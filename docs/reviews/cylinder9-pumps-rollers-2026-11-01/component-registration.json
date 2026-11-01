@@ -1,5 +1,5 @@
 {
-  "version": "6dad2178d891",
+  "version": "73cfb8f1df29",
   "scope": [
     "LBCylAmb9LtnBlk",
     "LBCylAmb9LtnGl",
@@ -118,6 +118,7 @@
     "GBCylSwrl9RollWht"
   ],
   "lotionCollarLiftMm": 0.7,
+  "rollerCapShoulderY": 450.53646337388,
   "silhouettes": {
     "lotion-head": {
       "w": 1322,
@@ -156,6 +157,6 @@
   "pumpTube": "Reused approved fine-mist visual mechanism/tube; lotion internals are a review representation, manufacturer mechanism dimensions unconfirmed.",
   "rollerFlangeSourceY": 760,
   "rollerPerspective": "Eye-level front view with horizontal flange, revision 2",
-  "rollerSeat": "Metal flange underside at anchors.seatY; plastic underside at body.bounds.top. Lower plug behind glass; whole insert moves together.",
+  "rollerSeat": "Both metal and plastic flange undersides at anchors.seatY. Lower plug behind glass; whole insert moves together.",
   "status": "Local candidates, pending visual approval"
 }

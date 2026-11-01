@@ -1,6 +1,6 @@
 # Cylinder 9 ml / 17-415 lotion pumps and rollers
 
-Local candidate library: **6dad2178d891**. New component artwork awaits Jordan's visual approval. The five previously approved body masters and all 30 fine-mist kits remain unchanged.
+Local candidate library: **73cfb8f1df29**. New component artwork awaits Jordan's visual approval. The five previously approved body masters and all 30 fine-mist kits remain unchanged.
 
 Review: http://localhost:3010/reviews/cylinder9-pumps-rollers-2026-11-01/index.html
 
@@ -53,3 +53,5 @@ Shoulder-seating revision 2 lifts the lotion head, collar and fitted overcap tog
 Roller perspective revision 2 replaces the tilted inserts with straight-on metal and plastic candidates. Both share a horizontal flange seated at the rim, with the previous uniform image scale preserved. Only the 100 roller configurations change. All 145 bodies, 15 lotion kits and 30 fine-mist kits are unchanged. Current verification and original snapshots are in `roller-level-v02/`.
 
 Metal seating revision 3 lowers the complete metal insert by 4.49 canvas pixels (about 0.43 mm at the registered scale), to the existing neck seating datum. This closes the visible gap under the flange. The plastic insert and all bottle bodies are unchanged. See `metal-rim-seat-v03/` for the pre-edit registry, close-up and current checks.
+
+Cap and plastic seating revision 4 lowers all 100 roll-on caps to the approved fine-mist collar contact line and aligns all 50 plastic inserts with the metal insert seating datum. Artwork and uniform scale are unchanged. See `caps-plastic-seat-v04/` for snapshots and checks.

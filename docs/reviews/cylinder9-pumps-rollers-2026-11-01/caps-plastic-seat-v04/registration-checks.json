@@ -1,0 +1,657 @@
+{
+  "version": "73cfb8f1df29",
+  "changed": [
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattCu",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9MtlRollPnkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShBlk",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9MtlRollSlDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9MtlRollWht",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9RollMattCu",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9RollMattGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9RollMattSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9RollPnkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9RollShBlk",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9RollShnGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9RollShnSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9RollSlDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylAmb9RollWht",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9MtlRollMattCu",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9MtlRollShBlk",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9MtlRollShnSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9MtlRollSlDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9MtlRollWht",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattCu",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9MtlRollPnkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShBlk",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9MtlRollSlDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9MtlRollWht",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9RollMattCu",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9RollMattGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9RollMattSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9RollPnkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9RollShBlk",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9RollShnGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9RollSlDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylBlu9RollWht",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattCu",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9MtlRollPnkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShBlk",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9MtlRollSlDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9MtlRollWht",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9RollMattCu",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9RollMattGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9RollMattSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9RollPnkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9RollShBlk",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9RollShnGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9RollShnSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9RollSlDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylFrst9RollWht",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattCu",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollPnkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShBlk",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollSlDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollWht",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9RollMattCu",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9RollMattGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9RollMattSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9RollPnkDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9RollShBlk",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9RollShnGl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9RollShnSl",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9RollSlDot",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    },
+    {
+      "sku": "GBCylSwrl9RollWht",
+      "capDropCanvasPx": 14.406463373880001,
+      "capDropMm": 1.3720441308457143
+    }
+  ],
+  "unchanged": [
+    "GBCylAmb9SpryBlk",
+    "GBCylAmb9SpryGl",
+    "GBCylAmb9SpryMattSl",
+    "GBCylAmb9SpryRd",
+    "GBCylAmb9SpryShSl",
+    "GBCylAmb9SpryTur",
+    "LBCylAmb9LtnBlk",
+    "LBCylAmb9LtnGl",
+    "LBCylAmb9LtnMtSl",
+    "GBCyl9SpryBlk",
+    "GBCyl9SpryGl",
+    "GBCyl9SpryMattSl",
+    "GBCyl9SpryRd",
+    "GBCyl9SpryShSl",
+    "GBCyl9SpryTur",
+    "LBCyl9LtnBlk",
+    "LBCyl9LtnGl",
+    "LBCyl9LtnMtSl",
+    "GBCylBlu9SpryBlk",
+    "GBCylBlu9SpryGl",
+    "GBCylBlu9SpryMattSl",
+    "GBCylBlu9SpryRd",
+    "GBCylBlu9SpryShSl",
+    "GBCylBlu9SpryTur",
+    "LBCylBlu9LtnBlk",
+    "LBCylBlu9LtnGl",
+    "LBCylBlu9LtnMattSl",
+    "GBCylFrst9SpryBlk",
+    "GBCylFrst9SpryGl",
+    "GBCylFrst9SpryMattSl",
+    "GBCylFrst9SpryRd",
+    "GBCylFrst9SpryShSl",
+    "GBCylFrst9SpryTur",
+    "LBCylFrst9LtnBlk",
+    "LBCylFrst9LtnGl",
+    "LBCylFrst9LtnMtSl",
+    "GBCylSwrl9SpryBlk",
+    "GBCylSwrl9SpryGl",
+    "GBCylSwrl9SpryMattSl",
+    "GBCylSwrl9SpryRd",
+    "GBCylSwrl9SpryShSl",
+    "GBCylSwrl9SpryTur",
+    "LBCylSwrl9LtnBlk",
+    "LBCylSwrl9LtnGl",
+    "LBCylSwrl9LtnMtSl"
+  ],
+  "plasticInsertsLowered": [
+    "GBCylAmb9RollBlkDot",
+    "GBCylAmb9RollMattCu",
+    "GBCylAmb9RollMattGl",
+    "GBCylAmb9RollMattSl",
+    "GBCylAmb9RollPnkDot",
+    "GBCylAmb9RollShBlk",
+    "GBCylAmb9RollShnGl",
+    "GBCylAmb9RollShnSl",
+    "GBCylAmb9RollSlDot",
+    "GBCylAmb9RollWht",
+    "GBCyl9RollBlkDot",
+    "GBCyl9RollMattCu",
+    "GBCyl9RollMattGl",
+    "GBCyl9RollMattSl",
+    "GBCyl9RollPnkDot",
+    "GBCyl9RollShBlk",
+    "GBCyl9RollShnGl",
+    "GBCyl9RollShnSl",
+    "GBCyl9RollSlDot",
+    "GBCyl9RollWht",
+    "GBCylBlu9RollBlkDot",
+    "GBCylBlu9RollMattCu",
+    "GBCylBlu9RollMattGl",
+    "GBCylBlu9RollMattSl",
+    "GBCylBlu9RollPnkDot",
+    "GBCylBlu9RollShBlk",
+    "GBCylBlu9RollShnGl",
+    "GBCylBlu9RollShnSl",
+    "GBCylBlu9RollSlDot",
+    "GBCylBlu9RollWht",
+    "GBCylFrst9RollBlkDot",
+    "GBCylFrst9RollMattCu",
+    "GBCylFrst9RollMattGl",
+    "GBCylFrst9RollMattSl",
+    "GBCylFrst9RollPnkDot",
+    "GBCylFrst9RollShBlk",
+    "GBCylFrst9RollShnGl",
+    "GBCylFrst9RollShnSl",
+    "GBCylFrst9RollSlDot",
+    "GBCylFrst9RollWht",
+    "GBCylSwrl9RollBlkDot",
+    "GBCylSwrl9RollMattCu",
+    "GBCylSwrl9RollMattGl",
+    "GBCylSwrl9RollMattSl",
+    "GBCylSwrl9RollPnkDot",
+    "GBCylSwrl9RollShBlk",
+    "GBCylSwrl9RollShnGl",
+    "GBCylSwrl9RollShnSl",
+    "GBCylSwrl9RollSlDot",
+    "GBCylSwrl9RollWht"
+  ],
+  "metalInsertsUnchanged": [
+    "GBCylAmb9MtlRollBlkDot",
+    "GBCylAmb9MtlRollMattCu",
+    "GBCylAmb9MtlRollMattGl",
+    "GBCylAmb9MtlRollMattSl",
+    "GBCylAmb9MtlRollPnkDot",
+    "GBCylAmb9MtlRollShBlk",
+    "GBCylAmb9MtlRollShnGl",
+    "GBCylAmb9MtlRollShnSl",
+    "GBCylAmb9MtlRollSlDot",
+    "GBCylAmb9MtlRollWht",
+    "GBCyl9MtlRollBlkDot",
+    "GBCyl9MtlRollMattCu",
+    "GBCyl9MtlRollMattGl",
+    "GBCyl9MtlRollMattSl",
+    "GBCyl9MtlRollPnkDot",
+    "GBCyl9MtlRollShBlk",
+    "GBCyl9MtlRollShnGl",
+    "GBCyl9MtlRollShnSl",
+    "GBCyl9MtlRollSlDot",
+    "GBCyl9MtlRollWht",
+    "GBCylBlu9MtlRollBlkDot",
+    "GBCylBlu9MtlRollMattCu",
+    "GBCylBlu9MtlRollMattGl",
+    "GBCylBlu9MtlRollMattSl",
+    "GBCylBlu9MtlRollPnkDot",
+    "GBCylBlu9MtlRollShBlk",
+    "GBCylBlu9MtlRollShnGl",
+    "GBCylBlu9MtlRollShnSl",
+    "GBCylBlu9MtlRollSlDot",
+    "GBCylBlu9MtlRollWht",
+    "GBCylFrst9MtlRollBlkDot",
+    "GBCylFrst9MtlRollMattCu",
+    "GBCylFrst9MtlRollMattGl",
+    "GBCylFrst9MtlRollMattSl",
+    "GBCylFrst9MtlRollPnkDot",
+    "GBCylFrst9MtlRollShBlk",
+    "GBCylFrst9MtlRollShnGl",
+    "GBCylFrst9MtlRollShnSl",
+    "GBCylFrst9MtlRollSlDot",
+    "GBCylFrst9MtlRollWht",
+    "GBCylSwrl9MtlRollBlkDot",
+    "GBCylSwrl9MtlRollMattCu",
+    "GBCylSwrl9MtlRollMattGl",
+    "GBCylSwrl9MtlRollMattSl",
+    "GBCylSwrl9MtlRollPnkDot",
+    "GBCylSwrl9MtlRollShBlk",
+    "GBCylSwrl9MtlRollShnGl",
+    "GBCylSwrl9MtlRollShnSl",
+    "GBCylSwrl9MtlRollSlDot",
+    "GBCylSwrl9MtlRollWht"
+  ],
+  "allBodiesAndArtworkUnchanged": true
+}

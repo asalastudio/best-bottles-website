@@ -1,0 +1,2563 @@
+{
+  "version": "73cfb8f1df29",
+  "started": "2026-11-01T16:56:28.724Z",
+  "pdp": [
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "width": 1440,
+      "view": "sidecar",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "width": 1440,
+      "view": "capon",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "width": 1440,
+      "view": "exploded",
+      "body": [
+        268.89007568359375,
+        302.04034423828125,
+        376.21978759765625,
+        413.84417724609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "width": 390,
+      "view": "sidecar",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "width": 390,
+      "view": "capon",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "width": 390,
+      "view": "exploded",
+      "body": [
+        55.66287612915039,
+        246.67803955078125,
+        278.6742248535156,
+        306.55120849609375
+      ],
+      "sameElement": true,
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "http://127.0.0.1:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "width": 1052
+        },
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=640&q=75",
+          "width": 640
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=640&q=75",
+          "width": 476
+        }
+      ]
+    }
+  ],
+  "builder": [
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=1200&q=75"
+        },
+        {
+          "slot": "assembly",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-17-415/GBCyl9RollShBlk/d74862d1cd55e9424100d0ee88540b1fb23425c118ebf225373fe55ac21d2e00.front-on-1000x1100.webp"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=1200&q=75"
+        },
+        {
+          "slot": "assembly",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-17-415/GBCyl9RollShnGl/2d1fa0dcad5bff5fd41a38fd82c9e8c592caebb867cb13706bbb34f92466f8c6.front-on-1000x1100.webp"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=1200&q=75"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "layers": [
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-CPR-17415%2Fcap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MGLD-17415%2Fcap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-MSLV-17415%2Fcap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-PNK-17415-DOT%2Fcap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SBLK-17415%2Fcap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SGLD-17415%2Fcap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SSLV-17415%2Fcap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-SLV-17415-DOT%2Fcap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png&w=3840&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "http://127.0.0.1:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=3840&q=75"
+        },
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75"
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-WHT-17415%2Fcap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png&w=1200&q=75"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "reviewPage": {
+    "status": "loaded",
+    "title": "9 ml Cylinder · Lotion pumps & rollers"
+  },
+  "finished": "2026-11-01T16:57:57.981Z"
+}
