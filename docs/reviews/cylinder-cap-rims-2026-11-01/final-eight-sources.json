@@ -1,0 +1,50 @@
+[
+  {
+    "key": "black-dotted",
+    "id": "CMP-ROC-BLK-17415-DOT",
+    "path": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-2de029de-03be-4ab5-831b-f08e8e2d8b37.png",
+    "prompt": "Edit image one into a single isolated reusable product cap layer. Image one is the APPROVED geometry, exact silhouette, shallow downward camera angle with a little lid visible, cylindrical rim, and studio lighting template. Image two is ONLY the finish and dot-pattern reference. Preserve image one's EXACT cap geometry, outline, width/height aspect (physical height26.94mm diameter19.19mm), canvas size, margins, position, shallow curved top and bottom. Material-only replacement: Glossy black body with EXACTLY seven small silver metallic round inset dots: three down central column at 22%,54%,85% height, and two down each left and right column at 38%,70%. Match the dot placement in image two. No gold remains. Photorealistic high fidelity studio product photography. Smooth clean edges, no halos, fringe, debris or shadows outside silhouette. Actual transparent background. One cap only, no bottle, no words."
+  },
+  {
+    "key": "pink-dotted",
+    "id": "CMP-ROC-PNK-17415-DOT",
+    "path": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-ad5c1b9b-9944-4f72-b1e8-239f99c4cf47.png",
+    "prompt": "Edit image one into a single isolated reusable product cap layer. Image one is the APPROVED geometry, exact silhouette, shallow downward camera angle with a little lid visible, cylindrical rim, and studio lighting template. Image two is ONLY the finish and dot-pattern reference. Preserve image one's EXACT cap geometry, outline, width/height aspect (physical height26.94mm diameter19.19mm), canvas size, margins, position, shallow curved top and bottom. Material-only replacement: Pale satin metallic pink body with EXACTLY eight small silver round inset dots. Three down each left/right column at 22%,53%,84%; two down center at 37%,68%. Match image two. No gold remains. Photorealistic high fidelity studio product photography. Smooth clean edges, no halos, fringe, debris or shadows outside silhouette. Actual transparent background. One cap only, no bottle, no words."
+  },
+  {
+    "key": "silver-dotted",
+    "id": "CMP-ROC-SLV-17415-DOT",
+    "path": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-c14c6eba-fdca-4874-bab3-c327ccc34919.png",
+    "prompt": "Edit image one into a single isolated reusable product cap layer. Image one is the APPROVED geometry, exact silhouette, shallow downward camera angle with a little lid visible, cylindrical rim, and studio lighting template. Image two is ONLY the finish and dot-pattern reference. Preserve image one's EXACT cap geometry, outline, width/height aspect (physical height26.94mm diameter19.19mm), canvas size, margins, position, shallow curved top and bottom. Material-only replacement: Matte satin silver body with EXACTLY eight small polished silver round inset dots. Three down each left/right column at 22%,53%,84%; two down center at 37%,68%. Match image two. No gold remains. Photorealistic high fidelity studio product photography. Smooth clean edges, no halos, fringe, debris or shadows outside silhouette. Actual transparent background. One cap only, no bottle, no words."
+  },
+  {
+    "key": "white",
+    "id": "CMP-ROC-WHT-17415",
+    "path": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-c8ceea6f-4f1d-47ce-ba0c-a8277e82f103.png",
+    "prompt": "Edit image one into a single isolated reusable product cap layer. Image one is the APPROVED geometry, exact silhouette, shallow downward camera angle with a little lid visible, cylindrical rim, and studio lighting template. Image two is ONLY the finish and dot-pattern reference. Preserve image one's EXACT cap geometry, outline, width/height aspect (physical height26.94mm diameter19.19mm), canvas size, margins, position, shallow curved top and bottom. Material-only replacement: Smooth clean white polymer cap, subtle soft cylindrical studio shading, no dots, no markings. No gold remains. Photorealistic high fidelity studio product photography. Smooth clean edges, no halos, fringe, debris or shadows outside silhouette. Actual transparent background. One cap only, no bottle, no words."
+  },
+  {
+    "key": "matte-gold",
+    "id": "CMP-ROC-MGLD-17415",
+    "path": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-d273bc3f-d89e-4645-a662-859de505e929.png",
+    "prompt": "Edit FIRST image geometry template, change material only to Fine satin matte champagne gold anodized metal. Broad smooth diffused studio highlights, no mirror sharp black bands, no glitter or grain. SECOND image is the exact finish reference. Preserve FIRST image's exact outer silhouette, proportions 26.94 mm high by 19.19 mm diameter, shallow visible top and rounded bevel, camera angle, centered position, image margins and size. Improve photographic detail and clean studio finish while matching SECOND color/material only; do not copy its old camera angle or crop. Cylinder must read round. No holes, dots, logos or decoration for this finish. One cap only, no bottle, no ground shadow, true transparent RGBA, no halos or debris outside silhouette. Bottom edge must remain level and subtly curved as FIRST, no sloping or tilted baseline."
+  },
+  {
+    "key": "matte-silver",
+    "id": "CMP-ROC-MSLV-17415",
+    "path": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-c45f20c9-d058-4451-b550-30d2fb099a52.png",
+    "prompt": "Edit FIRST image geometry template, change material only to Fine satin matte neutral silver metal. Broad soft diffused highlights, no mirror black strips, no grain, no color cast. SECOND image is the exact finish reference. Preserve FIRST image's exact outer silhouette, proportions 26.94 mm high by 19.19 mm diameter, shallow visible top and rounded bevel, camera angle, centered position, image margins and size. Improve photographic detail and clean studio finish while matching SECOND color/material only; do not copy its old camera angle or crop. Cylinder must read round. No holes, dots, logos or decoration for this finish. One cap only, no bottle, no ground shadow, true transparent RGBA, no halos or debris outside silhouette. Bottom edge must remain level and subtly curved as FIRST, no sloping or tilted baseline."
+  },
+  {
+    "key": "matte-copper",
+    "id": "CMP-ROC-CPR-17415",
+    "path": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-d082f50b-e024-40d3-8eca-9b6413e1ca6b.png",
+    "prompt": "Edit FIRST image geometry template, change material only to Warm matte copper metallic finish exactly as reference, broad softly reflected studio lights and burnished copper shading, no chrome sharp black strips. SECOND image is the exact finish reference. Preserve FIRST image's exact outer silhouette, proportions 26.94 mm high by 19.19 mm diameter, shallow visible top and rounded bevel, camera angle, centered position, image margins and size. Improve photographic detail and clean studio finish while matching SECOND color/material only; do not copy its old camera angle or crop. Cylinder must read round. No holes, dots, logos or decoration for this finish. One cap only, no bottle, no ground shadow, true transparent RGBA, no halos or debris outside silhouette. Bottom edge must remain level and subtly curved as FIRST, no sloping or tilted baseline."
+  },
+  {
+    "key": "shiny-black",
+    "id": "CMP-ROC-SBLK-17415",
+    "path": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-4003de7f-e097-41ae-a6ba-d526f95a6ce4.png",
+    "prompt": "Edit FIRST image geometry template, change material only to Deep polished glossy black cap. Clean controlled gray and white studio reflections wrapped around black cylindrical metal; not gray body, no brown tint. SECOND image is the exact finish reference. Preserve FIRST image's exact outer silhouette, proportions 26.94 mm high by 19.19 mm diameter, shallow visible top and rounded bevel, camera angle, centered position, image margins and size. Improve photographic detail and clean studio finish while matching SECOND color/material only; do not copy its old camera angle or crop. Cylinder must read round. No holes, dots, logos or decoration for this finish. One cap only, no bottle, no ground shadow, true transparent RGBA, no halos or debris outside silhouette. Bottom edge must remain level and subtly curved as FIRST, no sloping or tilted baseline."
+  }
+]

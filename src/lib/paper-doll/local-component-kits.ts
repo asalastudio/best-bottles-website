@@ -39,30 +39,31 @@ function readLocalKitReview(): LocalKitReview | null {
 export function localGpt13ComponentKits(host: string | null, flag: unknown): Record<string, BuilderKit> {
     if (process.env.VERCEL || process.env.NODE_ENV !== "development" || flag !== "gpt13"
         || !/^(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/.test(host ?? "")) return {};
+    const rows: Record<string, BuilderKit> = {};
     try {
         const review = JSON.parse(readFileSync("public/local-kits/gpt-13-415-2026-10-31/kits.json", "utf8")) as LocalKitReview;
-        const rows = { ...review.rows };
-        // Old bookmarked pilot URLs must resolve the current 5 ml master too.
-        // Other families keep their explicit pilot artwork.
-        try {
-            const current = JSON.parse(readFileSync("public/local-kits/cylinder5-masters-2026-11-01/kits.json", "utf8")) as LocalKitReview;
-            for (const [sku, kit] of Object.entries(current.rows ?? {})) {
-                if (/^GBCyl(?:Blu)?5/.test(sku) && kit.sku === sku) rows[sku] = kit;
-            }
-        } catch { /* The older pilot remains usable without this review batch. */ }
-        // Tulip seating follows the photographed shoulder. Keep this scoped to
-        // the explicit pilot until the body/component set is visually approved.
-        for (const file of ["public/local-kits/tulip-shoulder-2026-11-01/kits.json",
-            "public/local-kits/tulip-amber-tube-2026-11-01/kits.json"]) {
-            try {
-                const tulip = JSON.parse(readFileSync(file, "utf8")) as LocalKitReview;
-                for (const [sku, kit] of Object.entries(tulip.rows ?? {})) {
-                    if (/^GBTulip(?:Amb5|6)Spry/.test(sku) && kit.sku === sku) rows[sku] = kit;
-                }
-            } catch { /* The original pilot remains available without this local batch. */ }
+        Object.assign(rows, review.rows);
+    } catch { /* The optional original pilot may be absent in a clean checkout. */ }
+    // Old bookmarked pilot URLs must resolve the current 5 ml master too.
+    // Other families keep their explicit pilot artwork.
+    try {
+        const current = JSON.parse(readFileSync("public/local-kits/cylinder5-masters-2026-11-01/kits.json", "utf8")) as LocalKitReview;
+        for (const [sku, kit] of Object.entries(current.rows ?? {})) {
+            if (/^GBCyl(?:Blu)?5/.test(sku) && kit.sku === sku) rows[sku] = kit;
         }
-        return rows;
-    } catch { return {}; }
+    } catch { /* The older pilot remains usable without this review batch. */ }
+    // Tulip seating follows the photographed shoulder. Keep this scoped to
+    // the explicit pilot until the body/component set is visually approved.
+    for (const file of ["public/local-kits/tulip-shoulder-2026-11-01/kits.json",
+        "public/local-kits/tulip-amber-tube-2026-11-01/kits.json"]) {
+        try {
+            const tulip = JSON.parse(readFileSync(file, "utf8")) as LocalKitReview;
+            for (const [sku, kit] of Object.entries(tulip.rows ?? {})) {
+                if (/^GBTulip(?:Amb5|6)Spry/.test(sku) && kit.sku === sku) rows[sku] = kit;
+            }
+        } catch { /* The original pilot remains available without this local batch. */ }
+    }
+    return rows;
 }
 
 /** Shared local artwork review input for Builder and PDP. Never used on Vercel. */

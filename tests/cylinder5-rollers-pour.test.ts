@@ -33,10 +33,14 @@ describe('5 ml roller and pour seating',()=>{
    expect(cap.bounds.left).toBeLessThan(p.bounds.left);expect(cap.bounds.right).toBeGreaterThan(p.bounds.right);
   }
  });
- it('seats each original cap without stretching it or exposing the rim above it',()=>{
+ it('preserves visible cap diameter without stretching it or exposing the rim above it',()=>{
   for(const i of items){const k=current[i.sku],c=k.parts.find(p=>p.slot==='cap')!,b=k.parts.find(p=>p.slot==='body')!;
    expect(c.box!.width/c.image.width).toBeCloseTo(c.box!.height/c.image.height,5);
-   expect(c.box!.width).toBeCloseTo(before[i.sku].parts.find(p=>p.slot==='cap')!.box!.width,5);
+   const prior=before[i.sku].parts.find(p=>p.slot==='cap')!;
+   if(c.image.url.includes('/cylinder-cap-rims-2026-11-01/')) {
+    // The approved replacement has transparent antialiasing margins. Compare visible diameter.
+    expect(Math.abs((c.bounds.right-c.bounds.left)/(prior.bounds.right-prior.bounds.left)-1)).toBeLessThan(.02);
+   } else expect(c.box!.width).toBeCloseTo(prior.box!.width,5);
    expect((c.bounds.left+c.bounds.right)/2).toBeCloseTo(k.anchors.axisX,5);
    expect(c.bounds.top).toBeLessThan(b.bounds.top);
    const isShortPlastic=['CMP-CAP-BLK-S-13-415','CMP-CAP-WHT-S-13-415'].includes(c.componentId!);

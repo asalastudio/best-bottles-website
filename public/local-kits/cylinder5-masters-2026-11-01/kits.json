@@ -1,5 +1,5 @@
 {
-  "version": "de507a82113c",
+  "version": "f3a091df6cea",
   "rows": {
     "GBCyl5Sl": {
       "sku": "GBCyl5Sl",
@@ -82,21 +82,21 @@
             "dy": -158.63
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SLV-13-415-01.be765db5b8f5.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
             "key": "",
-            "sha256": "be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3",
-            "bytes": 187954,
-            "width": 422,
-            "height": 631
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-CAP-SLV-13-415-01"
         }
@@ -202,21 +202,21 @@
             "dy": -158.63
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SGLD-13-415-01.0f2e011c6b7a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
             "key": "",
-            "sha256": "0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545",
-            "bytes": 183339,
-            "width": 422,
-            "height": 631
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-CAP-SGLD-13-415-01"
         }
@@ -1042,21 +1042,21 @@
             "dy": -152.3
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-SHGD-S-13-415.1336d3427f5b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-gold.f5240b98053b.png",
             "key": "",
-            "sha256": "1336d3427f5b4014f74a933ee3a9302e9c14adff553e127df2ea2b7f809c2064",
-            "bytes": 121484,
-            "width": 402,
-            "height": 432
+            "sha256": "f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e",
+            "bytes": 2186433,
+            "width": 1230,
+            "height": 1320
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 415.65,
-            "y": 441.85742591327835,
-            "width": 168.7,
-            "height": 181.28955223880598
+            "x": 413.97139303482584,
+            "y": 440.1788189481042,
+            "width": 172.05721393034824,
+            "height": 184.64676616915423
           },
           "componentId": "CMP-CLS-SHGD-S-13-415"
         }
@@ -1162,21 +1162,21 @@
             "dy": -152.3
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-SHSL-S-13-415-02.ad476da805a7.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-silver.e7fa6410ca1c.png",
             "key": "",
-            "sha256": "ad476da805a7e2287f6ba115876b26ca13c96f290cb2ae72b4c25e81fe7b700f",
-            "bytes": 124145,
-            "width": 402,
-            "height": 432
+            "sha256": "e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a",
+            "bytes": 1927768,
+            "width": 1230,
+            "height": 1320
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 415.65,
-            "y": 441.85742591327835,
-            "width": 168.7,
-            "height": 181.28955223880598
+            "x": 413.97139303482584,
+            "y": 440.1788189481042,
+            "width": 172.05721393034824,
+            "height": 184.64676616915423
           },
           "componentId": "CMP-CLS-SHSL-S-13-415-02"
         }
@@ -1282,21 +1282,21 @@
             "dy": -158.63
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SLV-13-415-01.be765db5b8f5.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
             "key": "",
-            "sha256": "be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3",
-            "bytes": 187954,
-            "width": 422,
-            "height": 631
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-CAP-SLV-13-415-01"
         }
@@ -1522,21 +1522,21 @@
             "dy": -158.63
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SGLD-13-415-01.0f2e011c6b7a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
             "key": "",
-            "sha256": "0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545",
-            "bytes": 183339,
-            "width": 422,
-            "height": 631
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-CAP-SGLD-13-415-01"
         }
@@ -2242,21 +2242,21 @@
             "dy": -152.3
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-SHGD-S-13-415.1336d3427f5b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-gold.f5240b98053b.png",
             "key": "",
-            "sha256": "1336d3427f5b4014f74a933ee3a9302e9c14adff553e127df2ea2b7f809c2064",
-            "bytes": 121484,
-            "width": 402,
-            "height": 432
+            "sha256": "f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e",
+            "bytes": 2186433,
+            "width": 1230,
+            "height": 1320
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 415.65,
-            "y": 441.85742591327835,
-            "width": 168.7,
-            "height": 181.28955223880598
+            "x": 413.97139303482584,
+            "y": 440.1788189481042,
+            "width": 172.05721393034824,
+            "height": 184.64676616915423
           },
           "componentId": "CMP-CLS-SHGD-S-13-415"
         }
@@ -2362,21 +2362,21 @@
             "dy": -152.3
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-SHSL-S-13-415-02.ad476da805a7.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-silver.e7fa6410ca1c.png",
             "key": "",
-            "sha256": "ad476da805a7e2287f6ba115876b26ca13c96f290cb2ae72b4c25e81fe7b700f",
-            "bytes": 124145,
-            "width": 402,
-            "height": 432
+            "sha256": "e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a",
+            "bytes": 1927768,
+            "width": 1230,
+            "height": 1320
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 415.65,
-            "y": 441.85742591327835,
-            "width": 168.7,
-            "height": 181.28955223880598
+            "x": 413.97139303482584,
+            "y": 440.1788189481042,
+            "width": 172.05721393034824,
+            "height": 184.64676616915423
           },
           "componentId": "CMP-CLS-SHSL-S-13-415-02"
         }
@@ -2997,21 +2997,21 @@
             "dy": -364.34
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SGLD-13415.0f2e011c6b7a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
             "key": "",
-            "sha256": "0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545",
-            "bytes": 183339,
-            "width": 422,
-            "height": 631
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-ROC-SGLD-13415"
         }
@@ -3633,21 +3633,21 @@
             "dy": -364.34
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SSLV-13415.be765db5b8f5.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
             "key": "",
-            "sha256": "be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3",
-            "bytes": 187954,
-            "width": 422,
-            "height": 631
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-ROC-SSLV-13415"
         }
@@ -3951,21 +3951,21 @@
             "dy": -364.34
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SSLV-13415.be765db5b8f5.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
             "key": "",
-            "sha256": "be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3",
-            "bytes": 187954,
-            "width": 422,
-            "height": 631
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-ROC-SSLV-13415"
         }
@@ -4269,21 +4269,21 @@
             "dy": -364.34
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SGLD-13415.0f2e011c6b7a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
             "key": "",
-            "sha256": "0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545",
-            "bytes": 183339,
-            "width": 422,
-            "height": 631
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-ROC-SGLD-13415"
         }
@@ -5859,21 +5859,21 @@
             "dy": -364.34
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SGLD-13415.0f2e011c6b7a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
             "key": "",
-            "sha256": "0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545",
-            "bytes": 183339,
-            "width": 422,
-            "height": 631
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-ROC-SGLD-13415"
         }
@@ -6495,21 +6495,21 @@
             "dy": -364.34
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SSLV-13415.be765db5b8f5.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
             "key": "",
-            "sha256": "be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3",
-            "bytes": 187954,
-            "width": 422,
-            "height": 631
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-ROC-SSLV-13415"
         }
@@ -6813,21 +6813,21 @@
             "dy": -364.34
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SGLD-13415.0f2e011c6b7a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
             "key": "",
-            "sha256": "0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545",
-            "bytes": 183339,
-            "width": 422,
-            "height": 631
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-ROC-SGLD-13415"
         }
@@ -6972,21 +6972,21 @@
             "dy": -364.34
           },
           "image": {
-            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SSLV-13415.be765db5b8f5.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
             "key": "",
-            "sha256": "be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3",
-            "bytes": 187954,
-            "width": 422,
-            "height": 631
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.45,
-            "y": 358.75598289142084,
-            "width": 177.1,
-            "height": 264.810663507109
+            "x": 409.771327014218,
+            "y": 357.07730990563886,
+            "width": 180.45734597156397,
+            "height": 268.16800947867296
           },
           "componentId": "CMP-ROC-SSLV-13415"
         }

@@ -1,0 +1,9 @@
+{
+  "typecheck": "passed",
+  "testFilesPassed": 351,
+  "testFilesSkipped": 2,
+  "testsPassed": 3188,
+  "testsSkipped": 7,
+  "testsFailed": 0,
+  "command": "npx vitest run"
+}

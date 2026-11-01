@@ -1,0 +1,513 @@
+{
+  "method": "Median alpha silhouette center across straight barrel at source rows 600 through 1200",
+  "axes": {
+    "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png": 499.4039448818898,
+    "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png": 499.4039448818898,
+    "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png": 499.4039448818898,
+    "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png": 499.4039448818898,
+    "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png": 499.4039448818898
+  },
+  "changes": [
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattCu",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9MtlRollPnkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShBlk",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9MtlRollSlDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9MtlRollWht",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9RollMattCu",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9RollMattGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9RollMattSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9RollPnkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9RollShBlk",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9RollShnGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9RollShnSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9RollSlDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylAmb9RollWht",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9MtlRollMattCu",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9MtlRollShBlk",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9MtlRollShnSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9MtlRollSlDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9MtlRollWht",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattCu",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9MtlRollPnkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShBlk",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9MtlRollSlDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9MtlRollWht",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9RollMattCu",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9RollMattGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9RollMattSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9RollPnkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9RollShBlk",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9RollShnGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9RollSlDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylBlu9RollWht",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattCu",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9MtlRollPnkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShBlk",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9MtlRollSlDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9MtlRollWht",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9RollMattCu",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9RollMattGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9RollMattSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9RollPnkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9RollShBlk",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9RollShnGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9RollShnSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9RollSlDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylFrst9RollWht",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattCu",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollPnkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShBlk",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollSlDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollWht",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9RollMattCu",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9RollMattGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9RollMattSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9RollPnkDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9RollShBlk",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9RollShnGl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9RollShnSl",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9RollSlDot",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    },
+    {
+      "sku": "GBCylSwrl9RollWht",
+      "dx": -0.5960551181102005,
+      "visibleBodyAxis": 499.4039448818898
+    }
+  ],
+  "version": "5f6e38a210fd"
+}

@@ -1,0 +1,27 @@
+{
+  "gamma": 1.35,
+  "changed": 20,
+  "version": "f9414783f273",
+  "assets": {
+    "CMP-ROC-BLK-17415-DOT": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg",
+      "key": "",
+      "sha256": "bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f",
+      "bytes": 1371587,
+      "width": 1943,
+      "height": 2718,
+      "original": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg"
+    },
+    "CMP-ROC-SBLK-17415": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-black-deeper.5d076755cf61.svg",
+      "key": "",
+      "sha256": "5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523",
+      "bytes": 1296319,
+      "width": 1943,
+      "height": 2718,
+      "original": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg"
+    }
+  },
+  "geometryUnchanged": true,
+  "approval": "User authorized deeper black middle tones after approving cap set."
+}

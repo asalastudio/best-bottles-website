@@ -1,5 +1,5 @@
 {
-  "version": "73cfb8f1df29",
+  "version": "5f6e38a210fd",
   "bodyId": "cylinder-9ml-17-415",
   "rows": {
     "GBCylAmb9SpryBlk": {
@@ -2240,9 +2240,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -2254,21 +2254,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f",
+            "bytes": 1371587,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-BLK-17415-DOT"
         }
@@ -2399,9 +2399,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -2413,21 +2413,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-CPR-17415/cap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff",
+            "bytes": 1664600,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-CPR-17415"
         }
@@ -2558,9 +2558,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -2572,21 +2572,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MGLD-17415/cap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860",
+            "bytes": 1643092,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MGLD-17415"
         }
@@ -2717,9 +2717,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -2731,21 +2731,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MSLV-17415/cap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9",
+            "bytes": 1662024,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MSLV-17415"
         }
@@ -2876,9 +2876,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -2890,21 +2890,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-PNK-17415-DOT/cap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d",
+            "bytes": 1821432,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-PNK-17415-DOT"
         }
@@ -3035,9 +3035,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -3049,21 +3049,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SBLK-17415/cap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-black-deeper.5d076755cf61.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523",
+            "bytes": 1296319,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SBLK-17415"
         }
@@ -3194,9 +3194,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -3208,21 +3208,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SGLD-17415/cap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e",
+            "bytes": 1223500,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SGLD-17415"
         }
@@ -3353,9 +3353,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -3367,21 +3367,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SSLV-17415/cap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc",
+            "bytes": 1274312,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SSLV-17415"
         }
@@ -3512,9 +3512,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -3526,21 +3526,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SLV-17415-DOT/cap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9",
+            "bytes": 1916128,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SLV-17415-DOT"
         }
@@ -3671,9 +3671,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -3685,21 +3685,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-WHT-17415/cap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977",
+            "bytes": 1329284,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-WHT-17415"
         }
@@ -3830,9 +3830,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -3844,21 +3844,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f",
+            "bytes": 1371587,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-BLK-17415-DOT"
         }
@@ -3989,9 +3989,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -4003,21 +4003,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-CPR-17415/cap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff",
+            "bytes": 1664600,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-CPR-17415"
         }
@@ -4148,9 +4148,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -4162,21 +4162,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MGLD-17415/cap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860",
+            "bytes": 1643092,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MGLD-17415"
         }
@@ -4307,9 +4307,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -4321,21 +4321,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MSLV-17415/cap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9",
+            "bytes": 1662024,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MSLV-17415"
         }
@@ -4466,9 +4466,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -4480,21 +4480,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-PNK-17415-DOT/cap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d",
+            "bytes": 1821432,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-PNK-17415-DOT"
         }
@@ -4625,9 +4625,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -4639,21 +4639,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SBLK-17415/cap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-black-deeper.5d076755cf61.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523",
+            "bytes": 1296319,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SBLK-17415"
         }
@@ -4784,9 +4784,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -4798,21 +4798,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SGLD-17415/cap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e",
+            "bytes": 1223500,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SGLD-17415"
         }
@@ -4943,9 +4943,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -4957,21 +4957,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SSLV-17415/cap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc",
+            "bytes": 1274312,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SSLV-17415"
         }
@@ -5102,9 +5102,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -5116,21 +5116,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SLV-17415-DOT/cap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9",
+            "bytes": 1916128,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SLV-17415-DOT"
         }
@@ -5261,9 +5261,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -5275,21 +5275,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-WHT-17415/cap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977",
+            "bytes": 1329284,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-WHT-17415"
         }
@@ -7526,9 +7526,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -7540,21 +7540,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f",
+            "bytes": 1371587,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-BLK-17415-DOT"
         }
@@ -7685,9 +7685,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -7699,21 +7699,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-CPR-17415/cap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff",
+            "bytes": 1664600,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-CPR-17415"
         }
@@ -7844,9 +7844,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -7858,21 +7858,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MGLD-17415/cap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860",
+            "bytes": 1643092,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MGLD-17415"
         }
@@ -8003,9 +8003,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -8017,21 +8017,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MSLV-17415/cap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9",
+            "bytes": 1662024,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MSLV-17415"
         }
@@ -8162,9 +8162,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -8176,21 +8176,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-PNK-17415-DOT/cap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d",
+            "bytes": 1821432,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-PNK-17415-DOT"
         }
@@ -8321,9 +8321,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -8335,21 +8335,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SBLK-17415/cap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-black-deeper.5d076755cf61.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523",
+            "bytes": 1296319,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SBLK-17415"
         }
@@ -8480,9 +8480,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -8494,21 +8494,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SGLD-17415/cap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e",
+            "bytes": 1223500,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SGLD-17415"
         }
@@ -8639,9 +8639,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -8653,21 +8653,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SSLV-17415/cap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc",
+            "bytes": 1274312,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SSLV-17415"
         }
@@ -8798,9 +8798,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -8812,21 +8812,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SLV-17415-DOT/cap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9",
+            "bytes": 1916128,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SLV-17415-DOT"
         }
@@ -8957,9 +8957,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -8971,21 +8971,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-WHT-17415/cap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977",
+            "bytes": 1329284,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-WHT-17415"
         }
@@ -9116,9 +9116,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -9130,21 +9130,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f",
+            "bytes": 1371587,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-BLK-17415-DOT"
         }
@@ -9275,9 +9275,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -9289,21 +9289,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-CPR-17415/cap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff",
+            "bytes": 1664600,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-CPR-17415"
         }
@@ -9434,9 +9434,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -9448,21 +9448,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MGLD-17415/cap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860",
+            "bytes": 1643092,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MGLD-17415"
         }
@@ -9593,9 +9593,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -9607,21 +9607,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MSLV-17415/cap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9",
+            "bytes": 1662024,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MSLV-17415"
         }
@@ -9752,9 +9752,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -9766,21 +9766,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-PNK-17415-DOT/cap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d",
+            "bytes": 1821432,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-PNK-17415-DOT"
         }
@@ -9911,9 +9911,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -9925,21 +9925,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SBLK-17415/cap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-black-deeper.5d076755cf61.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523",
+            "bytes": 1296319,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SBLK-17415"
         }
@@ -10070,9 +10070,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -10084,21 +10084,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SGLD-17415/cap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e",
+            "bytes": 1223500,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SGLD-17415"
         }
@@ -10229,9 +10229,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -10243,21 +10243,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SSLV-17415/cap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc",
+            "bytes": 1274312,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SSLV-17415"
         }
@@ -10388,9 +10388,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -10402,21 +10402,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SLV-17415-DOT/cap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9",
+            "bytes": 1916128,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SLV-17415-DOT"
         }
@@ -10547,9 +10547,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -10561,21 +10561,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-WHT-17415/cap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977",
+            "bytes": 1329284,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-WHT-17415"
         }
@@ -12839,9 +12839,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -12853,21 +12853,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f",
+            "bytes": 1371587,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-BLK-17415-DOT"
         }
@@ -12998,9 +12998,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -13012,21 +13012,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-CPR-17415/cap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff",
+            "bytes": 1664600,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-CPR-17415"
         }
@@ -13157,9 +13157,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -13171,21 +13171,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MGLD-17415/cap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860",
+            "bytes": 1643092,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MGLD-17415"
         }
@@ -13316,9 +13316,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -13330,21 +13330,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MSLV-17415/cap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9",
+            "bytes": 1662024,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MSLV-17415"
         }
@@ -13475,9 +13475,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -13489,21 +13489,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-PNK-17415-DOT/cap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d",
+            "bytes": 1821432,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-PNK-17415-DOT"
         }
@@ -13634,9 +13634,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -13648,21 +13648,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SBLK-17415/cap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-black-deeper.5d076755cf61.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523",
+            "bytes": 1296319,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SBLK-17415"
         }
@@ -13793,9 +13793,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -13807,21 +13807,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SGLD-17415/cap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e",
+            "bytes": 1223500,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SGLD-17415"
         }
@@ -13952,9 +13952,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -13966,21 +13966,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SSLV-17415/cap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc",
+            "bytes": 1274312,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SSLV-17415"
         }
@@ -14111,9 +14111,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -14125,21 +14125,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SLV-17415-DOT/cap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9",
+            "bytes": 1916128,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SLV-17415-DOT"
         }
@@ -14270,9 +14270,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -14284,21 +14284,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-WHT-17415/cap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977",
+            "bytes": 1329284,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-WHT-17415"
         }
@@ -14429,9 +14429,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -14443,21 +14443,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f",
+            "bytes": 1371587,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-BLK-17415-DOT"
         }
@@ -14588,9 +14588,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -14602,21 +14602,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-CPR-17415/cap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff",
+            "bytes": 1664600,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-CPR-17415"
         }
@@ -14747,9 +14747,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -14761,21 +14761,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MGLD-17415/cap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860",
+            "bytes": 1643092,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MGLD-17415"
         }
@@ -14906,9 +14906,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -14920,21 +14920,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MSLV-17415/cap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9",
+            "bytes": 1662024,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MSLV-17415"
         }
@@ -15065,9 +15065,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -15079,21 +15079,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-PNK-17415-DOT/cap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d",
+            "bytes": 1821432,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-PNK-17415-DOT"
         }
@@ -15224,9 +15224,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -15238,21 +15238,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SBLK-17415/cap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-black-deeper.5d076755cf61.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523",
+            "bytes": 1296319,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SBLK-17415"
         }
@@ -15383,9 +15383,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -15397,21 +15397,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SGLD-17415/cap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e",
+            "bytes": 1223500,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SGLD-17415"
         }
@@ -15542,9 +15542,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -15556,21 +15556,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SSLV-17415/cap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc",
+            "bytes": 1274312,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SSLV-17415"
         }
@@ -15701,9 +15701,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -15715,21 +15715,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SLV-17415-DOT/cap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9",
+            "bytes": 1916128,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SLV-17415-DOT"
         }
@@ -15860,9 +15860,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -15874,21 +15874,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-WHT-17415/cap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977",
+            "bytes": 1329284,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-WHT-17415"
         }
@@ -18152,9 +18152,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -18166,21 +18166,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f",
+            "bytes": 1371587,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-BLK-17415-DOT"
         }
@@ -18311,9 +18311,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -18325,21 +18325,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-CPR-17415/cap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff",
+            "bytes": 1664600,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-CPR-17415"
         }
@@ -18470,9 +18470,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -18484,21 +18484,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MGLD-17415/cap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860",
+            "bytes": 1643092,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MGLD-17415"
         }
@@ -18629,9 +18629,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -18643,21 +18643,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MSLV-17415/cap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9",
+            "bytes": 1662024,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MSLV-17415"
         }
@@ -18788,9 +18788,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -18802,21 +18802,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-PNK-17415-DOT/cap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d",
+            "bytes": 1821432,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-PNK-17415-DOT"
         }
@@ -18947,9 +18947,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -18961,21 +18961,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SBLK-17415/cap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-black-deeper.5d076755cf61.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523",
+            "bytes": 1296319,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SBLK-17415"
         }
@@ -19106,9 +19106,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -19120,21 +19120,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SGLD-17415/cap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e",
+            "bytes": 1223500,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SGLD-17415"
         }
@@ -19265,9 +19265,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -19279,21 +19279,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SSLV-17415/cap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc",
+            "bytes": 1274312,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SSLV-17415"
         }
@@ -19424,9 +19424,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -19438,21 +19438,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SLV-17415-DOT/cap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9",
+            "bytes": 1916128,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SLV-17415-DOT"
         }
@@ -19583,9 +19583,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -19597,21 +19597,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-WHT-17415/cap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977",
+            "bytes": 1329284,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-WHT-17415"
         }
@@ -19742,9 +19742,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -19756,21 +19756,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f",
+            "bytes": 1371587,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-BLK-17415-DOT"
         }
@@ -19901,9 +19901,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -19915,21 +19915,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-CPR-17415/cap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff",
+            "bytes": 1664600,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-CPR-17415"
         }
@@ -20060,9 +20060,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -20074,21 +20074,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MGLD-17415/cap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860",
+            "bytes": 1643092,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MGLD-17415"
         }
@@ -20219,9 +20219,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -20233,21 +20233,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MSLV-17415/cap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9",
+            "bytes": 1662024,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MSLV-17415"
         }
@@ -20378,9 +20378,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -20392,21 +20392,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-PNK-17415-DOT/cap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d",
+            "bytes": 1821432,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-PNK-17415-DOT"
         }
@@ -20537,9 +20537,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -20551,21 +20551,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SBLK-17415/cap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-black-deeper.5d076755cf61.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523",
+            "bytes": 1296319,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SBLK-17415"
         }
@@ -20696,9 +20696,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -20710,21 +20710,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SGLD-17415/cap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e",
+            "bytes": 1223500,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SGLD-17415"
         }
@@ -20855,9 +20855,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -20869,21 +20869,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SSLV-17415/cap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc",
+            "bytes": 1274312,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SSLV-17415"
         }
@@ -21014,9 +21014,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -21028,21 +21028,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SLV-17415-DOT/cap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9",
+            "bytes": 1916128,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SLV-17415-DOT"
         }
@@ -21173,9 +21173,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -21187,21 +21187,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-WHT-17415/cap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977",
+            "bytes": 1329284,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-WHT-17415"
         }
@@ -23465,9 +23465,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -23479,21 +23479,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f",
+            "bytes": 1371587,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-BLK-17415-DOT"
         }
@@ -23624,9 +23624,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -23638,21 +23638,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-CPR-17415/cap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff",
+            "bytes": 1664600,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-CPR-17415"
         }
@@ -23783,9 +23783,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -23797,21 +23797,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MGLD-17415/cap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860",
+            "bytes": 1643092,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MGLD-17415"
         }
@@ -23942,9 +23942,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -23956,21 +23956,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MSLV-17415/cap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9",
+            "bytes": 1662024,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MSLV-17415"
         }
@@ -24101,9 +24101,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -24115,21 +24115,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-PNK-17415-DOT/cap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d",
+            "bytes": 1821432,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-PNK-17415-DOT"
         }
@@ -24260,9 +24260,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -24274,21 +24274,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SBLK-17415/cap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-black-deeper.5d076755cf61.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523",
+            "bytes": 1296319,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SBLK-17415"
         }
@@ -24419,9 +24419,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -24433,21 +24433,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SGLD-17415/cap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e",
+            "bytes": 1223500,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SGLD-17415"
         }
@@ -24578,9 +24578,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -24592,21 +24592,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SSLV-17415/cap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc",
+            "bytes": 1274312,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SSLV-17415"
         }
@@ -24737,9 +24737,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -24751,21 +24751,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SLV-17415-DOT/cap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9",
+            "bytes": 1916128,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SLV-17415-DOT"
         }
@@ -24896,9 +24896,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -24910,21 +24910,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-WHT-17415/cap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977",
+            "bytes": 1329284,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-WHT-17415"
         }
@@ -25055,9 +25055,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -25069,21 +25069,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f",
+            "bytes": 1371587,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-BLK-17415-DOT"
         }
@@ -25214,9 +25214,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -25228,21 +25228,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-CPR-17415/cap-7270ad7906b77fc4205880e342c82bc68caadccb2ae29b9af0a15d092fa6515d.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff",
+            "bytes": 1664600,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-CPR-17415"
         }
@@ -25373,9 +25373,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -25387,21 +25387,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MGLD-17415/cap-f8177f36068e4f7c83f1e91f552009c44e2af66a188a4607fc441a62d3c801f4.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860",
+            "bytes": 1643092,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MGLD-17415"
         }
@@ -25532,9 +25532,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -25546,21 +25546,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-MSLV-17415/cap-a94bbf2a95028c3e2736cc4a5cfe514287c53de562d81fbee336158c8910e56a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9",
+            "bytes": 1662024,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-MSLV-17415"
         }
@@ -25691,9 +25691,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -25705,21 +25705,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-PNK-17415-DOT/cap-03f38a7220376cb31d101af76bd9cbc68b23a1aa016daa8197dc46b6be79c195.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d",
+            "bytes": 1821432,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-PNK-17415-DOT"
         }
@@ -25850,9 +25850,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -25864,21 +25864,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SBLK-17415/cap-525c45718252ef61ddcd4b2ec56baefc9740ddbcbd351b0357c2d71206b8302e.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-black-deeper.5d076755cf61.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523",
+            "bytes": 1296319,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SBLK-17415"
         }
@@ -26009,9 +26009,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -26023,21 +26023,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SGLD-17415/cap-432dd7d9f1c70a58e8082e6252d14315d582afe7c5f09ba7748c3ff8166c89a8.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e",
+            "bytes": 1223500,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SGLD-17415"
         }
@@ -26168,9 +26168,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -26182,21 +26182,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SSLV-17415/cap-e5ffecd97ef82e2cd87e718b0dfc75c5911e138b43cfa23f2b456b19bab8385a.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc",
+            "bytes": 1274312,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SSLV-17415"
         }
@@ -26327,9 +26327,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -26341,21 +26341,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-SLV-17415-DOT/cap-ef0549c648a65725481f7363ade9f3c1f316f6aed43661fee0cf000e0ec0037b.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9",
+            "bytes": 1916128,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-SLV-17415-DOT"
         }
@@ -26486,9 +26486,9 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 400.02,
-            "top": 161.93646337388,
-            "right": 599.98,
+            "left": 398.6564448818898,
+            "right": 600.1514448818898,
+            "top": 167.66646337388,
             "bottom": 450.53646337388
           },
           "assembled": {
@@ -26500,21 +26500,21 @@
             "dy": -402.68
           },
           "image": {
-            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-WHT-17415/cap-8c258942c7b71da6a313a4cb0c8be9ab4c08b469af716b80592b97af3cf22fd3.png",
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg",
             "key": "",
-            "sha256": "",
-            "bytes": 0,
-            "width": 476,
-            "height": 687
+            "sha256": "89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977",
+            "bytes": 1329284,
+            "width": 1943,
+            "height": 2718
           },
           "image2x": null,
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 400.02,
-            "y": 161.93646337388,
-            "width": 199.96,
-            "height": 288.6
+            "x": 397.3964448818898,
+            "y": 166.40646337388,
+            "width": 204.01500000000001,
+            "height": 285.39
           },
           "componentId": "CMP-ROC-WHT-17415"
         }
