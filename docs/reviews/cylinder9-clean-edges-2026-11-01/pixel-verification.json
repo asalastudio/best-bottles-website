@@ -1,0 +1,15 @@
+{
+  "nativeBefore": [
+    743,
+    2116
+  ],
+  "nativeAfter": [
+    743,
+    2116
+  ],
+  "originalStructuralPixels": 766172,
+  "structuralPixelMismatch": 0,
+  "originalExteriorNonzeroAlphaPixels": 33050,
+  "remainingExteriorNonzeroAlphaPixels": 0,
+  "interiorAlphaMismatches": 0
+}

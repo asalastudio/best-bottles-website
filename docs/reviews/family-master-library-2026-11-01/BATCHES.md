@@ -9,5 +9,6 @@
 | 2026-11-01 Cylinder 9 ml 17-415 Sunburst v01 | 1 new clear body | Material candidate; +0.9% outline aspect drift, alpha fringe, no resolution gain; no active assignment | [Sunburst batch](https://drive.google.com/drive/folders/1xnEYqdc7t76QLhX25_fSpNqmerSgt9Ka) |
 | 2026-11-01 Cylinder 9 ml level-rim v02 | 1 clear body revision | Top edge leveled; full asset remains in review, no active assignment | [Level-rim batch](https://drive.google.com/drive/folders/1Ytrfo7QxC6FpxbUOEDRsKb0QeWqp3V7H) |
 | 2026-11-01 Cylinder 9 ml glass-refraction v03 | 1 clear body revision | Sharper material candidate; alpha and fit checks remain, no active assignment | [Glass-refraction batch](https://drive.google.com/drive/folders/1vTAxvhlt3h7RQTyyY14voRPjrr1sZFky) |
+| 2026-11-01 Cylinder 9 ml fixed-edge v04 | 1 clear body SVG + PNG | Fixed source geometry, cleaned fringe and PDP-size review; no active assignment | [Fixed-edge batch](https://drive.google.com/drive/folders/1qsoRIZJoStFeOF7raT5QVGB_v36rCOWv) |
 
 Approved files remain separate. New batch candidates do not replace an existing approved master. See the dated manifest for exact file hashes, source references, scale targets and approval state.
