@@ -1,0 +1,5638 @@
+{
+  "kits": {
+    "GBTulipAmb5SpryBlkMatt": {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.33,
+            "top": 363.79,
+            "right": 586.01,
+            "bottom": 711.16
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 524,
+            "height": 1048
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.33,
+            "y": 363.79,
+            "width": 173.68,
+            "height": 347.37
+          },
+          "componentId": "CMP-CAP-BLK-13-415-01"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 399.08,
+            "top": 339.9,
+            "right": 601.86,
+            "bottom": 708.07
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -757.16
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/overcap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 217,
+            "height": 394
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 399.08,
+            "y": 339.9,
+            "width": 202.78,
+            "height": 368.17
+          },
+          "componentId": "CMP-CAP-BLK-13-415-01"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.8,
+            "y": 630.0841348075867,
+            "width": 50.4,
+            "height": 400.26
+          },
+          "bounds": {
+            "left": 474.8,
+            "top": 630.0841348075867,
+            "right": 525.2,
+            "bottom": 1030.3441348075867
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "/local-kits/dip-tube-followup-2026-10-31/mechanism-tulip-5-v3.752290ff324a.png",
+            "key": "mechanism-tulip-5-v3.752290ff324a.png",
+            "sha256": "752290ff324ad2d49d4f02c995368027c855549ae5eabf62eedfdd7d27cd121b",
+            "bytes": 70984,
+            "width": 120,
+            "height": 953
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "blender-render",
+          "componentId": "CMP-CAP-BLK-13-415-01",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.32
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-BLK-13-415-01"
+        ],
+        "seatSignature": "2cf2dcac0f4299",
+        "seatDropMm": 0.67
+      }
+    },
+    "GBTulipAmb5SpryBluMatt": {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 418.08,
+            "top": 392.24,
+            "right": 582.54,
+            "bottom": 701.54
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/sprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 528,
+            "height": 993
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 418.08,
+            "y": 392.24,
+            "width": 164.46,
+            "height": 309.3
+          },
+          "componentId": "CMP-CAP-13-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 405.15,
+            "top": 340.85,
+            "right": 601.38,
+            "bottom": 709.02
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -729.66
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/overcap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 210,
+            "height": 394
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 405.15,
+            "y": 340.85,
+            "width": 196.23,
+            "height": 368.17
+          },
+          "componentId": "CMP-CAP-13-415"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.8,
+            "y": 630.0841348075867,
+            "width": 50.4,
+            "height": 400.26
+          },
+          "bounds": {
+            "left": 474.8,
+            "top": 630.0841348075867,
+            "right": 525.2,
+            "bottom": 1030.3441348075867
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "/local-kits/dip-tube-followup-2026-10-31/mechanism-tulip-5-v3.752290ff324a.png",
+            "key": "mechanism-tulip-5-v3.752290ff324a.png",
+            "sha256": "752290ff324ad2d49d4f02c995368027c855549ae5eabf62eedfdd7d27cd121b",
+            "bytes": 70984,
+            "width": 120,
+            "height": 953
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "blender-render",
+          "componentId": "CMP-CAP-13-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.32
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-13-415"
+        ],
+        "seatSignature": "aeab15e91f0b9c",
+        "seatDropMm": 0.76
+      }
+    },
+    "GBTulipAmb5SpryCuMatt": {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.66,
+            "top": 382.02,
+            "right": 585.27,
+            "bottom": 697.09
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/sprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 555,
+            "height": 1031
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.66,
+            "y": 382.02,
+            "width": 169.61,
+            "height": 315.07
+          },
+          "componentId": "CMP-SPR-MTCP-13-415-07"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 399.55,
+            "top": 341.78,
+            "right": 599.52,
+            "bottom": 710.89
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -741.75
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/overcap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 214,
+            "height": 395
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 399.55,
+            "y": 341.78,
+            "width": 199.97,
+            "height": 369.11
+          },
+          "componentId": "CMP-SPR-MTCP-13-415-07"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.8,
+            "y": 630.0841348075867,
+            "width": 50.4,
+            "height": 400.26
+          },
+          "bounds": {
+            "left": 474.8,
+            "top": 630.0841348075867,
+            "right": 525.2,
+            "bottom": 1030.3441348075867
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "/local-kits/dip-tube-followup-2026-10-31/mechanism-tulip-5-v3.752290ff324a.png",
+            "key": "mechanism-tulip-5-v3.752290ff324a.png",
+            "sha256": "752290ff324ad2d49d4f02c995368027c855549ae5eabf62eedfdd7d27cd121b",
+            "bytes": 70984,
+            "width": 120,
+            "height": 953
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "blender-render",
+          "componentId": "CMP-SPR-MTCP-13-415-07",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.32
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-SPR-MTCP-13-415-07"
+        ],
+        "seatSignature": "55439300130765",
+        "seatDropMm": 0.76
+      }
+    },
+    "GBTulipAmb5SpryGlMatt": {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 417.58,
+            "top": 388.75,
+            "right": 584.01,
+            "bottom": 698.15
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 525,
+            "height": 976
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 417.58,
+            "y": 388.75,
+            "width": 166.43,
+            "height": 309.4
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 400.95,
+            "top": 340.84,
+            "right": 600.92,
+            "bottom": 710.88
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -735.01
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 214,
+            "height": 396
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 400.95,
+            "y": 340.84,
+            "width": 199.97,
+            "height": 370.04
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-02"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.8,
+            "y": 630.0841348075867,
+            "width": 50.4,
+            "height": 400.26
+          },
+          "bounds": {
+            "left": 474.8,
+            "top": 630.0841348075867,
+            "right": 525.2,
+            "bottom": 1030.3441348075867
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "/local-kits/dip-tube-followup-2026-10-31/mechanism-tulip-5-v3.752290ff324a.png",
+            "key": "mechanism-tulip-5-v3.752290ff324a.png",
+            "sha256": "752290ff324ad2d49d4f02c995368027c855549ae5eabf62eedfdd7d27cd121b",
+            "bytes": 70984,
+            "width": 120,
+            "height": 953
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "blender-render",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.32
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-02"
+        ],
+        "seatSignature": "a1569e74063ab9",
+        "seatDropMm": 0.67
+      }
+    },
+    "GBTulipAmb5SprySlMatt": {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 410.73,
+            "top": 380.98,
+            "right": 586.76,
+            "bottom": 702.96
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/sprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 562,
+            "height": 1028
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.73,
+            "y": 380.98,
+            "width": 176.03,
+            "height": 321.98
+          },
+          "componentId": "CMP-CAP-SLV-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 398.14,
+            "top": 338.97,
+            "right": 600.92,
+            "bottom": 709.95
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -741.85
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/overcap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 217,
+            "height": 397
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 398.14,
+            "y": 338.97,
+            "width": 202.78,
+            "height": 370.98
+          },
+          "componentId": "CMP-CAP-SLV-13-415-02"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.8,
+            "y": 630.0841348075867,
+            "width": 50.4,
+            "height": 400.26
+          },
+          "bounds": {
+            "left": 474.8,
+            "top": 630.0841348075867,
+            "right": 525.2,
+            "bottom": 1030.3441348075867
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "/local-kits/dip-tube-followup-2026-10-31/mechanism-tulip-5-v3.752290ff324a.png",
+            "key": "mechanism-tulip-5-v3.752290ff324a.png",
+            "sha256": "752290ff324ad2d49d4f02c995368027c855549ae5eabf62eedfdd7d27cd121b",
+            "bytes": 70984,
+            "width": 120,
+            "height": 953
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "blender-render",
+          "componentId": "CMP-CAP-SLV-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.32
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-02"
+        ],
+        "seatSignature": "d7f44d4406d1d9",
+        "seatDropMm": 0.67
+      }
+    },
+    "GBTulipAmb5SpryBlkSh": {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412,
+            "top": 379.7,
+            "right": 584.75,
+            "bottom": 700.64
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/sprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 584,
+            "height": 1085
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412,
+            "y": 379.7,
+            "width": 172.75,
+            "height": 320.94
+          },
+          "componentId": "CMP-CAP-BLK-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 404.69,
+            "top": 341.78,
+            "right": 624.29,
+            "bottom": 709.95
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -743.13
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/overcap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 235,
+            "height": 394
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 404.69,
+            "y": 341.78,
+            "width": 219.6,
+            "height": 368.17
+          },
+          "componentId": "CMP-CAP-BLK-13-415-02"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.8,
+            "y": 630.0841348075867,
+            "width": 50.4,
+            "height": 400.26
+          },
+          "bounds": {
+            "left": 474.8,
+            "top": 630.0841348075867,
+            "right": 525.2,
+            "bottom": 1030.3441348075867
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "/local-kits/dip-tube-followup-2026-10-31/mechanism-tulip-5-v3.752290ff324a.png",
+            "key": "mechanism-tulip-5-v3.752290ff324a.png",
+            "sha256": "752290ff324ad2d49d4f02c995368027c855549ae5eabf62eedfdd7d27cd121b",
+            "bytes": 70984,
+            "width": 120,
+            "height": 953
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "blender-render",
+          "componentId": "CMP-CAP-BLK-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.32
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-BLK-13-415-02"
+        ],
+        "seatSignature": "a312073e13ef73",
+        "seatDropMm": 0.76
+      }
+    },
+    "GBTulipAmb5SpryGlSh": {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.53,
+            "top": 379.04,
+            "right": 585.41,
+            "bottom": 700.54
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/sprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 570,
+            "height": 1060
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.53,
+            "y": 379.04,
+            "width": 172.88,
+            "height": 321.5
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-03"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 402.82,
+            "top": 338.98,
+            "right": 599.05,
+            "bottom": 709.96
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -743.8
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/overcap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 210,
+            "height": 397
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 402.82,
+            "y": 338.98,
+            "width": 196.23,
+            "height": 370.98
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-03"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.8,
+            "y": 630.0841348075867,
+            "width": 50.4,
+            "height": 400.26
+          },
+          "bounds": {
+            "left": 474.8,
+            "top": 630.0841348075867,
+            "right": 525.2,
+            "bottom": 1030.3441348075867
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "/local-kits/dip-tube-followup-2026-10-31/mechanism-tulip-5-v3.752290ff324a.png",
+            "key": "mechanism-tulip-5-v3.752290ff324a.png",
+            "sha256": "752290ff324ad2d49d4f02c995368027c855549ae5eabf62eedfdd7d27cd121b",
+            "bytes": 70984,
+            "width": 120,
+            "height": 953
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "blender-render",
+          "componentId": "CMP-CAP-SGLD-13-415-03",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.32
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-03"
+        ],
+        "seatSignature": "2e6ccecc17340d",
+        "seatDropMm": 0.76
+      }
+    },
+    "GBTulipAmb5SprySlSh": {
+      "sku": "GBTulipAmb5SprySlSh",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.65,
+            "top": 380.9,
+            "right": 585.53,
+            "bottom": 702.4
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/sprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 570,
+            "height": 1060
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.65,
+            "y": 380.9,
+            "width": 172.88,
+            "height": 321.5
+          },
+          "componentId": "CMP-CAP-SLV-13-415-03"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 406.09,
+            "top": 342.72,
+            "right": 598.59,
+            "bottom": 709.96
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -741.94
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/overcap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 206,
+            "height": 393
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 406.09,
+            "y": 342.72,
+            "width": 192.5,
+            "height": 367.24
+          },
+          "componentId": "CMP-CAP-SLV-13-415-03"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.8,
+            "y": 630.0841348075867,
+            "width": 50.4,
+            "height": 400.26
+          },
+          "bounds": {
+            "left": 474.8,
+            "top": 630.0841348075867,
+            "right": 525.2,
+            "bottom": 1030.3441348075867
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -388.88
+          },
+          "image": {
+            "url": "/local-kits/dip-tube-followup-2026-10-31/mechanism-tulip-5-v3.752290ff324a.png",
+            "key": "mechanism-tulip-5-v3.752290ff324a.png",
+            "sha256": "752290ff324ad2d49d4f02c995368027c855549ae5eabf62eedfdd7d27cd121b",
+            "bytes": 70984,
+            "width": 120,
+            "height": 953
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "blender-render",
+          "componentId": "CMP-CAP-SLV-13-415-03",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.32
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-03"
+        ],
+        "seatSignature": "6c8fc99614e363",
+        "seatDropMm": 0.76
+      }
+    },
+    "GBTulipAmb5MtlRollBlkDot": {
+      "sku": "GBTulipAmb5MtlRollBlkDot",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 433.65,
+            "top": 460.41,
+            "right": 568.21,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-MtlRollon/roller-53cf968898a4e0df3ef88e45ed8557bc355e7fd0d82a8ab903b6fc6c185c13e0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 144,
+            "height": 122
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 433.65,
+            "y": 460.41,
+            "width": 134.56,
+            "height": 114
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 404.93,
+            "top": 444.17,
+            "right": 594.2,
+            "bottom": 705.84
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -301.84
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-BLK-13415-DOT/cap-1600b3dbeb4e0f59186934bb7a5fde2388437fdf0c5b1e12daf5a5a64548f6ba.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 217,
+            "height": 300
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 404.93,
+            "y": 444.17,
+            "width": 189.27,
+            "height": 261.67
+          },
+          "componentId": "CMP-ROC-BLK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-BLK-13415-DOT"
+        ],
+        "seatSignature": "f167e9e0031379",
+        "seatDropMm": 0.67
+      }
+    },
+    "GBTulipAmb5MtlRollCuMatt": {
+      "sku": "GBTulipAmb5MtlRollCuMatt",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 433.65,
+            "top": 460.41,
+            "right": 568.21,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-MtlRollon/roller-53cf968898a4e0df3ef88e45ed8557bc355e7fd0d82a8ab903b6fc6c185c13e0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 144,
+            "height": 122
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 433.65,
+            "y": 460.41,
+            "width": 134.56,
+            "height": 114
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 403.28,
+            "top": 419.34,
+            "right": 597.65,
+            "bottom": 708.09
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -304.09
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MCPR-13415/cap-bb805dd4a697892dc283552e9d7b09c75af970f33af7d15bcaeb7ba84eb87911.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 208,
+            "height": 309
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 403.28,
+            "y": 419.34,
+            "width": 194.37,
+            "height": 288.75
+          },
+          "componentId": "CMP-ROC-MCPR-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-MCPR-13415"
+        ],
+        "seatSignature": "caa942040236af",
+        "seatDropMm": 0.76
+      }
+    },
+    "GBTulipAmb5MtlRollGlMatt": {
+      "sku": "GBTulipAmb5MtlRollGlMatt",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 433.65,
+            "top": 460.41,
+            "right": 568.21,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-MtlRollon/roller-53cf968898a4e0df3ef88e45ed8557bc355e7fd0d82a8ab903b6fc6c185c13e0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 144,
+            "height": 122
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 433.65,
+            "y": 460.41,
+            "width": 134.56,
+            "height": 114
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 400.59,
+            "top": 427.37,
+            "right": 598.5,
+            "bottom": 709.96
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -305.96
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MGLD-13415/cap-9b832eb09c64205073176388c4d434fa40587551d5aa4aa9e7f614a08761b2a1.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 215,
+            "height": 307
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 400.59,
+            "y": 427.37,
+            "width": 197.91,
+            "height": 282.59
+          },
+          "componentId": "CMP-ROC-MGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-MGLD-13415"
+        ],
+        "seatSignature": "48e9c1ea103ee1",
+        "seatDropMm": 0.86
+      }
+    },
+    "GBTulipAmb5MtlRollSlMatt": {
+      "sku": "GBTulipAmb5MtlRollSlMatt",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 433.65,
+            "top": 460.41,
+            "right": 568.21,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-MtlRollon/roller-53cf968898a4e0df3ef88e45ed8557bc355e7fd0d82a8ab903b6fc6c185c13e0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 144,
+            "height": 122
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 433.65,
+            "y": 460.41,
+            "width": 134.56,
+            "height": 114
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 401.51,
+            "top": 432.93,
+            "right": 597.56,
+            "bottom": 710.9
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -306.9
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MSLV-13415/cap-c535b2709d5e55c210eb51b9c0aa8b0a08ed45124355251229ad09eeb403dd82.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 213,
+            "height": 302
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 401.51,
+            "y": 432.93,
+            "width": 196.05,
+            "height": 277.97
+          },
+          "componentId": "CMP-ROC-MSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-MSLV-13415"
+        ],
+        "seatSignature": "9905e1e71f2218",
+        "seatDropMm": 0.95
+      }
+    },
+    "GBTulipAmb5MtlRollPinkDot": {
+      "sku": "GBTulipAmb5MtlRollPinkDot",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 433.65,
+            "top": 460.41,
+            "right": 568.21,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-MtlRollon/roller-53cf968898a4e0df3ef88e45ed8557bc355e7fd0d82a8ab903b6fc6c185c13e0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 144,
+            "height": 122
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 433.65,
+            "y": 460.41,
+            "width": 134.56,
+            "height": 114
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 403.05,
+            "top": 440.85,
+            "right": 596.96,
+            "bottom": 708.71
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -304.71
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-PNK-13415-DOT/cap-1bbb0de407e4d8d1eb779bfabc4bf4f1c02546ac9a27d59ffa413d014e682bca.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 215,
+            "height": 297
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 403.05,
+            "y": 440.85,
+            "width": 193.91,
+            "height": 267.86
+          },
+          "componentId": "CMP-ROC-PNK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-PNK-13415-DOT"
+        ],
+        "seatSignature": "61a90cbc1b98e1",
+        "seatDropMm": 0.67
+      }
+    },
+    "GBTulipAmb5MtlRollBlkSh": {
+      "sku": "GBTulipAmb5MtlRollBlkSh",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 433.65,
+            "top": 460.41,
+            "right": 568.21,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-MtlRollon/roller-53cf968898a4e0df3ef88e45ed8557bc355e7fd0d82a8ab903b6fc6c185c13e0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 144,
+            "height": 122
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 433.65,
+            "y": 460.41,
+            "width": 134.56,
+            "height": 114
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 401.66,
+            "top": 430.69,
+            "right": 600.15,
+            "bottom": 707.67
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -303.67
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SBLK-13415/cap-7228d1ea9305176686d176e127e03e21b7156167d8fdc268233e0ba054661a69.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 220,
+            "height": 307
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 401.66,
+            "y": 430.69,
+            "width": 198.49,
+            "height": 276.98
+          },
+          "componentId": "CMP-ROC-SBLK-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SBLK-13415"
+        ],
+        "seatSignature": "45afa2c7050a14",
+        "seatDropMm": 0.57
+      }
+    },
+    "GBTulipAmb5MtlRollGlSh": {
+      "sku": "GBTulipAmb5MtlRollGlSh",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 433.65,
+            "top": 460.41,
+            "right": 568.21,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-MtlRollon/roller-53cf968898a4e0df3ef88e45ed8557bc355e7fd0d82a8ab903b6fc6c185c13e0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 144,
+            "height": 122
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 433.65,
+            "y": 460.41,
+            "width": 134.56,
+            "height": 114
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 401.62,
+            "top": 422.29,
+            "right": 599.28,
+            "bottom": 707.9
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -303.9
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SGLD-13415/cap-32efebc48a1661a9be5081b4c6b6eea893cbfeb2b520f38f412e3ae6f9784902.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 218,
+            "height": 315
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 401.62,
+            "y": 422.29,
+            "width": 197.66,
+            "height": 285.61
+          },
+          "componentId": "CMP-ROC-SGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SGLD-13415"
+        ],
+        "seatSignature": "41c325c713010c",
+        "seatDropMm": 0.76
+      }
+    },
+    "GBTulipAmb5MtlRollSlSh": {
+      "sku": "GBTulipAmb5MtlRollSlSh",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 433.65,
+            "top": 460.41,
+            "right": 568.21,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-MtlRollon/roller-53cf968898a4e0df3ef88e45ed8557bc355e7fd0d82a8ab903b6fc6c185c13e0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 144,
+            "height": 122
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 433.65,
+            "y": 460.41,
+            "width": 134.56,
+            "height": 114
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 401.51,
+            "top": 424.6,
+            "right": 599.42,
+            "bottom": 709.96
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -305.96
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SSLV-13415/cap-47af502b49bb741db747fd15afd403b51715ddc42a89da0a6d27dbf386fe1706.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 215,
+            "height": 310
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 401.51,
+            "y": 424.6,
+            "width": 197.91,
+            "height": 285.36
+          },
+          "componentId": "CMP-ROC-SSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SSLV-13415"
+        ],
+        "seatSignature": "d33f3bda151c61",
+        "seatDropMm": 0.86
+      }
+    },
+    "GBTulipAmb5MtlRollSlDot": {
+      "sku": "GBTulipAmb5MtlRollSlDot",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 433.65,
+            "top": 460.41,
+            "right": 568.21,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-MtlRollon/roller-53cf968898a4e0df3ef88e45ed8557bc355e7fd0d82a8ab903b6fc6c185c13e0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 144,
+            "height": 122
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 433.65,
+            "y": 460.41,
+            "width": 134.56,
+            "height": 114
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 404.08,
+            "top": 442.14,
+            "right": 595.04,
+            "bottom": 708.6
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -304.6
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SLV-13415-DOT/cap-1f928aee0555fa6fda688ec546e7c354868af4a1fde46c9dbc64d4c39e3af37b.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 215,
+            "height": 300
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 404.08,
+            "y": 442.14,
+            "width": 190.96,
+            "height": 266.46
+          },
+          "componentId": "CMP-ROC-SLV-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SLV-13415-DOT"
+        ],
+        "seatSignature": "f2a4a47b11679e",
+        "seatDropMm": 0.67
+      }
+    },
+    "GBTulipAmb5RollBlkDot": {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 437.39,
+            "top": 463.21,
+            "right": 564.48,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-PlsticRollon/roller-25a3b7198c2449e8200d03f748fbf04a25c44265cfd3be02030a8b4e595d3e7a.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 136,
+            "height": 119
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 437.39,
+            "y": 463.21,
+            "width": 127.09,
+            "height": 111.2
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 404.93,
+            "top": 444.17,
+            "right": 594.2,
+            "bottom": 705.84
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -299.04
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-BLK-13415-DOT/cap-1600b3dbeb4e0f59186934bb7a5fde2388437fdf0c5b1e12daf5a5a64548f6ba.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 217,
+            "height": 300
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 404.93,
+            "y": 444.17,
+            "width": 189.27,
+            "height": 261.67
+          },
+          "componentId": "CMP-ROC-BLK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-BLK-13415-DOT"
+        ],
+        "seatSignature": "f167e9e0031379",
+        "seatDropMm": 0.67
+      }
+    },
+    "GBTulipAmb5RollCuMatt": {
+      "sku": "GBTulipAmb5RollCuMatt",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 437.39,
+            "top": 463.21,
+            "right": 564.48,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-PlsticRollon/roller-25a3b7198c2449e8200d03f748fbf04a25c44265cfd3be02030a8b4e595d3e7a.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 136,
+            "height": 119
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 437.39,
+            "y": 463.21,
+            "width": 127.09,
+            "height": 111.2
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 403.28,
+            "top": 419.34,
+            "right": 597.65,
+            "bottom": 708.09
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -301.29
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MCPR-13415/cap-bb805dd4a697892dc283552e9d7b09c75af970f33af7d15bcaeb7ba84eb87911.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 208,
+            "height": 309
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 403.28,
+            "y": 419.34,
+            "width": 194.37,
+            "height": 288.75
+          },
+          "componentId": "CMP-ROC-MCPR-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-MCPR-13415"
+        ],
+        "seatSignature": "caa942040236af",
+        "seatDropMm": 0.76
+      }
+    },
+    "GBTulipAmb5RollGlMatt": {
+      "sku": "GBTulipAmb5RollGlMatt",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 437.39,
+            "top": 463.21,
+            "right": 564.48,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-PlsticRollon/roller-25a3b7198c2449e8200d03f748fbf04a25c44265cfd3be02030a8b4e595d3e7a.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 136,
+            "height": 119
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 437.39,
+            "y": 463.21,
+            "width": 127.09,
+            "height": 111.2
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 400.59,
+            "top": 427.37,
+            "right": 598.5,
+            "bottom": 709.96
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -303.16
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MGLD-13415/cap-9b832eb09c64205073176388c4d434fa40587551d5aa4aa9e7f614a08761b2a1.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 215,
+            "height": 307
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 400.59,
+            "y": 427.37,
+            "width": 197.91,
+            "height": 282.59
+          },
+          "componentId": "CMP-ROC-MGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-MGLD-13415"
+        ],
+        "seatSignature": "48e9c1ea103ee1",
+        "seatDropMm": 0.86
+      }
+    },
+    "GBTulipAmb5RollSlMatt": {
+      "sku": "GBTulipAmb5RollSlMatt",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 437.39,
+            "top": 463.21,
+            "right": 564.48,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-PlsticRollon/roller-25a3b7198c2449e8200d03f748fbf04a25c44265cfd3be02030a8b4e595d3e7a.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 136,
+            "height": 119
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 437.39,
+            "y": 463.21,
+            "width": 127.09,
+            "height": 111.2
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 401.51,
+            "top": 432.93,
+            "right": 597.56,
+            "bottom": 710.9
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -304.1
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MSLV-13415/cap-c535b2709d5e55c210eb51b9c0aa8b0a08ed45124355251229ad09eeb403dd82.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 213,
+            "height": 302
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 401.51,
+            "y": 432.93,
+            "width": 196.05,
+            "height": 277.97
+          },
+          "componentId": "CMP-ROC-MSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-MSLV-13415"
+        ],
+        "seatSignature": "9905e1e71f2218",
+        "seatDropMm": 0.95
+      }
+    },
+    "GBTulipAmb5RollPinkDot": {
+      "sku": "GBTulipAmb5RollPinkDot",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 437.39,
+            "top": 463.21,
+            "right": 564.48,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-PlsticRollon/roller-25a3b7198c2449e8200d03f748fbf04a25c44265cfd3be02030a8b4e595d3e7a.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 136,
+            "height": 119
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 437.39,
+            "y": 463.21,
+            "width": 127.09,
+            "height": 111.2
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 403.05,
+            "top": 440.85,
+            "right": 596.96,
+            "bottom": 708.71
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -301.91
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-PNK-13415-DOT/cap-1bbb0de407e4d8d1eb779bfabc4bf4f1c02546ac9a27d59ffa413d014e682bca.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 215,
+            "height": 297
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 403.05,
+            "y": 440.85,
+            "width": 193.91,
+            "height": 267.86
+          },
+          "componentId": "CMP-ROC-PNK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-PNK-13415-DOT"
+        ],
+        "seatSignature": "61a90cbc1b98e1",
+        "seatDropMm": 0.67
+      }
+    },
+    "GBTulipAmb5RollBlkSh": {
+      "sku": "GBTulipAmb5RollBlkSh",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 437.39,
+            "top": 463.21,
+            "right": 564.48,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-PlsticRollon/roller-25a3b7198c2449e8200d03f748fbf04a25c44265cfd3be02030a8b4e595d3e7a.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 136,
+            "height": 119
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 437.39,
+            "y": 463.21,
+            "width": 127.09,
+            "height": 111.2
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 401.66,
+            "top": 430.69,
+            "right": 600.15,
+            "bottom": 707.67
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -300.87
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SBLK-13415/cap-7228d1ea9305176686d176e127e03e21b7156167d8fdc268233e0ba054661a69.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 220,
+            "height": 307
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 401.66,
+            "y": 430.69,
+            "width": 198.49,
+            "height": 276.98
+          },
+          "componentId": "CMP-ROC-SBLK-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SBLK-13415"
+        ],
+        "seatSignature": "45afa2c7050a14",
+        "seatDropMm": 0.57
+      }
+    },
+    "GBTulipAmb5RollGlSh": {
+      "sku": "GBTulipAmb5RollGlSh",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 437.39,
+            "top": 463.21,
+            "right": 564.48,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-PlsticRollon/roller-25a3b7198c2449e8200d03f748fbf04a25c44265cfd3be02030a8b4e595d3e7a.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 136,
+            "height": 119
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 437.39,
+            "y": 463.21,
+            "width": 127.09,
+            "height": 111.2
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 401.62,
+            "top": 422.29,
+            "right": 599.28,
+            "bottom": 707.9
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -301.1
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SGLD-13415/cap-32efebc48a1661a9be5081b4c6b6eea893cbfeb2b520f38f412e3ae6f9784902.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 218,
+            "height": 315
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 401.62,
+            "y": 422.29,
+            "width": 197.66,
+            "height": 285.61
+          },
+          "componentId": "CMP-ROC-SGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SGLD-13415"
+        ],
+        "seatSignature": "41c325c713010c",
+        "seatDropMm": 0.76
+      }
+    },
+    "GBTulipAmb5RollSlSh": {
+      "sku": "GBTulipAmb5RollSlSh",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 437.39,
+            "top": 463.21,
+            "right": 564.48,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-PlsticRollon/roller-25a3b7198c2449e8200d03f748fbf04a25c44265cfd3be02030a8b4e595d3e7a.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 136,
+            "height": 119
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 437.39,
+            "y": 463.21,
+            "width": 127.09,
+            "height": 111.2
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 401.51,
+            "top": 424.6,
+            "right": 599.42,
+            "bottom": 709.96
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -303.16
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SSLV-13415/cap-47af502b49bb741db747fd15afd403b51715ddc42a89da0a6d27dbf386fe1706.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 215,
+            "height": 310
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 401.51,
+            "y": 424.6,
+            "width": 197.91,
+            "height": 285.36
+          },
+          "componentId": "CMP-ROC-SSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SSLV-13415"
+        ],
+        "seatSignature": "d33f3bda151c61",
+        "seatDropMm": 0.86
+      }
+    },
+    "GBTulipAmb5RollSlDot": {
+      "sku": "GBTulipAmb5RollSlDot",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 437.39,
+            "top": 463.21,
+            "right": 564.48,
+            "bottom": 574.41
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -32.41
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-PlsticRollon/roller-25a3b7198c2449e8200d03f748fbf04a25c44265cfd3be02030a8b4e595d3e7a.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 136,
+            "height": 119
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 437.39,
+            "y": 463.21,
+            "width": 127.09,
+            "height": 111.2
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 404.08,
+            "top": 442.14,
+            "right": 595.04,
+            "bottom": 708.6
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -301.8
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SLV-13415-DOT/cap-1f928aee0555fa6fda688ec546e7c354868af4a1fde46c9dbc64d4c39e3af37b.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 215,
+            "height": 300
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 404.08,
+            "y": 442.14,
+            "width": 190.96,
+            "height": 266.46
+          },
+          "componentId": "CMP-ROC-SLV-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SLV-13415-DOT"
+        ],
+        "seatSignature": "f2a4a47b11679e",
+        "seatDropMm": 0.67
+      }
+    },
+    "GBTulipAmb5BlkSht": {
+      "sku": "GBTulipAmb5BlkSht",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.53,
+            "top": 550.65,
+            "right": 588.59,
+            "bottom": 661.54
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -119.54
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 624,
+            "height": 393
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.53,
+            "y": 550.65,
+            "width": 176.06,
+            "height": 110.89
+          },
+          "componentId": "CMP-CAP-BLK-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-BLK-S-13-415"
+        ],
+        "seatSignature": "635ae2121e094d",
+        "seatDropMm": 0
+      }
+    },
+    "GBTulipAmb5CuSht": {
+      "sku": "GBTulipAmb5CuSht",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 416.03,
+            "top": 504.97,
+            "right": 584.4,
+            "bottom": 685.93
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -143.93
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-MTCP-S-13-415/cap-32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.03,
+            "y": 504.97,
+            "width": 168.37,
+            "height": 180.96
+          },
+          "componentId": "CMP-CLS-MTCP-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CLS-MTCP-S-13-415"
+        ],
+        "seatSignature": "73a0740b1a876a",
+        "seatDropMm": 0
+      }
+    },
+    "GBTulipAmb5GlMattSht": {
+      "sku": "GBTulipAmb5GlMattSht",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 416.03,
+            "top": 504.97,
+            "right": 584.4,
+            "bottom": 685.93
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -143.93
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-MTGD-S-13-415/cap-fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.03,
+            "y": 504.97,
+            "width": 168.37,
+            "height": 180.96
+          },
+          "componentId": "CMP-CLS-MTGD-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CLS-MTGD-S-13-415"
+        ],
+        "seatSignature": "0bbcaeab07ebde",
+        "seatDropMm": 0
+      }
+    },
+    "GBTulipAmb5SlMattSht": {
+      "sku": "GBTulipAmb5SlMattSht",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 416.03,
+            "top": 504.97,
+            "right": 584.4,
+            "bottom": 685.93
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -143.93
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-MTSL-S-13-415/cap-c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.03,
+            "y": 504.97,
+            "width": 168.37,
+            "height": 180.96
+          },
+          "componentId": "CMP-CLS-MTSL-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CLS-MTSL-S-13-415"
+        ],
+        "seatSignature": "5a5ef918043ead",
+        "seatDropMm": 0
+      }
+    },
+    "GBTulipAmb5BlkShSht": {
+      "sku": "GBTulipAmb5BlkShSht",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.61,
+            "top": 504.97,
+            "right": 584.4,
+            "bottom": 685.93
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -143.93
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SBLK-13-415/cap-672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 402,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.61,
+            "y": 504.97,
+            "width": 168.79,
+            "height": 180.96
+          },
+          "componentId": "CMP-CAP-SBLK-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SBLK-13-415"
+        ],
+        "seatSignature": "77b3198b0c6342",
+        "seatDropMm": 0
+      }
+    },
+    "GBTulipAmb5GlSht": {
+      "sku": "GBTulipAmb5GlSht",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.61,
+            "top": 504.55,
+            "right": 584.4,
+            "bottom": 685.93
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -143.93
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-SHGD-S-13-415/cap-1336d3427f5b4014f74a933ee3a9302e9c14adff553e127df2ea2b7f809c2064.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 402,
+            "height": 432
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.61,
+            "y": 504.55,
+            "width": 168.79,
+            "height": 181.38
+          },
+          "componentId": "CMP-CLS-SHGD-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CLS-SHGD-S-13-415"
+        ],
+        "seatSignature": "8ec888b009ff6d",
+        "seatDropMm": 0
+      }
+    },
+    "GBTulipAmb5SlSht": {
+      "sku": "GBTulipAmb5SlSht",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.61,
+            "top": 504.55,
+            "right": 584.4,
+            "bottom": 685.93
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -143.93
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-SHSL-S-13-415-02/cap-ad476da805a7e2287f6ba115876b26ca13c96f290cb2ae72b4c25e81fe7b700f.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 402,
+            "height": 432
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.61,
+            "y": 504.55,
+            "width": 168.79,
+            "height": 181.38
+          },
+          "componentId": "CMP-CLS-SHSL-S-13-415-02"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CLS-SHSL-S-13-415-02"
+        ],
+        "seatSignature": "20531b8c0fc38f",
+        "seatDropMm": 0
+      }
+    },
+    "GBTulipAmb5WhtSht": {
+      "sku": "GBTulipAmb5WhtSht",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 411.82,
+            "top": 560.56,
+            "right": 589.31,
+            "bottom": 669.26
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -127.26
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 627,
+            "height": 384
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.82,
+            "y": 560.56,
+            "width": 177.49,
+            "height": 108.7
+          },
+          "componentId": "CMP-CAP-WHT-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-WHT-S-13-415"
+        ],
+        "seatSignature": "6554c29201ae81",
+        "seatDropMm": 0
+      }
+    },
+    "GBTulipAmb5Gl": {
+      "sku": "GBTulipAmb5Gl",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 405.33,
+            "top": 426.23,
+            "right": 595.07,
+            "bottom": 705.59
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -163.59
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-01/cap-6c93eef5b547acf513950ef80da416fd024d75dab75a771524d07c23caf9c1a6.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 470,
+            "height": 692
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 405.33,
+            "y": 426.23,
+            "width": 189.74,
+            "height": 279.36
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-01"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-01"
+        ],
+        "seatSignature": "569a7c2f197d74",
+        "seatDropMm": 0.76
+      }
+    },
+    "GBTulipAmb5Sl": {
+      "sku": "GBTulipAmb5Sl",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5736998175182,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.58,
+            "y": 527.3,
+            "width": 325.93,
+            "height": 558.15
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 405.33,
+            "top": 426.63,
+            "right": 595.07,
+            "bottom": 705.99
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -163.99
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-01/cap-5fd070a7a5870e657d256e8f240c020ef06187f40a8ff0ce8270a9e8b0bcd7e2.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 470,
+            "height": 692
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 405.33,
+            "y": 426.63,
+            "width": 189.74,
+            "height": 279.36
+          },
+          "componentId": "CMP-CAP-SLV-13-415-01"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-01"
+        ],
+        "seatSignature": "8fdb1f410d4104",
+        "seatDropMm": 0.76
+      }
+    }
+  }
+}

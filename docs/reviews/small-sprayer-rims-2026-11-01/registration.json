@@ -1,0 +1,78 @@
+{
+  "version": "b20a905a6824",
+  "changes": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "before": "/local-kits/small-sprayers-2026-10-31/glass-3.3-gpt-neck-v1-c90d9f27720d.png",
+      "after": "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "before": "/local-kits/small-sprayers-2026-10-31/glass-3.3-gpt-neck-v1-c90d9f27720d.png",
+      "after": "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "before": "/local-kits/small-sprayers-2026-10-31/glass-4-gpt-neck-v1-506f69a26228.png",
+      "after": "/local-kits/small-sprayer-rims-2026-11-01/glass-4-continuous.e6f9b8379296.svg"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "before": "/local-kits/small-sprayers-2026-10-31/glass-4-gpt-neck-v1-506f69a26228.png",
+      "after": "/local-kits/small-sprayer-rims-2026-11-01/glass-4-continuous.e6f9b8379296.svg"
+    }
+  ],
+  "sources": [
+    {
+      "size": "3.3",
+      "path": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-29329d38-3ef2-4d15-9021-9a9cde35125a.png",
+      "source": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/small-sprayers-2026-10-31/glass-3.3-gpt-neck-v1-c90d9f27720d.png",
+      "prompt": "Repair this isolated 3.3 ml clear glass mini fine mist bottle BODY ONLY. No sprayer, tube or cap. Image 1 is the EXACT current silhouette and framing to preserve: 37 mm total height, 14 mm body diameter, short smooth 12mm neck with one broad rounded top lip, no screw threads. Image 2 confirms the continuous native geometry. The visible defect in image 1 is an artificial doubled black elliptical ring and a sharp compositing seam across the shoulder below a pale pasted-on neck. Remove that defect by rendering the neck, rounded shoulders and cylinder as ONE continuous realistic clear glass vessel with continuous studio reflections and plausible glass wall refraction. No detached ghost rim, no dark transverse ring inside the shoulder, no pasted-on pale neck. Preserve the exact outline, short lip/neck height, shoulder position, cylinder proportions, base thickness, straight-on camera, bottle size within canvas and margin placement. Sharp premium studio photograph, coherent softbox reflections, no haze, no blur or stretched rectangular paper reflections. Flat level top lip, symmetric neck and round base. Fully transparent background including outside the vessel. One bare bottle only. No words, no labels, no artificial seam.",
+      "registration": {
+        "rawDimensions": [
+          784,
+          2007
+        ],
+        "sourceBox": {
+          "n": 1360595,
+          "left": 27,
+          "top": 33,
+          "width": 731,
+          "height": 1945
+        },
+        "target": {
+          "x": 28.000000000000117,
+          "y": 30.000000000000004,
+          "w": 703.9999999999999,
+          "h": 1882
+        }
+      }
+    },
+    {
+      "size": "4",
+      "path": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-26467cb5-f1d8-44ba-9736-11d81c1eeb83.png",
+      "source": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/small-sprayers-2026-10-31/glass-4-gpt-neck-v1-506f69a26228.png",
+      "prompt": "Repair this isolated 4 ml clear glass mini fine mist bottle BODY ONLY. No sprayer, tube or cap. Image 1 is the EXACT current silhouette and framing to preserve: 49 mm total height, 14 mm body diameter, short smooth 12mm neck with one broad rounded top lip, no screw threads. Image 2 confirms the continuous native geometry. The visible defect in image 1 is an artificial doubled black elliptical ring and a sharp compositing seam across the shoulder below a pale pasted-on neck. Remove that defect by rendering the neck, rounded shoulders and cylinder as ONE continuous realistic clear glass vessel with continuous studio reflections and plausible glass wall refraction. No detached ghost rim, no dark transverse ring inside the shoulder, no pasted-on pale neck. Preserve the exact outline, short lip/neck height, shoulder position, cylinder proportions, base thickness, straight-on camera, bottle size within canvas and margin placement. Sharp premium studio photograph, coherent softbox reflections, no haze, no blur or stretched rectangular paper reflections. Flat level top lip, symmetric neck and round base. Fully transparent background including outside the vessel. One bare bottle only. No words, no labels, no artificial seam.",
+      "registration": {
+        "rawDimensions": [
+          724,
+          2171
+        ],
+        "sourceBox": {
+          "n": 1202843,
+          "left": 64,
+          "top": 24,
+          "width": 596,
+          "height": 2127
+        },
+        "target": {
+          "x": 28.000000000000117,
+          "y": 28.000000000000117,
+          "w": 703.9999999999999,
+          "h": 2482
+        }
+      }
+    }
+  ],
+  "geometry": "Original continuous native-profile alpha outline, dimensions, box, bounds, sizing and anchors retained. RGB regenerated continuously; no old RGB glass/neck seam composited."
+}

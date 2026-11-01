@@ -1,0 +1,166 @@
+{
+  "rows": {
+    "GBTulipAmb5SpryBlkSh": {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "familyId": "register:tulip-5ml-13-415|Amber",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 693.5694444444445,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+            "key": "tulip-5ml-13-415-amber.1987a24ec5e9.png",
+            "sha256": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+            "bytes": 1850139,
+            "width": 1280,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 339.5833333333333,
+            "y": 527.2962962962963,
+            "width": 325.925925925926,
+            "height": 558.1481481481482
+          },
+          "componentId": null
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-5ml-13-415",
+        "plateKey": "tulip-5ml-13-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-BLK-13-415-02"
+        ],
+        "seatSignature": "a312073e13ef73",
+        "seatDropMm": 0.76
+      }
+    },
+    "GBTulip6SpryBlkSh": {
+      "sku": "GBTulip6SpryBlkSh",
+      "familyId": "register:tulip-6ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 688.1,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 379.29,
+            "right": 620.71,
+            "top": 566,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+            "key": "tulip-6ml-13-415-clear.545e756d1bdb.png",
+            "sha256": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+            "bytes": 1024156,
+            "width": 1248,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 341.6,
+            "y": 528.6846153846154,
+            "width": 316.79999999999995,
+            "height": 556.4307692307692
+          },
+          "componentId": null
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "tulip-6ml-13-415",
+        "plateKey": "tulip-6ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 566,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-BLK-13-415-02"
+        ],
+        "seatSignature": "3c0e49fa15b3a7",
+        "seatDropMm": 0.57
+      }
+    }
+  }
+}
