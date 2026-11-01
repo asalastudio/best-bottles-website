@@ -1,0 +1,354 @@
+{
+  "version": "6dad2178d891",
+  "changed": [
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattCu",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattSl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylAmb9MtlRollPnkDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShBlk",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnGl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnSl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylAmb9MtlRollSlDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylAmb9MtlRollWht",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCyl9MtlRollMattCu",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCyl9MtlRollShBlk",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCyl9MtlRollShnSl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCyl9MtlRollSlDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCyl9MtlRollWht",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattCu",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattGl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattSl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylBlu9MtlRollPnkDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShBlk",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnSl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylBlu9MtlRollSlDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylBlu9MtlRollWht",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattCu",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattGl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattSl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylFrst9MtlRollPnkDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShBlk",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnGl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnSl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylFrst9MtlRollSlDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylFrst9MtlRollWht",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattCu",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattGl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollPnkDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShBlk",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnGl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnSl",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollSlDot",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollWht",
+      "loweredCanvasPx": 4.490000000000009,
+      "loweredMm": 0.4276190476190485
+    }
+  ],
+  "unchanged": [
+    "GBCylAmb9SpryBlk",
+    "GBCylAmb9SpryGl",
+    "GBCylAmb9SpryMattSl",
+    "GBCylAmb9SpryRd",
+    "GBCylAmb9SpryShSl",
+    "GBCylAmb9SpryTur",
+    "LBCylAmb9LtnBlk",
+    "LBCylAmb9LtnGl",
+    "LBCylAmb9LtnMtSl",
+    "GBCylAmb9RollBlkDot",
+    "GBCylAmb9RollMattCu",
+    "GBCylAmb9RollMattGl",
+    "GBCylAmb9RollMattSl",
+    "GBCylAmb9RollPnkDot",
+    "GBCylAmb9RollShBlk",
+    "GBCylAmb9RollShnGl",
+    "GBCylAmb9RollShnSl",
+    "GBCylAmb9RollSlDot",
+    "GBCylAmb9RollWht",
+    "GBCyl9SpryBlk",
+    "GBCyl9SpryGl",
+    "GBCyl9SpryMattSl",
+    "GBCyl9SpryRd",
+    "GBCyl9SpryShSl",
+    "GBCyl9SpryTur",
+    "LBCyl9LtnBlk",
+    "LBCyl9LtnGl",
+    "LBCyl9LtnMtSl",
+    "GBCyl9RollBlkDot",
+    "GBCyl9RollMattCu",
+    "GBCyl9RollMattGl",
+    "GBCyl9RollMattSl",
+    "GBCyl9RollPnkDot",
+    "GBCyl9RollShBlk",
+    "GBCyl9RollShnGl",
+    "GBCyl9RollShnSl",
+    "GBCyl9RollSlDot",
+    "GBCyl9RollWht",
+    "GBCylBlu9SpryBlk",
+    "GBCylBlu9SpryGl",
+    "GBCylBlu9SpryMattSl",
+    "GBCylBlu9SpryRd",
+    "GBCylBlu9SpryShSl",
+    "GBCylBlu9SpryTur",
+    "LBCylBlu9LtnBlk",
+    "LBCylBlu9LtnGl",
+    "LBCylBlu9LtnMattSl",
+    "GBCylBlu9RollBlkDot",
+    "GBCylBlu9RollMattCu",
+    "GBCylBlu9RollMattGl",
+    "GBCylBlu9RollMattSl",
+    "GBCylBlu9RollPnkDot",
+    "GBCylBlu9RollShBlk",
+    "GBCylBlu9RollShnGl",
+    "GBCylBlu9RollShnSl",
+    "GBCylBlu9RollSlDot",
+    "GBCylBlu9RollWht",
+    "GBCylFrst9SpryBlk",
+    "GBCylFrst9SpryGl",
+    "GBCylFrst9SpryMattSl",
+    "GBCylFrst9SpryRd",
+    "GBCylFrst9SpryShSl",
+    "GBCylFrst9SpryTur",
+    "LBCylFrst9LtnBlk",
+    "LBCylFrst9LtnGl",
+    "LBCylFrst9LtnMtSl",
+    "GBCylFrst9RollBlkDot",
+    "GBCylFrst9RollMattCu",
+    "GBCylFrst9RollMattGl",
+    "GBCylFrst9RollMattSl",
+    "GBCylFrst9RollPnkDot",
+    "GBCylFrst9RollShBlk",
+    "GBCylFrst9RollShnGl",
+    "GBCylFrst9RollShnSl",
+    "GBCylFrst9RollSlDot",
+    "GBCylFrst9RollWht",
+    "GBCylSwrl9SpryBlk",
+    "GBCylSwrl9SpryGl",
+    "GBCylSwrl9SpryMattSl",
+    "GBCylSwrl9SpryRd",
+    "GBCylSwrl9SpryShSl",
+    "GBCylSwrl9SpryTur",
+    "LBCylSwrl9LtnBlk",
+    "LBCylSwrl9LtnGl",
+    "LBCylSwrl9LtnMtSl",
+    "GBCylSwrl9RollBlkDot",
+    "GBCylSwrl9RollMattCu",
+    "GBCylSwrl9RollMattGl",
+    "GBCylSwrl9RollMattSl",
+    "GBCylSwrl9RollPnkDot",
+    "GBCylSwrl9RollShBlk",
+    "GBCylSwrl9RollShnGl",
+    "GBCylSwrl9RollShnSl",
+    "GBCylSwrl9RollSlDot",
+    "GBCylSwrl9RollWht"
+  ],
+  "bodyAndCapsUnchanged": true,
+  "artworkUnchanged": true
+}

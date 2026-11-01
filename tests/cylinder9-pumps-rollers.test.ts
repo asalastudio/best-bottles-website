@@ -47,7 +47,8 @@ describe('9 ml lotion and roller review registration',()=>{
    const kit=rows[c.websiteSku],body=kit.parts.find(p=>p.slot==='body')!,inserts=kit.parts.filter(p=>p.slot==='roller');
    expect(inserts).toHaveLength(1);
    const r=inserts[0],s=r.box!.height/r.image.height;
-   expect(r.box!.y+760*s).toBeCloseTo(body.bounds.top,5);
+   const seatY=c.applicatorKey==='metal-roller'?kit.anchors.seatY:body.bounds.top;
+   expect(r.box!.y+760*s).toBeCloseTo(seatY,5);
    expect(r.zOrder).toBeLessThan(body.zOrder);
    expect((r.bounds.left+r.bounds.right)/2).toBeCloseTo(kit.anchors.axisX,5);
    const cap=kit.parts.find(p=>p.slot==='cap')!;

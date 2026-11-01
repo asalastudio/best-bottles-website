@@ -40,7 +40,9 @@ for(const c of config){
  }else{
   const kind=c.applicatorKey==='metal-roller'?'metal':'plastic',id=kit.register.componentIds.find(id=>id.includes('Rollon'));
   // Preserve the prior uniform scale; only the perspective and rim plane change.
-  const a='roller-'+kind,s=157.11/(916-135),x=500-(140+908)/2*s,y=body.bounds.top-760*s;
+  // The metal flange seats at the neck datum below the top glass highlight.
+  const seatY=kind==='metal'?kit.anchors.seatY:body.bounds.top;
+  const a='roller-'+kind,s=157.11/(916-135),x=500-(140+908)/2*s,y=seatY-760*s;
   const insert=dimPart('roller',a,s,x,y,{left:x+140*s,top:y+118*s,right:x+908*s,bottom:y+1351*s},0,id,0);
   const cap=structuredClone(kit.parts.find(p=>p.slot==='cap'));
   kit.parts=[insert,body,cap];
@@ -48,6 +50,6 @@ for(const c of config){
  selected.push(c);
 }
 library.version=sha(JSON.stringify({assets,rows:library.rows})).slice(0,12);index.version=library.version;
-fs.writeFileSync(out+'/kits.json',JSON.stringify(library,null,2)+'\n');fs.writeFileSync('src/lib/products/cylinder9-master-index.json',JSON.stringify(index,null,2)+'\n');fs.writeFileSync(dir+'/component-registration.json',JSON.stringify({version:library.version,scope:selected.map(c=>c.websiteSku),lotionCollarLiftMm,silhouettes,pumpTube:'Reused approved fine-mist visual mechanism/tube; lotion internals are a review representation, manufacturer mechanism dimensions unconfirmed.',rollerFlangeSourceY:760,rollerPerspective:'Eye-level front view with horizontal flange, revision 2',rollerSeat:'Flat underside of flange at body.bounds.top; lower plug behind glass in assembled view; whole insert moves together.',status:'Local candidates, pending visual approval'},null,2)+'\n');
+fs.writeFileSync(out+'/kits.json',JSON.stringify(library,null,2)+'\n');fs.writeFileSync('src/lib/products/cylinder9-master-index.json',JSON.stringify(index,null,2)+'\n');fs.writeFileSync(dir+'/component-registration.json',JSON.stringify({version:library.version,scope:selected.map(c=>c.websiteSku),lotionCollarLiftMm,silhouettes,pumpTube:'Reused approved fine-mist visual mechanism/tube; lotion internals are a review representation, manufacturer mechanism dimensions unconfirmed.',rollerFlangeSourceY:760,rollerPerspective:'Eye-level front view with horizontal flange, revision 2',rollerSeat:'Metal flange underside at anchors.seatY; plastic underside at body.bounds.top. Lower plug behind glass; whole insert moves together.',status:'Local candidates, pending visual approval'},null,2)+'\n');
 fs.writeFileSync(review+'/model.json',JSON.stringify({version:library.version,configurations:selected.map(({websiteSku,productGroupSlug,glassLabel,applicatorKey,finishLabel})=>({websiteSku,productGroupSlug,glassLabel,applicatorKey,finishLabel})),assets},null,2));
 console.log(JSON.stringify({version:library.version,pumps:selected.filter(c=>c.applicatorKey==='lotion-pump').length,rollers:selected.filter(c=>c.applicatorKey!=='lotion-pump').length}));

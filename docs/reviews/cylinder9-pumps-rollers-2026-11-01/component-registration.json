@@ -1,5 +1,5 @@
 {
-  "version": "18d03f7c7fe2",
+  "version": "6dad2178d891",
   "scope": [
     "LBCylAmb9LtnBlk",
     "LBCylAmb9LtnGl",
@@ -156,6 +156,6 @@
   "pumpTube": "Reused approved fine-mist visual mechanism/tube; lotion internals are a review representation, manufacturer mechanism dimensions unconfirmed.",
   "rollerFlangeSourceY": 760,
   "rollerPerspective": "Eye-level front view with horizontal flange, revision 2",
-  "rollerSeat": "Flat underside of flange at body.bounds.top; lower plug behind glass in assembled view; whole insert moves together.",
+  "rollerSeat": "Metal flange underside at anchors.seatY; plastic underside at body.bounds.top. Lower plug behind glass; whole insert moves together.",
   "status": "Local candidates, pending visual approval"
 }
