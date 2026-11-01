@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-01",
+  "status": "review",
+  "files": [
+    {
+      "path": "BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-Refraction-v03_REVIEW_2026-11-01.png",
+      "bytes": 1427876,
+      "sha256": "206b5f1c72b151034524140526b47d2b2b33f55c6728b71a81ff4b9e313b2fa2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2248,
+      "sha256": "fb4fad28f4b2a91947888b2b49ab93a01c956af94fb562c9db461914519a4579"
+    },
+    {
+      "path": "barrel-dark.png",
+      "bytes": 424655,
+      "sha256": "e7672093fd08d487ebda898359e6ee196f1549dd9e48cfaaa8fff4baf5d271ad"
+    },
+    {
+      "path": "barrel-light.png",
+      "bytes": 441886,
+      "sha256": "82b9547f85c2a44054603425b32b54316c79267af319fbe28c422f650421244e"
+    },
+    {
+      "path": "base-dark.png",
+      "bytes": 435734,
+      "sha256": "c8cf83cf06ed43798b1d9840df4ac216738f15efeff475c7ed1ad88e206d6e6b"
+    },
+    {
+      "path": "base-light.png",
+      "bytes": 448037,
+      "sha256": "b299be90f5ebd49754801eadb837d06601f52d47000f444174ec49005674dc0b"
+    },
+    {
+      "path": "before-v02.png",
+      "bytes": 1221161,
+      "sha256": "377643eced2dbf8fc1c9687b58d2946077d4abf69f11a7f49d4ecf7f44fdefcd"
+    },
+    {
+      "path": "browser-checks.json",
+      "bytes": 3844,
+      "sha256": "8a42e6f4874b2ee140bdd7f8005f560230d48264ead34d3c67b5d7255028f272"
+    },
+    {
+      "path": "build-review.py",
+      "bytes": 11974,
+      "sha256": "d8208f3219903b8d9da79d8b20e6a5973d33c8c4c28149ec96595db2c0b2a979"
+    },
+    {
+      "path": "check-browser.cjs",
+      "bytes": 2587,
+      "sha256": "f5ce7942effa311692d1a9ba72c6afc34fc325d768620f048c60ad4aa270a60a"
+    },
+    {
+      "path": "glass-material-reference.png",
+      "bytes": 1521090,
+      "sha256": "20518a1a613143fd3fd6a535f206e5e0fc359e39ad8248d1a099749ca1335e5a"
+    },
+    {
+      "path": "measurements.json",
+      "bytes": 2545,
+      "sha256": "64e4733cdabdb90a638cefda6935e6e80d95ddd2efa5416a56ee8a0962c25152"
+    },
+    {
+      "path": "neck-dark.png",
+      "bytes": 519887,
+      "sha256": "f08963a3ac3e26d3f600e7243cf779bef12f0f846a83e0549ab3f4e9a4526cd9"
+    },
+    {
+      "path": "neck-light.png",
+      "bytes": 528262,
+      "sha256": "02c238b72c1b34f9eb088b8912269bdf979e3be3a578cf22eb6ccf1db25e87dd"
+    },
+    {
+      "path": "package-review.py",
+      "bytes": 1826,
+      "sha256": "4227dc84dffbf1063167ea6331ceffac5111a4d253ed9ee2f9da96967405a10e"
+    },
+    {
+      "path": "page-1440.png",
+      "bytes": 728651,
+      "sha256": "eff1fc03f622cd504dec10f63e043fc55d8766812bc1aec5bd2783671b7e9cdf"
+    },
+    {
+      "path": "page-390.png",
+      "bytes": 333752,
+      "sha256": "1b03d27736b91a47832c75a74bc54279b0f350752aa200880cd57c3ec3a17935"
+    },
+    {
+      "path": "preserved-assets.json",
+      "bytes": 546,
+      "sha256": "f1823ca66cf17cb171152458b9946608b2ed82a67c8c6c1035cb9a40ff966f75"
+    },
+    {
+      "path": "prompt.txt",
+      "bytes": 2741,
+      "sha256": "9000a1e449e9d4f7b50ab6b27a45b42e5cc319dbdd35f1e1223576578ced1f07"
+    },
+    {
+      "path": "restore.mjs",
+      "bytes": 2694,
+      "sha256": "05968d5922a474322313801e4a55b0482d0f45ec3acfbac4792fad724d61b7e1"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-glass-refraction-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-Refraction-v03_REVIEW_2026-11-01.png",
+      "bytes": 1427876,
+      "sha256": "206b5f1c72b151034524140526b47d2b2b33f55c6728b71a81ff4b9e313b2fa2",
+      "restoreTo": "public/reviews/cylinder9-glass-refraction-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-Refraction-v03_REVIEW_2026-11-01.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-glass-refraction-2026-11-01/before-v02.png",
+      "bytes": 1221161,
+      "sha256": "377643eced2dbf8fc1c9687b58d2946077d4abf69f11a7f49d4ecf7f44fdefcd",
+      "restoreTo": "public/reviews/cylinder9-glass-refraction-2026-11-01/before-v02.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-glass-refraction-2026-11-01/data.json",
+      "bytes": 2545,
+      "sha256": "64e4733cdabdb90a638cefda6935e6e80d95ddd2efa5416a56ee8a0962c25152",
+      "restoreTo": "public/reviews/cylinder9-glass-refraction-2026-11-01/data.json"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-glass-refraction-2026-11-01/index.html",
+      "bytes": 5464,
+      "sha256": "9f654b2e9e58524411643d2f9ed8c8102d33cae3b761c3ed73b9b3bc14ab91c4",
+      "restoreTo": "public/reviews/cylinder9-glass-refraction-2026-11-01/index.html"
+    }
+  ]
+}
