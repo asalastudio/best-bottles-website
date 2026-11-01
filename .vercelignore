@@ -36,3 +36,7 @@ output/
 # Local model audits, backups and restored review pages are not release assets.
 outputs/
 public/reviews/*-2026-10-31/
+
+# November 1 family review assets and the local-only configuration override.
+public/reviews/*-2026-11-01/
+public/local-kits/cylinder5-all71-2026-11-01/

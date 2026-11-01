@@ -281,3 +281,8 @@ data/descriptions/pdp/catalog-facts.json
 
 # Labeled Drive transfer copies; canonical images and the verified registry are in docs/reviews.
 /outputs/family-master-library-2026-11-01/
+
+# Cylinder 5 ml review runtime is restored from the checked-in package.
+/public/reviews/cylinder5-all71-2026-11-01/
+# Full-resolution per-state captures are preserved in the verified Drive ZIP.
+/docs/reviews/cylinder5-all71-2026-11-01/evidence/screenshots/
