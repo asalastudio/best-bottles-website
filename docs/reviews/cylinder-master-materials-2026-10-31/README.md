@@ -18,3 +18,7 @@ Files:
 Local review: http://localhost:3010/reviews/cylinder-master-materials-2026-10-31/index.html
 
 The two exact inputs are also copied into this review folder with the hashes in request.json. result.json records the API error and the decision to keep Sunburst. Retry the prepared one-image request after the billing-account mismatch or credit state is resolved. Do not substitute models or start a family batch before reviewing the pilot.
+
+## November 1 follow-up
+
+Jordan subsequently authorized the built-in image generator. One candidate is saved in [the built-in pilot](../cylinder9-builtin-material-2026-11-01/README.md) and its Cylinder Drive review folder. Material changed, but measured outline drift and alpha flecks keep it in review. This does not change the failed Sunburst request record or assign new runtime artwork.
