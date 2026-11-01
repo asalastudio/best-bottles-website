@@ -1,0 +1,125 @@
+{
+  "date": "2026-11-01",
+  "status": "review",
+  "files": [
+    {
+      "path": "BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-Level-Rim-v02_REVIEW_2026-11-01.png",
+      "bytes": 1221161,
+      "sha256": "377643eced2dbf8fc1c9687b58d2946077d4abf69f11a7f49d4ecf7f44fdefcd"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1436,
+      "sha256": "c5ca668523d3565cfc094802672f3cb4f39441c63a45c1f68db5e3ca939c78bf"
+    },
+    {
+      "path": "before-v01.png",
+      "bytes": 1229040,
+      "sha256": "1915175f1eaea5d6eb57a729643814fc3789dac1185fdceae7c320b606c3d1aa"
+    },
+    {
+      "path": "browser-checks.json",
+      "bytes": 1412,
+      "sha256": "c83d0f4b07a57cf3447074cb17d2b96480cc984e274f953ac8483a2d8a05c701"
+    },
+    {
+      "path": "build-review.py",
+      "bytes": 9792,
+      "sha256": "44444a55741348cb2bb299c662a204f651e29b0d9271bd975f48ec40a4376805"
+    },
+    {
+      "path": "check-browser.cjs",
+      "bytes": 1960,
+      "sha256": "efd5b2ef5c0c59707b6c33a1b81d2e295a8d22f0cf71fd7d2504c54758872930"
+    },
+    {
+      "path": "measurements.json",
+      "bytes": 2161,
+      "sha256": "e15d2376f80eeb44d2f2edf2b3ae48689ef0627f1f36423daa2e012acbe63377"
+    },
+    {
+      "path": "page-1200-dark.png",
+      "bytes": 530617,
+      "sha256": "33c3e5c2c6cd78454b222a7f12058357ab0f11663b8ad4f639a15444bed91a81"
+    },
+    {
+      "path": "page-1200-guide.png",
+      "bytes": 533333,
+      "sha256": "4fa79089c541262aed0c208907e28c068bf7472289aff03d8d2da960e8fbbb47"
+    },
+    {
+      "path": "page-1200-plain.png",
+      "bytes": 532742,
+      "sha256": "0fade714161d92675b596bcab8b599938e0b0bd97906b6efafaa96ff18ca28b7"
+    },
+    {
+      "path": "page-390-dark.png",
+      "bytes": 307163,
+      "sha256": "e6c20801dcaf5aed498b2d98f90fc3e90e2185646ff0076e7278c51705d75f1b"
+    },
+    {
+      "path": "page-390-guide.png",
+      "bytes": 307984,
+      "sha256": "263a65b071da0161cb48d9e5489eeaa3504590d2d14b81b32763381e16102cfa"
+    },
+    {
+      "path": "page-390-plain.png",
+      "bytes": 307108,
+      "sha256": "8e3ea16ecc08f5b92ab8c3e1bbf86c9c7a2b1f1293aafd99c068cc5cac4682b3"
+    },
+    {
+      "path": "preserved-assets.json",
+      "bytes": 546,
+      "sha256": "f1823ca66cf17cb171152458b9946608b2ed82a67c8c6c1035cb9a40ff966f75"
+    },
+    {
+      "path": "prompt.txt",
+      "bytes": 1339,
+      "sha256": "5bd1dcded4a0923cb3cadf7b813af007cc82205e950940b4b92401fbd578b6c9"
+    },
+    {
+      "path": "restore.mjs",
+      "bytes": 2694,
+      "sha256": "05968d5922a474322313801e4a55b0482d0f45ec3acfbac4792fad724d61b7e1"
+    },
+    {
+      "path": "rim-closeup-dark.png",
+      "bytes": 449040,
+      "sha256": "6b35c38753d653cf6b119f63f16b125ce109879848b49dd41204402ac3140ce6"
+    },
+    {
+      "path": "rim-closeup-guide.png",
+      "bytes": 453067,
+      "sha256": "1ba3875ec2730527384cdac625a1bcc92f9f166ab74c1f921c1b08be20a07f3c"
+    },
+    {
+      "path": "rim-closeup-plain.png",
+      "bytes": 452124,
+      "sha256": "6354cfebf71c322d0aa3c1deac6c577c30802f9ec6f0c7b5fc6ddad324f699c7"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-rim-level-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-Level-Rim-v02_REVIEW_2026-11-01.png",
+      "bytes": 1221161,
+      "sha256": "377643eced2dbf8fc1c9687b58d2946077d4abf69f11a7f49d4ecf7f44fdefcd",
+      "restoreTo": "public/reviews/cylinder9-rim-level-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-Level-Rim-v02_REVIEW_2026-11-01.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-rim-level-2026-11-01/before-v01.png",
+      "bytes": 1229040,
+      "sha256": "1915175f1eaea5d6eb57a729643814fc3789dac1185fdceae7c320b606c3d1aa",
+      "restoreTo": "public/reviews/cylinder9-rim-level-2026-11-01/before-v01.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-rim-level-2026-11-01/data.json",
+      "bytes": 2161,
+      "sha256": "e15d2376f80eeb44d2f2edf2b3ae48689ef0627f1f36423daa2e012acbe63377",
+      "restoreTo": "public/reviews/cylinder9-rim-level-2026-11-01/data.json"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-rim-level-2026-11-01/index.html",
+      "bytes": 4653,
+      "sha256": "fa74eafc5d392e2f2a773fb1dd8ebf0323171226958bcbc69ffd5940a80c7320",
+      "restoreTo": "public/reviews/cylinder9-rim-level-2026-11-01/index.html"
+    }
+  ]
+}

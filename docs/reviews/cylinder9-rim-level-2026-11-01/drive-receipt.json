@@ -1,0 +1,165 @@
+{
+  "folder": "https://drive.google.com/drive/folders/1Ytrfo7QxC6FpxbUOEDRsKb0QeWqp3V7H",
+  "files": [
+    {
+      "id": "1uoADh181e5jWjXWmmqYjRGH1LsdXAfv4",
+      "name": "BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-Level-Rim-v02_REVIEW_2026-11-01.png",
+      "parent": "1Ytrfo7QxC6FpxbUOEDRsKb0QeWqp3V7H",
+      "localPath": "docs/reviews/cylinder9-rim-level-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-Level-Rim-v02_REVIEW_2026-11-01.png",
+      "readback": {
+        "id": "1uoADh181e5jWjXWmmqYjRGH1LsdXAfv4",
+        "title": "BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-Level-Rim-v02_REVIEW_2026-11-01.png",
+        "mime_type": null,
+        "size": "1221161",
+        "url": "https://drive.google.com/file/d/1uoADh181e5jWjXWmmqYjRGH1LsdXAfv4/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1uoADh181e5jWjXWmmqYjRGH1LsdXAfv4/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1Ytrfo7QxC6FpxbUOEDRsKb0QeWqp3V7H"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "verified": {
+        "name": true,
+        "bytes": true,
+        "parent": true
+      },
+      "localSha256": "377643eced2dbf8fc1c9687b58d2946077d4abf69f11a7f49d4ecf7f44fdefcd"
+    },
+    {
+      "id": "1kwsxjyraoyNd-98VGNDnuEc6KHBN9uR5",
+      "name": "COMPARISON_Cylinder9_Level-Rim_v01-v02.png",
+      "parent": "1Ytrfo7QxC6FpxbUOEDRsKb0QeWqp3V7H",
+      "localPath": "docs/reviews/cylinder9-rim-level-2026-11-01/rim-closeup-plain.png",
+      "readback": {
+        "id": "1kwsxjyraoyNd-98VGNDnuEc6KHBN9uR5",
+        "title": "COMPARISON_Cylinder9_Level-Rim_v01-v02.png",
+        "mime_type": null,
+        "size": "452124",
+        "url": "https://drive.google.com/file/d/1kwsxjyraoyNd-98VGNDnuEc6KHBN9uR5/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1kwsxjyraoyNd-98VGNDnuEc6KHBN9uR5/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1Ytrfo7QxC6FpxbUOEDRsKb0QeWqp3V7H"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "verified": {
+        "name": true,
+        "bytes": true,
+        "parent": true
+      },
+      "localSha256": "6354cfebf71c322d0aa3c1deac6c577c30802f9ec6f0c7b5fc6ddad324f699c7"
+    },
+    {
+      "id": "1ogCmWj1srw30uEoW_IcD1_PHwAmX-Rt2",
+      "name": "README_Cylinder9_Level-Rim_v02.md",
+      "parent": "1Ytrfo7QxC6FpxbUOEDRsKb0QeWqp3V7H",
+      "localPath": "docs/reviews/cylinder9-rim-level-2026-11-01/README.md",
+      "readback": {
+        "id": "1ogCmWj1srw30uEoW_IcD1_PHwAmX-Rt2",
+        "title": "README_Cylinder9_Level-Rim_v02.md",
+        "mime_type": null,
+        "size": "1436",
+        "url": "https://drive.google.com/file/d/1ogCmWj1srw30uEoW_IcD1_PHwAmX-Rt2/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1ogCmWj1srw30uEoW_IcD1_PHwAmX-Rt2/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1Ytrfo7QxC6FpxbUOEDRsKb0QeWqp3V7H"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "verified": {
+        "name": true,
+        "bytes": true,
+        "parent": true
+      },
+      "localSha256": "c5ca668523d3565cfc094802672f3cb4f39441c63a45c1f68db5e3ca939c78bf"
+    },
+    {
+      "id": "10YJynOvBA49z-cokjCCpfq3o52xrXa6a",
+      "name": "Cylinder_9ml_Sunburst-Level-Rim_2026-11-01_v02.zip",
+      "parent": "1Ytrfo7QxC6FpxbUOEDRsKb0QeWqp3V7H",
+      "localPath": "outputs/family-master-library-2026-11-01/Cylinder_9ml_Sunburst-Level-Rim_2026-11-01_v02.zip",
+      "readback": {
+        "id": "10YJynOvBA49z-cokjCCpfq3o52xrXa6a",
+        "title": "Cylinder_9ml_Sunburst-Level-Rim_2026-11-01_v02.zip",
+        "mime_type": null,
+        "size": "7929634",
+        "url": "https://drive.google.com/file/d/10YJynOvBA49z-cokjCCpfq3o52xrXa6a/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/10YJynOvBA49z-cokjCCpfq3o52xrXa6a/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1Ytrfo7QxC6FpxbUOEDRsKb0QeWqp3V7H"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "verified": {
+        "name": true,
+        "bytes": true,
+        "parent": true
+      },
+      "localSha256": "30fefee325832f3fe69ee529168bb41ff059a6df3f03757903ae088f57f0a2e4"
+    },
+    {
+      "id": "1ffehCJuE0rMwCBZ49kqCBmb2pkdJ29cl",
+      "name": "BATCH-INDEX_2026-11-01_Cylinder9-Level-Rim-v02.md",
+      "parent": "1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe",
+      "localPath": "docs/reviews/family-master-library-2026-11-01/BATCHES.md",
+      "readback": {
+        "id": "1ffehCJuE0rMwCBZ49kqCBmb2pkdJ29cl",
+        "title": "BATCH-INDEX_2026-11-01_Cylinder9-Level-Rim-v02.md",
+        "mime_type": null,
+        "size": "1795",
+        "url": "https://drive.google.com/file/d/1ffehCJuE0rMwCBZ49kqCBmb2pkdJ29cl/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1ffehCJuE0rMwCBZ49kqCBmb2pkdJ29cl/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "verified": {
+        "name": true,
+        "bytes": true,
+        "parent": true
+      },
+      "localSha256": "b8663442528d69533823c1ff3f5f48f9b349bb7f5eccb2acce19397ac19c118f"
+    }
+  ]
+}

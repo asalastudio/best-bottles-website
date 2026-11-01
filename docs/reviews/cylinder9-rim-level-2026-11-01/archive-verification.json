@@ -1,0 +1,10 @@
+{
+  "archive": "outputs/family-master-library-2026-11-01/Cylinder_9ml_Sunburst-Level-Rim_2026-11-01_v02.zip",
+  "bytes": 7929634,
+  "sha256": "30fefee325832f3fe69ee529168bb41ff059a6df3f03757903ae088f57f0a2e4",
+  "entries": 24,
+  "crcPass": true,
+  "entryHashesPass": true,
+  "restoreVerified": true,
+  "runtimeFiles": 4
+}
