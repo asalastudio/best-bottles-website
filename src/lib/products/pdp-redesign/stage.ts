@@ -48,6 +48,8 @@ export type PartBox = { x: number; y: number; width: number; height: number };
 
 export type KitPartLike = {
     opacity?: number;
+    /** Permanent bottom trim in image space, retained when the part is lifted. */
+    trimBottomPct?: number;
     slot: string;
     zOrder: number;
     explodeIndex: number;
@@ -328,10 +330,10 @@ export function stageLayout(
         const occurrence = occurrences.get(owner) ?? 0;
         occurrences.set(owner, occurrence + 1);
         const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
-        let clipBottomPct: number | undefined;
+        let clipBottomPct: number | undefined = part.trimBottomPct === undefined ? undefined : Math.max(0, Math.min(100, part.trimBottomPct));
         if (part.box && BEHIND_GLASS_SLOTS.has(part.slot)) {
             const over = part.box.y + part.box.height + offset.dy - kit.anchors.baselineY;
-            if (over > 0.5) clipBottomPct = Math.min(100, (over / part.box.height) * 100);
+            if (over > 0.5) clipBottomPct = Math.max(clipBottomPct ?? 0, Math.min(100, (over / part.box.height) * 100));
         }
         return {
             key: `${owner}-${occurrence}`,

@@ -172,3 +172,17 @@ it("draws a catalogue hero's shaft and tube as cut, not multiplied into the glas
     act(() => root.render(<BuilderImage config={config} parts={previewParts(config, "complete")} stage="complete" label="shared tube" />));
     expect((el.querySelector('[data-builder-layer="diptube"]') as SVGImageElement).style.mixBlendMode).toBe("multiply");
 });
+
+it("trims the tube above the glass floor without scaling its mechanism or width", () => {
+    const trimmed = structuredClone(config);
+    const tube = trimmed.kit!.parts.find(part => part.slot === "diptube")!;
+    tube.box = { x: 481, y: 353, width: 43, height: 592 };
+    tube.trimBottomPct = 12;
+    tube.bounds.bottom = 353 + 592 * .88;
+    act(() => root.render(<BuilderImage config={trimmed} parts={previewParts(trimmed, "complete")} stage="complete" label="trimmed tube" />));
+    const image = el.querySelector('[data-builder-layer="diptube"]')!;
+    const crop = image.parentElement!.querySelector('clipPath rect')!;
+    expect(Number(crop.getAttribute("height"))).toBeCloseTo(tube.image.height * .88);
+    expect(Number(image.getAttribute("height"))).toBe(tube.image.height);
+    expect(Number(image.getAttribute("width"))).toBe(tube.image.width);
+});

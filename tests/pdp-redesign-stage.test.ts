@@ -178,6 +178,18 @@ describe("behind the glass", () => {
     };
     const context = { family: "Round", capacityMl: 78, color: "Frosted", applicator: "Vintage Bulb Sprayer", websiteSku: "GBRndFrst78AnSpGl" };
 
+    it("keeps the physical tube trim when lifted, without changing its image scale", () => {
+        const kit = structuredClone(REGISTER_KIT);
+        kit.parts[0].trimBottomPct = 30;
+        kit.parts[0].bounds.bottom = 930;
+        kit.parts[0].explodeIndex = 1;
+        for (const view of ["sidecar", "capon", "exploded"] as const) {
+            const tube = stageLayout(kit, view, context)!.parts.find(part => part.slot === "diptube")!;
+            expect(tube.clipBottomPct).toBe(30);
+            expect(tube.box?.heightPct).toBeCloseTo(900 / 1100 * 100);
+        }
+    });
+
     it("clips a dip tube at the plate's baseline when it is seated, and never the plate or the sprayer", () => {
         const layout = stageLayout(REGISTER_KIT, "capon", context)!;
         const tube = layout.parts.find((part) => part.slot === "diptube")!;

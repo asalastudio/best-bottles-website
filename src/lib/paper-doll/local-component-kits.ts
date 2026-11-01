@@ -50,6 +50,14 @@ export function localGpt13ComponentKits(host: string | null, flag: unknown): Rec
                 if (/^GBCyl(?:Blu)?5/.test(sku) && kit.sku === sku) rows[sku] = kit;
             }
         } catch { /* The older pilot remains usable without this review batch. */ }
+        // Tulip seating follows the photographed shoulder. Keep this scoped to
+        // the explicit pilot until the body/component set is visually approved.
+        try {
+            const tulip = JSON.parse(readFileSync("public/local-kits/tulip-shoulder-2026-11-01/kits.json", "utf8")) as LocalKitReview;
+            for (const [sku, kit] of Object.entries(tulip.rows ?? {})) {
+                if (/^GBTulip(?:Amb5|6)Spry/.test(sku) && kit.sku === sku) rows[sku] = kit;
+            }
+        } catch { /* The original pilot remains available without this local batch. */ }
         return rows;
     } catch { return {}; }
 }

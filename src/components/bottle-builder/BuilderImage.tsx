@@ -167,9 +167,14 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                 </g>;
             }
             const baselineY = kit?.anchors?.baselineY;
-            if (part.box && BEHIND_GLASS_SLOTS.has(part.slot) && baselineY !== undefined && part.box.y + part.box.height > baselineY + 0.5) {
-                // A behind-glass layer (dip tube, pipette) never shows below the plate's baseline.
-                const visible = Math.max(0, ((baselineY - part.box.y) / part.box.height) * part.image.height);
+            const trimBottomPct = Math.max(0, Math.min(100, part.trimBottomPct ?? 0));
+            const baselineVisible = part.box && BEHIND_GLASS_SLOTS.has(part.slot) && baselineY !== undefined
+                && part.box.y + part.box.height > baselineY + 0.5
+                ? Math.max(0, (baselineY - part.box.y) / part.box.height) : 1;
+            const visibleFraction = Math.min(1 - trimBottomPct / 100, baselineVisible);
+            if (visibleFraction < 1) {
+                // Keep the physically trimmed tube length shared with the product page.
+                const visible = visibleFraction * part.image.height;
                 const clipId = `${titleId}-${part.slot}-foot`;
                 return <g key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} transform={layerTransform(transform, part)}>
                     <defs><clipPath id={clipId} clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width={part.image.width} height={visible} /></clipPath></defs>
