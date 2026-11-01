@@ -1,0 +1,8 @@
+Use case: precise-object-edit.
+Edit IMAGE 1 only: the clear 9 ml Cylinder bottle with a 17-415 neck. IMAGE 1 is the exact geometry and framing target.
+IMAGE 2 is only a high-end clear-glass material reference. Transfer its photographic reflection, refraction, glass depth and subtle cylindrical highlight gradients. Do not copy its shape, dimensions, threads, viewpoint or black backdrop.
+Keep the complete outline and every geometric feature of IMAGE 1 unchanged: width-to-height ratio, straight vertical sides, shoulder height and curve, rim width, thread count and thread profile, neck proportions, heel and base thickness. No widening, narrowing, shortening or stretching.
+Preserve the same straight-on eye-level camera, exact image placement and generous source margins. Source canvas is 768 x 2192, axis x=379, rim y=125, shoulder y=477 and foot y=2096. If output resolution changes, scale every position uniformly and preserve the 768:2192 aspect ratio.
+Improve only glass material and studio lighting: photorealistic clean colorless transparent glass, nuanced specular highlights, crisp refractive edges without thick black stripes, softly rounded cylindrical reflections. Remove the flat rectangular paper-like appearance of the interior. No haze, milky fill, plastic appearance or invented internal object.
+Isolate the one complete bare bottle on transparent exterior, with its clear glass appearance lit for the catalog bone background #F5F3EF. Keep authentic bright reflections and refraction within the glass. No cap, spray, roller, dip tube, stopper, liquid, label, text or extra object. Do not crop the rim or base.
+Deliver one high-quality detailed studio product image. Geometry is locked to IMAGE 1; change only its material realism.

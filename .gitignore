@@ -289,3 +289,7 @@ data/descriptions/pdp/catalog-facts.json
 
 # Material comparison runtime is preserved in its review package.
 /public/reviews/cylinder5-layer-fidelity-2026-11-01/
+
+/public/reviews/cylinder9-sunburst-2026-11-01/
+
+/output/imagegen/cylinder9-sunburst-2026-11-01/

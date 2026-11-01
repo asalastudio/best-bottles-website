@@ -1,0 +1,14 @@
+{
+  "archive": "outputs/family-master-library-2026-11-01/Cylinder_9ml_Sunburst-Material_2026-11-01_v01.zip",
+  "bytes": 8833392,
+  "sha256": "9e46b2ed8ee79859b10465ab8f3026db9b2480c3493ca6644bb90100987da594",
+  "entries": 26,
+  "allEntryHashesMatch": true,
+  "crcPass": true,
+  "restore": {
+    "root": "/private/tmp/cylinder9-sunburst-restore-2026-11-01",
+    "filesVerified": 25,
+    "runtimeFilesRestored": 5,
+    "existingRuntimeUnchanged": 5
+  }
+}

@@ -22,3 +22,5 @@ The two exact inputs are also copied into this review folder with the hashes in 
 ## November 1 follow-up
 
 Jordan subsequently authorized the built-in image generator. One candidate is saved in [the built-in pilot](../cylinder9-builtin-material-2026-11-01/README.md) and its Cylinder Drive review folder. Material changed, but measured outline drift and alpha flecks keep it in review. This does not change the failed Sunburst request record or assign new runtime artwork.
+
+The separate Asala pilot key successfully generated one Sunburst candidate on November 1. See [the Sunburst review](../cylinder9-sunburst-2026-11-01/README.md). Outline drift is lower than the built-in candidate, but alpha fringe and no resolution gain keep it in review. The original failed-request record above is preserved.

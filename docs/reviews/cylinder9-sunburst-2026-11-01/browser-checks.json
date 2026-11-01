@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "width": 1440,
+      "imagesDecoded": true,
+      "overflow": false,
+      "imageCount": 6,
+      "background": "",
+      "uniformRatios": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "width": 1440,
+      "imagesDecoded": true,
+      "overflow": false,
+      "imageCount": 6,
+      "background": "checker",
+      "uniformRatios": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "width": 1440,
+      "imagesDecoded": true,
+      "overflow": false,
+      "imageCount": 6,
+      "background": "dark",
+      "uniformRatios": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "width": 390,
+      "imagesDecoded": true,
+      "overflow": false,
+      "imageCount": 6,
+      "background": "",
+      "uniformRatios": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "width": 390,
+      "imagesDecoded": true,
+      "overflow": false,
+      "imageCount": 6,
+      "background": "checker",
+      "uniformRatios": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "width": 390,
+      "imagesDecoded": true,
+      "overflow": false,
+      "imageCount": 6,
+      "background": "dark",
+      "uniformRatios": [
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "errors": [],
+  "notes": [
+    "Initial browser harness required HTTP 200 and stopped on valid cached HTTP 304. Rerun disables cache and accepts 304 before inspecting rendered content."
+  ]
+}
