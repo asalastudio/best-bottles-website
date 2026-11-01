@@ -1,0 +1,65 @@
+{
+  "sourceFile": "public/local-kits/small-sprayers-2026-10-31/kits.json",
+  "sourceVersion": "b20a905a6824",
+  "sourceSha256": "d93e56bf732e663b9d1300647ec361afa1daaf61c4038c3e5cf7614dd6878b81",
+  "priorConfigurations": 267,
+  "configurations": 271,
+  "addedSkus": [
+    "GBSpry3mlClBlk",
+    "GBSpry3mlClWht",
+    "GBSpry4mlClBlk",
+    "GBSpry4mlClWh"
+  ],
+  "assets": {
+    "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg": {
+      "file": "public/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg",
+      "sha256": "bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd",
+      "bytes": 2256027,
+      "contentType": "image/svg+xml",
+      "key": "reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg"
+    },
+    "/local-kits/small-sprayers-2026-10-31/mechanism-3.3-v3.png": {
+      "file": "public/local-kits/small-sprayers-2026-10-31/mechanism-3.3-v3.png",
+      "sha256": "a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5",
+      "bytes": 60557,
+      "contentType": "image/png",
+      "key": "reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png"
+    },
+    "/local-kits/small-sprayers-2026-10-31/head-black.png": {
+      "file": "public/local-kits/small-sprayers-2026-10-31/head-black.png",
+      "sha256": "691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2",
+      "bytes": 43828,
+      "contentType": "image/png",
+      "key": "reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png"
+    },
+    "/local-kits/small-sprayers-2026-10-31/overcap-12mm.png": {
+      "file": "public/local-kits/small-sprayers-2026-10-31/overcap-12mm.png",
+      "sha256": "0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52",
+      "bytes": 324597,
+      "contentType": "image/png",
+      "key": "reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+    },
+    "/local-kits/small-sprayers-2026-10-31/head-white.png": {
+      "file": "public/local-kits/small-sprayers-2026-10-31/head-white.png",
+      "sha256": "ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7",
+      "bytes": 24512,
+      "contentType": "image/png",
+      "key": "reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png"
+    },
+    "/local-kits/small-sprayer-rims-2026-11-01/glass-4-continuous.e6f9b8379296.svg": {
+      "file": "public/local-kits/small-sprayer-rims-2026-11-01/glass-4-continuous.e6f9b8379296.svg",
+      "sha256": "e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448",
+      "bytes": 1990579,
+      "contentType": "image/svg+xml",
+      "key": "reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg"
+    },
+    "/local-kits/small-sprayers-2026-10-31/mechanism-4-v3.png": {
+      "file": "public/local-kits/small-sprayers-2026-10-31/mechanism-4-v3.png",
+      "sha256": "241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc",
+      "bytes": 78005,
+      "contentType": "image/png",
+      "key": "reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png"
+    }
+  },
+  "approval": "Owner requested the previously corrected 3.3/4 ml glass be brought live after finding it missing from the hosted release."
+}

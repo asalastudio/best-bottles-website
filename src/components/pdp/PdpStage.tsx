@@ -162,11 +162,12 @@ export default function PdpStage({
     const showCallouts = Boolean(layout?.grid) && callouts.length > 0 && !zoom;
     const calloutRows = useMemo(() => {
         if (!layout) return [];
-        const clearOvercap = layout.parts.some(part => part.slot === "overcap" && (part.url.includes("cylinder-9ml-clear-overcap-") || part.url.includes("small-sprayers-2026-10-31/overcap-12mm.png")));
+        const smallSprayer = ["GBSpry3mlClBlk", "GBSpry3mlClWht", "GBSpry4mlClBlk", "GBSpry4mlClWh"].includes(context.websiteSku ?? "");
+        const clearOvercap = smallSprayer || layout.parts.some(part => part.slot === "overcap" && (part.url.includes("cylinder-9ml-clear-overcap-") || part.url.includes("small-sprayers-2026-10-31/overcap-12mm.png")));
         const rows = callouts.map((callout) => ({
             callout: clearOvercap && callout.key === "cap"
                 ? { ...callout, title: "OVERCAP", line1: "Clear", line2: "Included protective cover" }
-                : callout.key === "neck" && layout.parts.some(part => part.url.includes("small-sprayers-2026-10-31/"))
+                : callout.key === "neck" && smallSprayer
                     ? { ...callout, title: "NECK FINISH" } : callout,
             anchor: layout.anchors[callout.key] ?? null, shiftPct: 0,
         }));
@@ -180,7 +181,7 @@ export default function PdpStage({
             floor = y + (mobile && context.applicator === "Reducer" ? 18 : CALLOUT_MIN_GAP_PCT);
         }
         return rows;
-    }, [callouts, layout, mobile, context.applicator]);
+    }, [callouts, layout, mobile, context.applicator, context.websiteSku]);
 
     return (
         <section id="product-canvas" className={styles.canvas} aria-label="Product canvas" data-testid="pdp-canvas">
