@@ -1,0 +1,143 @@
+[
+  {
+    "slot": "body",
+    "before": {
+      "file": "references/body-original.png",
+      "size": [
+        914,
+        1721
+      ],
+      "alphaBounds128": [
+        184,
+        20,
+        736,
+        1701
+      ],
+      "opaqueAspect": 0.32837596668649616,
+      "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "alphaCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "after": {
+      "file": "body-enhanced-v01.png",
+      "size": [
+        914,
+        1721
+      ],
+      "alphaBounds128": [
+        184,
+        19,
+        737,
+        1699
+      ],
+      "opaqueAspect": 0.32916666666666666,
+      "sha256": "869d5b8fa3d3bb04188d663be0019464113e38e818221ceed3313401dcaf3947",
+      "alphaCorners": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "linearResolutionRatio": 1.0,
+    "outlineAspectChangePct": 0.24079106280192608
+  },
+  {
+    "slot": "sprayer",
+    "before": {
+      "file": "references/sprayer-original.png",
+      "size": [
+        525,
+        976
+      ],
+      "alphaBounds128": [
+        9,
+        8,
+        516,
+        967
+      ],
+      "opaqueAspect": 0.5286757038581856,
+      "sha256": "2612773a8d3e7a8267d94291add8f5c757baf3f0d1873ce71a4b03150299c301",
+      "alphaCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "after": {
+      "file": "sprayer-enhanced-v01.png",
+      "size": [
+        919,
+        1711
+      ],
+      "alphaBounds128": [
+        32,
+        12,
+        887,
+        1695
+      ],
+      "opaqueAspect": 0.5080213903743316,
+      "sha256": "a7b8cc63020b03849cc438d76c693e8678d30747cc3d4fd6cac30dadd9c0ed86",
+      "alphaCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "linearResolutionRatio": 1.7530737704918034,
+    "outlineAspectChangePct": -3.9068020968473394
+  },
+  {
+    "slot": "overcap",
+    "before": {
+      "file": "references/overcap-original.png",
+      "size": [
+        214,
+        396
+      ],
+      "alphaBounds128": [
+        7,
+        7,
+        206,
+        385
+      ],
+      "opaqueAspect": 0.5264550264550265,
+      "sha256": "ca81aa5a076674b7126d14583c097fde57aea18acfcdd3abdfbbcecfb406c789",
+      "alphaCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "after": {
+      "file": "overcap-enhanced-v01.png",
+      "size": [
+        922,
+        1706
+      ],
+      "alphaBounds128": [
+        34,
+        16,
+        882,
+        1682
+      ],
+      "opaqueAspect": 0.5090036014405762,
+      "sha256": "e0f721317bed501ceaf8f75b48e59abc18bf32f4a2aa1fbc1c4109d6f9806ba4",
+      "alphaCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "linearResolutionRatio": 4.308080808080808,
+    "outlineAspectChangePct": -3.3148937967146797
+  }
+]

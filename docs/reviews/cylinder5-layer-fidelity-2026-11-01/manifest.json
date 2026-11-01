@@ -1,0 +1,168 @@
+{
+  "status": "three-comparison-candidates-only",
+  "activeAssignmentsChanged": false,
+  "productionChanged": false,
+  "generator": "built-in, exact version not exposed",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3131,
+      "sha256": "972218d5ce7b0840c7031ce45a164e8e9077e539e712265be5d97db45f04c4df"
+    },
+    {
+      "path": "body-enhanced-v01.png",
+      "bytes": 1412205,
+      "sha256": "869d5b8fa3d3bb04188d663be0019464113e38e818221ceed3313401dcaf3947"
+    },
+    {
+      "path": "browser-checks.json",
+      "bytes": 703,
+      "sha256": "f0fff487eab9281830e1561f94b1f70e16be220ffeb67c1d12c606a2c5334911"
+    },
+    {
+      "path": "build-review.py",
+      "bytes": 8568,
+      "sha256": "5e11c24c4e3d2f9c1fc6b946b3eae61b704691f100922912c903897b30d5211e"
+    },
+    {
+      "path": "overcap-enhanced-v01.png",
+      "bytes": 2938116,
+      "sha256": "e0f721317bed501ceaf8f75b48e59abc18bf32f4a2aa1fbc1c4109d6f9806ba4"
+    },
+    {
+      "path": "prompts.json",
+      "bytes": 5582,
+      "sha256": "2d444892945d675980a9594fd2f8ef4d97a983f781ab05268447a44b8aac229a"
+    },
+    {
+      "path": "quality-measurements.json",
+      "bytes": 2797,
+      "sha256": "6e931c645b34dd1b18e58e12d5d6abc2b5ae46b5ecb6126b3464fe44fff41113"
+    },
+    {
+      "path": "references/body-original.png",
+      "bytes": 1246630,
+      "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb"
+    },
+    {
+      "path": "references/glass-material-reference.png",
+      "bytes": 1521090,
+      "sha256": "20518a1a613143fd3fd6a535f206e5e0fc359e39ad8248d1a099749ca1335e5a"
+    },
+    {
+      "path": "references/overcap-original.png",
+      "bytes": 101886,
+      "sha256": "ca81aa5a076674b7126d14583c097fde57aea18acfcdd3abdfbbcecfb406c789"
+    },
+    {
+      "path": "references/sprayer-original.png",
+      "bytes": 698720,
+      "sha256": "2612773a8d3e7a8267d94291add8f5c757baf3f0d1873ce71a4b03150299c301"
+    },
+    {
+      "path": "restore.mjs",
+      "bytes": 2694,
+      "sha256": "05968d5922a474322313801e4a55b0482d0f45ec3acfbac4792fad724d61b7e1"
+    },
+    {
+      "path": "review-1440-capon.png",
+      "bytes": 601675,
+      "sha256": "9c1148501e9ccd8698b794d0af2e6fe91a1a021af6122aa506e4522a106ff02e"
+    },
+    {
+      "path": "review-1440-exploded.png",
+      "bytes": 630436,
+      "sha256": "fa7839ab3cc796da691740534bd6dc6d0af9e3d7d7dbc3eb4065e7b1cdcd3a58"
+    },
+    {
+      "path": "review-1440-sidecar.png",
+      "bytes": 652429,
+      "sha256": "89fb25f232533f55ff281184ca3691e961d7036c4ae89c82a6dfbe116df82837"
+    },
+    {
+      "path": "review-390-capon.png",
+      "bytes": 459644,
+      "sha256": "c407c7bcda7ec26e763cd4be9ff73a7e794e57d0cb59a93526c87327654bc88d"
+    },
+    {
+      "path": "review-390-exploded.png",
+      "bytes": 441673,
+      "sha256": "3f5e2f066543481108f315c2691d46b22c3287cc03b2f4a7d9aed70cf6dca0e3"
+    },
+    {
+      "path": "review-390-sidecar.png",
+      "bytes": 473234,
+      "sha256": "ea07b81236fa54c0f021eae2f0b3f6bae190f06815a05b71fb54ca37e092addd"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder5-layer-fidelity-2026-11-01/body-enhanced-v01.png",
+      "bytes": 1412205,
+      "sha256": "869d5b8fa3d3bb04188d663be0019464113e38e818221ceed3313401dcaf3947",
+      "restoreTo": "public/reviews/cylinder5-layer-fidelity-2026-11-01/body-enhanced-v01.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder5-layer-fidelity-2026-11-01/body-original.png",
+      "bytes": 1246630,
+      "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "restoreTo": "public/reviews/cylinder5-layer-fidelity-2026-11-01/body-original.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder5-layer-fidelity-2026-11-01/data.json",
+      "bytes": 20187,
+      "sha256": "0c225f7cd4cf5d81b5004eb0cdfb2f210ff9b48544f25aad1206f84e4b114f0f",
+      "restoreTo": "public/reviews/cylinder5-layer-fidelity-2026-11-01/data.json"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder5-layer-fidelity-2026-11-01/index.html",
+      "bytes": 6123,
+      "sha256": "34741af99439d1fc95831ebb9640fd8b1bb4ae0bbcaff70ff9476097c963b046",
+      "restoreTo": "public/reviews/cylinder5-layer-fidelity-2026-11-01/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder5-layer-fidelity-2026-11-01/overcap-enhanced-v01.png",
+      "bytes": 2938116,
+      "sha256": "e0f721317bed501ceaf8f75b48e59abc18bf32f4a2aa1fbc1c4109d6f9806ba4",
+      "restoreTo": "public/reviews/cylinder5-layer-fidelity-2026-11-01/overcap-enhanced-v01.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder5-layer-fidelity-2026-11-01/overcap-original.png",
+      "bytes": 101886,
+      "sha256": "ca81aa5a076674b7126d14583c097fde57aea18acfcdd3abdfbbcecfb406c789",
+      "restoreTo": "public/reviews/cylinder5-layer-fidelity-2026-11-01/overcap-original.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder5-layer-fidelity-2026-11-01/sprayer-enhanced-v01.png",
+      "bytes": 3068698,
+      "sha256": "a7b8cc63020b03849cc438d76c693e8678d30747cc3d4fd6cac30dadd9c0ed86",
+      "restoreTo": "public/reviews/cylinder5-layer-fidelity-2026-11-01/sprayer-enhanced-v01.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder5-layer-fidelity-2026-11-01/sprayer-original.png",
+      "bytes": 698720,
+      "sha256": "2612773a8d3e7a8267d94291add8f5c757baf3f0d1873ce71a4b03150299c301",
+      "restoreTo": "public/reviews/cylinder5-layer-fidelity-2026-11-01/sprayer-original.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder5-layer-fidelity-2026-11-01/unchanged-cylinder-5ml-13-415-clear.webp",
+      "bytes": 22152,
+      "sha256": "83c61826ba175f2cbaafda66a6d4a93d88a72221d12aa831d8070dcfba9ca09c",
+      "restoreTo": "public/reviews/cylinder5-layer-fidelity-2026-11-01/unchanged-cylinder-5ml-13-415-clear.webp"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder5-layer-fidelity-2026-11-01/unchanged-mechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png",
+      "bytes": 81062,
+      "sha256": "f0febbcaaa4d31242b6298e9470e76e114794dd352f6387283fed832af0fe05c",
+      "restoreTo": "public/reviews/cylinder5-layer-fidelity-2026-11-01/unchanged-mechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png"
+    },
+    {
+      "path": "source-inventory.json",
+      "bytes": 1923,
+      "sha256": "a6062ec20b66376f026b4207daba616a164351dc56a95e06e51ddad5f11103ed"
+    },
+    {
+      "path": "sprayer-enhanced-v01.png",
+      "bytes": 3068698,
+      "sha256": "a7b8cc63020b03849cc438d76c693e8678d30747cc3d4fd6cac30dadd9c0ed86"
+    }
+  ]
+}

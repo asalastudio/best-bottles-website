@@ -1,0 +1,68 @@
+[
+  {
+    "slot": "body",
+    "source": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+    "path": "docs/reviews/cylinder5-layer-fidelity-2026-11-01/references/body-original.png",
+    "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+    "pixels": [
+      914,
+      1721
+    ],
+    "alphaBox": [
+      0,
+      0,
+      890,
+      1721
+    ],
+    "registeredBox": {
+      "x": 344.8791720263,
+      "y": 488.79150508069336,
+      "width": 308.55372528392115,
+      "height": 580.9857343693964
+    }
+  },
+  {
+    "slot": "sprayer",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png",
+    "path": "docs/reviews/cylinder5-layer-fidelity-2026-11-01/references/sprayer-original.png",
+    "sha256": "2612773a8d3e7a8267d94291add8f5c757baf3f0d1873ce71a4b03150299c301",
+    "pixels": [
+      525,
+      976
+    ],
+    "alphaBox": [
+      6,
+      6,
+      519,
+      970
+    ],
+    "registeredBox": {
+      "x": 417.63703139866794,
+      "y": 333.9484966698383,
+      "width": 166.3129115128449,
+      "height": 309.1805233111322
+    }
+  },
+  {
+    "slot": "overcap",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png",
+    "path": "docs/reviews/cylinder5-layer-fidelity-2026-11-01/references/overcap-original.png",
+    "sha256": "ca81aa5a076674b7126d14583c097fde57aea18acfcdd3abdfbbcecfb406c789",
+    "pixels": [
+      214,
+      396
+    ],
+    "alphaBox": [
+      6,
+      6,
+      208,
+      390
+    ],
+    "registeredBox": {
+      "x": 401.018715509039,
+      "y": 286.06978116079927,
+      "width": 199.82901046622266,
+      "height": 369.78497621313034
+    }
+  }
+]

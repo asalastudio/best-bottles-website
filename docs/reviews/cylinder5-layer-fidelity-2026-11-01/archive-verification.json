@@ -1,0 +1,11 @@
+{
+  "archive": "outputs/family-master-library-2026-11-01/Cylinder_5ml_Three-Layer-Fidelity_2026-11-01_v01.zip",
+  "bytes": 22880389,
+  "sha256": "4d56d5aa81faf09d3d7ce8d9dfc69b390320f36f47530e0661653268ee16b1ca",
+  "entries": 31,
+  "entryHashesVerified": true,
+  "emptyDirectoryRestore": {
+    "verified": 30,
+    "copied": 10
+  }
+}

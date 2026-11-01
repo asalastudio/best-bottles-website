@@ -286,3 +286,6 @@ data/descriptions/pdp/catalog-facts.json
 /public/reviews/cylinder5-all71-2026-11-01/
 # Full-resolution per-state captures are preserved in the verified Drive ZIP.
 /docs/reviews/cylinder5-all71-2026-11-01/evidence/screenshots/
+
+# Material comparison runtime is preserved in its review package.
+/public/reviews/cylinder5-layer-fidelity-2026-11-01/
