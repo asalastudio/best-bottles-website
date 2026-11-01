@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,7 +23,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
   "include": [
@@ -39,6 +45,9 @@
     "_skills",
     "dist",
     "pipeline",
-    "madison-image-pipeline-diagnostic"
+    "madison-image-pipeline-diagnostic",
+    "outputs",
+    "docs/reviews/catalog-checkpoint-2026-10-31/evidence",
+    "docs/reviews/**/source-code"
   ]
 }

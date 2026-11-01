@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { readFileSync } from "node:fs";
 import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
+import { CYLINDER9_MASTER_VERSION } from "@/lib/products/cylinder9-master";
 import type { BuilderFamily } from "@/lib/bottle-builder/entry";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
@@ -65,8 +66,17 @@ describe("bottle requests shared by the tile prefetch and the pick", () => {
         expect(fetcher).toHaveBeenCalledTimes(2);
         expect(fetcher.mock.calls.map(([url]) => url)).toEqual([
             "/api/bottle-builder/bodies?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle",
-            "/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle&media=elegant-photo-hardware-v5",
+            `/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-9ml%7C17-415%7CGlass%20Bottle&media=reviewed-masters-${CYLINDER9_MASTER_VERSION}`,
         ]);
+    });
+
+    it("keys 5 ml kits by the sprayer revision so an older browser cache cannot mask updates", async () => {
+        const fetcher = vi.fn(async (_url: string) => ({ ok: true, json: async () => ({ kits: {} }) }));
+        vi.stubGlobal("fetch", fetcher);
+        const { loadBodyKits } = await import("@/components/bottle-builder/builder-requests");
+        const index = JSON.parse(readFileSync("src/lib/products/cylinder5-master-index.json", "utf8"));
+        await loadBodyKits("Cylinder", "cylinder-5ml|13-415|Glass Bottle");
+        expect(fetcher.mock.calls[0][0]).toContain(`media=reviewed-masters-${index.version}`);
     });
 
     it("forgets a failed or malformed response, so trying again makes a new request", async () => {

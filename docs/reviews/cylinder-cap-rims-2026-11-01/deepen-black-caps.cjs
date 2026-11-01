@@ -1,0 +1,12 @@
+const fs=require('fs'),crypto=require('crypto'),assert=require('assert/strict');
+const dir='docs/reviews/cylinder-cap-rims-2026-11-01',kp='public/local-kits/cylinder9-masters-2026-11-01/kits.json',ip='src/lib/products/cylinder9-master-index.json';
+const kit=JSON.parse(fs.readFileSync(kp)),before=structuredClone(kit),index=JSON.parse(fs.readFileSync(ip));
+if(!fs.existsSync(dir+'/before-black-tone-kits.json'))fs.copyFileSync(kp,dir+'/before-black-tone-kits.json');
+const ids=['CMP-ROC-BLK-17415-DOT','CMP-ROC-SBLK-17415'],assets={};
+for(const id of ids){const part=Object.values(kit.rows).flatMap(r=>r.parts).find(p=>p.componentId===id);const original=part.image.url;let svg=fs.readFileSync('public'+original,'utf8');
+// Gamma leaves endpoints (black and white) fixed and reduces gray middle tones.
+// Alpha, geometry, metallic dots, and their placement are unchanged.
+if(!svg.includes('id="blackTone"'))svg=svg.replace('</defs>','<filter id="blackTone" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="gamma" amplitude="1" exponent="1.35" offset="0"/><feFuncG type="gamma" amplitude="1" exponent="1.35" offset="0"/><feFuncB type="gamma" amplitude="1" exponent="1.35" offset="0"/></feComponentTransfer></filter></defs>').replace('clip-path="url(#cap)"','clip-path="url(#cap)" filter="url(#blackTone)"');
+const bytes=Buffer.from(svg),sha=crypto.createHash('sha256').update(bytes).digest('hex'),name=(id.includes('DOT')?'cap9-black-dotted-deeper.':'cap9-shiny-black-deeper.')+sha.slice(0,12)+'.svg',url='/local-kits/cylinder-cap-rims-2026-11-01/'+name;fs.writeFileSync('public'+url,bytes);assets[id]={...part.image,url,sha256:sha,bytes:bytes.length,original};}
+let changed=0;for(const[sku,row]of Object.entries(kit.rows)){for(const part of row.parts){if(!ids.includes(part.componentId)||part.slot!=='cap')continue;const {original,...image}=assets[part.componentId];part.image=image;changed++;}assert.deepEqual(row.parts.filter(p=>p.slot!=='cap'),before.rows[sku].parts.filter(p=>p.slot!=='cap'));}
+kit.version=crypto.createHash('sha256').update(JSON.stringify(kit.rows)).digest('hex').slice(0,12);index.version=kit.version;fs.writeFileSync(kp,JSON.stringify(kit,null,2)+'\n');fs.writeFileSync(ip,JSON.stringify(index,null,2)+'\n');fs.writeFileSync(dir+'/black-tone-registration.json',JSON.stringify({gamma:1.35,changed,version:kit.version,assets,geometryUnchanged:true,approval:'User authorized deeper black middle tones after approving cap set.'},null,2)+'\n');console.log(JSON.stringify({changed,version:kit.version}));

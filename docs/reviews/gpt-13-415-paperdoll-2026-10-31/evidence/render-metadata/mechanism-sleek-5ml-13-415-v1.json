@@ -1,0 +1,39 @@
+{
+ "crop": [
+  1190,
+  2534,
+  1310,
+  3525
+ ],
+ "axis": 1250.0,
+ "baseline": 3597.9901552200317,
+ "tubeOuterDiameterMm": 1.1,
+ "tubeInnerDiameterMm": 0.7,
+ "tipHeightMm": 3.5,
+ "interiorBaseMm": 1.6,
+ "clearanceMm": 1.9,
+ "springVisible": true,
+ "source": "Working copy of existing 13-415 translucent pump mechanism; sleek-5ml-13-415 body height 46.5271 mm from current register. Tube diameter, pump interior, floor thickness, bend and tip clearance are visual-production assumptions, not supplier measurements.",
+ "tipDeflectionMm": 1.2,
+ "minimumTipClearanceMm": 1.8474981948733329,
+ "change": "Continuous hollow tube with gently bent tip, centered tangent at pump. Same pixels shared by every finish; body glass and external sprayer remain unchanged.",
+ "hardware_lit": [
+  "CAP_BlackDotted_Shell",
+  "CAP_Jewel_center_1",
+  "CAP_Jewel_center_2",
+  "CAP_Jewel_center_3",
+  "CAP_Jewel_left_1",
+  "CAP_Jewel_left_2",
+  "CAP_Jewel_right_1",
+  "CAP_Jewel_right_2",
+  "ROLLER_Ball \u2014 plastic or stainless",
+  "ROLLER_Housing_Flange_HollowStem",
+  "pump \u2014 discharge recess backing",
+  "pump \u2014 measured dip tube \u00d83.55",
+  "pump \u2014 measured pump body",
+  "pump \u2014 phenolic collar",
+  "pump \u2014 stationary white sleeve",
+  "pump \u2014 translucent overcap",
+  "pump \u2014 white actuator"
+ ]
+}

@@ -113,8 +113,8 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     }
     const failed = layers.some(({ part }) => part.image.url === failedUrl);
     if (!parts.length || failed) return <span role="img" aria-label={label}>Image unavailable</span>;
-    const { x, y, width, height } = !thumbnail && frameConfigurations?.length && layout
-        ? builderBodyFrame(config, frameConfigurations, bodyReference, layout, { expanded })
+    const { x, y, width, height } = !thumbnail && layout && (layout.glassSizing || frameConfigurations?.length)
+        ? builderBodyFrame(config, frameConfigurations ?? [], bodyReference, layout, { expanded })
         : previewFrame(layout?.anchors ?? kit.anchors, layers.map(layer => layer.bounds), { scale, thumbnail, expanded });
     // A single registered body layer is the chooser tile. <img> fetches in
     // parallel with preload/priority; SVG <image href> waits on hydrate and
@@ -167,19 +167,24 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                 </g>;
             }
             const baselineY = kit?.anchors?.baselineY;
-            if (part.box && BEHIND_GLASS_SLOTS.has(part.slot) && baselineY !== undefined && part.box.y + part.box.height > baselineY + 0.5) {
-                // A behind-glass layer (dip tube, pipette) never shows below the plate's baseline.
-                const visible = Math.max(0, ((baselineY - part.box.y) / part.box.height) * part.image.height);
+            const trimBottomPct = Math.max(0, Math.min(100, part.trimBottomPct ?? 0));
+            const baselineVisible = part.box && BEHIND_GLASS_SLOTS.has(part.slot) && baselineY !== undefined
+                && part.box.y + part.box.height > baselineY + 0.5
+                ? Math.max(0, (baselineY - part.box.y) / part.box.height) : 1;
+            const visibleFraction = Math.min(1 - trimBottomPct / 100, baselineVisible);
+            if (visibleFraction < 1) {
+                // Keep the physically trimmed tube length shared with the product page.
+                const visible = visibleFraction * part.image.height;
                 const clipId = `${titleId}-${part.slot}-foot`;
                 return <g key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} transform={layerTransform(transform, part)}>
                     <defs><clipPath id={clipId} clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width={part.image.width} height={visible} /></clipPath></defs>
                     <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0" clipPath={`url(#${clipId})`}
-                        style={{ mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined }}
+                        style={{ opacity: part.opacity, mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined) }}
                         onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />
                 </g>;
             }
             return <image key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} transform={layerTransform(transform, part)}
-                x="0" y="0" style={{ mixBlendMode: blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
+                x="0" y="0" style={{ opacity: part.opacity, mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined) }}
                 onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />;
         })}
 

@@ -1,0 +1,2353 @@
+{
+  "assemblies": {
+    "GB-CYL-AMB-5ML-SPR-MBLK": {
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MBLK",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-BLK-13-415-01",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "tulip-5ml-13-415|Amber",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBTulipAmb5SpryBlkMatt"
+    },
+    "GB-CYL-AMB-5ML-SPR-MBLU": {
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MBLU",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-13-415",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "tulip-5ml-13-415|Amber",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBTulipAmb5SpryBluMatt"
+    },
+    "GB-CYL-AMB-5ML-SPR-MCPR": {
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MCPR",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-MTCP-13-415-07",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "tulip-5ml-13-415|Amber",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBTulipAmb5SpryCuMatt"
+    },
+    "GB-CYL-AMB-5ML-SPR-MGLD": {
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MGLD",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "tulip-5ml-13-415|Amber",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBTulipAmb5SpryGlMatt"
+    },
+    "GB-CYL-AMB-5ML-SPR-MSLV": {
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MSLV",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SLV-13-415-02",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "tulip-5ml-13-415|Amber",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBTulipAmb5SprySlMatt"
+    },
+    "GB-CYL-AMB-5ML-SPR-SBLK": {
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SBLK",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-BLK-13-415-02",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "tulip-5ml-13-415|Amber",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBTulipAmb5SpryBlkSh"
+    },
+    "GB-CYL-AMB-5ML-SPR-SGLD": {
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SGLD",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SGLD-13-415-03",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "tulip-5ml-13-415|Amber",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBTulipAmb5SpryGlSh"
+    },
+    "GB-CYL-AMB-5ML-SPR-SSLV": {
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SSLV",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SLV-13-415-03",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "tulip-5ml-13-415|Amber",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBTulipAmb5SprySlSh"
+    },
+    "GB-RND-CLR-78ML-SPR-CPR": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-RND-CLR-78ML-SPR-CPR",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-MTCP-18-415-03",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRnd78SpryCu"
+    },
+    "GB-RND-CLR-78ML-SPR-MGLD": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-RND-CLR-78ML-SPR-MGLD",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-MTGD-18-415-05",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRnd78SpryMtGl"
+    },
+    "GB-RND-CLR-78ML-SPR-MSLV": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-RND-CLR-78ML-SPR-MSLV",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-MTSL-18-415-06",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRnd78SpryMtSl"
+    },
+    "GB-RND-CLR-78ML-SPR-SBLK": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-RND-CLR-78ML-SPR-SBLK",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-SHBK-18-415-06",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRnd78SpryShnBlk"
+    },
+    "GB-RND-CLR-78ML-SPR-SGLD": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-RND-CLR-78ML-SPR-SGLD",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-SHGD-18-415-05",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRnd78SpryShnGl"
+    },
+    "GB-RND-CLR-78ML-SPR-SSLV": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Clear",
+      "graceSku": "GB-RND-CLR-78ML-SPR-SSLV",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-SHSL-18-415-06",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRnd78SpryShnSl"
+    },
+    "GB-RND-FRS-78ML-SPR-CPR": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-RND-FRS-78ML-SPR-CPR",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-MTCP-18-415-03",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRndFrst78SpryCu"
+    },
+    "GB-RND-FRS-78ML-SPR-MGLD": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-RND-FRS-78ML-SPR-MGLD",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-MTGD-18-415-05",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRndFrst78SpryMtGl"
+    },
+    "GB-RND-FRS-78ML-SPR-MSLV": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-RND-FRS-78ML-SPR-MSLV",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-MTSL-18-415-06",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRndFrst78SpryMtSl"
+    },
+    "GB-RND-FRS-78ML-SPR-SBLK": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-RND-FRS-78ML-SPR-SBLK",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-SHBK-18-415-06",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRndFrst78SpryShnBlk"
+    },
+    "GB-RND-FRS-78ML-SPR-SGLD": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-RND-FRS-78ML-SPR-SGLD",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-SHGD-18-415-05",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRndFrst78SpryShnGl"
+    },
+    "GB-RND-FRS-78ML-SPR-SSLV": {
+      "bodyId": "round-78ml-18-415",
+      "glass": "Frosted",
+      "graceSku": "GB-RND-FRS-78ML-SPR-SSLV",
+      "neck": "18-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-SHSL-18-415-06",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "round-78ml-18-415|Frosted",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBRndFrst78SpryShnSl"
+    },
+    "GB-SLK-CLR-8ML-SPR-MBLK": {
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-MBLK",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-BLK-13-415-01",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "sleek-8ml-13-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBSleek8SpryBlkMatt"
+    },
+    "GB-SLK-CLR-8ML-SPR-MBLU": {
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-MBLU",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-13-415",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "sleek-8ml-13-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBSleek8SpryBluMatt"
+    },
+    "GB-SLK-CLR-8ML-SPR-MCPR": {
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-MCPR",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-SPR-MTCP-13-415-07",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "sleek-8ml-13-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBSleek8SpryCuMatt"
+    },
+    "GB-SLK-CLR-8ML-SPR-MGLD": {
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-MGLD",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "sleek-8ml-13-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBSleek8SpryGlMatt"
+    },
+    "GB-SLK-CLR-8ML-SPR-MSLV": {
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-MSLV",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SLV-13-415-02",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "sleek-8ml-13-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBSleek8SprySlMatt"
+    },
+    "GB-SLK-CLR-8ML-SPR-SBLK": {
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-SBLK",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-BLK-13-415-02",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "sleek-8ml-13-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBSleek8SpryBlkSh"
+    },
+    "GB-SLK-CLR-8ML-SPR-SGLD": {
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-SGLD",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SGLD-13-415-03",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "sleek-8ml-13-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBSleek8SpryGlSh"
+    },
+    "GB-SLK-CLR-8ML-SPR-SSLV": {
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-SSLV",
+      "neck": "13-415",
+      "parts": [
+        {
+          "componentId": "CMP-CAP-SLV-13-415-03",
+          "role": "sprayer"
+        }
+      ],
+      "plateKey": "sleek-8ml-13-415|Clear",
+      "reason": null,
+      "renderable": true,
+      "websiteSku": "GBSleek8SprySlSh"
+    }
+  },
+  "bodies": {
+    "round-78ml-18-415": {
+      "bodyId": "round-78ml-18-415",
+      "capacityMl": 78,
+      "dims": {
+        "diameterMm": 59,
+        "heightBareMm": 73,
+        "widthMm": null
+      },
+      "family": "Round",
+      "neck": "18-415"
+    },
+    "sleek-8ml-13-415": {
+      "bodyId": "sleek-8ml-13-415",
+      "capacityMl": 8,
+      "dims": {
+        "diameterMm": 17,
+        "heightBareMm": 66,
+        "widthMm": 17
+      },
+      "family": "Sleek",
+      "neck": "13-415"
+    },
+    "tulip-5ml-13-415": {
+      "bodyId": "tulip-5ml-13-415",
+      "capacityMl": 5,
+      "dims": {
+        "diameterMm": 23,
+        "heightBareMm": 45,
+        "widthMm": 23
+      },
+      "family": "Tulip",
+      "neck": "13-415"
+    }
+  },
+  "components": {
+    "CMP-CAP-13-415": {
+      "approved": true,
+      "componentId": "CMP-CAP-13-415",
+      "layers": [
+        {
+          "anchor": {
+            "x": 263,
+            "y": 573
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 993,
+          "pxPerMm": 33.6991,
+          "slot": "sprayer",
+          "solidBottomY": 977,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/sprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png",
+          "width": 528,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 101.5,
+            "y": 246
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 394,
+          "pxPerMm": 11.233,
+          "slot": "overcap",
+          "solidBottomY": 386,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/overcap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png",
+          "width": 210,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/diptube-834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 426.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/sprayer-072c629f7d92a933e4089f8c03e584980256a88a0fc08021fa8add365b426c9e.png",
+          "width": 385,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 496.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/overcap-1d96b170362cb8e9d3677d42017b59aac87017174af432e1f6059721a668d5cb.png",
+          "width": 428,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 43,
+            "y": -45.64
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 4,
+          "height": 2257,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/diptube-35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688.png",
+          "usage": "exploded",
+          "width": 110,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Frosted",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/diptube-f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 1227,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/diptube-5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085.png",
+          "usage": "seated",
+          "width": 147,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 1.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Cobalt Blue",
+          "height": 1228,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/diptube-4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007.png",
+          "usage": "seated",
+          "width": 142,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 42,
+            "y": -46.19
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 4,
+          "height": 1159,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/diptube-74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27.png",
+          "usage": "exploded",
+          "width": 109,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 413.09
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/sprayer-072c629f7d92a933e4089f8c03e584980256a88a0fc08021fa8add365b426c9e.png",
+          "width": 385,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 457.71
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/overcap-1d96b170362cb8e9d3677d42017b59aac87017174af432e1f6059721a668d5cb.png",
+          "width": 428,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-CAP-BLK-13-415-01": {
+      "approved": true,
+      "componentId": "CMP-CAP-BLK-13-415-01",
+      "layers": [
+        {
+          "anchor": {
+            "x": 264.5,
+            "y": 610.2
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 1048,
+          "pxPerMm": 31.6683,
+          "slot": "sprayer",
+          "solidBottomY": 978,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png",
+          "width": 524,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 108,
+            "y": 242
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 394,
+          "pxPerMm": 11.233,
+          "slot": "overcap",
+          "solidBottomY": 386,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/overcap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png",
+          "width": 217,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/diptube-834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 426.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-d8bec1ef79019326aadd602c3dd3450f0b90533938be759cf30827707fe5a0ea.png",
+          "width": 386,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 496.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/overcap-5088de2996649ad9b83f70579842e3e23551492f6d9e7d290df5272b41cd6065.png",
+          "width": 428,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 43,
+            "y": -45.64
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 4,
+          "height": 2257,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/diptube-35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688.png",
+          "usage": "exploded",
+          "width": 110,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Frosted",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/diptube-f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 1227,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/diptube-5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085.png",
+          "usage": "seated",
+          "width": 147,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 1.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Cobalt Blue",
+          "height": 1228,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/diptube-4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007.png",
+          "usage": "seated",
+          "width": 142,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 42,
+            "y": -46.19
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 4,
+          "height": 1159,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/diptube-74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27.png",
+          "usage": "exploded",
+          "width": 109,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 413.09
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-d8bec1ef79019326aadd602c3dd3450f0b90533938be759cf30827707fe5a0ea.png",
+          "width": 386,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 457.71
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/overcap-5088de2996649ad9b83f70579842e3e23551492f6d9e7d290df5272b41cd6065.png",
+          "width": 428,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-CAP-BLK-13-415-02": {
+      "approved": true,
+      "componentId": "CMP-CAP-BLK-13-415-02",
+      "layers": [
+        {
+          "anchor": {
+            "x": 297.5,
+            "y": 645.8
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 1085,
+          "pxPerMm": 35.4862,
+          "slot": "sprayer",
+          "solidBottomY": 1067,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/sprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png",
+          "width": 584,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 102,
+            "y": 245
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 394,
+          "pxPerMm": 11.233,
+          "slot": "overcap",
+          "solidBottomY": 385,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/overcap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png",
+          "width": 235,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/diptube-834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 426.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/sprayer-89f5d44301f184ae8fd4e63f79e5cc3f8766513cbd2e4d4d6e9b170d3e58d2a8.png",
+          "width": 386,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 496.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/overcap-e38f5276720e5771a3afa79a361e1b655481c8c6788bff5c0792821896ba2a15.png",
+          "width": 428,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 43,
+            "y": -45.64
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 4,
+          "height": 2257,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/diptube-35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688.png",
+          "usage": "exploded",
+          "width": 110,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Frosted",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/diptube-f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 1227,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/diptube-5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085.png",
+          "usage": "seated",
+          "width": 147,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 1.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Cobalt Blue",
+          "height": 1228,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/diptube-4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007.png",
+          "usage": "seated",
+          "width": 142,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 42,
+            "y": -46.19
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 4,
+          "height": 1159,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/diptube-74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27.png",
+          "usage": "exploded",
+          "width": 109,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 413.09
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/sprayer-89f5d44301f184ae8fd4e63f79e5cc3f8766513cbd2e4d4d6e9b170d3e58d2a8.png",
+          "width": 386,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 457.71
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/overcap-e38f5276720e5771a3afa79a361e1b655481c8c6788bff5c0792821896ba2a15.png",
+          "width": 428,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-CAP-SGLD-13-415-02": {
+      "approved": true,
+      "componentId": "CMP-CAP-SGLD-13-415-02",
+      "layers": [
+        {
+          "anchor": {
+            "x": 260,
+            "y": 562.2
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 976,
+          "pxPerMm": 33.1114,
+          "slot": "sprayer",
+          "solidBottomY": 967,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png",
+          "width": 525,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 106,
+            "y": 242
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 396,
+          "pxPerMm": 11.233,
+          "slot": "overcap",
+          "solidBottomY": 385,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png",
+          "width": 214,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/diptube-834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 426.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-ed4e54e11e274207dc43b26e513c42acb00bf458f4e4aa571bcbc8e97e8ab589.png",
+          "width": 385,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 496.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-3f49003ed439620c0bd14048481b905d106eb0395bb44fe73d8bbc64bb8d4e76.png",
+          "width": 428,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 43,
+            "y": -45.64
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 4,
+          "height": 2257,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/diptube-35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688.png",
+          "usage": "exploded",
+          "width": 110,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Frosted",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/diptube-f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 1227,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/diptube-5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085.png",
+          "usage": "seated",
+          "width": 147,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 1.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Cobalt Blue",
+          "height": 1228,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/diptube-4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007.png",
+          "usage": "seated",
+          "width": 142,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 42,
+            "y": -46.19
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 4,
+          "height": 1159,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/diptube-74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27.png",
+          "usage": "exploded",
+          "width": 109,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 413.09
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-ed4e54e11e274207dc43b26e513c42acb00bf458f4e4aa571bcbc8e97e8ab589.png",
+          "width": 385,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 457.71
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-3f49003ed439620c0bd14048481b905d106eb0395bb44fe73d8bbc64bb8d4e76.png",
+          "width": 428,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-CAP-SGLD-13-415-03": {
+      "approved": true,
+      "componentId": "CMP-CAP-SGLD-13-415-03",
+      "layers": [
+        {
+          "anchor": {
+            "x": 288.4,
+            "y": 613.5
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 1060,
+          "pxPerMm": 34.6082,
+          "slot": "sprayer",
+          "solidBottomY": 1033,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/sprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png",
+          "width": 570,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 104,
+            "y": 242
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 397,
+          "pxPerMm": 11.233,
+          "slot": "overcap",
+          "solidBottomY": 388,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/overcap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png",
+          "width": 210,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/diptube-834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 426.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/sprayer-1eb0c9b67ad1e7b74f3d3d45c4e400f4a4d62c0b19950c44822cccfa68f34eba.png",
+          "width": 386,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 496.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/overcap-b09e578a7e782b26e898e07944ed2c4ec01613da2388b6846c159f6d8ddc586d.png",
+          "width": 428,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 43,
+            "y": -45.64
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 4,
+          "height": 2257,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/diptube-35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688.png",
+          "usage": "exploded",
+          "width": 110,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Frosted",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/diptube-f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 1227,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/diptube-5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085.png",
+          "usage": "seated",
+          "width": 147,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 1.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Cobalt Blue",
+          "height": 1228,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/diptube-4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007.png",
+          "usage": "seated",
+          "width": 142,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 42,
+            "y": -46.19
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 4,
+          "height": 1159,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/diptube-74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27.png",
+          "usage": "exploded",
+          "width": 109,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 413.09
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/sprayer-1eb0c9b67ad1e7b74f3d3d45c4e400f4a4d62c0b19950c44822cccfa68f34eba.png",
+          "width": 386,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 457.71
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/overcap-b09e578a7e782b26e898e07944ed2c4ec01613da2388b6846c159f6d8ddc586d.png",
+          "width": 428,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-CAP-SLV-13-415-02": {
+      "approved": true,
+      "componentId": "CMP-CAP-SLV-13-415-02",
+      "layers": [
+        {
+          "anchor": {
+            "x": 285,
+            "y": 596.8
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 1028,
+          "pxPerMm": 33.513,
+          "slot": "sprayer",
+          "solidBottomY": 1010,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/sprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png",
+          "width": 562,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 109,
+            "y": 245
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 397,
+          "pxPerMm": 11.233,
+          "slot": "overcap",
+          "solidBottomY": 387,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/overcap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png",
+          "width": 217,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/diptube-834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 426.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/sprayer-52cca6c395908a850bc9326c1d2f26eec328853d1b8116b7fe3423418addb3db.png",
+          "width": 385,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 496.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/overcap-9c8b5a8d63fe9c0d191a04e24ca4531c56124ab14912386699f17362d69798e9.png",
+          "width": 428,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 43,
+            "y": -45.64
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 4,
+          "height": 2257,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/diptube-35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688.png",
+          "usage": "exploded",
+          "width": 110,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Frosted",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/diptube-f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 1227,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/diptube-5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085.png",
+          "usage": "seated",
+          "width": 147,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 1.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Cobalt Blue",
+          "height": 1228,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/diptube-4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007.png",
+          "usage": "seated",
+          "width": 142,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 42,
+            "y": -46.19
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 4,
+          "height": 1159,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/diptube-74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27.png",
+          "usage": "exploded",
+          "width": 109,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 413.09
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/sprayer-52cca6c395908a850bc9326c1d2f26eec328853d1b8116b7fe3423418addb3db.png",
+          "width": 385,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 457.71
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/overcap-9c8b5a8d63fe9c0d191a04e24ca4531c56124ab14912386699f17362d69798e9.png",
+          "width": 428,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-CAP-SLV-13-415-03": {
+      "approved": true,
+      "componentId": "CMP-CAP-SLV-13-415-03",
+      "layers": [
+        {
+          "anchor": {
+            "x": 288,
+            "y": 616.6
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 1060,
+          "pxPerMm": 34.6082,
+          "slot": "sprayer",
+          "solidBottomY": 1033,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/sprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png",
+          "width": 570,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 100.5,
+            "y": 241
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 393,
+          "pxPerMm": 11.233,
+          "slot": "overcap",
+          "solidBottomY": 384,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/overcap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png",
+          "width": 206,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/diptube-834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 426.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/sprayer-5c846a2db23faf515260b24a688420cd62e9534ead4500288d27d96036104f0c.png",
+          "width": 386,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 496.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/overcap-813387e8c39c1e5a0f5758907c4eee045ac280af6f565b614626225328b0a235.png",
+          "width": 428,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 43,
+            "y": -45.64
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 4,
+          "height": 2257,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/diptube-35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688.png",
+          "usage": "exploded",
+          "width": 110,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Frosted",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/diptube-f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 1227,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/diptube-5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085.png",
+          "usage": "seated",
+          "width": 147,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 1.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Cobalt Blue",
+          "height": 1228,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/diptube-4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007.png",
+          "usage": "seated",
+          "width": 142,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 42,
+            "y": -46.19
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 4,
+          "height": 1159,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/diptube-74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27.png",
+          "usage": "exploded",
+          "width": 109,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 413.09
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/sprayer-5c846a2db23faf515260b24a688420cd62e9534ead4500288d27d96036104f0c.png",
+          "width": 386,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 457.71
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/overcap-813387e8c39c1e5a0f5758907c4eee045ac280af6f565b614626225328b0a235.png",
+          "width": 428,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-SPR-MTCP-13-415-07": {
+      "approved": true,
+      "componentId": "CMP-SPR-MTCP-13-415-07",
+      "layers": [
+        {
+          "anchor": {
+            "x": 276,
+            "y": 602.2
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 1031,
+          "pxPerMm": 34.3484,
+          "slot": "sprayer",
+          "solidBottomY": 1019,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/sprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png",
+          "width": 555,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 107.5,
+            "y": 240
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 395,
+          "pxPerMm": 11.233,
+          "slot": "overcap",
+          "solidBottomY": 385,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/overcap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png",
+          "width": 214,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/diptube-834ec8b19dddaf40aa19edb9e133d78bf99c97efe35235d1a367c91339b4f643.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 426.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/sprayer-24f8adb1f0947e45d503281708be185fa84d41e0a940c8c448a2b58e3277e7a0.png",
+          "width": 385,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 496.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/overcap-58300a8b0ed2f129f9c50c2fc5137235c0ee657d48b3f2974f650d6ae056810b.png",
+          "width": 428,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 43,
+            "y": -45.64
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 4,
+          "height": 2257,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/diptube-35fb424806c266ad33e79db794217e62c49e5aa25104d9071f5fd87f9380e688.png",
+          "usage": "exploded",
+          "width": 110,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.36
+          },
+          "approved": true,
+          "bodyId": "cylinder-9ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Frosted",
+          "height": 2319,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/diptube-f62d509cc88934e5226865107cf62f0b6c89a835acbff0154276cfdccbf6ca1e.png",
+          "usage": "seated",
+          "width": 143,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 0.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Clear",
+          "height": 1227,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/diptube-5143b07ff4d8380e33c3f4b8d9e805be50a735afc9bf9cfe81aece4ddf238085.png",
+          "usage": "seated",
+          "width": 147,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 59,
+            "y": 1.81
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 5,
+          "glass": "Cobalt Blue",
+          "height": 1228,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/diptube-4d0ef8bcf5f2c768245df8b33aee94f14630b6e9c91a7295124211ed6aca1007.png",
+          "usage": "seated",
+          "width": 142,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 42,
+            "y": -46.19
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 4,
+          "height": 1159,
+          "pxPerMm": 25,
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/diptube-74d019c3d82a452cdde1f58b728cdcb874f4e2e9f366a977a823855da4d4ca27.png",
+          "usage": "exploded",
+          "width": 109,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 193,
+            "y": 413.09
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 1,
+          "height": 712,
+          "pxPerMm": 25,
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/sprayer-24f8adb1f0947e45d503281708be185fa84d41e0a940c8c448a2b58e3277e7a0.png",
+          "width": 385,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 214,
+            "y": 457.71
+          },
+          "approved": true,
+          "bodyId": "cylinder-5ml-13-415",
+          "explodeIndex": 2,
+          "height": 783,
+          "pxPerMm": 25,
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/overcap-58300a8b0ed2f129f9c50c2fc5137235c0ee657d48b3f2974f650d6ae056810b.png",
+          "width": 428,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-SPR-MTCP-18-415-03": {
+      "approved": true,
+      "componentId": "CMP-SPR-MTCP-18-415-03",
+      "layers": [
+        {
+          "anchor": {
+            "x": 113,
+            "y": 231.3
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 400,
+          "pxPerMm": 9.0702,
+          "slot": "sprayer",
+          "solidBottomY": 391,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+          "width": 229,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 181,
+            "y": 408
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 646,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 635,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png",
+          "width": 392,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-SPR-MTGD-18-415-05": {
+      "approved": true,
+      "componentId": "CMP-SPR-MTGD-18-415-05",
+      "layers": [
+        {
+          "anchor": {
+            "x": 116.5,
+            "y": 234.8
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 400,
+          "pxPerMm": 8.7991,
+          "slot": "sprayer",
+          "solidBottomY": 390,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+          "width": 232,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 176.5,
+            "y": 356
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 602,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 591,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+          "width": 349,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-SPR-MTSL-18-415-06": {
+      "approved": true,
+      "componentId": "CMP-SPR-MTSL-18-415-06",
+      "layers": [
+        {
+          "anchor": {
+            "x": 114,
+            "y": 226
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 397,
+          "pxPerMm": 9.1322,
+          "slot": "sprayer",
+          "solidBottomY": 391,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+          "width": 226,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 175.5,
+            "y": 354
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 600,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 587,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+          "width": 345,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-SPR-SHBK-18-415-06": {
+      "approved": true,
+      "componentId": "CMP-SPR-SHBK-18-415-06",
+      "layers": [
+        {
+          "anchor": {
+            "x": 118.5,
+            "y": 229.4
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 400,
+          "pxPerMm": 9.017,
+          "slot": "sprayer",
+          "solidBottomY": 393,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+          "width": 232,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 176,
+            "y": 352
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 596,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 587,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+          "width": 349,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-SPR-SHGD-18-415-05": {
+      "approved": true,
+      "componentId": "CMP-SPR-SHGD-18-415-05",
+      "layers": [
+        {
+          "anchor": {
+            "x": 121.5,
+            "y": 228.6
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 400,
+          "pxPerMm": 9.2797,
+          "slot": "sprayer",
+          "solidBottomY": 392,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+          "width": 242,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 169.8,
+            "y": 357
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 594,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 583,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png",
+          "width": 343,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    },
+    "CMP-SPR-SHSL-18-415-06": {
+      "approved": true,
+      "componentId": "CMP-SPR-SHSL-18-415-06",
+      "layers": [
+        {
+          "anchor": {
+            "x": 113,
+            "y": 231.3
+          },
+          "approved": true,
+          "explodeIndex": 1,
+          "height": 398,
+          "pxPerMm": 9.0296,
+          "slot": "sprayer",
+          "solidBottomY": 392,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+          "width": 226,
+          "z": "front"
+        },
+        {
+          "anchor": {
+            "x": 175.5,
+            "y": 354
+          },
+          "approved": true,
+          "explodeIndex": 2,
+          "height": 599,
+          "pxPerMm": 12.8025,
+          "slot": "overcap",
+          "solidBottomY": 583,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+          "width": 351,
+          "z": "front"
+        }
+      ],
+      "type": "fine-mist-sprayer"
+    }
+  },
+  "plates": {
+    "round-78ml-18-415|Clear": {
+      "anchors": {
+        "axisX": 914,
+        "baselineY": 2096,
+        "seatY": 133,
+        "shoulderY": 631
+      },
+      "approved": true,
+      "bodyId": "round-78ml-18-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "round-78ml-18-415|Clear",
+      "pxPerMm": 24.9215,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+      "width": 1840
+    },
+    "round-78ml-18-415|Frosted": {
+      "anchors": {
+        "axisX": 914.5,
+        "baselineY": 2096,
+        "seatY": 133,
+        "shoulderY": 631
+      },
+      "approved": true,
+      "bodyId": "round-78ml-18-415",
+      "glass": "Frosted",
+      "height": 2192,
+      "plateKey": "round-78ml-18-415|Frosted",
+      "pxPerMm": 24.9215,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+      "width": 1840
+    },
+    "sleek-8ml-13-415|Clear": {
+      "anchors": {
+        "axisX": 375.5,
+        "baselineY": 2096,
+        "seatY": 141,
+        "shoulderY": 464
+      },
+      "approved": true,
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "height": 2192,
+      "plateKey": "sleek-8ml-13-415|Clear",
+      "pxPerMm": 28.9993,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/sleek-8ml-13-415/clear/7987a868e0824c4d2462d6f97d9523b5dfc8bb4340bce939603558412e49573c.png",
+      "width": 768
+    },
+    "tulip-5ml-13-415|Amber": {
+      "anchors": {
+        "axisX": 630,
+        "baselineY": 2096,
+        "seatY": 152,
+        "shoulderY": 653
+      },
+      "approved": true,
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "height": 2192,
+      "plateKey": "tulip-5ml-13-415|Amber",
+      "pxPerMm": 41.2234,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-5ml-13-415/amber/84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png",
+      "width": 1280
+    }
+  }
+}

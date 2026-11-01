@@ -1,0 +1,237 @@
+[
+  {
+    "cap": "white",
+    "view": "SIDECAR",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=white&assetPreview=kits",
+    "images": [
+      {
+        "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+        "alt": "Best Bottles",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Ff769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8.body.png&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp&w=1200&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/assets/homepage/collection-sample-vials-bone-v3.webp",
+        "alt": "Sample Vials collection",
+        "loaded": true
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "cap": "white",
+    "view": "CAP ON",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=white&assetPreview=kits",
+    "images": [
+      {
+        "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+        "alt": "Best Bottles",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Ff769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8.body.png&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp&w=1200&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/assets/homepage/collection-sample-vials-bone-v3.webp",
+        "alt": "Sample Vials collection",
+        "loaded": true
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "cap": "white",
+    "view": "EXPLODED",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=white&assetPreview=kits",
+    "images": [
+      {
+        "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+        "alt": "Best Bottles",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Ff769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8.body.png&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp&w=1200&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/assets/homepage/collection-sample-vials-bone-v3.webp",
+        "alt": "Sample Vials collection",
+        "loaded": true
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "cap": "black",
+    "view": "SIDECAR",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=black&assetPreview=kits",
+    "images": [
+      {
+        "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+        "alt": "Best Bottles",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Ff769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8.body.png&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp&w=1200&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/assets/homepage/collection-sample-vials-bone-v3.webp",
+        "alt": "Sample Vials collection",
+        "loaded": true
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "cap": "black",
+    "view": "CAP ON",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=black&assetPreview=kits",
+    "images": [
+      {
+        "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+        "alt": "Best Bottles",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Ff769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8.body.png&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp&w=1200&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/assets/homepage/collection-sample-vials-bone-v3.webp",
+        "alt": "Sample Vials collection",
+        "loaded": true
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "cap": "black",
+    "view": "EXPLODED",
+    "url": "http://localhost:3010/products/vial-2ml-clear-8-425?cap=black&assetPreview=kits",
+    "images": [
+      {
+        "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+        "alt": "Best Bottles",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Ff769786d251fa57fa592825f790db1c62d9f3c75d8031647313bd15a9ee591d8.body.png&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp&w=1200&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-2ml-source-2026-10-31%2Fparts%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp&w=640&q=75",
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "src": "http://localhost:3010/assets/homepage/collection-sample-vials-bone-v3.webp",
+        "alt": "Sample Vials collection",
+        "loaded": true
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "mobile": true,
+    "overflow": false
+  },
+  {
+    "defaultHasPreview": false
+  }
+]

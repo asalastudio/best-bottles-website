@@ -13,10 +13,12 @@
  * full-canvas layers (box = the canvas); register parts carry a real box.
  * Nothing here reads pixels or Convex.
  */
+import { registeredGlassSizing } from "./catalog-scale";
+import type { PdpGlassSizing } from "@/lib/products/pdp-stage-frame";
 import { compose, footY, frameFromDatum, type Frame, type LayerGeometry, type PlateGeometry } from "./compose";
 import { stackedExplodeOffsets } from "@/lib/products/exploded-stack";
 import { ELEGANT_PHOTO_BODIES } from "./elegant-photo-bodies";
-import { detachedOvercap } from "./detached-overcaps";
+import { CYLINDER9_OVERCAP_MASTER, detachedOvercap } from "./detached-overcaps";
 import type { DetachedLook } from "@/lib/products/kit-frame";
 import { CYLINDER9_PILOT_LAYER_HASHES } from "./cylinder9-pilot-layers";
 import { closureDropMm, closureSeatSignature } from "./seat-drops";
@@ -99,6 +101,8 @@ export type RegisterStagePayload = {
 // ---------- the kit shape both stages draw ----------
 
 export type RegisterKitPart = {
+    /** Optical attenuation for a seated tube behind frosted glass. */
+    opacity?: number;
     slot: KitSlot;
     variantKey: string | null;
     zOrder: number;
@@ -147,6 +151,7 @@ export type RegisterKit = {
     three: null;
     conflicts: string[];
     register: RegisterKitMeta;
+    glassSizing?: PdpGlassSizing;
 };
 
 type PlacedLayer = RegisterLayer & { componentId: string; role: string };
@@ -284,9 +289,31 @@ export function kitFromRegister(
         ordered.splice(ordered.findIndex((part) => part.slot === "body") + 1, 0, ...tubes);
         parts = ordered.map((part, zOrder) => ({ ...part, zOrder }));
     }
+    // These mist tube crops contain glass-wide artifacts: a frost cloud or a
+    // second swirl pattern. Keep one body plate and the same mechanism's narrow
+    // tube. Frosting attenuates it; swirl print occludes it. Exploded stays unchanged.
+    const cylinder9GhostTube = ({
+        Frosted: "05437fcf0138676421a222e5d97c49f23c4b55a33cdc6c54ffc91dc5880aca73",
+        Swirl: "19765d409e1df03e6d1714a56a8502cdc425a991663ce7a361b3282fe569bf68",
+    } as Record<string, string>)[plate.glass];
+    if (assembly.bodyId === "cylinder-9ml-17-415" && cylinder9GhostTube) {
+        parts = parts.map(part => {
+            if (part.slot !== "diptube" || !part.image.url.includes(cylinder9GhostTube)) return part;
+            const narrow = parts.find(p => p.slot === "diptube" && p.componentId === part.componentId
+                && p.views?.includes("exploded") && p.box.width < part.box.width / 2);
+            return narrow ? { ...narrow, zOrder: plate.glass === "Swirl" ? (parts.find(p => p.slot === "body")?.zOrder ?? 0) - 0.5 : part.zOrder, explodeIndex: part.explodeIndex,
+                exploded: part.exploded, views: part.views, opacity: plate.glass === "Frosted" ? 0.3 : undefined } : part;
+        });
+    }
     // A clear overcap parked or lifted off the bottle is drawn as the empty cover, not the capped photograph's cover over its pump.
     parts = parts.map((part) => {
         const detached = detachedOvercap(part);
+        if (detached?.image.url === CYLINDER9_OVERCAP_MASTER) {
+            // True interior alpha lets the actual selected actuator show through
+            // when seated. The same empty shell also works off the bottle.
+            return { ...part, image: { ...part.image, ...detached.image },
+                box: detached.box, bounds: detached.bounds, detached };
+        }
         return detached ? { ...part, detached } : part;
     });
     // EXPLODED offsets are computed over the parts of each view separately, so a seated insert and its full plug never stack against each other.
@@ -295,6 +322,7 @@ export function kitFromRegister(
     lifts.forEach((offset, index) => { explodable[index].exploded = offset; });
 
     const componentIds = [...new Set(assembly.parts.map((part) => part.componentId))];
+    const glassSizing = registeredGlassSizing(assembly.bodyId, plate, parts.find(part => part.slot === "body"));
     return {
         sku: assembly.websiteSku ?? graceSku,
         familyId: `register:${assembly.plateKey}`,
@@ -302,6 +330,7 @@ export function kitFromRegister(
         canvas: { width: canvas.width, height: canvas.height },
         anchors: { axisX: datum.axisX, neckAxisX: datum.axisX, seatY: datum.seatY, baselineY: datum.baselineY, pxPerMm: round(frame.pxPerMm) },
         completeness: "full",
+        ...(glassSizing ? { glassSizing } : {}),
         parts,
         three: null,
         conflicts: [],

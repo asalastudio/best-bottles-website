@@ -1,0 +1,66 @@
+{
+  "folderUrl": "https://drive.google.com/drive/folders/1qsoRIZJoStFeOF7raT5QVGB_v36rCOWv",
+  "verification": "Remote names, byte sizes and parents verified; local SHA256 and archive entry checks are recorded separately.",
+  "files": [
+    {
+      "path": "docs/reviews/cylinder9-clean-edges-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_Fixed-Edges-v04_REVIEW.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "name": "BB_Cylinder_9ml_17-415_Clear_BODY_Fixed-Edges-v04_REVIEW.png",
+      "id": "1mIRaeXXV55UM1Lq-OMXbsWsJJjt4fEWd",
+      "url": "https://drive.google.com/file/d/1mIRaeXXV55UM1Lq-OMXbsWsJJjt4fEWd/view?usp=drivesdk",
+      "parent": "1qsoRIZJoStFeOF7raT5QVGB_v36rCOWv",
+      "remoteMetadataVerified": true
+    },
+    {
+      "path": "docs/reviews/cylinder9-clean-edges-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_Fixed-Edges-v04_REVIEW.svg",
+      "bytes": 1969493,
+      "sha256": "fbb87a2b785efae176bbc74d6d64ac5613cd23e63327386aa7f79c7b52f4cc4f",
+      "name": "BB_Cylinder_9ml_17-415_Clear_BODY_Fixed-Edges-v04_REVIEW.svg",
+      "id": "1L0mMSPq6P9GXAznGhlaC7awg-bnoTdJx",
+      "url": "https://drive.google.com/file/d/1L0mMSPq6P9GXAznGhlaC7awg-bnoTdJx/view?usp=drivesdk",
+      "parent": "1qsoRIZJoStFeOF7raT5QVGB_v36rCOWv",
+      "remoteMetadataVerified": true
+    },
+    {
+      "path": "docs/reviews/cylinder9-clean-edges-2026-11-01/full-bottle-product-stage.png",
+      "bytes": 34517,
+      "sha256": "eeac54719a2b5ad53363748395ce3f5a0b4c716d9a17a6b9afc992ffac4f6cb5",
+      "name": "BB_Cylinder_9ml_Clear_v04_Actual-Product-Page-Size.png",
+      "id": "1l4ee0WEgH0tKhIDfXqStZRZaiYBtxSyK",
+      "url": "https://drive.google.com/file/d/1l4ee0WEgH0tKhIDfXqStZRZaiYBtxSyK/view?usp=drivesdk",
+      "parent": "1qsoRIZJoStFeOF7raT5QVGB_v36rCOWv",
+      "remoteMetadataVerified": true
+    },
+    {
+      "path": "docs/reviews/cylinder9-clean-edges-2026-11-01/README.md",
+      "bytes": 3220,
+      "sha256": "2f66db654c2888477b63733962dd35fb0034de534218277a44526d639d7592e8",
+      "name": "README_Cylinder_9ml_Fixed-Edges_v04_REVIEW.md",
+      "id": "1uwUlGkk7S9ZMycy0TylndtVKml8LlnKP",
+      "url": "https://drive.google.com/file/d/1uwUlGkk7S9ZMycy0TylndtVKml8LlnKP/view?usp=drivesdk",
+      "parent": "1qsoRIZJoStFeOF7raT5QVGB_v36rCOWv",
+      "remoteMetadataVerified": true
+    },
+    {
+      "path": "outputs/family-master-library-2026-11-01/Cylinder_9ml_Fixed-Edges-PDP-Review_2026-11-01_v04.zip",
+      "bytes": 10693229,
+      "sha256": "0617f4e457a0bc83fa2c0373289177f79d66bb31cbc90f235cbc8692f94061df",
+      "name": "Cylinder_9ml_Fixed-Edges-PDP-Review_2026-11-01_v04.zip",
+      "id": "1_gFyo5v7kxFckPmzvHIbznJ3c00A307l",
+      "url": "https://drive.google.com/file/d/1_gFyo5v7kxFckPmzvHIbznJ3c00A307l/view?usp=drivesdk",
+      "parent": "1qsoRIZJoStFeOF7raT5QVGB_v36rCOWv",
+      "remoteMetadataVerified": true
+    },
+    {
+      "path": "docs/reviews/family-master-library-2026-11-01/BATCHES.md",
+      "bytes": 2296,
+      "sha256": "3b3f89838916d93c9eb0ae6f5f2faa8a37e0d1e39f972bd0d23d3fcb73573264",
+      "name": "BATCHES_2026-11-01_Cylinder-Fixed-Edges-v04.md",
+      "id": "1qq5C2-GfPwTGFJ_7KI-nAzlWBa9u7ZVY",
+      "url": "https://drive.google.com/file/d/1qq5C2-GfPwTGFJ_7KI-nAzlWBa9u7ZVY/view?usp=drivesdk",
+      "parent": "1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe",
+      "remoteMetadataVerified": true
+    }
+  ]
+}

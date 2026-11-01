@@ -1,0 +1,24 @@
+{
+  "emptyRestore": {
+    "mode": "restored",
+    "verifiedFiles": 226,
+    "copied": 203,
+    "unchanged": 0,
+    "backedUp": 0
+  },
+  "repeatRestore": {
+    "mode": "restored",
+    "verifiedFiles": 226,
+    "copied": 0,
+    "unchanged": 203,
+    "backedUp": 0
+  },
+  "conflictBackup": {
+    "mode": "restored",
+    "verifiedFiles": 226,
+    "copied": 1,
+    "unchanged": 202,
+    "backedUp": 1,
+    "backupRoot": "/var/folders/g3/l_7f2hg57x90xzht2md1q_hm0000gn/T/bb-dip-tube-restore-89lhhw8y/outputs/catalog-model-repair-2026-10-31/checkpoint-restore-backups/2026-10-31T23-36-05-549Z"
+  }
+}

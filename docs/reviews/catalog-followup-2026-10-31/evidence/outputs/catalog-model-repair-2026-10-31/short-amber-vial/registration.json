@@ -1,0 +1,116 @@
+{
+  "sku": "GBVialAmb1o5WhtCapSht",
+  "heightMm": 22,
+  "diameterMm": 16,
+  "alphaBounds": {
+    "left": 181,
+    "top": 250,
+    "right": 900,
+    "bottom": 1281
+  },
+  "horizontalCalibrationPct": 4.286256163863933,
+  "provenance": "Native image-generation tool, source product photograph plus dimensioned Blender working model. Exact generator model not selectable by this tool. Sunburst request failed for insufficient API credits.",
+  "limitations": [
+    "Neck height and cap seating inferred from exact product photograph",
+    "Legacy description says 1.5 ml while capacity field says 2 ml; commerce data unchanged"
+  ],
+  "kit": {
+    "sku": "GBVialAmb1o5WhtCapSht",
+    "familyId": "vial-2ml-amber-13-425",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "baselineY": 1000,
+      "seatY": 554.5454545454545,
+      "pxPerMm": 31.818181818181817
+    },
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 245.45454545454547,
+          "top": 300,
+          "right": 754.5454545454545,
+          "bottom": 1000
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "box": {
+          "x": 117.29675053736253,
+          "y": 130.26188166828322,
+          "width": 763.2823365785813,
+          "height": 990.5916585838992
+        },
+        "image": {
+          "url": "/local-kits/catalog-followups-2026-10-31/short-amber-5be9929a0bde.png",
+          "key": "short-amber-5be9929a0bde.png",
+          "sha256": "5be9929a0bde292b74b11d7122c9736b21552b1dffacebce4e52252195e6c392",
+          "bytes": 991128,
+          "width": 1078,
+          "height": 1459
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "image-generation-review"
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "left": 237.81818181818187,
+          "top": 214.5035812672175,
+          "right": 762.1818181818182,
+          "bottom": 554.5454545454545
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": 0,
+          "dy": -180
+        },
+        "image": {
+          "bytes": 8874,
+          "height": 1100,
+          "key": "71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp",
+          "sha256": "71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e",
+          "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "cap",
+        "variantKey": "white",
+        "zOrder": 1,
+        "box": {
+          "x": -294.49035812672184,
+          "y": 152.53333333333322,
+          "width": 1588.980716253444,
+          "height": 1747.8787878787882
+        }
+      }
+    ],
+    "plateSha256": "",
+    "three": null,
+    "conflicts": [],
+    "completeness": "full",
+    "glassSizing": {
+      "heightPct": 25.29,
+      "baselinePct": 91
+    }
+  }
+}

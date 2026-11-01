@@ -272,9 +272,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         const glass = glasses.find((option) => option.slug === targetSlug);
         analytics.pdpPick({ group: slug, type: "glass", value: glass?.label ?? targetSlug, sku: glass?.primaryWebsiteSku ?? null });
         if (targetSlug === slug) return;
-        const query = pickQuery(picks, rollers);
+        const query = [pickQuery(picks, rollers), searchParams.get("assetPreview") === "gpt13" ? "assetPreview=gpt13" : ""].filter(Boolean).join("&");
         router.push(`/products/${targetSlug}${query ? `?${query}` : ""}`, { scroll: false });
-    }, [glasses, picks, rollers, router, slug]);
+    }, [glasses, picks, rollers, router, slug, searchParams]);
 
     useEffect(() => {
         for (const glass of glasses) if (!glass.active) router.prefetch(`/products/${glass.slug}`);
@@ -364,6 +364,24 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const option = optionLabel(rollerOption, fitment, capName);
     const capacityLabel = `${group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity ?? ""} ${group.family ?? ""}`.trim();
     const bodyKit = kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku });
+    const hasMeasuredFiveBody = bodyKit?.parts.some(part => part.slot === "body"
+        && part.image.url.includes("/local-kits/cylinder5-profiles-2026-10-31/glass-5-")
+        && /-measured-v\d+\.png$/.test(part.image.url));
+    // Jordan's October 31 caliper measurements apply only to these local review masters.
+    const measuredVariant = hasMeasuredFiveBody && selected
+        ? { ...selected, heightWithoutCap: "53.23 mm", diameter: "17.45 mm" } : selected;
+    const measuredCallouts = buildCallouts(measuredVariant, capName).map(callout =>
+        hasMeasuredFiveBody && callout.key === "neck"
+            ? { ...callout, line2: "12.60 mm crest Ø · 12.00 mm root Ø" } : callout);
+    const measuredTechRows = techSheetRows(measuredVariant, group);
+    if (hasMeasuredFiveBody) measuredTechRows.push(
+        { k: "Shoulder to base", v: "40.10 mm" },
+        { k: "Internal depth", v: "48.80 mm" },
+        { k: "Rim wall", v: "1.80 mm" },
+        { k: "Plain rim diameter (derived)", v: "10.92 mm" },
+        { k: "Opening (assumed uniform)", v: "7.32 mm" },
+        { k: "Wall at thread crest", v: "2.64 mm" },
+    );
     const capKits = caps.map((cap) => kitFor(kitsBySku, cap.variants[0])).filter((entry): entry is KitLike => Boolean(entry));
     const groupKits = variants.map((variant) => kitFor(kitsBySku, variant)).filter((entry): entry is KitLike => Boolean(entry));
     const plate = selected ? platesBySku[selected.graceSku] ?? (selected.websiteSku ? platesBySku[selected.websiteSku] : undefined) : undefined;
@@ -411,7 +429,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         fallbackImageUrls={fallbackMedia.images}
                         fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
                         fallbackAlt={copy?.altText ?? variantTitle(title, option)}
-                        callouts={buildCallouts(selected, capName)}
+                        callouts={measuredCallouts}
                         caps={caps.map((cap) => ({
                             id: cap.id, name: cap.name, swatchName: cap.swatchName,
                             kit: kitFor(kitsBySku, cap.variants[0]),
@@ -481,6 +499,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                 </div>
 
                 <PdpBuildStrip
+                    productPageOnly={["cylinder-3.3ml-clear-12mm-finemist", "cylinder-4ml-clear-12mm-finemist"].includes(slug)}
                     capacityLabel={capacityLabel}
                     glassLabel={glassLabel(group.color)}
                     neck={group.neckThreadSize ?? null}
@@ -488,15 +507,15 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     groupKits={groupKits}
                     fitmentKits={fitmentKits}
                     capKits={capKits}
-                    href={buildYourBottleHref(group, collection?.band ?? null)}
+                    href={buildYourBottleHref(group, collection?.band ?? null, selected?.websiteSku ?? selected?.graceSku) + (searchParams.get("assetPreview") === "gpt13" ? "&assetPreview=gpt13" : "")}
                 />
 
                 <PdpTechSheet
-                    rows={techSheetRows(selected, group)}
-                    pdfHref={`/api/pdf/tech-sheet/${encodeURIComponent(slug)}${selected?.graceSku ? `?sku=${encodeURIComponent(selected.graceSku)}` : ""}`}
-                    drawing={drawingFor(slug, selected, drawingStyleFromQuery(searchParams.get("drawing")))}
-                    technical={technicalDrawingFor(drawingBodyId(slug))}
-                    labelFit={labelFitFor(drawingBodyId(slug))}
+                    rows={measuredTechRows}
+                    pdfHref={hasMeasuredFiveBody ? null : `/api/pdf/tech-sheet/${encodeURIComponent(slug)}${selected?.graceSku ? `?sku=${encodeURIComponent(selected.graceSku)}` : ""}`}
+                    drawing={hasMeasuredFiveBody ? null : drawingFor(slug, selected, drawingStyleFromQuery(searchParams.get("drawing")))}
+                    technical={hasMeasuredFiveBody ? null : technicalDrawingFor(drawingBodyId(slug))}
+                    labelFit={hasMeasuredFiveBody ? null : labelFitFor(drawingBodyId(slug))}
                 />
 
                 {collection && (

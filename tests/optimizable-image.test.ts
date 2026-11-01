@@ -10,3 +10,10 @@ it("optimizes approved local and supplier images without proxying arbitrary host
     expect(displayImageUrl("/images/catalog/hero.png", 640)).toBe("/_next/image?url=%2Fimages%2Fcatalog%2Fhero.png&w=640&q=75");
     expect(displayImageUrl("https://unknown-supplier.example/hero.png")).toBe("https://unknown-supplier.example/hero.png");
 });
+
+it("serves local SVG component envelopes directly so Next image optimization does not reject them", () => {
+    for (const url of ["/local-kits/roller.svg", "/local-kits/head.SVG?v=2", "/images/icon.svg#part"]) {
+        expect(isOptimizableImageUrl(url)).toBe(false);
+        expect(displayImageUrl(url, 640)).toBe(url);
+    }
+});

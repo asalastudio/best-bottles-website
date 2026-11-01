@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-31",
+  "status": "local meeting artifact; not a release approval",
+  "files": [
+    {
+      "path": "runtime/public/reviews/meeting-audit-2026-10-31/index.html",
+      "source": "public/reviews/meeting-audit-2026-10-31/index.html",
+      "sha256": "f26ec8becc9693eafad939a5ff7d3dab7f1c4e1b3b077f4bbb412a8643877f35",
+      "bytes": 767020,
+      "restoreTo": "public/reviews/meeting-audit-2026-10-31/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/meeting-audit-2026-10-31/main-bottle-index.csv",
+      "source": "public/reviews/meeting-audit-2026-10-31/main-bottle-index.csv",
+      "sha256": "5edc568efec700197ee84ab59e304467489f0371b8589b8f54efb5e2ac9982e7",
+      "bytes": 11804,
+      "restoreTo": "public/reviews/meeting-audit-2026-10-31/main-bottle-index.csv"
+    },
+    {
+      "path": "runtime/public/reviews/meeting-audit-2026-10-31/product-page-audit.csv",
+      "source": "public/reviews/meeting-audit-2026-10-31/product-page-audit.csv",
+      "sha256": "c8b668ed5edd84f35d1ab5d56add5fe1a3dbb777b82d43de70cec9c078e3d19a",
+      "bytes": 166979,
+      "restoreTo": "public/reviews/meeting-audit-2026-10-31/product-page-audit.csv"
+    },
+    {
+      "path": "runtime/public/reviews/meeting-audit-2026-10-31/unlinked-skus.csv",
+      "source": "public/reviews/meeting-audit-2026-10-31/unlinked-skus.csv",
+      "sha256": "019f1b60c028cba2d53a95223a89b93aad7572a9f3c6a31e07750c69da8be74e",
+      "bytes": 379,
+      "restoreTo": "public/reviews/meeting-audit-2026-10-31/unlinked-skus.csv"
+    },
+    {
+      "path": "runtime/public/reviews/meeting-audit-2026-10-31/sku-crosswalk.csv",
+      "source": "public/reviews/meeting-audit-2026-10-31/sku-crosswalk.csv",
+      "sha256": "0c0265e37807a3b673d2065e2eb2a6b15c200a10a6cb235ade4a14473e174ef4",
+      "bytes": 501930,
+      "restoreTo": "public/reviews/meeting-audit-2026-10-31/sku-crosswalk.csv"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/collect.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/collect.cjs",
+      "sha256": "f560ccbb2566f075cb8f564d8575b91fa1c07f6177ba6a9b3caf859467895a40",
+      "bytes": 787
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/build-data.ts.txt",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/build-data.ts",
+      "sha256": "0aa72f649528fa9a889258850d6b6b957d860f2ce18c34c0fc3fdc27fb9dae7b",
+      "bytes": 8510
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/board-template.html",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/board-template.html",
+      "sha256": "adf41b8efcc201b9bf68f9d23ac073ce2a83e985848bee0d2d9faba68d17ce7a",
+      "bytes": 22764
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/audit-data.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/audit-data.json",
+      "sha256": "99d705f6473d2b46fc0b301d90ae1fcc7337db097eaf3b315105f6b8753a897e",
+      "bytes": 744270
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/check-board.cjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/check-board.cjs",
+      "sha256": "3bd6434dd72c37e7bfdae37f7adb1af88db9a08a6e6930e797eda6f24ea62b44",
+      "bytes": 5926
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/browser-checks.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/browser-checks.json",
+      "sha256": "90b5c89d754cd39325f9b28f94cb19076b5a195e889e0b1e11db76c677042b66",
+      "bytes": 548
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/board-desktop.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/board-desktop.png",
+      "sha256": "ac86c55b6b06a91f1de0238e996ec6ad95c2fedc1c311300c1c3f0a997ed3309",
+      "bytes": 300552
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/board-mobile.png",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/board-mobile.png",
+      "sha256": "a0e4bfd1f28242008e0a07f62950815372525f03e8cd0f42a0956d3a04ea8519",
+      "bytes": 270328
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/build.mjs",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/build.mjs",
+      "bytes": 6145,
+      "sha256": "8adc455fe3591f041dbb2483781e8a9653f05e49fa679789cb2848f388af002f"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/structure.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/structure.json",
+      "bytes": 1515,
+      "sha256": "fd4410153e67891f842e9ceedad7423a57b0a528e6295e4712ecceaa9463a0bb"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/shared-locations.json",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/shared-locations.json",
+      "bytes": 381,
+      "sha256": "f54f621bf9b5a1cb5bdf506c2fcbfdc37285a3c536b2413964398ea7edfc4740"
+    },
+    {
+      "path": "evidence/outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/best-bottles-catalog-review.xlsx",
+      "source": "outputs/catalog-model-repair-2026-10-31/meeting-audit/shared/best-bottles-catalog-review.xlsx",
+      "bytes": 163260,
+      "sha256": "c404fbe7e5f77d15952b75bdae061e27392d4204e4de61b255cd3de766068037"
+    }
+  ]
+}

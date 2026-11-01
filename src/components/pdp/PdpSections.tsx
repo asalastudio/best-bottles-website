@@ -160,7 +160,7 @@ function StripWell({ entries, mobile }: { entries: StripEntry[]; mobile: boolean
 }
 
 export function PdpBuildStrip({
-    capacityLabel, glassLabel, neck, bodyKit, groupKits = [], fitmentKits = [], capKits, href,
+    capacityLabel, glassLabel, neck, bodyKit, groupKits = [], fitmentKits = [], capKits, href, productPageOnly = false,
 }: {
     capacityLabel: string;
     glassLabel: string;
@@ -173,6 +173,7 @@ export function PdpBuildStrip({
     /** One kit per cap finish on this page, in the rail's order. */
     capKits: KitLike[];
     href: string;
+    productPageOnly?: boolean;
 }) {
     const mobile = useIsPdpMobile();
     const body = bodyPart(bodyKit);
@@ -181,24 +182,33 @@ export function PdpBuildStrip({
     // fitment and its overcap the cap, in the head's finish (a matte black sprayer comes with the matte
     // black overcap); a roller is the fitment and its roll-on caps the caps.
     const mechanism = capKits.some(hasMechanism);
+    const reducer = capKits.some(kit => kit.parts.some(part => part.slot === "reducer"));
     const pump = capKits.some((kit) => kit.parts.some((part) => part.slot === "pump"));
     const ownCaps = distinct(capKits.map((kit) => stripEntry(kit, closureParts(kit))));
     const rollerKits = [...groupKits, ...fitmentKits].filter((kit) => !hasMechanism(kit));
-    const fitments = mechanism
+    const fitments = reducer
+        ? distinct(capKits.map(kit => stripEntry(kit, [fitmentPart(kit)])))
+        : mechanism
         ? ownCaps
         : distinct([
             ...fitmentKits.filter(hasMechanism).slice(0, 1).map((kit) => stripEntry(kit, closureParts(kit))),
             ...rollerKits.map((kit) => stripEntry(kit, [fitmentPart(kit)])),
         ]);
     const caps = mechanism
-        ? distinct(capKits.map((kit) => stripEntry(kit, [overcapPart(kit)])))
+        ? distinct(capKits.map((kit) => {
+            const part = overcapPart(kit);
+            // Deduplicate the empty master, not separate seated photographs
+            // whose URLs differ because a different finish is inside the cover.
+            return stripEntry(kit, [part?.detached ? { ...part, ...part.detached } : part]);
+        }))
         : distinct([...ownCaps, ...fitmentKits.filter((kit) => !hasMechanism(kit)).map((kit) => stripEntry(kit, closureParts(kit)))]);
+    const sharedClearOvercap = mechanism && caps.length === 1 && caps[0].parts.some(part => part.detached);
     const headName = pump ? "Lotion pump" : "Fine mist sprayer";
     return (
         <section className={styles.build} aria-labelledby="pdp-build-title" data-testid="pdp-build-strip">
             <div className={styles.buildHead}>
-                <h2 id="pdp-build-title" className={styles.buildTitle}>BUILD YOUR BOTTLE.</h2>
-                <span className={styles.buildLine}>Start from this {capacityLabel}. Three steps.</span>
+                <h2 id="pdp-build-title" className={styles.buildTitle}>{productPageOnly ? "YOUR BOTTLE COMPONENTS." : "BUILD YOUR BOTTLE."}</h2>
+                <span className={styles.buildLine}>{productPageOnly ? "Choose your sprayer above. Clear overcap included." : `Start from this ${capacityLabel}. Three steps.`}</span>
             </div>
             <div className={styles.buildGrid}>
                 <div className={styles.tile}>
@@ -214,7 +224,9 @@ export function PdpBuildStrip({
                     <StripWell entries={fitments} mobile={mobile} />
                     <span className={styles.tileTitle}>Fitment</span>
                     <span className={styles.tileBody}>
-                        {mechanism
+                        {reducer
+                            ? `Orifice reducer${neck ? ` for the ${neck} neck` : ""}. Stays seated when the cap is removed.`
+                            : mechanism
                             ? `${headName}${neck ? ` for the ${neck} neck` : ""}, in ${fitments.length} finish${fitments.length === 1 ? "" : "es"}.`
                             : `Roller, spray, dropper or pump${neck ? ` for the ${neck} neck` : ""}.`}
                     </span>
@@ -224,14 +236,14 @@ export function PdpBuildStrip({
                     <StripWell entries={caps} mobile={mobile} />
                     <span className={styles.tileTitle}>{mechanism ? "Overcap" : "Cap"}</span>
                     <span className={styles.tileBody}>
-                        {mechanism ? `Comes in the ${pump ? "pump's" : "sprayer's"} finish.` : `${caps.length} finishes. Every cap shown fits.`}
+                        {sharedClearOvercap ? "One clear overcap, included with every finish." : mechanism ? `Comes in the ${pump ? "pump's" : "sprayer's"} finish.` : `${caps.length} finishes. Every cap shown fits.`}
                     </span>
                 </div>
                 <div className={styles.tileCta}>
                     <div className={styles.tileCtaText}>
-                        <span className={styles.tileCtaTitle}>Your vision.<br />Our expertise.</span>
+                        <span className={styles.tileCtaTitle}>{productPageOnly ? <>Choose your<br />sprayer finish.</> : <>Your vision.<br />Our expertise.</>}</span>
                         <span className={styles.tileBody}>Sold assembled, from one piece.</span>
-                        <LocaleLink href={href} className={styles.blackButton} data-testid="pdp-build-cta">Start building →</LocaleLink>
+                        {productPageOnly ? <a href="#product-canvas" className={styles.blackButton} data-testid="pdp-configure-cta">Choose sprayer above ↑</a> : <LocaleLink href={href} className={styles.blackButton} data-testid="pdp-build-cta">Start building →</LocaleLink>}
                     </div>
                     {body && bodyKit ? <PdpKitPartImage part={body} canvas={bodyKit.canvas} height={130} className={styles.tileKit} /> : null}
                 </div>

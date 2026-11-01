@@ -32,3 +32,14 @@ dist/
 
 # Preserved generation sources and local review artifacts are not storefront assets.
 output/
+
+# Local model audits, backups and restored review pages are not release assets.
+outputs/
+public/reviews/*-2026-10-31/
+
+# November 1 family review assets and the local-only configuration override.
+public/reviews/*-2026-11-01/
+public/local-kits/cylinder5-all71-2026-11-01/
+
+# Source review inventories remain local; approved recipes use immutable hosted URLs.
+public/local-kits/cylinder9-masters-2026-11-01/

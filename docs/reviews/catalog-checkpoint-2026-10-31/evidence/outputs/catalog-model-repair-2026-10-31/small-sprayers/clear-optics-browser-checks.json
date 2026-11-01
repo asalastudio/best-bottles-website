@@ -1,0 +1,38 @@
+{
+  "rows": [
+    {
+      "url": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415?cap=short-shiny-black",
+      "body": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v9.png&w=640&q=75",
+      "lineup": [
+        "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-clear-measured-v11.png&w=256&q=75",
+        "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v9.png&w=256&q=75"
+      ]
+    },
+    {
+      "url": "http://localhost:3010/products/cylinder-5ml-clear-13-415?cap=short-shiny-black",
+      "body": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-clear-measured-v11.png&w=640&q=75",
+      "lineup": [
+        "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-clear-measured-v11.png&w=256&q=75",
+        "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v9.png&w=256&q=75"
+      ]
+    },
+    {
+      "url": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415?cap=short-shiny-black",
+      "body": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v9.png&w=640&q=75",
+      "lineup": [
+        "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-clear-measured-v11.png&w=256&q=75",
+        "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v9.png&w=256&q=75"
+      ]
+    },
+    {
+      "url": "http://localhost:3010/products/cylinder-5ml-clear-13-415?cap=short-shiny-black",
+      "body": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-clear-measured-v11.png&w=640&q=75",
+      "lineup": [
+        "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-clear-measured-v11.png&w=256&q=75",
+        "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v9.png&w=256&q=75"
+      ]
+    }
+  ],
+  "errors": [],
+  "pass": true
+}

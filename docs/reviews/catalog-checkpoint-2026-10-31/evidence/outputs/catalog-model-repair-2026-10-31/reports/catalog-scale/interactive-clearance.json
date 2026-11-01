@@ -1,0 +1,387 @@
+{
+  "checkedAt": "2026-10-31T16:36:48.108Z",
+  "source": "local-register-payload.json",
+  "baselinePct": 91,
+  "axisPct": 50,
+  "method": "One body-level factor, shared by both stages, every color, hardware choice and view. Never calculated from the selected cap. Original catalog targets are retained. Conservative layer rectangles include transparent padding.",
+  "rows": [
+    {
+      "bodyId": "royal-13ml-13-415",
+      "factor": 1,
+      "configurations": 35,
+      "pass": true,
+      "approvedTargetPct": 37.48,
+      "interactiveSpanPct": 37.48,
+      "reason": null
+    },
+    {
+      "bodyId": "circle-100ml-18-415",
+      "factor": 0.63,
+      "configurations": 86,
+      "pass": true,
+      "approvedTargetPct": 58,
+      "interactiveSpanPct": 36.54,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "round-78ml-18-415",
+      "factor": 0.29,
+      "configurations": 86,
+      "pass": true,
+      "approvedTargetPct": 48,
+      "interactiveSpanPct": 13.919999999999998,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "empire-50ml-18-415",
+      "factor": 0.46,
+      "configurations": 46,
+      "pass": true,
+      "approvedTargetPct": 50,
+      "interactiveSpanPct": 23,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "round-128ml-18-415",
+      "factor": 0.41,
+      "configurations": 92,
+      "pass": true,
+      "approvedTargetPct": 54,
+      "interactiveSpanPct": 22.139999999999997,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "elegant-100ml-18-415",
+      "factor": 0.78,
+      "configurations": 86,
+      "pass": true,
+      "approvedTargetPct": 57,
+      "interactiveSpanPct": 44.46,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "square-15ml-13-415",
+      "factor": 1,
+      "configurations": 34,
+      "pass": true,
+      "approvedTargetPct": 35.89,
+      "interactiveSpanPct": 35.89,
+      "reason": null
+    },
+    {
+      "bodyId": "cylinder-100ml-18-415",
+      "factor": 0.8,
+      "configurations": 43,
+      "pass": true,
+      "approvedTargetPct": 67.5,
+      "interactiveSpanPct": 54,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "diva-100ml-18-415",
+      "factor": 0.68,
+      "configurations": 43,
+      "pass": true,
+      "approvedTargetPct": 57,
+      "interactiveSpanPct": 38.760000000000005,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "circle-15ml-13-415",
+      "factor": 0.99,
+      "configurations": 36,
+      "pass": true,
+      "approvedTargetPct": 44.625,
+      "interactiveSpanPct": 44.17875,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "sleek-50ml-18-415",
+      "factor": 0.87,
+      "configurations": 43,
+      "pass": true,
+      "approvedTargetPct": 56,
+      "interactiveSpanPct": 48.72,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "empire-100ml-18-415",
+      "factor": 0.65,
+      "configurations": 43,
+      "pass": true,
+      "approvedTargetPct": 55,
+      "interactiveSpanPct": 35.75,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "sleek-100ml-18-415",
+      "factor": 0.88,
+      "configurations": 43,
+      "pass": true,
+      "approvedTargetPct": 60.5,
+      "interactiveSpanPct": 53.24,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "slim-100ml-18-415",
+      "factor": 0.81,
+      "configurations": 43,
+      "pass": true,
+      "approvedTargetPct": 67.5,
+      "interactiveSpanPct": 54.675000000000004,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "boston-round-30ml-20-400",
+      "factor": 1,
+      "configurations": 53,
+      "pass": true,
+      "approvedTargetPct": 45,
+      "interactiveSpanPct": 45,
+      "reason": null
+    },
+    {
+      "bodyId": "elegant-15ml-13-415",
+      "factor": 1,
+      "configurations": 70,
+      "pass": true,
+      "approvedTargetPct": 39,
+      "interactiveSpanPct": 39,
+      "reason": null
+    },
+    {
+      "bodyId": "sleek-30ml-18-415",
+      "factor": 1,
+      "configurations": 37,
+      "pass": true,
+      "approvedTargetPct": 47,
+      "interactiveSpanPct": 47,
+      "reason": null
+    },
+    {
+      "bodyId": "slim-30ml-18-415",
+      "factor": 1,
+      "configurations": 37,
+      "pass": true,
+      "approvedTargetPct": 48.5,
+      "interactiveSpanPct": 48.5,
+      "reason": null
+    },
+    {
+      "bodyId": "slim-50ml-18-415",
+      "factor": 0.77,
+      "configurations": 43,
+      "pass": true,
+      "approvedTargetPct": 54,
+      "interactiveSpanPct": 41.58,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "cylinder-5ml-13-415",
+      "factor": 1,
+      "configurations": 71,
+      "pass": true,
+      "approvedTargetPct": 36.5,
+      "interactiveSpanPct": 36.5,
+      "reason": null
+    },
+    {
+      "bodyId": "diva-46ml-18-415",
+      "factor": 0.56,
+      "configurations": 92,
+      "pass": true,
+      "approvedTargetPct": 47,
+      "interactiveSpanPct": 26.320000000000004,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "sleek-5ml-13-415",
+      "factor": 1,
+      "configurations": 36,
+      "pass": true,
+      "approvedTargetPct": 30,
+      "interactiveSpanPct": 30,
+      "reason": null
+    },
+    {
+      "bodyId": "tulip-5ml-13-415",
+      "factor": 1,
+      "configurations": 36,
+      "pass": true,
+      "approvedTargetPct": 32.97,
+      "interactiveSpanPct": 32.97,
+      "reason": null
+    },
+    {
+      "bodyId": "boston-round-60ml-20-400",
+      "factor": 1,
+      "configurations": 55,
+      "pass": true,
+      "approvedTargetPct": 52,
+      "interactiveSpanPct": 52,
+      "reason": null
+    },
+    {
+      "bodyId": "sleek-8ml-13-415",
+      "factor": 1,
+      "configurations": 36,
+      "pass": true,
+      "approvedTargetPct": 43,
+      "interactiveSpanPct": 43,
+      "reason": null
+    },
+    {
+      "bodyId": "cylinder-9ml-17-415",
+      "factor": 1,
+      "configurations": 145,
+      "pass": true,
+      "approvedTargetPct": 43.5,
+      "interactiveSpanPct": 43.5,
+      "reason": null
+    },
+    {
+      "bodyId": "flair-15ml-13-415",
+      "factor": 1,
+      "configurations": 36,
+      "pass": true,
+      "approvedTargetPct": 37.48,
+      "interactiveSpanPct": 37.48,
+      "reason": null
+    },
+    {
+      "bodyId": "circle-50ml-18-415",
+      "factor": 0.5,
+      "configurations": 91,
+      "pass": true,
+      "approvedTargetPct": 54,
+      "interactiveSpanPct": 27,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "cylinder-9ml-13-415",
+      "factor": 1,
+      "configurations": 72,
+      "pass": true,
+      "approvedTargetPct": 62.5,
+      "interactiveSpanPct": 62.5,
+      "reason": null
+    },
+    {
+      "bodyId": "grace-55ml-18-415",
+      "factor": 0.67,
+      "configurations": 43,
+      "pass": true,
+      "approvedTargetPct": 56.59,
+      "interactiveSpanPct": 37.9153,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "footed-rectangle-10ml-13-415",
+      "factor": 1,
+      "configurations": 36,
+      "pass": true,
+      "approvedTargetPct": 35.07,
+      "interactiveSpanPct": 35.07,
+      "reason": null
+    },
+    {
+      "bodyId": "tall-rectangle-10ml-13-415",
+      "factor": 1,
+      "configurations": 36,
+      "pass": true,
+      "approvedTargetPct": 52.98,
+      "interactiveSpanPct": 52.98,
+      "reason": null
+    },
+    {
+      "bodyId": "tulip-6ml-13-415",
+      "factor": 1,
+      "configurations": 35,
+      "pass": true,
+      "approvedTargetPct": 32.97,
+      "interactiveSpanPct": 32.97,
+      "reason": null
+    },
+    {
+      "bodyId": "cylinder-50ml-18-415",
+      "factor": 0.73,
+      "configurations": 43,
+      "pass": true,
+      "approvedTargetPct": 56,
+      "interactiveSpanPct": 40.879999999999995,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "diamond-60ml-18-415",
+      "factor": 0.56,
+      "configurations": 43,
+      "pass": true,
+      "approvedTargetPct": 48.87,
+      "interactiveSpanPct": 27.3672,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "diva-30ml-18-415",
+      "factor": 1,
+      "configurations": 34,
+      "pass": true,
+      "approvedTargetPct": 40,
+      "interactiveSpanPct": 40,
+      "reason": null
+    },
+    {
+      "bodyId": "elegant-60ml-18-415",
+      "factor": 0.64,
+      "configurations": 92,
+      "pass": true,
+      "approvedTargetPct": 47,
+      "interactiveSpanPct": 30.080000000000002,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "cylinder-25ml-18-415",
+      "factor": 0.44,
+      "configurations": 45,
+      "pass": true,
+      "approvedTargetPct": 46.5,
+      "interactiveSpanPct": 20.46,
+      "reason": "Fixed clearance envelope across all captured colors, hardware and views. This is a technical preview exception, not approval to change the catalog render target."
+    },
+    {
+      "bodyId": "tola-decorative-3ml-14.3mm",
+      "factor": 1,
+      "configurations": 1,
+      "pass": true,
+      "approvedTargetPct": 31.66,
+      "interactiveSpanPct": 31.66,
+      "reason": null
+    },
+    {
+      "bodyId": "tola-decorative-6ml-14.3mm",
+      "factor": 1,
+      "configurations": 1,
+      "pass": true,
+      "approvedTargetPct": 34.24,
+      "interactiveSpanPct": 34.24,
+      "reason": null
+    },
+    {
+      "bodyId": "pillar-9ml-13-415",
+      "factor": 1,
+      "configurations": 4,
+      "pass": true,
+      "approvedTargetPct": 37.87,
+      "interactiveSpanPct": 37.87,
+      "reason": null
+    },
+    {
+      "bodyId": "bell-10ml-13-415",
+      "factor": 1,
+      "configurations": 4,
+      "pass": true,
+      "approvedTargetPct": 37.09,
+      "interactiveSpanPct": 37.09,
+      "reason": null
+    }
+  ]
+}

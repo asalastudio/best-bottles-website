@@ -1,6 +1,8 @@
 import { previewParts, type BuilderConfiguration, type BuilderPart } from "./model";
 import { canonicalBody, registerVintagePreview, seatPreviewLayers, type PreviewLayer } from "./preview-registration";
 import { previewFrame } from "./preview-frame";
+import { fixedStageOffsets } from "@/lib/products/fixed-stage-placement";
+import { pdpReviewedGlassFrame, pdpReviewedGlassViewport } from "@/lib/products/pdp-stage-frame";
 import { offBottle } from "@/lib/products/kit-frame";
 
 type Stage = "body" | "fitment" | "complete";
@@ -32,7 +34,22 @@ export function builderPreviewLayout(config: BuilderConfiguration, parts: Builde
                 transform: `translate(${dx} ${dy})${l.transform ? ` ${l.transform}` : ""}` };
         });
     }
-    return { anchors, layers };
+    if (kit.glassSizing && parkCover) {
+        const body = layers.find(layer => layer.part.slot === "body");
+        const frame = body && pdpReviewedGlassFrame(body.bounds, anchors.axisX, kit.glassSizing, kit.canvas.width, kit.canvas.height);
+        if (frame) {
+            const placed = layers.map(layer => ({ ...layer.part, bounds: layer.bounds }));
+            const offsets = fixedStageOffsets(placed, new Map(placed.map(part => [part, { dx: 0, dy: 0 }])), "sidecar", frame, kit.canvas);
+            layers = layers.map((layer, index) => {
+                const { dx, dy } = offsets.get(placed[index])!;
+                if (!dx && !dy) return layer;
+                return { ...layer, bounds: { left: layer.bounds.left + dx, right: layer.bounds.right + dx,
+                    top: layer.bounds.top + dy, bottom: layer.bounds.bottom + dy },
+                    transform: `translate(${dx} ${dy})${layer.transform ? ` ${layer.transform}` : ""}` };
+            });
+        }
+    }
+    return { anchors, layers, glassSizing: kit.glassSizing, canvas: kit.canvas };
 }
 
 /** Reserve room for every offered top on this exact glass body. Changing a
@@ -41,6 +58,12 @@ export function builderPreviewLayout(config: BuilderConfiguration, parts: Builde
 export function builderBodyFrame(config: BuilderConfiguration, candidates: readonly BuilderConfiguration[],
     bodyReference: BuilderConfiguration | undefined, selected: NonNullable<ReturnType<typeof builderPreviewLayout>>,
     { expanded = false } = {}) {
+    const ownBody = selected.layers.find(layer => layer.part.slot === "body")?.bounds;
+    const reviewed = selected.glassSizing && ownBody
+        ? pdpReviewedGlassViewport(ownBody, selected.anchors.axisX, selected.glassSizing,
+            selected.canvas.width, selected.canvas.height)
+        : null;
+    if (reviewed) return reviewed;
     const compatible = candidates.filter(c => c.bodyId === config.bodyId && c.family === config.family
         && c.capacityMl === config.capacityMl && c.neck === config.neck);
     const referenceFor = (color: string) => {

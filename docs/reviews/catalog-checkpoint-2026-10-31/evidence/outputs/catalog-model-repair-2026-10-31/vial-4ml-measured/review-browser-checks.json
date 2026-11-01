@@ -1,0 +1,68 @@
+[
+  {
+    "finish": "black",
+    "view": "sidecar",
+    "cards": 4,
+    "links": [
+      "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+      "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+      "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+      "http://localhost:3010/products/vial-4ml-green-13-425?cap=black"
+    ]
+  },
+  {
+    "finish": "black",
+    "view": "capon",
+    "cards": 4,
+    "links": [
+      "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+      "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+      "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+      "http://localhost:3010/products/vial-4ml-green-13-425?cap=black"
+    ]
+  },
+  {
+    "finish": "black",
+    "view": "exploded",
+    "cards": 4,
+    "links": [
+      "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+      "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+      "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+      "http://localhost:3010/products/vial-4ml-green-13-425?cap=black"
+    ]
+  },
+  {
+    "finish": "white",
+    "view": "sidecar",
+    "cards": 4,
+    "links": [
+      "http://localhost:3010/products/vial-4ml-clear-13-425?cap=white",
+      "http://localhost:3010/products/vial-4ml-amber-13-425?cap=white",
+      "http://localhost:3010/products/vial-4ml-blue-13-425?cap=white",
+      "http://localhost:3010/products/vial-4ml-green-13-425?cap=white"
+    ]
+  },
+  {
+    "finish": "white",
+    "view": "capon",
+    "cards": 4,
+    "links": [
+      "http://localhost:3010/products/vial-4ml-clear-13-425?cap=white",
+      "http://localhost:3010/products/vial-4ml-amber-13-425?cap=white",
+      "http://localhost:3010/products/vial-4ml-blue-13-425?cap=white",
+      "http://localhost:3010/products/vial-4ml-green-13-425?cap=white"
+    ]
+  },
+  {
+    "finish": "white",
+    "view": "exploded",
+    "cards": 4,
+    "links": [
+      "http://localhost:3010/products/vial-4ml-clear-13-425?cap=white",
+      "http://localhost:3010/products/vial-4ml-amber-13-425?cap=white",
+      "http://localhost:3010/products/vial-4ml-blue-13-425?cap=white",
+      "http://localhost:3010/products/vial-4ml-green-13-425?cap=white"
+    ]
+  }
+]

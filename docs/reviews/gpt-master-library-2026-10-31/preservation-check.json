@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-11-01T06:27:13.954Z",
+  "comparedWith": "d7ef267e",
+  "sourceFilesChecked": 109,
+  "sourceBytesChanged": 0,
+  "anchorOrScaleChanges": 0,
+  "failures": [],
+  "scope": "All 109 recovered images, dimensions, anchors and scale targets preserved exactly; no runtime source assignments changed."
+}

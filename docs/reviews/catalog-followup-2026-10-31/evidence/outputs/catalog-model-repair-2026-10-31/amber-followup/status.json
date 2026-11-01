@@ -1,0 +1,942 @@
+{
+  "snapshot": "2026-10-31T08:21:22.879Z",
+  "scope": "Inventory coverage only. Does not claim unchanged amber products are defective or visually approved.",
+  "rows": [
+    {
+      "sku": "GB1mlAmbVialWht",
+      "family": "Vial",
+      "capacityMl": 1,
+      "applicator": null,
+      "group": "kh7e71khyhec2bjt745jbbe91s8drxkh",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBVAmb2WhtCap",
+      "family": "Vial",
+      "capacityMl": 2,
+      "applicator": null,
+      "group": "kh7e8ff1qa2g18d31pt4vc27px8drnt9",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattGl",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonShnSl",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBVAmb1DrmWhtCapSht",
+      "family": "Vial",
+      "capacityMl": 4,
+      "applicator": null,
+      "group": "kh78sykg22kf3nkezn73sc3sg18dr9wv",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonShnBlk",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBCylAmb9SpryBlk",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh71jmem78v5h6h9fwrrebyzzh8dr80m",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattBlk",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7em7yzqgy1gjt883fyyx2n0n8drzbs",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattGl",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7em7yzqgy1gjt883fyyx2n0n8drzbs",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattSl",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7em7yzqgy1gjt883fyyx2n0n8drzbs",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonShnSl",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7em7yzqgy1gjt883fyyx2n0n8drzbs",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": null,
+      "group": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropperSlTrim",
+      "family": "Boston Round",
+      "capacityMl": 15,
+      "applicator": "Dropper",
+      "group": "kh72nxfj0ynfrm2031nkfyrg9s8drxv8",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5Sl",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": null,
+      "group": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropper",
+      "family": "Boston Round",
+      "capacityMl": 15,
+      "applicator": "Dropper",
+      "group": "kh72nxfj0ynfrm2031nkfyrg9s8drxv8",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5WhtSht",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": null,
+      "group": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+      "family": "Boston Round",
+      "capacityMl": 15,
+      "applicator": "Dropper",
+      "group": "kh72nxfj0ynfrm2031nkfyrg9s8drxv8",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropperSlTrim",
+      "family": "Boston Round",
+      "capacityMl": 15,
+      "applicator": "Dropper",
+      "group": "kh72nxfj0ynfrm2031nkfyrg9s8drxv8",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropperGlTrim",
+      "family": "Boston Round",
+      "capacityMl": 15,
+      "applicator": "Dropper",
+      "group": "kh72nxfj0ynfrm2031nkfyrg9s8drxv8",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozBlkDrpShnGl",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Dropper",
+      "group": "kh7eemkwree12k3bp6ttyx91fd8dr618",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDropper",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Dropper",
+      "group": "kh7eemkwree12k3bp6ttyx91fd8dr618",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Dropper",
+      "group": "kh7eemkwree12k3bp6ttyx91fd8dr618",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Dropper",
+      "group": "kh7eemkwree12k3bp6ttyx91fd8dr618",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattGl",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattBlk",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattSl",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonShnSl",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonShnBlk",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattGl",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7em7yzqgy1gjt883fyyx2n0n8drzbs",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattBlk",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7em7yzqgy1gjt883fyyx2n0n8drzbs",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattSl",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7em7yzqgy1gjt883fyyx2n0n8drzbs",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonShnSl",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7em7yzqgy1gjt883fyyx2n0n8drzbs",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonShnBlk",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7em7yzqgy1gjt883fyyx2n0n8drzbs",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Dropper",
+      "group": "kh7ags8x8agsqg1zh1c3pt3vkd8drnnr",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Dropper",
+      "group": "kh7ags8x8agsqg1zh1c3pt3vkd8drnnr",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDrpr",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Dropper",
+      "group": "kh7ags8x8agsqg1zh1c3pt3vkd8drnnr",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Dropper",
+      "group": "kh7ags8x8agsqg1zh1c3pt3vkd8drnnr",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDropperShnSlTrim",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Dropper",
+      "group": "kh7ags8x8agsqg1zh1c3pt3vkd8drnnr",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Lotion Pump",
+      "group": "kh70qnzfhvfp5zknf3sbpgevzd8drsa8",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Lotion Pump",
+      "group": "kh70qnzfhvfp5zknf3sbpgevzd8drsa8",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollCuMatt",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollGlMatt",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkCapSht",
+      "family": "Boston Round",
+      "capacityMl": 15,
+      "applicator": null,
+      "group": "kh7bf0tnnv8vy0a7pnp8d48pb58dsmnx",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollGlSh",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollPinkDot",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollSlDot",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozBlkCapSht",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": null,
+      "group": "kh73j9m2dk0w10s04sqnx6qvr58dsm1c",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollSlMatt",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollSlSh",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollBlkSh",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkCapSht",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": null,
+      "group": "kh7cg7c0vak8s8tr311tfnqeex8dsfzk",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollWht",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattCu",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattSl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollPnkDot",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShBlk",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonGl",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnGl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9SpryGl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh71jmem78v5h6h9fwrrebyzzh8dr80m",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnSl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9SpryMattSl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh71jmem78v5h6h9fwrrebyzzh8dr80m",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollSlDot",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9SpryShSl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh71jmem78v5h6h9fwrrebyzzh8dr80m",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9SpryTur",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh71jmem78v5h6h9fwrrebyzzh8dr80m",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonGl",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7em7yzqgy1gjt883fyyx2n0n8drzbs",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkSh",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9SpryRd",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Fine Mist Sprayer",
+      "group": "kh71jmem78v5h6h9fwrrebyzzh8dr80m",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5RollCuMatt",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5RollGlMatt",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5RollPinkDot",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5RollSlDot",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5RollSlMatt",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5RollSlSh",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollBlkDot",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5RollGlSh",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9RollWht",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9RollMattCu",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9RollMattGl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9RollMattSl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9RollPnkDot",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9RollShBlk",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9RollShnGl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonGl",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Metal Roller Ball",
+      "group": "kh77zc945ckf676z7czx4y8tq98drgng",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9RollShnSl",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBCylAmb9RollSlDot",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Plastic Roller Ball",
+      "group": "kh77hy26z13s57w7g89jw2qhzx8ds021",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonGl",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Metal Roller Ball",
+      "group": "kh7em7yzqgy1gjt883fyyx2n0n8drzbs",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GB1mlAmbVBlk",
+      "family": "Vial",
+      "capacityMl": 1,
+      "applicator": null,
+      "group": "kh7e71khyhec2bjt745jbbe91s8drxkh",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBVAmb2BlackCap",
+      "family": "Vial",
+      "capacityMl": 2,
+      "applicator": null,
+      "group": "kh7e8ff1qa2g18d31pt4vc27px8drnt9",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBVAmb1DrmBlkDrpr",
+      "family": "Vial",
+      "capacityMl": 4,
+      "applicator": "Dropper",
+      "group": "kh71hn7z5e3x4mg49267cggscx8dssrw",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBVAmb1DrmBlackCapSht",
+      "family": "Vial",
+      "capacityMl": 4,
+      "applicator": null,
+      "group": "kh78sykg22kf3nkezn73sc3sg18dr9wv",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropper",
+      "family": "Boston Round",
+      "capacityMl": 15,
+      "applicator": "Dropper",
+      "group": "kh72nxfj0ynfrm2031nkfyrg9s8drxv8",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb1ozBlkDropper",
+      "family": "Boston Round",
+      "capacityMl": 30,
+      "applicator": "Dropper",
+      "group": "kh7eemkwree12k3bp6ttyx91fd8dr618",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": null,
+      "group": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDrpr",
+      "family": "Boston Round",
+      "capacityMl": 60,
+      "applicator": "Dropper",
+      "group": "kh7ags8x8agsqg1zh1c3pt3vkd8drnnr",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "applicator": "Lotion Pump",
+      "group": "kh70qnzfhvfp5zknf3sbpgevzd8drsa8",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBVialAmb1o5WhtCapSht",
+      "family": "Vial",
+      "capacityMl": 2,
+      "applicator": null,
+      "group": "kh74wd1kt174err92n6q50qmkh8ds0k9",
+      "status": "local-update-checked"
+    },
+    {
+      "sku": "CJAmb5mlSlCap",
+      "family": "Cream Jar",
+      "capacityMl": 5,
+      "applicator": null,
+      "group": "kh7dpbgjc62g2v993e6jbvv4fd8drj94",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": null,
+      "group": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": null,
+      "group": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": null,
+      "group": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": null,
+      "group": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": null,
+      "group": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "status": "not-verified-in-this-pass"
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "applicator": null,
+      "group": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "status": "not-verified-in-this-pass"
+    }
+  ]
+}

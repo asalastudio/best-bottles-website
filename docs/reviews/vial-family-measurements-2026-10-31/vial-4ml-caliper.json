@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-31",
+  "source": "Jordan physical caliper readings in chat",
+  "familyId": "vial-4ml-13-425",
+  "capacityMl": 4,
+  "rawMm": {
+    "H": 44.98,
+    "W": 14.6,
+    "T": 12.5,
+    "Fh": 7
+  },
+  "displayHeightMm": 45,
+  "derivedMm": {
+    "neckBaseAboveFoot": 37.98
+  },
+  "interpretation": {
+    "H": "Bare glass foot to rim",
+    "W": "Body outside diameter",
+    "T": "Outside diameter over the threads; not bore diameter",
+    "Fh": "Shoulder / neck base to top rim"
+  },
+  "unmeasured": [
+    "Bore diameter",
+    "Thread-root diameter",
+    "Glass wall thickness",
+    "Internal depth",
+    "Cap inner diameter",
+    "Thread pitch"
+  ],
+  "scale": {
+    "approvedFamilyTargetPct": 51.74,
+    "baselinePct": 91,
+    "source": "src/lib/register/catalog-scale.generated.json",
+    "note": "4 ml approved family exception retained; no rescaling from rounded height."
+  },
+  "status": "Applied as the measurement reference for local 2D product artwork on all eight 4 ml screw-cap SKUs; no new dimensional 3D model created",
+  "twoMlClarification": {
+    "colors": [
+      "Clear",
+      "Amber"
+    ],
+    "measurementsNotApplicable": true
+  },
+  "userCorrection": "The separate 4 ml vial family requires the shorter threaded neck. The 2 ml family has only clear and amber.",
+  "localArtwork": {
+    "manifest": "public/local-kits/vial-4ml-measured-2026-10-31/kits.json",
+    "model": "gpt-image-2.5-sunburst",
+    "colors": [
+      "Clear",
+      "Amber",
+      "Cobalt Blue",
+      "Green"
+    ],
+    "capFinishes": [
+      "Black",
+      "White"
+    ],
+    "reviewUrl": "http://localhost:3010/reviews/vial-4ml-short-neck-2026-10-31/index.html",
+    "registrationReport": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/registration.json",
+    "shapeReport": "outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/shape-consistency.json",
+    "dimensionsAreReferenceFor2D": true
+  }
+}

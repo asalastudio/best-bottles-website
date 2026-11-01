@@ -1,0 +1,1075 @@
+{
+  "version": "73cfb8f1df29",
+  "files": [
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/README.md",
+      "bytes": 6623,
+      "sha256": "23800c87ba2be7132f7222e1ec849724a9c20d06f197358f44ef520255e14d3b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/after-metal-exploded.png",
+      "bytes": 67416,
+      "sha256": "6ef488e546532c253d1af215df239071ea02786961522a286e59670454a80c1e"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/after-metal-sidecar.png",
+      "bytes": 36229,
+      "sha256": "2699f9fa11fc1f4d82b607918cde7f2d99a3ac0727e1edb42cbdf2957b9ab246"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/after-plastic-exploded.png",
+      "bytes": 67223,
+      "sha256": "33e1001c12a3e57b4127a2e3d1b4f186de3044cf08d39503a7230e86fd6ac3c1"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/after-plastic-sidecar.png",
+      "bytes": 35913,
+      "sha256": "399b6371e4b7b4833d504f50fa0f8883b01003124b9dcd6c1a81770a9f99e064"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/after-pump-exploded.png",
+      "bytes": 74366,
+      "sha256": "21a6a65404474a30b3ea2d36c2b7f233915caa934a5cdb9759722fdfe0f719a2"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/after-pump-sidecar.png",
+      "bytes": 35006,
+      "sha256": "629273bfe29f96e387dbe400b9f88399d43b01cda3a491f74389aebed822a045"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/before-index.json",
+      "bytes": 31606,
+      "sha256": "fe23af6fd08b96838d78f6d0c1a3ef4d12eb5310d78b28213298d5346a97440a"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/before-kits.json",
+      "bytes": 999819,
+      "sha256": "387165f5ba0081c7141b158a09b95da3f809386a943a72ed5dc5ddee53488f55"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/before-metal-exploded.png",
+      "bytes": 67722,
+      "sha256": "17e4527ae2038f9228a15249c8e910383ca6d6fa6091982765a8415f77bc5df1"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/before-metal-sidecar.png",
+      "bytes": 36053,
+      "sha256": "30922f089f91c96bd961d3eb0cca7407804a3d6e55cd9118ee4c129c788fa65b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/before-plastic-exploded.png",
+      "bytes": 67039,
+      "sha256": "964fe2c0f18c3d8743baf9e524f66da17ee7a21bcf17184266864be4a5a48f11"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/before-plastic-sidecar.png",
+      "bytes": 35175,
+      "sha256": "3b72cbfc4958dd4842c6806d90c942df1f23ea9af64a07aae747003952880248"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/before-pump-exploded.png",
+      "bytes": 72085,
+      "sha256": "504f6a76571787649419c04df62aaf3a20059330199a935882ad33d8effc39dd"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/before-pump-sidecar.png",
+      "bytes": 29197,
+      "sha256": "332362f25d1c45ad994e4476c137884af0feb8e95957820c3d37753aa51f23a8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/browser-verification.json",
+      "bytes": 188979,
+      "sha256": "153c23f6e1046ef70a71643591e523e86b678ed0c6ce793a7e108efe0bf515c3"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/build-components.cjs",
+      "bytes": 6603,
+      "sha256": "acf68b44fd643ed7095d0957e02e4b1fd70c85dd247f3831a5c8a527d3d41f19"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/builder-metal.png",
+      "bytes": 179090,
+      "sha256": "0096efb885472920fa9ed7170fbb574e7ded99ee4562f8c304a09ebeceb01e3f"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/README.md",
+      "bytes": 1572,
+      "sha256": "ea0d7613a6c48d0cd26990f131c6274ce2d3300f2b993dae21fa60bdd28115da"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/before-index.json",
+      "bytes": 32405,
+      "sha256": "e86326b48fadbd1cf75e02cce08b3306d4f698161d2612d7254b6b09e0bb5a0a"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/before-kits.json",
+      "bytes": 759533,
+      "sha256": "92d3ab735987b1540febfcb7ada403d1bef0e082c748cd5c323f437229408f15"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/before-plastic-seat-detail.png",
+      "bytes": 44766,
+      "sha256": "c0610855da7910f6b79b9e83773c7bbadc0b73ad94f393671d75976b61b98b5c"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/browser-verification.json",
+      "bytes": 108348,
+      "sha256": "96a7091ddd00a9bf4ae1d2b0e388ab74f3a331b8152b80a8ac9be5ea6c138691"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/builder-metal.png",
+      "bytes": 179292,
+      "sha256": "0ed3ebb7075b1ed165602809bb6ae8389fa96b02f8a5c3afd27d7bbfb24d470b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/metal-roller-cap-shoulder.png",
+      "bytes": 28151,
+      "sha256": "cefc9d7ed5eb5c632b0b7b4c236b7a23455d27cfc67b9a6543c7376cfee21e22"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/metal-roller-matte-silver-cap-on.png",
+      "bytes": 144333,
+      "sha256": "5e162eecf6b2382017eb3258c30b357d16f1cf7cd591a5728da96a29e9a64f75"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/metal-roller-seat-1440.png",
+      "bytes": 47803,
+      "sha256": "fb66fadbdfb99bc0dd457a9eefb31016494773bac26f26608929a11ddc6b85d7"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/metal-roller-seat-390.png",
+      "bytes": 4634,
+      "sha256": "5d72dc71d931829fe65e6812ee71beb88b6d583269d75c3ca508bc6f790e6d1a"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-black-dotted-cap-on.png",
+      "bytes": 148134,
+      "sha256": "6154bc32c1bcd04a14693c48e24192e2404b09c2cfc18eb9a91422a12638cc96"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-cap-shoulder.png",
+      "bytes": 28151,
+      "sha256": "cefc9d7ed5eb5c632b0b7b4c236b7a23455d27cfc67b9a6543c7376cfee21e22"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-matte-copper-cap-on.png",
+      "bytes": 171093,
+      "sha256": "bc38c7c10580578ad3fe55a585bd7900b1192d7980f98f67d059823ba2a9d07b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-matte-gold-cap-on.png",
+      "bytes": 163574,
+      "sha256": "61125f39d1feb5eabe2ae372caa0ac76e0b802a572c7e60bb4fd862cc86fc4da"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-matte-silver-cap-on.png",
+      "bytes": 144333,
+      "sha256": "5e162eecf6b2382017eb3258c30b357d16f1cf7cd591a5728da96a29e9a64f75"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-pink-dotted-cap-on.png",
+      "bytes": 161742,
+      "sha256": "a734cdfb53d095164ec32be85c9eb5275766c420a637ae65494e1a1e4be6a7f8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-seat-1440.png",
+      "bytes": 45467,
+      "sha256": "30cbc0b7c15b45a7cef1235ef4f42da808c625e0004dc6c004777c49b5cac6c9"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-seat-390.png",
+      "bytes": 4404,
+      "sha256": "e34b10d1980a193992b8d81f6eac2ec5ae1372110bbb7a0d27c2be83a10d4f8f"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-shiny-black-cap-on.png",
+      "bytes": 141909,
+      "sha256": "8349d792b56d373ae155b919612aba39e0f147d44a0f041ad36f97215707cfa3"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-shiny-gold-cap-on.png",
+      "bytes": 170422,
+      "sha256": "8f78b647e603fb42fc8b2783c7eac440c5ba7d97342ec5e8d338f25c0cb41bc3"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-shiny-silver-cap-on.png",
+      "bytes": 136227,
+      "sha256": "68a655a67f3899494efb129d05fea36f528afeac65ccb90149215d4bf7091e46"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-silver-dotted-cap-on.png",
+      "bytes": 156781,
+      "sha256": "95293c574bbe222b15dde78e75bf08d17a877e9b7a83bde1fb1f2cf2fc1e43db"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/plastic-roller-white-cap-on.png",
+      "bytes": 136769,
+      "sha256": "501535c47c1f343423a8a1b4bcbfc7e2b69a5a3c4b4f315a2731d2cbffe68e88"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/registration-checks.json",
+      "bytes": 17266,
+      "sha256": "0c98a971887d0d4c0d96f0be2bcbb4e58a6ca0c159f1569e5731756a314d7be4"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/reported-cap-gap.png",
+      "bytes": 26351,
+      "sha256": "d282076e85c48f014324bdf098e41dbef8ec45903cd4441c0f2b6e4eef4329f0"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/review-page.png",
+      "bytes": 191027,
+      "sha256": "9c229ee2a79c209a30393b65301f5d77caeb5ffc93496a036b8c5372ac24feaf"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/verified-metal-roller-1440.png",
+      "bytes": 394945,
+      "sha256": "6e42cf2a3413af11ef88b24e213a7e1226f6032c8651a12d086a01d02b279d6e"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/verified-metal-roller-390.png",
+      "bytes": 28008,
+      "sha256": "b3ea01298a84553d8ae251714ffe685b53d17d7b6acdc1d7759e39975d098c8a"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/verified-plastic-roller-1440.png",
+      "bytes": 392959,
+      "sha256": "0c5acf9574a68e6f2f8e4fdecb15c342fded6be8cd18bbc41ae066c971349da8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/verified-plastic-roller-390.png",
+      "bytes": 27727,
+      "sha256": "9ddedecd7f14b9bc7036a75014c2e42bc656cee2d9d4fe17bb05015b2cc60f8e"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/caps-plastic-seat-v04/verify-browser.cjs",
+      "bytes": 5731,
+      "sha256": "8462737fcaf4d56d5c3f542733320c02d12b978c940529eddc96a290bfa14d2b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/capture-after.cjs",
+      "bytes": 1031,
+      "sha256": "5fbec6e8b86bf138dc85aa8988b5f841d21d713591808522dd605c14c4e2b832"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/capture-before.cjs",
+      "bytes": 1032,
+      "sha256": "2604f2f17364d00451b2f2b811eea44496d096ff6dbf1f49e4a13f4a7d48ac0f"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/catalog-verification.json",
+      "bytes": 12666,
+      "sha256": "0d452c2bcee36da19ec5795dabee1142799a010f84ffcc365a437c5f6b497cbc"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/component-registration.json",
+      "bytes": 5020,
+      "sha256": "e239265166594a5b7a993a4f8ab5f5fc4af24449b5380b2252bad66481825af5"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/defects-and-changes.csv",
+      "bytes": 40117,
+      "sha256": "d38fa1af697f3cdaf33683cf457a9c40af619db4c52d2baf3d9d0aca80974d03"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/generation-and-reference-log.json",
+      "bytes": 26473,
+      "sha256": "807f206f9238c7ed1a2a92ddf2985b15cbe5f7a04749d32cad6d00cc9b7f55a6"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/README.md",
+      "bytes": 1140,
+      "sha256": "8ee91a4f2ab14eb331cae8f5243590caddb51491afb385c2ae350dd12af573a5"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/before-index.json",
+      "bytes": 32405,
+      "sha256": "c5df7042750c48cb794e2e3668ff3991fb0c3db3f1306ff160e7051736c564a9"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/before-kits.json",
+      "bytes": 759533,
+      "sha256": "6d54d8786e75cdb315cb37e394d2d827d7bef11f7c65f25307898ab865796979"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/before-metal-seat-detail.png",
+      "bytes": 47381,
+      "sha256": "06794d68bc34178a5be4d9ff0204bc2bdbe5faeb15b6c83e94d3ce31de466c62"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/before-metal-sidecar.png",
+      "bytes": 36373,
+      "sha256": "7d8abfb0dd0d746b302d18bcc9c20a903c1e3a4cd59069d1c2c9ceaa934e2c61"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/browser-verification.json",
+      "bytes": 38087,
+      "sha256": "43027fca530ab5d68cf636b7a6226feaa97bcf9ade5efabc786e06050d5b55de"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/builder-metal.png",
+      "bytes": 180206,
+      "sha256": "eafbdb8708fc1f7003d8439cce4d59bac9d9e31cc6d437ffa2a47600328d0a0b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/metal-roller-seat-1440.png",
+      "bytes": 47803,
+      "sha256": "fb66fadbdfb99bc0dd457a9eefb31016494773bac26f26608929a11ddc6b85d7"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/metal-roller-seat-390.png",
+      "bytes": 4634,
+      "sha256": "5d72dc71d931829fe65e6812ee71beb88b6d583269d75c3ca508bc6f790e6d1a"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/registration-checks.json",
+      "bytes": 9160,
+      "sha256": "86d0c5993d72db944529b68133c0db96ae3b2dbaff7e670741cad9a2bd3438ee"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/review-page.png",
+      "bytes": 196824,
+      "sha256": "b74c572424b1053090fd7d079cf9a258c016a03c5659cf8510e13a77f81f84be"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/verified-metal-roller-1440.png",
+      "bytes": 394865,
+      "sha256": "693e4b6f12a084a60149a87d9b0e6d88f64303533520686b8d38fe2ccf024b99"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/verified-metal-roller-390.png",
+      "bytes": 27970,
+      "sha256": "d33e7d17d3906e6e66b8e4fc85920084474c2d9dbab2376e3d776198e2cb3f9b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/metal-rim-seat-v03/verify-browser.cjs",
+      "bytes": 5077,
+      "sha256": "eab862e9b0ff6fe5477720620261777a8a4a8699e903164f50dff53f801d9392"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/prepare-sources.py",
+      "bytes": 1807,
+      "sha256": "8f907b1dad2f116eca1561ad3b6b605c13a80f81b14ca4a4d971fe03d716cec4"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/review-page.png",
+      "bytes": 193176,
+      "sha256": "07f02807f771625e56b547a290b5978a05bb35c068663edafe2b7ad2ff24c674"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/README.md",
+      "bytes": 1988,
+      "sha256": "5fedca005c3159b3b45a4dd97ade20f52d4b8fc37697d992961e62360e1a1f4c"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/before-after-metal-exploded.png",
+      "bytes": 67601,
+      "sha256": "53a70b52671fb645c9a808b836a0fb479014e0a0bfe8c4d8e6636fecbaeaebda"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/before-after-metal-sidecar.png",
+      "bytes": 36727,
+      "sha256": "2eb8a7981fe2d2a2257d48c1a40b7bb44d7fbaf43d13a33dfe5fd7c2651f11d6"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/before-after-plastic-exploded.png",
+      "bytes": 67339,
+      "sha256": "084c7fbb7b0be25e01e58e0126a769934b9d7eb67a8d5bb52e90e94878d623d1"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/before-after-plastic-sidecar.png",
+      "bytes": 36216,
+      "sha256": "091558134ae4041290d3273f9b7c42fc0f2500d01975a3e92a7eba078cde0049"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/before-after-pump-exploded.png",
+      "bytes": 74366,
+      "sha256": "21a6a65404474a30b3ea2d36c2b7f233915caa934a5cdb9759722fdfe0f719a2"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/before-after-pump-sidecar.png",
+      "bytes": 35006,
+      "sha256": "629273bfe29f96e387dbe400b9f88399d43b01cda3a491f74389aebed822a045"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/before-index.json",
+      "bytes": 32405,
+      "sha256": "6c442f32596f837967258a2a6e4ea770d10236c5709d5dd0109f121e2aa3ec3f"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/before-kits.json",
+      "bytes": 757233,
+      "sha256": "9d21dbd82cbec0c428a23bd246f8d001e96afb6d25fffde43ee63f81fc19c7f9"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/browser-verification.json",
+      "bytes": 72415,
+      "sha256": "35789bd8b38d644974756ab275c8017b531126409d5c2d7da28130ab741ff64e"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/builder-metal.png",
+      "bytes": 180180,
+      "sha256": "27723137797b3de679157ea3d1c03466a833e2786d40c3b6c8bb9266ca253baa"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/generation-log.json",
+      "bytes": 3108,
+      "sha256": "0c7fafd49c28e52f0e6775f63f88c0b91a364bfdc6de941820bc762662607393"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/metal-roller-seat-1440.png",
+      "bytes": 6210,
+      "sha256": "3a968776fbed1565d39a679c715268aed5037ca2fed3ae25b4931866dd7b54f4"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/metal-roller-seat-390.png",
+      "bytes": 3785,
+      "sha256": "1217b610a3662750dac43718869fd2761a89581cdb6f7188530f7499cefcccc7"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/metal-seat-detail.png",
+      "bytes": 47381,
+      "sha256": "06794d68bc34178a5be4d9ff0204bc2bdbe5faeb15b6c83e94d3ce31de466c62"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/plastic-roller-seat-1440.png",
+      "bytes": 5839,
+      "sha256": "a3a20d1d44ad4392711183e6ebc7906eb0281cbcdf6a458c4852608b4698f49c"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/plastic-roller-seat-390.png",
+      "bytes": 3613,
+      "sha256": "554b4a84b89a6914923aeaf81fd329721092ae5d0125f639495f39a403cdcd0a"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/plastic-seat-detail.png",
+      "bytes": 44766,
+      "sha256": "c0610855da7910f6b79b9e83773c7bbadc0b73ad94f393671d75976b61b98b5c"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/registration-checks.json",
+      "bytes": 4040,
+      "sha256": "70f017fd8bc6bb90595eb8e1d6540a92864693947c1f6083ea892860fb65d0aa"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/review-page.png",
+      "bytes": 196836,
+      "sha256": "f71dc79ad54a9715ff0131eb7882758ed2c1d4dc9c08299efe6719aa248e1331"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/verification.json",
+      "bytes": 443,
+      "sha256": "97a8b250219bc7bf9d0fd50ad73483e9bb3cf05b717d1e2e1e2bfc85c1c5056c"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/verified-metal-roller-1440.png",
+      "bytes": 66924,
+      "sha256": "9284fdfedf2ea84c319299894abace5bcb055ba239d0d06a2a56a1afd7c7bb4e"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/verified-metal-roller-390.png",
+      "bytes": 27957,
+      "sha256": "848d61ecf7aa17e615ec20aaf204860e57a67173383e6a44a86f3f9fda930609"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/verified-plastic-roller-1440.png",
+      "bytes": 66749,
+      "sha256": "e2d9cb53caa1cc180c43f3014156d1827bc66923604a519ee2e8c9763b49bf31"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/verified-plastic-roller-390.png",
+      "bytes": 27684,
+      "sha256": "2d84b0eb9325166062216f7fec742775fc82760b5d5b0ade744660e3e1c3a30a"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/roller-level-v02/verify-browser.cjs",
+      "bytes": 5039,
+      "sha256": "5788e0457e2ca34fa0c20c11ba06aa8dfd2359b425d494cdfebb47129fd622b3"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/selected-assets.json",
+      "bytes": 760,
+      "sha256": "1df7e18f5e9f85973390fe19ea2f35ff7c445562b07599f85e3bc29e3558ae0b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/README.md",
+      "bytes": 822,
+      "sha256": "ebac74b8937fa653091a51735b94bfcbb43b0fab70890a5fa7d10aad9a352622"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/before-index.json",
+      "bytes": 32405,
+      "sha256": "4209206777b52677118ff3eef91300dc57adf17b333250bf8ac349beda609981"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/before-kits.json",
+      "bytes": 757158,
+      "sha256": "eaab77db4b0ab5fd84cbf53cdec6f2be8595640863b5a5367d7c39f87aae74ac"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/black-full.png",
+      "bytes": 116894,
+      "sha256": "31d5e02662218e1992d9399d6513b8b99a1a02f78b97d363e196da76072fb845"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/black-shoulder.png",
+      "bytes": 26040,
+      "sha256": "da0171774985a3194883b05eaa931ea634130bdf2736bb48058bae665101631c"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/browser-checks.json",
+      "bytes": 4122,
+      "sha256": "7e9a4a2be9b755b822c5f917b1c444194603e1aed978d96afd530bacdd3093e8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/gold-full.png",
+      "bytes": 125484,
+      "sha256": "82a520b1251dcd9392ad0a3c300c49486dcdba1da61dc4bd5427d27a822ba777"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/gold-shoulder.png",
+      "bytes": 33853,
+      "sha256": "658bba8300486a86eedc597f7d2edf3e3eb9f2e0e915e96bfa11ea0698931393"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/matte-silver-full.png",
+      "bytes": 119596,
+      "sha256": "53803053e0e689f630c9cc629b1775fc98be61e655e0ce4177190597ebb39507"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/matte-silver-shoulder.png",
+      "bytes": 28091,
+      "sha256": "b43517011126a46fedfdc14f11351ca1483c790b0e0192bcac97a3de262fb4a8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/registration-checks.json",
+      "bytes": 506,
+      "sha256": "44f0b8ef117a33b2b2e96bbdb59ef86e4d06aa6f8aedbf9256ccac4e97fc3b94"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-metal-exploded.png",
+      "bytes": 67601,
+      "sha256": "53a70b52671fb645c9a808b836a0fb479014e0a0bfe8c4d8e6636fecbaeaebda"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-metal-sidecar.png",
+      "bytes": 36727,
+      "sha256": "2eb8a7981fe2d2a2257d48c1a40b7bb44d7fbaf43d13a33dfe5fd7c2651f11d6"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-plastic-exploded.png",
+      "bytes": 67339,
+      "sha256": "084c7fbb7b0be25e01e58e0126a769934b9d7eb67a8d5bb52e90e94878d623d1"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-plastic-sidecar.png",
+      "bytes": 36216,
+      "sha256": "091558134ae4041290d3273f9b7c42fc0f2500d01975a3e92a7eba078cde0049"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-pump-exploded.png",
+      "bytes": 74838,
+      "sha256": "c69c3e8aedea40b7e11007414653dc7903b8519edc060c53546bb41a57fe10fb"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/v01-after-pump-sidecar.png",
+      "bytes": 34427,
+      "sha256": "10cde2e2d7a5382aae761947fae3d3e79f0be53acb63f6acf48d865bac94a27b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/shoulder-seating-v02/verify.cjs",
+      "bytes": 2568,
+      "sha256": "719b82637f471c7927f6c47bb2563adb58e9aaa12e8c89ec95a09a9af2b60f0d"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/source-manifest.json",
+      "bytes": 48142,
+      "sha256": "62b61fe8a7967c98454838cf3ce35b1ad0309d36f12ce8b1440acad9fd287fca"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9MtlRollBlkDot-layer-1.png",
+      "bytes": 24343,
+      "sha256": "f6c95ed15b2c5d6e338f67c74ea2ee50fab15cbec0f5f4ed4fa0cc533fa16726"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9MtlRollBlkDot-layer-2.png",
+      "bytes": 46340,
+      "sha256": "a3588d54ba1c40d8249f915846e211511f61cc5ff29ecc0ce98abcb489785dfa"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9MtlRollBlkDot-layer-3.png",
+      "bytes": 24343,
+      "sha256": "f6c95ed15b2c5d6e338f67c74ea2ee50fab15cbec0f5f4ed4fa0cc533fa16726"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9MtlRollBlkDot-layer-4.png",
+      "bytes": 91560,
+      "sha256": "a8872eac3bc817f2b8ddad59fd9b2d5906778bbf4b15e4901d3b6b04c1572f7b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9MtlRollBlkDot-registered-0-body.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9MtlRollBlkDot-registered-1-roller.png",
+      "bytes": 84503,
+      "sha256": "63eff96be1fdb5837b7fe046aad481af65a4ecb2d36b8c3c8d8c058decbdd146"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9MtlRollBlkDot-registered-2-roller.png",
+      "bytes": 246061,
+      "sha256": "984db336768a94de302f1bc6d70cd1d191bcc551ec79506da7753cb4a9858bd2"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9MtlRollBlkDot-registered-3-cap.png",
+      "bytes": 112088,
+      "sha256": "a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9MtlRollBlkDot-registered-4-roller.png",
+      "bytes": 84503,
+      "sha256": "63eff96be1fdb5837b7fe046aad481af65a4ecb2d36b8c3c8d8c058decbdd146"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9MtlRollBlkDot-source.png",
+      "bytes": 152547,
+      "sha256": "2621925239a61806d7172d6432e88f501ee798632e83d013b67c4bd30f6cac1f"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9RollBlkDot-layer-1.png",
+      "bytes": 24343,
+      "sha256": "5757d03fa0f3d608327cdcf72ec1512a8cca1fe42ea3f82c7cd3c80e77a46ed5"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9RollBlkDot-layer-2.png",
+      "bytes": 46340,
+      "sha256": "f24d2d5b67b6b6779f6ab7720d2913afe6d2d56b79d94087da085052252be436"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9RollBlkDot-layer-3.png",
+      "bytes": 16186,
+      "sha256": "6759dd8fa6b8cf64ac6ff5f4ec9023688201c5a9aaa2c6cc13513f781e567dc1"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9RollBlkDot-layer-4.png",
+      "bytes": 91560,
+      "sha256": "35e3d5ca957eda88e8ddfe02fc0923a95e3482ff8edced065d8b58f6f19fb926"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9RollBlkDot-registered-0-body.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9RollBlkDot-registered-1-roller.png",
+      "bytes": 68471,
+      "sha256": "44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9RollBlkDot-registered-2-roller.png",
+      "bytes": 246438,
+      "sha256": "74196cf733bd135ca8394cc956222e2cd688f40bbb8bf8e4280f8ba0af361ca5"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9RollBlkDot-registered-3-cap.png",
+      "bytes": 112088,
+      "sha256": "a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9RollBlkDot-registered-4-roller.png",
+      "bytes": 68471,
+      "sha256": "44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/GBCyl9RollBlkDot-source.png",
+      "bytes": 151185,
+      "sha256": "20e013da3750f4af17020240aba8a79ea675cc02ced5d7ec51f10085cce76bb3"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-layer-1.png",
+      "bytes": 91384,
+      "sha256": "71e7edb6ec72ca27155842266da56d1dd23a9e2bc2f19c995c20cb6d797aa04d"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-layer-2.png",
+      "bytes": 45389,
+      "sha256": "9dbfc8c4d32baafc8c21e3b13411c53c21661abeb29e731fa4bfb7e302815d92"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-layer-3.png",
+      "bytes": 27866,
+      "sha256": "d3191c18b91f5f048295e8bd4729306ff2bc1864a1292be959fbd1eeb28c9609"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-layer-4.png",
+      "bytes": 49106,
+      "sha256": "e395bdc99e820ab1be7013083575667f24fa7309bceca4e080aebb6b69c5c72e"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-layer-5.png",
+      "bytes": 3972,
+      "sha256": "d438866536ded44485b99ed1793a253669a54f1e2803f440ff6394a629d4ece7"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-registered-0-body.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-registered-1-diptube.png",
+      "bytes": 148457,
+      "sha256": "ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-registered-2-diptube.png",
+      "bytes": 72830,
+      "sha256": "675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-registered-3-pump.png",
+      "bytes": 43777,
+      "sha256": "2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-registered-4-overcap.png",
+      "bytes": 300365,
+      "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-registered-5-collar.png",
+      "bytes": 46037,
+      "sha256": "34429e321f917537ac59089ebff88dcddf79e82f0cb3b306b3bca78f83d1a7a3"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnBlk-source.png",
+      "bytes": 177750,
+      "sha256": "efcc3c07e2de3d1b65f34dba0c9d0c2aef6c938c525ff6ef202f718d6697e142"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-layer-1.png",
+      "bytes": 91521,
+      "sha256": "c5563aae1b79095deb9aec2a752e5fbc1707e165325be28edc11754297d1fb8c"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-layer-2.png",
+      "bytes": 45389,
+      "sha256": "bc0c2c657a1891f58886529e2ada60b04a1a039045909656b45db199889178ad"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-layer-3.png",
+      "bytes": 1028,
+      "sha256": "cff55b13ec0b5c7b23c4be3b5de60dbfc9b72c3e528859e5ed605019308ffaa1"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-layer-4.png",
+      "bytes": 49106,
+      "sha256": "5ecbc6d0320a34888247075eb05938b3041b4ae4c855bdbeb60e1b59cd8a1e93"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-layer-5.png",
+      "bytes": 62684,
+      "sha256": "8eb49d17bf46ad449fcb06cd166ae375ecd806018280d90a5b66c19362ec7791"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-layer-6.png",
+      "bytes": 3972,
+      "sha256": "54b218842e48b357203b6cac71695a3d4fd4d6a740ba51802462acb4362cf0bc"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-registered-0-body.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-registered-1-diptube.png",
+      "bytes": 148457,
+      "sha256": "ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-registered-2-diptube.png",
+      "bytes": 72830,
+      "sha256": "675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-registered-3-pump.png",
+      "bytes": 43777,
+      "sha256": "2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-registered-4-overcap.png",
+      "bytes": 300365,
+      "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-registered-5-collar.png",
+      "bytes": 50751,
+      "sha256": "7dc5ccb725f5868f09026383c5079387c066dbcc05d4fdae87723222fc4fcf1d"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnGl-source.png",
+      "bytes": 209907,
+      "sha256": "7a4b6bf98574d89a6818ec802e40d946b119723f741adc62fdc6ba7c0468c85b"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-layer-1.png",
+      "bytes": 91384,
+      "sha256": "bc5feb322c07247093d003df0d66b012cd2cfefa33ff84538248ed4efd01c47d"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-layer-2.png",
+      "bytes": 45389,
+      "sha256": "4f2af038b5bfe11c35148d42433e4df6a8ec4ffc1c5558094b08c5c7b786d572"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-layer-3.png",
+      "bytes": 28277,
+      "sha256": "13cda7286c634b2d83e67b0386bcf04f56b23dbc4edae3a7743e742ccc82dd3e"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-layer-4.png",
+      "bytes": 49106,
+      "sha256": "56a25496590b890a4c0a1d1419c89d13ac24d6ae1fb96d4df5fd7ae0fa62563a"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-layer-5.png",
+      "bytes": 3972,
+      "sha256": "d89c11750b3f4f0cdceac529df3e5e2fc76f66ebe3605fe8b1d790bbf14c051c"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-registered-0-body.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-registered-1-diptube.png",
+      "bytes": 148457,
+      "sha256": "ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-registered-2-diptube.png",
+      "bytes": 72830,
+      "sha256": "675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-registered-3-pump.png",
+      "bytes": 43777,
+      "sha256": "2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-registered-4-overcap.png",
+      "bytes": 300365,
+      "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-registered-5-collar.png",
+      "bytes": 64498,
+      "sha256": "1ca0add7d54cdaedf31eff8e40fb193b72057f1902a2c127cae342f53e39bfc4"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/LBCyl9LtnMtSl-source.png",
+      "bytes": 179731,
+      "sha256": "69e3092536433b5c4f1c774a2469f97ec9d3c97b67f3002d4e0ab6042ade249c"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/lotion-head-generated-v01.png",
+      "bytes": 739065,
+      "sha256": "aea13b9db2aefa6d8713147f6474d64f372472f5841cdb30fa34738659e96ce2"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/lotion-mechanism-generated-v01.png",
+      "bytes": 844910,
+      "sha256": "7324c6f397a4e052349860adea3c6d0967fe1286b0c5d15cb187ca5e1201ddae"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/roller-metal-generated-v01.png",
+      "bytes": 937976,
+      "sha256": "0f91d5d27b9da54ac036cdf34333c280874f5b49b57072db11bb8226768c32cc"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/roller-metal-level-v02.png",
+      "bytes": 946167,
+      "sha256": "a3ec849d4e6acf1dfa25bc5250e603bec97d6f27dc97ee432cbc490ae08d9906"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/roller-plastic-generated-v01.png",
+      "bytes": 890796,
+      "sha256": "afc63c0dd6e070d8d2f56a1ed68f8237798bd701f51016ca4342a6bf348a0b37"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/sources/roller-plastic-level-v02.png",
+      "bytes": 925022,
+      "sha256": "4aeaf4d743ad69bfe27603389eef5e9ab1472a86d1ce136b8f264c93607442d9"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/verification.json",
+      "bytes": 1050,
+      "sha256": "b33172b47bdde930acb09f37cffa8b36a76f05170e402ab4256e14bb975c691d"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/verified-lotion-pump-1440.png",
+      "bytes": 74838,
+      "sha256": "c69c3e8aedea40b7e11007414653dc7903b8519edc060c53546bb41a57fe10fb"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/verified-lotion-pump-390.png",
+      "bytes": 31705,
+      "sha256": "5cba07b4cbdab12d814defad29c5c40bf3a15d51e6fd2d1f3e20ceebc46d661d"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/verified-metal-roller-1440.png",
+      "bytes": 67601,
+      "sha256": "53a70b52671fb645c9a808b836a0fb479014e0a0bfe8c4d8e6636fecbaeaebda"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/verified-metal-roller-390.png",
+      "bytes": 28110,
+      "sha256": "993d6a81376a2b5e103dbbe74973489da33b9232e8001084db5ff67df46aad0a"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/verified-plastic-roller-1440.png",
+      "bytes": 67339,
+      "sha256": "084c7fbb7b0be25e01e58e0126a769934b9d7eb67a8d5bb52e90e94878d623d1"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/verified-plastic-roller-390.png",
+      "bytes": 27787,
+      "sha256": "361c3d22f5cc59ccacf6d82a1c03ae0a77660888791c8b55f3419d06104c7180"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/verify-browser.cjs",
+      "bytes": 4660,
+      "sha256": "3a2b4046180b795f8d7c1549e8f3596301e3f944a08e667892196c5b63fcc6e5"
+    },
+    {
+      "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/verify-catalog.cjs",
+      "bytes": 1661,
+      "sha256": "215ec74d886e7cb0998f917791a7a7cab98bf8351fd8c92b3431156638cb866f"
+    },
+    {
+      "path": "public/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+      "bytes": 985854,
+      "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe"
+    },
+    {
+      "path": "public/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
+      "bytes": 1251166,
+      "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e"
+    },
+    {
+      "path": "public/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "bytes": 1262136,
+      "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2"
+    },
+    {
+      "path": "public/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "bytes": 1233944,
+      "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16"
+    },
+    {
+      "path": "public/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
+      "bytes": 1188258,
+      "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/after-metal-exploded.png",
+      "bytes": 67416,
+      "sha256": "6ef488e546532c253d1af215df239071ea02786961522a286e59670454a80c1e"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/after-metal-sidecar.png",
+      "bytes": 36229,
+      "sha256": "2699f9fa11fc1f4d82b607918cde7f2d99a3ac0727e1edb42cbdf2957b9ab246"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/after-plastic-exploded.png",
+      "bytes": 67223,
+      "sha256": "33e1001c12a3e57b4127a2e3d1b4f186de3044cf08d39503a7230e86fd6ac3c1"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/after-plastic-sidecar.png",
+      "bytes": 35913,
+      "sha256": "399b6371e4b7b4833d504f50fa0f8883b01003124b9dcd6c1a81770a9f99e064"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/after-pump-exploded.png",
+      "bytes": 74366,
+      "sha256": "21a6a65404474a30b3ea2d36c2b7f233915caa934a5cdb9759722fdfe0f719a2"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/after-pump-sidecar.png",
+      "bytes": 35006,
+      "sha256": "629273bfe29f96e387dbe400b9f88399d43b01cda3a491f74389aebed822a045"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/before-metal-exploded.png",
+      "bytes": 67722,
+      "sha256": "17e4527ae2038f9228a15249c8e910383ca6d6fa6091982765a8415f77bc5df1"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/before-metal-sidecar.png",
+      "bytes": 36053,
+      "sha256": "30922f089f91c96bd961d3eb0cca7407804a3d6e55cd9118ee4c129c788fa65b"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/before-plastic-exploded.png",
+      "bytes": 67039,
+      "sha256": "964fe2c0f18c3d8743baf9e524f66da17ee7a21bcf17184266864be4a5a48f11"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/before-plastic-sidecar.png",
+      "bytes": 35175,
+      "sha256": "3b72cbfc4958dd4842c6806d90c942df1f23ea9af64a07aae747003952880248"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/before-pump-exploded.png",
+      "bytes": 72085,
+      "sha256": "504f6a76571787649419c04df62aaf3a20059330199a935882ad33d8effc39dd"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/before-pump-sidecar.png",
+      "bytes": 29197,
+      "sha256": "332362f25d1c45ad994e4476c137884af0feb8e95957820c3d37753aa51f23a8"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/index.html",
+      "bytes": 5409,
+      "sha256": "fcaa3906e904605f7186aad12b34d1ef1a163dfc723f66d30b531ce29e93b79e"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/lotion-head.svg",
+      "bytes": 985854,
+      "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/model.json",
+      "bytes": 30426,
+      "sha256": "2d69e7472eebc8fba0e0a08e84ba4a101a337ef1d288dbef8d51d6c575dcdf12"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/plastic-roller-seat-v04.png",
+      "bytes": 45467,
+      "sha256": "30cbc0b7c15b45a7cef1235ef4f42da808c625e0004dc6c004777c49b5cac6c9"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/review.mjs",
+      "bytes": 2415,
+      "sha256": "4fd6cbc35d546f227e98a5ff59c7afdebce29b737e00db0293543ee6a8bd027a"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/roller-metal.svg",
+      "bytes": 1262136,
+      "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/roller-plastic.svg",
+      "bytes": 1233944,
+      "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16"
+    },
+    {
+      "path": "public/reviews/cylinder9-pumps-rollers-2026-11-01/rollon-cap-shoulder-v04.png",
+      "bytes": 28151,
+      "sha256": "cefc9d7ed5eb5c632b0b7b4c236b7a23455d27cfc67b9a6543c7376cfee21e22"
+    }
+  ]
+}

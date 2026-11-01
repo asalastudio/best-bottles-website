@@ -30,12 +30,22 @@ type SiteCopyFile = {
 
 const COPY = siteCopy as unknown as SiteCopyFile;
 
+function reviewedSmallSprayerCopy(sku: string, copy: ProductCopy): ProductCopy {
+    if (!["GBSpry3mlClBlk", "GBSpry3mlClWht", "GBSpry4mlClBlk", "GBSpry4mlClWh"].includes(sku)) return copy;
+    const rename = (text: string) => sku.startsWith("GBSpry3ml") ? text.replace(/\b3 ml\b/gi, "3.3 ml") : text;
+    return { ...copy, title: rename(copy.title), variantTitle: rename(copy.variantTitle),
+        sentences: copy.sentences.map(rename), metaDescription: rename(copy.metaDescription), altText: rename(copy.altText),
+        bullets: copy.bullets.map(([label, text]) => [label, label === "Included"
+            ? `${sku.endsWith("Blk") ? "Black" : "White"} fine-mist sprayer and one clear protective overcap.` : rename(text)]),
+    };
+}
+
 export function productCopyFor(variant: { websiteSku?: string | null; graceSku?: string | null }): ProductCopy | null {
     const website = variant.websiteSku?.trim();
-    if (website && COPY.bySku[website]) return COPY.bySku[website];
+    if (website && COPY.bySku[website]) return reviewedSmallSprayerCopy(website, COPY.bySku[website]);
     const grace = variant.graceSku?.trim();
     const mapped = grace ? COPY.graceToWebsite[grace] : undefined;
-    return mapped ? COPY.bySku[mapped] ?? null : null;
+    return mapped && COPY.bySku[mapped] ? reviewedSmallSprayerCopy(mapped, COPY.bySku[mapped]) : null;
 }
 
 export function productCopyCount(): number {

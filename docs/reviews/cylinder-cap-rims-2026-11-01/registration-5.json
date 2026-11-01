@@ -1,0 +1,248 @@
+{
+  "assets": {
+    "tall-gold": {
+      "file": "tall-gold.08341277ad29.png",
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
+      "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+      "bytes": 2858544,
+      "width": 1290,
+      "height": 1917,
+      "originalWidth": 422,
+      "originalHeight": 631,
+      "crop": [
+        40,
+        60,
+        948,
+        1438
+      ]
+    },
+    "tall-silver": {
+      "file": "tall-silver.31368590174d.png",
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
+      "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+      "bytes": 2585591,
+      "width": 1290,
+      "height": 1917,
+      "originalWidth": 422,
+      "originalHeight": 631,
+      "crop": [
+        42,
+        53,
+        941,
+        1444
+      ]
+    },
+    "short-gold": {
+      "file": "short-gold.f5240b98053b.png",
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-gold.f5240b98053b.png",
+      "sha256": "f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e",
+      "bytes": 2186433,
+      "width": 1230,
+      "height": 1320,
+      "originalWidth": 402,
+      "originalHeight": 432,
+      "crop": [
+        27,
+        45,
+        1158,
+        1231
+      ]
+    },
+    "short-silver": {
+      "file": "short-silver.e7fa6410ca1c.png",
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-silver.e7fa6410ca1c.png",
+      "sha256": "e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a",
+      "bytes": 1927768,
+      "width": 1230,
+      "height": 1320,
+      "originalWidth": 402,
+      "originalHeight": 432,
+      "crop": [
+        36,
+        70,
+        1139,
+        1175
+      ]
+    }
+  },
+  "changed": [
+    {
+      "sku": "GBCyl5Sl",
+      "key": "tall-silver",
+      "id": "CMP-CAP-SLV-13-415-01",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCyl5Gl",
+      "key": "tall-gold",
+      "id": "CMP-CAP-SGLD-13-415-01",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "key": "short-gold",
+      "id": "CMP-CLS-SHGD-S-13-415",
+      "bounds": {
+        "left": 416.0696517412935,
+        "right": 583.9303482587064,
+        "top": 442.2770776545719,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "key": "short-silver",
+      "id": "CMP-CLS-SHSL-S-13-415-02",
+      "bounds": {
+        "left": 416.0696517412935,
+        "right": 583.9303482587064,
+        "top": 442.2770776545719,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "key": "tall-silver",
+      "id": "CMP-CAP-SLV-13-415-01",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCylBlu5Gl",
+      "key": "tall-gold",
+      "id": "CMP-CAP-SGLD-13-415-01",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "key": "short-gold",
+      "id": "CMP-CLS-SHGD-S-13-415",
+      "bounds": {
+        "left": 416.0696517412935,
+        "right": 583.9303482587064,
+        "top": 442.2770776545719,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "key": "short-silver",
+      "id": "CMP-CLS-SHSL-S-13-415-02",
+      "bounds": {
+        "left": 416.0696517412935,
+        "right": 583.9303482587064,
+        "top": 442.2770776545719,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCyl5MtlRollGlSh",
+      "key": "tall-gold",
+      "id": "CMP-ROC-SGLD-13415",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCyl5MtlRollSlSh",
+      "key": "tall-silver",
+      "id": "CMP-ROC-SSLV-13415",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "key": "tall-silver",
+      "id": "CMP-ROC-SSLV-13415",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "key": "tall-gold",
+      "id": "CMP-ROC-SGLD-13415",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "key": "tall-gold",
+      "id": "CMP-ROC-SGLD-13415",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlSh",
+      "key": "tall-silver",
+      "id": "CMP-ROC-SSLV-13415",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollGlSh",
+      "key": "tall-gold",
+      "id": "CMP-ROC-SGLD-13415",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollSlSh",
+      "key": "tall-silver",
+      "id": "CMP-ROC-SSLV-13415",
+      "bounds": {
+        "left": 411.8696682464455,
+        "right": 588.1303317535545,
+        "top": 359.17565113786634,
+        "bottom": 623.1469781520843
+      }
+    }
+  ],
+  "version": "f3a091df6cea",
+  "method": "Generated metal surface registered to the existing cap alpha silhouette. Existing cap bounds, seat, body, roller and scale are unchanged. Padding is transparent and included in the image box."
+}

@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-31T16:46:54.584Z",
+  "configurations": 906,
+  "viewsPerConfiguration": 3,
+  "builderStatesPerConfiguration": 6,
+  "mismatches": [],
+  "clips": [],
+  "clipMeasurement": "Conservative recorded layer bounds. May include transparent source padding; visible pixel QA remains required."
+}

@@ -1,0 +1,56 @@
+{
+  "folderUrl": "https://drive.google.com/drive/folders/1vTAxvhlt3h7RQTyyY14voRPjrr1sZFky",
+  "verification": "Remote names, byte sizes and parents read back. Local file and archive hashes verified separately.",
+  "files": [
+    {
+      "localPath": "docs/reviews/cylinder9-glass-refraction-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-Refraction-v03_REVIEW_2026-11-01.png",
+      "name": "BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-Refraction-v03_REVIEW_2026-11-01.png",
+      "id": "1wlu1Va8vqFL0jLCaG8_jTqdYE7N5G6vS",
+      "url": "https://drive.google.com/file/d/1wlu1Va8vqFL0jLCaG8_jTqdYE7N5G6vS/view?usp=drivesdk",
+      "bytes": 1427876,
+      "localSha256": "206b5f1c72b151034524140526b47d2b2b33f55c6728b71a81ff4b9e313b2fa2",
+      "parent": "1vTAxvhlt3h7RQTyyY14voRPjrr1sZFky",
+      "metadataVerified": true
+    },
+    {
+      "localPath": "docs/reviews/cylinder9-glass-refraction-2026-11-01/neck-light.png",
+      "name": "BB_Cylinder_9ml_Clear_Before-v02_After-v03_Neck-Comparison.png",
+      "id": "1J-ympqzdwcwKO0wDlLs6kBRV6LL4mGaD",
+      "url": "https://drive.google.com/file/d/1J-ympqzdwcwKO0wDlLs6kBRV6LL4mGaD/view?usp=drivesdk",
+      "bytes": 528262,
+      "localSha256": "02c238b72c1b34f9eb088b8912269bdf979e3be3a578cf22eb6ccf1db25e87dd",
+      "parent": "1vTAxvhlt3h7RQTyyY14voRPjrr1sZFky",
+      "metadataVerified": true
+    },
+    {
+      "localPath": "docs/reviews/cylinder9-glass-refraction-2026-11-01/README.md",
+      "name": "README_Cylinder_9ml_Glass-Refraction_v03_REVIEW.md",
+      "id": "1HvpXQUWlKiNusAdpaNHKtwWBkbWrTS9Z",
+      "url": "https://drive.google.com/file/d/1HvpXQUWlKiNusAdpaNHKtwWBkbWrTS9Z/view?usp=drivesdk",
+      "bytes": 2248,
+      "localSha256": "fb4fad28f4b2a91947888b2b49ab93a01c956af94fb562c9db461914519a4579",
+      "parent": "1vTAxvhlt3h7RQTyyY14voRPjrr1sZFky",
+      "metadataVerified": true
+    },
+    {
+      "localPath": "outputs/family-master-library-2026-11-01/Cylinder_9ml_Sunburst-Glass-Refraction_2026-11-01_v03.zip",
+      "name": "Cylinder_9ml_Sunburst-Glass-Refraction_2026-11-01_v03.zip",
+      "id": "1M9Qbhrs0PSvaq9jhtPlFvyM8JsZ2qG3x",
+      "url": "https://drive.google.com/file/d/1M9Qbhrs0PSvaq9jhtPlFvyM8JsZ2qG3x/view?usp=drivesdk",
+      "bytes": 9965175,
+      "localSha256": "6338d9335fabfd013815bb434df52925d0c4d9e726dd76369e6cdb896f67d548",
+      "parent": "1vTAxvhlt3h7RQTyyY14voRPjrr1sZFky",
+      "metadataVerified": true
+    },
+    {
+      "localPath": "docs/reviews/family-master-library-2026-11-01/BATCHES.md",
+      "name": "BATCHES_2026-11-01_Cylinder-Glass-Refraction-v03.md",
+      "id": "16dMmXZ0zTnnQDh0gZ4QYhMBldn9PUOvH",
+      "url": "https://drive.google.com/file/d/16dMmXZ0zTnnQDh0gZ4QYhMBldn9PUOvH/view?usp=drivesdk",
+      "bytes": 2050,
+      "localSha256": "23dc680db517238d8255817fefd3d8e91a801bf975896862a92459366e62a147",
+      "parent": "1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe",
+      "metadataVerified": true
+    }
+  ]
+}

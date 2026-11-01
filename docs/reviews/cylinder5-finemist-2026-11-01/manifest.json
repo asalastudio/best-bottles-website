@@ -1,0 +1,182 @@
+[
+  {
+    "path": "src/lib/paper-doll/local-component-kits.ts",
+    "bytes": 3644,
+    "sha256": "33bf0f72d04356a7240c9dbd8c3483d0cc6be898aa5b331568f330ccc007c8f6"
+  },
+  {
+    "path": "src/components/bottle-builder/builder-requests.ts",
+    "bytes": 2986,
+    "sha256": "f06a2bad23c40963525707e8458ed99a6b7292d549793cebc3847bf53452828b"
+  },
+  {
+    "path": "src/lib/products/cylinder5-sprayer-index.json",
+    "bytes": 531,
+    "sha256": "da33bfa13653af97e0b1e019887bbb1a2b9f117b36eff21c40562cf538364724"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-overcap.cd9e1c80f58d.svg",
+    "bytes": 64030,
+    "sha256": "cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-sprayer.809c14cf93e1.svg",
+    "bytes": 299364,
+    "sha256": "809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-overcap.dd88361f3fed.svg",
+    "bytes": 56369,
+    "sha256": "dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-sprayer.d600b45fd94f.svg",
+    "bytes": 394555,
+    "sha256": "d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-overcap.5abe54c88dca.svg",
+    "bytes": 139248,
+    "sha256": "5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-sprayer.c6e4df7cab34.svg",
+    "bytes": 838113,
+    "sha256": "c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-overcap.0056c53ff25d.svg",
+    "bytes": 121536,
+    "sha256": "0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-sprayer.682c91008417.svg",
+    "bytes": 444974,
+    "sha256": "682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-overcap.f3ef10365bdc.svg",
+    "bytes": 142776,
+    "sha256": "f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-sprayer.e853d044d5b8.svg",
+    "bytes": 949858,
+    "sha256": "e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-overcap.2d8f48c7c9b5.svg",
+    "bytes": 144369,
+    "sha256": "2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-sprayer.a31e7cdc0a03.svg",
+    "bytes": 1312217,
+    "sha256": "a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-overcap.48fe1f6f78e9.svg",
+    "bytes": 55886,
+    "sha256": "48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-sprayer.40b457cd8831.svg",
+    "bytes": 358123,
+    "sha256": "40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-overcap.0b1dc7e7b639.svg",
+    "bytes": 64742,
+    "sha256": "0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-sprayer.3fff04080b71.svg",
+    "bytes": 829486,
+    "sha256": "3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/kits.json",
+    "bytes": 96767,
+    "sha256": "81cd64d089442b2eb8bcc79667bf43fa8c89a39e393651d6404fce48c6422924"
+  },
+  {
+    "path": "public/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+    "bytes": 3437610,
+    "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/after-clear-capon.png",
+    "bytes": 79479,
+    "sha256": "baaf71c4799b2cae2d076c1ce8e2e3d552bb90d0e1d1b80f303d56ca1d44651f"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/after-clear-exploded.png",
+    "bytes": 92888,
+    "sha256": "fbded5782db273fead983e8beace60da28ca81b791bc0b76e154ce55772233b6"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/after-clear-sidecar.png",
+    "bytes": 96826,
+    "sha256": "6513c8770474b6149b21a78d37665c2b2f2a7370096dba15a65c7793839e5a8e"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/after-cobalt-blue-capon.png",
+    "bytes": 89263,
+    "sha256": "f498a51ba91ec6bffbf2514ebe9340d3ecc05990c3550d13637ff44de4f24268"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/after-cobalt-blue-exploded.png",
+    "bytes": 104344,
+    "sha256": "021f9d0777659208990ec6eea280f66defd20dc9d80afaedab5de167cb928fec"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/after-cobalt-blue-sidecar.png",
+    "bytes": 105203,
+    "sha256": "09d9427d9878b58b7a227c01b9d589576c3a566d559b3e715c83debad979683c"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/before-clear-cap-on.png",
+    "bytes": 71976,
+    "sha256": "c0d9b0e4874dd59c331293e29513a1a8f649b225b67193671f8f8160a196f735"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/before-clear-exploded.png",
+    "bytes": 85635,
+    "sha256": "0a98855bfa5628541c2dda19f8033466e3f445b74fbfb3e407573a7b5c91c59a"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/before-clear-sidecar.png",
+    "bytes": 89610,
+    "sha256": "95bb76cf37da1092552c2ca0d45fd70f385736c8924fa2fb4393b5095798fb39"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/before-cobalt-blue-cap-on.png",
+    "bytes": 82340,
+    "sha256": "fb9fdac3af869cbb367e232f85d7355c83d74ac59f1c83fc0a6a99b3c1343ee3"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/before-cobalt-blue-exploded.png",
+    "bytes": 98186,
+    "sha256": "e4d0da7f516fc04756f050d7c8a046c6b30855763ac7f4dcd0296e7dcaaddab7"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/before-cobalt-blue-sidecar.png",
+    "bytes": 99268,
+    "sha256": "ae568ed4972ab257acd7bf4ae9c30a5235856f59e88685facbe31402955af9c4"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/index.html",
+    "bytes": 3986,
+    "sha256": "af55902ce589f954116488de6cdc7f70d8fc02ed31dedad501dec313867ca8cb"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/model.json",
+    "bytes": 4642,
+    "sha256": "4d4277cf6171625f1b7f8a63ee4a9881bdc1e5a8b76eb1a85910a3611547f1d7"
+  },
+  {
+    "path": "public/reviews/cylinder5-finemist-2026-11-01/review.mjs",
+    "bytes": 2103,
+    "sha256": "81a04af9c81a8e9843fa10e0f01b1321ed86509982d54763965fc0a76072bf23"
+  }
+]

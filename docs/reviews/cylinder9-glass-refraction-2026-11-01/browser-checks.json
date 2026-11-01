@@ -1,0 +1,213 @@
+{
+  "checks": [
+    {
+      "width": 1440,
+      "mode": "light",
+      "view": "neck",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "neck",
+      "darkBackground": false
+    },
+    {
+      "width": 1440,
+      "mode": "light",
+      "view": "barrel",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "barrel",
+      "darkBackground": false
+    },
+    {
+      "width": 1440,
+      "mode": "light",
+      "view": "base",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "base",
+      "darkBackground": false
+    },
+    {
+      "width": 1440,
+      "mode": "dark",
+      "view": "neck",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "neck",
+      "darkBackground": true
+    },
+    {
+      "width": 1440,
+      "mode": "dark",
+      "view": "barrel",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "barrel",
+      "darkBackground": true
+    },
+    {
+      "width": 1440,
+      "mode": "dark",
+      "view": "base",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "base",
+      "darkBackground": true
+    },
+    {
+      "width": 1440,
+      "mode": "full",
+      "full": [
+        {
+          "uniform": true,
+          "inside": true
+        },
+        {
+          "uniform": true,
+          "inside": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "mode": "light",
+      "view": "neck",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "neck",
+      "darkBackground": false
+    },
+    {
+      "width": 390,
+      "mode": "light",
+      "view": "barrel",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "barrel",
+      "darkBackground": false
+    },
+    {
+      "width": 390,
+      "mode": "light",
+      "view": "base",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "base",
+      "darkBackground": false
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "view": "neck",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "neck",
+      "darkBackground": true
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "view": "barrel",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "barrel",
+      "darkBackground": true
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "view": "base",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformImages": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected": "base",
+      "darkBackground": true
+    },
+    {
+      "width": 390,
+      "mode": "full",
+      "full": [
+        {
+          "uniform": true,
+          "inside": true
+        },
+        {
+          "uniform": true,
+          "inside": true
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

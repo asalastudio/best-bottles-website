@@ -136,6 +136,9 @@ function titleCase(value: string): string {
 }
 
 function cleanCapacity(group?: CustomerFacingNameGroupInput | null, variant?: CustomerFacingNameVariantInput | null): string | null {
+    // This legacy family says "3 ml" in text but is the catalogued 3.3 ml bottle.
+    if (group?.slug === "cylinder-3.3ml-clear-12mm-finemist"
+        || ["GBSpry3mlClBlk", "GBSpry3mlClWht"].includes(variant?.websiteSku ?? "")) return "3.3 ml";
     const capacity = clean(variant?.capacity) ?? clean(group?.capacity);
     if (capacity) {
         const ml = capacity.match(/(\d+(?:\.\d+)?)\s*ml/i);
@@ -154,6 +157,7 @@ function cleanColor(group?: CustomerFacingNameGroupInput | null, variant?: Custo
 }
 
 function cleanFamily(group?: CustomerFacingNameGroupInput | null, variant?: CustomerFacingNameVariantInput | null): string | null {
+    if (/^tulip-(?:5|6)ml-/.test(group?.slug ?? "") || /^GBTulip(?:Amb5|6)/.test(variant?.websiteSku ?? "")) return "Tulip";
     const family = clean(variant?.family) ?? clean(group?.family);
     return key(family) === "cylinder" && isTallNineMlCylinder(group, variant) ? "Tall Cylinder" : family;
 }

@@ -1,0 +1,769 @@
+{
+  "measurements": [
+    {
+      "slot": "body",
+      "before": {
+        "file": "references/body-original.png",
+        "size": [
+          914,
+          1721
+        ],
+        "alphaBounds128": [
+          184,
+          20,
+          736,
+          1701
+        ],
+        "opaqueAspect": 0.32837596668649616,
+        "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+        "alphaCorners": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "url": "body-original.png"
+      },
+      "after": {
+        "file": "body-enhanced-v01.png",
+        "size": [
+          914,
+          1721
+        ],
+        "alphaBounds128": [
+          184,
+          19,
+          737,
+          1699
+        ],
+        "opaqueAspect": 0.32916666666666666,
+        "sha256": "869d5b8fa3d3bb04188d663be0019464113e38e818221ceed3313401dcaf3947",
+        "alphaCorners": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "url": "body-enhanced-v01.png"
+      },
+      "linearResolutionRatio": 1.0,
+      "outlineAspectChangePct": 0.24079106280192608
+    },
+    {
+      "slot": "sprayer",
+      "before": {
+        "file": "references/sprayer-original.png",
+        "size": [
+          525,
+          976
+        ],
+        "alphaBounds128": [
+          9,
+          8,
+          516,
+          967
+        ],
+        "opaqueAspect": 0.5286757038581856,
+        "sha256": "2612773a8d3e7a8267d94291add8f5c757baf3f0d1873ce71a4b03150299c301",
+        "alphaCorners": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "url": "sprayer-original.png"
+      },
+      "after": {
+        "file": "sprayer-enhanced-v01.png",
+        "size": [
+          919,
+          1711
+        ],
+        "alphaBounds128": [
+          32,
+          12,
+          887,
+          1695
+        ],
+        "opaqueAspect": 0.5080213903743316,
+        "sha256": "a7b8cc63020b03849cc438d76c693e8678d30747cc3d4fd6cac30dadd9c0ed86",
+        "alphaCorners": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "url": "sprayer-enhanced-v01.png"
+      },
+      "linearResolutionRatio": 1.7530737704918034,
+      "outlineAspectChangePct": -3.9068020968473394
+    },
+    {
+      "slot": "overcap",
+      "before": {
+        "file": "references/overcap-original.png",
+        "size": [
+          214,
+          396
+        ],
+        "alphaBounds128": [
+          7,
+          7,
+          206,
+          385
+        ],
+        "opaqueAspect": 0.5264550264550265,
+        "sha256": "ca81aa5a076674b7126d14583c097fde57aea18acfcdd3abdfbbcecfb406c789",
+        "alphaCorners": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "url": "overcap-original.png"
+      },
+      "after": {
+        "file": "overcap-enhanced-v01.png",
+        "size": [
+          922,
+          1706
+        ],
+        "alphaBounds128": [
+          34,
+          16,
+          882,
+          1682
+        ],
+        "opaqueAspect": 0.5090036014405762,
+        "sha256": "e0f721317bed501ceaf8f75b48e59abc18bf32f4a2aa1fbc1c4109d6f9806ba4",
+        "alphaCorners": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "url": "overcap-enhanced-v01.png"
+      },
+      "linearResolutionRatio": 4.308080808080808,
+      "outlineAspectChangePct": -3.3148937967146797
+    }
+  ],
+  "before": {
+    "sidecar": {
+      "frame": {
+        "scale": 0.9472623275151822,
+        "x": 2.6368836242408875,
+        "y": -0.36775722669166555
+      },
+      "frameCss": "translate(2.6368836242408875%, -0.36775722669166555%) scale(0.9472623275151822)",
+      "parts": [
+        {
+          "key": "body-0",
+          "slot": "body",
+          "url": "body-original.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 1,
+          "box": {
+            "leftPct": 34.48791720263,
+            "topPct": 44.43559137097212,
+            "widthPct": 30.855372528392117,
+            "heightPct": 52.816884942672395
+          }
+        },
+        {
+          "key": "diptube-1",
+          "slot": "diptube",
+          "url": "unchanged-mechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 2,
+          "opacity": 0.62,
+          "box": {
+            "leftPct": 47.482400000000005,
+            "topPct": 49.34528462451588,
+            "widthPct": 5.0352,
+            "heightPct": 44.28687272727273
+          }
+        },
+        {
+          "key": "sprayer-2",
+          "slot": "sprayer",
+          "url": "sprayer-original.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 3,
+          "box": {
+            "leftPct": 41.76370313986679,
+            "topPct": 30.35895424271257,
+            "widthPct": 16.63129115128449,
+            "heightPct": 28.107320301012017
+          }
+        },
+        {
+          "key": "overcap-3",
+          "slot": "overcap",
+          "url": "overcap-original.png",
+          "dxPct": 21.529328449096102,
+          "dyPct": 36.83138569327913,
+          "zIndex": 4,
+          "box": {
+            "leftPct": 40.1018715509039,
+            "topPct": 26.00634374189084,
+            "widthPct": 19.982901046622263,
+            "heightPct": 33.616816019375484
+          }
+        }
+      ],
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "cap": {
+          "xPct": 79.94684693972357,
+          "yPct": 75.07802830691836
+        },
+        "fitment": {
+          "xPct": 52.38482763575223,
+          "yPct": 67.35081500762888
+        },
+        "neck": {
+          "xPct": 58.744367997758154,
+          "yPct": 42.77573605377254
+        },
+        "body": {
+          "xPct": 58.744367997758154,
+          "yPct": 66.6819848657387
+        }
+      },
+      "floorShadows": [
+        {
+          "key": "shadow-overcap-3",
+          "leftPct": 56.63547473834443,
+          "topPct": 93.93669992267105,
+          "widthPct": 29.974351569933404,
+          "heightPct": 5.994870313986681
+        }
+      ],
+      "baseline": false,
+      "baselinePct": 91,
+      "grid": false,
+      "backdrop": {
+        "url": "unchanged-cylinder-5ml-13-415-clear.webp",
+        "wall": "#f3f2f1",
+        "box": {
+          "leftPct": -81.125,
+          "topPct": -79.89030151515152,
+          "widthPct": 262.25,
+          "heightPct": 206.7801515151515
+        }
+      }
+    },
+    "capon": {
+      "frame": {
+        "scale": 0.9472623275151822,
+        "x": 2.6368836242408875,
+        "y": -0.36775722669166555
+      },
+      "frameCss": "translate(2.6368836242408875%, -0.36775722669166555%) scale(0.9472623275151822)",
+      "parts": [
+        {
+          "key": "body-0",
+          "slot": "body",
+          "url": "body-original.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 1,
+          "box": {
+            "leftPct": 34.48791720263,
+            "topPct": 44.43559137097212,
+            "widthPct": 30.855372528392117,
+            "heightPct": 52.816884942672395
+          }
+        },
+        {
+          "key": "diptube-1",
+          "slot": "diptube",
+          "url": "unchanged-mechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 2,
+          "opacity": 0.62,
+          "box": {
+            "leftPct": 47.482400000000005,
+            "topPct": 49.34528462451588,
+            "widthPct": 5.0352,
+            "heightPct": 44.28687272727273
+          }
+        },
+        {
+          "key": "sprayer-2",
+          "slot": "sprayer",
+          "url": "sprayer-original.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 3,
+          "box": {
+            "leftPct": 41.76370313986679,
+            "topPct": 30.35895424271257,
+            "widthPct": 16.63129115128449,
+            "heightPct": 28.107320301012017
+          }
+        },
+        {
+          "key": "overcap-3",
+          "slot": "overcap",
+          "url": "overcap-original.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 4,
+          "box": {
+            "leftPct": 40.1018715509039,
+            "topPct": 26.00634374189084,
+            "widthPct": 19.982901046622263,
+            "heightPct": 33.616816019375484
+          }
+        }
+      ],
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "cap": {
+          "xPct": 59.552925163193976,
+          "yPct": 40.18904416949339
+        },
+        "fitment": {
+          "xPct": 52.38482763575223,
+          "yPct": 67.35081500762888
+        },
+        "neck": {
+          "xPct": 58.744367997758154,
+          "yPct": 42.77573605377254
+        },
+        "body": {
+          "xPct": 58.744367997758154,
+          "yPct": 66.6819848657387
+        }
+      },
+      "floorShadows": [],
+      "baseline": false,
+      "baselinePct": 91,
+      "grid": false,
+      "backdrop": {
+        "url": "unchanged-cylinder-5ml-13-415-clear.webp",
+        "wall": "#f3f2f1",
+        "box": {
+          "leftPct": -81.125,
+          "topPct": -79.89030151515152,
+          "widthPct": 262.25,
+          "heightPct": 206.7801515151515
+        }
+      }
+    },
+    "exploded": {
+      "frame": {
+        "scale": 0.9472623275151822,
+        "x": 2.6368836242408875,
+        "y": -0.36775722669166555
+      },
+      "frameCss": "translate(2.6368836242408875%, -0.36775722669166555%) scale(0.9472623275151822)",
+      "parts": [
+        {
+          "key": "body-0",
+          "slot": "body",
+          "url": "body-original.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 1,
+          "box": {
+            "leftPct": 34.48791720263,
+            "topPct": 44.43559137097212,
+            "widthPct": 30.855372528392117,
+            "heightPct": 52.816884942672395
+          }
+        },
+        {
+          "key": "diptube-1",
+          "slot": "diptube",
+          "url": "unchanged-mechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png",
+          "dxPct": 21.690191971943072,
+          "dyPct": 2.8223881027568454,
+          "zIndex": 2,
+          "box": {
+            "leftPct": 47.482400000000005,
+            "topPct": 49.34528462451588,
+            "widthPct": 5.0352,
+            "heightPct": 44.28687272727273
+          }
+        },
+        {
+          "key": "sprayer-2",
+          "slot": "sprayer",
+          "url": "sprayer-original.png",
+          "dxPct": 21.690191971943072,
+          "dyPct": 2.8223881027568454,
+          "zIndex": 3,
+          "box": {
+            "leftPct": 41.76370313986679,
+            "topPct": 30.35895424271257,
+            "widthPct": 16.63129115128449,
+            "heightPct": 28.107320301012017
+          }
+        },
+        {
+          "key": "overcap-3",
+          "slot": "overcap",
+          "url": "overcap-original.png",
+          "dxPct": -23.53866770933604,
+          "dyPct": 36.83138569327913,
+          "zIndex": 4,
+          "box": {
+            "leftPct": 40.1018715509039,
+            "topPct": 26.00634374189084,
+            "widthPct": 19.982901046622263,
+            "heightPct": 33.616816019375484
+          }
+        }
+      ],
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "cap": {
+          "xPct": 37.25563200224185,
+          "yPct": 75.07802830691836
+        },
+        "fitment": {
+          "xPct": 72.93112936734616,
+          "yPct": 70.0243569309975
+        },
+        "neck": {
+          "xPct": 58.744367997758154,
+          "yPct": 42.77573605377254
+        },
+        "body": {
+          "xPct": 58.744367997758154,
+          "yPct": 66.6819848657387
+        }
+      },
+      "floorShadows": [],
+      "baseline": false,
+      "baselinePct": 91,
+      "grid": true,
+      "backdrop": null
+    }
+  },
+  "after": {
+    "sidecar": {
+      "frame": {
+        "scale": 0.9472623275151822,
+        "x": 2.6368836242408875,
+        "y": -0.36775722669166555
+      },
+      "frameCss": "translate(2.6368836242408875%, -0.36775722669166555%) scale(0.9472623275151822)",
+      "parts": [
+        {
+          "key": "body-0",
+          "slot": "body",
+          "url": "body-enhanced-v01.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 1,
+          "box": {
+            "leftPct": 34.49914972494754,
+            "topPct": 44.46593393408941,
+            "widthPct": 30.799576194706056,
+            "heightPct": 52.84832356466208
+          }
+        },
+        {
+          "key": "diptube-1",
+          "slot": "diptube",
+          "url": "unchanged-mechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 2,
+          "opacity": 0.62,
+          "box": {
+            "leftPct": 47.482400000000005,
+            "topPct": 49.34528462451588,
+            "widthPct": 5.0352,
+            "heightPct": 44.28687272727273
+          }
+        },
+        {
+          "key": "sprayer-2",
+          "slot": "sprayer",
+          "url": "sprayer-enhanced-v01.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 3,
+          "box": {
+            "leftPct": 41.44769471384773,
+            "topPct": 30.392424138456885,
+            "widthPct": 17.26330800332261,
+            "heightPct": 28.07722135080023
+          }
+        },
+        {
+          "key": "overcap-3",
+          "slot": "overcap",
+          "url": "overcap-enhanced-v01.png",
+          "dxPct": 21.529328449096102,
+          "dyPct": 36.83138569327913,
+          "zIndex": 4,
+          "box": {
+            "leftPct": 40.01047558971597,
+            "topPct": 26.292404840773994,
+            "widthPct": 20.203792972095748,
+            "heightPct": 32.85921779739568
+          }
+        }
+      ],
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "cap": {
+          "xPct": 79.94684693972357,
+          "yPct": 75.07802830691836
+        },
+        "fitment": {
+          "xPct": 52.38482763575223,
+          "yPct": 67.35081500762888
+        },
+        "neck": {
+          "xPct": 58.744367997758154,
+          "yPct": 42.77573605377254
+        },
+        "body": {
+          "xPct": 58.744367997758154,
+          "yPct": 66.6819848657387
+        }
+      },
+      "floorShadows": [
+        {
+          "key": "shadow-overcap-3",
+          "leftPct": 56.63547473834443,
+          "topPct": 93.93669992267105,
+          "widthPct": 29.974351569933404,
+          "heightPct": 5.994870313986681
+        }
+      ],
+      "baseline": false,
+      "baselinePct": 91,
+      "grid": false,
+      "backdrop": {
+        "url": "unchanged-cylinder-5ml-13-415-clear.webp",
+        "wall": "#f3f2f1",
+        "box": {
+          "leftPct": -81.125,
+          "topPct": -79.89030151515152,
+          "widthPct": 262.25,
+          "heightPct": 206.7801515151515
+        }
+      }
+    },
+    "capon": {
+      "frame": {
+        "scale": 0.9472623275151822,
+        "x": 2.6368836242408875,
+        "y": -0.36775722669166555
+      },
+      "frameCss": "translate(2.6368836242408875%, -0.36775722669166555%) scale(0.9472623275151822)",
+      "parts": [
+        {
+          "key": "body-0",
+          "slot": "body",
+          "url": "body-enhanced-v01.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 1,
+          "box": {
+            "leftPct": 34.49914972494754,
+            "topPct": 44.46593393408941,
+            "widthPct": 30.799576194706056,
+            "heightPct": 52.84832356466208
+          }
+        },
+        {
+          "key": "diptube-1",
+          "slot": "diptube",
+          "url": "unchanged-mechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 2,
+          "opacity": 0.62,
+          "box": {
+            "leftPct": 47.482400000000005,
+            "topPct": 49.34528462451588,
+            "widthPct": 5.0352,
+            "heightPct": 44.28687272727273
+          }
+        },
+        {
+          "key": "sprayer-2",
+          "slot": "sprayer",
+          "url": "sprayer-enhanced-v01.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 3,
+          "box": {
+            "leftPct": 41.44769471384773,
+            "topPct": 30.392424138456885,
+            "widthPct": 17.26330800332261,
+            "heightPct": 28.07722135080023
+          }
+        },
+        {
+          "key": "overcap-3",
+          "slot": "overcap",
+          "url": "overcap-enhanced-v01.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 4,
+          "box": {
+            "leftPct": 40.01047558971597,
+            "topPct": 26.292404840773994,
+            "widthPct": 20.203792972095748,
+            "heightPct": 32.85921779739568
+          }
+        }
+      ],
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "cap": {
+          "xPct": 59.552925163193976,
+          "yPct": 40.18904416949339
+        },
+        "fitment": {
+          "xPct": 52.38482763575223,
+          "yPct": 67.35081500762888
+        },
+        "neck": {
+          "xPct": 58.744367997758154,
+          "yPct": 42.77573605377254
+        },
+        "body": {
+          "xPct": 58.744367997758154,
+          "yPct": 66.6819848657387
+        }
+      },
+      "floorShadows": [],
+      "baseline": false,
+      "baselinePct": 91,
+      "grid": false,
+      "backdrop": {
+        "url": "unchanged-cylinder-5ml-13-415-clear.webp",
+        "wall": "#f3f2f1",
+        "box": {
+          "leftPct": -81.125,
+          "topPct": -79.89030151515152,
+          "widthPct": 262.25,
+          "heightPct": 206.7801515151515
+        }
+      }
+    },
+    "exploded": {
+      "frame": {
+        "scale": 0.9472623275151822,
+        "x": 2.6368836242408875,
+        "y": -0.36775722669166555
+      },
+      "frameCss": "translate(2.6368836242408875%, -0.36775722669166555%) scale(0.9472623275151822)",
+      "parts": [
+        {
+          "key": "body-0",
+          "slot": "body",
+          "url": "body-enhanced-v01.png",
+          "dxPct": 0,
+          "dyPct": 0,
+          "zIndex": 1,
+          "box": {
+            "leftPct": 34.49914972494754,
+            "topPct": 44.46593393408941,
+            "widthPct": 30.799576194706056,
+            "heightPct": 52.84832356466208
+          }
+        },
+        {
+          "key": "diptube-1",
+          "slot": "diptube",
+          "url": "unchanged-mechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png",
+          "dxPct": 21.690191971943072,
+          "dyPct": 2.8223881027568454,
+          "zIndex": 2,
+          "box": {
+            "leftPct": 47.482400000000005,
+            "topPct": 49.34528462451588,
+            "widthPct": 5.0352,
+            "heightPct": 44.28687272727273
+          }
+        },
+        {
+          "key": "sprayer-2",
+          "slot": "sprayer",
+          "url": "sprayer-enhanced-v01.png",
+          "dxPct": 21.690191971943072,
+          "dyPct": 2.8223881027568454,
+          "zIndex": 3,
+          "box": {
+            "leftPct": 41.44769471384773,
+            "topPct": 30.392424138456885,
+            "widthPct": 17.26330800332261,
+            "heightPct": 28.07722135080023
+          }
+        },
+        {
+          "key": "overcap-3",
+          "slot": "overcap",
+          "url": "overcap-enhanced-v01.png",
+          "dxPct": -23.53866770933604,
+          "dyPct": 36.83138569327913,
+          "zIndex": 4,
+          "box": {
+            "leftPct": 40.01047558971597,
+            "topPct": 26.292404840773994,
+            "widthPct": 20.203792972095748,
+            "heightPct": 32.85921779739568
+          }
+        }
+      ],
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "cap": {
+          "xPct": 37.25563200224185,
+          "yPct": 75.07802830691836
+        },
+        "fitment": {
+          "xPct": 72.93112936734616,
+          "yPct": 70.0243569309975
+        },
+        "neck": {
+          "xPct": 58.744367997758154,
+          "yPct": 42.77573605377254
+        },
+        "body": {
+          "xPct": 58.744367997758154,
+          "yPct": 66.6819848657387
+        }
+      },
+      "floorShadows": [],
+      "baseline": false,
+      "baselinePct": 91,
+      "grid": true,
+      "backdrop": null
+    }
+  }
+}

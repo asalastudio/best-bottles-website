@@ -1,0 +1,202 @@
+"use client";
+
+import { cylinder9MasterSku } from "@/lib/products/cylinder9-master";
+import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
+import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-heroes";
+import { capSwapFraming, capSwapPlateBox, capSwapPlateUrl } from "@/lib/products/catalog-cap-swap";
+import { catalogCapOnlySwap, capOnlyBox } from "@/lib/products/catalog-cap-only-swap";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import LocaleLink from "@/components/LocaleLink";
+import { useQuery } from "convex/react";
+import { api } from "../../../convex/_generated/api";
+import { Package } from "@/components/icons";
+import { resolveCatalogCardVisual } from "@/lib/products/catalog-card-visual";
+import type { ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
+import { getReconciledLocalSkuImage, isReconciliationSku, isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
+import { isAssembledOneMlVialImage, isOneMlVialGroup, oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
+import { getBlueHalfDramVialImage, isBlueHalfDramVialImage } from "@/lib/products/pdp-sku-image-fallback";
+
+type Props = {
+    title: string;
+    catalogHero?: CatalogHero | null;
+    imageUrl: string | null;
+    heroHoverImageUrl?: string | null;
+    href: string;
+    variants: ProductCardVariantPreview[];
+    family: string | null;
+    slug: string;
+    /**
+     * A cap the buyer picked on the card that is not the one pictured by
+     * default. On a hero card its own SKU plate is drawn in the hero's frame
+     * (see catalog-cap-swap.ts); with no calibrated plate for that SKU the
+     * hero stays (never borrow another finish's photo, never show a mismatch).
+     */
+    selected?: ProductCardVariantPreview | null;
+    /**
+     * The picked cap's own approved catalog hero, exact SKU only. Shown when
+     * no calibrated swap can draw the pick, so picking a finish never leaves
+     * another finish's bottle on screen.
+     */
+    selectedHero?: CatalogHero | null;
+};
+
+function skuOf(variant: ProductCardVariantPreview | null | undefined): string | null {
+    return variant?.websiteSku ?? variant?.graceSku ?? null;
+}
+
+export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroHoverImageUrl, href, variants, family, slug, selected = null, selectedHero = null }: Props) {
+    const [heroHovered, setHeroHovered] = useState(false);
+    const [failed, setFailed] = useState<Set<string>>(() => new Set());
+    const masterSku = process.env.NODE_ENV === "development"
+        ? cylinder9MasterSku(skuOf(selected) ?? catalogHero?.websiteSku ?? skuOf(variants[0])) : null;
+    const skus = [...new Set([catalogHero ? null : skuOf(variants[0]), skuOf(selected)].filter((sku): sku is string => Boolean(sku)))];
+    // The approved hero already supplies the default image. Fetch a plate only
+    // for a selected finish, or for a card that needs its primary fallback.
+    const assemblyPlates = useQuery(api.productPlates.forSkus, !masterSku && skus.length ? { skus } : "skip");
+    const assembly = (variant: ProductCardVariantPreview) => {
+        const plate = assemblyPlates?.plates[skuOf(variant) ?? ""];
+        const vialImage = oneMlVialApplicator(skuOf(variant))?.image;
+        return (vialImage ? [vialImage] : [getBlueHalfDramVialImage(skuOf(variant)), plate?.thumb, getReconciledLocalSkuImage(skuOf(variant)), variant.imageUrl]).find((url) => url && !failed.has(url));
+    };
+    const primaryPlate = variants[0] ? assemblyPlates?.plates[skuOf(variants[0]) ?? ""] : null;
+    const primaryLocal = !isOneMlVialGroup(slug) && !catalogHero && !primaryPlate?.thumb ? getReconciledLocalSkuImage(skuOf(variants[0])) : null;
+    const visual = resolveCatalogCardVisual({
+        heroImageUrl: primaryLocal && !failed.has(primaryLocal) ? primaryLocal : imageUrl && !failed.has(imageUrl) ? imageUrl : null,
+        heroHoverImageUrl: heroHoverImageUrl && !failed.has(heroHoverImageUrl) ? heroHoverImageUrl : null,
+        heroHovered,
+        fallbackImageUrl: variants[0] ? assembly(variants[0]) : null,
+    });
+    const selectedPlate = selected ? assemblyPlates?.plates[skuOf(selected) ?? ""] : undefined;
+    const capOnly = catalogCapOnlySwap(catalogHero, skuOf(selected));
+    const capOnlyUrl = selectedPlate?.imageCapOff;
+    // Hero card: the picked cap's plate, placed and lit like the hero. Other
+    // cards show plates already, so the picked cap's full plate simply replaces it.
+    const heroSwap = catalogHero && selected ? capSwapFraming(catalogHero.url) : null;
+    const heroSwapUrl = heroSwap ? capSwapPlateUrl(heroSwap, selectedPlate) : null;
+    const selectedExactPhoto = selected && (isReconciliationSku(skuOf(selected)) || getBlueHalfDramVialImage(skuOf(selected)))
+        ? [getBlueHalfDramVialImage(skuOf(selected)), getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl].find((url) => url && !failed.has(url))
+        : null;
+    const selectedVialImage = oneMlVialApplicator(skuOf(selected))?.image;
+    const swapUrl = catalogHero
+        ? undefined
+        : selected
+            ? (selectedVialImage ? [selectedVialImage] : [getBlueHalfDramVialImage(skuOf(selected)), selectedPlate?.image, getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl, assembly(selected)]).find((url) => url && !failed.has(url))
+            : undefined;
+    const displayImage = selectedVialImage && failed.has(selectedVialImage) ? null : swapUrl ?? visual.url;
+    const fail = (url: string) => setFailed((current) => new Set(current).add(url));
+
+    const preloadUrls = heroHoverImageUrl ?? "";
+    useEffect(() => {
+        if (!preloadUrls || masterSku) return;
+        const images = preloadUrls.split("\n").map((url) => {
+            const image = new window.Image();
+            image.src = url;
+            return image;
+        });
+        return () => { images.forEach((image) => { image.onload = null; }); };
+    }, [preloadUrls, masterSku]);
+
+    const approvedHero = catalogHero && !("hoverUrl" in catalogHero);
+    const exactVariant = variants.find(variant => variant.websiteSku === catalogHero?.websiteSku);
+
+    // The selected exact SKU shares its body and components with PDP and Builder.
+    // Keep this ahead of legacy baked-photo swaps so choosing a cap cannot restore old glass.
+    if (masterSku) {
+        return <ProductCardImagePreview productTitle={title}
+            defaultImage={{ url: displayImage ?? imageUrl, alt: title }}
+            catalogHero={catalogHero ? { ...catalogHero, websiteSku: masterSku } : null}
+            productHref={href} variantPreviews={[]}
+            auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: masterSku }} />;
+    }
+
+    if (catalogHero && selected && capOnly && capOnlyUrl && !failed.has(capOnlyUrl)) {
+        return <LocaleLink href={href} aria-label={`View ${title}, ${selected.label}`}
+            className="relative block aspect-[10/11] w-full overflow-hidden bg-[#f5f3ef]"
+            data-visual-mode="selected-cap" data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined}
+            data-bb-product-group-slug={slug} data-bb-website-sku={skuOf(selected) ?? undefined}>
+            <span className="absolute inset-0 block" style={getCatalogHeroStyle(catalogHero)} data-testid="catalog-card-cap-only-swap">
+                <Image src={catalogHero.url} alt={`${title}, ${selected.label}`} fill unoptimized className="object-fill" />
+                <span className="absolute block overflow-hidden" style={capOnlyBox(capOnly.patch)} data-testid="catalog-card-cap-patch" aria-hidden>
+                    <span className="absolute block" style={capOnlyBox(capOnly.backdrop)}>
+                        <Image src={catalogHero.url} alt="" fill unoptimized className="object-fill" />
+                    </span>
+                    <span className="absolute block" style={{ ...capOnlyBox(capOnly.plate), mixBlendMode: "multiply" }}>
+                        <Image key={capOnlyUrl} src={capOnlyUrl} alt="" fill unoptimized className="object-fill"
+                            onError={() => fail(capOnlyUrl)} />
+                    </span>
+                </span>
+            </span>
+        </LocaleLink>;
+    }
+
+    if (catalogHero && heroSwap && heroSwapUrl && !failed.has(heroSwapUrl)) {
+        // bone × the hero's own shadow × the plate. The wrapper carries the bone
+        // and the hero's framing so both multiplies blend inside it (a transform
+        // seals a blend, so the backdrop must live on the same element).
+        return <LocaleLink href={href} aria-label={`View ${title}, ${selected!.label}`}
+            className="relative block aspect-[10/11] w-full overflow-hidden bg-[#f5f3ef]"
+            data-visual-mode="selected-cap" data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined}
+            data-bb-product-group-slug={slug} data-bb-website-sku={skuOf(selected) ?? undefined}>
+            <span className="absolute inset-0 block bg-[#f5f3ef]" style={getCatalogHeroStyle(catalogHero)} data-testid="catalog-card-cap-swap">
+                <Image src={heroSwap.shadow} alt="" fill unoptimized aria-hidden className="object-fill" style={{ mixBlendMode: "multiply" }} />
+                <span className="absolute block" style={{ ...capSwapPlateBox(heroSwap), mixBlendMode: "multiply" }}>
+                    <Image key={heroSwapUrl} src={heroSwapUrl} alt={`${title}, ${selected!.label}`} fill unoptimized
+                        className="object-fill" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        onError={() => fail(heroSwapUrl)} />
+                </span>
+            </span>
+        </LocaleLink>;
+    }
+
+    // A picked finish with its own approved hero shows that hero when no swap can
+    // draw it. While plates load for a calibrated hero the swap may still come,
+    // so the card waits rather than flicker between the two.
+    if (catalogHero && selected && selectedHero && selectedHero.websiteSku === skuOf(selected)
+        && selectedHero.url !== catalogHero.url && !(heroSwap && assemblyPlates === undefined)) {
+        return <ProductCardImagePreview
+            productTitle={`${title}, ${selected.label}`} defaultImage={{ url: null, alt: `${title}, ${selected.label}` }} catalogHero={selectedHero}
+            productHref={href} variantPreviews={[]}
+            auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: selectedHero.websiteSku }}
+        />;
+    }
+
+    // A selected SKU without a calibrated swap still shows its own photograph.
+    // Restrict this to the reconciled cohort; an unrelated variant must never
+    // inherit another cap's approved hero image.
+    if (catalogHero && selected && selectedExactPhoto) {
+        return <LocaleLink href={href} aria-label={`View ${title}, ${selected.label}`}
+            className="relative block aspect-[10/11] w-full overflow-hidden bg-[#f5f3ef]"
+            data-visual-mode="selected-exact-photo" data-bb-image-audit="catalog-card"
+            data-bb-family={family ?? undefined} data-bb-product-group-slug={slug}
+            data-bb-website-sku={skuOf(selected) ?? undefined}>
+            <Image key={selectedExactPhoto} src={selectedExactPhoto} alt={`${title}, ${selected.label}`}
+                fill className="object-contain" style={isBlueHalfDramVialImage(selectedExactPhoto)
+                    ? { mixBlendMode: "multiply", transform: "translateY(22%) scale(0.41)" }
+                    : isReconciledLocalSkuAssetUrl(selectedExactPhoto) ? { mixBlendMode: "multiply" } : undefined}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                onError={() => fail(selectedExactPhoto)} />
+        </LocaleLink>;
+    }
+
+    if (catalogHero) {
+        return <ProductCardImagePreview
+            productTitle={title} defaultImage={{ url: approvedHero ? exactVariant?.imageUrl ?? null : imageUrl, alt: title }} catalogHero={catalogHero}
+            productHref={href} variantPreviews={[]}
+            auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: approvedHero ? exactVariant?.websiteSku : undefined }}
+        />;
+    }
+
+    return <LocaleLink href={href} aria-label={`View ${title}`} className={`relative block aspect-[4/3] w-full overflow-hidden sm:aspect-[10/11] ${isReconciledLocalSkuAssetUrl(displayImage) ? "bg-[#f5f3ef]" : "bg-[#f8f6f2]"}`}
+        onPointerEnter={(event) => { if (event.pointerType === "mouse") setHeroHovered(true); }}
+        onPointerLeave={() => setHeroHovered(false)} data-visual-mode={swapUrl ? "selected-cap" : visual.mode}
+        data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined} data-bb-product-group-slug={slug}
+        data-bb-website-sku={skuOf(selected) ?? variants[0]?.websiteSku}>
+        {displayImage ? <Image key={displayImage} src={displayImage} alt={selected ? `${title}, ${selected.label}` : title} fill
+            unoptimized={displayImage.includes(".public.blob.vercel-storage.com/")}
+            className="object-contain" style={isAssembledOneMlVialImage(displayImage) ? { mixBlendMode: "multiply", transform: "scale(0.62)" } : isReconciledLocalSkuAssetUrl(displayImage) ? { mixBlendMode: "multiply" } : undefined}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            onError={() => fail(displayImage)} />
+            : <span className="flex h-full flex-col items-center justify-center gap-3 text-xs text-slate"><Package className="h-10 w-10" />Product image coming soon</span>}
+    </LocaleLink>;
+}

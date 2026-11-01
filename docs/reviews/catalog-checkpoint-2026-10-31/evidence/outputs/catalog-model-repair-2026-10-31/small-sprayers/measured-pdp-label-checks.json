@@ -1,0 +1,10 @@
+{
+  "height": true,
+  "diameter": true,
+  "shoulder": true,
+  "depth": true,
+  "rimWall": true,
+  "crestWall": true,
+  "oldHeight": true,
+  "oldDiameter": true
+}

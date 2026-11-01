@@ -1,0 +1,586 @@
+{
+  "version": "de507a82113c",
+  "records": [
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.03ff39558342.svg"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-sprayer.809c14cf93e1.svg"
+        },
+        {
+          "slot": "overcap",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-overcap.cd9e1c80f58d.svg"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415-finemist?sku=GBCyl5SpryBlkMatt&sku=GBCyl5SpryBlkMatt"
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.03ff39558342.svg"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-sprayer.c6e4df7cab34.svg"
+        },
+        {
+          "slot": "overcap",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-overcap.5abe54c88dca.svg"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415-finemist?sku=GBCyl5SpryBluMatt&sku=GBCyl5SpryBluMatt"
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.03ff39558342.svg"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-sprayer.682c91008417.svg"
+        },
+        {
+          "slot": "overcap",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-overcap.0056c53ff25d.svg"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415-finemist?sku=GBCyl5SpryCuMatt&sku=GBCyl5SpryCuMatt"
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.03ff39558342.svg"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-sprayer.40b457cd8831.svg"
+        },
+        {
+          "slot": "overcap",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-overcap.48fe1f6f78e9.svg"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415-finemist?sku=GBCyl5SprySlMatt&sku=GBCyl5SprySlMatt"
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "diptube",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.03ff39558342.svg"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-sprayer.e853d044d5b8.svg"
+        },
+        {
+          "slot": "overcap",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-overcap.f3ef10365bdc.svg"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415-finemist?sku=GBCyl5SpryGlMatt&sku=GBCyl5SpryGlMatt"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-BLK-13415-DOT.afd2b0f2cb3c.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5MtlRollBlkDot&sku=GBCyl5MtlRollBlkDot"
+    },
+    {
+      "sku": "GBCyl5MtlRollCuMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MCPR-13415.9b809c36ba0a.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5MtlRollCuMatt&sku=GBCyl5MtlRollCuMatt"
+    },
+    {
+      "sku": "GBCyl5MtlRollSlMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MSLV-13415.023bc67c73ef.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5MtlRollSlMatt&sku=GBCyl5MtlRollSlMatt"
+    },
+    {
+      "sku": "GBCyl5MtlRollPinkDot",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-PNK-13415-DOT.f263dadacb67.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5MtlRollPinkDot&sku=GBCyl5MtlRollPinkDot"
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MGLD-13415.40270b2051e9.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5MtlRollGlMatt&sku=GBCyl5MtlRollGlMatt"
+    },
+    {
+      "sku": "GBCyl5Gl",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SGLD-13-415-01.0f2e011c6b7a.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415?sku=GBCyl5Gl&sku=GBCyl5Gl"
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SLV-13-415-01.be765db5b8f5.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415?sku=GBCyl5Sl&sku=GBCyl5Sl"
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTCP-S-13-415.32b055ffaedc.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415?sku=GBCyl5CuSht&sku=GBCyl5CuSht"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTGD-S-13-415.fda428af1afd.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415?sku=GBCyl5GlMattSht&sku=GBCyl5GlMattSht"
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "version": "de507a82113c",
+      "body": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTSL-S-13-415.c2a5e084f15a.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-clear-13-415?sku=GBCyl5SlMattSht&sku=GBCyl5SlMattSht"
+    },
+    {
+      "sku": "GBCylBlu5Gl",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SGLD-13-415-01.0f2e011c6b7a.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415?sku=GBCylBlu5Gl&sku=GBCylBlu5Gl"
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SLV-13-415-01.be765db5b8f5.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415?sku=GBCylBlu5Sl&sku=GBCylBlu5Sl"
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTCP-S-13-415.32b055ffaedc.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415?sku=GBCylBlu5CuSht&sku=GBCylBlu5CuSht"
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTGD-S-13-415.fda428af1afd.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415?sku=GBCylBlu5GlMattSht&sku=GBCylBlu5GlMattSht"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTSL-S-13-415.c2a5e084f15a.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415?sku=GBCylBlu5SlMattSht&sku=GBCylBlu5SlMattSht"
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-sprayer.c6e4df7cab34.svg"
+        },
+        {
+          "slot": "overcap",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-overcap.5abe54c88dca.svg"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415-finemist?sku=GBCylBlu5SpryBluMatt&sku=GBCylBlu5SpryBluMatt"
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-sprayer.682c91008417.svg"
+        },
+        {
+          "slot": "overcap",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-overcap.0056c53ff25d.svg"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415-finemist?sku=GBCylBlu5SpryCuMatt&sku=GBCylBlu5SpryCuMatt"
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-sprayer.40b457cd8831.svg"
+        },
+        {
+          "slot": "overcap",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-overcap.48fe1f6f78e9.svg"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415-finemist?sku=GBCylBlu5SprySlMatt&sku=GBCylBlu5SprySlMatt"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-sprayer.e853d044d5b8.svg"
+        },
+        {
+          "slot": "overcap",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-overcap.f3ef10365bdc.svg"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415-finemist?sku=GBCylBlu5SpryGlMatt&sku=GBCylBlu5SpryGlMatt"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "sprayer",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-sprayer.a31e7cdc0a03.svg"
+        },
+        {
+          "slot": "overcap",
+          "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-overcap.2d8f48c7c9b5.svg"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415-finemist?sku=GBCylBlu5SpryGlSh&sku=GBCylBlu5SpryGlSh"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-BLK-13415-DOT.afd2b0f2cb3c.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5MtlRollBlkDot&sku=GBCylBlu5MtlRollBlkDot"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollCuMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MCPR-13415.9b809c36ba0a.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5MtlRollCuMatt&sku=GBCylBlu5MtlRollCuMatt"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MSLV-13415.023bc67c73ef.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5MtlRollSlMatt&sku=GBCylBlu5MtlRollSlMatt"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollPinkDot",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-PNK-13415-DOT.f263dadacb67.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5MtlRollPinkDot&sku=GBCylBlu5MtlRollPinkDot"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlMatt",
+      "version": "de507a82113c",
+      "body": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg"
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MGLD-13415.40270b2051e9.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5MtlRollGlMatt&sku=GBCylBlu5MtlRollGlMatt"
+    }
+  ],
+  "errors": []
+}

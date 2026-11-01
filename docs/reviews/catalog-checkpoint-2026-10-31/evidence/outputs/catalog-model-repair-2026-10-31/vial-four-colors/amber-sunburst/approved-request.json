@@ -1,0 +1,22 @@
+{
+  "status": "User approved exact two-image transfer and one high-quality Sunburst edit",
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "size": "auto",
+  "background": "transparent",
+  "count": 1,
+  "destination": "OpenAI images edit API",
+  "userRequest": "Use 2.5 Sunburst again; same geometry and angle; elevate material to photorealistic studio grade",
+  "inputs": [
+    {
+      "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-four-colors/masters/amber.png",
+      "sha256": "5e9de72bdf63148e685ba09eb5945374a1ffe4dfb90de718f424089acffa8e98"
+    },
+    {
+      "path": "/var/folders/g3/l_7f2hg57x90xzht2md1q_hm0000gn/T/TemporaryItems/NSIRD_screencaptureui_3Zhupd/Screenshot 2026-10-31 at 12.41.10 PM.png",
+      "sha256": "500715b2ab1e8514c2dc348d446dcf9880a08163793bd3d735a08950a36a33ee"
+    }
+  ],
+  "prompt": "1. Keep the first image's exact bottle geometry, proportions and straight-on eye-level camera, including its rim and flat standing base. Bare bottle only, no cap.\n2. Replace the artificial flat material with studio-photographed dark amber glass: realistic transparent depth, refraction, natural cylindrical light falloff and nuanced highlights. The second image is a real amber-glass color/material reference, not a shape reference. Remove the painted rectangular sticker-like appearance inside the glass.\n3. Enhance the photorealistic material quality. Keep the background genuinely transparent and the entire bottle uncropped. No text or extra objects.\n",
+  "approval": "Approve these two images"
+}

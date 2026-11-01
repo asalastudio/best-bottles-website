@@ -1,0 +1,168 @@
+{
+  "GBVialClr2mlBlackCap": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1063,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 283
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "vial-2ml-clear-8-425",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1064,
+          "left": 343,
+          "right": 681,
+          "top": 57
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 33088,
+          "height": 1100,
+          "key": "kits/master-parts/7a31aa22ff9c7ee1991d19d0cc0c66a6635503157100fd78db0594ee4776e6ce.body.webp",
+          "sha256": "7a31aa22ff9c7ee1991d19d0cc0c66a6635503157100fd78db0594ee4776e6ce",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/7a31aa22ff9c7ee1991d19d0cc0c66a6635503157100fd78db0594ee4776e6ce.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 283,
+          "left": 323,
+          "right": 684,
+          "top": 39
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": 0,
+          "dy": -250
+        },
+        "image": {
+          "bytes": 13686,
+          "height": 1100,
+          "key": "kits/master-parts/e7c3ab0ecb141fed0e5d23b69e6f8e8270abdd9e8c50867979cc0d15674082e4.cap.webp",
+          "sha256": "e7c3ab0ecb141fed0e5d23b69e6f8e8270abdd9e8c50867979cc0d15674082e4",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/e7c3ab0ecb141fed0e5d23b69e6f8e8270abdd9e8c50867979cc0d15674082e4.cap.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "cap",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "2c2522ffc06da3eb084ba920364e1735d4a78db63e359a97369b6b631cf79820",
+    "sku": "GBVialClr2mlBlackCap",
+    "three": null
+  },
+  "GBVialClr2mlWhtCap": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1060,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 284
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "vial-2ml-clear-8-425",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1064,
+          "left": 339,
+          "right": 676,
+          "top": 59
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 32496,
+          "height": 1100,
+          "key": "kits/master-parts/f7f0462434986be0edfa763f295934a69f1c5fb69b8934aeb26c98970b39acdf.body.webp",
+          "sha256": "f7f0462434986be0edfa763f295934a69f1c5fb69b8934aeb26c98970b39acdf",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/f7f0462434986be0edfa763f295934a69f1c5fb69b8934aeb26c98970b39acdf.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 284,
+          "left": 325,
+          "right": 680,
+          "top": 39
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": 0,
+          "dy": -249
+        },
+        "image": {
+          "bytes": 11782,
+          "height": 1100,
+          "key": "kits/master-parts/524ea79cc66044151a8d310d78e7241cb641098c2fe4ebde86134fa038a324d5.cap.webp",
+          "sha256": "524ea79cc66044151a8d310d78e7241cb641098c2fe4ebde86134fa038a324d5",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/524ea79cc66044151a8d310d78e7241cb641098c2fe4ebde86134fa038a324d5.cap.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "cap",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "94967ea010feb494787f7f1eea51590060e5c20fbcfc9ddb32798c72ce5e3abe",
+    "sku": "GBVialClr2mlWhtCap",
+    "three": null
+  }
+}

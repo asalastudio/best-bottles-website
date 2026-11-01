@@ -1,0 +1,526 @@
+{
+  "batchFolder": "https://drive.google.com/drive/folders/1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S",
+  "files": [
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+      "name": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED_2026-11-01.png",
+      "parent": "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g",
+      "result": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "131zKqcjzkH3rVVLjTv3KnJT_0f0JPsrs",
+        "title": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED_2026-11-01.png",
+        "file_name": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED_2026-11-01.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/131zKqcjzkH3rVVLjTv3KnJT_0f0JPsrs/view?usp=drivesdk",
+        "parent_id": "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "131zKqcjzkH3rVVLjTv3KnJT_0f0JPsrs",
+          "title": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED_2026-11-01.png",
+          "file_name": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED_2026-11-01.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/131zKqcjzkH3rVVLjTv3KnJT_0f0JPsrs/view?usp=drivesdk",
+          "parent_id": "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g"
+        }
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "bytes": "1634900"
+      },
+      "readback": {
+        "id": "131zKqcjzkH3rVVLjTv3KnJT_0f0JPsrs",
+        "title": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED_2026-11-01.png",
+        "mime_type": null,
+        "size": "1634900",
+        "url": "https://drive.google.com/file/d/131zKqcjzkH3rVVLjTv3KnJT_0f0JPsrs/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/131zKqcjzkH3rVVLjTv3KnJT_0f0JPsrs/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_DipTube_GPT_Master_v01_APPROVED.png",
+      "name": "BB_Shared-FineMist_DipTube_GPT_Master_v01_APPROVED_2026-11-01.png",
+      "parent": "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g",
+      "result": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "18WFhURWjTen2EPg0CI7vALby9xm5kNo1",
+        "title": "BB_Shared-FineMist_DipTube_GPT_Master_v01_APPROVED_2026-11-01.png",
+        "file_name": "BB_Shared-FineMist_DipTube_GPT_Master_v01_APPROVED_2026-11-01.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/18WFhURWjTen2EPg0CI7vALby9xm5kNo1/view?usp=drivesdk",
+        "parent_id": "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "18WFhURWjTen2EPg0CI7vALby9xm5kNo1",
+          "title": "BB_Shared-FineMist_DipTube_GPT_Master_v01_APPROVED_2026-11-01.png",
+          "file_name": "BB_Shared-FineMist_DipTube_GPT_Master_v01_APPROVED_2026-11-01.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/18WFhURWjTen2EPg0CI7vALby9xm5kNo1/view?usp=drivesdk",
+          "parent_id": "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g"
+        }
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "bytes": "865610"
+      },
+      "readback": {
+        "id": "18WFhURWjTen2EPg0CI7vALby9xm5kNo1",
+        "title": "BB_Shared-FineMist_DipTube_GPT_Master_v01_APPROVED_2026-11-01.png",
+        "mime_type": null,
+        "size": "865610",
+        "url": "https://drive.google.com/file/d/18WFhURWjTen2EPg0CI7vALby9xm5kNo1/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/18WFhURWjTen2EPg0CI7vALby9xm5kNo1/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/approval.json",
+      "name": "APPROVAL_Cylinder9-Body-and-Shared-DipTube_2026-11-01.json",
+      "parent": "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g",
+      "result": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1Z7LO9j1HXEMlSOJ1UrZz7J0rtZQnl-wG",
+        "title": "APPROVAL_Cylinder9-Body-and-Shared-DipTube_2026-11-01.json",
+        "file_name": "APPROVAL_Cylinder9-Body-and-Shared-DipTube_2026-11-01.json",
+        "mime_type": "application/json",
+        "url": "https://drive.google.com/file/d/1Z7LO9j1HXEMlSOJ1UrZz7J0rtZQnl-wG/view?usp=drivesdk",
+        "parent_id": "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1Z7LO9j1HXEMlSOJ1UrZz7J0rtZQnl-wG",
+          "title": "APPROVAL_Cylinder9-Body-and-Shared-DipTube_2026-11-01.json",
+          "file_name": "APPROVAL_Cylinder9-Body-and-Shared-DipTube_2026-11-01.json",
+          "mime_type": "application/json",
+          "url": "https://drive.google.com/file/d/1Z7LO9j1HXEMlSOJ1UrZz7J0rtZQnl-wG/view?usp=drivesdk",
+          "parent_id": "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g"
+        }
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "bytes": "1300"
+      },
+      "readback": {
+        "id": "1Z7LO9j1HXEMlSOJ1UrZz7J0rtZQnl-wG",
+        "title": "APPROVAL_Cylinder9-Body-and-Shared-DipTube_2026-11-01.json",
+        "mime_type": null,
+        "size": "1300",
+        "url": "https://drive.google.com/file/d/1Z7LO9j1HXEMlSOJ1UrZz7J0rtZQnl-wG/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1Z7LO9j1HXEMlSOJ1UrZz7J0rtZQnl-wG/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1q1Sdlmvm6t5hmE01RaKtcNnkGiCJQJ_g"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.png",
+      "name": "BB_17-415_White-Actuator_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+      "parent": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S",
+      "result": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1Vxpkg16Cb4vgmEdOo4t_4yapvDUxnxYF",
+        "title": "BB_17-415_White-Actuator_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+        "file_name": "BB_17-415_White-Actuator_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1Vxpkg16Cb4vgmEdOo4t_4yapvDUxnxYF/view?usp=drivesdk",
+        "parent_id": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1Vxpkg16Cb4vgmEdOo4t_4yapvDUxnxYF",
+          "title": "BB_17-415_White-Actuator_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+          "file_name": "BB_17-415_White-Actuator_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1Vxpkg16Cb4vgmEdOo4t_4yapvDUxnxYF/view?usp=drivesdk",
+          "parent_id": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S"
+        }
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "bytes": "831626"
+      },
+      "readback": {
+        "id": "1Vxpkg16Cb4vgmEdOo4t_4yapvDUxnxYF",
+        "title": "BB_17-415_White-Actuator_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+        "mime_type": null,
+        "size": "831626",
+        "url": "https://drive.google.com/file/d/1Vxpkg16Cb4vgmEdOo4t_4yapvDUxnxYF/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1Vxpkg16Cb4vgmEdOo4t_4yapvDUxnxYF/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.png",
+      "name": "BB_17-415_Black-Collar_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+      "parent": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S",
+      "result": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "14r5NUz3bNvsLh5NszXlFZS55oVKpqtoE",
+        "title": "BB_17-415_Black-Collar_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+        "file_name": "BB_17-415_Black-Collar_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/14r5NUz3bNvsLh5NszXlFZS55oVKpqtoE/view?usp=drivesdk",
+        "parent_id": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "14r5NUz3bNvsLh5NszXlFZS55oVKpqtoE",
+          "title": "BB_17-415_Black-Collar_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+          "file_name": "BB_17-415_Black-Collar_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/14r5NUz3bNvsLh5NszXlFZS55oVKpqtoE/view?usp=drivesdk",
+          "parent_id": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S"
+        }
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "bytes": "887018"
+      },
+      "readback": {
+        "id": "14r5NUz3bNvsLh5NszXlFZS55oVKpqtoE",
+        "title": "BB_17-415_Black-Collar_PSD-Geometry_GPT-Cleanup_v01_REVIEW.png",
+        "mime_type": null,
+        "size": "887018",
+        "url": "https://drive.google.com/file/d/14r5NUz3bNvsLh5NszXlFZS55oVKpqtoE/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/14r5NUz3bNvsLh5NszXlFZS55oVKpqtoE/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/README.md",
+      "name": "README_Cylinder9_PSD-Fitments_GPT-Cleanup_2026-11-01.md",
+      "parent": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S",
+      "result": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1K9PxqGsHm9xzZ0m9TQKBvdu3FTvONb2t",
+        "title": "README_Cylinder9_PSD-Fitments_GPT-Cleanup_2026-11-01.md",
+        "file_name": "README_Cylinder9_PSD-Fitments_GPT-Cleanup_2026-11-01.md",
+        "mime_type": "text/markdown",
+        "url": "https://drive.google.com/file/d/1K9PxqGsHm9xzZ0m9TQKBvdu3FTvONb2t/view?usp=drivesdk",
+        "parent_id": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1K9PxqGsHm9xzZ0m9TQKBvdu3FTvONb2t",
+          "title": "README_Cylinder9_PSD-Fitments_GPT-Cleanup_2026-11-01.md",
+          "file_name": "README_Cylinder9_PSD-Fitments_GPT-Cleanup_2026-11-01.md",
+          "mime_type": "text/markdown",
+          "url": "https://drive.google.com/file/d/1K9PxqGsHm9xzZ0m9TQKBvdu3FTvONb2t/view?usp=drivesdk",
+          "parent_id": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S"
+        }
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "bytes": "5272"
+      },
+      "readback": {
+        "id": "1K9PxqGsHm9xzZ0m9TQKBvdu3FTvONb2t",
+        "title": "README_Cylinder9_PSD-Fitments_GPT-Cleanup_2026-11-01.md",
+        "mime_type": null,
+        "size": "5272",
+        "url": "https://drive.google.com/file/d/1K9PxqGsHm9xzZ0m9TQKBvdu3FTvONb2t/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1K9PxqGsHm9xzZ0m9TQKBvdu3FTvONb2t/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/family-master-library-2026-11-01/Cylinder_9ml_PSD-Fitments_GPT-Cleanup_2026-11-01_v01.zip",
+      "name": "Cylinder_9ml_PSD-Fitments_GPT-Cleanup_2026-11-01_v01.zip",
+      "parent": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S",
+      "result": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1bKwvDknwfH8f1FKdbtyq9Jn9__6gWoWw",
+        "title": "Cylinder_9ml_PSD-Fitments_GPT-Cleanup_2026-11-01_v01.zip",
+        "file_name": "Cylinder_9ml_PSD-Fitments_GPT-Cleanup_2026-11-01_v01.zip",
+        "mime_type": "application/zip",
+        "url": "https://drive.google.com/file/d/1bKwvDknwfH8f1FKdbtyq9Jn9__6gWoWw/view?usp=drivesdk",
+        "parent_id": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1bKwvDknwfH8f1FKdbtyq9Jn9__6gWoWw",
+          "title": "Cylinder_9ml_PSD-Fitments_GPT-Cleanup_2026-11-01_v01.zip",
+          "file_name": "Cylinder_9ml_PSD-Fitments_GPT-Cleanup_2026-11-01_v01.zip",
+          "mime_type": "application/zip",
+          "url": "https://drive.google.com/file/d/1bKwvDknwfH8f1FKdbtyq9Jn9__6gWoWw/view?usp=drivesdk",
+          "parent_id": "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S"
+        }
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "bytes": "18818175"
+      },
+      "readback": {
+        "id": "1bKwvDknwfH8f1FKdbtyq9Jn9__6gWoWw",
+        "title": "Cylinder_9ml_PSD-Fitments_GPT-Cleanup_2026-11-01_v01.zip",
+        "mime_type": null,
+        "size": "18818175",
+        "url": "https://drive.google.com/file/d/1bKwvDknwfH8f1FKdbtyq9Jn9__6gWoWw/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1bKwvDknwfH8f1FKdbtyq9Jn9__6gWoWw/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      }
+    }
+  ],
+  "approvedFolder": "https://drive.google.com/drive/folders/1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc",
+  "approvedFiles": [
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+      "name": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+      "parent": "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc",
+      "id": "1y5bFKy-ni7NVsom0KcemhnJZnkAOXCOz",
+      "url": "https://drive.google.com/file/d/1y5bFKy-ni7NVsom0KcemhnJZnkAOXCOz/view?usp=drivesdk",
+      "remote": {
+        "name": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+        "bytes": 1634900,
+        "parentIds": [
+          "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc"
+        ],
+        "url": "https://drive.google.com/file/d/1y5bFKy-ni7NVsom0KcemhnJZnkAOXCOz/view?usp=drivesdk"
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "byteCount": true,
+        "remoteContentHashVerified": false
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_17-415_White-Actuator_PSD-GPT_v01_APPROVED.png",
+      "name": "BB_17-415_White-Actuator_PSD-GPT_v01_APPROVED.png",
+      "parent": "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc",
+      "id": "1N0lzRbyioUQWa9CaMh1ESfz3oYG_VDUs",
+      "url": "https://drive.google.com/file/d/1N0lzRbyioUQWa9CaMh1ESfz3oYG_VDUs/view?usp=drivesdk",
+      "remote": {
+        "name": "BB_17-415_White-Actuator_PSD-GPT_v01_APPROVED.png",
+        "bytes": 831626,
+        "parentIds": [
+          "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc"
+        ],
+        "url": "https://drive.google.com/file/d/1N0lzRbyioUQWa9CaMh1ESfz3oYG_VDUs/view?usp=drivesdk"
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "byteCount": true,
+        "remoteContentHashVerified": false
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_17-415_Black-Collar_PSD-GPT_v01_APPROVED.png",
+      "name": "BB_17-415_Black-Collar_PSD-GPT_v01_APPROVED.png",
+      "parent": "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc",
+      "id": "1fIUQQSSK_EISzaSE_rabIbrDr-mU_UZc",
+      "url": "https://drive.google.com/file/d/1fIUQQSSK_EISzaSE_rabIbrDr-mU_UZc/view?usp=drivesdk",
+      "remote": {
+        "name": "BB_17-415_Black-Collar_PSD-GPT_v01_APPROVED.png",
+        "bytes": 887018,
+        "parentIds": [
+          "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc"
+        ],
+        "url": "https://drive.google.com/file/d/1fIUQQSSK_EISzaSE_rabIbrDr-mU_UZc/view?usp=drivesdk"
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "byteCount": true,
+        "remoteContentHashVerified": false
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_17-415_Pump-and-Tube_Reference-v02_APPROVED.png",
+      "name": "BB_17-415_Pump-and-Tube_Reference-v02_APPROVED.png",
+      "parent": "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc",
+      "id": "1i_3wSYX2QehsBz3D0MUDE3QTBHKWRtRZ",
+      "url": "https://drive.google.com/file/d/1i_3wSYX2QehsBz3D0MUDE3QTBHKWRtRZ/view?usp=drivesdk",
+      "remote": {
+        "name": "BB_17-415_Pump-and-Tube_Reference-v02_APPROVED.png",
+        "bytes": 859237,
+        "parentIds": [
+          "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc"
+        ],
+        "url": "https://drive.google.com/file/d/1i_3wSYX2QehsBz3D0MUDE3QTBHKWRtRZ/view?usp=drivesdk"
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "byteCount": true,
+        "remoteContentHashVerified": false
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/BB_Cylinder_9ml_Clear-Overcap_v06_APPROVED.png",
+      "name": "BB_Cylinder_9ml_Clear-Overcap_v06_APPROVED.png",
+      "parent": "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc",
+      "id": "1L1E08Bvpgpr6hkdKfuisLarqs7-h6CQI",
+      "url": "https://drive.google.com/file/d/1L1E08Bvpgpr6hkdKfuisLarqs7-h6CQI/view?usp=drivesdk",
+      "remote": {
+        "name": "BB_Cylinder_9ml_Clear-Overcap_v06_APPROVED.png",
+        "bytes": 300365,
+        "parentIds": [
+          "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc"
+        ],
+        "url": "https://drive.google.com/file/d/1L1E08Bvpgpr6hkdKfuisLarqs7-h6CQI/view?usp=drivesdk"
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "byteCount": true,
+        "remoteContentHashVerified": false
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/assembly-v03-approved.json",
+      "name": "assembly-v03-approved.json",
+      "parent": "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc",
+      "id": "10JF2vEWSL7n-3-SD6Z342Y2NW0jHd7Vc",
+      "url": "https://drive.google.com/file/d/10JF2vEWSL7n-3-SD6Z342Y2NW0jHd7Vc/view?usp=drivesdk",
+      "remote": {
+        "name": "assembly-v03-approved.json",
+        "bytes": 3702,
+        "parentIds": [
+          "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc"
+        ],
+        "url": "https://drive.google.com/file/d/10JF2vEWSL7n-3-SD6Z342Y2NW0jHd7Vc/view?usp=drivesdk"
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "byteCount": true,
+        "remoteContentHashVerified": false
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-psd-fitments-2026-11-01/README.md",
+      "name": "README.md",
+      "parent": "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc",
+      "id": "12JKeqIs6LfwfRBTgp_nCgvnQ6wEATNWi",
+      "url": "https://drive.google.com/file/d/12JKeqIs6LfwfRBTgp_nCgvnQ6wEATNWi/view?usp=drivesdk",
+      "remote": {
+        "name": "README.md",
+        "bytes": 6849,
+        "parentIds": [
+          "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc"
+        ],
+        "url": "https://drive.google.com/file/d/12JKeqIs6LfwfRBTgp_nCgvnQ6wEATNWi/view?usp=drivesdk"
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "byteCount": true,
+        "remoteContentHashVerified": false
+      }
+    },
+    {
+      "local": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/family-master-library-2026-11-01/Cylinder_9ml_PSD-Fitments_GPT-Cleanup_2026-11-01_v03_APPROVED.zip",
+      "name": "Cylinder_9ml_PSD-Fitments_GPT-Cleanup_2026-11-01_v03_APPROVED.zip",
+      "parent": "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc",
+      "id": "14M8syTkIqAGvLoTRj4peVX0aekuKAw2B",
+      "url": "https://drive.google.com/file/d/14M8syTkIqAGvLoTRj4peVX0aekuKAw2B/view?usp=drivesdk",
+      "remote": {
+        "name": "Cylinder_9ml_PSD-Fitments_GPT-Cleanup_2026-11-01_v03_APPROVED.zip",
+        "bytes": 23598224,
+        "parentIds": [
+          "1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc"
+        ],
+        "url": "https://drive.google.com/file/d/14M8syTkIqAGvLoTRj4peVX0aekuKAw2B/view?usp=drivesdk"
+      },
+      "verification": {
+        "name": true,
+        "parent": true,
+        "byteCount": true,
+        "remoteContentHashVerified": false
+      }
+    }
+  ]
+}

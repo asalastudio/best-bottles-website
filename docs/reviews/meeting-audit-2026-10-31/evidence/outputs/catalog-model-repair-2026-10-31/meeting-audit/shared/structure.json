@@ -1,0 +1,78 @@
+{
+  "specs": [
+    {
+      "name": "Review",
+      "headers": [
+        "Product page",
+        "Decision",
+        "Owner",
+        "Reviewer",
+        "Meeting notes / next action",
+        "Review readiness",
+        "Local product URL",
+        "Original source URL",
+        "Known issues",
+        "Implementation evidence",
+        "Identity",
+        "Glass and geometry",
+        "Scale and alignment",
+        "Tube / ball / insert",
+        "Cap seating",
+        "Views and mobile",
+        "Builder handoff",
+        "Family",
+        "Capacity (ml)",
+        "Color",
+        "Neck",
+        "SKU count",
+        "Catalog exception",
+        "Record ID"
+      ],
+      "rows": 363,
+      "columns": 24
+    },
+    {
+      "name": "Main bottles",
+      "headers": [
+        "Family",
+        "Capacity (ml)",
+        "Neck",
+        "Colors",
+        "Product pages",
+        "SKU variants",
+        "Starting product URL",
+        "Representative ID"
+      ],
+      "rows": 90,
+      "columns": 8
+    },
+    {
+      "name": "SKU index",
+      "headers": [
+        "SKU",
+        "Product page",
+        "Color",
+        "Cap finish",
+        "Fitment",
+        "Local product URL",
+        "Product group ID",
+        "Link state"
+      ],
+      "rows": 2485,
+      "columns": 8
+    }
+  ],
+  "decisions": [
+    "Not reviewed",
+    "Fix needed",
+    "Spot-check approved",
+    "Hold"
+  ],
+  "checks": [
+    "Unchecked",
+    "Pass",
+    "Fix",
+    "N/A"
+  ],
+  "inventoryAt": "2026-10-31T21:30:51.590Z"
+}

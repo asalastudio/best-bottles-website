@@ -1,0 +1,14 @@
+{
+  "source": "Jordan: Let us run with this and update it; clear reference review, 2026-10-31",
+  "scope": "Clear v16 appearance and cobalt v9 appearance. Dimensions updated separately; no production approval inferred.",
+  "sources": [
+    {
+      "file": "outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-clear-measured-v16.blend",
+      "sha256": "b591fe24f4efe36e17bd4b5a88544ac260c56c18bc8743b57016ed7cf13bf3f6"
+    },
+    {
+      "file": "outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-cobalt-measured-v9.blend",
+      "sha256": "ccb9d65366cd9d08f0391663718b794bf0b68fcb8bd4fdc6a09f32e674b2ae2a"
+    }
+  ]
+}

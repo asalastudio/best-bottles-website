@@ -1,0 +1,591 @@
+{
+  "scope": "15 existing Tulip sprayer previews",
+  "changes": [
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "slot": "sprayer",
+      "previousBottom": 720.3230256898191,
+      "newBottom": 693.5694444444445,
+      "deltaY": -26.753581245374676
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "slot": "overcap",
+      "previousBottom": 717.2459562321599,
+      "newBottom": 709.8694444444444,
+      "deltaY": -7.376511787715458
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "slot": "sprayer",
+      "previousBottom": 709.803044719315,
+      "newBottom": 693.5694444444445,
+      "deltaY": -16.233600274870582
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "slot": "overcap",
+      "previousBottom": 719.1241674595624,
+      "newBottom": 709.8694444444444,
+      "deltaY": -9.254723015117975
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "slot": "sprayer",
+      "previousBottom": 710.7121788772597,
+      "newBottom": 693.5694444444445,
+      "deltaY": -17.142734432815246
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "slot": "overcap",
+      "previousBottom": 718.1950523311133,
+      "newBottom": 709.8694444444444,
+      "deltaY": -8.325607886668877
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "slot": "sprayer",
+      "previousBottom": 706.2664129400571,
+      "newBottom": 693.5694444444445,
+      "deltaY": -12.696968495612623
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "slot": "overcap",
+      "previousBottom": 720.0632730732636,
+      "newBottom": 709.8694444444444,
+      "deltaY": -10.193828628819233
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "slot": "sprayer",
+      "previousBottom": 708.2645099904852,
+      "newBottom": 693.5694444444445,
+      "deltaY": -14.695065546040723
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "slot": "overcap",
+      "previousBottom": 721.0023786869649,
+      "newBottom": 709.8694444444444,
+      "deltaY": -11.132934242520491
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "slot": "sprayer",
+      "previousBottom": 710.7621313035204,
+      "newBottom": 693.5694444444445,
+      "deltaY": -17.192686859075934
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "slot": "overcap",
+      "previousBottom": 720.1831588962893,
+      "newBottom": 709.8694444444444,
+      "deltaY": -10.31371445184493
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "slot": "sprayer",
+      "previousBottom": 713.0899143672693,
+      "newBottom": 693.5694444444445,
+      "deltaY": -19.520469922824873
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "slot": "overcap",
+      "previousBottom": 720.0632730732636,
+      "newBottom": 709.8694444444444,
+      "deltaY": -10.193828628819233
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "slot": "sprayer",
+      "previousBottom": 711.5713606089439,
+      "newBottom": 693.5694444444445,
+      "deltaY": -18.00191616449945
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "slot": "overcap",
+      "previousBottom": 719.1341579448144,
+      "newBottom": 709.8694444444444,
+      "deltaY": -9.264713500370021
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 1009.0,
+      "interiorFloorY": 1017.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 5.0466105848552205
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "slot": "sprayer",
+      "previousBottom": 709.803044719315,
+      "newBottom": 688.1,
+      "deltaY": -21.703044719315017
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "slot": "overcap",
+      "previousBottom": 719.1241674595624,
+      "newBottom": 704.4,
+      "deltaY": -14.724167459562409
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SpryBluMatt",
+      "slot": "sprayer",
+      "previousBottom": 710.7121788772597,
+      "newBottom": 688.1,
+      "deltaY": -22.61217887725968
+    },
+    {
+      "sku": "GBTulip6SpryBluMatt",
+      "slot": "overcap",
+      "previousBottom": 718.1950523311133,
+      "newBottom": 704.4,
+      "deltaY": -13.795052331113311
+    },
+    {
+      "sku": "GBTulip6SpryBluMatt",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SpryBluMatt",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SpryCuMatt",
+      "slot": "sprayer",
+      "previousBottom": 706.2664129400571,
+      "newBottom": 688.1,
+      "deltaY": -18.166412940057057
+    },
+    {
+      "sku": "GBTulip6SpryCuMatt",
+      "slot": "overcap",
+      "previousBottom": 720.0632730732636,
+      "newBottom": 704.4,
+      "deltaY": -15.663273073263667
+    },
+    {
+      "sku": "GBTulip6SpryCuMatt",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SpryCuMatt",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SpryGlMatt",
+      "slot": "sprayer",
+      "previousBottom": 708.2645099904852,
+      "newBottom": 688.1,
+      "deltaY": -20.164509990485158
+    },
+    {
+      "sku": "GBTulip6SpryGlMatt",
+      "slot": "overcap",
+      "previousBottom": 721.0023786869649,
+      "newBottom": 704.4,
+      "deltaY": -16.602378686964926
+    },
+    {
+      "sku": "GBTulip6SpryGlMatt",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SpryGlMatt",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SpryGlSh",
+      "slot": "sprayer",
+      "previousBottom": 710.7621313035204,
+      "newBottom": 688.1,
+      "deltaY": -22.66213130352037
+    },
+    {
+      "sku": "GBTulip6SpryGlSh",
+      "slot": "overcap",
+      "previousBottom": 720.1831588962893,
+      "newBottom": 704.4,
+      "deltaY": -15.783158896289365
+    },
+    {
+      "sku": "GBTulip6SpryGlSh",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SpryGlSh",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SprySlMatt",
+      "slot": "sprayer",
+      "previousBottom": 713.0899143672693,
+      "newBottom": 688.1,
+      "deltaY": -24.989914367269307
+    },
+    {
+      "sku": "GBTulip6SprySlMatt",
+      "slot": "overcap",
+      "previousBottom": 720.0632730732636,
+      "newBottom": 704.4,
+      "deltaY": -15.663273073263667
+    },
+    {
+      "sku": "GBTulip6SprySlMatt",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SprySlMatt",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SprySlSh",
+      "slot": "sprayer",
+      "previousBottom": 711.5713606089439,
+      "newBottom": 688.1,
+      "deltaY": -23.471360608943883
+    },
+    {
+      "sku": "GBTulip6SprySlSh",
+      "slot": "overcap",
+      "previousBottom": 719.1341579448144,
+      "newBottom": 704.4,
+      "deltaY": -14.734157944814456
+    },
+    {
+      "sku": "GBTulip6SprySlSh",
+      "slot": "diptube",
+      "views": [
+        "sidecar",
+        "capon"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    },
+    {
+      "sku": "GBTulip6SprySlSh",
+      "slot": "diptube",
+      "views": [
+        "exploded"
+      ],
+      "previousBottom": 1030.3441348075867,
+      "newBottom": 982.0,
+      "interiorFloorY": 990.0,
+      "clearanceCanvasPx": 8.0,
+      "trimBottomPct": 11.430494823754355
+    }
+  ],
+  "preserved": "All body pixels, body boxes, size targets, anchors, sprayer and overcap dimensions, dip-tube source images, width, upper mechanism, bend and image scale"
+}

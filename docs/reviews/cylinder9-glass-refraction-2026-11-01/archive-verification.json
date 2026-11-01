@@ -1,0 +1,16 @@
+{
+  "archive": "outputs/family-master-library-2026-11-01/Cylinder_9ml_Sunburst-Glass-Refraction_2026-11-01_v03.zip",
+  "bytes": 9965175,
+  "sha256": "6338d9335fabfd013815bb434df52925d0c4d9e726dd76369e6cdb896f67d548",
+  "zipEntries": 25,
+  "crcPass": true,
+  "entryHashesPass": true,
+  "restore": {
+    "mode": "restored",
+    "verifiedFiles": 24,
+    "copied": 4,
+    "unchanged": 0,
+    "backedUp": 0
+  },
+  "restoredInto": "/var/folders/g3/l_7f2hg57x90xzht2md1q_hm0000gn/T/cylinder9-refraction-v03-restore-iq_cdl52"
+}

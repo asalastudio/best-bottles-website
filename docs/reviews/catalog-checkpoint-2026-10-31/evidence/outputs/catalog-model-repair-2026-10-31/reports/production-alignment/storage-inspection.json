@@ -1,0 +1,158 @@
+{
+  "checkedAt": "2026-10-31T16:52:48.698027+00:00",
+  "inspectionOnly": true,
+  "movedOrDeleted": false,
+  "totalAllocatedKiB": 27070156,
+  "directories": [
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/renders",
+      "allocatedKiB": 11147980
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working",
+      "allocatedKiB": 15433588
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/audit",
+      "allocatedKiB": 13684
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/scripts",
+      "allocatedKiB": 624
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/sources",
+      "allocatedKiB": 34504
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/backups",
+      "allocatedKiB": 136
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/reports",
+      "allocatedKiB": 439636
+    }
+  ],
+  "fileTypeLogicalBytes": {
+    ".blend": 24787151657,
+    ".png": 1405024646,
+    ".glb": 843540564,
+    ".blend1": 454943380,
+    ".json": 127702709,
+    ".webp": 43250656,
+    ".csv": 10548403,
+    ".html": 10217424,
+    ".gif": 6243412,
+    ".log": 1843929,
+    ".py": 327278,
+    ".bak": 119457,
+    ".cjs": 36442,
+    ".pyc": 34775,
+    ".patch": 24307,
+    ".ts": 11967,
+    ".md": 7050,
+    ".txt": 1044
+  },
+  "largestFiles": [
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/priority-assemblies/flair/model-tube-v13.blend",
+      "bytes": 97003833
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/priority-assemblies/flair/model-tube-v14.blend",
+      "bytes": 97002714
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/priority-assemblies/flair/model-fit-v8.blend",
+      "bytes": 97001878
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/renders/superseded/tube-pre-v13/priority-flair--spray-matte-black/review-scene.blend",
+      "bytes": 96997407
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/renders/final/sku-variants/priority-flair--spray-matte-black/review-scene.blend",
+      "bytes": 96992138
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/priority-assemblies/tulip5/model-fit-v8.blend",
+      "bytes": 95772454
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/priority-assemblies/tulip5/model-tube-v13.blend",
+      "bytes": 95770946
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/priority-assemblies/tulip5/model-tube-v14.blend",
+      "bytes": 95768495
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/renders/superseded/tube-pre-v13/priority-tulip5--spray-matte-black/review-scene.blend",
+      "bytes": 95766469
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/renders/final/sku-variants/priority-tulip5--spray-matte-black/review-scene.blend",
+      "bytes": 95766319
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/priority-assemblies/sleek5/model-tube-v14.blend",
+      "bytes": 95760479
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/priority-assemblies/sleek5/model-fit-v8.blend",
+      "bytes": 95758836
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/priority-assemblies/sleek5/model-tube-v13.blend",
+      "bytes": 95756374
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/pilots/sleek5-tube-caustics.blend",
+      "bytes": 95756225
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/pilots/sleek5-tube-slim.blend",
+      "bytes": 95755810
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/pilots/sleek5-tube-native-material.blend",
+      "bytes": 95755730
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/pilots/sleek5-tube-optics.blend",
+      "bytes": 95755654
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/working/pilots/sleek5-tube-shadow-lighting.blend",
+      "bytes": 95755468
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/renders/superseded/tube-pre-v13/priority-sleek5--spray-matte-black/review-scene.blend",
+      "bytes": 95753514
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/renders/final/sku-variants/priority-sleek5--spray-matte-black/review-scene.blend",
+      "bytes": 95748123
+    }
+  ],
+  "processes": [
+    "9015  1413   0.0  0.0   24:43 /Users/jordanrichter/.local/share/blender_mcp/.venv/bin/python /Users/jordanrichter/.local/share/blender_mcp/.venv/bin/blender-mcp",
+    "12874  1413   0.0  0.0   07:30 /Users/jordanrichter/.local/share/blender_mcp/.venv/bin/python /Users/jordanrichter/.local/share/blender_mcp/.venv/bin/blender-mcp",
+    "14192 14190 275.3 23.1   01:46 next-server (v16.2.12)",
+    "14211 14192   0.0  0.2   01:37 node /Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/.next/dev/build/cf208e1b0e4c4caf.js 59184",
+    "14212 14192   0.3  0.3   01:36 node /Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/.next/dev/build/56416d4ae4ce586f.js 59187",
+    "14213 14192   0.0  0.3   01:35 node /Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/.next/dev/build/56416d4ae4ce586f.js 59189"
+  ],
+  "retainedNextCacheAllocatedKiB": 50478096,
+  "postVerificationProcesses": {
+    "checkedAt": "2026-10-31T16:55:03.899301+00:00",
+    "processes": [
+      "9015  1413   0.0  0.0   26:58 /Users/jordanrichter/.local/share/blender_mcp/.venv/bin/python /Users/jordanrichter/.local/share/blender_mcp/.venv/bin/blender-mcp",
+      "12874  1413   0.0  0.0   09:45 /Users/jordanrichter/.local/share/blender_mcp/.venv/bin/python /Users/jordanrichter/.local/share/blender_mcp/.venv/bin/blender-mcp",
+      "14192 14190   0.0 15.0   04:01 next-server (v16.2.12)",
+      "14211 14192   0.0  0.2   03:52 node /Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/.next/dev/build/cf208e1b0e4c4caf.js 59184",
+      "14212 14192   0.0  0.3   03:51 node /Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/.next/dev/build/56416d4ae4ce586f.js 59187",
+      "14213 14192   0.0  0.2   03:50 node /Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/.next/dev/build/56416d4ae4ce586f.js 59189"
+    ]
+  }
+}

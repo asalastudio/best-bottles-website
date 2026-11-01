@@ -12,6 +12,9 @@ import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { resolveImageWithFallback } from "@/lib/products/image-fallback";
 import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-heroes";
 
+import CylinderMasterPreview from "./CylinderMasterPreview";
+import { cylinderMasterSku, masterProductHref } from "@/lib/products/cylinder-master";
+
 import styles from "./ProductCardImagePreview.module.css";
 
 type ProductCardImagePreviewProps = {
@@ -194,14 +197,17 @@ export default function ProductCardImagePreview({
         () => previews.filter((preview) => !preview.imageUrl),
         [previews],
     );
-    const fixedHero = Boolean(catalogHero);
+    const canonicalHero = Boolean(cylinderMasterSku(catalogHero?.websiteSku ?? auditMeta?.websiteSku ?? previewablePreviews[0]?.websiteSku));
+    const fixedHero = Boolean(catalogHero) && !canonicalHero;
     const [selection, setSelection] = useState<{ productHref: string; id: string } | null>(null);
     const [failedImages, setFailedImages] = useState<Set<string>>(() => new Set());
 
     const selectedPreview = selection?.productHref === productHref
         ? previewablePreviews.find((preview) => preview.id === selection.id) ?? null
         : null;
-    const activePreview = fixedHero ? null : selectedPreview ?? (catalogHero ? null : previewablePreviews[0] ?? null);
+    const activePreview = fixedHero ? null : selectedPreview ?? (canonicalHero
+        ? previewablePreviews.find(preview => preview.websiteSku === catalogHero?.websiteSku) ?? previewablePreviews[0] ?? null
+        : catalogHero ? null : previewablePreviews[0] ?? null);
     const firstPreview = previewablePreviews[0];
     const legacyImage = {
         url: defaultImage.url ?? firstPreview?.imageUrl ?? null,
@@ -236,6 +242,8 @@ export default function ProductCardImagePreview({
     const resolvedPhoto = resolvedImageUrl === displayImage.url ? displayImage : fallbackPhoto;
     const resolvedImageAlt = resolvedPhoto.alt;
     const isStudioHero = Boolean(catalogHero && resolvedImageUrl === catalogHero.url);
+    const masterSku = canonicalHero ? cylinderMasterSku(activePreview?.websiteSku ?? activePreview?.sku ?? catalogHero?.websiteSku ?? auditMeta?.websiteSku) : null;
+    const linkedHref = masterProductHref(productHref, masterSku);
 
     const markImageFailed = (url: string) => {
         setFailedImages((current) => {
@@ -250,11 +258,38 @@ export default function ProductCardImagePreview({
         setSelection({ productHref, id: preview.id });
     };
 
+    const photo = resolvedImageUrl ? (
+        <Image
+            key={resolvedImageUrl}
+            src={resolvedImageUrl}
+            alt={resolvedImageAlt ?? productTitle}
+            fill
+            data-bb-image-audit={auditMeta?.surface}
+            data-bb-family={auditMeta?.family ?? undefined}
+            data-bb-product-group-slug={auditMeta?.productGroupSlug ?? undefined}
+            data-bb-grace-sku={resolvedPhoto.graceSku ?? undefined}
+            data-bb-website-sku={resolvedPhoto.websiteSku ?? undefined}
+            data-bb-shopify-variant-id={resolvedPhoto.shopifyVariantId ?? undefined}
+            className={isStudioHero ? "object-contain" : "object-contain transition duration-500 ease-out group-hover/catalog-card:scale-[1.03]"}
+            style={isStudioHero && catalogHero ? getCatalogHeroStyle(catalogHero) : undefined}
+            data-bb-hero-state={isStudioHero ? "empty" : undefined}
+            sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 320px"
+            onError={() => markImageFailed(resolvedImageUrl)}
+        />
+    ) : (
+        <div className="flex h-full flex-col items-center justify-center p-4 text-center">
+            <Package className="mb-3 h-12 w-12 text-champagne" strokeWidth={1} />
+            <p className="max-w-[120px] text-[10px] font-medium uppercase leading-tight tracking-wider text-slate/60">
+                {placeholderLabel}
+            </p>
+        </div>
+    );
+
     return (
         <div
-            onMouseLeave={() => { if (catalogHero) setSelection(null); }}
+            onMouseLeave={() => { if (fixedHero) setSelection(null); }}
             onBlur={(event) => {
-                if (catalogHero && !event.currentTarget.contains(event.relatedTarget as Node | null)) setSelection(null);
+                if (fixedHero && !event.currentTarget.contains(event.relatedTarget as Node | null)) setSelection(null);
             }}
         >
             <div
@@ -268,40 +303,12 @@ export default function ProductCardImagePreview({
                 data-bb-studio-hero={isStudioHero ? "true" : undefined}
             >
                 <LocaleLink
-                    href={productHref}
+                    href={linkedHref}
                     onClick={onOpen}
                     className="absolute inset-0 z-10"
                     aria-label={`View ${productTitle}`}
                 />
-                {resolvedImageUrl ? (
-                    <Image
-                        key={resolvedImageUrl}
-                        src={resolvedImageUrl}
-                        alt={resolvedImageAlt ?? productTitle}
-                        fill
-                        data-bb-image-audit={auditMeta?.surface}
-                        data-bb-family={auditMeta?.family ?? undefined}
-                        data-bb-product-group-slug={auditMeta?.productGroupSlug ?? undefined}
-                        data-bb-grace-sku={resolvedPhoto.graceSku ?? undefined}
-                        data-bb-website-sku={resolvedPhoto.websiteSku ?? undefined}
-                        data-bb-shopify-variant-id={resolvedPhoto.shopifyVariantId ?? undefined}
-                        className={isStudioHero ? "object-contain" : "object-contain transition duration-500 ease-out group-hover/catalog-card:scale-[1.03]"}
-                        style={isStudioHero && catalogHero ? getCatalogHeroStyle(catalogHero) : undefined}
-                        data-bb-hero-state={isStudioHero ? "empty" : undefined}
-                        sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 320px"
-                        onError={() => markImageFailed(resolvedImageUrl)}
-                    />
-                ) : (
-                    <div className="flex h-full flex-col items-center justify-center p-4 text-center">
-                        <Package className="mb-3 h-12 w-12 text-champagne" strokeWidth={1} />
-                        <p className="max-w-[120px] text-[10px] font-medium uppercase leading-tight tracking-wider text-slate/60">
-                            {placeholderLabel}
-                        </p>
-                    </div>
-                )}
-
-
-
+                {masterSku ? <CylinderMasterPreview sku={masterSku} title={productTitle} fallback={photo} /> : photo}
             </div>
             <ProductCardSwatchRow
                 previewableVariants={fixedHero ? [] : previewablePreviews}

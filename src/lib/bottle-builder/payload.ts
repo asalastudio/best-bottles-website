@@ -15,6 +15,8 @@ export function bareChooserKit(kit: BuilderKit): BuilderKit | undefined {
         conflicts: [],
         canvas: kit.canvas,
         anchors: kit.anchors,
+        ...(kit.glassSizing ? { glassSizing: kit.glassSizing } : {}),
+        ...(kit.register ? { register: kit.register } : {}),
         plateSha256: "",
         three: null,
         parts: [{ ...body, image2x: null, mask: null }],

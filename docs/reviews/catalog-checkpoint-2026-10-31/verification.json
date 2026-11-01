@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-31",
+  "typecheck": {
+    "command": "tsc --noEmit --incremental false",
+    "exitCode": 0,
+    "note": "Excluded local output backups and frozen evidence from app compilation."
+  },
+  "lint": {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "errors": 0,
+    "warnings": 85
+  },
+  "vitest": {
+    "command": "vitest run --maxWorkers=2",
+    "exitCode": 0,
+    "filesPassed": 342,
+    "filesSkipped": 2,
+    "testsPassed": 3142,
+    "testsSkipped": 7
+  },
+  "packagedFixture": {
+    "command": "vitest run tests/small-sprayer-review.test.ts",
+    "exitCode": 0,
+    "testsPassed": 2
+  },
+  "build": {
+    "command": "npm run build -- --webpack",
+    "exitCode": 0,
+    "environment": "isolated index export, CI placeholders, no .env.local or deployment",
+    "note": "Live localhost .next directory was not touched."
+  },
+  "restore": {
+    "archiveHashesVerified": 497,
+    "runtimeFiles": 160,
+    "emptyDirectoryRestore": "passed",
+    "conflictingFileBackup": "passed",
+    "unchangedFilesPreserved": "passed"
+  },
+  "releaseState": "draft checkpoint only; 2 ml images held for new measured revision"
+}

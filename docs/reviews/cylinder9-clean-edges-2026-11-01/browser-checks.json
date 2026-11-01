@@ -1,0 +1,155 @@
+{
+  "checks": [
+    {
+      "viewport": 1440,
+      "variant": "clean",
+      "reviewBody": "fixed-v04",
+      "loaded": true,
+      "uniform": true,
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540
+      },
+      "visibleBody": {
+        "left": 418.724885552921,
+        "right": 495.2678280159089,
+        "top": 416.7868712196278,
+        "bottom": 701.5776768992664
+      },
+      "bodyWidth": 76.54294246298787,
+      "bodyHeight": 284.7908056796386,
+      "inside": true,
+      "outerOverflow": false,
+      "status": "Cleaned v04 · full glass body 76.5 × 284.8 CSS px at this viewport · 100% page zoom",
+      "error": ""
+    },
+    {
+      "viewport": 1440,
+      "variant": "before",
+      "reviewBody": "v03",
+      "loaded": true,
+      "uniform": true,
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540
+      },
+      "visibleBody": {
+        "left": 418.724885552921,
+        "right": 495.2678280159089,
+        "top": 416.7868712196278,
+        "bottom": 701.5776768992664
+      },
+      "bodyWidth": 76.54294246298787,
+      "bodyHeight": 284.7908056796386,
+      "inside": true,
+      "outerOverflow": false,
+      "status": "Previous v03 · full glass body 76.5 × 284.8 CSS px at this viewport · 100% page zoom",
+      "error": ""
+    },
+    {
+      "viewport": 1440,
+      "variant": "assembled",
+      "reviewBody": "fixed-v04",
+      "loaded": true,
+      "uniform": true,
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540
+      },
+      "visibleBody": {
+        "left": 418.724885552921,
+        "right": 495.2678280159089,
+        "top": 416.7868712196278,
+        "bottom": 701.5776768992664
+      },
+      "bodyWidth": 76.54294246298787,
+      "bodyHeight": 284.7908056796386,
+      "inside": true,
+      "outerOverflow": false,
+      "status": "Cleaned v04 · full glass body 76.5 × 284.8 CSS px at this viewport · 100% page zoom",
+      "error": ""
+    },
+    {
+      "viewport": 390,
+      "variant": "clean",
+      "reviewBody": "fixed-v04",
+      "loaded": true,
+      "uniform": true,
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 390,
+        "height": 400
+      },
+      "visibleBody": {
+        "left": 166.64770854883207,
+        "right": 223.33699606565574,
+        "top": 331.66767411691706,
+        "bottom": 542.5898405482503
+      },
+      "bodyWidth": 56.68928751682367,
+      "bodyHeight": 210.92216643133327,
+      "inside": true,
+      "outerOverflow": false,
+      "status": "Cleaned v04 · full glass body 56.7 × 210.9 CSS px at this viewport · 100% page zoom",
+      "error": ""
+    },
+    {
+      "viewport": 390,
+      "variant": "before",
+      "reviewBody": "v03",
+      "loaded": true,
+      "uniform": true,
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 390,
+        "height": 400
+      },
+      "visibleBody": {
+        "left": 166.64770854883207,
+        "right": 223.33699606565574,
+        "top": 331.66767411691706,
+        "bottom": 542.5898405482503
+      },
+      "bodyWidth": 56.68928751682367,
+      "bodyHeight": 210.92216643133327,
+      "inside": true,
+      "outerOverflow": false,
+      "status": "Previous v03 · full glass body 56.7 × 210.9 CSS px at this viewport · 100% page zoom",
+      "error": ""
+    },
+    {
+      "viewport": 390,
+      "variant": "assembled",
+      "reviewBody": "fixed-v04",
+      "loaded": true,
+      "uniform": true,
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 390,
+        "height": 400
+      },
+      "visibleBody": {
+        "left": 166.64770854883207,
+        "right": 223.33699606565574,
+        "top": 331.66767411691706,
+        "bottom": 542.5898405482503
+      },
+      "bodyWidth": 56.68928751682367,
+      "bodyHeight": 210.92216643133327,
+      "inside": true,
+      "outerOverflow": false,
+      "status": "Cleaned v04 · full glass body 56.7 × 210.9 CSS px at this viewport · 100% page zoom",
+      "error": ""
+    }
+  ],
+  "errors": []
+}

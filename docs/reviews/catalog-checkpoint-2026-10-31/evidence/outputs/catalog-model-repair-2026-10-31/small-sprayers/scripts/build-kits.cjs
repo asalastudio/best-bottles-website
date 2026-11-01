@@ -1,0 +1,18 @@
+const fs=require('fs'),path=require('path'),sharp=require('sharp'),crypto=require('crypto');
+const root=process.cwd(),r=path.resolve(__dirname,'../renders'),dest=path.join(root,'public/local-kits/small-sprayers-2026-10-31');fs.mkdirSync(dest,{recursive:true});
+(async()=>{const rows={};async function asset(file){const source=path.join(r,file),data=fs.readFileSync(source),meta=await sharp(data).metadata();fs.copyFileSync(source,path.join(dest,file));return {url:'/local-kits/small-sprayers-2026-10-31/'+file,key:'',sha256:crypto.createHash('sha256').update(data).digest('hex'),bytes:data.length,width:meta.width,height:meta.height};}
+const cap=await asset('overcap-12mm.png'),heads={black:await asset('head-black.png'),white:await asset('head-white.png')};
+for(const [size,height,target] of [['3.3',37,28],['4',49,32.5]]){const body=await asset(`glass-${size}-profile-v4.png`),tube=await asset(`mechanism-${size}-v3.png`),bm=JSON.parse(fs.readFileSync(path.join(r,`glass-${size}-profile-v4.json`))),tm=JSON.parse(fs.readFileSync(path.join(r,`mechanism-${size}-v3.json`)));
+const pos=(image,meta)=>({x:500+(meta.crop[0]-meta.axis)*.4,y:1001+(meta.crop[1]-meta.baseline)*.4,width:image.width*.4,height:image.height*.4});
+const bodybox=pos(body,bm),tubebox=pos(tube,tm);
+async function bounds(image,box){const {data,info}=await sharp(path.join(dest,path.basename(image.url))).ensureAlpha().raw().toBuffer({resolveWithObject:true});let l=info.width,t=info.height,rr=0,bb=0;for(let y=0;y<info.height;y++)for(let x=0;x<info.width;x++)if(data[(y*info.width+x)*4+3]>6){l=Math.min(l,x);t=Math.min(t,y);rr=Math.max(rr,x+1);bb=Math.max(bb,y+1);}return {left:box.x+l*box.width/info.width,top:box.y+t*box.height/info.height,right:box.x+rr*box.width/info.width,bottom:box.y+bb*box.height/info.height};}
+const bodybounds=await bounds(body,bodybox),tubebounds=await bounds(tube,tubebox);
+for(const finish of ['black','white']){const sku=size==='3.3'?(finish==='black'?'GBSpry3mlClBlk':'GBSpry3mlClWht'):(finish==='black'?'GBSpry4mlClBlk':'GBSpry4mlClWh'),head=heads[finish],seat=1001-(height-6)*10,hw=15.4*10,hh=head.height/head.width*hw;const headbox={x:500-hw/2,y:seat-hh,width:hw,height:hh};const cw=cap.width*.4,ch=cap.height*.4,capbox={x:500-cw/2,y:seat-94.5-ch+4.8,width:cw,height:ch};
+const component='review-small-sprayer-'+finish;
+const part=(slot,image,box,bounds,z,ex,owner=component)=>({slot,variantKey:null,image,image2x:null,mask:null,box,bounds,zOrder:z,explodeIndex:ex,componentId:owner,assembled:{x:0,y:0},exploded:{dx:0,dy:0},derivation:'psd-layer'});
+const capbounds=await bounds(cap,capbox),headbounds=await bounds(head,headbox);
+const cover=part('overcap',cap,capbox,capbounds,4,2,'review-small-clear-overcap');cover.detached={image:{url:cap.url,width:cap.width,height:cap.height},box:capbox,bounds:capbounds};
+const mechanism=part('diptube',tube,tubebox,tubebounds,1,1);
+rows[sku]={sku,familyId:`cylinder-${size}ml-clear-12mm`,completeness:'full',conflicts:[],canvas:{width:1000,height:1100},anchors:{axisX:500,neckAxisX:500,baselineY:bodybounds.bottom,seatY:seat,pxPerMm:10},plateSha256:'',three:null,glassSizing:{heightPct:target,baselinePct:91,landmarkY:1001+(bm.shoulder-bm.baseline)*.4,source:'approved Cylinder family exception; full native glass, 2026-10-31'},parts:[part('body',body,bodybox,bodybounds,0,0,null),{...mechanism,views:['sidecar','capon'],opacity:.75},{...mechanism,views:['exploded']},part('sprayer',head,headbox,headbounds,3,1),cover]};
+}}
+fs.writeFileSync(path.join(dest,'kits.json'),JSON.stringify({rows,defaultPdpSkus:Object.keys(rows)},null,2));console.log('Created',Object.keys(rows));require('./apply-gpt-bodies.cjs');})();

@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-01T06:32:21.011Z",
+  "inheritedKeyOverride": false,
+  "worktreeKeyMatchesMainProject": true,
+  "requestedModel": "gpt-image-2.5-sunburst",
+  "modelAccess": {
+    "status": 200,
+    "verifiedId": "gpt-image-2.5-sunburst"
+  },
+  "editAttempts": 2,
+  "editResult": {
+    "status": 429,
+    "code": "credit_balance_exhausted"
+  },
+  "generatedImages": 0,
+  "userReportsAvailableCredits": true,
+  "fundedOrganizationConfirmed": false,
+  "organizationOrProjectReturnedByModelCheck": false,
+  "nextAction": "Confirm the funded API organization/project; keep Sunburst and the two approved inputs. No further generation retries until billing scope is clarified.",
+  "credentialsExposed": false
+}

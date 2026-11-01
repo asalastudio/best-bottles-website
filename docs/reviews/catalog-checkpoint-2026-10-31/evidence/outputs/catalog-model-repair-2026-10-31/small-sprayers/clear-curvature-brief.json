@@ -1,0 +1,41 @@
+{
+  "source": "Jordan visual feedback, 2026-10-31",
+  "scope": "Clear 5 ml Cylinder only",
+  "protected": [
+    "cobalt v9 render and all cobalt kits",
+    "53.23 mm height and 17.55 mm nominal diameter",
+    "shared clear/cobalt geometry",
+    "measured neck dimensions",
+    "fixed camera, stage scale and baseline"
+  ],
+  "visualDefects": [
+    "v9 dark edge bands read as thick walls",
+    "v11 card removal made clear glass pale",
+    "flat rectangular interior reflection reads like paper rather than curved transparent glass"
+  ],
+  "acceptance": [
+    "visible but restrained edge reflections",
+    "gradual light transition supporting cylindrical shape",
+    "transparent clear glass with actual modeled refraction",
+    "no rectangular strip reflection terminating inside the body",
+    "unchanged cobalt and closure placement"
+  ],
+  "candidateTests": {
+    "v12": "restore graduated grey side reflection cards",
+    "v13": "replace short rectangular light strips with broad studio diffuser",
+    "v14": "transmission sees lit studio instead of constant cream shader",
+    "v15": "Full-height feathered highlight sources beyond bottle bounds, matching clear 5 ml reference",
+    "v16": "Stronger full-height feathered highlights based on user-confirmed clear 5 ml example; no geometry or glass-shader changes"
+  },
+  "status": "v16 staged locally for reference comparison; cobalt unchanged; awaiting user visual approval",
+  "userConfirmedReference": {
+    "file": "user-photos/clear-5ml-appearance-reference.png",
+    "identity": "Clear 5 ml example, explicitly confirmed by Jordan",
+    "use": [
+      "continuous soft vertical reflections",
+      "rounded shoulder and neck appearance",
+      "transparent glass edges and rounded base"
+    ],
+    "preserve": "User caliper dimensions and cobalt geometry/render; catalog light background stays unchanged"
+  }
+}

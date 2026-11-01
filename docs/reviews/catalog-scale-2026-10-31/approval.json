@@ -1,0 +1,14 @@
+{
+  "confirmedBy": "Jordan Richter",
+  "confirmedOn": "2026-10-31",
+  "exactAnswer": "Later catalog-wide curve, with approved family exceptions",
+  "curve": "3.5314 * bareHeightMm ** 0.5868",
+  "canvasAspect": "10:11",
+  "glassBaselinePct": 91,
+  "centerlinePct": 50,
+  "vial2mlClearFullGlassPct": 40.24,
+  "rollout": "Local review only; no publication",
+  "enabledConfigurations": 906,
+  "heldConfigurations": 1182,
+  "unresolvedRegisterRecords": 397
+}

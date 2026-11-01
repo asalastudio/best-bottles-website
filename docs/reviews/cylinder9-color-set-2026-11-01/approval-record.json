@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-01",
+  "libraryVersion": "77bb10d2a151",
+  "statement": "Yes, use those. That looks much better.",
+  "scope": [
+    "Amber body material revision 4",
+    "Cobalt Blue body material revision 4"
+  ],
+  "approvedBodyHashes": {
+    "body-amber": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+    "body-cobalt": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0"
+  },
+  "scopeLimit": "Does not extend visual sign-off to every hardware configuration."
+}

@@ -1,0 +1,423 @@
+{
+  "pickLine": "CLEAR · FINE MIST SPRAY · WHITE",
+  "view": "sidecar",
+  "availableViews": [
+    "sidecar",
+    "capon",
+    "exploded"
+  ],
+  "onViewChange": {},
+  "kit": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1061,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 533
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "cylinder-3.3ml-clear-12mm",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1061,
+          "left": 375,
+          "right": 623,
+          "top": 533
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 14832,
+          "height": 1100,
+          "key": "kits/cylinder-master/d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac.body.webp",
+          "sha256": "d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1019,
+          "left": 373,
+          "right": 622,
+          "top": 108
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": 0,
+          "dy": -510
+        },
+        "image": {
+          "bytes": 14360,
+          "height": 1100,
+          "key": "kits/cylinder-master/88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6.sprayer.webp",
+          "sha256": "88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6.sprayer.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "sprayer",
+        "variantKey": null,
+        "zOrder": 1
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 390,
+          "left": 385,
+          "right": 613,
+          "top": 48
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 2,
+        "exploded": {
+          "dx": 0,
+          "dy": -816
+        },
+        "image": {
+          "bytes": 8328,
+          "height": 1100,
+          "key": "kits/cylinder-master/171893154f35133b49cf1904364064bb63260cf4c3da62e8fe7c9b704d0c044f.overcap.webp",
+          "sha256": "171893154f35133b49cf1904364064bb63260cf4c3da62e8fe7c9b704d0c044f",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/171893154f35133b49cf1904364064bb63260cf4c3da62e8fe7c9b704d0c044f.overcap.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "overcap",
+        "variantKey": null,
+        "zOrder": 2
+      }
+    ],
+    "plateSha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+    "sku": "GBSpry3mlClWht",
+    "three": null
+  },
+  "context": {
+    "family": "Cylinder",
+    "capacityMl": 3.3,
+    "color": "Clear",
+    "applicator": "Fine Mist Sprayer",
+    "websiteSku": "GBSpry3mlClWht"
+  },
+  "glassFrame": {
+    "envelope": null,
+    "standOn": null
+  },
+  "fallbackImageUrls": [
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClWht/2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99.front-on-1000x1100.webp",
+    "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784530694916_8uop1z.png?v=1784531060"
+  ],
+  "fallbackBodyImageUrl": null,
+  "fallbackAlt": "3 ml clear glass cylinder fine-mist spray bottle with white fine-mist sprayer",
+  "callouts": [
+    {
+      "key": "cap",
+      "title": "CAP",
+      "line1": "White",
+      "line2": "Fits 12mm"
+    },
+    {
+      "key": "fitment",
+      "title": "FITMENT",
+      "line1": "Fine Mist Sprayer",
+      "line2": "Fits 12mm neck"
+    },
+    {
+      "key": "neck",
+      "title": "NECK THREAD",
+      "line1": "12mm",
+      "line2": null
+    },
+    {
+      "key": "body",
+      "title": "BODY",
+      "line1": "Clear glass · 3.3 ml (0.1 oz)",
+      "line2": "H 37 mm · Ø 14 mm · 75 g"
+    }
+  ],
+  "caps": [
+    {
+      "id": "black",
+      "name": "Black",
+      "swatchName": "Black",
+      "kit": null,
+      "unavailable": false
+    },
+    {
+      "id": "white",
+      "name": "White",
+      "swatchName": "White",
+      "kit": {
+        "anchors": {
+          "axisX": 500,
+          "baselineY": 1061,
+          "neckAxisX": 500,
+          "pxPerMm": null,
+          "seatY": 533
+        },
+        "canvas": {
+          "height": 1100,
+          "width": 1000
+        },
+        "completeness": "full",
+        "conflicts": [],
+        "familyId": "cylinder-3.3ml-clear-12mm",
+        "parts": [
+          {
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "bounds": {
+              "bottom": 1061,
+              "left": 375,
+              "right": 623,
+              "top": 533
+            },
+            "derivation": "psd-layer",
+            "explodeIndex": 0,
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "bytes": 14832,
+              "height": 1100,
+              "key": "kits/cylinder-master/d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac.body.webp",
+              "sha256": "d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac.body.webp",
+              "width": 1000
+            },
+            "image2x": null,
+            "mask": null,
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0
+          },
+          {
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "bounds": {
+              "bottom": 1019,
+              "left": 373,
+              "right": 622,
+              "top": 108
+            },
+            "derivation": "psd-layer",
+            "explodeIndex": 1,
+            "exploded": {
+              "dx": 0,
+              "dy": -510
+            },
+            "image": {
+              "bytes": 14360,
+              "height": 1100,
+              "key": "kits/cylinder-master/88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6.sprayer.webp",
+              "sha256": "88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6.sprayer.webp",
+              "width": 1000
+            },
+            "image2x": null,
+            "mask": null,
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 1
+          },
+          {
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "bounds": {
+              "bottom": 390,
+              "left": 385,
+              "right": 613,
+              "top": 48
+            },
+            "derivation": "psd-layer",
+            "explodeIndex": 2,
+            "exploded": {
+              "dx": 0,
+              "dy": -816
+            },
+            "image": {
+              "bytes": 8328,
+              "height": 1100,
+              "key": "kits/cylinder-master/171893154f35133b49cf1904364064bb63260cf4c3da62e8fe7c9b704d0c044f.overcap.webp",
+              "sha256": "171893154f35133b49cf1904364064bb63260cf4c3da62e8fe7c9b704d0c044f",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/171893154f35133b49cf1904364064bb63260cf4c3da62e8fe7c9b704d0c044f.overcap.webp",
+              "width": 1000
+            },
+            "image2x": null,
+            "mask": null,
+            "slot": "overcap",
+            "variantKey": null,
+            "zOrder": 2
+          }
+        ],
+        "plateSha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+        "sku": "GBSpry3mlClWht",
+        "three": null
+      },
+      "unavailable": false
+    }
+  ],
+  "activeCapId": "white",
+  "onCapPick": {},
+  "glasses": [
+    {
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "label": "Clear",
+      "active": true,
+      "kit": {
+        "anchors": {
+          "axisX": 500,
+          "baselineY": 1061,
+          "neckAxisX": 500,
+          "pxPerMm": null,
+          "seatY": 533
+        },
+        "canvas": {
+          "height": 1100,
+          "width": 1000
+        },
+        "completeness": "full",
+        "conflicts": [],
+        "familyId": "cylinder-3.3ml-clear-12mm",
+        "parts": [
+          {
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "bounds": {
+              "bottom": 1061,
+              "left": 375,
+              "right": 623,
+              "top": 533
+            },
+            "derivation": "psd-layer",
+            "explodeIndex": 0,
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "bytes": 14832,
+              "height": 1100,
+              "key": "kits/cylinder-master/d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac.body.webp",
+              "sha256": "d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac.body.webp",
+              "width": 1000
+            },
+            "image2x": null,
+            "mask": null,
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0
+          },
+          {
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "bounds": {
+              "bottom": 1019,
+              "left": 373,
+              "right": 622,
+              "top": 108
+            },
+            "derivation": "psd-layer",
+            "explodeIndex": 1,
+            "exploded": {
+              "dx": 0,
+              "dy": -510
+            },
+            "image": {
+              "bytes": 14360,
+              "height": 1100,
+              "key": "kits/cylinder-master/88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6.sprayer.webp",
+              "sha256": "88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6.sprayer.webp",
+              "width": 1000
+            },
+            "image2x": null,
+            "mask": null,
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 1
+          },
+          {
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "bounds": {
+              "bottom": 390,
+              "left": 385,
+              "right": 613,
+              "top": 48
+            },
+            "derivation": "psd-layer",
+            "explodeIndex": 2,
+            "exploded": {
+              "dx": 0,
+              "dy": -816
+            },
+            "image": {
+              "bytes": 8328,
+              "height": 1100,
+              "key": "kits/cylinder-master/171893154f35133b49cf1904364064bb63260cf4c3da62e8fe7c9b704d0c044f.overcap.webp",
+              "sha256": "171893154f35133b49cf1904364064bb63260cf4c3da62e8fe7c9b704d0c044f",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/171893154f35133b49cf1904364064bb63260cf4c3da62e8fe7c9b704d0c044f.overcap.webp",
+              "width": 1000
+            },
+            "image2x": null,
+            "mask": null,
+            "slot": "overcap",
+            "variantKey": null,
+            "zOrder": 2
+          }
+        ],
+        "plateSha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+        "sku": "GBSpry3mlClWht",
+        "three": null
+      },
+      "unavailable": false
+    }
+  ],
+  "onGlassPick": {},
+  "activeCapName": "White",
+  "activeGlassLabel": "Clear"
+}

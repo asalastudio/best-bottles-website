@@ -1,0 +1,486 @@
+{
+  "date": "2026-11-01",
+  "status": "approved Cylinder 9 ml clear / black assembly, revision 3",
+  "files": [
+    {
+      "path": "BB_17-415_Black-Collar_PSD-GPT_v01_APPROVED.png",
+      "bytes": 887018,
+      "sha256": "7aedfaed66d5579c836af8adf3e7dab63122486fca5af1d5330478da09c2508e"
+    },
+    {
+      "path": "BB_17-415_Pump-and-Tube_Reference-v02_APPROVED.png",
+      "bytes": 859237,
+      "sha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f"
+    },
+    {
+      "path": "BB_17-415_Pump-and-Tube_Reference-v02_REVIEW.png",
+      "bytes": 859237,
+      "sha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f"
+    },
+    {
+      "path": "BB_17-415_White-Actuator_PSD-GPT_v01_APPROVED.png",
+      "bytes": 831626,
+      "sha256": "f71292c15119d1aef747fc967ae32ad2d3410179eedeb90bace1fe47d4e2378e"
+    },
+    {
+      "path": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba"
+    },
+    {
+      "path": "BB_Cylinder_9ml_Clear-Overcap_v06_APPROVED.png",
+      "bytes": 300365,
+      "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0"
+    },
+    {
+      "path": "BB_DipTube_GPT_Master_v01_APPROVED.png",
+      "bytes": 865610,
+      "sha256": "baa1588f17bbec4288edc69a34e1b5725570886c39f56a06e6aa28b91d033d78"
+    },
+    {
+      "path": "CMP-SPR-BLK-17-415-01--collar.png",
+      "bytes": 40472,
+      "sha256": "a028691129ace1193997cb09d53eb503510f196708d9a9a3dfbbfa740e3006bf"
+    },
+    {
+      "path": "CMP-SPR-BLK-17-415-01--sprayer.png",
+      "bytes": 61211,
+      "sha256": "e1a702da154ad6dd77950ac20562e2c55f7c2811679c0dcbf045be8c20622b98"
+    },
+    {
+      "path": "CMP-SPR-CLR-17-415--collar.png",
+      "bytes": 105494,
+      "sha256": "3aaad2679f488259c597ee4f98bc230ea9c39f7cb3a8beb7d4c3336b7918ccee"
+    },
+    {
+      "path": "CMP-SPR-CLR-17-415--sprayer.png",
+      "bytes": 61211,
+      "sha256": "e3c2b6d53c0b2f60603ea10a5cc652f187a38b20d54b6f4d2eac7c236546aa23"
+    },
+    {
+      "path": "CMP-SPR-RED-17-415--collar.png",
+      "bytes": 99100,
+      "sha256": "c39ace8baf084db6c8c034080adc3240a1eb34fb4f501e2978ba0d86973a1be6"
+    },
+    {
+      "path": "CMP-SPR-RED-17-415--sprayer.png",
+      "bytes": 61211,
+      "sha256": "16db8e5b2c3f8e1c14d1cab227e6da253a39609d50bf0ac81f5239c025a41e1b"
+    },
+    {
+      "path": "CMP-SPR-SGLD-17-415--collar.png",
+      "bytes": 88494,
+      "sha256": "1a664dd8e175e87008adb19090b701cf65672e51b3b89f15a569d8adff32dacc"
+    },
+    {
+      "path": "CMP-SPR-SGLD-17-415--sprayer.png",
+      "bytes": 61211,
+      "sha256": "ba606009b1b274ee70fed1e00d097e2ff8c7cc6ae4c9bf9af9fe267ff12a9fa0"
+    },
+    {
+      "path": "CMP-SPR-SLV-17-415--collar.png",
+      "bytes": 42199,
+      "sha256": "68ce28f209f1fd23e7498c3d1a95d65eefdf699cc95040420c300f5eb52c6069"
+    },
+    {
+      "path": "CMP-SPR-SLV-17-415--sprayer.png",
+      "bytes": 61211,
+      "sha256": "00908138e5529120b2f41ded501dbf9f889962a4909b3e3d8478ee4858ef7c90"
+    },
+    {
+      "path": "CMP-SPR-SSLV-17-415--collar.png",
+      "bytes": 42059,
+      "sha256": "6d6e1807ab55c8ae418d64acc37afac8e8e131ef9eb32acffc55445cf5952366"
+    },
+    {
+      "path": "CMP-SPR-SSLV-17-415--sprayer.png",
+      "bytes": 61211,
+      "sha256": "91dbb6f8b8868f9977fadd7f70e79143b0f3fd318bc9f7fb97a8443f4061ef1b"
+    },
+    {
+      "path": "GPT-collar-raw.png",
+      "bytes": 1512859,
+      "sha256": "9352137fcd68807a0aeaeea0a7bce57cddf1cbecad040fc6c309240a56edbdbe"
+    },
+    {
+      "path": "GPT-collar-registered.png",
+      "bytes": 887018,
+      "sha256": "7aedfaed66d5579c836af8adf3e7dab63122486fca5af1d5330478da09c2508e"
+    },
+    {
+      "path": "GPT-collar-registered.svg",
+      "bytes": 2024039,
+      "sha256": "f3bc2aa264417115a337583e0f8b8a1c87bd6fa1c4e03d81be245f715cf37735"
+    },
+    {
+      "path": "GPT-sprayer-raw.png",
+      "bytes": 1578774,
+      "sha256": "91a8004e5b43918bb6eb7b133322e18e657e36ea1d6a232ad226aeedf96ee370"
+    },
+    {
+      "path": "GPT-sprayer-registered.png",
+      "bytes": 831626,
+      "sha256": "f71292c15119d1aef747fc967ae32ad2d3410179eedeb90bace1fe47d4e2378e"
+    },
+    {
+      "path": "GPT-sprayer-registered.svg",
+      "bytes": 2113370,
+      "sha256": "3e30af16ba6d023bbd60c3756f9fb4ecee40da77bb6dfc5f75aad285f89403da"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6849,
+      "sha256": "87e4bddad88345a8afba017c905f70401c988a82348278e08c6d73370e476a4b"
+    },
+    {
+      "path": "approval.json",
+      "bytes": 2051,
+      "sha256": "fbfb99b233419b6a07ceb8347c53c48f3febe579c1c19339b93687ed13b1f2ff"
+    },
+    {
+      "path": "assembly-v03-approved.json",
+      "bytes": 3702,
+      "sha256": "2073ea2f1226fa53fd6891de1b6ecbff5de99b6894d9ca22c7da54ebc6ae945d"
+    },
+    {
+      "path": "before-contact-adjustment-v03.png",
+      "bytes": 40130,
+      "sha256": "726d2d0e974d1229ecff5fe2bb595dfe23617b1dc7a47b19411b1b6927cf3c1c"
+    },
+    {
+      "path": "before-shoulder-seating-v02.png",
+      "bytes": 38767,
+      "sha256": "adeb7b26ed7d432a5c08bbbba12495216fc44e83e80b7d5ede17f8d4e797484f"
+    },
+    {
+      "path": "browser-checks.json",
+      "bytes": 22810,
+      "sha256": "4b5799928e5d1b13c0d1795b011452146d1ab0abdab794811251604ed42dfcab"
+    },
+    {
+      "path": "check-review.cjs",
+      "bytes": 3646,
+      "sha256": "1ff55c4897b1e82581d8c3b55cfc1a1cbb9a6c4295d45ddd108e05b281e16bb1"
+    },
+    {
+      "path": "cleanup-registration.json",
+      "bytes": 1599,
+      "sha256": "9900ab91c4d0e551c008663c8970a7dea0669225b04d74a04652773a60775c42"
+    },
+    {
+      "path": "edge-check.html",
+      "bytes": 1037,
+      "sha256": "7f61c6833fcb78c5fdd227e1b8da66bcea73ae800f74bb58352c5611aef14874"
+    },
+    {
+      "path": "edge-verification.json",
+      "bytes": 381,
+      "sha256": "02b7270a44e54037f200e15e624d5ae87dd2f8bf405bfcc943c973cac7d3812c"
+    },
+    {
+      "path": "export-and-check-edges.cjs",
+      "bytes": 2191,
+      "sha256": "69957ed4bc6bf3f0f393f6a0fe4ec096fb409994dd614a82641a034f992744f5"
+    },
+    {
+      "path": "generation-prompts.json",
+      "bytes": 4660,
+      "sha256": "7074331ba8e3134983b99e509df986c561f69e9dad56fe676fd68983b7d8a636"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3162,
+      "sha256": "24247dd945eb19bbdb862d9b643b95efd2a37e2b97f6fe40cafaf1fc1baaa8f5"
+    },
+    {
+      "path": "package-review.py",
+      "bytes": 1878,
+      "sha256": "5cc39ab449ce908f3a730472fb40605c25d403d3c7d528fae0a22fb457f5b804"
+    },
+    {
+      "path": "page-review.png",
+      "bytes": 248348,
+      "sha256": "44411b05c9426568a886eb92443b5d01711db348ed80205fc0f1d358cf30392c"
+    },
+    {
+      "path": "preserved-assets.json",
+      "bytes": 615,
+      "sha256": "1780e09ac7e2cf32709a0b850ab481e2dce9a76ff0f307aaa01f52d32db9e1b2"
+    },
+    {
+      "path": "product-size-review.png",
+      "bytes": 239347,
+      "sha256": "ebf3f7917498093f549c0ad60a394871925617a21c085574dc168ba68c2c61e9"
+    },
+    {
+      "path": "psd-provenance.json",
+      "bytes": 12700,
+      "sha256": "2cc23f32c084cbb49015dfdf33096b2519098bd40d75073f22f01287cde54bdc"
+    },
+    {
+      "path": "pump-reference.png",
+      "bytes": 135191,
+      "sha256": "fa2e0c1301424512ae243b49a75dbd6eff3496dc24c36876b9351a33e8eea893"
+    },
+    {
+      "path": "recover-psd.py",
+      "bytes": 2735,
+      "sha256": "1807693347d47c97bdc0de9c2fe2bd5d13f2333fcf7da9987a7579aee717b8a1"
+    },
+    {
+      "path": "register-cleanup.cjs",
+      "bytes": 2952,
+      "sha256": "d5973bba768a0dbe585fb86f3c6803aeaaa35027064b6b286da4ea80371f8a6b"
+    },
+    {
+      "path": "restore.mjs",
+      "bytes": 2694,
+      "sha256": "05968d5922a474322313801e4a55b0482d0f45ec3acfbac4792fad724d61b7e1"
+    },
+    {
+      "path": "review.mjs",
+      "bytes": 5371,
+      "sha256": "30001fea6e9fa957525bf6bf946e0b469c37628fee05061de9e5cecfe4f01b82"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-BLK-17-415-01--collar.png",
+      "bytes": 40472,
+      "sha256": "a028691129ace1193997cb09d53eb503510f196708d9a9a3dfbbfa740e3006bf",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-BLK-17-415-01--collar.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-BLK-17-415-01--sprayer.png",
+      "bytes": 61211,
+      "sha256": "e1a702da154ad6dd77950ac20562e2c55f7c2811679c0dcbf045be8c20622b98",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-BLK-17-415-01--sprayer.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-CLR-17-415--collar.png",
+      "bytes": 105494,
+      "sha256": "3aaad2679f488259c597ee4f98bc230ea9c39f7cb3a8beb7d4c3336b7918ccee",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-CLR-17-415--collar.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-CLR-17-415--sprayer.png",
+      "bytes": 61211,
+      "sha256": "e3c2b6d53c0b2f60603ea10a5cc652f187a38b20d54b6f4d2eac7c236546aa23",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-CLR-17-415--sprayer.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-RED-17-415--collar.png",
+      "bytes": 99100,
+      "sha256": "c39ace8baf084db6c8c034080adc3240a1eb34fb4f501e2978ba0d86973a1be6",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-RED-17-415--collar.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-RED-17-415--sprayer.png",
+      "bytes": 61211,
+      "sha256": "16db8e5b2c3f8e1c14d1cab227e6da253a39609d50bf0ac81f5239c025a41e1b",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-RED-17-415--sprayer.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SGLD-17-415--collar.png",
+      "bytes": 88494,
+      "sha256": "1a664dd8e175e87008adb19090b701cf65672e51b3b89f15a569d8adff32dacc",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SGLD-17-415--collar.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SGLD-17-415--sprayer.png",
+      "bytes": 61211,
+      "sha256": "ba606009b1b274ee70fed1e00d097e2ff8c7cc6ae4c9bf9af9fe267ff12a9fa0",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SGLD-17-415--sprayer.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SLV-17-415--collar.png",
+      "bytes": 42199,
+      "sha256": "68ce28f209f1fd23e7498c3d1a95d65eefdf699cc95040420c300f5eb52c6069",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SLV-17-415--collar.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SLV-17-415--sprayer.png",
+      "bytes": 61211,
+      "sha256": "00908138e5529120b2f41ded501dbf9f889962a4909b3e3d8478ee4858ef7c90",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SLV-17-415--sprayer.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SSLV-17-415--collar.png",
+      "bytes": 42059,
+      "sha256": "6d6e1807ab55c8ae418d64acc37afac8e8e131ef9eb32acffc55445cf5952366",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SSLV-17-415--collar.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SSLV-17-415--sprayer.png",
+      "bytes": 61211,
+      "sha256": "91dbb6f8b8868f9977fadd7f70e79143b0f3fd318bc9f7fb97a8443f4061ef1b",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/CMP-SPR-SSLV-17-415--sprayer.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.png",
+      "bytes": 887018,
+      "sha256": "7aedfaed66d5579c836af8adf3e7dab63122486fca5af1d5330478da09c2508e",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.svg",
+      "bytes": 2024039,
+      "sha256": "f3bc2aa264417115a337583e0f8b8a1c87bd6fa1c4e03d81be245f715cf37735",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.png",
+      "bytes": 831626,
+      "sha256": "f71292c15119d1aef747fc967ae32ad2d3410179eedeb90bace1fe47d4e2378e",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.svg",
+      "bytes": 2113370,
+      "sha256": "3e30af16ba6d023bbd60c3756f9fb4ecee40da77bb6dfc5f75aad285f89403da",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/body-approved.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/body-approved.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/edge-check.html",
+      "bytes": 1037,
+      "sha256": "7f61c6833fcb78c5fdd227e1b8da66bcea73ae800f74bb58352c5611aef14874",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/edge-check.html"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/index.html",
+      "bytes": 3162,
+      "sha256": "24247dd945eb19bbdb862d9b643b95efd2a37e2b97f6fe40cafaf1fc1baaa8f5",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/psd-provenance.json",
+      "bytes": 12700,
+      "sha256": "2cc23f32c084cbb49015dfdf33096b2519098bd40d75073f22f01287cde54bdc",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/psd-provenance.json"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/review.mjs",
+      "bytes": 5371,
+      "sha256": "30001fea6e9fa957525bf6bf946e0b469c37628fee05061de9e5cecfe4f01b82",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/review.mjs"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/tube-layer.mjs",
+      "bytes": 1215,
+      "sha256": "d8a809e4d9ebe962478eb0b976dd19800a184ec31f9fcd19cc6966a1e2906d6b",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/tube-layer.mjs"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/tube-master.png",
+      "bytes": 865610,
+      "sha256": "baa1588f17bbec4288edc69a34e1b5725570886c39f56a06e6aa28b91d033d78",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/tube-master.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/tube-reference-layer.mjs",
+      "bytes": 1129,
+      "sha256": "b33b7a8e877c5dfc92c11f63fd86dc4939c1c0a19f5ff9e7f46d0ff9bd10e02b",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/tube-reference-layer.mjs"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-psd-fitments-2026-11-01/tube-reference-v02.png",
+      "bytes": 859237,
+      "sha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f",
+      "restoreTo": "public/reviews/cylinder9-psd-fitments-2026-11-01/tube-reference-v02.png"
+    },
+    {
+      "path": "seating-v02.json",
+      "bytes": 520,
+      "sha256": "1f743368b766eaec81c84680b2b3df8100ccc2bc697b8689e6cfcbaddcecb876"
+    },
+    {
+      "path": "seating-v03.json",
+      "bytes": 476,
+      "sha256": "32a92332865fa6d4c81c5521f41743d74d0c1bbc1ac1f98dc35e76361687baf6"
+    },
+    {
+      "path": "stage-1440-bare.png",
+      "bytes": 33450,
+      "sha256": "4375e073f8f865bec202ab1e312f8cc8b40b3e54981ac95634de02e9b967eddb"
+    },
+    {
+      "path": "stage-1440-cap-on.png",
+      "bytes": 37000,
+      "sha256": "5f6750252a65677cb4f9f1c1cdf9a6c61fa3b2cc9857c53292c7e08432193168"
+    },
+    {
+      "path": "stage-1440-exploded.png",
+      "bytes": 50062,
+      "sha256": "3c7a8e2c4356158beb20f4cad8f4796faccfe9b6568150532467852e0ba46b6d"
+    },
+    {
+      "path": "stage-1440-sidecar.png",
+      "bytes": 39582,
+      "sha256": "4fe814024b75437482d6f67d1640465098c0849376a60564aa7c5c3bdab5d825"
+    },
+    {
+      "path": "stage-390-bare.png",
+      "bytes": 18273,
+      "sha256": "3e886a5edd651ad1d059663a02a07d422c10c686ff0d86e1f3e14a44a122e9b6"
+    },
+    {
+      "path": "stage-390-cap-on.png",
+      "bytes": 20406,
+      "sha256": "ff76b58eb27e648e7e910109cdc0f92422a733b675386d14c80505db25c309d7"
+    },
+    {
+      "path": "stage-390-exploded.png",
+      "bytes": 27850,
+      "sha256": "bfc0041a4b043409f183d2131e1fe5af6c11ded55455a2b7c7018ebb0eb6e70d"
+    },
+    {
+      "path": "stage-390-sidecar.png",
+      "bytes": 21984,
+      "sha256": "a1237d795502af210dd2a745325c5d9bb1ba81310eb1e16c1391d9530fa575ff"
+    },
+    {
+      "path": "stage-cap-on.png",
+      "bytes": 35448,
+      "sha256": "52c20a528a4ff12091e94b8d9d443b7ac19df0e2a4a59f73eff162db6c2037c8"
+    },
+    {
+      "path": "stage-exploded.png",
+      "bytes": 48790,
+      "sha256": "5da7e287d87644b2e1ccdb2c8fe86f1687893988126ba9a00770a7f3bbca8984"
+    },
+    {
+      "path": "stage-sidecar.png",
+      "bytes": 38385,
+      "sha256": "32e3bc009bd603df710617c10ff3c8c200b894f83caa7d88b418927c5ada9b64"
+    },
+    {
+      "path": "transparent-edge-check.png",
+      "bytes": 128887,
+      "sha256": "4b774c91cf91081ea742b4949785301b0587b1ae0b3a13d5bd506deb335563c5"
+    },
+    {
+      "path": "tube-layer.mjs",
+      "bytes": 1215,
+      "sha256": "d8a809e4d9ebe962478eb0b976dd19800a184ec31f9fcd19cc6966a1e2906d6b"
+    },
+    {
+      "path": "tube-length-studies.png",
+      "bytes": 20466,
+      "sha256": "9690918f8c4ac0aa301341451a8235d0248a0d375afad9ca3d516a4da84a68f6"
+    },
+    {
+      "path": "tube-reference-layer.mjs",
+      "bytes": 1129,
+      "sha256": "b33b7a8e877c5dfc92c11f63fd86dc4939c1c0a19f5ff9e7f46d0ff9bd10e02b"
+    },
+    {
+      "path": "tube-reference-v02-prompt.txt",
+      "bytes": 1817,
+      "sha256": "1617cb61bca1ee5c2620efb01ea31b6adf288a9646742b4b61eb6e3abdca7ac3"
+    }
+  ]
+}

@@ -162,7 +162,14 @@ export default function PdpStage({
     const showCallouts = Boolean(layout?.grid) && callouts.length > 0 && !zoom;
     const calloutRows = useMemo(() => {
         if (!layout) return [];
-        const rows = callouts.map((callout) => ({ callout, anchor: layout.anchors[callout.key] ?? null, shiftPct: 0 }));
+        const clearOvercap = layout.parts.some(part => part.slot === "overcap" && (part.url.includes("cylinder-9ml-clear-overcap-") || part.url.includes("small-sprayers-2026-10-31/overcap-12mm.png")));
+        const rows = callouts.map((callout) => ({
+            callout: clearOvercap && callout.key === "cap"
+                ? { ...callout, title: "OVERCAP", line1: "Clear", line2: "Included protective cover" }
+                : callout.key === "neck" && layout.parts.some(part => part.url.includes("small-sprayers-2026-10-31/"))
+                    ? { ...callout, title: "NECK FINISH" } : callout,
+            anchor: layout.anchors[callout.key] ?? null, shiftPct: 0,
+        }));
         // Labels read top to bottom. When two anchors sit closer than a label is
         // tall (the roller insert seats right at the neck), the lower label steps
         // down and its leader jogs; the dot stays on the part.
@@ -170,13 +177,13 @@ export default function PdpStage({
         for (const row of rows.filter((entry) => entry.anchor).sort((a, b) => a.anchor!.yPct - b.anchor!.yPct)) {
             const y = Math.max(row.anchor!.yPct, floor);
             row.shiftPct = y - row.anchor!.yPct;
-            floor = y + CALLOUT_MIN_GAP_PCT;
+            floor = y + (mobile && context.applicator === "Reducer" ? 18 : CALLOUT_MIN_GAP_PCT);
         }
         return rows;
-    }, [callouts, layout]);
+    }, [callouts, layout, mobile, context.applicator]);
 
     return (
-        <section className={styles.canvas} aria-label="Product canvas" data-testid="pdp-canvas">
+        <section id="product-canvas" className={styles.canvas} aria-label="Product canvas" data-testid="pdp-canvas">
             <div className={styles.canvasHead}>
                 <span className={styles.pickLine} data-testid="pdp-pick-line">{pickLine}</span>
                 <div className={styles.viewSwitch} role="group" aria-label="View">
@@ -193,7 +200,7 @@ export default function PdpStage({
                                 onClick={() => onViewChange(option.id)}
                                 data-testid={`pdp-view-${option.id}`}
                             >
-                                {option.label}
+                                {option.id === "sidecar" && context.applicator === "Reducer" ? "CAP OFF" : option.label}
                             </button>
                         );
                     })}
@@ -245,7 +252,7 @@ export default function PdpStage({
                 onPointerCancel={() => { pressRef.current = null; }}
             >
                 <div className={styles.stageGrid} data-on={layout?.grid ? "true" : "false"} aria-hidden />
-                <div className={styles.stageBaseline} data-on={layout ? (layout.baseline ? "true" : "false") : "true"} aria-hidden />
+                <div className={styles.stageBaseline} data-on={layout ? (layout.baseline && layout.baselinePct === undefined ? "true" : "false") : "true"} aria-hidden />
                 <div
                     className={styles.stageZoom}
                     data-testid="pdp-stage-zoom"
@@ -254,6 +261,11 @@ export default function PdpStage({
                 {layout ? (
                     <div className={styles.stageCanvasHost} role="img" aria-label={fallbackAlt}>
                         <div className={styles.stageCanvas}>
+                            {layout.baselinePct !== undefined ? (
+                                <div className={styles.stageBaseline} data-testid="pdp-glass-baseline"
+                                    data-on={layout.baseline ? "true" : "false"}
+                                    style={{ top: `${layout.baselinePct}%`, bottom: "auto" }} aria-hidden />
+                            ) : null}
                             <div className={styles.stageFrame} style={{ transform: layout.frameCss }}>
                                 {layout.backdrop ? (
                                     // The body's studio: wall, floor and contact shadow, pinned to the kit's baseline.
@@ -285,7 +297,7 @@ export default function PdpStage({
                                         key={part.key}
                                         className={styles.stagePart}
                                         data-slot={part.slot}
-                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex }}
+                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex, mixBlendMode: part.blendMode }}
                                     >
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
@@ -295,7 +307,7 @@ export default function PdpStage({
                                             decoding="async"
                                             onError={() => { if (markRegisterOptimizerUnavailable(part.url)) showRaw(part.url); }}
                                             style={{
-                                                position: "absolute", display: "block", maxWidth: "none",
+                                                position: "absolute", display: "block", maxWidth: "none", opacity: part.opacity,
                                                 left: `${part.box.leftPct}%`, top: `${part.box.topPct}%`,
                                                 width: `${part.box.widthPct}%`, height: `${part.box.heightPct}%`,
                                                 ...(part.clipBottomPct ? { clipPath: `inset(0 0 ${part.clipBottomPct}% 0)` } : {}),
@@ -313,7 +325,7 @@ export default function PdpStage({
                                         decoding="async"
                                         className={styles.stagePart}
                                         data-slot={part.slot}
-                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex }}
+                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex, mixBlendMode: part.blendMode }}
                                     />
                                 ))}
                             </div>
@@ -358,7 +370,7 @@ export default function PdpStage({
                     </button>
                 ) : null}
 
-                <div className={styles.callouts} data-on={showCallouts ? "true" : "false"} aria-hidden={!showCallouts} data-testid="pdp-callouts">
+                <div className={styles.callouts} data-on={showCallouts ? "true" : "false"} aria-hidden={!showCallouts || mobile} data-testid="pdp-callouts">
                     {calloutRows.map(({ callout, anchor, shiftPct }) => {
                         if (!anchor) return null;
                         const rowStyle: CSSProperties = {
@@ -371,7 +383,7 @@ export default function PdpStage({
                                 {shiftPct > 0 ? <span className={styles.calloutJog} style={{ left: canvasX(anchor.xPct), top: canvasY(anchor.yPct), height: `calc(var(--pdp-canvas-h) * ${shiftPct / 100})` }} /> : null}
                                 <div className={styles.callout} style={rowStyle}>
                                     <span className={styles.calloutLeader} />
-                                    <span className={styles.calloutLabel}>
+                                    <span className={styles.calloutLabel} style={mobile && context.applicator === "Reducer" ? { flexShrink: 1, minWidth: 0, overflowWrap: "anywhere" } : undefined}>
                                         <b>{callout.title}</b>
                                         {callout.line1}
                                         {callout.line2 ? <><br />{callout.line2}</> : null}
@@ -382,6 +394,17 @@ export default function PdpStage({
                     })}
                 </div>
             </div>
+
+            {layout?.grid && calloutRows.some(row => row.anchor) ? (
+                <dl className={styles.mobileCallouts} data-testid="pdp-component-details">
+                    {calloutRows.filter(row => row.anchor).map(({ callout }) => (
+                        <div key={callout.key}>
+                            <dt>{callout.title}</dt>
+                            <dd>{callout.line1}{callout.line2 ? <><br />{callout.line2}</> : null}</dd>
+                        </div>
+                    ))}
+                </dl>
+            ) : null}
 
             <div className={styles.lineup} data-testid="pdp-glass-lineup">
                 <span className={styles.lineupLabel}>

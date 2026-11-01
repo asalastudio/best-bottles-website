@@ -1,0 +1,5 @@
+import bpy,bmesh,json,sys
+from pathlib import Path
+r=Path(sys.argv[sys.argv.index('--')+1]).resolve()
+for d in (r/'working/empire-assemblies').glob('*lotion'):
+ a=json.loads((d/'repair-report-v8.json').read_text());bpy.ops.wm.open_mainfile(filepath=a['workingCopy'],load_ui=False,use_scripts=False);o=bpy.context.scene.objects['pump — white actuator'];bm=bmesh.new();bm.from_mesh(o.data);bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=1e-7);bmesh.ops.dissolve_degenerate(bm,edges=list(bm.edges),dist=1e-7);bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));check={'nonManifoldEdges':sum(not e.is_manifold for e in bm.edges),'degenerateFaces':sum(f.calc_area()<1e-16 for f in bm.faces)};bm.to_mesh(o.data);bm.free();a['workingCopy']=str(d/'model-mesh-v9.blend');a['changes'].append({'code':'DEGENERATE-FACE','detail':'Removed a submicron degenerate actuator triangle while preserving the visible surface','checks':check});bpy.ops.wm.save_as_mainfile(filepath=a['workingCopy'],compress=True);(d/'repair-report-v9.json').write_text(json.dumps(a,indent=2));print('EMPIRE_FINAL_MESH',d.name,check,flush=True)

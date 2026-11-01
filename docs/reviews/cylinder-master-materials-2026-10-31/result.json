@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-01T06:27:13.960Z",
+  "requestedModel": "gpt-image-2.5-sunburst",
+  "requestedImages": 1,
+  "generatedImages": 0,
+  "status": "waiting-for-billing-account-check",
+  "error": {
+    "httpStatus": 429,
+    "code": "credit_balance_exhausted",
+    "type": "insufficient_quota",
+    "message": "You have no credits remaining. Add credits to continue using the API."
+  },
+  "exactFileUploadApproval": "User approved source-cylinder9-clear.png and glass-material-reference.png to api.openai.com for one high-quality edit.",
+  "latestUserDecision": "Keep Sunburst; I’ll restore credits",
+  "fallbackUsed": false,
+  "runtimeChanged": false,
+  "editAttempts": 2,
+  "note": "The user reports available funds. Both attempts with the existing project key returned credit_balance_exhausted. The funded organization has not been identified; this record does not assert the balance in the user-visible account."
+}

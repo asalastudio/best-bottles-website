@@ -1,0 +1,5 @@
+import fs from 'node:fs';
+import {kitFromRegister} from '@/lib/register/stage-kit';
+const p=JSON.parse(fs.readFileSync('outputs/catalog-model-repair-2026-10-31/reports/catalog-scale/register-payload-precise-raccoon-123.json','utf8')).payload;
+const rows={};for(const [sku,a] of Object.entries(p.assemblies) as any){if(a?.bodyId==='tulip-5ml-13-415'&&a.parts?.some(p=>p.role==='sprayer')){const kit=kitFromRegister(sku,p);rows[a.websiteSku]=kit;}}
+fs.writeFileSync('outputs/catalog-model-repair-2026-10-31/component-followups/tulip-before.json',JSON.stringify(rows,null,2));console.log(JSON.stringify(rows['GBTulipAmb5SpryGlMatt'],null,2));

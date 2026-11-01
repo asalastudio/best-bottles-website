@@ -1,0 +1,132 @@
+{
+  "version": "855be1641a16",
+  "heightMm": 26.94,
+  "diameterMm": 19.19,
+  "approved": "Owner approved polished gold and silver materials and shallow angle; assembled seating still under review.",
+  "assets": {
+    "CMP-ROC-SGLD-17415": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg",
+      "key": "",
+      "sha256": "7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e",
+      "bytes": 1223500,
+      "width": 1943,
+      "height": 2718
+    },
+    "CMP-ROC-SSLV-17415": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
+      "key": "",
+      "sha256": "12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc",
+      "bytes": 1274312,
+      "width": 1943,
+      "height": 2718
+    }
+  },
+  "changed": [
+    {
+      "sku": "GBCylAmb9MtlRollShnGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-gold-shallow.ce9e8e87c0d2.svg",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SSLV-17415.7f5e94437ab3.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg"
+    },
+    {
+      "sku": "GBCylAmb9RollShnGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-gold-shallow.ce9e8e87c0d2.svg",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg"
+    },
+    {
+      "sku": "GBCylAmb9RollShnSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SSLV-17415.7f5e94437ab3.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg"
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-gold-shallow.ce9e8e87c0d2.svg",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg"
+    },
+    {
+      "sku": "GBCyl9MtlRollShnSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SSLV-17415.7f5e94437ab3.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg"
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-gold-shallow.ce9e8e87c0d2.svg",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg"
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SSLV-17415.7f5e94437ab3.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-gold-shallow.ce9e8e87c0d2.svg",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SSLV-17415.7f5e94437ab3.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg"
+    },
+    {
+      "sku": "GBCylBlu9RollShnGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-gold-shallow.ce9e8e87c0d2.svg",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg"
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SSLV-17415.7f5e94437ab3.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg"
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-gold-shallow.ce9e8e87c0d2.svg",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg"
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SSLV-17415.7f5e94437ab3.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg"
+    },
+    {
+      "sku": "GBCylFrst9RollShnGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-gold-shallow.ce9e8e87c0d2.svg",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg"
+    },
+    {
+      "sku": "GBCylFrst9RollShnSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SSLV-17415.7f5e94437ab3.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg"
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-gold-shallow.ce9e8e87c0d2.svg",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg"
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SSLV-17415.7f5e94437ab3.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg"
+    },
+    {
+      "sku": "GBCylSwrl9RollShnGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-gold-shallow.ce9e8e87c0d2.svg",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-gold.7ef02838716e.svg"
+    },
+    {
+      "sku": "GBCylSwrl9RollShnSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SSLV-17415.7f5e94437ab3.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg"
+    }
+  ],
+  "sourcePixelOutline": [
+    199,
+    136,
+    764,
+    1091
+  ]
+}

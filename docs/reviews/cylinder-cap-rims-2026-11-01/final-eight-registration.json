@@ -1,0 +1,480 @@
+{
+  "version": "c1c8e6cfc8ff",
+  "heightMm": 26.94,
+  "diameterMm": 19.19,
+  "approved": "Eight generated finishes matched to owner-approved polished pair geometry and measured registration. Owner visual approval of these eight pending.",
+  "assets": {
+    "CMP-ROC-BLK-17415-DOT": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg",
+      "key": "",
+      "sha256": "a1e91c4aa199cac161099728ff5269758f12c4d8edbd6d14209b52a052b3a8b8",
+      "bytes": 1371260,
+      "width": 1943,
+      "height": 2718
+    },
+    "CMP-ROC-PNK-17415-DOT": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
+      "key": "",
+      "sha256": "ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d",
+      "bytes": 1821432,
+      "width": 1943,
+      "height": 2718
+    },
+    "CMP-ROC-SLV-17415-DOT": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg",
+      "key": "",
+      "sha256": "4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9",
+      "bytes": 1916128,
+      "width": 1943,
+      "height": 2718
+    },
+    "CMP-ROC-WHT-17415": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg",
+      "key": "",
+      "sha256": "89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977",
+      "bytes": 1329284,
+      "width": 1943,
+      "height": 2718
+    },
+    "CMP-ROC-MGLD-17415": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg",
+      "key": "",
+      "sha256": "c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860",
+      "bytes": 1643092,
+      "width": 1943,
+      "height": 2718
+    },
+    "CMP-ROC-MSLV-17415": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg",
+      "key": "",
+      "sha256": "599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9",
+      "bytes": 1662024,
+      "width": 1943,
+      "height": 2718
+    },
+    "CMP-ROC-CPR-17415": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg",
+      "key": "",
+      "sha256": "c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff",
+      "bytes": 1664600,
+      "width": 1943,
+      "height": 2718
+    },
+    "CMP-ROC-SBLK-17415": {
+      "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg",
+      "key": "",
+      "sha256": "370d4a5706e077f6bc0d9df2398d6af8b666bb738003fd2932b664f34cb856bd",
+      "bytes": 1295992,
+      "width": 1943,
+      "height": 2718
+    }
+  },
+  "changed": [
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-BLK-17415-DOT.b9d4bac8918a.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattCu",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-CPR-17415.46e2882e3e1e.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MGLD-17415.bc90473d3e10.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MSLV-17415.7baffb6d9271.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollPnkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-PNK-17415-DOT.127ace97ecc4.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShBlk",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SBLK-17415.b89416ba3c15.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollSlDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SLV-17415-DOT.f722e9fc16b2.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollWht",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-WHT-17415.00e2726361df.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg"
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-BLK-17415-DOT.b9d4bac8918a.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg"
+    },
+    {
+      "sku": "GBCylAmb9RollMattCu",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-CPR-17415.46e2882e3e1e.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg"
+    },
+    {
+      "sku": "GBCylAmb9RollMattGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MGLD-17415.bc90473d3e10.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg"
+    },
+    {
+      "sku": "GBCylAmb9RollMattSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MSLV-17415.7baffb6d9271.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg"
+    },
+    {
+      "sku": "GBCylAmb9RollPnkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-PNK-17415-DOT.127ace97ecc4.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg"
+    },
+    {
+      "sku": "GBCylAmb9RollShBlk",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SBLK-17415.b89416ba3c15.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg"
+    },
+    {
+      "sku": "GBCylAmb9RollSlDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SLV-17415-DOT.f722e9fc16b2.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg"
+    },
+    {
+      "sku": "GBCylAmb9RollWht",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-WHT-17415.00e2726361df.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg"
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-BLK-17415-DOT.b9d4bac8918a.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg"
+    },
+    {
+      "sku": "GBCyl9MtlRollMattCu",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-CPR-17415.46e2882e3e1e.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg"
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MGLD-17415.bc90473d3e10.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg"
+    },
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MSLV-17415.7baffb6d9271.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg"
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-PNK-17415-DOT.127ace97ecc4.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg"
+    },
+    {
+      "sku": "GBCyl9MtlRollShBlk",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SBLK-17415.b89416ba3c15.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg"
+    },
+    {
+      "sku": "GBCyl9MtlRollSlDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SLV-17415-DOT.f722e9fc16b2.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg"
+    },
+    {
+      "sku": "GBCyl9MtlRollWht",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-WHT-17415.00e2726361df.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg"
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-BLK-17415-DOT.b9d4bac8918a.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg"
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-CPR-17415.46e2882e3e1e.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg"
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MGLD-17415.bc90473d3e10.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg"
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MSLV-17415.7baffb6d9271.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg"
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-PNK-17415-DOT.127ace97ecc4.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg"
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SBLK-17415.b89416ba3c15.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg"
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SLV-17415-DOT.f722e9fc16b2.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg"
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-WHT-17415.00e2726361df.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-BLK-17415-DOT.b9d4bac8918a.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattCu",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-CPR-17415.46e2882e3e1e.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MGLD-17415.bc90473d3e10.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MSLV-17415.7baffb6d9271.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollPnkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-PNK-17415-DOT.127ace97ecc4.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShBlk",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SBLK-17415.b89416ba3c15.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollSlDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SLV-17415-DOT.f722e9fc16b2.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollWht",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-WHT-17415.00e2726361df.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg"
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-BLK-17415-DOT.b9d4bac8918a.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg"
+    },
+    {
+      "sku": "GBCylBlu9RollMattCu",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-CPR-17415.46e2882e3e1e.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg"
+    },
+    {
+      "sku": "GBCylBlu9RollMattGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MGLD-17415.bc90473d3e10.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg"
+    },
+    {
+      "sku": "GBCylBlu9RollMattSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MSLV-17415.7baffb6d9271.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg"
+    },
+    {
+      "sku": "GBCylBlu9RollPnkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-PNK-17415-DOT.127ace97ecc4.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg"
+    },
+    {
+      "sku": "GBCylBlu9RollShBlk",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SBLK-17415.b89416ba3c15.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg"
+    },
+    {
+      "sku": "GBCylBlu9RollSlDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SLV-17415-DOT.f722e9fc16b2.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg"
+    },
+    {
+      "sku": "GBCylBlu9RollWht",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-WHT-17415.00e2726361df.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg"
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-BLK-17415-DOT.b9d4bac8918a.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg"
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattCu",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-CPR-17415.46e2882e3e1e.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg"
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MGLD-17415.bc90473d3e10.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg"
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MSLV-17415.7baffb6d9271.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg"
+    },
+    {
+      "sku": "GBCylFrst9MtlRollPnkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-PNK-17415-DOT.127ace97ecc4.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg"
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShBlk",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SBLK-17415.b89416ba3c15.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg"
+    },
+    {
+      "sku": "GBCylFrst9MtlRollSlDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SLV-17415-DOT.f722e9fc16b2.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg"
+    },
+    {
+      "sku": "GBCylFrst9MtlRollWht",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-WHT-17415.00e2726361df.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg"
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-BLK-17415-DOT.b9d4bac8918a.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg"
+    },
+    {
+      "sku": "GBCylFrst9RollMattCu",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-CPR-17415.46e2882e3e1e.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg"
+    },
+    {
+      "sku": "GBCylFrst9RollMattGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MGLD-17415.bc90473d3e10.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg"
+    },
+    {
+      "sku": "GBCylFrst9RollMattSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MSLV-17415.7baffb6d9271.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg"
+    },
+    {
+      "sku": "GBCylFrst9RollPnkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-PNK-17415-DOT.127ace97ecc4.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg"
+    },
+    {
+      "sku": "GBCylFrst9RollShBlk",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SBLK-17415.b89416ba3c15.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg"
+    },
+    {
+      "sku": "GBCylFrst9RollSlDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SLV-17415-DOT.f722e9fc16b2.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg"
+    },
+    {
+      "sku": "GBCylFrst9RollWht",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-WHT-17415.00e2726361df.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg"
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-BLK-17415-DOT.b9d4bac8918a.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg"
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattCu",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-CPR-17415.46e2882e3e1e.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg"
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MGLD-17415.bc90473d3e10.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg"
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MSLV-17415.7baffb6d9271.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg"
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollPnkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-PNK-17415-DOT.127ace97ecc4.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg"
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShBlk",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SBLK-17415.b89416ba3c15.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg"
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollSlDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SLV-17415-DOT.f722e9fc16b2.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg"
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollWht",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-WHT-17415.00e2726361df.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg"
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-BLK-17415-DOT.b9d4bac8918a.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-black-dotted.a1e91c4aa199.svg"
+    },
+    {
+      "sku": "GBCylSwrl9RollMattCu",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-CPR-17415.46e2882e3e1e.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg"
+    },
+    {
+      "sku": "GBCylSwrl9RollMattGl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MGLD-17415.bc90473d3e10.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-gold.c78f2b41c8cf.svg"
+    },
+    {
+      "sku": "GBCylSwrl9RollMattSl",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MSLV-17415.7baffb6d9271.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-silver.599ca6d02ec2.svg"
+    },
+    {
+      "sku": "GBCylSwrl9RollPnkDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-PNK-17415-DOT.127ace97ecc4.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg"
+    },
+    {
+      "sku": "GBCylSwrl9RollShBlk",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SBLK-17415.b89416ba3c15.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-shiny-black.370d4a5706e0.svg"
+    },
+    {
+      "sku": "GBCylSwrl9RollSlDot",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SLV-17415-DOT.f722e9fc16b2.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-silver-dotted.4897dd1c954a.svg"
+    },
+    {
+      "sku": "GBCylSwrl9RollWht",
+      "before": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-WHT-17415.00e2726361df.png",
+      "after": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-white.89d2da5d92b2.svg"
+    }
+  ],
+  "sourcePixelOutline": [
+    199,
+    136,
+    764,
+    1091
+  ]
+}

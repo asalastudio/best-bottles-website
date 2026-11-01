@@ -1,0 +1,991 @@
+{
+  "summary": {
+    "checkedAt": "2026-11-01T06:24:35.231Z",
+    "family": "Cylinder",
+    "scope": "Glass bodies only; caps and fitments reuse each body.",
+    "catalogGroups": 53,
+    "glassProductGroups": 50,
+    "glassProductGroupsWithCachedVariants": 49,
+    "plasticProductGroups": 3,
+    "bodyDesigns": 12,
+    "bodyColorMasters": 18,
+    "recoveredSourceMasters": 17,
+    "sourceRecoveryNeeded": [
+      "cylinder-30ml-18-415|Clear"
+    ],
+    "unmappedGlassGroups": [],
+    "pilot": "cylinder-9ml-17-415|Clear",
+    "requestedModel": "gpt-image-2.5-sunburst",
+    "familyBatchStatus": "not started; one pilot for review first",
+    "scalePolicy": "Use the 109 recovered anchor/target records and accepted later family exceptions. Increased source pixels do not increase on-canvas bottle size.",
+    "runtimeChanged": false
+  },
+  "rows": [
+    {
+      "plateKey": "cylinder-3.3ml-12mm|Clear",
+      "bodyId": "cylinder-3.3ml-12mm",
+      "capacityMl": 3.3,
+      "neck": "12mm",
+      "glass": "Clear",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/15ce2cfbff36dc202e30e66bdf511ed1d2f6e1586759a5640a49e3904bc042c7.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/940322a814dbe4710e139d228ff1ac7653b19d9dd1324a29ece7eb72f3283c51.png",
+      "fileSha256": "15ce2cfbff36dc202e30e66bdf511ed1d2f6e1586759a5640a49e3904bc042c7",
+      "anchors": {
+        "axisX": 575,
+        "seatY": 128,
+        "shoulderY": 146,
+        "baselineY": 2095
+      },
+      "scale": {
+        "targetPct": 28,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 37
+      },
+      "protectedLaterCorrection": true,
+      "productPages": [
+        {
+          "slug": "cylinder-3.3ml-clear-12mm-finemist",
+          "name": "3.3 ml Clear Cylinder Fine Mist Spray Bottle",
+          "variantCount": 2,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Reconcile later accepted geometry/component repairs before assigning a final body."
+    },
+    {
+      "plateKey": "cylinder-4ml-12mm|Clear",
+      "bodyId": "cylinder-4ml-12mm",
+      "capacityMl": 4,
+      "neck": "12mm",
+      "glass": "Clear",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/6ee48a6120f0324b73485ecff23bf8caa61037ff51de462afdef5975ee9f92eb.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/b9b6d6103edaf56bb056c679c05c0f7b237d621ae2507f06d65336d40fc439b7.png",
+      "fileSha256": "6ee48a6120f0324b73485ecff23bf8caa61037ff51de462afdef5975ee9f92eb",
+      "anchors": {
+        "axisX": 465,
+        "seatY": 123,
+        "shoulderY": 156,
+        "baselineY": 2096
+      },
+      "scale": {
+        "targetPct": 32.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 49
+      },
+      "protectedLaterCorrection": true,
+      "productPages": [
+        {
+          "slug": "cylinder-4ml-clear-12mm-finemist",
+          "name": "4 ml Clear Cylinder Fine Mist Spray Bottle",
+          "variantCount": 2,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Reconcile later accepted geometry/component repairs before assigning a final body."
+    },
+    {
+      "plateKey": "cylinder-5ml-13-415|Clear",
+      "bodyId": "cylinder-5ml-13-415",
+      "capacityMl": 5,
+      "neck": "13-415",
+      "glass": "Clear",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/7a241aaee776778898fea5fb9994d4a4030638b9d104815c7683791a39d66da9.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/e1f7c0e7d1305ff1f3c2c9a22602f619d9576754473977a1c5ecb146e6280ec2.png",
+      "fileSha256": "7a241aaee776778898fea5fb9994d4a4030638b9d104815c7683791a39d66da9",
+      "anchors": {
+        "axisX": 444.5,
+        "seatY": 151,
+        "shoulderY": 577,
+        "baselineY": 2094,
+        "barrelAxisX": 455,
+        "bodyShoulderY": 607
+      },
+      "scale": {
+        "targetPct": 36.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 53
+      },
+      "protectedLaterCorrection": true,
+      "productPages": [
+        {
+          "slug": "cylinder-5ml-clear-13-415",
+          "name": "5 ml Clear Cylinder Bottle",
+          "variantCount": 10,
+          "applicators": [
+            "Cap/Closure"
+          ]
+        },
+        {
+          "slug": "cylinder-5ml-clear-13-415-rollon",
+          "name": "5 ml Clear Cylinder Roll-On Bottle",
+          "variantCount": 18,
+          "applicators": [
+            "Metal Roller Ball",
+            "Plastic Roller Ball"
+          ]
+        },
+        {
+          "slug": "cylinder-5ml-clear-13-415-finemist",
+          "name": "5 ml Clear Cylinder Fine Mist Spray Bottle",
+          "variantCount": 8,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Reconcile later accepted geometry/component repairs before assigning a final body."
+    },
+    {
+      "plateKey": "cylinder-5ml-13-415|Cobalt Blue",
+      "bodyId": "cylinder-5ml-13-415",
+      "capacityMl": 5,
+      "neck": "13-415",
+      "glass": "Cobalt Blue",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/834e1cce7a7f3d6dfa135707e769b209d889061754b8825db1655c38c0271cdb.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/5db1c8bb2111937674cbe79084673e547e4cc18906aabc7d72010a5e52cca84b.png",
+      "fileSha256": "834e1cce7a7f3d6dfa135707e769b209d889061754b8825db1655c38c0271cdb",
+      "anchors": {
+        "axisX": 446,
+        "seatY": 150,
+        "shoulderY": 580,
+        "baselineY": 2095,
+        "barrelAxisX": 454.5,
+        "bodyShoulderY": 611
+      },
+      "scale": {
+        "targetPct": 36.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 53
+      },
+      "protectedLaterCorrection": true,
+      "productPages": [
+        {
+          "slug": "cylinder-5ml-cobalt-blue-13-415",
+          "name": "5 ml Cobalt Blue Cylinder Bottle",
+          "variantCount": 10,
+          "applicators": [
+            "Cap/Closure"
+          ]
+        },
+        {
+          "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+          "name": "5 ml Cobalt Blue Cylinder Roll-On Bottle",
+          "variantCount": 18,
+          "applicators": [
+            "Metal Roller Ball",
+            "Plastic Roller Ball"
+          ]
+        },
+        {
+          "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+          "name": "5 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
+          "variantCount": 7,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Reconcile later accepted geometry/component repairs before assigning a final body."
+    },
+    {
+      "plateKey": "cylinder-5.5ml-13-415|Clear",
+      "bodyId": "cylinder-5.5ml-13-415",
+      "capacityMl": 5.5,
+      "neck": "13-415",
+      "glass": "Clear",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/77f8547a00012f0bcd36cddfef803378056434f70278ba285e76819dbc115c07.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/e5f40a8f37ff4f0d00817aa62bedb63605d75ba3068aa8d88dd8cf5af91592e5.png",
+      "fileSha256": "77f8547a00012f0bcd36cddfef803378056434f70278ba285e76819dbc115c07",
+      "anchors": {
+        "axisX": 444.5,
+        "seatY": 151,
+        "shoulderY": 578,
+        "baselineY": 2095,
+        "barrelAxisX": 455,
+        "bodyShoulderY": 604
+      },
+      "scale": {
+        "targetPct": 36.2871,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/next-batch-2026-09-25/README.md",
+        "basis": "catalog-curve",
+        "heightBareMm": 53
+      },
+      "protectedLaterCorrection": false,
+      "productPages": [
+        {
+          "slug": "cylinder-5.5ml-clear-13-415-finemist",
+          "name": "5.5 ml Clear Cylinder Fine Mist Spray Bottle",
+          "variantCount": 1,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        },
+        {
+          "slug": "cylinder-5.5ml-clear-13-415-capclosure",
+          "name": "5.5 ml Clear Cylinder Bottle",
+          "variantCount": 0,
+          "applicators": [
+            "Cap/Closure"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Retain registered geometry and approved scale; material treatment follows pilot review."
+    },
+    {
+      "plateKey": "cylinder-9ml-13-415|Clear",
+      "bodyId": "cylinder-9ml-13-415",
+      "capacityMl": 9,
+      "neck": "13-415",
+      "glass": "Clear",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/7a866573d796d5543c2e6e88e4b4fb96d08fdde722b6ba6f07c0a528b7cf9ff6.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/170ebb7506f7fe2fb9b476317578cd4515c705a7529e6bcdb8bb5b2fecbd40c0.png",
+      "fileSha256": "7a866573d796d5543c2e6e88e4b4fb96d08fdde722b6ba6f07c0a528b7cf9ff6",
+      "anchors": {
+        "axisX": 353.8,
+        "seatY": 125,
+        "shoulderY": 330,
+        "baselineY": 2096,
+        "barrelAxisX": 367.5,
+        "bodyShoulderY": 340
+      },
+      "scale": {
+        "targetPct": 62.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 106
+      },
+      "protectedLaterCorrection": true,
+      "productPages": [
+        {
+          "slug": "cylinder-9ml-clear-13-415-finemist",
+          "name": "9 ml Clear Cylinder Fine Mist Spray Bottle",
+          "variantCount": 8,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-clear-13-415",
+          "name": "9 ml Clear Cylinder Bottle with Cap",
+          "variantCount": 10,
+          "applicators": []
+        },
+        {
+          "slug": "cylinder-9ml-clear-13-415-rollon",
+          "name": "9 ml Clear Cylinder Roll-On Bottle",
+          "variantCount": 18,
+          "applicators": [
+            "Metal Roller Ball",
+            "Plastic Roller Ball"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Reconcile later accepted geometry/component repairs before assigning a final body."
+    },
+    {
+      "plateKey": "cylinder-9ml-13-415|Frosted",
+      "bodyId": "cylinder-9ml-13-415",
+      "capacityMl": 9,
+      "neck": "13-415",
+      "glass": "Frosted",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/7cadb88aa92ccff1c337efa5904398e792e3832cff5cfdd0a9366af51066495e.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/a947448b227ce22aa17497df7eb3c1a12ecb39bac1078e8286be79ecfb3f550b.png",
+      "fileSha256": "7cadb88aa92ccff1c337efa5904398e792e3832cff5cfdd0a9366af51066495e",
+      "anchors": {
+        "axisX": 356.8,
+        "seatY": 125,
+        "shoulderY": 328,
+        "baselineY": 2096,
+        "barrelAxisX": 368.5,
+        "bodyShoulderY": 340
+      },
+      "scale": {
+        "targetPct": 62.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 106
+      },
+      "protectedLaterCorrection": true,
+      "productPages": [
+        {
+          "slug": "cylinder-9ml-frosted-13-415-finemist",
+          "name": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
+          "variantCount": 8,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-frosted-13-415",
+          "name": "9 ml Frosted Cylinder Bottle with Cap",
+          "variantCount": 10,
+          "applicators": []
+        },
+        {
+          "slug": "cylinder-9ml-frosted-13-415-rollon",
+          "name": "9 ml Frosted Cylinder Roll-On Bottle",
+          "variantCount": 18,
+          "applicators": [
+            "Metal Roller Ball",
+            "Plastic Roller Ball"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Reconcile later accepted geometry/component repairs before assigning a final body."
+    },
+    {
+      "plateKey": "cylinder-9ml-17-415|Amber",
+      "bodyId": "cylinder-9ml-17-415",
+      "capacityMl": 9,
+      "neck": "17-415",
+      "glass": "Amber",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/2497d6024a8575bc1c3dfb7ca8e09cb1cfa654c81fd3a7b41a89452fca4fac8d.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/50ae1ae8df2e9fab769df154dc61974b8fa23bfa564f3eaf0e7db667dd4a96f7.png",
+      "fileSha256": "2497d6024a8575bc1c3dfb7ca8e09cb1cfa654c81fd3a7b41a89452fca4fac8d",
+      "anchors": {
+        "axisX": 379,
+        "seatY": 125,
+        "shoulderY": 480,
+        "baselineY": 2096,
+        "barrelAxisX": 384,
+        "bodyShoulderY": 491
+      },
+      "scale": {
+        "targetPct": 43.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 70
+      },
+      "protectedLaterCorrection": true,
+      "productPages": [
+        {
+          "slug": "cylinder-9ml-amber-17-415-finemist",
+          "name": "9 ml Amber Cylinder Fine Mist Spray Bottle",
+          "variantCount": 6,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-amber-17-415-lotionpump",
+          "name": "9 ml Amber Cylinder Lotion Pump Bottle",
+          "variantCount": 3,
+          "applicators": [
+            "Lotion Pump"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-amber-17-415-rollon",
+          "name": "9 ml Amber Cylinder Roll-On Bottle",
+          "variantCount": 20,
+          "applicators": [
+            "Metal Roller Ball",
+            "Plastic Roller Ball"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Reconcile later accepted geometry/component repairs before assigning a final body."
+    },
+    {
+      "plateKey": "cylinder-9ml-17-415|Clear",
+      "bodyId": "cylinder-9ml-17-415",
+      "capacityMl": 9,
+      "neck": "17-415",
+      "glass": "Clear",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/35018244cb0df545826f81a741f502b2f3913c7f1ebe29a81e3e6ef06cfe264d.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/1d85ae177e4fcf59af6937b97e0417a5dc1c323a3a2aab24dfc626add040515c.png",
+      "fileSha256": "35018244cb0df545826f81a741f502b2f3913c7f1ebe29a81e3e6ef06cfe264d",
+      "anchors": {
+        "axisX": 379,
+        "seatY": 125,
+        "shoulderY": 477,
+        "baselineY": 2096,
+        "barrelAxisX": 383.5,
+        "bodyShoulderY": 491
+      },
+      "scale": {
+        "targetPct": 43.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 70
+      },
+      "protectedLaterCorrection": true,
+      "productPages": [
+        {
+          "slug": "cylinder-9ml-clear-17-415-finemist",
+          "name": "9 ml Clear Cylinder Fine Mist Spray Bottle",
+          "variantCount": 6,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-clear-17-415-lotionpump",
+          "name": "9 ml Clear Cylinder Lotion Pump Bottle",
+          "variantCount": 3,
+          "applicators": [
+            "Lotion Pump"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-clear-17-415-rollon",
+          "name": "9 ml Clear Cylinder Roll-On Bottle",
+          "variantCount": 20,
+          "applicators": [
+            "Metal Roller Ball",
+            "Plastic Roller Ball"
+          ]
+        }
+      ],
+      "state": "pilot-prepared",
+      "note": "Reconcile later accepted geometry/component repairs before assigning a final body."
+    },
+    {
+      "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+      "bodyId": "cylinder-9ml-17-415",
+      "capacityMl": 9,
+      "neck": "17-415",
+      "glass": "Cobalt Blue",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/4151b885b0cbb6cfb89fd1e7ced3f8c3664870cca2399acc00e4c10bc02367d3.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/7058c80a92d7a19ef4bd46557c005525bfeb97d910ec22eeb641583c5ae16c47.png",
+      "fileSha256": "4151b885b0cbb6cfb89fd1e7ced3f8c3664870cca2399acc00e4c10bc02367d3",
+      "anchors": {
+        "axisX": 381,
+        "seatY": 125,
+        "shoulderY": 490,
+        "baselineY": 2096,
+        "barrelAxisX": 384.5,
+        "bodyShoulderY": 505
+      },
+      "scale": {
+        "targetPct": 43.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 70
+      },
+      "protectedLaterCorrection": true,
+      "productPages": [
+        {
+          "slug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+          "name": "9 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
+          "variantCount": 6,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+          "name": "9 ml Cobalt Blue Cylinder Lotion Pump Bottle",
+          "variantCount": 3,
+          "applicators": [
+            "Lotion Pump"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "name": "9 ml Cobalt Blue Cylinder Roll-On Bottle",
+          "variantCount": 20,
+          "applicators": [
+            "Metal Roller Ball",
+            "Plastic Roller Ball"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Reconcile later accepted geometry/component repairs before assigning a final body."
+    },
+    {
+      "plateKey": "cylinder-9ml-17-415|Frosted",
+      "bodyId": "cylinder-9ml-17-415",
+      "capacityMl": 9,
+      "neck": "17-415",
+      "glass": "Frosted",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/c684d0095b694cb60a90e599f2d9ee138eda6114e79321654d7b10a93c8553a7.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/371a5005efa829abb55caf0ff9776bb708f81a0e8cf26551e30d7de6a7f9b0a0.png",
+      "fileSha256": "c684d0095b694cb60a90e599f2d9ee138eda6114e79321654d7b10a93c8553a7",
+      "anchors": {
+        "axisX": 379.5,
+        "seatY": 125,
+        "shoulderY": 489,
+        "baselineY": 2097,
+        "barrelAxisX": 384.5,
+        "bodyShoulderY": 502
+      },
+      "scale": {
+        "targetPct": 43.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 70
+      },
+      "protectedLaterCorrection": true,
+      "productPages": [
+        {
+          "slug": "cylinder-9ml-frosted-17-415-finemist",
+          "name": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
+          "variantCount": 6,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-frosted-17-415-lotionpump",
+          "name": "9 ml Frosted Cylinder Lotion Pump Bottle",
+          "variantCount": 3,
+          "applicators": [
+            "Lotion Pump"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-frosted-17-415-rollon",
+          "name": "9 ml Frosted Cylinder Roll-On Bottle",
+          "variantCount": 20,
+          "applicators": [
+            "Metal Roller Ball",
+            "Plastic Roller Ball"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Reconcile later accepted geometry/component repairs before assigning a final body."
+    },
+    {
+      "plateKey": "cylinder-9ml-17-415|Swirl",
+      "bodyId": "cylinder-9ml-17-415",
+      "capacityMl": 9,
+      "neck": "17-415",
+      "glass": "Swirl",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/98808a04fcb5bc57b0273448bf7a938a589fd0b1b782a5f00f3cdcf6fd3afcd1.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/4c2770b3633bab675e7a2231ec4211b195c4ec3a5bbb366503bb47960f67cf73.png",
+      "fileSha256": "98808a04fcb5bc57b0273448bf7a938a589fd0b1b782a5f00f3cdcf6fd3afcd1",
+      "anchors": {
+        "axisX": 378.5,
+        "seatY": 125,
+        "shoulderY": 489,
+        "baselineY": 2096,
+        "barrelAxisX": 384,
+        "bodyShoulderY": 503
+      },
+      "scale": {
+        "targetPct": 43.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 70
+      },
+      "protectedLaterCorrection": true,
+      "productPages": [
+        {
+          "slug": "cylinder-9ml-swirl-17-415-lotionpump",
+          "name": "9 ml Swirl Cylinder Lotion Pump Bottle",
+          "variantCount": 3,
+          "applicators": [
+            "Lotion Pump"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-swirl-17-415-rollon",
+          "name": "9 ml Swirl Cylinder Roll-On Bottle",
+          "variantCount": 20,
+          "applicators": [
+            "Metal Roller Ball",
+            "Plastic Roller Ball"
+          ]
+        },
+        {
+          "slug": "cylinder-9ml-swirl-17-415-finemist",
+          "name": "9 ml Swirl Cylinder Fine Mist Spray Bottle",
+          "variantCount": 6,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Reconcile later accepted geometry/component repairs before assigning a final body."
+    },
+    {
+      "plateKey": "cylinder-25ml-18-415|Clear",
+      "bodyId": "cylinder-25ml-18-415",
+      "capacityMl": 25,
+      "neck": "18-415",
+      "glass": "Clear",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/ccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png",
+      "fileSha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "anchors": {
+        "axisX": 498,
+        "seatY": 147,
+        "shoulderY": 486,
+        "baselineY": 2096,
+        "barrelAxisX": 504.5,
+        "bodyShoulderY": 500
+      },
+      "scale": {
+        "targetPct": 46.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 83
+      },
+      "protectedLaterCorrection": false,
+      "productPages": [
+        {
+          "slug": "cylinder-25ml-clear-18-415-lotionpump",
+          "name": "25 ml Clear Cylinder Lotion Pump Bottle",
+          "variantCount": 7,
+          "applicators": [
+            "Lotion Pump"
+          ]
+        },
+        {
+          "slug": "cylinder-25ml-clear-18-415-finemist",
+          "name": "25 ml Clear Cylinder Fine Mist Spray Bottle",
+          "variantCount": 5,
+          "applicators": [
+            "Fine Mist Sprayer"
+          ]
+        },
+        {
+          "slug": "cylinder-25ml-clear-18-415-antique",
+          "name": "25 mL Clear Cylinder Vintage Bulb Sprayer Bottle",
+          "variantCount": 9,
+          "applicators": [
+            "Vintage Bulb Sprayer"
+          ]
+        },
+        {
+          "slug": "cylinder-25ml-clear-18-415-antiquetassel",
+          "name": "25 mL Clear Cylinder Vintage Bulb Sprayer with Tassel Bottle",
+          "variantCount": 9,
+          "applicators": [
+            "Vintage Bulb Sprayer with Tassel"
+          ]
+        },
+        {
+          "slug": "cylinder-25ml-clear-18-415-dropper",
+          "name": "25 mL Clear Cylinder Dropper Bottle",
+          "variantCount": 3,
+          "applicators": [
+            "Dropper"
+          ]
+        },
+        {
+          "slug": "cylinder-25ml-clear-18-415-reducer",
+          "name": "25 mL Clear Cylinder Reducer Bottle",
+          "variantCount": 12,
+          "applicators": [
+            "Reducer"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Retain registered geometry and approved scale; material treatment follows pilot review."
+    },
+    {
+      "plateKey": "cylinder-28ml-16mm|Clear",
+      "bodyId": "cylinder-28ml-16mm",
+      "capacityMl": 28,
+      "neck": "16mm",
+      "glass": "Clear",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/bd4cb95c2e2f7cb1495779df5edfd82f5900c7538c91efa1643eab5ff10e12f7.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/492c82d1207e30e8a89d750aaea9adc4cdbff9ede94e500339c9113e2c20501c.png",
+      "fileSha256": "bd4cb95c2e2f7cb1495779df5edfd82f5900c7538c91efa1643eab5ff10e12f7",
+      "anchors": {
+        "axisX": 489,
+        "seatY": 145,
+        "shoulderY": 496,
+        "baselineY": 2096
+      },
+      "scale": {
+        "targetPct": 50.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 81
+      },
+      "protectedLaterCorrection": false,
+      "productPages": [
+        {
+          "slug": "cylinder-28ml-clear-16mm-rollon",
+          "name": "28 ml Clear Cylinder Roll-On Bottle",
+          "variantCount": 4,
+          "applicators": [
+            "Metal Roller Ball",
+            "Plastic Roller Ball"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Retain registered geometry and approved scale; material treatment follows pilot review."
+    },
+    {
+      "plateKey": "cylinder-30ml-18-415|Clear",
+      "bodyId": "cylinder-30ml-18-415",
+      "capacityMl": 30,
+      "neck": "18-415",
+      "glass": "Clear",
+      "sourceAvailable": false,
+      "sourceUrl": null,
+      "sourceFile": null,
+      "fileSha256": null,
+      "anchors": null,
+      "scale": {
+        "targetPct": 46,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 50.8
+      },
+      "protectedLaterCorrection": false,
+      "productPages": [
+        {
+          "slug": "cylinder-30ml-clear-18-415",
+          "name": "30 ml Clear Cylinder Bottle with Cap",
+          "variantCount": 2,
+          "applicators": []
+        }
+      ],
+      "state": "source-recovery-required",
+      "note": "Documented fixed sprayer pair; standalone body source must be recovered before generation."
+    },
+    {
+      "plateKey": "cylinder-50ml-16mm|Clear",
+      "bodyId": "cylinder-50ml-16mm",
+      "capacityMl": 50,
+      "neck": "16mm",
+      "glass": "Clear",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/902b57f33d8ea69a6cc2f7fa493ec610fb019cf2fad1cb74123e2b890fb134ef.png",
+      "fileSha256": "583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c",
+      "anchors": {
+        "axisX": 480,
+        "seatY": 185,
+        "shoulderY": 434,
+        "baselineY": 2096
+      },
+      "scale": {
+        "targetPct": 53,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 98
+      },
+      "protectedLaterCorrection": false,
+      "productPages": [
+        {
+          "slug": "cylinder-50ml-clear-16mm-rollon",
+          "name": "50 ml Clear Cylinder Roll-On Bottle",
+          "variantCount": 4,
+          "applicators": [
+            "Metal Roller Ball",
+            "Plastic Roller Ball"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Retain registered geometry and approved scale; material treatment follows pilot review."
+    },
+    {
+      "plateKey": "cylinder-50ml-18-415|Clear",
+      "bodyId": "cylinder-50ml-18-415",
+      "capacityMl": 50,
+      "neck": "18-415",
+      "glass": "Clear",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/6da4f4e418e44d36adbfeeb11105e20f20408165f6ae7a83acf14d4f6ab84c2a.png",
+      "fileSha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "anchors": {
+        "axisX": 380.5,
+        "seatY": 180,
+        "shoulderY": 415,
+        "baselineY": 2096,
+        "barrelAxisX": 384,
+        "bodyShoulderY": 423
+      },
+      "scale": {
+        "targetPct": 56,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 117
+      },
+      "protectedLaterCorrection": false,
+      "productPages": [
+        {
+          "slug": "cylinder-50ml-clear-18-415-perfumespray",
+          "name": "50 ml Clear Cylinder Bottle",
+          "variantCount": 6,
+          "applicators": [
+            "Perfume Spray Pump"
+          ]
+        },
+        {
+          "slug": "cylinder-50ml-clear-18-415-reducer",
+          "name": "50 ml Clear Cylinder Reducer Bottle",
+          "variantCount": 12,
+          "applicators": [
+            "Reducer"
+          ]
+        },
+        {
+          "slug": "cylinder-50ml-clear-18-415-antiquespray",
+          "name": "50 ml Clear Cylinder Vintage Bulb Spray Bottle",
+          "variantCount": 9,
+          "applicators": [
+            "Vintage Bulb Sprayer"
+          ]
+        },
+        {
+          "slug": "cylinder-50ml-clear-18-415-antiquespray-tassel",
+          "name": "50 ml Clear Cylinder Vintage Bulb Spray Bottle with Tassel",
+          "variantCount": 9,
+          "applicators": [
+            "Vintage Bulb Sprayer with Tassel"
+          ]
+        },
+        {
+          "slug": "cylinder-50ml-clear-18-415-lotionpump",
+          "name": "50 ml Clear Cylinder Lotion Pump Bottle",
+          "variantCount": 7,
+          "applicators": [
+            "Lotion Pump"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Retain registered geometry and approved scale; material treatment follows pilot review."
+    },
+    {
+      "plateKey": "cylinder-100ml-18-415|Clear",
+      "bodyId": "cylinder-100ml-18-415",
+      "capacityMl": 100,
+      "neck": "18-415",
+      "glass": "Clear",
+      "sourceAvailable": true,
+      "sourceUrl": "/reviews/glass-body-overview-2026-10-31/masters/ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366.png",
+      "sourceFile": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/5ad1aa3cecf3d484d2a07ed3ea34d2c1cffdeca83a815fe4d23562e82fcdfb25.png",
+      "fileSha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "anchors": {
+        "axisX": 364.5,
+        "seatY": 212,
+        "shoulderY": 427,
+        "baselineY": 2096,
+        "barrelAxisX": 368,
+        "bodyShoulderY": 437
+      },
+      "scale": {
+        "targetPct": 67.5,
+        "baselinePct": 91,
+        "landmark": "shoulder",
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+        "basis": "approved-family-exception",
+        "heightBareMm": 154
+      },
+      "protectedLaterCorrection": false,
+      "productPages": [
+        {
+          "slug": "cylinder-100ml-clear-18-415-lotionpump",
+          "name": "100 ml Clear Cylinder Lotion Pump Bottle",
+          "variantCount": 7,
+          "applicators": [
+            "Lotion Pump"
+          ]
+        },
+        {
+          "slug": "cylinder-100ml-clear-18-415-reducer",
+          "name": "100 ml Clear Cylinder Reducer Bottle",
+          "variantCount": 12,
+          "applicators": [
+            "Reducer"
+          ]
+        },
+        {
+          "slug": "cylinder-100ml-clear-18-415-perfumespray",
+          "name": "100 ml Clear Cylinder Bottle",
+          "variantCount": 6,
+          "applicators": [
+            "Perfume Spray Pump"
+          ]
+        },
+        {
+          "slug": "cylinder-100ml-clear-18-415-antiquespray",
+          "name": "100 ml Clear Cylinder Vintage Bulb Spray Bottle",
+          "variantCount": 9,
+          "applicators": [
+            "Vintage Bulb Sprayer"
+          ]
+        },
+        {
+          "slug": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+          "name": "100 ml Clear Cylinder Vintage Bulb Spray Bottle with Tassel",
+          "variantCount": 9,
+          "applicators": [
+            "Vintage Bulb Sprayer with Tassel"
+          ]
+        }
+      ],
+      "state": "source-preserved-await-pilot",
+      "note": "Retain registered geometry and approved scale; material treatment follows pilot review."
+    }
+  ]
+}

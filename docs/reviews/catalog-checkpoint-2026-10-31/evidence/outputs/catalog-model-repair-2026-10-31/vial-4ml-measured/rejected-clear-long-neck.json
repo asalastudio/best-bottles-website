@@ -1,0 +1,5 @@
+{
+  "status": "Not integrated",
+  "reason": "Generated finish remains too long against the supplied 7 mm neck measurement; do not propagate",
+  "method": "Built-in image generator"
+}

@@ -79,28 +79,31 @@ function chooserScale(body: BuilderBody, all: BuilderBody[] = [body]) {
     return 1;
 }
 
-export default function MatrixClient({ families: initialFamilies, familyList, openFamily, bodies: initialBodies, preferMobile = false }: {
+export default function MatrixClient({ families: initialFamilies, familyList, openFamily, bodies: initialBodies, preferMobile = false, initialSelection, initialStep = 0, entryUnavailable = false }: {
     families: BuilderFamily[];
     /** Every eligible family, streamed into the page's own response. */
     familyList?: Promise<BuilderFamily[] | null>;
     openFamily: string;
     bodies: BuilderBody[];
     preferMobile?: boolean;
+    initialSelection?: BuilderSelection;
+    initialStep?: number;
+    entryUnavailable?: boolean;
 }) {
     const { formatPrice } = useRegion();
     const money = (value: number | null) => (value == null ? "—" : formatPrice(value));
     const { families, status: familyStatus, retry: retryFamilies } = useBuilderFamilies(initialFamilies, familyList);
-    const familyNotice = <FamilyLoadingStatus status={familyStatus} onRetry={retryFamilies} />;
+    const familyNotice = <>{entryUnavailable && <p role="status">This product is not currently available in the builder. Choose another bottle below.</p>}<FamilyLoadingStatus status={familyStatus} onRetry={retryFamilies} /></>;
     const router = useRouter();
     const searchParams = useSearchParams();
     const { items, addItems, isCartHydrated } = useCart();
-    const [selection, setSelection] = useState<BuilderSelection>(emptySelection);
+    const [selection, setSelection] = useState<BuilderSelection>(() => initialSelection ?? emptySelection());
     // First paint is chooser-only; the chosen bottle's configurations load, then its kit layers.
     const chooser = useBuilderBodyConfigurations(openFamily, initialBodies, selection.bodyId, searchParams.get("shop"));
     // A tile about to be picked starts its configurations and kit layers, so the pick finds them in flight.
     const prefetchBottle = (bodyId: string) => prefetchBody(openFamily, bodyId, searchParams.get("shop"));
     const bodies = useBuilderKits(openFamily, chooser.bodies, selection.bodyId);
-    const [step, setStep] = useState(0);
+    const [step, setStep] = useState(initialStep);
     const isMobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot(preferMobile));
     const [previewExpanded, setPreviewExpanded] = useState(false);
     const reviewHeading = useRef<HTMLHeadingElement>(null);
@@ -371,7 +374,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                         <div className={styles.selectedFitment}><div><strong>{displayApplicatorName(fitment ?? "")}</strong><small>{body?.neck} neck · {color} glass</small></div>
                             <button className={styles.textButton} onClick={() => goTo(2)}>Change fitment</button></div>
                         <div className={styles.closureSection}>
-                            <p>{current.closures.length === 1 ? `This ${finishLabel.toLowerCase()} is included with your bottle.` : `Select your ${finishLabel.toLowerCase()} to see the complete bottle.`}</p>
+                            <p>{current.closures.length === 1 ? `This ${finishLabel.toLowerCase()} is included with your bottle.` : `${configuration ? "Change" : "Select"} your ${finishLabel.toLowerCase()}${configuration ? " to customize this bottle." : " to see the complete bottle."}`}</p>
                             {capLinerNote(body?.neck, fitment) && <p className={styles.linerNote}>{capLinerNote(body?.neck, fitment)}</p>}
                         <div className={styles.closureGrid}>{current.fitted.map(c => <Option key={c.id} label={c.closure} selected={closure === c.closure} onClick={() => { update({ closure: c.closure }); setShowCover(false); }}>
                                 <div className={styles.closureThumb}><BuilderFinishImage config={c} /></div><strong>{c.closure}</strong>

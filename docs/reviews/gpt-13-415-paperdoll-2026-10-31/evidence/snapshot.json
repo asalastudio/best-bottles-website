@@ -1,0 +1,3410 @@
+{
+  "checkedAt": "2026-11-01T06:41:50.360Z",
+  "endpoint": "https://precise-raccoon-123.convex.cloud",
+  "groups": [
+    {
+      "_id": "kh70n2ynb88a19vcfn32teqpc98dr7wh",
+      "slug": "cylinder-5.5ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh7741tfg408sxvnatv8dkmxy18drh79",
+      "slug": "sleek-5ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "slug": "tulip-5ml-amber-13-415-finemist"
+    },
+    {
+      "_id": "kh758zqt053vpb9s9eans7cx6h8dsxeh",
+      "slug": "cylinder-5ml-clear-13-415"
+    },
+    {
+      "_id": "kh77aj8w1aberar7q0xae741m58ds18f",
+      "slug": "sleek-8ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh76rjk9z4ga7yr20k3v3jt1mx8dr793",
+      "slug": "cylinder-5ml-cobalt-blue-13-415"
+    },
+    {
+      "_id": "kh7fng63kjqxetkje9nf66jbb58dr7mg",
+      "slug": "cylinder-9ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh7bxq1ab35ajbz46krngekab58drcpv",
+      "slug": "cylinder-9ml-frosted-13-415-finemist"
+    },
+    {
+      "_id": "kh7cz3nf9xgxxewknq3jytp2cx8drd2a",
+      "slug": "sleek-5ml-clear-13-415"
+    },
+    {
+      "_id": "kh71waqvcdze8pd7h9rxkqhams8ds81k",
+      "slug": "footed-rectangle-10ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh77bvn2qc0n4s02bjhwqk3jjs8drbb8",
+      "slug": "tall-rectangle-10ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "slug": "tulip-5ml-amber-13-415"
+    },
+    {
+      "_id": "kh757h63gh9rkb8bd26w79je118dsf6k",
+      "slug": "circle-15ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh748ncyhk5zkwxka6v4mwvee98dsss8",
+      "slug": "elegant-15ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh704vgv799cqn5gn7pm7janad8dshhr",
+      "slug": "elegant-15ml-frosted-13-415-finemist"
+    },
+    {
+      "_id": "kh77emhhnq0vmbndd81r80w3zx8ds2eq",
+      "slug": "flair-15ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "slug": "cylinder-5ml-clear-13-415-rollon"
+    },
+    {
+      "_id": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-rollon"
+    },
+    {
+      "_id": "kh72r4xhzh6jgrp9bdd48wc9698dshr7",
+      "slug": "cylinder-5ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "slug": "sleek-5ml-clear-13-415-rollon"
+    },
+    {
+      "_id": "kh71fxvsvt7xwvmrb5ynggz1bh8ds73v",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-finemist"
+    },
+    {
+      "_id": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "slug": "tulip-5ml-amber-13-415-rollon"
+    },
+    {
+      "_id": "kh7a23ketzqqwry2dgegd6sfj18ds1c3",
+      "slug": "tulip-6ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh739bs1qea53y047hpctbqtv58drb5a",
+      "slug": "royal-13ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh7chwdqx3be2h7pdkg3075dgd8dr9vn",
+      "slug": "square-15ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh7d8evpx0b68wp0rb442bmxrx8ds36r",
+      "slug": "pillar-9ml-clear-17-415-finemist"
+    },
+    {
+      "_id": "kh7d30p5y2cnze1er94dvpcegd8dskc9",
+      "slug": "bell-10ml-clear-13-415-finemist"
+    },
+    {
+      "_id": "kh72a7e36b0ck50fy1xmfb49j98dswm8",
+      "slug": "rectangle-10ml-clear-13-415-finemist"
+    }
+  ],
+  "details": [
+    {
+      "group": {
+        "slug": "cylinder-5.5ml-clear-13-415-finemist"
+      },
+      "variants": []
+    },
+    {
+      "group": {
+        "slug": "sleek-5ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBSleek5SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBSleek5SpryGlSh"
+        },
+        {
+          "websiteSku": "GBSleek5SprySlSh"
+        },
+        {
+          "websiteSku": "GBSleek5SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBSleek5SprySlMatt"
+        },
+        {
+          "websiteSku": "GBSleek5SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBSleek5SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBSleek5SpryGlMatt"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "tulip-5ml-amber-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBTulipAmb5SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBTulipAmb5SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBTulipAmb5SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBTulipAmb5SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBTulipAmb5SpryGlMatt"
+        },
+        {
+          "websiteSku": "GBTulipAmb5SpryGlSh"
+        },
+        {
+          "websiteSku": "GBTulipAmb5SprySlMatt"
+        },
+        {
+          "websiteSku": "GBTulipAmb5SprySlSh"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "cylinder-5ml-clear-13-415"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBCyl5Sl"
+        },
+        {
+          "websiteSku": "GBCyl5Gl"
+        },
+        {
+          "websiteSku": "GBCyl5BlkSht"
+        },
+        {
+          "websiteSku": "GBCyl5WhtSht"
+        },
+        {
+          "websiteSku": "GBCyl5CuSht"
+        },
+        {
+          "websiteSku": "GBCyl5GlMattSht"
+        },
+        {
+          "websiteSku": "GBCyl5SlMattSht"
+        },
+        {
+          "websiteSku": "GBCyl5BlkShSht"
+        },
+        {
+          "websiteSku": "GBCyl5GlSht"
+        },
+        {
+          "websiteSku": "GBCyl5SlSht"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "sleek-8ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBSleek8SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBSleek8SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBSleek8SpryGlSh"
+        },
+        {
+          "websiteSku": "GBSleek8SprySlMatt"
+        },
+        {
+          "websiteSku": "GBSleek8SprySlSh"
+        },
+        {
+          "websiteSku": "GBSleek8SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBSleek8SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBSleek8SpryGlMatt"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "cylinder-5ml-cobalt-blue-13-415"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBCylBlu5Sl"
+        },
+        {
+          "websiteSku": "GBCylBlu5WhtSht"
+        },
+        {
+          "websiteSku": "GBCylBlu5Gl"
+        },
+        {
+          "websiteSku": "GBCylBlu5BlkSht"
+        },
+        {
+          "websiteSku": "GBCylBlu5BlkShSht"
+        },
+        {
+          "websiteSku": "GBCylBlu5CuSht"
+        },
+        {
+          "websiteSku": "GBCylBlu5GlMattSht"
+        },
+        {
+          "websiteSku": "GBCylBlu5SlMattSht"
+        },
+        {
+          "websiteSku": "GBCylBlu5GlSht"
+        },
+        {
+          "websiteSku": "GBCylBlu5SlSht"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "cylinder-9ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBTallCyl9SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBTallCyl9SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBTallCyl9SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBTallCyl9SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBTallCyl9SpryGlMatt"
+        },
+        {
+          "websiteSku": "GBTallCyl9SpryGlSh"
+        },
+        {
+          "websiteSku": "GBTallCyl9SprySlMatt"
+        },
+        {
+          "websiteSku": "GBTallCyl9SprySlSh"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "cylinder-9ml-frosted-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBTallCylFrst9SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBTallCylFrst9SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBTallCylFrst9SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBTallCylFrst9SpryGlSh"
+        },
+        {
+          "websiteSku": "GBTallCylFrst9SpryGlMatt"
+        },
+        {
+          "websiteSku": "GBTallCylFrst9SprySlMatt"
+        },
+        {
+          "websiteSku": "GBTallCylFrst9SprySlSh"
+        },
+        {
+          "websiteSku": "GBTallCylFrst9SpryCuMatt"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "sleek-5ml-clear-13-415"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBSleek5Gl"
+        },
+        {
+          "websiteSku": "GBSleek5Sl"
+        },
+        {
+          "websiteSku": "GBSleek5WhtSht"
+        },
+        {
+          "websiteSku": "GBSleek5BlkSht"
+        },
+        {
+          "websiteSku": "GBSleek5CuSht"
+        },
+        {
+          "websiteSku": "GBSleek5GlMattSht"
+        },
+        {
+          "websiteSku": "GBSleek5SlMattSht"
+        },
+        {
+          "websiteSku": "GBSleek5BlkShSht"
+        },
+        {
+          "websiteSku": "GBSleek5GlSht"
+        },
+        {
+          "websiteSku": "GBSleek5SlSht"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "footed-rectangle-10ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBRect10SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBRect10SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBRect10SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBRect10SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBRect10SpryGlMatt"
+        },
+        {
+          "websiteSku": "GBRect10SpryGlSh"
+        },
+        {
+          "websiteSku": "GBRect10SprySlMatt"
+        },
+        {
+          "websiteSku": "GBRect10SprySlSh"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "tall-rectangle-10ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBTallRect10SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBTallRect10SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBTallRect10SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBTallRect10SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBTallRect10SpryGlMatt"
+        },
+        {
+          "websiteSku": "GBTallRect10SpryGlSh"
+        },
+        {
+          "websiteSku": "GBTallRect10SprySlMatt"
+        },
+        {
+          "websiteSku": "GBTallRect10SprySlSh"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "tulip-5ml-amber-13-415"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBTulipAmb5Gl"
+        },
+        {
+          "websiteSku": "GBTulipAmb5Sl"
+        },
+        {
+          "websiteSku": "GBTulipAmb5WhtSht"
+        },
+        {
+          "websiteSku": "GBTulipAmb5BlkSht"
+        },
+        {
+          "websiteSku": "GBTulipAmb5CuSht"
+        },
+        {
+          "websiteSku": "GBTulipAmb5GlMattSht"
+        },
+        {
+          "websiteSku": "GBTulipAmb5SlMattSht"
+        },
+        {
+          "websiteSku": "GBTulipAmb5BlkShSht"
+        },
+        {
+          "websiteSku": "GBTulipAmb5GlSht"
+        },
+        {
+          "websiteSku": "GBTulipAmb5SlSht"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "circle-15ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBCrcl15SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBCrcl15SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBCrcl15SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBCrcl15SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBCrcl15SpryGlMatt"
+        },
+        {
+          "websiteSku": "GBCrcl15SpryGlSh"
+        },
+        {
+          "websiteSku": "GBCrcl15SprySlMatt"
+        },
+        {
+          "websiteSku": "GBCrcl15SprySlSh"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "elegant-15ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBElg15SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBElg15SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBElg15SpryGlSh"
+        },
+        {
+          "websiteSku": "GBElg15SprySlMatt"
+        },
+        {
+          "websiteSku": "GBElg15SprySlSh"
+        },
+        {
+          "websiteSku": "GBElg15SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBElg15SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBElg15SpryGlMatt"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "elegant-15ml-frosted-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBElgFrst15SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBElgFrst15SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBElgFrst15SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBElgFrst15SpryGlSh"
+        },
+        {
+          "websiteSku": "GBElgFrst15SprySlMatt"
+        },
+        {
+          "websiteSku": "GBElgFrst15SprySlSh"
+        },
+        {
+          "websiteSku": "GBElgFrst15SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBElgFrst15SpryGlMatt"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "flair-15ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBFlair15SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBFlair15SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBFlair15SpryGlSh"
+        },
+        {
+          "websiteSku": "GBFlair15SprySlMatt"
+        },
+        {
+          "websiteSku": "GBFlair15SprySlSh"
+        },
+        {
+          "websiteSku": "GBFlair15SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBFlair15SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBFlair15SpryGlMatt"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "cylinder-5ml-clear-13-415-rollon"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBCyl5MtlRollBlkSh"
+        },
+        {
+          "websiteSku": "GBCyl5MtlRollCuMatt"
+        },
+        {
+          "websiteSku": "GBCyl5MtlRollGlMatt"
+        },
+        {
+          "websiteSku": "GBCyl5MtlRollGlSh"
+        },
+        {
+          "websiteSku": "GBCyl5MtlRollPinkDot"
+        },
+        {
+          "websiteSku": "GBCyl5MtlRollSlDot"
+        },
+        {
+          "websiteSku": "GBCyl5MtlRollSlMatt"
+        },
+        {
+          "websiteSku": "GBCyl5MtlRollSlSh"
+        },
+        {
+          "websiteSku": "GBCyl5RollBlkDot"
+        },
+        {
+          "websiteSku": "GBCyl5RollSlSh"
+        },
+        {
+          "websiteSku": "GBCyl5RollBlkSh"
+        },
+        {
+          "websiteSku": "GBCyl5RollGlSh"
+        },
+        {
+          "websiteSku": "GBCyl5RollSlDot"
+        },
+        {
+          "websiteSku": "GBCyl5RollPinkDot"
+        },
+        {
+          "websiteSku": "GBCyl5RollCuMatt"
+        },
+        {
+          "websiteSku": "GBCyl5RollGlMatt"
+        },
+        {
+          "websiteSku": "GBCyl5RollSlMatt"
+        },
+        {
+          "websiteSku": "GBCyl5MtlRollBlkDot"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "cylinder-5ml-cobalt-blue-13-415-rollon"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBCylBlu5MtlRollBlkSh"
+        },
+        {
+          "websiteSku": "GBCylBlu5MtlRollCuMatt"
+        },
+        {
+          "websiteSku": "GBCylBlu5MtlRollGlMatt"
+        },
+        {
+          "websiteSku": "GBCylBlu5MtlRollGlSh"
+        },
+        {
+          "websiteSku": "GBCylBlu5MtlRollPinkDot"
+        },
+        {
+          "websiteSku": "GBCylBlu5MtlRollSlDot"
+        },
+        {
+          "websiteSku": "GBCylBlu5MtlRollSlMatt"
+        },
+        {
+          "websiteSku": "GBCylBlu5MtlRollSlSh"
+        },
+        {
+          "websiteSku": "GBCylBlu5RollBlkDot"
+        },
+        {
+          "websiteSku": "GBCylBlu5RollGlSh"
+        },
+        {
+          "websiteSku": "GBCylBlu5RollSlSh"
+        },
+        {
+          "websiteSku": "GBCylBlu5RollBlkSh"
+        },
+        {
+          "websiteSku": "GBCylBlu5RollGlMatt"
+        },
+        {
+          "websiteSku": "GBCylBlu5RollPinkDot"
+        },
+        {
+          "websiteSku": "GBCylBlu5RollSlDot"
+        },
+        {
+          "websiteSku": "GBCylBlu5RollCuMatt"
+        },
+        {
+          "websiteSku": "GBCylBlu5RollSlMatt"
+        },
+        {
+          "websiteSku": "GBCylBlu5MtlRollBlkDot"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "cylinder-5ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBCyl5SpryBlkMatt"
+        },
+        {
+          "websiteSku": "GBCyl5SprySlMatt"
+        },
+        {
+          "websiteSku": "GBCyl5SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBCyl5SpryGlSh"
+        },
+        {
+          "websiteSku": "GBCyl5SprySlSh"
+        },
+        {
+          "websiteSku": "GBCyl5SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBCyl5SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBCyl5SpryGlMatt"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "sleek-5ml-clear-13-415-rollon"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBSleek5MtlRollBlkSh"
+        },
+        {
+          "websiteSku": "GBSleek5MtlRollCuMatt"
+        },
+        {
+          "websiteSku": "GBSleek5MtlRollGlMatt"
+        },
+        {
+          "websiteSku": "GBSleek5MtlRollGlSh"
+        },
+        {
+          "websiteSku": "GBSleek5MtlRollPinkDot"
+        },
+        {
+          "websiteSku": "GBSleek5MtlRollSlDot"
+        },
+        {
+          "websiteSku": "GBSleek5MtlRollSlMatt"
+        },
+        {
+          "websiteSku": "GBSleek5MtlRollSlSh"
+        },
+        {
+          "websiteSku": "GBSleek5RollBlkDot"
+        },
+        {
+          "websiteSku": "GBSleek5RollBlkSh"
+        },
+        {
+          "websiteSku": "GBSleek5RollGlSh"
+        },
+        {
+          "websiteSku": "GBSleek5RollSlSh"
+        },
+        {
+          "websiteSku": "GBSleek5RollPinkDot"
+        },
+        {
+          "websiteSku": "GBSleek5RollSlDot"
+        },
+        {
+          "websiteSku": "GBSleek5RollCuMatt"
+        },
+        {
+          "websiteSku": "GBSleek5RollGlMatt"
+        },
+        {
+          "websiteSku": "GBSleek5RollSlMatt"
+        },
+        {
+          "websiteSku": "GBSleek5MtlRollBlkDot"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "cylinder-5ml-cobalt-blue-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBCylBlu5SprySlSh"
+        },
+        {
+          "websiteSku": "GBCylBlu5SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBCylBlu5SpryGlSh"
+        },
+        {
+          "websiteSku": "GBCylBlu5SpryGlMatt"
+        },
+        {
+          "websiteSku": "GBCylBlu5SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBCylBlu5SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBCylBlu5SprySlMatt"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "tulip-5ml-amber-13-415-rollon"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBTulipAmb5MtlRollCuMatt"
+        },
+        {
+          "websiteSku": "GBTulipAmb5MtlRollGlMatt"
+        },
+        {
+          "websiteSku": "GBTulipAmb5MtlRollGlSh"
+        },
+        {
+          "websiteSku": "GBTulipAmb5MtlRollPinkDot"
+        },
+        {
+          "websiteSku": "GBTulipAmb5MtlRollSlDot"
+        },
+        {
+          "websiteSku": "GBTulipAmb5MtlRollSlMatt"
+        },
+        {
+          "websiteSku": "GBTulipAmb5MtlRollSlSh"
+        },
+        {
+          "websiteSku": "GBTulipAmb5MtlRollBlkSh"
+        },
+        {
+          "websiteSku": "GBTulipAmb5RollBlkDot"
+        },
+        {
+          "websiteSku": "GBTulipAmb5RollBlkSh"
+        },
+        {
+          "websiteSku": "GBTulipAmb5RollCuMatt"
+        },
+        {
+          "websiteSku": "GBTulipAmb5RollGlMatt"
+        },
+        {
+          "websiteSku": "GBTulipAmb5RollPinkDot"
+        },
+        {
+          "websiteSku": "GBTulipAmb5RollSlDot"
+        },
+        {
+          "websiteSku": "GBTulipAmb5RollSlMatt"
+        },
+        {
+          "websiteSku": "GBTulipAmb5RollSlSh"
+        },
+        {
+          "websiteSku": "GBTulipAmb5MtlRollBlkDot"
+        },
+        {
+          "websiteSku": "GBTulipAmb5RollGlSh"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "tulip-6ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBTulip6SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBTulip6SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBTulip6SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBTulip6SpryGlMatt"
+        },
+        {
+          "websiteSku": "GBTulip6SpryGlSh"
+        },
+        {
+          "websiteSku": "GBTulip6SprySlMatt"
+        },
+        {
+          "websiteSku": "GBTulip6SprySlSh"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "royal-13ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBRoyal13SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBRoyal13SpryGlSh"
+        },
+        {
+          "websiteSku": "GBRoyal13SprySlSh"
+        },
+        {
+          "websiteSku": "GBRoyal13SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBRoyal13SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBRoyal13SprySlMatt"
+        },
+        {
+          "websiteSku": "GBRoyal13SpryGlMatt"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "square-15ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBSqr15SpryBlkSh"
+        },
+        {
+          "websiteSku": "GBSqr15SpryGlSh"
+        },
+        {
+          "websiteSku": "GBSqr15SprySlMatt"
+        },
+        {
+          "websiteSku": "GBSqr15SprySlSh"
+        },
+        {
+          "websiteSku": "GBSqr15SpryBluMatt"
+        },
+        {
+          "websiteSku": "GBSqr15SpryCuMatt"
+        },
+        {
+          "websiteSku": "GBSqr15SpryGlMatt"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "pillar-9ml-clear-17-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBPillar9SpryBlkMatt"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "bell-10ml-clear-13-415-finemist"
+      },
+      "variants": [
+        {
+          "websiteSku": "GBBell10SpryBlkSh"
+        }
+      ]
+    },
+    {
+      "group": {
+        "slug": "rectangle-10ml-clear-13-415-finemist"
+      },
+      "variants": []
+    }
+  ],
+  "products": [
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SPR-MBLK",
+      "productGroupId": "kh7741tfg408sxvnatv8dkmxy18drh79",
+      "websiteSku": "GBSleek5SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SPR-SGLD",
+      "productGroupId": "kh7741tfg408sxvnatv8dkmxy18drh79",
+      "websiteSku": "GBSleek5SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SPR-SSLV",
+      "productGroupId": "kh7741tfg408sxvnatv8dkmxy18drh79",
+      "websiteSku": "GBSleek5SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SPR-SBLK",
+      "productGroupId": "kh7741tfg408sxvnatv8dkmxy18drh79",
+      "websiteSku": "GBSleek5SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SPR-MSLV",
+      "productGroupId": "kh7741tfg408sxvnatv8dkmxy18drh79",
+      "websiteSku": "GBSleek5SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SPR-MCPR",
+      "productGroupId": "kh7741tfg408sxvnatv8dkmxy18drh79",
+      "websiteSku": "GBSleek5SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SPR-MBLU",
+      "productGroupId": "kh7741tfg408sxvnatv8dkmxy18drh79",
+      "websiteSku": "GBSleek5SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SPR-MGLD",
+      "productGroupId": "kh7741tfg408sxvnatv8dkmxy18drh79",
+      "websiteSku": "GBSleek5SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MBLK",
+      "productGroupId": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "websiteSku": "GBTulipAmb5SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SBLK",
+      "productGroupId": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "websiteSku": "GBTulipAmb5SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MBLU",
+      "productGroupId": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "websiteSku": "GBTulipAmb5SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MCPR",
+      "productGroupId": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "websiteSku": "GBTulipAmb5SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MGLD",
+      "productGroupId": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "websiteSku": "GBTulipAmb5SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SGLD",
+      "productGroupId": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "websiteSku": "GBTulipAmb5SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MSLV",
+      "productGroupId": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "websiteSku": "GBTulipAmb5SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SSLV",
+      "productGroupId": "kh7fqangqjdg0wb0mrn5v1d0rd8dsa38",
+      "websiteSku": "GBTulipAmb5SprySlSh"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Regular Shiny Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SLV-T",
+      "productGroupId": "kh758zqt053vpb9s9eans7cx6h8dsxeh",
+      "websiteSku": "GBCyl5Sl"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Regular Shiny Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-GLD-T",
+      "productGroupId": "kh758zqt053vpb9s9eans7cx6h8dsxeh",
+      "websiteSku": "GBCyl5Gl"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Ribbed Black",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-S",
+      "productGroupId": "kh758zqt053vpb9s9eans7cx6h8dsxeh",
+      "websiteSku": "GBCyl5BlkSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Ribbed White",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-WHT-5ML-WHT-S",
+      "productGroupId": "kh758zqt053vpb9s9eans7cx6h8dsxeh",
+      "websiteSku": "GBCyl5WhtSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Copper",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MCPR-S",
+      "productGroupId": "kh758zqt053vpb9s9eans7cx6h8dsxeh",
+      "websiteSku": "GBCyl5CuSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MGLD-S",
+      "productGroupId": "kh758zqt053vpb9s9eans7cx6h8dsxeh",
+      "websiteSku": "GBCyl5GlMattSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MSLV-S",
+      "productGroupId": "kh758zqt053vpb9s9eans7cx6h8dsxeh",
+      "websiteSku": "GBCyl5SlMattSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Black",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SBLK-S",
+      "productGroupId": "kh758zqt053vpb9s9eans7cx6h8dsxeh",
+      "websiteSku": "GBCyl5BlkShSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SGLD-S",
+      "productGroupId": "kh758zqt053vpb9s9eans7cx6h8dsxeh",
+      "websiteSku": "GBCyl5GlSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SSLV-S",
+      "productGroupId": "kh758zqt053vpb9s9eans7cx6h8dsxeh",
+      "websiteSku": "GBCyl5SlSht"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "capacityMl": 8,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-MBLK",
+      "productGroupId": "kh77aj8w1aberar7q0xae741m58ds18f",
+      "websiteSku": "GBSleek8SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 8,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-SBLK",
+      "productGroupId": "kh77aj8w1aberar7q0xae741m58ds18f",
+      "websiteSku": "GBSleek8SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 8,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-SGLD",
+      "productGroupId": "kh77aj8w1aberar7q0xae741m58ds18f",
+      "websiteSku": "GBSleek8SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 8,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-MSLV",
+      "productGroupId": "kh77aj8w1aberar7q0xae741m58ds18f",
+      "websiteSku": "GBSleek8SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 8,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-SSLV",
+      "productGroupId": "kh77aj8w1aberar7q0xae741m58ds18f",
+      "websiteSku": "GBSleek8SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 8,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-MBLU",
+      "productGroupId": "kh77aj8w1aberar7q0xae741m58ds18f",
+      "websiteSku": "GBSleek8SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 8,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-MCPR",
+      "productGroupId": "kh77aj8w1aberar7q0xae741m58ds18f",
+      "websiteSku": "GBSleek8SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 8,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-8ML-SPR-MGLD",
+      "productGroupId": "kh77aj8w1aberar7q0xae741m58ds18f",
+      "websiteSku": "GBSleek8SpryGlMatt"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Regular Shiny Silver",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-SLV-T",
+      "productGroupId": "kh76rjk9z4ga7yr20k3v3jt1mx8dr793",
+      "websiteSku": "GBCylBlu5Sl"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Ribbed White",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CBL-5ML-S-02",
+      "productGroupId": "kh76rjk9z4ga7yr20k3v3jt1mx8dr793",
+      "websiteSku": "GBCylBlu5WhtSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Regular Shiny Gold",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-GLD-T",
+      "productGroupId": "kh76rjk9z4ga7yr20k3v3jt1mx8dr793",
+      "websiteSku": "GBCylBlu5Gl"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Ribbed Black",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CBL-5ML-S-01",
+      "productGroupId": "kh76rjk9z4ga7yr20k3v3jt1mx8dr793",
+      "websiteSku": "GBCylBlu5BlkSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Black",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-CAP-SBLK",
+      "productGroupId": "kh76rjk9z4ga7yr20k3v3jt1mx8dr793",
+      "websiteSku": "GBCylBlu5BlkShSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Copper",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MCPR-S",
+      "productGroupId": "kh76rjk9z4ga7yr20k3v3jt1mx8dr793",
+      "websiteSku": "GBCylBlu5CuSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Gold",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MGLD-S",
+      "productGroupId": "kh76rjk9z4ga7yr20k3v3jt1mx8dr793",
+      "websiteSku": "GBCylBlu5GlMattSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Silver",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MSLV-S",
+      "productGroupId": "kh76rjk9z4ga7yr20k3v3jt1mx8dr793",
+      "websiteSku": "GBCylBlu5SlMattSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Gold",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-SGLD-S",
+      "productGroupId": "kh76rjk9z4ga7yr20k3v3jt1mx8dr793",
+      "websiteSku": "GBCylBlu5GlSht"
+    },
+    {
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Silver",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-SSLV-S",
+      "productGroupId": "kh76rjk9z4ga7yr20k3v3jt1mx8dr793",
+      "websiteSku": "GBCylBlu5SlSht"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "capacityMl": 9,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-9ML-SPR-MBLK",
+      "productGroupId": "kh7fng63kjqxetkje9nf66jbb58dr7mg",
+      "websiteSku": "GBTallCyl9SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 9,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-9ML-SPR-MBLU",
+      "productGroupId": "kh7fng63kjqxetkje9nf66jbb58dr7mg",
+      "websiteSku": "GBTallCyl9SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 9,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-9ML-SPR-MCPR",
+      "productGroupId": "kh7fng63kjqxetkje9nf66jbb58dr7mg",
+      "websiteSku": "GBTallCyl9SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 9,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-9ML-SPR-SBLK",
+      "productGroupId": "kh7fng63kjqxetkje9nf66jbb58dr7mg",
+      "websiteSku": "GBTallCyl9SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 9,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-9ML-SPR-MGLD",
+      "productGroupId": "kh7fng63kjqxetkje9nf66jbb58dr7mg",
+      "websiteSku": "GBTallCyl9SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 9,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-9ML-SPR-SGLD",
+      "productGroupId": "kh7fng63kjqxetkje9nf66jbb58dr7mg",
+      "websiteSku": "GBTallCyl9SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 9,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-9ML-SPR-MSLV-02",
+      "productGroupId": "kh7fng63kjqxetkje9nf66jbb58dr7mg",
+      "websiteSku": "GBTallCyl9SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 9,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-9ML-SPR-SSLV-02",
+      "productGroupId": "kh7fng63kjqxetkje9nf66jbb58dr7mg",
+      "websiteSku": "GBTallCyl9SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Frosted",
+      "capacityMl": 9,
+      "color": "Frosted",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-FRS-9ML-01",
+      "productGroupId": "kh7bxq1ab35ajbz46krngekab58drcpv",
+      "websiteSku": "GBTallCylFrst9SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Frosted",
+      "capacityMl": 9,
+      "color": "Frosted",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-FRS-9ML-02",
+      "productGroupId": "kh7bxq1ab35ajbz46krngekab58drcpv",
+      "websiteSku": "GBTallCylFrst9SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Frosted",
+      "capacityMl": 9,
+      "color": "Frosted",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-FRS-9ML-03",
+      "productGroupId": "kh7bxq1ab35ajbz46krngekab58drcpv",
+      "websiteSku": "GBTallCylFrst9SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Frosted",
+      "capacityMl": 9,
+      "color": "Frosted",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-FRS-9ML-06",
+      "productGroupId": "kh7bxq1ab35ajbz46krngekab58drcpv",
+      "websiteSku": "GBTallCylFrst9SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Frosted",
+      "capacityMl": 9,
+      "color": "Frosted",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-FRS-9ML-05",
+      "productGroupId": "kh7bxq1ab35ajbz46krngekab58drcpv",
+      "websiteSku": "GBTallCylFrst9SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Frosted",
+      "capacityMl": 9,
+      "color": "Frosted",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-FRS-9ML-07",
+      "productGroupId": "kh7bxq1ab35ajbz46krngekab58drcpv",
+      "websiteSku": "GBTallCylFrst9SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Frosted",
+      "capacityMl": 9,
+      "color": "Frosted",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-FRS-9ML-08",
+      "productGroupId": "kh7bxq1ab35ajbz46krngekab58drcpv",
+      "websiteSku": "GBTallCylFrst9SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Frosted",
+      "capacityMl": 9,
+      "color": "Frosted",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-FRS-9ML-04",
+      "productGroupId": "kh7bxq1ab35ajbz46krngekab58drcpv",
+      "websiteSku": "GBTallCylFrst9SpryCuMatt"
+    },
+    {
+      "applicator": null,
+      "capColor": "Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-GLD-T",
+      "productGroupId": "kh7cz3nf9xgxxewknq3jytp2cx8drd2a",
+      "websiteSku": "GBSleek5Gl"
+    },
+    {
+      "applicator": null,
+      "capColor": "Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SLV-T",
+      "productGroupId": "kh7cz3nf9xgxxewknq3jytp2cx8drd2a",
+      "websiteSku": "GBSleek5Sl"
+    },
+    {
+      "applicator": null,
+      "capColor": "White",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-WHT-5ML-WHT-S",
+      "productGroupId": "kh7cz3nf9xgxxewknq3jytp2cx8drd2a",
+      "websiteSku": "GBSleek5WhtSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Clear",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-S",
+      "productGroupId": "kh7cz3nf9xgxxewknq3jytp2cx8drd2a",
+      "websiteSku": "GBSleek5BlkSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MCPR-S",
+      "productGroupId": "kh7cz3nf9xgxxewknq3jytp2cx8drd2a",
+      "websiteSku": "GBSleek5CuSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MGLD-S",
+      "productGroupId": "kh7cz3nf9xgxxewknq3jytp2cx8drd2a",
+      "websiteSku": "GBSleek5GlMattSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MSLV-S",
+      "productGroupId": "kh7cz3nf9xgxxewknq3jytp2cx8drd2a",
+      "websiteSku": "GBSleek5SlMattSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SBLK-S",
+      "productGroupId": "kh7cz3nf9xgxxewknq3jytp2cx8drd2a",
+      "websiteSku": "GBSleek5BlkShSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SGLD-S",
+      "productGroupId": "kh7cz3nf9xgxxewknq3jytp2cx8drd2a",
+      "websiteSku": "GBSleek5GlSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-SSLV-S",
+      "productGroupId": "kh7cz3nf9xgxxewknq3jytp2cx8drd2a",
+      "websiteSku": "GBSleek5SlSht"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MBLK-01",
+      "productGroupId": "kh71waqvcdze8pd7h9rxkqhams8ds81k",
+      "websiteSku": "GBRect10SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-SBLK-01",
+      "productGroupId": "kh71waqvcdze8pd7h9rxkqhams8ds81k",
+      "websiteSku": "GBRect10SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MBLU-01",
+      "productGroupId": "kh71waqvcdze8pd7h9rxkqhams8ds81k",
+      "websiteSku": "GBRect10SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MCPR-01",
+      "productGroupId": "kh71waqvcdze8pd7h9rxkqhams8ds81k",
+      "websiteSku": "GBRect10SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MGLD-01",
+      "productGroupId": "kh71waqvcdze8pd7h9rxkqhams8ds81k",
+      "websiteSku": "GBRect10SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-SGLD-01",
+      "productGroupId": "kh71waqvcdze8pd7h9rxkqhams8ds81k",
+      "websiteSku": "GBRect10SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MSLV-01",
+      "productGroupId": "kh71waqvcdze8pd7h9rxkqhams8ds81k",
+      "websiteSku": "GBRect10SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-SSLV-01",
+      "productGroupId": "kh71waqvcdze8pd7h9rxkqhams8ds81k",
+      "websiteSku": "GBRect10SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MBLK-02",
+      "productGroupId": "kh77bvn2qc0n4s02bjhwqk3jjs8drbb8",
+      "websiteSku": "GBTallRect10SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-SBLK-02",
+      "productGroupId": "kh77bvn2qc0n4s02bjhwqk3jjs8drbb8",
+      "websiteSku": "GBTallRect10SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MBLU-02",
+      "productGroupId": "kh77bvn2qc0n4s02bjhwqk3jjs8drbb8",
+      "websiteSku": "GBTallRect10SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MCPR-02",
+      "productGroupId": "kh77bvn2qc0n4s02bjhwqk3jjs8drbb8",
+      "websiteSku": "GBTallRect10SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MGLD-02",
+      "productGroupId": "kh77bvn2qc0n4s02bjhwqk3jjs8drbb8",
+      "websiteSku": "GBTallRect10SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-SGLD-02",
+      "productGroupId": "kh77bvn2qc0n4s02bjhwqk3jjs8drbb8",
+      "websiteSku": "GBTallRect10SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-MSLV-02",
+      "productGroupId": "kh77bvn2qc0n4s02bjhwqk3jjs8drbb8",
+      "websiteSku": "GBTallRect10SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Rectangle",
+      "graceSku": "GB-RCT-CLR-10ML-SPR-SSLV-02",
+      "productGroupId": "kh77bvn2qc0n4s02bjhwqk3jjs8drbb8",
+      "websiteSku": "GBTallRect10SprySlSh"
+    },
+    {
+      "applicator": null,
+      "capColor": "Gold",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-GLD-T",
+      "productGroupId": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "websiteSku": "GBTulipAmb5Gl"
+    },
+    {
+      "applicator": null,
+      "capColor": "Silver",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-SLV-T",
+      "productGroupId": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "websiteSku": "GBTulipAmb5Sl"
+    },
+    {
+      "applicator": null,
+      "capColor": "White",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-WHT-S",
+      "productGroupId": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "websiteSku": "GBTulipAmb5WhtSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Amber",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-DEC-AMB-5ML-S",
+      "productGroupId": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "websiteSku": "GBTulipAmb5BlkSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-TLP-AMB-5ML-MCPR-S",
+      "productGroupId": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "websiteSku": "GBTulipAmb5CuSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-TLP-AMB-5ML-MGLD-S",
+      "productGroupId": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "websiteSku": "GBTulipAmb5GlMattSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-TLP-AMB-5ML-MSLV-S",
+      "productGroupId": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "websiteSku": "GBTulipAmb5SlMattSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-TLP-AMB-5ML-SBLK-S",
+      "productGroupId": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "websiteSku": "GBTulipAmb5BlkShSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-TLP-AMB-5ML-SGLD-S",
+      "productGroupId": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "websiteSku": "GBTulipAmb5GlSht"
+    },
+    {
+      "applicator": null,
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-TLP-AMB-5ML-SSLV-S",
+      "productGroupId": "kh78nmd9f3yxdrd9x11wcr4yg58drqsm",
+      "websiteSku": "GBTulipAmb5SlSht"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Circle",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-MBLK",
+      "productGroupId": "kh757h63gh9rkb8bd26w79je118dsf6k",
+      "websiteSku": "GBCrcl15SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Circle",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-SBLK",
+      "productGroupId": "kh757h63gh9rkb8bd26w79je118dsf6k",
+      "websiteSku": "GBCrcl15SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Circle",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-MBLU",
+      "productGroupId": "kh757h63gh9rkb8bd26w79je118dsf6k",
+      "websiteSku": "GBCrcl15SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Circle",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-MCPR",
+      "productGroupId": "kh757h63gh9rkb8bd26w79je118dsf6k",
+      "websiteSku": "GBCrcl15SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Circle",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-MGLD",
+      "productGroupId": "kh757h63gh9rkb8bd26w79je118dsf6k",
+      "websiteSku": "GBCrcl15SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Circle",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-SGLD",
+      "productGroupId": "kh757h63gh9rkb8bd26w79je118dsf6k",
+      "websiteSku": "GBCrcl15SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Circle",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-MSLV",
+      "productGroupId": "kh757h63gh9rkb8bd26w79je118dsf6k",
+      "websiteSku": "GBCrcl15SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Circle",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-SSLV",
+      "productGroupId": "kh757h63gh9rkb8bd26w79je118dsf6k",
+      "websiteSku": "GBCrcl15SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-CLR-15ML-SPR-MBLK",
+      "productGroupId": "kh748ncyhk5zkwxka6v4mwvee98dsss8",
+      "websiteSku": "GBElg15SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-CLR-15ML-SPR-SBLK",
+      "productGroupId": "kh748ncyhk5zkwxka6v4mwvee98dsss8",
+      "websiteSku": "GBElg15SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-CLR-15ML-SPR-SGLD-01",
+      "productGroupId": "kh748ncyhk5zkwxka6v4mwvee98dsss8",
+      "websiteSku": "GBElg15SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-CLR-15ML-SPR-MSLV-01",
+      "productGroupId": "kh748ncyhk5zkwxka6v4mwvee98dsss8",
+      "websiteSku": "GBElg15SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-CLR-15ML-SPR-SSLV",
+      "productGroupId": "kh748ncyhk5zkwxka6v4mwvee98dsss8",
+      "websiteSku": "GBElg15SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-CLR-15ML-SPR-MBLU",
+      "productGroupId": "kh748ncyhk5zkwxka6v4mwvee98dsss8",
+      "websiteSku": "GBElg15SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-CLR-15ML-SPR-MCPR-01",
+      "productGroupId": "kh748ncyhk5zkwxka6v4mwvee98dsss8",
+      "websiteSku": "GBElg15SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-CLR-15ML-SPR-MGLD",
+      "productGroupId": "kh748ncyhk5zkwxka6v4mwvee98dsss8",
+      "websiteSku": "GBElg15SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Black",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-FRS-15ML-SPR-BLK-01",
+      "productGroupId": "kh704vgv799cqn5gn7pm7janad8dshhr",
+      "websiteSku": "GBElgFrst15SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Black",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-FRS-15ML-SPR-BLK-02",
+      "productGroupId": "kh704vgv799cqn5gn7pm7janad8dshhr",
+      "websiteSku": "GBElgFrst15SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Clear",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-FRS-15ML-SPR",
+      "productGroupId": "kh704vgv799cqn5gn7pm7janad8dshhr",
+      "websiteSku": "GBElgFrst15SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-FRS-15ML-SPR-SGLD-02",
+      "productGroupId": "kh704vgv799cqn5gn7pm7janad8dshhr",
+      "websiteSku": "GBElgFrst15SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-FRS-15ML-SPR-MSLV-02",
+      "productGroupId": "kh704vgv799cqn5gn7pm7janad8dshhr",
+      "websiteSku": "GBElgFrst15SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Silver",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-FRS-15ML-SPR-SLV",
+      "productGroupId": "kh704vgv799cqn5gn7pm7janad8dshhr",
+      "websiteSku": "GBElgFrst15SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-FRS-15ML-SPR-MCPR-02",
+      "productGroupId": "kh704vgv799cqn5gn7pm7janad8dshhr",
+      "websiteSku": "GBElgFrst15SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "family": "Elegant",
+      "graceSku": "GB-ELG-FRS-15ML-SPR-MGLD",
+      "productGroupId": "kh704vgv799cqn5gn7pm7janad8dshhr",
+      "websiteSku": "GBElgFrst15SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Flair",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-MBLK",
+      "productGroupId": "kh77emhhnq0vmbndd81r80w3zx8ds2eq",
+      "websiteSku": "GBFlair15SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Flair",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-SBLK",
+      "productGroupId": "kh77emhhnq0vmbndd81r80w3zx8ds2eq",
+      "websiteSku": "GBFlair15SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Flair",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-SGLD",
+      "productGroupId": "kh77emhhnq0vmbndd81r80w3zx8ds2eq",
+      "websiteSku": "GBFlair15SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Flair",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-MSLV",
+      "productGroupId": "kh77emhhnq0vmbndd81r80w3zx8ds2eq",
+      "websiteSku": "GBFlair15SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Flair",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-SSLV",
+      "productGroupId": "kh77emhhnq0vmbndd81r80w3zx8ds2eq",
+      "websiteSku": "GBFlair15SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Flair",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-MBLU",
+      "productGroupId": "kh77emhhnq0vmbndd81r80w3zx8ds2eq",
+      "websiteSku": "GBFlair15SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Flair",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-MCPR",
+      "productGroupId": "kh77emhhnq0vmbndd81r80w3zx8ds2eq",
+      "websiteSku": "GBFlair15SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Flair",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-MGLD",
+      "productGroupId": "kh77emhhnq0vmbndd81r80w3zx8ds2eq",
+      "websiteSku": "GBFlair15SpryGlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SBLK",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5MtlRollBlkSh"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-MCPR",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5MtlRollCuMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-MGLD",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5MtlRollGlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SGLD",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5MtlRollGlSh"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Pink with Dots",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-PKDT",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5MtlRollPinkDot"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Silver with Dots",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SLDT",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5MtlRollSlDot"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-MSLV",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5MtlRollSlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SSLV",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5MtlRollSlSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black with Dots",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-BKDT",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5RollBlkDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SSLV",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5RollSlSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SBLK",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5RollBlkSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SGLD",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5RollGlSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Silver with Dots",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SLDT",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5RollSlDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Pink with Dots",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-PKDT",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5RollPinkDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MCPR",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5RollCuMatt"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MGLD",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5RollGlMatt"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MSLV",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5RollSlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black with Dots",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-BKDT",
+      "productGroupId": "kh77q80zfxqpd2xb73q7nz9pyx8ds95a",
+      "websiteSku": "GBCyl5MtlRollBlkDot"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MRL-SBLK",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5MtlRollBlkSh"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MRL-MCPR",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5MtlRollCuMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MRL-MGLD",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5MtlRollGlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MRL-SGLD",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5MtlRollGlSh"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Pink with Dots",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MRL-PKDT",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5MtlRollPinkDot"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Silver with Dots",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MRL-SLDT",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5MtlRollSlDot"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MRL-MSLV",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5MtlRollSlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MRL-SSLV",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5MtlRollSlSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black with Dots",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-BKDT",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5RollBlkDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SGLD",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5RollGlSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SSLV",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5RollSlSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SBLK",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5RollBlkSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MGLD",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5RollGlMatt"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Pink with Dots",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-PKDT",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5RollPinkDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Silver with Dots",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SLDT",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5RollSlDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MCPR",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5RollCuMatt"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MSLV",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5RollSlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black with Dots",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-MRL-BKDT",
+      "productGroupId": "kh7032qfrynwfexqr0hxpqrs9x8dsg46",
+      "websiteSku": "GBCylBlu5MtlRollBlkDot"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SPR-MBLK",
+      "productGroupId": "kh72r4xhzh6jgrp9bdd48wc9698dshr7",
+      "websiteSku": "GBCyl5SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SPR-MSLV",
+      "productGroupId": "kh72r4xhzh6jgrp9bdd48wc9698dshr7",
+      "websiteSku": "GBCyl5SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SPR-SBLK",
+      "productGroupId": "kh72r4xhzh6jgrp9bdd48wc9698dshr7",
+      "websiteSku": "GBCyl5SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SPR-SGLD",
+      "productGroupId": "kh72r4xhzh6jgrp9bdd48wc9698dshr7",
+      "websiteSku": "GBCyl5SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SPR-SSLV",
+      "productGroupId": "kh72r4xhzh6jgrp9bdd48wc9698dshr7",
+      "websiteSku": "GBCyl5SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SPR-MBLU",
+      "productGroupId": "kh72r4xhzh6jgrp9bdd48wc9698dshr7",
+      "websiteSku": "GBCyl5SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SPR-MCPR",
+      "productGroupId": "kh72r4xhzh6jgrp9bdd48wc9698dshr7",
+      "websiteSku": "GBCyl5SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-CLR-5ML-SPR-MGLD",
+      "productGroupId": "kh72r4xhzh6jgrp9bdd48wc9698dshr7",
+      "websiteSku": "GBCyl5SpryGlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MRL-SBLK",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5MtlRollBlkSh"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MRL-MCPR",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5MtlRollCuMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MRL-MGLD",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5MtlRollGlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MRL-SGLD",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5MtlRollGlSh"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Pink Dotted",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MRL-PKDT",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5MtlRollPinkDot"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Silver Dotted",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MRL-SLDT",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5MtlRollSlDot"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MRL-MSLV",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5MtlRollSlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MRL-SSLV",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5MtlRollSlSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black Dotted",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-ROL-BKDT",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5RollBlkDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-ROL-SBLK",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5RollBlkSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-ROL-SGLD",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5RollGlSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-ROL-SSLV",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5RollSlSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Pink Dotted",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-ROL-PKDT",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5RollPinkDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Silver Dotted",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-ROL-SLDT",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5RollSlDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-ROL-MCPR",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5RollCuMatt"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-ROL-MGLD",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5RollGlMatt"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-ROL-MSLV",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5RollSlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black Dotted",
+      "capacityMl": 5,
+      "color": "Clear",
+      "family": "Sleek",
+      "graceSku": "GB-SLK-CLR-5ML-MRL-BKDT",
+      "productGroupId": "kh70wgg86xs0ntr2wsk5x7fh198drm62",
+      "websiteSku": "GBSleek5MtlRollBlkDot"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-SPR-SSLV",
+      "productGroupId": "kh71fxvsvt7xwvmrb5ynggz1bh8ds73v",
+      "websiteSku": "GBCylBlu5SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-SPR-SBLK",
+      "productGroupId": "kh71fxvsvt7xwvmrb5ynggz1bh8ds73v",
+      "websiteSku": "GBCylBlu5SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-SPR-SGLD",
+      "productGroupId": "kh71fxvsvt7xwvmrb5ynggz1bh8ds73v",
+      "websiteSku": "GBCylBlu5SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-SPR-MGLD",
+      "productGroupId": "kh71fxvsvt7xwvmrb5ynggz1bh8ds73v",
+      "websiteSku": "GBCylBlu5SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-SPR-MBLU",
+      "productGroupId": "kh71fxvsvt7xwvmrb5ynggz1bh8ds73v",
+      "websiteSku": "GBCylBlu5SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-SPR-MCPR",
+      "productGroupId": "kh71fxvsvt7xwvmrb5ynggz1bh8ds73v",
+      "websiteSku": "GBCylBlu5SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Cobalt Blue",
+      "family": "Cylinder",
+      "graceSku": "GB-CYL-BLU-5ML-SPR-MSLV",
+      "productGroupId": "kh71fxvsvt7xwvmrb5ynggz1bh8ds73v",
+      "websiteSku": "GBCylBlu5SprySlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-MCPR",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5MtlRollCuMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-MGLD",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5MtlRollGlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SGLD",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5MtlRollGlSh"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Pink Dotted",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-PKDT",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5MtlRollPinkDot"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Silver Dotted",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SLDT",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5MtlRollSlDot"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-MSLV",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5MtlRollSlMatt"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SSLV",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5MtlRollSlSh"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SBLK",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5MtlRollBlkSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black Dotted",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-BKDT",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5RollBlkDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SBLK",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5RollBlkSh"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Copper",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-MCPR",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5RollCuMatt"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-MGLD",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5RollGlMatt"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Pink Dotted",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-PKDT",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5RollPinkDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Silver Dotted",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SLDT",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5RollSlDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-MSLV",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5RollSlMatt"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SSLV",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5RollSlSh"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black Dotted",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-BKDT",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5MtlRollBlkDot"
+    },
+    {
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "capacityMl": 5,
+      "color": "Amber",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SGLD",
+      "productGroupId": "kh7fxc90fb155dn60gba4vg89x8drm0w",
+      "websiteSku": "GBTulipAmb5RollGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 6,
+      "color": "Clear",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-SBLK",
+      "productGroupId": "kh7a23ketzqqwry2dgegd6sfj18ds1c3",
+      "websiteSku": "GBTulip6SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 6,
+      "color": "Clear",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-MBLU",
+      "productGroupId": "kh7a23ketzqqwry2dgegd6sfj18ds1c3",
+      "websiteSku": "GBTulip6SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 6,
+      "color": "Clear",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-MCPR",
+      "productGroupId": "kh7a23ketzqqwry2dgegd6sfj18ds1c3",
+      "websiteSku": "GBTulip6SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 6,
+      "color": "Clear",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-MGLD",
+      "productGroupId": "kh7a23ketzqqwry2dgegd6sfj18ds1c3",
+      "websiteSku": "GBTulip6SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 6,
+      "color": "Clear",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-SGLD",
+      "productGroupId": "kh7a23ketzqqwry2dgegd6sfj18ds1c3",
+      "websiteSku": "GBTulip6SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 6,
+      "color": "Clear",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-MSLV",
+      "productGroupId": "kh7a23ketzqqwry2dgegd6sfj18ds1c3",
+      "websiteSku": "GBTulip6SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 6,
+      "color": "Clear",
+      "family": "Tulip",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-SSLV",
+      "productGroupId": "kh7a23ketzqqwry2dgegd6sfj18ds1c3",
+      "websiteSku": "GBTulip6SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 13,
+      "color": "Clear",
+      "family": "Royal",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-SBLK",
+      "productGroupId": "kh739bs1qea53y047hpctbqtv58drb5a",
+      "websiteSku": "GBRoyal13SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 13,
+      "color": "Clear",
+      "family": "Royal",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-SGLD",
+      "productGroupId": "kh739bs1qea53y047hpctbqtv58drb5a",
+      "websiteSku": "GBRoyal13SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 13,
+      "color": "Clear",
+      "family": "Royal",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-SSLV",
+      "productGroupId": "kh739bs1qea53y047hpctbqtv58drb5a",
+      "websiteSku": "GBRoyal13SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 13,
+      "color": "Clear",
+      "family": "Royal",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-MBLU",
+      "productGroupId": "kh739bs1qea53y047hpctbqtv58drb5a",
+      "websiteSku": "GBRoyal13SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 13,
+      "color": "Clear",
+      "family": "Royal",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-MCPR",
+      "productGroupId": "kh739bs1qea53y047hpctbqtv58drb5a",
+      "websiteSku": "GBRoyal13SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 13,
+      "color": "Clear",
+      "family": "Royal",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-MSLV",
+      "productGroupId": "kh739bs1qea53y047hpctbqtv58drb5a",
+      "websiteSku": "GBRoyal13SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 13,
+      "color": "Clear",
+      "family": "Royal",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-MGLD",
+      "productGroupId": "kh739bs1qea53y047hpctbqtv58drb5a",
+      "websiteSku": "GBRoyal13SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Square",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-SBLK",
+      "productGroupId": "kh7chwdqx3be2h7pdkg3075dgd8dr9vn",
+      "websiteSku": "GBSqr15SpryBlkSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Square",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-SGLD",
+      "productGroupId": "kh7chwdqx3be2h7pdkg3075dgd8dr9vn",
+      "websiteSku": "GBSqr15SpryGlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Square",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-MSLV",
+      "productGroupId": "kh7chwdqx3be2h7pdkg3075dgd8dr9vn",
+      "websiteSku": "GBSqr15SprySlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Square",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-SSLV",
+      "productGroupId": "kh7chwdqx3be2h7pdkg3075dgd8dr9vn",
+      "websiteSku": "GBSqr15SprySlSh"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Square",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-MBLU",
+      "productGroupId": "kh7chwdqx3be2h7pdkg3075dgd8dr9vn",
+      "websiteSku": "GBSqr15SpryBluMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Square",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-MCPR",
+      "productGroupId": "kh7chwdqx3be2h7pdkg3075dgd8dr9vn",
+      "websiteSku": "GBSqr15SpryCuMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "capacityMl": 15,
+      "color": "Clear",
+      "family": "Square",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-MGLD",
+      "productGroupId": "kh7chwdqx3be2h7pdkg3075dgd8dr9vn",
+      "websiteSku": "GBSqr15SpryGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "capacityMl": 9,
+      "color": "Clear",
+      "family": "Pillar",
+      "graceSku": "GB-PIL-CLR-9ML-SPR-MBLK",
+      "productGroupId": "kh7d8evpx0b68wp0rb442bmxrx8ds36r",
+      "websiteSku": "GBPillar9SpryBlkMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "capacityMl": 10,
+      "color": "Clear",
+      "family": "Bell",
+      "graceSku": "GB-BEL-CLR-10ML-SPR-SBLK",
+      "productGroupId": "kh7d30p5y2cnze1er94dvpcegd8dskc9",
+      "websiteSku": "GBBell10SpryBlkSh"
+    }
+  ]
+}

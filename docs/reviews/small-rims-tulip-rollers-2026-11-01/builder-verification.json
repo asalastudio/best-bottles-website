@@ -1,0 +1,34 @@
+{
+  "api": [
+    {
+      "bodyMl": 5,
+      "matchingKits": 18
+    },
+    {
+      "bodyMl": 6,
+      "matchingKits": 18
+    }
+  ],
+  "records": [
+    {
+      "sku": "GBTulipAmb5MtlRollBlkDot",
+      "passed": true,
+      "url": "http://localhost:3010/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "passed": true,
+      "url": "http://localhost:3010/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "passed": true,
+      "url": "http://localhost:3010/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6RollBlkDot",
+      "passed": true,
+      "url": "http://localhost:3010/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6RollBlkDot&from=pdp"
+    }
+  ]
+}

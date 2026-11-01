@@ -1,0 +1,718 @@
+[
+  {
+    "name": "tulip",
+    "view": "sidecar",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-black",
+    "title": "5 ml Amber Tulip Fine-Mist Spray Bottle - Matte Black Sprayer",
+    "capOptions": [
+      {
+        "id": "matte-black",
+        "label": "Matte Black"
+      },
+      {
+        "id": "shiny-black",
+        "label": "Shiny Black"
+      },
+      {
+        "id": "matte-blue",
+        "label": "Matte Blue"
+      },
+      {
+        "id": "matte-copper",
+        "label": "Matte Copper"
+      },
+      {
+        "id": "matte-gold",
+        "label": "Matte Gold"
+      },
+      {
+        "id": "shiny-gold",
+        "label": "Shiny Gold"
+      },
+      {
+        "id": "matte-silver",
+        "label": "Matte Silver"
+      },
+      {
+        "id": "shiny-silver",
+        "label": "Shiny Silver"
+      }
+    ],
+    "parts": [
+      {
+        "slot": "body",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 1;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Ftulip-5ml-13-415%2Famber%2F84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png&w=640&q=75",
+            "box": {
+              "x": 379.25396728515625,
+              "y": 442.7808837890625,
+              "width": 157.9288330078125,
+              "height": 270.453125,
+              "top": 442.7808837890625,
+              "right": 537.1828002929688,
+              "bottom": 713.2340087890625,
+              "left": 379.25396728515625
+            }
+          }
+        ]
+      },
+      {
+        "slot": "diptube",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 2;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fdip-tube-followup-2026-10-31%2Fmechanism-tulip-5-v3.752290ff324a.png&w=640&q=75",
+            "box": {
+              "x": 444.7851867675781,
+              "y": 492.5963439941406,
+              "width": 24.4141845703125,
+              "height": 193.94088745117188,
+              "top": 492.5963439941406,
+              "right": 469.1993713378906,
+              "bottom": 686.5372314453125,
+              "left": 444.7851867675781
+            }
+          }
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 3;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png&w=640&q=75",
+            "box": {
+              "x": 414.5103759765625,
+              "y": 363.5543212890625,
+              "width": 84.14642333984375,
+              "height": 168.308349609375,
+              "top": 363.5543212890625,
+              "right": 498.65679931640625,
+              "bottom": 531.8626708984375,
+              "left": 414.5103759765625
+            }
+          }
+        ]
+      },
+      {
+        "slot": "overcap",
+        "opacity": "",
+        "style": "transform: translate(24.563%, 32.0845%); z-index: 4;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fovercap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png&w=640&q=75",
+            "box": {
+              "x": 527.1148681640625,
+              "y": 523.0009765625,
+              "width": 98.2427978515625,
+              "height": 178.394775390625,
+              "top": 523.0009765625,
+              "right": 625.357666015625,
+              "bottom": 701.395751953125,
+              "left": 527.1148681640625
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "tulip",
+    "view": "exploded",
+    "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-black",
+    "title": "5 ml Amber Tulip Fine-Mist Spray Bottle - Matte Black Sprayer",
+    "capOptions": [
+      {
+        "id": "matte-black",
+        "label": "Matte Black"
+      },
+      {
+        "id": "shiny-black",
+        "label": "Shiny Black"
+      },
+      {
+        "id": "matte-blue",
+        "label": "Matte Blue"
+      },
+      {
+        "id": "matte-copper",
+        "label": "Matte Copper"
+      },
+      {
+        "id": "matte-gold",
+        "label": "Matte Gold"
+      },
+      {
+        "id": "shiny-gold",
+        "label": "Shiny Gold"
+      },
+      {
+        "id": "matte-silver",
+        "label": "Matte Silver"
+      },
+      {
+        "id": "shiny-silver",
+        "label": "Shiny Silver"
+      }
+    ],
+    "parts": [
+      {
+        "slot": "body",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 1;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Ftulip-5ml-13-415%2Famber%2F84b129e160855a59bcfc53b0893110ca504ed2f65cd309fc0323b830abd361d0.png&w=640&q=75",
+            "box": {
+              "x": 379.25396728515625,
+              "y": 362.7808837890625,
+              "width": 157.9288330078125,
+              "height": 270.453125,
+              "top": 362.7808837890625,
+              "right": 537.1828002929688,
+              "bottom": 633.2340087890625,
+              "left": 379.25396728515625
+            }
+          }
+        ]
+      },
+      {
+        "slot": "diptube",
+        "opacity": "",
+        "style": "transform: translate(24.8905%, 2.7869%); z-index: 2;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fdip-tube-followup-2026-10-31%2Fmechanism-tulip-5-v3.752290ff324a.png&w=640&q=75",
+            "box": {
+              "x": 565.3922729492188,
+              "y": 427.4507751464844,
+              "width": 24.4141845703125,
+              "height": 193.94094848632812,
+              "top": 427.4507751464844,
+              "right": 589.8064575195312,
+              "bottom": 621.3917236328125,
+              "left": 565.3922729492188
+            }
+          }
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "opacity": "",
+        "style": "transform: translate(24.8905%, 2.7869%); z-index: 3;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png&w=640&q=75",
+            "box": {
+              "x": 535.117431640625,
+              "y": 298.40875244140625,
+              "width": 84.146484375,
+              "height": 168.30831909179688,
+              "top": 298.40875244140625,
+              "right": 619.263916015625,
+              "bottom": 466.7170715332031,
+              "left": 535.117431640625
+            }
+          }
+        ]
+      },
+      {
+        "slot": "overcap",
+        "opacity": "",
+        "style": "transform: translate(0%, -24.6127%); z-index: 4;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fovercap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png&w=640&q=75",
+            "box": {
+              "x": 408.094482421875,
+              "y": 140.79937744140625,
+              "width": 98.24282836914062,
+              "height": 178.394775390625,
+              "top": 140.79937744140625,
+              "right": 506.3373107910156,
+              "bottom": 319.19415283203125,
+              "left": 408.094482421875
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "sleek",
+    "view": "sidecar",
+    "url": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?cap=matte-copper",
+    "title": "8 ml Clear Sleek Fine-Mist Spray Bottle - Matte Copper Sprayer",
+    "capOptions": [
+      {
+        "id": "matte-black",
+        "label": "Matte Black"
+      },
+      {
+        "id": "shiny-black",
+        "label": "Shiny Black"
+      },
+      {
+        "id": "matte-blue",
+        "label": "Matte Blue"
+      },
+      {
+        "id": "matte-copper",
+        "label": "Matte Copper"
+      },
+      {
+        "id": "matte-gold",
+        "label": "Matte Gold"
+      },
+      {
+        "id": "shiny-gold",
+        "label": "Shiny Gold"
+      },
+      {
+        "id": "matte-silver",
+        "label": "Matte Silver"
+      },
+      {
+        "id": "shiny-silver",
+        "label": "Shiny Silver"
+      }
+    ],
+    "parts": [
+      {
+        "slot": "body",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 1;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fsleek-8ml-13-415%2Fclear%2F7987a868e0824c4d2462d6f97d9523b5dfc8bb4340bce939603558412e49573c.png&w=640&q=75",
+            "box": {
+              "x": 403.5669860839844,
+              "y": 403.1768798828125,
+              "width": 109.26699829101562,
+              "height": 311.8697509765625,
+              "top": 403.1768798828125,
+              "right": 512.833984375,
+              "bottom": 715.046630859375,
+              "left": 403.5669860839844
+            }
+          }
+        ]
+      },
+      {
+        "slot": "diptube",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 2;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fdip-tube-followup-2026-10-31%2Fmechanism-sleek-8-v1.5b26404496ef.png&w=640&q=75",
+            "box": {
+              "x": 447.09619140625,
+              "y": 445.63067626953125,
+              "width": 20.457855224609375,
+              "height": 243.54351806640625,
+              "top": 445.63067626953125,
+              "right": 467.5540466308594,
+              "bottom": 689.1741943359375,
+              "left": 447.09619140625
+            }
+          }
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 3;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=640&q=75",
+            "box": {
+              "x": 423.8372802734375,
+              "y": 349.4937438964844,
+              "width": 66.6630859375,
+              "height": 123.83505249023438,
+              "top": 349.4937438964844,
+              "right": 490.5003662109375,
+              "bottom": 473.32879638671875,
+              "left": 423.8372802734375
+            }
+          }
+        ]
+      },
+      {
+        "slot": "overcap",
+        "opacity": "",
+        "style": "transform: translate(21.377%, 51.5145%); z-index: 4;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fovercap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png&w=640&q=75",
+            "box": {
+              "x": 501.4949035644531,
+              "y": 556.3035278320312,
+              "width": 78.59268188476562,
+              "height": 145.0806884765625,
+              "top": 556.3035278320312,
+              "right": 580.0875854492188,
+              "bottom": 701.3842163085938,
+              "left": 501.4949035644531
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "sleek",
+    "view": "exploded",
+    "url": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?cap=matte-copper",
+    "title": "8 ml Clear Sleek Fine-Mist Spray Bottle - Matte Copper Sprayer",
+    "capOptions": [
+      {
+        "id": "matte-black",
+        "label": "Matte Black"
+      },
+      {
+        "id": "shiny-black",
+        "label": "Shiny Black"
+      },
+      {
+        "id": "matte-blue",
+        "label": "Matte Blue"
+      },
+      {
+        "id": "matte-copper",
+        "label": "Matte Copper"
+      },
+      {
+        "id": "matte-gold",
+        "label": "Matte Gold"
+      },
+      {
+        "id": "shiny-gold",
+        "label": "Shiny Gold"
+      },
+      {
+        "id": "matte-silver",
+        "label": "Matte Silver"
+      },
+      {
+        "id": "shiny-silver",
+        "label": "Shiny Silver"
+      }
+    ],
+    "parts": [
+      {
+        "slot": "body",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 1;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fsleek-8ml-13-415%2Fclear%2F7987a868e0824c4d2462d6f97d9523b5dfc8bb4340bce939603558412e49573c.png&w=640&q=75",
+            "box": {
+              "x": 403.5669860839844,
+              "y": 323.1768798828125,
+              "width": 109.26699829101562,
+              "height": 311.8697509765625,
+              "top": 323.1768798828125,
+              "right": 512.833984375,
+              "bottom": 635.046630859375,
+              "left": 403.5669860839844
+            }
+          }
+        ]
+      },
+      {
+        "slot": "diptube",
+        "opacity": "",
+        "style": "transform: translate(22.3641%, 2.82508%); z-index: 2;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fdip-tube-followup-2026-10-31%2Fmechanism-sleek-8-v1.5b26404496ef.png&w=640&q=75",
+            "box": {
+              "x": 534.959228515625,
+              "y": 377.8396911621094,
+              "width": 20.4578857421875,
+              "height": 243.54348754882812,
+              "top": 377.8396911621094,
+              "right": 555.4171142578125,
+              "bottom": 621.3831787109375,
+              "left": 534.959228515625
+            }
+          }
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "opacity": "",
+        "style": "transform: translate(22.3641%, 2.82508%); z-index: 3;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=640&q=75",
+            "box": {
+              "x": 511.7003479003906,
+              "y": 281.7027893066406,
+              "width": 66.66305541992188,
+              "height": 123.83505249023438,
+              "top": 281.7027893066406,
+              "right": 578.3634033203125,
+              "bottom": 405.537841796875,
+              "left": 511.7003479003906
+            }
+          }
+        ]
+      },
+      {
+        "slot": "overcap",
+        "opacity": "",
+        "style": "transform: translate(-23.8821%, 51.5145%); z-index: 4;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fovercap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png&w=640&q=75",
+            "box": {
+              "x": 323.68292236328125,
+              "y": 476.30352783203125,
+              "width": 78.59268188476562,
+              "height": 145.0806884765625,
+              "top": 476.30352783203125,
+              "right": 402.2756042480469,
+              "bottom": 621.3842163085938,
+              "left": 323.68292236328125
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "round",
+    "view": "sidecar",
+    "url": "http://localhost:3010/products/round-78ml-clear-18-415-perfumespray?cap=copper",
+    "title": "78 ml Clear Round Perfume Spray Bottle - Copper Sprayer",
+    "capOptions": [
+      {
+        "id": "copper",
+        "label": "Copper"
+      },
+      {
+        "id": "matte-gold",
+        "label": "Matte Gold"
+      },
+      {
+        "id": "matte-silver",
+        "label": "Matte Silver"
+      },
+      {
+        "id": "shiny-black",
+        "label": "Shiny Black"
+      },
+      {
+        "id": "shiny-gold",
+        "label": "Shiny Gold"
+      },
+      {
+        "id": "shiny-silver",
+        "label": "Shiny Silver"
+      }
+    ],
+    "parts": [
+      {
+        "slot": "body",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 1;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fround-78ml-18-415%2Fclear%2F971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png&w=640&q=75",
+            "box": {
+              "x": 213.5294952392578,
+              "y": 350.73822021484375,
+              "width": 331.52386474609375,
+              "height": 394.9466552734375,
+              "top": 350.73822021484375,
+              "right": 545.0533599853516,
+              "bottom": 745.6848754882812,
+              "left": 213.5294952392578
+            }
+          }
+        ]
+      },
+      {
+        "slot": "diptube",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 2;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fdip-tube-followup-2026-10-31%2Fmechanism-round-78-v1.951d7c2f41fa.png&w=640&q=75",
+            "box": {
+              "x": 367.421630859375,
+              "y": 418.4530029296875,
+              "width": 25.3297119140625,
+              "height": 296.8221435546875,
+              "top": 418.4530029296875,
+              "right": 392.7513427734375,
+              "bottom": 715.275146484375,
+              "left": 367.421630859375
+            }
+          }
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 3;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=640&q=75",
+            "box": {
+              "x": 322.26434326171875,
+              "y": 260.1844787597656,
+              "width": 113.36459350585938,
+              "height": 198.02212524414062,
+              "top": 260.1844787597656,
+              "right": 435.6289367675781,
+              "bottom": 458.20660400390625,
+              "left": 322.26434326171875
+            }
+          }
+        ]
+      },
+      {
+        "slot": "overcap",
+        "opacity": "",
+        "style": "transform: translate(46.721%, 55.5627%); z-index: 4;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fovercap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png&w=640&q=75",
+            "box": {
+              "x": 521.2828369140625,
+              "y": 501.8226623535156,
+              "width": 137.484130859375,
+              "height": 226.57431030273438,
+              "top": 501.8226623535156,
+              "right": 658.7669677734375,
+              "bottom": 728.39697265625,
+              "left": 521.2828369140625
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "round",
+    "view": "exploded",
+    "url": "http://localhost:3010/products/round-78ml-clear-18-415-perfumespray?cap=copper",
+    "title": "78 ml Clear Round Perfume Spray Bottle - Copper Sprayer",
+    "capOptions": [
+      {
+        "id": "copper",
+        "label": "Copper"
+      },
+      {
+        "id": "matte-gold",
+        "label": "Matte Gold"
+      },
+      {
+        "id": "matte-silver",
+        "label": "Matte Silver"
+      },
+      {
+        "id": "shiny-black",
+        "label": "Shiny Black"
+      },
+      {
+        "id": "shiny-gold",
+        "label": "Shiny Gold"
+      },
+      {
+        "id": "shiny-silver",
+        "label": "Shiny Silver"
+      }
+    ],
+    "parts": [
+      {
+        "slot": "body",
+        "opacity": "",
+        "style": "transform: translate(0%, 0%); z-index: 1;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fround-78ml-18-415%2Fclear%2F971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png&w=640&q=75",
+            "box": {
+              "x": 376.50555419921875,
+              "y": 473.6257629394531,
+              "width": 162.041259765625,
+              "height": 193.04086303710938,
+              "top": 473.6257629394531,
+              "right": 538.5468139648438,
+              "bottom": 666.6666259765625,
+              "left": 376.50555419921875
+            }
+          }
+        ]
+      },
+      {
+        "slot": "diptube",
+        "opacity": "",
+        "style": "transform: translate(0%, -72.2127%); z-index: 2;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fdip-tube-followup-2026-10-31%2Fmechanism-round-78-v1.951d7c2f41fa.png&w=640&q=75",
+            "box": {
+              "x": 451.7244873046875,
+              "y": 335.0682678222656,
+              "width": 12.380615234375,
+              "height": 145.07986450195312,
+              "top": 335.0682678222656,
+              "right": 464.1051025390625,
+              "bottom": 480.14813232421875,
+              "left": 451.7244873046875
+            }
+          }
+        ]
+      },
+      {
+        "slot": "sprayer",
+        "opacity": "",
+        "style": "transform: translate(0%, -72.2127%); z-index: 3;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=640&q=75",
+            "box": {
+              "x": 429.65264892578125,
+              "y": 257.7102355957031,
+              "width": 55.4100341796875,
+              "height": 96.78866577148438,
+              "top": 257.7102355957031,
+              "right": 485.06268310546875,
+              "bottom": 354.4989013671875,
+              "left": 429.65264892578125
+            }
+          }
+        ]
+      },
+      {
+        "slot": "overcap",
+        "opacity": "",
+        "style": "transform: translate(0%, -115.105%); z-index: 4;",
+        "img": [
+          {
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fovercap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png&w=640&q=75",
+            "box": {
+              "x": 425.96600341796875,
+              "y": 141.78384399414062,
+              "width": 67.19906616210938,
+              "height": 110.74436950683594,
+              "top": 141.78384399414062,
+              "right": 493.1650695800781,
+              "bottom": 252.52821350097656,
+              "left": 425.96600341796875
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

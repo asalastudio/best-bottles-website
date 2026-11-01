@@ -210,7 +210,11 @@ describe("redesigned product page", () => {
         expect(pushes).toEqual(["/products/cylinder-9ml-amber-17-415-rollon?roller=plastic&cap=black-with-dots"]);
         await click('[data-testid="pdp-ask-grace"]');
         expect(graceOpens).toEqual([{ source: "pdp" }]);
-        expect(container.querySelector('[data-testid="pdp-build-cta"]')?.getAttribute("href")).toBe("/matrix?family=Cylinder&shop=roll-on-bottles&from=pdp");
+        const builderParams = new URL(container.querySelector('[data-testid="pdp-build-cta"]')!.getAttribute("href")!, "http://localhost").searchParams;
+        expect(builderParams.get("family")).toBe("Cylinder");
+        expect(builderParams.get("shop")).toBe("roll-on-bottles");
+        expect(builderParams.get("from")).toBe("pdp");
+        expect(builderParams.get("sku")).toBeTruthy();
         expect(text('[data-testid="pdp-collection"] h2')).toBe("Roll-On Bottles");
     });
 });

@@ -1,0 +1,82 @@
+{
+  "method": "1.25 native px alpha erosion, 0.9 px alpha smoothing, source RGB retained; no shape warp or resizing",
+  "checks": [
+    {
+      "file": "actuator.png",
+      "size": [
+        992,
+        1208
+      ],
+      "removedFringePixels": 5527,
+      "exteriorAlphaExpansion": 0,
+      "solidInteriorRgbChanges": 0,
+      "sha256": "0e86a99e6f43a8eb58484b308c13afd24b6234f6f953e32b40d11ff52bd92182"
+    },
+    {
+      "file": "collar-black.png",
+      "size": [
+        1204,
+        1028
+      ],
+      "removedFringePixels": 348,
+      "exteriorAlphaExpansion": 0,
+      "solidInteriorRgbChanges": 0,
+      "sha256": "8fcf55b9fe3c6f9df96e5cb3272a24860321497ba54c4dfb2d42ad6b310395ee"
+    },
+    {
+      "file": "collar-gold.png",
+      "size": [
+        1204,
+        1028
+      ],
+      "removedFringePixels": 141,
+      "exteriorAlphaExpansion": 0,
+      "solidInteriorRgbChanges": 0,
+      "sha256": "5063cb8d191d8b6e7cf2c54c265d7e3672d587a66db903d4064ef6b4b4097a8a"
+    },
+    {
+      "file": "collar-matte-silver.png",
+      "size": [
+        1204,
+        1028
+      ],
+      "removedFringePixels": 393,
+      "exteriorAlphaExpansion": 0,
+      "solidInteriorRgbChanges": 0,
+      "sha256": "a92a50f2af07c9c92110fbadd396156222d4cb28fe99235fe72e169a94f4a104"
+    },
+    {
+      "file": "collar-shiny-silver.png",
+      "size": [
+        1204,
+        1028
+      ],
+      "removedFringePixels": 238,
+      "exteriorAlphaExpansion": 0,
+      "solidInteriorRgbChanges": 0,
+      "sha256": "de08091a534df7f91a287602ad519a56a678191fd351f84242bdd6b8609f8d95"
+    },
+    {
+      "file": "collar-red.png",
+      "size": [
+        1204,
+        1028
+      ],
+      "removedFringePixels": 278,
+      "exteriorAlphaExpansion": 0,
+      "solidInteriorRgbChanges": 0,
+      "sha256": "6194fb5305347782e7c0dcd5a01f2b96296841c9d736ea344e426e725989e808"
+    },
+    {
+      "file": "collar-turquoise.png",
+      "size": [
+        1204,
+        1028
+      ],
+      "removedFringePixels": 769,
+      "exteriorAlphaExpansion": 0,
+      "solidInteriorRgbChanges": 0,
+      "sha256": "bf4cd34cd121d06ac3292c0405d0b985f7df84b6d1b6359d45f948caaa05fda6"
+    }
+  ]
+}

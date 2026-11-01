@@ -46,6 +46,49 @@ const PAYLOAD: RegisterStagePayload = {
 const DATUM = STAGE_DATUMS["cylinder-9ml-17-415"];
 const PX_PER_MM = (DATUM.baselineY - DATUM.seatY) / ((2176 - 167) / 27.2142);
 
+describe("9 ml frosted mist tube", () => {
+    it("replaces the glass-wide ghost while preserving glass geometry and the full exploded tube", () => {
+        const payload = structuredClone(PAYLOAD);
+        const plateKey = "cylinder-9ml-17-415|Frosted";
+        payload.plates[plateKey] = { ...PLATE, plateKey, glass: "Frosted" };
+        const id = "CMP-SPR-BLK-17-415-01";
+        const layer = { slot: "diptube" as const, z: "front" as const, explodeIndex: 3, pxPerMm: 25,
+            anchor: { x: 58, y: 20 }, approved: true, bodyId: PLATE.bodyId, glass: "Frosted" };
+        payload.components[id] = { componentId: id, type: "fine-mist-sprayer", approved: true, layers: [
+            { ...layer, url: "/05437fcf0138676421a222e5d97c49f23c4b55a33cdc6c54ffc91dc5880aca73.png", width: 428, height: 1654, usage: "seated" },
+            { ...layer, url: "/narrow-tube.png", width: 116, height: 1594, usage: "exploded" },
+        ] };
+        const key = "GB-CYL-FRS-9ML-SPR-BLK";
+        payload.assemblies[key] = { graceSku: key, websiteSku: "GBCylFrst9SpryBlk", bodyId: PLATE.bodyId, plateKey,
+            glass: "Frosted", neck: "17-415", parts: [{ role: "sprayer", componentId: id }], renderable: true, reason: null };
+        const corrected = kitFromRegister(key, payload)!;
+        const seated = corrected.parts.find(p => p.slot === "diptube" && p.views?.includes("sidecar"))!;
+        const exploded = corrected.parts.find(p => p.slot === "diptube" && p.views?.includes("exploded"))!;
+        expect(seated.image.url).toBe("/narrow-tube.png");
+        expect(seated.box).toEqual(exploded.box);
+        expect(seated.opacity).toBe(0.3);
+        expect(exploded.opacity).toBeUndefined();
+        expect(corrected.parts.find(p => p.slot === "body")!.image.url).toBe(PLATE.url);
+        expect(stageLayout(corrected, "sidecar", {})!.parts.find(p => p.slot === "diptube")!.opacity).toBe(0.3);
+        expect(stageLayout(corrected, "exploded", {})!.parts.find(p => p.slot === "diptube")!.opacity).toBeUndefined();
+        // The swirl defect has the same cause but must not inherit frost opacity.
+        const swirlKey = "cylinder-9ml-17-415|Swirl";
+        payload.plates[swirlKey] = { ...PLATE, plateKey: swirlKey, glass: "Swirl" };
+        payload.assemblies[key] = { ...payload.assemblies[key]!, plateKey: swirlKey, glass: "Swirl" };
+        payload.components[id].layers = payload.components[id].layers.map(layer => ({ ...layer, glass: "Swirl",
+            url: layer.usage === "seated" ? "/19765d409e1df03e6d1714a56a8502cdc425a991663ce7a361b3282fe569bf68.png" : layer.url }));
+        const swirl = kitFromRegister(key, payload)!;
+        const swirlTube = swirl.parts.find(p => p.slot === "diptube" && p.views?.includes("sidecar"))!;
+        expect(swirlTube.image.url).toBe("/narrow-tube.png");
+        expect(swirlTube.opacity).toBeUndefined();
+        expect(swirlTube.zOrder).toBeLessThan(swirl.parts.find(p => p.slot === "body")!.zOrder);
+        expect(stageLayout(swirl, "exploded", {})!.parts.find(p => p.slot === "diptube")!.zIndex).toBeGreaterThan(stageLayout(swirl, "exploded", {})!.parts.find(p => p.slot === "body")!.zIndex);
+        expect(swirl.parts.filter(p => p.slot === "body")).toHaveLength(1);
+        expect(swirl.parts.find(p => p.slot === "body")!.image.url).toBe(PLATE.url);
+
+    });
+});
+
 describe("kitFromRegister", () => {
     const kit = kitFromRegister("GB-CYL-CLR-9ML-MRL-BKDT", PAYLOAD)!;
 
@@ -134,10 +177,32 @@ describe("kitFromRegister", () => {
         expect(assembledKit(both).parts.filter((part) => part.slot === "roller").map((part) => part.image.url)).toEqual([seated.url]);
         expect(assembledKit(both).parts.length).toBe(both.parts.length - 1);
         expect(assembledKit(kit).parts).toEqual(kit.parts);
-        // the plug lifts as the insert's own unit, the cap above it
+        // The whole plug detaches without covering the bottle. A fixed-scale
+        // stage can place it beside the glass when a vertical stack cannot fit.
         const exploded = stageLayout(both, "exploded", context)!;
-        expect(exploded.parts.find((part) => part.slot === "roller")!.dyPct).toBeLessThan(0);
-        expect(exploded.parts.find((part) => part.slot === "cap")!.dyPct).toBeLessThan(exploded.parts.find((part) => part.slot === "roller")!.dyPct);
+        const drawnRoller = exploded.parts.find((part) => part.slot === "roller")!;
+        const sourceRoller = both.parts.find((part) => part.image.url === drawnRoller.url)!;
+        const bodyBounds = both.parts.find((part) => part.slot === "body")!.bounds;
+        const rollerBounds = {
+            left: sourceRoller.bounds.left + drawnRoller.dxPct / 100 * both.canvas.width,
+            right: sourceRoller.bounds.right + drawnRoller.dxPct / 100 * both.canvas.width,
+            top: sourceRoller.bounds.top + drawnRoller.dyPct / 100 * both.canvas.height,
+            bottom: sourceRoller.bounds.bottom + drawnRoller.dyPct / 100 * both.canvas.height,
+        };
+        expect(rollerBounds.right < bodyBounds.left || rollerBounds.left > bodyBounds.right
+            || rollerBounds.bottom < bodyBounds.top || rollerBounds.top > bodyBounds.bottom).toBe(true);
+        // The reviewed glass no longer shrinks to fit a tall vertical stack.
+        // Detached pieces may move into the side tray.
+        for (const drawn of exploded.parts) {
+            const source = both.parts.find(part => part.image.url === drawn.url)!;
+            const f = exploded.frame;
+            const x = (value: number) => f.x + (value / both.canvas.width * 100 + drawn.dxPct) * f.scale;
+            const y = (value: number) => f.y + (value / both.canvas.height * 100 + drawn.dyPct) * f.scale;
+            expect(x(source.bounds.left)).toBeGreaterThanOrEqual(0);
+            expect(x(source.bounds.right)).toBeLessThanOrEqual(100);
+            expect(y(source.bounds.top)).toBeGreaterThanOrEqual(0);
+            expect(y(source.bounds.bottom)).toBeLessThanOrEqual(100);
+        }
     });
 
     it("uses the original flat-bottom roller in Builder when extra seated layers share its component", () => {

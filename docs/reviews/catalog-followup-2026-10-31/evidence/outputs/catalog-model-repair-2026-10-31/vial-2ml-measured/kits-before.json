@@ -1,0 +1,428 @@
+{
+  "rows": {
+    "GBVialClr2mlWhtCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1001,
+        "seatY": 286,
+        "pxPerMm": null
+      },
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-clear-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 356.7853612048185,
+            "top": 103.17712177121781,
+            "right": 643.2146387951816,
+            "bottom": 998.468634686347
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e.body.png",
+            "key": "32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e.body.png",
+            "sha256": "32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e",
+            "bytes": 587312,
+            "width": 1198,
+            "height": 1313
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 20.75101319377808,
+            "y": 27.169352578244386,
+            "width": 958.4979736124438,
+            "height": 1050.5073784249907
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "white",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 343,
+            "top": 75,
+            "right": 658,
+            "bottom": 287
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -211
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "key": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+            "bytes": 9370,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "plateSha256": "c4fa1744adec04afc085cd829573d1035a8f32b290cbd2633f6fb020d653c6c8",
+      "sku": "GBVialClr2mlWhtCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    },
+    "GBVialClr2mlBlackCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1001,
+        "seatY": 288,
+        "pxPerMm": null
+      },
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-clear-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 356.7853612048185,
+            "top": 103.17712177121781,
+            "right": 643.2146387951816,
+            "bottom": 998.468634686347
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e.body.png",
+            "key": "32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e.body.png",
+            "sha256": "32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e",
+            "bytes": 587312,
+            "width": 1198,
+            "height": 1313
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 20.75101319377808,
+            "y": 27.169352578244386,
+            "width": 958.4979736124438,
+            "height": 1050.5073784249907
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "black",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 338,
+            "top": 83,
+            "right": 656,
+            "bottom": 289
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -213
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "key": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+            "bytes": 9794,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "plateSha256": "52508a53280415b93a16451db5cbf60c93fb612488cf7e5908beb5fdc02cbc31",
+      "sku": "GBVialClr2mlBlackCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    },
+    "GBVAmb2BlackCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1001,
+        "seatY": 288,
+        "pxPerMm": null
+      },
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-amber-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 353.97651794699766,
+            "top": 103.17712177121781,
+            "right": 646.0234820530023,
+            "bottom": 998.4686346863468
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac.body.png",
+            "key": "32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac.body.png",
+            "sha256": "32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac",
+            "bytes": 591550,
+            "width": 1199,
+            "height": 1312
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 21.234485072123448,
+            "y": 29.766409482276742,
+            "width": 956.7330873308732,
+            "height": 1046.9005926422901
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "black",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 338,
+            "top": 83,
+            "right": 656,
+            "bottom": 289
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -213
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "key": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+            "bytes": 9794,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "plateSha256": "",
+      "sku": "GBVAmb2BlackCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    },
+    "GBVAmb2WhtCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1001,
+        "seatY": 286,
+        "pxPerMm": null
+      },
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-amber-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 353.97651794699766,
+            "top": 103.17712177121781,
+            "right": 646.0234820530023,
+            "bottom": 998.4686346863468
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac.body.png",
+            "key": "32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac.body.png",
+            "sha256": "32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac",
+            "bytes": 591550,
+            "width": 1199,
+            "height": 1312
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 21.234485072123448,
+            "y": 29.766409482276742,
+            "width": 956.7330873308732,
+            "height": 1046.9005926422901
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "white",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 343,
+            "top": 75,
+            "right": 658,
+            "bottom": 287
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -211
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "key": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+            "bytes": 9370,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "plateSha256": "",
+      "sku": "GBVAmb2WhtCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    }
+  },
+  "reviewCandidate": {
+    "scope": "local-only",
+    "generatedBodySha256": "32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e",
+    "sourceGeometry": "Approved straight-on 2 ml clear vial master",
+    "pixelAssetUnmodified": true,
+    "sizingApproval": {
+      "date": "2026-10-31",
+      "instruction": "Use the later approved vial sizing",
+      "source": "docs/hero-families/vials-2026-09-25/approval.json",
+      "scope": "local product page, two clear 2 ml vial cap SKUs",
+      "glassHeightMm": 35,
+      "glassHeightPct": 40.24,
+      "baselinePct": 91
+    },
+    "materialUpgrade": {
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/sunburst-pilot/clear-sunburst.png",
+      "appliedAt": "2026-10-31T20:12:40.714Z",
+      "userInstruction": "ok update the product page now",
+      "scope": "Local clear 2 ml product page, both cap finishes; amber and 4 ml unchanged"
+    },
+    "amberIntegration": {
+      "appliedAt": "2026-10-31T20:15:44.839Z",
+      "scope": "Local 2 ml amber, both cap SKUs",
+      "method": "Existing approved built-in GPT dark amber master; not a new Sunburst generation",
+      "sha256": "5e9de72bdf63148e685ba09eb5945374a1ffe4dfb90de718f424089acffa8e98",
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/masters/amber.png",
+      "userInstruction": "we need the amber as well as the clear to be updated for the 2 mL",
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      },
+      "pixelAssetUnmodified": true,
+      "caps": "Shared approved black and white 8-425 cap masters"
+    },
+    "amberSunburst": {
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "appliedAt": "2026-10-31T20:22:59.453Z",
+      "sha256": "32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac",
+      "approval": "Approve these two images",
+      "ratioDeltaPct": 0.5643040742163263,
+      "source": "outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/amber-sunburst.png"
+    }
+  },
+  "defaultPdpSkus": [
+    "GBVialClr2mlWhtCap",
+    "GBVialClr2mlBlackCap",
+    "GBVAmb2BlackCap",
+    "GBVAmb2WhtCap"
+  ]
+}

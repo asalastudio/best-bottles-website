@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-31",
+  "sku": "GBVialClr2mlWhtCap",
+  "method": "built-in image_gen reference edit",
+  "reference": "docs/reviews/vial-2ml-source-correction-2026-10-31/vial-alternate-Uncapped.png",
+  "referenceSha256": "95a7aa02445056318dd1edd05757bd90bf8d364f4bc78b25750f77cf86ad6b47",
+  "output": "GBVialClr2mlWhtCap-sidecar-candidate-v1.png",
+  "outputSha256": "fcdc22dc9e57634975a96afd0b3435cac7b1a487c908a12db5693a0b210509ff",
+  "prompt": "prompt.txt",
+  "status": "visual-review-candidate",
+  "userApproved": false,
+  "published": false,
+  "geometryValidation": "Visual comparison only; generated thread, glass-base and cap surface details remain unverified. No claim of pixel-identical geometry.",
+  "notes": "The source-corrected local layered kit is unchanged. This generated image is a sidecar catalog candidate, not a replacement for the separate animatable body/cap layers."
+}

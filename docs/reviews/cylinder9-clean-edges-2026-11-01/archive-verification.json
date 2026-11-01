@@ -1,0 +1,16 @@
+{
+  "archive": "outputs/family-master-library-2026-11-01/Cylinder_9ml_Fixed-Edges-PDP-Review_2026-11-01_v04.zip",
+  "bytes": 10693229,
+  "sha256": "0617f4e457a0bc83fa2c0373289177f79d66bb31cbc90f235cbc8692f94061df",
+  "zipEntries": 26,
+  "crcPass": true,
+  "entryHashesPass": true,
+  "restore": {
+    "mode": "restored",
+    "verifiedFiles": 25,
+    "copied": 4,
+    "unchanged": 0,
+    "backedUp": 0
+  },
+  "restoredInto": "/var/folders/g3/l_7f2hg57x90xzht2md1q_hm0000gn/T/cylinder9-clean-v04-restore-j7gywf8k"
+}

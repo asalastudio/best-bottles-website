@@ -1,0 +1,22 @@
+{
+  "errors": [],
+  "images": [
+    {
+      "src": "source.png",
+      "loaded": true
+    },
+    {
+      "src": "BB_cylinder-9ml-17-415_Clear_BODY_Builtin-v01_REVIEW_2026-11-01_952e3be55f8a.png",
+      "loaded": true
+    },
+    {
+      "src": "source.png",
+      "loaded": true
+    },
+    {
+      "src": "BB_cylinder-9ml-17-415_Clear_BODY_Builtin-v01_REVIEW_2026-11-01_952e3be55f8a.png",
+      "loaded": true
+    }
+  ],
+  "mobileHorizontalOverflow": false
+}

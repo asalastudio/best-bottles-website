@@ -1,0 +1,42 @@
+{
+  "source": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/working/native/native-cyl5-13415-v7-review-2026-09-29__Cyl-5ml-13-415_clear_STUDIO-v1.5-body-v7e/model-fit-v8.blend",
+  "partNames": [
+    "roller-metal | V54 seated visual housing \u2014 compressed sleeve.001",
+    "roller-metal | V54 metal ball \u00d88.001"
+  ],
+  "crop": [
+    1097,
+    709,
+    1403,
+    1164
+  ],
+  "axis": 1250.0,
+  "seat": 964.3023014068604,
+  "sourcePxPerMm": 25,
+  "flangeSeatWorldMm": 105.49210011959076,
+  "ballDiameterMm": 8.19,
+  "flangeDiameterMm": 11.21,
+  "ballSphericityMaxAxisDeltaMm": 9.313225746154785e-06,
+  "changes": "Isolated existing 13-415 assembly in studio; mesh, ball position, housing and plug preserved. Complete plug travels with seated ball.",
+  "acceptance": "visual-production candidate",
+  "hardware_lit": [
+    "CAP_BlackDotted_Shell",
+    "CAP_Jewel_center_1",
+    "CAP_Jewel_center_2",
+    "CAP_Jewel_center_3",
+    "CAP_Jewel_left_1",
+    "CAP_Jewel_left_2",
+    "CAP_Jewel_right_1",
+    "CAP_Jewel_right_2",
+    "ROLLER_Ball \u2014 plastic or stainless",
+    "ROLLER_Housing_Flange_HollowStem",
+    "pump \u2014 discharge recess backing",
+    "pump \u2014 measured dip tube \u00d83.55",
+    "pump \u2014 measured pump body",
+    "pump \u2014 phenolic collar",
+    "pump \u2014 stationary white sleeve",
+    "pump \u2014 translucent overcap",
+    "pump \u2014 white actuator"
+  ],
+  "calibration": "Flange underside read from the exported scene world geometry after linked transforms evaluated."
+}

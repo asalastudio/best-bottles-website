@@ -8,7 +8,7 @@ describe("detached overcaps: the 9 mL Cylinder 17-415 clear cover (Jordan 2026-0
     it("parks the empty cover beside the glass for every fine-mist and lotion finish", () => {
         for (const id of ["CMP-SPR-BLK-17-415-01", "CMP-SPR-CLR-17-415", "CMP-SPR-RED-17-415", "CMP-SPR-SGLD-17-415", "CMP-SPR-SLV-17-415",
             "CMP-SPR-SSLV-17-415", "CMP-LPM-BLK-17-415", "CMP-LPM-MSLV-17-415", "CMP-LPM-SGLD-17-415"]) {
-            expect(DETACHED_OVERCAPS[id]?.url).toBe("/assets/register/overcaps/ovr-17-415-clear-overcap.webp");
+            expect(DETACHED_OVERCAPS[id]?.url).toBe("/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png");
         }
         expect(lotion.seatedLayerSha256).not.toBe(mist.seatedLayerSha256);   // each seated layer carries its own head
     });

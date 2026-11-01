@@ -1,0 +1,34 @@
+[
+  {
+    "glass": "Amber",
+    "key": "amber",
+    "psd": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/3. Amber 9ml (Uncapped)/1. GBCylAmb9MtlRollMattSl.psd",
+    "layer": "Layer 13",
+    "psdSha256": "41b647554b0328f43e6fff79ce496a1f8cf61442d5cf3a9c7789b6b0709a013a",
+    "referenceFile": "amber-material-reference.png"
+  },
+  {
+    "glass": "Cobalt Blue",
+    "key": "cobalt",
+    "psd": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/1. GBCylBlu9MtlRollMattSl.psd",
+    "layer": "Layer 11",
+    "psdSha256": "886d3b0893675d66ad450e0f0b82f59b91f2a0f20147a4112ad840577f3fd935",
+    "referenceFile": "cobalt-material-reference.png"
+  },
+  {
+    "glass": "Frosted",
+    "key": "frosted",
+    "psd": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/1. GBCylFrst9MtlRollMattSl.psd",
+    "layer": "Layer 15",
+    "psdSha256": "3e5fa16c0e73adcec46d0b1d82cb6476aaa4ac38b8c986082027acb6a6f69fa2",
+    "referenceFile": "frosted-material-reference.png"
+  },
+  {
+    "glass": "Swirl",
+    "key": "swirl",
+    "psd": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/1. GBCylSwrl9MtlRollMattSl.psd",
+    "layer": "Layer 17",
+    "psdSha256": "f7da46e6ce0df88f919dc68005b81f53832f5e50b4813adf3526ade5cbaf7ac0",
+    "referenceFile": "swirl-material-reference.png"
+  }
+]

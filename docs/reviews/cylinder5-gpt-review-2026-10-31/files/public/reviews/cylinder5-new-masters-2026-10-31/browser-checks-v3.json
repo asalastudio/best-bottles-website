@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "desktop",
+      "status": 200,
+      "images": [
+        {
+          "src": "clear-candidate-v3.png",
+          "decoded": true
+        },
+        {
+          "src": "cobalt-candidate-v3.png",
+          "decoded": true
+        },
+        {
+          "src": "clear-candidate-v3.png",
+          "decoded": true
+        },
+        {
+          "src": "cobalt-candidate-v3.png",
+          "decoded": true
+        },
+        {
+          "src": "physical-thread-reference.png",
+          "decoded": true
+        },
+        {
+          "src": "measured-clear-v19.png",
+          "decoded": true
+        },
+        {
+          "src": "measured-cobalt-v19.png",
+          "decoded": true
+        }
+      ],
+      "overflow": false,
+      "outlineVisible": true
+    },
+    {
+      "name": "mobile",
+      "status": 200,
+      "images": [
+        {
+          "src": "clear-candidate-v3.png",
+          "decoded": true
+        },
+        {
+          "src": "cobalt-candidate-v3.png",
+          "decoded": true
+        },
+        {
+          "src": "clear-candidate-v3.png",
+          "decoded": true
+        },
+        {
+          "src": "cobalt-candidate-v3.png",
+          "decoded": true
+        },
+        {
+          "src": "physical-thread-reference.png",
+          "decoded": true
+        },
+        {
+          "src": "measured-clear-v19.png",
+          "decoded": true
+        },
+        {
+          "src": "measured-cobalt-v19.png",
+          "decoded": true
+        }
+      ],
+      "overflow": false,
+      "outlineVisible": true
+    }
+  ],
+  "errors": []
+}

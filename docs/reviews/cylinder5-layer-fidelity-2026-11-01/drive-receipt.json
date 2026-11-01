@@ -1,0 +1,163 @@
+{
+  "folder": "https://drive.google.com/drive/folders/1xxIfDrFCvGvfsQDXUaRvH90xdWf3Y2lv",
+  "files": [
+    {
+      "localPath": "docs/reviews/cylinder5-layer-fidelity-2026-11-01/body-enhanced-v01.png",
+      "expectedName": "Cylinder_5ml_13-415_Clear_Body_Builtin-v01_REVIEW-No-Resolution-Gain.png",
+      "id": "1TPw-BStbJg5JmMfjfqfCqDD2jt3WZJeh",
+      "title": "Cylinder_5ml_13-415_Clear_Body_Builtin-v01_REVIEW-No-Resolution-Gain.png",
+      "mime_type": null,
+      "size": "1412205",
+      "url": "https://drive.google.com/file/d/1TPw-BStbJg5JmMfjfqfCqDD2jt3WZJeh/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1TPw-BStbJg5JmMfjfqfCqDD2jt3WZJeh/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1xxIfDrFCvGvfsQDXUaRvH90xdWf3Y2lv"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified",
+      "nameSizeParentVerified": true
+    },
+    {
+      "localPath": "docs/reviews/cylinder5-layer-fidelity-2026-11-01/sprayer-enhanced-v01.png",
+      "expectedName": "Cylinder_5ml_13-415_Matte-Gold_Sprayer_Builtin-v01_REVIEW.png",
+      "id": "1iU73Z6QMLH_yPVb5_LAOM0_y8_McyuFB",
+      "title": "Cylinder_5ml_13-415_Matte-Gold_Sprayer_Builtin-v01_REVIEW.png",
+      "mime_type": null,
+      "size": "3068698",
+      "url": "https://drive.google.com/file/d/1iU73Z6QMLH_yPVb5_LAOM0_y8_McyuFB/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1iU73Z6QMLH_yPVb5_LAOM0_y8_McyuFB/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1xxIfDrFCvGvfsQDXUaRvH90xdWf3Y2lv"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified",
+      "nameSizeParentVerified": true
+    },
+    {
+      "localPath": "docs/reviews/cylinder5-layer-fidelity-2026-11-01/overcap-enhanced-v01.png",
+      "expectedName": "Cylinder_5ml_13-415_Matte-Gold_Overcap_Builtin-v01_REVIEW.png",
+      "id": "1ID0PGLksJn-AEPAC-TSWTnNjKBfd4jZi",
+      "title": "Cylinder_5ml_13-415_Matte-Gold_Overcap_Builtin-v01_REVIEW.png",
+      "mime_type": null,
+      "size": "2938116",
+      "url": "https://drive.google.com/file/d/1ID0PGLksJn-AEPAC-TSWTnNjKBfd4jZi/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1ID0PGLksJn-AEPAC-TSWTnNjKBfd4jZi/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1xxIfDrFCvGvfsQDXUaRvH90xdWf3Y2lv"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified",
+      "nameSizeParentVerified": true
+    },
+    {
+      "localPath": "outputs/family-master-library-2026-11-01/Cylinder_5ml_Three-Layer-Fidelity_2026-11-01_v01.zip",
+      "expectedName": "Cylinder_5ml_Three-Layer-Fidelity_2026-11-01_v01.zip",
+      "id": "1ZcL6A6Hzt6ZfOZMglMGk-8U2yIQeBB8g",
+      "title": "Cylinder_5ml_Three-Layer-Fidelity_2026-11-01_v01.zip",
+      "mime_type": null,
+      "size": "22880389",
+      "url": "https://drive.google.com/file/d/1ZcL6A6Hzt6ZfOZMglMGk-8U2yIQeBB8g/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1ZcL6A6Hzt6ZfOZMglMGk-8U2yIQeBB8g/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1xxIfDrFCvGvfsQDXUaRvH90xdWf3Y2lv"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified",
+      "nameSizeParentVerified": true
+    },
+    {
+      "localPath": "docs/reviews/cylinder5-layer-fidelity-2026-11-01/README.md",
+      "expectedName": "Cylinder_5ml_Layer-Fidelity_Findings-and-Restore_v01.md",
+      "id": "1Jx4ePNAhto8vaiZOE6aOY6SZc4I2E7gl",
+      "title": "Cylinder_5ml_Layer-Fidelity_Findings-and-Restore_v01.md",
+      "mime_type": null,
+      "size": "3131",
+      "url": "https://drive.google.com/file/d/1Jx4ePNAhto8vaiZOE6aOY6SZc4I2E7gl/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1Jx4ePNAhto8vaiZOE6aOY6SZc4I2E7gl/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1xxIfDrFCvGvfsQDXUaRvH90xdWf3Y2lv"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified",
+      "nameSizeParentVerified": true
+    },
+    {
+      "localPath": "docs/reviews/cylinder5-layer-fidelity-2026-11-01/quality-measurements.json",
+      "expectedName": "Cylinder_5ml_Layer-Fidelity_Measurements_v01.json",
+      "id": "1whuF2Mm31GYoZxLwDszVKGEJoApPRlfI",
+      "title": "Cylinder_5ml_Layer-Fidelity_Measurements_v01.json",
+      "mime_type": null,
+      "size": "2797",
+      "url": "https://drive.google.com/file/d/1whuF2Mm31GYoZxLwDszVKGEJoApPRlfI/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1whuF2Mm31GYoZxLwDszVKGEJoApPRlfI/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1xxIfDrFCvGvfsQDXUaRvH90xdWf3Y2lv"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified",
+      "nameSizeParentVerified": true
+    }
+  ],
+  "libraryIndex": {
+    "id": "1YofcSykNUbH79Ssk6q_qWZ35v2LWPIbW",
+    "title": "BATCH-INDEX_2026-11-01_Cylinder5-layer-fidelity-v01.md",
+    "mime_type": null,
+    "size": "1297",
+    "url": "https://drive.google.com/file/d/1YofcSykNUbH79Ssk6q_qWZ35v2LWPIbW/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/1YofcSykNUbH79Ssk6q_qWZ35v2LWPIbW/view?usp=drivesdk",
+    "file_or_folder": null,
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "date": "2026-11-01",
+  "identity": "cylinder-9ml-17-415|Clear",
+  "status": "review",
+  "activeAssignmentsChanged": false,
+  "files": [
+    {
+      "path": "BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-v01_REVIEW_2026-11-01.png",
+      "bytes": 1229040,
+      "sha256": "1915175f1eaea5d6eb57a729643814fc3789dac1185fdceae7c320b606c3d1aa"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2046,
+      "sha256": "43271457d2c001dc797d6b1b1aaac994606cad9deed4460e813a9df019d40bf3"
+    },
+    {
+      "path": "browser-checks.json",
+      "bytes": 1487,
+      "sha256": "2db1d2f4a2f17775327f80d8aba9a631ece762bacb6abb39948cc7e435e7b05b"
+    },
+    {
+      "path": "build-review.py",
+      "bytes": 11863,
+      "sha256": "f30e92d4d34ba51761775287c4b5bb5aeb1f1a9f2c057b6996ba9b794b8b64f1"
+    },
+    {
+      "path": "check-browser.cjs",
+      "bytes": 2036,
+      "sha256": "8168bcfcbec42248b97b5919ab216aa66d0570cfa3fb0e2044174793b9346198"
+    },
+    {
+      "path": "comparison-1440-catalog.png",
+      "bytes": 430946,
+      "sha256": "b602427052da550e60a6f8c60c17439c0dc536096f568936d89e5be4bc5bb8eb"
+    },
+    {
+      "path": "comparison-1440-checker.png",
+      "bytes": 438600,
+      "sha256": "0d9a9e7c434f8d340ed00b15b0e8adc9be1db090c2b3900c9eb9c998a814cb99"
+    },
+    {
+      "path": "comparison-1440-dark.png",
+      "bytes": 431315,
+      "sha256": "b4cce686c2b19cd7e04c17ea779e76e0b7d4648a920d8e10f51955a2797e83fc"
+    },
+    {
+      "path": "comparison-390-catalog.png",
+      "bytes": 373046,
+      "sha256": "29ed159f212593de55a4d59954ad2901f2f49998555bba20f37ff4dca64b19fe"
+    },
+    {
+      "path": "comparison-390-checker.png",
+      "bytes": 377738,
+      "sha256": "2dcd524a7a8194bdecf5791da33c199cdcc25f65036c63d2efe0744659d286c9"
+    },
+    {
+      "path": "comparison-390-dark.png",
+      "bytes": 373941,
+      "sha256": "84e414d16b74b7f577b8fafe60b9caf0de68111a94a5c47e56b539df51f063d8"
+    },
+    {
+      "path": "earlier-builtin-candidate.png",
+      "bytes": 1097149,
+      "sha256": "952e3be55f8a7670281c64cb6cc4d9d250c61f994b118ef4da2eb7ae0daceeda"
+    },
+    {
+      "path": "glass-material-reference.png",
+      "bytes": 1521090,
+      "sha256": "20518a1a613143fd3fd6a535f206e5e0fc359e39ad8248d1a099749ca1335e5a"
+    },
+    {
+      "path": "measurements.json",
+      "bytes": 4599,
+      "sha256": "a7e9bb6638c59d82e02e3ad4f815da279fce583186700eb4f62653dad5b9d9b9"
+    },
+    {
+      "path": "preserved-assets.json",
+      "bytes": 546,
+      "sha256": "f1823ca66cf17cb171152458b9946608b2ed82a67c8c6c1035cb9a40ff966f75"
+    },
+    {
+      "path": "prompt.txt",
+      "bytes": 1752,
+      "sha256": "d931091c02bc4c5d9832ccbc0d1b78e086fe94d6f4e232e5b3069e7feaeef65b"
+    },
+    {
+      "path": "request.json",
+      "bytes": 2302,
+      "sha256": "102525141d3958685a971bc19de6cc80917d78699efb8b54560e2e5882ada021"
+    },
+    {
+      "path": "restore.mjs",
+      "bytes": 2694,
+      "sha256": "05968d5922a474322313801e4a55b0482d0f45ec3acfbac4792fad724d61b7e1"
+    },
+    {
+      "path": "result.json",
+      "bytes": 980,
+      "sha256": "be0ce8b1482f7b6c50a6a927a36070b93158da8acde99f47d8c2a14f607db244"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-sunburst-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-v01_REVIEW_2026-11-01.png",
+      "bytes": 1229040,
+      "sha256": "1915175f1eaea5d6eb57a729643814fc3789dac1185fdceae7c320b606c3d1aa",
+      "restoreTo": "public/reviews/cylinder9-sunburst-2026-11-01/BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-v01_REVIEW_2026-11-01.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-sunburst-2026-11-01/data.json",
+      "bytes": 4599,
+      "sha256": "a7e9bb6638c59d82e02e3ad4f815da279fce583186700eb4f62653dad5b9d9b9",
+      "restoreTo": "public/reviews/cylinder9-sunburst-2026-11-01/data.json"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-sunburst-2026-11-01/earlier-builtin-candidate.png",
+      "bytes": 1097149,
+      "sha256": "952e3be55f8a7670281c64cb6cc4d9d250c61f994b118ef4da2eb7ae0daceeda",
+      "restoreTo": "public/reviews/cylinder9-sunburst-2026-11-01/earlier-builtin-candidate.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-sunburst-2026-11-01/index.html",
+      "bytes": 4981,
+      "sha256": "963aeb67d1510fbabdc15820f73cd85979c7733f623f2fb94e8ff6e47395a112",
+      "restoreTo": "public/reviews/cylinder9-sunburst-2026-11-01/index.html"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-sunburst-2026-11-01/source-cylinder9-clear.png",
+      "bytes": 484190,
+      "sha256": "35018244cb0df545826f81a741f502b2f3913c7f1ebe29a81e3e6ef06cfe264d",
+      "restoreTo": "public/reviews/cylinder9-sunburst-2026-11-01/source-cylinder9-clear.png"
+    },
+    {
+      "path": "source-cylinder9-clear.png",
+      "bytes": 484190,
+      "sha256": "35018244cb0df545826f81a741f502b2f3913c7f1ebe29a81e3e6ef06cfe264d"
+    }
+  ]
+}

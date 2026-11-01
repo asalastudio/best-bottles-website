@@ -7,6 +7,8 @@ import allHeroes from "@/lib/products/catalog-heroes.json";
 const heroes = allHeroes.filter(hero => hero.family === "Cylinder");
 import { getCatalogHeroStyle } from "@/lib/products/catalog-heroes";
 
+// Keep coverage of the legacy photographic fallback for SKUs outside the approved layered release.
+vi.mock("@/lib/products/cylinder-master", () => ({ cylinderMasterSku: () => null, cylinderMasterSource: () => null, masterProductHref: (href: string) => href }));
 vi.mock("next/image", () => ({ default: (props: ImgHTMLAttributes<HTMLImageElement> & { fill?: boolean }) => {
     const p = { ...props }; delete p.fill; return createElement("img", p);
 } }));

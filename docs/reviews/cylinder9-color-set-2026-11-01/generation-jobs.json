@@ -1,0 +1,83 @@
+[
+  {
+    "key": "gold",
+    "kind": "collar",
+    "ref": "CMP-SPR-SGLD-17-415--collar.png",
+    "change": "polished warm yellow gold metal, using image 2 only as a gold hue and sheen reference; clean bright metallic reflections",
+    "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-75a38e92-ec5f-4765-976a-9e1eb5baf3c8.png",
+    "prompt": "Use case: precise-object-edit. Image 1 is the LOCKED GEOMETRY edit target: an approved isolated cylindrical sprayer collar. Image 2 is a COLOR/MATERIAL reference ONLY, not a shape reference. Change ONLY the finish of image 1 to polished warm yellow gold metal, using image 2 only as a gold hue and sheen reference; clean bright metallic reflections. Keep image 1's exact cylinder silhouette, height-to-width ratio, top curvature, flat bottom, camera perspective, placement and transparent canvas padding. Do not add or remove any feature. Keep all existing geometric connection points fixed. Retain premium photorealistic studio quality with crisp clean edges, no white matte or colored contamination outside the collar. One collar only, no bottle, actuator, pump, cap, tube, text or background. Genuine transparent PNG alpha. Material highlights must wrap the cylinder naturally; do not create dents or wavy sides. Preserve the aspect ratio of image 1 and preserve every geometry coordinate as closely as possible. This is a colorway edit, not a redesign."
+  },
+  {
+    "key": "matte-silver",
+    "kind": "collar",
+    "ref": "CMP-SPR-SLV-17-415--collar.png",
+    "change": "satin matte silver metal with broad soft vertical tonal gradients and fine smooth surface, matching image 2's silver sheen; no black plastic finish",
+    "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-7ccf54b9-c9c6-4ed5-ac45-5eeee41173ca.png",
+    "prompt": "Use case: precise-object-edit. Image 1 is the LOCKED GEOMETRY edit target: an approved isolated cylindrical sprayer collar. Image 2 is a COLOR/MATERIAL reference ONLY, not a shape reference. Change ONLY the finish of image 1 to satin matte silver metal with broad soft vertical tonal gradients and fine smooth surface, matching image 2's silver sheen; no black plastic finish. Keep image 1's exact cylinder silhouette, height-to-width ratio, top curvature, flat bottom, camera perspective, placement and transparent canvas padding. Do not add or remove any feature. Keep all existing geometric connection points fixed. Retain premium photorealistic studio quality with crisp clean edges, no white matte or colored contamination outside the collar. One collar only, no bottle, actuator, pump, cap, tube, text or background. Genuine transparent PNG alpha. Material highlights must wrap the cylinder naturally; do not create dents or wavy sides. Preserve the aspect ratio of image 1 and preserve every geometry coordinate as closely as possible. This is a colorway edit, not a redesign."
+  },
+  {
+    "key": "shiny-silver",
+    "kind": "collar",
+    "ref": "CMP-SPR-SSLV-17-415--collar.png",
+    "change": "polished mirror silver chrome metal with controlled bright and dark vertical reflections, matching image 2; neutral silver not white plastic",
+    "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-585d9899-9e8a-4688-b7a1-58f1e7427615.png",
+    "prompt": "Use case: precise-object-edit. Image 1 is the LOCKED GEOMETRY edit target: an approved isolated cylindrical sprayer collar. Image 2 is a COLOR/MATERIAL reference ONLY, not a shape reference. Change ONLY the finish of image 1 to polished mirror silver chrome metal with controlled bright and dark vertical reflections, matching image 2; neutral silver not white plastic. Keep image 1's exact cylinder silhouette, height-to-width ratio, top curvature, flat bottom, camera perspective, placement and transparent canvas padding. Do not add or remove any feature. Keep all existing geometric connection points fixed. Retain premium photorealistic studio quality with crisp clean edges, no white matte or colored contamination outside the collar. One collar only, no bottle, actuator, pump, cap, tube, text or background. Genuine transparent PNG alpha. Material highlights must wrap the cylinder naturally; do not create dents or wavy sides. Preserve the aspect ratio of image 1 and preserve every geometry coordinate as closely as possible. This is a colorway edit, not a redesign."
+  },
+  {
+    "key": "red",
+    "kind": "collar",
+    "ref": "CMP-SPR-RED-17-415--collar.png",
+    "change": "rich metallic ruby red anodized color, matching image 2, with smoothly curved satin highlights",
+    "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-e3b69cb3-12cf-48b0-91f5-0228fc4a575f.png",
+    "prompt": "Image 1 is the LOCKED GEOMETRY of the isolated collar to edit. Image 2 is the original RED ANODIZED FINISH reference. Image 3 is the user's final material reference and must control sheen. Change only image 1's color/material to exactly this SATIN METALLIC RED. Match the supplied real product: deep red anodized aluminum with fine even metallic grain, broad diffuse red highlights, darker burgundy edge and center reflection bands, and subtle metallic luster. It is NOT polished chrome, NOT candy lacquer, NOT mirror shiny. Absolutely no bright white vertical stripes or laser-like gleams. Preserve the source's modest smooth satin sheen, rather than exaggerating metal reflections. Preserve the exact silhouette, size ratio, straight level upper/lower rims, perspective and image position of image 1. Reproduce reference material without adding dents or scratches. One isolated collar only. No white plastic sprayer, glass bottle, tube or other part. Transparent PNG with genuine alpha and no white matte outside edges, no outside shadows. Material/color only, same geometry, no redesign.",
+    "materialApproval": "User said yes to satin-red final generation",
+    "rejectedGlossVersion": "collar-red-mirror-REJECTED.png"
+  },
+  {
+    "key": "turquoise",
+    "kind": "collar",
+    "ref": "CMP-SPR-CLR-17-415--collar.png",
+    "change": "metallic turquoise/cyan anodized color, matching image 2, saturated cyan with controlled curved satin highlights; NOT a transparent clear collar",
+    "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-52fd3266-2af0-4a4b-8855-882e9ed2632b.png",
+    "prompt": "Image 1 is the locked geometry of the approved sprayer collar. Image 2 is color/finish reference ONLY. Change ONLY image 1's finish to metallic turquoise/cyan anodized color, matching image 2, saturated cyan with controlled curved satin highlights; NOT a transparent clear collar. Preserve exactly the first image's outer shape, proportions, all silhouette landmarks, camera angle, position and padding on its transparent canvas. Keep its cylindrical rim and flat bottom, height and width, highlights wrapping the curved surface. One collar only, no bottle or other component. Output a genuinely transparent PNG with clean alpha edges, no white matte, no background, no halo or glow, no shadows outside the object, no text. Keep the source aspect ratio and return the highest native detail available. This is solely a color and material edit. Do not change geometry."
+  },
+  {
+    "key": "amber",
+    "kind": "body",
+    "ref": "amber-material-reference.png",
+    "change": "deep rich pharmaceutical amber-brown glass matching image 2's hue, realistic brown absorption strongest at the thick edges and base; translucent warm amber center, crisp glass highlights, not a flat orange coating",
+    "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-3d377b29-6fad-4e1c-9c57-9e3df2c45b6f.png",
+    "prompt": "Precise product-photo LIGHTING edit of this exact empty bare bottle. Keep its exact silhouette, level rim, threads, neck, shoulder, base, proportions, dark brown amber glass hue, scale and camera angle completely unchanged. Improve only how real studio lights reflect in the glass. Use one broad softbox at front-left with a natural curved elongated reflection that gently rolls off and fades across the cylindrical glass, plus a restrained softer edge/rim light on the opposite side. The key highlight should feel like a real diffused studio softbox reflected ON the curved glass wall, with a tapered curved end at the shoulder, subtle irregular soft edge and continuous tonal transitions. Preserve realistic dark glass absorption and rounded cylindrical depth. Avoid the paired straight uniform white columns, hard paper rectangles or repeated ruler-straight panels running all the way into the heel. No bright neon glow, no blown-out white strips. It is an EMPTY bottle: no rods, dip tube, mechanism, insert or second bottle inside. Make the photographic reflections feel calm, plausible and premium, while keeping the body dark. Do not remove reflections entirely or make the glass flat matte. High native crisp detail, smooth clean silhouette, genuine transparent PNG alpha and no background or cast shadow. No cap, sprayer, label or text. This is a studio-reflection pass only.",
+    "revision": 4,
+    "rev": 4,
+    "appearanceApproval": "User: Yes, use those. That looks much better."
+  },
+  {
+    "key": "cobalt",
+    "kind": "body",
+    "ref": "cobalt-material-reference.png",
+    "change": "deep rich cobalt blue glass matching image 2's hue, true saturated blue glass absorption, darkest at the walls and base, translucent blue center and crisp clean studio reflections; no purple hue",
+    "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-92f11c9b-b195-4457-8ccd-f0c7d1ddcca7.png",
+    "prompt": "Precise product-photo LIGHTING edit of this exact empty bare bottle. Keep its exact silhouette, level rim, threads, neck, shoulder, base, proportions, dark cobalt blue glass hue, scale and camera angle completely unchanged. Improve only how real studio lights reflect in the glass. Use one broad softbox at front-left with a natural curved elongated reflection that gently rolls off and fades across the cylindrical glass, plus a restrained softer edge/rim light on the opposite side. The key highlight should feel like a real diffused studio softbox reflected ON the curved glass wall, with a tapered curved end at the shoulder, subtle irregular soft edge and continuous tonal transitions. Preserve realistic dark glass absorption and rounded cylindrical depth. Avoid the paired straight uniform white columns, hard paper rectangles or repeated ruler-straight panels running all the way into the heel. No bright neon glow, no blown-out white strips. It is an EMPTY bottle: no rods, dip tube, mechanism, insert or second bottle inside. Make the photographic reflections feel calm, plausible and premium, while keeping the body dark. Do not remove reflections entirely or make the glass flat matte. High native crisp detail, smooth clean silhouette, genuine transparent PNG alpha and no background or cast shadow. No cap, sprayer, label or text. This is a studio-reflection pass only.",
+    "revision": 4,
+    "rev": 4,
+    "appearanceApproval": "User: Yes, use those. That looks much better."
+  },
+  {
+    "key": "frosted",
+    "kind": "body",
+    "ref": "frosted-material-reference.png",
+    "change": "fine acid-etched frosted glass matching image 2: neutral translucent soft white diffusion over the SAME cylinder, clean even matte glass texture and subtle cylindrical shading, no cloudy internal blob, no ghostly object inside",
+    "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-005f0ffc-d4ee-4acd-ac47-b79c3da1be62.png",
+    "prompt": "Use case: precise-object-edit. Image 1 is the LOCKED bottle geometry, position, perspective, rim, exact threads, shoulder, diameter and base. Image 2 is the MATERIAL QUALITY AND COLOR REFERENCE ONLY. Edit only the material of image 1 to the soft SATIN FROSTED glass shown in image 2: fine acid-etched diffusion, subtly warm neutral white/translucent material, soft broad highlights with gentle cylindrical rolloff, credible smooth glass thickness at the base. Even satin surface, no grainy low-resolution noise, no pearlescent metallic finish, no blown-out glowing center. Do not adopt image 2's round bottle outline, shoulder, neck or proportions. Keep the tall straight cylinder of image 1 exactly. Clean studio-grade optical glass, high native sharpness, smooth clean edges, no white cutout debris or jagged contour. The bottle is completely EMPTY. No dip tube, pump housing, mechanism, second bottle inside, twin rods, interior insert, or paper-like rectangle. Avoid thin vertical white lines or repeated narrow bright streaks through the center that could look like tubes. Reflections should be broad, soft and coherent on the curved exterior glass surface. Do not remove cylindrical shading or flatten the bottle. No cap, sprayer, text or props. Exact straight-on eye-level angle, level rim, no view into the opening. Genuine transparent PNG alpha, no painted background or exterior shadow. Preserve the same image 1 aspect ratio, object scale and framing. This is solely a material cleanup and color transfer, not a geometry redesign.",
+    "revision": 2
+  },
+  {
+    "key": "swirl",
+    "kind": "body",
+    "ref": "swirl-material-reference.png",
+    "change": "clear glass with the SAME diagonal spiraling fluted surface treatment seen in image 2, rising to the right; only this barrel surface finish changes. Preserve image 1's outer bottle geometry, thread profile, rim and shoulder exactly; keep neck unpatterned. One crisp coherent swirl surface, never a doubled ghost pattern",
+    "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-5135d968-9294-428f-939d-1423e8f4a6a8.png",
+    "prompt": "Use case: precise-object-edit. Image 1 is the LOCKED approved bare clear 9 ml Cylinder body and exact geometry to preserve. Image 2 is solely a material reference. Change ONLY the material/finish on image 1 to clear glass with the SAME diagonal spiraling fluted surface treatment seen in image 2, rising to the right; only this barrel surface finish changes. Preserve image 1's outer bottle geometry, thread profile, rim and shoulder exactly; keep neck unpatterned. One crisp coherent swirl surface, never a doubled ghost pattern. Do not adopt the second image's neck, thread shape, shoulder, height, width or base. Keep image 1's identical outer silhouette, same level rim, exact threads and thread pitch, same narrow neck and shoulder, same hollow interior and base thickness. Same straight-on perspective, same image framing and exact scale. Maintain sharply focused high-end photographic glass fidelity. No opacity haze surrounding the outside. One bare empty bottle, no cap, sprayer, tube or internal parts. Genuine transparent PNG alpha, no white rectangle, no fake checkerboard, no external shadow, no text or added objects. Retain the source image 1 aspect ratio. Material edit only, geometry must remain unchanged."
+  }
+]

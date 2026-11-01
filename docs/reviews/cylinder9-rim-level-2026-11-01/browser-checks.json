@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "width": 1200,
+      "mode": "plain",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformZoom": [
+        true,
+        true
+      ],
+      "guideVisible": false,
+      "darkBackground": false
+    },
+    {
+      "width": 1200,
+      "mode": "guide",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformZoom": [
+        true,
+        true
+      ],
+      "guideVisible": true,
+      "darkBackground": false
+    },
+    {
+      "width": 1200,
+      "mode": "dark",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformZoom": [
+        true,
+        true
+      ],
+      "guideVisible": true,
+      "darkBackground": true
+    },
+    {
+      "width": 390,
+      "mode": "plain",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformZoom": [
+        true,
+        true
+      ],
+      "guideVisible": false,
+      "darkBackground": false
+    },
+    {
+      "width": 390,
+      "mode": "guide",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformZoom": [
+        true,
+        true
+      ],
+      "guideVisible": true,
+      "darkBackground": false
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "allImagesLoaded": true,
+      "overflow": false,
+      "uniformZoom": [
+        true,
+        true
+      ],
+      "guideVisible": true,
+      "darkBackground": true
+    }
+  ],
+  "errors": []
+}

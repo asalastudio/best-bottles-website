@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "glass": "clear",
+      "sku": "GBElg60RdcrShnGl",
+      "href": "/matrix?family=Elegant&shop=splash-on-bottles&sku=GBElg60RdcrShnGl&from=pdp",
+      "matched": true
+    },
+    {
+      "glass": "frosted",
+      "sku": "GBElgFrst60RdcrShnGl",
+      "href": "/matrix?family=Elegant&shop=splash-on-bottles&sku=GBElgFrst60RdcrShnGl&from=pdp",
+      "matched": true
+    }
+  ],
+  "reviewImagesLoaded": true
+}

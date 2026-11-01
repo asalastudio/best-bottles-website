@@ -28,6 +28,43 @@ import {
 
 export type StageBounds = { left: number; top: number; right: number; bottom: number };
 
+/** Explicit reviewed glass size on the product canvas; independent of image resolution and closure height. */
+export type PdpGlassSizing = {
+    /** Span above the foot, measured to landmarkY (or the bare-glass top when omitted). */
+    heightPct: number;
+    baselinePct: number;
+    landmarkY?: number;
+    source?: string;
+};
+
+export function pdpReviewedGlassFrame(
+    body: StageBounds, axisX: number, sizing: PdpGlassSizing,
+    width: number, height: number,
+): PdpStageFrame | null {
+    const glassHeight = body.bottom - (sizing.landmarkY ?? body.top);
+    if (![glassHeight, axisX, sizing.heightPct, sizing.baselinePct, width, height].every(Number.isFinite)
+        || glassHeight <= 0 || width <= 0 || height <= 0 || sizing.heightPct <= 0
+        || sizing.heightPct > sizing.baselinePct || sizing.baselinePct > 100) return null;
+    const scale = (sizing.heightPct / 100) * height / glassHeight;
+    return {
+        scale,
+        x: 50 - axisX * scale / width * 100,
+        y: sizing.baselinePct - body.bottom * scale / height * 100,
+    };
+}
+
+/** The identical reviewed frame expressed as an SVG viewBox for Build Your Bottle. */
+export function pdpReviewedGlassViewport(
+    body: StageBounds, axisX: number, sizing: PdpGlassSizing, width: number, height: number,
+): { x: number; y: number; width: number; height: number } | null {
+    const frame = pdpReviewedGlassFrame(body, axisX, sizing, width, height);
+    return frame ? {
+        x: -frame.x / 100 * width / frame.scale,
+        y: -frame.y / 100 * height / frame.scale,
+        width: width / frame.scale, height: height / frame.scale,
+    } : null;
+}
+
 type PartBounds = {
     slot?: string;
     bounds: StageBounds;

@@ -1,0 +1,52 @@
+{
+  "api": [
+    {
+      "family": "Cylinder",
+      "body": "tulip-5ml|13-415|Glass Bottle",
+      "configs": 36
+    },
+    {
+      "family": "Tulip",
+      "body": "tulip-5ml|13-415|Glass Bottle",
+      "configs": 36
+    },
+    {
+      "family": "Cylinder",
+      "body": "tulip-6ml|13-415|Glass Bottle",
+      "configs": 34
+    },
+    {
+      "family": "Tulip",
+      "body": "tulip-6ml|13-415|Glass Bottle",
+      "configs": 34
+    },
+    {
+      "legacyRedirect": "streamed redirect to /catalog/cylinder?guide=1"
+    }
+  ],
+  "pages": [
+    {
+      "slug": "tulip-5ml-amber-13-415-rollon",
+      "sku": "GBTulipAmb5RollBlkDot",
+      "title": "5 ML AMBER TULIP ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "links": [
+        "/matrix",
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp",
+        "/matrix",
+        "/matrix"
+      ]
+    },
+    {
+      "slug": "tulip-6ml-clear-13-415-finemist",
+      "sku": "GBTulip6SpryBlkSh",
+      "title": "6 ML CLEAR TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "links": [
+        "/matrix",
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp",
+        "/matrix",
+        "/matrix"
+      ]
+    }
+  ],
+  "errors": []
+}

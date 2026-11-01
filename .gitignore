@@ -266,3 +266,46 @@ data/descriptions/pdp/catalog-facts.json
 
 # Dip tube cuts from catalogue heroes: fits, warps and cuts (scripts/register/tubes/cut_heroes.py)
 /output/register-tubes/
+
+# October 31 raw review work stays local; selected files are frozen in docs/reviews/catalog-checkpoint-2026-10-31.
+/outputs/catalog-model-repair-2026-10-31/
+/public/reviews/*-2026-10-31/
+/public/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v5.png
+/public/assets/register/overcaps/cylinder-9ml-clear-overcap-v2.png
+
+# Local Drive transfer staging. Sources remain in the review archive.
+/outputs/drive-backup-2026-10-31/
+
+# Cylinder material pilot working copies; exact inputs and request are preserved in docs/reviews.
+/output/imagegen/cylinder9-material-pilot-2026-10-31/
+
+# Labeled Drive transfer copies; canonical images and the verified registry are in docs/reviews.
+/outputs/family-master-library-2026-11-01/
+
+# Cylinder 5 ml review runtime is restored from the checked-in package.
+/public/reviews/cylinder5-all71-2026-11-01/
+# Full-resolution per-state captures are preserved in the verified Drive ZIP.
+/docs/reviews/cylinder5-all71-2026-11-01/evidence/screenshots/
+
+# Material comparison runtime is preserved in its review package.
+/public/reviews/cylinder5-layer-fidelity-2026-11-01/
+
+/public/reviews/cylinder9-sunburst-2026-11-01/
+
+/output/imagegen/cylinder9-sunburst-2026-11-01/
+
+/public/reviews/cylinder9-rim-level-2026-11-01/
+
+/output/imagegen/cylinder9-rim-level-2026-11-01/
+
+/public/reviews/cylinder9-glass-refraction-2026-11-01/
+
+/output/imagegen/cylinder9-glass-refraction-2026-11-01/
+
+/public/reviews/cylinder9-clean-edges-2026-11-01/
+
+/output/imagegen/cylinder9-clean-edges-2026-11-01/
+
+/public/reviews/cylinder9-psd-fitments-2026-11-01/
+
+/public/reviews/cylinder9-color-set-2026-11-01/

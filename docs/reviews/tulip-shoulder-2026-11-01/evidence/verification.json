@@ -1,0 +1,29 @@
+{
+  "pdpStates": 45,
+  "skus": 15,
+  "builder": [
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "clips": [
+        {
+          "href": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fmechanism-tulip-6ml-13-415-v1.fedeba5153ac.png&w=1200&q=75",
+          "height": "1007",
+          "visible": "891.8949171247937"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "clips": [
+        {
+          "href": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fmechanism-tulip-5ml-13-415-v1.e5dc3c7fa6a8.png&w=1200&q=75",
+          "height": "1007",
+          "visible": "956.180631410508"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

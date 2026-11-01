@@ -2,14 +2,16 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { getFunctionName } from "convex/server";
 import type { BuilderKit, CatalogRow } from "@/lib/bottle-builder/model";
 
-const state = vi.hoisted(() => ({ rows: [] as unknown[], kits: {} as Record<string, unknown>, truncated: false, missingPlates: [] as string[], register: null as unknown, registerDown: false }));
+const state = vi.hoisted(() => ({ rows: [] as unknown[], kits: {} as Record<string, unknown>, truncated: false, missingPlates: [] as string[], register: null as unknown, registerDown: false, local: null as Record<string, BuilderKit> | null }));
 vi.mock("server-only", () => ({}));
+// Exercise the legacy/register fallback path independently of the approved release.
+vi.mock("@/lib/paper-doll/approved-component-kits", () => ({ approvedComponentKits: () => ({}), APPROVED_KIT_VERSION: "test" }));
 vi.mock("next/cache", () => ({ unstable_cache: (fn: unknown) => fn }));
-vi.mock("@/lib/paper-doll/local-component-kits", () => ({ readLocalComponentKits: () => null }));
+vi.mock("@/lib/paper-doll/local-component-kits", () => ({ readLocalComponentKits: () => state.local }));
 vi.mock("convex/browser", () => ({ ConvexHttpClient: class {
-    async query(ref: Parameters<typeof getFunctionName>[0], args: { pairs?: { websiteSku: string }[]; skus?: string[] }) {
+    async query(ref: Parameters<typeof getFunctionName>[0], args: { family?: string; pairs?: { websiteSku: string }[]; skus?: string[] }) {
         switch (getFunctionName(ref)) {
-            case "matrix:getFamilyRows": return { rows: state.rows, truncated: state.truncated };
+            case "matrix:getFamilyRows": return { rows: (state.rows as CatalogRow[]).filter(row => row.family === args.family), truncated: state.truncated };
             case "productKits:forSkus": return Object.fromEntries(args.pairs!.map(p => [p.websiteSku, state.kits[p.websiteSku] ?? null]));
             case "productPlates:forSkus": return { plates: Object.fromEntries(args.skus!.filter(sku => !state.missingPlates.includes(sku)).map(sku => [sku, { image: `https://example.com/${sku}.png` }])) };
             case "products:lookupSku": return null;
@@ -48,7 +50,21 @@ describe("fresh builder purchase reconciliation", () => {
         state.rows = [row("GBCylSwrl9MtlRollMattSl", "Matte Silver"), row("GBCylSwrl9MtlRollShnGl", "Shiny Gold")];
         state.kits = { GBCylSwrl9MtlRollMattSl: kit("GBCylSwrl9MtlRollMattSl") };
         state.truncated = false;
+        state.local = null;
         state.missingPlates = [];
+    });
+    it("keeps the local chooser and loaded kit on the same reviewed body and excludes exploded layers", async () => {
+        const sku = "GBCylSwrl9MtlRollMattSl";
+        const [original] = await loadBuilderFamily("Cylinder");
+        const staged = kit(sku);
+        staged.parts[0].image.url = "/local-kits/review/body-v2.png";
+        staged.parts.push({ ...staged.parts[1], views: ["exploded"] } as typeof staged.parts[number]);
+        state.local = { [sku]: staged };
+        const reviewed = await loadBuilderFamilyOrUncached("Cylinder");
+        expect(reviewed.bodies[0].configurations.find(c => c.id === sku)?.chooserKit?.parts[0].image.url).toBe("/local-kits/review/body-v2.png");
+        const loaded = await loadBuilderBodyKits("Cylinder", original.id);
+        expect(loaded[sku]?.parts[0].image.url).toBe("/local-kits/review/body-v2.png");
+        expect(loaded[sku]?.parts.filter(p => p.slot === "roller")).toHaveLength(1);
     });
     it("accepts the exact listed plate with a sibling bare-body proof, without requiring its own layered kit", async () => {
         const listed = (await loadBuilderBodies(state.rows as CatalogRow[])).flatMap(body => body.configurations);
@@ -81,6 +97,7 @@ describe("fresh builder purchase reconciliation", () => {
         state.rows.pop(); state.truncated = true;
         expect(await freshConfiguration("Cylinder", target.websiteSku!)).toBeNull();
         state.truncated = false;
+        state.local = null;
         state.rows.push({ ...target, websiteSku: "AnotherSwirlShnGl", graceSku: "another-grace" });
         expect(await freshConfiguration("Cylinder", target.websiteSku!)).toBeNull();
     });
@@ -93,6 +110,7 @@ describe("register kits in the builder", () => {
         state.rows = [row("GBCylSwrl9MtlRollMattSl", "Matte Silver"), row("GBCylSwrl9MtlRollShnGl", "Shiny Gold")];
         state.kits = {};
         state.truncated = false;
+        state.local = null;
         state.missingPlates = [];
         state.register = {
             plates: { [PLATE.plateKey]: PLATE },

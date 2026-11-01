@@ -1,4 +1,5 @@
-@import "tailwindcss";
+/* Scan application source, not local Blender renders and audit archives. */
+@import "tailwindcss" source("../");
 
 /* ── shadcn/ui radius token (used by shadcn components) ─────────────────── */
 :root {

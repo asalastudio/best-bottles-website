@@ -260,7 +260,7 @@ export default function MobileBuilder(p: Props) {
                     <div className={styles.finishThumb}><img src={displayImageUrl(c.imageUrl, 640)} alt={c.closure} loading="lazy" onError={e => { e.currentTarget.hidden = true; }} /></div><strong>{shortFinishLabel(c.closure)}</strong><span>Out of stock</span>
                 </Choice>)}</div>}
             </fieldset>
-            {stage === 3 && p.hasIncludedCover && <p className={styles.included}>Matching overcap included: <strong>{closure}</strong>. Supplied with this {fitment?.includes("Pump") ? "pump" : "sprayer"}; it cannot be mixed and matched.</p>}
+            {stage === 3 && p.hasIncludedCover && <p className={styles.included}>Protective overcap included: <strong>{configuration?.kit?.parts.some(part => part.slot === "overcap" && part.image.url.includes("cylinder-9ml-clear-overcap-")) ? "Clear" : closure}</strong>. Supplied with this {fitment?.includes("Pump") ? "pump" : "sprayer"}; it cannot be mixed and matched.</p>}
         </>}
         {stage === 4 && <section className={styles.review} aria-label="Review and quantity">
             <dl className={styles.summary}>{[["Bottle", `${body?.capacityMl} ml ${body?.profileLabel}`, 0], ["Glass", color, 1], ["Fitment", fitment ? displayApplicatorName(fitment) : fitment, 2], [finishLabel, closure, 3]].map(([label, value, to]) => <div key={label}>

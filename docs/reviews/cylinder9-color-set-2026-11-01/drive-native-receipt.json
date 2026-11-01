@@ -1,0 +1,160 @@
+{
+  "folder": "https://drive.google.com/drive/folders/1sA98vHrYW07HtsEywivMjMVPPwN-kP3v",
+  "files": [
+    {
+      "name": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED_2026-11-01.png",
+      "id": "1cIZOy_qsQ6D10E8SF_fBPq5cmD3ZoLmj",
+      "url": "https://drive.google.com/file/d/1cIZOy_qsQ6D10E8SF_fBPq5cmD3ZoLmj/view?usp=drivesdk",
+      "bytes": 1634900,
+      "localSha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Amber_BODY_v04_APPROVED_2026-11-01.png",
+      "id": "13QpzbPpIOzXf0Hk60gNqp-G4GtlFyRRX",
+      "url": "https://drive.google.com/file/d/13QpzbPpIOzXf0Hk60gNqp-G4GtlFyRRX/view?usp=drivesdk",
+      "bytes": 1050360,
+      "localSha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Cobalt-Blue_BODY_v04_APPROVED_2026-11-01.png",
+      "id": "13KleVhp2gVQsv2ef9SJfEZLbJXO6WOgA",
+      "url": "https://drive.google.com/file/d/13KleVhp2gVQsv2ef9SJfEZLbJXO6WOgA/view?usp=drivesdk",
+      "bytes": 1022364,
+      "localSha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Frosted_BODY_Clear-Neck_v03_REVIEW_2026-11-01.png",
+      "id": "199XRR1_fD-SSn_C4Uyf3BiklJydIbNzp",
+      "url": "https://drive.google.com/file/d/199XRR1_fD-SSn_C4Uyf3BiklJydIbNzp/view?usp=drivesdk",
+      "bytes": 1131945,
+      "localSha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Swirl_BODY_v01_REVIEW_2026-11-01.png",
+      "id": "1Uz4r_gFejWv9qr2GzHKDlBuH4pWiW2NS",
+      "url": "https://drive.google.com/file/d/1Uz4r_gFejWv9qr2GzHKDlBuH4pWiW2NS/view?usp=drivesdk",
+      "bytes": 1537538,
+      "localSha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Black_COLLAR_Smooth-Edge_v03_REVIEW_2026-11-01.png",
+      "id": "1iKRXCPS933nH3qp44eJO196xQ4kISA0y",
+      "url": "https://drive.google.com/file/d/1iKRXCPS933nH3qp44eJO196xQ4kISA0y/view?usp=drivesdk",
+      "bytes": 860722,
+      "localSha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Gold_COLLAR_Smooth-Edge_v03_REVIEW_2026-11-01.png",
+      "id": "14cHOfMe5o0NraoLX5fUhlxGlbsZTq8JD",
+      "url": "https://drive.google.com/file/d/14cHOfMe5o0NraoLX5fUhlxGlbsZTq8JD/view?usp=drivesdk",
+      "bytes": 918131,
+      "localSha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Matte-Silver_COLLAR_Smooth-Edge_v03_REVIEW_2026-11-01.png",
+      "id": "1tzYlNyo63_3FvcsEqw2nLIMQ5EaeFqaU",
+      "url": "https://drive.google.com/file/d/1tzYlNyo63_3FvcsEqw2nLIMQ5EaeFqaU/view?usp=drivesdk",
+      "bytes": 1206578,
+      "localSha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Shiny-Silver_COLLAR_Smooth-Edge_v03_REVIEW_2026-11-01.png",
+      "id": "1AHFmv_zUTX_HsK2yeKBxr5YAR71yFdnd",
+      "url": "https://drive.google.com/file/d/1AHFmv_zUTX_HsK2yeKBxr5YAR71yFdnd/view?usp=drivesdk",
+      "bytes": 914651,
+      "localSha256": "21659785df2b6f8a242573a035ef4cfe40e4bab57f6b31407d2281014f3c363e",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Red_COLLAR_Smooth-Edge_v03_REVIEW_2026-11-01.png",
+      "id": "1CBACglB53zTw7n16_nMpudGOME-fGlza",
+      "url": "https://drive.google.com/file/d/1CBACglB53zTw7n16_nMpudGOME-fGlza/view?usp=drivesdk",
+      "bytes": 1351590,
+      "localSha256": "e34c8674e08e3f1eed980b88caff4cbecdb81cd89d3fcbb0957526446cf466a1",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Turquoise_COLLAR_Smooth-Edge_v03_REVIEW_2026-11-01.png",
+      "id": "1_pT6I5FES3wqJ5KuuemNoCGALYNoCkIM",
+      "url": "https://drive.google.com/file/d/1_pT6I5FES3wqJ5KuuemNoCGALYNoCkIM/view?usp=drivesdk",
+      "bytes": 1444391,
+      "localSha256": "430ff4c25dced2145d0390140a89f0115c771bab5422a71944291ab23684506c",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_White-Actuator_PSD-GPT_Edges_v02_REVIEW_2026-11-01.png",
+      "id": "1Hj0iaHJH_LJv_E2dKypFRZJ1ZTgswUuk",
+      "url": "https://drive.google.com/file/d/1Hj0iaHJH_LJv_E2dKypFRZJ1ZTgswUuk/view?usp=drivesdk",
+      "bytes": 826441,
+      "localSha256": "0e86a99e6f43a8eb58484b308c13afd24b6234f6f953e32b40d11ff52bd92182",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Clear-Overcap_v06_APPROVED_2026-11-01.png",
+      "id": "1WNF9n3HyTE8i7NgdiAvOFOw9LDUk4DnQ",
+      "url": "https://drive.google.com/file/d/1WNF9n3HyTE8i7NgdiAvOFOw9LDUk4DnQ/view?usp=drivesdk",
+      "bytes": 300365,
+      "localSha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    },
+    {
+      "name": "BB_Cylinder_9ml_17-415_Pump-and-Tube_Fitted-52.3mm_v02_APPROVED_2026-11-01.png",
+      "id": "1FxFoo8t1XJSL8TT6R4zIomAm1o1bdZVE",
+      "url": "https://drive.google.com/file/d/1FxFoo8t1XJSL8TT6R4zIomAm1o1bdZVE/view?usp=drivesdk",
+      "bytes": 124485,
+      "localSha256": "f5a5592f59a0c28f79b56fc4bf4b17c0a479646a41c738cabcdbc1a9d45d9484",
+      "parentIds": [
+        "1sA98vHrYW07HtsEywivMjMVPPwN-kP3v"
+      ],
+      "metadataVerified": true
+    }
+  ],
+  "verification": "Drive names, byte sizes and parent folder matched; local SHA-256 preserved"
+}

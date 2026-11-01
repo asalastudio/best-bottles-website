@@ -1,0 +1,266 @@
+[
+  {
+    "sku": "GBVialClr2mlWhtCap",
+    "source": "12. Vials/0. All Vials/Capped/1. GBVClr2mlWhtCap..psd",
+    "sourceSha256": "500f136e0d421df069cce004344e3bb85f09548eb29f9385780578989d80b8a0",
+    "mapping": {
+      "sourceSha256": "500f136e0d421df069cce004344e3bb85f09548eb29f9385780578989d80b8a0",
+      "reviewedBy": "Codex source inspection, candidate only; not user release approval",
+      "evidence": "Visible Layer 6 is the rounded vial matching the current legacy exact-SKU white-cap photo; own closure layer retained. The hidden angular Layer 4 is rejected. Layer 5 is an obsolete white closure, hidden in the white source and left enabled beneath the black closure in the black source. Black closure pixels also match its uncapped master.",
+      "parts": {
+        "body": [
+          3
+        ],
+        "cap": [
+          4
+        ]
+      },
+      "exclude": {
+        "1": "Obsolete angular body; hidden in source",
+        "2": "Obsolete white closure; not the black cap. White source hides this layer."
+      }
+    },
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "kind": "pixel",
+        "bounds": [
+          0,
+          0,
+          472,
+          945
+        ],
+        "background": true,
+        "visible": true,
+        "pixelHash": "eb7ff50e8cd52fc617b09c903613066f1702da703a4e9c64b053c7964dd33fdf",
+        "size": [
+          472,
+          945
+        ],
+        "opacity": 255
+      },
+      {
+        "index": 1,
+        "name": "Layer 4",
+        "kind": "pixel",
+        "bounds": [
+          168,
+          279,
+          310,
+          701
+        ],
+        "background": false,
+        "visible": false,
+        "pixelHash": "e98ec1c86927ef8751867dacf28b0ad48f756030625eac880539f99f325417b9",
+        "size": [
+          142,
+          422
+        ],
+        "opacity": 255
+      },
+      {
+        "index": 2,
+        "name": "Layer 5",
+        "kind": "pixel",
+        "bounds": [
+          169,
+          271,
+          301,
+          373
+        ],
+        "background": false,
+        "visible": false,
+        "pixelHash": "39fa0449760705059ab3a111c4a8affb02cf5d00f1af7a862d33e61bcdc39bba",
+        "size": [
+          132,
+          102
+        ],
+        "opacity": 255
+      },
+      {
+        "index": 3,
+        "name": "Layer 6",
+        "kind": "pixel",
+        "bounds": [
+          164,
+          283,
+          310,
+          711
+        ],
+        "background": false,
+        "visible": true,
+        "pixelHash": "a6cba73f33802ceac75f3cbcb55d3238f14922dd81536a75aa3f13e5e1aaa84e",
+        "size": [
+          146,
+          428
+        ],
+        "opacity": 255
+      },
+      {
+        "index": 4,
+        "name": "Layer 7",
+        "kind": "pixel",
+        "bounds": [
+          163,
+          271,
+          311,
+          371
+        ],
+        "background": false,
+        "visible": true,
+        "pixelHash": "4345417b28d70767113576b205ae6afdcc7b4819fcab45aac1c8a75f3cac5d20",
+        "size": [
+          148,
+          100
+        ],
+        "opacity": 255
+      }
+    ],
+    "registration": {
+      "scale": 2.102803738317757,
+      "ox": 1.6355140186915946,
+      "oy": -494.09345794392516,
+      "uniformScale": true
+    },
+    "encodedLayerParity": {
+      "ok": true,
+      "mean": 1.1141,
+      "tailOver40": 0.0
+    },
+    "status": "local-review-candidate",
+    "userVisualApproval": false
+  },
+  {
+    "sku": "GBVialClr2mlBlackCap",
+    "source": "12. Vials/0. All Vials/Capped/1. GBVClr2mlBlackCap..psd",
+    "sourceSha256": "69421535410d8ff0181a006930d4774f02f9d27f128e33e0b6fd9d92e86be7f0",
+    "mapping": {
+      "sourceSha256": "69421535410d8ff0181a006930d4774f02f9d27f128e33e0b6fd9d92e86be7f0",
+      "reviewedBy": "Codex source inspection, candidate only; not user release approval",
+      "evidence": "Visible Layer 6 is the rounded vial matching the current legacy exact-SKU white-cap photo; own closure layer retained. The hidden angular Layer 4 is rejected. Layer 5 is an obsolete white closure, hidden in the white source and left enabled beneath the black closure in the black source. Black closure pixels also match its uncapped master.",
+      "parts": {
+        "body": [
+          3
+        ],
+        "cap": [
+          4
+        ]
+      },
+      "exclude": {
+        "1": "Obsolete angular body; hidden in source",
+        "2": "Obsolete white closure; not the black cap. White source hides this layer."
+      }
+    },
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "kind": "pixel",
+        "bounds": [
+          0,
+          0,
+          472,
+          945
+        ],
+        "background": true,
+        "visible": true,
+        "pixelHash": "eb7ff50e8cd52fc617b09c903613066f1702da703a4e9c64b053c7964dd33fdf",
+        "size": [
+          472,
+          945
+        ],
+        "opacity": 255
+      },
+      {
+        "index": 1,
+        "name": "Layer 4",
+        "kind": "pixel",
+        "bounds": [
+          168,
+          279,
+          310,
+          701
+        ],
+        "background": false,
+        "visible": false,
+        "pixelHash": "e98ec1c86927ef8751867dacf28b0ad48f756030625eac880539f99f325417b9",
+        "size": [
+          142,
+          422
+        ],
+        "opacity": 255
+      },
+      {
+        "index": 2,
+        "name": "Layer 5",
+        "kind": "pixel",
+        "bounds": [
+          169,
+          271,
+          301,
+          373
+        ],
+        "background": false,
+        "visible": true,
+        "pixelHash": "39fa0449760705059ab3a111c4a8affb02cf5d00f1af7a862d33e61bcdc39bba",
+        "size": [
+          132,
+          102
+        ],
+        "opacity": 255
+      },
+      {
+        "index": 3,
+        "name": "Layer 6",
+        "kind": "pixel",
+        "bounds": [
+          164,
+          283,
+          310,
+          711
+        ],
+        "background": false,
+        "visible": true,
+        "pixelHash": "a6cba73f33802ceac75f3cbcb55d3238f14922dd81536a75aa3f13e5e1aaa84e",
+        "size": [
+          146,
+          428
+        ],
+        "opacity": 255
+      },
+      {
+        "index": 4,
+        "name": "Layer 3",
+        "kind": "pixel",
+        "bounds": [
+          160,
+          275,
+          310,
+          372
+        ],
+        "background": false,
+        "visible": true,
+        "pixelHash": "a0af4b37f8e7755b45d647d68869dec2ec6e220f7df27931c2013034fcabfd58",
+        "size": [
+          150,
+          97
+        ],
+        "opacity": 255
+      }
+    ],
+    "registration": {
+      "scale": 2.102803738317757,
+      "ox": 1.6355140186915946,
+      "oy": -494.09345794392516,
+      "uniformScale": true
+    },
+    "encodedLayerParity": {
+      "ok": true,
+      "mean": 1.1852,
+      "tailOver40": 0.0
+    },
+    "status": "local-review-candidate",
+    "userVisualApproval": false
+  }
+]

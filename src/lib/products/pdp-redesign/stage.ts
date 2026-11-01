@@ -20,12 +20,15 @@
  * one size in one place.
  */
 import { explodedKitFrame, offBottle, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets, type DetachedLook } from "@/lib/products/kit-frame";
+import { fixedStageOffsets } from "@/lib/products/fixed-stage-placement";
 import { stackedExplodeOffsets } from "@/lib/products/exploded-stack";
 import {
     PDP_PLATE_CANVAS,
     mergeStageBounds,
     pdpStageBounds,
     pdpStageFrame,
+    pdpReviewedGlassFrame,
+    type PdpGlassSizing,
     pdpStageTransformCss,
     type PdpStageFrame,
     type StageBounds,
@@ -44,6 +47,11 @@ export const STAGE_VIEWS: ReadonlyArray<{ id: StageView; label: string }> = [
 export type PartBox = { x: number; y: number; width: number; height: number };
 
 export type KitPartLike = {
+    opacity?: number;
+    /** Blend seated internals through tinted glass without painting over its reflections. */
+    blendMode?: "multiply";
+    /** Permanent bottom trim in image space, retained when the part is lifted. */
+    trimBottomPct?: number;
     slot: string;
     zOrder: number;
     explodeIndex: number;
@@ -71,11 +79,15 @@ export type KitLike = {
     canvas: { width: number; height: number };
     anchors: { axisX: number; neckAxisX: number | null; seatY: number; baselineY: number; pxPerMm?: number | null };
     parts: KitPartLike[];
+    /** Reviewed bare-glass height and baseline, applied uniformly to every part and view. */
+    glassSizing?: PdpGlassSizing;
     /** Set when the kit was composed from the component register rather than published per SKU. */
-    register?: { bodyId: string; plateKey: string; glass: string; pxPerMm?: number } | null;
+    register?: { bodyId: string; plateKey: string; glass: string; pxPerMm?: number; bodyLayers?: boolean } | null;
 };
 
 export type StagePart = {
+    opacity?: number;
+    blendMode?: "multiply";
     key: string;
     slot: string;
     url: string;
@@ -103,6 +115,8 @@ export type StageLayout = {
     /** Anchor points in percent of the canvas box, after the frame transform. */
     anchors: Partial<Record<"cap" | "fitment" | "neck" | "body", StagePoint>>;
     baseline: boolean;
+    /** When set, draw the baseline inside the 10:11 canvas at this exact percentage. */
+    baselinePct?: number;
     grid: boolean;
     /** The body's studio (wall, floor, contact shadow), drawn under the kit; null keeps the flat canvas. */
     backdrop: StageBackdropPlacement | null;
@@ -131,20 +145,29 @@ export type StageContext = {
     websiteSku?: string | null;
 };
 
+/** Reducers can separate only when the actual insert and removable cap are present. */
+function separableReducer(kit: KitLike | null | undefined, context: StageContext, full = false): boolean {
+    return context.applicator?.trim().toLowerCase() === "reducer"
+        && Boolean(kit?.parts.some(part => part.slot === "cap"))
+        && Boolean(kit?.parts.some(part => part.slot === "reducer"
+            && (!part.views || part.views.includes(full ? "exploded" : "capon"))));
+}
+
 /** Which views the stage can honestly show for this SKU. */
 export function availableViews(kit: KitLike | null | undefined, context: StageContext): StageView[] {
     const views: StageView[] = ["sidecar"];
     if (!kit?.parts?.length) return views;
+    if (context.applicator?.trim().toLowerCase() === "reducer" && !separableReducer(kit, context)) return ["capon"];
     views.push("capon");
-    if (allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) views.push("exploded");
+    if (separableReducer(kit, context, true) || allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) views.push("exploded");
     return views;
 }
 
-/** Sidecar collapses to the assembled stack when the closure must stay on (droppers, reducers, bulb sprayers). */
+/** Keep complete tops assembled unless the reducer kit explicitly supplies the separate insert. */
 export function effectiveView(view: StageView, kit: KitLike | null | undefined, context: StageContext): StageView {
     if (!kit?.parts?.length) return "sidecar";
-    if (view === "sidecar" && requiresAssembledClosure(context.applicator, context.websiteSku)) return "capon";
-    if (view === "exploded" && !allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) return "capon";
+    if (view === "sidecar" && !separableReducer(kit, context) && requiresAssembledClosure(context.applicator, context.websiteSku)) return "capon";
+    if (view === "exploded" && !separableReducer(kit, context, true) && !allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) return "capon";
     return view;
 }
 
@@ -289,20 +312,43 @@ export function stageLayout(
         });
     }
 
+    const glass = sorted.find((part) => part.slot === "body");
+    const reviewedFrame = kit.glassSizing && glass
+        ? pdpReviewedGlassFrame(glass.bounds, kit.anchors.axisX, kit.glassSizing, canvas.width, canvas.height)
+        : null;
+    // Size the bare glass, with one uniform transform for the entire assembly.
+    // Keep its size and foot fixed when a cap changes or the parts are lifted.
+    if (reviewedFrame) {
+        frame = reviewedFrame;
+        offsets = fixedStageOffsets(sorted, offsets, view, frame, canvas, {
+            insertsFirst: ["cylinder-9ml-17-415", "cylinder-5ml-13-415"].includes(kit.register?.bodyId ?? "")
+                && sorted.some(part => part.slot === "roller" && (kit.register?.bodyLayers === true || part.image.url.startsWith("/local-kits/cylinder9-masters-2026-11-01/"))),
+        });
+    }
+
+    // Stable physical-layer keys let CSS translate the same DOM element between views.
+    const occurrences = new Map<string, number>();
     const parts: StagePart[] = sorted.map((part, index) => {
+        const owner = `${part.slot}-${part.componentId ?? "body"}`;
+        const occurrence = occurrences.get(owner) ?? 0;
+        occurrences.set(owner, occurrence + 1);
         const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
-        let clipBottomPct: number | undefined;
+        let clipBottomPct: number | undefined = part.trimBottomPct === undefined ? undefined : Math.max(0, Math.min(100, part.trimBottomPct));
         if (part.box && BEHIND_GLASS_SLOTS.has(part.slot)) {
             const over = part.box.y + part.box.height + offset.dy - kit.anchors.baselineY;
-            if (over > 0.5) clipBottomPct = Math.min(100, (over / part.box.height) * 100);
+            if (over > 0.5) clipBottomPct = Math.max(clipBottomPct ?? 0, Math.min(100, (over / part.box.height) * 100));
         }
         return {
-            key: `${part.slot}-${index}`,
+            key: `${owner}-${occurrence}`,
             slot: part.slot,
             url: part.image.url,
             dxPct: (offset.dx / canvas.width) * 100,
             dyPct: (offset.dy / canvas.height) * 100,
-            zIndex: part.zOrder + 1,
+            // zOrder is a relative priority and can be fractional (a tube
+            // between glass and hardware). CSS z-index requires an integer.
+            zIndex: index + 1,
+            opacity: part.opacity,
+            blendMode: part.blendMode,
             ...(part.box ? {
                 box: {
                     leftPct: (part.box.x / canvas.width) * 100,
@@ -362,6 +408,7 @@ export function stageLayout(
         floorShadows,
         // the studio's own floor replaces the drawn baseline
         baseline: view !== "exploded" && !backdrop,
+        ...(reviewedFrame ? { baselinePct: kit.glassSizing!.baselinePct } : {}),
         grid: view === "exploded",
         backdrop,
     };

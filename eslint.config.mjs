@@ -20,6 +20,9 @@ const eslintConfig = defineConfig([
     "build/**",
     "dist/**",
     "outputs/**",
+    // Frozen review evidence keeps historical scripts verbatim; it is not app source.
+    "docs/reviews/catalog-checkpoint-2026-10-31/evidence/**",
+    "docs/reviews/catalog-checkpoint-2026-10-31/runtime/**",
     "_ARCHIVE_Best_Bottles/**",
     "seo-audit-*/**",
     "mobile-audit-screenshots/**",

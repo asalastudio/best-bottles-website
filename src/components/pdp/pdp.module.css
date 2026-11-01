@@ -438,6 +438,10 @@
     font-weight: 600;
 }
 
+.mobileCallouts {
+    display: none;
+}
+
 /* ── glass lineup ───────────────────────────────────────────────────────── */
 
 .lineup {
@@ -1389,6 +1393,7 @@
         grid-template-areas:
             "head"
             "stage"
+            "details"
             "rail"
             "lineup";
     }
@@ -1422,9 +1427,34 @@
         bottom: 30px;
     }
 
-    .callout {
-        right: 10px;
-        gap: 6px;
+    /* Keep the full component view clear on narrow screens. */
+    .callouts {
+        display: none;
+    }
+
+    .mobileCallouts {
+        grid-area: details;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 20px;
+        margin: 0;
+        padding: 14px 16px;
+        border-top: 1px solid var(--pdp-divider);
+        font-size: 11px;
+        line-height: 1.5;
+        color: var(--pdp-body);
+        overflow-wrap: anywhere;
+    }
+
+    .mobileCallouts dt {
+        color: var(--pdp-ink);
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: .12em;
+    }
+
+    .mobileCallouts dd {
+        margin: 3px 0 0;
     }
 
     .calloutDot {
@@ -1701,6 +1731,8 @@
     }
 
     .buildLine {
+        max-width: 100%;
+        white-space: normal;
         font-size: 10px;
     }
 

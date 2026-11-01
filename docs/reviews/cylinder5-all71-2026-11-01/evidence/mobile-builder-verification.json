@@ -1,0 +1,38 @@
+[
+  {
+    "sku": "GBCyl5GlMattSht",
+    "passed": true,
+    "mainPreviewLayersMatch": true,
+    "expanded": true
+  },
+  {
+    "sku": "GBCylBlu5SlSht",
+    "passed": true,
+    "mainPreviewLayersMatch": true,
+    "expanded": true
+  },
+  {
+    "sku": "GBCyl5MtlRollBlkSh",
+    "passed": true,
+    "mainPreviewLayersMatch": true,
+    "expanded": true
+  },
+  {
+    "sku": "GBCylBlu5RollGlSh",
+    "passed": true,
+    "mainPreviewLayersMatch": true,
+    "expanded": true
+  },
+  {
+    "sku": "GBCyl5SpryGlMatt",
+    "passed": true,
+    "mainPreviewLayersMatch": true,
+    "expanded": true
+  },
+  {
+    "sku": "GBCylBlu5SprySlSh",
+    "passed": true,
+    "mainPreviewLayersMatch": true,
+    "expanded": true
+  }
+]

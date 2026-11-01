@@ -1,0 +1,26 @@
+{
+  "status": "generated-review-candidate",
+  "generatedImages": 1,
+  "editDurationSeconds": 22.3,
+  "attempts": [
+    {
+      "status": 400,
+      "reason": "input_fidelity unsupported; rejected before generation"
+    },
+    {
+      "status": "success",
+      "input_fidelity": "omitted",
+      "output": "BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-v01_REVIEW_2026-11-01.png"
+    }
+  ],
+  "resolutionGain": false,
+  "geometry": "alpha >=128 outline aspect +0.897% at equal height; not a manufacturer fit test",
+  "visualReview": [
+    "Complete upright bottle, no components baked into the body.",
+    "Softer vertical reflections than the source.",
+    "Ragged light and colored alpha fringe around the shoulders and barrel; isolated faint alpha outside the bottle.",
+    "Near-opaque bright interior needs evaluation with component compositing.",
+    "No PDP or builder assignment; no family rollout."
+  ],
+  "cost": "Not returned by bundled CLI; no cost estimate asserted."
+}

@@ -273,10 +273,10 @@ export function capacityEyebrow(group: Pick<PdpGroup, "family" | "capacity" | "c
     return [group.family, capacity, clean(group.neckThreadSize)].filter(Boolean).map((part) => String(part).toUpperCase()).join(" · ");
 }
 
-export function pageTitle(group: Pick<PdpGroup, "family" | "capacity" | "capacityMl" | "color">, fitment: string | null): string {
+export function pageTitle(group: Pick<PdpGroup, "family" | "capacity" | "capacityMl" | "color"> & { slug?: string }, fitment: string | null): string {
     const capacity = group.capacityMl != null ? `${group.capacityMl} ml` : clean(group.capacity)?.split(" (")[0] ?? "";
     const glass = glassLabel(group.color);
-    const family = clean(group.family) ?? "Bottle";
+    const family = /^tulip-(?:5|6)ml-/.test(group.slug ?? "") ? "Tulip" : clean(group.family) ?? "Bottle";
     // A bulb sprayer page is named as the tab title names it, tassel included: it is not a plain "Spray Bottle".
     const type = fitment
         ? /bulb sprayer/i.test(fitment) ? `Vintage-Style Bulb Sprayer Bottle${/tassel/i.test(fitment) ? " with Tassel" : ""}`
@@ -395,7 +395,7 @@ export function callouts(variant: ProductVariant | null | undefined, capName: st
         const roller = rollerIdFor(applicator);
         const line1 = roller ? `${displayApplicatorName(applicator)} insert` : displayApplicatorName(applicator);
         const line2 = neck
-            ? roller ? `Press-fit into ${neck} neck` : thread ? `Threads onto ${neck} neck` : `Fits ${neck} neck`
+            ? roller || applicator.toLowerCase() === "reducer" ? `Press-fit into ${neck} neck` : thread ? `Threads onto ${neck} neck` : `Fits ${neck} neck`
             : null;
         out.push({ key: "fitment", title: "FITMENT", line1, line2 });
     }
@@ -491,10 +491,11 @@ export function collectionDescription(band: CollectionBand, groups: readonly Col
     return `${band.subtitle} ${members.length} ${noun}${familyText ? ` across ${familyText}` : ""}${range}.`;
 }
 
-export function buildYourBottleHref(group: Pick<PdpGroup, "family">, collection: CollectionBand | null): string {
+export function buildYourBottleHref(group: Pick<PdpGroup, "family">, collection: CollectionBand | null, sku?: string | null): string {
     const params = new URLSearchParams();
     if (group.family) params.set("family", group.family);
     if (collection) params.set("shop", collection.key);
+    if (sku) params.set("sku", sku);
     params.set("from", "pdp");
     return `/matrix?${params.toString()}`;
 }

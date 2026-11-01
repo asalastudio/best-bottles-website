@@ -1,0 +1,3 @@
+1. Keep the first image's exact bottle geometry, proportions and straight-on eye-level camera, including its rim and flat standing base. Bare bottle only, no cap.
+2. Replace the artificial flat material with studio-photographed dark amber glass: realistic transparent depth, refraction, natural cylindrical light falloff and nuanced highlights. The second image is a real amber-glass color/material reference, not a shape reference. Remove the painted rectangular sticker-like appearance inside the glass.
+3. Enhance the photorealistic material quality. Keep the background genuinely transparent and the entire bottle uncropped. No text or extra objects.

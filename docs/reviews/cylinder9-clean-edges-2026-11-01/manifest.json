@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-01",
+  "status": "review",
+  "files": [
+    {
+      "path": "BB_Cylinder_9ml_17-415_Clear_BODY_Fixed-Edges-v04_REVIEW.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba"
+    },
+    {
+      "path": "BB_Cylinder_9ml_17-415_Clear_BODY_Fixed-Edges-v04_REVIEW.svg",
+      "bytes": 1969493,
+      "sha256": "fbb87a2b785efae176bbc74d6d64ac5613cd23e63327386aa7f79c7b52f4cc4f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3220,
+      "sha256": "2f66db654c2888477b63733962dd35fb0034de534218277a44526d639d7592e8"
+    },
+    {
+      "path": "Sunburst-cleanup-v04_REJECTED-shape-drift.png",
+      "bytes": 1281249,
+      "sha256": "85c279e240102b69be6bd70a9724f632e6bfe35ed4475bd432bf1bbab0fef2ce"
+    },
+    {
+      "path": "before-v03.png",
+      "bytes": 1427876,
+      "sha256": "206b5f1c72b151034524140526b47d2b2b33f55c6728b71a81ff4b9e313b2fa2"
+    },
+    {
+      "path": "browser-checks.json",
+      "bytes": 4081,
+      "sha256": "62c4e45387fd348caf625a0d10c10aaad3aa9190ee1f263ee01fabee9aeeedee"
+    },
+    {
+      "path": "build-review.cjs",
+      "bytes": 8345,
+      "sha256": "8a9c1692b0c11f970aa0f091cf7ac67e746650105cbd1e4e871eb989b7029ed7"
+    },
+    {
+      "path": "full-bottle-product-stage.png",
+      "bytes": 34517,
+      "sha256": "eeac54719a2b5ad53363748395ce3f5a0b4c716d9a17a6b9afc992ffac4f6cb5"
+    },
+    {
+      "path": "geometry-contract.json",
+      "bytes": 794,
+      "sha256": "5343f6a7532b627417ad3520b059447027357344cad5fe8226a67f4cd92ff4c1"
+    },
+    {
+      "path": "package-review.py",
+      "bytes": 1813,
+      "sha256": "b6f16d967be8f3c4c264d28537db6f3c9cde5ce9c10d03ab4ce7199b806ff6dc"
+    },
+    {
+      "path": "pdp-1440-assembled.png",
+      "bytes": 236324,
+      "sha256": "0245c6f4021f8946fd7e8be414085da5e28fe86bafe88b90e8f0c201b5a2229b"
+    },
+    {
+      "path": "pdp-1440-before.png",
+      "bytes": 236185,
+      "sha256": "6a2e192a370d8c8b498fb0da71be154d983bf63b5256307b210752fa74b60201"
+    },
+    {
+      "path": "pdp-1440-clean.png",
+      "bytes": 236271,
+      "sha256": "2e45f2d9548b034ce0fcd4d1871d4280242d95f157452975ca1d612665f8f36a"
+    },
+    {
+      "path": "pdp-390-assembled.png",
+      "bytes": 93169,
+      "sha256": "e00cabaae5c110c59dece9ddda59b26690e7d0e7a11d2bcfd2f1766d650b4710"
+    },
+    {
+      "path": "pdp-390-before.png",
+      "bytes": 92372,
+      "sha256": "3ac8ad123fd0b441f87b9c8a1d99ed91bde34e824b27da80a138abcfc14b4699"
+    },
+    {
+      "path": "pdp-390-clean.png",
+      "bytes": 92460,
+      "sha256": "00c8c0ca94fb65512817bbc99be17f93f5483e528403fc376b5d05a1d3adae5b"
+    },
+    {
+      "path": "pixel-verification.json",
+      "bytes": 281,
+      "sha256": "836b989333ce67f68ed78fe7d26c5627a96ef6b3eeda0c67b789d571bfd27e76"
+    },
+    {
+      "path": "preserved-assets.json",
+      "bytes": 546,
+      "sha256": "f1823ca66cf17cb171152458b9946608b2ed82a67c8c6c1035cb9a40ff966f75"
+    },
+    {
+      "path": "render-and-check.cjs",
+      "bytes": 4674,
+      "sha256": "6e0a06a4b19e197c1be6effe1e4fd3a0c98c7b77aea05b20013717a4f0284a55"
+    },
+    {
+      "path": "restore.mjs",
+      "bytes": 2694,
+      "sha256": "05968d5922a474322313801e4a55b0482d0f45ec3acfbac4792fad724d61b7e1"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-clean-edges-2026-11-01/before-v03.png",
+      "bytes": 1427876,
+      "sha256": "206b5f1c72b151034524140526b47d2b2b33f55c6728b71a81ff4b9e313b2fa2",
+      "restoreTo": "public/reviews/cylinder9-clean-edges-2026-11-01/before-v03.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-clean-edges-2026-11-01/body-clean-v04.png",
+      "bytes": 1634900,
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "restoreTo": "public/reviews/cylinder9-clean-edges-2026-11-01/body-clean-v04.png"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-clean-edges-2026-11-01/body-clean-v04.svg",
+      "bytes": 1969493,
+      "sha256": "fbb87a2b785efae176bbc74d6d64ac5613cd23e63327386aa7f79c7b52f4cc4f",
+      "restoreTo": "public/reviews/cylinder9-clean-edges-2026-11-01/body-clean-v04.svg"
+    },
+    {
+      "path": "runtime/public/reviews/cylinder9-clean-edges-2026-11-01/index.html",
+      "bytes": 5140,
+      "sha256": "4eca37b6f4f3df270cde47193fd522fe24be2ccc6570ee4ef2adc59a1139a508",
+      "restoreTo": "public/reviews/cylinder9-clean-edges-2026-11-01/index.html"
+    },
+    {
+      "path": "sunburst-prompt.txt",
+      "bytes": 2026,
+      "sha256": "8ed23ed7d760a8bb5ab8383de06efb0c044d880eb524a18300ad2fc62b40ea21"
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "source": "Native Photoshop layers, not Blender renders",
+  "root": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master",
+  "components": [
+    {
+      "componentId": "CMP-SPR-BLK-17-415-01",
+      "websiteSku": "Spry17-415Blk",
+      "psd": "20. Caps/13. 17-415 Spray/13. Spry17-415Blk.psd",
+      "reference": {
+        "psd": "3.  17-415 Bottles/10. Clear  (Capped)/23. GBCyl9SpryBlk.psd",
+        "matchedLayers": [
+          "Layer 13",
+          "Layer 18"
+        ],
+        "bottlePxPerMm": 12.3676,
+        "rimY": 604,
+        "axisX": 356.5
+      },
+      "psdSha256": "4d8aa231dbedd4910be40e7bc150aabc267395c12961846a5a85913f09b481be",
+      "layers": [
+        {
+          "slot": "sprayer",
+          "layerName": "Layer 10",
+          "file": "CMP-SPR-BLK-17-415-01--sprayer.png",
+          "width": 248,
+          "height": 302,
+          "sha256": "e1a702da154ad6dd77950ac20562e2c55f7c2811679c0dcbf045be8c20622b98",
+          "pxPerMm": 15.338,
+          "anchor": {
+            "x": 122.5,
+            "y": 299.9
+          },
+          "z": "front",
+          "explodeIndex": 2,
+          "solidBottomY": 290,
+          "originalMetadataSha256": "60eefa3c2a0fc252aca1a5cbcacb103f7b8fbe9b1f5d0f160d354b271a1113f6",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 2,
+            "nativeLayerName": "Layer 10",
+            "transparentPaddingPx": 6
+          }
+        },
+        {
+          "slot": "collar",
+          "layerName": "Layer 11",
+          "file": "CMP-SPR-BLK-17-415-01--collar.png",
+          "width": 301,
+          "height": 257,
+          "sha256": "a028691129ace1193997cb09d53eb503510f196708d9a9a3dfbbfa740e3006bf",
+          "pxPerMm": 15.338,
+          "anchor": {
+            "x": 148.5,
+            "y": 30.9
+          },
+          "z": "front",
+          "explodeIndex": 1,
+          "solidBottomY": 249,
+          "originalMetadataSha256": "dff02db6b0e742574fb4ac8bf36e545ce9d3dc34d5933ad7183b652433061b79",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 3,
+            "nativeLayerName": "Layer 11",
+            "transparentPaddingPx": 6
+          }
+        }
+      ]
+    },
+    {
+      "componentId": "CMP-SPR-CLR-17-415",
+      "websiteSku": "Spry17-415Tur",
+      "psd": "20. Caps/13. 17-415 Spray/16. Spry17-415Tur.psd",
+      "reference": {
+        "psd": "3.  17-415 Bottles/10. Clear  (Capped)/26. GBCyl9SpryTur.psd",
+        "matchedLayers": [
+          "Layer 13",
+          "Layer 20"
+        ],
+        "bottlePxPerMm": 12.3676,
+        "rimY": 604,
+        "axisX": 354.5
+      },
+      "psdSha256": "468c2a35e0367f94fafbcab68173720c87ff4e770eb73d36a112b7d6fa6e25b5",
+      "layers": [
+        {
+          "slot": "sprayer",
+          "layerName": "Layer 10",
+          "file": "CMP-SPR-CLR-17-415--sprayer.png",
+          "width": 248,
+          "height": 302,
+          "sha256": "e3c2b6d53c0b2f60603ea10a5cc652f187a38b20d54b6f4d2eac7c236546aa23",
+          "pxPerMm": 16.2325,
+          "anchor": {
+            "x": 122.0,
+            "y": 296.1
+          },
+          "z": "front",
+          "explodeIndex": 2,
+          "solidBottomY": 290,
+          "originalMetadataSha256": "60eefa3c2a0fc252aca1a5cbcacb103f7b8fbe9b1f5d0f160d354b271a1113f6",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 2,
+            "nativeLayerName": "Layer 10",
+            "transparentPaddingPx": 6
+          }
+        },
+        {
+          "slot": "collar",
+          "layerName": "Layer 17",
+          "file": "CMP-SPR-CLR-17-415--collar.png",
+          "width": 328,
+          "height": 281,
+          "sha256": "3aaad2679f488259c597ee4f98bc230ea9c39f7cb3a8beb7d4c3336b7918ccee",
+          "pxPerMm": 16.2325,
+          "anchor": {
+            "x": 152.0,
+            "y": 43.1
+          },
+          "z": "front",
+          "explodeIndex": 1,
+          "solidBottomY": 272,
+          "originalMetadataSha256": "c3d7bd5f5e539c5caf8726381cd8bd533973dd26321086cb64d426f236fa38d4",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 3,
+            "nativeLayerName": "Layer 17",
+            "transparentPaddingPx": 6
+          }
+        }
+      ]
+    },
+    {
+      "componentId": "CMP-SPR-RED-17-415",
+      "websiteSku": "Spry17-415Red",
+      "psd": "20. Caps/13. 17-415 Spray/15. Spry17-415Red.psd",
+      "reference": {
+        "psd": "3.  17-415 Bottles/10. Clear  (Capped)/25. GBCyl9SpryRd.psd",
+        "matchedLayers": [
+          "Layer 13",
+          "Layer 19"
+        ],
+        "bottlePxPerMm": 12.3676,
+        "rimY": 604,
+        "axisX": 353.5
+      },
+      "psdSha256": "d597dc4806a9d20fe813676af33d78b0d0145de05c29db7bf499ed9ef8bf653c",
+      "layers": [
+        {
+          "slot": "sprayer",
+          "layerName": "Layer 10",
+          "file": "CMP-SPR-RED-17-415--sprayer.png",
+          "width": 248,
+          "height": 302,
+          "sha256": "16db8e5b2c3f8e1c14d1cab227e6da253a39609d50bf0ac81f5239c025a41e1b",
+          "pxPerMm": 16.028,
+          "anchor": {
+            "x": 125.0,
+            "y": 296.3
+          },
+          "z": "front",
+          "explodeIndex": 2,
+          "solidBottomY": 290,
+          "originalMetadataSha256": "60eefa3c2a0fc252aca1a5cbcacb103f7b8fbe9b1f5d0f160d354b271a1113f6",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 2,
+            "nativeLayerName": "Layer 10",
+            "transparentPaddingPx": 6
+          }
+        },
+        {
+          "slot": "collar",
+          "layerName": "Layer 16",
+          "file": "CMP-SPR-RED-17-415--collar.png",
+          "width": 308,
+          "height": 271,
+          "sha256": "c39ace8baf084db6c8c034080adc3240a1eb34fb4f501e2978ba0d86973a1be6",
+          "pxPerMm": 16.028,
+          "anchor": {
+            "x": 153.0,
+            "y": 36.3
+          },
+          "z": "front",
+          "explodeIndex": 1,
+          "solidBottomY": 263,
+          "originalMetadataSha256": "72adc567286a99a486ef379857035353ca27058aa369bb048e0e4e7bad0b2779",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 3,
+            "nativeLayerName": "Layer 16",
+            "transparentPaddingPx": 6
+          }
+        }
+      ]
+    },
+    {
+      "componentId": "CMP-SPR-SGLD-17-415",
+      "websiteSku": "Spry17-415Gl",
+      "psd": "20. Caps/13. 17-415 Spray/11. Spry17-415Gl.psd",
+      "reference": {
+        "psd": "3.  17-415 Bottles/10. Clear  (Capped)/21. GBCyl9SpryGl.psd",
+        "matchedLayers": [
+          "Layer 13",
+          "Layer 15"
+        ],
+        "bottlePxPerMm": 12.3676,
+        "rimY": 601,
+        "axisX": 353.5
+      },
+      "psdSha256": "6be1f163ccf98c092fafbc889686be601b0706c2c1dca3a6a40eb35807995540",
+      "layers": [
+        {
+          "slot": "sprayer",
+          "layerName": "Layer 10",
+          "file": "CMP-SPR-SGLD-17-415--sprayer.png",
+          "width": 248,
+          "height": 302,
+          "sha256": "ba606009b1b274ee70fed1e00d097e2ff8c7cc6ae4c9bf9af9fe267ff12a9fa0",
+          "pxPerMm": 15.6366,
+          "anchor": {
+            "x": 122.0,
+            "y": 298.1
+          },
+          "z": "front",
+          "explodeIndex": 2,
+          "solidBottomY": 290,
+          "originalMetadataSha256": "60eefa3c2a0fc252aca1a5cbcacb103f7b8fbe9b1f5d0f160d354b271a1113f6",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 2,
+            "nativeLayerName": "Layer 10",
+            "transparentPaddingPx": 6
+          }
+        },
+        {
+          "slot": "collar",
+          "layerName": "Layer 13",
+          "file": "CMP-SPR-SGLD-17-415--collar.png",
+          "width": 305,
+          "height": 260,
+          "sha256": "1a664dd8e175e87008adb19090b701cf65672e51b3b89f15a569d8adff32dacc",
+          "pxPerMm": 15.6366,
+          "anchor": {
+            "x": 152.0,
+            "y": 32.1
+          },
+          "z": "front",
+          "explodeIndex": 1,
+          "solidBottomY": 254,
+          "originalMetadataSha256": "a2caa8655dc2429857e029d875eeca3661bf33a0a891c60961627967cbf8deab",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 3,
+            "nativeLayerName": "Layer 13",
+            "transparentPaddingPx": 6
+          }
+        }
+      ]
+    },
+    {
+      "componentId": "CMP-SPR-SLV-17-415",
+      "websiteSku": "Spry17-415MattSl",
+      "psd": "20. Caps/13. 17-415 Spray/12. Spry17-415MattSl.psd",
+      "reference": {
+        "psd": "3.  17-415 Bottles/10. Clear  (Capped)/22. GBCyl9SpryMattSl.psd",
+        "matchedLayers": [
+          "Layer 13",
+          "Layer 12"
+        ],
+        "bottlePxPerMm": 12.3676,
+        "rimY": 604,
+        "axisX": 353.5
+      },
+      "psdSha256": "cc50f6c922187256becfb655397b045939f65b07b292bd35fca7735d0baaeb66",
+      "layers": [
+        {
+          "slot": "sprayer",
+          "layerName": "Layer 10",
+          "file": "CMP-SPR-SLV-17-415--sprayer.png",
+          "width": 248,
+          "height": 302,
+          "sha256": "00908138e5529120b2f41ded501dbf9f889962a4909b3e3d8478ee4858ef7c90",
+          "pxPerMm": 15.9321,
+          "anchor": {
+            "x": 121.5,
+            "y": 293.3
+          },
+          "z": "front",
+          "explodeIndex": 2,
+          "solidBottomY": 290,
+          "originalMetadataSha256": "60eefa3c2a0fc252aca1a5cbcacb103f7b8fbe9b1f5d0f160d354b271a1113f6",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 2,
+            "nativeLayerName": "Layer 10",
+            "transparentPaddingPx": 6
+          }
+        },
+        {
+          "slot": "collar",
+          "layerName": "Layer 14",
+          "file": "CMP-SPR-SLV-17-415--collar.png",
+          "width": 309,
+          "height": 260,
+          "sha256": "68ce28f209f1fd23e7498c3d1a95d65eefdf699cc95040420c300f5eb52c6069",
+          "pxPerMm": 15.9321,
+          "anchor": {
+            "x": 155.5,
+            "y": 24.3
+          },
+          "z": "front",
+          "explodeIndex": 1,
+          "solidBottomY": 254,
+          "originalMetadataSha256": "bce8b6712e4e5518b9b7b810afbd3c2d44999c6e7732dea1c933885de45c2aec",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 3,
+            "nativeLayerName": "Layer 14",
+            "transparentPaddingPx": 6
+          }
+        }
+      ]
+    },
+    {
+      "componentId": "CMP-SPR-SSLV-17-415",
+      "websiteSku": "Spry17-415ShnSl",
+      "psd": "20. Caps/13. 17-415 Spray/14. Spry17-415ShnSl.psd",
+      "reference": {
+        "psd": "3.  17-415 Bottles/10. Clear  (Capped)/24. GBCyl9SpryShSl.psd",
+        "matchedLayers": [
+          "Layer 13",
+          "Layer 15"
+        ],
+        "bottlePxPerMm": 12.3676,
+        "rimY": 601,
+        "axisX": 353.5
+      },
+      "psdSha256": "8d4a211ce46b20fe1e70b3a23b8d6054eed2862150f01e60aa77928a83c69004",
+      "layers": [
+        {
+          "slot": "sprayer",
+          "layerName": "Layer 10",
+          "file": "CMP-SPR-SSLV-17-415--sprayer.png",
+          "width": 248,
+          "height": 302,
+          "sha256": "91dbb6f8b8868f9977fadd7f70e79143b0f3fd318bc9f7fb97a8443f4061ef1b",
+          "pxPerMm": 16.018,
+          "anchor": {
+            "x": 120.5,
+            "y": 290.9
+          },
+          "z": "front",
+          "explodeIndex": 2,
+          "solidBottomY": 290,
+          "originalMetadataSha256": "60eefa3c2a0fc252aca1a5cbcacb103f7b8fbe9b1f5d0f160d354b271a1113f6",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 2,
+            "nativeLayerName": "Layer 10",
+            "transparentPaddingPx": 6
+          }
+        },
+        {
+          "slot": "collar",
+          "layerName": "Layer 15",
+          "file": "CMP-SPR-SSLV-17-415--collar.png",
+          "width": 312,
+          "height": 266,
+          "sha256": "6d6e1807ab55c8ae418d64acc37afac8e8e131ef9eb32acffc55445cf5952366",
+          "pxPerMm": 16.018,
+          "anchor": {
+            "x": 155.5,
+            "y": 30.9
+          },
+          "z": "front",
+          "explodeIndex": 1,
+          "solidBottomY": 260,
+          "originalMetadataSha256": "85fceab7cafd1a47d516a9153e0f682a4b6b6f4d108111ac439552bedb0f2f9c",
+          "extraction": {
+            "tool": "ImageMagick",
+            "nativeLayerIndex": 3,
+            "nativeLayerName": "Layer 15",
+            "transparentPaddingPx": 6
+          }
+        }
+      ]
+    }
+  ],
+  "archivedCdnNote": "Black sprayer CDN bytes differ from historical hash, so these are freshly extracted native PSD layers."
+}

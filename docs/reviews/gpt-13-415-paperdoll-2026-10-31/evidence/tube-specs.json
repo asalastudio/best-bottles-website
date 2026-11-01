@@ -1,0 +1,26 @@
+{
+  "acceptance": "visual-production candidate",
+  "units": "mm",
+  "specs": {
+    "sleek-5ml-13-415": 46.5271,
+    "tulip-5ml-13-415": 47.1429,
+    "sleek-8ml-13-415": 67.4286,
+    "cylinder-9ml-13-415": 105.8201,
+    "footed-rectangle-10ml-13-415": 52.7619,
+    "tall-rectangle-10ml-13-415": 102.1711,
+    "circle-15ml-13-415": 64.919,
+    "elegant-15ml-13-415": 64.4148,
+    "flair-15ml-13-415": 60.0,
+    "cylinder-5ml-13-415": 53.3842,
+    "tulip-6ml-13-415": 47.1429,
+    "royal-13ml-13-415": 59.8478,
+    "square-15ml-13-415": 54.4244,
+    "pillar-9ml-13-415": 58.8571,
+    "bell-10ml-13-415": 57.5238
+  },
+  "outerDiameter": 1.1,
+  "innerDiameter": 0.7,
+  "floorThickness": 1.6,
+  "tipHeight": 3.5,
+  "assumptions": "Pump internals, tube OD/bore, bend, floor and clearance are visual estimates. Length follows existing registered rim-to-foot span. No bottle geometry or source image changes."
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "slot": "sprayer",
+    "originalCanvas": [
+      248,
+      302
+    ],
+    "originalBounds": [
+      7,
+      6,
+      234,
+      290
+    ],
+    "generatedCanvas": [
+      1136,
+      1384
+    ],
+    "generatedBounds": [
+      28,
+      25,
+      1090,
+      1352
+    ],
+    "generatedAspectDriftPercent": 0.1258178993390313,
+    "uniformScale": 0.21401657874905802,
+    "translation": [
+      0.8647324792765687,
+      0.6495855312735497
+    ],
+    "outputCanvas": [
+      992,
+      1208
+    ],
+    "outline": "Original Photoshop row extents at alpha >=200; generated outside pixels clipped",
+    "materialStatus": "User liked generated appearance; registered composite remains a review candidate",
+    "geometryStatus": "Raw generation aspect close; registration still required"
+  },
+  {
+    "slot": "collar",
+    "originalCanvas": [
+      301,
+      257
+    ],
+    "originalBounds": [
+      8,
+      10,
+      291,
+      249
+    ],
+    "generatedCanvas": [
+      1357,
+      1159
+    ],
+    "generatedBounds": [
+      40,
+      58,
+      1311,
+      1086
+    ],
+    "generatedAspectDriftPercent": 4.415242468823477,
+    "uniformScale": 0.23249027237354086,
+    "translation": [
+      -7.547178988326863,
+      -3.4844357976653697
+    ],
+    "outputCanvas": [
+      1204,
+      1028
+    ],
+    "outline": "Original Photoshop row extents at alpha >=200; generated outside pixels clipped",
+    "materialStatus": "User liked generated appearance; registered composite remains a review candidate",
+    "geometryStatus": "Raw generation is too wide; do not use unregistered raw layer"
+  }
+]

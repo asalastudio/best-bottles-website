@@ -1,0 +1,4 @@
+{
+  "api": [{"bodyId":"cylinder-9ml|17-415|Glass Bottle","matchingKits":15},{"bodyId":"cylinder-9ml|13-415|Glass Bottle","matchingKits":4},{"bodyId":"flair-15ml|13-415|Glass Bottle","matchingKits":36}],
+  "records": [{"family":"Cylinder","sku":"LBCyl9LtnBlk","passed":true},{"family":"Flair","sku":"GBFlair15SpryBlkMatt","passed":true},{"family":"Flair","sku":"GBFlair15MtlRollBlkDot","passed":true},{"family":"Cylinder","sku":"GBTallCyl9WhtSht","passed":true}]
+}

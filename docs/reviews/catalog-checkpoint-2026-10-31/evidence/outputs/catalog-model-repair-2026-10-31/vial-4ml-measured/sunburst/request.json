@@ -1,0 +1,71 @@
+{
+  "status": "Prepared for exact input transfer approval",
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "size": "auto",
+  "background": "transparent",
+  "maxImages": 4,
+  "destination": "OpenAI images edit API",
+  "jobs": [
+    {
+      "color": "clear",
+      "prompt": "1. Render the measured bottle silhouette from image 1 as a photorealistic bare 4 ml glass vial. Lock the outside shape: height 44.98 mm, body diameter 14.60 mm, thread-crest diameter 12.50 mm, short neck height 7 mm from shoulder to rim. Image 1 is a dimension guide, not material or line art to copy. The neck must have the short proportion drawn in image 1.\n2. Use clear glass and studio lighting, using image 2 only for glass color and material quality, not its longer-neck geometry. Real optical refraction and cylindrical light falloff, no sticker-like interior panel.\n3. One empty bare bottle, upright, straight-on eye-level view without looking into the top. Full bottle, no cap, no text, no extra objects; genuinely transparent background. Enhance photographic quality.\n",
+      "inputs": [
+        {
+          "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/references/measured-geometry.png",
+          "sha256": "72a3c2201e8ad5327638be3678bc77d4bfd247a3a8a46f50c54af73c4837a947"
+        },
+        {
+          "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-four-colors/sunburst-pilot/clear-sunburst.png",
+          "sha256": "32f2956f5be3443b20a2b87a70014f95830013e2dbc28f8188dd90f6ecb9c75e"
+        }
+      ],
+      "output": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear.png"
+    },
+    {
+      "color": "amber",
+      "prompt": "1. Render the measured bottle silhouette from image 1 as a photorealistic bare 4 ml glass vial. Lock the outside shape: height 44.98 mm, body diameter 14.60 mm, thread-crest diameter 12.50 mm, short neck height 7 mm from shoulder to rim. Image 1 is a dimension guide, not material or line art to copy. The neck must have the short proportion drawn in image 1.\n2. Use dark amber glass and studio lighting, using image 2 only for glass color and material quality, not its longer-neck geometry. Real optical refraction and cylindrical light falloff, no sticker-like interior panel.\n3. One empty bare bottle, upright, straight-on eye-level view without looking into the top. Full bottle, no cap, no text, no extra objects; genuinely transparent background. Enhance photographic quality.\n",
+      "inputs": [
+        {
+          "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/references/measured-geometry.png",
+          "sha256": "72a3c2201e8ad5327638be3678bc77d4bfd247a3a8a46f50c54af73c4837a947"
+        },
+        {
+          "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-four-colors/amber-sunburst/amber-sunburst.png",
+          "sha256": "32e5dfca3f9368b87082eb5063c47b7ef12bbb460c09f9d8f695dc659f6357ac"
+        }
+      ],
+      "output": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber.png"
+    },
+    {
+      "color": "green",
+      "prompt": "1. Render the measured bottle silhouette from image 1 as a photorealistic bare 4 ml glass vial. Lock the outside shape: height 44.98 mm, body diameter 14.60 mm, thread-crest diameter 12.50 mm, short neck height 7 mm from shoulder to rim. Image 1 is a dimension guide, not material or line art to copy. The neck must have the short proportion drawn in image 1.\n2. Use deep emerald green glass and studio lighting, using image 2 only for glass color and material quality, not its longer-neck geometry. Real optical refraction and cylindrical light falloff, no sticker-like interior panel.\n3. One empty bare bottle, upright, straight-on eye-level view without looking into the top. Full bottle, no cap, no text, no extra objects; genuinely transparent background. Enhance photographic quality.\n",
+      "inputs": [
+        {
+          "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/references/measured-geometry.png",
+          "sha256": "72a3c2201e8ad5327638be3678bc77d4bfd247a3a8a46f50c54af73c4837a947"
+        },
+        {
+          "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-four-colors/masters/green.png",
+          "sha256": "3381d04a8bbff31289b4af37ab1cf0e8a493b4ec2422c88d109053ae3cec1b83"
+        }
+      ],
+      "output": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/green.png"
+    },
+    {
+      "color": "cobalt",
+      "prompt": "1. Render the measured bottle silhouette from image 1 as a photorealistic bare 4 ml glass vial. Lock the outside shape: height 44.98 mm, body diameter 14.60 mm, thread-crest diameter 12.50 mm, short neck height 7 mm from shoulder to rim. Image 1 is a dimension guide, not material or line art to copy. The neck must have the short proportion drawn in image 1.\n2. Use deep cobalt blue glass and studio lighting, using image 2 only for glass color and material quality, not its longer-neck geometry. Real optical refraction and cylindrical light falloff, no sticker-like interior panel.\n3. One empty bare bottle, upright, straight-on eye-level view without looking into the top. Full bottle, no cap, no text, no extra objects; genuinely transparent background. Enhance photographic quality.\n",
+      "inputs": [
+        {
+          "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/references/measured-geometry.png",
+          "sha256": "72a3c2201e8ad5327638be3678bc77d4bfd247a3a8a46f50c54af73c4837a947"
+        },
+        {
+          "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-four-colors/masters/cobalt.png",
+          "sha256": "367f2c44fd97995197a418cb1ed184df03930cb9edb5c25d10bdd03d51eee8d7"
+        }
+      ],
+      "output": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/cobalt.png"
+    }
+  ]
+}

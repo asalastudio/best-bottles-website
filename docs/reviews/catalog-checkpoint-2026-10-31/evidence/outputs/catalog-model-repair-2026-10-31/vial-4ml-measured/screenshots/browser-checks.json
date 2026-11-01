@@ -1,0 +1,2418 @@
+[
+  {
+    "name": "desktop-clear-black-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 411.64928780400106,
+      "right": 502.33530125318714,
+      "top": 422.0036136430085,
+      "bottom": 701.3990968281013
+    },
+    "capBounds": {
+      "left": 509.7882612304687,
+      "right": 603.013907409668,
+      "top": 640.7158142089844,
+      "bottom": 701.3964172363281
+    },
+    "clipping": false,
+    "centerError": 99.40878979147425,
+    "seatError": 235.91195916700462,
+    "sidecarBaselineError": 0.0026795917731305963,
+    "capMatches": true,
+    "bodyAspect": 0.3245793826563359,
+    "glassHeightPct": 51.7399042935357,
+    "glassFootPct": 90.99983274594469,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-clear-black-capon",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 411.64928780400106,
+      "right": 502.33530125318714,
+      "top": 422.0036136430085,
+      "bottom": 701.3990968281013
+    },
+    "capBounds": {
+      "left": 410.3798544921875,
+      "right": 503.6055109863281,
+      "top": 404.80071411132815,
+      "bottom": 465.4813171386719
+    },
+    "clipping": false,
+    "centerError": 0.0003882106637149718,
+    "seatError": 0.00314093065162524,
+    "sidecarBaselineError": 235.91777968942938,
+    "capMatches": true,
+    "bodyAspect": 0.3245793826563359,
+    "glassHeightPct": 51.7399042935357,
+    "glassFootPct": 90.99983274594469,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-clear-black-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 411.64928780400106,
+      "right": 502.33530125318714,
+      "top": 422.0036136430085,
+      "bottom": 701.3990968281013
+    },
+    "capBounds": {
+      "left": 410.3798544921875,
+      "right": 503.6055109863281,
+      "top": 353.86992797851565,
+      "bottom": 414.5505310058594
+    },
+    "clipping": false,
+    "centerError": 0.0003882106637149718,
+    "seatError": 50.933927063464125,
+    "sidecarBaselineError": 286.8485658222419,
+    "capMatches": true,
+    "bodyAspect": 0.3245793826563359,
+    "glassHeightPct": 51.7399042935357,
+    "glassFootPct": 90.99983274594469,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-clear-white-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=white",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 411.64928780400106,
+      "right": 502.33530125318714,
+      "top": 422.0036136430085,
+      "bottom": 701.3990968281013
+    },
+    "capBounds": {
+      "left": 509.7901774597168,
+      "right": 603.0167988586426,
+      "top": 640.9360539661755,
+      "bottom": 701.3919207763672
+    },
+    "clipping": false,
+    "centerError": 99.41119363058561,
+    "seatError": 235.9074627070437,
+    "sidecarBaselineError": 0.007176051734063549,
+    "capMatches": true,
+    "bodyAspect": 0.3245793826563359,
+    "glassHeightPct": 51.7399042935357,
+    "glassFootPct": 90.99983274594469,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-clear-white-capon",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=white",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 411.64928780400106,
+      "right": 502.33530125318714,
+      "top": 422.0036136430085,
+      "bottom": 701.3990968281013
+    },
+    "capBounds": {
+      "left": 410.3817504882812,
+      "right": 503.6083618164062,
+      "top": 405.0209833041104,
+      "bottom": 465.4768441772461
+    },
+    "clipping": false,
+    "centerError": 0.002761623749648834,
+    "seatError": 0.007613892077415585,
+    "sidecarBaselineError": 235.92225265085517,
+    "capMatches": true,
+    "bodyAspect": 0.3245793826563359,
+    "glassHeightPct": 51.7399042935357,
+    "glassFootPct": 90.99983274594469,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-clear-white-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=white",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 411.64928780400106,
+      "right": 502.33530125318714,
+      "top": 422.0036136430085,
+      "bottom": 701.3990968281013
+    },
+    "capBounds": {
+      "left": 410.3817504882812,
+      "right": 503.6083618164062,
+      "top": 354.0901971712979,
+      "bottom": 414.5460580444336
+    },
+    "clipping": false,
+    "centerError": 0.002761623749648834,
+    "seatError": 50.938400024889916,
+    "sidecarBaselineError": 286.85303878366767,
+    "capMatches": true,
+    "bodyAspect": 0.3245793826563359,
+    "glassHeightPct": 51.7399042935357,
+    "glassFootPct": 90.99983274594469,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-clear-thumbnails",
+    "passed": true,
+    "lineup": [
+      {
+        "name": "Clear",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Amber",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Cobalt Blue",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Green",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75"
+        ]
+      }
+    ],
+    "build": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75"
+    ]
+  },
+  {
+    "name": "desktop-amber-black-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 411.6466667143371,
+      "right": 502.3336058548804,
+      "top": 421.99665329304145,
+      "bottom": 701.3867003606083
+    },
+    "capBounds": {
+      "left": 509.7882612304687,
+      "right": 603.013907409668,
+      "top": 640.7158142089844,
+      "bottom": 701.3964172363281
+    },
+    "clipping": false,
+    "centerError": 99.41094803545963,
+    "seatError": 235.91976551125094,
+    "sidecarBaselineError": 0.00971687571984603,
+    "capMatches": true,
+    "bodyAspect": 0.3245890112850435,
+    "glassHeightPct": 51.738897605104974,
+    "glassFootPct": 90.99753710381636,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-amber-black-capon",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 411.6466667143371,
+      "right": 502.3336058548804,
+      "top": 421.99665329304145,
+      "bottom": 701.3867003606083
+    },
+    "capBounds": {
+      "left": 410.3798544921875,
+      "right": 503.6055109863281,
+      "top": 404.80071411132815,
+      "bottom": 465.4813171386719
+    },
+    "clipping": false,
+    "centerError": 0.0025464546490923112,
+    "seatError": 0.004665413594693746,
+    "sidecarBaselineError": 235.9053832219364,
+    "capMatches": true,
+    "bodyAspect": 0.3245890112850435,
+    "glassHeightPct": 51.738897605104974,
+    "glassFootPct": 90.99753710381636,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-amber-black-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 411.6466667143371,
+      "right": 502.3336058548804,
+      "top": 421.99665329304145,
+      "bottom": 701.3867003606083
+    },
+    "capBounds": {
+      "left": 410.3798544921875,
+      "right": 503.6055109863281,
+      "top": 353.86992797851565,
+      "bottom": 414.5505310058594
+    },
+    "clipping": false,
+    "centerError": 0.0025464546490923112,
+    "seatError": 50.926120719217806,
+    "sidecarBaselineError": 286.8361693547489,
+    "capMatches": true,
+    "bodyAspect": 0.3245890112850435,
+    "glassHeightPct": 51.738897605104974,
+    "glassFootPct": 90.99753710381636,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-amber-white-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=white",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 411.6466667143371,
+      "right": 502.3336058548804,
+      "top": 421.99665329304145,
+      "bottom": 701.3867003606083
+    },
+    "capBounds": {
+      "left": 509.7901774597168,
+      "right": 603.0167988586426,
+      "top": 640.9360539661755,
+      "bottom": 701.3919207763672
+    },
+    "clipping": false,
+    "centerError": 99.41335187457099,
+    "seatError": 235.91526905129,
+    "sidecarBaselineError": 0.005220415758913077,
+    "capMatches": true,
+    "bodyAspect": 0.3245890112850435,
+    "glassHeightPct": 51.738897605104974,
+    "glassFootPct": 90.99753710381636,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-amber-white-capon",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=white",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 411.6466667143371,
+      "right": 502.3336058548804,
+      "top": 421.99665329304145,
+      "bottom": 701.3867003606083
+    },
+    "capBounds": {
+      "left": 410.3817504882812,
+      "right": 503.6083618164062,
+      "top": 405.0209833041104,
+      "bottom": 465.4768441772461
+    },
+    "clipping": false,
+    "centerError": 0.004919867735026173,
+    "seatError": 0.0001924521689034009,
+    "sidecarBaselineError": 235.9098561833622,
+    "capMatches": true,
+    "bodyAspect": 0.3245890112850435,
+    "glassHeightPct": 51.738897605104974,
+    "glassFootPct": 90.99753710381636,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-amber-white-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=white",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 411.6466667143371,
+      "right": 502.3336058548804,
+      "top": 421.99665329304145,
+      "bottom": 701.3867003606083
+    },
+    "capBounds": {
+      "left": 410.3817504882812,
+      "right": 503.6083618164062,
+      "top": 354.0901971712979,
+      "bottom": 414.5460580444336
+    },
+    "clipping": false,
+    "centerError": 0.004919867735026173,
+    "seatError": 50.9305936806436,
+    "sidecarBaselineError": 286.8406423161747,
+    "capMatches": true,
+    "bodyAspect": 0.3245890112850435,
+    "glassHeightPct": 51.738897605104974,
+    "glassFootPct": 90.99753710381636,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-amber-thumbnails",
+    "passed": true,
+    "lineup": [
+      {
+        "name": "Clear",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Amber",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Cobalt Blue",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Green",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75"
+        ]
+      }
+    ],
+    "build": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75"
+    ]
+  },
+  {
+    "name": "desktop-blue-black-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 411.65017069413574,
+      "right": 502.3365944323679,
+      "top": 421.9971495283411,
+      "bottom": 701.3857894248151
+    },
+    "capBounds": {
+      "left": 509.7882612304687,
+      "right": 603.013907409668,
+      "top": 640.7158142089844,
+      "bottom": 701.3964172363281
+    },
+    "clipping": false,
+    "centerError": 99.40770175681646,
+    "seatError": 235.9194882665616,
+    "sidecarBaselineError": 0.01062781151301806,
+    "capMatches": true,
+    "bodyAspect": 0.3245888013622728,
+    "glassHeightPct": 51.738637017865564,
+    "glassFootPct": 90.9973684120028,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-blue-black-capon",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 411.65017069413574,
+      "right": 502.3365944323679,
+      "top": 421.9971495283411,
+      "bottom": 701.3857894248151
+    },
+    "capBounds": {
+      "left": 410.3798544921875,
+      "right": 503.6055109863281,
+      "top": 404.80071411132815,
+      "bottom": 465.4813171386719
+    },
+    "clipping": false,
+    "centerError": 0.0006998239940116946,
+    "seatError": 0.0043881689053364425,
+    "sidecarBaselineError": 235.90447228614323,
+    "capMatches": true,
+    "bodyAspect": 0.3245888013622728,
+    "glassHeightPct": 51.738637017865564,
+    "glassFootPct": 90.9973684120028,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-blue-black-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 411.65017069413574,
+      "right": 502.3365944323679,
+      "top": 421.9971495283411,
+      "bottom": 701.3857894248151
+    },
+    "capBounds": {
+      "left": 410.3798544921875,
+      "right": 503.6055109863281,
+      "top": 353.86992797851565,
+      "bottom": 414.5505310058594
+    },
+    "clipping": false,
+    "centerError": 0.0006998239940116946,
+    "seatError": 50.926397963907164,
+    "sidecarBaselineError": 286.83525841895573,
+    "capMatches": true,
+    "bodyAspect": 0.3245888013622728,
+    "glassHeightPct": 51.738637017865564,
+    "glassFootPct": 90.9973684120028,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-blue-white-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=white",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 411.65017069413574,
+      "right": 502.3365944323679,
+      "top": 421.9971495283411,
+      "bottom": 701.3857894248151
+    },
+    "capBounds": {
+      "left": 509.7901774597168,
+      "right": 603.0167988586426,
+      "top": 640.9360539661755,
+      "bottom": 701.3919207763672
+    },
+    "clipping": false,
+    "centerError": 99.41010559592783,
+    "seatError": 235.91499180660065,
+    "sidecarBaselineError": 0.006131351552085107,
+    "capMatches": true,
+    "bodyAspect": 0.3245888013622728,
+    "glassHeightPct": 51.738637017865564,
+    "glassFootPct": 90.9973684120028,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-blue-white-capon",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=white",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 411.65017069413574,
+      "right": 502.3365944323679,
+      "top": 421.9971495283411,
+      "bottom": 701.3857894248151
+    },
+    "capBounds": {
+      "left": 410.3817504882812,
+      "right": 503.6083618164062,
+      "top": 405.0209833041104,
+      "bottom": 465.4768441772461
+    },
+    "clipping": false,
+    "centerError": 0.0016735890919221674,
+    "seatError": 0.0000847925204539024,
+    "sidecarBaselineError": 235.90894524756902,
+    "capMatches": true,
+    "bodyAspect": 0.3245888013622728,
+    "glassHeightPct": 51.738637017865564,
+    "glassFootPct": 90.9973684120028,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-blue-white-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=white",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 411.65017069413574,
+      "right": 502.3365944323679,
+      "top": 421.9971495283411,
+      "bottom": 701.3857894248151
+    },
+    "capBounds": {
+      "left": 410.3817504882812,
+      "right": 503.6083618164062,
+      "top": 354.0901971712979,
+      "bottom": 414.5460580444336
+    },
+    "clipping": false,
+    "centerError": 0.0016735890919221674,
+    "seatError": 50.930870925332954,
+    "sidecarBaselineError": 286.8397313803815,
+    "capMatches": true,
+    "bodyAspect": 0.3245888013622728,
+    "glassHeightPct": 51.738637017865564,
+    "glassFootPct": 90.9973684120028,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-blue-thumbnails",
+    "passed": true,
+    "lineup": [
+      {
+        "name": "Clear",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Amber",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Cobalt Blue",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Green",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75"
+        ]
+      }
+    ],
+    "build": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75"
+    ]
+  },
+  {
+    "name": "desktop-green-black-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 411.64882225132385,
+      "right": 502.3350690642161,
+      "top": 421.9976058310651,
+      "bottom": 701.3862457275391
+    },
+    "capBounds": {
+      "left": 509.7882612304687,
+      "right": 603.013907409668,
+      "top": 640.7158142089844,
+      "bottom": 701.3964172363281
+    },
+    "clipping": false,
+    "centerError": 99.40913866229835,
+    "seatError": 235.9190319638376,
+    "sidecarBaselineError": 0.010171508789085237,
+    "capMatches": true,
+    "bodyAspect": 0.32458816810338303,
+    "glassHeightPct": 51.73863701786555,
+    "glassFootPct": 90.99745291250724,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-green-black-capon",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=black",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 411.64882225132385,
+      "right": 502.3350690642161,
+      "top": 421.9976058310651,
+      "bottom": 701.3862457275391
+    },
+    "capBounds": {
+      "left": 410.3798544921875,
+      "right": 503.6055109863281,
+      "top": 404.80071411132815,
+      "bottom": 465.4813171386719
+    },
+    "clipping": false,
+    "centerError": 0.0007370814878413512,
+    "seatError": 0.003931866181346777,
+    "sidecarBaselineError": 235.90492858886716,
+    "capMatches": true,
+    "bodyAspect": 0.32458816810338303,
+    "glassHeightPct": 51.73863701786555,
+    "glassFootPct": 90.99745291250724,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-green-black-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=black",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 411.64882225132385,
+      "right": 502.3350690642161,
+      "top": 421.9976058310651,
+      "bottom": 701.3862457275391
+    },
+    "capBounds": {
+      "left": 410.3798544921875,
+      "right": 503.6055109863281,
+      "top": 353.86992797851565,
+      "bottom": 414.5505310058594
+    },
+    "clipping": false,
+    "centerError": 0.0007370814878413512,
+    "seatError": 50.92685426663115,
+    "sidecarBaselineError": 286.83571472167966,
+    "capMatches": true,
+    "bodyAspect": 0.32458816810338303,
+    "glassHeightPct": 51.73863701786555,
+    "glassFootPct": 90.99745291250724,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-green-white-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=white",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 411.64882225132385,
+      "right": 502.3350690642161,
+      "top": 421.9976058310651,
+      "bottom": 701.3862457275391
+    },
+    "capBounds": {
+      "left": 509.7901774597168,
+      "right": 603.0167988586426,
+      "top": 640.9360539661755,
+      "bottom": 701.3919207763672
+    },
+    "clipping": false,
+    "centerError": 99.41154250140971,
+    "seatError": 235.91453550387666,
+    "sidecarBaselineError": 0.005675048828152285,
+    "capMatches": true,
+    "bodyAspect": 0.32458816810338303,
+    "glassHeightPct": 51.73863701786555,
+    "glassFootPct": 90.99745291250724,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-green-white-capon",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=white",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 411.64882225132385,
+      "right": 502.3350690642161,
+      "top": 421.9976058310651,
+      "bottom": 701.3862457275391
+    },
+    "capBounds": {
+      "left": 410.3817504882812,
+      "right": 503.6083618164062,
+      "top": 405.0209833041104,
+      "bottom": 465.4768441772461
+    },
+    "clipping": false,
+    "centerError": 0.003110494573775213,
+    "seatError": 0.0005410952444435679,
+    "sidecarBaselineError": 235.90940155029296,
+    "capMatches": true,
+    "bodyAspect": 0.32458816810338303,
+    "glassHeightPct": 51.73863701786555,
+    "glassFootPct": 90.99745291250724,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-green-white-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=white",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 411.64882225132385,
+      "right": 502.3350690642161,
+      "top": 421.9976058310651,
+      "bottom": 701.3862457275391
+    },
+    "capBounds": {
+      "left": 410.3817504882812,
+      "right": 503.6083618164062,
+      "top": 354.0901971712979,
+      "bottom": 414.5460580444336
+    },
+    "clipping": false,
+    "centerError": 0.003110494573775213,
+    "seatError": 50.931327228056944,
+    "sidecarBaselineError": 286.84018768310546,
+    "capMatches": true,
+    "bodyAspect": 0.32458816810338303,
+    "glassHeightPct": 51.73863701786555,
+    "glassFootPct": 90.99745291250724,
+    "baselinePct": 90.99826388888889,
+    "canvas": {
+      "x": 211.546875,
+      "y": 210,
+      "width": 490.90625,
+      "height": 540
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "desktop-green-thumbnails",
+    "passed": true,
+    "lineup": [
+      {
+        "name": "Clear",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Amber",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Cobalt Blue",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Green",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75"
+        ]
+      }
+    ],
+    "build": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75"
+    ]
+  },
+  {
+    "name": "mobile-clear-black-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 137.94249543385524,
+      "right": 200.45843097255818,
+      "top": 338.5060168559066,
+      "bottom": 531.0935156917863
+    },
+    "capBounds": {
+      "left": 205.59146118164062,
+      "right": 269.8548355102539,
+      "top": 489.27351340553975,
+      "bottom": 531.1013454367898
+    },
+    "clipping": false,
+    "centerError": 68.52268514274056,
+    "seatError": 162.62395259486368,
+    "sidecarBaselineError": 0.007829745003505195,
+    "capMatches": true,
+    "bodyAspect": 0.32461055840378367,
+    "glassHeightPct": 51.738235845595845,
+    "glassFootPct": 90.99603326312521,
+    "baselinePct": 90.9960962095454,
+    "canvas": {
+      "x": 0,
+      "y": 192.375,
+      "width": 338.40625,
+      "height": 372.234375
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-clear-black-capon",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 137.94249543385524,
+      "right": 200.45843097255818,
+      "top": 338.5060168559066,
+      "bottom": 531.0935156917863
+    },
+    "capBounds": {
+      "left": 137.06426239013672,
+      "right": 201.32763671875,
+      "top": 326.6518114124645,
+      "bottom": 368.4796556507457
+    },
+    "clipping": false,
+    "centerError": 0.00451364876334992,
+    "seatError": 0.00226280881963703,
+    "sidecarBaselineError": 162.61386004104054,
+    "capMatches": true,
+    "bodyAspect": 0.32461055840378367,
+    "glassHeightPct": 51.738235845595845,
+    "glassFootPct": 90.99603326312521,
+    "baselinePct": 90.9960962095454,
+    "canvas": {
+      "x": 0,
+      "y": 192.375,
+      "width": 338.40625,
+      "height": 372.234375
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-clear-black-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 137.94249543385524,
+      "right": 200.45843097255818,
+      "top": 338.5060168559066,
+      "bottom": 531.0935156917863
+    },
+    "capBounds": {
+      "left": 137.06426239013672,
+      "right": 201.32763671875,
+      "top": 291.5440527898615,
+      "bottom": 333.3718909246271
+    },
+    "clipping": false,
+    "centerError": 0.00451364876334992,
+    "seatError": 35.105501917298966,
+    "sidecarBaselineError": 197.72162476715914,
+    "capMatches": true,
+    "bodyAspect": 0.32461055840378367,
+    "glassHeightPct": 51.738235845595845,
+    "glassFootPct": 90.99603326312521,
+    "baselinePct": 90.9960962095454,
+    "canvas": {
+      "x": 0,
+      "y": 192.375,
+      "width": 338.40625,
+      "height": 372.234375
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-clear-white-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=white",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 137.87912698849476,
+      "right": 200.36612062653737,
+      "top": 338.53504461502956,
+      "bottom": 531.0380432685458
+    },
+    "capBounds": {
+      "left": 205.49279861450196,
+      "right": 269.72854537963866,
+      "top": 489.38350463867187,
+      "bottom": 531.0374865722656
+    },
+    "clipping": false,
+    "centerError": 68.48804818955425,
+    "seatError": 162.5442162886141,
+    "sidecarBaselineError": 0.0005566962802276976,
+    "capMatches": true,
+    "bodyAspect": 0.32460270268574964,
+    "glassHeightPct": 51.73942513785084,
+    "glassFootPct": 90.9979622425119,
+    "baselinePct": 90.99613640181421,
+    "canvas": {
+      "x": 0,
+      "y": 192.46875,
+      "width": 338.25,
+      "height": 372.0625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-clear-white-capon",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=white",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 137.87912698849476,
+      "right": 200.36612062653737,
+      "top": 338.53504461502956,
+      "bottom": 531.0380432685458
+    },
+    "capBounds": {
+      "left": 136.99724403381347,
+      "right": 201.23299583435056,
+      "top": 326.8369369784268,
+      "bottom": 368.4909307861328
+    },
+    "clipping": false,
+    "centerError": 0.007503873434032471,
+    "seatError": 0.0023394975186761258,
+    "sidecarBaselineError": 162.547112482413,
+    "capMatches": true,
+    "bodyAspect": 0.32460270268574964,
+    "glassHeightPct": 51.73942513785084,
+    "glassFootPct": 90.9979622425119,
+    "baselinePct": 90.99613640181421,
+    "canvas": {
+      "x": 0,
+      "y": 192.46875,
+      "width": 338.25,
+      "height": 372.0625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-clear-white-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=white",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 137.87912698849476,
+      "right": 200.36612062653737,
+      "top": 338.53504461502956,
+      "bottom": 531.0380432685458
+    },
+    "capBounds": {
+      "left": 136.99724403381347,
+      "right": 201.23299583435056,
+      "top": 291.7453842440518,
+      "bottom": 333.3993780517578
+    },
+    "clipping": false,
+    "centerError": 0.007503873434032471,
+    "seatError": 35.093892231893676,
+    "sidecarBaselineError": 197.638665216788,
+    "capMatches": true,
+    "bodyAspect": 0.32460270268574964,
+    "glassHeightPct": 51.73942513785084,
+    "glassFootPct": 90.9979622425119,
+    "baselinePct": 90.99613640181421,
+    "canvas": {
+      "x": 0,
+      "y": 192.46875,
+      "width": 338.25,
+      "height": 372.0625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-clear-thumbnails",
+    "passed": true,
+    "lineup": [
+      {
+        "name": "Clear",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Amber",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Cobalt Blue",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Green",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75"
+        ]
+      }
+    ],
+    "build": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75"
+    ]
+  },
+  {
+    "name": "mobile-amber-black-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 139.62102419162892,
+      "right": 202.89755898320024,
+      "top": 338.0302697039665,
+      "bottom": 532.9754291986621
+    },
+    "capBounds": {
+      "left": 208.09483422851562,
+      "right": 273.14305697631835,
+      "top": 490.63603326970883,
+      "bottom": 532.9757183283026
+    },
+    "clipping": false,
+    "centerError": 69.35965401500242,
+    "seatError": 164.6071623534853,
+    "sidecarBaselineError": 0.00028912964046412526,
+    "capMatches": true,
+    "bodyAspect": 0.32458633471888304,
+    "glassHeightPct": 51.739612704903884,
+    "glassFootPct": 90.99870394258264,
+    "baselinePct": 90.99693124326119,
+    "canvas": {
+      "x": 0,
+      "y": 190.109375,
+      "width": 342.53125,
+      "height": 376.78125
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-amber-black-capon",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 139.62102419162892,
+      "right": 202.89755898320024,
+      "top": 338.0302697039665,
+      "bottom": 532.9754291986621
+    },
+    "capBounds": {
+      "left": 138.73231854248047,
+      "right": 203.7805361328125,
+      "top": 326.02793789950283,
+      "bottom": 368.36761075106534
+    },
+    "clipping": false,
+    "centerError": 0.0028642497681090617,
+    "seatError": 0.0009452237519553819,
+    "sidecarBaselineError": 164.6078184475968,
+    "capMatches": true,
+    "bodyAspect": 0.32458633471888304,
+    "glassHeightPct": 51.739612704903884,
+    "glassFootPct": 90.99870394258264,
+    "baselinePct": 90.99693124326119,
+    "canvas": {
+      "x": 0,
+      "y": 190.109375,
+      "width": 342.53125,
+      "height": 376.78125
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-amber-black-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 139.62102419162892,
+      "right": 202.89755898320024,
+      "top": 338.0302697039665,
+      "bottom": 532.9754291986621
+    },
+    "capBounds": {
+      "left": 138.73231854248047,
+      "right": 203.7805361328125,
+      "top": 290.49134626908733,
+      "bottom": 332.83101301713424
+    },
+    "clipping": false,
+    "centerError": 0.0028642497681090617,
+    "seatError": 35.53754295768306,
+    "sidecarBaselineError": 200.1444161815279,
+    "capMatches": true,
+    "bodyAspect": 0.32458633471888304,
+    "glassHeightPct": 51.739612704903884,
+    "glassFootPct": 90.99870394258264,
+    "baselinePct": 90.99693124326119,
+    "canvas": {
+      "x": 0,
+      "y": 190.109375,
+      "width": 342.53125,
+      "height": 376.78125
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-amber-white-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=white",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 139.5575746033481,
+      "right": 202.80492392823285,
+      "top": 338.04329340508644,
+      "bottom": 532.8951393753562
+    },
+    "capBounds": {
+      "left": 207.99933486938477,
+      "right": 273.01766342163086,
+      "top": 490.7348861971768,
+      "bottom": 532.8982794189453
+    },
+    "clipping": false,
+    "centerError": 69.32724987971734,
+    "seatError": 164.53122163431487,
+    "sidecarBaselineError": 0.003140043589155539,
+    "capMatches": true,
+    "bodyAspect": 0.3245919945481809,
+    "glassHeightPct": 51.738448085704114,
+    "glassFootPct": 90.998170020424,
+    "baselinePct": 90.99697133136954,
+    "canvas": {
+      "x": 0,
+      "y": 190.1875,
+      "width": 342.375,
+      "height": 376.609375
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-amber-white-capon",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=white",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 139.5575746033481,
+      "right": 202.80492392823285,
+      "top": 338.04329340508644,
+      "bottom": 532.8951393753562
+    },
+    "capBounds": {
+      "left": 138.66847091674805,
+      "right": 203.68679946899414,
+      "top": 326.20186617764557,
+      "bottom": 368.3652593994141
+    },
+    "clipping": false,
+    "centerError": 0.003614072919376099,
+    "seatError": 0.001798385216375209,
+    "sidecarBaselineError": 164.5298799759421,
+    "capMatches": true,
+    "bodyAspect": 0.3245919945481809,
+    "glassHeightPct": 51.738448085704114,
+    "glassFootPct": 90.998170020424,
+    "baselinePct": 90.99697133136954,
+    "canvas": {
+      "x": 0,
+      "y": 190.1875,
+      "width": 342.375,
+      "height": 376.609375
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-amber-white-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=white",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 139.5575746033481,
+      "right": 202.80492392823285,
+      "top": 338.04329340508644,
+      "bottom": 532.8951393753562
+    },
+    "capBounds": {
+      "left": 138.66847091674805,
+      "right": 203.68679946899414,
+      "top": 290.68148043545807,
+      "bottom": 332.8448736572266
+    },
+    "clipping": false,
+    "centerError": 0.003614072919376099,
+    "seatError": 35.522184127403875,
+    "sidecarBaselineError": 200.0502657181296,
+    "capMatches": true,
+    "bodyAspect": 0.3245919945481809,
+    "glassHeightPct": 51.738448085704114,
+    "glassFootPct": 90.998170020424,
+    "baselinePct": 90.99697133136954,
+    "canvas": {
+      "x": 0,
+      "y": 190.1875,
+      "width": 342.375,
+      "height": 376.609375
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-amber-thumbnails",
+    "passed": true,
+    "lineup": [
+      {
+        "name": "Clear",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Amber",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Cobalt Blue",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Green",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75"
+        ]
+      }
+    ],
+    "build": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75"
+    ]
+  },
+  {
+    "name": "mobile-blue-black-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 141.11475130344536,
+      "right": 205.0673912910238,
+      "top": 337.5874407458088,
+      "bottom": 534.606474322751
+    },
+    "capBounds": {
+      "left": 210.31974340820312,
+      "right": 276.06263104248046,
+      "top": 491.81804243607957,
+      "bottom": 534.6082768110796
+    },
+    "clipping": false,
+    "centerError": 70.10011592810721,
+    "seatError": 166.35980371670263,
+    "sidecarBaselineError": 0.001802488328621621,
+    "capMatches": true,
+    "bodyAspect": 0.3246013282397049,
+    "glassHeightPct": 51.73861617875466,
+    "glassFootPct": 90.99673528643083,
+    "baselinePct": 90.99749702515284,
+    "canvas": {
+      "x": 0,
+      "y": 188.09375,
+      "width": 346.1875,
+      "height": 380.796875
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-blue-black-capon",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 141.11475130344536,
+      "right": 205.0673912910238,
+      "top": 337.5874407458088,
+      "bottom": 534.606474322751
+    },
+    "capBounds": {
+      "left": 140.2168305053711,
+      "right": 205.95971813964846,
+      "top": 325.45561567826707,
+      "bottom": 368.245850053267
+    },
+    "clipping": false,
+    "centerError": 0.002796974724788015,
+    "seatError": 0.002623041109927726,
+    "sidecarBaselineError": 166.36062426948394,
+    "capMatches": true,
+    "bodyAspect": 0.3246013282397049,
+    "glassHeightPct": 51.73861617875466,
+    "glassFootPct": 90.99673528643083,
+    "baselinePct": 90.99749702515284,
+    "canvas": {
+      "x": 0,
+      "y": 188.09375,
+      "width": 346.1875,
+      "height": 380.796875
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-blue-black-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 141.11475130344536,
+      "right": 205.0673912910238,
+      "top": 337.5874407458088,
+      "bottom": 534.606474322751
+    },
+    "capBounds": {
+      "left": 140.2168305053711,
+      "right": 205.95971813964846,
+      "top": 289.5402714399858,
+      "bottom": 332.33050581498577
+    },
+    "clipping": false,
+    "centerError": 0.002796974724788015,
+    "seatError": 35.91796727939118,
+    "sidecarBaselineError": 202.27596850776519,
+    "capMatches": true,
+    "bodyAspect": 0.3246013282397049,
+    "glassHeightPct": 51.73861617875466,
+    "glassFootPct": 90.99673528643083,
+    "baselinePct": 90.99749702515284,
+    "canvas": {
+      "x": 0,
+      "y": 188.09375,
+      "width": 346.1875,
+      "height": 380.796875
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-blue-white-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=white",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 141.05147240930023,
+      "right": 204.97468344077905,
+      "top": 337.61669810564683,
+      "bottom": 534.5509834173603
+    },
+    "capBounds": {
+      "left": 210.22552932739256,
+      "right": 275.9383805847168,
+      "top": 491.9366738614169,
+      "bottom": 534.5498822021484
+    },
+    "clipping": false,
+    "centerError": 70.06887703101505,
+    "seatError": 166.28534067315798,
+    "sidecarBaselineError": 0.0011012152118610175,
+    "capMatches": true,
+    "bodyAspect": 0.32459158104592734,
+    "glassHeightPct": 51.73971371079499,
+    "glassFootPct": 90.99861633296823,
+    "baselinePct": 90.99753694581281,
+    "canvas": {
+      "x": 0,
+      "y": 188.1875,
+      "width": 346.03125,
+      "height": 380.625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-blue-white-capon",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=white",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 141.05147240930023,
+      "right": 204.97468344077905,
+      "top": 337.61669810564683,
+      "bottom": 534.5509834173603
+    },
+    "capBounds": {
+      "left": 140.1542707824707,
+      "right": 205.8671220397949,
+      "top": 325.6492614746094,
+      "bottom": 368.2624816894531
+    },
+    "clipping": false,
+    "centerError": 0.0023815139068261715,
+    "seatError": 0.0020598395373099265,
+    "sidecarBaselineError": 166.28850172790715,
+    "capMatches": true,
+    "bodyAspect": 0.32459158104592734,
+    "glassHeightPct": 51.73971371079499,
+    "glassFootPct": 90.99861633296823,
+    "baselinePct": 90.99753694581281,
+    "canvas": {
+      "x": 0,
+      "y": 188.1875,
+      "width": 346.03125,
+      "height": 380.625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-blue-white-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=white",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 141.05147240930023,
+      "right": 204.97468344077905,
+      "top": 337.61669810564683,
+      "bottom": 534.5509834173603
+    },
+    "capBounds": {
+      "left": 140.1542707824707,
+      "right": 205.8671220397949,
+      "top": 289.7501504239169,
+      "bottom": 332.3633587646484
+    },
+    "clipping": false,
+    "centerError": 0.0023815139068261715,
+    "seatError": 35.901182764342025,
+    "sidecarBaselineError": 202.18762465271186,
+    "capMatches": true,
+    "bodyAspect": 0.32459158104592734,
+    "glassHeightPct": 51.73971371079499,
+    "glassFootPct": 90.99861633296823,
+    "baselinePct": 90.99753694581281,
+    "canvas": {
+      "x": 0,
+      "y": 188.1875,
+      "width": 346.03125,
+      "height": 380.625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-blue-thumbnails",
+    "passed": true,
+    "lineup": [
+      {
+        "name": "Clear",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Amber",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Cobalt Blue",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Green",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75"
+        ]
+      }
+    ],
+    "build": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75"
+    ]
+  },
+  {
+    "name": "mobile-green-black-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 138.9222295976583,
+      "right": 201.8804098408591,
+      "top": 338.22755063413484,
+      "bottom": 532.1949135916574
+    },
+    "capBounds": {
+      "left": 207.05394775390624,
+      "right": 271.7748670959473,
+      "top": 490.0672449840199,
+      "bottom": 532.1934901012074
+    },
+    "clipping": false,
+    "centerError": 69.01308770566806,
+    "seatError": 163.77982251058842,
+    "sidecarBaselineError": 0.0014234904499517143,
+    "capMatches": true,
+    "bodyAspect": 0.324581307304715,
+    "glassHeightPct": 51.739720873927574,
+    "glassFootPct": 90.99935176870784,
+    "baselinePct": 90.99737423415164,
+    "canvas": {
+      "x": 0,
+      "y": 191.046875,
+      "width": 340.8125,
+      "height": 374.890625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-green-black-capon",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=black",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 138.9222295976583,
+      "right": 201.8804098408591,
+      "top": 338.22755063413484,
+      "bottom": 532.1949135916574
+    },
+    "capBounds": {
+      "left": 138.03949505615236,
+      "right": 202.76041955566407,
+      "top": 326.2851404918324,
+      "bottom": 368.4113856090199
+    },
+    "clipping": false,
+    "centerError": 0.0013624133504634983,
+    "seatError": 0.0022819815991397263,
+    "sidecarBaselineError": 163.7835279826375,
+    "capMatches": true,
+    "bodyAspect": 0.324581307304715,
+    "glassHeightPct": 51.739720873927574,
+    "glassFootPct": 90.99935176870784,
+    "baselinePct": 90.99737423415164,
+    "canvas": {
+      "x": 0,
+      "y": 191.046875,
+      "width": 340.8125,
+      "height": 374.890625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-green-black-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=black",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 138.9222295976583,
+      "right": 201.8804098408591,
+      "top": 338.22755063413484,
+      "bottom": 532.1949135916574
+    },
+    "capBounds": {
+      "left": 138.03949505615236,
+      "right": 202.76041955566407,
+      "top": 290.9268630704013,
+      "bottom": 333.05310208407315
+    },
+    "clipping": false,
+    "centerError": 0.0013624133504634983,
+    "seatError": 35.36056550654587,
+    "sidecarBaselineError": 199.14181150758424,
+    "capMatches": true,
+    "bodyAspect": 0.324581307304715,
+    "glassHeightPct": 51.739720873927574,
+    "glassFootPct": 90.99935176870784,
+    "baselinePct": 90.99737423415164,
+    "canvas": {
+      "x": 0,
+      "y": 191.046875,
+      "width": 340.8125,
+      "height": 374.890625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-green-white-sidecar",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=white",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 138.85262876374952,
+      "right": 201.77862082764693,
+      "top": 338.24019870931977,
+      "bottom": 532.1058480398996
+    },
+    "capBounds": {
+      "left": 206.94559837341308,
+      "right": 271.63458656311036,
+      "top": 490.1676498413086,
+      "bottom": 532.1176712036133
+    },
+    "clipping": false,
+    "centerError": 68.97446767256349,
+    "seatError": 163.707184692736,
+    "sidecarBaselineError": 0.011823163713756912,
+    "capMatches": true,
+    "bodyAspect": 0.3245855688265639,
+    "glassHeightPct": 51.738466107156114,
+    "glassFootPct": 90.99609805493337,
+    "baselinePct": 90.9970393227972,
+    "canvas": {
+      "x": 0,
+      "y": 191.140625,
+      "width": 340.640625,
+      "height": 374.703125
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-green-white-capon",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=white",
+    "view": "capon",
+    "bodyBounds": {
+      "left": 138.85262876374952,
+      "right": 201.77862082764693,
+      "top": 338.24019870931977,
+      "bottom": 532.1058480398996
+    },
+    "capBounds": {
+      "left": 137.96594345092774,
+      "right": 202.6549366760254,
+      "top": 326.4674229292436,
+      "bottom": 368.41743835449216
+    },
+    "clipping": false,
+    "centerError": 0.00518473222166449,
+    "seatError": 0.006951843614842801,
+    "sidecarBaselineError": 163.6884096854074,
+    "capMatches": true,
+    "bodyAspect": 0.3245855688265639,
+    "glassHeightPct": 51.738466107156114,
+    "glassFootPct": 90.99609805493337,
+    "baselinePct": 90.9970393227972,
+    "canvas": {
+      "x": 0,
+      "y": 191.140625,
+      "width": 340.640625,
+      "height": 374.703125
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-green-white-exploded",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=white",
+    "view": "exploded",
+    "bodyBounds": {
+      "left": 138.85262876374952,
+      "right": 201.77862082764693,
+      "top": 338.24019870931977,
+      "bottom": 532.1058480398996
+    },
+    "capBounds": {
+      "left": 137.96594345092774,
+      "right": 202.6549366760254,
+      "top": 291.12681732177737,
+      "bottom": 333.076838684082
+    },
+    "clipping": false,
+    "centerError": 0.00518473222166449,
+    "seatError": 35.3336478267953,
+    "sidecarBaselineError": 199.02900935581755,
+    "capMatches": true,
+    "bodyAspect": 0.3245855688265639,
+    "glassHeightPct": 51.738466107156114,
+    "glassFootPct": 90.99609805493337,
+    "baselinePct": 90.9970393227972,
+    "canvas": {
+      "x": 0,
+      "y": 191.140625,
+      "width": 340.640625,
+      "height": 374.703125
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "mobile-green-thumbnails",
+    "passed": true,
+    "lineup": [
+      {
+        "name": "Clear",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fa55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Amber",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fb6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Cobalt Blue",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=256&q=75"
+        ]
+      },
+      {
+        "name": "Green",
+        "images": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75"
+        ]
+      }
+    ],
+    "build": [
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=256&q=75",
+      "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png&w=256&q=75"
+    ]
+  },
+  {
+    "name": "legacy-query-clear",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 137.94249543385524,
+      "right": 200.45843097255818,
+      "top": 338.5060168559066,
+      "bottom": 531.0935156917863
+    },
+    "capBounds": {
+      "left": 205.59146118164062,
+      "right": 269.8548355102539,
+      "top": 489.27351340553975,
+      "bottom": 531.1013454367898
+    },
+    "clipping": false,
+    "centerError": 68.52268514274056,
+    "seatError": 162.62395259486368,
+    "sidecarBaselineError": 0.007829745003505195,
+    "capMatches": true,
+    "bodyAspect": 0.32461055840378367,
+    "glassHeightPct": 51.738235845595845,
+    "glassFootPct": 90.99603326312521,
+    "baselinePct": 90.9960962095454,
+    "canvas": {
+      "x": 0,
+      "y": 192.375,
+      "width": 338.40625,
+      "height": 372.234375
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "reload-clear",
+    "url": "http://localhost:3010/products/vial-4ml-clear-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 137.94249543385524,
+      "right": 200.45843097255818,
+      "top": 338.5060168559066,
+      "bottom": 531.0935156917863
+    },
+    "capBounds": {
+      "left": 205.59146118164062,
+      "right": 269.8548355102539,
+      "top": 489.27351340553975,
+      "bottom": 531.1013454367898
+    },
+    "clipping": false,
+    "centerError": 68.52268514274056,
+    "seatError": 162.62395259486368,
+    "sidecarBaselineError": 0.007829745003505195,
+    "capMatches": true,
+    "bodyAspect": 0.32461055840378367,
+    "glassHeightPct": 51.738235845595845,
+    "glassFootPct": 90.99603326312521,
+    "baselinePct": 90.9960962095454,
+    "canvas": {
+      "x": 0,
+      "y": 192.375,
+      "width": 338.40625,
+      "height": 372.234375
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "legacy-query-amber",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 139.62102419162892,
+      "right": 202.89755898320024,
+      "top": 338.0302697039665,
+      "bottom": 532.9754291986621
+    },
+    "capBounds": {
+      "left": 208.09483422851562,
+      "right": 273.14305697631835,
+      "top": 490.63603326970883,
+      "bottom": 532.9757183283026
+    },
+    "clipping": false,
+    "centerError": 69.35965401500242,
+    "seatError": 164.6071623534853,
+    "sidecarBaselineError": 0.00028912964046412526,
+    "capMatches": true,
+    "bodyAspect": 0.32458633471888304,
+    "glassHeightPct": 51.739612704903884,
+    "glassFootPct": 90.99870394258264,
+    "baselinePct": 90.99693124326119,
+    "canvas": {
+      "x": 0,
+      "y": 190.109375,
+      "width": 342.53125,
+      "height": 376.78125
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "reload-amber",
+    "url": "http://localhost:3010/products/vial-4ml-amber-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 139.62102419162892,
+      "right": 202.89755898320024,
+      "top": 338.0302697039665,
+      "bottom": 532.9754291986621
+    },
+    "capBounds": {
+      "left": 208.09483422851562,
+      "right": 273.14305697631835,
+      "top": 490.63603326970883,
+      "bottom": 532.9757183283026
+    },
+    "clipping": false,
+    "centerError": 69.35965401500242,
+    "seatError": 164.6071623534853,
+    "sidecarBaselineError": 0.00028912964046412526,
+    "capMatches": true,
+    "bodyAspect": 0.32458633471888304,
+    "glassHeightPct": 51.739612704903884,
+    "glassFootPct": 90.99870394258264,
+    "baselinePct": 90.99693124326119,
+    "canvas": {
+      "x": 0,
+      "y": 190.109375,
+      "width": 342.53125,
+      "height": 376.78125
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "legacy-query-blue",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 141.11475130344536,
+      "right": 205.0673912910238,
+      "top": 337.5874407458088,
+      "bottom": 534.606474322751
+    },
+    "capBounds": {
+      "left": 210.31974340820312,
+      "right": 276.06263104248046,
+      "top": 491.81804243607957,
+      "bottom": 534.6082768110796
+    },
+    "clipping": false,
+    "centerError": 70.10011592810721,
+    "seatError": 166.35980371670263,
+    "sidecarBaselineError": 0.001802488328621621,
+    "capMatches": true,
+    "bodyAspect": 0.3246013282397049,
+    "glassHeightPct": 51.73861617875466,
+    "glassFootPct": 90.99673528643083,
+    "baselinePct": 90.99749702515284,
+    "canvas": {
+      "x": 0,
+      "y": 188.09375,
+      "width": 346.1875,
+      "height": 380.796875
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "reload-blue",
+    "url": "http://localhost:3010/products/vial-4ml-blue-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 141.11475130344536,
+      "right": 205.0673912910238,
+      "top": 337.5874407458088,
+      "bottom": 534.606474322751
+    },
+    "capBounds": {
+      "left": 210.31974340820312,
+      "right": 276.06263104248046,
+      "top": 491.81804243607957,
+      "bottom": 534.6082768110796
+    },
+    "clipping": false,
+    "centerError": 70.10011592810721,
+    "seatError": 166.35980371670263,
+    "sidecarBaselineError": 0.001802488328621621,
+    "capMatches": true,
+    "bodyAspect": 0.3246013282397049,
+    "glassHeightPct": 51.73861617875466,
+    "glassFootPct": 90.99673528643083,
+    "baselinePct": 90.99749702515284,
+    "canvas": {
+      "x": 0,
+      "y": 188.09375,
+      "width": 346.1875,
+      "height": 380.796875
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "legacy-query-green",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 138.9222295976583,
+      "right": 201.8804098408591,
+      "top": 338.22755063413484,
+      "bottom": 532.1949135916574
+    },
+    "capBounds": {
+      "left": 207.05394775390624,
+      "right": 271.7748670959473,
+      "top": 490.0672449840199,
+      "bottom": 532.1934901012074
+    },
+    "clipping": false,
+    "centerError": 69.01308770566806,
+    "seatError": 163.77982251058842,
+    "sidecarBaselineError": 0.0014234904499517143,
+    "capMatches": true,
+    "bodyAspect": 0.324581307304715,
+    "glassHeightPct": 51.739720873927574,
+    "glassFootPct": 90.99935176870784,
+    "baselinePct": 90.99737423415164,
+    "canvas": {
+      "x": 0,
+      "y": 191.046875,
+      "width": 340.8125,
+      "height": 374.890625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  },
+  {
+    "name": "reload-green",
+    "url": "http://localhost:3010/products/vial-4ml-green-13-425?cap=black",
+    "view": "sidecar",
+    "bodyBounds": {
+      "left": 138.9222295976583,
+      "right": 201.8804098408591,
+      "top": 338.22755063413484,
+      "bottom": 532.1949135916574
+    },
+    "capBounds": {
+      "left": 207.05394775390624,
+      "right": 271.7748670959473,
+      "top": 490.0672449840199,
+      "bottom": 532.1934901012074
+    },
+    "clipping": false,
+    "centerError": 69.01308770566806,
+    "seatError": 163.77982251058842,
+    "sidecarBaselineError": 0.0014234904499517143,
+    "capMatches": true,
+    "bodyAspect": 0.324581307304715,
+    "glassHeightPct": 51.739720873927574,
+    "glassFootPct": 90.99935176870784,
+    "baselinePct": 90.99737423415164,
+    "canvas": {
+      "x": 0,
+      "y": 191.046875,
+      "width": 340.8125,
+      "height": 374.890625
+    },
+    "imageLoaded": true,
+    "allImagesLoaded": true,
+    "overflow": false,
+    "generated": true,
+    "frame": "translate(18.3811%, 33.5111%) scale(0.632378)",
+    "previewFlag": false
+  }
+]

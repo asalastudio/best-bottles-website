@@ -1,0 +1,21 @@
+{
+  "skuCount": 71,
+  "pour": 20,
+  "rollon": 36,
+  "sprayer": 15,
+  "bodyMasters": 2,
+  "computedStatesPassed": 213,
+  "pdpBrowserStatesPassed": 426,
+  "desktopBuilderEntriesPassed": 71,
+  "mobileBuilderEntriesPassed": 6,
+  "failedFirstPassJobsRetried": 6,
+  "remainingFailures": 0,
+  "pageErrors": 0,
+  "screenshots": 503,
+  "contactSheetsVisuallyScanned": 6,
+  "focusedTestsPassed": 11,
+  "typecheck": "passed",
+  "targetedLint": "passed",
+  "visualApproval": "pending",
+  "productionChanged": false
+}

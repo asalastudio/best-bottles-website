@@ -1,0 +1,17 @@
+{
+  "archive": "outputs/family-master-library-2026-11-01/Cylinder_5ml_All-71_Local-Review_2026-11-01.zip",
+  "bytes": 33638231,
+  "sha256": "f56455ddc28ddb55ec19fa2e4b2674ebb0ca2ea1cf68011febca06a1657e7d81",
+  "entries": 552,
+  "zipCrcVerified": true,
+  "allEntryHashesVerified": true,
+  "emptyDirectoryRuntimeRestore": {
+    "verifiedFiles": 48,
+    "copiedFiles": 21,
+    "unchangedSecondPass": 21
+  },
+  "git": {
+    "sourceAndRuntimePackage": true,
+    "fullResolutionStateCaptures": "Drive ZIP only"
+  }
+}

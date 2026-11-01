@@ -1,0 +1,50 @@
+{
+  "plates": {
+    "development": 96,
+    "production": 96,
+    "changed": 2,
+    "onlyDevelopment": [],
+    "onlyProduction": [],
+    "changedExamples": [
+      "empire-100ml-18-415|Clear",
+      "empire-50ml-18-415|Clear"
+    ]
+  },
+  "bodies": {
+    "development": 93,
+    "production": 93,
+    "changed": 0,
+    "onlyDevelopment": [],
+    "onlyProduction": [],
+    "changedExamples": []
+  },
+  "components": {
+    "development": 118,
+    "production": 118,
+    "changed": 21,
+    "onlyDevelopment": [],
+    "onlyProduction": [],
+    "changedExamples": [
+      "CMP-CAP-SGLD-18415-S",
+      "CMP-CAP-WHT-18415-T",
+      "CMP-LPM-SBLK-18-415",
+      "CMP-ROC-SLV-13415-DOT",
+      "CMP-CAP-SBLK-18415-T",
+      "CMP-LPM-MGLD-18-415",
+      "CMP-CAP-MSLV-18415-T",
+      "CMP-SPR-MTSL-18-415-06",
+      "CMP-LPM-MSLV-18-415-01",
+      "CMP-LPM-SSLV-18-415",
+      "CMP-LPM-SGLD-18-415",
+      "CMP-SPR-SHBK-18-415-06"
+    ]
+  },
+  "assemblies": {
+    "development": 2485,
+    "production": 2485,
+    "changed": 0,
+    "onlyDevelopment": [],
+    "onlyProduction": [],
+    "changedExamples": []
+  }
+}

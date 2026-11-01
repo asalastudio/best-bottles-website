@@ -1,0 +1,71 @@
+{
+  "path": "M32 104 C32 62 94 49 190 46 Q600 33 1020 46 C1110 49 1156 62 1156 104 L1160 990 Q600 1000 40 990 Z",
+  "results": [
+    {
+      "key": "gold",
+      "size": [
+        1204,
+        1028
+      ],
+      "geometry": "Shared smooth cylinder contour fitted to source, removes pixel-step notches; same physical image dimensions and placement anchors.",
+      "contourSha256": "9e23cb53dbebb0c4e14f9b5cbe4e451b9c79a8bf7dc97cbf079201031e8b1a69",
+      "materialExtensionPx": 5,
+      "sha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839"
+    },
+    {
+      "key": "matte-silver",
+      "size": [
+        1204,
+        1028
+      ],
+      "geometry": "Shared smooth cylinder contour fitted to source, removes pixel-step notches; same physical image dimensions and placement anchors.",
+      "contourSha256": "9e23cb53dbebb0c4e14f9b5cbe4e451b9c79a8bf7dc97cbf079201031e8b1a69",
+      "materialExtensionPx": 5,
+      "sha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155"
+    },
+    {
+      "key": "shiny-silver",
+      "size": [
+        1204,
+        1028
+      ],
+      "geometry": "Shared smooth cylinder contour fitted to source, removes pixel-step notches; same physical image dimensions and placement anchors.",
+      "contourSha256": "9e23cb53dbebb0c4e14f9b5cbe4e451b9c79a8bf7dc97cbf079201031e8b1a69",
+      "materialExtensionPx": 5,
+      "sha256": "21659785df2b6f8a242573a035ef4cfe40e4bab57f6b31407d2281014f3c363e"
+    },
+    {
+      "key": "red",
+      "size": [
+        1204,
+        1028
+      ],
+      "geometry": "Shared smooth cylinder contour fitted to source, removes pixel-step notches; same physical image dimensions and placement anchors.",
+      "contourSha256": "9e23cb53dbebb0c4e14f9b5cbe4e451b9c79a8bf7dc97cbf079201031e8b1a69",
+      "materialExtensionPx": 5,
+      "sha256": "e34c8674e08e3f1eed980b88caff4cbecdb81cd89d3fcbb0957526446cf466a1"
+    },
+    {
+      "key": "turquoise",
+      "size": [
+        1204,
+        1028
+      ],
+      "geometry": "Shared smooth cylinder contour fitted to source, removes pixel-step notches; same physical image dimensions and placement anchors.",
+      "contourSha256": "9e23cb53dbebb0c4e14f9b5cbe4e451b9c79a8bf7dc97cbf079201031e8b1a69",
+      "materialExtensionPx": 5,
+      "sha256": "430ff4c25dced2145d0390140a89f0115c771bab5422a71944291ab23684506c"
+    },
+    {
+      "key": "black",
+      "size": [
+        1204,
+        1028
+      ],
+      "geometry": "Shared smooth cylinder contour fitted to source, removes pixel-step notches; same physical image dimensions and placement anchors.",
+      "contourSha256": "9e23cb53dbebb0c4e14f9b5cbe4e451b9c79a8bf7dc97cbf079201031e8b1a69",
+      "materialExtensionPx": 5,
+      "sha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf"
+    }
+  ]
+}

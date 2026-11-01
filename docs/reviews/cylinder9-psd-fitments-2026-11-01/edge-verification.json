@@ -1,0 +1,20 @@
+[
+  {
+    "slot": "sprayer",
+    "nativeExport": [
+      992,
+      1208
+    ],
+    "nontransparentPixelsOutsideOriginalOutline": 0,
+    "retainedSilhouetteCoverage": 0.9943623947911704
+  },
+  {
+    "slot": "collar",
+    "nativeExport": [
+      1204,
+      1028
+    ],
+    "nontransparentPixelsOutsideOriginalOutline": 0,
+    "retainedSilhouetteCoverage": 0.9998570357353854
+  }
+]

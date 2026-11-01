@@ -1,0 +1,124 @@
+{
+  "clear": {
+    "source": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/clear-v3.png",
+    "hash": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f",
+    "dimensions": [
+      1195,
+      1316
+    ],
+    "alphaBounds": {
+      "left": 419,
+      "top": 95,
+      "right": 769,
+      "bottom": 1220
+    },
+    "ratio": 0.3111111111111111,
+    "targetRatio": 0.3245887060915963,
+    "ratioDeltaPct": -4.152207001522079,
+    "transparentPixels": 1178556,
+    "verticalScale": 0.8,
+    "horizontalScale": 0.8346566728069619,
+    "horizontalCalibrationPct": 4.332084100870226,
+    "visualQA": {
+      "file": "clear-v3.png",
+      "status": "Local visual review candidate, not production approved",
+      "neckRatio": 0.15911111,
+      "targetNeckRatio": 0.15562472209871056,
+      "camera": "Upright straight-on; no view down into opening",
+      "reason": "First candidate with short neck matching the 7 mm guide; native body is 4.15% too narrow, calibrated in display registration."
+    }
+  },
+  "amber": {
+    "source": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/amber-v2.png",
+    "hash": "b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68",
+    "dimensions": [
+      1195,
+      1316
+    ],
+    "alphaBounds": {
+      "left": 420,
+      "top": 91,
+      "right": 773,
+      "bottom": 1221
+    },
+    "ratio": 0.3123893805309734,
+    "targetRatio": 0.3245887060915963,
+    "ratioDeltaPct": -3.7583949569644948,
+    "transparentPixels": 1177134,
+    "verticalScale": 0.7964601769911505,
+    "horizontalScale": 0.8275632733213503,
+    "horizontalCalibrationPct": 3.9051665392362045,
+    "visualQA": {
+      "file": "amber-v2.png",
+      "status": "Color-only edit verified against the shared clear master; local review",
+      "reference": "clear-v3.png",
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68",
+      "normalizedEdgeRms": 0.003622551265803671,
+      "shoulderHeightFractionDelta": 0.0020000000000000018,
+      "camera": "Same upright straight-on view; no view into opening"
+    }
+  },
+  "cobalt": {
+    "source": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/cobalt-v2.png",
+    "hash": "d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7",
+    "dimensions": [
+      1195,
+      1316
+    ],
+    "alphaBounds": {
+      "left": 418,
+      "top": 92,
+      "right": 774,
+      "bottom": 1221
+    },
+    "ratio": 0.3153232949512843,
+    "targetRatio": 0.3245887060915963,
+    "ratioDeltaPct": -2.8545081718577614,
+    "transparentPixels": 1176710,
+    "verticalScale": 0.7971656333038086,
+    "horizontalScale": 0.8205894255124625,
+    "horizontalCalibrationPct": 2.938384600396682,
+    "visualQA": {
+      "file": "cobalt-v2.png",
+      "status": "Color-only edit verified against the shared clear master; local review",
+      "reference": "clear-v3.png",
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7",
+      "normalizedEdgeRms": 0.0033465995566447884,
+      "shoulderHeightFractionDelta": 0.0040000000000000036,
+      "camera": "Same upright straight-on view; no view into opening"
+    }
+  },
+  "green": {
+    "source": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-4ml-measured/sunburst/green-v2.png",
+    "hash": "309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8",
+    "dimensions": [
+      1195,
+      1316
+    ],
+    "alphaBounds": {
+      "left": 418,
+      "top": 93,
+      "right": 772,
+      "bottom": 1222
+    },
+    "ratio": 0.31355181576616475,
+    "targetRatio": 0.3245887060915963,
+    "ratioDeltaPct": -3.4002693619034963,
+    "transparentPixels": 1169558,
+    "verticalScale": 0.7971656333038086,
+    "horizontalScale": 0.8252255239616855,
+    "horizontalCalibrationPct": 3.519957394749218,
+    "visualQA": {
+      "file": "green-v2.png",
+      "status": "Color-only edit verified against the shared clear master; local review",
+      "reference": "clear-v3.png",
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8",
+      "normalizedEdgeRms": 0.0022797072900293115,
+      "shoulderHeightFractionDelta": 0.0020000000000000018,
+      "camera": "Same upright straight-on view; no view into opening"
+    }
+  }
+}

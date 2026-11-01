@@ -1,0 +1,101 @@
+[
+  {
+    "key": "gold",
+    "kind": "collar",
+    "nativeSize": [
+      1204,
+      1028
+    ],
+    "exteriorNonzeroAlpha": 0,
+    "structuralCoverage": 0.9999943178320635,
+    "maskSha256": "6b9bbeebd8e37bf314172abd733cfc209a476f8c7a3ff75523044056485d27ff"
+  },
+  {
+    "key": "matte-silver",
+    "kind": "collar",
+    "nativeSize": [
+      1204,
+      1028
+    ],
+    "exteriorNonzeroAlpha": 0,
+    "structuralCoverage": 0.9998390052417999,
+    "maskSha256": "6b9bbeebd8e37bf314172abd733cfc209a476f8c7a3ff75523044056485d27ff"
+  },
+  {
+    "key": "shiny-silver",
+    "kind": "collar",
+    "nativeSize": [
+      1204,
+      1028
+    ],
+    "exteriorNonzeroAlpha": 0,
+    "structuralCoverage": 0.999956436712487,
+    "maskSha256": "6b9bbeebd8e37bf314172abd733cfc209a476f8c7a3ff75523044056485d27ff"
+  },
+  {
+    "key": "red",
+    "kind": "collar",
+    "nativeSize": [
+      1204,
+      1028
+    ],
+    "exteriorNonzeroAlpha": 0,
+    "structuralCoverage": 0.9999725361883071,
+    "maskSha256": "6b9bbeebd8e37bf314172abd733cfc209a476f8c7a3ff75523044056485d27ff"
+  },
+  {
+    "key": "turquoise",
+    "kind": "collar",
+    "nativeSize": [
+      1204,
+      1028
+    ],
+    "exteriorNonzeroAlpha": 0,
+    "structuralCoverage": 0.9995122805854527,
+    "maskSha256": "6b9bbeebd8e37bf314172abd733cfc209a476f8c7a3ff75523044056485d27ff"
+  },
+  {
+    "key": "frosted",
+    "kind": "body",
+    "nativeSize": [
+      743,
+      2116
+    ],
+    "exteriorNonzeroAlpha": 0,
+    "structuralCoverage": 0.9984812620877731,
+    "maskSha256": "32dd18d5322a14e46f8ad70d4066853cb7f9dcad94e9aeae6389031e665ef7f3"
+  },
+  {
+    "key": "swirl",
+    "kind": "body",
+    "nativeSize": [
+      743,
+      2116
+    ],
+    "exteriorNonzeroAlpha": 0,
+    "structuralCoverage": 0.9999458777034915,
+    "maskSha256": "32dd18d5322a14e46f8ad70d4066853cb7f9dcad94e9aeae6389031e665ef7f3"
+  },
+  {
+    "key": "amber",
+    "kind": "body",
+    "nativeSize": [
+      743,
+      2116
+    ],
+    "exteriorNonzeroAlpha": 0,
+    "structuralCoverage": 1,
+    "maskSha256": "32dd18d5322a14e46f8ad70d4066853cb7f9dcad94e9aeae6389031e665ef7f3"
+  },
+  {
+    "key": "cobalt",
+    "kind": "body",
+    "nativeSize": [
+      743,
+      2116
+    ],
+    "exteriorNonzeroAlpha": 0,
+    "structuralCoverage": 1,
+    "maskSha256": "32dd18d5322a14e46f8ad70d4066853cb7f9dcad94e9aeae6389031e665ef7f3"
+  }
+]

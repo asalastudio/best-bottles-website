@@ -1,0 +1,5 @@
+import bpy,json,sys
+from pathlib import Path
+from mathutils import Vector
+r=Path(sys.argv[sys.argv.index('--')+1]).resolve();row=next(a for a in json.loads((r/'sources/variant-render-queue.json').read_text()) if a['id']=='cyl5-cobalt-blue--cap-shiny-silver');bpy.ops.wm.open_mainfile(filepath=str(r/'working/pilots/cobalt-polished-fill.blend'),load_ui=False,use_scripts=False);s=bpy.context.scene;o=s.objects['Catalog polished metal fill'];o.data.energy=3.5;o.data.size=.6;o.data.size_y=.25;o.location=(0,-.16,.07);o.rotation_euler=(Vector((0,0,.068))-o.location).to_track_quat('-Z','Y').to_euler();p=r/'working/pilots/cobalt-wide-fill.blend';bpy.ops.wm.save_as_mainfile(filepath=str(p),compress=True)
+code=(r/'scripts/render-variants.py').read_text().split('import traceback\nqueue=')[0];code=code.replace("out=r/'renders/final/sku-variants'","out=r/'renders/pilots/cap-wide-fill'");outer={};exec(code,outer);env=outer['env'];rendercode=outer['code'].replace('resolution_percentage=100','resolution_percentage=50').replace('s.cycles.samples=96','s.cycles.samples=32');exec(rendercode,env);row['saveScene']=True;env['render'](row,str(p),'after')

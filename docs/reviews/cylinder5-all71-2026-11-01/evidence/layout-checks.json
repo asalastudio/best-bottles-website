@@ -1,0 +1,2349 @@
+{
+  "states": 213,
+  "errors": [],
+  "checks": [
+    {
+      "sku": "GBCyl5Sl",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5Gl",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5Gl",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5Gl",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5BlkSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5BlkSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5BlkSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5Gl",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5Gl",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5Gl",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5BlkSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5BlkSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5BlkSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollCuMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollCuMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollCuMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollGlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollGlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollGlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollPinkDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollPinkDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollPinkDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollSlDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollSlDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollSlDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollCuMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollCuMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollCuMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollPinkDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollPinkDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollPinkDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollGlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollGlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollGlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollBlkSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollBlkSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollBlkSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollGlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollGlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollGlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollPinkDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollPinkDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollPinkDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollCuMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollCuMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollCuMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.30598834475508,
+        41.72440447988893,
+        29.22813199759273,
+        50.031445362897436
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "view": "sidecar",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "view": "capon",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "view": "exploded",
+      "bodyFrame": [
+        35.44682594286529,
+        41.813919389154826,
+        29.106348114269426,
+        49.822981007218694
+      ],
+      "passed": true
+    }
+  ]
+}

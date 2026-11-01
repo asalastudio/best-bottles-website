@@ -1,0 +1,492 @@
+{
+  "status": "Clear and cobalt v19 approved by Jordan on 2026-10-31; locked in local product pages and builder. No production upload.",
+  "reference": "User-confirmed clear 5 ml example",
+  "currentClear": "renders/glass-5-clear-measured-v19.blend",
+  "currentCobalt": "renders/glass-5-cobalt-measured-v19.blend",
+  "measured": {
+    "source": "Jordan physical caliper measurements, 2026-10-31, current conversation",
+    "precedence": "Latest 12.60 mm outside-thread and 17.45 mm body readings supersede 12.64 and 17.55 respectively",
+    "heightOverallMm": 53.23,
+    "bodyDiameterNominalMm": 17.45,
+    "shape": "Very subtle convex barrel; preserve natural slope, not a perfect straight cylinder",
+    "rawDiameterReadingsMm": {
+      "firstSet": {
+        "top": 17.44,
+        "middle": 17.51,
+        "base": 17.56
+      },
+      "secondSet": {
+        "top": 17.55,
+        "middle": 17.65,
+        "bottom": 17.5
+      }
+    },
+    "shoulderToBaseMm": 40.1,
+    "neckThreadRootDiameterMm": 12.0,
+    "neckThreadCrestDiameterMm": 12.6,
+    "internalDepthMm": 48.8,
+    "derivedCenterBaseThicknessMm": 4.43,
+    "status": "New caliper diameters applied to both glasses; approved per-glass appearance retained; local review",
+    "rimWallThicknessMm": 1.8,
+    "threadCrestWallThicknessMm": 2.64,
+    "derivedThreadBoreDiameterMm": 7.32,
+    "derivedLipBoreDiameterMm": 7.32,
+    "neckTransition": "Uniform 7.32 mm bore; 10.92 mm plain rim and neck lands, with 12.00 mm actual thread roots and 12.60 mm crests",
+    "appliesTo": [
+      "5 ml Cylinder clear 13-415",
+      "5 ml Cylinder cobalt blue 13-415"
+    ],
+    "latestNeckClarification": {
+      "source": "Jordan, current conversation after measured-v9 local review",
+      "outsideThreadDiameterMm": 12.6,
+      "rimEdgeGlassThicknessMm": 1.8,
+      "rimToOutsideThreadThicknessMm": 2.64,
+      "interpretation": "Final wording interpreted as radial glass thickness at the plain rim and including the outside thread, respectively. The earlier phrase about neck height was followed by this clarification. These two numbers are not used as vertical neck heights.",
+      "rootDiameterNote": "12.00 mm root diameter retained from earlier explicit measurement; latest wording confirms 12.64 mm across the outside of the threads.",
+      "referenceImage": "user-photos/clear-5ml-appearance-reference.png; user-confirmed clear 5 ml example"
+    },
+    "sharedGeometryVerification": "five-measured-verification.json: identical v19 geometry for clear and cobalt",
+    "derivedPlainRimDiameterMm": 10.92,
+    "inferredPlainNeckLandDiameterMm": 10.92,
+    "assumptions": [
+      "Uniform opening through the neck is inferred, not independently measured",
+      "Plain rim OD = 12.60 - 2*2.64 + 2*1.80 = 10.92 mm",
+      "Unthreaded lands use the derived rim OD, guided by the user-confirmed clear 5 ml reference"
+    ]
+  },
+  "geometryVerification": {
+    "rows": [
+      {
+        "glass": "clear",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-clear-measured-v19.blend",
+        "measured": {
+          "heightMm": 53.22999879717827,
+          "barrelDiameterMm": 17.450000300533993,
+          "internalDepthMm": 48.799998592585325,
+          "baseThicknessMm": 4.430000204592943,
+          "rootDiameterMm": 11.999999487294877,
+          "crestDiameterMm": 12.60000083854995,
+          "threadBoreMm": 7.319999501305395,
+          "plainRimDiameterMm": 10.920000758974046,
+          "lipBoreMm": 7.31999934784409,
+          "rimWallMm": 1.8000007055649783,
+          "threadCrestWallMm": 2.6400006686222772
+        },
+        "expected": {
+          "heightMm": 53.23,
+          "barrelDiameterMm": 17.45,
+          "internalDepthMm": 48.8,
+          "baseThicknessMm": 4.43,
+          "rootDiameterMm": 12,
+          "crestDiameterMm": 12.6,
+          "threadBoreMm": 7.32,
+          "plainRimDiameterMm": 10.92,
+          "lipBoreMm": 7.32,
+          "rimWallMm": 1.8,
+          "threadCrestWallMm": 2.64
+        },
+        "checks": {
+          "heightMm": true,
+          "barrelDiameterMm": true,
+          "internalDepthMm": true,
+          "baseThicknessMm": true,
+          "rootDiameterMm": true,
+          "crestDiameterMm": true,
+          "threadBoreMm": true,
+          "plainRimDiameterMm": true,
+          "lipBoreMm": true,
+          "rimWallMm": true,
+          "threadCrestWallMm": true,
+          "baseDownNeckUp": true,
+          "cameraClipSafe": true
+        },
+        "geometry": {
+          "nonManifoldEdges": 0,
+          "flippedEdges": 0,
+          "degenerateFaces": 0
+        },
+        "geometrySha256": "55979c0ec53ac71051cf12f3b113704f785c855f8cde6735e44a79222ba864c1"
+      },
+      {
+        "glass": "cobalt",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/small-sprayers/renders/glass-5-cobalt-measured-v19.blend",
+        "measured": {
+          "heightMm": 53.22999879717827,
+          "barrelDiameterMm": 17.450000300533993,
+          "internalDepthMm": 48.799998592585325,
+          "baseThicknessMm": 4.430000204592943,
+          "rootDiameterMm": 11.999999487294877,
+          "crestDiameterMm": 12.60000083854995,
+          "threadBoreMm": 7.319999501305395,
+          "plainRimDiameterMm": 10.920000758974046,
+          "lipBoreMm": 7.31999934784409,
+          "rimWallMm": 1.8000007055649783,
+          "threadCrestWallMm": 2.6400006686222772
+        },
+        "expected": {
+          "heightMm": 53.23,
+          "barrelDiameterMm": 17.45,
+          "internalDepthMm": 48.8,
+          "baseThicknessMm": 4.43,
+          "rootDiameterMm": 12,
+          "crestDiameterMm": 12.6,
+          "threadBoreMm": 7.32,
+          "plainRimDiameterMm": 10.92,
+          "lipBoreMm": 7.32,
+          "rimWallMm": 1.8,
+          "threadCrestWallMm": 2.64
+        },
+        "checks": {
+          "heightMm": true,
+          "barrelDiameterMm": true,
+          "internalDepthMm": true,
+          "baseThicknessMm": true,
+          "rootDiameterMm": true,
+          "crestDiameterMm": true,
+          "threadBoreMm": true,
+          "plainRimDiameterMm": true,
+          "lipBoreMm": true,
+          "rimWallMm": true,
+          "threadCrestWallMm": true,
+          "baseDownNeckUp": true,
+          "cameraClipSafe": true
+        },
+        "geometry": {
+          "nonManifoldEdges": 0,
+          "flippedEdges": 0,
+          "degenerateFaces": 0
+        },
+        "geometrySha256": "55979c0ec53ac71051cf12f3b113704f785c855f8cde6735e44a79222ba864c1"
+      }
+    ],
+    "sameGeometryForBothGlasses": true
+  },
+  "appearanceVerification": [
+    {
+      "glass": "clear",
+      "approvedSourceVersion": 16,
+      "currentVersion": 19,
+      "checks": {
+        "bodyMaterial": true,
+        "studio": true,
+        "world": true,
+        "camera": true,
+        "crop": true,
+        "view": true
+      }
+    },
+    {
+      "glass": "cobalt",
+      "approvedSourceVersion": 9,
+      "currentVersion": 19,
+      "checks": {
+        "bodyMaterial": true,
+        "studio": true,
+        "world": true,
+        "camera": true,
+        "crop": true,
+        "view": true
+      }
+    }
+  ],
+  "integration": {
+    "variants": 71,
+    "bodyImagesUpdated": 71,
+    "closurePartsAndPositionsUnchanged": true,
+    "allStageLayoutDataUnchanged": true
+  },
+  "layoutVerification": {
+    "variants": 71,
+    "views": 213,
+    "stable": true,
+    "outOfFrameImageBoxes": [],
+    "rows": [
+      {
+        "sku": "GBCyl5SpryBlkMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5Sl",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5WhtSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5Gl",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5Sl",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5Gl",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5MtlRollCuMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5MtlRollBlkSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5MtlRollGlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5MtlRollSlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5MtlRollPinkDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5MtlRollGlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5MtlRollSlDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5MtlRollSlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5MtlRollCuMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5MtlRollGlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5MtlRollPinkDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5MtlRollBlkSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5MtlRollGlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5MtlRollSlDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5SpryBluMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5SprySlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5SpryBlkSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5SpryGlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5SprySlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5MtlRollSlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5MtlRollSlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5SpryCuMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5SpryGlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5SpryBlkSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5SpryGlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5SprySlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5SpryBluMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5SpryCuMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5SpryGlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5SprySlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5RollBlkDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5RollBlkDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5RollBlkSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5RollGlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5RollSlDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5RollSlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5RollCuMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5RollGlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5RollSlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5RollPinkDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5RollGlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5RollGlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5RollPinkDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5RollBlkSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5RollSlDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5RollSlSh",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5RollCuMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5RollSlMatt",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5MtlRollBlkDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5MtlRollBlkDot",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5BlkSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5BlkSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5BlkShSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5CuSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5GlMattSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5SlMattSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5GlSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCylBlu5SlSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5CuSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5GlMattSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5SlMattSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5BlkShSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5WhtSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5GlSht",
+        "stable": true
+      },
+      {
+        "sku": "GBCyl5SlSht",
+        "stable": true
+      }
+    ]
+  },
+  "approvalRecord": "approved-five-v19.json",
+  "handoffVerification": "five-approved-handoff-checks.json"
+}

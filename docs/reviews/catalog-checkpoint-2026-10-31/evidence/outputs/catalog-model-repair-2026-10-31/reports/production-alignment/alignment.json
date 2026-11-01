@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-10-31T16:43:21.991784+00:00",
+  "productionDeployment": "dpl_kpjnvNxG5Kdyvdd1pHLSTzSCxNYU",
+  "productionUrl": "https://best-bottles-website.vercel.app",
+  "productionCommit": "087ff9b028763a4793882f909180c7a01ca5eb54",
+  "localCommit": "4c3793cc9413f7bc1c604a6bb1226437f9c07523",
+  "sourceTreesMatch": true,
+  "tree": "7b5ee860186dafefde573f33fee896a034d38029",
+  "publicSettingsBefore": {
+    "NEXT_PUBLIC_CONVEX_URL": "https://helpful-elephant-638.convex.cloud",
+    "NEXT_PUBLIC_CONVEX_SITE_URL": "https://helpful-elephant-638.convex.site",
+    "NEXT_PUBLIC_SITE_URL": "http://localhost:3000",
+    "NEXT_PUBLIC_CATALOG_HERO_PILOT": "families-2026-09-22"
+  },
+  "publicSettingsAfter": {
+    "NEXT_PUBLIC_CONVEX_URL": "https://precise-raccoon-123.convex.cloud",
+    "NEXT_PUBLIC_CONVEX_SITE_URL": "https://precise-raccoon-123.convex.site",
+    "NEXT_PUBLIC_CATALOG_HERO_PILOT": "families-2026-09-22",
+    "NEXT_PUBLIC_SITE_URL": "http://localhost:3010"
+  },
+  "unchangedPublicSettings": {
+    "NEXT_PUBLIC_SANITY_PROJECT_ID": "gh97irjh",
+    "NEXT_PUBLIC_SANITY_DATASET": "production"
+  },
+  "privateEnvironmentBackup": "/private/tmp/best-bottles-production-alignment-2026-10-31/.env.local.before-alignment",
+  "retainedCache": "/private/tmp/best-bottles-production-alignment-2026-10-31/next-cache-before-alignment",
+  "productionWrites": false,
+  "intentionalLocalDifferences": [
+    "Uncommitted model and shared-stage review changes remain on the existing local branch.",
+    "Corrected 2 ml vial local review remains enabled.",
+    "Convex CLI remains targeted at the development deployment; no backend deploy or mutation was performed.",
+    "Local origin remains localhost for local routing and sessions.",
+    "October 31 subsequent review: new shared transparent 9 ml overcap and accepted frosted tube treatment. Earlier URL parity verification predates these intentional local component replacements."
+  ],
+  "pending": [],
+  "verifiedAt": "2026-10-31T16:54:26.335773+00:00",
+  "browserVerification": {
+    "product": true,
+    "stageAssetUrlsMatch": true,
+    "pdpBodyStable": true,
+    "builderBodyStable": true,
+    "mobileOverflow": false,
+    "scope": "9 ml clear Cylinder 17-415; gallery image coverage 110 plates"
+  },
+  "numericalVerification": {
+    "configurations": 906,
+    "frameMismatches": 0,
+    "recordedBoundsClips": 0
+  },
+  "remainingReviewWork": [
+    "1,182 configurations remain held for component clearance; 397 records require fallback-source review.",
+    "Geometry, material realism, dip tube fidelity and the full visual catalog audit are not certified by this alignment.",
+    "Unpublished local changes require review before a production release."
+  ]
+}

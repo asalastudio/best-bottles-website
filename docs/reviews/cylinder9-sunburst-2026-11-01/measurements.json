@@ -1,0 +1,203 @@
+{
+  "images": [
+    {
+      "role": "source",
+      "title": "Geometry source",
+      "file": "source-cylinder9-clear.png",
+      "width": 768,
+      "height": 2192,
+      "bytes": 484190,
+      "sha256": "35018244cb0df545826f81a741f502b2f3913c7f1ebe29a81e3e6ef06cfe264d",
+      "alphaBounds": {
+        "1": [
+          117,
+          123,
+          650,
+          2098
+        ],
+        "16": [
+          119,
+          125,
+          648,
+          2096
+        ],
+        "64": [
+          119,
+          125,
+          648,
+          2096
+        ],
+        "128": [
+          119,
+          125,
+          648,
+          2096
+        ],
+        "192": [
+          119,
+          125,
+          648,
+          2096
+        ],
+        "254": [
+          119,
+          126,
+          647,
+          2095
+        ]
+      },
+      "outlineAspectChangePct": 0.0,
+      "heightRatioToSource": 1.0,
+      "placementPct": {
+        "left": 38.66554972205065,
+        "top": 34.68375540457073,
+        "width": 22.698455836936382,
+        "height": 58.89561457689931
+      }
+    },
+    {
+      "role": "builtin",
+      "title": "Earlier built-in candidate",
+      "file": "earlier-builtin-candidate.png",
+      "width": 857,
+      "height": 1835,
+      "bytes": 1097149,
+      "sha256": "952e3be55f8a7670281c64cb6cc4d9d250c61f994b118ef4da2eb7ae0daceeda",
+      "alphaBounds": {
+        "1": [
+          0,
+          57,
+          831,
+          1835
+        ],
+        "16": [
+          193,
+          94,
+          668,
+          1764
+        ],
+        "64": [
+          193,
+          95,
+          668,
+          1764
+        ],
+        "128": [
+          194,
+          95,
+          667,
+          1763
+        ],
+        "192": [
+          194,
+          96,
+          667,
+          1762
+        ],
+        "254": [
+          220,
+          97,
+          663,
+          1758
+        ]
+      },
+      "outlineAspectChangePct": 5.656457820511096,
+      "heightRatioToSource": 0.8371350364963503,
+      "placementPct": {
+        "left": 34.965159432059046,
+        "top": 35.02613468212459,
+        "width": 29.92998459169662,
+        "height": 58.259808768180015
+      }
+    },
+    {
+      "role": "sunburst",
+      "title": "Sunburst candidate v01",
+      "file": "BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-v01_REVIEW_2026-11-01.png",
+      "width": 743,
+      "height": 2117,
+      "bytes": 1229040,
+      "sha256": "1915175f1eaea5d6eb57a729643814fc3789dac1185fdceae7c320b606c3d1aa",
+      "alphaBounds": {
+        "1": [
+          0,
+          33,
+          742,
+          2095
+        ],
+        "16": [
+          115,
+          117,
+          628,
+          2006
+        ],
+        "64": [
+          115,
+          117,
+          627,
+          2006
+        ],
+        "128": [
+          116,
+          118,
+          627,
+          2005
+        ],
+        "192": [
+          116,
+          118,
+          627,
+          2005
+        ],
+        "254": [
+          119,
+          120,
+          620,
+          2004
+        ]
+      },
+      "outlineAspectChangePct": 0.897394670329188,
+      "heightRatioToSource": 0.9657846715328468,
+      "placementPct": {
+        "left": 38.531446745768406,
+        "top": 34.73070041665399,
+        "width": 22.93710650846319,
+        "height": 59.41252230321372
+      }
+    }
+  ],
+  "scale": {
+    "targetPct": 43.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 70
+  },
+  "result": {
+    "status": "generated-review-candidate",
+    "generatedImages": 1,
+    "editDurationSeconds": 22.3,
+    "attempts": [
+      {
+        "status": 400,
+        "reason": "input_fidelity unsupported; rejected before generation"
+      },
+      {
+        "status": "success",
+        "input_fidelity": "omitted",
+        "output": "BB_Cylinder_9ml_17-415_Clear_BODY_Sunburst-v01_REVIEW_2026-11-01.png"
+      }
+    ],
+    "resolutionGain": false,
+    "geometry": "alpha >=128 outline aspect +0.897% at equal height; not a manufacturer fit test",
+    "visualReview": [
+      "Complete upright bottle, no components baked into the body.",
+      "Softer vertical reflections than the source.",
+      "Ragged light and colored alpha fringe around the shoulders and barrel; isolated faint alpha outside the bottle.",
+      "Near-opaque bright interior needs evaluation with component compositing.",
+      "No PDP or builder assignment; no family rollout."
+    ],
+    "cost": "Not returned by bundled CLI; no cost estimate asserted."
+  }
+}

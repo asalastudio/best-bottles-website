@@ -1,0 +1,39 @@
+{
+  "sourceSha256": "206b5f1c72b151034524140526b47d2b2b33f55c6728b71a81ff4b9e313b2fa2",
+  "sourceSize": [
+    743,
+    2116
+  ],
+  "structuralAlphaThreshold": 128,
+  "structuralBounds": [
+    119,
+    113,
+    631,
+    2018
+  ],
+  "outlineCoordinates": "derived directly from v03 row extents at alpha >=128; subthreshold exterior fringe clipped; no warp or scale",
+  "sharpenKernel": [
+    0,
+    -0.2,
+    0,
+    -0.2,
+    1.8,
+    -0.2,
+    0,
+    -0.2,
+    0
+  ],
+  "alphaPreservedInsideOutline": true,
+  "generatedAlternative": {
+    "model": "gpt-image-2.5-sunburst",
+    "seconds": 22.4,
+    "count": 1,
+    "size": [
+      743,
+      2115
+    ],
+    "status": "rejected for exact-shape use",
+    "aspectDriftPercent": -1.141670991178001
+  },
+  "activeProductAssignmentsChanged": false
+}

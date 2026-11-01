@@ -1,0 +1,1615 @@
+[
+  {
+    "sku": "LBCyl9LtnBlk",
+    "psd": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/9. Clear  (Uncapped)/29. LBCyl9LtnBlk.psd",
+    "sha256": "5303869f9d72f7e8d6ee0b7c9151b16f5464806191b89afeb149e6eb69fdc348",
+    "layers": [
+      {
+        "name": "Layer 17",
+        "file": "LBCyl9LtnBlk-layer-1.png",
+        "bbox": [
+          120,
+          603,
+          373,
+          1518
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 13",
+        "file": "LBCyl9LtnBlk-layer-2.png",
+        "bbox": [
+          145,
+          366,
+          335,
+          599
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 18",
+        "file": "LBCyl9LtnBlk-layer-3.png",
+        "bbox": [
+          125,
+          585,
+          357,
+          778
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 14",
+        "file": "LBCyl9LtnBlk-layer-4.png",
+        "bbox": [
+          417,
+          1253,
+          618,
+          1519
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 19",
+        "file": "LBCyl9LtnBlk-layer-5.png",
+        "bbox": [
+          211,
+          384,
+          265,
+          436
+        ],
+        "visible": true
+      }
+    ],
+    "parts": [
+      {
+        "file": "LBCyl9LtnBlk-registered-0-body.png",
+        "url": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+        "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+        "part": {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+            "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+            "bytes": 1634900,
+            "width": 743,
+            "height": 2116,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        }
+      },
+      {
+        "file": "LBCyl9LtnBlk-registered-1-diptube.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-BLK-17-415/diptube-ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967.png",
+        "sha256": "ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967",
+        "part": {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 5,
+          "bounds": {
+            "left": 457.57,
+            "top": 305.06,
+            "right": 542.43,
+            "bottom": 1057.01
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-BLK-17-415/diptube-ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 202,
+            "height": 1790
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 457.57,
+            "y": 305.06,
+            "width": 84.86,
+            "height": 751.95
+          },
+          "componentId": "CMP-LPM-BLK-17-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ]
+        }
+      },
+      {
+        "file": "LBCyl9LtnBlk-registered-2-diptube.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-BLK-17-415/diptube-675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8.png",
+        "sha256": "675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8",
+        "part": {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 464.29,
+            "top": 326.49,
+            "right": 535.7,
+            "bottom": 1012.9
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -732.39
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-BLK-17-415/diptube-675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 170,
+            "height": 1634
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 464.29,
+            "y": 326.49,
+            "width": 71.41,
+            "height": 686.41
+          },
+          "componentId": "CMP-LPM-BLK-17-415",
+          "views": [
+            "exploded"
+          ]
+        }
+      },
+      {
+        "file": "LBCyl9LtnBlk-registered-3-pump.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-BLK-17-415/pump-2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64.png",
+        "sha256": "2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64",
+        "part": {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 420.18,
+            "top": 81.57999999999998,
+            "right": 579.81,
+            "bottom": 289.09999999999997
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -732.39
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-BLK-17-415/pump-2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 380,
+            "height": 494
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 420.18,
+            "y": 81.57999999999998,
+            "width": 159.63,
+            "height": 207.52
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        }
+      },
+      {
+        "file": "LBCyl9LtnBlk-registered-4-overcap.png",
+        "url": "/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png",
+        "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+        "part": {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 50.50999999999999,
+            "right": 589.89,
+            "bottom": 289.53
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -964.34
+          },
+          "image": {
+            "url": "/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 427,
+            "height": 569
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 50.50999999999999,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-BLK-17-415",
+          "detached": {
+            "image": {
+              "url": "/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png",
+              "width": 427,
+              "height": 569
+            },
+            "box": {
+              "x": 410.52,
+              "y": 55,
+              "width": 179.37,
+              "height": 239.02
+            },
+            "bounds": {
+              "left": 410.52,
+              "top": 55,
+              "right": 589.89,
+              "bottom": 294.02
+            }
+          }
+        }
+      },
+      {
+        "file": "LBCyl9LtnBlk-registered-5-collar.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-BLK-17-415/collar-34429e321f917537ac59089ebff88dcddf79e82f0cb3b306b3bca78f83d1a7a3.png",
+        "sha256": "34429e321f917537ac59089ebff88dcddf79e82f0cb3b306b3bca78f83d1a7a3",
+        "part": {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 394.56,
+            "top": 280.7,
+            "right": 605.44,
+            "bottom": 444.53
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -732.39
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-BLK-17-415/collar-34429e321f917537ac59089ebff88dcddf79e82f0cb3b306b3bca78f83d1a7a3.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 502,
+            "height": 390
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 394.56,
+            "y": 280.7,
+            "width": 210.88,
+            "height": 163.83
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        }
+      }
+    ]
+  },
+  {
+    "sku": "LBCyl9LtnGl",
+    "psd": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/9. Clear  (Uncapped)/28. LBCyl9LtnGl.psd",
+    "sha256": "3ad7b4b9f12e04ebcb5fd6cb0809847694f8c20ad759df58599cee27643991ad",
+    "layers": [
+      {
+        "name": "Layer 19",
+        "file": "LBCyl9LtnGl-layer-1.png",
+        "bbox": [
+          117,
+          600,
+          370,
+          1515
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 13",
+        "file": "LBCyl9LtnGl-layer-2.png",
+        "bbox": [
+          145,
+          362,
+          335,
+          595
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 12",
+        "file": "LBCyl9LtnGl-layer-3.png",
+        "bbox": [
+          125,
+          583,
+          354,
+          776
+        ],
+        "visible": false
+      },
+      {
+        "name": "Layer 14",
+        "file": "LBCyl9LtnGl-layer-4.png",
+        "bbox": [
+          417,
+          1253,
+          618,
+          1519
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 15",
+        "file": "LBCyl9LtnGl-layer-5.png",
+        "bbox": [
+          125,
+          579,
+          357,
+          772
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 20",
+        "file": "LBCyl9LtnGl-layer-6.png",
+        "bbox": [
+          211,
+          380,
+          265,
+          432
+        ],
+        "visible": true
+      }
+    ],
+    "parts": [
+      {
+        "file": "LBCyl9LtnGl-registered-0-body.png",
+        "url": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+        "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+        "part": {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+            "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+            "bytes": 1634900,
+            "width": 743,
+            "height": 2116,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        }
+      },
+      {
+        "file": "LBCyl9LtnGl-registered-1-diptube.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-SGLD-17-415/diptube-ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967.png",
+        "sha256": "ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967",
+        "part": {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 5,
+          "bounds": {
+            "left": 457.57,
+            "top": 305.06,
+            "right": 542.43,
+            "bottom": 1057.01
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-SGLD-17-415/diptube-ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 202,
+            "height": 1790
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 457.57,
+            "y": 305.06,
+            "width": 84.86,
+            "height": 751.95
+          },
+          "componentId": "CMP-LPM-SGLD-17-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ]
+        }
+      },
+      {
+        "file": "LBCyl9LtnGl-registered-2-diptube.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-SGLD-17-415/diptube-675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8.png",
+        "sha256": "675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8",
+        "part": {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 464.29,
+            "top": 326.49,
+            "right": 535.7,
+            "bottom": 1012.9
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -732.39
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-SGLD-17-415/diptube-675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 170,
+            "height": 1634
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 464.29,
+            "y": 326.49,
+            "width": 71.41,
+            "height": 686.41
+          },
+          "componentId": "CMP-LPM-SGLD-17-415",
+          "views": [
+            "exploded"
+          ]
+        }
+      },
+      {
+        "file": "LBCyl9LtnGl-registered-3-pump.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-SGLD-17-415/pump-2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64.png",
+        "sha256": "2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64",
+        "part": {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 420.18,
+            "top": 81.57999999999998,
+            "right": 579.81,
+            "bottom": 289.09999999999997
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -732.39
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-SGLD-17-415/pump-2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 380,
+            "height": 494
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 420.18,
+            "y": 81.57999999999998,
+            "width": 159.63,
+            "height": 207.52
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        }
+      },
+      {
+        "file": "LBCyl9LtnGl-registered-4-overcap.png",
+        "url": "/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png",
+        "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+        "part": {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 50.50999999999999,
+            "right": 589.89,
+            "bottom": 289.53
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -964.34
+          },
+          "image": {
+            "url": "/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 427,
+            "height": 569
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 50.50999999999999,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-SGLD-17-415",
+          "detached": {
+            "image": {
+              "url": "/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png",
+              "width": 427,
+              "height": 569
+            },
+            "box": {
+              "x": 410.52,
+              "y": 55,
+              "width": 179.37,
+              "height": 239.02
+            },
+            "bounds": {
+              "left": 410.52,
+              "top": 55,
+              "right": 589.89,
+              "bottom": 294.02
+            }
+          }
+        }
+      },
+      {
+        "file": "LBCyl9LtnGl-registered-5-collar.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-SGLD-17-415/collar-7dc5ccb725f5868f09026383c5079387c066dbcc05d4fdae87723222fc4fcf1d.png",
+        "sha256": "7dc5ccb725f5868f09026383c5079387c066dbcc05d4fdae87723222fc4fcf1d",
+        "part": {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 394.56,
+            "top": 280.7,
+            "right": 605.44,
+            "bottom": 444.53
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -732.39
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-SGLD-17-415/collar-7dc5ccb725f5868f09026383c5079387c066dbcc05d4fdae87723222fc4fcf1d.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 502,
+            "height": 390
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 394.56,
+            "y": 280.7,
+            "width": 210.88,
+            "height": 163.83
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        }
+      }
+    ]
+  },
+  {
+    "sku": "LBCyl9LtnMtSl",
+    "psd": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/9. Clear  (Uncapped)/27. LBCyl9LtnMtSl.psd",
+    "sha256": "7732960ed803d81da6141f49640ae9df20f76545a776677c7572ad320dffbe7e",
+    "layers": [
+      {
+        "name": "Layer 17",
+        "file": "LBCyl9LtnMtSl-layer-1.png",
+        "bbox": [
+          120,
+          603,
+          373,
+          1518
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 13",
+        "file": "LBCyl9LtnMtSl-layer-2.png",
+        "bbox": [
+          145,
+          362,
+          335,
+          595
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 12",
+        "file": "LBCyl9LtnMtSl-layer-3.png",
+        "bbox": [
+          125,
+          583,
+          354,
+          776
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 14",
+        "file": "LBCyl9LtnMtSl-layer-4.png",
+        "bbox": [
+          417,
+          1253,
+          618,
+          1519
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 18",
+        "file": "LBCyl9LtnMtSl-layer-5.png",
+        "bbox": [
+          211,
+          380,
+          265,
+          432
+        ],
+        "visible": true
+      }
+    ],
+    "parts": [
+      {
+        "file": "LBCyl9LtnMtSl-registered-0-body.png",
+        "url": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+        "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+        "part": {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+            "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+            "bytes": 1634900,
+            "width": 743,
+            "height": 2116,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        }
+      },
+      {
+        "file": "LBCyl9LtnMtSl-registered-1-diptube.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-MSLV-17-415/diptube-ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967.png",
+        "sha256": "ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967",
+        "part": {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 5,
+          "bounds": {
+            "left": 457.57,
+            "top": 305.06,
+            "right": 542.43,
+            "bottom": 1057.01
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-MSLV-17-415/diptube-ead20a68592b47436b2fbdcb4ca1526eac0547d9a56751e2a13319f16f498967.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 202,
+            "height": 1790
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 457.57,
+            "y": 305.06,
+            "width": 84.86,
+            "height": 751.95
+          },
+          "componentId": "CMP-LPM-MSLV-17-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ]
+        }
+      },
+      {
+        "file": "LBCyl9LtnMtSl-registered-2-diptube.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-MSLV-17-415/diptube-675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8.png",
+        "sha256": "675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8",
+        "part": {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 464.29,
+            "top": 326.49,
+            "right": 535.7,
+            "bottom": 1012.9
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -732.39
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-MSLV-17-415/diptube-675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 170,
+            "height": 1634
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 464.29,
+            "y": 326.49,
+            "width": 71.41,
+            "height": 686.41
+          },
+          "componentId": "CMP-LPM-MSLV-17-415",
+          "views": [
+            "exploded"
+          ]
+        }
+      },
+      {
+        "file": "LBCyl9LtnMtSl-registered-3-pump.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-MSLV-17-415/pump-2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64.png",
+        "sha256": "2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64",
+        "part": {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 420.18,
+            "top": 81.57999999999998,
+            "right": 579.81,
+            "bottom": 289.09999999999997
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -732.39
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-MSLV-17-415/pump-2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 380,
+            "height": 494
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 420.18,
+            "y": 81.57999999999998,
+            "width": 159.63,
+            "height": 207.52
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        }
+      },
+      {
+        "file": "LBCyl9LtnMtSl-registered-4-overcap.png",
+        "url": "/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png",
+        "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+        "part": {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 50.50999999999999,
+            "right": 589.89,
+            "bottom": 289.53
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -964.34
+          },
+          "image": {
+            "url": "/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 427,
+            "height": 569
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 50.50999999999999,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-MSLV-17-415",
+          "detached": {
+            "image": {
+              "url": "/assets/register/overcaps/cylinder-9ml-clear-overcap-alpha-v6.png",
+              "width": 427,
+              "height": 569
+            },
+            "box": {
+              "x": 410.52,
+              "y": 55,
+              "width": 179.37,
+              "height": 239.02
+            },
+            "bounds": {
+              "left": 410.52,
+              "top": 55,
+              "right": 589.89,
+              "bottom": 294.02
+            }
+          }
+        }
+      },
+      {
+        "file": "LBCyl9LtnMtSl-registered-5-collar.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-MSLV-17-415/collar-1ca0add7d54cdaedf31eff8e40fb193b72057f1902a2c127cae342f53e39bfc4.png",
+        "sha256": "1ca0add7d54cdaedf31eff8e40fb193b72057f1902a2c127cae342f53e39bfc4",
+        "part": {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 394.56,
+            "top": 280.7,
+            "right": 605.44,
+            "bottom": 444.53
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -732.39
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-LPM-MSLV-17-415/collar-1ca0add7d54cdaedf31eff8e40fb193b72057f1902a2c127cae342f53e39bfc4.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 502,
+            "height": 390
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 394.56,
+            "y": 280.7,
+            "width": 210.88,
+            "height": 163.83
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        }
+      }
+    ]
+  },
+  {
+    "sku": "GBCyl9MtlRollBlkDot",
+    "psd": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/9. Clear  (Uncapped)/2. GBCyl9MtlRollBlkDot.psd",
+    "sha256": "6a1bfffde891cc903a2f248f0a1706fec811a17e43037b30e141f40dcd1ecede",
+    "layers": [
+      {
+        "name": "Layer 7",
+        "file": "GBCyl9MtlRollBlkDot-layer-1.png",
+        "bbox": [
+          26,
+          487,
+          379,
+          806
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 10",
+        "file": "GBCyl9MtlRollBlkDot-layer-2.png",
+        "bbox": [
+          445,
+          1190,
+          682,
+          1519
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 15",
+        "file": "GBCyl9MtlRollBlkDot-layer-3.png",
+        "bbox": [
+          26,
+          487,
+          379,
+          806
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 16",
+        "file": "GBCyl9MtlRollBlkDot-layer-4.png",
+        "bbox": [
+          118,
+          606,
+          371,
+          1521
+        ],
+        "visible": true
+      }
+    ],
+    "parts": [
+      {
+        "file": "GBCyl9MtlRollBlkDot-registered-0-body.png",
+        "url": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+        "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+        "part": {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+            "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+            "bytes": 1634900,
+            "width": 743,
+            "height": 2116,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        }
+      },
+      {
+        "file": "GBCyl9MtlRollBlkDot-registered-1-roller.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-MtlRollon/roller-63eff96be1fdb5837b7fe046aad481af65a4ecb2d36b8c3c8d8c058decbdd146.png",
+        "sha256": "63eff96be1fdb5837b7fe046aad481af65a4ecb2d36b8c3c8d8c058decbdd146",
+        "part": {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 421.44,
+            "top": 178.62,
+            "right": 578.55,
+            "bottom": 401.68
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-MtlRollon/roller-63eff96be1fdb5837b7fe046aad481af65a4ecb2d36b8c3c8d8c058decbdd146.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 374,
+            "height": 531
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 421.44,
+            "y": 178.62,
+            "width": 157.11,
+            "height": 223.06
+          },
+          "componentId": "LIB-17-415-MtlRollon",
+          "views": [
+            "sidecar",
+            "capon"
+          ]
+        }
+      },
+      {
+        "file": "GBCyl9MtlRollBlkDot-registered-2-roller.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-MtlRollon/roller-984db336768a94de302f1bc6d70cd1d191bcc551ec79506da7753cb4a9858bd2.png",
+        "sha256": "984db336768a94de302f1bc6d70cd1d191bcc551ec79506da7753cb4a9858bd2",
+        "part": {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 5,
+          "bounds": {
+            "left": 429.43,
+            "top": 300.44,
+            "right": 571.84,
+            "bottom": 1056.59
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-MtlRollon/roller-984db336768a94de302f1bc6d70cd1d191bcc551ec79506da7753cb4a9858bd2.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 339,
+            "height": 1800
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 429.43,
+            "y": 300.44,
+            "width": 142.41,
+            "height": 756.15
+          },
+          "componentId": "LIB-17-415-MtlRollon",
+          "views": [
+            "sidecar",
+            "capon"
+          ]
+        }
+      },
+      {
+        "file": "GBCyl9MtlRollBlkDot-registered-3-cap.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+        "sha256": "a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8",
+        "part": {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 400.02,
+            "top": 147.53,
+            "right": 599.98,
+            "bottom": 436.13
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -402.68
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 476,
+            "height": 687
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 400.02,
+            "y": 147.53,
+            "width": 199.96,
+            "height": 288.6
+          },
+          "componentId": "CMP-ROC-BLK-17415-DOT"
+        }
+      },
+      {
+        "file": "GBCyl9MtlRollBlkDot-registered-4-roller.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-MtlRollon/roller-63eff96be1fdb5837b7fe046aad481af65a4ecb2d36b8c3c8d8c058decbdd146.png",
+        "sha256": "63eff96be1fdb5837b7fe046aad481af65a4ecb2d36b8c3c8d8c058decbdd146",
+        "part": {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 421.44,
+            "top": 178.62,
+            "right": 578.55,
+            "bottom": 401.68
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -121.17
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-MtlRollon/roller-63eff96be1fdb5837b7fe046aad481af65a4ecb2d36b8c3c8d8c058decbdd146.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 374,
+            "height": 531
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 421.44,
+            "y": 178.62,
+            "width": 157.11,
+            "height": 223.06
+          },
+          "componentId": "LIB-17-415-MtlRollon",
+          "views": [
+            "exploded"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "sku": "GBCyl9RollBlkDot",
+    "psd": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/3.  17-415 Bottles/9. Clear  (Uncapped)/12. GBCyl9RollBlkDot.psd",
+    "sha256": "4dcaf8ce4fc56d0a743c1c40dd616e5537df51ba0628e10c03f201cb1ea1c2e0",
+    "layers": [
+      {
+        "name": "Layer 7",
+        "file": "GBCyl9RollBlkDot-layer-1.png",
+        "bbox": [
+          26,
+          487,
+          379,
+          806
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 10",
+        "file": "GBCyl9RollBlkDot-layer-2.png",
+        "bbox": [
+          445,
+          1190,
+          682,
+          1519
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 17",
+        "file": "GBCyl9RollBlkDot-layer-3.png",
+        "bbox": [
+          134,
+          473,
+          320,
+          791
+        ],
+        "visible": true
+      },
+      {
+        "name": "Layer 16",
+        "file": "GBCyl9RollBlkDot-layer-4.png",
+        "bbox": [
+          118,
+          606,
+          371,
+          1521
+        ],
+        "visible": true
+      }
+    ],
+    "parts": [
+      {
+        "file": "GBCyl9RollBlkDot-registered-0-body.png",
+        "url": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+        "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+        "part": {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+            "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+            "bytes": 1634900,
+            "width": 743,
+            "height": 2116,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        }
+      },
+      {
+        "file": "GBCyl9RollBlkDot-registered-1-roller.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-PlsticRollon/roller-44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad.png",
+        "sha256": "44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad",
+        "part": {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 421.44,
+            "top": 178.62,
+            "right": 578.55,
+            "bottom": 401.68
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-PlsticRollon/roller-44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 374,
+            "height": 531
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 421.44,
+            "y": 178.62,
+            "width": 157.11,
+            "height": 223.06
+          },
+          "componentId": "LIB-17-415-PlsticRollon",
+          "views": [
+            "sidecar",
+            "capon"
+          ]
+        }
+      },
+      {
+        "file": "GBCyl9RollBlkDot-registered-2-roller.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-PlsticRollon/roller-74196cf733bd135ca8394cc956222e2cd688f40bbb8bf8e4280f8ba0af361ca5.png",
+        "sha256": "74196cf733bd135ca8394cc956222e2cd688f40bbb8bf8e4280f8ba0af361ca5",
+        "part": {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 5,
+          "bounds": {
+            "left": 429.43,
+            "top": 300.44,
+            "right": 571.84,
+            "bottom": 1056.59
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-PlsticRollon/roller-74196cf733bd135ca8394cc956222e2cd688f40bbb8bf8e4280f8ba0af361ca5.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 339,
+            "height": 1800
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 429.43,
+            "y": 300.44,
+            "width": 142.41,
+            "height": 756.15
+          },
+          "componentId": "LIB-17-415-PlsticRollon",
+          "views": [
+            "sidecar",
+            "capon"
+          ]
+        }
+      },
+      {
+        "file": "GBCyl9RollBlkDot-registered-3-cap.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+        "sha256": "a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8",
+        "part": {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 400.02,
+            "top": 147.53,
+            "right": 599.98,
+            "bottom": 436.13
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -402.68
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/CMP-ROC-BLK-17415-DOT/cap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 476,
+            "height": 687
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 400.02,
+            "y": 147.53,
+            "width": 199.96,
+            "height": 288.6
+          },
+          "componentId": "CMP-ROC-BLK-17415-DOT"
+        }
+      },
+      {
+        "file": "GBCyl9RollBlkDot-registered-4-roller.png",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-PlsticRollon/roller-44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad.png",
+        "sha256": "44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad",
+        "part": {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 421.44,
+            "top": 178.62,
+            "right": 578.55,
+            "bottom": 401.68
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -121.17
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/17-415/LIB-17-415-PlsticRollon/roller-44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 374,
+            "height": 531
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 421.44,
+            "y": 178.62,
+            "width": 157.11,
+            "height": 223.06
+          },
+          "componentId": "LIB-17-415-PlsticRollon",
+          "views": [
+            "exploded"
+          ]
+        }
+      }
+    ]
+  }
+]

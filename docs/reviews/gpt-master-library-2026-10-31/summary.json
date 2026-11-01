@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-11-01T06:06:59.559Z",
+  "readOnly": true,
+  "historicalImages": 109,
+  "historicalDesigns": 71,
+  "verifiedFiles": 109,
+  "bytes": 147265252,
+  "recordedModels": {
+    "gpt-image-2.5-sunburst": 109
+  },
+  "matchesCurrentRegister": 100,
+  "registerDesigns": 100,
+  "registerPlates": 110,
+  "registerSources": {
+    "gpt-image-2.5-sunburst": 101,
+    "native Blender (outputs/cyl5-13415-register-v7e-2026-09-29/export_cyl5.py)": 2,
+    "native Blender (outputs/tallcyl-13415-v40-2026-09-28/export_v13.py)": 2,
+    "native Blender (outputs/cyl9-17415-studio-2026-09-30/export.py + restudio.py)": 5
+  },
+  "historicalWithScaleTarget": 109,
+  "historicalWithAnchors": 109,
+  "unmatchedGlassEntries": 12,
+  "unmatchedGlassDesigns": 11,
+  "scaleDecision": "September 25 catalog curve fitted from five reference bodies, with approved family exceptions. Foot baseline 91%. Preserve shoulder/full-glass landmark distinctions; no per-cap or per-color camera refit.",
+  "coverageLimit": "Historical manifest coverage is not catalog-wide visual approval or proof of runtime selection. Some register identities and labels require reconciliation. Recent local overrides are separate.",
+  "mediaGapNote": "Offline media-gap-snapshot audited an older product/plate snapshot from a different endpoint, not bare-body masters; its gap count is excluded from this report."
+}

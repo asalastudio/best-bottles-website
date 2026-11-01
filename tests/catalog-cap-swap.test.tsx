@@ -7,6 +7,8 @@ import { capSwapFraming, capSwapPlateBox, capSwapPlateUrl } from "@/lib/products
 import { getProductHero, type CatalogHero } from "@/lib/products/catalog-heroes";
 
 const plates = vi.hoisted(() => ({ current: {} as Record<string, { image: string; imageCapOff: string | null; thumb: string; thumbCapOff: string | null }> }));
+// Keep coverage of the legacy photographic fallback for SKUs outside the approved layered release.
+vi.mock("@/lib/products/cylinder-master", () => ({ cylinderMasterSku: () => null, cylinderMasterSource: () => null, masterProductHref: (href: string) => href }));
 vi.mock("convex/react", () => ({ useQuery: () => ({ plates: plates.current, conflicts: [] }) }));
 vi.mock("next/image", () => ({ default: (props: ImgHTMLAttributes<HTMLImageElement> & { fill?: boolean; unoptimized?: boolean }) => {
     const p = { ...props } as Record<string, unknown>; delete p.fill; delete p.unoptimized; return createElement("img", p);

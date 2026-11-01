@@ -1,0 +1,108 @@
+{
+  "records": [
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollPnkDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "screenshot": "builder-GBCyl9MtlRollPnkDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 824.1007080078125,
+            "y": 425.3177795410156,
+            "width": 66.47320556640625,
+            "height": 94.40206909179688,
+            "top": 425.3177795410156,
+            "right": 890.5739135742188,
+            "bottom": 519.7198486328125,
+            "left": 824.1007080078125
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-clear.56f95ad35e51.png&w=1200&q=75",
+          "rect": {
+            "x": 810.4046630859375,
+            "y": 457.8255920410156,
+            "width": 92.7388916015625,
+            "height": 264.1123962402344,
+            "top": 457.8255920410156,
+            "right": 903.1435546875,
+            "bottom": 721.93798828125,
+            "left": 810.4046630859375
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-pink-dotted.ca8c4d56f807.svg",
+          "rect": {
+            "x": 824.982421875,
+            "y": 428.5505676269531,
+            "width": 64.08258056640625,
+            "height": 89.64309692382812,
+            "top": 428.5505676269531,
+            "right": 889.0650024414062,
+            "bottom": 518.1936645507812,
+            "left": 824.982421875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShnSl&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "screenshot": "builder-GBCylBlu9RollShnSl.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 824.1007080078125,
+            "y": 425.3177795410156,
+            "width": 66.47320556640625,
+            "height": 94.40206909179688,
+            "top": 425.3177795410156,
+            "right": 890.5739135742188,
+            "bottom": 519.7198486328125,
+            "left": 824.1007080078125
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder9-masters-2026-11-01%2Fbody-cobalt.9499ee157608.png&w=1200&q=75",
+          "rect": {
+            "x": 810.4046630859375,
+            "y": 457.8255920410156,
+            "width": 92.7388916015625,
+            "height": 264.1123962402344,
+            "top": 457.8255920410156,
+            "right": 903.1435546875,
+            "bottom": 721.93798828125,
+            "left": 810.4046630859375
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/local-kits/cylinder-cap-rims-2026-11-01/cap9-polished-silver.12802f8023bc.svg",
+          "rect": {
+            "x": 824.982421875,
+            "y": 428.5505676269531,
+            "width": 64.08258056640625,
+            "height": 89.64309692382812,
+            "top": 428.5505676269531,
+            "right": 889.0650024414062,
+            "bottom": 518.1936645507812,
+            "left": 824.982421875
+          }
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "errors": []
+}

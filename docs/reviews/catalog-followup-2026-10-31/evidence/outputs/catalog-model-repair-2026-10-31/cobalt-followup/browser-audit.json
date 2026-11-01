@@ -1,0 +1,1766 @@
+[
+  {
+    "slug": "atomizer-5ml",
+    "sku": "GBAtom5Blu",
+    "skus": [
+      "GBAtom5Blu"
+    ],
+    "views": [],
+    "errors": [
+      "Waiting for selector `[data-testid=\"pdp-stage\"]` failed"
+    ],
+    "legacy": {
+      "title": "5 ml Blue Atomizer",
+      "images": [
+        {
+          "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+          "loaded": true,
+          "alt": "Best Bottles"
+        },
+        {
+          "src": "http://localhost:3010/_next/image?url=%2Fimages%2Fcatalog%2Fnext-four-approved-2026-09-24%2FGBAtom5Blu.b415f9e2335c.webp&w=1200&q=75",
+          "loaded": true,
+          "alt": "Atomizer 5 ml — Fine Mist Spray"
+        }
+      ],
+      "notFound": false,
+      "url": "http://localhost:3010/products/atomizer-5ml?sku=GBAtom5Blu",
+      "filename": "atomizer-5ml-legacy.png"
+    },
+    "auditNote": "Uses legacy product gallery, not the three-view stage"
+  },
+  {
+    "slug": "atomizer-10ml",
+    "sku": "GBAtom10Blu",
+    "skus": [
+      "GBAtom10Blu"
+    ],
+    "views": [],
+    "errors": [
+      "Waiting for selector `[data-testid=\"pdp-stage\"]` failed"
+    ],
+    "legacy": {
+      "title": "10 ml Blue Atomizer",
+      "images": [
+        {
+          "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+          "loaded": true,
+          "alt": "Best Bottles"
+        },
+        {
+          "src": "http://localhost:3010/_next/image?url=%2Fimages%2Fcatalog%2Fnext-four-approved-2026-09-24%2FGBAtom10Blu.52f14664d8de.webp&w=1200&q=75",
+          "loaded": true,
+          "alt": "Atomizer 10 ml — Fine Mist Spray"
+        }
+      ],
+      "notFound": false,
+      "url": "http://localhost:3010/products/atomizer-10ml?sku=GBAtom10Blu",
+      "filename": "atomizer-10ml-legacy.png"
+    },
+    "auditNote": "Uses legacy product gallery, not the three-view stage"
+  },
+  {
+    "slug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "sku": "GBBstnBlu1ozMtlRollonMattSl",
+    "skus": [
+      "GBBstnBlu1ozMtlRollonMattSl",
+      "GBBstnBlu1ozMtlRollonShnSl",
+      "GBBstnBlu1ozMtlRollonMattBlk",
+      "GBBstnBlu1ozMtlRollonMattGl",
+      "GBBstnBlu1ozRollonMattBlk",
+      "GBBstnBlu1ozRollonMattSl",
+      "GBBstnBlu1ozRollonShnSl",
+      "GBBstnBlu1ozRollonMattGl",
+      "GBBstnBlu1ozRollonShnBlk",
+      "GBBstnBlu1ozRollonGl",
+      "GBBstnBlu1ozMtlRollonGl"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "boston-round-30ml-cobalt-blue-20-400-rollon-sidecar.png",
+        "view": "sidecar",
+        "title": "30 ML (1 OZ) COBALT BLUE BOSTON ROUND ROLL-ON BOTTLE\n-\nMetal Ball, Matte Silver Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FLIB-20-400-MtlRollon%2Froller-655ee3b81fb3254a98e868d6a62299eb34036994444c2b822c1bdea1bf8440c6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-ROC-MSLV-20400-T%2Fcap-2c113f753401da07dba95940d10f2096ae23de2a725a402a56265f1ffd252d8f.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=roll-on-bottles&sku=GBBstnBlu1ozMtlRollonMattSl&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "boston-round-30ml-cobalt-blue-20-400-rollon-capon.png",
+        "view": "capon",
+        "title": "30 ML (1 OZ) COBALT BLUE BOSTON ROUND ROLL-ON BOTTLE\n-\nMetal Ball, Matte Silver Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FLIB-20-400-MtlRollon%2Froller-655ee3b81fb3254a98e868d6a62299eb34036994444c2b822c1bdea1bf8440c6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-ROC-MSLV-20400-T%2Fcap-2c113f753401da07dba95940d10f2096ae23de2a725a402a56265f1ffd252d8f.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=roll-on-bottles&sku=GBBstnBlu1ozMtlRollonMattSl&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "boston-round-30ml-cobalt-blue-20-400-rollon-exploded.png",
+        "view": "capon",
+        "title": "30 ML (1 OZ) COBALT BLUE BOSTON ROUND ROLL-ON BOTTLE\n-\nMetal Ball, Matte Silver Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FLIB-20-400-MtlRollon%2Froller-655ee3b81fb3254a98e868d6a62299eb34036994444c2b822c1bdea1bf8440c6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-ROC-MSLV-20400-T%2Fcap-2c113f753401da07dba95940d10f2096ae23de2a725a402a56265f1ffd252d8f.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=roll-on-bottles&sku=GBBstnBlu1ozMtlRollonMattSl&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "sku": "GBBstnBlu2ozMtlRollonMattBlk",
+    "skus": [
+      "GBBstnBlu2ozMtlRollonMattBlk",
+      "GBBstnBlu2ozMtlRollonMattGl",
+      "GBBstnBlu2ozMtlRollonMattSl",
+      "GBBstnBlu2ozMtlRollonShnSl",
+      "GBBstnBlu2ozRollonMattGl",
+      "GBBstnBlu2ozRollonMattBlk",
+      "GBBstnBlu2ozRollonMattSl",
+      "GBBstnBlu2ozRollonShnSl",
+      "GBBstnBlu2ozRollonShnBlk",
+      "GBBstnBlu2ozRollonGl",
+      "GBBstnBlu2ozMtlRollonGl",
+      "GBBstnBlu2ozMtlRollonShnBlk"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "boston-round-60ml-cobalt-blue-20-400-rollon-sidecar.png",
+        "view": "sidecar",
+        "title": "60 ML (2 OZ) COBALT BLUE BOSTON ROUND ROLL-ON BOTTLE\n-\nMetal Ball, Matte Black Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FLIB-20-400-MtlRollon%2Froller-655ee3b81fb3254a98e868d6a62299eb34036994444c2b822c1bdea1bf8440c6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-ROC-MBLK-20400-T%2Fcap-59c27a9edea1d7284b1e1b485f30e719fb0313982203dd523a32f8fde66765df.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=roll-on-bottles&sku=GBBstnBlu2ozMtlRollonMattBlk&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "boston-round-60ml-cobalt-blue-20-400-rollon-capon.png",
+        "view": "capon",
+        "title": "60 ML (2 OZ) COBALT BLUE BOSTON ROUND ROLL-ON BOTTLE\n-\nMetal Ball, Matte Black Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FLIB-20-400-MtlRollon%2Froller-655ee3b81fb3254a98e868d6a62299eb34036994444c2b822c1bdea1bf8440c6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-ROC-MBLK-20400-T%2Fcap-59c27a9edea1d7284b1e1b485f30e719fb0313982203dd523a32f8fde66765df.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=roll-on-bottles&sku=GBBstnBlu2ozMtlRollonMattBlk&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "boston-round-60ml-cobalt-blue-20-400-rollon-exploded.png",
+        "view": "capon",
+        "title": "60 ML (2 OZ) COBALT BLUE BOSTON ROUND ROLL-ON BOTTLE\n-\nMetal Ball, Matte Black Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FLIB-20-400-MtlRollon%2Froller-655ee3b81fb3254a98e868d6a62299eb34036994444c2b822c1bdea1bf8440c6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-ROC-MBLK-20400-T%2Fcap-59c27a9edea1d7284b1e1b485f30e719fb0313982203dd523a32f8fde66765df.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=roll-on-bottles&sku=GBBstnBlu2ozMtlRollonMattBlk&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+    "sku": "GBBstnBlu15WhtDrpr",
+    "skus": [
+      "GBBstnBlu15WhtDrpr",
+      "GBBstnBlu15WhtDrprSlTrim",
+      "GBBstnBlu15WhtDrprGlTrim",
+      "GBBstnBlu15mlBlkDropperSlTrim",
+      "GBBstnBlu15BlkDrprGlTrim",
+      "GBBstnBlu15BlkDrpr"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "boston-round-15ml-cobalt-blue-18-400-dropper-sidecar.png",
+        "view": "sidecar",
+        "title": "15 ML (0.5 OZ) COBALT BLUE BOSTON ROUND DROPPER BOTTLE\n-\nWhite Dropper",
+        "body": [],
+        "parts": [
+          {
+            "slot": "body",
+            "loaded": false
+          },
+          {
+            "slot": "fitment",
+            "loaded": false
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=dropper-bottles&sku=GBBstnBlu15WhtDrpr&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "boston-round-15ml-cobalt-blue-18-400-dropper-capon.png",
+        "view": "capon",
+        "title": "15 ML (0.5 OZ) COBALT BLUE BOSTON ROUND DROPPER BOTTLE\n-\nWhite Dropper",
+        "body": [],
+        "parts": [
+          {
+            "slot": "body",
+            "loaded": false
+          },
+          {
+            "slot": "fitment",
+            "loaded": false
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=dropper-bottles&sku=GBBstnBlu15WhtDrpr&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "boston-round-15ml-cobalt-blue-18-400-dropper-exploded.png",
+        "view": "capon",
+        "title": "15 ML (0.5 OZ) COBALT BLUE BOSTON ROUND DROPPER BOTTLE\n-\nWhite Dropper",
+        "body": [],
+        "parts": [
+          {
+            "slot": "body",
+            "loaded": false
+          },
+          {
+            "slot": "fitment",
+            "loaded": false
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=dropper-bottles&sku=GBBstnBlu15WhtDrpr&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+    "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+    "skus": [
+      "GBBstnBlu1ozBlkDropperShnGlTrim",
+      "GBBstnBlu1ozWhtDropper",
+      "GBBstnBlu1ozWhtDropperShnGlTrim",
+      "GBBstnBlu1ozWhtDropperShnSlTrim",
+      "GBBstnBlu1ozBlkDropper"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "boston-round-30ml-cobalt-blue-20-400-dropper-sidecar.png",
+        "view": "sidecar",
+        "title": "30 ML (1 OZ) COBALT BLUE BOSTON ROUND DROPPER BOTTLE\n-\nBlack Dropper",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "pipette",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-76MM-01%2Fpipette-87369e7f06247569b010f80a7e1e8cd0cb50f0f9ce01e32ddceaf7beccce7387.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "fitment",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-76MM-01%2Ffitment-e636a33d7fa37d0530db4959d91432ab193b0d5601fe272fd082d97a745ae6ee.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=dropper-bottles&sku=GBBstnBlu1ozBlkDropper&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "boston-round-30ml-cobalt-blue-20-400-dropper-capon.png",
+        "view": "capon",
+        "title": "30 ML (1 OZ) COBALT BLUE BOSTON ROUND DROPPER BOTTLE\n-\nBlack Dropper",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "pipette",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-76MM-01%2Fpipette-87369e7f06247569b010f80a7e1e8cd0cb50f0f9ce01e32ddceaf7beccce7387.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "fitment",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-76MM-01%2Ffitment-e636a33d7fa37d0530db4959d91432ab193b0d5601fe272fd082d97a745ae6ee.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=dropper-bottles&sku=GBBstnBlu1ozBlkDropper&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "boston-round-30ml-cobalt-blue-20-400-dropper-exploded.png",
+        "view": "capon",
+        "title": "30 ML (1 OZ) COBALT BLUE BOSTON ROUND DROPPER BOTTLE\n-\nBlack Dropper",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "pipette",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-76MM-01%2Fpipette-87369e7f06247569b010f80a7e1e8cd0cb50f0f9ce01e32ddceaf7beccce7387.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "fitment",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-76MM-01%2Ffitment-e636a33d7fa37d0530db4959d91432ab193b0d5601fe272fd082d97a745ae6ee.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=dropper-bottles&sku=GBBstnBlu1ozBlkDropper&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+    "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+    "skus": [
+      "GBBstnBlu2ozBlkDropperShnGlTrim",
+      "GBBstnBlu2ozWhtDropper",
+      "GBBstnBlu2ozWhtDropperShnGlTrim",
+      "GBBstnBlu2ozWhtDropperShnSlTrim",
+      "GBBstnBlu2ozBlkDropper"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "boston-round-60ml-cobalt-blue-20-400-dropper-sidecar.png",
+        "view": "sidecar",
+        "title": "60 ML (2 OZ) COBALT BLUE BOSTON ROUND DROPPER BOTTLE\n-\nBlack Dropper",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "pipette",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-90%2Fpipette-c2f919bb2f271e34d839e782ca900fe48dbe7a1c15561e426b5919dad038fa10.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "fitment",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-90%2Ffitment-87f311ae81a645ec627583f725d921861609960c3fc47af78212e5135f20bc6b.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=dropper-bottles&sku=GBBstnBlu2ozBlkDropper&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "boston-round-60ml-cobalt-blue-20-400-dropper-capon.png",
+        "view": "capon",
+        "title": "60 ML (2 OZ) COBALT BLUE BOSTON ROUND DROPPER BOTTLE\n-\nBlack Dropper",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "pipette",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-90%2Fpipette-c2f919bb2f271e34d839e782ca900fe48dbe7a1c15561e426b5919dad038fa10.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "fitment",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-90%2Ffitment-87f311ae81a645ec627583f725d921861609960c3fc47af78212e5135f20bc6b.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=dropper-bottles&sku=GBBstnBlu2ozBlkDropper&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "boston-round-60ml-cobalt-blue-20-400-dropper-exploded.png",
+        "view": "capon",
+        "title": "60 ML (2 OZ) COBALT BLUE BOSTON ROUND DROPPER BOTTLE\n-\nBlack Dropper",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "pipette",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-90%2Fpipette-c2f919bb2f271e34d839e782ca900fe48dbe7a1c15561e426b5919dad038fa10.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "fitment",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-DRP-BLK-20400-90%2Ffitment-87f311ae81a645ec627583f725d921861609960c3fc47af78212e5135f20bc6b.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&shop=dropper-bottles&sku=GBBstnBlu2ozBlkDropper&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "boston-round-15ml-cobalt-blue-18-400",
+    "sku": "GBBstnBlu15BlkCapSht",
+    "skus": [
+      "GBBstnBlu15BlkCapSht"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "boston-round-15ml-cobalt-blue-18-400-sidecar.png",
+        "view": "sidecar",
+        "title": "15 ML (0.5 OZ) COBALT BLUE BOSTON ROUND POUR BOTTLE\n-\nBlack Cap",
+        "body": [],
+        "parts": [],
+        "builder": "/matrix?family=Boston+Round&sku=GBBstnBlu15BlkCapSht&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "boston-round-15ml-cobalt-blue-18-400-capon.png",
+        "view": "sidecar",
+        "title": "15 ML (0.5 OZ) COBALT BLUE BOSTON ROUND POUR BOTTLE\n-\nBlack Cap",
+        "body": [],
+        "parts": [],
+        "builder": "/matrix?family=Boston+Round&sku=GBBstnBlu15BlkCapSht&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "boston-round-15ml-cobalt-blue-18-400-exploded.png",
+        "view": "sidecar",
+        "title": "15 ML (0.5 OZ) COBALT BLUE BOSTON ROUND POUR BOTTLE\n-\nBlack Cap",
+        "body": [],
+        "parts": [],
+        "builder": "/matrix?family=Boston+Round&sku=GBBstnBlu15BlkCapSht&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "boston-round-30ml-cobalt-blue-20-400",
+    "sku": "GBBstnBlu1ozBlkCapSht",
+    "skus": [
+      "GBBstnBlu1ozBlkCapSht"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "boston-round-30ml-cobalt-blue-20-400-sidecar.png",
+        "view": "sidecar",
+        "title": "30 ML (1 OZ) COBALT BLUE BOSTON ROUND POUR BOTTLE\n-\nBlack Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-CAP-BLK-20-400-1OZ%2Fcap-021ceabd0255303507a4fc4b7594aa0d2ffa7c0c1b79d8469b07b7cd03e97804.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&sku=GBBstnBlu1ozBlkCapSht&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "boston-round-30ml-cobalt-blue-20-400-capon.png",
+        "view": "capon",
+        "title": "30 ML (1 OZ) COBALT BLUE BOSTON ROUND POUR BOTTLE\n-\nBlack Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-CAP-BLK-20-400-1OZ%2Fcap-021ceabd0255303507a4fc4b7594aa0d2ffa7c0c1b79d8469b07b7cd03e97804.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&sku=GBBstnBlu1ozBlkCapSht&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "boston-round-30ml-cobalt-blue-20-400-exploded.png",
+        "view": "exploded",
+        "title": "30 ML (1 OZ) COBALT BLUE BOSTON ROUND POUR BOTTLE\n-\nBlack Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-30ml-20-400%2Fcobalt-blue%2F45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-CAP-BLK-20-400-1OZ%2Fcap-021ceabd0255303507a4fc4b7594aa0d2ffa7c0c1b79d8469b07b7cd03e97804.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&sku=GBBstnBlu1ozBlkCapSht&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "boston-round-60ml-cobalt-blue-20-400",
+    "sku": "GBBstnBlu2ozBlkCapSht",
+    "skus": [
+      "GBBstnBlu2ozBlkCapSht"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "boston-round-60ml-cobalt-blue-20-400-sidecar.png",
+        "view": "sidecar",
+        "title": "60 ML (2 OZ) COBALT BLUE BOSTON ROUND POUR BOTTLE\n-\nBlack Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-CAP-BLK-20-400-2OZ%2Fcap-021ceabd0255303507a4fc4b7594aa0d2ffa7c0c1b79d8469b07b7cd03e97804.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&sku=GBBstnBlu2ozBlkCapSht&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "boston-round-60ml-cobalt-blue-20-400-capon.png",
+        "view": "capon",
+        "title": "60 ML (2 OZ) COBALT BLUE BOSTON ROUND POUR BOTTLE\n-\nBlack Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-CAP-BLK-20-400-2OZ%2Fcap-021ceabd0255303507a4fc4b7594aa0d2ffa7c0c1b79d8469b07b7cd03e97804.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&sku=GBBstnBlu2ozBlkCapSht&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "boston-round-60ml-cobalt-blue-20-400-exploded.png",
+        "view": "exploded",
+        "title": "60 ML (2 OZ) COBALT BLUE BOSTON ROUND POUR BOTTLE\n-\nBlack Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fboston-round-60ml-20-400%2Fcobalt-blue%2F9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F20-400%2FCMP-CAP-BLK-20-400-2OZ%2Fcap-021ceabd0255303507a4fc4b7594aa0d2ffa7c0c1b79d8469b07b7cd03e97804.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Boston+Round&sku=GBBstnBlu2ozBlkCapSht&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "vial-4ml-blue-13-425",
+    "sku": "GBVBlu1DrmWhtCapSht",
+    "skus": [
+      "GBVBlu1DrmWhtCapSht",
+      "GBVBlu1DrmBlackCapSht"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "vial-4ml-blue-13-425-sidecar.png",
+        "view": "sidecar",
+        "title": "1 DRAM (4 ML) COBALT BLUE VIAL\n-\nWhite Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Vial&shop=sample-vials&sku=GBVBlu1DrmWhtCapSht&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "vial-4ml-blue-13-425-capon.png",
+        "view": "capon",
+        "title": "1 DRAM (4 ML) COBALT BLUE VIAL\n-\nWhite Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Vial&shop=sample-vials&sku=GBVBlu1DrmWhtCapSht&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "vial-4ml-blue-13-425-exploded.png",
+        "view": "exploded",
+        "title": "1 DRAM (4 ML) COBALT BLUE VIAL\n-\nWhite Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2Fd1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fvial-4ml-measured-2026-10-31%2Fparts%2F71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Vial&shop=sample-vials&sku=GBVBlu1DrmWhtCapSht&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "vial-4ml-blue-13-425-dropper",
+    "sku": "GBVBlu1DrmBlkDropper",
+    "skus": [
+      "GBVBlu1DrmBlkDropper"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "vial-4ml-blue-13-425-dropper-sidecar.png",
+        "view": "sidecar",
+        "title": "1 DRAM (4 ML) COBALT BLUE VIAL WITH DROPPER\n-\nClear Dropper",
+        "body": [],
+        "parts": [
+          {
+            "slot": "body",
+            "loaded": false
+          },
+          {
+            "slot": "fitment",
+            "loaded": false
+          }
+        ],
+        "builder": "/matrix?family=Vial&shop=dropper-bottles&sku=GBVBlu1DrmBlkDropper&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "vial-4ml-blue-13-425-dropper-capon.png",
+        "view": "capon",
+        "title": "1 DRAM (4 ML) COBALT BLUE VIAL WITH DROPPER\n-\nClear Dropper",
+        "body": [],
+        "parts": [
+          {
+            "slot": "body",
+            "loaded": false
+          },
+          {
+            "slot": "fitment",
+            "loaded": false
+          }
+        ],
+        "builder": "/matrix?family=Vial&shop=dropper-bottles&sku=GBVBlu1DrmBlkDropper&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "vial-4ml-blue-13-425-dropper-exploded.png",
+        "view": "capon",
+        "title": "1 DRAM (4 ML) COBALT BLUE VIAL WITH DROPPER\n-\nClear Dropper",
+        "body": [],
+        "parts": [
+          {
+            "slot": "body",
+            "loaded": false
+          },
+          {
+            "slot": "fitment",
+            "loaded": false
+          }
+        ],
+        "builder": "/matrix?family=Vial&shop=dropper-bottles&sku=GBVBlu1DrmBlkDropper&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "vial-3ml-blue-13-425",
+    "sku": "GBVBlu1o9BlackCapSht",
+    "skus": [
+      "GBVBlu1o9BlackCapSht"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "vial-3ml-blue-13-425-sidecar.png",
+        "view": "sidecar",
+        "title": "5/8 DRAM (3 ML) COBALT BLUE VIAL\n-\nBlack Cap",
+        "body": [],
+        "parts": [],
+        "builder": "/matrix?family=Vial&shop=sample-vials&sku=GBVBlu1o9BlackCapSht&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "vial-3ml-blue-13-425-capon.png",
+        "view": "sidecar",
+        "title": "5/8 DRAM (3 ML) COBALT BLUE VIAL\n-\nBlack Cap",
+        "body": [],
+        "parts": [],
+        "builder": "/matrix?family=Vial&shop=sample-vials&sku=GBVBlu1o9BlackCapSht&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "vial-3ml-blue-13-425-exploded.png",
+        "view": "sidecar",
+        "title": "5/8 DRAM (3 ML) COBALT BLUE VIAL\n-\nBlack Cap",
+        "body": [],
+        "parts": [],
+        "builder": "/matrix?family=Vial&shop=sample-vials&sku=GBVBlu1o9BlackCapSht&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "cylinder-5ml-cobalt-blue-13-415",
+    "sku": "GBCylBlu5Sl",
+    "skus": [
+      "GBCylBlu5Sl",
+      "GBCylBlu5WhtSht",
+      "GBCylBlu5Gl",
+      "GBCylBlu5BlkSht",
+      "GBCylBlu5BlkShSht",
+      "GBCylBlu5CuSht",
+      "GBCylBlu5GlMattSht",
+      "GBCylBlu5SlMattSht",
+      "GBCylBlu5GlSht",
+      "GBCylBlu5SlSht"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "cylinder-5ml-cobalt-blue-13-415-sidecar.png",
+        "view": "sidecar",
+        "title": "5 ML COBALT BLUE CYLINDER POUR BOTTLE\n-\nRegular Shiny Silver Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-01%2Fcap-be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&sku=GBCylBlu5Sl&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "cylinder-5ml-cobalt-blue-13-415-capon.png",
+        "view": "capon",
+        "title": "5 ML COBALT BLUE CYLINDER POUR BOTTLE\n-\nRegular Shiny Silver Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-01%2Fcap-be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&sku=GBCylBlu5Sl&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "cylinder-5ml-cobalt-blue-13-415-exploded.png",
+        "view": "exploded",
+        "title": "5 ML COBALT BLUE CYLINDER POUR BOTTLE\n-\nRegular Shiny Silver Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-01%2Fcap-be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&sku=GBCylBlu5Sl&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+    "sku": "GBCylBlu9SpryBlk",
+    "skus": [
+      "GBCylBlu9SpryBlk",
+      "GBCylBlu9SpryTur",
+      "GBCylBlu9SpryMattSl",
+      "GBCylBlu9SpryGl",
+      "GBCylBlu9SpryShSl",
+      "GBCylBlu9SpryRd"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "cylinder-9ml-cobalt-blue-17-415-finemist-sidecar.png",
+        "view": "sidecar",
+        "title": "9 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nBlack Sprayer",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "diptube",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-SPR-BLK-17-415-01%2Fdiptube-f1c47da17a12d3c01ccfb51863615782102f1a454b36a231cc1f59895dd9d938.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "sprayer",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-SPR-BLK-17-415-01%2Fsprayer-b8b8824a9c0e1597a56bdb2712a7e82190b8b0dd0d6d45da467e51873a583dd3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "overcap",
+            "src": "http://localhost:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "collar",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-SPR-BLK-17-415-01%2Fcollar-8c6f6359674ce298481c1d74905220267c48a2af90b4501ce59e8cf0917f2ca4.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu9SpryBlk&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "cylinder-9ml-cobalt-blue-17-415-finemist-capon.png",
+        "view": "capon",
+        "title": "9 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nBlack Sprayer",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "diptube",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-SPR-BLK-17-415-01%2Fdiptube-f1c47da17a12d3c01ccfb51863615782102f1a454b36a231cc1f59895dd9d938.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "sprayer",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-SPR-BLK-17-415-01%2Fsprayer-b8b8824a9c0e1597a56bdb2712a7e82190b8b0dd0d6d45da467e51873a583dd3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "overcap",
+            "src": "http://localhost:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "collar",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-SPR-BLK-17-415-01%2Fcollar-8c6f6359674ce298481c1d74905220267c48a2af90b4501ce59e8cf0917f2ca4.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu9SpryBlk&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "cylinder-9ml-cobalt-blue-17-415-finemist-exploded.png",
+        "view": "exploded",
+        "title": "9 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nBlack Sprayer",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "diptube",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-SPR-BLK-17-415-01%2Fdiptube-db8dd86ede5d93ed72cc79e2de829fc4e9fee530e726dae9b6cfa32eaaedd13f.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "sprayer",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-SPR-BLK-17-415-01%2Fsprayer-b8b8824a9c0e1597a56bdb2712a7e82190b8b0dd0d6d45da467e51873a583dd3.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "overcap",
+            "src": "http://localhost:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "collar",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-SPR-BLK-17-415-01%2Fcollar-8c6f6359674ce298481c1d74905220267c48a2af90b4501ce59e8cf0917f2ca4.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu9SpryBlk&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "sku": "GBCylBlu5MtlRollBlkSh",
+    "skus": [
+      "GBCylBlu5MtlRollBlkSh",
+      "GBCylBlu5MtlRollCuMatt",
+      "GBCylBlu5MtlRollGlMatt",
+      "GBCylBlu5MtlRollGlSh",
+      "GBCylBlu5MtlRollPinkDot",
+      "GBCylBlu5MtlRollSlDot",
+      "GBCylBlu5MtlRollSlMatt",
+      "GBCylBlu5MtlRollSlSh",
+      "GBCylBlu5RollBlkDot",
+      "GBCylBlu5RollGlSh",
+      "GBCylBlu5RollSlSh",
+      "GBCylBlu5RollBlkSh",
+      "GBCylBlu5RollGlMatt",
+      "GBCylBlu5RollPinkDot",
+      "GBCylBlu5RollSlDot",
+      "GBCylBlu5RollCuMatt",
+      "GBCylBlu5RollSlMatt",
+      "GBCylBlu5MtlRollBlkDot"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "cylinder-5ml-cobalt-blue-13-415-rollon-sidecar.png",
+        "view": "sidecar",
+        "title": "5 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Black Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FLIB-13-415-MtlRollon%2Froller-21b3ac34990036064878e735d7eb702a6f37a23ebcd09bebdf93edac8cd15089.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SBLK-13415%2Fcap-a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkSh&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "cylinder-5ml-cobalt-blue-13-415-rollon-capon.png",
+        "view": "capon",
+        "title": "5 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Black Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FLIB-13-415-MtlRollon%2Froller-21b3ac34990036064878e735d7eb702a6f37a23ebcd09bebdf93edac8cd15089.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SBLK-13415%2Fcap-a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkSh&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "cylinder-5ml-cobalt-blue-13-415-rollon-exploded.png",
+        "view": "exploded",
+        "title": "5 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Black Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SBLK-13415%2Fcap-a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FLIB-13-415-MtlRollon%2Froller-21b3ac34990036064878e735d7eb702a6f37a23ebcd09bebdf93edac8cd15089.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkSh&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+    "sku": "GBCylBlu5SprySlSh",
+    "skus": [
+      "GBCylBlu5SprySlSh",
+      "GBCylBlu5SpryBlkSh",
+      "GBCylBlu5SpryGlSh",
+      "GBCylBlu5SpryGlMatt",
+      "GBCylBlu5SpryBluMatt",
+      "GBCylBlu5SpryCuMatt",
+      "GBCylBlu5SprySlMatt"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "cylinder-5ml-cobalt-blue-13-415-finemist-sidecar.png",
+        "view": "sidecar",
+        "title": "5 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nShiny Silver Sprayer",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "diptube",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fmechanism-5-measured-v6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "sprayer",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-5c846a2db23faf515260b24a688420cd62e9534ead4500288d27d96036104f0c.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "overcap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fovercap-813387e8c39c1e5a0f5758907c4eee045ac280af6f565b614626225328b0a235.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "cylinder-5ml-cobalt-blue-13-415-finemist-capon.png",
+        "view": "capon",
+        "title": "5 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nShiny Silver Sprayer",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "diptube",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fmechanism-5-measured-v6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "sprayer",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-5c846a2db23faf515260b24a688420cd62e9534ead4500288d27d96036104f0c.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "overcap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fovercap-813387e8c39c1e5a0f5758907c4eee045ac280af6f565b614626225328b0a235.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "cylinder-5ml-cobalt-blue-13-415-finemist-exploded.png",
+        "view": "exploded",
+        "title": "5 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nShiny Silver Sprayer",
+        "body": [
+          "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fglass-5-cobalt-measured-v19.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "diptube",
+            "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Fcylinder5-profiles-2026-10-31%2Fmechanism-5-measured-v6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "sprayer",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-5c846a2db23faf515260b24a688420cd62e9534ead4500288d27d96036104f0c.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "overcap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fovercap-813387e8c39c1e5a0f5758907c4eee045ac280af6f565b614626225328b0a235.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+    "sku": "LBCylBlu9LtnMattSl",
+    "skus": [
+      "LBCylBlu9LtnMattSl",
+      "LBCylBlu9LtnGl",
+      "LBCylBlu9LtnBlk"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "cylinder-9ml-cobalt-blue-17-415-lotionpump-sidecar.png",
+        "view": "sidecar",
+        "title": "9 ML COBALT BLUE CYLINDER TREATMENT PUMP BOTTLE\n-\nMatte Silver Pump",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "diptube",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-LPM-MSLV-17-415%2Fdiptube-545a5667796d78480eacd156c1c342d28e263f68c15101210d4afd14554cf94c.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "pump",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-LPM-MSLV-17-415%2Fpump-2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "overcap",
+            "src": "http://localhost:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "collar",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-LPM-MSLV-17-415%2Fcollar-1ca0add7d54cdaedf31eff8e40fb193b72057f1902a2c127cae342f53e39bfc4.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnMattSl&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "cylinder-9ml-cobalt-blue-17-415-lotionpump-capon.png",
+        "view": "capon",
+        "title": "9 ML COBALT BLUE CYLINDER TREATMENT PUMP BOTTLE\n-\nMatte Silver Pump",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "diptube",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-LPM-MSLV-17-415%2Fdiptube-545a5667796d78480eacd156c1c342d28e263f68c15101210d4afd14554cf94c.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "pump",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-LPM-MSLV-17-415%2Fpump-2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "overcap",
+            "src": "http://localhost:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "collar",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-LPM-MSLV-17-415%2Fcollar-1ca0add7d54cdaedf31eff8e40fb193b72057f1902a2c127cae342f53e39bfc4.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnMattSl&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "cylinder-9ml-cobalt-blue-17-415-lotionpump-exploded.png",
+        "view": "exploded",
+        "title": "9 ML COBALT BLUE CYLINDER TREATMENT PUMP BOTTLE\n-\nMatte Silver Pump",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "diptube",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-LPM-MSLV-17-415%2Fdiptube-675be4723cd5b9f1de7516721880a824090178a4cd132035b5c84c9f3fee81a8.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "pump",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-LPM-MSLV-17-415%2Fpump-2b22b52abaa1296f29f6781d9186be75277b36ed6e15a71045bf08d666a47e64.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "overcap",
+            "src": "http://localhost:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "collar",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-LPM-MSLV-17-415%2Fcollar-1ca0add7d54cdaedf31eff8e40fb193b72057f1902a2c127cae342f53e39bfc4.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnMattSl&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "sku": "GBCylBlu9RollBlkDot",
+    "skus": [
+      "GBCylBlu9RollBlkDot",
+      "GBCylBlu9MtlRollMattSl",
+      "GBCylBlu9MtlRollSlDot",
+      "GBCylBlu9MtlRollPnkDot",
+      "GBCylBlu9MtlRollMattGl",
+      "GBCylBlu9MtlRollBlkDot",
+      "GBCylBlu9MtlRollShnGl",
+      "GBCylBlu9MtlRollShnSl",
+      "GBCylBlu9MtlRollMattCu",
+      "GBCylBlu9MtlRollShBlk",
+      "GBCylBlu9MtlRollWht",
+      "GBCylBlu9RollWht",
+      "GBCylBlu9RollShBlk",
+      "GBCylBlu9RollShnGl",
+      "GBCylBlu9RollShnSl",
+      "GBCylBlu9RollPnkDot",
+      "GBCylBlu9RollMattSl",
+      "GBCylBlu9RollSlDot",
+      "GBCylBlu9RollMattGl",
+      "GBCylBlu9RollMattCu"
+    ],
+    "views": [
+      {
+        "requestedView": "sidecar",
+        "filename": "cylinder-9ml-cobalt-blue-17-415-rollon-sidecar.png",
+        "view": "sidecar",
+        "title": "9 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FLIB-17-415-PlsticRollon%2Froller-44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FLIB-17-415-PlsticRollon%2Froller-0a479ad9842e17f9c017d49f87d4eca58dd6c98025fd311b8c3983eadec141b9.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollBlkDot&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "capon",
+        "filename": "cylinder-9ml-cobalt-blue-17-415-rollon-capon.png",
+        "view": "capon",
+        "title": "9 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FLIB-17-415-PlsticRollon%2Froller-44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FLIB-17-415-PlsticRollon%2Froller-0a479ad9842e17f9c017d49f87d4eca58dd6c98025fd311b8c3983eadec141b9.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollBlkDot&from=pdp",
+        "overflow": false
+      },
+      {
+        "requestedView": "exploded",
+        "filename": "cylinder-9ml-cobalt-blue-17-415-rollon-exploded.png",
+        "view": "exploded",
+        "title": "9 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+        "body": [
+          "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75"
+        ],
+        "parts": [
+          {
+            "slot": "body",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-9ml-17-415%2Fcobalt-blue%2Ff799310a3a9e19ac2d2cc53cfd1f3b94e3586b7076a90b444aa4d265a3dd1e50.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "cap",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FCMP-ROC-BLK-17415-DOT%2Fcap-a55d4503bfb4f61b3a5f74e89637b78418e453956a756608bbf0028bd19787c8.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "slot": "roller",
+            "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F17-415%2FLIB-17-415-PlsticRollon%2Froller-44fe7e9ab18e362658698b4f5b2dba59e82eaf5f048d9579f6eb56a2a1ddcfad.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollBlkDot&from=pdp",
+        "overflow": false
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "teardrop-9ml-cobalt-blue-Ground-glassapplicator",
+    "sku": "GBTrdpBlue",
+    "skus": [
+      "GBTrdpBlue"
+    ],
+    "views": [],
+    "errors": [
+      "Waiting for selector `[data-testid=\"pdp-stage\"]` failed"
+    ],
+    "legacy": {
+      "title": "9 ml Cobalt Blue Teardrop Applicator Bottle",
+      "images": [
+        {
+          "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+          "loaded": true,
+          "alt": "Best Bottles"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/teardrop-9ml-cobalt-blue-ground/GBTrdpBlue/972f1c27ff32221de89108e6bcd58d3bdc8511cbb18178131e31ef60b1069194.front-on-1000x1100.webp",
+          "loaded": true,
+          "alt": "Teardrop 9 ml — Fine Mist Spray"
+        }
+      ],
+      "notFound": false,
+      "url": "http://localhost:3010/products/teardrop-9ml-cobalt-blue-Ground-glassapplicator?sku=GBTrdpBlue",
+      "filename": "teardrop-9ml-cobalt-blue-Ground-glassapplicator-legacy.png"
+    },
+    "auditNote": "Uses legacy product gallery, not the three-view stage"
+  },
+  {
+    "slug": "genie-32ml-cobalt-blue-Ground",
+    "sku": "GB1ozGenieBl",
+    "skus": [
+      "GB1ozGenieBl"
+    ],
+    "views": [],
+    "errors": [
+      "Waiting for selector `[data-testid=\"pdp-stage\"]` failed"
+    ],
+    "legacy": {
+      "title": "32 ml Cobalt Blue Genie Bottle",
+      "images": [
+        {
+          "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+          "loaded": true,
+          "alt": "Best Bottles"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-cobalt-blue-ground/GB1ozGenieBl/aa73026f5aa7944e823716ff13034b759c5516730e8748db049ef75598df0331.front-off-1000x1100.webp",
+          "loaded": true,
+          "alt": "Decorative 32 ml — Fine Mist Spray"
+        }
+      ],
+      "notFound": false,
+      "url": "http://localhost:3010/products/genie-32ml-cobalt-blue-Ground?sku=GB1ozGenieBl",
+      "filename": "genie-32ml-cobalt-blue-Ground-legacy.png"
+    },
+    "auditNote": "Uses legacy product gallery, not the three-view stage"
+  },
+  {
+    "slug": "eternal-flame-35ml-cobalt-blue-Ground",
+    "sku": "GBEternalFlameBlue",
+    "skus": [
+      "GBEternalFlameBlue"
+    ],
+    "views": [],
+    "errors": [
+      "Waiting for selector `[data-testid=\"pdp-stage\"]` failed"
+    ],
+    "legacy": {
+      "title": "35 ml Cobalt Blue Eternal Flame Bottle",
+      "images": [
+        {
+          "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+          "loaded": true,
+          "alt": "Best Bottles"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-cobalt-blue-ground/GBEternalFlameBlue/493b0df9e181e03080166c1511ec69142ee9e4ba3d334622ae176abfc7443131.front-off-1000x1100.webp",
+          "loaded": true,
+          "alt": "Decorative 35 ml — Fine Mist Spray"
+        }
+      ],
+      "notFound": false,
+      "url": "http://localhost:3010/products/eternal-flame-35ml-cobalt-blue-Ground?sku=GBEternalFlameBlue",
+      "filename": "eternal-flame-35ml-cobalt-blue-Ground-legacy.png"
+    },
+    "auditNote": "Uses legacy product gallery, not the three-view stage"
+  },
+  {
+    "slug": "apothecary-15ml-cobalt-blue-Ground-glassapplicator",
+    "sku": "GB15ApthBlue",
+    "skus": [
+      "GB15ApthBlue"
+    ],
+    "views": [],
+    "errors": [
+      "Waiting for selector `[data-testid=\"pdp-stage\"]` failed"
+    ],
+    "legacy": {
+      "title": "15 ml Cobalt Blue Apothecary Applicator Bottle",
+      "images": [
+        {
+          "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+          "loaded": true,
+          "alt": "Best Bottles"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/apothecary-15ml-cobalt-blue-ground/GB15ApthBlue/0da595fba46cf1621b08820fbe2acf4a3396cd1f572e1381cd59afda5f97aadd.front-on-1000x1100.webp",
+          "loaded": true,
+          "alt": "Apothecary 15 ml — Fine Mist Spray"
+        }
+      ],
+      "notFound": false,
+      "url": "http://localhost:3010/products/apothecary-15ml-cobalt-blue-Ground-glassapplicator?sku=GB15ApthBlue",
+      "filename": "apothecary-15ml-cobalt-blue-Ground-glassapplicator-legacy.png"
+    },
+    "auditNote": "Uses legacy product gallery, not the three-view stage"
+  },
+  {
+    "slug": "apothecary-30ml-cobalt-blue-Ground-glassapplicator",
+    "sku": "GB1ozApthBlue",
+    "skus": [
+      "GB1ozApthBlue"
+    ],
+    "views": [],
+    "errors": [
+      "Waiting for selector `[data-testid=\"pdp-stage\"]` failed"
+    ],
+    "legacy": {
+      "title": "30 ml Cobalt Blue Apothecary Applicator Bottle",
+      "images": [
+        {
+          "src": "http://localhost:3010/brand/best-bottles-wordmark-supplied.png",
+          "loaded": true,
+          "alt": "Best Bottles"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/apothecary-30ml-cobalt-blue-ground/GB1ozApthBlue/f9221a3ac886dacabaedb13e0059cb358e0f99917b62b803d82ff7ffa67628e0.front-on-1000x1100.webp",
+          "loaded": true,
+          "alt": "Apothecary 30 ml — Fine Mist Spray"
+        }
+      ],
+      "notFound": false,
+      "url": "http://localhost:3010/products/apothecary-30ml-cobalt-blue-Ground-glassapplicator?sku=GB1ozApthBlue",
+      "filename": "apothecary-30ml-cobalt-blue-Ground-glassapplicator-legacy.png"
+    },
+    "auditNote": "Uses legacy product gallery, not the three-view stage"
+  }
+]

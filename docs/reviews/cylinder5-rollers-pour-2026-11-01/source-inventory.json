@@ -1,0 +1,135 @@
+[
+  {
+    "id": "CMP-CAP-SLV-13-415-01",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-CAP-SLV-13-415-01.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-01/cap-be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3.png",
+    "sha256": "be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3",
+    "bytes": 187954
+  },
+  {
+    "id": "CMP-CAP-SGLD-13-415-01",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-CAP-SGLD-13-415-01.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-01/cap-0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545.png",
+    "sha256": "0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545",
+    "bytes": 183339
+  },
+  {
+    "id": "CMP-CAP-BLK-S-13-415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-CAP-BLK-S-13-415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-df3b5176c9a9723d4c3d14bf3a5e25104096e10de55ca4e3cf9437bd6f434a67.png",
+    "sha256": "df3b5176c9a9723d4c3d14bf3a5e25104096e10de55ca4e3cf9437bd6f434a67",
+    "bytes": 88362
+  },
+  {
+    "id": "CMP-CAP-WHT-S-13-415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-CAP-WHT-S-13-415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584.png",
+    "sha256": "ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584",
+    "bytes": 71907
+  },
+  {
+    "id": "CMP-CLS-MTCP-S-13-415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-CLS-MTCP-S-13-415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-MTCP-S-13-415/cap-32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+    "sha256": "32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772",
+    "bytes": 119746
+  },
+  {
+    "id": "CMP-CLS-MTGD-S-13-415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-CLS-MTGD-S-13-415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-MTGD-S-13-415/cap-fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+    "sha256": "fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104",
+    "bytes": 119914
+  },
+  {
+    "id": "CMP-CLS-MTSL-S-13-415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-CLS-MTSL-S-13-415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-MTSL-S-13-415/cap-c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+    "sha256": "c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a",
+    "bytes": 120747
+  },
+  {
+    "id": "CMP-CAP-SBLK-13-415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-CAP-SBLK-13-415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SBLK-13-415/cap-672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+    "sha256": "672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84",
+    "bytes": 114848
+  },
+  {
+    "id": "CMP-CLS-SHGD-S-13-415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-CLS-SHGD-S-13-415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-SHGD-S-13-415/cap-1336d3427f5b4014f74a933ee3a9302e9c14adff553e127df2ea2b7f809c2064.png",
+    "sha256": "1336d3427f5b4014f74a933ee3a9302e9c14adff553e127df2ea2b7f809c2064",
+    "bytes": 121484
+  },
+  {
+    "id": "CMP-CLS-SHSL-S-13-415-02",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-CLS-SHSL-S-13-415-02.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-SHSL-S-13-415-02/cap-ad476da805a7e2287f6ba115876b26ca13c96f290cb2ae72b4c25e81fe7b700f.png",
+    "sha256": "ad476da805a7e2287f6ba115876b26ca13c96f290cb2ae72b4c25e81fe7b700f",
+    "bytes": 124145
+  },
+  {
+    "id": "CMP-ROC-SBLK-13415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-ROC-SBLK-13415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SBLK-13415/cap-a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png",
+    "sha256": "a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8",
+    "bytes": 170243
+  },
+  {
+    "id": "CMP-ROC-MCPR-13415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-ROC-MCPR-13415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MCPR-13415/cap-9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png",
+    "sha256": "9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8",
+    "bytes": 183525
+  },
+  {
+    "id": "CMP-ROC-MGLD-13415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-ROC-MGLD-13415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MGLD-13415/cap-40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png",
+    "sha256": "40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf",
+    "bytes": 181703
+  },
+  {
+    "id": "CMP-ROC-SGLD-13415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-ROC-SGLD-13415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SGLD-13415/cap-0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545.png",
+    "sha256": "0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545",
+    "bytes": 183339
+  },
+  {
+    "id": "CMP-ROC-PNK-13415-DOT",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-ROC-PNK-13415-DOT.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-PNK-13415-DOT/cap-f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png",
+    "sha256": "f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1",
+    "bytes": 211964
+  },
+  {
+    "id": "CMP-ROC-SLV-13415-DOT",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-ROC-SLV-13415-DOT.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SLV-13415-DOT/cap-e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png",
+    "sha256": "e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86",
+    "bytes": 200985
+  },
+  {
+    "id": "CMP-ROC-MSLV-13415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-ROC-MSLV-13415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MSLV-13415/cap-023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png",
+    "sha256": "023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153",
+    "bytes": 183056
+  },
+  {
+    "id": "CMP-ROC-SSLV-13415",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-ROC-SSLV-13415.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SSLV-13415/cap-be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3.png",
+    "sha256": "be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3",
+    "bytes": 187954
+  },
+  {
+    "id": "CMP-ROC-BLK-13415-DOT",
+    "file": "docs/reviews/cylinder5-rollers-pour-2026-11-01/sources/CMP-ROC-BLK-13415-DOT.png",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-BLK-13415-DOT/cap-afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png",
+    "sha256": "afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e",
+    "bytes": 188848
+  }
+]

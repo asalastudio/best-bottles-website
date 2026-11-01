@@ -1,0 +1,17 @@
+[
+  {
+    "file": "public/local-kits/cylinder5-all71-2026-11-01/kits.json",
+    "sha256": "d787f102c28e057a47baf62b5dffe32276f1f830d0f2485fd87f08e60a9029e0",
+    "unchanged": true
+  },
+  {
+    "file": "public/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+    "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+    "unchanged": true
+  },
+  {
+    "file": "public/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+    "sha256": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+    "unchanged": true
+  }
+]

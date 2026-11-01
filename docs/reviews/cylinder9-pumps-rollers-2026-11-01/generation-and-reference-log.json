@@ -1,0 +1,137 @@
+{
+  "jobs": [
+    {
+      "name": "lotion-head",
+      "file": "exec-40eab3bb-037d-46eb-b3c4-5ea8cdde15ff.png",
+      "prompt": "Edit the supplied reference into ONE high-resolution isolated product component: the WHITE LOTION/TREATMENT PUMP ACTUATOR ONLY. Reference 1 is the exact source assembled product and is authoritative for shape: upright white cylindrical head, straight nearly vertical sides, a circular white recessed bezel with a larger DARK OPEN dispensing hole, stepped wider lower white sleeve; this is a lotion treatment pump, NOT a mist-spray nozzle. Reference 2 is the original isolated actuator shape. Reference 3 shows the dark lotion nozzle insert. Preserve the source front-on eye-level camera, exact head/sleeve proportions, centered round nozzle, flat level top, upright vertical axis. Improve to crisp photorealistic studio product photography: natural softly glossy white polypropylene, subtle curved reflections, clean edges. Output the complete white actuator and lower sleeve only, without bottle, metal collar, dip tube, overcap, label, shadow on floor, backdrop, detached parts or text. Entire component centered on a genuinely transparent RGBA canvas with 12% transparent padding on all sides. No white fringe, no debris. Match source object outline and proportions; do not use a tapered/conical head. Source nozzle bezel must remain visibly recessed and dark open at center.",
+      "status": "candidate"
+    },
+    {
+      "name": "roller-metal",
+      "file": "exec-74ee80b1-8745-48fe-b3ec-886327d3abf9.png",
+      "prompt": "Precise product-component edit of reference 1: regenerate this METAL ROLLER BALL WITH ITS COMPLETE WHITE PLASTIC PRESS-FIT INSERT PLUG as a sharp photorealistic studio cutout. Keep its exact upright front-on geometry, relative dimensions and symmetric silhouette. Reference 2 is the actual assembled product photo: use its frosted milky translucent polypropylene socket/housing appearance, but retain the complete lower plug shown in reference 1 for an exploded configurator. One polished stainless steel spherical ball fully and realistically seated within the upper socket; only the upper spherical cap projects above housing, perfectly round centered, no flat cut, dents or floating gap. Natural large studio softbox reflections on the steel, not chrome stripes drawn flat. Housing matte translucent white with plausible wall thickness, smooth molded surfaces, thin continuous seating flange, lower slightly tapered hollow press-fit plug stem and a level bottom, no glass bottle included. The ball must be part of the same insert assembly, not separated. Clean high fidelity edges, no broken pixels, no white halo/debris. Entire component centered with at least 12 percent transparent padding, output true transparent RGBA. No floor shadow, no lettering, no other pieces. Preserve the original reference's scale ratio: flange width to total height roughly 374:531, ball visible width about 248 out of 374 flange width, top dome rises only 96 out of total 531 height.",
+      "status": "candidate"
+    },
+    {
+      "name": "roller-plastic",
+      "file": "exec-9f5a3496-8f49-401e-9eb7-10ed90436d6e.png",
+      "prompt": "Make ONE localized material edit to this exact product-component cutout. Change ONLY the exposed polished steel roller sphere into smooth white translucent plastic (natural opaque milky white polypropylene ball with gentle studio highlights). Preserve pixel-identical scale, shape, frame, axis, housing, seating flange, lower tapered press-fit plug and camera angle. Ball remains perfectly spherical and fully seated, its upper dome exposed as in source. Also remove the detached white fringe/debris immediately outside the component silhouette, leaving a crisp smooth antialiased alpha boundary. Transparent background must remain transparent. No bottle, cap, text, extra parts, or floor shadow. No changes to plastic housing, no taller ball, no floating gap, no clipping. High resolution premium realistic product photography.",
+      "status": "candidate"
+    },
+    {
+      "name": "lotion-mechanism",
+      "file": "exec-148b7a35-77e9-4bbf-aedb-d34b3bfade61.png",
+      "prompt": "Recreate the isolated small LOTION PUMP INTERNAL MECHANISM AND DIP TUBE shown in the reference as high fidelity photorealistic translucent polymer on transparent background. Preserve the visible mechanism's original general shape: long compact cylindrical milky-white pump chamber at top, tapering lower connector, one thin slightly naturally curved semi-transparent flexible tube extending down. Correct the disproportionately thick existing tube: chamber diameter approx 5 mm, tube outside diameter only 1.4 mm, total assembly length approx 61 mm, chamber occupies about 22 mm, lower tube occupies remaining 39 mm. Center on vertical axis, very slight tube bend at lower quarter only, lower tip clean angled cut. No metal collar, actuator, bottle, overcap, spring sticking out or duplicate tube. Realistic molded seam and gently transmitted light, visible transparent wall edges, not a solid white rod. Eye-level straight-on camera, soft natural studio highlights, no clipping, no floor or contact shadow, genuine transparent background with at least 10% margin, crisp clean smooth antialiased edges without white fringe or debris. One complete continuous connected mechanism.",
+      "status": "rejected: glow around transparent mechanism; reuse approved fitted tube"
+    }
+  ],
+  "references": {
+    "lotion": {
+      "markdown": "Browse Categories\n\n[Perfume vials, Bottles, Roll on bottles\\\\\n\\\\\nand Decorative glass Bottles](https://www.bestbottles.com/all-bottles/Perfume-vials-glass-bottles/Perfume-glas-bottle-vials-purchase.php)\n\n[Perfume Atomizers, Sprayers,\\\\\n\\\\\nAluminum Bottles & Cans](https://www.bestbottles.com/all-bottles/Perfume-atomizer-aluminum-bottle-cans/Perfume-atomizer-Aluminum-bottle-cans-purchase.php)\n\n[Perfume Accessories\\\\\n\\\\\nand Packaging](https://www.bestbottles.com/all-bottles/accessories/velvet-bags-organza-gusseted-bags-gift-box-purchase.php)\n\n[Cream Jars and \\\\\n\\\\\nLotion Bottles](https://www.bestbottles.com/all-bottles/lotion-pump-cream-jars/lotion-pumps-bottles-cream-jars-purchase.php)\n\n# LBCyl9LtnBlk\n\n[![](https://www.bestbottles.com/images/store/caps/17-415LtMattSl.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-lotion-pump-matte-silver-trim-cap)[![](https://www.bestbottles.com/images/store/caps/17-415LtGl.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-lotion-pump-gold-trim-and-cap)[![](https://www.bestbottles.com/images/store/caps/17-415LtBlk.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-lotion-pump-black-trim-and-cap)\n\n![Cylinder design 9ml,1/3 oz clear glass bottle with treatment pump with black trim and plastic overcap.](https://www.bestbottles.com/images/store/enlarged_pics/LBCyl9LtnBlk.gif)\n\n![Cylinder design 9ml,1/3 oz clear glass bottle with treatment pump with black trim and plastic overcap.](https://www.bestbottles.com/images/store/capped/LBCyl9LtnBlk.gif)\n\nClear Cylinder Glass Bottle, Capacity: 9ml \\| Best Bottles - YouTube\n\nTap to unmute\n\n[Clear Cylinder Glass Bottle, Capacity: 9ml \\| Best Bottles](https://www.youtube.com/watch?v=9aJBIDoo8aQ) [Best Bottles](https://www.youtube.com/channel/UC35CAw014_BYaS39wgawlmA)\n\nBest Bottles31 subscribers\n\n0:00Time elapsed 0 seconds/0:17Time duration 17 seconds\n\n[Watch on YouTube](https://www.youtube.com/watch?v=9aJBIDoo8aQ)\n\n[Previous](https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-lotion-pump-black-trim-and-cap#carousel-example-captions) [Next](https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-lotion-pump-black-trim-and-cap#carousel-example-captions)\n\n1. ![Cylinder design 9ml,1/3 oz clear glass bottle with treatment pump with black trim and plastic overcap.](https://www.bestbottles.com/images/store/enlarged_pics/LBCyl9LtnBlk.gif)\n2. ![Cylinder design 9ml,1/3 oz clear glass bottle with treatment pump with black trim and plastic overcap.](https://www.bestbottles.com/images/store/capped/LBCyl9LtnBlk.gif)\n3. ![](https://www.bestbottles.com/UAT/all-bottles/video.jpeg)\n\n1. ![Cylinder design 9ml,1/3 oz clear glass bottle with treatment pump with black trim and plastic overcap.](https://www.bestbottles.com/images/store/enlarged_pics/LBCyl9LtnBlk.gif)\n2. ![Cylinder design 9ml,1/3 oz clear glass bottle with treatment pump with black trim and plastic overcap.](https://www.bestbottles.com/images/store/capped/LBCyl9LtnBlk.gif)\n3. ![](https://www.bestbottles.com/UAT/all-bottles/video.jpeg)\n\n**Item Type:** Lotion Bottles\n\n**Item Name:** LBCyl9LtnBlk\n\n**Item Description:** Cylinder design 9ml,1/3 oz clear glass bottle with treatment pump with black trim and plastic overcap. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Price each\n\n**Purchase:** 1\u00a0pcs\u00a0-\u00a0$0.88/pc12\u00a0pcs\u00a0-\u00a0$10.03($0.84/pc)144\u00a0pcs\u00a0-\u00a0$114.05($0.79/pc)576\u00a0pcs\u00a0-\u00a0$430.85($0.75/pc)2880\u00a0pcs\u00a0-\u00a0$1,976.83($0.69/pc)**Order Qty:**\n\n\n\n\n\nTotal Qty:\n\n\n\nPrice:\nAdd To\n\n**Item Capacity:** 9 ml (0.3 oz)\n\n**Item Height with Cap:** 98 \u00b11 mm\n\n**Item Height without Cap:** 70 \u00b11 mm\n\n**Item Diameter:** 20 \u00b10.5 mm\n\n**Neck Thread Size:** 17-415\n\n* * *\n\n### Product Packaging Ideas\n\n![9ml Cylinder Glass Bottle with white lotion pump and black trimp cap. For use with lotions, moisturizers, and creams.](https://www.bestbottles.com/images/product-ideas/Glass-Bottle-for-Lotion-Black-Cylinder-9ml-1.png)\n\n##### 9ml Black Cylinder Glass Bottle - Lotion\n\n![9ml Cylinder Glass Bottle with white lotion pump and black trimp cap. For use with lotions, moisturizers, and creams.](https://www.bestbottles.com/images/product-ideas/Glass-Bottle-for-Lotion-Black-Cylinder-9ml-1.png)\n\n##### 9ml Black Cylinder Glass Bottle - Lotion\n\nNemat International\u00ae, Inc. Copyright 2018. All rights\nreserved",
+      "images": [
+        "https://www.bestbottles.com/UAT/all-bottles/video.jpeg",
+        "https://www.bestbottles.com/images/store/caps/17-415LtGl.png",
+        "https://www.bestbottles.com/images/store/caps/17-415LtBlk.png",
+        "https://i.ytimg.com/vi_webp/9aJBIDoo8aQ/sddefault.webp",
+        "https://www.bestbottles.com/images/product-ideas/Glass-Bottle-for-Lotion-Black-Cylinder-9ml-1.png",
+        "https://www.bestbottles.com/images/store/capped/LBCyl9LtnBlk.gif",
+        "https://www.bestbottles.com/images/store/caps/17-415LtMattSl.png",
+        "https://www.bestbottles.com/images/store/enlarged_pics/LBCyl9LtnBlk.gif"
+      ],
+      "metadata": {
+        "language": "en-US",
+        "keywords": "Clear glass bottle, glass Lotion bottle, container or jar, lotion pump black trim and cap, lid or closure for Cologne, aftershave, splash on, and perfume or fragrance oil, beard oils,   Refillable, Travel-size, good for promotions and samples",
+        "revisit-after": "30 Days",
+        "title": "Cylinder design 9ml,1/3 oz clear glass bottle with treatment pump with black trim and plastic overcap. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Price each",
+        "viewport": [
+          "width=device-width, initial-scale=1",
+          "width=device-width, initial-scale=1"
+        ],
+        "description": "Wholesale distributor of glass bottles and containers for use with perfume, fragrance oil, essential oil, or aromatherapy. Clear glass bottle with lotion pump applicator and black trim and cap, capacity: 9ml, (1/3)oz",
+        "scrapeId": "01a196f4-c92d-7013-93c5-41b13d9dfb12",
+        "sourceURL": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-lotion-pump-black-trim-and-cap",
+        "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-lotion-pump-black-trim-and-cap",
+        "statusCode": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "timezone": "America/New_York",
+        "proxyUsed": "basic",
+        "indexId": "b28fc173-db53-4e67-87a3-1cde1476185b",
+        "creditsUsed": 1,
+        "concurrencyLimited": false
+      },
+      "conversationId": "2abf8cb0-bc5e-850f-a9a8-c515565b2301"
+    },
+    "roller": {
+      "markdown": "Browse Categories\n\n[Perfume vials, Bottles, Roll on bottles\\\\\n\\\\\nand Decorative glass Bottles](https://www.bestbottles.com/all-bottles/Perfume-vials-glass-bottles/Perfume-glas-bottle-vials-purchase.php)\n\n[Perfume Atomizers, Sprayers,\\\\\n\\\\\nAluminum Bottles & Cans](https://www.bestbottles.com/all-bottles/Perfume-atomizer-aluminum-bottle-cans/Perfume-atomizer-Aluminum-bottle-cans-purchase.php)\n\n[Perfume Accessories\\\\\n\\\\\nand Packaging](https://www.bestbottles.com/all-bottles/accessories/velvet-bags-organza-gusseted-bags-gift-box-purchase.php)\n\n[Cream Jars and \\\\\n\\\\\nLotion Bottles](https://www.bestbottles.com/all-bottles/lotion-pump-cream-jars/lotion-pumps-bottles-cream-jars-purchase.php)\n\n# GBCyl9MtlRollWht\n\n[![](https://www.bestbottles.com/images/store/caps/17-415CpRollMattSl.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-matte-silver-cap)[![](https://www.bestbottles.com/images/store/caps/17-415CpRollBlkDot.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-black-dot-cap)[![](https://www.bestbottles.com/images/store/caps/17-415CpRollSlDot.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-silver-dot-cap)[![](https://www.bestbottles.com/images/store/caps/17-415CpRollPnkDot.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-pink-dot-cap)[![](https://www.bestbottles.com/images/store/caps/17-415CpRollMattGl.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-matte-gold-cap)[![](https://www.bestbottles.com/images/store/caps/17-415CpRollShnGl.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-shiny-gold-cap)[![](https://www.bestbottles.com/images/store/caps/17-415CpRollShnSl.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-shiny-silver-cap)[![](https://www.bestbottles.com/images/store/caps/17-415CpRollCu.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-matte-copper-cap)[![](https://www.bestbottles.com/images/store/caps/17-415CpRollShnBlk.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-shiny-black-cap)[![](https://www.bestbottles.com/images/store/caps/17-415CpRollWhite.png)](https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-white-cap)\n\n![Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and white cap.](https://www.bestbottles.com/images/store/enlarged_pics/GBCyl9MtlRollWht.gif)\n\n![Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and white cap.](https://www.bestbottles.com/images/store/capped/GBCyl9MtlRollWht.gif)\n\nClear Cylinder Glass Bottle, Capacity: 9ml \\| Best Bottles - YouTube\n\nTap to unmute\n\n[Clear Cylinder Glass Bottle, Capacity: 9ml \\| Best Bottles](https://www.youtube.com/watch?v=9aJBIDoo8aQ) [Best Bottles](https://www.youtube.com/channel/UC35CAw014_BYaS39wgawlmA)\n\nBest Bottles31 subscribers\n\n0:00Time elapsed 0 seconds/0:18Time duration 18 seconds\n\nMore videos\n\n[Watch on YouTube](https://www.youtube.com/watch?v=9aJBIDoo8aQ)\n\n[3:00:01](https://www.youtube.com/watch?v=y0akruQ45H0&feature=endscreen)\n\n[**Elegant Haunted Autumn \ud83c\udf83 Candlelit Fall Painting \\| 4K Framed TV Art \\| 3 Hours, No Sound** \\\\\n1 month ago](https://www.youtube.com/watch?v=y0akruQ45H0&feature=endscreen)\n\n[30:45](https://www.youtube.com/watch?v=qydWq6V9WVg&feature=endscreen)\n\n[**Kushner THREATENS LAWSUIT Over EXPLOSIVE Bribery Allegations** \\\\\n3 days ago](https://www.youtube.com/watch?v=qydWq6V9WVg&feature=endscreen)\n\n[12:42](https://www.youtube.com/watch?v=cVMvyUnoF7w&feature=endscreen)\n\n[**Boil Cable Ties and Turn Them into Money! You Won\u2019t Believe the Result! \ud83d\ude31 \\| Creation Invention** \\\\\n2 weeks ago](https://www.youtube.com/watch?v=cVMvyUnoF7w&feature=endscreen)\n\n[5:39](https://www.youtube.com/watch?v=mqqX9i-q3qs&feature=endscreen)\n\n[**Telenovela: El Coraz\u00f3n Que No Siente - SNL** \\\\\n6 hours ago](https://www.youtube.com/watch?v=mqqX9i-q3qs&feature=endscreen)\n\n[17:04](https://www.youtube.com/watch?v=XVA8_8KPN9A&feature=endscreen)\n\n[**Dancakes 101 - The Best Way To Make Pancake Art \ud83e\udd5e\ud83d\udc68\u200d\ud83c\udfa8** \\\\\n6 years ago](https://www.youtube.com/watch?v=XVA8_8KPN9A&feature=endscreen)\n\n[29:06](https://www.youtube.com/watch?v=I0c_fG_bMco&feature=endscreen)\n\n[**Most Incredible Cruise Ship Videos Ever Captured** \\\\\n3 weeks ago](https://www.youtube.com/watch?v=I0c_fG_bMco&feature=endscreen)\n\n[1:11:11](https://www.youtube.com/watch?v=8kze9LhiAwU&feature=endscreen)\n\n[**174 Hz + 528 Hz \ud83c\udf3f Cortisol Flush \u2022 Activate Parasympathetic Calm & End Overthinking Now** \\\\\n7 months ago](https://www.youtube.com/watch?v=8kze9LhiAwU&feature=endscreen)\n\n[17:17](https://www.youtube.com/watch?v=vGp7R_Mq3mk&feature=endscreen)\n\n[**10 Famous Actors Who Have DIED in the last few days** \\\\\n2 days ago](https://www.youtube.com/watch?v=vGp7R_Mq3mk&feature=endscreen)\n\n[39:17](https://www.youtube.com/watch?v=hEKxIDoKAkw&feature=endscreen)\n\n[**Eddie Van Halen Called Dolly Parton Up On Stage to Laugh at Her \u2014 Nobody Was Ready For Her Nails** \\\\\n7 days ago](https://www.youtube.com/watch?v=hEKxIDoKAkw&feature=endscreen)\n\n[3:00:01](https://www.youtube.com/watch?v=8RWWTRkf-5M&feature=endscreen)\n\n[**Warm Orange Glow Background \ud83e\udde1 \\| Aesthetic Photography Lighting \\| Tiktok Background \\| No Sound** \\\\\n1 month ago](https://www.youtube.com/watch?v=8RWWTRkf-5M&feature=endscreen)\n\n[18:34](https://www.youtube.com/watch?v=VZozPSqlfwo&feature=endscreen)\n\n[**When Barack Obama Proved He Was The Funniest President Of ALL TIME** \\\\\n3 weeks ago](https://www.youtube.com/watch?v=VZozPSqlfwo&feature=endscreen)\n\n[19:25](https://www.youtube.com/watch?v=5ocGCNocNB4&feature=endscreen)\n\n[**5 Bartending Gadgets Tested by Design Expert \\| Well Equipped \\| Epicurious** \\\\\n5 years ago](https://www.youtube.com/watch?v=5ocGCNocNB4&feature=endscreen)\n\n[Previous](https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-white-cap#carousel-example-captions) [Next](https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-white-cap#carousel-example-captions)\n\n1. ![Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and white cap.](https://www.bestbottles.com/images/store/enlarged_pics/GBCyl9MtlRollWht.gif)\n2. ![Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and white cap.](https://www.bestbottles.com/images/store/capped/GBCyl9MtlRollWht.gif)\n3. ![](https://www.bestbottles.com/UAT/all-bottles/video.jpeg)\n\n1. ![Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and white cap.](https://www.bestbottles.com/images/store/enlarged_pics/GBCyl9MtlRollWht.gif)\n2. ![Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and white cap.](https://www.bestbottles.com/images/store/capped/GBCyl9MtlRollWht.gif)\n3. ![](https://www.bestbottles.com/UAT/all-bottles/video.jpeg)\n\n**Item Type:** Clear, frosted and colored glass roll-on bottles with steel roller-balls, capacity range about 1/3oz (from 8ml to 10ml)\n\n**Item Name:** GBCyl9MtlRollWht\n\n**Item Description:** Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and white cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each\n\n**Purchase:** 1\u00a0pcs\u00a0-\u00a0$0.64/pc12\u00a0pcs\u00a0-\u00a0$7.30($0.61/pc)144\u00a0pcs\u00a0-\u00a0$82.94($0.58/pc)576\u00a0pcs\u00a0-\u00a0$313.34($0.54/pc)2880\u00a0pcs\u00a0-\u00a0$1,437.70($0.50/pc)**Order Qty:**\n\n\n\n\n\nTotal Qty:\n\n\n\nPrice:\nAdd To\n\n**Item Capacity:** 9 ml (0.3 oz)\n\n**Item Height with Cap:** 83 \u00b11 mm\n\n**Item Height without Cap:** 70 \u00b11 mm\n\n**Item Diameter:** 20 \u00b10.5 mm\n\n**Neck Thread Size:** 17-415\n\nNemat International\u00ae, Inc. Copyright 2018. All rights\nreserved",
+      "links": [
+        "https://www.bestbottles.com/all-bottles/Perfume-vials-glass-bottles/Perfume-glas-bottle-vials-purchase.php",
+        "https://www.bestbottles.com/all-bottles/Perfume-atomizer-aluminum-bottle-cans/Perfume-atomizer-Aluminum-bottle-cans-purchase.php",
+        "https://www.bestbottles.com/all-bottles/accessories/velvet-bags-organza-gusseted-bags-gift-box-purchase.php",
+        "https://www.bestbottles.com/all-bottles/lotion-pump-cream-jars/lotion-pumps-bottles-cream-jars-purchase.php",
+        "https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-matte-silver-cap",
+        "https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-black-dot-cap",
+        "https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-silver-dot-cap",
+        "https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-pink-dot-cap",
+        "https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-matte-gold-cap",
+        "https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-shiny-gold-cap",
+        "https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-shiny-silver-cap",
+        "https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-matte-copper-cap",
+        "https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-shiny-black-cap",
+        "https://www.bestbottles.com//product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-white-cap",
+        "https://www.youtube.com/watch?v=9aJBIDoo8aQ",
+        "https://www.youtube.com/channel/UC35CAw014_BYaS39wgawlmA",
+        "https://www.youtube.com/watch?v=y0akruQ45H0&feature=endscreen",
+        "https://www.youtube.com/watch?v=qydWq6V9WVg&feature=endscreen",
+        "https://www.youtube.com/watch?v=cVMvyUnoF7w&feature=endscreen",
+        "https://www.youtube.com/watch?v=mqqX9i-q3qs&feature=endscreen",
+        "https://www.youtube.com/watch?v=XVA8_8KPN9A&feature=endscreen",
+        "https://www.youtube.com/watch?v=I0c_fG_bMco&feature=endscreen",
+        "https://www.youtube.com/watch?v=8kze9LhiAwU&feature=endscreen",
+        "https://www.youtube.com/watch?v=vGp7R_Mq3mk&feature=endscreen",
+        "https://www.youtube.com/watch?v=hEKxIDoKAkw&feature=endscreen",
+        "https://www.youtube.com/watch?v=8RWWTRkf-5M&feature=endscreen",
+        "https://www.youtube.com/watch?v=VZozPSqlfwo&feature=endscreen",
+        "https://www.youtube.com/watch?v=5ocGCNocNB4&feature=endscreen",
+        "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-white-cap#carousel-example-captions"
+      ],
+      "images": [
+        "https://i.ytimg.com/vi_webp/9aJBIDoo8aQ/sddefault.webp",
+        "https://www.bestbottles.com/images/store/capped/GBCyl9MtlRollWht.gif",
+        "https://www.bestbottles.com/images/store/caps/17-415CpRollShnBlk.png",
+        "https://www.bestbottles.com/images/store/caps/17-415CpRollShnSl.png",
+        "https://www.bestbottles.com/images/store/caps/17-415CpRollShnGl.png",
+        "https://www.bestbottles.com/images/store/caps/17-415CpRollMattSl.png",
+        "https://www.bestbottles.com/images/store/caps/17-415CpRollBlkDot.png",
+        "https://www.bestbottles.com/images/store/caps/17-415CpRollMattGl.png",
+        "https://www.bestbottles.com/images/store/caps/17-415CpRollCu.png",
+        "https://www.bestbottles.com/images/store/caps/17-415CpRollSlDot.png",
+        "https://www.bestbottles.com/images/store/caps/17-415CpRollWhite.png",
+        "https://www.bestbottles.com/images/store/enlarged_pics/GBCyl9MtlRollWht.gif",
+        "https://www.bestbottles.com/images/store/caps/17-415CpRollPnkDot.png",
+        "https://www.bestbottles.com/UAT/all-bottles/video.jpeg"
+      ],
+      "metadata": {
+        "language": "en-US",
+        "keywords": "Clear glass bottle, glass Roll on bottle container or jar, metal roller ball, metal or steel roll on plug, white cap, lid or closure for Cologne, aftershave, splash on, and perfume or fragrance oil, beard oils,   Refillable, Travel-size, good for promotions and samples",
+        "title": "Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and white cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+        "description": "Wholesale distributor of glass bottles and containers for use with perfume, fragrance oil, essential oil, or aromatherapy. Clear glass bottle with metal roller ball applicator and white cap, capacity: 9ml, (1/3)oz",
+        "revisit-after": "30 Days",
+        "viewport": [
+          "width=device-width, initial-scale=1",
+          "width=device-width, initial-scale=1"
+        ],
+        "scrapeId": "01a196f4-272e-722f-b575-a00073df68c4",
+        "sourceURL": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-white-cap",
+        "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-white-cap",
+        "statusCode": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "timezone": "America/New_York",
+        "proxyUsed": "basic",
+        "indexId": "84de9795-775b-4a2c-a488-6ffe90fbb42b",
+        "creditsUsed": 1,
+        "concurrencyLimited": false
+      },
+      "conversationId": "2abf8cb0-bc5e-850f-a9a8-c515565b2301"
+    }
+  }
+}

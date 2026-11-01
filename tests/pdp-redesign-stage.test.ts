@@ -29,7 +29,50 @@ describe("views", () => {
     });
 });
 
+describe("reducer cap removal", () => {
+    const context = { ...CONTEXT, family: "Elegant", capacityMl: 60, applicator: "Reducer" };
+    const reducerKit: KitLike = { ...KIT, parts: KIT.parts.flatMap(part => part.slot === "roller" ? [
+        { ...part, slot: "reducer", views: ["sidecar", "capon"], image: { ...part.image, url: "seated.png" } },
+        { ...part, slot: "reducer", views: ["exploded"], image: { ...part.image, url: "full-plug.png" } },
+    ] : [part]) };
+    it("removes the cap while leaving the reducer seated, then shows the full plug exploded", () => {
+        expect(availableViews(reducerKit, context)).toEqual(["sidecar", "capon", "exploded"]);
+        const off = stageLayout(reducerKit, "sidecar", context)!;
+        const on = stageLayout(reducerKit, "capon", context)!;
+        expect(off.frameCss).toBe(on.frameCss);
+        expect(off.parts.find(p => p.slot === "cap")!.dxPct).toBeGreaterThan(0);
+        expect(off.parts.find(p => p.slot === "reducer")).toMatchObject({ url: "seated.png", dxPct: 0, dyPct: 0 });
+        const exploded = stageLayout(reducerKit, "exploded", context)!;
+        expect(exploded.parts.filter(p => p.slot === "reducer")).toHaveLength(1);
+        expect(exploded.parts.find(p => p.slot === "reducer")!.url).toBe("full-plug.png");
+        expect(exploded.parts.find(p => p.slot === "reducer")!.dyPct).toBeLessThan(0);
+    });
+    it("does not offer a fake cap-off view when the reducer insert is missing", () => {
+        const missing = { ...KIT, parts: KIT.parts.filter(p => p.slot !== "roller") };
+        expect(availableViews(missing, context)).toEqual(["capon"]);
+        expect(effectiveView("sidecar", missing, context)).toBe("capon");
+        expect(effectiveView("exploded", missing, context)).toBe("capon");
+    });
+});
+
 describe("layout", () => {
+    it("keeps fractional layer priorities above or behind glass with valid CSS indices", () => {
+        for (const tubePriority of [-0.5, 0.5]) {
+            const kit: KitLike = { ...KIT, parts: [
+                ...KIT.parts,
+                { ...KIT.parts[0], slot: "diptube", zOrder: tubePriority },
+            ] };
+            for (const view of ["sidecar", "capon", "exploded"] as const) {
+                const parts = stageLayout(kit, view, CONTEXT)!.parts;
+                const tube = parts.find(part => part.slot === "diptube")!;
+                const glass = parts.find(part => part.slot === "body")!;
+                expect(parts.every(part => Number.isInteger(part.zIndex) && part.zIndex > 0)).toBe(true);
+                expect(Math.sign(tube.zIndex - glass.zIndex)).toBe(Math.sign(tubePriority));
+                expect(tube.zIndex).toBeLessThan(parts.find(part => part.slot === "cap")!.zIndex);
+            }
+        }
+    });
+
     it("paints every part in z order at its assembled position for CAP ON", () => {
         const layout = stageLayout(KIT, "capon", CONTEXT)!;
         expect(layout.parts.map((part) => part.slot)).toEqual(["body", "roller", "cap"]);
@@ -134,6 +177,32 @@ describe("behind the glass", () => {
         ],
     };
     const context = { family: "Round", capacityMl: 78, color: "Frosted", applicator: "Vintage Bulb Sprayer", websiteSku: "GBRndFrst78AnSpGl" };
+
+    it("uses the tinted-glass blend only for the seated tube", () => {
+        const kit = structuredClone(REGISTER_KIT);
+        const tube = kit.parts[0];
+        tube.views = ["sidecar", "capon"];
+        tube.blendMode = "multiply";
+        tube.opacity = .5;
+        const lifted = { ...tube, views: ["exploded"] as const, blendMode: undefined, opacity: undefined };
+        kit.parts.push({ ...lifted, views: ["exploded"] });
+        for (const view of ["sidecar", "capon"] as const) {
+            expect(stageLayout(kit, view, { ...context, applicator: "Fine Mist Sprayer" })!.parts.find(p => p.slot === "diptube")?.blendMode).toBe("multiply");
+        }
+        expect(stageLayout(kit, "exploded", { ...context, applicator: "Fine Mist Sprayer" })!.parts.find(p => p.slot === "diptube")?.blendMode).toBeUndefined();
+    });
+
+    it("keeps the physical tube trim when lifted, without changing its image scale", () => {
+        const kit = structuredClone(REGISTER_KIT);
+        kit.parts[0].trimBottomPct = 30;
+        kit.parts[0].bounds.bottom = 930;
+        kit.parts[0].explodeIndex = 1;
+        for (const view of ["sidecar", "capon", "exploded"] as const) {
+            const tube = stageLayout(kit, view, context)!.parts.find(part => part.slot === "diptube")!;
+            expect(tube.clipBottomPct).toBe(30);
+            expect(tube.box?.heightPct).toBeCloseTo(900 / 1100 * 100);
+        }
+    });
 
     it("clips a dip tube at the plate's baseline when it is seated, and never the plate or the sprayer", () => {
         const layout = stageLayout(REGISTER_KIT, "capon", context)!;

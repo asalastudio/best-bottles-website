@@ -1,0 +1,1686 @@
+{
+  "rows": [
+    {
+      "glass": "clear",
+      "capId": "black-leather",
+      "view": "sidecar",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 407.964599609375,
+        "y": 382.0201416015625,
+        "width": 127.46343994140625,
+        "height": 136.35931396484375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "black-leather",
+      "view": "capon",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 217.65603637695312,
+        "y": 89.02032470703125,
+        "width": 127.46340942382812,
+        "height": 136.35928344726562
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "black-leather",
+      "view": "exploded",
+      "body": {
+        "x": 223.30560302734375,
+        "y": 180.75048828125,
+        "width": 251.84710693359375,
+        "height": 363.19671630859375
+      },
+      "cap": {
+        "x": 294.9460144042969,
+        "y": 11.77362060546875,
+        "width": 114.05502319335938,
+        "height": 122.01507568359375
+      },
+      "reducer": {
+        "x": 325.34246826171875,
+        "y": 142.03848266601562,
+        "width": 45.2890625,
+        "height": 51.16802978515625
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "brown-leather",
+      "view": "sidecar",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 407.9676513671875,
+        "y": 379.46978759765625,
+        "width": 129.2366943359375,
+        "height": 138.91754150390625
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "brown-leather",
+      "view": "capon",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 217.94674682617188,
+        "y": 86.52020263671875,
+        "width": 129.23678588867188,
+        "height": 138.91754150390625
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "brown-leather",
+      "view": "exploded",
+      "body": {
+        "x": 223.85568237304688,
+        "y": 182.28338623046875,
+        "width": 250.73605346679688,
+        "height": 361.59442138671875
+      },
+      "cap": {
+        "x": 295.43902587890625,
+        "y": 11.779937744140625,
+        "width": 115.13165283203125,
+        "height": 123.75582885742188
+      },
+      "reducer": {
+        "x": 325.44244384765625,
+        "y": 143.74215698242188,
+        "width": 45.0892333984375,
+        "height": 50.942291259765625
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "ivory-leather",
+      "view": "sidecar",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 407.97344970703125,
+        "y": 386.08746337890625,
+        "width": 120.58807373046875,
+        "height": 132.3038330078125
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "ivory-leather",
+      "view": "capon",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 215.5047607421875,
+        "y": 93.75897216796875,
+        "width": 120.58804321289062,
+        "height": 132.3038330078125
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "ivory-leather",
+      "view": "exploded",
+      "body": {
+        "x": 222.42120361328125,
+        "y": 178.2861328125,
+        "width": 253.63323974609375,
+        "height": 365.77264404296875
+      },
+      "cap": {
+        "x": 292.631103515625,
+        "y": 11.776092529296875,
+        "width": 108.66818237304688,
+        "height": 119.22586059570312
+      },
+      "reducer": {
+        "x": 325.1817932128906,
+        "y": 139.29959106445312,
+        "width": 45.6102294921875,
+        "height": 51.530914306640625
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "light-brown-leather",
+      "view": "sidecar",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 407.9732666015625,
+        "y": 382.1488037109375,
+        "width": 126.7366943359375,
+        "height": 136.2283935546875
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "light-brown-leather",
+      "view": "capon",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 218.7607421875,
+        "y": 88.715087890625,
+        "width": 126.73663330078125,
+        "height": 136.22845458984375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "light-brown-leather",
+      "view": "exploded",
+      "body": {
+        "x": 223.2779541015625,
+        "y": 180.6734619140625,
+        "width": 251.90289306640625,
+        "height": 363.2772216796875
+      },
+      "cap": {
+        "x": 295.9229736328125,
+        "y": 11.774261474609375,
+        "width": 113.4298095703125,
+        "height": 121.92501831054688
+      },
+      "reducer": {
+        "x": 325.33746337890625,
+        "y": 141.95291137695312,
+        "width": 45.299072265625,
+        "height": 51.179351806640625
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "matte-silver",
+      "view": "sidecar",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 407.9669189453125,
+        "y": 424.0791015625,
+        "width": 97.2291259765625,
+        "height": 94.30755615234375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "matte-silver",
+      "view": "capon",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 228.107177734375,
+        "y": 129.0516357421875,
+        "width": 97.22921752929688,
+        "height": 94.3074951171875
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "matte-silver",
+      "view": "exploded",
+      "body": {
+        "x": 213.50625610351562,
+        "y": 153.44415283203125,
+        "width": 271.6388854980469,
+        "height": 391.7391357421875
+      },
+      "cap": {
+        "x": 300.86334228515625,
+        "y": 11.780136108398438,
+        "width": 93.83840942382812,
+        "height": 91.01860046386719
+      },
+      "reducer": {
+        "x": 323.5618896484375,
+        "y": 111.68991088867188,
+        "width": 48.84814453125,
+        "height": 55.18914794921875
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "pink",
+      "view": "sidecar",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 407.97637939453125,
+        "y": 384.61859130859375,
+        "width": 121.38751220703125,
+        "height": 133.77191162109375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "pink",
+      "view": "capon",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 215.63555908203125,
+        "y": 91.24429321289062,
+        "width": 121.38751220703125,
+        "height": 133.77194213867188
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "pink",
+      "view": "exploded",
+      "body": {
+        "x": 222.74261474609375,
+        "y": 179.18173217773438,
+        "width": 252.98406982421875,
+        "height": 364.8364562988281
+      },
+      "cap": {
+        "x": 292.890380859375,
+        "y": 11.777587890625,
+        "width": 109.108642578125,
+        "height": 120.24029541015625
+      },
+      "reducer": {
+        "x": 325.24017333984375,
+        "y": 140.29498291015625,
+        "width": 45.493499755859375,
+        "height": 51.399017333984375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "shiny-black",
+      "view": "sidecar",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 407.9683837890625,
+        "y": 418.97381591796875,
+        "width": 103.639404296875,
+        "height": 99.4095458984375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "shiny-black",
+      "view": "capon",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 225.11285400390625,
+        "y": 127.78701782226562,
+        "width": 103.63943481445312,
+        "height": 99.4095458984375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "shiny-black",
+      "view": "exploded",
+      "body": {
+        "x": 214.77517700195312,
+        "y": 156.98004150390625,
+        "width": 269.0760192871094,
+        "height": 388.043212890625
+      },
+      "cap": {
+        "x": 298.4454345703125,
+        "y": 11.771804809570312,
+        "width": 99.08132934570312,
+        "height": 95.03752136230469
+      },
+      "reducer": {
+        "x": 323.79248046875,
+        "y": 115.6197509765625,
+        "width": 48.38726806640625,
+        "height": 54.66845703125
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "shiny-gold",
+      "view": "sidecar",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 407.96728515625,
+        "y": 420.14306640625,
+        "width": 103.5667724609375,
+        "height": 98.23223876953125
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "shiny-gold",
+      "view": "capon",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 228.03451538085938,
+        "y": 127.07476806640625,
+        "width": 103.56674194335938,
+        "height": 98.232177734375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "shiny-gold",
+      "view": "exploded",
+      "body": {
+        "x": 214.4862060546875,
+        "y": 156.17486572265625,
+        "width": 269.65966796875,
+        "height": 388.88482666015625
+      },
+      "cap": {
+        "x": 301.1371765136719,
+        "y": 11.77197265625,
+        "width": 99.22665405273438,
+        "height": 94.11557006835938
+      },
+      "reducer": {
+        "x": 323.7399597167969,
+        "y": 114.724853515625,
+        "width": 48.492218017578125,
+        "height": 54.787017822265625
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "shiny-silver",
+      "view": "sidecar",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 407.9674072265625,
+        "y": 419.45513916015625,
+        "width": 97.6798095703125,
+        "height": 98.92987060546875
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "shiny-silver",
+      "view": "capon",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 228.51419067382812,
+        "y": 129.4876708984375,
+        "width": 97.6798095703125,
+        "height": 98.92990112304688
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "shiny-silver",
+      "view": "exploded",
+      "body": {
+        "x": 214.65792846679688,
+        "y": 156.65335083007812,
+        "width": 269.3128967285156,
+        "height": 388.3846130371094
+      },
+      "cap": {
+        "x": 301.65643310546875,
+        "y": 11.777908325195312,
+        "width": 93.46603393554688,
+        "height": 94.66215515136719
+      },
+      "reducer": {
+        "x": 323.77117919921875,
+        "y": 115.25665283203125,
+        "width": 48.429840087890625,
+        "height": 54.716583251953125
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "white",
+      "view": "sidecar",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 407.974365234375,
+        "y": 397.2864990234375,
+        "width": 100.33984375,
+        "height": 121.09674072265625
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "white",
+      "view": "capon",
+      "body": {
+        "x": 137.59349060058594,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 225.53436279296875,
+        "y": 103.23623657226562,
+        "width": 100.33984375,
+        "height": 121.0968017578125
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "clear",
+      "capId": "white",
+      "view": "exploded",
+      "body": {
+        "x": 219.91748046875,
+        "y": 171.30938720703125,
+        "width": 258.6900634765625,
+        "height": 373.065185546875
+      },
+      "cap": {
+        "x": 300.74560546875,
+        "y": 11.77276611328125,
+        "width": 92.22421264648438,
+        "height": 111.30230712890625
+      },
+      "reducer": {
+        "x": 324.72686767578125,
+        "y": 131.54556274414062,
+        "width": 46.519561767578125,
+        "height": 52.558319091796875
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "black-leather",
+      "view": "sidecar",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 402.0643005371094,
+        "y": 382.02099609375,
+        "width": 127.46340942382812,
+        "height": 136.35931396484375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "black-leather",
+      "view": "capon",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 217.65603637695312,
+        "y": 95.31430053710938,
+        "width": 127.46340942382812,
+        "height": 136.3592529296875
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "black-leather",
+      "view": "exploded",
+      "body": {
+        "x": 223.59173583984375,
+        "y": 180.75048828125,
+        "width": 251.84710693359375,
+        "height": 363.19671630859375
+      },
+      "cap": {
+        "x": 294.9460144042969,
+        "y": 11.77435302734375,
+        "width": 114.05502319335938,
+        "height": 122.01507568359375
+      },
+      "reducer": {
+        "x": 325.34246826171875,
+        "y": 142.03848266601562,
+        "width": 45.2890625,
+        "height": 51.16802978515625
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "brown-leather",
+      "view": "sidecar",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 402.0672912597656,
+        "y": 379.47064208984375,
+        "width": 129.23678588867188,
+        "height": 138.91754150390625
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "brown-leather",
+      "view": "capon",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 217.94674682617188,
+        "y": 92.81414794921875,
+        "width": 129.23678588867188,
+        "height": 138.91754150390625
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "brown-leather",
+      "view": "exploded",
+      "body": {
+        "x": 224.14056396484375,
+        "y": 182.28338623046875,
+        "width": 250.73602294921875,
+        "height": 361.59442138671875
+      },
+      "cap": {
+        "x": 295.43902587890625,
+        "y": 11.78070068359375,
+        "width": 115.13165283203125,
+        "height": 123.75582885742188
+      },
+      "reducer": {
+        "x": 325.44244384765625,
+        "y": 143.74215698242188,
+        "width": 45.0892333984375,
+        "height": 50.942291259765625
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "ivory-leather",
+      "view": "sidecar",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 402.0731201171875,
+        "y": 386.083740234375,
+        "width": 120.5880126953125,
+        "height": 132.3038330078125
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "ivory-leather",
+      "view": "capon",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 215.5047607421875,
+        "y": 100.05291748046875,
+        "width": 120.58804321289062,
+        "height": 132.3038330078125
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "ivory-leather",
+      "view": "exploded",
+      "body": {
+        "x": 222.70938110351562,
+        "y": 178.2861328125,
+        "width": 253.63327026367188,
+        "height": 365.77264404296875
+      },
+      "cap": {
+        "x": 292.631103515625,
+        "y": 11.772735595703125,
+        "width": 108.66818237304688,
+        "height": 119.22586059570312
+      },
+      "reducer": {
+        "x": 325.1817932128906,
+        "y": 139.29959106445312,
+        "width": 45.6102294921875,
+        "height": 51.530914306640625
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "light-brown-leather",
+      "view": "sidecar",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 402.07293701171875,
+        "y": 382.14501953125,
+        "width": 126.73663330078125,
+        "height": 136.22845458984375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "light-brown-leather",
+      "view": "capon",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 218.7607421875,
+        "y": 95.009033203125,
+        "width": 126.73663330078125,
+        "height": 136.22845458984375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "light-brown-leather",
+      "view": "exploded",
+      "body": {
+        "x": 223.56414794921875,
+        "y": 180.6734619140625,
+        "width": 251.90289306640625,
+        "height": 363.2772216796875
+      },
+      "cap": {
+        "x": 295.9229736328125,
+        "y": 11.77093505859375,
+        "width": 113.4298095703125,
+        "height": 121.92498779296875
+      },
+      "reducer": {
+        "x": 325.33746337890625,
+        "y": 141.95291137695312,
+        "width": 45.299072265625,
+        "height": 51.179351806640625
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "matte-silver",
+      "view": "sidecar",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 402.0665588378906,
+        "y": 424.07073974609375,
+        "width": 97.22921752929688,
+        "height": 94.3074951171875
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "matte-silver",
+      "view": "capon",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 228.107177734375,
+        "y": 136.21771240234375,
+        "width": 97.22921752929688,
+        "height": 94.30752563476562
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "matte-silver",
+      "view": "exploded",
+      "body": {
+        "x": 213.81488037109375,
+        "y": 153.44415283203125,
+        "width": 271.63897705078125,
+        "height": 391.7391357421875
+      },
+      "cap": {
+        "x": 300.86334228515625,
+        "y": 11.772003173828125,
+        "width": 93.83840942382812,
+        "height": 91.01858520507812
+      },
+      "reducer": {
+        "x": 323.5618896484375,
+        "y": 111.68991088867188,
+        "width": 48.84814453125,
+        "height": 55.18914794921875
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "pink-leather",
+      "view": "sidecar",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 402.0760498046875,
+        "y": 384.612548828125,
+        "width": 121.38751220703125,
+        "height": 133.7718505859375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "pink-leather",
+      "view": "capon",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 215.63555908203125,
+        "y": 97.97430419921875,
+        "width": 121.38751220703125,
+        "height": 133.77191162109375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "pink-leather",
+      "view": "exploded",
+      "body": {
+        "x": 223.030029296875,
+        "y": 179.18173217773438,
+        "width": 252.984130859375,
+        "height": 364.8364562988281
+      },
+      "cap": {
+        "x": 292.890380859375,
+        "y": 11.772125244140625,
+        "width": 109.108642578125,
+        "height": 120.24029541015625
+      },
+      "reducer": {
+        "x": 325.24017333984375,
+        "y": 140.29498291015625,
+        "width": 45.493499755859375,
+        "height": 51.399017333984375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "shiny-black",
+      "view": "sidecar",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 402.06805419921875,
+        "y": 418.975341796875,
+        "width": 103.63946533203125,
+        "height": 99.4095458984375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "shiny-black",
+      "view": "capon",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 225.11285400390625,
+        "y": 134.9676513671875,
+        "width": 103.63943481445312,
+        "height": 99.4095458984375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "shiny-black",
+      "view": "exploded",
+      "body": {
+        "x": 215.08090209960938,
+        "y": 156.98004150390625,
+        "width": 269.0760803222656,
+        "height": 388.043212890625
+      },
+      "cap": {
+        "x": 298.4454345703125,
+        "y": 11.773284912109375,
+        "width": 99.08132934570312,
+        "height": 95.03750610351562
+      },
+      "reducer": {
+        "x": 323.79248046875,
+        "y": 115.6197509765625,
+        "width": 48.38726806640625,
+        "height": 54.66845703125
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "shiny-gold",
+      "view": "sidecar",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 402.0669860839844,
+        "y": 420.139404296875,
+        "width": 103.56674194335938,
+        "height": 98.23211669921875
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "shiny-gold",
+      "view": "capon",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 228.03451538085938,
+        "y": 133.36871337890625,
+        "width": 103.56674194335938,
+        "height": 98.232177734375
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "shiny-gold",
+      "view": "exploded",
+      "body": {
+        "x": 214.7926025390625,
+        "y": 156.17486572265625,
+        "width": 269.65966796875,
+        "height": 388.88482666015625
+      },
+      "cap": {
+        "x": 301.1371765136719,
+        "y": 11.768386840820312,
+        "width": 99.22665405273438,
+        "height": 94.11558532714844
+      },
+      "reducer": {
+        "x": 323.7399597167969,
+        "y": 114.724853515625,
+        "width": 48.492218017578125,
+        "height": 54.787017822265625
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "shiny-silver",
+      "view": "sidecar",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 402.06707763671875,
+        "y": 419.4490966796875,
+        "width": 97.6798095703125,
+        "height": 98.9298095703125
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "shiny-silver",
+      "view": "capon",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 228.51419067382812,
+        "y": 136.21771240234375,
+        "width": 97.6798095703125,
+        "height": 98.92987060546875
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "shiny-silver",
+      "view": "exploded",
+      "body": {
+        "x": 214.96392822265625,
+        "y": 156.65335083007812,
+        "width": 269.3128662109375,
+        "height": 388.3846130371094
+      },
+      "cap": {
+        "x": 301.65643310546875,
+        "y": 11.772079467773438,
+        "width": 93.46603393554688,
+        "height": 94.66215515136719
+      },
+      "reducer": {
+        "x": 323.77117919921875,
+        "y": 115.25665283203125,
+        "width": 48.429840087890625,
+        "height": 54.716583251953125
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "white",
+      "view": "sidecar",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 402.0740051269531,
+        "y": 397.294921875,
+        "width": 100.33981323242188,
+        "height": 121.09674072265625
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "white",
+      "view": "capon",
+      "body": {
+        "x": 137.91326904296875,
+        "y": 130.08364868164062,
+        "width": 281.4544677734375,
+        "height": 405.8944396972656
+      },
+      "cap": {
+        "x": 225.53436279296875,
+        "y": 109.98080444335938,
+        "width": 100.33984375,
+        "height": 121.09677124023438
+      },
+      "reducer": {
+        "x": 251.62591552734375,
+        "y": 141.34881591796875,
+        "width": 50.61328125,
+        "height": 14.884521484375
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-seated.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    },
+    {
+      "glass": "frosted",
+      "capId": "white",
+      "view": "exploded",
+      "body": {
+        "x": 220.21142578125,
+        "y": 171.30938720703125,
+        "width": 258.6900634765625,
+        "height": 373.065185546875
+      },
+      "cap": {
+        "x": 300.74560546875,
+        "y": 11.780517578125,
+        "width": 92.22421264648438,
+        "height": 111.30230712890625
+      },
+      "reducer": {
+        "x": 324.72686767578125,
+        "y": 131.54556274414062,
+        "width": 46.519561767578125,
+        "height": 52.558319091796875
+      },
+      "reducerUrl": "/_next/image?url=%2Flocal-kits%2Felegant60-reducer-2026-10-31%2Freducer-18415-full.png&w=640&q=75",
+      "loaded": true,
+      "fitmentText": "02\nFITMENT\nOrifice reducer for the 18-415 neck. Stays seated when the cap is removed.",
+      "fitmentImages": 1,
+      "capOffLabel": "CAP OFF"
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

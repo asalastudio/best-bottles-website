@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "width": 1440,
+      "view": "sidecar",
+      "imagesDecoded": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "view": "capon",
+      "imagesDecoded": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "view": "exploded",
+      "imagesDecoded": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "view": "sidecar",
+      "imagesDecoded": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "view": "capon",
+      "imagesDecoded": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "view": "exploded",
+      "imagesDecoded": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

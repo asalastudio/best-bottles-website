@@ -1,0 +1,15 @@
+{
+  "status": "local-only, originals retained; not included in this package",
+  "files": [
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/component-followups/renders/mechanism-tulip-5-v3.blend",
+      "bytes": 52733409,
+      "sha256": "ab4a6a7baeb883016a4c869c8c3880c4465d43cae3e2fcbb215e658386e36cd0"
+    },
+    {
+      "path": "outputs/catalog-model-repair-2026-10-31/short-amber-vial/renders/short-amber-v1.blend",
+      "bytes": 53012138,
+      "sha256": "ab66e353b73ba9b73c1cddf9a6b2e7e142235763dfedb42a99579475c501f70e"
+    }
+  ]
+}

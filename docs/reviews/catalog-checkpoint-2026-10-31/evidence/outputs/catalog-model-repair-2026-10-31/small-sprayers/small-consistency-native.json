@@ -1,0 +1,58 @@
+{
+  "source": "Current local Blender scenes; visual comparison with user-provided original-site screenshots",
+  "sizes": [
+    {
+      "sizeMl": 3.3,
+      "bodyHeightMm": 37.00000047683716,
+      "bodyDiameterMm": 14.000000432133675,
+      "interiorFloorMm": 1.5999999595806003,
+      "tubeTipMm": 3.5000001080334187,
+      "tipClearanceMm": 1.9000001484528184,
+      "tubeOuterDiameterMm": 1.1000000552205362,
+      "tubeTopMm": 18.99999938905239,
+      "tubeCentered": true,
+      "heelZProfileMm": [
+        0.0,
+        0.1,
+        0.3,
+        0.6,
+        1.0,
+        1.6,
+        1.6457,
+        1.85,
+        2.2913,
+        2.3
+      ]
+    },
+    {
+      "sizeMl": 4.0,
+      "bodyHeightMm": 48.99999871850014,
+      "bodyDiameterMm": 14.000000432133675,
+      "interiorFloorMm": 1.5999999595806003,
+      "tubeTipMm": 3.5000001080334187,
+      "tipClearanceMm": 1.9000001484528184,
+      "tubeOuterDiameterMm": 1.1000000552205362,
+      "tubeTopMm": 30.99999949336052,
+      "tubeCentered": true,
+      "heelZProfileMm": [
+        0.0,
+        0.1,
+        0.3,
+        0.6,
+        1.0,
+        1.6,
+        1.6415,
+        1.85,
+        2.2831,
+        2.3
+      ]
+    }
+  ],
+  "matchedHeelProfiles": false,
+  "heelProfileMaxDeltaMm": 0.008199999999999985,
+  "heelProfilesConsistentWithin001Mm": true,
+  "notes": [
+    "Tube diameter and concealed neck geometry are modeling assumptions, not supplier measurements.",
+    "Mechanism v2 uses the current 1.6 mm base: actual tip clearance is 1.9 mm. The housing and spring follow the exact-SKU source photo visually."
+  ]
+}

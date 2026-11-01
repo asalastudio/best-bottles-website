@@ -1,0 +1,2584 @@
+{
+  "records": [
+    {
+      "sku": "GBCyl5Sl",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl5Sl&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5Sl.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 710.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 710.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 936.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CAP-SLV-13-415-01.be765db5b8f5.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 660.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 660.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 762.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5Gl",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl5Gl&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5Gl.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 710.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 710.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 936.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CAP-SGLD-13-415-01.0f2e011c6b7a.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 660.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 660.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 762.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5BlkSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl5BlkSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5BlkSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 710.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 710.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 936.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CAP-BLK-S-13-415.df3b5176c9a9.png&w=1200&q=75",
+          "rect": {
+            "x": 825.43896484375,
+            "y": 706.5985107421875,
+            "width": 63.5439453125,
+            "height": 41.87384033203125,
+            "top": 706.5985107421875,
+            "right": 888.98291015625,
+            "bottom": 748.4723510742188,
+            "left": 825.43896484375
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl5WhtSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5WhtSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 710.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 710.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 936.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CAP-WHT-S-13-415.ef7fce8e5d29.png&w=1200&q=75",
+          "rect": {
+            "x": 825.43896484375,
+            "y": 706.5985107421875,
+            "width": 63.5439453125,
+            "height": 41.87384033203125,
+            "top": 706.5985107421875,
+            "right": 888.98291015625,
+            "bottom": 748.4723510742188,
+            "left": 825.43896484375
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl5CuSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5CuSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 710.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 710.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 936.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CLS-MTCP-S-13-415.32b055ffaedc.png&w=1200&q=75",
+          "rect": {
+            "x": 824.62548828125,
+            "y": 692.4904174804688,
+            "width": 65.33380126953125,
+            "height": 70.2215576171875,
+            "top": 692.4904174804688,
+            "right": 889.9592895507812,
+            "bottom": 762.7119750976562,
+            "left": 824.62548828125
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl5GlMattSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5GlMattSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 710.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 710.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 936.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CLS-MTGD-S-13-415.fda428af1afd.png&w=1200&q=75",
+          "rect": {
+            "x": 824.62548828125,
+            "y": 692.4904174804688,
+            "width": 65.33380126953125,
+            "height": 70.2215576171875,
+            "top": 692.4904174804688,
+            "right": 889.9592895507812,
+            "bottom": 762.7119750976562,
+            "left": 824.62548828125
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl5SlMattSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5SlMattSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 710.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 710.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 936.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CLS-MTSL-S-13-415.c2a5e084f15a.png&w=1200&q=75",
+          "rect": {
+            "x": 824.62548828125,
+            "y": 692.4904174804688,
+            "width": 65.33380126953125,
+            "height": 70.2215576171875,
+            "top": 692.4904174804688,
+            "right": 889.9592895507812,
+            "bottom": 762.7119750976562,
+            "left": 824.62548828125
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl5BlkShSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5BlkShSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 710.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 710.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 936.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CAP-SBLK-13-415.672aa00a7c1b.png&w=1200&q=75",
+          "rect": {
+            "x": 824.4625244140625,
+            "y": 692.490234375,
+            "width": 65.496826171875,
+            "height": 70.22174072265625,
+            "top": 692.490234375,
+            "right": 889.9593505859375,
+            "bottom": 762.7119750976562,
+            "left": 824.4625244140625
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl5GlSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5GlSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 710.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 710.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 936.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CLS-SHGD-S-13-415.1336d3427f5b.png&w=1200&q=75",
+          "rect": {
+            "x": 824.4625244140625,
+            "y": 692.3273315429688,
+            "width": 65.496826171875,
+            "height": 70.3846435546875,
+            "top": 692.3273315429688,
+            "right": 889.9593505859375,
+            "bottom": 762.7119750976562,
+            "left": 824.4625244140625
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl5SlSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5SlSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 710.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 710.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 936.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CLS-SHSL-S-13-415-02.ad476da805a7.png&w=1200&q=75",
+          "rect": {
+            "x": 824.4625244140625,
+            "y": 692.3273315429688,
+            "width": 65.496826171875,
+            "height": 70.3846435546875,
+            "top": 692.3273315429688,
+            "right": 889.9593505859375,
+            "bottom": 762.7119750976562,
+            "left": 824.4625244140625
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCylBlu5Sl&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5Sl.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 710.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 710.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 935.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CAP-SLV-13-415-01.be765db5b8f5.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 660.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 660.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 762.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCylBlu5WhtSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5WhtSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 710.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 710.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 935.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CAP-WHT-S-13-415.ef7fce8e5d29.png&w=1200&q=75",
+          "rect": {
+            "x": 825.43896484375,
+            "y": 706.5985107421875,
+            "width": 63.5439453125,
+            "height": 41.87384033203125,
+            "top": 706.5985107421875,
+            "right": 888.98291015625,
+            "bottom": 748.4723510742188,
+            "left": 825.43896484375
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5Gl",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCylBlu5Gl&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5Gl.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 710.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 710.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 935.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CAP-SGLD-13-415-01.0f2e011c6b7a.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 660.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 660.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 762.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5BlkSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCylBlu5BlkSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5BlkSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 710.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 710.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 935.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CAP-BLK-S-13-415.df3b5176c9a9.png&w=1200&q=75",
+          "rect": {
+            "x": 825.43896484375,
+            "y": 706.5985107421875,
+            "width": 63.5439453125,
+            "height": 41.87384033203125,
+            "top": 706.5985107421875,
+            "right": 888.98291015625,
+            "bottom": 748.4723510742188,
+            "left": 825.43896484375
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5BlkShSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 710.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 710.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 935.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CAP-SBLK-13-415.672aa00a7c1b.png&w=1200&q=75",
+          "rect": {
+            "x": 824.4625244140625,
+            "y": 692.490234375,
+            "width": 65.496826171875,
+            "height": 70.22174072265625,
+            "top": 692.490234375,
+            "right": 889.9593505859375,
+            "bottom": 762.7119750976562,
+            "left": 824.4625244140625
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCylBlu5CuSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5CuSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 710.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 710.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 935.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CLS-MTCP-S-13-415.32b055ffaedc.png&w=1200&q=75",
+          "rect": {
+            "x": 824.62548828125,
+            "y": 692.4904174804688,
+            "width": 65.33380126953125,
+            "height": 70.2215576171875,
+            "top": 692.4904174804688,
+            "right": 889.9592895507812,
+            "bottom": 762.7119750976562,
+            "left": 824.62548828125
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCylBlu5GlMattSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5GlMattSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 710.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 710.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 935.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CLS-MTGD-S-13-415.fda428af1afd.png&w=1200&q=75",
+          "rect": {
+            "x": 824.62548828125,
+            "y": 692.4904174804688,
+            "width": 65.33380126953125,
+            "height": 70.2215576171875,
+            "top": 692.4904174804688,
+            "right": 889.9592895507812,
+            "bottom": 762.7119750976562,
+            "left": 824.62548828125
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCylBlu5SlMattSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5SlMattSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 710.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 710.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 935.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CLS-MTSL-S-13-415.c2a5e084f15a.png&w=1200&q=75",
+          "rect": {
+            "x": 824.62548828125,
+            "y": 692.4904174804688,
+            "width": 65.33380126953125,
+            "height": 70.2215576171875,
+            "top": 692.4904174804688,
+            "right": 889.9592895507812,
+            "bottom": 762.7119750976562,
+            "left": 824.62548828125
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCylBlu5GlSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5GlSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 710.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 710.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 935.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CLS-SHGD-S-13-415.1336d3427f5b.png&w=1200&q=75",
+          "rect": {
+            "x": 824.4625244140625,
+            "y": 692.3273315429688,
+            "width": 65.496826171875,
+            "height": 70.3846435546875,
+            "top": 692.3273315429688,
+            "right": 889.9593505859375,
+            "bottom": 762.7119750976562,
+            "left": 824.4625244140625
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "href": "http://localhost:3010/matrix?family=Cylinder&sku=GBCylBlu5SlSht&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5SlSht.png",
+      "layers": [
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 710.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 710.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 935.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-CLS-SHSL-S-13-415-02.ad476da805a7.png&w=1200&q=75",
+          "rect": {
+            "x": 824.4625244140625,
+            "y": 692.3273315429688,
+            "width": 65.496826171875,
+            "height": 70.3846435546875,
+            "top": 692.3273315429688,
+            "right": 889.9593505859375,
+            "bottom": 762.7119750976562,
+            "left": 824.4625244140625
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5MtlRollBlkSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SBLK-13415.a284ff0061dd.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5MtlRollCuMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollCuMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5MtlRollCuMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MCPR-13415.9b809c36ba0a.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollGlMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5MtlRollGlMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MGLD-13415.40270b2051e9.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5MtlRollGlSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollGlSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5MtlRollGlSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SGLD-13415.0f2e011c6b7a.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5MtlRollPinkDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollPinkDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5MtlRollPinkDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-PNK-13415-DOT.f263dadacb67.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5MtlRollSlDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollSlDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5MtlRollSlDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SLV-13415-DOT.e1f9bbd394c9.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5MtlRollSlMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollSlMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5MtlRollSlMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MSLV-13415.023bc67c73ef.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5MtlRollSlSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollSlSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5MtlRollSlSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SSLV-13415.be765db5b8f5.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5RollBlkDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-BLK-13415-DOT.afd2b0f2cb3c.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollSlSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5RollSlSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SSLV-13415.be765db5b8f5.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5RollBlkSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SBLK-13415.a284ff0061dd.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollGlSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5RollGlSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SGLD-13415.0f2e011c6b7a.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5RollSlDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollSlDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5RollSlDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SLV-13415-DOT.e1f9bbd394c9.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollPinkDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5RollPinkDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-PNK-13415-DOT.f263dadacb67.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollCuMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5RollCuMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MCPR-13415.9b809c36ba0a.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollGlMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5RollGlMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MGLD-13415.40270b2051e9.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollSlMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5RollSlMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MSLV-13415.023bc67c73ef.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "screenshot": "builder-GBCyl5MtlRollBlkDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+          "rect": {
+            "x": 796.9861450195312,
+            "y": 762.5491943359375,
+            "width": 119.79425048828125,
+            "height": 225.564453125,
+            "top": 762.5491943359375,
+            "right": 916.7803955078125,
+            "bottom": 988.1136474609375,
+            "left": 796.9861450195312
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-BLK-13415-DOT.afd2b0f2cb3c.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5MtlRollBlkSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SBLK-13415.a284ff0061dd.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollCuMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollCuMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5MtlRollCuMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MCPR-13415.9b809c36ba0a.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollGlMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5MtlRollGlMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MGLD-13415.40270b2051e9.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollGlSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5MtlRollGlSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SGLD-13415.0f2e011c6b7a.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollPinkDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollPinkDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5MtlRollPinkDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-PNK-13415-DOT.f263dadacb67.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollSlDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5MtlRollSlDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SLV-13415-DOT.e1f9bbd394c9.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollSlMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5MtlRollSlMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MSLV-13415.023bc67c73ef.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollSlSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5MtlRollSlSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SSLV-13415.be765db5b8f5.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollBlkDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5RollBlkDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-BLK-13415-DOT.afd2b0f2cb3c.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5RollGlSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollGlSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5RollGlSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SGLD-13415.0f2e011c6b7a.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5RollSlSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollSlSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5RollSlSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SSLV-13415.be765db5b8f5.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5RollBlkSh",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollBlkSh&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5RollBlkSh.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SBLK-13415.a284ff0061dd.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5RollGlMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollGlMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5RollGlMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MGLD-13415.40270b2051e9.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5RollPinkDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollPinkDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5RollPinkDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-PNK-13415-DOT.f263dadacb67.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5RollSlDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollSlDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5RollSlDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-SLV-13415-DOT.e1f9bbd394c9.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5RollCuMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollCuMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5RollCuMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MCPR-13415.9b809c36ba0a.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollSlMatt&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5RollSlMatt.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-MSLV-13415.023bc67c73ef.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkDot&from=pdp",
+      "passed": true,
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "screenshot": "builder-GBCylBlu5MtlRollBlkDot.png",
+      "layers": [
+        {
+          "slot": "roller",
+          "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+          "rect": {
+            "x": 823.1989135742188,
+            "y": 717.958740234375,
+            "width": 68.28363037109375,
+            "height": 96.97314453125,
+            "top": 717.958740234375,
+            "right": 891.4825439453125,
+            "bottom": 814.931884765625,
+            "left": 823.1989135742188
+          }
+        },
+        {
+          "slot": "body",
+          "url": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+          "rect": {
+            "x": 797.5633544921875,
+            "y": 762.9528198242188,
+            "width": 119.295166015625,
+            "height": 224.62457275390625,
+            "top": 762.9528198242188,
+            "right": 916.8585205078125,
+            "bottom": 987.577392578125,
+            "left": 797.5633544921875
+          }
+        },
+        {
+          "slot": "cap",
+          "url": "/_next/image?url=%2Flocal-kits%2Fcylinder5-masters-2026-11-01%2Fcap-CMP-ROC-BLK-13415-DOT.afd2b0f2cb3c.png&w=1200&q=75",
+          "rect": {
+            "x": 822.8319091796875,
+            "y": 712.063720703125,
+            "width": 68.758056640625,
+            "height": 102.8111572265625,
+            "top": 712.063720703125,
+            "right": 891.5899658203125,
+            "bottom": 814.8748779296875,
+            "left": 822.8319091796875
+          }
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "errors": [
+    "ChunkLoadError: Failed to load chunk /_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsay._.js from module [turbopack]/browser/dev/hmr-client/hmr-client.ts [app-client] (ecmascript, async loader)\nhttp://localhost:3010/_next/static/chunks/turbopack-_16pkvym._.js:698:25"
+  ]
+}

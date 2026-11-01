@@ -1,0 +1,23 @@
+{
+  "lotion-head": {
+    "url": "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg",
+    "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+    "bytes": 985854,
+    "width": 1322,
+    "height": 1190
+  },
+  "roller-metal": {
+    "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+    "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+    "bytes": 1262136,
+    "width": 1052,
+    "height": 1494
+  },
+  "roller-plastic": {
+    "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+    "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+    "bytes": 1233944,
+    "width": 1052,
+    "height": 1494
+  }
+}

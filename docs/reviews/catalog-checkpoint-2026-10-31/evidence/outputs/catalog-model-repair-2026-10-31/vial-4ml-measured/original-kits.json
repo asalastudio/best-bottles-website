@@ -1,0 +1,336 @@
+{
+  "GBV1DrmBlackCapSht": null,
+  "GBV1DrmWhtCapSht": null,
+  "GBVAmb1DrmBlackCapSht": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1061,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 258
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "vial-4ml-amber-13-425",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1064,
+          "left": 336,
+          "right": 665,
+          "top": 74
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 33332,
+          "height": 1100,
+          "key": "kits/master-parts/69fc215f8711d853ca0174e95a9f1c8b24ee7cd0b4d8d7762ece2ff1fb81bf4d.body.webp",
+          "sha256": "69fc215f8711d853ca0174e95a9f1c8b24ee7cd0b4d8d7762ece2ff1fb81bf4d",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/69fc215f8711d853ca0174e95a9f1c8b24ee7cd0b4d8d7762ece2ff1fb81bf4d.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 258,
+          "left": 328,
+          "right": 666,
+          "top": 38
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": 0,
+          "dy": -208
+        },
+        "image": {
+          "bytes": 10514,
+          "height": 1100,
+          "key": "kits/master-parts/ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp",
+          "sha256": "ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "cap",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5",
+    "sku": "GBVAmb1DrmBlackCapSht",
+    "three": null
+  },
+  "GBVAmb1DrmWhtCapSht": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1052.9,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 253
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "vial-4ml-amber-13-425",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1056,
+          "left": 336,
+          "right": 659,
+          "top": 84
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 33040,
+          "height": 1100,
+          "key": "kits/master-parts/947989e8a8baf02334187dd0b6f3752a7dcc7e90dc8dae2caa323a18543c91da.body.webp",
+          "sha256": "947989e8a8baf02334187dd0b6f3752a7dcc7e90dc8dae2caa323a18543c91da",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/947989e8a8baf02334187dd0b6f3752a7dcc7e90dc8dae2caa323a18543c91da.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 253,
+          "left": 335,
+          "right": 665,
+          "top": 39
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": 0,
+          "dy": -193
+        },
+        "image": {
+          "bytes": 8874,
+          "height": 1100,
+          "key": "kits/master-parts/71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp",
+          "sha256": "71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "cap",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2",
+    "sku": "GBVAmb1DrmWhtCapSht",
+    "three": null
+  },
+  "GBVGr1DrmBlackCapSht": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1061,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 256
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "vial-4ml-green-13-425",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1064,
+          "left": 333,
+          "right": 668,
+          "top": 81
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 31676,
+          "height": 1100,
+          "key": "kits/master-parts/f03266cd8043a0ecf61534b6ac2e6d51cdca34b060906affdf023a8fa8e60450.body.webp",
+          "sha256": "f03266cd8043a0ecf61534b6ac2e6d51cdca34b060906affdf023a8fa8e60450",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/f03266cd8043a0ecf61534b6ac2e6d51cdca34b060906affdf023a8fa8e60450.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 256,
+          "left": 330,
+          "right": 666,
+          "top": 38
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": 0,
+          "dy": -199
+        },
+        "image": {
+          "bytes": 10222,
+          "height": 1100,
+          "key": "kits/master-parts/8f732abf292982a72a087730b259ff2c61e231955dab202f815a3fda08fe9d58.cap.webp",
+          "sha256": "8f732abf292982a72a087730b259ff2c61e231955dab202f815a3fda08fe9d58",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/8f732abf292982a72a087730b259ff2c61e231955dab202f815a3fda08fe9d58.cap.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "cap",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df",
+    "sku": "GBVGr1DrmBlackCapSht",
+    "three": null
+  },
+  "GBVGr1DrmWhtCapSht": {
+    "anchors": {
+      "axisX": 500,
+      "baselineY": 1058.2,
+      "neckAxisX": 500,
+      "pxPerMm": null,
+      "seatY": 261
+    },
+    "canvas": {
+      "height": 1100,
+      "width": 1000
+    },
+    "completeness": "full",
+    "conflicts": [],
+    "familyId": "vial-4ml-green-13-425",
+    "parts": [
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 1061,
+          "left": 337,
+          "right": 667,
+          "top": 87
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 0,
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "bytes": 31832,
+          "height": 1100,
+          "key": "kits/master-parts/40587e0da2bb2eba74d0d89b740649192f394cd6d988aa1a07e9565ab01725de.body.webp",
+          "sha256": "40587e0da2bb2eba74d0d89b740649192f394cd6d988aa1a07e9565ab01725de",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/40587e0da2bb2eba74d0d89b740649192f394cd6d988aa1a07e9565ab01725de.body.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0
+      },
+      {
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "bounds": {
+          "bottom": 261,
+          "left": 335,
+          "right": 669,
+          "top": 39
+        },
+        "derivation": "psd-layer",
+        "explodeIndex": 1,
+        "exploded": {
+          "dx": 0,
+          "dy": -198
+        },
+        "image": {
+          "bytes": 9472,
+          "height": 1100,
+          "key": "kits/master-parts/e9ed32e4232f33da2d145e0150cf1f65c8d178e5d744ef65f40864d82201a57a.cap.webp",
+          "sha256": "e9ed32e4232f33da2d145e0150cf1f65c8d178e5d744ef65f40864d82201a57a",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/e9ed32e4232f33da2d145e0150cf1f65c8d178e5d744ef65f40864d82201a57a.cap.webp",
+          "width": 1000
+        },
+        "image2x": null,
+        "mask": null,
+        "slot": "cap",
+        "variantKey": null,
+        "zOrder": 1
+      }
+    ],
+    "plateSha256": "3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d",
+    "sku": "GBVGr1DrmWhtCapSht",
+    "three": null
+  }
+}

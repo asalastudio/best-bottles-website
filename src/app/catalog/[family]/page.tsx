@@ -69,7 +69,10 @@ export default async function FamilyLandingPage({
     if (!family) notFound();
 
     const urlSearchParams = toURLSearchParams(resolvedSearchParams);
-    const landingRedirect = familyLandingRedirect(family, urlSearchParams);
+    const canonicalRoute = familyToSlug(family);
+    const landingRedirect = routeSlug !== canonicalRoute
+        ? `/catalog/${canonicalRoute}${urlSearchParams.size ? `?${urlSearchParams}` : ""}`
+        : familyLandingRedirect(family, urlSearchParams);
     if (landingRedirect) {
         const localeValue = await getLocale();
         const locale: AppLocale = isLocale(localeValue) ? localeValue : defaultLocale;

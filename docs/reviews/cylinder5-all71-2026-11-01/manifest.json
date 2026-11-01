@@ -1,0 +1,274 @@
+{
+  "status": "localhost-enabled-appearance-review-pending",
+  "counts": {
+    "skus": 71,
+    "bodies": 2,
+    "pour": 20,
+    "rollon": 36,
+    "sprayer": 15
+  },
+  "productionChanged": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5864,
+      "sha256": "678668dcbb44f058fcd0ad3802d3d8595ea86f1f9d850316781e1c1da9ef88ca"
+    },
+    {
+      "path": "evidence/before-clear-pour.json",
+      "bytes": 414,
+      "sha256": "5b9f6ea5efba31dc8e316a49f8988591d77584c5eb0dd97b5fd35a8456cb02b1"
+    },
+    {
+      "path": "evidence/before-clear-pour.png",
+      "bytes": 66378,
+      "sha256": "c84884ff4878984e73a3fe2954a4704d83c3ba8e70f893f5145469f92e80d450"
+    },
+    {
+      "path": "evidence/browser-first-pass.json",
+      "bytes": 267951,
+      "sha256": "86636d464ba541b05afa33557bbf01ef2ec86532ca56baffd680d93a3d3edb01"
+    },
+    {
+      "path": "evidence/browser-verification.json",
+      "bytes": 278634,
+      "sha256": "0cd315693943012471a5fb7cff6acd591040a523a95aba03de78707a84247868"
+    },
+    {
+      "path": "evidence/builder-api-verification.json",
+      "bytes": 106,
+      "sha256": "248affed5456eb3fd2495b8e385b0be4b56b91c1098bd2ae9c8f21fbdb632ddd"
+    },
+    {
+      "path": "evidence/builder-main-stage.png",
+      "bytes": 3828,
+      "sha256": "2dcda2d380beacf4acf2f720e2f76976eea6f8b8f5a0dc72ff695d2b19d23b25"
+    },
+    {
+      "path": "evidence/builder-verification.json",
+      "bytes": 141831,
+      "sha256": "6650bf1d0d0561eb9853d9e7e72ca4ed2c017e5929ed6d82791a2bdb109abc11"
+    },
+    {
+      "path": "evidence/capture-checksums.json",
+      "bytes": 91448,
+      "sha256": "4c544a30da8460d24bc22cb93c37f5b8b04280e371a45f4141330dc8fb4f1b47"
+    },
+    {
+      "path": "evidence/catalog-snapshot.json",
+      "bytes": 806347,
+      "sha256": "703c506d5c8b7b14a735b82436c1d2fe0259218c50260bfb4ebae82fa711ec1b"
+    },
+    {
+      "path": "evidence/contact-sheets/01.png",
+      "bytes": 275489,
+      "sha256": "5ade5b302d9f067fcd2a10756049364ba736e0a93203f1a760a63cfab0047d9a"
+    },
+    {
+      "path": "evidence/contact-sheets/02.png",
+      "bytes": 285170,
+      "sha256": "2d3463edc2836cf614f8968dd1056f42a61a45933c883e68d1693ae07f1d47c0"
+    },
+    {
+      "path": "evidence/contact-sheets/03.png",
+      "bytes": 277396,
+      "sha256": "6d35efd8ef714fb154e0f829266862bacc6088cd476654511fb6956025b65559"
+    },
+    {
+      "path": "evidence/contact-sheets/04.png",
+      "bytes": 297815,
+      "sha256": "df1fccfbee126984ccd088137ebcc1c66399a8c100c21ad7934e42d9655f9910"
+    },
+    {
+      "path": "evidence/contact-sheets/05.png",
+      "bytes": 314672,
+      "sha256": "960fc030cd5f459d370fe4947e41a0cd29e5961501a575799636e59c49c24c20"
+    },
+    {
+      "path": "evidence/contact-sheets/06.png",
+      "bytes": 337438,
+      "sha256": "565b7d2f2de1c5b2ea7b95cd71998b78a386a09159f7a19a9402131bce6d8f0b"
+    },
+    {
+      "path": "evidence/kits-before.json",
+      "bytes": 340790,
+      "sha256": "83138316309f296128c89897e8e52edf0c4d274af342773f76d3af48e6083d6d"
+    },
+    {
+      "path": "evidence/layout-checks.json",
+      "bytes": 49320,
+      "sha256": "ba07f73855c7ff4c9c54d58925209f98654fff6a6552d9a5f4b5e060c506819e"
+    },
+    {
+      "path": "evidence/mobile-builder-verification.json",
+      "bytes": 705,
+      "sha256": "687efb47505394a3d236a44bf7cf5d5435a3d60b6ca8b865519e6ccacca38f3d"
+    },
+    {
+      "path": "evidence/verification-summary.json",
+      "bytes": 505,
+      "sha256": "054d32e33381da492ed75c28e5001475c8a00eb58889efe0bd44bbedcd30fb3c"
+    },
+    {
+      "path": "files/public/images/pdp/backdrops/cylinder-5ml-13-415-clear.webp",
+      "bytes": 22152,
+      "sha256": "83c61826ba175f2cbaafda66a6d4a93d88a72221d12aa831d8070dcfba9ca09c",
+      "restoreTo": "public/images/pdp/backdrops/cylinder-5ml-13-415-clear.webp"
+    },
+    {
+      "path": "files/public/images/pdp/backdrops/cylinder-5ml-13-415-cobalt.webp",
+      "bytes": 22156,
+      "sha256": "2476c60cea17b2e3561324d356b3adb2f84df6f0aeb869054b8ef402995ed8f4",
+      "restoreTo": "public/images/pdp/backdrops/cylinder-5ml-13-415-cobalt.webp"
+    },
+    {
+      "path": "files/public/local-kits/cylinder5-all71-2026-11-01/kits.json",
+      "bytes": 381658,
+      "sha256": "d787f102c28e057a47baf62b5dffe32276f1f830d0f2485fd87f08e60a9029e0",
+      "restoreTo": "public/local-kits/cylinder5-all71-2026-11-01/kits.json"
+    },
+    {
+      "path": "files/public/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png",
+      "bytes": 420607,
+      "sha256": "e66b67414c119eb8f999a37f26bf0a3808a95732fa123a0d0ce6f8e9b59640c6",
+      "restoreTo": "public/local-kits/cylinder5-profiles-2026-10-31/glass-5-clear-measured-v19.png"
+    },
+    {
+      "path": "files/public/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png",
+      "bytes": 459712,
+      "sha256": "aad0f0df8534c8e165dcbd39289ac492151a00ce0597f3df6d6644ee27fa3683",
+      "restoreTo": "public/local-kits/cylinder5-profiles-2026-10-31/glass-5-cobalt-measured-v19.png"
+    },
+    {
+      "path": "files/public/local-kits/cylinder5-profiles-2026-10-31/mechanism-5-measured-v6.png",
+      "bytes": 84979,
+      "sha256": "0fcd2cf291c19f88980f6c9c92d91eb3dcd112c0b734aac75ff9b11e7db538f1",
+      "restoreTo": "public/local-kits/cylinder5-profiles-2026-10-31/mechanism-5-measured-v6.png"
+    },
+    {
+      "path": "files/public/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "bytes": 1246630,
+      "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "restoreTo": "public/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+    },
+    {
+      "path": "files/public/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+      "bytes": 1209733,
+      "sha256": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+      "restoreTo": "public/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png"
+    },
+    {
+      "path": "files/public/local-kits/gpt-13-415-2026-10-31/mechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png",
+      "bytes": 81062,
+      "sha256": "f0febbcaaa4d31242b6298e9470e76e114794dd352f6387283fed832af0fe05c",
+      "restoreTo": "public/local-kits/gpt-13-415-2026-10-31/mechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png"
+    },
+    {
+      "path": "files/public/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "bytes": 77046,
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "restoreTo": "public/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png"
+    },
+    {
+      "path": "files/public/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "bytes": 72485,
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "restoreTo": "public/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-all71-2026-11-01/data.json",
+      "bytes": 1303044,
+      "sha256": "b214f6a2c7af5216925336615fa9b216141c985b9bf56915a3722ed7c4b40544",
+      "restoreTo": "public/reviews/cylinder5-all71-2026-11-01/data.json"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-all71-2026-11-01/index.html",
+      "bytes": 7592,
+      "sha256": "6add6cd9a256ed5ee4daed72ffafc7647b87ff93d3eb948caa51ebdd573fc7d7",
+      "restoreTo": "public/reviews/cylinder5-all71-2026-11-01/index.html"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-all71-2026-11-01/inventory.csv",
+      "bytes": 16713,
+      "sha256": "bbd6c9749c10e4d5d492f7390a996f3c6a689d210441d2e2785f48763b155702",
+      "restoreTo": "public/reviews/cylinder5-all71-2026-11-01/inventory.csv"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-all71-2026-11-01/proofs/01.png",
+      "bytes": 275489,
+      "sha256": "5ade5b302d9f067fcd2a10756049364ba736e0a93203f1a760a63cfab0047d9a",
+      "restoreTo": "public/reviews/cylinder5-all71-2026-11-01/proofs/01.png"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-all71-2026-11-01/proofs/02.png",
+      "bytes": 285170,
+      "sha256": "2d3463edc2836cf614f8968dd1056f42a61a45933c883e68d1693ae07f1d47c0",
+      "restoreTo": "public/reviews/cylinder5-all71-2026-11-01/proofs/02.png"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-all71-2026-11-01/proofs/03.png",
+      "bytes": 277396,
+      "sha256": "6d35efd8ef714fb154e0f829266862bacc6088cd476654511fb6956025b65559",
+      "restoreTo": "public/reviews/cylinder5-all71-2026-11-01/proofs/03.png"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-all71-2026-11-01/proofs/04.png",
+      "bytes": 297815,
+      "sha256": "df1fccfbee126984ccd088137ebcc1c66399a8c100c21ad7934e42d9655f9910",
+      "restoreTo": "public/reviews/cylinder5-all71-2026-11-01/proofs/04.png"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-all71-2026-11-01/proofs/05.png",
+      "bytes": 314672,
+      "sha256": "960fc030cd5f459d370fe4947e41a0cd29e5961501a575799636e59c49c24c20",
+      "restoreTo": "public/reviews/cylinder5-all71-2026-11-01/proofs/05.png"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-all71-2026-11-01/proofs/06.png",
+      "bytes": 337438,
+      "sha256": "565b7d2f2de1c5b2ea7b95cd71998b78a386a09159f7a19a9402131bce6d8f0b",
+      "restoreTo": "public/reviews/cylinder5-all71-2026-11-01/proofs/06.png"
+    },
+    {
+      "path": "files/public/reviews/cylinder5-all71-2026-11-01/proofs.html",
+      "bytes": 1205,
+      "sha256": "a0f0917e4a6d8d7ed8d8c66bc665ec4b387ca26739db5d1ad4611015b26ea083",
+      "restoreTo": "public/reviews/cylinder5-all71-2026-11-01/proofs.html"
+    },
+    {
+      "path": "inventory.csv",
+      "bytes": 16713,
+      "sha256": "bbd6c9749c10e4d5d492f7390a996f3c6a689d210441d2e2785f48763b155702"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 52262,
+      "sha256": "42883e50e9b3f9f30cf22ea4d7e75c38920363eee892294b82e7996b4e261a3e"
+    },
+    {
+      "path": "recipes/make-proof-sheets.cjs",
+      "bytes": 3332,
+      "sha256": "b0c7305d44a61c011b350ca0eb88eac057851e0c18179861ab00de6b80a1e113"
+    },
+    {
+      "path": "recipes/retry-product-pages.cjs",
+      "bytes": 4919,
+      "sha256": "21b16fbb63babfcc1b69b31987e03e799022e7749cd93b19cd655b1d00b2ec3d"
+    },
+    {
+      "path": "recipes/verify-builders.cjs",
+      "bytes": 3882,
+      "sha256": "2b35a30e3ed50bb0738adf1a3e0bba6995997227b46ec8ac6803b9255118747c"
+    },
+    {
+      "path": "recipes/verify-product-pages.cjs",
+      "bytes": 4588,
+      "sha256": "40d6609a87d91cf3415d813f7c6a547eabf749d115391e2c8cf064386972bba6"
+    },
+    {
+      "path": "restore.mjs",
+      "bytes": 2694,
+      "sha256": "05968d5922a474322313801e4a55b0482d0f45ec3acfbac4792fad724d61b7e1"
+    }
+  ]
+}

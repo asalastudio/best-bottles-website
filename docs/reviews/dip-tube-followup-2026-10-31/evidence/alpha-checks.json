@@ -1,0 +1,35 @@
+[
+  {
+    "url": "/local-kits/dip-tube-followup-2026-10-31/mechanism-tulip-5-v3.752290ff324a.png",
+    "size": [
+      120,
+      953
+    ],
+    "continuousAlphaRows": 929,
+    "missingRows": 0,
+    "topPadding": 12,
+    "bottomPadding": 12
+  },
+  {
+    "url": "/local-kits/dip-tube-followup-2026-10-31/mechanism-round-78-v1.951d7c2f41fa.png",
+    "size": [
+      141,
+      1652
+    ],
+    "continuousAlphaRows": 1628,
+    "missingRows": 0,
+    "topPadding": 12,
+    "bottomPadding": 12
+  },
+  {
+    "url": "/local-kits/dip-tube-followup-2026-10-31/mechanism-sleek-8-v1.5b26404496ef.png",
+    "size": [
+      124,
+      1476
+    ],
+    "continuousAlphaRows": 1452,
+    "missingRows": 0,
+    "topPadding": 12,
+    "bottomPadding": 12
+  }
+]

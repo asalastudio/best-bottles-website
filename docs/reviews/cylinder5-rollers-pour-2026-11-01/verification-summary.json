@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-01T17:58:26.000792+00:00",
+  "version": "de507a82113c",
+  "scope": {
+    "configurations": 56,
+    "metalRoller": 18,
+    "plasticRoller": 18,
+    "pour": 20
+  },
+  "passed": true,
+  "typecheck": "passed",
+  "targetedTests": 62,
+  "testFiles": 11,
+  "pdpStates": 336,
+  "builderSelections": 56,
+  "sharedApiKits": 71,
+  "catalogSelections": 30,
+  "reviewControls": 18,
+  "retries": {
+    "pdpRecovered": 8,
+    "builder": "One development HMR error in the first pass. Second pass verifier waited on hidden lazy images. Final resumed pass checks visible decoded images only; all 56 unique selections passed with zero reported errors. First and second attempt reports retained."
+  },
+  "publication": "Local review only; not merged or deployed"
+}

@@ -1,0 +1,94 @@
+{
+  "createdAt": "2026-11-01T07:30:28.662417+00:00",
+  "identity": "cylinder-9ml-17-415|Clear",
+  "family": "Cylinder",
+  "generator": "Built-in image_gen",
+  "modelVersion": "not exposed",
+  "generationCount": 1,
+  "status": "review - geometry and alpha cleanup required",
+  "approval": null,
+  "runtimeAssigned": false,
+  "filename": "BB_cylinder-9ml-17-415_Clear_BODY_Builtin-v01_REVIEW_2026-11-01_952e3be55f8a.png",
+  "bytes": 1097149,
+  "sha256": "952e3be55f8a7670281c64cb6cc4d9d250c61f994b118ef4da2eb7ae0daceeda",
+  "dimensions": {
+    "width": 857,
+    "height": 1835,
+    "hasAlpha": true
+  },
+  "inputs": [
+    {
+      "role": "Geometry and composition target: recovered 9 ml 17-415 Clear body",
+      "src": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/1d85ae177e4fcf59af6937b97e0417a5dc1c323a3a2aab24dfc626add040515c.png",
+      "name": "source-cylinder9-clear.png",
+      "file": "output/imagegen/cylinder9-material-pilot-2026-10-31/source-cylinder9-clear.png",
+      "sha256": "35018244cb0df545826f81a741f502b2f3913c7f1ebe29a81e3e6ef06cfe264d"
+    },
+    {
+      "role": "Material reference only: user-provided clear-glass photograph; do not copy its geometry or dark background",
+      "src": "public/reviews/clear-5ml-reference-2026-10-31/reference.png",
+      "name": "glass-material-reference.png",
+      "file": "output/imagegen/cylinder9-material-pilot-2026-10-31/glass-material-reference.png",
+      "sha256": "20518a1a613143fd3fd6a535f206e5e0fc359e39ad8248d1a099749ca1335e5a"
+    }
+  ],
+  "sourceRegistration": {
+    "plateKey": "cylinder-9ml-17-415|Clear",
+    "anchors": {
+      "axisX": 379,
+      "seatY": 125,
+      "shoulderY": 477,
+      "baselineY": 2096,
+      "barrelAxisX": 383.5,
+      "bodyShoulderY": 491
+    },
+    "scale": {
+      "targetPct": 43.5,
+      "baselinePct": 91,
+      "landmark": "shoulder",
+      "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+      "basis": "approved-family-exception",
+      "heightBareMm": 70
+    },
+    "width": 768,
+    "height": 2192,
+    "sha256": "1d85ae177e4fcf59af6937b97e0417a5dc1c323a3a2aab24dfc626add040515c"
+  },
+  "candidateAlphaBoundsAt128": {
+    "x": 194,
+    "y": 95,
+    "width": 473,
+    "height": 1668
+  },
+  "sourceAlphaBoundsAt128": {
+    "x": 119,
+    "y": 125,
+    "width": 529,
+    "height": 1971
+  },
+  "outlineAspectRatioChangePct": 5.656,
+  "qa": [
+    "Entire bottle present; no cap or component is baked into the image.",
+    "Real alpha exists. Small residual flecks are visible above the rim and below the base.",
+    "Material has softer vertical highlights; glass realism remains subject to owner review.",
+    "Visible outline aspect ratio is about 5.7 percent wider at equal bottle height, measured at alpha >=128. This is a rough geometry check, not manufacturer validation.",
+    "The new candidate is not registered or assigned to PDP or builder. Geometry must match the locked source before acceptance."
+  ],
+  "scaleContract": {
+    "targetPct": 43.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 70
+  },
+  "driveReviewFolder": "https://drive.google.com/drive/folders/1HOZUKGBMAl7nm1KP3NCtyGQCOaH3X3yz",
+  "localReview": "http://localhost:3010/reviews/cylinder9-builtin-material-2026-11-01/index.html",
+  "driveFile": {
+    "id": "1JwaJ_lvUuIeBnpWlnBq8mOtA-7nwJMCz",
+    "url": "https://drive.google.com/file/d/1JwaJ_lvUuIeBnpWlnBq8mOtA-7nwJMCz/view?usp=drivesdk",
+    "nameVerified": true,
+    "sizeVerified": true,
+    "parentVerified": true
+  }
+}
