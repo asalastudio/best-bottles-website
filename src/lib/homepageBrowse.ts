@@ -1,3 +1,4 @@
+import { withStorefrontFamily, storefrontFamily } from './products/storefront-family';
 import { BOTTLE_CATEGORIES, FAMILY_ORDER } from './catalogFilters';
 import { HOME_ACCESSORY_STORY, HOME_APPLICATION_LINKS, HOME_EDITORIAL_STORIES, HOME_SAMPLE_FEATURE, homepageFamilyHref } from './homepageMerchandising';
 import { isVisibleCatalogGroup } from './products/catalog-listing-visibility';
@@ -11,11 +12,11 @@ type Hero = { groupSlug: string; family: string; url: string };
 
 /** Exact catalog labels are navigation identities. Never coalesce similar names. */
 export function buildHomeBrowseData(groups: readonly HomeBrowseGroup[], heroes: readonly Hero[]): HomeBrowseData {
-    const visible = groups.filter(g => isVisibleCatalogGroup(g));
+    const visible = groups.filter(g => isVisibleCatalogGroup(g)).map(withStorefrontFamily);
     const bottles = visible.filter(g => BOTTLE_CATEGORIES.has(g.category) || g.category === 'Metal Atomizer');
     const imageFor = (rows: readonly HomeBrowseGroup[]) => {
         const slugs = new Set(rows.map(g => g.slug));
-        return heroes.find(h => slugs.has(h.groupSlug) && rows.some(g => g.slug === h.groupSlug && g.family === h.family))?.url
+        return heroes.find(h => slugs.has(h.groupSlug) && rows.some(g => g.slug === h.groupSlug && g.family === storefrontFamily(h.family)))?.url
             ?? rows.find(g => g.heroImageUrl)?.heroImageUrl ?? null;
     };
     const names = [...new Set(bottles.map(g => g.family).filter(Boolean))];

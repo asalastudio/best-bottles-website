@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
 import { detachedCapOffset, offBottle, REMOVABLE_KIT_SLOTS } from "@/lib/products/kit-frame";
 import { pdpReviewedGlassViewport } from "@/lib/products/pdp-stage-frame";
+import { registerImageSrc } from "@/lib/products/register-image";
 import { cylinderMasterSource } from "@/lib/products/cylinder-master";
 
 const requests = new Map<string, Promise<BuilderKit>>();
@@ -49,8 +50,8 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
             const drawn = removable ? offBottle(part) : part;
             const offset = removable ? detachedCapOffset(drawn, body.bounds) : { dx: 0, dy: 0 };
             const box = drawn.box ?? { x: 0, y: 0, width: kit.canvas.width, height: kit.canvas.height };
-            return <image key={`${part.slot}-${i}`} href={drawn.image.url} x={box.x + offset.dx} y={box.y + offset.dy}
-                width={box.width} height={box.height} opacity={part.opacity ?? 1} data-bb-master-part={part.slot} />;
+            return <image key={`${part.slot}-${i}`} href={registerImageSrc(drawn.image.url, 640)} data-bb-master-source={drawn.image.url} x={box.x + offset.dx} y={box.y + offset.dy}
+                width={box.width} height={box.height} opacity={part.opacity ?? 1} style={{ mixBlendMode: part.blendMode }} data-bb-master-part={part.slot} />;
         })}
     </svg>;
 }

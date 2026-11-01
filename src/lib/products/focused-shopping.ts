@@ -10,6 +10,7 @@ import {
     type RollerMaterial,
     type SortValue,
 } from "@/lib/catalogFilters";
+import { storefrontFamily } from "./storefront-family";
 import { stripLocalePrefix } from "@/i18n/paths";
 
 export const APPLICATION_ROUTE_SLUGS = {
@@ -53,15 +54,15 @@ function isApplicationRoute(pathname: string): boolean {
 }
 
 export function familyToSlug(family: string): string {
-    return family.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    return storefrontFamily(family).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
 const FAMILY_BY_SLUG = new Map(
-    CATALOG_FAMILIES.map((family) => [familyToSlug(family), family] as const),
+    CATALOG_FAMILIES.map((family) => [familyToSlug(family), storefrontFamily(family)] as const),
 );
 
 export function familyFromSlug(slug: string): string | undefined {
-    return FAMILY_BY_SLUG.get(slug.trim().toLowerCase());
+    return slug.trim().toLowerCase() === "tulip" ? "Cylinder" : FAMILY_BY_SLUG.get(slug.trim().toLowerCase());
 }
 
 export function isFamilyLandingFamily(family: string): boolean {
@@ -83,7 +84,7 @@ export function parseBrowseContext(pathname: string, params: URLSearchParams): B
     const route = stripLocalePrefix(pathname).replace(/\/+$/, "");
     const { filters, sort } = paramsToFilters(params);
     const routeApplication = applicationForRoute(route);
-    const family = familyForRoute(route) ?? (filters.families.length === 1 && CATALOG_FAMILIES.includes(filters.families[0]) ? filters.families[0] : undefined);
+    const family = familyForRoute(route) ?? (filters.families.length === 1 && CATALOG_FAMILIES.includes(filters.families[0]) ? storefrontFamily(filters.families[0]) : undefined);
     const application = routeApplication ?? (isApplicationRoute(route) ? undefined : applicationForBuckets(filters.applicators));
     const entryMode: BrowseEntryMode = routeApplication
         ? "application"

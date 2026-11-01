@@ -2,6 +2,8 @@ import { createElement, type ImgHTMLAttributes } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 const query = vi.hoisted(() => vi.fn<(...args: unknown[]) => undefined>(() => undefined));
+// Keep coverage of the legacy photographic fallback for SKUs outside the approved layered release.
+vi.mock("@/lib/products/cylinder-master", () => ({ cylinderMasterSku: () => null, cylinderMasterSource: () => null }));
 vi.mock('convex/react', () => ({ useQuery: query }));
 vi.mock('next/image', () => ({ default: (props: ImgHTMLAttributes<HTMLImageElement> & { fill?: boolean; unoptimized?: boolean }) => {
     const p = { ...props }; delete p.fill; delete p.unoptimized; return createElement('img', p);

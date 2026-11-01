@@ -48,8 +48,7 @@ function skuOf(variant: ProductCardVariantPreview | null | undefined): string | 
 export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroHoverImageUrl, href, variants, family, slug, selected = null, selectedHero = null }: Props) {
     const [heroHovered, setHeroHovered] = useState(false);
     const [failed, setFailed] = useState<Set<string>>(() => new Set());
-    const masterSku = process.env.NODE_ENV === "development"
-        ? cylinderMasterSku(skuOf(selected) ?? catalogHero?.websiteSku ?? skuOf(variants[0])) : null;
+    const masterSku = cylinderMasterSku(skuOf(selected) ?? catalogHero?.websiteSku ?? skuOf(variants[0]));
     const skus = [...new Set([catalogHero ? null : skuOf(variants[0]), skuOf(selected)].filter((sku): sku is string => Boolean(sku)))];
     // The approved hero already supplies the default image. Fetch a plate only
     // for a selected finish, or for a card that needs its primary fallback.

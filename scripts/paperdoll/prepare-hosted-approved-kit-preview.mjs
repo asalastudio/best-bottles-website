@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import nextEnv from '@next/env';
+import {createBlobStore,verifyPublicUrl} from './lib/store-blob.mjs';
+nextEnv.loadEnvConfig(process.cwd(),true);
+const dir='docs/reviews/hosted-masters-tulip-2026-11-01';fs.mkdirSync(dir,{recursive:true});
+const hash=b=>createHash('sha256').update(b).digest('hex');
+const sources=[
+ {file:'public/local-kits/cylinder5-masters-2026-11-01/kits.json',count:71,approval:'Owner locked clear/cobalt 5 ml bodies and component assemblies, including corrected shiny caps.'},
+ {file:'public/local-kits/cylinder9-masters-2026-11-01/kits.json',count:145,approval:'Owner accepted 9 ml glass, sprayers and roller caps; lotion mechanism accepted with slimmer, slightly shorter lower tube.'},
+ {file:'public/local-kits/tulip-shoulder-2026-11-01/kits.json',count:null,approval:'Owner accepted clear/amber Tulip sprayer seating and tube treatment.'},
+ {file:'public/local-kits/tulip-amber-tube-2026-11-01/kits.json',count:null,approval:'Owner accepted amber tube treatment.'},
+ {file:'public/local-kits/tulip-rollers-2026-11-01/kits.json',count:36,approval:'Owner approved the clear/amber metal/plastic roller fit and requested committing to the PR.'},
+];
+const rows={},assets=new Map(),provenance=[];
+for(const s of sources){const batch=JSON.parse(fs.readFileSync(s.file));let selected=Object.entries(batch.rows).filter(([sku])=>!sku.startsWith('GBTulip')||/Spry|MtlRoll|Roll/.test(sku));if(s.count!==null&&selected.length!==s.count)throw Error('Unexpected approved scope '+s.file);Object.assign(rows,Object.fromEntries(selected));provenance.push({...s,version:batch.version,sourceSha256:hash(fs.readFileSync(s.file)),selected:selected.map(([sku])=>sku)});}
+if(Object.keys(rows).length!==267)throw Error('Expected 267 approved configurations, got '+Object.keys(rows).length);
+for(const k of Object.values(rows))for(const p of k.parts){if(p.image2x||p.mask)throw Error('Additional media needs explicit handling '+k.sku);const image=p.image;if(!image.url.startsWith('/'))continue;const file='public'+image.url,bytes=fs.readFileSync(file),sha=hash(bytes),ext=path.extname(file).slice(1),contentType=ext==='svg'?'image/svg+xml':ext==='png'?'image/png':ext==='webp'?'image/webp':null;if(!contentType)throw Error('Unexpected image type '+file);if(image.sha256&&image.sha256!==sha)throw Error('Source hash mismatch '+file);assets.set(image.url,{file,sha256:sha,bytes:bytes.length,contentType,key:'reviewed-master-media/2026-11-01/'+sha+'.'+ext});}
+const plan={status:'approved-local-awaiting-hosted-verification',scope:Object.keys(rows).sort(),configurations:Object.keys(rows).length,assetCount:assets.size,assetBytes:[...assets.values()].reduce((n,a)=>n+a.bytes,0),sources:provenance,assets:Object.fromEntries(assets)};fs.writeFileSync(dir+'/upload-plan.json',JSON.stringify(plan,null,2));console.log(JSON.stringify({configurations:plan.configurations,assets:plan.assetCount,bytes:plan.assetBytes,blobConfigured:Boolean(process.env.BLOB_READ_WRITE_TOKEN),apply:process.argv.includes('--apply')}));
+if(!process.argv.includes('--apply'))process.exit(0);
+const store=createBlobStore(),uploaded={};let cursor=0;const entries=[...assets];await Promise.all(Array.from({length:3},async()=>{while(cursor<entries.length){const [url,a]=entries[cursor++];const bytes=fs.readFileSync(a.file);const result=await store.putObject(a.key,bytes,a.contentType);const verdict=await verifyPublicUrl(result.url,{expectedBytes:a.bytes,expectedContentType:a.contentType});const problems=verdict.problems.filter(p=>!p.startsWith('content-length 0 !='));if(problems.length)throw Error(a.file+': '+problems.join('; '));const got=await fetch(result.url);const publicBytes=Buffer.from(await got.arrayBuffer());if(hash(publicBytes)!==a.sha256)throw Error('Public content hash mismatch '+a.file);uploaded[url]={...a,url:result.url,existed:result.existed,verified:true};fs.writeFileSync(dir+'/asset-receipt.json',JSON.stringify(uploaded,null,2));console.log('VERIFIED '+Object.keys(uploaded).length+'/'+assets.size+' '+a.sha256.slice(0,12));}}));
+for(const k of Object.values(rows))for(const p of k.parts){const u=uploaded[p.image.url];if(u)p.image={...p.image,url:u.url,key:u.key,sha256:u.sha256,bytes:u.bytes};}
+const version=hash(JSON.stringify(rows)).slice(0,16);const manifest={version,status:'approved-local-awaiting-hosted-verification',rows};fs.writeFileSync('src/lib/paper-doll/approved-kits.generated.json',JSON.stringify(manifest)+'\n');fs.writeFileSync('src/lib/paper-doll/approved-kit-index.json',JSON.stringify({version,skus:Object.keys(rows).sort()})+'\n');fs.writeFileSync(dir+'/release-manifest.json',JSON.stringify({version,configurations:Object.keys(rows).length,sourceApproval:provenance,assetCount:assets.size,productionDataMutated:false},null,2));console.log('HOSTED MANIFEST '+version);

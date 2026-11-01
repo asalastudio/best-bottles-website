@@ -1,3 +1,4 @@
+import { withStorefrontFamily, storefrontFamily } from "./products/storefront-family";
 import { matchesShopCollection, SHOP_COLLECTIONS } from "./shopCollections";
 import {
     APPLICATOR_BUCKETS,
@@ -154,9 +155,9 @@ export function buildCatalogSearchResult(input: {
         primarySkus: input.primarySkus.filter(row => !isMissingHeroSource(row)),
         variantPreviewRows: input.variantPreviewRows.map(row => ({ ...row, variants: row.variants.filter(variant => !isMissingHeroSource(variant)) })),
     };
-    const groups = input.groups.filter((group) => !getLegacyProductRouteOverride(group.slug) && isVisibleCatalogGroup(group, input.variantPreviewRows.find(row => row.groupId === group._id)?.variants));
+    const groups = input.groups.map(withStorefrontFamily).filter((group) => !getLegacyProductRouteOverride(group.slug) && isVisibleCatalogGroup(group, input.variantPreviewRows.find(row => row.groupId === group._id)?.variants));
     const skuMap = new Map(input.primarySkus.map((row) => [row.groupId, row.websiteSku ?? row.graceSku ?? ""]));
-    const filters = input.filters;
+    const filters = { ...input.filters, families: [...new Set(input.filters.families.map(storefrontFamily))] };
     const matchesApplicatorBucket = (group: CatalogSearchGroup, bucket: string) => {
         return applicatorBucketMatchesProductValues(bucket as never, group.applicatorTypes ?? []);
     };

@@ -157,6 +157,7 @@ function cleanColor(group?: CustomerFacingNameGroupInput | null, variant?: Custo
 }
 
 function cleanFamily(group?: CustomerFacingNameGroupInput | null, variant?: CustomerFacingNameVariantInput | null): string | null {
+    if (/^tulip-(?:5|6)ml-/.test(group?.slug ?? "") || /^GBTulip(?:Amb5|6)/.test(variant?.websiteSku ?? "")) return "Tulip";
     const family = clean(variant?.family) ?? clean(group?.family);
     return key(family) === "cylinder" && isTallNineMlCylinder(group, variant) ? "Tall Cylinder" : family;
 }

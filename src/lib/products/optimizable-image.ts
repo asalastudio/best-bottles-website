@@ -27,7 +27,8 @@ const REGISTER_BLOB_HOST = "yzy7l20k4yt6znzz.public.blob.vercel-storage.com";
 export function isRegisterAssetUrl(value: string): boolean {
     try {
         const url = new URL(value);
-        return url.protocol === "https:" && url.hostname === REGISTER_BLOB_HOST && url.pathname.startsWith("/register/");
+        return url.protocol === "https:" && url.hostname === REGISTER_BLOB_HOST && (url.pathname.startsWith("/register/")
+            || (url.pathname.startsWith("/reviewed-master-media/") && /\.(?:png|webp)$/i.test(url.pathname)));
     } catch {
         return false;
     }
@@ -41,5 +42,5 @@ export type DisplayImageWidth = 256 | 384 | 640 | 828 | 1200;
  * original and optimized bytes. Widths come from Next's default deviceSizes. */
 export function displayImageUrl(value: string, width: DisplayImageWidth = 1200): string {
     if (!isOptimizableImageUrl(value)) return value;
-    return `/_next/image?url=${encodeURIComponent(value)}&w=${width}&q=75`;
+    return `/_next/image?url=${encodeURIComponent(value)}&w=${width}&q=${value.includes("/reviewed-master-media/") ? 90 : 75}`;
 }

@@ -1,4 +1,6 @@
 import { readKitPilot } from "../../../../scripts/asset-ledger/kit-pilot.mjs";
+import { approvedComponentKits } from "@/lib/paper-doll/approved-component-kits";
+import { withStorefrontFamily, sourceFamilyForProduct } from "@/lib/products/storefront-family";
 import { localPdpComponentKits } from "@/lib/paper-doll/local-component-kits";
 import { hasCatalogSourceHold } from "@/lib/products/catalog-listing-visibility";
 import { notFound, permanentRedirect } from "next/navigation";
@@ -71,6 +73,7 @@ async function getProductData(slug: string): Promise<ProductGroupPayload | null>
     if (!data) return null;
     return {
         ...data,
+        group: withStorefrontFamily(data.group),
         variants: filterVariantsForGroupIntent(slug, filterVariantsForProductGroup(data.group, data.variants)),
     };
 }
@@ -84,7 +87,7 @@ async function getSiblingGroups(data: ProductGroupPayload | null, activeSlug: st
     const group = data?.group;
     if (!group) return [];
     return await getConvexClient().query(api.products.getSiblingGroups, {
-        family: group.family,
+        family: sourceFamilyForProduct(activeSlug, group.family),
         capacityMl: group.capacityMl ?? 0,
         excludeSlug: activeSlug,
         neckThreadSize: group.neckThreadSize ?? undefined,
@@ -207,7 +210,7 @@ async function loadRedesignPayload(
     // One frame per glass: the bounds every SKU of this glass needs, across all its colours and
     // closures (cached per glass), read while the published kits load.
     const stageEnvelopesLoad = Object.keys(registerKits).length
-        ? loadGlassStageEnvelopes({ family: data.group.family, capacityMl: data.group.capacityMl ?? null })
+        ? loadGlassStageEnvelopes({ family: sourceFamilyForProduct(activeSlug, data.group.family), capacityMl: data.group.capacityMl ?? null })
         : Promise.resolve({});
     for (let index = 0; index < pending.length; index += 50) {
         try {
@@ -228,7 +231,7 @@ async function loadRedesignPayload(
     // Use the same host-gated, exact-SKU local review input as the classic PDP.
     // The loader disables candidates on Vercel; local defaults require an explicit SKU allowlist.
     // Sibling glass thumbnails must use the same reviewed body as their product page.
-    const reviewKits = { ...localComponentKits, ...localPdpComponentKits(localReview.host, localReview.flag, pairs) };
+    const reviewKits = { ...approvedComponentKits(), ...localComponentKits, ...localPdpComponentKits(localReview.host, localReview.flag, pairs) };
     for (const pair of pairs) {
         const localKit = pair.websiteSku ? reviewKits[pair.websiteSku] : null;
         if (!localKit || localKit.sku !== pair.websiteSku) continue;
@@ -252,7 +255,7 @@ async function loadRedesignPayload(
         const found = groups.flat().filter((variant) => Boolean(variant.graceSku));
         const kits = found.length ? await loadRegisterKits(convex, found.map((variant) => variant.graceSku)).catch(() => ({} as Record<string, KitLike>)) : {};
         for (const variant of found) {
-            const kit = kits[variant.graceSku] ?? (variant.websiteSku ? kits[variant.websiteSku] : undefined);
+            const kit = (variant.websiteSku ? reviewKits[variant.websiteSku] : undefined) ?? kits[variant.graceSku] ?? (variant.websiteSku ? kits[variant.websiteSku] : undefined);
             if (kit) fitmentKits.push(kit as KitLike);
         }
     }
@@ -401,7 +404,11 @@ export default async function ProductPage({
     const group = data?.group;
     const variant = primaryVariant;
     const requestHost = (await headers()).get('host');
-    const localComponentKits = localPdpComponentKits(requestHost, resolvedSearchParams.assetPreview, data?.variants ?? []);
+    const approved = approvedComponentKits();
+    const localComponentKits = { ...Object.fromEntries(data.variants.flatMap(variant => {
+        const sku = variant.websiteSku;
+        return sku && approved[sku] ? [[sku, approved[sku]]] : [];
+    })), ...localPdpComponentKits(requestHost, resolvedSearchParams.assetPreview, data.variants) };
     const localAssetPreview = localBostonPreview(process.env.NODE_ENV, (await headers()).get('host'), resolvedSearchParams.assetPreview) && group?.family === 'Boston Round';
     const completion = localAssetPreview ? await readCompletion(process.cwd()) : null;
     const displayedPlates = localAssetPreview ? previewPlates(completion, group?._id, data?.variants ?? [], platesBySku) : platesBySku;

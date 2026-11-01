@@ -149,7 +149,7 @@ function FamiliesRail({ cards, familyCounts }: { cards?: HomepageData["designFam
     const locale = useAppLocale();
     const rail = useRef<HTMLDivElement>(null);
     const entries = cards?.length
-        ? [...cards].sort((a, b) => (a.order ?? 0) - (b.order ?? 0)).filter((c) => CATALOG_FAMILIES.includes(c.family))
+        ? [...cards].sort((a, b) => (a.order ?? 0) - (b.order ?? 0)).filter((c) => CATALOG_FAMILIES.includes(c.family) && c.family !== "Tulip")
         : Object.keys(FAMILY_ART).map((family) => ({ family, title: family, image: undefined }));
     const [position, setPosition] = useState({ start: true, end: entries.length <= 4, index: 1 });
 

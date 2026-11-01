@@ -197,7 +197,7 @@ export default function ProductCardImagePreview({
         () => previews.filter((preview) => !preview.imageUrl),
         [previews],
     );
-    const canonicalHero = process.env.NODE_ENV === "development" && Boolean(cylinderMasterSku(catalogHero?.websiteSku ?? auditMeta?.websiteSku ?? previewablePreviews[0]?.websiteSku));
+    const canonicalHero = Boolean(cylinderMasterSku(catalogHero?.websiteSku ?? auditMeta?.websiteSku ?? previewablePreviews[0]?.websiteSku));
     const fixedHero = Boolean(catalogHero) && !canonicalHero;
     const [selection, setSelection] = useState<{ productHref: string; id: string } | null>(null);
     const [failedImages, setFailedImages] = useState<Set<string>>(() => new Set());

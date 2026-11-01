@@ -4,12 +4,14 @@ import type { BuilderKit, CatalogRow } from "@/lib/bottle-builder/model";
 
 const state = vi.hoisted(() => ({ rows: [] as unknown[], kits: {} as Record<string, unknown>, truncated: false, missingPlates: [] as string[], register: null as unknown, registerDown: false, local: null as Record<string, BuilderKit> | null }));
 vi.mock("server-only", () => ({}));
+// Exercise the legacy/register fallback path independently of the approved release.
+vi.mock("@/lib/paper-doll/approved-component-kits", () => ({ approvedComponentKits: () => ({}), APPROVED_KIT_VERSION: "test" }));
 vi.mock("next/cache", () => ({ unstable_cache: (fn: unknown) => fn }));
 vi.mock("@/lib/paper-doll/local-component-kits", () => ({ readLocalComponentKits: () => state.local }));
 vi.mock("convex/browser", () => ({ ConvexHttpClient: class {
-    async query(ref: Parameters<typeof getFunctionName>[0], args: { pairs?: { websiteSku: string }[]; skus?: string[] }) {
+    async query(ref: Parameters<typeof getFunctionName>[0], args: { family?: string; pairs?: { websiteSku: string }[]; skus?: string[] }) {
         switch (getFunctionName(ref)) {
-            case "matrix:getFamilyRows": return { rows: state.rows, truncated: state.truncated };
+            case "matrix:getFamilyRows": return { rows: (state.rows as CatalogRow[]).filter(row => row.family === args.family), truncated: state.truncated };
             case "productKits:forSkus": return Object.fromEntries(args.pairs!.map(p => [p.websiteSku, state.kits[p.websiteSku] ?? null]));
             case "productPlates:forSkus": return { plates: Object.fromEntries(args.skus!.filter(sku => !state.missingPlates.includes(sku)).map(sku => [sku, { image: `https://example.com/${sku}.png` }])) };
             case "products:lookupSku": return null;

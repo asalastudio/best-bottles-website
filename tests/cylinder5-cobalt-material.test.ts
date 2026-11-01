@@ -28,10 +28,11 @@ describe("one 5 ml cobalt material master", () => {
         vi.stubEnv("NODE_ENV", "development"); vi.stubEnv("VERCEL", ""); vi.stubEnv("BUILDER_LOCAL_KITS", "");
         const builder = readLocalComponentKits()!;
         const pilot = localGpt13ComponentKits("localhost:3010", "gpt13");
+        const selections = [undefined, "gpt13"].map(flag => localPdpComponentKits("localhost:3010", flag, index.skus.map(websiteSku => ({ websiteSku }))));
         for (const sku of index.skus) {
             expect(builder[sku]).toEqual(current[sku]);
             expect(pilot[sku]).toEqual(current[sku]);
-            for (const flag of [undefined, "gpt13"]) expect(localPdpComponentKits("localhost:3010", flag, [{ websiteSku: sku }])[sku]).toEqual(current[sku]);
+            for (const selected of selections) expect(selected[sku]).toEqual(current[sku]);
         }
     });
 });
@@ -51,6 +52,7 @@ describe("5 ml catalog master source", () => {
         expect((await GET(new Request("http://localhost:3010/api/bottle-masters/cylinder5?sku=GBCylBlu5Gl"))).status).toBe(404);
     });
     it("routes 5 ml and 9 ml previews to separate exact-SKU sources", async () => {
+        vi.stubEnv("NODE_ENV", "development");
         const { cylinderMasterSource } = await import("@/lib/products/cylinder-master");
         expect(cylinderMasterSource("GBCylBlu5Gl")).toEqual({ family: "cylinder5", version: index.version });
         expect(cylinderMasterSource("GBCylBlu9SpryGl")?.family).toBe("cylinder9");

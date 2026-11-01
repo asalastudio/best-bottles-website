@@ -82,7 +82,7 @@ export type KitLike = {
     /** Reviewed bare-glass height and baseline, applied uniformly to every part and view. */
     glassSizing?: PdpGlassSizing;
     /** Set when the kit was composed from the component register rather than published per SKU. */
-    register?: { bodyId: string; plateKey: string; glass: string; pxPerMm?: number } | null;
+    register?: { bodyId: string; plateKey: string; glass: string; pxPerMm?: number; bodyLayers?: boolean } | null;
 };
 
 export type StagePart = {
@@ -322,7 +322,7 @@ export function stageLayout(
         frame = reviewedFrame;
         offsets = fixedStageOffsets(sorted, offsets, view, frame, canvas, {
             insertsFirst: ["cylinder-9ml-17-415", "cylinder-5ml-13-415"].includes(kit.register?.bodyId ?? "")
-                && sorted.some(part => part.slot === "roller" && part.image.url.startsWith("/local-kits/cylinder9-masters-2026-11-01/")),
+                && sorted.some(part => part.slot === "roller" && (kit.register?.bodyLayers === true || part.image.url.startsWith("/local-kits/cylinder9-masters-2026-11-01/"))),
         });
     }
 

@@ -41,5 +41,5 @@ public/reviews/*-2026-10-31/
 public/reviews/*-2026-11-01/
 public/local-kits/cylinder5-all71-2026-11-01/
 
-# Approved Cylinder 9 ml masters are a localhost review until publication.
+# Source review inventories remain local; approved recipes use immutable hosted URLs.
 public/local-kits/cylinder9-masters-2026-11-01/

@@ -1,3 +1,4 @@
+import { storefrontFamily } from "../products/storefront-family";
 import { emptySelection, type BuilderBody, type BuilderSelection } from "./model";
 import { chooserBodies } from "./payload";
 export type BuilderFamily = { family: string; groups: number };
@@ -8,7 +9,7 @@ export async function loadBuilderEntry(requested: string | undefined, loaders: {
     family: (name: string) => Promise<BuilderBody[]>;
     families: () => Promise<BuilderFamily[]>;
 }) {
-    const preferred = requested && requested.length <= 100 ? requested : "Cylinder";
+    const preferred = requested && requested.length <= 100 ? storefrontFamily(requested) : "Cylinder";
     const bodies = await loaders.family(preferred);
     if (bodies.length) return { openFamily: preferred, bodies, families: [{ family: preferred, groups: bodies.length }] };
     const families = await loaders.families();

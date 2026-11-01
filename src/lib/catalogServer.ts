@@ -1,3 +1,4 @@
+import { storefrontFamily, withStorefrontFamily } from "./products/storefront-family";
 import { getShopCollection } from "./shopCollections";
 import type { ConvexHttpClient } from "convex/browser";
 import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
@@ -48,7 +49,7 @@ export function sanitizeCatalogResult(result: CatalogSearchResultShape): Catalog
     const visibleIds = new Set(items.map((group) => group._id));
     return {
         ...result,
-        items,
+        items: items.map(withStorefrontFamily),
         // Facets describe the complete filtered catalog, not the current page.
         // Rebuilding them from `items` collapses Refine to the first 24 cards.
         facets: result.facets,
@@ -160,7 +161,7 @@ export function normalizeCatalogSearchArgs(args: CatalogSearchArgs): CatalogSear
             collection: typeof filters.collection === "string" ? filters.collection : null,
             applicators: asStringArray(filters.applicators) as CatalogFilters["applicators"],
             rollerMaterials: normalizeRollerMaterials(asStringArray(filters.rollerMaterials)),
-            families: asStringArray(filters.families),
+            families: [...new Set(asStringArray(filters.families).map(storefrontFamily))],
             colors: asStringArray(filters.colors),
             capacities: asStringArray(filters.capacities),
             neckThreadSizes: asStringArray(filters.neckThreadSizes),
@@ -181,7 +182,8 @@ export async function searchCatalogServer(args: CatalogSearchArgs): Promise<Cata
     const { shopCollection, ...backendFilters } = normalizedArgs.filters;
     // Shop collections and product types that span several stored categories
     // ("jars", "packaging-more") are matched in memory; Convex takes one exact category.
-    const inMemoryOnly = Boolean(shopCollection) || isMultiCategoryValue(normalizedArgs.filters.category);
+    const inMemoryOnly = Boolean(shopCollection) || isMultiCategoryValue(normalizedArgs.filters.category)
+        || normalizedArgs.filters.families.includes("Cylinder");
     if (!inMemoryOnly) try {
         const snapshotPromise = getCatalogVisibilitySnapshot();
         // "Specialty" stands for every non-standard neck; Convex matches exact stored values.

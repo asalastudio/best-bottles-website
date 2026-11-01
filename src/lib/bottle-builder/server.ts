@@ -1,4 +1,6 @@
 import "server-only";
+import { approvedComponentKits, APPROVED_KIT_VERSION } from "../paper-doll/approved-component-kits";
+import { storefrontFamily, sourceFamilies, withStorefrontFamily } from "../products/storefront-family";
 import { CYLINDER9_OVERCAP_MASTER } from "@/lib/register/detached-overcaps";
 import { unstable_cache } from "next/cache";
 import type { ConvexHttpClient } from "convex/browser";
@@ -14,10 +16,9 @@ import { assembledKit, type RegisterKit } from "@/lib/register/stage-kit";
 
 const client = () => createResilientConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
-// Local preview of kits that are extracted but not yet published: BUILDER_LOCAL_KITS
-// names a kits.json staged by scripts/paperdoll/local-kit-overlay.mjs, whose part
-// URLs live under public/local-kits/. Never set in production; nothing here writes.
-const localKits = readLocalComponentKits;
+// Approved hosted recipes are shared by catalog, PDP and Builder. Local candidate
+// overrides remain host/environment gated in readLocalComponentKits; nothing here writes.
+const localKits = () => ({ ...approvedComponentKits(), ...readLocalComponentKits() });
 
 function localAssembledKit(kit: BuilderKit): BuilderKit {
     if (kit.register) return assembledKit(kit as RegisterKit);
@@ -27,7 +28,7 @@ function localAssembledKit(kit: BuilderKit): BuilderKit {
     }) };
 }
 
-/** Apply review files after the shared cache so localhost never reverts to stale artwork. */
+/** Apply current approved recipes and optional local candidates after the shared cache. */
 function withLocalReviewBodies(bodies: BuilderBody[]): BuilderBody[] {
     const local = localKits();
     if (!local) return bodies;
@@ -45,7 +46,10 @@ function withLocalReviewBodies(bodies: BuilderBody[]): BuilderBody[] {
 
 // Raw matrix rows repeat compatibility lists and can exceed Next's 2 MB cache
 // entry limit. Cache the slim family workspace and individual image kits.
-const familyRows = (family: string) => client().query(api.matrix.getFamilyRows, { family });
+const familyRows = async (family: string) => {
+    const sources = await Promise.all(sourceFamilies(family).map(family => client().query(api.matrix.getFamilyRows, { family })));
+    return { ...sources[0], truncated: sources.some(source => source.truncated), rows: sources.flatMap(source => source.rows) };
+};
 
 const KIT_BATCH = 50;
 
@@ -71,7 +75,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: true }));
-}, ["bottle-builder-family-chooser-v10-cyl9-swirl-behind", CYLINDER9_OVERCAP_MASTER], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v11-tulip-cylinder", CYLINDER9_OVERCAP_MASTER, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** The cached family. When the cache has no entry to fall back on (a new key, an
  * eviction) and the register lookup fails, this one request builds the family
@@ -91,7 +95,8 @@ export async function loadBuilderFamilyOrUncached(family: string): Promise<{ bod
 }
 
 export const loadBuilderFamilies = unstable_cache(async () => {
-    const families = await client().query(api.matrix.listFamilies, {});
+    const sources = await client().query(api.matrix.listFamilies, {});
+    const families = [...new Set(sources.map(row => storefrontFamily(row.family)))].map(family => ({ family }));
     const available = new Array<{ family: string; groups: number } | null>(families.length);
     let cursor = 0;
     await Promise.all(Array.from({ length: Math.min(4, families.length) }, async () => {
@@ -109,7 +114,7 @@ export const loadBuilderFamilies = unstable_cache(async () => {
         }
     }));
     return available.filter(family => family !== null);
-}, ["bottle-builder-families-bare-v8-tall9-caps"], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-families-bare-v9-tulip-cylinder", APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** `strictRegister`: a failed register lookup throws instead of drawing the
  * published kits. Every cached caller sets it, so a Convex hiccup leaves the
@@ -166,7 +171,7 @@ const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null
         kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
     }
     return kits;
-}, ["bottle-builder-body-kits-v8-cyl9-swirl-behind", CYLINDER9_OVERCAP_MASTER], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-body-kits-v9-hosted-approved", CYLINDER9_OVERCAP_MASTER, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export async function loadBuilderBodyKits(family: string, bodyId: string) {
     if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};
@@ -269,12 +274,14 @@ export async function loadBuilderBodies(rows: CatalogRow[], options: KitLoadOpti
                 && !body.configurations.some(other => other.color === finish.color && other.fitment === finish.fitment && other.closure === finish.closure)) body.unavailableFinishes.push(finish);
         }
     }
-    return bodies;
+    // Resolve exact source-family compatibility first; regroup only the resulting storefront models.
+    return bodies.map(body => ({ ...withStorefrontFamily(body), configurations: body.configurations.map(config => ({
+        ...withStorefrontFamily(config), product: withStorefrontFamily(config.product),
+    })) }));
 }
 
 export async function freshConfiguration(family: string, sku: string) {
-    const convex = client();
-    const data = await convex.query(api.matrix.getFamilyRows, { family });
+    const data = await familyRows(family);
     if (data.truncated) return null;
     const rows = data.rows.map(reviewedCylinderFiveMlRow);
     const target = rows.filter(row => row.websiteSku === sku);

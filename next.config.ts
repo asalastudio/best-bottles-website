@@ -74,6 +74,8 @@ const nextConfig: NextConfig = {
         return config;
     },
     images: {
+        // Reviewed raster masters retain a high-quality display derivative; source files stay immutable.
+        qualities: [75, 90],
         remotePatterns: [
             {
                 protocol: "https",

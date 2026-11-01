@@ -273,10 +273,10 @@ export function capacityEyebrow(group: Pick<PdpGroup, "family" | "capacity" | "c
     return [group.family, capacity, clean(group.neckThreadSize)].filter(Boolean).map((part) => String(part).toUpperCase()).join(" · ");
 }
 
-export function pageTitle(group: Pick<PdpGroup, "family" | "capacity" | "capacityMl" | "color">, fitment: string | null): string {
+export function pageTitle(group: Pick<PdpGroup, "family" | "capacity" | "capacityMl" | "color"> & { slug?: string }, fitment: string | null): string {
     const capacity = group.capacityMl != null ? `${group.capacityMl} ml` : clean(group.capacity)?.split(" (")[0] ?? "";
     const glass = glassLabel(group.color);
-    const family = clean(group.family) ?? "Bottle";
+    const family = /^tulip-(?:5|6)ml-/.test(group.slug ?? "") ? "Tulip" : clean(group.family) ?? "Bottle";
     // A bulb sprayer page is named as the tab title names it, tassel included: it is not a plain "Spray Bottle".
     const type = fitment
         ? /bulb sprayer/i.test(fitment) ? `Vintage-Style Bulb Sprayer Bottle${/tassel/i.test(fitment) ? " with Tassel" : ""}`
