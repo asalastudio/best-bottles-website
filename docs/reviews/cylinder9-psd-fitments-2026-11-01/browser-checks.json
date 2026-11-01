@@ -1,0 +1,761 @@
+{
+  "checks": [
+    {
+      "body": {
+        "x": 418.724885552921,
+        "y": 416.7868712196278,
+        "width": 76.54294246298788,
+        "height": 284.7908056796386
+      },
+      "uniform": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/body-approved.png",
+          "loaded": true,
+          "visible": true,
+          "x": 400.93463134765625,
+          "y": 399.8937683105469,
+          "width": 111.07696533203125,
+          "height": 316.3345642089844,
+          "inside": true
+        },
+        {
+          "slot": "diptube",
+          "url": "embedded generated tube",
+          "loaded": true,
+          "visible": true,
+          "x": 444.4385681152344,
+          "y": 466.42498779296875,
+          "width": 26.284393310546875,
+          "height": 212.74176025390625,
+          "inside": true
+        },
+        {
+          "slot": "sprayer",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 424.5007629394531,
+          "y": 334.39239501953125,
+          "width": 65.77682495117188,
+          "height": 80.0985107421875,
+          "inside": true
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+          "loaded": true,
+          "visible": true,
+          "x": 524.9066162109375,
+          "y": 611.4755859375,
+          "width": 67.4771728515625,
+          "height": 89.917724609375,
+          "inside": true
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 417.6033630371094,
+          "y": 405.7374267578125,
+          "width": 79.83505249023438,
+          "height": 68.15972900390625,
+          "inside": true
+        }
+      ],
+      "overflow": false,
+      "stable": true,
+      "viewport": 1440,
+      "mode": "sidecar",
+      "metrics": {
+        "mode": "sidecar",
+        "cleaned": true,
+        "ppm": 4.068519842685373,
+        "bodyTop": 114.56324205450439,
+        "bodyBase": 399.3596310424805,
+        "tubeLengthMm": 52.3,
+        "tubeDiameterMm": 1.4,
+        "tubeTipAboveOuterBaseMm": 5.5,
+        "collarLiftMm": 0.7,
+        "pumpStartBelowRimMm": 12.2,
+        "bodyAnchor": {
+          "left": 39.792,
+          "top": 27.6827,
+          "width": 20.416,
+          "height": 68.8173
+        }
+      }
+    },
+    {
+      "body": {
+        "x": 418.724885552921,
+        "y": 416.7868712196278,
+        "width": 76.54294246298788,
+        "height": 284.7908056796386
+      },
+      "uniform": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/body-approved.png",
+          "loaded": true,
+          "visible": true,
+          "x": 400.93463134765625,
+          "y": 399.8937683105469,
+          "width": 111.07696533203125,
+          "height": 316.3345642089844,
+          "inside": true
+        },
+        {
+          "slot": "diptube",
+          "url": "embedded generated tube",
+          "loaded": true,
+          "visible": true,
+          "x": 444.4385681152344,
+          "y": 466.42498779296875,
+          "width": 26.284393310546875,
+          "height": 212.74176025390625,
+          "inside": true
+        },
+        {
+          "slot": "sprayer",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 424.5007629394531,
+          "y": 334.39239501953125,
+          "width": 65.77682495117188,
+          "height": 80.0985107421875,
+          "inside": true
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+          "loaded": true,
+          "visible": true,
+          "x": 423.3272705078125,
+          "y": 320.0727233886719,
+          "width": 67.4771728515625,
+          "height": 89.91769409179688,
+          "inside": true
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 417.6033630371094,
+          "y": 405.7374267578125,
+          "width": 79.83505249023438,
+          "height": 68.15972900390625,
+          "inside": true
+        }
+      ],
+      "overflow": false,
+      "stable": true,
+      "viewport": 1440,
+      "mode": "cap-on",
+      "metrics": {
+        "mode": "cap-on",
+        "cleaned": true,
+        "ppm": 4.068519842685373,
+        "bodyTop": 114.56324205450439,
+        "bodyBase": 399.3596310424805,
+        "tubeLengthMm": 52.3,
+        "tubeDiameterMm": 1.4,
+        "tubeTipAboveOuterBaseMm": 5.5,
+        "collarLiftMm": 0.7,
+        "pumpStartBelowRimMm": 12.2,
+        "bodyAnchor": {
+          "left": 39.792,
+          "top": 27.6827,
+          "width": 20.416,
+          "height": 68.8173
+        }
+      }
+    },
+    {
+      "body": {
+        "x": 418.724885552921,
+        "y": 416.7868712196278,
+        "width": 76.54294246298788,
+        "height": 284.7908056796386
+      },
+      "uniform": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/body-approved.png",
+          "loaded": true,
+          "visible": true,
+          "x": 400.93463134765625,
+          "y": 399.8937683105469,
+          "width": 111.07696533203125,
+          "height": 316.3345642089844,
+          "inside": true
+        },
+        {
+          "slot": "diptube",
+          "url": "embedded generated tube",
+          "loaded": true,
+          "visible": true,
+          "x": 566.4843139648438,
+          "y": 413.53289794921875,
+          "width": 26.28436279296875,
+          "height": 212.74176025390625,
+          "inside": true
+        },
+        {
+          "slot": "sprayer",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 546.5584716796875,
+          "y": 281.5123291015625,
+          "width": 65.77679443359375,
+          "height": 80.09844970703125,
+          "inside": true
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+          "loaded": true,
+          "visible": true,
+          "x": 317.9857177734375,
+          "y": 611.4755859375,
+          "width": 67.4771728515625,
+          "height": 89.917724609375,
+          "inside": true
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 539.6610717773438,
+          "y": 352.8453369140625,
+          "width": 79.83502197265625,
+          "height": 68.15975952148438,
+          "inside": true
+        }
+      ],
+      "overflow": false,
+      "stable": true,
+      "viewport": 1440,
+      "mode": "exploded",
+      "metrics": {
+        "mode": "exploded",
+        "cleaned": true,
+        "ppm": 4.068519842685373,
+        "bodyTop": 114.56324205450439,
+        "bodyBase": 399.3596310424805,
+        "tubeLengthMm": 52.3,
+        "tubeDiameterMm": 1.4,
+        "tubeTipAboveOuterBaseMm": 5.5,
+        "collarLiftMm": 0.7,
+        "pumpStartBelowRimMm": 12.2,
+        "bodyAnchor": {
+          "left": 39.792,
+          "top": 27.6827,
+          "width": 20.416,
+          "height": 68.8173
+        }
+      }
+    },
+    {
+      "body": {
+        "x": 418.724885552921,
+        "y": 416.7868712196278,
+        "width": 76.54294246298788,
+        "height": 284.7908056796386
+      },
+      "uniform": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/body-approved.png",
+          "loaded": true,
+          "visible": true,
+          "x": 400.93463134765625,
+          "y": 399.8937683105469,
+          "width": 111.07696533203125,
+          "height": 316.3345642089844,
+          "inside": true
+        },
+        {
+          "slot": "diptube",
+          "url": "embedded generated tube",
+          "loaded": true,
+          "visible": false,
+          "x": 444.4385681152344,
+          "y": 466.42498779296875,
+          "width": 26.284393310546875,
+          "height": 212.74176025390625,
+          "inside": true
+        },
+        {
+          "slot": "sprayer",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.svg",
+          "loaded": true,
+          "visible": false,
+          "x": 424.5007629394531,
+          "y": 334.39239501953125,
+          "width": 65.77682495117188,
+          "height": 80.0985107421875,
+          "inside": true
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+          "loaded": true,
+          "visible": false,
+          "x": 524.9066162109375,
+          "y": 611.4755859375,
+          "width": 67.4771728515625,
+          "height": 89.917724609375,
+          "inside": true
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.svg",
+          "loaded": true,
+          "visible": false,
+          "x": 417.6033630371094,
+          "y": 405.7374267578125,
+          "width": 79.83505249023438,
+          "height": 68.15972900390625,
+          "inside": true
+        }
+      ],
+      "overflow": false,
+      "stable": true,
+      "viewport": 1440,
+      "mode": "bare",
+      "metrics": {
+        "mode": "bare",
+        "cleaned": true,
+        "ppm": 4.068519842685373,
+        "bodyTop": 114.56324205450439,
+        "bodyBase": 399.3596310424805,
+        "tubeLengthMm": 52.3,
+        "tubeDiameterMm": 1.4,
+        "tubeTipAboveOuterBaseMm": 5.5,
+        "collarLiftMm": 0.7,
+        "pumpStartBelowRimMm": 12.2,
+        "bodyAnchor": {
+          "left": 39.792,
+          "top": 27.6827,
+          "width": 20.416,
+          "height": 68.8173
+        }
+      }
+    },
+    {
+      "viewport": 1440,
+      "lengthStudies": [
+        {
+          "label": "27 mmSame tube width and housing",
+          "width": 25.84375,
+          "height": 108,
+          "ratio": 0.23929398148148148
+        },
+        {
+          "label": "52.3 mmSame tube width and housing",
+          "width": 25.84375,
+          "height": 209.1875,
+          "ratio": 0.12354347176576039
+        },
+        {
+          "label": "100 mmSame tube width and housing",
+          "width": 25.84375,
+          "height": 400,
+          "ratio": 0.064609375
+        }
+      ],
+      "fixedTubeWidth": true
+    },
+    {
+      "body": {
+        "x": 166.64770854883207,
+        "y": 331.66767411691706,
+        "width": 56.68928751682369,
+        "height": 210.92216643133327
+      },
+      "uniform": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/body-approved.png",
+          "loaded": true,
+          "visible": true,
+          "x": 153.4718780517578,
+          "y": 319.1562805175781,
+          "width": 82.26589965820312,
+          "height": 234.28414916992188,
+          "inside": true
+        },
+        {
+          "slot": "diptube",
+          "url": "embedded generated tube",
+          "loaded": true,
+          "visible": true,
+          "x": 185.6956787109375,
+          "y": 368.4439697265625,
+          "width": 19.470794677734375,
+          "height": 157.5865478515625,
+          "inside": true
+        },
+        {
+          "slot": "sprayer",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 170.91896057128906,
+          "y": 270.6349792480469,
+          "width": 48.724884033203125,
+          "height": 59.32244873046875,
+          "inside": true
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+          "loaded": true,
+          "visible": true,
+          "x": 245.29881286621094,
+          "y": 475.88934326171875,
+          "width": 49.98222351074219,
+          "height": 66.60302734375,
+          "inside": true
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 165.8177490234375,
+          "y": 323.4911193847656,
+          "width": 59.130859375,
+          "height": 50.485137939453125,
+          "inside": true
+        }
+      ],
+      "overflow": false,
+      "stable": true,
+      "viewport": 390,
+      "mode": "sidecar",
+      "metrics": {
+        "mode": "sidecar",
+        "cleaned": true,
+        "ppm": 3.0137186686732704,
+        "bodyTop": 84.86166829052735,
+        "bodyBase": 295.82197509765626,
+        "tubeLengthMm": 52.3,
+        "tubeDiameterMm": 1.4,
+        "tubeTipAboveOuterBaseMm": 5.5,
+        "collarLiftMm": 0.7,
+        "pumpStartBelowRimMm": 12.2,
+        "bodyAnchor": {
+          "left": 39.792,
+          "top": 27.6827,
+          "width": 20.416,
+          "height": 68.8173
+        }
+      }
+    },
+    {
+      "body": {
+        "x": 166.64770854883207,
+        "y": 331.66767411691706,
+        "width": 56.68928751682369,
+        "height": 210.92216643133327
+      },
+      "uniform": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/body-approved.png",
+          "loaded": true,
+          "visible": true,
+          "x": 153.4718780517578,
+          "y": 319.1562805175781,
+          "width": 82.26589965820312,
+          "height": 234.28414916992188,
+          "inside": true
+        },
+        {
+          "slot": "diptube",
+          "url": "embedded generated tube",
+          "loaded": true,
+          "visible": true,
+          "x": 185.6956787109375,
+          "y": 368.4439697265625,
+          "width": 19.470794677734375,
+          "height": 157.5865478515625,
+          "inside": true
+        },
+        {
+          "slot": "sprayer",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 170.91896057128906,
+          "y": 270.6349792480469,
+          "width": 48.724884033203125,
+          "height": 59.32244873046875,
+          "inside": true
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+          "loaded": true,
+          "visible": true,
+          "x": 170.05677795410156,
+          "y": 260.03533935546875,
+          "width": 49.98222351074219,
+          "height": 66.60305786132812,
+          "inside": true
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 165.8177490234375,
+          "y": 323.4911193847656,
+          "width": 59.130859375,
+          "height": 50.485137939453125,
+          "inside": true
+        }
+      ],
+      "overflow": false,
+      "stable": true,
+      "viewport": 390,
+      "mode": "cap-on",
+      "metrics": {
+        "mode": "cap-on",
+        "cleaned": true,
+        "ppm": 3.0137186686732704,
+        "bodyTop": 84.86166829052735,
+        "bodyBase": 295.82197509765626,
+        "tubeLengthMm": 52.3,
+        "tubeDiameterMm": 1.4,
+        "tubeTipAboveOuterBaseMm": 5.5,
+        "collarLiftMm": 0.7,
+        "pumpStartBelowRimMm": 12.2,
+        "bodyAnchor": {
+          "left": 39.792,
+          "top": 27.6827,
+          "width": 20.416,
+          "height": 68.8173
+        }
+      }
+    },
+    {
+      "body": {
+        "x": 166.64770854883207,
+        "y": 331.66767411691706,
+        "width": 56.68928751682369,
+        "height": 210.92216643133327
+      },
+      "uniform": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/body-approved.png",
+          "loaded": true,
+          "visible": true,
+          "x": 153.4718780517578,
+          "y": 319.1562805175781,
+          "width": 82.26589965820312,
+          "height": 234.28414916992188,
+          "inside": true
+        },
+        {
+          "slot": "diptube",
+          "url": "embedded generated tube",
+          "loaded": true,
+          "visible": true,
+          "x": 276.1043701171875,
+          "y": 329.2629089355469,
+          "width": 19.470794677734375,
+          "height": 157.58648681640625,
+          "inside": true
+        },
+        {
+          "slot": "sprayer",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 261.339599609375,
+          "y": 231.46588134765625,
+          "width": 48.724884033203125,
+          "height": 59.32244873046875,
+          "inside": true
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+          "loaded": true,
+          "visible": true,
+          "x": 92.02799987792969,
+          "y": 475.88934326171875,
+          "width": 49.98222351074219,
+          "height": 66.60302734375,
+          "inside": true
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.svg",
+          "loaded": true,
+          "visible": true,
+          "x": 256.2264099121094,
+          "y": 284.3100280761719,
+          "width": 59.130859375,
+          "height": 50.48516845703125,
+          "inside": true
+        }
+      ],
+      "overflow": false,
+      "stable": true,
+      "viewport": 390,
+      "mode": "exploded",
+      "metrics": {
+        "mode": "exploded",
+        "cleaned": true,
+        "ppm": 3.0137186686732704,
+        "bodyTop": 84.86166829052735,
+        "bodyBase": 295.82197509765626,
+        "tubeLengthMm": 52.3,
+        "tubeDiameterMm": 1.4,
+        "tubeTipAboveOuterBaseMm": 5.5,
+        "collarLiftMm": 0.7,
+        "pumpStartBelowRimMm": 12.2,
+        "bodyAnchor": {
+          "left": 39.792,
+          "top": 27.6827,
+          "width": 20.416,
+          "height": 68.8173
+        }
+      }
+    },
+    {
+      "body": {
+        "x": 166.64770854883207,
+        "y": 331.66767411691706,
+        "width": 56.68928751682369,
+        "height": 210.92216643133327
+      },
+      "uniform": true,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/body-approved.png",
+          "loaded": true,
+          "visible": true,
+          "x": 153.4718780517578,
+          "y": 319.1562805175781,
+          "width": 82.26589965820312,
+          "height": 234.28414916992188,
+          "inside": true
+        },
+        {
+          "slot": "diptube",
+          "url": "embedded generated tube",
+          "loaded": true,
+          "visible": false,
+          "x": 185.6956787109375,
+          "y": 368.4439697265625,
+          "width": 19.470794677734375,
+          "height": 157.5865478515625,
+          "inside": true
+        },
+        {
+          "slot": "sprayer",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-sprayer-registered.svg",
+          "loaded": true,
+          "visible": false,
+          "x": 170.91896057128906,
+          "y": 270.6349792480469,
+          "width": 48.724884033203125,
+          "height": 59.32244873046875,
+          "inside": true
+        },
+        {
+          "slot": "overcap",
+          "url": "http://127.0.0.1:3010/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fcylinder-9ml-clear-overcap-alpha-v6.png&w=640&q=75",
+          "loaded": true,
+          "visible": false,
+          "x": 245.29881286621094,
+          "y": 475.88934326171875,
+          "width": 49.98222351074219,
+          "height": 66.60302734375,
+          "inside": true
+        },
+        {
+          "slot": "collar",
+          "url": "http://127.0.0.1:3010/reviews/cylinder9-psd-fitments-2026-11-01/GPT-collar-registered.svg",
+          "loaded": true,
+          "visible": false,
+          "x": 165.8177490234375,
+          "y": 323.4911193847656,
+          "width": 59.130859375,
+          "height": 50.485137939453125,
+          "inside": true
+        }
+      ],
+      "overflow": false,
+      "stable": true,
+      "viewport": 390,
+      "mode": "bare",
+      "metrics": {
+        "mode": "bare",
+        "cleaned": true,
+        "ppm": 3.0137186686732704,
+        "bodyTop": 84.86166829052735,
+        "bodyBase": 295.82197509765626,
+        "tubeLengthMm": 52.3,
+        "tubeDiameterMm": 1.4,
+        "tubeTipAboveOuterBaseMm": 5.5,
+        "collarLiftMm": 0.7,
+        "pumpStartBelowRimMm": 12.2,
+        "bodyAnchor": {
+          "left": 39.792,
+          "top": 27.6827,
+          "width": 20.416,
+          "height": 68.8173
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "lengthStudies": [
+        {
+          "label": "27 mmSame tube width and housing",
+          "width": 25.84375,
+          "height": 108,
+          "ratio": 0.23929398148148148
+        },
+        {
+          "label": "52.3 mmSame tube width and housing",
+          "width": 25.84375,
+          "height": 209.1875,
+          "ratio": 0.12354347176576039
+        },
+        {
+          "label": "100 mmSame tube width and housing",
+          "width": 25.84375,
+          "height": 400,
+          "ratio": 0.064609375
+        }
+      ],
+      "fixedTubeWidth": true
+    }
+  ],
+  "errors": [],
+  "preserved": {
+    "body": true,
+    "tube": true
+  }
+}

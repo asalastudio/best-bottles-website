@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-01",
+  "body": {
+    "file": "BB_Cylinder_9ml_17-415_Clear_BODY_v04_APPROVED.png",
+    "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+    "userStatement": "The bottle\u2019s acceptable.",
+    "scope": "Appearance approval of exact 9 ml clear v04 pixels. Existing body size and rim preserved."
+  },
+  "tube": {
+    "file": "BB_DipTube_GPT_Master_v01_APPROVED.png",
+    "sha256": "baa1588f17bbec4288edc69a34e1b5725570886c39f56a06e6aa28b91d033d78",
+    "userStatement": "This is really good. We can reuse this dip tube for longer bottles as well and cut it for shorter bottles.",
+    "scope": "Appearance master and length-adaptation direction; individual fitments require compatible housing, measured lengths and visual clearance checks.",
+    "generator": "Built-in GPT image generator; exact model version not exposed",
+    "nativeSize": [
+      1024,
+      1536
+    ],
+    "nominalDiameterMm": 1.1
+  },
+  "integratedAssembly": "approved by user, revision 3",
+  "productionChanged": false,
+  "generatedFitmentFinish": {
+    "userStatement": "But that looks really good.",
+    "scope": "Generated material appearance liked by user; cleanup and fixed-outline registration are subsequent review work.",
+    "registeredAssemblyApproved": true
+  },
+  "active9mlMechanism": {
+    "file": "BB_17-415_Pump-and-Tube_Reference-v02_APPROVED.png",
+    "sha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f",
+    "status": "approved within revision 3 assembly",
+    "reference": "pump-reference.png",
+    "reason": "Later user reference requests a longer milky mechanism visible below the collar. Earlier approved tube remains preserved."
+  },
+  "finalSignoff": {
+    "date": "2026-11-01",
+    "userStatement": "perfect",
+    "reviewUrl": "http://localhost:3010/reviews/cylinder9-psd-fitments-2026-11-01/index.html?revision=3",
+    "scope": "Exact Cylinder 9 ml clear / black sprayer assembly shown in revision 3; other glass colors, sizes and collar finishes need their own checks."
+  }
+}

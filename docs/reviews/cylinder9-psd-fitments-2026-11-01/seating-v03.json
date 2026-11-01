@@ -1,0 +1,13 @@
+{
+  "revision": 3,
+  "collarLiftMm": 0.7,
+  "bodyShoulderSourceY": 480,
+  "bodyShoulderBelowRimMm": 13.485564304461942,
+  "collarBottomBelowRimMm": 13.519585343591082,
+  "mechanismTopBelowRimMm": 12.2,
+  "tubeTotalLengthMm": 52.3,
+  "tubeDiameterMm": 1.4,
+  "tipAboveExteriorBaseMm": 5.5,
+  "tubeCandidate": "BB_17-415_Pump-and-Tube_Reference-v02_REVIEW.png",
+  "scope": "Visible-assembly presentation match to user photograph; manufacturer tube dimensions are unverified."
+}

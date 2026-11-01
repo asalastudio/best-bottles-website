@@ -12,3 +12,17 @@
 | 2026-11-01 Cylinder 9 ml fixed-edge v04 | 1 clear body SVG + PNG | Fixed source geometry, cleaned fringe and PDP-size review; no active assignment | [Fixed-edge batch](https://drive.google.com/drive/folders/1qsoRIZJoStFeOF7raT5QVGB_v36rCOWv) |
 
 Approved files remain separate. New batch candidates do not replace an existing approved master. See the dated manifest for exact file hashes, source references, scale targets and approval state.
+
+## 2026-11-01: Cylinder 9 ml Photoshop fitments and GPT tube
+
+The user accepted the fixed-edge v04 body and generated dip-tube master. Their exact native files are preserved with approval hashes. The black 17-415 sprayer uses recovered Photoshop geometry with a GPT material-cleanup candidate; original layers remain available. The collar generation drifted +4.415% in aspect, so the registered candidate clips uniformly placed material to the original PSD outline. Tube length adaptation preserves housing and width. Eight desktop/mobile states and two constant-width length checks passed. Other colors and catalog families remain unapproved by this batch.
+
+- [Batch documentation](../cylinder9-psd-fitments-2026-11-01/README.md)
+- [Local review](http://localhost:3010/reviews/cylinder9-psd-fitments-2026-11-01/index.html)
+- [Drive review batch](https://drive.google.com/drive/folders/1UUCxu73O-1jbY8sNViwSms2CQ9X-tu7S)
+
+Revision 3 follows the later user photograph: a new milky pump mechanism candidate is visible below the collar, and a 0.7 mm collar lift meets the shoulder contact line. The original approved tube is retained separately. The active mechanism and integrated assembly still need sign-off; source records and eight desktop/mobile state checks are in the same batch.
+
+Final sign-off: the user said “perfect” on revision 3. The exact 9 ml clear / black assembly is approved, with five asset hashes and seating settings in `assembly-v03-approved.json`. Other colors and families are outside this sign-off.
+
+[Approved revision 3 masters and archive](https://drive.google.com/drive/folders/1zb0-C5B-35rTgLy9OPLkUYQpTRQQpTGc)

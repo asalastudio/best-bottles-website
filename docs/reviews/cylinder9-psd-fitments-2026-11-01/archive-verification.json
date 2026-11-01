@@ -1,0 +1,16 @@
+{
+  "archive": "outputs/family-master-library-2026-11-01/Cylinder_9ml_PSD-Fitments_GPT-Cleanup_2026-11-01_v03_APPROVED.zip",
+  "bytes": 23598224,
+  "sha256": "e135328992345a56fa98e1f891ba52647758853cdfb53c9a6cf75bf6d082aef3",
+  "zipEntries": 92,
+  "crcPass": true,
+  "entryHashesPass": true,
+  "restore": {
+    "mode": "restored",
+    "verifiedFiles": 91,
+    "copied": 25,
+    "unchanged": 0,
+    "backedUp": 0
+  },
+  "restoredInto": "/var/folders/g3/l_7f2hg57x90xzht2md1q_hm0000gn/T/cylinder9-psd-fitment-restore-g8tnrfvx"
+}

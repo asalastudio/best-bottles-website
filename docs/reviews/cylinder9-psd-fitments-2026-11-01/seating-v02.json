@@ -1,0 +1,15 @@
+{
+  "revision": 2,
+  "date": "2026-11-01",
+  "collarLiftMm": 1.5,
+  "pumpStartBelowRimMm": 5,
+  "tubeTotalLengthMm": 59.5,
+  "tubeTipAboveExteriorBaseMm": 5.5,
+  "bodyShoulderLandmark": {
+    "sourceY": 460,
+    "belowRimMm": 12.750656167979002
+  },
+  "collarBottomBelowRimMm": 12.719585343591081,
+  "bodyPixelsChanged": false,
+  "description": "Raise external actuator and collar together. Retain the tube floor clearance while placing the translucent mechanism 2 mm lower. Cap-on overcap follows the external head."
+}
