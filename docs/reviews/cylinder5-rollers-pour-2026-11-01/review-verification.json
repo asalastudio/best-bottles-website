@@ -1,0 +1,130 @@
+{
+  "checks": [
+    {
+      "glass": "Clear",
+      "fitment": "Metal Roller Ball",
+      "view": "sidecar",
+      "sku": "GBCyl5MtlRollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Clear",
+      "fitment": "Metal Roller Ball",
+      "view": "capon",
+      "sku": "GBCyl5MtlRollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Clear",
+      "fitment": "Metal Roller Ball",
+      "view": "exploded",
+      "sku": "GBCyl5MtlRollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Clear",
+      "fitment": "Plastic Roller Ball",
+      "view": "sidecar",
+      "sku": "GBCyl5RollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Clear",
+      "fitment": "Plastic Roller Ball",
+      "view": "capon",
+      "sku": "GBCyl5RollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Clear",
+      "fitment": "Plastic Roller Ball",
+      "view": "exploded",
+      "sku": "GBCyl5RollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Clear",
+      "fitment": "Cap/Closure",
+      "view": "sidecar",
+      "sku": "GBCyl5Sl",
+      "passed": true
+    },
+    {
+      "glass": "Clear",
+      "fitment": "Cap/Closure",
+      "view": "capon",
+      "sku": "GBCyl5Sl",
+      "passed": true
+    },
+    {
+      "glass": "Clear",
+      "fitment": "Cap/Closure",
+      "view": "exploded",
+      "sku": "GBCyl5Sl",
+      "passed": true
+    },
+    {
+      "glass": "Cobalt Blue",
+      "fitment": "Metal Roller Ball",
+      "view": "sidecar",
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Cobalt Blue",
+      "fitment": "Metal Roller Ball",
+      "view": "capon",
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Cobalt Blue",
+      "fitment": "Metal Roller Ball",
+      "view": "exploded",
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Cobalt Blue",
+      "fitment": "Plastic Roller Ball",
+      "view": "sidecar",
+      "sku": "GBCylBlu5RollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Cobalt Blue",
+      "fitment": "Plastic Roller Ball",
+      "view": "capon",
+      "sku": "GBCylBlu5RollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Cobalt Blue",
+      "fitment": "Plastic Roller Ball",
+      "view": "exploded",
+      "sku": "GBCylBlu5RollBlkSh",
+      "passed": true
+    },
+    {
+      "glass": "Cobalt Blue",
+      "fitment": "Cap/Closure",
+      "view": "sidecar",
+      "sku": "GBCylBlu5Sl",
+      "passed": true
+    },
+    {
+      "glass": "Cobalt Blue",
+      "fitment": "Cap/Closure",
+      "view": "capon",
+      "sku": "GBCylBlu5Sl",
+      "passed": true
+    },
+    {
+      "glass": "Cobalt Blue",
+      "fitment": "Cap/Closure",
+      "view": "exploded",
+      "sku": "GBCylBlu5Sl",
+      "passed": true
+    }
+  ]
+}

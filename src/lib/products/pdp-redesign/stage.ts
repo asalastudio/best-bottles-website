@@ -316,7 +316,7 @@ export function stageLayout(
     if (reviewedFrame) {
         frame = reviewedFrame;
         offsets = fixedStageOffsets(sorted, offsets, view, frame, canvas, {
-            insertsFirst: kit.register?.bodyId === "cylinder-9ml-17-415"
+            insertsFirst: ["cylinder-9ml-17-415", "cylinder-5ml-13-415"].includes(kit.register?.bodyId ?? "")
                 && sorted.some(part => part.slot === "roller" && part.image.url.startsWith("/local-kits/cylinder9-masters-2026-11-01/")),
         });
     }

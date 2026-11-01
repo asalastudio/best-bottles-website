@@ -1,0 +1,193 @@
+{
+  "records": [
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Shiny Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5BlkShSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Shiny Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5BlkShSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Shiny Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5BlkShSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5RollSlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollSlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5RollSlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollSlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5RollSlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollSlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Black with Dots",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Black with Dots",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Black with Dots",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkDot&from=pdp"
+    }
+  ],
+  "failures": [
+    {
+      "viewport": "desktop",
+      "sku": "GBCyl5BlkShSht",
+      "error": "Waiting failed: 45000ms exceeded"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBCyl5RollSlMatt",
+      "error": "Waiting failed: 45000ms exceeded"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBCyl5MtlRollBlkDot",
+      "error": "Waiting failed: 45000ms exceeded"
+    }
+  ],
+  "pageErrors": []
+}

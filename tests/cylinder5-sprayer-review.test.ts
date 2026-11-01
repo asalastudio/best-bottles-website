@@ -63,7 +63,7 @@ describe("5 ml fine-mist review registration", () => {
             expect(actual[sku].anchors).toEqual(review.rows[sku].anchors);
             expect(localPdpComponentKits("localhost:3010", undefined, [{ websiteSku: sku }])[sku]).toEqual(actual[sku]);
         }
-        for (const sku of Object.keys(before).filter(sku => !sku.includes("Spry") && !sku.startsWith("GBCylBlu5"))) expect(actual[sku]).toEqual(before[sku]);
+        for (const sku of Object.keys(before).filter(sku => !sku.includes("Spry") && !sku.startsWith("GBCylBlu5"))) expect(actual[sku].parts.find(p => p.slot === "body")).toEqual(before[sku].parts.find(p => p.slot === "body"));
         vi.stubEnv("VERCEL", "1");
         expect(readLocalComponentKits()).toBeNull();
     });

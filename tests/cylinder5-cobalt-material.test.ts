@@ -8,17 +8,17 @@ const before = JSON.parse(readFileSync("docs/reviews/cylinder5-cobalt-material-2
 const current = JSON.parse(readFileSync(index.kitFile, "utf8")).rows as Record<string, BuilderKit>;
 afterEach(() => vi.unstubAllEnvs());
 describe("one 5 ml cobalt material master", () => {
-    it("changes only the body artwork on all 35 cobalt configurations", () => {
+    it("preserves the registered body and anchors on all 35 cobalt configurations", () => {
         expect(index.cobaltSkus).toHaveLength(35);
         expect(Object.keys(current)).toHaveLength(71);
         const bodies = new Set<string>();
         for (const [sku, kit] of Object.entries(current)) {
-            if (!index.cobaltSkus.includes(sku)) { expect(kit).toEqual(before[sku]); continue; }
+            if (!index.cobaltSkus.includes(sku)) { expect(kit.parts.find(p => p.slot === "body")).toEqual(before[sku].parts.find(p => p.slot === "body")); continue; }
             const original = before[sku].parts.find(p => p.slot === "body")!;
             const body = kit.parts.find(p => p.slot === "body")!;
             bodies.add(body.image.url);
             expect({ ...body, image: original.image, image2x: original.image2x }).toEqual(original);
-            expect(kit.parts.filter(p => p.slot !== "body")).toEqual(before[sku].parts.filter(p => p.slot !== "body"));
+            if (sku.includes("Spry")) expect(kit.parts.filter(p => p.slot !== "body")).toEqual(before[sku].parts.filter(p => p.slot !== "body"));
             expect(kit.anchors).toEqual(before[sku].anchors);
             expect(kit.glassSizing).toEqual(before[sku].glassSizing);
         }

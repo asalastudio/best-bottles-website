@@ -1,0 +1,462 @@
+{
+  "records": [
+    {
+      "sku": "GBCyl5BlkSht",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5BlkSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5BlkSht&from=pdp"
+    },
+    {
+      "sku": "GBCyl5BlkSht",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5BlkSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5BlkSht&from=pdp"
+    },
+    {
+      "sku": "GBCyl5BlkSht",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5BlkSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5BlkSht&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Ribbed White",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5WhtSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5WhtSht&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Ribbed White",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5WhtSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5WhtSht&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Ribbed White",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5WhtSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5WhtSht&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Shiny Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5BlkShSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Shiny Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5BlkShSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Shiny Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5BlkShSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5RollSlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollSlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5RollSlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollSlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5RollSlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollSlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Black with Dots",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Black with Dots",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Black with Dots",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5RollSlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollSlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5RollSlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollSlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5RollSlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollSlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Black with Dots",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Black with Dots",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "roller": "Existing Blender ball plus full plug; mesh preserved",
+      "cap": "Black with Dots",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Shiny Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5BlkShSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5BlkShSht&from=pdp"
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Shiny Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5BlkShSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5BlkShSht&from=pdp"
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "roller": null,
+      "cap": "Short Shiny Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5BlkShSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5BlkShSht&from=pdp"
+    }
+  ],
+  "failures": [],
+  "pageErrors": []
+}
