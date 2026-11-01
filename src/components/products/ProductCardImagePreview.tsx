@@ -13,7 +13,7 @@ import { resolveImageWithFallback } from "@/lib/products/image-fallback";
 import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-heroes";
 
 import CylinderMasterPreview from "./CylinderMasterPreview";
-import { cylinderMasterSku } from "@/lib/products/cylinder-master";
+import { cylinderMasterSku, masterProductHref } from "@/lib/products/cylinder-master";
 
 import styles from "./ProductCardImagePreview.module.css";
 
@@ -243,7 +243,7 @@ export default function ProductCardImagePreview({
     const resolvedImageAlt = resolvedPhoto.alt;
     const isStudioHero = Boolean(catalogHero && resolvedImageUrl === catalogHero.url);
     const masterSku = canonicalHero ? cylinderMasterSku(activePreview?.websiteSku ?? activePreview?.sku ?? catalogHero?.websiteSku ?? auditMeta?.websiteSku) : null;
-    const linkedHref = masterSku ? `${productHref}${productHref.includes("?") ? "&" : "?"}sku=${encodeURIComponent(masterSku)}` : productHref;
+    const linkedHref = masterProductHref(productHref, masterSku);
 
     const markImageFailed = (url: string) => {
         setFailedImages((current) => {

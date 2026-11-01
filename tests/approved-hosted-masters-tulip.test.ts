@@ -16,7 +16,7 @@ import index from "@/lib/paper-doll/approved-kit-index.json";
 vi.mock("server-only", () => ({}));
 import { GET } from "@/app/api/bottle-masters/approved/route";
 import { localPdpComponentKits } from "@/lib/paper-doll/local-component-kits";
-import { cylinderMasterSource, cylinderMasterSku } from "@/lib/products/cylinder-master";
+import { cylinderMasterSource, cylinderMasterSku, masterProductHref } from "@/lib/products/cylinder-master";
 const directory = "docs/reviews/hosted-masters-tulip-2026-11-01/";
 const plan = JSON.parse(readFileSync(directory + "upload-plan.json", "utf8"));
 const receipt = JSON.parse(readFileSync(directory + "asset-receipt.json", "utf8"));
@@ -94,6 +94,15 @@ const group = (slug: string, family: string, ml: number): CatalogSearchGroup => 
     priceRangeMin: 1, priceRangeMax: 1, applicatorTypes: ["Fine Mist Sprayer"],
 });
 describe("Tulip storefront regrouping without changing product identities", () => {
+    it("keeps a single exact SKU in catalog links while preserving the return path and anchor", () => {
+        const href = masterProductHref("/es/products/tulip-5ml-amber-13-415-rollon?sku=old&from=%2Fcatalog%3Ffamily%3DCylinder&sku=duplicate#details", "GBTulipAmb5RollBlkDot");
+        const url = new URL(href, "https://www.bestbottles.com");
+        expect(url.searchParams.getAll("sku")).toEqual(["GBTulipAmb5RollBlkDot"]);
+        expect(url.searchParams.get("from")).toBe("/catalog?family=Cylinder");
+        expect(url.pathname).toBe("/es/products/tulip-5ml-amber-13-415-rollon");
+        expect(url.hash).toBe("#details");
+        expect(masterProductHref("/products/other?sku=old", null)).toBe("/products/other?sku=old");
+    });
     it("retains product slugs and distinct 5/6 ml body IDs under Cylinder", () => {
         for (const ml of [5, 6]) {
             const row = { family: "Tulip", color: "Clear", capacityMl: ml, neckThreadSize: "13-415", category: "Glass Bottle", productGroupSlug: `tulip-${ml}ml-clear-13-415-finemist` } as CatalogRow;

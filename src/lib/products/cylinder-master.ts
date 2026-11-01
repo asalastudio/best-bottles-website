@@ -10,3 +10,11 @@ export function cylinderMasterSource(sku: string) {
     if (cylinder9MasterSku(sku)) return { family: "cylinder9", version: CYLINDER9_MASTER_VERSION };
     return approvedMasterSku(sku) ? { family: "approved", version: APPROVED_KIT_VERSION } : null;
 }
+
+/** Replace an existing SKU rather than adding a duplicate that resets PDP selection. */
+export function masterProductHref(href: string, sku: string | null): string {
+    if (!sku) return href;
+    const url = new URL(href, "https://www.bestbottles.com");
+    url.searchParams.set("sku", sku);
+    return href.startsWith("https://") ? url.href : `${url.pathname}${url.search}${url.hash}`;
+}
