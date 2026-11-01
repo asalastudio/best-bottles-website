@@ -1,0 +1,16 @@
+{
+  "version": "18d03f7c7fe2",
+  "pdpStatesPassed": 60,
+  "builderSelectionsPassed": 3,
+  "unitTestsPassed": 27,
+  "unitTestFiles": 4,
+  "visualChecks": [
+    "metal-seat-detail.png",
+    "plastic-seat-detail.png",
+    "verified-plastic-roller-390.png",
+    "../after-metal-exploded.png",
+    "../after-plastic-exploded.png"
+  ],
+  "scope": "Level perspective and flush rim seating for 100 roller combinations",
+  "productionChanged": false
+}

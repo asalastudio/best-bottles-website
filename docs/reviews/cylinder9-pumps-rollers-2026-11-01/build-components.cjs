@@ -6,11 +6,12 @@ const previous=JSON.parse(fs.readFileSync(dir+'/before-kits.json')),index=JSON.p
 // clipping contours remove exterior alpha debris from the displayed component.
 const silhouettes={
  'lotion-head':{w:1322,h:1190,d:'M 358 216 Q 358 176 418 176 Q 661 156 907 176 Q 967 178 967 218 L 967 698 Q 1013 700 1013 736 L 1013 1024 Q 1013 1036 996 1036 L 326 1036 Q 310 1036 310 1023 L 310 737 Q 310 702 358 698 Z',ink:[310,169,1013,1036]},
- 'roller-metal':{w:1052,h:1494,d:'M 272 321 C 305 195 416 119 526 119 C 636 119 747 195 780 321 Q 865 319 865 370 L 865 662 Q 916 679 916 700 L 916 741 Q 916 763 780 765 L 759 1327 Q 759 1351 736 1351 L 315 1351 Q 294 1351 294 1327 L 273 765 Q 135 763 135 741 L 135 700 Q 135 680 186 662 L 186 370 Q 186 319 272 321 Z',ink:[135,119,916,1351]},
- 'roller-plastic':{w:1052,h:1494,d:'M 272 321 C 305 195 416 119 526 119 C 636 119 747 195 780 321 Q 865 319 865 370 L 865 662 Q 916 679 916 700 L 916 741 Q 916 763 780 765 L 759 1327 Q 759 1351 736 1351 L 315 1351 Q 294 1351 294 1327 L 273 765 Q 135 763 135 741 L 135 700 Q 135 680 186 662 L 186 370 Q 186 319 272 321 Z',ink:[135,119,916,1351]}
+ 'roller-metal':{w:1052,h:1494,d:'M 274 330 C 307 198 415 118 524 118 C 633 118 741 198 774 330 L 820 330 Q 848 330 848 361 L 848 682 L 887 687 Q 908 688 908 706 L 908 746 Q 908 760 894 760 L 768 760 L 749 1336 Q 749 1351 730 1351 L 318 1351 Q 301 1351 301 1336 L 281 760 L 154 760 Q 140 760 140 746 L 140 706 Q 140 689 159 687 L 200 682 L 200 361 Q 200 330 228 330 Z',ink:[140,118,908,1351]},
+ 'roller-plastic':{w:1052,h:1494,d:'M 274 330 C 307 198 415 118 524 118 C 633 118 741 198 774 330 L 820 330 Q 848 330 848 361 L 848 682 L 887 687 Q 908 688 908 706 L 908 746 Q 908 760 894 760 L 768 760 L 749 1336 Q 749 1351 730 1351 L 318 1351 Q 301 1351 301 1336 L 281 760 L 154 760 Q 140 760 140 746 L 140 706 Q 140 689 159 687 L 200 682 L 200 361 Q 200 330 228 330 Z',ink:[140,118,908,1351]}
 };
 for(const[name,v]of Object.entries(silhouettes)){
- const png=fs.readFileSync(dir+'/sources/'+name+'-generated-v01.png');
+ const sourceFile=name.startsWith('roller-')?name+'-level-v02.png':name+'-generated-v01.png';
+ const png=fs.readFileSync(dir+'/sources/'+sourceFile);
  const svg=Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${v.w}" height="${v.h}" viewBox="0 0 ${v.w} ${v.h}"><defs><clipPath id="contour"><path d="${v.d}"/></clipPath></defs><image width="${v.w}" height="${v.h}" href="data:image/png;base64,${png.toString('base64')}" clip-path="url(#contour)"/></svg>`);
  const hash=sha(svg),file=name+'.'+hash.slice(0,12)+'.svg';fs.writeFileSync(out+'/'+file,svg);assets[name]={url:'/local-kits/cylinder9-masters-2026-11-01/'+file,sha256:hash,bytes:svg.length,width:v.w,height:v.h};fs.writeFileSync(review+'/'+name+'.svg',svg);
 }
@@ -38,14 +39,15 @@ for(const c of config){
   kit.parts=[tube,body,head,collar,cap];
  }else{
   const kind=c.applicatorKey==='metal-roller'?'metal':'plastic',id=kit.register.componentIds.find(id=>id.includes('Rollon'));
-  const a='roller-'+kind,s=157.11/(916-135),x=500-(135+916)/2*s,y=body.bounds.top-765*s;
-  const insert=dimPart('roller',a,s,x,y,{left:x+135*s,top:y+119*s,right:x+916*s,bottom:y+1351*s},0,id,0);
+  // Preserve the prior uniform scale; only the perspective and rim plane change.
+  const a='roller-'+kind,s=157.11/(916-135),x=500-(140+908)/2*s,y=body.bounds.top-760*s;
+  const insert=dimPart('roller',a,s,x,y,{left:x+140*s,top:y+118*s,right:x+908*s,bottom:y+1351*s},0,id,0);
   const cap=structuredClone(kit.parts.find(p=>p.slot==='cap'));
   kit.parts=[insert,body,cap];
  }
  selected.push(c);
 }
 library.version=sha(JSON.stringify({assets,rows:library.rows})).slice(0,12);index.version=library.version;
-fs.writeFileSync(out+'/kits.json',JSON.stringify(library,null,2)+'\n');fs.writeFileSync('src/lib/products/cylinder9-master-index.json',JSON.stringify(index,null,2)+'\n');fs.writeFileSync(dir+'/component-registration.json',JSON.stringify({version:library.version,scope:selected.map(c=>c.websiteSku),lotionCollarLiftMm,silhouettes,pumpTube:'Reused approved fine-mist visual mechanism/tube; lotion internals are a review representation, manufacturer mechanism dimensions unconfirmed.',rollerSeat:'Underside of flange at body.bounds.top; lower plug behind glass in assembled view; whole insert moves together.',status:'Local candidates, pending visual approval'},null,2)+'\n');
+fs.writeFileSync(out+'/kits.json',JSON.stringify(library,null,2)+'\n');fs.writeFileSync('src/lib/products/cylinder9-master-index.json',JSON.stringify(index,null,2)+'\n');fs.writeFileSync(dir+'/component-registration.json',JSON.stringify({version:library.version,scope:selected.map(c=>c.websiteSku),lotionCollarLiftMm,silhouettes,pumpTube:'Reused approved fine-mist visual mechanism/tube; lotion internals are a review representation, manufacturer mechanism dimensions unconfirmed.',rollerFlangeSourceY:760,rollerPerspective:'Eye-level front view with horizontal flange, revision 2',rollerSeat:'Flat underside of flange at body.bounds.top; lower plug behind glass in assembled view; whole insert moves together.',status:'Local candidates, pending visual approval'},null,2)+'\n');
 fs.writeFileSync(review+'/model.json',JSON.stringify({version:library.version,configurations:selected.map(({websiteSku,productGroupSlug,glassLabel,applicatorKey,finishLabel})=>({websiteSku,productGroupSlug,glassLabel,applicatorKey,finishLabel})),assets},null,2));
 console.log(JSON.stringify({version:library.version,pumps:selected.filter(c=>c.applicatorKey==='lotion-pump').length,rollers:selected.filter(c=>c.applicatorKey!=='lotion-pump').length}));

@@ -1,6 +1,6 @@
 # Cylinder 9 ml / 17-415 lotion pumps and rollers
 
-Local candidate library: **3dc8ce855e21**. New component artwork awaits Jordan's visual approval. The five previously approved body masters and all 30 fine-mist kits remain unchanged.
+Local candidate library: **18d03f7c7fe2**. New component artwork awaits Jordan's visual approval. The five previously approved body masters and all 30 fine-mist kits remain unchanged.
 
 Review: http://localhost:3010/reviews/cylinder9-pumps-rollers-2026-11-01/index.html
 
@@ -42,10 +42,12 @@ This reconstructs the three immutable SVG assets, updates only the 115 lotion/ro
 
 This batch is saved as review candidates, separate from the previously approved Cylinder family Drive archive. It has not been represented as a new approved Drive master set.
 
-## Completed checks
+## Initial batch checks (before the later seating revisions)
 
 Typecheck passed. The full unit suite passed 3,169 tests, with seven skipped. Lint passed with zero errors. Actual browser verification covered 25 SKUs in all three views at 1440 px and 390 px widths (150 states), seven builder selections and 20 catalog selections. All passed. The remaining finish combinations are covered by the exhaustive 115-SKU registration checks, not a claim of individual visual approval.
 
 The prior CI failure was a stale builder cache-version expectation, not a type error. That assertion now checks the current master version and passes locally. Production build status remains a separate CI check.
 
 Shoulder-seating revision 2 lifts the lotion head, collar and fitted overcap together by 0.7 mm across all 15 lotion combinations. See `shoulder-seating-v02/` for the previous registry, close-ups and focused verification.
+
+Roller perspective revision 2 replaces the tilted inserts with straight-on metal and plastic candidates. Both share a horizontal flange seated at the rim, with the previous uniform image scale preserved. Only the 100 roller configurations change. All 145 bodies, 15 lotion kits and 30 fine-mist kits are unchanged. Current verification and original snapshots are in `roller-level-v02/`.

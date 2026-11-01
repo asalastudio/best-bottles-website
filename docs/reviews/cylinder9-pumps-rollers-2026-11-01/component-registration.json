@@ -1,5 +1,5 @@
 {
-  "version": "3dc8ce855e21",
+  "version": "18d03f7c7fe2",
   "scope": [
     "LBCylAmb9LtnBlk",
     "LBCylAmb9LtnGl",
@@ -133,27 +133,29 @@
     "roller-metal": {
       "w": 1052,
       "h": 1494,
-      "d": "M 272 321 C 305 195 416 119 526 119 C 636 119 747 195 780 321 Q 865 319 865 370 L 865 662 Q 916 679 916 700 L 916 741 Q 916 763 780 765 L 759 1327 Q 759 1351 736 1351 L 315 1351 Q 294 1351 294 1327 L 273 765 Q 135 763 135 741 L 135 700 Q 135 680 186 662 L 186 370 Q 186 319 272 321 Z",
+      "d": "M 274 330 C 307 198 415 118 524 118 C 633 118 741 198 774 330 L 820 330 Q 848 330 848 361 L 848 682 L 887 687 Q 908 688 908 706 L 908 746 Q 908 760 894 760 L 768 760 L 749 1336 Q 749 1351 730 1351 L 318 1351 Q 301 1351 301 1336 L 281 760 L 154 760 Q 140 760 140 746 L 140 706 Q 140 689 159 687 L 200 682 L 200 361 Q 200 330 228 330 Z",
       "ink": [
-        135,
-        119,
-        916,
+        140,
+        118,
+        908,
         1351
       ]
     },
     "roller-plastic": {
       "w": 1052,
       "h": 1494,
-      "d": "M 272 321 C 305 195 416 119 526 119 C 636 119 747 195 780 321 Q 865 319 865 370 L 865 662 Q 916 679 916 700 L 916 741 Q 916 763 780 765 L 759 1327 Q 759 1351 736 1351 L 315 1351 Q 294 1351 294 1327 L 273 765 Q 135 763 135 741 L 135 700 Q 135 680 186 662 L 186 370 Q 186 319 272 321 Z",
+      "d": "M 274 330 C 307 198 415 118 524 118 C 633 118 741 198 774 330 L 820 330 Q 848 330 848 361 L 848 682 L 887 687 Q 908 688 908 706 L 908 746 Q 908 760 894 760 L 768 760 L 749 1336 Q 749 1351 730 1351 L 318 1351 Q 301 1351 301 1336 L 281 760 L 154 760 Q 140 760 140 746 L 140 706 Q 140 689 159 687 L 200 682 L 200 361 Q 200 330 228 330 Z",
       "ink": [
-        135,
-        119,
-        916,
+        140,
+        118,
+        908,
         1351
       ]
     }
   },
   "pumpTube": "Reused approved fine-mist visual mechanism/tube; lotion internals are a review representation, manufacturer mechanism dimensions unconfirmed.",
-  "rollerSeat": "Underside of flange at body.bounds.top; lower plug behind glass in assembled view; whole insert moves together.",
+  "rollerFlangeSourceY": 760,
+  "rollerPerspective": "Eye-level front view with horizontal flange, revision 2",
+  "rollerSeat": "Flat underside of flange at body.bounds.top; lower plug behind glass in assembled view; whole insert moves together.",
   "status": "Local candidates, pending visual approval"
 }

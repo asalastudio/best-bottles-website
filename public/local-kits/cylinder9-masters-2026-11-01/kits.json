@@ -1,5 +1,5 @@
 {
-  "version": "3dc8ce855e21",
+  "version": "18d03f7c7fe2",
   "bodyId": "cylinder-9ml-17-415",
   "rows": {
     "GBCylAmb9SpryBlk": {
@@ -2164,10 +2164,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -2178,9 +2178,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -2189,8 +2189,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -2323,10 +2323,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -2337,9 +2337,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -2348,8 +2348,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -2482,10 +2482,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -2496,9 +2496,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -2507,8 +2507,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -2641,10 +2641,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -2655,9 +2655,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -2666,8 +2666,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -2800,10 +2800,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -2814,9 +2814,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -2825,8 +2825,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -2959,10 +2959,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -2973,9 +2973,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -2984,8 +2984,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -3118,10 +3118,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -3132,9 +3132,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -3143,8 +3143,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -3277,10 +3277,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -3291,9 +3291,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -3302,8 +3302,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -3436,10 +3436,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -3450,9 +3450,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -3461,8 +3461,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -3595,10 +3595,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -3609,9 +3609,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -3620,8 +3620,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -3754,10 +3754,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -3768,9 +3768,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -3779,8 +3779,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -3913,10 +3913,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -3927,9 +3927,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -3938,8 +3938,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -4072,10 +4072,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -4086,9 +4086,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -4097,8 +4097,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -4231,10 +4231,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -4245,9 +4245,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -4256,8 +4256,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -4390,10 +4390,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -4404,9 +4404,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -4415,8 +4415,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -4549,10 +4549,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -4563,9 +4563,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -4574,8 +4574,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -4708,10 +4708,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -4722,9 +4722,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -4733,8 +4733,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -4867,10 +4867,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -4881,9 +4881,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -4892,8 +4892,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -5026,10 +5026,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -5040,9 +5040,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -5051,8 +5051,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -5185,10 +5185,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -5199,9 +5199,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -5210,8 +5210,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -7450,10 +7450,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -7464,9 +7464,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -7475,8 +7475,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -7609,10 +7609,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -7623,9 +7623,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -7634,8 +7634,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -7768,10 +7768,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -7782,9 +7782,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -7793,8 +7793,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -7927,10 +7927,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -7941,9 +7941,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -7952,8 +7952,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -8086,10 +8086,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -8100,9 +8100,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -8111,8 +8111,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -8245,10 +8245,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -8259,9 +8259,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -8270,8 +8270,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -8404,10 +8404,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -8418,9 +8418,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -8429,8 +8429,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -8563,10 +8563,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -8577,9 +8577,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -8588,8 +8588,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -8722,10 +8722,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -8736,9 +8736,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -8747,8 +8747,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -8881,10 +8881,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -8895,9 +8895,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -8906,8 +8906,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -9040,10 +9040,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -9054,9 +9054,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -9065,8 +9065,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -9199,10 +9199,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -9213,9 +9213,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -9224,8 +9224,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -9358,10 +9358,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -9372,9 +9372,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -9383,8 +9383,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -9517,10 +9517,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -9531,9 +9531,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -9542,8 +9542,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -9676,10 +9676,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -9690,9 +9690,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -9701,8 +9701,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -9835,10 +9835,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -9849,9 +9849,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -9860,8 +9860,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -9994,10 +9994,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -10008,9 +10008,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -10019,8 +10019,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -10153,10 +10153,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -10167,9 +10167,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -10178,8 +10178,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -10312,10 +10312,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -10326,9 +10326,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -10337,8 +10337,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -10471,10 +10471,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -10485,9 +10485,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -10496,8 +10496,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -12763,10 +12763,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -12777,9 +12777,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -12788,8 +12788,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -12922,10 +12922,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -12936,9 +12936,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -12947,8 +12947,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -13081,10 +13081,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -13095,9 +13095,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -13106,8 +13106,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -13240,10 +13240,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -13254,9 +13254,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -13265,8 +13265,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -13399,10 +13399,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -13413,9 +13413,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -13424,8 +13424,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -13558,10 +13558,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -13572,9 +13572,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -13583,8 +13583,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -13717,10 +13717,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -13731,9 +13731,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -13742,8 +13742,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -13876,10 +13876,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -13890,9 +13890,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -13901,8 +13901,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -14035,10 +14035,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -14049,9 +14049,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -14060,8 +14060,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -14194,10 +14194,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -14208,9 +14208,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -14219,8 +14219,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -14353,10 +14353,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -14367,9 +14367,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -14378,8 +14378,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -14512,10 +14512,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -14526,9 +14526,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -14537,8 +14537,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -14671,10 +14671,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -14685,9 +14685,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -14696,8 +14696,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -14830,10 +14830,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -14844,9 +14844,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -14855,8 +14855,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -14989,10 +14989,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -15003,9 +15003,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -15014,8 +15014,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -15148,10 +15148,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -15162,9 +15162,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -15173,8 +15173,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -15307,10 +15307,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -15321,9 +15321,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -15332,8 +15332,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -15466,10 +15466,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -15480,9 +15480,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -15491,8 +15491,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -15625,10 +15625,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -15639,9 +15639,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -15650,8 +15650,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -15784,10 +15784,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -15798,9 +15798,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -15809,8 +15809,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -18076,10 +18076,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -18090,9 +18090,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -18101,8 +18101,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -18235,10 +18235,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -18249,9 +18249,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -18260,8 +18260,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -18394,10 +18394,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -18408,9 +18408,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -18419,8 +18419,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -18553,10 +18553,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -18567,9 +18567,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -18578,8 +18578,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -18712,10 +18712,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -18726,9 +18726,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -18737,8 +18737,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -18871,10 +18871,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -18885,9 +18885,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -18896,8 +18896,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -19030,10 +19030,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -19044,9 +19044,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -19055,8 +19055,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -19189,10 +19189,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -19203,9 +19203,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -19214,8 +19214,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -19348,10 +19348,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -19362,9 +19362,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -19373,8 +19373,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -19507,10 +19507,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -19521,9 +19521,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -19532,8 +19532,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -19666,10 +19666,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -19680,9 +19680,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -19691,8 +19691,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -19825,10 +19825,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -19839,9 +19839,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -19850,8 +19850,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -19984,10 +19984,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -19998,9 +19998,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -20009,8 +20009,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -20143,10 +20143,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -20157,9 +20157,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -20168,8 +20168,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -20302,10 +20302,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -20316,9 +20316,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -20327,8 +20327,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -20461,10 +20461,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -20475,9 +20475,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -20486,8 +20486,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -20620,10 +20620,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -20634,9 +20634,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -20645,8 +20645,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -20779,10 +20779,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -20793,9 +20793,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -20804,8 +20804,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -20938,10 +20938,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -20952,9 +20952,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -20963,8 +20963,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -21097,10 +21097,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -21111,9 +21111,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -21122,8 +21122,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -23389,10 +23389,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -23403,9 +23403,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -23414,8 +23414,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -23548,10 +23548,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -23562,9 +23562,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -23573,8 +23573,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -23707,10 +23707,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -23721,9 +23721,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -23732,8 +23732,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -23866,10 +23866,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -23880,9 +23880,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -23891,8 +23891,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -24025,10 +24025,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -24039,9 +24039,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -24050,8 +24050,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -24184,10 +24184,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -24198,9 +24198,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -24209,8 +24209,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -24343,10 +24343,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -24357,9 +24357,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -24368,8 +24368,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -24502,10 +24502,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -24516,9 +24516,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -24527,8 +24527,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -24661,10 +24661,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -24675,9 +24675,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -24686,8 +24686,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -24820,10 +24820,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -24834,9 +24834,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.398bc9e1e62d.svg",
-            "sha256": "398bc9e1e62da60df74cedc72f487baa92236a5760e45f8e9978a29dc702171e",
-            "bytes": 1251166,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -24845,8 +24845,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -24979,10 +24979,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -24993,9 +24993,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -25004,8 +25004,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -25138,10 +25138,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -25152,9 +25152,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -25163,8 +25163,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -25297,10 +25297,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -25311,9 +25311,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -25322,8 +25322,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -25456,10 +25456,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -25470,9 +25470,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -25481,8 +25481,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -25615,10 +25615,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -25629,9 +25629,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -25640,8 +25640,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -25774,10 +25774,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -25788,9 +25788,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -25799,8 +25799,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -25933,10 +25933,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -25947,9 +25947,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -25958,8 +25958,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -26092,10 +26092,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -26106,9 +26106,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -26117,8 +26117,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -26251,10 +26251,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -26265,9 +26265,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -26276,8 +26276,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
@@ -26410,10 +26410,10 @@
           "zOrder": 0,
           "explodeIndex": 0,
           "bounds": {
-            "left": 421.445,
-            "top": 174.55729833546732,
-            "right": 578.555,
-            "bottom": 422.3927912932138
+            "left": 422.75257362355956,
+            "top": 175.3619590268886,
+            "right": 577.2474263764404,
+            "bottom": 423.39861715749043
           },
           "assembled": {
             "x": 0,
@@ -26424,9 +26424,9 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.b909e49ffc05.svg",
-            "sha256": "b909e49ffc0595124f83a9fcac9db55d43046415ab5f8057a7bfc3a12a6ca57e",
-            "bytes": 1188258,
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
             "width": 1052,
             "height": 1494,
             "key": ""
@@ -26435,8 +26435,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 394.2877016645326,
-            "y": 150.618642765685,
+            "x": 394.5894494238156,
+            "y": 151.62446862996157,
             "width": 211.62576184379003,
             "height": 300.5407682458387
           },
