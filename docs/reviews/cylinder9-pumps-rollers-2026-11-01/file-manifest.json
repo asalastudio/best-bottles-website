@@ -113,8 +113,8 @@
     },
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/defects-and-changes.csv",
-      "bytes": 40233,
-      "sha256": "afaed9fabd39d49279bbd275321e11e504250da012082aa9a36cd50206ee09db"
+      "bytes": 40117,
+      "sha256": "d38fa1af697f3cdaf33683cf457a9c40af619db4c52d2baf3d9d0aca80974d03"
     },
     {
       "path": "docs/reviews/cylinder9-pumps-rollers-2026-11-01/generation-and-reference-log.json",
