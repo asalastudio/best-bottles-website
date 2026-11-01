@@ -7,8 +7,8 @@ type Part = { slot: string; componentId?: string | null; explodeIndex: number; b
 type Offset = { dx: number; dy: number };
 const moved = (b: StageBounds, o: Offset): StageBounds => ({ left: b.left + o.dx, right: b.right + o.dx, top: b.top + o.dy, bottom: b.bottom + o.dy });
 const union = (a: StageBounds, b: StageBounds): StageBounds => ({ left: Math.min(a.left,b.left), right: Math.max(a.right,b.right), top: Math.min(a.top,b.top), bottom: Math.max(a.bottom,b.bottom) });
-const fits = (b: StageBounds, f: StageBounds) => b.left >= f.left && b.right <= f.right && b.top >= f.top && b.bottom <= f.bottom;
-const overlaps = (a: StageBounds,b: StageBounds,gap: number) => a.left < b.right+gap && a.right > b.left-gap && a.top < b.bottom+gap && a.bottom > b.top-gap;
+const fits = (b: StageBounds, f: StageBounds) => b.left >= f.left-1e-7 && b.right <= f.right+1e-7 && b.top >= f.top-1e-7 && b.bottom <= f.bottom+1e-7;
+const overlaps = (a: StageBounds,b: StageBounds,gap: number) => a.left < b.right+gap-1e-7 && a.right > b.left-gap+1e-7 && a.top < b.bottom+gap-1e-7 && a.bottom > b.top-gap+1e-7;
 
 export function fixedStageOffsets<T extends Part>(parts: readonly T[], offsets: ReadonlyMap<T,Offset>, view: 'sidecar'|'capon'|'exploded', frame: PdpStageFrame, canvas: { width: number; height: number }): Map<T,Offset> {
     const result = new Map(offsets);
@@ -30,11 +30,21 @@ export function fixedStageOffsets<T extends Part>(parts: readonly T[], offsets: 
     for(const unit of units){
         const b=unit.bounds,w=b.right-b.left,h=b.bottom-b.top;
         const preferred=result.get(unit.parts[0])??{dx:0,dy:0};
-        const xs=[body.bounds.right+gap,body.bounds.left-gap-w,area.left,area.right-w,(body.bounds.left+body.bounds.right-w)/2];
-        const ys=[body.bounds.bottom-h,area.top,body.bounds.top-gap-h,...occupied.flatMap(o=>[o.top-gap-h,o.bottom+gap])];
-        const vertical=ys.map(y=>({dx:preferred.dx,dy:y-b.top}));
-        const positions=[preferred,...vertical,...xs.flatMap(x=>ys.map(y=>({dx:x-b.left,dy:y-b.top})))];
-        const chosen=positions.find(o=>{const q=moved(b,o);return fits(q,area)&&occupied.every(other=>!overlaps(q,other,gap));});
+        const choose = (space: number, available: StageBounds) => {
+            const xs=[body.bounds.right+space,body.bounds.left-space-w,available.left,available.right-w,(body.bounds.left+body.bounds.right-w)/2];
+            const ys=[body.bounds.bottom-h,available.top,body.bounds.top-space-h,...occupied.flatMap(o=>[o.top-space-h,o.bottom+space])];
+            const vertical=ys.map(y=>({dx:preferred.dx,dy:y-b.top}));
+            const positions=[preferred,...vertical,...xs.flatMap(x=>ys.map(y=>({dx:x-b.left,dy:y-b.top})))];
+            return positions.find(o=>{const q=moved(b,o);return fits(q,available)&&occupied.every(other=>!overlaps(q,other,space));});
+        };
+        // Wide glass can leave less than 4% beside an unchanged overcap. Use a
+        // 1.5% visible gap and 0.5% side margins before leaving a unit offscreen.
+        // The bottle, mechanism proportions and existing successful layouts stay fixed.
+        const compactArea = { ...area,
+            left:(0.5-frame.x)/100*canvas.width/frame.scale,
+            right:(99.5-frame.x)/100*canvas.width/frame.scale };
+        const chosen=choose(gap,area) ?? (view==='exploded'
+            ? choose(canvas.width/frame.scale*.015,compactArea) : undefined);
         if(chosen){for(const p of unit.parts)result.set(p,chosen);occupied.push(moved(b,chosen));}
         else occupied.push(moved(b,preferred));
     }

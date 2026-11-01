@@ -1,0 +1,3779 @@
+{
+  "records": [
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek8SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek8SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek8SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5Sl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5Sl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5Sl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5Gl",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5Gl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&sku=GBSleek5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5Gl",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5Gl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&sku=GBSleek5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5Gl",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5Gl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&sku=GBSleek5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRect10SpryBlkMatt",
+      "bodyId": "footed-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBRect10SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRect10SpryBlkMatt",
+      "bodyId": "footed-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBRect10SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRect10SpryBlkMatt",
+      "bodyId": "footed-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBRect10SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallRect10SpryBlkMatt",
+      "bodyId": "tall-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallRect10SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        288.744873046875,
+        147.35763549804688,
+        120.7943115234375,
+        359.7892150878906
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBTallRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallRect10SpryBlkMatt",
+      "bodyId": "tall-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallRect10SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        288.744873046875,
+        147.35763549804688,
+        120.7943115234375,
+        359.7892150878906
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBTallRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallRect10SpryBlkMatt",
+      "bodyId": "tall-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallRect10SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        288.744873046875,
+        147.35763549804688,
+        120.7943115234375,
+        359.7892150878906
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBTallRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5Gl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&sku=GBTulipAmb5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5Gl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&sku=GBTulipAmb5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5Gl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&sku=GBTulipAmb5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCrcl15SpryBlkMatt",
+      "bodyId": "circle-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCrcl15SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        192.9229736328125,
+        136.95184326171875,
+        308.43719482421875,
+        370.67828369140625
+      ],
+      "builder": "/matrix?family=Circle&shop=glass-spray-bottles&sku=GBCrcl15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCrcl15SpryBlkMatt",
+      "bodyId": "circle-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCrcl15SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        192.9229736328125,
+        136.95184326171875,
+        308.43719482421875,
+        370.67828369140625
+      ],
+      "builder": "/matrix?family=Circle&shop=glass-spray-bottles&sku=GBCrcl15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCrcl15SpryBlkMatt",
+      "bodyId": "circle-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCrcl15SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        192.9229736328125,
+        136.95184326171875,
+        308.43719482421875,
+        370.67828369140625
+      ],
+      "builder": "/matrix?family=Circle&shop=glass-spray-bottles&sku=GBCrcl15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElg15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBElg15SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        257.8560485839844,
+        213.94549560546875,
+        184.25405883789062,
+        290.15240478515625
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElg15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElg15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBElg15SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        257.8560485839844,
+        213.94549560546875,
+        184.25405883789062,
+        290.15240478515625
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElg15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElg15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBElg15SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        257.8560485839844,
+        213.94549560546875,
+        184.25405883789062,
+        290.15240478515625
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElg15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElgFrst15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBElgFrst15SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        257.23980712890625,
+        214.11978149414062,
+        184.1383056640625,
+        289.9701232910156
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElgFrst15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElgFrst15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBElgFrst15SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        257.23980712890625,
+        214.11978149414062,
+        184.1383056640625,
+        289.9701232910156
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElgFrst15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElgFrst15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBElgFrst15SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        257.23980712890625,
+        214.11978149414062,
+        184.1383056640625,
+        289.9701232910156
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElgFrst15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBFlair15SpryBlkMatt",
+      "bodyId": "flair-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBFlair15SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        241.13473510742188,
+        198.49139404296875,
+        212.30453491210938,
+        306.17156982421875
+      ],
+      "builder": "/matrix?family=Flair&shop=glass-spray-bottles&sku=GBFlair15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBFlair15SpryBlkMatt",
+      "bodyId": "flair-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBFlair15SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        241.13473510742188,
+        198.49139404296875,
+        212.30453491210938,
+        306.17156982421875
+      ],
+      "builder": "/matrix?family=Flair&shop=glass-spray-bottles&sku=GBFlair15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBFlair15SpryBlkMatt",
+      "bodyId": "flair-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBFlair15SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        241.13473510742188,
+        198.49139404296875,
+        212.30453491210938,
+        306.17156982421875
+      ],
+      "builder": "/matrix?family=Flair&shop=glass-spray-bottles&sku=GBFlair15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5MtlRollBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5MtlRollBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5MtlRollBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5MtlRollBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5MtlRollBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5MtlRollBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5MtlRollBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5MtlRollBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5MtlRollBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5SprySlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5SprySlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5SprySlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollCuMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5MtlRollCuMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollCuMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5MtlRollCuMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollCuMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Metal Roller Ball",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5MtlRollCuMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "bodyId": "tulip-6ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulip6SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "bodyId": "tulip-6ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulip6SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "bodyId": "tulip-6ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulip6SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRoyal13SpryBlkSh",
+      "bodyId": "royal-13ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBRoyal13SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        237.71392822265625,
+        207.39202880859375,
+        225.558349609375,
+        297.14776611328125
+      ],
+      "builder": "/matrix?family=Royal&shop=glass-spray-bottles&sku=GBRoyal13SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRoyal13SpryBlkSh",
+      "bodyId": "royal-13ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBRoyal13SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        237.71392822265625,
+        207.39202880859375,
+        225.558349609375,
+        297.14776611328125
+      ],
+      "builder": "/matrix?family=Royal&shop=glass-spray-bottles&sku=GBRoyal13SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRoyal13SpryBlkSh",
+      "bodyId": "royal-13ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBRoyal13SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        237.71392822265625,
+        207.39202880859375,
+        225.558349609375,
+        297.14776611328125
+      ],
+      "builder": "/matrix?family=Royal&shop=glass-spray-bottles&sku=GBRoyal13SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSqr15SpryBlkSh",
+      "bodyId": "square-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSqr15SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        271.9779052734375,
+        231.501220703125,
+        156.72723388671875,
+        271.79278564453125
+      ],
+      "builder": "/matrix?family=Square&shop=glass-spray-bottles&sku=GBSqr15SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSqr15SpryBlkSh",
+      "bodyId": "square-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSqr15SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        271.9779052734375,
+        231.501220703125,
+        156.72723388671875,
+        271.79278564453125
+      ],
+      "builder": "/matrix?family=Square&shop=glass-spray-bottles&sku=GBSqr15SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSqr15SpryBlkSh",
+      "bodyId": "square-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSqr15SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        271.9779052734375,
+        231.501220703125,
+        156.72723388671875,
+        271.79278564453125
+      ],
+      "builder": "/matrix?family=Square&shop=glass-spray-bottles&sku=GBSqr15SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBPillar9SpryBlkMatt",
+      "bodyId": "pillar-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBPillar9SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        279.89093017578125,
+        228.4678955078125,
+        136.40789794921875,
+        274.8272705078125
+      ],
+      "builder": "/matrix?family=Pillar&shop=glass-spray-bottles&sku=GBPillar9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBPillar9SpryBlkMatt",
+      "bodyId": "pillar-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBPillar9SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        279.89093017578125,
+        228.4678955078125,
+        136.40789794921875,
+        274.8272705078125
+      ],
+      "builder": "/matrix?family=Pillar&shop=glass-spray-bottles&sku=GBPillar9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBPillar9SpryBlkMatt",
+      "bodyId": "pillar-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBPillar9SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        279.89093017578125,
+        228.4678955078125,
+        136.40789794921875,
+        274.8272705078125
+      ],
+      "builder": "/matrix?family=Pillar&shop=glass-spray-bottles&sku=GBPillar9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBBell10SpryBlkSh",
+      "bodyId": "bell-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBBell10SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        267.66973876953125,
+        195.76431274414062,
+        162.47735595703125,
+        309.1654968261719
+      ],
+      "builder": "/matrix?family=Bell&shop=glass-spray-bottles&sku=GBBell10SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBBell10SpryBlkSh",
+      "bodyId": "bell-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBBell10SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        267.66973876953125,
+        195.76431274414062,
+        162.47735595703125,
+        309.1654968261719
+      ],
+      "builder": "/matrix?family=Bell&shop=glass-spray-bottles&sku=GBBell10SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBBell10SpryBlkSh",
+      "bodyId": "bell-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBBell10SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        267.66973876953125,
+        195.76431274414062,
+        162.47735595703125,
+        309.1654968261719
+      ],
+      "builder": "/matrix?family=Bell&shop=glass-spray-bottles&sku=GBBell10SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5SprySlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5SprySlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5SprySlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5SprySlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5SprySlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5SprySlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryCuMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5SpryCuMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryCuMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5SpryCuMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryCuMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5SpryCuMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBluMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5SpryBluMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBluMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBluMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5SpryBluMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBluMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBluMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5SpryBluMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBluMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5SpryGlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5SpryGlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5SpryGlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5Sl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5Sl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5Sl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek8SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek8SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "bodyId": "sleek-8ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek8SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu5Sl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu5Sl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Cap/Closure",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu5Sl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCylBlu5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryBlkMatt",
+      "bodyId": "cylinder-9ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5Gl",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": null,
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5Gl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&sku=GBSleek5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5Gl",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": null,
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5Gl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&sku=GBSleek5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5Gl",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": null,
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5Gl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&sku=GBSleek5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRect10SpryBlkMatt",
+      "bodyId": "footed-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBRect10SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRect10SpryBlkMatt",
+      "bodyId": "footed-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBRect10SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRect10SpryBlkMatt",
+      "bodyId": "footed-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBRect10SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallRect10SpryBlkMatt",
+      "bodyId": "tall-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallRect10SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        151.10060119628906,
+        109.154296875,
+        89.476318359375,
+        266.5062255859375
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBTallRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallRect10SpryBlkMatt",
+      "bodyId": "tall-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallRect10SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        151.10060119628906,
+        109.154296875,
+        89.476318359375,
+        266.5062255859375
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBTallRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallRect10SpryBlkMatt",
+      "bodyId": "tall-rectangle-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallRect10SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        151.10060119628906,
+        109.154296875,
+        89.476318359375,
+        266.5062255859375
+      ],
+      "builder": "/matrix?family=Rectangle&shop=glass-spray-bottles&sku=GBTallRect10SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": null,
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5Gl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&sku=GBTulipAmb5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": null,
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5Gl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&sku=GBTulipAmb5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": null,
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5Gl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&sku=GBTulipAmb5Gl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCrcl15SpryBlkMatt",
+      "bodyId": "circle-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCrcl15SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        80.12297058105469,
+        101.43377685546875,
+        228.4702606201172,
+        274.56341552734375
+      ],
+      "builder": "/matrix?family=Circle&shop=glass-spray-bottles&sku=GBCrcl15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCrcl15SpryBlkMatt",
+      "bodyId": "circle-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCrcl15SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        80.12297058105469,
+        101.43377685546875,
+        228.4702606201172,
+        274.56341552734375
+      ],
+      "builder": "/matrix?family=Circle&shop=glass-spray-bottles&sku=GBCrcl15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCrcl15SpryBlkMatt",
+      "bodyId": "circle-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCrcl15SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        80.12297058105469,
+        101.43377685546875,
+        228.4702606201172,
+        274.56341552734375
+      ],
+      "builder": "/matrix?family=Circle&shop=glass-spray-bottles&sku=GBCrcl15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElg15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBElg15SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        128.22442626953125,
+        158.47857666015625,
+        136.47677612304688,
+        214.918212890625
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElg15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElg15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBElg15SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        128.22442626953125,
+        158.47857666015625,
+        136.47677612304688,
+        214.918212890625
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElg15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElg15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBElg15SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        128.22442626953125,
+        158.47857666015625,
+        136.47677612304688,
+        214.918212890625
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElg15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElgFrst15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBElgFrst15SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        127.77703857421875,
+        158.60769653320312,
+        136.39105224609375,
+        214.78317260742188
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElgFrst15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElgFrst15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBElgFrst15SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        127.77703857421875,
+        158.60769653320312,
+        136.39105224609375,
+        214.78317260742188
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElgFrst15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBElgFrst15SpryBlkMatt",
+      "bodyId": "elegant-15ml-13-415",
+      "glass": "Frosted",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBElgFrst15SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        127.77703857421875,
+        158.60769653320312,
+        136.39105224609375,
+        214.78317260742188
+      ],
+      "builder": "/matrix?family=Elegant&shop=glass-spray-bottles&sku=GBElgFrst15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBFlair15SpryBlkMatt",
+      "bodyId": "flair-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBFlair15SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        115.8451156616211,
+        147.02862548828125,
+        157.25399780273438,
+        226.78363037109375
+      ],
+      "builder": "/matrix?family=Flair&shop=glass-spray-bottles&sku=GBFlair15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBFlair15SpryBlkMatt",
+      "bodyId": "flair-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBFlair15SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        115.8451156616211,
+        147.02862548828125,
+        157.25399780273438,
+        226.78363037109375
+      ],
+      "builder": "/matrix?family=Flair&shop=glass-spray-bottles&sku=GBFlair15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBFlair15SpryBlkMatt",
+      "bodyId": "flair-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBFlair15SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        115.8451156616211,
+        147.02862548828125,
+        157.25399780273438,
+        226.78363037109375
+      ],
+      "builder": "/matrix?family=Flair&shop=glass-spray-bottles&sku=GBFlair15SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5MtlRollBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5MtlRollBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5MtlRollBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu5MtlRollBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu5MtlRollBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu5MtlRollBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5MtlRollBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5MtlRollBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5MtlRollBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu5SprySlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu5SprySlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu5SprySlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollCuMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5MtlRollCuMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollCuMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5MtlRollCuMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollCuMatt",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Metal Roller Ball",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5MtlRollCuMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "bodyId": "tulip-5ml-13-415",
+      "glass": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "bodyId": "tulip-6ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulip6SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "bodyId": "tulip-6ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulip6SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "bodyId": "tulip-6ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulip6SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "builder": "/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRoyal13SpryBlkSh",
+      "bodyId": "royal-13ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBRoyal13SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        113.30413055419922,
+        153.62322998046875,
+        167.0777587890625,
+        220.10302734375
+      ],
+      "builder": "/matrix?family=Royal&shop=glass-spray-bottles&sku=GBRoyal13SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRoyal13SpryBlkSh",
+      "bodyId": "royal-13ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBRoyal13SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        113.30413055419922,
+        153.62322998046875,
+        167.0777587890625,
+        220.10302734375
+      ],
+      "builder": "/matrix?family=Royal&shop=glass-spray-bottles&sku=GBRoyal13SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBRoyal13SpryBlkSh",
+      "bodyId": "royal-13ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBRoyal13SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        113.30413055419922,
+        153.62322998046875,
+        167.0777587890625,
+        220.10302734375
+      ],
+      "builder": "/matrix?family=Royal&shop=glass-spray-bottles&sku=GBRoyal13SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSqr15SpryBlkSh",
+      "bodyId": "square-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSqr15SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        138.69534301757812,
+        171.47689819335938,
+        116.09124755859375,
+        201.33096313476562
+      ],
+      "builder": "/matrix?family=Square&shop=glass-spray-bottles&sku=GBSqr15SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSqr15SpryBlkSh",
+      "bodyId": "square-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSqr15SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        138.69534301757812,
+        171.47689819335938,
+        116.09124755859375,
+        201.33096313476562
+      ],
+      "builder": "/matrix?family=Square&shop=glass-spray-bottles&sku=GBSqr15SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSqr15SpryBlkSh",
+      "bodyId": "square-15ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSqr15SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        138.69534301757812,
+        171.47689819335938,
+        116.09124755859375,
+        201.33096313476562
+      ],
+      "builder": "/matrix?family=Square&shop=glass-spray-bottles&sku=GBSqr15SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBPillar9SpryBlkMatt",
+      "bodyId": "pillar-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBPillar9SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.55068969726562,
+        169.23175048828125,
+        101.03778076171875,
+        203.58087158203125
+      ],
+      "builder": "/matrix?family=Pillar&shop=glass-spray-bottles&sku=GBPillar9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBPillar9SpryBlkMatt",
+      "bodyId": "pillar-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBPillar9SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.55068969726562,
+        169.23175048828125,
+        101.03778076171875,
+        203.58087158203125
+      ],
+      "builder": "/matrix?family=Pillar&shop=glass-spray-bottles&sku=GBPillar9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBPillar9SpryBlkMatt",
+      "bodyId": "pillar-9ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBPillar9SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.55068969726562,
+        169.23175048828125,
+        101.03778076171875,
+        203.58087158203125
+      ],
+      "builder": "/matrix?family=Pillar&shop=glass-spray-bottles&sku=GBPillar9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBBell10SpryBlkSh",
+      "bodyId": "bell-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBBell10SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        135.49130249023438,
+        145.0079345703125,
+        120.34397888183594,
+        229.00830078125
+      ],
+      "builder": "/matrix?family=Bell&shop=glass-spray-bottles&sku=GBBell10SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBBell10SpryBlkSh",
+      "bodyId": "bell-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBBell10SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        135.49130249023438,
+        145.0079345703125,
+        120.34397888183594,
+        229.00830078125
+      ],
+      "builder": "/matrix?family=Bell&shop=glass-spray-bottles&sku=GBBell10SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBBell10SpryBlkSh",
+      "bodyId": "bell-10ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBBell10SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        135.49130249023438,
+        145.0079345703125,
+        120.34397888183594,
+        229.00830078125
+      ],
+      "builder": "/matrix?family=Bell&shop=glass-spray-bottles&sku=GBBell10SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5SprySlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5SprySlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5SprySlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkSh",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5SprySlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5SprySlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SprySlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5SprySlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SprySlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryCuMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5SpryCuMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryCuMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5SpryCuMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryCuMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5SpryCuMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBluMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5SpryBluMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBluMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBluMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5SpryBluMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBluMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBluMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5SpryBluMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBluMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5SpryGlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5SpryGlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "bodyId": "sleek-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5SpryGlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5Sl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5Sl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Clear",
+      "applicator": "Cap/Closure",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5Sl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "builder": "/matrix?family=Cylinder&sku=GBCyl5Sl&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "bodyId": "cylinder-5ml-13-415",
+      "glass": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollBlkDot&from=pdp&assetPreview=gpt13"
+    }
+  ],
+  "errors": []
+}

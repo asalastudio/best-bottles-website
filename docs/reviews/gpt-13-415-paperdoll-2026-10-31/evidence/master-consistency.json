@@ -1,0 +1,99 @@
+{
+  "bodyColorIdentities": 18,
+  "skuCount": 238,
+  "sprayerSkus": 126,
+  "fiveMlSkus": 143,
+  "errors": [],
+  "masters": [
+    {
+      "key": "sleek-5ml-13-415|Clear",
+      "skuCount": 36,
+      "url": "/local-kits/gpt-13-415-2026-10-31/sleek-5ml-13-415-clear.a3270080edb0.png"
+    },
+    {
+      "key": "tulip-5ml-13-415|Amber",
+      "skuCount": 36,
+      "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png"
+    },
+    {
+      "key": "cylinder-5ml-13-415|Clear",
+      "skuCount": 36,
+      "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+    },
+    {
+      "key": "sleek-8ml-13-415|Clear",
+      "skuCount": 8,
+      "url": "/local-kits/gpt-13-415-2026-10-31/sleek-8ml-13-415-clear.a30b2604fa73.png"
+    },
+    {
+      "key": "cylinder-5ml-13-415|Cobalt Blue",
+      "skuCount": 35,
+      "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png"
+    },
+    {
+      "key": "cylinder-9ml-13-415|Clear",
+      "skuCount": 8,
+      "url": "/local-kits/gpt-13-415-2026-10-31/cylinder-9ml-13-415-clear.7a866573d796.png"
+    },
+    {
+      "key": "cylinder-9ml-13-415|Frosted",
+      "skuCount": 8,
+      "url": "/local-kits/gpt-13-415-2026-10-31/cylinder-9ml-13-415-frosted.7cadb88aa92c.png"
+    },
+    {
+      "key": "footed-rectangle-10ml-13-415|Clear",
+      "skuCount": 8,
+      "url": "/local-kits/gpt-13-415-2026-10-31/footed-rectangle-10ml-13-415-clear.1adcac01e02b.png"
+    },
+    {
+      "key": "tall-rectangle-10ml-13-415|Clear",
+      "skuCount": 8,
+      "url": "/local-kits/gpt-13-415-2026-10-31/tall-rectangle-10ml-13-415-clear.7b76e4484634.png"
+    },
+    {
+      "key": "circle-15ml-13-415|Clear",
+      "skuCount": 8,
+      "url": "/local-kits/gpt-13-415-2026-10-31/circle-15ml-13-415-clear.6c2f69b10b1c.png"
+    },
+    {
+      "key": "elegant-15ml-13-415|Clear",
+      "skuCount": 8,
+      "url": "/local-kits/gpt-13-415-2026-10-31/elegant-15ml-13-415-clear.56da9e1912c4.png"
+    },
+    {
+      "key": "elegant-15ml-13-415|Frosted",
+      "skuCount": 8,
+      "url": "/local-kits/gpt-13-415-2026-10-31/elegant-15ml-13-415-frosted.930cbfc1ee47.png"
+    },
+    {
+      "key": "flair-15ml-13-415|Clear",
+      "skuCount": 8,
+      "url": "/local-kits/gpt-13-415-2026-10-31/flair-15ml-13-415-clear.f606c00236a6.png"
+    },
+    {
+      "key": "tulip-6ml-13-415|Clear",
+      "skuCount": 7,
+      "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png"
+    },
+    {
+      "key": "royal-13ml-13-415|Clear",
+      "skuCount": 7,
+      "url": "/local-kits/gpt-13-415-2026-10-31/royal-13ml-13-415-clear.5155f9cb3773.png"
+    },
+    {
+      "key": "square-15ml-13-415|Clear",
+      "skuCount": 7,
+      "url": "/local-kits/gpt-13-415-2026-10-31/square-15ml-13-415-clear.7fc1299a37a6.png"
+    },
+    {
+      "key": "pillar-9ml-13-415|Clear",
+      "skuCount": 1,
+      "url": "/local-kits/gpt-13-415-2026-10-31/pillar-9ml-13-415-clear.e2a8a3fdd902.png"
+    },
+    {
+      "key": "bell-10ml-13-415|Clear",
+      "skuCount": 1,
+      "url": "/local-kits/gpt-13-415-2026-10-31/bell-10ml-13-415-clear.82159e636e8b.png"
+    }
+  ]
+}

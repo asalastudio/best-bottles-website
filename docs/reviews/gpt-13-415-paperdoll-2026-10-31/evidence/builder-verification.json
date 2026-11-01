@@ -1,0 +1,1217 @@
+[
+  {
+    "sku": "GBCyl5SpryBlkMatt",
+    "href": "http://localhost:3010/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp&assetPreview=gpt13",
+    "passed": true,
+    "layers": [
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 113.171875,
+          "y": 675.171875,
+          "width": 28.6875,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 141.859375,
+          "bottom": 732.546875,
+          "left": 113.171875
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 250.328125,
+          "y": 675.171875,
+          "width": 30.5,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 280.828125,
+          "bottom": 732.546875,
+          "left": 250.328125
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 388.21875,
+          "y": 675.171875,
+          "width": 30.875,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 419.09375,
+          "bottom": 732.546875,
+          "left": 388.21875
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 526.296875,
+          "y": 675.171875,
+          "width": 30.859375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 557.15625,
+          "bottom": 732.546875,
+          "left": 526.296875
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 111.84375,
+          "y": 822.96875,
+          "width": 31.359375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 143.203125,
+          "bottom": 880.34375,
+          "left": 111.84375
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 250.140625,
+          "y": 822.96875,
+          "width": 30.875,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 281.015625,
+          "bottom": 880.34375,
+          "left": 250.140625
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 388.234375,
+          "y": 822.96875,
+          "width": 30.84375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 419.078125,
+          "bottom": 880.34375,
+          "left": 388.234375
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 526.296875,
+          "y": 822.96875,
+          "width": 30.84375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 557.140625,
+          "bottom": 880.34375,
+          "left": 526.296875
+        }
+      },
+      {
+        "slot": "overcap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fovercap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 90.796875,
+          "y": 970.328125,
+          "width": 24.375,
+          "height": 44.25,
+          "top": 970.328125,
+          "right": 115.171875,
+          "bottom": 1014.578125,
+          "left": 90.796875
+        }
+      },
+      {
+        "slot": "body",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 796.9861450195312,
+          "y": 736.5491943359375,
+          "width": 119.79425048828125,
+          "height": 225.564453125,
+          "top": 736.5491943359375,
+          "right": 916.7803955078125,
+          "bottom": 962.1136474609375,
+          "left": 796.9861450195312
+        }
+      },
+      {
+        "slot": "diptube",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fmechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png&w=1200&q=75",
+        "opacity": "0.62",
+        "rect": {
+          "x": 847.4365234375,
+          "y": 757.5169677734375,
+          "width": 19.548828125,
+          "height": 189.13543701171875,
+          "top": 757.5169677734375,
+          "right": 866.9853515625,
+          "bottom": 946.6524047851562,
+          "left": 847.4365234375
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 823.1956787109375,
+          "y": 666.3804321289062,
+          "width": 67.38336181640625,
+          "height": 134.76666259765625,
+          "top": 666.3804321289062,
+          "right": 890.5790405273438,
+          "bottom": 801.1470947265625,
+          "left": 823.1956787109375
+        }
+      },
+      {
+        "slot": "overcap",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fovercap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 900.0389404296875,
+          "y": 815.8675537109375,
+          "width": 78.67138671875,
+          "height": 142.841064453125,
+          "top": 815.8675537109375,
+          "right": 978.7103271484375,
+          "bottom": 958.7086181640625,
+          "left": 900.0389404296875
+        }
+      }
+    ],
+    "calls": [
+      {
+        "url": "http://localhost:3010/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-5ml%7C13-415%7CGlass%20Bottle&media=reviewed-cylinder9-overcap-swirl-v6&assetPreview=gpt13",
+        "status": 200,
+        "cache": "no-store",
+        "matchingKits": 1
+      }
+    ]
+  },
+  {
+    "sku": "GBCylBlu5SprySlSh",
+    "href": "http://localhost:3010/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp&assetPreview=gpt13",
+    "passed": true,
+    "layers": [
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 112.265625,
+          "y": 675.171875,
+          "width": 30.5,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 142.765625,
+          "bottom": 732.546875,
+          "left": 112.265625
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 250.140625,
+          "y": 675.171875,
+          "width": 30.875,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 281.015625,
+          "bottom": 732.546875,
+          "left": 250.140625
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 388.234375,
+          "y": 675.171875,
+          "width": 30.859375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 419.09375,
+          "bottom": 732.546875,
+          "left": 388.234375
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 526.046875,
+          "y": 675.171875,
+          "width": 31.359375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 557.40625,
+          "bottom": 732.546875,
+          "left": 526.046875
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 112.078125,
+          "y": 822.96875,
+          "width": 30.875,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 142.953125,
+          "bottom": 880.34375,
+          "left": 112.078125
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 250.15625,
+          "y": 822.96875,
+          "width": 30.84375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 281,
+          "bottom": 880.34375,
+          "left": 250.15625
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 388.234375,
+          "y": 822.96875,
+          "width": 30.84375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 419.078125,
+          "bottom": 880.34375,
+          "left": 388.234375
+        }
+      },
+      {
+        "slot": "overcap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fovercap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 91.390625,
+          "y": 970.328125,
+          "width": 23.1875,
+          "height": 44.25,
+          "top": 970.328125,
+          "right": 114.578125,
+          "bottom": 1014.578125,
+          "left": 91.390625
+        }
+      },
+      {
+        "slot": "body",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-cobalt-candidate-v3.c51b7b6df61f.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 797.5633544921875,
+          "y": 736.9528198242188,
+          "width": 119.295166015625,
+          "height": 224.62457275390625,
+          "top": 736.9528198242188,
+          "right": 916.8585205078125,
+          "bottom": 961.577392578125,
+          "left": 797.5633544921875
+        }
+      },
+      {
+        "slot": "diptube",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fmechanism-cylinder-5ml-13-415-v1.f0febbcaaa4d.png&w=1200&q=75",
+        "opacity": "0.15",
+        "rect": {
+          "x": 847.4365234375,
+          "y": 757.5169677734375,
+          "width": 19.548828125,
+          "height": 189.13543701171875,
+          "top": 757.5169677734375,
+          "right": 866.9853515625,
+          "bottom": 946.6524047851562,
+          "left": 847.4365234375
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 823.3197021484375,
+          "y": 673.0222778320312,
+          "width": 67.07330322265625,
+          "height": 124.73284912109375,
+          "top": 673.0222778320312,
+          "right": 890.3930053710938,
+          "bottom": 797.755126953125,
+          "left": 823.3197021484375
+        }
+      },
+      {
+        "slot": "overcap",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fovercap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 900.0389404296875,
+          "y": 816.2279052734375,
+          "width": 74.6839599609375,
+          "height": 142.47955322265625,
+          "top": 816.2279052734375,
+          "right": 974.722900390625,
+          "bottom": 958.7074584960938,
+          "left": 900.0389404296875
+        }
+      }
+    ],
+    "calls": [
+      {
+        "url": "http://localhost:3010/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-5ml%7C13-415%7CGlass%20Bottle&media=reviewed-cylinder9-overcap-swirl-v6&assetPreview=gpt13",
+        "status": 200,
+        "cache": "no-store",
+        "matchingKits": 1
+      }
+    ]
+  },
+  {
+    "sku": "GBCyl5MtlRollBlkSh",
+    "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5MtlRollBlkSh&from=pdp&assetPreview=gpt13",
+    "passed": true,
+    "layers": [
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-BLK-13415-DOT%2Fcap-afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 108.34375,
+          "y": 675.171875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 146.703125,
+          "bottom": 732.546875,
+          "left": 108.34375
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-MCPR-13415%2Fcap-9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 246.40625,
+          "y": 675.171875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 284.765625,
+          "bottom": 732.546875,
+          "left": 246.40625
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-MGLD-13415%2Fcap-40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 384.484375,
+          "y": 675.171875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 422.84375,
+          "bottom": 732.546875,
+          "left": 384.484375
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-MSLV-13415%2Fcap-023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 522.546875,
+          "y": 675.171875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 560.90625,
+          "bottom": 732.546875,
+          "left": 522.546875
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-PNK-13415-DOT%2Fcap-f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 108.34375,
+          "y": 822.96875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 146.703125,
+          "bottom": 880.34375,
+          "left": 108.34375
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SBLK-13415%2Fcap-a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 246.40625,
+          "y": 822.96875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 284.765625,
+          "bottom": 880.34375,
+          "left": 246.40625
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SGLD-13415%2Fcap-0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 384.484375,
+          "y": 822.96875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 422.84375,
+          "bottom": 880.34375,
+          "left": 384.484375
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SSLV-13415%2Fcap-be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 522.546875,
+          "y": 822.96875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 560.90625,
+          "bottom": 880.34375,
+          "left": 522.546875
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SLV-13415-DOT%2Fcap-e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 108.34375,
+          "y": 970.765625,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 970.765625,
+          "right": 146.703125,
+          "bottom": 1028.140625,
+          "left": 108.34375
+        }
+      },
+      {
+        "slot": "roller",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Froller-metal.2c4bc8ffee8b.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 832.2861328125,
+          "y": 725.698486328125,
+          "width": 49.849609375,
+          "height": 74.122802734375,
+          "top": 725.698486328125,
+          "right": 882.1357421875,
+          "bottom": 799.8212890625,
+          "left": 832.2861328125
+        }
+      },
+      {
+        "slot": "body",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-clear-candidate-v3.3d366e116958.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 796.9861450195312,
+          "y": 762.5491943359375,
+          "width": 119.79425048828125,
+          "height": 225.564453125,
+          "top": 762.5491943359375,
+          "right": 916.7803955078125,
+          "bottom": 988.1136474609375,
+          "left": 796.9861450195312
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SBLK-13415%2Fcap-a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 822.8319091796875,
+          "y": 716.7474365234375,
+          "width": 68.758056640625,
+          "height": 102.811279296875,
+          "top": 716.7474365234375,
+          "right": 891.5899658203125,
+          "bottom": 819.5587158203125,
+          "left": 822.8319091796875
+        }
+      }
+    ],
+    "calls": [
+      {
+        "url": "http://localhost:3010/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-5ml%7C13-415%7CGlass%20Bottle&media=reviewed-cylinder9-overcap-swirl-v6&assetPreview=gpt13",
+        "status": 200,
+        "cache": "no-store",
+        "matchingKits": 1
+      }
+    ]
+  },
+  {
+    "sku": "GBCylBlu5RollBlkDot",
+    "href": "http://localhost:3010/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5RollBlkDot&from=pdp&assetPreview=gpt13",
+    "passed": true,
+    "layers": [
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-BLK-13415-DOT%2Fcap-afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 108.34375,
+          "y": 675.171875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 146.703125,
+          "bottom": 732.546875,
+          "left": 108.34375
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-MCPR-13415%2Fcap-9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 246.40625,
+          "y": 675.171875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 284.765625,
+          "bottom": 732.546875,
+          "left": 246.40625
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-MGLD-13415%2Fcap-40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 384.484375,
+          "y": 675.171875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 422.84375,
+          "bottom": 732.546875,
+          "left": 384.484375
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-MSLV-13415%2Fcap-023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 522.546875,
+          "y": 675.171875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 560.90625,
+          "bottom": 732.546875,
+          "left": 522.546875
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-PNK-13415-DOT%2Fcap-f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 108.34375,
+          "y": 822.96875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 146.703125,
+          "bottom": 880.34375,
+          "left": 108.34375
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SBLK-13415%2Fcap-a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 246.40625,
+          "y": 822.96875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 284.765625,
+          "bottom": 880.34375,
+          "left": 246.40625
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SGLD-13415%2Fcap-0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 384.484375,
+          "y": 822.96875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 422.84375,
+          "bottom": 880.34375,
+          "left": 384.484375
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SSLV-13415%2Fcap-be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 522.546875,
+          "y": 822.96875,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 560.90625,
+          "bottom": 880.34375,
+          "left": 522.546875
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-SLV-13415-DOT%2Fcap-e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 108.34375,
+          "y": 970.765625,
+          "width": 38.359375,
+          "height": 57.375,
+          "top": 970.765625,
+          "right": 146.703125,
+          "bottom": 1028.140625,
+          "left": 108.34375
+        }
+      },
+      {
+        "slot": "roller",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Froller-plastic.4b356a2a9537.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 832.2861328125,
+          "y": 725.698486328125,
+          "width": 49.849609375,
+          "height": 74.122802734375,
+          "top": 725.698486328125,
+          "right": 882.1357421875,
+          "bottom": 799.8212890625,
+          "left": 832.2861328125
+        }
+      },
+      {
+        "slot": "body",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fcylinder5-cobalt-candidate-v3.c51b7b6df61f.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 797.5633544921875,
+          "y": 762.9528198242188,
+          "width": 119.295166015625,
+          "height": 224.62457275390625,
+          "top": 762.9528198242188,
+          "right": 916.8585205078125,
+          "bottom": 987.577392578125,
+          "left": 797.5633544921875
+        }
+      },
+      {
+        "slot": "cap",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-ROC-BLK-13415-DOT%2Fcap-afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 822.8319091796875,
+          "y": 716.7474365234375,
+          "width": 68.758056640625,
+          "height": 102.811279296875,
+          "top": 716.7474365234375,
+          "right": 891.5899658203125,
+          "bottom": 819.5587158203125,
+          "left": 822.8319091796875
+        }
+      }
+    ],
+    "calls": [
+      {
+        "url": "http://localhost:3010/api/bottle-builder/kits?family=Cylinder&bodyId=cylinder-5ml%7C13-415%7CGlass%20Bottle&media=reviewed-cylinder9-overcap-swirl-v6&assetPreview=gpt13",
+        "status": 200,
+        "cache": "no-store",
+        "matchingKits": 1
+      }
+    ]
+  },
+  {
+    "sku": "GBSleek5SpryBlkSh",
+    "href": "http://localhost:3010/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkSh&from=pdp&assetPreview=gpt13",
+    "passed": true,
+    "layers": [
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 113.171875,
+          "y": 675.171875,
+          "width": 28.6875,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 141.859375,
+          "bottom": 732.546875,
+          "left": 113.171875
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 250.328125,
+          "y": 675.171875,
+          "width": 30.5,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 280.828125,
+          "bottom": 732.546875,
+          "left": 250.328125
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 388.21875,
+          "y": 675.171875,
+          "width": 30.875,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 419.09375,
+          "bottom": 732.546875,
+          "left": 388.21875
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 526.296875,
+          "y": 675.171875,
+          "width": 30.859375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 557.15625,
+          "bottom": 732.546875,
+          "left": 526.296875
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 111.84375,
+          "y": 822.96875,
+          "width": 31.359375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 143.203125,
+          "bottom": 880.34375,
+          "left": 111.84375
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 250.140625,
+          "y": 822.96875,
+          "width": 30.875,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 281.015625,
+          "bottom": 880.34375,
+          "left": 250.140625
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 388.234375,
+          "y": 822.96875,
+          "width": 30.84375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 419.078125,
+          "bottom": 880.34375,
+          "left": 388.234375
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 526.296875,
+          "y": 822.96875,
+          "width": 30.84375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 557.140625,
+          "bottom": 880.34375,
+          "left": 526.296875
+        }
+      },
+      {
+        "slot": "overcap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fovercap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 89.796875,
+          "y": 970.328125,
+          "width": 26.390625,
+          "height": 44.25,
+          "top": 970.328125,
+          "right": 116.1875,
+          "bottom": 1014.578125,
+          "left": 89.796875
+        }
+      },
+      {
+        "slot": "body",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fsleek-5ml-13-415-clear.a3270080edb0.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 809.6983032226562,
+          "y": 761.6060180664062,
+          "width": 97.75103759765625,
+          "height": 206.02911376953125,
+          "top": 761.6060180664062,
+          "right": 907.4493408203125,
+          "bottom": 967.6351318359375,
+          "left": 809.6983032226562
+        }
+      },
+      {
+        "slot": "diptube",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fmechanism-sleek-5ml-13-415-v1.2e57300aab46.png&w=1200&q=75",
+        "opacity": "0.62",
+        "rect": {
+          "x": 847.7373046875,
+          "y": 790.7080078125,
+          "width": 18.947265625,
+          "height": 156.47320556640625,
+          "top": 790.7080078125,
+          "right": 866.6845703125,
+          "bottom": 947.1812133789062,
+          "left": 847.7373046875
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 824.1222534179688,
+          "y": 708.42626953125,
+          "width": 64.95672607421875,
+          "height": 120.681640625,
+          "top": 708.42626953125,
+          "right": 889.0789794921875,
+          "bottom": 829.10791015625,
+          "left": 824.1222534179688
+        }
+      },
+      {
+        "slot": "overcap",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fovercap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 897.5220947265625,
+          "y": 820.2630615234375,
+          "width": 82.5751953125,
+          "height": 138.44525146484375,
+          "top": 820.2630615234375,
+          "right": 980.0972900390625,
+          "bottom": 958.7083129882812,
+          "left": 897.5220947265625
+        }
+      }
+    ],
+    "calls": [
+      {
+        "url": "http://localhost:3010/api/bottle-builder/kits?family=Sleek&bodyId=sleek-5ml%7C13-415%7CGlass%20Bottle&media=reviewed-cylinder9-overcap-swirl-v6&assetPreview=gpt13",
+        "status": 200,
+        "cache": "no-store",
+        "matchingKits": 1
+      }
+    ]
+  },
+  {
+    "sku": "GBTulipAmb5SpryGlMatt",
+    "href": "http://localhost:3010/matrix?family=Tulip&shop=glass-spray-bottles&sku=GBTulipAmb5SpryGlMatt&from=pdp&assetPreview=gpt13",
+    "passed": true,
+    "layers": [
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 113.171875,
+          "y": 675.171875,
+          "width": 28.6875,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 141.859375,
+          "bottom": 732.546875,
+          "left": 113.171875
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 250.328125,
+          "y": 675.171875,
+          "width": 30.5,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 280.828125,
+          "bottom": 732.546875,
+          "left": 250.328125
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 388.21875,
+          "y": 675.171875,
+          "width": 30.875,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 419.09375,
+          "bottom": 732.546875,
+          "left": 388.21875
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 526.296875,
+          "y": 675.171875,
+          "width": 30.859375,
+          "height": 57.375,
+          "top": 675.171875,
+          "right": 557.15625,
+          "bottom": 732.546875,
+          "left": 526.296875
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 111.84375,
+          "y": 822.96875,
+          "width": 31.359375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 143.203125,
+          "bottom": 880.34375,
+          "left": 111.84375
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 250.140625,
+          "y": 822.96875,
+          "width": 30.875,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 281.015625,
+          "bottom": 880.34375,
+          "left": 250.140625
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 388.234375,
+          "y": 822.96875,
+          "width": 30.84375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 419.078125,
+          "bottom": 880.34375,
+          "left": 388.234375
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 526.296875,
+          "y": 822.96875,
+          "width": 30.84375,
+          "height": 57.375,
+          "top": 822.96875,
+          "right": 557.140625,
+          "bottom": 880.34375,
+          "left": 526.296875
+        }
+      },
+      {
+        "slot": "overcap",
+        "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fovercap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png&w=3840&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 91.03125,
+          "y": 970.328125,
+          "width": 23.90625,
+          "height": 44.25,
+          "top": 970.328125,
+          "right": 114.9375,
+          "bottom": 1014.578125,
+          "left": 91.03125
+        }
+      },
+      {
+        "slot": "body",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Ftulip-5ml-13-415-amber.1987a24ec5e9.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 792.3145141601562,
+          "y": 742.796630859375,
+          "width": 131.85308837890625,
+          "height": 225.79827880859375,
+          "top": 742.796630859375,
+          "right": 924.1676025390625,
+          "bottom": 968.5949096679688,
+          "left": 792.3145141601562
+        }
+      },
+      {
+        "slot": "diptube",
+        "url": "/_next/image?url=%2Flocal-kits%2Fgpt-13-415-2026-10-31%2Fmechanism-tulip-5ml-13-415-v1.e5dc3c7fa6a8.png&w=1200&q=75",
+        "opacity": "0.42",
+        "rect": {
+          "x": 847.0162963867188,
+          "y": 775.2041015625,
+          "width": 20.3892822265625,
+          "height": 171.10003662109375,
+          "top": 775.2041015625,
+          "right": 867.4055786132812,
+          "bottom": 946.3041381835938,
+          "left": 847.0162963867188
+        }
+      },
+      {
+        "slot": "sprayer",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 823.8593139648438,
+          "y": 690.8092041015625,
+          "width": 67.34588623046875,
+          "height": 125.19915771484375,
+          "top": 690.8092041015625,
+          "right": 891.2052001953125,
+          "bottom": 816.0083618164062,
+          "left": 823.8593139648438
+        }
+      },
+      {
+        "slot": "overcap",
+        "url": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fovercap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png&w=1200&q=75",
+        "opacity": "1",
+        "rect": {
+          "x": 913.8572998046875,
+          "y": 808.9671630859375,
+          "width": 80.917724609375,
+          "height": 149.735595703125,
+          "top": 808.9671630859375,
+          "right": 994.7750244140625,
+          "bottom": 958.7027587890625,
+          "left": 913.8572998046875
+        }
+      }
+    ],
+    "calls": [
+      {
+        "url": "http://localhost:3010/api/bottle-builder/kits?family=Tulip&bodyId=tulip-5ml%7C13-415%7CGlass%20Bottle&media=reviewed-cylinder9-overcap-swirl-v6&assetPreview=gpt13",
+        "status": 200,
+        "cache": "no-store",
+        "matchingKits": 1
+      }
+    ]
+  }
+]

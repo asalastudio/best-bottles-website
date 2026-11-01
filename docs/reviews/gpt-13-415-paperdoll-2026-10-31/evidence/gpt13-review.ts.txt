@@ -1,0 +1,26 @@
+import fs from 'node:fs'; import {stageLayout,glassFrame} from './src/lib/products/pdp-redesign/stage';
+const out='outputs/catalog-model-repair-2026-10-31/13-415-gpt-paperdoll',pub='public/reviews/gpt-13-415-paperdoll-2026-10-31';
+const before=JSON.parse(fs.readFileSync(out+'/kits-before.json','utf8')),after=JSON.parse(fs.readFileSync(out+'/kits-after.json','utf8')),report=JSON.parse(fs.readFileSync(out+'/changes.json','utf8')),snapshot=JSON.parse(fs.readFileSync(out+'/snapshot.json','utf8'));
+fs.mkdirSync(pub,{recursive:true});const rows:any[]=[],checks:any[]=[],errors:any[]=[];
+for(const item of report.changes){
+ const product=snapshot.products.find((p:any)=>p.websiteSku===item.sku),context={family:product.family,capacityMl:product.capacityMl,color:product.color,applicator:product.applicator,websiteSku:item.sku};
+ const render:any={before:{},after:{}};let fixed:any;
+ for(const [kind,kits]of Object.entries({before,after})){
+  const kit:any=(kits as any)[item.sku];const peer=snapshot.products.filter((p:any)=>p.productGroupId===product.productGroupId).map((p:any)=>({kit:(kits as any)[p.websiteSku],applicator:p.applicator}));
+  const frame=glassFrame({kit,applicator:product.applicator},peer);
+  for(const view of ['sidecar','capon','exploded'] as const){
+   const l=stageLayout(kit,view,context,frame)!; render[kind][view]=l;
+   if(kind==='before')continue;
+   const visible=l.parts.map(p=>{const b=p.box!;return {slot:p.slot,url:p.url,left:l.frame.x+(b.leftPct+p.dxPct)*l.frame.scale,top:l.frame.y+(b.topPct+p.dyPct)*l.frame.scale,width:b.widthPct*l.frame.scale,height:b.heightPct*l.frame.scale,dx:p.dxPct,dy:p.dyPct,clip:p.clipBottomPct??0}});
+   for(const v of visible){if(v.left<-.15||v.top<-.15||v.left+v.width>100.15||v.top+v.height>100.15) errors.push({sku:item.sku,view,problem:'image out of canvas',part:v});}
+   const body=visible.find(p=>p.slot==='body')!;const box=[body.left,body.top,body.width,body.height];
+   if(fixed&&box.some((x,i)=>Math.abs(x-fixed[i])>.02))errors.push({sku:item.sku,view,problem:'body moved across views'});fixed=box;
+   const tube=visible.find(p=>p.slot==='diptube'),head=visible.find(p=>p.slot==='sprayer');
+   if(head&&(!tube||tube.dx!==head.dx||tube.dy!==head.dy||tube.clip>0))errors.push({sku:item.sku,view,problem:'tube disconnected, missing or clipped'});
+   if(tube&&view!=='exploded'&&tube.top+tube.height>=body.top+body.height)errors.push({sku:item.sku,view,problem:'tube below glass'});
+   checks.push({sku:item.sku,view,bodyFrame:box,parts:visible,passed:!errors.some(e=>e.sku===item.sku&&e.view===view)});
+  }
+ }
+ rows.push({...item,render});
+}
+fs.writeFileSync(out+'/layout-checks.json',JSON.stringify({states:checks.length,errors,checks},null,2));fs.writeFileSync(pub+'/data.json',JSON.stringify(rows));fs.writeFileSync(pub+'/inventory.csv','sku,group,glass,applicator,cap,body_status,review_url\n'+report.changes.map((x:any)=>[x.sku,x.slug,x.glass,x.applicator??'',x.capColor??'',x.bodyStatus,'http://localhost:3010'+x.url].map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\n'));console.log('Layout states',checks.length,'errors',errors.length,JSON.stringify(errors.slice(0,5)));

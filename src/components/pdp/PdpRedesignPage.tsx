@@ -272,9 +272,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         const glass = glasses.find((option) => option.slug === targetSlug);
         analytics.pdpPick({ group: slug, type: "glass", value: glass?.label ?? targetSlug, sku: glass?.primaryWebsiteSku ?? null });
         if (targetSlug === slug) return;
-        const query = pickQuery(picks, rollers);
+        const query = [pickQuery(picks, rollers), searchParams.get("assetPreview") === "gpt13" ? "assetPreview=gpt13" : ""].filter(Boolean).join("&");
         router.push(`/products/${targetSlug}${query ? `?${query}` : ""}`, { scroll: false });
-    }, [glasses, picks, rollers, router, slug]);
+    }, [glasses, picks, rollers, router, slug, searchParams]);
 
     useEffect(() => {
         for (const glass of glasses) if (!glass.active) router.prefetch(`/products/${glass.slug}`);
@@ -507,7 +507,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     groupKits={groupKits}
                     fitmentKits={fitmentKits}
                     capKits={capKits}
-                    href={buildYourBottleHref(group, collection?.band ?? null, selected?.websiteSku ?? selected?.graceSku)}
+                    href={buildYourBottleHref(group, collection?.band ?? null, selected?.websiteSku ?? selected?.graceSku) + (searchParams.get("assetPreview") === "gpt13" ? "&assetPreview=gpt13" : "")}
                 />
 
                 <PdpTechSheet

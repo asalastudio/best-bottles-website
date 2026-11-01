@@ -31,6 +31,16 @@ function readLocalKitReview(): LocalKitReview | null {
     return loaded ? { rows, defaultPdpSkus: [...defaults] } : null;
 }
 
+/** Opt-in GPT-body composition pilot. The hosted application never reads it. */
+export function localGpt13ComponentKits(host: string | null, flag: unknown): Record<string, BuilderKit> {
+    if (process.env.VERCEL || process.env.NODE_ENV !== "development" || flag !== "gpt13"
+        || !/^(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/.test(host ?? "")) return {};
+    try {
+        const review = JSON.parse(readFileSync("public/local-kits/gpt-13-415-2026-10-31/kits.json", "utf8")) as LocalKitReview;
+        return review.rows ?? {};
+    } catch { return {}; }
+}
+
 /** Shared local artwork review input for Builder and PDP. Never used on Vercel. */
 export function readLocalComponentKits(): Record<string, BuilderKit> | null {
     return readLocalKitReview()?.rows ?? null;
@@ -41,11 +51,12 @@ export function localPdpComponentKits(host: string | null, flag: unknown,
     variants: Array<{ websiteSku?: string | null }>): Record<string, BuilderKit> {
     if (!/^(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/.test(host ?? "")) return {};
     const review = readLocalKitReview();
-    if (!review?.rows) return {};
-    const defaults = new Set(review.defaultPdpSkus ?? []);
+    const pilot = localGpt13ComponentKits(host, flag);
+    if (!review?.rows && !Object.keys(pilot).length) return {};
+    const defaults = new Set(review?.defaultPdpSkus ?? []);
     return Object.fromEntries(variants.flatMap(({ websiteSku }) => {
-        if (!websiteSku || (flag !== "kits" && !defaults.has(websiteSku))) return [];
-        const kit = review.rows[websiteSku];
+        if (!websiteSku || (flag !== "kits" && flag !== "gpt13" && !defaults.has(websiteSku))) return [];
+        const kit = pilot[websiteSku] ?? review?.rows[websiteSku];
         return kit && kit.sku === websiteSku ? [[websiteSku, kit]] : [];
     }));
 }

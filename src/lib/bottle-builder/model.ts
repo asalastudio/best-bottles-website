@@ -24,7 +24,7 @@ export type CatalogRow = Omit<MatrixRow, "resolution"> & {
 };
 type PublishedKit = NonNullable<FunctionReturnType<typeof api.productKits.forSku>>;
 /** A published kit layer (a full-canvas image), or a register part standing in its own box on the canvas (src/lib/register/stage-kit.ts). */
-export type BuilderPart = PublishedKit["parts"][number] & { opacity?: number; box?: PartBox | null; componentId?: string | null; detached?: DetachedLook | null };
+export type BuilderPart = PublishedKit["parts"][number] & { opacity?: number; views?: Array<"sidecar" | "capon" | "exploded">; box?: PartBox | null; componentId?: string | null; detached?: DetachedLook | null };
 /** A published per-SKU kit, or one composed from the component register (`register` set): one plate per glass, shared component layers, one datum per body. */
 export type BuilderKit = Omit<PublishedKit, "parts"> & { parts: BuilderPart[]; register?: RegisterKitMeta | null; glassSizing?: PdpGlassSizing };
 export type BuilderConfiguration = {

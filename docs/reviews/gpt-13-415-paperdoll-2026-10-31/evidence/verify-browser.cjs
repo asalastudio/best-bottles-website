@@ -1,0 +1,24 @@
+const fs=require('fs'),assert=require('assert/strict'),P=require('puppeteer-core');
+const out='outputs/catalog-model-repair-2026-10-31/13-415-gpt-paperdoll',items=JSON.parse(fs.readFileSync(out+'/changes.json')).changes,kits=JSON.parse(fs.readFileSync(out+'/kits-after.json'));
+const reps=new Map();for(const x of items){const key=x.bodyId+'|'+x.glass+'|'+x.applicator;if(!reps.has(key))reps.set(key,x)}
+for(const x of items.filter(x=>x.bodyId==='sleek-5ml-13-415'&&x.sprayer))reps.set(x.sku,x);
+const jobs=['desktop','mobile'].flatMap(viewport=>[...new Map([...reps.values()].map(x=>[x.sku,x])).values()].map(item=>({viewport,item})));
+(async()=>{const b=await P.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--no-sandbox']});const previous=JSON.parse(fs.readFileSync(out+'/browser-verification.json','utf8'));const records=previous.records,errors=previous.errors;const failures=[];let cursor=0;
+try{await Promise.all(Array.from({length:1},async()=>{const page=await b.newPage();page.on('pageerror',e=>errors.push(e.message));while(cursor<jobs.length){const {viewport,item}=jobs[cursor++];if(records.filter(x=>x.sku===item.sku&&x.viewport===viewport).length===3)continue;console.log('START',viewport,item.sku);try{await page.setViewport(viewport==='desktop'?{width:1440,height:1000}:{width:390,height:844});
+const res=await page.goto('http://localhost:3010'+item.url,{waitUntil:'domcontentloaded',timeout:60000});assert.equal(res.status(),200);await page.waitForSelector('[data-testid="pdp-stage"]');await page.waitForFunction(u=>[...document.querySelectorAll('[data-testid="pdp-stage"] img')].some(i=>(new URL(i.src).searchParams.get('url')??i.getAttribute('src'))===u),{timeout:60000},item.bodyUrl);let prior;
+for(const view of ['sidecar','capon','exploded']){
+if(records.some(x=>x.sku===item.sku&&x.viewport===viewport&&x.view===view))continue;
+await page.$eval('[data-testid="pdp-view-'+view+'"]',e=>e.click());await page.waitForFunction(v=>document.querySelector('[data-testid="pdp-stage"]').dataset.view===v,{},view);
+await page.waitForFunction(()=>[...document.querySelectorAll('[data-testid="pdp-stage"] img')].every(i=>i.complete&&i.naturalWidth),{timeout:60000});await page.evaluate(async()=>{await Promise.all([...document.querySelectorAll('[data-testid="pdp-stage"] img')].map(i=>i.decode()))});await new Promise(r=>setTimeout(r,450));
+const d=await page.evaluate(()=>{const s=document.querySelector('[data-testid="pdp-stage"]');return {stage:s.getBoundingClientRect().toJSON(),overflow:document.documentElement.scrollWidth>innerWidth+1,text:document.querySelector('main').textContent,builder:document.querySelector('[data-testid="pdp-build-cta"]')?.getAttribute('href'),parts:[...s.querySelectorAll('[data-slot]')].map(e=>({slot:e.dataset.slot,transform:e.style.transform,rect:e.querySelector('img')?.getBoundingClientRect().toJSON(),url:e.querySelector('img')?.getAttribute('src')}))}});
+assert.ok(d.text.includes(item.sku),'SKU '+item.sku);assert.equal(d.overflow,false);const body=d.parts.find(p=>p.slot==='body'),tube=d.parts.filter(p=>p.slot==='diptube'),head=d.parts.find(p=>p.slot==='sprayer');
+const frame=[body.rect.x-d.stage.x,body.rect.y-d.stage.y,body.rect.width,body.rect.height];if(prior)frame.forEach((v,i)=>assert.ok(Math.abs(v-prior[i])<.3,'fixed body '+item.sku));prior=frame;
+for(const p of d.parts){const r=p.rect,s=d.stage;assert.ok(r.x>=s.x-1&&r.y>=s.y-1&&r.right<=s.right+1&&r.bottom<=s.bottom+1,'uncropped '+item.sku+' '+view+' '+p.slot);}
+if(head){assert.equal(tube.length,1);assert.equal(head.transform,tube[0].transform);if(view!=='exploded')assert.ok(tube[0].rect.bottom<body.rect.bottom)}
+assert.ok(d.builder.includes('assetPreview=gpt13'),'preview carried into builder');
+const file=viewport+'-'+item.sku+'-'+view+'.png';await(await page.$('[data-testid="pdp-stage"]')).screenshot({path:out+'/screenshots/'+file});
+records.push({sku:item.sku,bodyId:item.bodyId,glass:item.glass,applicator:item.applicator,viewport,view,screenshot:file,passed:true,bodyFrame:frame,builder:d.builder});fs.writeFileSync(out+'/browser-verification.json',JSON.stringify({records,errors},null,2));}
+console.log(viewport,item.sku,'3 views pass');}catch(e){const bad=await page.$$eval('[data-testid="pdp-stage"] img',imgs=>imgs.filter(i=>!i.complete||!i.naturalWidth).map(i=>i.src)).catch(()=>[]);failures.push({sku:item.sku,viewport,error:e.message,bad});console.error('FAIL',JSON.stringify(failures.at(-1)));fs.writeFileSync(out+'/browser-failures.json',JSON.stringify(failures,null,2));}}
+await page.close()}));
+fs.writeFileSync(out+'/browser-failures.json',JSON.stringify(failures,null,2));console.log('COMPLETE',records.length,'states;',errors.length,'page errors;',failures.length,'failures');if(failures.length)process.exitCode=1;
+}finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)});

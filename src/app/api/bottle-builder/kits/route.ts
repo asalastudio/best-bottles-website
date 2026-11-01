@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { localGpt13ComponentKits } from "@/lib/paper-doll/local-component-kits";
 import { BUILDER_CDN_CACHE, loadBuilderBodyKits } from "@/lib/bottle-builder/server";
 
 export async function GET(request: Request) {
@@ -9,8 +10,15 @@ export async function GET(request: Request) {
         return NextResponse.json({ error: "Choose a bottle to load its finishes." }, { status: 400 });
     }
     try {
-        return NextResponse.json({ kits: await loadBuilderBodyKits(family, bodyId) }, {
-            headers: { "Cache-Control": BUILDER_CDN_CACHE },
+        const kits = { ...await loadBuilderBodyKits(family, bodyId) };
+        const pilot = localGpt13ComponentKits(url.host, url.searchParams.get("assetPreview"));
+        for (const [id, kit] of Object.entries(kits)) {
+            const reviewed = kit?.sku ? pilot[kit.sku] : undefined;
+            if (reviewed && reviewed.sku === kit?.sku) kits[id] = { ...reviewed,
+                parts: reviewed.parts.filter(part => !part.views || part.views.includes("capon")) };
+        }
+        return NextResponse.json({ kits }, {
+            headers: { "Cache-Control": Object.keys(pilot).length ? "no-store" : BUILDER_CDN_CACHE },
         });
     } catch (error) {
         // Uncached 503: the browser retries, and the data cache keeps its last good entry.
