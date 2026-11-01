@@ -178,6 +178,20 @@ describe("behind the glass", () => {
     };
     const context = { family: "Round", capacityMl: 78, color: "Frosted", applicator: "Vintage Bulb Sprayer", websiteSku: "GBRndFrst78AnSpGl" };
 
+    it("uses the tinted-glass blend only for the seated tube", () => {
+        const kit = structuredClone(REGISTER_KIT);
+        const tube = kit.parts[0];
+        tube.views = ["sidecar", "capon"];
+        tube.blendMode = "multiply";
+        tube.opacity = .5;
+        const lifted = { ...tube, views: ["exploded"] as const, blendMode: undefined, opacity: undefined };
+        kit.parts.push({ ...lifted, views: ["exploded"] });
+        for (const view of ["sidecar", "capon"] as const) {
+            expect(stageLayout(kit, view, { ...context, applicator: "Fine Mist Sprayer" })!.parts.find(p => p.slot === "diptube")?.blendMode).toBe("multiply");
+        }
+        expect(stageLayout(kit, "exploded", { ...context, applicator: "Fine Mist Sprayer" })!.parts.find(p => p.slot === "diptube")?.blendMode).toBeUndefined();
+    });
+
     it("keeps the physical tube trim when lifted, without changing its image scale", () => {
         const kit = structuredClone(REGISTER_KIT);
         kit.parts[0].trimBottomPct = 30;

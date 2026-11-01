@@ -6,10 +6,12 @@ for sku,kit in rows.items():
     seat=kit['glassSizing']['landmarkY']
     for p in kit['parts']:
         if p['slot'] not in ['sprayer','overcap']:continue
-        dy=seat-p['bounds']['bottom']
+        # The closed overcap covers the neck band; the exposed sprayer does not.
+        bottom=seat+16.3 if p['slot']=='overcap' else seat
+        dy=bottom-p['bounds']['bottom']
         p['box']['y']+=dy
         p['bounds']['top']+=dy;p['bounds']['bottom']+=dy
-        changes.append({'sku':sku,'slot':p['slot'],'previousBottom':old[sku]['parts'][kit['parts'].index(p)]['bounds']['bottom'],'newBottom':seat,'deltaY':dy})
+        changes.append({'sku':sku,'slot':p['slot'],'previousBottom':old[sku]['parts'][kit['parts'].index(p)]['bounds']['bottom'],'newBottom':bottom,'deltaY':dy})
     assert kit['anchors']==old[sku]['anchors'] and kit['glassSizing']==old[sku]['glassSizing']
     for slot in ['body']:
         assert [p for p in kit['parts'] if p['slot']==slot]==[p for p in old[sku]['parts'] if p['slot']==slot]

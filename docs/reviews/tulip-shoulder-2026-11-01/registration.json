@@ -12,8 +12,8 @@
       "sku": "GBTulipAmb5SpryBlkMatt",
       "slot": "overcap",
       "previousBottom": 717.2459562321599,
-      "newBottom": 693.5694444444445,
-      "deltaY": -23.676511787715413
+      "newBottom": 709.8694444444444,
+      "deltaY": -7.376511787715458
     },
     {
       "sku": "GBTulipAmb5SpryBlkMatt",
@@ -51,8 +51,8 @@
       "sku": "GBTulipAmb5SpryBlkSh",
       "slot": "overcap",
       "previousBottom": 719.1241674595624,
-      "newBottom": 693.5694444444445,
-      "deltaY": -25.55472301511793
+      "newBottom": 709.8694444444444,
+      "deltaY": -9.254723015117975
     },
     {
       "sku": "GBTulipAmb5SpryBlkSh",
@@ -90,8 +90,8 @@
       "sku": "GBTulipAmb5SpryBluMatt",
       "slot": "overcap",
       "previousBottom": 718.1950523311133,
-      "newBottom": 693.5694444444445,
-      "deltaY": -24.62560788666883
+      "newBottom": 709.8694444444444,
+      "deltaY": -8.325607886668877
     },
     {
       "sku": "GBTulipAmb5SpryBluMatt",
@@ -129,8 +129,8 @@
       "sku": "GBTulipAmb5SpryCuMatt",
       "slot": "overcap",
       "previousBottom": 720.0632730732636,
-      "newBottom": 693.5694444444445,
-      "deltaY": -26.493828628819188
+      "newBottom": 709.8694444444444,
+      "deltaY": -10.193828628819233
     },
     {
       "sku": "GBTulipAmb5SpryCuMatt",
@@ -168,8 +168,8 @@
       "sku": "GBTulipAmb5SpryGlMatt",
       "slot": "overcap",
       "previousBottom": 721.0023786869649,
-      "newBottom": 693.5694444444445,
-      "deltaY": -27.432934242520446
+      "newBottom": 709.8694444444444,
+      "deltaY": -11.132934242520491
     },
     {
       "sku": "GBTulipAmb5SpryGlMatt",
@@ -207,8 +207,8 @@
       "sku": "GBTulipAmb5SpryGlSh",
       "slot": "overcap",
       "previousBottom": 720.1831588962893,
-      "newBottom": 693.5694444444445,
-      "deltaY": -26.613714451844885
+      "newBottom": 709.8694444444444,
+      "deltaY": -10.31371445184493
     },
     {
       "sku": "GBTulipAmb5SpryGlSh",
@@ -246,8 +246,8 @@
       "sku": "GBTulipAmb5SprySlMatt",
       "slot": "overcap",
       "previousBottom": 720.0632730732636,
-      "newBottom": 693.5694444444445,
-      "deltaY": -26.493828628819188
+      "newBottom": 709.8694444444444,
+      "deltaY": -10.193828628819233
     },
     {
       "sku": "GBTulipAmb5SprySlMatt",
@@ -285,8 +285,8 @@
       "sku": "GBTulipAmb5SprySlSh",
       "slot": "overcap",
       "previousBottom": 719.1341579448144,
-      "newBottom": 693.5694444444445,
-      "deltaY": -25.564713500369976
+      "newBottom": 709.8694444444444,
+      "deltaY": -9.264713500370021
     },
     {
       "sku": "GBTulipAmb5SprySlSh",
@@ -324,8 +324,8 @@
       "sku": "GBTulip6SpryBlkSh",
       "slot": "overcap",
       "previousBottom": 719.1241674595624,
-      "newBottom": 688.1,
-      "deltaY": -31.024167459562364
+      "newBottom": 704.4,
+      "deltaY": -14.724167459562409
     },
     {
       "sku": "GBTulip6SpryBlkSh",
@@ -363,8 +363,8 @@
       "sku": "GBTulip6SpryBluMatt",
       "slot": "overcap",
       "previousBottom": 718.1950523311133,
-      "newBottom": 688.1,
-      "deltaY": -30.095052331113266
+      "newBottom": 704.4,
+      "deltaY": -13.795052331113311
     },
     {
       "sku": "GBTulip6SpryBluMatt",
@@ -402,8 +402,8 @@
       "sku": "GBTulip6SpryCuMatt",
       "slot": "overcap",
       "previousBottom": 720.0632730732636,
-      "newBottom": 688.1,
-      "deltaY": -31.963273073263622
+      "newBottom": 704.4,
+      "deltaY": -15.663273073263667
     },
     {
       "sku": "GBTulip6SpryCuMatt",
@@ -441,8 +441,8 @@
       "sku": "GBTulip6SpryGlMatt",
       "slot": "overcap",
       "previousBottom": 721.0023786869649,
-      "newBottom": 688.1,
-      "deltaY": -32.90237868696488
+      "newBottom": 704.4,
+      "deltaY": -16.602378686964926
     },
     {
       "sku": "GBTulip6SpryGlMatt",
@@ -480,8 +480,8 @@
       "sku": "GBTulip6SpryGlSh",
       "slot": "overcap",
       "previousBottom": 720.1831588962893,
-      "newBottom": 688.1,
-      "deltaY": -32.08315889628932
+      "newBottom": 704.4,
+      "deltaY": -15.783158896289365
     },
     {
       "sku": "GBTulip6SpryGlSh",
@@ -519,8 +519,8 @@
       "sku": "GBTulip6SprySlMatt",
       "slot": "overcap",
       "previousBottom": 720.0632730732636,
-      "newBottom": 688.1,
-      "deltaY": -31.963273073263622
+      "newBottom": 704.4,
+      "deltaY": -15.663273073263667
     },
     {
       "sku": "GBTulip6SprySlMatt",
@@ -558,8 +558,8 @@
       "sku": "GBTulip6SprySlSh",
       "slot": "overcap",
       "previousBottom": 719.1341579448144,
-      "newBottom": 688.1,
-      "deltaY": -31.03415794481441
+      "newBottom": 704.4,
+      "deltaY": -14.734157944814456
     },
     {
       "sku": "GBTulip6SprySlSh",

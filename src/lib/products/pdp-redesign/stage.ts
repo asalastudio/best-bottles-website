@@ -48,6 +48,8 @@ export type PartBox = { x: number; y: number; width: number; height: number };
 
 export type KitPartLike = {
     opacity?: number;
+    /** Blend seated internals through tinted glass without painting over its reflections. */
+    blendMode?: "multiply";
     /** Permanent bottom trim in image space, retained when the part is lifted. */
     trimBottomPct?: number;
     slot: string;
@@ -85,6 +87,7 @@ export type KitLike = {
 
 export type StagePart = {
     opacity?: number;
+    blendMode?: "multiply";
     key: string;
     slot: string;
     url: string;
@@ -345,6 +348,7 @@ export function stageLayout(
             // between glass and hardware). CSS z-index requires an integer.
             zIndex: index + 1,
             opacity: part.opacity,
+            blendMode: part.blendMode,
             ...(part.box ? {
                 box: {
                     leftPct: (part.box.x / canvas.width) * 100,

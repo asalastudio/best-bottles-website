@@ -1,6 +1,6 @@
 # Tulip shoulder and tube review
 
-The user reference shows the sprayer bottom above the rounded shoulder with a small neck band visible. This local revision raises the sprayer and assembled overcap to each body's existing shoulder landmark. All component dimensions and artwork remain unchanged. The two masters remain separate: 5 ml amber and 6 ml clear.
+The user reference shows the sprayer bottom above the rounded shoulder with a small neck band visible. This local revision raises the sprayer to each body's existing shoulder landmark. The later closed-overcap correction seats the overcap 16.3 canvas pixels lower to meet the shoulder and cover the neck band. All component dimensions and artwork remain unchanged. The two masters remain separate: 5 ml amber and 6 ml clear.
 
 The clear tube previously extended into the thick glass base. Both tube endpoints are now registered above their own interior floor: clear at canvas y=982, amber at y=1009. Each has an 8 px clearance from the visually registered floor. These are artwork landmarks, not manufacturer depth measurements. Permanent layer clipping trims only the lower tube and preserves its diameter, bend and pump mechanism. The same trim applies in exploded view and the standalone builder.
 

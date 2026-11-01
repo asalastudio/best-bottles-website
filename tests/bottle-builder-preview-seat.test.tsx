@@ -186,3 +186,16 @@ it("trims the tube above the glass floor without scaling its mechanism or width"
     expect(Number(image.getAttribute("height"))).toBe(tube.image.height);
     expect(Number(image.getAttribute("width"))).toBe(tube.image.width);
 });
+
+
+it("uses the amber tube blend in the builder without tinting the bottle or hardware", () => {
+    const amber = structuredClone(config);
+    amber.color = "Amber";
+    const tube = amber.kit!.parts.find(part => part.slot === "diptube")!;
+    tube.blendMode = "multiply";
+    tube.opacity = .5;
+    act(() => root.render(<BuilderImage config={amber} parts={previewParts(amber, "complete")} stage="complete" label="amber tube" />));
+    expect((el.querySelector('[data-builder-layer="diptube"]') as SVGImageElement).style.mixBlendMode).toBe("multiply");
+    expect((el.querySelector('[data-builder-layer="diptube"]') as SVGImageElement).style.opacity).toBe("0.5");
+    expect((el.querySelector('[data-builder-layer="sprayer"]') as SVGImageElement).style.mixBlendMode).toBe("");
+});
