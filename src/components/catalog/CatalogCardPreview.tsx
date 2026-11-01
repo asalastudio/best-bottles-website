@@ -1,6 +1,6 @@
 "use client";
 
-import { cylinder9MasterSku } from "@/lib/products/cylinder9-master";
+import { cylinderMasterSku } from "@/lib/products/cylinder-master";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-heroes";
 import { capSwapFraming, capSwapPlateBox, capSwapPlateUrl } from "@/lib/products/catalog-cap-swap";
@@ -49,7 +49,7 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     const [heroHovered, setHeroHovered] = useState(false);
     const [failed, setFailed] = useState<Set<string>>(() => new Set());
     const masterSku = process.env.NODE_ENV === "development"
-        ? cylinder9MasterSku(skuOf(selected) ?? catalogHero?.websiteSku ?? skuOf(variants[0])) : null;
+        ? cylinderMasterSku(skuOf(selected) ?? catalogHero?.websiteSku ?? skuOf(variants[0])) : null;
     const skus = [...new Set([catalogHero ? null : skuOf(variants[0]), skuOf(selected)].filter((sku): sku is string => Boolean(sku)))];
     // The approved hero already supplies the default image. Fetch a plate only
     // for a selected finish, or for a card that needs its primary fallback.

@@ -40,19 +40,30 @@ describe("5 ml fine-mist review registration", () => {
     });
     it("seats the visible hardware bottom at the common shoulder and preserves source aspect", () => {
         for (const kit of Object.values(review.rows)) for (const p of kit.parts.filter(p => ["sprayer", "overcap"].includes(p.slot))) {
-            expect(p.bounds.bottom).toBeCloseTo(kit.glassSizing!.landmarkY!, 5);
+            expect(p.bounds.bottom).toBeCloseTo(kit.glassSizing!.landmarkY! - 21, 5);
             expect((p.bounds.left + p.bounds.right) / 2).toBeCloseTo(kit.anchors.axisX, 5);
             expect(p.box!.width / p.image.width).toBeCloseTo(p.box!.height / p.image.height, 5);
         }
     });
+    it("keeps overcaps close to the collar width while covering the actuator", () => {
+        for (const kit of Object.values(review.rows)) {
+            const head = kit.parts.find(p => p.slot === "sprayer")!.bounds;
+            const cap = kit.parts.find(p => p.slot === "overcap")!.bounds;
+            expect((cap.right - cap.left) / (head.right - head.left)).toBeGreaterThanOrEqual(1.019);
+            expect((cap.right - cap.left) / (head.right - head.left)).toBeLessThan(1.05);
+            expect(cap.bottom - cap.top).toBeGreaterThan(head.bottom - head.top);
+        }
+    });
+
     it("serves identical review layers to the local PDP and builder without altering other kits", () => {
         vi.stubEnv("NODE_ENV", "development"); vi.stubEnv("VERCEL", ""); vi.stubEnv("BUILDER_LOCAL_KITS", "");
         const actual = readLocalComponentKits()!;
         for (const sku of index.skus) {
-            expect(actual[sku]).toEqual(review.rows[sku]);
+            expect(actual[sku].parts.filter(p => p.slot !== "body")).toEqual(review.rows[sku].parts.filter(p => p.slot !== "body"));
+            expect(actual[sku].anchors).toEqual(review.rows[sku].anchors);
             expect(localPdpComponentKits("localhost:3010", undefined, [{ websiteSku: sku }])[sku]).toEqual(actual[sku]);
         }
-        for (const sku of Object.keys(before).filter(sku => !sku.includes("Spry"))) expect(actual[sku]).toEqual(before[sku]);
+        for (const sku of Object.keys(before).filter(sku => !sku.includes("Spry") && !sku.startsWith("GBCylBlu5"))) expect(actual[sku]).toEqual(before[sku]);
         vi.stubEnv("VERCEL", "1");
         expect(readLocalComponentKits()).toBeNull();
     });

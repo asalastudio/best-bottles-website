@@ -74,7 +74,7 @@ describe("bottle requests shared by the tile prefetch and the pick", () => {
         const fetcher = vi.fn(async (_url: string) => ({ ok: true, json: async () => ({ kits: {} }) }));
         vi.stubGlobal("fetch", fetcher);
         const { loadBodyKits } = await import("@/components/bottle-builder/builder-requests");
-        const index = JSON.parse(readFileSync("src/lib/products/cylinder5-sprayer-index.json", "utf8"));
+        const index = JSON.parse(readFileSync("src/lib/products/cylinder5-master-index.json", "utf8"));
         await loadBodyKits("Cylinder", "cylinder-5ml|13-415|Glass Bottle");
         expect(fetcher.mock.calls[0][0]).toContain(`media=reviewed-masters-${index.version}`);
     });

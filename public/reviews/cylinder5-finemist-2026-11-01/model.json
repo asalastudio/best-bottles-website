@@ -1,5 +1,5 @@
 {
-  "version": "15a83f894e25",
+  "version": "9f0a75b9deee",
   "configurations": [
     {
       "websiteSku": "GBCyl5SpryBlkMatt",
@@ -62,56 +62,56 @@
       "productGroupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
       "glassLabel": "Cobalt Blue",
       "finishLabel": "Shiny Silver",
-      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png"
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
     },
     {
       "websiteSku": "GBCylBlu5SpryBlkSh",
       "productGroupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
       "glassLabel": "Cobalt Blue",
       "finishLabel": "Shiny Black",
-      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png"
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
     },
     {
       "websiteSku": "GBCylBlu5SpryGlSh",
       "productGroupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
       "glassLabel": "Cobalt Blue",
       "finishLabel": "Shiny Gold",
-      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png"
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
     },
     {
       "websiteSku": "GBCylBlu5SpryGlMatt",
       "productGroupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
       "glassLabel": "Cobalt Blue",
       "finishLabel": "Matte Gold",
-      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png"
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
     },
     {
       "websiteSku": "GBCylBlu5SpryBluMatt",
       "productGroupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
       "glassLabel": "Cobalt Blue",
       "finishLabel": "Matte Blue",
-      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png"
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
     },
     {
       "websiteSku": "GBCylBlu5SpryCuMatt",
       "productGroupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
       "glassLabel": "Cobalt Blue",
       "finishLabel": "Matte Copper",
-      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png"
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
     },
     {
       "websiteSku": "GBCylBlu5SprySlMatt",
       "productGroupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
       "glassLabel": "Cobalt Blue",
       "finishLabel": "Matte Silver",
-      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png"
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg"
     }
   ],
   "tubeAsset": {
-    "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
-    "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
-    "bytes": 3437610,
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.03ff39558342.svg",
+    "sha256": "03ff39558342a2aca5841d6e8686bca12d76c89b10a065f93d9c0de778e10c9f",
+    "bytes": 3437600,
     "width": 180,
-    "height": 1314.4927248521285
+    "height": 1385.4694126067
   }
 }

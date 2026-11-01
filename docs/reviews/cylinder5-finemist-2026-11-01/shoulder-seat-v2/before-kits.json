@@ -1,0 +1,3351 @@
+{
+  "version": "15a83f894e25",
+  "rows": {
+    "GBCyl5SpryBlkMatt": {
+      "sku": "GBCyl5SpryBlkMatt",
+      "familyId": "register:cylinder-5ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+            "key": "cylinder5-clear-candidate-v3.3d366e116958.png",
+            "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+            "bytes": 1246630,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 344.8791720263,
+            "y": 488.79150508069336,
+            "width": 308.55372528392115,
+            "height": 580.9857343693964
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-01",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-01",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 417.36069756357085,
+            "top": 320.1697740171638,
+            "right": 582.6393024364291,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-sprayer.809c14cf93e1.svg",
+            "sha256": "809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f",
+            "bytes": 299364,
+            "width": 524,
+            "height": 1048,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.3987438807824,
+            "y": 313.2141613872439,
+            "width": 173.55909609895338,
+            "height": 347.11819219790675
+          },
+          "componentId": "CMP-CAP-BLK-13-415-01"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 405.68663603239395,
+            "top": 284.17221003569745,
+            "right": 594.3133639676059,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-overcap.cd9e1c80f58d.svg",
+            "sha256": "cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd",
+            "bytes": 64030,
+            "width": 217,
+            "height": 394,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 399.1500662524609,
+            "y": 276.7018445729168,
+            "width": 202.6336631779258,
+            "height": 367.91549904194824
+          },
+          "componentId": "CMP-CAP-BLK-13-415-01"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-BLK-13-415-01"
+        ],
+        "seatSignature": "24a1080d1d4776",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCyl5SprySlMatt": {
+      "sku": "GBCyl5SprySlMatt",
+      "familyId": "register:cylinder-5ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+            "key": "cylinder5-clear-candidate-v3.3d366e116958.png",
+            "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+            "bytes": 1246630,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 344.8791720263,
+            "y": 488.79150508069336,
+            "width": 308.55372528392115,
+            "height": 580.9857343693964
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.49066098716355,
+            "top": 328.5313919792817,
+            "right": 584.5093390128364,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-sprayer.40b457cd8831.svg",
+            "sha256": "40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd",
+            "bytes": 358123,
+            "width": 562,
+            "height": 1028,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.79569770867266,
+            "y": 321.0194507336962,
+            "width": 175.90462416745956,
+            "height": 321.7614833525773
+          },
+          "componentId": "CMP-CAP-SLV-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 407.0873295566654,
+            "top": 288.84118844993543,
+            "right": 592.9126704433347,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-overcap.48fe1f6f78e9.svg",
+            "sha256": "48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc",
+            "bytes": 55886,
+            "width": 217,
+            "height": 397,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 397.74937272818954,
+            "y": 275.7680488900692,
+            "width": 202.6336631779258,
+            "height": 370.71688609049096
+          },
+          "componentId": "CMP-CAP-SLV-13-415-02"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-02"
+        ],
+        "seatSignature": "39b0adcb1b3d0c",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCyl5SpryBlkSh": {
+      "sku": "GBCyl5SpryBlkSh",
+      "familyId": "register:cylinder-5ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+            "key": "cylinder5-clear-candidate-v3.3d366e116958.png",
+            "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+            "bytes": 1246630,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 344.8791720263,
+            "y": 488.79150508069336,
+            "width": 308.55372528392115,
+            "height": 580.9857343693964
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 417.67993760834435,
+            "top": 325.8973347107434,
+            "right": 582.3200623916557,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-sprayer.d600b45fd94f.svg",
+            "sha256": "d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489",
+            "bytes": 394555,
+            "width": 584,
+            "height": 1085,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.76826346890766,
+            "y": 321.7591628131377,
+            "width": 172.62088487155089,
+            "height": 320.7083220644396
+          },
+          "componentId": "CMP-CAP-BLK-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 409.42197064599065,
+            "top": 284.17280190656334,
+            "right": 590.5780293540093,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-overcap.dd88361f3fed.svg",
+            "sha256": "dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d",
+            "bytes": 56369,
+            "width": 235,
+            "height": 394,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 403.8192059436808,
+            "y": 277.6362430872018,
+            "width": 219.44161750713607,
+            "height": 367.9148821183473
+          },
+          "componentId": "CMP-CAP-BLK-13-415-02"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-BLK-13-415-02"
+        ],
+        "seatSignature": "065d2254125e3f",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCyl5SpryGlSh": {
+      "sku": "GBCyl5SpryGlSh",
+      "familyId": "register:cylinder-5ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+            "key": "cylinder5-clear-candidate-v3.3d366e116958.png",
+            "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+            "bytes": 1246630,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 344.8791720263,
+            "y": 488.79150508069336,
+            "width": 308.55372528392115,
+            "height": 580.9857343693964
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-03",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-03",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419.2268336504916,
+            "top": 330.72419699128505,
+            "right": 580.7731663495084,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-sprayer.a31e7cdc0a03.svg",
+            "sha256": "a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc",
+            "bytes": 1312217,
+            "width": 570,
+            "height": 1060,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.6496135426578,
+            "y": 324.0562432963913,
+            "width": 172.76061845861085,
+            "height": 321.2741325721535
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-03"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 408.9553693761044,
+            "top": 281.3725754063999,
+            "right": 591.0446306238956,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-overcap.2d8f48c7c9b5.svg",
+            "sha256": "2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33",
+            "bytes": 144369,
+            "width": 210,
+            "height": 397,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 402.41883179285037,
+            "y": 273.90224673982385,
+            "width": 196.09612749762132,
+            "height": 370.71506007883653
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-03"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-03"
+        ],
+        "seatSignature": "60b00b90072d3b",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCyl5SprySlSh": {
+      "sku": "GBCyl5SprySlSh",
+      "familyId": "register:cylinder-5ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+            "key": "cylinder5-clear-candidate-v3.3d366e116958.png",
+            "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+            "bytes": 1246630,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 344.8791720263,
+            "y": 488.79150508069336,
+            "width": 308.55372528392115,
+            "height": 580.9857343693964
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-03",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-03",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419.2268336504916,
+            "top": 330.72419699128505,
+            "right": 580.7731663495084,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-sprayer.3fff04080b71.svg",
+            "sha256": "3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7",
+            "bytes": 829486,
+            "width": 570,
+            "height": 1060,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.6496135426578,
+            "y": 324.0562432963913,
+            "width": 172.76061845861085,
+            "height": 321.2741325721535
+          },
+          "componentId": "CMP-CAP-SLV-13-415-03"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 411.28879499875296,
+            "top": 284.16976246291176,
+            "right": 588.7112050012471,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-overcap.0b1dc7e7b639.svg",
+            "sha256": "0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866",
+            "bytes": 64742,
+            "width": 206,
+            "height": 393,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 405.68598205130576,
+            "y": 278.56694951546456,
+            "width": 192.36324452901997,
+            "height": 366.9842480577905
+          },
+          "componentId": "CMP-CAP-SLV-13-415-03"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-03"
+        ],
+        "seatSignature": "aecca8cb1e4f68",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCyl5SpryBluMatt": {
+      "sku": "GBCyl5SpryBluMatt",
+      "familyId": "register:cylinder-5ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+            "key": "cylinder5-clear-candidate-v3.3d366e116958.png",
+            "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+            "bytes": 1246630,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 344.8791720263,
+            "y": 488.79150508069336,
+            "width": 308.55372528392115,
+            "height": 580.9857343693964
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-13-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-13-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.6280333664908,
+            "top": 336.77855540174556,
+            "right": 579.3719666335093,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-sprayer.c6e4df7cab34.svg",
+            "sha256": "c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0",
+            "bytes": 838113,
+            "width": 528,
+            "height": 993,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 417.8266698382493,
+            "y": 333.0434040307569,
+            "width": 164.34666032350142,
+            "height": 309.0837759493123
+          },
+          "componentId": "CMP-CAP-13-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 409.4222649177654,
+            "top": 282.30636648972194,
+            "right": 590.5777350822347,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-overcap.5abe54c88dca.svg",
+            "sha256": "5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0",
+            "bytes": 139248,
+            "width": 210,
+            "height": 394,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 403.81951841783336,
+            "y": 276.7036199897899,
+            "width": 196.09612749762132,
+            "height": 367.9136868288705
+          },
+          "componentId": "CMP-CAP-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-13-415"
+        ],
+        "seatSignature": "c77a906f1696c4",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCyl5SpryCuMatt": {
+      "sku": "GBCyl5SpryCuMatt",
+      "familyId": "register:cylinder-5ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+            "key": "cylinder5-clear-candidate-v3.3d366e116958.png",
+            "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+            "bytes": 1246630,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 344.8791720263,
+            "y": 488.79150508069336,
+            "width": 308.55372528392115,
+            "height": 580.9857343693964
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-SPR-MTCP-13-415-07",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-SPR-MTCP-13-415-07",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419.2265324230034,
+            "top": 329.32219434258496,
+            "right": 580.7734675769966,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-sprayer.682c91008417.svg",
+            "sha256": "682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600",
+            "bytes": 444974,
+            "width": 555,
+            "height": 1031,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5619516633665,
+            "y": 325.9629953129178,
+            "width": 169.48686013320648,
+            "height": 314.84856359880337
+          },
+          "componentId": "CMP-SPR-MTCP-13-415-07"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 407.5557381488035,
+            "top": 285.1117587793463,
+            "right": 592.4442618511964,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-overcap.0056c53ff25d.svg",
+            "sha256": "0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627",
+            "bytes": 121536,
+            "width": 214,
+            "height": 395,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 399.1517143441493,
+            "y": 277.6415153974314,
+            "width": 199.82901046622266,
+            "height": 368.8432669820465
+          },
+          "componentId": "CMP-SPR-MTCP-13-415-07"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-SPR-MTCP-13-415-07"
+        ],
+        "seatSignature": "e6e38f641b45af",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCyl5SpryGlMatt": {
+      "sku": "GBCyl5SpryGlMatt",
+      "familyId": "register:cylinder-5ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+            "key": "cylinder5-clear-candidate-v3.3d366e116958.png",
+            "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+            "bytes": 1246630,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 344.8791720263,
+            "y": 488.79150508069336,
+            "width": 308.55372528392115,
+            "height": 580.9857343693964
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419.69462272665487,
+            "top": 333.34872645528765,
+            "right": 580.3053772733451,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-sprayer.e853d044d5b8.svg",
+            "sha256": "e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481",
+            "bytes": 949858,
+            "width": 525,
+            "height": 976,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.8435442435775,
+            "y": 330.81443447033,
+            "width": 166.3129115128449,
+            "height": 309.18362216483166
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 407.08884793743385,
+            "top": 284.1779783566069,
+            "right": 592.9111520625662,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-overcap.f3ef10365bdc.svg",
+            "sha256": "f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226",
+            "bytes": 142776,
+            "width": 214,
+            "height": 396,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 400.5523849782584,
+            "y": 277.6415153974314,
+            "width": 199.82901046622266,
+            "height": 369.7770474047859
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-02"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-02"
+        ],
+        "seatSignature": "a37b76950a3492",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCylBlu5SprySlSh": {
+      "sku": "GBCylBlu5SprySlSh",
+      "familyId": "register:cylinder-5ml-13-415|Cobalt Blue",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "key": "cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "sha256": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+            "bytes": 1209733,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 346.3659576190476,
+            "y": 489.830989047619,
+            "width": 307.2680847619048,
+            "height": 578.5649604761904
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-03",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419.2268336504916,
+            "top": 330.72419699128505,
+            "right": 580.7731663495084,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-sprayer.3fff04080b71.svg",
+            "sha256": "3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7",
+            "bytes": 829486,
+            "width": 570,
+            "height": 1060,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.6496135426578,
+            "y": 324.0562432963913,
+            "width": 172.76061845861085,
+            "height": 321.2741325721535
+          },
+          "componentId": "CMP-CAP-SLV-13-415-03"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 411.28879499875296,
+            "top": 284.16976246291176,
+            "right": 588.7112050012471,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-overcap.0b1dc7e7b639.svg",
+            "sha256": "0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866",
+            "bytes": 64742,
+            "width": 206,
+            "height": 393,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 405.68598205130576,
+            "y": 278.56694951546456,
+            "width": 192.36324452901997,
+            "height": 366.9842480577905
+          },
+          "componentId": "CMP-CAP-SLV-13-415-03"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Cobalt Blue",
+        "glass": "Cobalt Blue",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-03"
+        ],
+        "seatSignature": "8d6231731c4e30",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCylBlu5SpryBlkSh": {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "familyId": "register:cylinder-5ml-13-415|Cobalt Blue",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "key": "cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "sha256": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+            "bytes": 1209733,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 346.3659576190476,
+            "y": 489.830989047619,
+            "width": 307.2680847619048,
+            "height": 578.5649604761904
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 417.67993760834435,
+            "top": 325.8973347107434,
+            "right": 582.3200623916557,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-sprayer.d600b45fd94f.svg",
+            "sha256": "d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489",
+            "bytes": 394555,
+            "width": 584,
+            "height": 1085,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.76826346890766,
+            "y": 321.7591628131377,
+            "width": 172.62088487155089,
+            "height": 320.7083220644396
+          },
+          "componentId": "CMP-CAP-BLK-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 409.42197064599065,
+            "top": 284.17280190656334,
+            "right": 590.5780293540093,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-overcap.dd88361f3fed.svg",
+            "sha256": "dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d",
+            "bytes": 56369,
+            "width": 235,
+            "height": 394,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 403.8192059436808,
+            "y": 277.6362430872018,
+            "width": 219.44161750713607,
+            "height": 367.9148821183473
+          },
+          "componentId": "CMP-CAP-BLK-13-415-02"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Cobalt Blue",
+        "glass": "Cobalt Blue",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-BLK-13-415-02"
+        ],
+        "seatSignature": "d016455c0da1e7",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCylBlu5SpryGlSh": {
+      "sku": "GBCylBlu5SpryGlSh",
+      "familyId": "register:cylinder-5ml-13-415|Cobalt Blue",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "key": "cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "sha256": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+            "bytes": 1209733,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 346.3659576190476,
+            "y": 489.830989047619,
+            "width": 307.2680847619048,
+            "height": 578.5649604761904
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-03",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419.2268336504916,
+            "top": 330.72419699128505,
+            "right": 580.7731663495084,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-sprayer.a31e7cdc0a03.svg",
+            "sha256": "a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc",
+            "bytes": 1312217,
+            "width": 570,
+            "height": 1060,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.6496135426578,
+            "y": 324.0562432963913,
+            "width": 172.76061845861085,
+            "height": 321.2741325721535
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-03"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 408.9553693761044,
+            "top": 281.3725754063999,
+            "right": 591.0446306238956,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-overcap.2d8f48c7c9b5.svg",
+            "sha256": "2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33",
+            "bytes": 144369,
+            "width": 210,
+            "height": 397,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 402.41883179285037,
+            "y": 273.90224673982385,
+            "width": 196.09612749762132,
+            "height": 370.71506007883653
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-03"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Cobalt Blue",
+        "glass": "Cobalt Blue",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-03"
+        ],
+        "seatSignature": "349dd4680303d3",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCylBlu5SpryGlMatt": {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "familyId": "register:cylinder-5ml-13-415|Cobalt Blue",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "key": "cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "sha256": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+            "bytes": 1209733,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 346.3659576190476,
+            "y": 489.830989047619,
+            "width": 307.2680847619048,
+            "height": 578.5649604761904
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419.69462272665487,
+            "top": 333.34872645528765,
+            "right": 580.3053772733451,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-sprayer.e853d044d5b8.svg",
+            "sha256": "e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481",
+            "bytes": 949858,
+            "width": 525,
+            "height": 976,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.8435442435775,
+            "y": 330.81443447033,
+            "width": 166.3129115128449,
+            "height": 309.18362216483166
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 407.08884793743385,
+            "top": 284.1779783566069,
+            "right": 592.9111520625662,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-overcap.f3ef10365bdc.svg",
+            "sha256": "f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226",
+            "bytes": 142776,
+            "width": 214,
+            "height": 396,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 400.5523849782584,
+            "y": 277.6415153974314,
+            "width": 199.82901046622266,
+            "height": 369.7770474047859
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-02"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Cobalt Blue",
+        "glass": "Cobalt Blue",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-02"
+        ],
+        "seatSignature": "bb32824d0dfdea",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCylBlu5SpryBluMatt": {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "familyId": "register:cylinder-5ml-13-415|Cobalt Blue",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "key": "cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "sha256": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+            "bytes": 1209733,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 346.3659576190476,
+            "y": 489.830989047619,
+            "width": 307.2680847619048,
+            "height": 578.5649604761904
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-13-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.6280333664908,
+            "top": 336.77855540174556,
+            "right": 579.3719666335093,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-sprayer.c6e4df7cab34.svg",
+            "sha256": "c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0",
+            "bytes": 838113,
+            "width": 528,
+            "height": 993,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 417.8266698382493,
+            "y": 333.0434040307569,
+            "width": 164.34666032350142,
+            "height": 309.0837759493123
+          },
+          "componentId": "CMP-CAP-13-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 409.4222649177654,
+            "top": 282.30636648972194,
+            "right": 590.5777350822347,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-overcap.5abe54c88dca.svg",
+            "sha256": "5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0",
+            "bytes": 139248,
+            "width": 210,
+            "height": 394,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 403.81951841783336,
+            "y": 276.7036199897899,
+            "width": 196.09612749762132,
+            "height": 367.9136868288705
+          },
+          "componentId": "CMP-CAP-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Cobalt Blue",
+        "glass": "Cobalt Blue",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-13-415"
+        ],
+        "seatSignature": "bce5307717530c",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCylBlu5SpryCuMatt": {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "familyId": "register:cylinder-5ml-13-415|Cobalt Blue",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "key": "cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "sha256": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+            "bytes": 1209733,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 346.3659576190476,
+            "y": 489.830989047619,
+            "width": 307.2680847619048,
+            "height": 578.5649604761904
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-SPR-MTCP-13-415-07",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419.2265324230034,
+            "top": 329.32219434258496,
+            "right": 580.7734675769966,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-sprayer.682c91008417.svg",
+            "sha256": "682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600",
+            "bytes": 444974,
+            "width": 555,
+            "height": 1031,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5619516633665,
+            "y": 325.9629953129178,
+            "width": 169.48686013320648,
+            "height": 314.84856359880337
+          },
+          "componentId": "CMP-SPR-MTCP-13-415-07"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 407.5557381488035,
+            "top": 285.1117587793463,
+            "right": 592.4442618511964,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryCuMatt-overcap.0056c53ff25d.svg",
+            "sha256": "0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627",
+            "bytes": 121536,
+            "width": 214,
+            "height": 395,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 399.1517143441493,
+            "y": 277.6415153974314,
+            "width": 199.82901046622266,
+            "height": 368.8432669820465
+          },
+          "componentId": "CMP-SPR-MTCP-13-415-07"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Cobalt Blue",
+        "glass": "Cobalt Blue",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-SPR-MTCP-13-415-07"
+        ],
+        "seatSignature": "4c628d4c1ec277",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBCylBlu5SprySlMatt": {
+      "sku": "GBCylBlu5SprySlMatt",
+      "familyId": "register:cylinder-5ml-13-415|Cobalt Blue",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 501,
+        "baselineY": 1061,
+        "pxPerMm": 10.49
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 36.5,
+        "baselinePct": 91,
+        "landmarkY": 637.1469781520843,
+        "source": "Jordan caliper measurements 2026-10-31: shoulder 40.10 mm; approved 36.5% family framing and 91% foot preserved"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 407.688,
+            "top": 496.2184,
+            "right": 592.312,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "key": "cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
+            "sha256": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
+            "bytes": 1209733,
+            "width": 914,
+            "height": 1721
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 346.3659576190476,
+            "y": 489.830989047619,
+            "width": 307.2680847619048,
+            "height": 578.5649604761904
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.5550256410256,
+            "y": 616.1669781520843,
+            "width": 53.25692307692308,
+            "height": 388.9213218479157
+          },
+          "bounds": {
+            "left": 474.5550256410256,
+            "top": 616.1669781520843,
+            "right": 527.8119487179487,
+            "bottom": 1005.0883
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
+            "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
+            "bytes": 3437610,
+            "width": 180,
+            "height": 1314.4927248521285,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.49066098716355,
+            "top": 328.5313919792817,
+            "right": 584.5093390128364,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -529.77
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-sprayer.40b457cd8831.svg",
+            "sha256": "40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd",
+            "bytes": 358123,
+            "width": 562,
+            "height": 1028,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.79569770867266,
+            "y": 321.0194507336962,
+            "width": 175.90462416745956,
+            "height": 321.7614833525773
+          },
+          "componentId": "CMP-CAP-SLV-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 407.0873295566654,
+            "top": 288.84118844993543,
+            "right": 592.9126704433347,
+            "bottom": 637.1469781520843
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -863.64
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-overcap.48fe1f6f78e9.svg",
+            "sha256": "48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc",
+            "bytes": 55886,
+            "width": 217,
+            "height": 397,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 397.74937272818954,
+            "y": 275.7680488900692,
+            "width": 202.6336631779258,
+            "height": 370.71688609049096
+          },
+          "componentId": "CMP-CAP-SLV-13-415-02"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-5ml-13-415",
+        "plateKey": "cylinder-5ml-13-415|Cobalt Blue",
+        "glass": "Cobalt Blue",
+        "datum": {
+          "axisX": 500,
+          "seatY": 501,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.49,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-02"
+        ],
+        "seatSignature": "2948246306e864",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    }
+  },
+  "defaultPdpSkus": [
+    "GBCyl5SpryBlkMatt",
+    "GBCyl5SprySlMatt",
+    "GBCyl5SpryBlkSh",
+    "GBCyl5SpryGlSh",
+    "GBCyl5SprySlSh",
+    "GBCyl5SpryBluMatt",
+    "GBCyl5SpryCuMatt",
+    "GBCyl5SpryGlMatt",
+    "GBCylBlu5SprySlSh",
+    "GBCylBlu5SpryBlkSh",
+    "GBCylBlu5SpryGlSh",
+    "GBCylBlu5SpryGlMatt",
+    "GBCylBlu5SpryBluMatt",
+    "GBCylBlu5SpryCuMatt",
+    "GBCylBlu5SprySlMatt"
+  ]
+}

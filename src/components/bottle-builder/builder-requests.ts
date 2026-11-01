@@ -1,4 +1,4 @@
-import cylinder5Sprayers from "@/lib/products/cylinder5-sprayer-index.json";
+import cylinder5Masters from "@/lib/products/cylinder5-master-index.json";
 import { CYLINDER9_MASTER_VERSION } from "@/lib/products/cylinder9-master";
 import type { BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/model";
 
@@ -35,7 +35,7 @@ export function loadBodyConfigurations(family: string, bodyId: string, shop: str
 /** The chosen bottle's kit layers, keyed by configuration id. */
 export function loadBodyKits(family: string, bodyId: string) {
     const pilot = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("assetPreview") === "gpt13" ? "&assetPreview=gpt13" : "";
-    const mediaVersion = bodyId.startsWith("cylinder-5ml|13-415|") ? cylinder5Sprayers.version : CYLINDER9_MASTER_VERSION;
+    const mediaVersion = bodyId.startsWith("cylinder-5ml|13-415|") ? cylinder5Masters.version : CYLINDER9_MASTER_VERSION;
     return load(`/api/bottle-builder/kits?${query(family, bodyId)}&media=reviewed-masters-${mediaVersion}${pilot}`,
         data => {
             const kits = data && typeof data === "object" ? (data as { kits?: unknown }).kits : null;

@@ -12,8 +12,8 @@ import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { resolveImageWithFallback } from "@/lib/products/image-fallback";
 import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-heroes";
 
-import Cylinder9MasterPreview from "./Cylinder9MasterPreview";
-import { cylinder9MasterSku } from "@/lib/products/cylinder9-master";
+import CylinderMasterPreview from "./CylinderMasterPreview";
+import { cylinderMasterSku } from "@/lib/products/cylinder-master";
 
 import styles from "./ProductCardImagePreview.module.css";
 
@@ -197,7 +197,7 @@ export default function ProductCardImagePreview({
         () => previews.filter((preview) => !preview.imageUrl),
         [previews],
     );
-    const canonicalHero = process.env.NODE_ENV === "development" && Boolean(cylinder9MasterSku(catalogHero?.websiteSku ?? auditMeta?.websiteSku ?? previewablePreviews[0]?.websiteSku));
+    const canonicalHero = process.env.NODE_ENV === "development" && Boolean(cylinderMasterSku(catalogHero?.websiteSku ?? auditMeta?.websiteSku ?? previewablePreviews[0]?.websiteSku));
     const fixedHero = Boolean(catalogHero) && !canonicalHero;
     const [selection, setSelection] = useState<{ productHref: string; id: string } | null>(null);
     const [failedImages, setFailedImages] = useState<Set<string>>(() => new Set());
@@ -242,7 +242,7 @@ export default function ProductCardImagePreview({
     const resolvedPhoto = resolvedImageUrl === displayImage.url ? displayImage : fallbackPhoto;
     const resolvedImageAlt = resolvedPhoto.alt;
     const isStudioHero = Boolean(catalogHero && resolvedImageUrl === catalogHero.url);
-    const masterSku = canonicalHero ? cylinder9MasterSku(activePreview?.websiteSku ?? activePreview?.sku ?? catalogHero?.websiteSku ?? auditMeta?.websiteSku) : null;
+    const masterSku = canonicalHero ? cylinderMasterSku(activePreview?.websiteSku ?? activePreview?.sku ?? catalogHero?.websiteSku ?? auditMeta?.websiteSku) : null;
     const linkedHref = masterSku ? `${productHref}${productHref.includes("?") ? "&" : "?"}sku=${encodeURIComponent(masterSku)}` : productHref;
 
     const markImageFailed = (url: string) => {
@@ -308,7 +308,7 @@ export default function ProductCardImagePreview({
                     className="absolute inset-0 z-10"
                     aria-label={`View ${productTitle}`}
                 />
-                {masterSku ? <Cylinder9MasterPreview sku={masterSku} title={productTitle} fallback={photo} /> : photo}
+                {masterSku ? <CylinderMasterPreview sku={masterSku} title={productTitle} fallback={photo} /> : photo}
             </div>
             <ProductCardSwatchRow
                 previewableVariants={fixedHero ? [] : previewablePreviews}

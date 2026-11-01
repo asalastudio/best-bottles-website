@@ -1,0 +1,1723 @@
+{
+  "records": [
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5SprySlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5SprySlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5SprySlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5SpryBluMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5SpryBluMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5SpryBluMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5SpryCuMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5SpryCuMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5SpryCuMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5SpryGlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5SpryGlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5SpryGlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5SprySlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5SprySlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5SprySlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5SpryGlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5SpryGlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5SpryGlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5SpryBluMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5SpryBluMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5SpryBluMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5SpryCuMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5SpryCuMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5SpryCuMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu5SprySlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu5SprySlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu5SprySlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5SprySlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5SprySlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5SprySlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5SprySlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5SprySlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5SprySlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5SpryBluMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5SpryBluMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5SpryBluMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5SpryCuMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5SpryCuMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5SpryCuMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5SpryGlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5SpryGlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5SpryGlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu5SprySlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu5SprySlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Silver",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu5SprySlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu5SpryBlkSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu5SpryBlkSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu5SpryBlkSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu5SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu5SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu5SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlSh&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu5SpryGlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu5SpryGlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Gold",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu5SpryGlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryGlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu5SpryBluMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu5SpryBluMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Blue",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu5SpryBluMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBluMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu5SpryCuMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu5SpryCuMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Copper",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu5SpryCuMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu5SprySlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu5SprySlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "glass": "Cobalt Blue",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu5SprySlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "bodyUrl": "/local-kits/cylinder5-masters-2026-11-01/body-cobalt.e66d97c3587f.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SprySlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl5SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl5SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl5SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl5SprySlMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl5SprySlMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlMatt&from=pdp"
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "roller": null,
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl5SprySlMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SprySlMatt&from=pdp"
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "retriedTimeouts": [
+    {
+      "viewport": "desktop",
+      "sku": "GBCyl5SprySlMatt",
+      "error": "Waiting failed: 45000ms exceeded"
+    }
+  ]
+}

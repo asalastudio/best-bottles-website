@@ -1,6 +1,6 @@
 # 5 ml Cylinder fine-mist sprayer checkpoint
 
-Local review, November 1, 2026. Fifteen existing configurations: eight clear and seven cobalt. No cobalt matte-black SKU was invented.
+Local review, November 1, 2026. The final shoulder/cap adjustment is in `shoulder-seat-v2/`; the cobalt material update is in `../cylinder5-cobalt-material-2026-11-01/`. The original evidence below records the initial sprayer checkpoint. Fifteen existing configurations: eight clear and seven cobalt. No cobalt matte-black SKU was invented.
 
 ## Changes
 

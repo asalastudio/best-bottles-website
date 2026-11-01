@@ -8,7 +8,8 @@ const reference=original.rows.GBCyl5SpryGlMatt,ppm=reference.register.pxPerMm,di
 // The measured 53.23 mm outer height and 48.80 mm depth leave a 4.43 mm base.
 // Allow another 0.9 mm above that interior floor; do not stretch the shaft width.
 const baseThicknessMm=53.23-48.80,tipClearanceMm=baseThicknessMm+0.9;
-const shoulderY=reference.glassSizing.landmarkY,tubeTop=shoulderY-2*ppm,tubeBottom=reference.parts.find(p=>p.slot==='body').bounds.bottom-tipClearanceMm*ppm;
+// Lift to the upper shoulder crest so glass corners do not protrude above the collar.
+const shoulderY=reference.glassSizing.landmarkY-21,tubeTop=shoulderY-2*ppm,tubeBottom=reference.parts.find(p=>p.slot==='body').bounds.bottom-tipClearanceMm*ppm;
 const nativePxPerMm=39/diameterMm,scale=ppm/nativePxPerMm,nativeHeight=(tubeBottom-tubeTop)/scale;
 const raw=fs.readFileSync(dir+'/sources/approved-mechanism.png');
 const svg=Buffer.from(tubeSvg(nativeHeight/TUBE.pxPerMm,'data:image/png;base64,'+raw.toString('base64')));const tubeHash=sha(svg),tubeFile='mechanism-5ml.'+tubeHash.slice(0,12)+'.svg';fs.writeFileSync(out+'/'+tubeFile,svg);
@@ -16,7 +17,9 @@ const tubeAsset={url:'/local-kits/cylinder5-finemist-2026-11-01/'+tubeFile,sha25
 const rows={},checks=[];
 for(const c of inventory){const kit=structuredClone(original.rows[c.sku]);const sourceSku=c.sku.replace('GBCylBlu5','GBCyl5');const body=kit.parts.find(p=>p.slot==='body');
  const registered=[];
- for(const slot of ['sprayer','overcap']){const part=structuredClone(kit.parts.find(p=>p.slot===slot)),a=hardware[sourceSku+'|'+slot];if(!a)throw Error('Missing PSD layer '+c.sku);const s=part.box.width/a.width,[l,t,r,b]=a.ink;part.box={x:kit.anchors.axisX-(l+r)/2*s,y:shoulderY-b*s,width:a.width*s,height:a.height*s};part.bounds={left:part.box.x+l*s,top:part.box.y+t*s,right:part.box.x+r*s,bottom:shoulderY};const{ink,source,sourceSha256,excludedOpaqueSpecks,...image}=a;part.image={...image,key:''};registered.push(part);}
+ for(const slot of ['sprayer','overcap']){const part=structuredClone(kit.parts.find(p=>p.slot===slot)),a=hardware[sourceSku+'|'+slot];if(!a)throw Error('Missing PSD layer '+c.sku);let s=part.box.width/a.width;const [l,t,r,b]=a.ink;
+ if(slot==='overcap'){const h=registered.find(p=>p.slot==='sprayer').bounds;const targetWidth=(h.right-h.left)*1.02,minHeight=h.bottom-h.top+0.3*ppm;s=Math.max(targetWidth/(r-l),minHeight/(b-t));}
+ part.box={x:kit.anchors.axisX-(l+r)/2*s,y:shoulderY-b*s,width:a.width*s,height:a.height*s};part.bounds={left:part.box.x+l*s,top:part.box.y+t*s,right:part.box.x+r*s,bottom:shoulderY};const{ink,source,sourceSha256,excludedOpaqueSpecks,...image}=a;part.image={...image,key:''};registered.push(part);}
  const head=registered.find(p=>p.slot==='sprayer'),cid=head.componentId;
  const tube={slot:'diptube',variantKey:null,zOrder:2,explodeIndex:1,box:{x:kit.anchors.axisX-86*scale,y:tubeTop,width:180*scale,height:tubeBottom-tubeTop},bounds:{left:kit.anchors.axisX-86*scale,top:tubeTop,right:kit.anchors.axisX+94*scale,bottom:tubeBottom},assembled:{x:0,y:0},exploded:{dx:0,dy:0},image:{...tubeAsset,key:''},image2x:null,mask:null,derivation:'psd-layer',componentId:cid};
  const tubes=c.glass==='Clear'?[{...structuredClone(tube),views:['sidecar','capon'],opacity:0.62},{...structuredClone(tube),views:['exploded']}]:[{...tube,views:['exploded']}];

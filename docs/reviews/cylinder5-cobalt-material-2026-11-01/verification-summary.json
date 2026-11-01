@@ -1,0 +1,14 @@
+{
+  "version": "9f0a75b9deee",
+  "targetedUnitTests": 83,
+  "typecheckExitCode": 0,
+  "cobaltPdpStates": 210,
+  "cobaltBuilderSelections": 35,
+  "finalSprayerPdpStates": 90,
+  "finalSprayerBuilderSelections": 15,
+  "sharedBuilderApiKits": 71,
+  "catalogVisibleSelections": 30,
+  "initialAutomatedTimeouts": 4,
+  "unresolvedTimeouts": 0,
+  "deployed": false
+}

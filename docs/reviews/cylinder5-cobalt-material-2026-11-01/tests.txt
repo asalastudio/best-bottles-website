@@ -1,0 +1,20 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9
+
+ ✓ tests/gpt13-local-review.test.ts (4 tests) 5ms
+ ✓ tests/local-component-kits.test.ts (5 tests) 7ms
+ ✓ tests/fixed-stage-placement.test.ts (4 tests) 7ms
+ ✓ tests/builder-gpt13-preview.test.ts (2 tests) 6ms
+ ✓ tests/pdp-redesign-stage.test.ts (15 tests) 114ms
+ ✓ tests/cylinder9-master-library.test.ts (4 tests) 147ms
+ ✓ tests/cylinder5-sprayer-review.test.ts (6 tests) 339ms
+   ✓ 5 ml fine-mist review registration > serves identical review layers to the local PDP and builder without altering other kits  304ms
+ ✓ tests/bottle-builder-load-speed.test.tsx (10 tests) 253ms
+ ✓ tests/cylinder5-cobalt-material.test.ts (4 tests) 2093ms
+   ✓ one 5 ml cobalt material master > uses the same source in normal navigation, old gpt13 bookmarks, and the builder  2028ms
+
+ Test Files  9 passed (9)
+      Tests  54 passed (54)
+   Start at  09:30:33
+   Duration  2.57s (transform 624ms, setup 0ms, collect 1.05s, tests 2.97s, environment 1.21s, prepare 1.02s)
+

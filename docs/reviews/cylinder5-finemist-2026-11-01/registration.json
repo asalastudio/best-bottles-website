@@ -1,20 +1,20 @@
 {
-  "version": "15a83f894e25",
-  "shoulderY": 637.1469781520843,
+  "version": "3a55d266f3a2",
+  "shoulderY": 616.1469781520843,
   "diameterMm": 1.1,
   "baseThicknessMm": 4.43,
   "tipClearanceMm": 5.33,
-  "tubeTop": 616.1669781520843,
+  "tubeTop": 595.1669781520843,
   "tubeBottom": 1005.0883,
-  "nativeHeight": 1314.4927248521285,
+  "nativeHeight": 1385.4694126067,
   "scale": 0.2958717948717949,
   "sourceSha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f",
   "tubeAsset": {
-    "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.8229291f81f9.svg",
-    "sha256": "8229291f81f9337828c327503724d63be487a1866ae6b7480ede184bad55fa80",
-    "bytes": 3437610,
+    "url": "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.03ff39558342.svg",
+    "sha256": "03ff39558342a2aca5841d6e8686bca12d76c89b10a065f93d9c0de778e10c9f",
+    "bytes": 3437600,
     "width": 180,
-    "height": 1314.4927248521285
+    "height": 1385.4694126067
   },
   "checks": [
     {
@@ -23,7 +23,7 @@
       "finish": "Matte Black",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
       "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -33,7 +33,7 @@
       "finish": "Matte Silver",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
       "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -43,7 +43,7 @@
       "finish": "Shiny Black",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
       "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -53,7 +53,7 @@
       "finish": "Shiny Gold",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
       "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -63,7 +63,7 @@
       "finish": "Shiny Silver",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
       "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -73,7 +73,7 @@
       "finish": "Matte Blue",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
       "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -83,7 +83,7 @@
       "finish": "Matte Copper",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
       "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -93,7 +93,7 @@
       "finish": "Matte Gold",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png",
       "bodyHash": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -103,7 +103,7 @@
       "finish": "Shiny Silver",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
       "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -113,7 +113,7 @@
       "finish": "Shiny Black",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
       "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -123,7 +123,7 @@
       "finish": "Shiny Gold",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
       "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -133,7 +133,7 @@
       "finish": "Matte Gold",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
       "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -143,7 +143,7 @@
       "finish": "Matte Blue",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
       "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -153,7 +153,7 @@
       "finish": "Matte Copper",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
       "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     },
@@ -163,7 +163,7 @@
       "finish": "Matte Silver",
       "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/cylinder5-cobalt-candidate-v3.c51b7b6df61f.png",
       "bodyHash": "c51b7b6df61f5edad0f5788994689f9b1cb122d00436c99f65b92122c72e0495",
-      "shoulderY": 637.1469781520843,
+      "shoulderY": 616.1469781520843,
       "tipClearanceMm": 5.33,
       "tubeDiameterMm": 1.1
     }

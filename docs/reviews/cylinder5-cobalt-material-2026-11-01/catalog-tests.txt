@@ -1,0 +1,13 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9
+
+ ✓ tests/catalog-card-visual.test.ts (4 tests) 2ms
+ ✓ tests/product-card-variant-previews.test.ts (7 tests) 31ms
+ ✓ tests/catalog-cap-previews.test.ts (14 tests) 33ms
+ ✓ tests/cylinder-catalog-hero-preview.test.ts (4 tests) 126ms
+
+ Test Files  4 passed (4)
+      Tests  29 passed (29)
+   Start at  09:31:32
+   Duration  3.66s (transform 462ms, setup 0ms, collect 2.71s, tests 193ms, environment 679ms, prepare 343ms)
+

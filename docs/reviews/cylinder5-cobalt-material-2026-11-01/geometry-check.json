@@ -1,0 +1,32 @@
+{
+  "oldBounds": [
+    181,
+    17,
+    734,
+    1704
+  ],
+  "newBounds": [
+    182,
+    19,
+    736,
+    1706
+  ],
+  "oldShape": [
+    1721,
+    914,
+    4
+  ],
+  "newShape": [
+    1721,
+    914,
+    4
+  ],
+  "maskIoU": 0.9906056042590412,
+  "areaChangePercent": 0.2371267362738294,
+  "outlineDisplacement95px": 7.0,
+  "outlineDisplacementMaxPx": 73,
+  "registeredContour95px": 3.5,
+  "registeredContourMaxPxExcludingRimBaseTangencies": 16.5,
+  "displayedWidthApproxPx": 85,
+  "registeredContour95ApproxDisplayedPx": 0.5379746835443038
+}

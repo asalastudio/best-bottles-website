@@ -18,6 +18,7 @@ function readLocalKitReview(): LocalKitReview | null {
         process.env.NODE_ENV === "development" ? "public/local-kits/catalog-followups-2026-10-31/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder5-all71-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder5-finemist-2026-11-01/kits.json" : undefined,
+        process.env.NODE_ENV === "development" ? "public/local-kits/cylinder5-masters-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder9-masters-2026-11-01/kits.json" : undefined];
     const rows: Record<string, BuilderKit> = {};
     const defaults = new Set<string>();
@@ -40,7 +41,16 @@ export function localGpt13ComponentKits(host: string | null, flag: unknown): Rec
         || !/^(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/.test(host ?? "")) return {};
     try {
         const review = JSON.parse(readFileSync("public/local-kits/gpt-13-415-2026-10-31/kits.json", "utf8")) as LocalKitReview;
-        return review.rows ?? {};
+        const rows = { ...review.rows };
+        // Old bookmarked pilot URLs must resolve the current 5 ml master too.
+        // Other families keep their explicit pilot artwork.
+        try {
+            const current = JSON.parse(readFileSync("public/local-kits/cylinder5-masters-2026-11-01/kits.json", "utf8")) as LocalKitReview;
+            for (const [sku, kit] of Object.entries(current.rows ?? {})) {
+                if (/^GBCyl(?:Blu)?5/.test(sku) && kit.sku === sku) rows[sku] = kit;
+            }
+        } catch { /* The older pilot remains usable without this review batch. */ }
+        return rows;
     } catch { return {}; }
 }
 
