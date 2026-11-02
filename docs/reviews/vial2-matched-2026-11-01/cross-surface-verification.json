@@ -1,0 +1,1681 @@
+{
+  "version": "efe02f8dc1ca0973",
+  "status": "passed",
+  "builder": [
+    {
+      "kind": "api",
+      "sku": "GBVAmb2BlackCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+    },
+    {
+      "kind": "api",
+      "sku": "GBVAmb2WhtCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+    },
+    {
+      "kind": "api",
+      "sku": "GBVialClr2mlBlackCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+    },
+    {
+      "kind": "api",
+      "sku": "GBVialClr2mlWhtCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+    },
+    {
+      "kind": "api",
+      "sku": "GBTulip6SpryBlkSh",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png"
+    },
+    {
+      "kind": "api",
+      "sku": "GBTulip6SpryBluMatt",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png"
+    },
+    {
+      "kind": "api",
+      "sku": "GBTulip6SpryCuMatt",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png"
+    },
+    {
+      "kind": "api",
+      "sku": "GBTulip6SpryGlMatt",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png"
+    },
+    {
+      "kind": "api",
+      "sku": "GBTulip6SpryGlSh",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png"
+    },
+    {
+      "kind": "api",
+      "sku": "GBTulip6SprySlMatt",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png"
+    },
+    {
+      "kind": "api",
+      "sku": "GBTulip6SprySlSh",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png"
+    },
+    {
+      "kind": "page",
+      "sku": "GBVAmb2BlackCap",
+      "passed": true,
+      "shot": "builder-GBVAmb2BlackCap.png"
+    },
+    {
+      "kind": "page",
+      "sku": "GBVialClr2mlWhtCap",
+      "passed": true,
+      "shot": "builder-GBVialClr2mlWhtCap.png"
+    },
+    {
+      "kind": "page",
+      "sku": "GBTulip6SprySlSh",
+      "passed": true,
+      "shot": "builder-GBTulip6SprySlSh.png"
+    }
+  ],
+  "catalog": [
+    {
+      "viewport": "desktop",
+      "sku": "GBVAmb2BlackCap",
+      "version": "efe02f8dc1ca0973",
+      "sources": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp"
+        }
+      ],
+      "href": "http://localhost:3010/products/vial-2ml-amber-8-425?sku=GBVAmb2BlackCap"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBVAmb2WhtCap",
+      "version": "efe02f8dc1ca0973",
+      "sources": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp"
+        }
+      ],
+      "href": "http://localhost:3010/products/vial-2ml-amber-8-425?sku=GBVAmb2WhtCap"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBVialClr2mlBlackCap",
+      "version": "efe02f8dc1ca0973",
+      "sources": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp"
+        }
+      ],
+      "href": "http://localhost:3010/products/vial-2ml-clear-8-425?sku=GBVialClr2mlBlackCap"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBVialClr2mlWhtCap",
+      "version": "efe02f8dc1ca0973",
+      "sources": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp"
+        }
+      ],
+      "href": "http://localhost:3010/products/vial-2ml-clear-8-425?sku=GBVialClr2mlWhtCap"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBVAmb2BlackCap",
+      "version": "efe02f8dc1ca0973",
+      "sources": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp"
+        }
+      ],
+      "href": "http://localhost:3010/products/vial-2ml-amber-8-425?sku=GBVAmb2BlackCap"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBVAmb2WhtCap",
+      "version": "efe02f8dc1ca0973",
+      "sources": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp"
+        }
+      ],
+      "href": "http://localhost:3010/products/vial-2ml-amber-8-425?sku=GBVAmb2WhtCap"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBVialClr2mlBlackCap",
+      "version": "efe02f8dc1ca0973",
+      "sources": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp"
+        }
+      ],
+      "href": "http://localhost:3010/products/vial-2ml-clear-8-425?sku=GBVialClr2mlBlackCap"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBVialClr2mlWhtCap",
+      "version": "efe02f8dc1ca0973",
+      "sources": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp"
+        }
+      ],
+      "href": "http://localhost:3010/products/vial-2ml-clear-8-425?sku=GBVialClr2mlWhtCap"
+    }
+  ],
+  "tulip": [
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryBlkSh",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fovercap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryBlkSh",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fovercap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryBlkSh",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fovercap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryBluMatt",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fovercap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryBluMatt",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fovercap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryBluMatt",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fovercap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryCuMatt",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fovercap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryCuMatt",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fovercap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryCuMatt",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fovercap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryGlMatt",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fovercap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryGlMatt",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fovercap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryGlMatt",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fovercap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryGlSh",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fovercap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryGlSh",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fovercap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SpryGlSh",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fovercap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SprySlMatt",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fovercap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SprySlMatt",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fovercap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SprySlMatt",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fovercap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SprySlSh",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fovercap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SprySlSh",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fovercap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBTulip6SprySlSh",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fovercap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryBlkSh",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fovercap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryBlkSh",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fovercap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryBlkSh",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fsprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-02%2Fovercap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryBluMatt",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fovercap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryBluMatt",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fovercap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryBluMatt",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fsprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-13-415%2Fovercap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryCuMatt",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fovercap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryCuMatt",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fovercap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryCuMatt",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fsprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-SPR-MTCP-13-415-07%2Fovercap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryGlMatt",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fovercap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryGlMatt",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fovercap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryGlMatt",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fsprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-02%2Fovercap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryGlSh",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fovercap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryGlSh",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fovercap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SpryGlSh",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fsprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SGLD-13-415-03%2Fovercap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SprySlMatt",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fovercap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SprySlMatt",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fovercap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SprySlMatt",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fsprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-02%2Fovercap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SprySlSh",
+      "view": "sidecar",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fovercap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SprySlSh",
+      "view": "capon",
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "0.4",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fovercap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBTulip6SprySlSh",
+      "view": "exploded",
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "blend": "multiply",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png&w=640&q=90"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ffedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png&w=640&q=90"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fsprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png&w=640&q=75"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "blend": "",
+          "opacity": "",
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-SLV-13-415-03%2Fovercap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png&w=640&q=75"
+        }
+      ]
+    }
+  ]
+}

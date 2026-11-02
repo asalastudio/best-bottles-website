@@ -28,6 +28,8 @@ for (const source of plan.sources) {
 }
 // Explicit owner-requested shoulder and amber-compositing revision; body pixels remain unchanged.
 Object.assign(originals, JSON.parse(readFileSync("public/local-kits/tulip-amber-seating-2026-11-01/kits.json", "utf8")).rows);
+// Scoped clear-glass optical revision, with unchanged pixels and placement.
+Object.assign(originals, JSON.parse(readFileSync("public/local-kits/tulip6-glass-depth-2026-11-01/kits.json", "utf8")).rows);
 afterEach(() => vi.unstubAllEnvs());
 
 describe("approved hosted master release", () => {
@@ -41,7 +43,7 @@ describe("approved hosted master release", () => {
     });
     it("preserves the original 267 approved configurations alongside the scoped small-sprayer extension", () => {
         expect(Object.keys(originals)).toHaveLength(267);
-        expect(Object.keys(hosted)).toHaveLength(434);
+        expect(Object.keys(hosted)).toHaveLength(438);
         expect(Object.keys(hosted)).toEqual(expect.arrayContaining(Object.keys(originals)));
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         expect(hosted.GBTallCyl9SpryGlMatt).toBeDefined();

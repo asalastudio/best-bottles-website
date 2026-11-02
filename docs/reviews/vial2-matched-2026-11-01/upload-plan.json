@@ -1,0 +1,65 @@
+{
+  "skus": [
+    "GBVAmb2BlackCap",
+    "GBVAmb2WhtCap",
+    "GBVialClr2mlBlackCap",
+    "GBVialClr2mlWhtCap"
+  ],
+  "approvedImageHashes": {
+    "Clear": {
+      "sha256": "1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd",
+      "bytes": 967968,
+      "file": "public/local-kits/vial2-matched-2026-11-01/clear.1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+    },
+    "Amber": {
+      "sha256": "ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f",
+      "bytes": 847975,
+      "file": "public/local-kits/vial2-matched-2026-11-01/amber.ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+    }
+  },
+  "assets": {
+    "/local-kits/vial2-matched-2026-11-01/clear.1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png": {
+      "file": "public/local-kits/vial2-matched-2026-11-01/clear.1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png",
+      "sha256": "1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd",
+      "bytes": 967968,
+      "contentType": "image/png",
+      "key": "reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png",
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+    },
+    "/local-kits/vial2-matched-2026-11-01/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp": {
+      "file": "public/local-kits/vial2-matched-2026-11-01/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+      "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+      "bytes": 9794,
+      "contentType": "image/webp",
+      "key": "reviewed-master-media/2026-11-01/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp",
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp"
+    },
+    "/local-kits/vial2-matched-2026-11-01/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp": {
+      "file": "public/local-kits/vial2-matched-2026-11-01/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+      "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+      "bytes": 9370,
+      "contentType": "image/webp",
+      "key": "reviewed-master-media/2026-11-01/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp",
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp"
+    },
+    "/local-kits/vial2-matched-2026-11-01/amber.ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png": {
+      "file": "public/local-kits/vial2-matched-2026-11-01/amber.ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png",
+      "sha256": "ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f",
+      "bytes": 847975,
+      "contentType": "image/png",
+      "key": "reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png",
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+    }
+  },
+  "preservedRecipeCount": 427,
+  "revisedTulipSkus": [
+    "GBTulip6SpryBlkSh",
+    "GBTulip6SpryBluMatt",
+    "GBTulip6SpryCuMatt",
+    "GBTulip6SpryGlMatt",
+    "GBTulip6SpryGlSh",
+    "GBTulip6SprySlMatt",
+    "GBTulip6SprySlSh"
+  ],
+  "productionDataMutated": false
+}

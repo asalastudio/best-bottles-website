@@ -1,0 +1,407 @@
+{
+  "version": "vial2-approved-2026-11-01-v1",
+  "defaultPdpSkus": [
+    "GBVAmb2BlackCap",
+    "GBVAmb2WhtCap",
+    "GBVialClr2mlBlackCap",
+    "GBVialClr2mlWhtCap"
+  ],
+  "rows": {
+    "GBVialClr2mlBlackCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 251.71428571428572,
+        "baselineY": 1000,
+        "pxPerMm": 25.714285714285715
+      },
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-clear-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 357.28660652324777,
+            "right": 642.7133934767522,
+            "top": 100,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial2-matched-2026-11-01/clear.1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png",
+            "key": "clear.1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png",
+            "sha256": "1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd",
+            "bytes": 967968,
+            "width": 971,
+            "height": 1619
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "owner-approved-gpt-material-and-geometry",
+          "box": {
+            "x": 195.5239417071478,
+            "y": 36.294240111034,
+            "width": 606.4538514920195,
+            "height": 1011.1727966689799
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "black",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 352.1583299978979,
+            "right": 647.8416700021021,
+            "top": 60.17098998829181,
+            "bottom": 251.71428571428572
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -230
+          },
+          "image": {
+            "url": "/local-kits/vial2-matched-2026-11-01/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "key": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+            "bytes": 9794,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 37.87855351544192,
+            "y": -17.004221396453318,
+            "width": 929.8218239125916,
+            "height": 1022.8040063038509
+          }
+        }
+      ],
+      "plateSha256": "52508a53280415b93a16451db5cbf60c93fb612488cf7e5908beb5fdc02cbc31",
+      "sku": "GBVialClr2mlBlackCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    },
+    "GBVialClr2mlWhtCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 251.71428571428572,
+        "baselineY": 1000,
+        "pxPerMm": 25.714285714285715
+      },
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-clear-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 357.28660652324777,
+            "right": 642.7133934767522,
+            "top": 100,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial2-matched-2026-11-01/clear.1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png",
+            "key": "clear.1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png",
+            "sha256": "1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd",
+            "bytes": 967968,
+            "width": 971,
+            "height": 1619
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "owner-approved-gpt-material-and-geometry",
+          "box": {
+            "x": 195.5239417071478,
+            "y": 36.294240111034,
+            "width": 606.4538514920195,
+            "height": 1011.1727966689799
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "white",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 352.1583299978979,
+            "right": 647.8416700021021,
+            "top": 52.71470450510702,
+            "bottom": 251.71428571428572
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -230
+          },
+          "image": {
+            "url": "/local-kits/vial2-matched-2026-11-01/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "key": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+            "bytes": 9370,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 30.192026437764525,
+            "y": -17.686090733989204,
+            "width": 938.6772698546163,
+            "height": 1032.5449968400778
+          }
+        }
+      ],
+      "plateSha256": "c4fa1744adec04afc085cd829573d1035a8f32b290cbd2633f6fb020d653c6c8",
+      "sku": "GBVialClr2mlWhtCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    },
+    "GBVAmb2BlackCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 251.71428571428572,
+        "baselineY": 1000,
+        "pxPerMm": 25.714285714285715
+      },
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-amber-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 358.402489626556,
+            "right": 641.597510373444,
+            "top": 100,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial2-matched-2026-11-01/amber.ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png",
+            "key": "amber.ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png",
+            "sha256": "ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f",
+            "bytes": 847975,
+            "width": 971,
+            "height": 1620
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "owner-approved-gpt-material-and-geometry",
+          "box": {
+            "x": 197.8215767634855,
+            "y": 39.00414937759336,
+            "width": 604.356846473029,
+            "height": 1008.298755186722
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "black",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 352.1583299978979,
+            "right": 647.8416700021021,
+            "top": 60.17098998829181,
+            "bottom": 251.71428571428572
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -230
+          },
+          "image": {
+            "url": "/local-kits/vial2-matched-2026-11-01/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "key": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+            "bytes": 9794,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 37.87855351544192,
+            "y": -17.004221396453318,
+            "width": 929.8218239125916,
+            "height": 1022.8040063038509
+          }
+        }
+      ],
+      "plateSha256": "",
+      "sku": "GBVAmb2BlackCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    },
+    "GBVAmb2WhtCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 251.71428571428572,
+        "baselineY": 1000,
+        "pxPerMm": 25.714285714285715
+      },
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-amber-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 358.402489626556,
+            "right": 641.597510373444,
+            "top": 100,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial2-matched-2026-11-01/amber.ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png",
+            "key": "amber.ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png",
+            "sha256": "ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f",
+            "bytes": 847975,
+            "width": 971,
+            "height": 1620
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "owner-approved-gpt-material-and-geometry",
+          "box": {
+            "x": 197.8215767634855,
+            "y": 39.00414937759336,
+            "width": 604.356846473029,
+            "height": 1008.298755186722
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "white",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 352.1583299978979,
+            "right": 647.8416700021021,
+            "top": 52.71470450510702,
+            "bottom": 251.71428571428572
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -230
+          },
+          "image": {
+            "url": "/local-kits/vial2-matched-2026-11-01/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "key": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+            "bytes": 9370,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 30.192026437764525,
+            "y": -17.686090733989204,
+            "width": 938.6772698546163,
+            "height": 1032.5449968400778
+          }
+        }
+      ],
+      "plateSha256": "",
+      "sku": "GBVAmb2WhtCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    }
+  }
+}

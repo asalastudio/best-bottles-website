@@ -1,0 +1,24 @@
+{
+  "exitCode": 1,
+  "beforePlateGeometrySha256": "ce6451a5f135c4cfbd281b13b7b4c827c42c747a2f80b2e43c97996e5b79f4e6",
+  "recountPlateGeometrySha256": "ffdee6bdbfbe1cd87b800c23ada604227e2ce0ab9d45c0849ab1a712004b92c0",
+  "notes": "Read-only catalog recount. Preserve existing identity guards. No plate publication in this batch.",
+  "measurements": {
+    "plates": 2283,
+    "fetchFailures": 0,
+    "measurementFailures": 0,
+    "bottlesWithTwoOrMore": 225,
+    "wrongSize": 40,
+    "legacySource": 86,
+    "tolerance": 0.05
+  },
+  "buildReason": "Existing GBCyl5BlkShSht identity guard preserved",
+  "familyMovement": {
+    "newApprovedVialRecipes": 4,
+    "revisedTulipOpticalRecipes": 7,
+    "unchangedPriorRecipes": 427,
+    "previousSharedRecipes": 434,
+    "currentSharedRecipes": 438,
+    "commercialRecordsWritten": 0
+  }
+}

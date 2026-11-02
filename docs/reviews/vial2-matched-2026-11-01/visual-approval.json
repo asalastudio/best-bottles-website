@@ -1,0 +1,21 @@
+{
+  "approvedAt": "2026-11-02T05:08:48.935Z",
+  "approvalText": "Those two 2ml cklearn and amber are good to go please use them",
+  "geometryApproval": "that 2ml is accurate",
+  "generator": "Built-in GPT image editor; exact model version is not exposed",
+  "clearPrompt": "Create a studio-grade photorealistic CLEAR 2 ml 8-425 vial using IMAGE ONE as a STRICT GEOMETRY AND CAMERA GUIDE. Image two supplies ONLY glass-material quality. Reproduce the first image's outline exactly: 35 mm height / 11.64 mm diameter (height divided by width 3.007), small 8.96 mm outside thread crest diameter, approx 5.90 mm neck height above the shoulder. Do not inherit the taller neck or different proportions of image two. Bottle completely straight upright, perfectly frontal eye-level orthographic view. The top rim MUST be a very narrow level horizontal lip seen edge-on: NO visible oval mouth, NO visible interior hole, NO top-down view, NO visible underside. Keep two compact rounded helical threads, subtle gently rounded shoulders, straight cylindrical walls, modest rounded glass base. Make the guide's flat outline into real transparent glass; no outline drawing remains. Crisp photorealistic clear flint glass with natural studio softbox highlights wrapping around the cylinder, believable clear edge refraction, clean upper lip and fine threads. Empty unlabeled uncapped bottle with a visible internal floor just above the outer bottom, no exaggerated base thickness. No body distorting refraction, no grain, no white fringe, no blur, no rectangular panel or paper inside. Show ONE whole bottle with the identical guide framing and silhouette, true alpha transparency outside the glass, no floor or shadow, no backdrop, no text, no dimensions, no cap, no liquid or fitments. Geometry image one takes absolute priority.",
+  "amberPrompt": "Make ONLY a glass-material color edit of IMAGE ONE, the newly approved straight-on 2 ml 8-425 vial. Image two is ONLY an amber glass material reference. Preserve image one's silhouette EXACTLY pixel for pixel: total height, cylindrical body width, slim small threaded neck width, compact two threads, shoulder height, rim, side walls, base and camera. Preserve its exact framing and position. Most important: keep the true straight-on eye-level camera and the level thin horizontal rim from image one; NO visible oval opening and NO looking down into the mouth. Do NOT inherit image two's top-down camera or broader neck. Change all the clear glass, including neck and threads, to real medium-dark warm pharmaceutical amber brown glass with darker brown edges and base, natural cylindrical studio softbox reflections. Keep the luminous amber studio reflection of image two while maintaining a deeper true amber brown overall; it must look like colored transparent glass, not liquid, orange plastic, a flat tinted sticker or a painted object. No liquid inside. Preserve the accurate inner floor and restrained rounded base of image one. Studio-grade photorealism, sharp coherent edge refraction, smooth clean silhouette, no white fringe or noise. Full uncapped bare bottle, no cap, no tube, no text, no labels, no cast shadow or floor, isolated on true alpha transparency. The only intended change is clear glass to amber glass; geometry and angle are locked by image one.",
+  "oldClearDraftSuperseded": true,
+  "images": {
+    "Clear": {
+      "sha256": "1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd",
+      "bytes": 967968,
+      "file": "public/local-kits/vial2-matched-2026-11-01/clear.1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+    },
+    "Amber": {
+      "sha256": "ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f",
+      "bytes": 847975,
+      "file": "public/local-kits/vial2-matched-2026-11-01/amber.ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+    }
+  }
+}

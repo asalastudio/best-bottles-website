@@ -24,7 +24,9 @@ function readLocalKitReview(): LocalKitReview | null {
         process.env.NODE_ENV === "development" ? "public/local-kits/remaining-13-415-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder25-18415-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/tulip-amber-seating-2026-11-01/kits.json" : undefined,
-        process.env.NODE_ENV === "development" ? "public/local-kits/rectangle9-applicator-2026-11-01/kits.json" : undefined];
+        process.env.NODE_ENV === "development" ? "public/local-kits/rectangle9-applicator-2026-11-01/kits.json" : undefined,
+        process.env.NODE_ENV === "development" ? "public/local-kits/tulip6-glass-depth-2026-11-01/kits.json" : undefined,
+        process.env.NODE_ENV === "development" ? "public/local-kits/vial2-matched-2026-11-01/kits.json" : undefined];
     const rows: Record<string, BuilderKit> = {};
     const defaults = new Set<string>();
     let loaded = false;
@@ -77,6 +79,13 @@ export function localGpt13ComponentKits(host: string | null, flag: unknown): Rec
             if (kit.sku === sku && kit.register?.bodyId.endsWith("-13-415")) rows[sku] = kit;
         }
     } catch { /* This review batch is optional outside the active checkout. */ }
+    // Apply the latest clear Tulip optics after older bookmarked pilot batches.
+    try {
+        const current = JSON.parse(readFileSync("public/local-kits/tulip6-glass-depth-2026-11-01/kits.json", "utf8")) as LocalKitReview;
+        for (const [sku, kit] of Object.entries(current.rows ?? {})) {
+            if (/^GBTulip6Spry/.test(sku) && kit.sku === sku) rows[sku] = kit;
+        }
+    } catch { /* The hosted recipe remains available without the local review mirror. */ }
     return rows;
 }
 

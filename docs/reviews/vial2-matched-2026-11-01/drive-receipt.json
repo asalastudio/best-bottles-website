@@ -1,0 +1,58 @@
+{
+  "approvedFolder": {
+    "success": true,
+    "id": "1Ml_UdR6K5jWW1-rGLUGFRuZmZor-ArKt",
+    "url": "https://drive.google.com/drive/folders/1Ml_UdR6K5jWW1-rGLUGFRuZmZor-ArKt",
+    "title": "2 ml · 8-425 · Approved masters · 2026-11-01",
+    "parent_id": "1AYFXiRBkXntGigvpMPFno5vZCU5JrPz2"
+  },
+  "family": {
+    "success": true,
+    "id": "1AYFXiRBkXntGigvpMPFno5vZCU5JrPz2",
+    "url": "https://drive.google.com/drive/folders/1AYFXiRBkXntGigvpMPFno5vZCU5JrPz2",
+    "title": "Vial",
+    "parent_id": "1kztMnt9MYau-UfgN6sK8kI7fJZsMnQUe"
+  },
+  "masters": [
+    {
+      "id": "1wasoDTy2teiCoRKVJD1TfmsXHnSy2ZEJ",
+      "title": "Best_Bottles_Vial_2ml_8-425_Clear_Body_APPROVED_2026-11-01.png",
+      "mime_type": null,
+      "size": "967968",
+      "url": "https://drive.google.com/file/d/1wasoDTy2teiCoRKVJD1TfmsXHnSy2ZEJ/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1wasoDTy2teiCoRKVJD1TfmsXHnSy2ZEJ/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1Ml_UdR6K5jWW1-rGLUGFRuZmZor-ArKt"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "id": "1r5y-zm6ev2utMFx4dZ3MK8Fs18YYst9E",
+      "title": "Best_Bottles_Vial_2ml_8-425_Amber_Body_APPROVED_2026-11-01.png",
+      "mime_type": null,
+      "size": "847975",
+      "url": "https://drive.google.com/file/d/1r5y-zm6ev2utMFx4dZ3MK8Fs18YYst9E/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1r5y-zm6ev2utMFx4dZ3MK8Fs18YYst9E/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1Ml_UdR6K5jWW1-rGLUGFRuZmZor-ArKt"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    }
+  ]
+}

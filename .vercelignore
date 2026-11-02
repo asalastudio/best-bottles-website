@@ -52,3 +52,7 @@ public/local-kits/tulip-amber-seating-2026-11-01/
 
 # Rectangle applicator candidates require visual approval before release.
 public/local-kits/rectangle9-applicator-2026-11-01/
+
+# Source copies of approved vial bodies and the local Tulip optics mirror.
+public/local-kits/vial2-matched-2026-11-01/
+public/local-kits/tulip6-glass-depth-2026-11-01/

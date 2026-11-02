@@ -1,0 +1,118 @@
+{
+  "status": "Owner approved both exact body images; using existing PSD cap pixels",
+  "measurementsMm": {
+    "bareHeight": 35,
+    "shoulderToBottom": 28.19,
+    "bodyDiameter": 11.64,
+    "threadCrestDiameter": 8.96,
+    "bore": 3,
+    "neckHeight": 5.9
+  },
+  "registration": {
+    "alphaThreshold": 16,
+    "targetHeight": 900,
+    "targetBaseline": 1000,
+    "axisX": 500,
+    "capUniformScale": 0.9498741537568605,
+    "bodyRegistration": "Uniform only. Approved silhouettes are not stretched to the caliper outline."
+  },
+  "assets": {
+    "Clear": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-94d76e87-e6a9-4842-9e7f-2ab430eea5e3.png",
+      "sha256": "1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd",
+      "bytes": 967968,
+      "width": 971,
+      "height": 1619,
+      "alphaBounds": {
+        "left": 259,
+        "top": 102,
+        "right": 716,
+        "bottom": 1543
+      },
+      "file": "public/local-kits/vial2-matched-2026-11-01/clear.1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png",
+      "url": "/local-kits/vial2-matched-2026-11-01/clear.1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png",
+      "scale": 0.6245662734212353,
+      "box": {
+        "x": 195.5239417071478,
+        "y": 36.294240111034,
+        "width": 606.4538514920195,
+        "height": 1011.1727966689799
+      },
+      "bounds": {
+        "left": 357.28660652324777,
+        "right": 642.7133934767522,
+        "top": 100,
+        "bottom": 1000
+      }
+    },
+    "Amber": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-d181a27a-c869-4d8c-b896-b06b8c950a1b.png",
+      "sha256": "ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f",
+      "bytes": 847975,
+      "width": 971,
+      "height": 1620,
+      "alphaBounds": {
+        "left": 258,
+        "top": 98,
+        "right": 713,
+        "bottom": 1544
+      },
+      "file": "public/local-kits/vial2-matched-2026-11-01/amber.ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png",
+      "url": "/local-kits/vial2-matched-2026-11-01/amber.ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png",
+      "scale": 0.6224066390041494,
+      "box": {
+        "x": 197.8215767634855,
+        "y": 39.00414937759336,
+        "width": 604.356846473029,
+        "height": 1008.298755186722
+      },
+      "bounds": {
+        "left": 358.402489626556,
+        "right": 641.597510373444,
+        "top": 100,
+        "bottom": 1000
+      }
+    }
+  },
+  "capSources": {
+    "GBVialClr2mlBlackCap": {
+      "url": "/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+      "key": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+      "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+      "bytes": 9794,
+      "width": 1000,
+      "height": 1100
+    },
+    "GBVialClr2mlWhtCap": {
+      "url": "/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+      "key": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+      "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+      "bytes": 9370,
+      "width": 1000,
+      "height": 1100
+    },
+    "GBVAmb2BlackCap": {
+      "url": "/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+      "key": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+      "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+      "bytes": 9794,
+      "width": 1000,
+      "height": 1100
+    },
+    "GBVAmb2WhtCap": {
+      "url": "/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+      "key": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+      "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+      "bytes": 9370,
+      "width": 1000,
+      "height": 1100
+    }
+  },
+  "skus": [
+    "GBVAmb2BlackCap",
+    "GBVAmb2WhtCap",
+    "GBVialClr2mlBlackCap",
+    "GBVialClr2mlWhtCap"
+  ],
+  "productionDataMutated": false
+}
