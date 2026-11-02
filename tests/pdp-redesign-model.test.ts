@@ -197,6 +197,11 @@ describe("copy", () => {
 });
 
 describe("exploded callouts (render only what the field holds)", () => {
+    it.each([28, 50])("describes the %s ml 16 mm roller as fitting over the rim", capacityMl => {
+        const rows = callouts(variant({ websiteSku: "roller16", graceSku: "roller16", family: "Cylinder", capacityMl, neckThreadSize: "16mm", applicator: "Metal Roller Ball" }), "Black");
+        expect(rows.find(row => row.key === "fitment")?.line2).toBe("Fits over the 16mm rim");
+    });
+
     it("describes the reducer as a press-fit insert rather than a threaded closure", () => {
         const rows = callouts(variant({ websiteSku: "GBElg60RdcrShnGl", graceSku: "GB-ELG-CLR-60ML-RDC-SGLD", applicator: "Reducer", neckThreadSize: "18-415" }), "Shiny Gold");
         expect(rows.find(row => row.key === "fitment")?.line2).toBe("Press-fit into 18-415 neck");

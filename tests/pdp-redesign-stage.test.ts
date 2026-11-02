@@ -27,6 +27,15 @@ describe("views", () => {
         expect(effectiveView("exploded", KIT, dropper)).toBe("capon");
         expect(availableViews(KIT, { ...CONTEXT, family: "Boston Round" })).toEqual(["sidecar", "capon"]);
     });
+
+    it.each(["Vintage Bulb Sprayer", "Vintage Bulb Sprayer with Tassel"])("offers only assembled color swaps for %s", applicator => {
+        const context = { ...CONTEXT, applicator };
+        expect(availableViews(KIT, context)).toEqual(["capon"]);
+        for (const requested of ["sidecar", "capon", "exploded"] as const) {
+            expect(effectiveView(requested, KIT, context)).toBe("capon");
+            expect(stageLayout(KIT, requested, context)!.parts.every(part => part.dxPct === 0 && part.dyPct === 0)).toBe(true);
+        }
+    });
 });
 
 describe("reducer cap removal", () => {

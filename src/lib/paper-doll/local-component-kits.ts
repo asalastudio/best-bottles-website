@@ -118,6 +118,15 @@ export function localGpt13ComponentKits(host: string | null, flag: unknown): Rec
             if (kit.register?.bodyId === "cylinder-25ml-18-415" && kit.sku === sku) rows[sku] = kit;
         }
     } catch { /* The optional material review may be absent. */ }
+    // Remaining Cylinder review sets keep one recovered body per physical
+    // profile. Candidates are opt-in and remain unavailable on hosted builds.
+    try {
+        const current = JSON.parse(readFileSync("public/local-kits/cylinder-family-completion-2026-11-02/kits.json", "utf8")) as LocalKitReview;
+        for (const [sku, kit] of Object.entries(current.rows ?? {})) {
+            if (kit.sku === sku && ["cylinder-25ml-18-415", "cylinder-28ml-16mm", "cylinder-50ml-16mm",
+                "cylinder-50ml-18-415", "cylinder-100ml-18-415"].includes(kit.register?.bodyId ?? "")) rows[sku] = kit;
+        }
+    } catch { /* Missing review files do not affect production or older pilots. */ }
     return withCurrentSharedMasters(rows);
 }
 

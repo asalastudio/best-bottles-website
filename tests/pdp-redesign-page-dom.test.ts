@@ -145,6 +145,20 @@ const click = async (selector: string) => {
 };
 
 describe("redesigned product page", () => {
+    it.each(["Vintage Bulb Sprayer", "Vintage Bulb Sprayer with Tassel"])("keeps %s assembled when swapping finish colors", async (applicator) => {
+        const { default: PdpRedesignPage } = await import("@/components/pdp/PdpRedesignPage");
+        const variants = VARIANTS.slice(0, 2).map(item => ({ ...item, applicator }));
+        root = createRoot(container);
+        await act(async () => { root.render(createElement(PdpRedesignPage, { ...payload, variants, siblings: [], group: { ...payload.group, primaryWebsiteSku: variants[0].websiteSku, primaryGraceSku: variants[0].graceSku, applicatorTypes: [applicator] } })); });
+        expect(container.querySelector('[aria-label="View"]')).toBeNull();
+        expect(container.querySelector('[data-testid="pdp-stage"]')?.getAttribute("data-view")).toBe("capon");
+        const finishes = container.querySelectorAll<HTMLButtonElement>('[data-testid="pdp-cap-rail"] button');
+        expect(finishes).toHaveLength(2);
+        await act(async () => { finishes[1].click(); });
+        expect(container.querySelector('[data-testid="pdp-stage"]')?.getAttribute("data-view")).toBe("capon");
+        expect(container.querySelector('[aria-label="View"]')).toBeNull();
+    });
+
     it("opens on the group's primary SKU with the canvas, buy box and curated description", async () => {
         await mount();
         expect(text('[data-testid="pdp-eyebrow"]')).toBe("CYLINDER · 9 ML · 17-415");

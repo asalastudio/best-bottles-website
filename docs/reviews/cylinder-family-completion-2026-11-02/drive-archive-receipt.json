@@ -1,0 +1,331 @@
+{
+  "capturedAt": "2026-11-02T19:33:46.292Z",
+  "root": {
+    "id": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1",
+    "url": "https://drive.google.com/drive/folders/1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1"
+  },
+  "folders": {
+    "25 ml - 18-415 - Clear - REVIEW": {
+      "success": true,
+      "id": "1E3IkO4oNc1I1LxU7Puhb9QWILwMoybDf",
+      "url": "https://drive.google.com/drive/folders/1E3IkO4oNc1I1LxU7Puhb9QWILwMoybDf",
+      "title": "25 ml - 18-415 - Clear - REVIEW",
+      "parent_id": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1"
+    },
+    "28 ml - 16 mm - Clear - REVIEW": {
+      "success": true,
+      "id": "1Nk2jj7RTrmm668nbCGg0LpYpSo3nKm04",
+      "url": "https://drive.google.com/drive/folders/1Nk2jj7RTrmm668nbCGg0LpYpSo3nKm04",
+      "title": "28 ml - 16 mm - Clear - REVIEW",
+      "parent_id": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1"
+    },
+    "50 ml - 16 mm - Clear - REVIEW": {
+      "success": true,
+      "id": "1Mmh97mPwmpludEMbQ-0_pelZHvMm6viw",
+      "url": "https://drive.google.com/drive/folders/1Mmh97mPwmpludEMbQ-0_pelZHvMm6viw",
+      "title": "50 ml - 16 mm - Clear - REVIEW",
+      "parent_id": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1"
+    },
+    "50 ml - 18-415 - Clear - REVIEW": {
+      "success": true,
+      "id": "1_V2cjfkZHQPaU82SSk_EUkxUIuskPBHk",
+      "url": "https://drive.google.com/drive/folders/1_V2cjfkZHQPaU82SSk_EUkxUIuskPBHk",
+      "title": "50 ml - 18-415 - Clear - REVIEW",
+      "parent_id": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1"
+    },
+    "100 ml - 18-415 - Clear - REVIEW": {
+      "success": true,
+      "id": "1J71LYdfkLuzPSms_5oG-M4ZGhoXZzFEp",
+      "url": "https://drive.google.com/drive/folders/1J71LYdfkLuzPSms_5oG-M4ZGhoXZzFEp",
+      "title": "100 ml - 18-415 - Clear - REVIEW",
+      "parent_id": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1"
+    },
+    "16 mm Roller and Cap Components - REVIEW": {
+      "success": true,
+      "id": "1JV5bnXdJp0jDmVm81MgTDi2Vtsimk8gw",
+      "url": "https://drive.google.com/drive/folders/1JV5bnXdJp0jDmVm81MgTDi2Vtsimk8gw",
+      "title": "16 mm Roller and Cap Components - REVIEW",
+      "parent_id": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1"
+    },
+    "Existing Approved Master References - unchanged": {
+      "success": true,
+      "id": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "url": "https://drive.google.com/drive/folders/14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "title": "Existing Approved Master References - unchanged",
+      "parent_id": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1"
+    }
+  },
+  "files": [
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-100ml-18-415-glass-bottle-clear.ae9a7bfccc37.png",
+      "id": "1Hc1ott0M7Yt_TVx6UtCoFO4RW7CMjz6B",
+      "name": "Cylinder_100ml_18-415_Clear_BODY_REVIEW_ae9a7bfccc37.png",
+      "parentId": "1J71LYdfkLuzPSms_5oG-M4ZGhoXZzFEp",
+      "size": 328523,
+      "url": "https://drive.google.com/file/d/1Hc1ott0M7Yt_TVx6UtCoFO4RW7CMjz6B/view?usp=drivesdk",
+      "sha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-28ml-16mm-glass-bottle-clear.bd4cb95c2e2f.png",
+      "id": "1kF-96jwNcNL0KkG-QeSeUqkIhNMmpI3F",
+      "name": "Cylinder_28ml_16mm_Clear_BODY_REVIEW_bd4cb95c2e2f.png",
+      "parentId": "1Nk2jj7RTrmm668nbCGg0LpYpSo3nKm04",
+      "size": 635988,
+      "url": "https://drive.google.com/file/d/1kF-96jwNcNL0KkG-QeSeUqkIhNMmpI3F/view?usp=drivesdk",
+      "sha256": "bd4cb95c2e2f7cb1495779df5edfd82f5900c7538c91efa1643eab5ff10e12f7",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-3.3ml-12mm-glass-bottle-clear.bcebf76efcc3.svg",
+      "id": "1wd-vKkTr_F3b5BkA1KXbXVxoLS0EDLIl",
+      "name": "Cylinder_3.3ml_12mm_Clear_BODY_APPROVED-REFERENCE_bcebf76efcc3.svg",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 2256027,
+      "url": "https://drive.google.com/file/d/1wd-vKkTr_F3b5BkA1KXbXVxoLS0EDLIl/view?usp=drivesdk",
+      "sha256": "bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-4ml-12mm-glass-bottle-clear.e6f9b8379296.svg",
+      "id": "108lMq_j-qI19a2-5OHcPO8wdJa9MkZw6",
+      "name": "Cylinder_4ml_12mm_Clear_BODY_APPROVED-REFERENCE_e6f9b8379296.svg",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1990579,
+      "url": "https://drive.google.com/file/d/108lMq_j-qI19a2-5OHcPO8wdJa9MkZw6/view?usp=drivesdk",
+      "sha256": "e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-5ml-13-415-glass-bottle-clear.3d366e116958.png",
+      "id": "1Fr0XIDqFquICr08yglkWryZwF0KkOqTt",
+      "name": "Cylinder_5ml_13-415_Clear_BODY_APPROVED-REFERENCE_3d366e116958.png",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1246630,
+      "url": "https://drive.google.com/file/d/1Fr0XIDqFquICr08yglkWryZwF0KkOqTt/view?usp=drivesdk",
+      "sha256": "3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-50ml-16mm-glass-bottle-clear.583b5d7a43ef.png",
+      "id": "1TQLNyyAB0igeLYXznFMR3UqEtGoFtaX3",
+      "name": "Cylinder_50ml_16mm_Clear_BODY_REVIEW_583b5d7a43ef.png",
+      "parentId": "1Mmh97mPwmpludEMbQ-0_pelZHvMm6viw",
+      "size": 573361,
+      "url": "https://drive.google.com/file/d/1TQLNyyAB0igeLYXznFMR3UqEtGoFtaX3/view?usp=drivesdk",
+      "sha256": "583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-9ml-17-415-glass-bottle-clear.56f95ad35e51.png",
+      "id": "16BOa6fJVINB1JlV6HNwaDuDS6HRFiCCa",
+      "name": "Cylinder_9ml_17-415_Clear_BODY_APPROVED-REFERENCE_56f95ad35e51.png",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1634900,
+      "url": "https://drive.google.com/file/d/16BOa6fJVINB1JlV6HNwaDuDS6HRFiCCa/view?usp=drivesdk",
+      "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-9ml-17-415-glass-bottle-amber.f45c288e0b6c.png",
+      "id": "1dXDCJQS616ZUd33qOqcbg880Ke4vScCU",
+      "name": "Cylinder_9ml_17-415_Amber_BODY_APPROVED-REFERENCE_f45c288e0b6c.png",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1050360,
+      "url": "https://drive.google.com/file/d/1dXDCJQS616ZUd33qOqcbg880Ke4vScCU/view?usp=drivesdk",
+      "sha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-5ml-13-415-glass-bottle-cobalt-blue.e66d97c3587f.svg",
+      "id": "1tZNSBjbqMsippamXM4M_bYdLvjkgI7tM",
+      "name": "Cylinder_5ml_13-415_Cobalt-Blue_BODY_APPROVED-REFERENCE_e66d97c3587f.svg",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1614155,
+      "url": "https://drive.google.com/file/d/1tZNSBjbqMsippamXM4M_bYdLvjkgI7tM/view?usp=drivesdk",
+      "sha256": "e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-9ml-17-415-glass-bottle-cobalt-blue.9499ee157608.png",
+      "id": "1k42n_rnqs37zaB_hyfYygo-rCIdvILrH",
+      "name": "Cylinder_9ml_17-415_Cobalt-Blue_BODY_APPROVED-REFERENCE_9499ee157608.png",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1022364,
+      "url": "https://drive.google.com/file/d/1k42n_rnqs37zaB_hyfYygo-rCIdvILrH/view?usp=drivesdk",
+      "sha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-9ml-17-415-glass-bottle-frosted.76402e4bb5a5.png",
+      "id": "1PR5IXT4KXsINvsY95k737KsgoCki7fen",
+      "name": "Cylinder_9ml_17-415_Frosted_BODY_APPROVED-REFERENCE_76402e4bb5a5.png",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1131945,
+      "url": "https://drive.google.com/file/d/1PR5IXT4KXsINvsY95k737KsgoCki7fen/view?usp=drivesdk",
+      "sha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-9ml-13-415-glass-bottle-clear.254d72521e49.svg",
+      "id": "1IId-6l6UUP7tUpRNdVEYE_gD_8wPLoa1",
+      "name": "Cylinder_9ml_13-415_Clear_BODY_APPROVED-REFERENCE_254d72521e49.svg",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1644238,
+      "url": "https://drive.google.com/file/d/1IId-6l6UUP7tUpRNdVEYE_gD_8wPLoa1/view?usp=drivesdk",
+      "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-9ml-13-415-glass-bottle-frosted.3d82baa9a8bd.svg",
+      "id": "1zwLYzQ8guDas4CuTrns9jiYZivCj_iHs",
+      "name": "Cylinder_9ml_13-415_Frosted_BODY_APPROVED-REFERENCE_3d82baa9a8bd.svg",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1331030,
+      "url": "https://drive.google.com/file/d/1zwLYzQ8guDas4CuTrns9jiYZivCj_iHs/view?usp=drivesdk",
+      "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-50ml-18-415-glass-bottle-clear.c21649897a68.png",
+      "id": "16Vn9CAW7oKQxTvHISOgsAwUgcMu_u_wR",
+      "name": "Cylinder_50ml_18-415_Clear_BODY_REVIEW_c21649897a68.png",
+      "parentId": "1_V2cjfkZHQPaU82SSk_EUkxUIuskPBHk",
+      "size": 468773,
+      "url": "https://drive.google.com/file/d/16Vn9CAW7oKQxTvHISOgsAwUgcMu_u_wR/view?usp=drivesdk",
+      "sha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-9ml-17-415-glass-bottle-swirl.032e641c93c4.png",
+      "id": "1Ox8N-SnwfRlqRqLn2sYm2C1uW0uczsvE",
+      "name": "Cylinder_9ml_17-415_Swirl_BODY_APPROVED-REFERENCE_032e641c93c4.png",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1537538,
+      "url": "https://drive.google.com/file/d/1Ox8N-SnwfRlqRqLn2sYm2C1uW0uczsvE/view?usp=drivesdk",
+      "sha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-25ml-18-415-glass-bottle-clear.e0b0f790a992.png",
+      "id": "1NmDojRfTaa8l8U-ClsahHlTj2UbX-p0m",
+      "name": "Cylinder_25ml_18-415_Clear_BODY_REVIEW_e0b0f790a992.png",
+      "parentId": "1E3IkO4oNc1I1LxU7Puhb9QWILwMoybDf",
+      "size": 1190237,
+      "url": "https://drive.google.com/file/d/1NmDojRfTaa8l8U-ClsahHlTj2UbX-p0m/view?usp=drivesdk",
+      "sha256": "e0b0f790a9920a6beb3b1c8f7785637b57ddfa3ff96aaa0142d2f11da42c5c51",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/tulip-5ml-13-415-glass-bottle-amber.1987a24ec5e9.png",
+      "id": "1EI8cHPbNAcK4ukwyEq4ftH7nD5tEFiax",
+      "name": "Cylinder_Tulip_5ml_13-415_Amber_BODY_APPROVED-REFERENCE_1987a24ec5e9.png",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1850139,
+      "url": "https://drive.google.com/file/d/1EI8cHPbNAcK4ukwyEq4ftH7nD5tEFiax/view?usp=drivesdk",
+      "sha256": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/masters/tulip-6ml-13-415-glass-bottle-clear.545e756d1bdb.png",
+      "id": "1aryW1rBhCzNz7-Ackkpo8AcYhxrhnLpa",
+      "name": "Cylinder_Tulip_6ml_13-415_Clear_BODY_APPROVED-REFERENCE_545e756d1bdb.png",
+      "parentId": "14vlurHan2h97sqINoDsld1eFgyroT_oc",
+      "size": 1024156,
+      "url": "https://drive.google.com/file/d/1aryW1rBhCzNz7-Ackkpo8AcYhxrhnLpa/view?usp=drivesdk",
+      "sha256": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/sources/roller16-metal-over-rim.png",
+      "id": "1ioTPmUaTOMamuG8c1y3QCy6_gjITLwue",
+      "name": "Jumbo_Roller_16mm_Metal_Over-Rim_No-Plug_28ml-50ml_REVIEW.png",
+      "parentId": "1JV5bnXdJp0jDmVm81MgTDi2Vtsimk8gw",
+      "size": 820214,
+      "url": "https://drive.google.com/file/d/1ioTPmUaTOMamuG8c1y3QCy6_gjITLwue/view?usp=drivesdk",
+      "sha256": null,
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/sources/roller16-plastic-over-rim.png",
+      "id": "1Q_LoqGyS_UyRexSBGs3oqNyENUI2Ao43",
+      "name": "Jumbo_Roller_16mm_Plastic_Over-Rim_No-Plug_28ml-50ml_REVIEW.png",
+      "parentId": "1JV5bnXdJp0jDmVm81MgTDi2Vtsimk8gw",
+      "size": 816430,
+      "url": "https://drive.google.com/file/d/1Q_LoqGyS_UyRexSBGs3oqNyENUI2Ao43/view?usp=drivesdk",
+      "sha256": null,
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/sources/cap16-black-clean.png",
+      "id": "1Ku1DQLO9qMFTMzEDamKiZazRQkoBWUu9",
+      "name": "Jumbo_Roller_Cap_16mm_Black_Shared-Outline_REVIEW.png",
+      "parentId": "1JV5bnXdJp0jDmVm81MgTDi2Vtsimk8gw",
+      "size": 1422306,
+      "url": "https://drive.google.com/file/d/1Ku1DQLO9qMFTMzEDamKiZazRQkoBWUu9/view?usp=drivesdk",
+      "sha256": null,
+      "verified": true
+    },
+    {
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/sources/cap16-white-clean.png",
+      "id": "1EPkxuzsA--kWIRVzgIZU67QZYNcbcITx",
+      "name": "Jumbo_Roller_Cap_16mm_White_Shared-Outline_REVIEW.png",
+      "parentId": "1JV5bnXdJp0jDmVm81MgTDi2Vtsimk8gw",
+      "size": 1146425,
+      "url": "https://drive.google.com/file/d/1EPkxuzsA--kWIRVzgIZU67QZYNcbcITx/view?usp=drivesdk",
+      "sha256": null,
+      "verified": true
+    }
+  ],
+  "verifiedAt": "2026-11-02T19:40:03.582Z",
+  "documents": [
+    {
+      "id": "1msXqoCXT9Col54gX9hUqJG3LYSIEQinj",
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/README.md",
+      "name": "README - Cylinder review status and product rules - 2026-11-02.md",
+      "parentId": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1",
+      "url": "https://drive.google.com/file/d/1msXqoCXT9Col54gX9hUqJG3LYSIEQinj/view?usp=drivesdk",
+      "verifiedSizeAndParent": true
+    },
+    {
+      "id": "1WUiS18_rGTz3PzuFObO0_5W8y-UfIl1d",
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/MASTER_INDEX.md",
+      "name": "Cylinder Master Image Index - 18 Bodies and 4 Components - 2026-11-02.md",
+      "parentId": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1",
+      "url": "https://drive.google.com/file/d/1WUiS18_rGTz3PzuFObO0_5W8y-UfIl1d/view?usp=drivesdk",
+      "verifiedSizeAndParent": true
+    },
+    {
+      "id": "182igiKAvq5NaEXJbkLRxOxz1dZLVDdlG",
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/configuration-checklist.csv",
+      "name": "Cylinder Configuration Audit - 504 Glass Rows - 2026-11-02.csv",
+      "parentId": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1",
+      "url": "https://drive.google.com/file/d/182igiKAvq5NaEXJbkLRxOxz1dZLVDdlG/view?usp=drivesdk",
+      "verifiedSizeAndParent": true
+    },
+    {
+      "id": "1FmuM_k5DOMytdFT_DABRPgJI78S6KI7t",
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/physical-profile-crosswalk.json",
+      "name": "Cylinder Physical Profile Rules - 25ml and Jumbo Rollers - 2026-11-02.json",
+      "parentId": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1",
+      "url": "https://drive.google.com/file/d/1FmuM_k5DOMytdFT_DABRPgJI78S6KI7t/view?usp=drivesdk",
+      "verifiedSizeAndParent": true
+    },
+    {
+      "id": "1tRiGh_oDn1yIIAVLWCWqypJOal5l_Dzv",
+      "source": "docs/reviews/cylinder-family-completion-2026-11-02/validation-summary.json",
+      "name": "Cylinder Review Verification - 109 Candidates - 2026-11-02.json",
+      "parentId": "1fwXoPU9KjI8DSPjyeFyQREoAlRfD1yd1",
+      "url": "https://drive.google.com/file/d/1tRiGh_oDn1yIIAVLWCWqypJOal5l_Dzv/view?usp=drivesdk",
+      "verifiedSizeAndParent": true
+    }
+  ],
+  "sourcePackage": {
+    "id": "18KYJQ_ILfMRUTVEDUXjQ6JTRc-ry1I5x",
+    "url": "https://drive.google.com/file/d/18KYJQ_ILfMRUTVEDUXjQ6JTRc-ry1I5x/view?usp=drivesdk",
+    "bytes": 66736038,
+    "sha256": "3b566ceb5d22c12671d253df153e14337fe458484b73f9bc33f6b757c0fac8a0",
+    "verifiedSizeAndParent": true
+  },
+  "verification": "All 28 uploads verified by parent folder and byte size. Native source hashes are recorded alongside the files. New artwork remains REVIEW; original approvals are unchanged."
+}

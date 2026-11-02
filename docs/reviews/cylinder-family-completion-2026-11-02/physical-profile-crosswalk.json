@@ -1,0 +1,19 @@
+{
+  "authority": "Jordan's explicit correction on 2026-11-02: the 30 ml entry is a mismatch and is actually the 25 ml. Jumbo metal and plastic rollers apply only to the 28 ml and 50 ml large roller bottles.",
+  "publication": "Review inventory reconciliation. Original catalog records and historical evidence are preserved; no database write or live product deletion.",
+  "aliases": [
+    {"websiteSku":"GBSpry1ozGl","graceSku":"GB-SPR-CLR-30ML-GLD","sourceProfile":"cylinder-30ml|18-415|Glass Bottle","sourceCapacityMl":30,"targetProfile":"cylinder-25ml|18-415|Glass Bottle","physicalCapacityMl":25},
+    {"websiteSku":"GBSpry1ozSl","graceSku":"GB-SPR-CLR-30ML-SLV","sourceProfile":"cylinder-30ml|18-415|Glass Bottle","sourceCapacityMl":30,"targetProfile":"cylinder-25ml|18-415|Glass Bottle","physicalCapacityMl":25}
+  ],
+  "fitmentPolicy25ml": {
+    "authority": "Jordan's 2026-11-02 follow-up and supplied legacy screenshots",
+    "allowedApplicators": ["Reducer","Fine Mist Sprayer","Lotion Pump","Vintage Bulb Sprayer","Vintage Bulb Sprayer with Tassel"],
+    "rollerOffered": false,
+    "otherCatalogRows": "Keep any imported rows outside this confirmed list visible as reconciliation holds. Do not delete or publish them."
+  },
+  "rollerHardware": {
+    "profiles": ["cylinder-28ml|16mm|Glass Bottle","cylinder-50ml|16mm|Glass Bottle"],
+    "materials": ["metal","plastic"],
+    "mounting": "Internal track fits around the glass rim. No protruding bottom plug."
+  }
+}

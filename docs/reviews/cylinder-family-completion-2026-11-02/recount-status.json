@@ -1,0 +1,19 @@
+{
+  "measurement": {
+    "plates": 2283,
+    "failures": 0,
+    "evidence": "plate-geometry-current.json"
+  },
+  "ledgerBuild": {
+    "passed": false,
+    "blockingSku": "GBCyl5BlkShSht",
+    "reason": "Historical cylinder-final-plates catalog identity guard differs from current catalog. Existing hold; no identity guard bypass and no backend mutation."
+  },
+  "trackedGlobalMeasurementRestored": true,
+  "afterMaterialBatch": {
+    "plateMeasurement": "2283 plates, zero measurement failures",
+    "ledgerBuild": "Held at unchanged historical identity guard for GBCyl5BlkShSht",
+    "trackedGlobalMeasurementRestored": true,
+    "evidence": "recount-after.log"
+  }
+}

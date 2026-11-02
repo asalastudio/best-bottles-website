@@ -396,9 +396,11 @@ export function callouts(variant: ProductVariant | null | undefined, capName: st
     const applicator = clean(variant.applicator);
     if (applicator && applicator !== "N/A" && applicator !== "Cap/Closure") {
         const roller = rollerIdFor(applicator);
+        const overRimRoller = roller && variant.family === "Cylinder" && neck === "16mm"
+            && [28, 50].includes(variant.capacityMl ?? 0);
         const line1 = roller ? `${displayApplicatorName(applicator)} insert` : displayApplicatorName(applicator);
         const line2 = neck
-            ? roller || applicator.toLowerCase() === "reducer" ? `Press-fit into ${neck} neck` : thread ? `Threads onto ${neck} neck` : `Fits ${neck} neck`
+            ? overRimRoller ? `Fits over the ${neck} rim` : roller || applicator.toLowerCase() === "reducer" ? `Press-fit into ${neck} neck` : thread ? `Threads onto ${neck} neck` : `Fits ${neck} neck`
             : null;
         out.push({ key: "fitment", title: "FITMENT", line1, line2 });
     }

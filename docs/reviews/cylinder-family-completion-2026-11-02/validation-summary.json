@@ -1,0 +1,50 @@
+{
+  "status": "local-review-only",
+  "catalogRows": 507,
+  "glassRows": 504,
+  "physicalMasterSets": 18,
+  "recoveredBodies": 18,
+  "existingApprovedRecipes": 362,
+  "candidateRecipes": 109,
+  "held": 33,
+  "registration": {
+    "configurations": 109,
+    "sourceHashes": 17,
+    "bodyMasters": 5
+  },
+  "pdp": {
+    "states": 102,
+    "errors": 0,
+    "assembledPolicies": [
+      {
+        "sku": "GBCyl50AnSpTslBlk",
+        "viewport": "desktop",
+        "controls": [],
+        "railButtons": 9
+      },
+      {
+        "sku": "GBCyl50AnSpTslBlk",
+        "viewport": "mobile",
+        "controls": [],
+        "railButtons": 9
+      }
+    ]
+  },
+  "builder": {
+    "eligibleExactRecipes": 101,
+    "actualPages": 4,
+    "catalogOnlyExclusions": 8,
+    "errors": 0
+  },
+  "unitTests": {
+    "passed": 3287,
+    "failed": 0,
+    "skipped": 7,
+    "files": 377
+  },
+  "typecheck": "passed",
+  "scopedLint": "passed",
+  "productionManifest": "unchanged ca21bfc3c0c3ce57, 456 recipes",
+  "ledger": "measurement 2283/2283; existing GBCyl5BlkShSht identity guard prevents recount; no guard bypass",
+  "publication": "not merged or deployed"
+}

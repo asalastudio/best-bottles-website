@@ -1,0 +1,15 @@
+{
+  "retrievedAt": "2026-11-02",
+  "sourceUrl": "https://www.bestbottles.com/product/Tube-Glass-Bottle-Sprayer-atomizer-Gold-1oz",
+  "websiteSku": "GBSpry1ozGl",
+  "verifiedDescription": "Clear Glass Spray Bottle with Gold Top and Base. Capacity: 1oz (30ml)",
+  "verifiedType": "Classic Perfume Spray Glass Bottles",
+  "legacyNeckLabel": "18-415",
+  "sourceStatus": 200,
+  "findings": [
+    "Catalog applicator is null. Do not interpret this as a plain pour bottle.",
+    "Original PSD contains an assembled spray bottle and matching metal base.",
+    "Standalone bare-glass layer remains to be separated and validated before an interchangeable kit can be released."
+  ],
+  "publication": "Read-only reconciliation, no catalog mutation."
+}

@@ -1,0 +1,508 @@
+[
+  {
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/2. 28ml  Uncapped/1. GBCyl28MtlRollBlk.psd",
+    "sha256": "50d44a77f0efb65fe6c3b4e569d2138799acbe4a0136fd5708cba59286fb958c",
+    "canvas": [
+      1400,
+      1925
+    ],
+    "layers": [
+      {
+        "index": 1,
+        "name": "Layer 8",
+        "bbox": [
+          199,
+          251,
+          644,
+          1828
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/28-metal-black-layer-1.png",
+        "sha256": "4d10371d4c165926db78accac3bfec2b93ca9d8762a4b5988bd0e203ca026eeb",
+        "size": [
+          445,
+          1577
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          445,
+          1577
+        ]
+      },
+      {
+        "index": 2,
+        "name": "Layer 3",
+        "bbox": [
+          242,
+          480,
+          578,
+          884
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/28-metal-black-layer-2.png",
+        "sha256": "001af9d1c245b08758027496b2bd8371fbc4b971cc60ea08fa3d31a5d7a16103",
+        "size": [
+          336,
+          404
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          336,
+          404
+        ]
+      },
+      {
+        "index": 3,
+        "name": "Layer 5",
+        "bbox": [
+          825,
+          1313,
+          1255,
+          1822
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/28-metal-black-layer-3.png",
+        "sha256": "cc023b07188c3416c1bf513de0a902acc24b2ef3a5246cacddd94aac132098e2",
+        "size": [
+          430,
+          509
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          430,
+          509
+        ]
+      },
+      {
+        "index": 4,
+        "name": "Layer 4",
+        "bbox": [
+          813,
+          1313,
+          1309,
+          1828
+        ],
+        "visible": false,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/28-metal-black-layer-4.png",
+        "sha256": "1ca911959a9164200fa8c66a4531f06951c56d3a8514566b6b8fddec6b1fa234",
+        "size": [
+          496,
+          515
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          496,
+          515
+        ]
+      }
+    ]
+  },
+  {
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/2. 28ml  Uncapped/4.  GBCyl28RollWht.psd",
+    "sha256": "6f63bd84d0ababc7a48ab3c26c6804c7ca2e19e032c6828dcbda1fc1534534d0",
+    "canvas": [
+      1400,
+      1925
+    ],
+    "layers": [
+      {
+        "index": 1,
+        "name": "Layer 13",
+        "bbox": [
+          199,
+          251,
+          644,
+          1828
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/28-plastic-white-layer-1.png",
+        "sha256": "4d10371d4c165926db78accac3bfec2b93ca9d8762a4b5988bd0e203ca026eeb",
+        "size": [
+          445,
+          1577
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          445,
+          1577
+        ]
+      },
+      {
+        "index": 2,
+        "name": "Layer 8",
+        "bbox": [
+          221,
+          466,
+          560,
+          1042
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/28-plastic-white-layer-2.png",
+        "sha256": "b5176bfd01982ede60b193f0f16e5d3a554b455ce4a500811701e0e2a18b9b96",
+        "size": [
+          339,
+          576
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          339,
+          576
+        ]
+      },
+      {
+        "index": 3,
+        "name": "Layer 6",
+        "bbox": [
+          773,
+          1313,
+          1269,
+          1828
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/28-plastic-white-layer-3.png",
+        "sha256": "1ca911959a9164200fa8c66a4531f06951c56d3a8514566b6b8fddec6b1fa234",
+        "size": [
+          496,
+          515
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          496,
+          515
+        ]
+      },
+      {
+        "index": 4,
+        "name": "Layer 9",
+        "bbox": [
+          243,
+          534,
+          578,
+          885
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/28-plastic-white-layer-4.png",
+        "sha256": "dc2bbd9d44b68b59a7ae186f57af3caab82060df02dbaab7fc8c53eede3faecb",
+        "size": [
+          335,
+          351
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          335,
+          351
+        ]
+      }
+    ]
+  },
+  {
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/4. 50ml Uncapped/3. GBCyl50MtlRollBlk.psd",
+    "sha256": "986851ecd3257d24f5f05d4f84e10b4b408802100b3019829a51c4744f694649",
+    "canvas": [
+      1400,
+      1925
+    ],
+    "layers": [
+      {
+        "index": 1,
+        "name": "Layer 10",
+        "bbox": [
+          226,
+          453,
+          735,
+          1821
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/50-metal-black-layer-1.png",
+        "sha256": "7cccee44e3111f74959db28a72087b2f82bcbb796768ed197372c2cfaaae10cf",
+        "size": [
+          509,
+          1368
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          509,
+          1368
+        ]
+      },
+      {
+        "index": 2,
+        "name": "Layer 11",
+        "bbox": [
+          282,
+          182,
+          669,
+          672
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/50-metal-black-layer-2.png",
+        "sha256": "047a7655528c6ecbbf8e8d5c08d3182ce6877f1b108330d2d53f5c0cd9a6032c",
+        "size": [
+          387,
+          490
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          387,
+          490
+        ]
+      },
+      {
+        "index": 3,
+        "name": "Layer 5",
+        "bbox": [
+          867,
+          1313,
+          1305,
+          1822
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/50-metal-black-layer-3.png",
+        "sha256": "66d4120473ed33e87ee9d115f511127b8d15619d0651b64363ffe274f032f736",
+        "size": [
+          438,
+          509
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          438,
+          509
+        ]
+      }
+    ]
+  },
+  {
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/4. 50ml Uncapped/2. GBCyl50RollWht.psd",
+    "sha256": "1879bd88979eba638f4fa2469f5dd4b5067f43d4e4f0fb7da0e852d81bb32a3f",
+    "canvas": [
+      1400,
+      1925
+    ],
+    "layers": [
+      {
+        "index": 1,
+        "name": "Layer 8",
+        "bbox": [
+          813,
+          1313,
+          1309,
+          1828
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/50-plastic-white-layer-1.png",
+        "sha256": "1ca911959a9164200fa8c66a4531f06951c56d3a8514566b6b8fddec6b1fa234",
+        "size": [
+          496,
+          515
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          496,
+          515
+        ]
+      },
+      {
+        "index": 2,
+        "name": "Layer 13",
+        "bbox": [
+          226,
+          453,
+          735,
+          1821
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/50-plastic-white-layer-2.png",
+        "sha256": "7cccee44e3111f74959db28a72087b2f82bcbb796768ed197372c2cfaaae10cf",
+        "size": [
+          509,
+          1368
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          509,
+          1368
+        ]
+      },
+      {
+        "index": 3,
+        "name": "Layer 6",
+        "bbox": [
+          249,
+          172,
+          645,
+          870
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/50-plastic-white-layer-3.png",
+        "sha256": "c72b09ba379c7aaf5b98dedfc74445f0e6d5b05f6d7fd78e82bd4c1d4422f64c",
+        "size": [
+          396,
+          698
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          396,
+          698
+        ]
+      },
+      {
+        "index": 4,
+        "name": "Layer 14",
+        "bbox": [
+          276,
+          252,
+          670,
+          672
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/50-plastic-white-layer-4.png",
+        "sha256": "b301d2ba82975358ac1739be48e041701105f98559858b7b6364816721e7e703",
+        "size": [
+          394,
+          420
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          394,
+          420
+        ]
+      },
+      {
+        "index": 5,
+        "name": "Layer 4",
+        "bbox": [
+          813,
+          1313,
+          1309,
+          1828
+        ],
+        "visible": false,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/50-plastic-white-layer-5.png",
+        "sha256": "1ca911959a9164200fa8c66a4531f06951c56d3a8514566b6b8fddec6b1fa234",
+        "size": [
+          496,
+          515
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          496,
+          515
+        ]
+      }
+    ]
+  },
+  {
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/18. Perfume Glass Bottles with Metal Decoration/GBSpry1ozSl.psd",
+    "sha256": "c1f3997dac5a55dc8cf90bc3ac2f3ad715fbf4a4b12f440947877417ba91ba6a",
+    "canvas": [
+      6000,
+      4000
+    ],
+    "layers": [
+      {
+        "index": 1,
+        "name": "Hue/Saturation 1",
+        "bbox": [
+          2398,
+          325,
+          3124,
+          3146
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/30-classic-silver-layer-1.png",
+        "sha256": "0d9f39dde5bf81a81a2a3898bbae6e3758853f0b7593aa100274351e3171762e",
+        "size": [
+          726,
+          2821
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          726,
+          2821
+        ]
+      },
+      {
+        "index": 2,
+        "name": "Brightness/Contrast 1",
+        "bbox": [
+          2402,
+          325,
+          3880,
+          3168
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/30-classic-silver-layer-2.png",
+        "sha256": "808a1e51b6d1b16aeb525399a2049db34aaa835df8b8dcdebd2290969a88c3d1",
+        "size": [
+          1478,
+          2843
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          1478,
+          2843
+        ]
+      },
+      {
+        "index": 3,
+        "name": "Layer 1",
+        "bbox": [
+          2451,
+          294,
+          3057,
+          1371
+        ],
+        "visible": true,
+        "opacity": 255,
+        "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/30-classic-silver-layer-3.png",
+        "sha256": "db13322614a9d627099ae347b525c0b26a7c9c0be4a6ca8a1804ad52a94b58d2",
+        "size": [
+          606,
+          1077
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          606,
+          1077
+        ]
+      }
+    ]
+  }
+]

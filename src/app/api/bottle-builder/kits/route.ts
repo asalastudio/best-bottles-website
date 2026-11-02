@@ -13,8 +13,9 @@ export async function GET(request: Request) {
         const kits = { ...await loadBuilderBodyKits(family, bodyId) };
         const pilot = localGpt13ComponentKits(url.host, url.searchParams.get("assetPreview"));
         for (const [id, kit] of Object.entries(kits)) {
-            const reviewed = kit?.sku ? pilot[kit.sku] : undefined;
-            if (reviewed && reviewed.sku === kit?.sku) kits[id] = { ...reviewed,
+            const sku = kit?.sku ?? id;
+            const reviewed = pilot[sku];
+            if (reviewed && reviewed.sku === sku) kits[id] = { ...reviewed,
                 parts: reviewed.parts.filter(part => !part.views || part.views.includes("capon")) };
         }
         return NextResponse.json({ kits }, {

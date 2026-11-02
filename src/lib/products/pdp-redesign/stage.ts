@@ -164,6 +164,7 @@ export function availableViews(kit: KitLike | null | undefined, context: StageCo
     if (isTolaApplicator(context.websiteSku)) return ["capon"];
     // Only a seated stopper-and-wand photograph is registered for this set.
     if (rectangleApplicatorGlass(context.websiteSku)) return ["capon"];
+    if (requiresAssembledClosure(context.applicator, context.websiteSku) && !separableReducer(kit, context)) return ["capon"];
     const views: StageView[] = ["sidecar"];
     if (!kit?.parts?.length) return views;
     if (context.applicator?.trim().toLowerCase() === "reducer" && !separableReducer(kit, context)) return ["capon"];

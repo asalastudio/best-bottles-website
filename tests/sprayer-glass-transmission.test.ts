@@ -8,6 +8,21 @@ const affected = rows.filter(kit => ["tulip-6ml-13-415", "sleek-8ml-13-415"].inc
     && kit.register?.glass === "Clear" && kit.parts.some(part => part.slot === "sprayer"));
 
 describe("clear sprayer plug transmission", () => {
+    it.each([
+        ["cylinder-50ml-18-415", "lotion-tube.cad1b0cae24a.webp", 2931],
+        ["cylinder-50ml-18-415", "spray-tube.1d7b75dddaa9.webp", 3446],
+        ["cylinder-100ml-18-415", "lotion-tube.4c935884bdfa.webp", 3844],
+        ["cylinder-100ml-18-415", "spray-tube.175e68a53415.webp", 4520],
+    ])("attenuates only the registered seated chamber on %s / %s", (bodyId, filename, height) => {
+        const kit={register:{bodyId:String(bodyId),glass:"Clear"}};
+        const part={slot:"diptube",views:["sidecar","capon"],image:{url:"/local-kits/cylinder-family-completion-2026-11-02/"+filename,height:Number(height)}};
+        expect(sprayerPlugMask(kit,part,"sidecar")).toContain("linear-gradient");
+        expect(sprayerPlugMask(kit,part,"capon")).toContain("black 100%");
+        expect(sprayerPlugMask(kit,part,"exploded")).toBeUndefined();
+        expect(sprayerPlugMask(kit,{...part,views:["exploded"]},"capon")).toBeUndefined();
+        expect(sprayerPlugMask(kit,{...part,slot:"pump"},"capon")).toBeUndefined();
+        expect(sprayerPlugMask(kit,{...part,image:{...part.image,url:"/unregistered.webp"}},"capon")).toBeUndefined();
+    });
     it("softens only the seated chamber for all fifteen finishes and keeps the natural exploded part", () => {
         expect(affected).toHaveLength(15);
         for (const kit of affected) {

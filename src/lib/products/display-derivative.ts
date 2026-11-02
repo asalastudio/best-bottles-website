@@ -1,9 +1,12 @@
 import manifest from "./display-images.generated.json";
+import reviewManifest from "./review-display-images.generated.json";
 
 type DisplaySources = Record<string, Record<"128" | "256" | "640" | "1200", string>>;
-const sources = manifest.sources as DisplaySources;
+// Local candidates retain their original master URLs in the kits. Their
+// delivery entries are reached only by explicitly gated localhost recipes.
+const sources = { ...manifest.sources, ...reviewManifest.sources } as DisplaySources;
 const aliases = manifest.aliases as Record<string, string>;
-const pixelWidths = manifest.pixelWidths as Record<string, Record<string, number>>;
+const pixelWidths = { ...manifest.pixelWidths, ...reviewManifest.pixelWidths } as Record<string, Record<string, number>>;
 
 /** Immutable, lossless delivery copies of the exact approved sources. This
  * changes download bytes only. Keep the original source identity, registered

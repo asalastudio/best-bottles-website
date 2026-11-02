@@ -16,6 +16,7 @@ import { plugMaskStyle } from "@/lib/products/sprayer-glass-transmission";
  * finger) pans. Click again, press Escape or the button to zoom out.
  */
 import { isTolaApplicator } from "@/lib/products/tola-applicator";
+import { requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
@@ -107,6 +108,8 @@ export default function PdpStage({
     caps, activeCapId, onCapPick, glasses, onGlassPick, activeCapName, activeGlassLabel,
 }: PdpStageProps) {
     const singleTola = isTolaApplicator(context.websiteSku);
+    const swatchesOnly = requiresAssembledClosure(context.applicator, context.websiteSku)
+        && availableViews.length === 1 && !singleTola && finishKind !== "glass";
     const layout = useMemo(() => stageLayout(kit, view, context, glassFrame ?? {}), [kit, view, context, glassFrame]);
     const railRef = useRef<HTMLDivElement>(null);
     // Register masters are served display-sized through the optimizer; when that
@@ -194,7 +197,7 @@ export default function PdpStage({
             style={singleTola ? { width: "100%", minWidth: 0, gridTemplateColumns: "minmax(0, 1fr)", gridTemplateAreas: '"head" "stage" "lineup"' } : finishKind === "glass" ? { width: "100%", minWidth: 0 } : undefined}>
             <div className={styles.canvasHead}>
                 <span className={styles.pickLine} data-testid="pdp-pick-line">{pickLine}</span>
-                <div className={styles.viewSwitch} role="group" aria-label="View">
+                {!swatchesOnly && <div className={styles.viewSwitch} role="group" aria-label="View">
                     {STAGE_VIEWS.filter(option => (!singleTola && finishKind !== "glass") || availableViews.includes(option.id)).map((option) => {
                         const enabled = availableViews.includes(option.id);
                         return (
@@ -212,7 +215,7 @@ export default function PdpStage({
                             </button>
                         );
                     })}
-                </div>
+                </div>}
             </div>
 
             {!singleTola && <div className={styles.rail} role="group" aria-label={finishKind === "glass" ? "Glass colors" : "Caps"} data-testid="pdp-cap-rail">
