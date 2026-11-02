@@ -1,0 +1,46 @@
+{
+  "verifiedAt": "2026-11-02",
+  "verification": "Drive metadata read back after upload; exact size and parent checked",
+  "files": [
+    {
+      "id": "1QpFfNLuzvBjGVRST2-Z3378AS17d_MXF",
+      "title": "Tulip Pour - 19 Unified Masters and 1 Identity Hold - Review and Evidence - 2026-11-01.zip",
+      "mime_type": null,
+      "size": "17659907",
+      "url": "https://drive.google.com/file/d/1QpFfNLuzvBjGVRST2-Z3378AS17d_MXF/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1QpFfNLuzvBjGVRST2-Z3378AS17d_MXF/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1uu3uhXNDts4jfT0AyfoTIOLeZNN1_O38"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "id": "16b6uuU8LWHAZ8yDLsPaO0fQAjN5VWhM1",
+      "title": "Tulip Amber - Shared Catalog Body - Copper Cap - VERIFIED LOCAL 2026-11-01.png",
+      "mime_type": null,
+      "size": "27901",
+      "url": "https://drive.google.com/file/d/16b6uuU8LWHAZ8yDLsPaO0fQAjN5VWhM1/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/16b6uuU8LWHAZ8yDLsPaO0fQAjN5VWhM1/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1uu3uhXNDts4jfT0AyfoTIOLeZNN1_O38"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    }
+  ]
+}
