@@ -21,7 +21,8 @@ import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
 import PdpKitStackImage from "./PdpKitStackImage";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
-import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
+import { registeredImageSizes } from "@/lib/products/display-derivative";
+import { markRegisterOptimizerUnavailable, registerImageSrc, registerImageSrcSet } from "@/lib/products/register-image";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import type { Callout } from "@/lib/products/pdp-redesign/model";
@@ -310,9 +311,13 @@ export default function PdpStage({
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
                                             src={rawUrls.has(part.url) ? part.url : registerImageSrc(part.url, 640)}
+                                            srcSet={rawUrls.has(part.url) ? undefined : registerImageSrcSet(part.url)}
+                                            sizes={registeredImageSizes(part.box.widthPct, layout.frame.scale, zoom ? STAGE_ZOOM : 1)}
                                             alt=""
                                             draggable={false}
                                             decoding="async"
+                                            loading="eager"
+                                            fetchPriority="high"
                                             onError={() => { if (markRegisterOptimizerUnavailable(part.url)) showRaw(part.url); }}
                                             style={{
                                                 position: "absolute", display: "block", maxWidth: "none", opacity: part.opacity,
@@ -332,6 +337,8 @@ export default function PdpStage({
                                         alt=""
                                         draggable={false}
                                         decoding="async"
+                                        loading="eager"
+                                        fetchPriority="high"
                                         className={styles.stagePart}
                                         data-slot={part.slot}
                                         style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex, mixBlendMode: part.blendMode }}
@@ -348,6 +355,8 @@ export default function PdpStage({
                             src={rawUrls.has(fallbackImageUrl) ? fallbackImageUrl : displayImageUrl(fallbackImageUrl)}
                             alt={showingBareBody ? `${fallbackAlt}, uncapped bottle` : fallbackAlt}
                             decoding="async"
+                            loading="eager"
+                            fetchPriority="high"
                             onError={() => {
                                 if (!rawUrls.has(fallbackImageUrl) && markRegisterOptimizerUnavailable(fallbackImageUrl)) showRaw(fallbackImageUrl);
                                 else setFailedFallbackUrls((current) => new Set(current).add(fallbackImageUrl));

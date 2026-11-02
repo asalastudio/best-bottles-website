@@ -10,6 +10,7 @@ import { EMPTY_FILTERS } from "@/lib/catalogFilters";
 import { buildHomeBrowseData } from "@/lib/homepageBrowse";
 import { loadBuilderEntry } from "@/lib/bottle-builder/entry";
 import { isOptimizableImageUrl, displayImageUrl } from "@/lib/products/optimizable-image";
+import { displayDerivativeUrl } from "@/lib/products/display-derivative";
 import { stageLayout } from "@/lib/products/pdp-redesign/stage";
 import manifest from "@/lib/paper-doll/approved-kits.generated.json";
 import index from "@/lib/paper-doll/approved-kit-index.json";
@@ -33,13 +34,15 @@ Object.assign(originals, JSON.parse(readFileSync("public/local-kits/tulip6-glass
 afterEach(() => vi.unstubAllEnvs());
 
 describe("approved hosted master release", () => {
-    it("serves display-sized raster copies while leaving exact SVG envelopes and master URLs intact", () => {
+    it("serves lossless approved display copies while retaining historical master URLs", () => {
         const png = Object.values(receipt).find((a: unknown) => (a as { url: string }).url.endsWith(".png")) as { url: string };
         const svg = Object.values(receipt).find((a: unknown) => (a as { url: string }).url.endsWith(".svg")) as { url: string };
         expect(isOptimizableImageUrl(png.url)).toBe(true);
-        expect(displayImageUrl(png.url, 640)).toContain("w=640&q=90");
-        expect(isOptimizableImageUrl(svg.url)).toBe(false);
-        expect(displayImageUrl(svg.url, 640)).toBe(svg.url);
+        const pngCopy = displayDerivativeUrl(png.url, 640), svgCopy = displayDerivativeUrl(svg.url, 640);
+        if (pngCopy) expect(displayImageUrl(png.url, 640)).toBe(pngCopy);
+        else expect(displayImageUrl(png.url, 640)).toContain("w=640&q=90");
+        expect(isOptimizableImageUrl(svg.url)).toBe(Boolean(svgCopy));
+        expect(displayImageUrl(svg.url, 640)).toBe(svgCopy ?? svg.url);
     });
     it("preserves the original 267 approved configurations alongside the scoped small-sprayer extension", () => {
         expect(Object.keys(originals)).toHaveLength(267);

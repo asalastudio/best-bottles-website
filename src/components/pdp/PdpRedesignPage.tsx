@@ -76,6 +76,7 @@ import { PdpBuildStrip, PdpCollectionBand, PdpOrderLines, PdpProductInfo, PdpSti
 import { drawingBodyId, drawingFor, drawingStyleFromQuery } from "@/lib/products/pdp-redesign/drawings";
 import { technicalDrawingFor } from "@/lib/products/pdp-redesign/tech-drawing";
 import { labelFitFor } from "@/lib/products/pdp-redesign/label-fit";
+import { registerImageSrc } from "@/lib/products/register-image";
 
 export type PdpRedesignPayload = {
     slug: string;
@@ -108,7 +109,7 @@ function materialSwatch(kit: KitLike | null | undefined, name: string | null | u
     if (!part) return getMaterialSwatchStyle(name, {});
     const drawn = getMaterialSwatchBackground(name);
     // The cap's whole face, a hair inside its edges, so a dotted cap's three columns of dots sit inside the circle.
-    return { background: `url("${part.image.url}") 50% 50% / 96% auto no-repeat${drawn ? `, ${drawn}` : ""}` };
+    return { background: `url("${registerImageSrc(part.image.url, 128)}") 50% 50% / 96% auto no-repeat${drawn ? `, ${drawn}` : ""}` };
 }
 
 function kitFor(kits: Record<string, KitLike | null>, variant: { websiteSku?: string | null; graceSku?: string | null } | null | undefined): KitLike | null {

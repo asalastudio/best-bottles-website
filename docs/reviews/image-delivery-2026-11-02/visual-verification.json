@@ -1,0 +1,506 @@
+{
+  "states": [
+    {
+      "route": "tulip-6ml-clear-13-415-finemist?cap=shiny-silver",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "layers": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea/256-d0c24521fd9e2285587fedec956b0dc7fc77ec7b4955a6a48c3bce60f2e2ad48.webp",
+          "box": [
+            444.9644775390625,
+            484.8263244628906,
+            24.055816650390625,
+            201.92904663085938
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4/640-00342ee6b107d51b8bd2d0c7510501fadb3ba435c23d92646e3b55cb9f473fc1.webp",
+          "box": [
+            381.3677673339844,
+            447.2457275390625,
+            151.24929809570312,
+            265.66259765625
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/78a0231ee807a6f14cf1e196b79d805b11bebcda3492a6b5c3c3c4f1100c96f1/640-f970e8bab8b2d292f750485487627f5988991b1adc3aff20002637412ffd2282.webp",
+          "box": [
+            415.27081298828125,
+            369.8203430175781,
+            82.54656982421875,
+            153.52871704101562
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/399f2358dba6296845b35734511f25b9c58657cc690940ec17969cfd2d0539ee/256-3be0648a46795a0940e882e44f366eaa5b7db1676b81fd26e6df7daa7ecf78f4.webp",
+          "box": [
+            526.07666015625,
+            526.0194091796875,
+            91.9227294921875,
+            175.3658447265625
+          ],
+          "loading": "eager",
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "route": "tulip-6ml-clear-13-415-finemist?cap=shiny-silver",
+      "viewport": "desktop",
+      "view": "capon"
+    },
+    {
+      "route": "tulip-6ml-clear-13-415-finemist?cap=shiny-silver",
+      "viewport": "desktop",
+      "view": "exploded"
+    },
+    {
+      "route": "cylinder-9ml-frosted-13-415-finemist?cap=matte-black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "layers": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414/640-0fab6a8c6c0914d5de22645957cf37f83e40970c9530d02406aedd4d86e4d94d.webp",
+          "box": [
+            388.8887939453125,
+            301.2850341796875,
+            140.48870849609375,
+            418.42724609375
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/7fafc89c8536f6cb0e2c73d2622c90ebade3d7cdbeddbaba341834a240598554/256-898403676112ed9798a3881bcc0aa5edf00c74c44f39d7a33cc5d07a72a2c6e3.webp",
+          "box": [
+            447.01531982421875,
+            358.19903564453125,
+            18.03826904296875,
+            292.21954345703125
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f/640-036749f5c7e686f7bd4926f39fe4312166212bd15828d4c1e489d00176ab3c08.webp",
+          "box": [
+            425.5041809082031,
+            255.50833129882812,
+            58.815155029296875,
+            117.64523315429688
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd/256-c89aa6e7a76823db37af571fdc066f397359e1901c29f797ef2e7d329e6d708a.webp",
+          "box": [
+            498.27276611328125,
+            590.594482421875,
+            62.28802490234375,
+            113.094482421875
+          ],
+          "loading": "eager",
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "route": "cylinder-9ml-frosted-13-415-finemist?cap=matte-black",
+      "viewport": "desktop",
+      "view": "capon"
+    },
+    {
+      "route": "cylinder-9ml-frosted-13-415-finemist?cap=matte-black",
+      "viewport": "desktop",
+      "view": "exploded"
+    },
+    {
+      "route": "vial-2ml-amber-8-425?cap=white",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "layers": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f/640-6fc67a6e03bfad0a3308cae5a71faf71ef0eb6897f3c0b51bcb7d5e3e1793087.webp",
+          "box": [
+            384.041259765625,
+            469.3737487792969,
+            145.9097900390625,
+            243.43667602539062
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa/640-5467cd6359fcbc37651cbc6164f5bd62b6e804f07981bf8ee364e8e7e403ec5a.webp",
+          "box": [
+            419.24212646484375,
+            636.3610229492188,
+            226.63018798828125,
+            249.29241943359375
+          ],
+          "loading": "eager",
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "route": "vial-2ml-amber-8-425?cap=white",
+      "viewport": "desktop",
+      "view": "capon"
+    },
+    {
+      "route": "vial-2ml-amber-8-425?cap=white",
+      "viewport": "desktop",
+      "view": "exploded"
+    },
+    {
+      "route": "cylinder-5ml-cobalt-blue-13-415-rollon?roller=metal&cap=shiny-silver",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "layers": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2/640-5b70287e3e571fd44fb3a5596cd32f748707bf744a534989742694465d58bafc.webp",
+          "box": [
+            416.2529296875,
+            381.8959655761719,
+            81.775390625,
+            116.14321899414062
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212/640-b9780dacb2c51b274ec2dc64cee8a082ce93e1f91b5ad19baf81a3027e642e53.webp",
+          "box": [
+            385.5556945800781,
+            435.78631591796875,
+            142.87387084960938,
+            269.03729248046875
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a/640-986212caab420abc057183658e923513b568af126c99f26e9543208d712c3628.webp",
+          "box": [
+            510.1084289550781,
+            577.6617431640625,
+            83.90670776367188,
+            124.69818115234375
+          ],
+          "loading": "eager",
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "route": "cylinder-5ml-cobalt-blue-13-415-rollon?roller=metal&cap=shiny-silver",
+      "viewport": "desktop",
+      "view": "capon"
+    },
+    {
+      "route": "cylinder-5ml-cobalt-blue-13-415-rollon?roller=metal&cap=shiny-silver",
+      "viewport": "desktop",
+      "view": "exploded"
+    },
+    {
+      "route": "tola-6ml-clear-14.3mm",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "layers": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1/640-eea25241cdac45fc73002d66118139c391a7ec923a50699ca23330673822a2e2.webp",
+          "box": [
+            278.6163024902344,
+            406.51422119140625,
+            278.1835021972656,
+            305.99896240234375
+          ],
+          "loading": "eager",
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "route": "tola-6ml-clear-14.3mm",
+      "viewport": "desktop",
+      "view": "capon"
+    },
+    {
+      "route": "tulip-6ml-clear-13-415-finemist?cap=shiny-silver",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "layers": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea/256-d0c24521fd9e2285587fedec956b0dc7fc77ec7b4955a6a48c3bce60f2e2ad48.webp",
+          "box": [
+            186.07974243164062,
+            382.06658935546875,
+            17.81011962890625,
+            149.5625
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4/640-00342ee6b107d51b8bd2d0c7510501fadb3ba435c23d92646e3b55cb9f473fc1.webp",
+          "box": [
+            138.9710693359375,
+            354.2268981933594,
+            112.02748107910156,
+            196.77749633789062
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/78a0231ee807a6f14cf1e196b79d805b11bebcda3492a6b5c3c3c4f1100c96f1/640-f970e8bab8b2d292f750485487627f5988991b1adc3aff20002637412ffd2282.webp",
+          "box": [
+            164.0906219482422,
+            296.8910827636719,
+            61.150115966796875,
+            113.71426391601562
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/399f2358dba6296845b35734511f25b9c58657cc690940ec17969cfd2d0539ee/256-3be0648a46795a0940e882e44f366eaa5b7db1676b81fd26e6df7daa7ecf78f4.webp",
+          "box": [
+            246.17587280273438,
+            412.58172607421875,
+            68.07962036132812,
+            129.89837646484375
+          ],
+          "loading": "eager",
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "route": "tulip-6ml-clear-13-415-finemist?cap=shiny-silver",
+      "viewport": "mobile",
+      "view": "capon"
+    },
+    {
+      "route": "tulip-6ml-clear-13-415-finemist?cap=shiny-silver",
+      "viewport": "mobile",
+      "view": "exploded"
+    },
+    {
+      "route": "cylinder-9ml-frosted-13-415-finemist?cap=matte-black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "layers": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414/640-0fab6a8c6c0914d5de22645957cf37f83e40970c9530d02406aedd4d86e4d94d.webp",
+          "box": [
+            144.537841796875,
+            246.11355590820312,
+            104.06790161132812,
+            309.9433288574219
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/7fafc89c8536f6cb0e2c73d2622c90ebade3d7cdbeddbaba341834a240598554/256-898403676112ed9798a3881bcc0aa5edf00c74c44f39d7a33cc5d07a72a2c6e3.webp",
+          "box": [
+            187.60507202148438,
+            288.26763916015625,
+            13.367752075195312,
+            216.45889282226562
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f/640-036749f5c7e686f7bd4926f39fe4312166212bd15828d4c1e489d00176ab3c08.webp",
+          "box": [
+            171.6625518798828,
+            212.20765686035156,
+            43.56123352050781,
+            87.13740539550781
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd/256-c89aa6e7a76823db37af571fdc066f397359e1901c29f797ef2e7d329e6d708a.webp",
+          "box": [
+            225.57435607910156,
+            460.4140319824219,
+            46.13600158691406,
+            83.76931762695312
+          ],
+          "loading": "eager",
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "route": "cylinder-9ml-frosted-13-415-finemist?cap=matte-black",
+      "viewport": "mobile",
+      "view": "capon"
+    },
+    {
+      "route": "cylinder-9ml-frosted-13-415-finemist?cap=matte-black",
+      "viewport": "mobile",
+      "view": "exploded"
+    },
+    {
+      "route": "vial-2ml-amber-8-425?cap=white",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "layers": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f/640-6fc67a6e03bfad0a3308cae5a71faf71ef0eb6897f3c0b51bcb7d5e3e1793087.webp",
+          "box": [
+            120.29927062988281,
+            371.07855224609375,
+            101.76109313964844,
+            169.778564453125
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa/640-5467cd6359fcbc37651cbc6164f5bd62b6e804f07981bf8ee364e8e7e403ec5a.webp",
+          "box": [
+            144.85256958007812,
+            487.5428161621094,
+            158.05935668945312,
+            173.85916137695312
+          ],
+          "loading": "eager",
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "route": "vial-2ml-amber-8-425?cap=white",
+      "viewport": "mobile",
+      "view": "capon"
+    },
+    {
+      "route": "vial-2ml-amber-8-425?cap=white",
+      "viewport": "mobile",
+      "view": "exploded"
+    },
+    {
+      "route": "cylinder-5ml-cobalt-blue-13-415-rollon?roller=metal&cap=shiny-silver",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "layers": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2/640-5b70287e3e571fd44fb3a5596cd32f748707bf744a534989742694465d58bafc.webp",
+          "box": [
+            164.82081604003906,
+            305.8270568847656,
+            60.58038330078125,
+            86.02325439453125
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212/640-b9780dacb2c51b274ec2dc64cee8a082ce93e1f91b5ad19baf81a3027e642e53.webp",
+          "box": [
+            142.07171630859375,
+            345.74530029296875,
+            105.82696533203125,
+            199.2802734375
+          ],
+          "loading": "eager",
+          "priority": "high"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a/640-986212caab420abc057183658e923513b568af126c99f26e9543208d712c3628.webp",
+          "box": [
+            234.33775329589844,
+            450.8475036621094,
+            62.14930725097656,
+            92.37289428710938
+          ],
+          "loading": "eager",
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "route": "cylinder-5ml-cobalt-blue-13-415-rollon?roller=metal&cap=shiny-silver",
+      "viewport": "mobile",
+      "view": "capon"
+    },
+    {
+      "route": "cylinder-5ml-cobalt-blue-13-415-rollon?roller=metal&cap=shiny-silver",
+      "viewport": "mobile",
+      "view": "exploded"
+    },
+    {
+      "route": "tola-6ml-clear-14.3mm",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "layers": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1/640-eea25241cdac45fc73002d66118139c391a7ec923a50699ca23330673822a2e2.webp",
+          "box": [
+            88.05342864990234,
+            324.06768798828125,
+            206.04998779296875,
+            226.66375732421875
+          ],
+          "loading": "eager",
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "route": "tola-6ml-clear-14.3mm",
+      "viewport": "mobile",
+      "view": "capon"
+    }
+  ],
+  "comparisons": [
+    {
+      "route": "tulip-6ml-clear-13-415-finemist?cap=shiny-silver",
+      "geometryUnchanged": true,
+      "meanAbsoluteChannelDifference": 0.2919283028238967,
+      "channelFractionDifferenceAbove16": 0.003409252164041436
+    },
+    {
+      "route": "cylinder-9ml-frosted-13-415-finemist?cap=matte-black",
+      "geometryUnchanged": true,
+      "meanAbsoluteChannelDifference": 0.121351284234426,
+      "channelFractionDifferenceAbove16": 0.0011893358876117496
+    },
+    {
+      "route": "vial-2ml-amber-8-425?cap=white",
+      "geometryUnchanged": true,
+      "meanAbsoluteChannelDifference": 0.11024283382999858,
+      "channelFractionDifferenceAbove16": 0.0006882361288491557
+    },
+    {
+      "route": "cylinder-5ml-cobalt-blue-13-415-rollon?roller=metal&cap=shiny-silver",
+      "geometryUnchanged": true,
+      "meanAbsoluteChannelDifference": 0.1888773591599262,
+      "channelFractionDifferenceAbove16": 0.001800411522633745
+    },
+    {
+      "route": "tola-6ml-clear-14.3mm",
+      "geometryUnchanged": true,
+      "meanAbsoluteChannelDifference": 0.062006334432163406,
+      "channelFractionDifferenceAbove16": 0.0001357378320729106
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

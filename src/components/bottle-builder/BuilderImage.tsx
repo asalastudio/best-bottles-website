@@ -11,6 +11,7 @@ import { isOptimizableImageUrl, isRegisterAssetUrl } from "@/lib/products/optimi
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
 import { plugMaskStyle, sprayerPlugMask } from "@/lib/products/sprayer-glass-transmission";
 import { BEHIND_GLASS_SLOTS } from "@/lib/products/pdp-redesign/stage";
+import { displayDerivativeUrl } from "@/lib/products/display-derivative";
 
 /** Clear glass and the clear dip tube take the stage colour. A published dropper
  * part also contains its metal collar; multiplying a clear dropper assembly
@@ -80,7 +81,8 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         if (!rawRegister && markRegisterOptimizerUnavailable(url)) { setRawRegister(true); return; }
         retryOrFail(url);
     };
-    const layerHref = (url: string, width: 640 | 1200) => (rawRegister && isRegisterAssetUrl(url) ? url : registerImageSrc(url, width));
+    const layerHref = (url: string) => (rawRegister && isRegisterAssetUrl(url) ? url : registerImageSrc(url, thumbnail ? 256 : expanded ? 1200 : 640));
+    const deliveryCopy = (url: string) => rawRegister && isRegisterAssetUrl(url) ? null : displayDerivativeUrl(url, thumbnail ? 256 : 640);
     const urlKey = urls.join("|");
     const [loadState, setLoadState] = useState({ key: urlKey, count: 0 });
     if (loadState.key !== urlKey) setLoadState({ key: urlKey, count: 0 });
@@ -107,9 +109,9 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         // The body or exact assembly keeps its registered frame while Next
         // delivers a display-sized copy instead of the source-resolution file.
         const dimensions = stage === "complete" ? { width: 1000, height: 1100 } : config.bodyImage ?? { width: 1000, height: 1100 };
-        return wrap(<Image key={`${fallbackUrl}:${attempt(fallbackUrl)}`} src={fallbackUrl} alt={label} {...imgProps} width={dimensions.width} height={dimensions.height}
+        return wrap(<Image key={`${fallbackUrl}:${attempt(fallbackUrl)}`} src={deliveryCopy(fallbackUrl) ?? fallbackUrl} alt={label} {...imgProps} width={dimensions.width} height={dimensions.height}
             sizes={thumbnail ? "(max-width: 640px) 42vw, 220px" : "(max-width: 640px) 90vw, 520px"}
-            unoptimized={!isOptimizableImageUrl(fallbackUrl) || (rawRegister && isRegisterAssetUrl(fallbackUrl))} data-builder-layer={stage === "complete" ? "assembly" : "body"}
+            unoptimized={Boolean(deliveryCopy(fallbackUrl)) || !isOptimizableImageUrl(fallbackUrl) || (rawRegister && isRegisterAssetUrl(fallbackUrl))} data-builder-layer={stage === "complete" ? "assembly" : "body"}
             onError={() => onLayerError(fallbackUrl)} style={{ width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", objectFit: "contain", objectPosition: "center", mixBlendMode: config.color === "Clear" && stage !== "complete" ? "multiply" : undefined, transform: expanded ? undefined : `scale(${Math.min(1, scale) * .88})`, transformOrigin: expanded ? "center center" : "bottom center" }} />);
     }
     const failed = layers.some(({ part }) => part.image.url === failedUrl);
@@ -140,9 +142,9 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         return wrap(<span data-chooser-img style={{ containerType: "size", display: "grid", placeItems: "center", width: "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", overflow: "hidden", mixBlendMode: blend }}>
             <span data-chooser-frame style={{ position: "relative", display: "block", overflow: "hidden", width: `min(100cqw, calc(100cqh * ${ratio}))`, height: `min(100cqh, calc(100cqw / ${ratio}))` }}>
             <span style={{ position: "absolute", inset: 0 }}>
-                <Image key={`${part.image.url}:${attempt(part.image.url)}`} src={part.image.url} alt={label} {...imgProps} width={part.image.width} height={part.image.height}
+                <Image key={`${part.image.url}:${attempt(part.image.url)}`} src={deliveryCopy(part.image.url) ?? part.image.url} alt={label} {...imgProps} width={part.image.width} height={part.image.height}
                     sizes={thumbnail ? "(max-width: 640px) 42vw, 220px" : "(max-width: 640px) 90vw, 520px"}
-                    unoptimized={!isOptimizableImageUrl(part.image.url) || (rawRegister && isRegisterAssetUrl(part.image.url))} data-builder-layer={part.slot}
+                    unoptimized={Boolean(deliveryCopy(part.image.url)) || !isOptimizableImageUrl(part.image.url) || (rawRegister && isRegisterAssetUrl(part.image.url))} data-builder-layer={part.slot}
                     onError={() => onLayerError(part.image.url)} style={crop} />
             </span>
             </span>
@@ -159,10 +161,10 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                         <clipPath id={opaqueId} clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width={part.image.width} height={glassY} /></clipPath>
                         <clipPath id={glassId} clipPathUnits="userSpaceOnUse"><rect x="0" y={glassY} width={part.image.width} height={part.image.height - glassY} /></clipPath>
                     </defs>
-                    <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0"
+                    <image href={layerHref(part.image.url)} width={part.image.width} height={part.image.height} x="0" y="0"
                         clipPath={`url(#${opaqueId})`} data-builder-layer={part.slot} data-builder-material="opaque"
                         onLoad={markLoaded} onError={() => onLayerError(part.image.url)} />
-                    <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0"
+                    <image href={layerHref(part.image.url)} width={part.image.width} height={part.image.height} x="0" y="0"
                         clipPath={`url(#${glassId})`} data-builder-material="glass" style={{ mixBlendMode: "multiply" }}
                         onError={() => onLayerError(part.image.url)} />
                 </g>;
@@ -180,12 +182,12 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                 const clipId = `${titleId}-${part.slot}-foot`;
                 return <g key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} transform={layerTransform(transform, part)}>
                     <defs><clipPath id={clipId} clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width={part.image.width} height={visible} /></clipPath></defs>
-                    <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0" clipPath={`url(#${clipId})`}
+                    <image href={layerHref(part.image.url)} width={part.image.width} height={part.image.height} x="0" y="0" clipPath={`url(#${clipId})`}
                         style={{ ...transmission, opacity: part.opacity, mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined) }}
                         onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />
                 </g>;
             }
-            return <image key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} transform={layerTransform(transform, part)}
+            return <image key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} href={layerHref(part.image.url)} width={part.image.width} height={part.image.height} transform={layerTransform(transform, part)}
                 x="0" y="0" style={{ ...transmission, opacity: part.opacity, mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined) }}
                 onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />;
         })}
