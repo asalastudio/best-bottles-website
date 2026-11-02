@@ -1,0 +1,50 @@
+[
+  {
+    "sku": "GBTallCyl9SpryBlkMatt",
+    "slug": "cylinder-9ml-clear-13-415-finemist",
+    "color": "Clear",
+    "fitment": "Fine Mist Sprayer"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollBlkDot",
+    "slug": "cylinder-9ml-clear-13-415-rollon",
+    "color": "Clear",
+    "fitment": "Metal Roller"
+  },
+  {
+    "sku": "GBTallCyl9RollBlkDot",
+    "slug": "cylinder-9ml-clear-13-415-rollon",
+    "color": "Clear",
+    "fitment": "Plastic Roller"
+  },
+  {
+    "sku": "GBTallCyl9CuSht",
+    "slug": "cylinder-9ml-clear-13-415",
+    "color": "Clear",
+    "fitment": "Screw Cap"
+  },
+  {
+    "sku": "GBTallCylFrst9SpryCuMatt",
+    "slug": "cylinder-9ml-frosted-13-415-finemist",
+    "color": "Frosted",
+    "fitment": "Fine Mist Sprayer"
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollBlkDot",
+    "slug": "cylinder-9ml-frosted-13-415-rollon",
+    "color": "Frosted",
+    "fitment": "Metal Roller"
+  },
+  {
+    "sku": "GBTallCylFrst9RollBlkDot",
+    "slug": "cylinder-9ml-frosted-13-415-rollon",
+    "color": "Frosted",
+    "fitment": "Plastic Roller"
+  },
+  {
+    "sku": "GBTallCylFrst9CuSht",
+    "slug": "cylinder-9ml-frosted-13-415",
+    "color": "Frosted",
+    "fitment": "Screw Cap"
+  }
+]

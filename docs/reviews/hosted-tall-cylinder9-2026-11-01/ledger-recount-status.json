@@ -1,0 +1,19 @@
+{
+  "measurement": {
+    "plates": 2283,
+    "fetchFailures": 0,
+    "measurementFailures": 0
+  },
+  "ledgerBuild": "blocked-by-existing-historical-identity-guard",
+  "guardSku": "GBCyl5BlkShSht",
+  "guardSource": "scripts/asset-ledger/cylinder-final-plates.mjs",
+  "generatedGeometryRestored": true,
+  "guardBypassed": false,
+  "scopedMasterChange": {
+    "priorRecipes": 290,
+    "newRecipes": 72,
+    "combinedRecipes": 362,
+    "priorRecipesUnchanged": true
+  },
+  "familyCompleteClaim": false
+}
