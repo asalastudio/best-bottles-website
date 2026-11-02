@@ -1,4 +1,5 @@
 import { isMissingHeroSource } from "./catalog-listing-visibility";
+import { rectangleApplicatorGlass } from "./rectangle-applicator";
 import { normalizeImportedCapColor } from "./cap-finish-evidence";
 import { glassSwatchImage } from "./glass-swatches";
 import { isLegacyBestBottlesImageUrl } from "../productVariantIntegrity";
@@ -309,6 +310,8 @@ function finishFromName(itemName: string | null | undefined): string | null {
 }
 
 function resolveCapFinish(variant: ProductCardVariantPreviewSource): string | null {
+    const rectangleGlass = rectangleApplicatorGlass(variant.websiteSku);
+    if (rectangleGlass) return rectangleGlass;
     const vial = oneMlVialApplicator(variant.websiteSku);
     if (vial) return `${vial.color} Applicator`;
     const capColor = cleanFinishLabel(variant.capColor);

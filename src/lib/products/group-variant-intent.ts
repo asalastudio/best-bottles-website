@@ -64,7 +64,8 @@ export function parseProductSlug(slug: string): {
     neck: string;
     closure: string | null;
 } | null {
-    const match = PRODUCT_SLUG.exec(slug);
+    // Normalize parsed tokens while preserving existing mixed-case Ground URLs.
+    const match = PRODUCT_SLUG.exec(slug.toLowerCase());
     if (!match) return null;
     const [, family, capacity, color, neck, closure] = match;
     return {

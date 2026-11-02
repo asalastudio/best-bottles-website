@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "passed": 3240,
+  "failed": 0,
+  "skipped": 7,
+  "suites": 925,
+  "command": "npx vitest run --maxWorkers=2",
+  "capturedAt": "2026-11-02T04:40:59.654Z",
+  "note": "The initial default-concurrency run hit five build-stub timeouts and a Vitest worker RPC timeout; the bounded full-suite run passed."
+}

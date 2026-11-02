@@ -37,6 +37,7 @@ import {
     type FocusedPdpRelations,
 } from "@/lib/products/pdp-relations";
 import PdpRedesignPage, { type PdpRedesignPayload } from "@/components/pdp/PdpRedesignPage";
+import { RECTANGLE_APPLICATOR_SLUG } from "@/lib/products/rectangle-applicator";
 import { parseProductSlug } from "@/lib/products/group-variant-intent";
 import { resolveItemDescriptions } from "@/lib/products/item-description/resolve";
 import { collectionDescription, collectionFor, derivePicks, pageOptionLabel, resolveVariant, variantTitle, type SiblingGlassGroup } from "@/lib/products/pdp-redesign/model";
@@ -73,7 +74,8 @@ async function getProductData(slug: string): Promise<ProductGroupPayload | null>
     if (!data) return null;
     return {
         ...data,
-        group: withStorefrontFamily(data.group),
+        group: { ...withStorefrontFamily(data.group), ...(slug === RECTANGLE_APPLICATOR_SLUG
+            ? { displayName: "9 ml Rectangle Applicator Bottle", primaryWebsiteSku: "GBSQSTClear", primaryGraceSku: "GB-RCT-CLR-9ML-T-02" } : {}) },
         variants: filterVariantsForGroupIntent(slug, filterVariantsForProductGroup(data.group, data.variants)),
     };
 }

@@ -1,0 +1,362 @@
+{
+  "status": "passed",
+  "capturedAt": "2026-11-02T04:43:40.137Z",
+  "pdp": [
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTClear",
+      "shot": "desktop-GBSQSTClear.png",
+      "url": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?cap=clear",
+      "title": "9 ML RECTANGLE APPLICATOR BOTTLE\n-\nClear",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "image": {
+        "x": 359.265625,
+        "y": 495.1875,
+        "width": 194.640625,
+        "height": 214,
+        "top": 495.1875,
+        "right": 553.90625,
+        "bottom": 709.1875,
+        "left": 359.265625
+      },
+      "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Frectangle9-applicator-2026-11-01%2FGBSQSTClear.9d207e97894d.png&w=640&q=75",
+      "rail": [
+        {
+          "id": "cobalt-blue",
+          "active": "false"
+        },
+        {
+          "id": "clear",
+          "active": "true"
+        },
+        {
+          "id": "green",
+          "active": "false"
+        }
+      ],
+      "overflow": false,
+      "visible": {
+        "x": 412.80807117474916,
+        "y": 501.5342680608365,
+        "width": 88.36944763795987,
+        "height": 199.84182509505703
+      }
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTBlue",
+      "shot": "desktop-GBSQSTBlue.png",
+      "url": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?cap=cobalt-blue",
+      "title": "9 ML RECTANGLE APPLICATOR BOTTLE\n-\nCobalt Blue",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "image": {
+        "x": 359.65625,
+        "y": 495.859375,
+        "width": 194.015625,
+        "height": 213.140625,
+        "top": 495.859375,
+        "right": 553.671875,
+        "bottom": 709,
+        "left": 359.65625
+      },
+      "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Frectangle9-applicator-2026-11-01%2FGBSQSTBlue.c36ec873d508.png&w=640&q=75",
+      "rail": [
+        {
+          "id": "cobalt-blue",
+          "active": "true"
+        },
+        {
+          "id": "clear",
+          "active": "false"
+        },
+        {
+          "id": "green",
+          "active": "false"
+        }
+      ],
+      "overflow": false,
+      "visible": {
+        "x": 412.171757518797,
+        "y": 501.532319391635,
+        "width": 89.6329495614035,
+        "height": 199.84972671102662
+      }
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTGREEN",
+      "shot": "desktop-GBSQSTGREEN.png",
+      "url": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?cap=green",
+      "title": "9 ML RECTANGLE APPLICATOR BOTTLE\n-\nGreen",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "image": {
+        "x": 360.140625,
+        "y": 495.875,
+        "width": 193.859375,
+        "height": 212.796875,
+        "top": 495.875,
+        "right": 554,
+        "bottom": 708.671875,
+        "left": 360.140625
+      },
+      "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Frectangle9-applicator-2026-11-01%2FGBSQSTGREEN.4ab6517202ba.png&w=640&q=75",
+      "rail": [
+        {
+          "id": "cobalt-blue",
+          "active": "false"
+        },
+        {
+          "id": "clear",
+          "active": "false"
+        },
+        {
+          "id": "green",
+          "active": "true"
+        }
+      ],
+      "overflow": false,
+      "visible": {
+        "x": 412.6138392857143,
+        "y": 501.5431054984779,
+        "width": 88.75099206349206,
+        "height": 199.8412052891933
+      }
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTClear",
+      "shot": "mobile-GBSQSTClear.png",
+      "url": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?cap=clear",
+      "title": "9 ML RECTANGLE APPLICATOR BOTTLE\n-\nClear",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 390,
+        "height": 400,
+        "top": 178.5,
+        "right": 390,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "image": {
+        "x": 122.609375,
+        "y": 389.75,
+        "width": 144.171875,
+        "height": 158.515625,
+        "top": 389.75,
+        "right": 266.78125,
+        "bottom": 548.265625,
+        "left": 122.609375
+      },
+      "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Frectangle9-applicator-2026-11-01%2FGBSQSTClear.9d207e97894d.png&w=640&q=75",
+      "rail": [
+        {
+          "id": "cobalt-blue",
+          "active": "false"
+        },
+        {
+          "id": "clear",
+          "active": "true"
+        },
+        {
+          "id": "green",
+          "active": "false"
+        }
+      ],
+      "overflow": false,
+      "visible": {
+        "x": 162.26869512959865,
+        "y": 394.4512238593156,
+        "width": 65.45595997073578,
+        "height": 148.02827946768062
+      }
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTBlue",
+      "shot": "mobile-GBSQSTBlue.png",
+      "url": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?cap=cobalt-blue",
+      "title": "9 ML RECTANGLE APPLICATOR BOTTLE\n-\nCobalt Blue",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 390,
+        "height": 400,
+        "top": 178.5,
+        "right": 390,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "image": {
+        "x": 122.890625,
+        "y": 390.25,
+        "width": 143.703125,
+        "height": 157.875,
+        "top": 390.25,
+        "right": 266.59375,
+        "bottom": 548.125,
+        "left": 122.890625
+      },
+      "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Frectangle9-applicator-2026-11-01%2FGBSQSTBlue.c36ec873d508.png&w=640&q=75",
+      "rail": [
+        {
+          "id": "cobalt-blue",
+          "active": "true"
+        },
+        {
+          "id": "clear",
+          "active": "false"
+        },
+        {
+          "id": "green",
+          "active": "false"
+        }
+      ],
+      "overflow": false,
+      "visible": {
+        "x": 161.7877114661654,
+        "y": 394.45199619771864,
+        "width": 66.3891630116959,
+        "height": 148.03032319391636
+      }
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTGREEN",
+      "shot": "mobile-GBSQSTGREEN.png",
+      "url": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?cap=green",
+      "title": "9 ML RECTANGLE APPLICATOR BOTTLE\n-\nGreen",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 390,
+        "height": 400,
+        "top": 178.5,
+        "right": 390,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "image": {
+        "x": 123.25,
+        "y": 390.25,
+        "width": 143.59375,
+        "height": 157.625,
+        "top": 390.25,
+        "right": 266.84375,
+        "bottom": 547.875,
+        "left": 123.25
+      },
+      "src": "http://localhost:3010/_next/image?url=%2Flocal-kits%2Frectangle9-applicator-2026-11-01%2FGBSQSTGREEN.4ab6517202ba.png&w=640&q=75",
+      "rail": [
+        {
+          "id": "cobalt-blue",
+          "active": "false"
+        },
+        {
+          "id": "clear",
+          "active": "false"
+        },
+        {
+          "id": "green",
+          "active": "true"
+        }
+      ],
+      "overflow": false,
+      "visible": {
+        "x": 162.11748120300751,
+        "y": 394.44853500761036,
+        "width": 65.73882623224728,
+        "height": 148.0283485540335
+      }
+    }
+  ],
+  "catalog": [
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTClear",
+      "shot": "catalog-desktop-GBSQSTClear.png",
+      "version": "rectangle9-2026-11-01-v1",
+      "viewBox": "-7.105427357601003e-14 -1.5631940186722207e-13 1000.0000000000001 1100.0000000000002",
+      "source": "/local-kits/rectangle9-applicator-2026-11-01/GBSQSTClear.9d207e97894d.png",
+      "href": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTClear",
+      "title": "9 ml Rectangle Applicator Bottle\n\n9 ml · Ground · Clear · Glass stopper\n\nClear\n\n$3.20\n/pc · 1–11 pcs\n\nPack of 1\n▾\n−\nQuantity\n+\nADD TO CART · $3.20"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTBlue",
+      "shot": "catalog-desktop-GBSQSTBlue.png",
+      "version": "rectangle9-2026-11-01-v1",
+      "viewBox": "-7.105427357601003e-14 -1.5631940186722207e-13 1000.0000000000001 1100.0000000000002",
+      "source": "/local-kits/rectangle9-applicator-2026-11-01/GBSQSTBlue.c36ec873d508.png",
+      "href": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTBlue",
+      "title": "9 ml Rectangle Applicator Bottle\n\n9 ml · Ground · Cobalt Blue · Glass stopper\n\nCobalt Blue\n\n$3.20\n/pc · 1–11 pcs\n\nPack of 1\n▾\n−\nQuantity\n+\nADD TO CART · $3.20"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTGREEN",
+      "shot": "catalog-desktop-GBSQSTGREEN.png",
+      "version": "rectangle9-2026-11-01-v1",
+      "viewBox": "-7.105427357601003e-14 -1.5631940186722207e-13 1000.0000000000001 1100.0000000000002",
+      "source": "/local-kits/rectangle9-applicator-2026-11-01/GBSQSTGREEN.4ab6517202ba.png",
+      "href": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTGREEN",
+      "title": "9 ml Rectangle Applicator Bottle\n\n9 ml · Ground · Green · Glass stopper\n\nGreen\n\n$3.20\n/pc · 1–11 pcs\n\nPack of 1\n▾\n−\nQuantity\n+\nADD TO CART · $3.20"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTClear",
+      "shot": "catalog-mobile-GBSQSTClear.png",
+      "version": "rectangle9-2026-11-01-v1",
+      "viewBox": "-7.105427357601003e-14 -1.5631940186722207e-13 1000.0000000000001 1100.0000000000002",
+      "source": "/local-kits/rectangle9-applicator-2026-11-01/GBSQSTClear.9d207e97894d.png",
+      "href": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTClear",
+      "title": "9 ml Rectangle Applicator Bottle\n\n9 ml · Ground · Clear · Glass stopper\n\nClear\n\n$3.20\n/pc · 1–11 pcs\n\nPack of 1\n▾\n−\nQuantity\n+\nADD TO CART · $3.20"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTBlue",
+      "shot": "catalog-mobile-GBSQSTBlue.png",
+      "version": "rectangle9-2026-11-01-v1",
+      "viewBox": "-7.105427357601003e-14 -1.5631940186722207e-13 1000.0000000000001 1100.0000000000002",
+      "source": "/local-kits/rectangle9-applicator-2026-11-01/GBSQSTBlue.c36ec873d508.png",
+      "href": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTBlue",
+      "title": "9 ml Rectangle Applicator Bottle\n\n9 ml · Ground · Cobalt Blue · Glass stopper\n\nCobalt Blue\n\n$3.20\n/pc · 1–11 pcs\n\nPack of 1\n▾\n−\nQuantity\n+\nADD TO CART · $3.20"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTGREEN",
+      "shot": "catalog-mobile-GBSQSTGREEN.png",
+      "version": "rectangle9-2026-11-01-v1",
+      "viewBox": "-7.105427357601003e-14 -1.5631940186722207e-13 1000.0000000000001 1100.0000000000002",
+      "source": "/local-kits/rectangle9-applicator-2026-11-01/GBSQSTGREEN.4ab6517202ba.png",
+      "href": "http://localhost:3010/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTGREEN",
+      "title": "9 ml Rectangle Applicator Bottle\n\n9 ml · Ground · Green · Glass stopper\n\nGreen\n\n$3.20\n/pc · 1–11 pcs\n\nPack of 1\n▾\n−\nQuantity\n+\nADD TO CART · $3.20"
+    }
+  ]
+}

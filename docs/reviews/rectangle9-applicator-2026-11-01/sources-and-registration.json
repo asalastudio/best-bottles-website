@@ -1,0 +1,95 @@
+{
+  "createdAt": "2026-11-02T04:24:31.797Z",
+  "status": "visual approval pending",
+  "sourceGeometry": {
+    "heightBareMm": 47,
+    "heightWithStopperMm": 64,
+    "widthMm": 24
+  },
+  "sizing": {
+    "heightPct": 37.01,
+    "baselinePct": 91,
+    "source": "docs/hero-families/batch3-2026-09-25/approval.json",
+    "method": "uniform alpha-bounds registration; no image stretching, recoloring, sharpening or mask alteration"
+  },
+  "sources": [
+    {
+      "sku": "GBSQSTClear",
+      "color": "Clear",
+      "sha256": "9d207e97894d01b78c75b3a8504039f828f665794701ea6598a0746f90f4d624",
+      "bytes": 1094330,
+      "file": "GBSQSTClear.9d207e97894d.png",
+      "generatedOriginal": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-e550a845-5ddb-4de8-ac08-d3313d44a64b.png",
+      "native": {
+        "width": 1196,
+        "height": 1315
+      },
+      "alphaBounds": {
+        "x": 329,
+        "y": 39,
+        "width": 543,
+        "height": 1228
+      },
+      "uniformScale": 0.3315228013029316,
+      "visibleHeight": 407.11,
+      "visibleWidth": 180.01688110749186,
+      "baseline": 1001,
+      "model": "built-in image generator; exact model version not exposed",
+      "status": "candidate - visual approval pending",
+      "geometryReference": "GBSQSTClear.51eb1f340836.webp",
+      "materialReference": null
+    },
+    {
+      "sku": "GBSQSTBlue",
+      "color": "Cobalt Blue",
+      "sha256": "c36ec873d5083b93cc07d56c24b456c5e49a9c15256296c44dba016bce09c6a1",
+      "bytes": 952183,
+      "file": "GBSQSTBlue.c36ec873d508.png",
+      "generatedOriginal": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-f581b4c4-e662-4863-92c2-acde2b7d5fce.png",
+      "native": {
+        "width": 1197,
+        "height": 1315
+      },
+      "alphaBounds": {
+        "x": 324,
+        "y": 35,
+        "width": 553,
+        "height": 1233
+      },
+      "uniformScale": 0.33017842660178426,
+      "visibleHeight": 407.11,
+      "visibleWidth": 182.5886699107867,
+      "baseline": 1001,
+      "model": "built-in image generator; exact model version not exposed",
+      "status": "candidate - visual approval pending",
+      "geometryReference": "GBSQSTClear.51eb1f340836.webp",
+      "materialReference": "GBSQSTBlue.e5e8aa201280.webp"
+    },
+    {
+      "sku": "GBSQSTGREEN",
+      "color": "Green",
+      "sha256": "4ab6517202ba5c76e03944766143f1520882e5b5849996f5d4ad059323c92954",
+      "bytes": 1043401,
+      "file": "GBSQSTGREEN.4ab6517202ba.png",
+      "generatedOriginal": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-73cf6bab-364e-4507-b889-33e0831aff12.png",
+      "native": {
+        "width": 1197,
+        "height": 1314
+      },
+      "alphaBounds": {
+        "x": 324,
+        "y": 35,
+        "width": 548,
+        "height": 1234
+      },
+      "uniformScale": 0.3299108589951378,
+      "visibleHeight": 407.11,
+      "visibleWidth": 180.7911507293355,
+      "baseline": 1001,
+      "model": "built-in image generator; exact model version not exposed",
+      "status": "candidate - visual approval pending",
+      "geometryReference": "GBSQSTClear.51eb1f340836.webp",
+      "materialReference": "GBSQSTGREEN.ab6f6a5ef950.webp"
+    }
+  ]
+}

@@ -33,6 +33,7 @@ import {
     type PdpStageFrame,
     type StageBounds,
 } from "@/lib/products/pdp-stage-frame";
+import { rectangleApplicatorGlass } from "../rectangle-applicator";
 import { allowsExplodedClosure, hangsBesideGlass, requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { placeStageBackdrop, stageBackdropFor, type StageBackdropPlacement } from "./stage-backdrops";
 
@@ -155,6 +156,8 @@ function separableReducer(kit: KitLike | null | undefined, context: StageContext
 
 /** Which views the stage can honestly show for this SKU. */
 export function availableViews(kit: KitLike | null | undefined, context: StageContext): StageView[] {
+    // Only a seated stopper-and-wand photograph is registered for this set.
+    if (rectangleApplicatorGlass(context.websiteSku)) return ["capon"];
     const views: StageView[] = ["sidecar"];
     if (!kit?.parts?.length) return views;
     if (context.applicator?.trim().toLowerCase() === "reducer" && !separableReducer(kit, context)) return ["capon"];

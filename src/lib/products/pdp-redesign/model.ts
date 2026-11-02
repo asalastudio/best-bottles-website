@@ -13,6 +13,7 @@
  */
 import type { ProductGroupPayload, ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
 import { decoratedCapFinish } from "@/lib/products/decorated-cap-finish";
+import { rectangleApplicatorGlass } from "../rectangle-applicator";
 import { normalizeImportedCapColor } from "@/lib/products/cap-finish-evidence";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import { CANONICAL_GLASS_COLORS, canonicalGlassColor, catalogFitmentLabel, displayApplicatorName } from "@/lib/catalogFilters";
@@ -75,6 +76,8 @@ function clean(value: string | null | undefined): string | null {
 
 /** The finish a cap is sold as: "Black with Dots", "Matte Copper", "Shiny Silver". */
 export function capFinishName(variant: ProductVariant): string {
+    const rectangleGlass = rectangleApplicatorGlass(variant.websiteSku);
+    if (rectangleGlass) return rectangleGlass;
     const normalised = normalizeImportedCapColor(variant);
     const dotted = decoratedCapFinish(normalised);
     if (dotted) return dotted;

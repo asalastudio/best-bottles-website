@@ -29,6 +29,7 @@ import {
     matchListedOption,
     type GracePdpPlateCommand,
 } from "@/lib/grace/pdpPlateSwap";
+import { rectangleApplicatorGlass } from "@/lib/products/rectangle-applicator";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
 import { getMaterialSwatchBackground, getMaterialSwatchStyle } from "@/lib/products/material-swatches";
@@ -151,6 +152,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
             part.slot === "roller" && (!part.views || part.views.includes("exploded")));
         return rollerPart?.image.url ? [[option.id, rollerPart.image.url]] : [];
     }));
+    const rectangleGlass = rectangleApplicatorGlass(selected?.websiteSku);
     const fitment = fitmentLabel(selected);
     // Product copy v2 (scripts/pdp-descriptions/product_copy.py) names the product when it covers this SKU.
     const copy = useMemo(() => (selected?.websiteSku ? descriptions[selected.websiteSku]?.copy ?? null : null), [descriptions, selected?.websiteSku]);
@@ -178,7 +180,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         stageEnvelopes,
     ), [kit, selected?.applicator, variants, kitsBySku, stageEnvelopes]);
     // The requested view survives a SKU change; a SKU without layers shows SIDECAR until one returns.
-    const shownView: StageView = views.includes(view) ? view : "sidecar";
+    const shownView: StageView = views.includes(view) ? view : views[0];
 
     // Grace's configureCurrentProduct lands here as it does on the classic page
     // (ProductDetailClient). Until 2026-09-25 this page had no listener, so the
@@ -318,9 +320,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
             productGroupSlug: slug,
             family: group.family,
             capacity: group.capacity ?? undefined,
-            color: group.color ?? undefined,
+            color: rectangleGlass ?? group.color ?? undefined,
             applicator: selected.applicator,
-            capColor: activeCap?.name ?? null,
+            capColor: rectangleGlass ? null : activeCap?.name ?? null,
             category: group.category,
             neckThreadSize: selected.neckThreadSize ?? group.neckThreadSize ?? null,
             webPrice1pc: selected.webPrice1pc ?? null,
@@ -334,7 +336,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         setQty(1);
         if (addedTimer.current != null) window.clearTimeout(addedTimer.current);
         addedTimer.current = window.setTimeout(() => setAddedQty(null), ADDED_FLASH_MS);
-    }, [selected, addState, tiers, qty, addItems, group, title, checkoutReady, slug, activeCap?.name]);
+    }, [selected, addState, tiers, qty, addItems, group, title, checkoutReady, slug, activeCap?.name, rectangleGlass]);
 
     // ── in this order: the cart's view of this page's lines ───────────────
     const pageSlugs = useMemo(() => new Set([slug, ...siblings.map((sibling) => sibling.slug)]), [slug, siblings]);
@@ -357,7 +359,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const minimum = useMemo(() => checkoutMinimum(cartItems), [cartItems]);
 
     // ── copy ──────────────────────────────────────────────────────────────
-    const glassName = activeGlass?.shortLabel ?? glassShortLabel(group.color);
+    const glassName = rectangleGlass ?? activeGlass?.shortLabel ?? glassShortLabel(group.color);
     const capName = activeCap?.name ?? null;
     const description = selected?.websiteSku ? descriptions[selected.websiteSku] ?? null : null;
     // The headline names the SKU in the buy box: a new cap, roller or finish changes it with the pick.
@@ -368,7 +370,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         && part.image.url.includes("/local-kits/cylinder5-profiles-2026-10-31/glass-5-")
         && /-measured-v\d+\.png$/.test(part.image.url));
     // Jordan's October 31 caliper measurements apply only to these local review masters.
-    const measuredVariant = hasMeasuredFiveBody && selected
+    const measuredVariant = rectangleGlass && selected ? { ...selected, color: rectangleGlass }
+        : hasMeasuredFiveBody && selected
         ? { ...selected, heightWithoutCap: "53.23 mm", diameter: "17.45 mm" } : selected;
     const measuredCallouts = buildCallouts(measuredVariant, capName).map(callout =>
         hasMeasuredFiveBody && callout.key === "neck"
@@ -391,7 +394,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         plateImageUrl: plate?.image ?? null,
     });
     const swatchStyle = materialSwatch(kit, activeCap?.swatchName ?? capName);
-    const selectionName = `${glassLabel(group.color)} glass${capName ? ` · ${capName} cap` : fitment ? ` · ${fitment}` : ""}`;
+    const selectionName = rectangleGlass ? rectangleGlass + " glass · Glass stopper"
+        : glassLabel(group.color) + " glass" + (capName ? " · " + capName + " cap" : fitment ? " · " + fitment : "");
     const stickyLine = `${qty.toLocaleString("en-US")} × ${unitPrice != null ? formatPrice(unitPrice) : "—"} · ${lineLabel(glassName, rollerOption, rollerOption ? null : fitment, capName)}`;
 
     // The server titles the tab for the SKU it rendered; a pick after that renames the tab with the headline.
@@ -419,7 +423,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
 
                 <div className={styles.grid}>
                     <PdpStage
-                        pickLine={pickLine(glassName, rollerOption, rollerOption ? null : fitment, capName)}
+                        pickLine={pickLine(glassName, rollerOption, rollerOption ? null : fitment, rectangleGlass ? null : capName)}
+                        finishKind={rectangleGlass ? "glass" : "cap"}
                         view={shownView}
                         availableViews={views}
                         onViewChange={onView}
@@ -437,7 +442,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         }))}
                         activeCapId={activeCap?.id ?? null}
                         onCapPick={onCapPick}
-                        glasses={glasses.map((glass) => ({
+                        glasses={(rectangleGlass ? [] : glasses).map((glass) => ({
                             slug: glass.slug, label: glass.label, active: glass.active, kit: glassBodyKit(glass.slug),
                             unavailable: glass.active
                                 ? variants.every((variant) => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false)
@@ -498,7 +503,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     </div>
                 </div>
 
-                <PdpBuildStrip
+                {!rectangleGlass && <PdpBuildStrip
                     productPageOnly={["cylinder-3.3ml-clear-12mm-finemist", "cylinder-4ml-clear-12mm-finemist"].includes(slug)}
                     capacityLabel={capacityLabel}
                     glassLabel={glassLabel(group.color)}
@@ -508,7 +513,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     fitmentKits={fitmentKits}
                     capKits={capKits}
                     href={buildYourBottleHref(group, collection?.band ?? null, selected?.websiteSku ?? selected?.graceSku) + (searchParams.get("assetPreview") === "gpt13" ? "&assetPreview=gpt13" : "")}
-                />
+                />}
 
                 <PdpTechSheet
                     rows={measuredTechRows}

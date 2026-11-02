@@ -1,0 +1,30 @@
+{
+  "scope": "Rectangle 9 ml local candidates; no catalog release claim",
+  "steps": [
+    {
+      "step": "measure-plates",
+      "exitCode": 0,
+      "tail": [
+        "{\"plates\": 2283, \"fetchFailures\": 0, \"measurementFailures\": 0, \"bottlesWithTwoOrMore\": 225, \"wrongSize\": 40, \"legacySource\": 86, \"tolerance\": 0.05}",
+        "2283 plates listed, 2283 images on hand"
+      ]
+    },
+    {
+      "step": "ledger-build",
+      "exitCode": 1,
+      "tail": [
+        "file:///Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/scripts/asset-ledger/cylinder-final-plates.mjs:47",
+        "        if(matches.length!==1||['productGroupId','capacityMl','color','applicator','capColor','graceSku'].some(k=>current[k]!==row[k]))throw Error('Catalog identity changed for '+row.sku+'.');",
+        "                                                                                                                                             ^",
+        "",
+        "Error: Catalog identity changed for GBCyl5BlkShSht.",
+        "    at readCylinderFinalPlates (file:///Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/scripts/asset-ledger/cylinder-final-plates.mjs:47:142)",
+        "    at async file:///Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/scripts/asset-ledger/build.mjs:297:14",
+        "",
+        "Node.js v22.22.3"
+      ]
+    }
+  ],
+  "priorPlateGeometrySha256": "ce6451a5f135c4cfbd281b13b7b4c827c42c747a2f80b2e43c97996e5b79f4e6",
+  "restoredOnlyGeneratedPlateGeometryAfterHistoricalGuard": true
+}

@@ -1,3 +1,4 @@
+import { rectangleApplicatorGlass } from "./rectangle-applicator";
 import { getFinishFromWebsiteSku } from "../paper-doll/tokens.generated";
 
 // Exact legacy descriptions identify these short black/white vial caps;
@@ -21,6 +22,8 @@ type CapEvidence = { websiteSku?: string | null; color?: string | null; capColor
 /** Some imports repeat the bottle's glass color in capColor. Only replace that
  * value when the exact website SKU supplies a known component finish. */
 export function normalizeImportedCapColor<T extends CapEvidence>(variant: T): T {
+    const rectangleGlass = rectangleApplicatorGlass(variant.websiteSku);
+    if (rectangleGlass) return { ...variant, capColor: rectangleGlass };
     const glass = variant.color?.trim().toLowerCase();
     const cap = variant.capColor?.trim().toLowerCase();
     const verified = VERIFIED_VIAL_CAPS[variant.websiteSku ?? ""];

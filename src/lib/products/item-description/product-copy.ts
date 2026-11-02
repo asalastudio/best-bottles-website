@@ -6,6 +6,7 @@
  * Included / Fits / Glass / Good to know bullets, one Care note, the item-type line, the meta description and
  * the image alt text for every product that passes the checks. Products it does not cover keep today's copy.
  */
+import { rectangleApplicatorGlass, rectangleApplicatorSku } from "../rectangle-applicator";
 import siteCopy from "../../../../data/descriptions/pdp/product-copy.site.json";
 
 export type ProductCopy = {
@@ -41,6 +42,18 @@ function reviewedSmallSprayerCopy(sku: string, copy: ProductCopy): ProductCopy {
 }
 
 export function productCopyFor(variant: { websiteSku?: string | null; graceSku?: string | null }): ProductCopy | null {
+    const rectangleGlass = rectangleApplicatorGlass(rectangleApplicatorSku(variant));
+    if (rectangleGlass) {
+        const title = "9 ml Rectangle Applicator Bottle";
+        const option = rectangleGlass + " Glass";
+        const sentences = ["A rectangular glass bottle for perfume oil and attar.",
+            "The faceted glass stopper has a glass applicator wand and seats in a ground-glass neck."];
+        return { title, option, variantTitle: title + " - " + option, sentences,
+            bullets: [["Included", "Matching faceted glass stopper with glass applicator wand."],
+                ["Glass", rectangleGlass + " glass."], ["Neck", "Ground-glass stopper joint."]],
+            care: "", itemType: "Glass applicator bottle",
+            metaDescription: sentences.join(" "), altText: title + ", " + rectangleGlass.toLowerCase() + " glass with matching faceted stopper" };
+    }
     const website = variant.websiteSku?.trim();
     if (website && COPY.bySku[website]) return reviewedSmallSprayerCopy(website, COPY.bySku[website]);
     const grace = variant.graceSku?.trim();
