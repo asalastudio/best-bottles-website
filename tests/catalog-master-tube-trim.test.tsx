@@ -1,0 +1,30 @@
+// @vitest-environment jsdom
+import React, { act } from "react";
+import { createRoot } from "react-dom/client";
+import { afterEach, expect, it, vi } from "vitest";
+import CylinderMasterPreview from "@/components/products/CylinderMasterPreview";
+import manifest from "@/lib/paper-doll/approved-kits.generated.json";
+import type { BuilderKit } from "@/lib/bottle-builder/model";
+const rows = manifest.rows as unknown as Record<string, BuilderKit>;
+const container = document.createElement("div");
+let root: ReturnType<typeof createRoot>;
+afterEach(() => { act(() => root?.unmount()); container.replaceChildren(); vi.unstubAllGlobals(); });
+it.each(["GBTulip6SpryGlMatt", "GBTulip6SpryBlkSh", "GBTulipAmb5SpryGlMatt"])("stops the %s catalog dip tube at its approved interior floor", async sku => {
+    vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
+    vi.stubGlobal("fetch", vi.fn(async () => ({ ok: true, json: async () => ({ kit: rows[sku], version: manifest.version }) })));
+    root = createRoot(container);
+    await act(async () => { root.render(<CylinderMasterPreview sku={sku} title="Tulip" fallback={<span>legacy</span>} />); });
+    const tube = container.querySelector('[data-bb-master-part="diptube"]')!;
+    expect(tube).not.toBeNull();
+    const original = rows[sku].parts.find(part => part.slot === "diptube" && part.views?.includes("sidecar"))!;
+    expect(original.trimBottomPct).toBeGreaterThan(0);
+    const clip = tube.getAttribute("clip-path");
+    expect(clip).toMatch(/^url\(#.+\)$/);
+    const id = clip!.slice(5, -1);
+    const rect = [...container.querySelectorAll("clipPath")].find(path => path.id === id)!.querySelector("rect")!;
+    expect(Number(rect.getAttribute("y")) + Number(rect.getAttribute("height"))).toBeCloseTo(original.bounds.bottom, 6);
+    expect(Number(rect.getAttribute("y")) + Number(rect.getAttribute("height"))).toBeLessThan(rows[sku].anchors.baselineY);
+    expect(tube.getAttribute("opacity")).toBe(String(original.opacity));
+    expect((tube as SVGElement).style.mixBlendMode).toBe(original.blendMode ?? "");
+    expect(container.querySelectorAll('[data-bb-master-part="diptube"]')).toHaveLength(1);
+});

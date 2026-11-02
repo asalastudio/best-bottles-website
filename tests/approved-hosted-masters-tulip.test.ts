@@ -37,18 +37,19 @@ describe("approved hosted master release", () => {
         expect(isOptimizableImageUrl(svg.url)).toBe(false);
         expect(displayImageUrl(svg.url, 640)).toBe(svg.url);
     });
-    it("publishes only the 267 approved configurations, not the broader candidate library", () => {
-        expect(Object.keys(hosted).sort()).toEqual(Object.keys(originals).sort());
-        expect(Object.keys(hosted)).toHaveLength(267);
+    it("preserves the original 267 approved configurations alongside the scoped small-sprayer extension", () => {
+        expect(Object.keys(originals)).toHaveLength(267);
+        expect(Object.keys(hosted)).toHaveLength(271);
+        expect(Object.keys(hosted)).toEqual(expect.arrayContaining(Object.keys(originals)));
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         expect(hosted.GBTallCyl9SpryGlMatt).toBeUndefined();
         expect(hosted.GBFlair15SpryBlkMatt).toBeUndefined();
-        expect(hosted.GBSpry3mlClBlk).toBeUndefined();
+        expect(hosted.GBSpry3mlClBlk).toBeDefined();
         expect(JSON.stringify(hosted)).not.toContain('"url":"/local-kits/');
     });
     it("retains exact body geometry, cap seating, roller plug and tube placement in all three views", () => {
-        for (const [sku, kit] of Object.entries(hosted)) {
-            const original = originals[sku];
+        for (const [sku, original] of Object.entries(originals)) {
+            const kit = hosted[sku];
             const restored = structuredClone(kit);
             restored.parts.forEach((part, i) => { part.image = original.parts[i].image; });
             expect(restored, sku).toEqual(original);

@@ -1,0 +1,13 @@
+{
+  "version": "a63043cf5188f86a",
+  "configurations": 271,
+  "addedSkus": [
+    "GBSpry3mlClBlk",
+    "GBSpry3mlClWht",
+    "GBSpry4mlClBlk",
+    "GBSpry4mlClWh"
+  ],
+  "preservedPriorRecipesSha256": "b319d9d90adc6eb9438be7aada48d0f691be040ae512b9975fc9cb35a2c7e3e5",
+  "sourceSha256": "d93e56bf732e663b9d1300647ec361afa1daaf61c4038c3e5cf7614dd6878b81",
+  "productionDataMutated": false
+}
