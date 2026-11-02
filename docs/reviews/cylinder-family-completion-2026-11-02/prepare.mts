@@ -3,7 +3,7 @@ import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
 import { availableViews, stageLayout, type StageView } from '../../../src/lib/products/pdp-redesign/stage';
-import type { ReviewKit as KitLike } from './review-types';
+import type { ReviewKit as KitLike, FamilySnapshot, RecoveredMaster, ReviewHold } from './review-types';
 import { builderBodyIdentity, type CatalogRow } from '../../../src/lib/bottle-builder/model';
 import { withCylinder25CopperOvercap } from '../../../src/lib/register/cylinder25-copper-overcap';
 
@@ -12,12 +12,11 @@ const out='public/local-kits/cylinder-family-completion-2026-11-02';
 const read=(p:string)=>JSON.parse(fs.readFileSync(p,'utf8'));
 const hash=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 const raw=read(dir+'/register-kits-before.json').kits as Record<string,KitLike>;
-const catalog=Object.values(read(dir+'/current-family-snapshot.json').families).flatMap((f:any)=>f.rows) as CatalogRow[];
-const library=read('docs/reviews/cylinder-master-materials-2026-10-31/family-inventory.json').rows;
+const catalog=Object.values((read(dir+'/current-family-snapshot.json') as FamilySnapshot).families).flatMap(f=>f.rows) as CatalogRow[];
+const library=read('docs/reviews/cylinder-master-materials-2026-10-31/family-inventory.json').rows as RecoveredMaster[];
 const media=read(dir+'/source-media.json');
-const approved=read('src/lib/paper-doll/approved-kits.generated.json');
-const rows:Record<string,KitLike>={}, before:Record<string,KitLike>={}, changes:any[]=[], held:any[]=[];
-const tubeSources:any[]=[];
+const rows:Record<string,KitLike>={}, before:Record<string,KitLike>={}, changes:Record<string, unknown>[]=[], held:ReviewHold[]=[];
+const tubeSources:Array<Record<string, unknown> & { image: {bytes:number} }>=[];
 fs.mkdirSync(out,{recursive:true});
 const nativeLotion=fs.readFileSync('docs/reviews/cylinder-lotion-pumps-2026-11-02/sources/lotion-tube-clean.png');
 const nativeSpray=fs.readFileSync('docs/reviews/cylinder5-finemist-2026-11-01/sources/approved-mechanism.png');
@@ -68,13 +67,13 @@ async function makeTube(kind:'lotion'|'spray'|'bulb',bodyId:string,height:number
 
 for(const bodyId of Object.keys(floors)){
     const group=catalog.filter(r=>r.category==='Glass Bottle'&&raw[r.websiteSku!]?.register?.bodyId===bodyId);
-    const master=library.find((r:any)=>r.bodyId===bodyId&&r.glass==='Clear');
+    const master=library.find(r=>r.bodyId===bodyId&&r.glass==='Clear');
     assert(master?.sourceAvailable,bodyId+' lacks a recovered body');
     const bodyBytes=fs.readFileSync(master.sourceFile);assert.equal(hash(bodyBytes),master.fileSha256);
     const bodyFile='body-'+bodyId+'.'+master.fileSha256.slice(0,12)+'.png';
     fs.writeFileSync(out+'/'+bodyFile,bodyBytes);
     const sample=raw[group[0].websiteSku!],sampleBody=sample.parts.find(p=>p.slot==='body')!;
-    const shoulder=sampleBody.box!.y+master.anchors.bodyShoulderY*sampleBody.box!.height/sampleBody.image.height;
+    const shoulder=sampleBody.box!.y+master.anchors.bodyShoulderY!*sampleBody.box!.height/sampleBody.image.height;
     const innerFloor=sampleBody.box!.y+floors[bodyId]*sampleBody.box!.height/sampleBody.image.height;
     const ppm=sample.anchors.pxPerMm!,tip=innerFloor-.5*ppm,top=shoulder-ppm;
     const mechanisms={lotion:await makeTube('lotion',bodyId,tip-top,ppm),spray:await makeTube('spray',bodyId,tip-top,ppm),bulb:await makeTube('bulb',bodyId,tip-top,ppm)};
@@ -87,7 +86,7 @@ for(const bodyId of Object.keys(floors)){
         before[sku]=structuredClone(original);
         body.image={...body.image,url:'/local-kits/cylinder-family-completion-2026-11-02/'+bodyFile,sha256:master.fileSha256,bytes:bodyBytes.length};
         kit.glassSizing={heightPct:master.scale.targetPct,baselinePct:master.scale.baselinePct,landmarkY:body.box!.y+master.anchors.shoulderY*body.box!.height/body.image.height,source:master.scale.source};
-        const adjustments:any[]=[];
+        const adjustments:Array<{slot:string;dx:number;dy:number;visibleBottom:number}>=[];
         for(const part of kit.parts){
             if(part.slot==='body'||part.slot==='diptube')continue;
             const m=media[part.image.url];assert(m,'Missing native asset '+part.image.url);
@@ -139,7 +138,7 @@ for(const [sku,kit] of Object.entries(reference25.rows) as Array<[string,KitLike
 }
 const bulb25=catalog.filter(row=>row.capacityMl===25&&row.family==='Cylinder'&&row.applicator==='Vintage Bulb Sprayer');
 if(bulb25.length){
-    const sample=rows[bulb25[0].websiteSku!],oldBody=old25.rows[bulb25[0].websiteSku!].parts.find((p:any)=>p.slot==='body');
+    const sample=rows[bulb25[0].websiteSku!],oldBody=old25.rows[bulb25[0].websiteSku!].parts.find((p:{slot:string})=>p.slot==='body');
     const ppm=sample.anchors.pxPerMm!,top=sample.glassSizing!.landmarkY!-ppm;
     const floor=oldBody.box.y+1935*oldBody.box.height/oldBody.image.height,tip=floor-.5*ppm;
     const material=await makeTube('bulb','cylinder-25ml-18-415',tip-top,ppm);
@@ -152,7 +151,7 @@ if(bulb25.length){
         changes.push({sku:row.websiteSku,bodyId:'cylinder-25ml-18-415',tubeKind:'bulb',innerFloorY:floor,tipY:tip,presentation:'assembled color swatches only'});
     }
 }
-held.push(...read('docs/reviews/cylinder25-18415-2026-11-01/registration.json').held.map((x:any)=>({...x,bodyId:'cylinder-25ml-18-415'})));
+held.push(...read('docs/reviews/cylinder25-18415-2026-11-01/registration.json').held.map((x:ReviewHold)=>({...x,bodyId:'cylinder-25ml-18-415'})));
 for(const row of catalog.filter(r=>r.category==='Glass Bottle'&&r.capacityMl===30))held.push({sku:row.websiteSku,bodyId:'cylinder-30ml-18-415',reason:'fixed-classic-spray-source',detail:'Native PSD and live reference recovered. It includes a matching metal base; a separate plain body is not yet validated. Keep the existing source until that assembly is reconciled.'});
 
 const rollerFile=dir+'/roller-registration.json';

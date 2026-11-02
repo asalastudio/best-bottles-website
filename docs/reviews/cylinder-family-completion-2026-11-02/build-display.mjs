@@ -1,5 +1,4 @@
 import fs from 'node:fs';
-import path from 'node:path';
 import {createHash} from 'node:crypto';
 import sharp from 'sharp';
 const dir='docs/reviews/cylinder-family-completion-2026-11-02',out='public/local-kits/cylinder-family-completion-2026-11-02/display';

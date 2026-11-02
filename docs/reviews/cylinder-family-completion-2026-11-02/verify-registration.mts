@@ -2,12 +2,12 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { availableViews, stageLayout } from '../../../src/lib/products/pdp-redesign/stage';
-import type { ReviewKit } from './review-types';
+import type { ReviewKit, FamilySnapshot } from './review-types';
 const dir = 'docs/reviews/cylinder-family-completion-2026-11-02';
 const read = (p: string) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const kits = read('public/local-kits/cylinder-family-completion-2026-11-02/kits.json').rows as Record<string, ReviewKit>;
-const snapshot = read(dir + '/current-family-snapshot.json');
-const catalog = Object.values(snapshot.families).flatMap((family: any) => family.rows) as any[];
+const snapshot = read(dir + '/current-family-snapshot.json') as FamilySnapshot;
+const catalog = Object.values(snapshot.families).flatMap(family => family.rows);
 const registration = read(dir + '/registration.json');
 const rollers = read(dir + '/roller-registration.json');
 const bodies = new Map<string, string>(), hashes = new Map<string, string>();
@@ -49,7 +49,7 @@ for (const [sku, kit] of Object.entries(kits)) {
             }
         }
     }
-    const change = registration.changes.find((c: any) => c.sku === sku);
+    const change = registration.changes.find((c: {sku:string;innerFloorY?:number;tipY?:number}) => c.sku === sku);
     if (change?.innerFloorY !== undefined && change?.tipY !== undefined) {
         assert(change.tipY < change.innerFloorY, 'Tube penetrates floor ' + sku);
         assert(change.innerFloorY < body.bounds.bottom, 'Floor is not inside body ' + sku);

@@ -2,12 +2,12 @@ import fs from 'node:fs';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
-import type { ReviewKit as KitLike, ReviewPart as KitPartLike } from './review-types';
+import type { ReviewKit as KitLike, ReviewPart as KitPartLike, FamilySnapshot, RecoveredMaster } from './review-types';
 const dir='docs/reviews/cylinder-family-completion-2026-11-02',out='public/local-kits/cylinder-family-completion-2026-11-02';
 const read=(p:string)=>JSON.parse(fs.readFileSync(p,'utf8'));
 const sha=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
-const catalog=Object.values(read(dir+'/current-family-snapshot.json').families).flatMap((f:any)=>f.rows) as any[];
-const library=read('docs/reviews/cylinder-master-materials-2026-10-31/family-inventory.json').rows;
+const catalog=Object.values((read(dir+'/current-family-snapshot.json') as FamilySnapshot).families).flatMap(f=>f.rows);
+const library=read('docs/reviews/cylinder-master-materials-2026-10-31/family-inventory.json').rows as RecoveredMaster[];
 fs.mkdirSync(out,{recursive:true});
 async function image(file:string,name:string){
     const raw=fs.readFileSync(file),{data,info}=await sharp(raw).ensureAlpha().raw().toBuffer({resolveWithObject:true});
@@ -28,16 +28,19 @@ const dims:Record<number,{height:number;diameter:number;closedHeight:number}>={2
 // Registration width from the original 28 ml photo: the white flange spans
 // approximately 294 px against 445 px of a 31 mm body. This is not a new caliper measurement.
 const flangeWidthMm=294/445*31;
-const ref=library.find((r:any)=>r.bodyId==='cylinder-28ml-16mm');
+const ref=library.find(r=>r.bodyId==='cylinder-28ml-16mm');
+assert(ref?.sourceAvailable,'The 28 ml source must be available before registering shared jumbo hardware');
 const capHeightMm=100-81*(ref.anchors.baselineY-ref.anchors.shoulderY)/(ref.anchors.baselineY-ref.anchors.seatY);
-const rows:Record<string,KitLike>={},configurations:any[]=[];
+const rows:Record<string,KitLike>={},configurations:Record<string, unknown>[]=[];
 function part(slot:string,asset:Awaited<ReturnType<typeof image>>,axis:number,base:number,scale:number,id:string,index:number):KitPartLike{
     const b=asset.bounds,x=axis-(b.left+b.right)/2*scale,y=base-b.bottom*scale;
     return {slot,variantKey:null,componentId:id,zOrder:index,explodeIndex:index,assembled:{x:0,y:0},exploded:{dx:0,dy:0},image:asset.image,
         box:{x,y,width:asset.image.width*scale,height:asset.image.height*scale},bounds:{left:x+b.left*scale,top:y+b.top*scale,right:x+b.right*scale,bottom:base}};
 }
-for(const row of catalog.filter(r=>r.category==='Glass Bottle'&&r.neckThreadSize==='16mm'&&[28,50].includes(r.capacityMl))){
-    const d=dims[row.capacityMl],master=library.find((r:any)=>r.bodyId==='cylinder-'+row.capacityMl+'ml-16mm'&&r.glass==='Clear');assert(master?.sourceAvailable);
+for(const row of catalog.filter(r=>r.category==='Glass Bottle'&&r.neckThreadSize==='16mm'&&[28,50].includes(r.capacityMl ?? 0))){
+    assert(row.capacityMl===28||row.capacityMl===50,'Unexpected jumbo roller capacity');
+    assert(row.capColor==='Black'||row.capColor==='White','Unexpected jumbo roller cap finish');
+    const d=dims[row.capacityMl],master=library.find(r=>r.bodyId==='cylinder-'+row.capacityMl+'ml-16mm'&&r.glass==='Clear');assert(master?.sourceAvailable);
     const bytes=fs.readFileSync(master.sourceFile);assert.equal(sha(bytes),master.fileSha256);
     const info=await sharp(bytes).metadata(),scale=800/(master.anchors.baselineY-master.anchors.seatY),ppm=800/d.height;
     const file='body-'+master.bodyId+'.'+master.fileSha256.slice(0,12)+'.png';fs.writeFileSync(out+'/'+file,bytes);

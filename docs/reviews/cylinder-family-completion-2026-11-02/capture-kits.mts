@@ -2,9 +2,10 @@ import fs from "node:fs";
 import { ConvexHttpClient } from "convex/browser";
 import { loadRegisterKits } from "../../../src/lib/register/load";
 import { builderBodyIdentity, type CatalogRow } from "../../../src/lib/bottle-builder/model";
+import type { FamilySnapshot, InventoryGroup } from "./review-types";
 const dir = "docs/reviews/cylinder-family-completion-2026-11-02";
-const snapshot = JSON.parse(fs.readFileSync(dir + "/current-family-snapshot.json", "utf8"));
-const rows = Object.values(snapshot.families).flatMap((family: any) => family.rows) as CatalogRow[];
+const snapshot = JSON.parse(fs.readFileSync(dir + "/current-family-snapshot.json", "utf8")) as FamilySnapshot;
+const rows = Object.values(snapshot.families).flatMap(family => family.rows) as CatalogRow[];
 const glass = rows.filter(row => row.category === "Glass Bottle");
 const client = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 const registered = await loadRegisterKits(client, glass.map(row => row.graceSku), { strict: true });
@@ -14,12 +15,12 @@ const kits = Object.fromEntries(glass.flatMap(row => {
     return kit ? [[row.websiteSku!, kit]] : [];
 }));
 fs.writeFileSync(dir + "/register-kits-before.json", JSON.stringify({ capturedAt: new Date().toISOString(), kits }, null, 2) + "\n");
-const groups = new Map<string, any>();
+const groups = new Map<string, InventoryGroup>();
 for (const row of glass) {
     const key = builderBodyIdentity(row).bodyId + "|" + row.color;
-    const group = groups.get(key) ?? { key, profile: builderBodyIdentity(row).bodyId, glass: row.color, category: row.category,
-        capacityMl: row.capacityMl, neck: row.neckThreadSize, rows: [], registerAvailable: 0, approvedAvailable: 0, bodies: {}, tubeSources: {} };
-    group.rows.push(row.websiteSku);
+    const group: InventoryGroup = groups.get(key) ?? { key, profile: builderBodyIdentity(row).bodyId, glass: row.color!, category: row.category!,
+        capacityMl: row.capacityMl!, neck: row.neckThreadSize!, rows: [], registerAvailable: 0, approvedAvailable: 0, bodies: {}, tubeSources: {} };
+    group.rows.push(row.websiteSku!);
     const kit = approved.rows[row.websiteSku!] ?? kits[row.websiteSku!];
     if (kits[row.websiteSku!]) group.registerAvailable++;
     if (approved.rows[row.websiteSku!]) group.approvedAvailable++;
