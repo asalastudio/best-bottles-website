@@ -1,0 +1,14 @@
+{
+  "groups": [
+    "cylinder-9ml-13-415|Clear",
+    "cylinder-9ml-13-415|Frosted",
+    "sleek-5ml-13-415|Clear",
+    "sleek-8ml-13-415|Clear"
+  ],
+  "configurations": 144,
+  "layouts": 432,
+  "contactTiles": 24,
+  "viewControls": 12,
+  "errors": [],
+  "passed": true
+}

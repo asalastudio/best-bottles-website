@@ -1,0 +1,28 @@
+{
+  "productionOrigin": "https://best-bottles-website.vercel.app",
+  "commit": "2268baa3330354a9dc49e61a7526e638df6b3aba",
+  "pullRequest": "https://github.com/asalastudio/best-bottles-website/pull/383",
+  "deploymentId": "dpl_6BbeeCMrQgQTUTyCymSzkgBoNT7s",
+  "deploymentState": "READY",
+  "masterVersion": "a63043cf5188f86a",
+  "scope": "Previously approved Tulip catalog tube trims and four small-sprayer recipes only. New Cylinder 9 ml 13-415 and Sleek candidates remain unpublished.",
+  "tulip": {
+    "passed": true,
+    "verifiedAt": "2026-11-02T00:55:46.364Z",
+    "evidence": "docs/reviews/tulip-catalog-parity-2026-11-01/production-2268baa3/verification.json",
+    "failures": [],
+    "errors": [],
+    "catalogStates": 30,
+    "pdpTubeTrimChecks": 2
+  },
+  "smallSprayers": {
+    "passed": true,
+    "verifiedAt": "2026-11-02T00:56:03.206Z",
+    "evidence": "docs/reviews/hosted-small-sprayers-2026-11-01/production-2268baa3/verification.json",
+    "failures": [],
+    "errors": [],
+    "apiRecipes": 271,
+    "productPageStates": 24,
+    "catalogCards": 2
+  }
+}

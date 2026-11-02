@@ -1,0 +1,242 @@
+[
+  {
+    "sku": "GBSleek5SpryBlkMatt",
+    "kind": "sprayer",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-5ml-clear-13-415-finemist?sku=GBSleek5SpryBlkMatt&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+    "roller": null,
+    "capColor": "Matte Black"
+  },
+  {
+    "sku": "GBSleek5SpryGlSh",
+    "kind": "gold-sprayer",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-5ml-clear-13-415-finemist?sku=GBSleek5SpryGlSh&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+    "roller": null,
+    "capColor": "Shiny Gold"
+  },
+  {
+    "sku": "GBSleek5MtlRollBlkDot",
+    "kind": "metal-roller",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-5ml-clear-13-415-rollon?sku=GBSleek5MtlRollBlkDot&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+    "roller": "metal",
+    "capColor": "Black with Dots Cap"
+  },
+  {
+    "sku": "GBSleek5RollBlkDot",
+    "kind": "plastic-roller",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-5ml-clear-13-415-rollon?sku=GBSleek5RollBlkDot&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+    "roller": "plastic",
+    "capColor": "Black with Dots Cap"
+  },
+  {
+    "sku": "GBSleek5BlkSht",
+    "kind": "ribbed-pour",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-5ml-clear-13-415?sku=GBSleek5BlkSht&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+    "roller": null,
+    "capColor": "Black Short"
+  },
+  {
+    "sku": "GBSleek5CuSht",
+    "kind": "smooth-pour",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-5ml-clear-13-415?sku=GBSleek5CuSht&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+    "roller": null,
+    "capColor": "Short Matte Copper"
+  },
+  {
+    "sku": "GBSleek8SpryBlkMatt",
+    "kind": "sprayer",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBlkMatt&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+    "roller": null,
+    "capColor": "Matte Black"
+  },
+  {
+    "sku": "GBSleek8SpryGlSh",
+    "kind": "gold-sprayer",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryGlSh&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+    "roller": null,
+    "capColor": "Shiny Gold"
+  },
+  {
+    "sku": "GBSleek8MtlRollBlkDot",
+    "kind": "metal-roller",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-8ml-clear-13-415-rollon?sku=GBSleek8MtlRollBlkDot&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+    "roller": "metal",
+    "capColor": "Black with Dots Cap"
+  },
+  {
+    "sku": "GBSleek8RollBlkDot",
+    "kind": "plastic-roller",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-8ml-clear-13-415-rollon?sku=GBSleek8RollBlkDot&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+    "roller": "plastic",
+    "capColor": "Black with Dots Cap"
+  },
+  {
+    "sku": "GBSleek8BlkSht",
+    "kind": "ribbed-pour",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-8ml-clear-13-415?sku=GBSleek8BlkSht&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+    "roller": null,
+    "capColor": "Black Short"
+  },
+  {
+    "sku": "GBSleek8CuSht",
+    "kind": "smooth-pour",
+    "family": "Sleek",
+    "glass": "Clear",
+    "url": "/products/sleek-8ml-clear-13-415?sku=GBSleek8CuSht&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+    "roller": null,
+    "capColor": "Short Matte Copper"
+  },
+  {
+    "sku": "GBTallCyl9SpryBlkMatt",
+    "kind": "sprayer",
+    "family": "Cylinder",
+    "glass": "Clear",
+    "url": "/products/cylinder-9ml-clear-13-415-finemist?sku=GBTallCyl9SpryBlkMatt&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+    "roller": null,
+    "capColor": "Matte Black"
+  },
+  {
+    "sku": "GBTallCyl9SpryGlSh",
+    "kind": "gold-sprayer",
+    "family": "Cylinder",
+    "glass": "Clear",
+    "url": "/products/cylinder-9ml-clear-13-415-finemist?sku=GBTallCyl9SpryGlSh&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+    "roller": null,
+    "capColor": "Shiny Gold"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollBlkDot",
+    "kind": "metal-roller",
+    "family": "Cylinder",
+    "glass": "Clear",
+    "url": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9MtlRollBlkDot&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+    "roller": "metal",
+    "capColor": "Black with Dots Cap"
+  },
+  {
+    "sku": "GBTallCyl9RollBlkDot",
+    "kind": "plastic-roller",
+    "family": "Cylinder",
+    "glass": "Clear",
+    "url": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9RollBlkDot&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+    "roller": "plastic",
+    "capColor": "Black with Dots Cap"
+  },
+  {
+    "sku": "GBTallCyl9CuSht",
+    "kind": "smooth-pour",
+    "family": "Cylinder",
+    "glass": "Clear",
+    "url": "/products/cylinder-9ml-clear-13-415?sku=GBTallCyl9CuSht&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+    "roller": null,
+    "capColor": "Short Lined Matte Copper"
+  },
+  {
+    "sku": "GBTallCyl9BlkSht",
+    "kind": "ribbed-pour",
+    "family": "Cylinder",
+    "glass": "Clear",
+    "url": "/products/cylinder-9ml-clear-13-415?sku=GBTallCyl9BlkSht&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+    "roller": null,
+    "capColor": "Short Ribbed Black"
+  },
+  {
+    "sku": "GBTallCylFrst9SpryCuMatt",
+    "kind": "sprayer",
+    "family": "Cylinder",
+    "glass": "Frosted",
+    "url": "/products/cylinder-9ml-frosted-13-415-finemist?sku=GBTallCylFrst9SpryCuMatt&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+    "roller": null,
+    "capColor": "Copper"
+  },
+  {
+    "sku": "GBTallCylFrst9SpryGlSh",
+    "kind": "gold-sprayer",
+    "family": "Cylinder",
+    "glass": "Frosted",
+    "url": "/products/cylinder-9ml-frosted-13-415-finemist?sku=GBTallCylFrst9SpryGlSh&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+    "roller": null,
+    "capColor": "Shiny Gold"
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollBlkDot",
+    "kind": "metal-roller",
+    "family": "Cylinder",
+    "glass": "Frosted",
+    "url": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9MtlRollBlkDot&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+    "roller": "metal",
+    "capColor": "Tall Black with Dots Cap"
+  },
+  {
+    "sku": "GBTallCylFrst9RollBlkDot",
+    "kind": "plastic-roller",
+    "family": "Cylinder",
+    "glass": "Frosted",
+    "url": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9RollBlkDot&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+    "roller": "plastic",
+    "capColor": "Tall Black with Dots Cap"
+  },
+  {
+    "sku": "GBTallCylFrst9CuSht",
+    "kind": "smooth-pour",
+    "family": "Cylinder",
+    "glass": "Frosted",
+    "url": "/products/cylinder-9ml-frosted-13-415?sku=GBTallCylFrst9CuSht&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+    "roller": null,
+    "capColor": "Short Lined Matte Copper"
+  },
+  {
+    "sku": "GBTallCylFrst9BlkSht",
+    "kind": "ribbed-pour",
+    "family": "Cylinder",
+    "glass": "Frosted",
+    "url": "/products/cylinder-9ml-frosted-13-415?sku=GBTallCylFrst9BlkSht&assetPreview=gpt13",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+    "roller": null,
+    "capColor": "Short Ribbed Black"
+  }
+]
