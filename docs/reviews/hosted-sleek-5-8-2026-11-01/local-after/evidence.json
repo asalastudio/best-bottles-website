@@ -1,0 +1,122 @@
+{
+  "origin": "http://localhost:3010",
+  "capturedAt": "2026-11-02T03:20:37.622Z",
+  "records": [
+    {
+      "viewport": "desktop",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryBlkMt%2F5552f8f037bac327904742ffd4909884487ac96b09f01cfa7e86a3526672e2f0.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryBluMt%2F9b4d4c593dd13757005d50766c54c0b90a382483f2688e6e58535147f75abf0e.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryCuMt%2Fdd94624aef2dac827026dca38e092d24abaa447cd01bdb812f4f1973fa476f41.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryGlMt%2F5f71842cac62701b6fbea00adf8c86ece4031d58881eecca83a19e242efbd044.front-on-240x240.webp&w=48&q=75"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryBlkMt%2F5552f8f037bac327904742ffd4909884487ac96b09f01cfa7e86a3526672e2f0.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryBluMt%2F9b4d4c593dd13757005d50766c54c0b90a382483f2688e6e58535147f75abf0e.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryCuMt%2Fdd94624aef2dac827026dca38e092d24abaa447cd01bdb812f4f1973fa476f41.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryGlMt%2F5f71842cac62701b6fbea00adf8c86ece4031d58881eecca83a19e242efbd044.front-on-240x240.webp&w=48&q=75"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "slug": "sleek-5ml-clear-13-415",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCP13-415BlkSht%2Fd7a6cc194f3dd5f5c84837e6a424d5ac04fbdc5d73bd533c78fda0e3b7d0c26d.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCP13-415Gl%2Fdde595660fb13935313327d98f20f1346572d408ab3ffad657cb73283f06072a.front-on-240x240.webp&w=48&q=75"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "slug": "sleek-8ml-clear-13-415",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCP13-415BlkSht%2Fd7a6cc194f3dd5f5c84837e6a424d5ac04fbdc5d73bd533c78fda0e3b7d0c26d.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCP13-415Gl%2Fdde595660fb13935313327d98f20f1346572d408ab3ffad657cb73283f06072a.front-on-240x240.webp&w=48&q=75"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415BlackDot%2Fd717752ddc78c25762c9134e716c8eafd459fd11a0c4f499122ffa5c0907510f.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415Cu%2F76c60985446372d07e0635c0d9135d9cc32cb7c5782fa36e26ab662f77dc08e2.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415SlMt%2F9d5418cbe2e4bd14ad3bd6d8c58d6c883345d05d3bbf2373cdbcd85e4a537a4c.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415PinkDot%2F687ae47c6eb6f77fd149b6af06a260a70c689a1f2544dca4bd5fc6edf137e2fe.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415GlMt%2Fa30d76a6b69a0bff24efbb327090f01323d7d5dcdcb11b72d84b5abba7aa50c6.front-on-240x240.webp&w=48&q=75"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415BlackDot%2Fd717752ddc78c25762c9134e716c8eafd459fd11a0c4f499122ffa5c0907510f.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415Cu%2F76c60985446372d07e0635c0d9135d9cc32cb7c5782fa36e26ab662f77dc08e2.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415SlMt%2F9d5418cbe2e4bd14ad3bd6d8c58d6c883345d05d3bbf2373cdbcd85e4a537a4c.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415PinkDot%2F687ae47c6eb6f77fd149b6af06a260a70c689a1f2544dca4bd5fc6edf137e2fe.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415GlMt%2Fa30d76a6b69a0bff24efbb327090f01323d7d5dcdcb11b72d84b5abba7aa50c6.front-on-240x240.webp&w=48&q=75"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryBlkMt%2F5552f8f037bac327904742ffd4909884487ac96b09f01cfa7e86a3526672e2f0.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryBluMt%2F9b4d4c593dd13757005d50766c54c0b90a382483f2688e6e58535147f75abf0e.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryCuMt%2Fdd94624aef2dac827026dca38e092d24abaa447cd01bdb812f4f1973fa476f41.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryGlMt%2F5f71842cac62701b6fbea00adf8c86ece4031d58881eecca83a19e242efbd044.front-on-240x240.webp&w=48&q=75"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryBlkMt%2F5552f8f037bac327904742ffd4909884487ac96b09f01cfa7e86a3526672e2f0.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryBluMt%2F9b4d4c593dd13757005d50766c54c0b90a382483f2688e6e58535147f75abf0e.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryCuMt%2Fdd94624aef2dac827026dca38e092d24abaa447cd01bdb812f4f1973fa476f41.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Fsprayer-13-415%2FCP13-415SpryGlMt%2F5f71842cac62701b6fbea00adf8c86ece4031d58881eecca83a19e242efbd044.front-on-240x240.webp&w=48&q=75"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "slug": "sleek-5ml-clear-13-415",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCP13-415BlkSht%2Fd7a6cc194f3dd5f5c84837e6a424d5ac04fbdc5d73bd533c78fda0e3b7d0c26d.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCP13-415Gl%2Fdde595660fb13935313327d98f20f1346572d408ab3ffad657cb73283f06072a.front-on-240x240.webp&w=48&q=75"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "slug": "sleek-8ml-clear-13-415",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCP13-415BlkSht%2Fd7a6cc194f3dd5f5c84837e6a424d5ac04fbdc5d73bd533c78fda0e3b7d0c26d.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCP13-415Gl%2Fdde595660fb13935313327d98f20f1346572d408ab3ffad657cb73283f06072a.front-on-240x240.webp&w=48&q=75"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415BlackDot%2Fd717752ddc78c25762c9134e716c8eafd459fd11a0c4f499122ffa5c0907510f.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415Cu%2F76c60985446372d07e0635c0d9135d9cc32cb7c5782fa36e26ab662f77dc08e2.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415SlMt%2F9d5418cbe2e4bd14ad3bd6d8c58d6c883345d05d3bbf2373cdbcd85e4a537a4c.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415PinkDot%2F687ae47c6eb6f77fd149b6af06a260a70c689a1f2544dca4bd5fc6edf137e2fe.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415GlMt%2Fa30d76a6b69a0bff24efbb327090f01323d7d5dcdcb11b72d84b5abba7aa50c6.front-on-240x240.webp&w=48&q=75"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "sources": [
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415BlackDot%2Fd717752ddc78c25762c9134e716c8eafd459fd11a0c4f499122ffa5c0907510f.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415Cu%2F76c60985446372d07e0635c0d9135d9cc32cb7c5782fa36e26ab662f77dc08e2.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415SlMt%2F9d5418cbe2e4bd14ad3bd6d8c58d6c883345d05d3bbf2373cdbcd85e4a537a4c.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415PinkDot%2F687ae47c6eb6f77fd149b6af06a260a70c689a1f2544dca4bd5fc6edf137e2fe.front-on-240x240.webp&w=48&q=75",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fplates%2Froll-on-cap-13-415%2FCPRoll13-415GlMt%2Fa30d76a6b69a0bff24efbb327090f01323d7d5dcdcb11b72d84b5abba7aa50c6.front-on-240x240.webp&w=48&q=75"
+      ]
+    }
+  ]
+}

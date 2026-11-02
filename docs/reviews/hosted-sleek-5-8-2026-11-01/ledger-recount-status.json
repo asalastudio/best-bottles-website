@@ -1,0 +1,18 @@
+{
+  "measurement": {
+    "plates": 2283,
+    "fetchFailures": 0,
+    "measurementFailures": 0
+  },
+  "ledgerBuild": "blocked-by-existing-historical-identity-guard",
+  "guardSku": "GBCyl5BlkShSht",
+  "generatedGeometryRestored": true,
+  "guardBypassed": false,
+  "scopedMasterChange": {
+    "priorRecipes": 362,
+    "newRecipes": 72,
+    "amendedExistingTulipSprayers": 8,
+    "combinedRecipes": 434
+  },
+  "familyCompleteClaim": false
+}

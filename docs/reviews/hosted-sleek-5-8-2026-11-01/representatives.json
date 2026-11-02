@@ -1,0 +1,50 @@
+[
+  {
+    "sku": "GBSleek5SpryBlkMatt",
+    "slug": "sleek-5ml-clear-13-415-finemist",
+    "color": "Clear",
+    "fitment": "Fine Mist Sprayer"
+  },
+  {
+    "sku": "GBSleek5MtlRollBlkDot",
+    "slug": "sleek-5ml-clear-13-415-rollon",
+    "color": "Clear",
+    "fitment": "Metal Roller"
+  },
+  {
+    "sku": "GBSleek5RollBlkDot",
+    "slug": "sleek-5ml-clear-13-415-rollon",
+    "color": "Clear",
+    "fitment": "Plastic Roller"
+  },
+  {
+    "sku": "GBSleek5BlkSht",
+    "slug": "sleek-5ml-clear-13-415",
+    "color": "Clear",
+    "fitment": "Screw Cap"
+  },
+  {
+    "sku": "GBSleek8SpryBlkMatt",
+    "slug": "sleek-8ml-clear-13-415-finemist",
+    "color": "Clear",
+    "fitment": "Fine Mist Sprayer"
+  },
+  {
+    "sku": "GBSleek8MtlRollBlkDot",
+    "slug": "sleek-8ml-clear-13-415-rollon",
+    "color": "Clear",
+    "fitment": "Metal Roller"
+  },
+  {
+    "sku": "GBSleek8RollBlkDot",
+    "slug": "sleek-8ml-clear-13-415-rollon",
+    "color": "Clear",
+    "fitment": "Plastic Roller"
+  },
+  {
+    "sku": "GBSleek8BlkSht",
+    "slug": "sleek-8ml-clear-13-415",
+    "color": "Clear",
+    "fitment": "Screw Cap"
+  }
+]

@@ -26,6 +26,8 @@ for (const source of plan.sources) {
     const rows = JSON.parse(readFileSync(source.file, "utf8")).rows;
     for (const sku of source.selected) originals[sku] = rows[sku];
 }
+// Explicit owner-requested shoulder and amber-compositing revision; body pixels remain unchanged.
+Object.assign(originals, JSON.parse(readFileSync("public/local-kits/tulip-amber-seating-2026-11-01/kits.json", "utf8")).rows);
 afterEach(() => vi.unstubAllEnvs());
 
 describe("approved hosted master release", () => {
@@ -39,11 +41,11 @@ describe("approved hosted master release", () => {
     });
     it("preserves the original 267 approved configurations alongside the scoped small-sprayer extension", () => {
         expect(Object.keys(originals)).toHaveLength(267);
-        expect(Object.keys(hosted)).toHaveLength(362);
+        expect(Object.keys(hosted)).toHaveLength(434);
         expect(Object.keys(hosted)).toEqual(expect.arrayContaining(Object.keys(originals)));
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         expect(hosted.GBTallCyl9SpryGlMatt).toBeDefined();
-        expect(hosted.GBSleek5SpryGlMatt).toBeUndefined();
+        expect(hosted.GBSleek5SpryGlMatt).toBeDefined();
         expect(hosted.GBFlair15SpryBlkMatt).toBeUndefined();
         expect(hosted.GBSpry3mlClBlk).toBeDefined();
         expect(JSON.stringify(hosted)).not.toContain('"url":"/local-kits/');

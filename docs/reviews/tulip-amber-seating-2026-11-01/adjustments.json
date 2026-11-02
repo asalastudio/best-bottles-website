@@ -1,0 +1,72 @@
+{
+  "authorization": "Jordan explicitly requested both the visible neck gap and the pale amber mechanism be corrected in this chat on November 1.",
+  "imageBytesChanged": false,
+  "bodyPartsUnchanged": true,
+  "clearTulipUnchanged": true,
+  "adjustments": [
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "dropPx": 35.58351154991385,
+      "shoulderContactY": 705.2824074074074,
+      "seatedTubeOpacity": 0.18,
+      "seatedTubeBehindGlass": true,
+      "innerFloorY": 1009
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "dropPx": 17.038545357610246,
+      "shoulderContactY": 705.2824074074074,
+      "seatedTubeOpacity": 0.18,
+      "seatedTubeBehindGlass": true,
+      "innerFloorY": 1009
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "dropPx": 16.697862971873974,
+      "shoulderContactY": 705.2824074074074,
+      "seatedTubeOpacity": 0.18,
+      "seatedTubeBehindGlass": true,
+      "innerFloorY": 1009
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "dropPx": 15.381050535557847,
+      "shoulderContactY": 705.2824074074074,
+      "seatedTubeOpacity": 0.18,
+      "seatedTubeBehindGlass": true,
+      "innerFloorY": 1009
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "dropPx": 15.517986671842891,
+      "shoulderContactY": 705.2824074074074,
+      "seatedTubeOpacity": 0.18,
+      "seatedTubeBehindGlass": true,
+      "innerFloorY": 1009
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "dropPx": 20.20736362360958,
+      "shoulderContactY": 705.2824074074074,
+      "seatedTubeOpacity": 0.18,
+      "seatedTubeBehindGlass": true,
+      "innerFloorY": 1009
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "dropPx": 17.352203152961806,
+      "shoulderContactY": 705.2824074074074,
+      "seatedTubeOpacity": 0.18,
+      "seatedTubeBehindGlass": true,
+      "innerFloorY": 1009
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "dropPx": 20.20736362360958,
+      "shoulderContactY": 705.2824074074074,
+      "seatedTubeOpacity": 0.18,
+      "seatedTubeBehindGlass": true,
+      "innerFloorY": 1009
+    }
+  ]
+}
