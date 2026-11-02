@@ -1,11 +1,12 @@
 import fs from 'node:fs';
-import { createRequire } from 'node:module';
-const require=createRequire(process.cwd()+'/package.json');
+import type { KitLike, StageView } from '../../../src/lib/products/pdp-redesign/stage';
+type ReviewKit = KitLike & { register: NonNullable<KitLike['register']> };
+type CatalogRecord = { id: string; family: string; color: string; capacityMl: number; fitment: string; profileLabel?: string; closure: string; product: { productGroupSlug: string } };
 const { stageLayout, availableViews, effectiveView }=await import(process.cwd()+'/src/lib/products/pdp-redesign/stage.ts');
 const directory=process.env.REVIEW_DIR!,kitFile=process.env.KIT_FILE!,catalogFile=process.env.CATALOG_FILE!;
-const scope=JSON.parse(fs.readFileSync(kitFile,'utf8')).rows;
-const raw=JSON.parse(fs.readFileSync(catalogFile,'utf8'));const records=raw.configurations??raw;
-const entries=Object.entries(scope).map(([sku,kit]:[string,any])=>{const r=records.find((x:any)=>x.id===sku);if(!r)throw Error(sku);const context={websiteSku:sku,family:r.family,color:r.color,capacityMl:r.capacityMl,applicator:r.fitment};const allowed=[...new Set(availableViews(kit,context).map((v:any)=>effectiveView(v,kit,context)))];return{sku,group:kit.register.plateKey,title:`${r.capacityMl} ml ${r.color} ${r.profileLabel??r.family}`,fitment:r.fitment,finish:r.closure,url:`/products/${r.product.productGroupSlug}?sku=${encodeURIComponent(sku)}&assetPreview=kits`,allowed,views:Object.fromEntries(allowed.map(view=>[view,stageLayout(kit,view,context)]))};});
+const scope: Record<string, ReviewKit>=JSON.parse(fs.readFileSync(kitFile,'utf8')).rows;
+const raw=JSON.parse(fs.readFileSync(catalogFile,'utf8'));const records: CatalogRecord[]=raw.configurations??raw;
+const entries=Object.entries(scope).map(([sku,kit])=>{const r=records.find((x)=>x.id===sku);if(!r)throw Error(sku);const context={websiteSku:sku,family:r.family,color:r.color,capacityMl:r.capacityMl,applicator:r.fitment};const allowed=[...new Set(availableViews(kit,context).map((v:StageView)=>effectiveView(v,kit,context)))];return{sku,group:kit.register.plateKey,title:`${r.capacityMl} ml ${r.color} ${r.profileLabel??r.family}`,fitment:r.fitment,finish:r.closure,url:`/products/${r.product.productGroupSlug}?sku=${encodeURIComponent(sku)}&assetPreview=kits`,allowed,views:Object.fromEntries(allowed.map(view=>[view,stageLayout(kit,view,context)]))};});
 const order=[...new Set(entries.map(e=>e.group))];
 let base=fs.readFileSync('docs/reviews/cylinder9-sleek-13415-2026-11-01/review-page.html','utf8');
 base=base.replace(/<title>.*?<\/title>/,'<title>'+process.env.REVIEW_TITLE+'</title>').replace(/<h1>.*?<\/h1>/,'<h1>'+process.env.REVIEW_TITLE+'</h1>').replace('144 configurations across four glass masters. The existing bottle shapes, 91% baseline and size curve are preserved.',`${entries.length} exact configurations. Existing master image bytes and the locked bottle scale are preserved.`).replace(/<script type="application\/json" id="data">[\s\S]*?<\/script>/,'<script type="application/json" id="data">'+JSON.stringify({order,entries}).replace(/</g,'\\u003c')+'</script>');
