@@ -12,6 +12,9 @@ const report={origin,version:require(process.cwd()+'/src/lib/paper-doll/approved
 fs.mkdirSync(dir,{recursive:true});const save=()=>fs.writeFileSync(dir+'/verification.json',JSON.stringify(report,null,2));
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
 const css=s=>s.replace(/\s+/g,'').replace(/-?\d+\.\d+(?=%)/g,n=>Number(n).toFixed(3)).replace(/;$/,'');
+// Same-origin optimizer URLs have different hosts on localhost and preview.
+// Compare their exact path and query; external master URLs remain unchanged.
+const sourceUrl=value=>{const u=new URL(value,'http://localhost:3010');return u.pathname.startsWith('/_next/image')?u.pathname+u.search:u.href;};
 const rounded=value=>Array.isArray(value)?value.map(rounded):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).map(([k,v])=>[k,rounded(v)])):typeof value==='number'?Number(value.toFixed(8)):value;
 (async()=>{const b=await P.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--no-sandbox']});try{
  const p=await b.newPage();p.on('pageerror',e=>report.errors.push({area:'browser',message:e.message}));
@@ -24,14 +27,14 @@ const rounded=value=>Array.isArray(value)?value.map(rounded):value&&typeof value
    for(const view of ['sidecar','capon','exploded']){
     await p.waitForSelector('[data-testid="pdp-view-'+view+'"]',{timeout:15000});
     await p.click('[data-testid="pdp-view-'+view+'"]');
-    await p.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.querySelectorAll('[data-testid="pdp-stage"] img')].map(i=>i.decode()));});await pause(160);
+    await p.evaluate(async()=>{await document.fonts.ready;const stage=document.querySelector('[data-testid="pdp-stage"]');await Promise.all([...stage.querySelectorAll('img')].map(i=>i.decode()));await Promise.all(stage.getAnimations({subtree:true}).filter(a=>a.effect.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})));});await pause(60);
     const parts=await p.$$eval('[data-testid="pdp-stage"] [data-slot]',es=>es.map(e=>({slot:e.dataset.slot,url:e.querySelector('img')?.src,currentSrc:e.querySelector('img')?.currentSrc,style:e.getAttribute('style'),imgStyle:e.querySelector('img')?.getAttribute('style')})));
     const tubes=parts.filter(x=>x.slot==='diptube');
     assert.equal(tubes.length,c.kind==='9ml'&&c.glass!=='Clear'&&view!=='exploded'?0:1,c.sku+' duplicate/missing tube '+view);
     if(tubes.length)assert.ok(tubes[0].url.includes(source.sha256)||tubes[0].currentSrc.includes(source.sha256),c.sku+' old tube '+view);
     if(viewport==='desktop'&&view==='sidecar'&&['LBCyl9LtnGl','LBCyl25LtnMtGl'].includes(c.sku)){
      const old=JSON.parse(fs.readFileSync('docs/reviews/cylinder-lotion-pumps-2026-11-02/'+c.kind+'-before-dom.json'));
-     const exterior=rows=>rows.filter(x=>x.slot!=='diptube').map(({slot,url,style,imgStyle})=>({slot,url,style:css(style),imgStyle:css(imgStyle)}));
+     const exterior=rows=>rows.filter(x=>x.slot!=='diptube').map(({slot,url,style,imgStyle})=>({slot,url:sourceUrl(url),style:css(style),imgStyle:css(imgStyle)}));
      assert.deepEqual(exterior(parts),exterior(old),c.sku+' exterior changed');
     }
     const screenshot=['LBCyl9LtnGl','LBCyl25LtnMtGl'].includes(c.sku)||viewport==='desktop'&&view==='sidecar';

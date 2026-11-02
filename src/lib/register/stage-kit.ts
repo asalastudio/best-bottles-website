@@ -24,6 +24,7 @@ import { CYLINDER9_PILOT_LAYER_HASHES } from "./cylinder9-pilot-layers";
 import { closureDropMm, closureSeatSignature } from "./seat-drops";
 import { heroTube, type HeroTubeLayer } from "./dip-tubes";
 import { withCylinder25LotionTube } from "./cylinder-lotion-tube";
+import { withCylinder25CopperOvercap } from "./cylinder25-copper-overcap";
 
 export type StageDatum = { axisX: number; seatY: number; baselineY: number };
 /** The slots a kit part can occupy (convex/productKits.ts and the register's registerSlotV agree). */
@@ -318,6 +319,7 @@ export function kitFromRegister(
         return detached ? { ...part, detached } : part;
     });
     parts = withCylinder25LotionTube(parts, assembly.bodyId, datum.axisX, frame.pxPerMm);
+    parts = withCylinder25CopperOvercap(parts, assembly.bodyId);
     // EXPLODED offsets are computed over the parts of each view separately, so a seated insert and its full plug never stack against each other.
     const lifts = stackedExplodeOffsets(parts.filter((part) => !part.views || part.views.includes("exploded")));
     const explodable = parts.filter((part) => !part.views || part.views.includes("exploded"));

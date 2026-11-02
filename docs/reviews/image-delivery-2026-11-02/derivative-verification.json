@@ -2115,6 +2115,50 @@
         }
       }
     },
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-02/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa.png": {
+      "sourceHash": "6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa",
+      "sourceBytes": 252512,
+      "sourceWidth": 725,
+      "sourceHeight": 2170,
+      "derivatives": {
+        "128": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/128-6e1c2a72ae1177294a8a2c3e39bba985f0c90e2127a9c23608c90b5bc1ea1f8a.webp",
+          "sha256": "6e1c2a72ae1177294a8a2c3e39bba985f0c90e2127a9c23608c90b5bc1ea1f8a",
+          "bytes": 6342,
+          "width": 128,
+          "height": 383,
+          "alphaDifferences": 0,
+          "visibleColorDifferences": 0
+        },
+        "256": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/256-0397cc9aa4a342b124f44ab25e630c6f31d70b8d2bd77cc34543eed09625d84b.webp",
+          "sha256": "0397cc9aa4a342b124f44ab25e630c6f31d70b8d2bd77cc34543eed09625d84b",
+          "bytes": 20390,
+          "width": 256,
+          "height": 766,
+          "alphaDifferences": 0,
+          "visibleColorDifferences": 0
+        },
+        "640": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "sha256": "e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1",
+          "bytes": 120008,
+          "width": 640,
+          "height": 1916,
+          "alphaDifferences": 0,
+          "visibleColorDifferences": 0
+        },
+        "1200": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/1200-bfb1a57ea5eebea2d4e020048587f629ea1bc8da12d0476c389d826c9541872f.webp",
+          "sha256": "bfb1a57ea5eebea2d4e020048587f629ea1bc8da12d0476c389d826c9541872f",
+          "bytes": 146504,
+          "width": 725,
+          "height": 2170,
+          "alphaDifferences": 0,
+          "visibleColorDifferences": 0
+        }
+      }
+    },
     "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg": {
       "sourceHash": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
       "sourceBytes": 985854,
@@ -5151,45 +5195,45 @@
         }
       }
     },
-    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-02/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa.png": {
-      "sourceHash": "6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa",
-      "sourceBytes": 252512,
-      "sourceWidth": 725,
-      "sourceHeight": 2170,
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-02/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd.png": {
+      "sourceHash": "e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd",
+      "sourceBytes": 1960607,
+      "sourceWidth": 1008,
+      "sourceHeight": 1560,
       "derivatives": {
         "128": {
-          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/128-6e1c2a72ae1177294a8a2c3e39bba985f0c90e2127a9c23608c90b5bc1ea1f8a.webp",
-          "sha256": "6e1c2a72ae1177294a8a2c3e39bba985f0c90e2127a9c23608c90b5bc1ea1f8a",
-          "bytes": 6342,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/128-a2315d526dc59a2695c2e33da924155cc38af9051785a76b7594aa61dabcfcd6.webp",
+          "sha256": "a2315d526dc59a2695c2e33da924155cc38af9051785a76b7594aa61dabcfcd6",
+          "bytes": 16994,
           "width": 128,
-          "height": 383,
+          "height": 198,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         },
         "256": {
-          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/256-0397cc9aa4a342b124f44ab25e630c6f31d70b8d2bd77cc34543eed09625d84b.webp",
-          "sha256": "0397cc9aa4a342b124f44ab25e630c6f31d70b8d2bd77cc34543eed09625d84b",
-          "bytes": 20390,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/256-63d163247a79ff9dcd2d7f825cc8e0744cd10750e56215bc69c9d8c4f842ec0a.webp",
+          "sha256": "63d163247a79ff9dcd2d7f825cc8e0744cd10750e56215bc69c9d8c4f842ec0a",
+          "bytes": 56956,
           "width": 256,
-          "height": 766,
+          "height": 396,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         },
         "640": {
-          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
-          "sha256": "e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1",
-          "bytes": 120008,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "sha256": "60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155",
+          "bytes": 432580,
           "width": 640,
-          "height": 1916,
+          "height": 990,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         },
         "1200": {
-          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/1200-bfb1a57ea5eebea2d4e020048587f629ea1bc8da12d0476c389d826c9541872f.webp",
-          "sha256": "bfb1a57ea5eebea2d4e020048587f629ea1bc8da12d0476c389d826c9541872f",
-          "bytes": 146504,
-          "width": 725,
-          "height": 2170,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/1200-5bfe2c72d96af557e5ec04cb23af58193c23bfe27c5d9e15899971e5c0a7f73e.webp",
+          "sha256": "5bfe2c72d96af557e5ec04cb23af58193c23bfe27c5d9e15899971e5c0a7f73e",
+          "bytes": 1199876,
+          "width": 1008,
+          "height": 1560,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         }
@@ -5197,13 +5241,13 @@
     }
   },
   "summary": {
-    "assets": 118,
-    "sourceBytes": 83617706,
+    "assets": 119,
+    "sourceBytes": 85578313,
     "displayBytes": {
-      "128": 2302012,
-      "256": 6604092,
-      "640": 24241010,
-      "1200": 42042880
+      "128": 2319006,
+      "256": 6661048,
+      "640": 24673590,
+      "1200": 43242756
     },
     "losslessPixelChecksPassed": true,
     "published": true

@@ -1,0 +1,13 @@
+{
+  "unitPassed": 3276,
+  "unitSkipped": 7,
+  "unitFailed": 0,
+  "typecheck": "passed",
+  "scopedLint": "passed",
+  "browserStates": 58,
+  "builderApis": 10,
+  "browserErrors": 0,
+  "browserPassed": true,
+  "candidateNotApproved": true,
+  "actualBuilderPages": 1
+}

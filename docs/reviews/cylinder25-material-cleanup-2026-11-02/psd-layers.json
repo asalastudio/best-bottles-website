@@ -1,0 +1,135 @@
+[
+  {
+    "name": "copper-pump-original",
+    "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/8. 18-415 Lotion/16. Ltn18-415Cu.psd",
+    "psdSha256": "e2ccc9139c6e8d3adaae3c1802676c68d1c030ff8b274bf998b0e53529cccaa9",
+    "layer": "Layer 1",
+    "bbox": [
+      92,
+      -11,
+      308,
+      396
+    ],
+    "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/copper-pump-original.png",
+    "size": [
+      216,
+      407
+    ],
+    "sha256": "a2db04263622f51642d133bb99a15f309b14b3e0580fc424b23594e07cdd9866",
+    "status": "unaltered native PSD layer export"
+  },
+  {
+    "name": "matte-gold-pump-original",
+    "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/8. 18-415 Lotion/16. Ltn18-415MtGl.psd",
+    "psdSha256": "427693d148f0e97bb99289f5a0783c38c0b0a25a28d53e88b2bc99f0ce1adde5",
+    "layer": "Layer 1 copy",
+    "bbox": [
+      85,
+      -1,
+      309,
+      401
+    ],
+    "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/matte-gold-pump-original.png",
+    "size": [
+      224,
+      402
+    ],
+    "sha256": "f0ab82b1bbace58bf70519f014908f8fae8f72a8e7bab19e19f4a82ae208b9a4",
+    "status": "unaltered native PSD layer export"
+  },
+  {
+    "name": "shiny-silver-pump-original",
+    "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/8. 18-415 Lotion/21. Ltn18-415ShnSl.psd",
+    "psdSha256": "8ac632f6ac78b0f4e26071a500a1865c6c2e1751966f75e15ba6c095ab608abf",
+    "layer": "Layer 2 copy",
+    "bbox": [
+      89,
+      0,
+      308,
+      395
+    ],
+    "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/shiny-silver-pump-original.png",
+    "size": [
+      219,
+      395
+    ],
+    "sha256": "84302d4511bfc0e5e11e58f38784c628822bcb48734d47c064fa3e26f6039976",
+    "status": "unaltered native PSD layer export"
+  },
+  {
+    "name": "25ml-lotion-mechanism-original",
+    "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd",
+    "psdSha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5",
+    "layer": "Layer 19",
+    "bbox": [
+      778,
+      765,
+      927,
+      1601
+    ],
+    "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/25ml-lotion-mechanism-original.png",
+    "size": [
+      149,
+      836
+    ],
+    "sha256": "a3a849811e1a51e84b34579c0d03bfa74353ead613d4ac88e2bf2f65ad1b7684",
+    "status": "unaltered native PSD layer export"
+  },
+  {
+    "name": "25ml-lotion-head-original",
+    "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd",
+    "psdSha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5",
+    "layer": "Layer 21",
+    "bbox": [
+      704,
+      221,
+      1021,
+      773
+    ],
+    "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/25ml-lotion-head-original.png",
+    "size": [
+      317,
+      552
+    ],
+    "sha256": "07c5555d93a826e3671da70252dd44dc9bfdc496d40612c36368c5e278a3a8e4",
+    "status": "unaltered native PSD layer export"
+  },
+  {
+    "name": "25ml-glass-original",
+    "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd",
+    "psdSha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5",
+    "layer": "Layer 25",
+    "bbox": [
+      636,
+      553,
+      1093,
+      1707
+    ],
+    "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/25ml-glass-original.png",
+    "size": [
+      457,
+      1154
+    ],
+    "sha256": "638388637c45152c182f6cbe85c5850e039171603b50bf61fc862b3b1097443f",
+    "status": "unaltered native PSD layer export"
+  },
+  {
+    "name": "25ml-matte-gold-overcap-original",
+    "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd",
+    "psdSha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5",
+    "layer": "Layer 22",
+    "bbox": [
+      1203,
+      1120,
+      1541,
+      1704
+    ],
+    "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/25ml-matte-gold-overcap-original.png",
+    "size": [
+      338,
+      584
+    ],
+    "sha256": "2c585c75a573a3133be77f7617f33e9f9a65b25c85814d06d474d640c72e2d9d",
+    "status": "unaltered native PSD layer export"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "version": "ddb3216a07e8a478",
+  "status": "candidate-not-approved",
+  "image": {
+    "file": "public/local-kits/cylinder25-material-cleanup-2026-11-02/body-cylinder-25ml-clear.e0b0f790a992.png",
+    "sha256": "e0b0f790a9920a6beb3b1c8f7785637b57ddfa3ff96aaa0142d2f11da42c5c51",
+    "bytes": 1190237,
+    "width": 851,
+    "height": 1849,
+    "rimY": 123,
+    "baselineY": 1768,
+    "axisX": 420.4345238095238
+  },
+  "source": "docs/reviews/gpt-master-library-2026-10-31/recovered-master-lock.json",
+  "target": {
+    "shoulderSpanPct": 46.5,
+    "baselinePct": 91
+  },
+  "configurations": 36,
+  "heldTasselConfigurations": 9,
+  "preserved": [
+    "body bounds",
+    "glassSizing",
+    "canvas",
+    "anchors",
+    "neck finish",
+    "head artwork",
+    "tube material and endpoint",
+    "other closures"
+  ],
+  "capChange": "Copper overcap alone; visible width, axis and bottom retained, source white scraps excluded; new cap is uniformly scaled.",
+  "generatedWith": "built-in image editor; model version not exposed"
+}

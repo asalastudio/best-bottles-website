@@ -1,0 +1,391 @@
+{
+  "source": "Unmodified component-register recipe snapshot from cylinder25-18415-2026-11-01/current-kits.json",
+  "kits": {
+    "LBCyl25LtnCu": {
+      "sku": "LBCyl25LtnCu",
+      "familyId": "register:cylinder-25ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 9.31
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 350.97,
+            "right": 649.03,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/cylinder-25ml-18-415/clear/ccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1008,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 295.59,
+            "y": 200.66,
+            "width": 413.75,
+            "height": 899.74
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 442.95,
+            "top": 261,
+            "right": 527.1,
+            "bottom": 995.33
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/register/tubes/cylinder-25ml-18-415-clear-lotion.8365ab47547d.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 205,
+            "height": 1789
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 442.95,
+            "y": 261,
+            "width": 84.15,
+            "height": 734.33
+          },
+          "componentId": "CMP-LPM-CPR-18-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ]
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 380.21,
+            "top": -10.37,
+            "right": 621.92,
+            "bottom": 413.68
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -720.15
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/pump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 228,
+            "height": 400
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 380.21,
+            "y": -10.37,
+            "width": 241.71,
+            "height": 424.05
+          },
+          "componentId": "CMP-LPM-CPR-18-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 349.4,
+            "top": -56.81,
+            "right": 654.24,
+            "bottom": 414.63
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -1169.15
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/overcap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 419,
+            "height": 648
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 349.4,
+            "y": -56.81,
+            "width": 304.84,
+            "height": 471.44
+          },
+          "componentId": "CMP-LPM-CPR-18-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-25ml-18-415",
+        "plateKey": "cylinder-25ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 9.31,
+        "componentIds": [
+          "CMP-LPM-CPR-18-415"
+        ],
+        "seatSignature": "12a18b1c065a53",
+        "seatDropMm": 0.54
+      }
+    },
+    "GBcyl25SpryCu": {
+      "sku": "GBcyl25SpryCu",
+      "familyId": "register:cylinder-25ml-18-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 9.31
+      },
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 350.97,
+            "right": 649.03,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/cylinder-25ml-18-415/clear/ccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 1008,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 295.59,
+            "y": 200.66,
+            "width": 413.75,
+            "height": 899.74
+          },
+          "componentId": null
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 479.89,
+            "top": 261,
+            "right": 565.68,
+            "bottom": 995.33
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/register/tubes/cylinder-25ml-18-415-clear-spray.3752f87634f0.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 209,
+            "height": 1789
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 479.89,
+            "y": 261,
+            "width": 85.79,
+            "height": 734.33
+          },
+          "componentId": "CMP-SPR-MTCP-18-415-03",
+          "views": [
+            "sidecar",
+            "capon"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 383.96,
+            "top": 2.51,
+            "right": 619.12,
+            "bottom": 413.27
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -704.14
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 229,
+            "height": 400
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 383.96,
+            "y": 2.51,
+            "width": 235.16,
+            "height": 410.76
+          },
+          "componentId": "CMP-SPR-MTCP-18-415-03"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 368.32,
+            "top": -56.81,
+            "right": 653.51,
+            "bottom": 413.18
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -1138.81
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png",
+            "key": "",
+            "sha256": "",
+            "bytes": 0,
+            "width": 392,
+            "height": 646
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 368.32,
+            "y": -56.81,
+            "width": 285.19,
+            "height": 469.99
+          },
+          "componentId": "CMP-SPR-MTCP-18-415-03"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-25ml-18-415",
+        "plateKey": "cylinder-25ml-18-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 9.31,
+        "componentIds": [
+          "CMP-SPR-MTCP-18-415-03"
+        ],
+        "seatSignature": "74379f38061e2d",
+        "seatDropMm": 0.54
+      }
+    }
+  }
+}

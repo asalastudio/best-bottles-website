@@ -17,7 +17,7 @@ it("covers every approved source with immutable display copies and leaves unknow
             expect(displayImageUrl(source, width as 128 | 256 | 640 | 1200)).toBe(displayDerivativeUrl(source, width));
         }
     }
-    expect(Object.keys(delivery.sources)).toHaveLength(118); // Includes the single assembled Tola photograph.
+    expect(Object.keys(delivery.sources)).toHaveLength(119); // Includes Tola and the cleaned 25 ml copper overcap.
     expect(displayDerivativeUrl("https://unknown.example/master.png", 640)).toBeNull();
     expect(displayDerivativeUrl("/local-kits/unapproved-candidate.svg", 640)).toBeNull();
     for (const [alias, source] of Object.entries(delivery.aliases)) {

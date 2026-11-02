@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import type { BuilderKit } from "../bottle-builder/model";
 import { approvedComponentKits } from "./approved-component-kits";
 import { withCylinder25LotionTube } from "../register/cylinder-lotion-tube";
+import { withCylinder25CopperOvercap } from "../register/cylinder25-copper-overcap";
 
 // Keep older local files and bookmarked pilots on the current shared recipes
 // for the Rectangle roll-ons and the corrected 9 ml / 13-415 pour-cap fit.
@@ -14,7 +15,7 @@ const currentSharedMasters = Object.fromEntries(Object.entries(approvedComponent
 function withCurrentSharedMasters(rows: Record<string, BuilderKit>): Record<string, BuilderKit> {
     const current = { ...rows, ...Object.fromEntries(Object.entries(currentSharedMasters).filter(([sku]) => Object.hasOwn(rows, sku))) };
     return Object.fromEntries(Object.entries(current).map(([sku, kit]) => kit.register?.bodyId !== "cylinder-25ml-18-415" ? [sku, kit] : [sku, {
-        ...kit, parts: withCylinder25LotionTube(kit.parts, kit.register?.bodyId ?? "", kit.anchors.axisX, kit.anchors.pxPerMm ?? 10.5),
+        ...kit, parts: withCylinder25CopperOvercap(withCylinder25LotionTube(kit.parts, kit.register?.bodyId ?? "", kit.anchors.axisX, kit.anchors.pxPerMm ?? 10.5), kit.register?.bodyId ?? ""),
     }]));
 }
 
@@ -110,6 +111,13 @@ export function localGpt13ComponentKits(host: string | null, flag: unknown): Rec
             if (kit.register?.bodyId === "sleek-8ml-13-415" && kit.sku === sku) rows[sku] = kit;
         }
     } catch { /* The approved hosted recipes remain available without this local mirror. */ }
+    // New 25 ml glass is an explicit localhost candidate, not a hosted master.
+    try {
+        const current = JSON.parse(readFileSync("public/local-kits/cylinder25-material-cleanup-2026-11-02/kits.json", "utf8")) as LocalKitReview;
+        for (const [sku, kit] of Object.entries(current.rows ?? {})) {
+            if (kit.register?.bodyId === "cylinder-25ml-18-415" && kit.sku === sku) rows[sku] = kit;
+        }
+    } catch { /* The optional material review may be absent. */ }
     return withCurrentSharedMasters(rows);
 }
 

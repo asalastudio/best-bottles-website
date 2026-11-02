@@ -19,6 +19,8 @@ for (const kit of Object.values(manifest.rows)) for (const part of kit.parts) {
 }
 const tola = fs.readFileSync('src/lib/products/tola-applicator.ts', 'utf8').match(/https:\/\/yzy7l20k4yt6znzz\.public\.blob\.vercel-storage\.com\/plates\/[^\s"']+\.webp/);
 if (tola) assets.set(tola[0], { source: tola[0] });
+const copperCap = fs.readFileSync('src/lib/register/cylinder25-copper-overcap.ts', 'utf8').match(/https:\/\/yzy7l20k4yt6znzz\.public\.blob\.vercel-storage\.com\/reviewed-master-media\/[^\s"']+\.png/);
+if (copperCap) assets.set(copperCap[0], { source: copperCap[0], expectedHash: new URL(copperCap[0]).pathname.split('/').at(-1).replace('.png', '') });
 fs.mkdirSync(dir, { recursive: true });
 const previous = fs.existsSync(path.join(dir, 'report.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'report.json'))) : { assets: {} };
 const report = { version: 1, masterManifestVersion: manifest.version, mode: 'lossless WebP display copies; original masters unchanged', assets: {} };
