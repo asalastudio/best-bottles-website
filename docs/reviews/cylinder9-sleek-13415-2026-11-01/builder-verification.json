@@ -1,0 +1,39 @@
+{
+  "version": "3ebe6e73b538",
+  "api": [
+    {
+      "bodyId": "sleek-5ml|13-415|Glass Bottle",
+      "matchingKits": 36
+    },
+    {
+      "bodyId": "sleek-8ml|13-415|Glass Bottle",
+      "matchingKits": 36
+    },
+    {
+      "bodyId": "cylinder-9ml|13-415|Glass Bottle",
+      "matchingKits": 72
+    }
+  ],
+  "records": [
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "passed": true,
+      "url": "http://localhost:3010/matrix?family=Sleek&sku=GBSleek5RollBlkDot&from=pdp&shop=roll-on-bottles"
+    },
+    {
+      "sku": "GBSleek8RollBlkDot",
+      "passed": true,
+      "url": "http://localhost:3010/matrix?family=Sleek&sku=GBSleek8RollBlkDot&from=pdp&shop=roll-on-bottles"
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "passed": true,
+      "url": "http://localhost:3010/matrix?family=Cylinder&sku=GBTallCyl9RollBlkDot&from=pdp&shop=roll-on-bottles"
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "passed": true,
+      "url": "http://localhost:3010/matrix?family=Cylinder&sku=GBTallCylFrst9RollBlkDot&from=pdp&shop=roll-on-bottles"
+    }
+  ]
+}

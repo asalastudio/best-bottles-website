@@ -1,0 +1,404 @@
+{
+  "archiveUploads": {
+    "jobs": [
+      {
+        "file_name": "Cylinder 9ml Clear and Frosted - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+        "file_uri": "/private/tmp/Cylinder_13-415_CANDIDATE_Review_72_SKUs_2026-11-01.zip",
+        "mime_type": "application/zip",
+        "parent_folder_id": "1hMb8YmZRoYvRLR026wGPjQe1P7gUNP-V"
+      },
+      {
+        "file_name": "Sleek 5ml and 8ml - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+        "file_uri": "/private/tmp/Sleek_13-415_CANDIDATE_Review_72_SKUs_2026-11-01.zip",
+        "mime_type": "application/zip",
+        "parent_folder_id": "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy"
+      },
+      {
+        "file_name": "Cylinder 9ml and Sleek 5ml 8ml - Same Scale Review Sheet - CANDIDATE - 144 Configurations.png",
+        "file_uri": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/cylinder9-sleek-13415-2026-11-01/contact-sheet.png",
+        "mime_type": "image/png",
+        "parent_folder_id": "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy"
+      }
+    ],
+    "res": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "1gn_4ZQR_0Yox9btOewCy0Mj3ZRY2pYBn",
+            "title": "Cylinder 9ml Clear and Frosted - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+            "file_name": "Cylinder 9ml Clear and Frosted - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+            "mime_type": "application/zip",
+            "url": "https://drive.google.com/file/d/1gn_4ZQR_0Yox9btOewCy0Mj3ZRY2pYBn/view?usp=drivesdk",
+            "parent_id": "1hMb8YmZRoYvRLR026wGPjQe1P7gUNP-V",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "1gn_4ZQR_0Yox9btOewCy0Mj3ZRY2pYBn",
+              "title": "Cylinder 9ml Clear and Frosted - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+              "file_name": "Cylinder 9ml Clear and Frosted - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+              "mime_type": "application/zip",
+              "url": "https://drive.google.com/file/d/1gn_4ZQR_0Yox9btOewCy0Mj3ZRY2pYBn/view?usp=drivesdk",
+              "parent_id": "1hMb8YmZRoYvRLR026wGPjQe1P7gUNP-V"
+            }
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "1v0bEpi45fAx8SSFM58jsqZ4eYroB2i0I",
+            "title": "Sleek 5ml and 8ml - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+            "file_name": "Sleek 5ml and 8ml - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+            "mime_type": "application/zip",
+            "url": "https://drive.google.com/file/d/1v0bEpi45fAx8SSFM58jsqZ4eYroB2i0I/view?usp=drivesdk",
+            "parent_id": "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "1v0bEpi45fAx8SSFM58jsqZ4eYroB2i0I",
+              "title": "Sleek 5ml and 8ml - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+              "file_name": "Sleek 5ml and 8ml - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+              "mime_type": "application/zip",
+              "url": "https://drive.google.com/file/d/1v0bEpi45fAx8SSFM58jsqZ4eYroB2i0I/view?usp=drivesdk",
+              "parent_id": "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy"
+            }
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "1sOl3zgWgL6gyRmpXfrEr0l1N0pNL_Uqt",
+            "title": "Cylinder 9ml and Sleek 5ml 8ml - Same Scale Review Sheet - CANDIDATE - 144 Configurations.png",
+            "file_name": "Cylinder 9ml and Sleek 5ml 8ml - Same Scale Review Sheet - CANDIDATE - 144 Configurations.png",
+            "mime_type": "image/png",
+            "url": "https://drive.google.com/file/d/1sOl3zgWgL6gyRmpXfrEr0l1N0pNL_Uqt/view?usp=drivesdk",
+            "parent_id": "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "1sOl3zgWgL6gyRmpXfrEr0l1N0pNL_Uqt",
+              "title": "Cylinder 9ml and Sleek 5ml 8ml - Same Scale Review Sheet - CANDIDATE - 144 Configurations.png",
+              "file_name": "Cylinder 9ml and Sleek 5ml 8ml - Same Scale Review Sheet - CANDIDATE - 144 Configurations.png",
+              "mime_type": "image/png",
+              "url": "https://drive.google.com/file/d/1sOl3zgWgL6gyRmpXfrEr0l1N0pNL_Uqt/view?usp=drivesdk",
+              "parent_id": "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy"
+            }
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  "metadata": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "id": "1gn_4ZQR_0Yox9btOewCy0Mj3ZRY2pYBn",
+          "title": "Cylinder 9ml Clear and Frosted - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+          "mime_type": null,
+          "size": "26219003",
+          "url": "https://drive.google.com/file/d/1gn_4ZQR_0Yox9btOewCy0Mj3ZRY2pYBn/view?usp=drivesdk",
+          "display_url": "https://drive.google.com/file/d/1gn_4ZQR_0Yox9btOewCy0Mj3ZRY2pYBn/view?usp=drivesdk",
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1hMb8YmZRoYvRLR026wGPjQe1P7gUNP-V"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "id": "1v0bEpi45fAx8SSFM58jsqZ4eYroB2i0I",
+          "title": "Sleek 5ml and 8ml - 13-415 - 72 Configurations - CANDIDATE Review - 2026-11-01.zip",
+          "mime_type": null,
+          "size": "23356959",
+          "url": "https://drive.google.com/file/d/1v0bEpi45fAx8SSFM58jsqZ4eYroB2i0I/view?usp=drivesdk",
+          "display_url": "https://drive.google.com/file/d/1v0bEpi45fAx8SSFM58jsqZ4eYroB2i0I/view?usp=drivesdk",
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "id": "1sOl3zgWgL6gyRmpXfrEr0l1N0pNL_Uqt",
+          "title": "Cylinder 9ml and Sleek 5ml 8ml - Same Scale Review Sheet - CANDIDATE - 144 Configurations.png",
+          "mime_type": null,
+          "size": "190307",
+          "url": "https://drive.google.com/file/d/1sOl3zgWgL6gyRmpXfrEr0l1N0pNL_Uqt/view?usp=drivesdk",
+          "display_url": "https://drive.google.com/file/d/1sOl3zgWgL6gyRmpXfrEr0l1N0pNL_Uqt/view?usp=drivesdk",
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        },
+        "isError": false
+      }
+    }
+  ],
+  "bodies": [
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1bLzzW5LTkteWoe1AoNXsUfMDLfXtBRZq",
+      "title": "Cylinder - 9 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+      "file_name": "Cylinder - 9 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+      "mime_type": "image/svg+xml",
+      "url": "https://drive.google.com/file/d/1bLzzW5LTkteWoe1AoNXsUfMDLfXtBRZq/view?usp=drivesdk",
+      "parent_id": "1hMb8YmZRoYvRLR026wGPjQe1P7gUNP-V",
+      "source": "body-cylinder-9ml-13-415-clear.254d72521e49.svg"
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1bi1IgBpggkgZ0VEuLfie3ydnc9Op2ZDj",
+      "title": "Cylinder - 9 ml - Frosted - 13-415 - Registered Body - CANDIDATE.svg",
+      "file_name": "Cylinder - 9 ml - Frosted - 13-415 - Registered Body - CANDIDATE.svg",
+      "mime_type": "image/svg+xml",
+      "url": "https://drive.google.com/file/d/1bi1IgBpggkgZ0VEuLfie3ydnc9Op2ZDj/view?usp=drivesdk",
+      "parent_id": "1hMb8YmZRoYvRLR026wGPjQe1P7gUNP-V",
+      "source": "body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg"
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1K6zUAFUZF_SzVpsYiyKzYoTXNe-USwBP",
+      "title": "Sleek - 5 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+      "file_name": "Sleek - 5 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+      "mime_type": "image/svg+xml",
+      "url": "https://drive.google.com/file/d/1K6zUAFUZF_SzVpsYiyKzYoTXNe-USwBP/view?usp=drivesdk",
+      "parent_id": "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy",
+      "source": "body-sleek-5ml-13-415-clear.87084cf3360e.svg"
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "13-E_bnNcdsqVkI0QV36Yhzx8SjszLgN-",
+      "title": "Sleek - 8 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+      "file_name": "Sleek - 8 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+      "mime_type": "image/svg+xml",
+      "url": "https://drive.google.com/file/d/13-E_bnNcdsqVkI0QV36Yhzx8SjszLgN-/view?usp=drivesdk",
+      "parent_id": "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy",
+      "source": "body-sleek-8ml-13-415-clear.d0e6e55766ec.svg"
+    }
+  ],
+  "bodyMetadata": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1bLzzW5LTkteWoe1AoNXsUfMDLfXtBRZq",
+        "title": "Cylinder - 9 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+        "file_name": "Cylinder - 9 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+        "mime_type": "image/svg+xml",
+        "url": "https://drive.google.com/file/d/1bLzzW5LTkteWoe1AoNXsUfMDLfXtBRZq/view?usp=drivesdk",
+        "parent_id": "1hMb8YmZRoYvRLR026wGPjQe1P7gUNP-V",
+        "source": "body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+        "metadata": {
+          "id": "1bLzzW5LTkteWoe1AoNXsUfMDLfXtBRZq",
+          "title": "Cylinder - 9 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+          "mime_type": null,
+          "size": "1644238",
+          "url": "https://drive.google.com/file/d/1bLzzW5LTkteWoe1AoNXsUfMDLfXtBRZq/view?usp=drivesdk",
+          "display_url": "https://drive.google.com/file/d/1bLzzW5LTkteWoe1AoNXsUfMDLfXtBRZq/view?usp=drivesdk",
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1hMb8YmZRoYvRLR026wGPjQe1P7gUNP-V"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1bi1IgBpggkgZ0VEuLfie3ydnc9Op2ZDj",
+        "title": "Cylinder - 9 ml - Frosted - 13-415 - Registered Body - CANDIDATE.svg",
+        "file_name": "Cylinder - 9 ml - Frosted - 13-415 - Registered Body - CANDIDATE.svg",
+        "mime_type": "image/svg+xml",
+        "url": "https://drive.google.com/file/d/1bi1IgBpggkgZ0VEuLfie3ydnc9Op2ZDj/view?usp=drivesdk",
+        "parent_id": "1hMb8YmZRoYvRLR026wGPjQe1P7gUNP-V",
+        "source": "body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+        "metadata": {
+          "id": "1bi1IgBpggkgZ0VEuLfie3ydnc9Op2ZDj",
+          "title": "Cylinder - 9 ml - Frosted - 13-415 - Registered Body - CANDIDATE.svg",
+          "mime_type": null,
+          "size": "1331030",
+          "url": "https://drive.google.com/file/d/1bi1IgBpggkgZ0VEuLfie3ydnc9Op2ZDj/view?usp=drivesdk",
+          "display_url": "https://drive.google.com/file/d/1bi1IgBpggkgZ0VEuLfie3ydnc9Op2ZDj/view?usp=drivesdk",
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1hMb8YmZRoYvRLR026wGPjQe1P7gUNP-V"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1K6zUAFUZF_SzVpsYiyKzYoTXNe-USwBP",
+        "title": "Sleek - 5 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+        "file_name": "Sleek - 5 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+        "mime_type": "image/svg+xml",
+        "url": "https://drive.google.com/file/d/1K6zUAFUZF_SzVpsYiyKzYoTXNe-USwBP/view?usp=drivesdk",
+        "parent_id": "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy",
+        "source": "body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+        "metadata": {
+          "id": "1K6zUAFUZF_SzVpsYiyKzYoTXNe-USwBP",
+          "title": "Sleek - 5 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+          "mime_type": null,
+          "size": "1338890",
+          "url": "https://drive.google.com/file/d/1K6zUAFUZF_SzVpsYiyKzYoTXNe-USwBP/view?usp=drivesdk",
+          "display_url": "https://drive.google.com/file/d/1K6zUAFUZF_SzVpsYiyKzYoTXNe-USwBP/view?usp=drivesdk",
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        }
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "13-E_bnNcdsqVkI0QV36Yhzx8SjszLgN-",
+        "title": "Sleek - 8 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+        "file_name": "Sleek - 8 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+        "mime_type": "image/svg+xml",
+        "url": "https://drive.google.com/file/d/13-E_bnNcdsqVkI0QV36Yhzx8SjszLgN-/view?usp=drivesdk",
+        "parent_id": "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy",
+        "source": "body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+        "metadata": {
+          "id": "13-E_bnNcdsqVkI0QV36Yhzx8SjszLgN-",
+          "title": "Sleek - 8 ml - Clear - 13-415 - Registered Body - CANDIDATE.svg",
+          "mime_type": null,
+          "size": "845901",
+          "url": "https://drive.google.com/file/d/13-E_bnNcdsqVkI0QV36Yhzx8SjszLgN-/view?usp=drivesdk",
+          "display_url": "https://drive.google.com/file/d/13-E_bnNcdsqVkI0QV36Yhzx8SjszLgN-/view?usp=drivesdk",
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1LL9WXaaSLH_eAs5F_XtPcpHPCr9c0pxy"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        }
+      }
+    }
+  ]
+}
