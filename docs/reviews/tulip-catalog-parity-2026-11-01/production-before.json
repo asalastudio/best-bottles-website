@@ -1,0 +1,38 @@
+{
+  "sku": "GBTulip6SpryGlMatt",
+  "version": "b319d9d90adc6eb9",
+  "images": [
+    {
+      "slot": "body",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "x": "341.6",
+      "y": "528.6846153846154",
+      "height": "556.4307692307692",
+      "clipPath": null
+    },
+    {
+      "slot": "diptube",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png",
+      "x": "474.8",
+      "y": "607.4041348075866",
+      "height": "422.94",
+      "clipPath": null
+    },
+    {
+      "slot": "sprayer",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png",
+      "x": "417.55851569933395",
+      "y": "378.6247383444339",
+      "height": "309.4752616555661",
+      "clipPath": null
+    },
+    {
+      "slot": "overcap",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png",
+      "x": "644.71",
+      "y": "690.8625118934348",
+      "height": "370.1374881065652",
+      "clipPath": null
+    }
+  ]
+}

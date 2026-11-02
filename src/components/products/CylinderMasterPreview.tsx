@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
-import { detachedCapOffset, offBottle, REMOVABLE_KIT_SLOTS } from "@/lib/products/kit-frame";
-import { pdpReviewedGlassViewport } from "@/lib/products/pdp-stage-frame";
+import { stageLayout } from "@/lib/products/pdp-redesign/stage";
 import { registerImageSrc } from "@/lib/products/register-image";
 import { cylinderMasterSource } from "@/lib/products/cylinder-master";
 
@@ -29,6 +28,7 @@ function loadKit(sku: string): Promise<BuilderKit> {
 export default function CylinderMasterPreview({ sku, title, fallback }: {
     sku: string; title: string; fallback: React.ReactNode;
 }) {
+    const clipPrefix = useId().replace(/[^a-zA-Z0-9_-]/g, "");
     const [result, setResult] = useState<{ sku: string; kit?: BuilderKit; failed?: boolean } | null>(null);
     useEffect(() => {
         let active = true;
@@ -39,19 +39,33 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
     const current = result?.sku === sku ? result : null;
     if (current?.failed) return fallback;
     const kit = current?.kit;
-    const body = kit?.parts.find(part => part.slot === "body");
-    const frame = kit && body && kit.glassSizing
-        ? pdpReviewedGlassViewport(body.bounds, kit.anchors.axisX, kit.glassSizing, 1000, 1100) : null;
-    if (!kit || !body || !frame) return <span className="absolute inset-0" role="status" aria-label="Loading bottle image" />;
-    return <svg className="absolute inset-0 h-full w-full" viewBox={`${frame.x} ${frame.y} ${frame.width} ${frame.height}`}
+    const layout = kit ? stageLayout(kit, "sidecar", { websiteSku: sku }) : null;
+    if (kit && !layout) return fallback;
+    if (!layout) return <span className="absolute inset-0" role="status" aria-label="Loading bottle image" />;
+    const { canvas, frame } = layout;
+    const viewport = {
+        x: -frame.x / 100 * canvas.width / frame.scale,
+        y: -frame.y / 100 * canvas.height / frame.scale,
+        width: canvas.width / frame.scale,
+        height: canvas.height / frame.scale,
+    };
+    return <svg className="absolute inset-0 h-full w-full" viewBox={`${viewport.x} ${viewport.y} ${viewport.width} ${viewport.height}`}
         role="img" aria-label={title} data-bb-master-version={cylinderMasterSource(sku)?.version} data-bb-master-sku={sku}>
-        {kit.parts.filter(part => !part.views || part.views.includes("sidecar")).sort((a, b) => a.zOrder - b.zOrder).map((part, i) => {
-            const removable = REMOVABLE_KIT_SLOTS.has(part.slot);
-            const drawn = removable ? offBottle(part) : part;
-            const offset = removable ? detachedCapOffset(drawn, body.bounds) : { dx: 0, dy: 0 };
-            const box = drawn.box ?? { x: 0, y: 0, width: kit.canvas.width, height: kit.canvas.height };
-            return <image key={`${part.slot}-${i}`} href={registerImageSrc(drawn.image.url, 640)} data-bb-master-source={drawn.image.url} x={box.x + offset.dx} y={box.y + offset.dy}
-                width={box.width} height={box.height} opacity={part.opacity ?? 1} style={{ mixBlendMode: part.blendMode }} data-bb-master-part={part.slot} />;
+        {layout.parts.map((part, i) => {
+            const x = ((part.box?.leftPct ?? 0) + part.dxPct) / 100 * canvas.width;
+            const y = ((part.box?.topPct ?? 0) + part.dyPct) / 100 * canvas.height;
+            const width = (part.box?.widthPct ?? 100) / 100 * canvas.width;
+            const height = (part.box?.heightPct ?? 100) / 100 * canvas.height;
+            const clipId = `${clipPrefix}-master-${i}`;
+            const visibleHeight = height * (1 - (part.clipBottomPct ?? 0) / 100);
+            return <g key={part.key}>
+                {part.clipBottomPct !== undefined && <defs>
+                    <clipPath id={clipId} clipPathUnits="userSpaceOnUse"><rect x={x} y={y} width={width} height={visibleHeight} /></clipPath>
+                </defs>}
+                <image href={registerImageSrc(part.url, 640)} data-bb-master-source={part.url} x={x} y={y}
+                    width={width} height={height} opacity={part.opacity ?? 1} style={{ mixBlendMode: part.blendMode }}
+                    clipPath={part.clipBottomPct !== undefined ? `url(#${clipId})` : undefined} data-bb-master-part={part.slot} />
+            </g>;
         })}
     </svg>;
 }
