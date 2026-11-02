@@ -9,6 +9,7 @@ import { SLEEK8_MASTER_REVIEW_VERSION, sleek8ReviewSku } from '@/lib/products/sl
 vi.mock('server-only', () => ({}));
 import { localGpt13ComponentKits, localPdpComponentKits } from '@/lib/paper-doll/local-component-kits';
 import { GET } from '@/app/api/bottle-masters/sleek8/route';
+const capFitBefore = JSON.parse(readFileSync('docs/reviews/tall9-pour-cap-fit-2026-11-01/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const read = (file: string) => JSON.parse(readFileSync(file, 'utf8'));
 const directory = 'docs/reviews/sleek8-correction-2026-11-01/';
 const before = read(directory + 'before-all-kits.json').rows as Record<string, KitLike>;
@@ -59,6 +60,7 @@ describe('Sleek 8 ml regenerated glass and internal tube candidate', () => {
         const baseline = structuredClone(manifest.rows) as unknown as Record<string, KitLike>;
         // Reconstruct this historical 438-recipe approval before the later Rectangle roll-on extension.
         for (const sku of Object.keys(baseline)) if (/^GBRect10(?:MtlRoll|Roll)/.test(sku)) delete baseline[sku];
+        Object.assign(baseline, capFitBefore);
         const opticalBefore = read('docs/reviews/sleek8-hero-depth-2026-11-01/before-kits.json').rows;
         for (const [sku, original] of Object.entries(opticalBefore)) baseline[sku] = original as KitLike;
         expect(hash(JSON.stringify(baseline))).toBe(proof.approvedManifestHash);

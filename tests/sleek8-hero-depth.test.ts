@@ -7,6 +7,7 @@ import { stageLayout, type KitLike } from '@/lib/products/pdp-redesign/stage';
 import { cylinderMasterSource } from '@/lib/products/cylinder-master';
 vi.mock('server-only', () => ({}));
 import { GET } from '@/app/api/bottle-masters/approved/route';
+const capFitBefore = JSON.parse(readFileSync('docs/reviews/tall9-pour-cap-fit-2026-11-01/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const dir = 'docs/reviews/sleek8-hero-depth-2026-11-01/';
 const read = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
 const before = read(dir + 'before-kits.json').rows as Record<string, KitLike>;
@@ -50,7 +51,7 @@ describe('Sleek 8 ml hero tube depth', () => {
     it('preserves all 430 other recipes and versions the shared hosted manifest', () => {
         const prior = read(dir + 'prior-recipe-hashes.json').recipes;
         expect(Object.keys(prior)).toHaveLength(430);
-        for (const [sku, digest] of Object.entries(prior)) expect(hash(rows[sku]), sku).toBe(digest);
+        for (const [sku, digest] of Object.entries(prior)) expect(hash(capFitBefore[sku] ?? rows[sku]), sku).toBe(digest);
         expect(Object.keys(rows)).toHaveLength(456); expect(index.skus).toEqual(Object.keys(rows).sort());
         expect(index.version).toBe(manifest.version);
         expect(manifest.version).toBe(createHash('sha256').update(JSON.stringify(manifest.rows)).digest('hex').slice(0, 16));

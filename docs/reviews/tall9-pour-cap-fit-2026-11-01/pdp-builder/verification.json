@@ -1,0 +1,843 @@
+{
+  "origin": "http://localhost:3010",
+  "version": "4c6095d23d920c4f",
+  "apis": [
+    "GBTallCyl9CuSht",
+    "GBTallCyl9GlMattSht",
+    "GBTallCyl9SlMattSht",
+    "GBTallCyl9BlkShSht",
+    "GBTallCyl9SlSht",
+    "GBTallCyl9BlkSht",
+    "GBTallCyl9WhtSht",
+    "GBTallCyl9GlSht",
+    "GBTallCyl9Gl",
+    "GBTallCyl9Sl",
+    "GBTallCylFrst9CuSht",
+    "GBTallCylFrst9GlMattSht",
+    "GBTallCylFrst9SlMattSht",
+    "GBTallCylFrst9BlkShSht",
+    "GBTallCylFrst9GlSht",
+    "GBTallCylFrst9SlSht",
+    "GBTallCylFrst9BlkSht",
+    "GBTallCylFrst9WhtSht",
+    "GBTallCylFrst9Gl",
+    "GBTallCylFrst9Sl"
+  ],
+  "pages": [
+    {
+      "sku": "GBTallCyl9GlSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9GlSht-sidecar.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ff5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.2578%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9GlSht-capon.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ff5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9GlSht-exploded.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ff5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -16.6882%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9WhtSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9WhtSht-sidecar.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-WHT-S-13-415%2Fcap-ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584.png&w=640&q=75"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.101%, 65.8182%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9WhtSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9WhtSht-capon.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-WHT-S-13-415%2Fcap-ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584.png&w=640&q=75"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9WhtSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9WhtSht-exploded.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-WHT-S-13-415%2Fcap-ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584.png&w=640&q=75"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -19.9085%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9CuSht-sidecar.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.2527%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9CuSht-capon.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9CuSht-exploded.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -16.7195%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9Sl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9Sl-sidecar.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.5605%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9Sl",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9Sl-capon.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9Sl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9Sl-exploded.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.3356%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9GlSht-sidecar.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ff5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.2578%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9GlSht-capon.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ff5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9GlSht-exploded.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Ff5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -16.6882%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9WhtSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9WhtSht-sidecar.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-WHT-S-13-415%2Fcap-ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584.png&w=640&q=75"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.101%, 65.8182%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9WhtSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9WhtSht-capon.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-WHT-S-13-415%2Fcap-ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584.png&w=640&q=75"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9WhtSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9WhtSht-exploded.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-WHT-S-13-415%2Fcap-ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584.png&w=640&q=75"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -19.9085%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9CuSht-sidecar.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.2527%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9CuSht-capon.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9CuSht-exploded.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -16.7195%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9Sl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9Sl-sidecar.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.5605%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9Sl",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9Sl-capon.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "http://localhost:3010/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9Sl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9Sl-exploded.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.3356%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    }
+  ],
+  "builders": [
+    {
+      "kind": "api",
+      "matched": 20,
+      "unavailable": []
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCyl9GlSht",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCyl9WhtSht",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCylFrst9CuSht",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCylFrst9Sl",
+      "passed": true
+    }
+  ],
+  "unavailable": [],
+  "errors": [],
+  "failures": [],
+  "passed": true
+}

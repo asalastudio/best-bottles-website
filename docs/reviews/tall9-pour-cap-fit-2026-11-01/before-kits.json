@@ -1,0 +1,2405 @@
+{
+  "version": "b4e1b077ae76a6da",
+  "rows": {
+    "GBTallCyl9CuSht": {
+      "sku": "GBTallCyl9CuSht",
+      "familyId": "register:cylinder-9ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 344.2064941653983,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "key": "reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e",
+            "bytes": 1644238,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 356.39776763064435,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.8023940337782,
+            "right": 557.7770593723383,
+            "top": 223.8562922630997,
+            "bottom": 354.2064941653983
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+            "key": "reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+            "sha256": "32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772",
+            "bytes": 119746,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 436.8023940337782,
+            "y": 223.8562922630997,
+            "width": 121.27710200190657,
+            "height": 130.35020190229858
+          },
+          "componentId": "CMP-CLS-MTCP-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CLS-MTCP-S-13-415"
+        ],
+        "seatSignature": "269ab6930f143c",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCyl9GlMattSht": {
+      "sku": "GBTallCyl9GlMattSht",
+      "familyId": "register:cylinder-9ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 344.2064941653983,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "key": "reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e",
+            "bytes": 1644238,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 356.39776763064435,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.8023940337782,
+            "right": 557.7770593723383,
+            "top": 223.8562922630997,
+            "bottom": 354.2064941653983
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+            "key": "reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+            "sha256": "fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104",
+            "bytes": 119914,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 436.8023940337782,
+            "y": 223.8562922630997,
+            "width": 121.27710200190657,
+            "height": 130.35020190229858
+          },
+          "componentId": "CMP-CLS-MTGD-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CLS-MTGD-S-13-415"
+        ],
+        "seatSignature": "786a1603032510",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCyl9SlMattSht": {
+      "sku": "GBTallCyl9SlMattSht",
+      "familyId": "register:cylinder-9ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 344.2064941653983,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "key": "reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e",
+            "bytes": 1644238,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 356.39776763064435,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.8023940337782,
+            "right": 557.7770593723383,
+            "top": 223.8562922630997,
+            "bottom": 354.2064941653983
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+            "key": "reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+            "sha256": "c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a",
+            "bytes": 120747,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 436.8023940337782,
+            "y": 223.8562922630997,
+            "width": 121.27710200190657,
+            "height": 130.35020190229858
+          },
+          "componentId": "CMP-CLS-MTSL-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CLS-MTSL-S-13-415"
+        ],
+        "seatSignature": "2caca0b01fe8d7",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCyl9BlkShSht": {
+      "sku": "GBTallCyl9BlkShSht",
+      "familyId": "register:cylinder-9ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 344.2064941653983,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "key": "reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e",
+            "bytes": 1644238,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 356.39776763064435,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.8022691670256,
+            "right": 557.7771848649895,
+            "top": 223.85602250084213,
+            "bottom": 354.2064941653983
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+            "key": "reviewed-master-media/2026-11-01/672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+            "sha256": "672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84",
+            "bytes": 114848,
+            "width": 402,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 436.4998318777807,
+            "y": 223.85602250084213,
+            "width": 121.57979027645375,
+            "height": 130.35047166455615
+          },
+          "componentId": "CMP-CAP-SBLK-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CAP-SBLK-13-415"
+        ],
+        "seatSignature": "119412b315680c",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCyl9GlSht": {
+      "sku": "GBTallCyl9GlSht",
+      "familyId": "register:cylinder-9ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 344.2064941653983,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "key": "reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e",
+            "bytes": 1644238,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 356.39776763064435,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.6510505224032,
+            "right": 557.6259662203672,
+            "top": 223.85602250084213,
+            "bottom": 354.2064941653983
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png",
+            "key": "reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png",
+            "sha256": "f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e",
+            "bytes": 2186433,
+            "width": 1230,
+            "height": 1320
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 435.1388640761786,
+            "y": 222.34383605461758,
+            "width": 123.99928859041302,
+            "height": 133.07240726776033
+          },
+          "componentId": "CMP-CLS-SHGD-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CLS-SHGD-S-13-415"
+        ],
+        "seatSignature": "702454b8116def",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCyl9SlSht": {
+      "sku": "GBTallCyl9SlSht",
+      "familyId": "register:cylinder-9ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 344.2064941653983,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "key": "reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e",
+            "bytes": 1644238,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 356.39776763064435,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.6510505224032,
+            "right": 557.6259662203672,
+            "top": 223.85602250084213,
+            "bottom": 354.2064941653983
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png",
+            "key": "reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png",
+            "sha256": "e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a",
+            "bytes": 1927768,
+            "width": 1230,
+            "height": 1320
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 435.1388640761786,
+            "y": 222.34383605461758,
+            "width": 123.99928859041302,
+            "height": 133.07240726776033
+          },
+          "componentId": "CMP-CLS-SHSL-S-13-415-02"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CLS-SHSL-S-13-415-02"
+        ],
+        "seatSignature": "b2856e1409ccdd",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCyl9BlkSht": {
+      "sku": "GBTallCyl9BlkSht",
+      "familyId": "register:cylinder-9ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 344.2064941653983,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "key": "reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e",
+            "bytes": 1644238,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 356.39776763064435,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 438.31971349959025,
+            "top": 259.28,
+            "right": 556.2597134995904,
+            "bottom": 337
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -81.35
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-df3b5176c9a9723d4c3d14bf3a5e25104096e10de55ca4e3cf9437bd6f434a67.png",
+            "key": "",
+            "sha256": "df3b5176c9a9723d4c3d14bf3a5e25104096e10de55ca4e3cf9437bd6f434a67",
+            "bytes": 88362,
+            "width": 390,
+            "height": 257
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 438.31971349959025,
+            "y": 259.28,
+            "width": 117.94,
+            "height": 77.72
+          },
+          "componentId": "CMP-CAP-BLK-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CAP-BLK-S-13-415"
+        ],
+        "seatSignature": "e61dd8770a3bba",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCyl9WhtSht": {
+      "sku": "GBTallCyl9WhtSht",
+      "familyId": "register:cylinder-9ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 344.2064941653983,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "key": "reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e",
+            "bytes": 1644238,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 356.39776763064435,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 438.31971349959025,
+            "top": 259.28,
+            "right": 556.2597134995904,
+            "bottom": 337
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -81.35
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584.png",
+            "key": "",
+            "sha256": "ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584",
+            "bytes": 71907,
+            "width": 390,
+            "height": 257
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 438.31971349959025,
+            "y": 259.28,
+            "width": 117.94,
+            "height": 77.72
+          },
+          "componentId": "CMP-CAP-WHT-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CAP-WHT-S-13-415"
+        ],
+        "seatSignature": "7847d53d0c31e8",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCyl9Gl": {
+      "sku": "GBTallCyl9Gl",
+      "familyId": "register:cylinder-9ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 344.2064941653983,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "key": "reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e",
+            "bytes": 1644238,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 356.39776763064435,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 433.6241796719693,
+            "right": 560.652837070801,
+            "top": 163.96595725143376,
+            "bottom": 354.2064941653983
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+            "key": "reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 432.1119337505546,
+            "y": 162.4537113300191,
+            "width": 130.05314924166098,
+            "height": 193.26502875679384
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-01"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-01"
+        ],
+        "seatSignature": "a1c871d61bc77b",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCyl9Sl": {
+      "sku": "GBTallCyl9Sl",
+      "familyId": "register:cylinder-9ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 344.2064941653983,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "key": "reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+            "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e",
+            "bytes": 1644238,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 356.39776763064435,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 433.6241796719693,
+            "right": 560.652837070801,
+            "top": 163.96595725143376,
+            "bottom": 354.2064941653983
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+            "key": "reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 432.1119337505546,
+            "y": 162.4537113300191,
+            "width": 130.05314924166098,
+            "height": 193.26502875679384
+          },
+          "componentId": "CMP-CAP-SLV-13-415-01"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-01"
+        ],
+        "seatSignature": "7d6fe26c05b64b",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCylFrst9CuSht": {
+      "sku": "GBTallCylFrst9CuSht",
+      "familyId": "register:cylinder-9ml-13-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 343.3947234906139,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "key": "reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414",
+            "bytes": 1331030,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 355.1801116184678,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.8023940337782,
+            "right": 557.7770593723383,
+            "top": 223.04452158831532,
+            "bottom": 353.3947234906139
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+            "key": "reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+            "sha256": "32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772",
+            "bytes": 119746,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 436.8023940337782,
+            "y": 223.04452158831532,
+            "width": 121.27710200190657,
+            "height": 130.35020190229858
+          },
+          "componentId": "CMP-CLS-MTCP-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CLS-MTCP-S-13-415"
+        ],
+        "seatSignature": "3d7f512b1a142c",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCylFrst9GlMattSht": {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "familyId": "register:cylinder-9ml-13-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 343.3947234906139,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "key": "reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414",
+            "bytes": 1331030,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 355.1801116184678,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.8023940337782,
+            "right": 557.7770593723383,
+            "top": 223.04452158831532,
+            "bottom": 353.3947234906139
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+            "key": "reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+            "sha256": "fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104",
+            "bytes": 119914,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 436.8023940337782,
+            "y": 223.04452158831532,
+            "width": 121.27710200190657,
+            "height": 130.35020190229858
+          },
+          "componentId": "CMP-CLS-MTGD-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CLS-MTGD-S-13-415"
+        ],
+        "seatSignature": "3a692b4b096540",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCylFrst9SlMattSht": {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "familyId": "register:cylinder-9ml-13-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 343.3947234906139,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "key": "reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414",
+            "bytes": 1331030,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 355.1801116184678,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.8023940337782,
+            "right": 557.7770593723383,
+            "top": 223.04452158831532,
+            "bottom": 353.3947234906139
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+            "key": "reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+            "sha256": "c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a",
+            "bytes": 120747,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 436.8023940337782,
+            "y": 223.04452158831532,
+            "width": 121.27710200190657,
+            "height": 130.35020190229858
+          },
+          "componentId": "CMP-CLS-MTSL-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CLS-MTSL-S-13-415"
+        ],
+        "seatSignature": "92fa4fb8171a87",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCylFrst9BlkShSht": {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "familyId": "register:cylinder-9ml-13-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 343.3947234906139,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "key": "reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414",
+            "bytes": 1331030,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 355.1801116184678,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.8022691670256,
+            "right": 557.7771848649895,
+            "top": 223.04425182605775,
+            "bottom": 353.3947234906139
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+            "key": "reviewed-master-media/2026-11-01/672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+            "sha256": "672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84",
+            "bytes": 114848,
+            "width": 402,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 436.4998318777807,
+            "y": 223.04425182605775,
+            "width": 121.57979027645375,
+            "height": 130.35047166455615
+          },
+          "componentId": "CMP-CAP-SBLK-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CAP-SBLK-13-415"
+        ],
+        "seatSignature": "61cf1deb0f9f1c",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCylFrst9GlSht": {
+      "sku": "GBTallCylFrst9GlSht",
+      "familyId": "register:cylinder-9ml-13-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 343.3947234906139,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "key": "reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414",
+            "bytes": 1331030,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 355.1801116184678,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.6510505224032,
+            "right": 557.6259662203672,
+            "top": 223.04425182605775,
+            "bottom": 353.3947234906139
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png",
+            "key": "reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png",
+            "sha256": "f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e",
+            "bytes": 2186433,
+            "width": 1230,
+            "height": 1320
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 435.1388640761786,
+            "y": 221.5320653798332,
+            "width": 123.99928859041302,
+            "height": 133.07240726776033
+          },
+          "componentId": "CMP-CLS-SHGD-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CLS-SHGD-S-13-415"
+        ],
+        "seatSignature": "2bb24e5006131f",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCylFrst9SlSht": {
+      "sku": "GBTallCylFrst9SlSht",
+      "familyId": "register:cylinder-9ml-13-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 343.3947234906139,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "key": "reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414",
+            "bytes": 1331030,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 355.1801116184678,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 436.6510505224032,
+            "right": 557.6259662203672,
+            "top": 223.04425182605775,
+            "bottom": 353.3947234906139
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png",
+            "key": "reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png",
+            "sha256": "e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a",
+            "bytes": 1927768,
+            "width": 1230,
+            "height": 1320
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 435.1388640761786,
+            "y": 221.5320653798332,
+            "width": 123.99928859041302,
+            "height": 133.07240726776033
+          },
+          "componentId": "CMP-CLS-SHSL-S-13-415-02"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CLS-SHSL-S-13-415-02"
+        ],
+        "seatSignature": "fb88cb2c11fe6d",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCylFrst9BlkSht": {
+      "sku": "GBTallCylFrst9BlkSht",
+      "familyId": "register:cylinder-9ml-13-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 343.3947234906139,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "key": "reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414",
+            "bytes": 1331030,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 355.1801116184678,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 438.31971349959025,
+            "top": 259.28,
+            "right": 556.2597134995904,
+            "bottom": 337
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -81.35
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-df3b5176c9a9723d4c3d14bf3a5e25104096e10de55ca4e3cf9437bd6f434a67.png",
+            "key": "",
+            "sha256": "df3b5176c9a9723d4c3d14bf3a5e25104096e10de55ca4e3cf9437bd6f434a67",
+            "bytes": 88362,
+            "width": 390,
+            "height": 257
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 438.31971349959025,
+            "y": 259.28,
+            "width": 117.94,
+            "height": 77.72
+          },
+          "componentId": "CMP-CAP-BLK-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CAP-BLK-S-13-415"
+        ],
+        "seatSignature": "ccfcfe2f02c6ea",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCylFrst9WhtSht": {
+      "sku": "GBTallCylFrst9WhtSht",
+      "familyId": "register:cylinder-9ml-13-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 343.3947234906139,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "key": "reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414",
+            "bytes": 1331030,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 355.1801116184678,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 438.31971349959025,
+            "top": 259.28,
+            "right": 556.2597134995904,
+            "bottom": 337
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -81.35
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584.png",
+            "key": "",
+            "sha256": "ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584",
+            "bytes": 71907,
+            "width": 390,
+            "height": 257
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 438.31971349959025,
+            "y": 259.28,
+            "width": 117.94,
+            "height": 77.72
+          },
+          "componentId": "CMP-CAP-WHT-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CAP-WHT-S-13-415"
+        ],
+        "seatSignature": "1faf43250e82d8",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCylFrst9Gl": {
+      "sku": "GBTallCylFrst9Gl",
+      "familyId": "register:cylinder-9ml-13-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 343.3947234906139,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "key": "reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414",
+            "bytes": 1331030,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 355.1801116184678,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 433.6241796719693,
+            "right": 560.652837070801,
+            "top": 163.15418657664938,
+            "bottom": 353.3947234906139
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+            "key": "reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 432.1119337505546,
+            "y": 161.64194065523472,
+            "width": 130.05314924166098,
+            "height": 193.26502875679384
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-01"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-01"
+        ],
+        "seatSignature": "6360bdde0c66ab",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "GBTallCylFrst9Sl": {
+      "sku": "GBTallCylFrst9Sl",
+      "familyId": "register:cylinder-9ml-13-415|Frosted",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 7.56
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 62.5,
+        "baselinePct": 91,
+        "landmarkY": 343.3947234906139,
+        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 431.96,
+            "right": 568.04,
+            "top": 261,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "key": "reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+            "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414",
+            "bytes": 1331030,
+            "width": 736,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 355.1801116184678,
+            "y": 210.26433282597668,
+            "width": 298.7316083206494,
+            "height": 889.7006595636732
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 433.6241796719693,
+            "right": 560.652837070801,
+            "top": 163.15418657664938,
+            "bottom": 353.3947234906139
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+            "key": "reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 432.1119337505546,
+            "y": 161.64194065523472,
+            "width": 130.05314924166098,
+            "height": 193.26502875679384
+          },
+          "componentId": "CMP-CAP-SLV-13-415-01"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-13-415",
+        "plateKey": "cylinder-9ml-13-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 261,
+          "baselineY": 1061
+        },
+        "pxPerMm": 7.56,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-01"
+        ],
+        "seatSignature": "7dc41f1412f95b",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    }
+  }
+}

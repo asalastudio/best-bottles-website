@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "passed": 3261,
+  "failed": 0,
+  "skipped": 7,
+  "typecheck": "passed",
+  "scopedLint": "passed",
+  "catalogStates": 40,
+  "pdpStates": 24,
+  "masterApis": 20,
+  "builderChecks": 5
+}

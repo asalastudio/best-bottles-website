@@ -5,6 +5,7 @@ import manifest from '@/lib/paper-doll/approved-kits.generated.json';
 import source from '../public/local-kits/remaining-13-415-2026-11-01/kits.json';
 import { cylinderMasterSku } from '@/lib/products/cylinder-master';
 import { stageLayout, type KitLike } from '@/lib/products/pdp-redesign/stage';
+const capFitBefore = JSON.parse(readFileSync('docs/reviews/tall9-pour-cap-fit-2026-11-01/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const hosted=manifest.rows as unknown as Record<string,KitLike>;
 const selected=Object.entries(source.rows as unknown as Record<string,KitLike>).filter(([,kit])=>['sleek-5ml-13-415|Clear','sleek-8ml-13-415|Clear'].includes(kit.register?.plateKey??''));
 const opticsBefore=JSON.parse(readFileSync('docs/reviews/sleek8-hero-depth-2026-11-01/before-kits.json','utf8')).rows as Record<string,KitLike>;
@@ -14,7 +15,7 @@ describe('approved Sleek 5/8 ml shared catalog, PDP and builder masters',()=>{
  it('publishes exactly the 72 approved combinations while preserving the earlier 362',()=>{
   const release=JSON.parse(readFileSync('docs/reviews/hosted-sleek-5-8-2026-11-01/release-manifest.json','utf8'));
   expect(selected).toHaveLength(72);expect(Object.keys(hosted)).toHaveLength(456);expect(release.addedSkus).toEqual(selected.map(([sku])=>sku).sort());
-  const selectedSkus=new Set(release.addedSkus);const prior=Object.fromEntries(Object.entries(hosted).filter(([sku])=>!selectedSkus.has(sku)&&!/^GBRect10(?:MtlRoll|Roll)/.test(sku)&&!['GBVAmb2BlackCap','GBVAmb2WhtCap','GBVialClr2mlBlackCap','GBVialClr2mlWhtCap'].includes(sku)));Object.assign(prior,JSON.parse(readFileSync('docs/reviews/tulip6-glass-depth-2026-11-01/before-kits.json','utf8')).rows);expect(Object.keys(prior)).toHaveLength(362);expect(hash(prior)).toBe(release.preservedPriorRecipesSha256);
+  const selectedSkus=new Set(release.addedSkus);const prior=Object.fromEntries(Object.entries(hosted).filter(([sku])=>!selectedSkus.has(sku)&&!/^GBRect10(?:MtlRoll|Roll)/.test(sku)&&!['GBVAmb2BlackCap','GBVAmb2WhtCap','GBVialClr2mlBlackCap','GBVialClr2mlWhtCap'].includes(sku)));Object.assign(prior,JSON.parse(readFileSync('docs/reviews/tulip6-glass-depth-2026-11-01/before-kits.json','utf8')).rows);Object.assign(prior,capFitBefore);expect(Object.keys(prior)).toHaveLength(362);expect(hash(prior)).toBe(release.preservedPriorRecipesSha256);
  });
  it('routes each cap choice to the approved body without changing placement or glass appearance',()=>{
   for(const [sku,original]of selected){const kit=hosted[sku];expect(kit,sku).toBeDefined();if(!kit)continue;expect(cylinderMasterSku(sku)).toBe(sku);expect(kit.glassSizing).toEqual(original.glassSizing);expect(kit.parts).toHaveLength(original.parts.length);
