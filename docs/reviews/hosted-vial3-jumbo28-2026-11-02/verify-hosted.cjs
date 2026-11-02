@@ -136,10 +136,12 @@ async function settle(page) {
                     const sku = row.websiteSku, allowed = expectedSources(manifest.rows[sku]);
                     await page.goto(origin + '/matrix?' + new URLSearchParams({ family: 'Vial', sku, from: 'pdp' }),
                         { waitUntil: 'domcontentloaded', timeout: 120000 });
-                    await page.waitForFunction(expected => [...document.querySelectorAll('[data-builder-layer="body"]')]
+                    await page.waitForFunction(expected => [...document.querySelectorAll('svg [data-builder-layer="body"]')]
                         .some(element => expected.includes(element.currentSrc || element.src || element.getAttribute('href'))),
                     { timeout: 45000 }, [...allowed]);
-                    const layers = await page.$$eval('[data-builder-layer]', async elements => {
+                    // Choice thumbnails include other available finishes. Check the
+                    // selected assembly in both responsive SVG canvases instead.
+                    const layers = await page.$$eval('svg [data-builder-layer]', async elements => {
                         const sources = elements.map(element => ({ slot: element.dataset.builderLayer, source: element.currentSrc || element.src || element.getAttribute('href') }));
                         await Promise.all(sources.map(source => { const image = new Image(); image.src = source.source; return image.decode(); }));
                         return sources;
