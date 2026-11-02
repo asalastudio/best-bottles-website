@@ -29,6 +29,7 @@ import {
     matchListedOption,
     type GracePdpPlateCommand,
 } from "@/lib/grace/pdpPlateSwap";
+import { isTolaApplicator } from "@/lib/products/tola-applicator";
 import { rectangleApplicatorGlass } from "@/lib/products/rectangle-applicator";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
@@ -153,11 +154,12 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         return rollerPart?.image.url ? [[option.id, rollerPart.image.url]] : [];
     }));
     const rectangleGlass = rectangleApplicatorGlass(selected?.websiteSku);
+    const singleTola = isTolaApplicator(selected?.websiteSku);
     const fitment = fitmentLabel(selected);
     // Product copy v2 (scripts/pdp-descriptions/product_copy.py) names the product when it covers this SKU.
     const copy = useMemo(() => (selected?.websiteSku ? descriptions[selected.websiteSku]?.copy ?? null : null), [descriptions, selected?.websiteSku]);
     const title = useMemo(() => copy?.title ?? pageTitle(group, fitment), [copy, group, fitment]);
-    const kit = kitFor(kitsBySku, selected);
+    const kit = singleTola ? null : kitFor(kitsBySku, selected);
     const glassBodyKit = useCallback((glassSlug: string): KitLike | null => {
         if (glassSlug === slug) return kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku }) ?? variants.map((variant) => kitFor(kitsBySku, variant)).find(Boolean) ?? null;
         const sibling = siblings.find((candidate) => candidate.slug === glassSlug);
@@ -442,7 +444,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         }))}
                         activeCapId={activeCap?.id ?? null}
                         onCapPick={onCapPick}
-                        glasses={(rectangleGlass ? [] : glasses).map((glass) => ({
+                        glasses={(rectangleGlass || singleTola ? [] : glasses).map((glass) => ({
                             slug: glass.slug, label: glass.label, active: glass.active, kit: glassBodyKit(glass.slug),
                             unavailable: glass.active
                                 ? variants.every((variant) => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false)
@@ -503,7 +505,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     </div>
                 </div>
 
-                {!rectangleGlass && <PdpBuildStrip
+                {!rectangleGlass && !singleTola && <PdpBuildStrip
                     productPageOnly={["cylinder-3.3ml-clear-12mm-finemist", "cylinder-4ml-clear-12mm-finemist"].includes(slug)}
                     capacityLabel={capacityLabel}
                     glassLabel={glassLabel(group.color)}

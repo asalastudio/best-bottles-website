@@ -1,0 +1,258 @@
+{
+  "payload": {
+    "assemblies": {
+      "GB-DEC-CLR-6ML-T": {
+        "bodyId": "tola-decorative-6ml-14.3mm",
+        "glass": "Clear",
+        "graceSku": "GB-DEC-CLR-6ML-T",
+        "neck": "14.3mm",
+        "parts": [
+          {
+            "componentId": "LIB-14.3mm-Plug",
+            "role": "cap"
+          }
+        ],
+        "plateKey": "tola-decorative-6ml-14.3mm|Clear",
+        "reason": null,
+        "renderable": true,
+        "websiteSku": "GB6TPlGl"
+      }
+    },
+    "bodies": {
+      "tola-decorative-6ml-14.3mm": {
+        "bodyId": "tola-decorative-6ml-14.3mm",
+        "capacityMl": 6,
+        "dims": {
+          "diameterMm": 22,
+          "heightBareMm": 48,
+          "widthMm": 22
+        },
+        "family": "Decorative",
+        "neck": "14.3mm"
+      }
+    },
+    "components": {
+      "LIB-14.3mm-Plug": {
+        "approved": true,
+        "componentId": "LIB-14.3mm-Plug",
+        "layers": [
+          {
+            "anchor": {
+              "x": 174,
+              "y": 209
+            },
+            "approved": true,
+            "explodeIndex": 0,
+            "height": 209,
+            "pxPerMm": 39.9529,
+            "slot": "cap",
+            "solidBottomY": 209,
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/14.3mm/LIB-14.3mm-Plug/cap-aba9e15e9f99886d702eca5424048b05dcf9b226e09097b5e907ed9f84154ee9.png",
+            "usage": "seated",
+            "width": 346,
+            "z": "front"
+          },
+          {
+            "anchor": {
+              "x": 174,
+              "y": 209
+            },
+            "approved": true,
+            "explodeIndex": 0,
+            "height": 306,
+            "pxPerMm": 39.9529,
+            "slot": "cap",
+            "solidBottomY": 306,
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/14.3mm/LIB-14.3mm-Plug/cap-633d053114357ecad4054d94c0dccfa276b4693ac6686ff87135fbb242ed91b7.png",
+            "usage": "exploded",
+            "width": 346,
+            "z": "front"
+          }
+        ],
+        "type": "plug-applicator"
+      }
+    },
+    "plates": {
+      "tola-decorative-6ml-14.3mm|Clear": {
+        "anchors": {
+          "axisX": 540.5,
+          "baselineY": 2096,
+          "seatY": 352,
+          "shoulderY": 755
+        },
+        "approved": true,
+        "bodyId": "tola-decorative-6ml-14.3mm",
+        "glass": "Clear",
+        "height": 2192,
+        "plateKey": "tola-decorative-6ml-14.3mm|Clear",
+        "pxPerMm": 34.8544,
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tola-decorative-6ml-14.3mm/clear/d30216cae12ad97deac0bbf29bda947b877f5c7218ca94d8e4e2c863df3ce5c4.png",
+        "width": 1120
+      }
+    }
+  },
+  "kit": {
+    "sku": "GB6TPlGl",
+    "familyId": "register:tola-decorative-6ml-14.3mm|Clear",
+    "plateSha256": "",
+    "canvas": {
+      "width": 1000,
+      "height": 1100
+    },
+    "anchors": {
+      "axisX": 500,
+      "neckAxisX": 500,
+      "seatY": 536,
+      "baselineY": 1061,
+      "pxPerMm": 10.49
+    },
+    "completeness": "full",
+    "glassSizing": {
+      "heightPct": 34.24,
+      "baselinePct": 91,
+      "landmarkY": 657.3184215328467,
+      "source": "docs/hero-families/next-batch-2026-09-25/approval.json"
+    },
+    "parts": [
+      {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 0,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 384.58,
+          "right": 615.42,
+          "top": 536,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tola-decorative-6ml-14.3mm/clear/d30216cae12ad97deac0bbf29bda947b877f5c7218ca94d8e4e2c863df3ce5c4.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 1120,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 337.29,
+          "y": 430.04,
+          "width": 337.16,
+          "height": 659.86
+        },
+        "componentId": null
+      },
+      {
+        "slot": "cap",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 454.3,
+          "top": 481.11,
+          "right": 545.17,
+          "bottom": 536
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/14.3mm/LIB-14.3mm-Plug/cap-aba9e15e9f99886d702eca5424048b05dcf9b226e09097b5e907ed9f84154ee9.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 346,
+          "height": 209
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 454.3,
+          "y": 481.11,
+          "width": 90.87,
+          "height": 54.89
+        },
+        "componentId": "LIB-14.3mm-Plug",
+        "views": [
+          "sidecar",
+          "capon"
+        ]
+      },
+      {
+        "slot": "cap",
+        "variantKey": null,
+        "zOrder": 2,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 454.3,
+          "top": 481.11,
+          "right": 545.17,
+          "bottom": 561.47
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": -49.47
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/14.3mm/LIB-14.3mm-Plug/cap-633d053114357ecad4054d94c0dccfa276b4693ac6686ff87135fbb242ed91b7.png",
+          "key": "",
+          "sha256": "",
+          "bytes": 0,
+          "width": 346,
+          "height": 306
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 454.3,
+          "y": 481.11,
+          "width": 90.87,
+          "height": 80.36
+        },
+        "componentId": "LIB-14.3mm-Plug",
+        "views": [
+          "exploded"
+        ]
+      }
+    ],
+    "three": null,
+    "conflicts": [],
+    "register": {
+      "bodyId": "tola-decorative-6ml-14.3mm",
+      "plateKey": "tola-decorative-6ml-14.3mm|Clear",
+      "glass": "Clear",
+      "datum": {
+        "axisX": 500,
+        "seatY": 536,
+        "baselineY": 1061
+      },
+      "pxPerMm": 10.49,
+      "componentIds": [
+        "LIB-14.3mm-Plug"
+      ],
+      "seatSignature": "a6e727cc1c1649",
+      "seatDropMm": 0
+    }
+  }
+}

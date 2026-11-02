@@ -1,3 +1,4 @@
+import { isTolaApplicator } from "./tola-applicator";
 import { rectangleApplicatorGlass } from "./rectangle-applicator";
 import policy from "./closure-presentation-policy.json";
 
@@ -9,7 +10,7 @@ export function requiresAssembledClosure(applicator?: string | null, websiteSku?
     // Explicit catalog/source exception: the recorded description is “15ml,
     // 1/2 oz Clear glass bottle with a black dropper”, but applicator is N/A.
     // Exact identity lookup only; do not generalize from the SKU spelling.
-    if (rectangleApplicatorGlass(websiteSku)) return true;
+    if (isTolaApplicator(websiteSku) || rectangleApplicatorGlass(websiteSku)) return true;
     if (websiteSku && policy.assembledExactSkus.includes(websiteSku)) return true;
     return policy.assembledApplicators.some(value => value.toLowerCase() === applicator?.trim().toLowerCase());
 }

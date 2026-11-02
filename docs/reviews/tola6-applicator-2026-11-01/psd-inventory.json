@@ -1,0 +1,137 @@
+[
+  {
+    "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/16. 14.3mm/14.3mm/Capped/GB6TPlGl. copy.psd",
+    "sha256": "aebe22cbd6089ba057c31f54809477b6e3186f60f605e365df28a7211df6d337",
+    "width": 827,
+    "height": 1115,
+    "composite": "docs/reviews/tola6-applicator-2026-11-01/sources/source-0.png",
+    "layers": [
+      {
+        "index": 0,
+        "name": "Layer 0",
+        "visible": true,
+        "kind": "pixel",
+        "bbox": [
+          0,
+          0,
+          827,
+          1115
+        ]
+      },
+      {
+        "index": 1,
+        "name": "Layer 1",
+        "visible": true,
+        "kind": "pixel",
+        "bbox": [
+          261,
+          182,
+          578,
+          1000
+        ]
+      },
+      {
+        "index": 2,
+        "name": "Layer 3",
+        "visible": true,
+        "kind": "pixel",
+        "bbox": [
+          265,
+          149,
+          527,
+          448
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/16. 14.3mm/14.3mm/Uncapped/GB6TPlGl...psd",
+    "sha256": "66b0dc9bba3fb7d0246712abe11429408a6233047706fcd56c5255eb8a05ad83",
+    "width": 827,
+    "height": 1115,
+    "composite": "docs/reviews/tola6-applicator-2026-11-01/sources/source-1.png",
+    "layers": [
+      {
+        "index": 0,
+        "name": "Layer 0",
+        "visible": true,
+        "kind": "pixel",
+        "bbox": [
+          0,
+          0,
+          827,
+          1115
+        ]
+      },
+      {
+        "index": 1,
+        "name": "Layer 1",
+        "visible": true,
+        "kind": "pixel",
+        "bbox": [
+          141,
+          182,
+          458,
+          1000
+        ]
+      },
+      {
+        "index": 2,
+        "name": "Layer 3",
+        "visible": true,
+        "kind": "pixel",
+        "bbox": [
+          465,
+          701,
+          727,
+          1000
+        ]
+      },
+      {
+        "index": 3,
+        "name": "Layer 4",
+        "visible": true,
+        "kind": "pixel",
+        "bbox": [
+          199,
+          188,
+          382,
+          443
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/16. 14.3mm/14.3mm Cap/4. 14mmCpApp6mlShnGlRedDot.psd",
+    "sha256": "c87fac6b24893ebc9991b639f46568c2b62ad54f920d11ccb015f8ee8c58f22f",
+    "width": 68,
+    "height": 71,
+    "composite": "docs/reviews/tola6-applicator-2026-11-01/sources/source-2.png",
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "visible": true,
+        "kind": "pixel",
+        "bbox": [
+          0,
+          0,
+          68,
+          71
+        ]
+      },
+      {
+        "index": 1,
+        "name": "Layer 20",
+        "visible": true,
+        "kind": "pixel",
+        "bbox": [
+          4,
+          9,
+          54,
+          64
+        ]
+      }
+    ]
+  }
+]

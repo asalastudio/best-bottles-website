@@ -33,6 +33,7 @@ import {
     type PdpStageFrame,
     type StageBounds,
 } from "@/lib/products/pdp-stage-frame";
+import { isTolaApplicator, tolaAssemblyLayout } from "../tola-applicator";
 import { rectangleApplicatorGlass } from "../rectangle-applicator";
 import { allowsExplodedClosure, hangsBesideGlass, requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { placeStageBackdrop, stageBackdropFor, type StageBackdropPlacement } from "./stage-backdrops";
@@ -156,6 +157,7 @@ function separableReducer(kit: KitLike | null | undefined, context: StageContext
 
 /** Which views the stage can honestly show for this SKU. */
 export function availableViews(kit: KitLike | null | undefined, context: StageContext): StageView[] {
+    if (isTolaApplicator(context.websiteSku)) return ["capon"];
     // Only a seated stopper-and-wand photograph is registered for this set.
     if (rectangleApplicatorGlass(context.websiteSku)) return ["capon"];
     const views: StageView[] = ["sidecar"];
@@ -168,6 +170,7 @@ export function availableViews(kit: KitLike | null | undefined, context: StageCo
 
 /** Keep complete tops assembled unless the reducer kit explicitly supplies the separate insert. */
 export function effectiveView(view: StageView, kit: KitLike | null | undefined, context: StageContext): StageView {
+    if (isTolaApplicator(context.websiteSku)) return "capon";
     if (!kit?.parts?.length) return "sidecar";
     if (view === "sidecar" && !separableReducer(kit, context) && requiresAssembledClosure(context.applicator, context.websiteSku)) return "capon";
     if (view === "exploded" && !separableReducer(kit, context, true) && !allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) return "capon";
@@ -280,6 +283,7 @@ export function stageLayout(
     /** The kit's `glassFrame` on its page, so every SKU of the glass shares this frame. */
     options: Partial<GlassFrame> = {},
 ): StageLayout | null {
+    if (isTolaApplicator(context.websiteSku)) return tolaAssemblyLayout();
     if (!kit?.parts?.length) return null;
     const canvas = kit.canvas ?? PDP_PLATE_CANVAS;
     const view = effectiveView(requested, kit, context);

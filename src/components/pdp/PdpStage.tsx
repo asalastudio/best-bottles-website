@@ -13,6 +13,7 @@
  * 2.5x; the point under the pointer stays put, so moving it (or dragging a
  * finger) pans. Click again, press Escape or the button to zoom out.
  */
+import { isTolaApplicator } from "@/lib/products/tola-applicator";
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
@@ -102,6 +103,7 @@ export default function PdpStage({
     pickLine, finishKind = "cap", view, availableViews, onViewChange, kit, context, glassFrame = null, fallbackImageUrls, fallbackBodyImageUrl, fallbackAlt, callouts,
     caps, activeCapId, onCapPick, glasses, onGlassPick, activeCapName, activeGlassLabel,
 }: PdpStageProps) {
+    const singleTola = isTolaApplicator(context.websiteSku);
     const layout = useMemo(() => stageLayout(kit, view, context, glassFrame ?? {}), [kit, view, context, glassFrame]);
     const railRef = useRef<HTMLDivElement>(null);
     // Register masters are served display-sized through the optimizer; when that
@@ -186,11 +188,11 @@ export default function PdpStage({
 
     return (
         <section id="product-canvas" className={styles.canvas} aria-label="Product canvas" data-testid="pdp-canvas"
-            style={finishKind === "glass" ? { width: "100%", minWidth: 0 } : undefined}>
+            style={singleTola ? { width: "100%", minWidth: 0, gridTemplateColumns: "minmax(0, 1fr)", gridTemplateAreas: '"head" "stage" "lineup"' } : finishKind === "glass" ? { width: "100%", minWidth: 0 } : undefined}>
             <div className={styles.canvasHead}>
                 <span className={styles.pickLine} data-testid="pdp-pick-line">{pickLine}</span>
                 <div className={styles.viewSwitch} role="group" aria-label="View">
-                    {STAGE_VIEWS.filter(option => finishKind !== "glass" || availableViews.includes(option.id)).map((option) => {
+                    {STAGE_VIEWS.filter(option => (!singleTola && finishKind !== "glass") || availableViews.includes(option.id)).map((option) => {
                         const enabled = availableViews.includes(option.id);
                         return (
                             <button
@@ -203,14 +205,14 @@ export default function PdpStage({
                                 onClick={() => onViewChange(option.id)}
                                 data-testid={`pdp-view-${option.id}`}
                             >
-                                {finishKind === "glass" ? "STOPPER ON" : option.id === "sidecar" && context.applicator === "Reducer" ? "CAP OFF" : option.label}
+                                {singleTola ? "ASSEMBLED" : finishKind === "glass" ? "STOPPER ON" : option.id === "sidecar" && context.applicator === "Reducer" ? "CAP OFF" : option.label}
                             </button>
                         );
                     })}
                 </div>
             </div>
 
-            <div className={styles.rail} role="group" aria-label={finishKind === "glass" ? "Glass colors" : "Caps"} data-testid="pdp-cap-rail">
+            {!singleTola && <div className={styles.rail} role="group" aria-label={finishKind === "glass" ? "Glass colors" : "Caps"} data-testid="pdp-cap-rail">
                 <span className={styles.railLabel}>
                     <span className={styles.railLabelDesktop}>{finishKind === "glass" ? "GLASS" : "CAPS"} {caps.length}</span>
                     {activeCapName ? <span className={styles.railLabelMobile}>{finishKind === "glass" ? "GLASS" : "CAP"} · {activeCapName}</span> : null}
@@ -238,18 +240,18 @@ export default function PdpStage({
                     );
                 })}
                 </div>
-            </div>
+            </div>}
 
             <div
                 className={styles.stage}
                 data-testid="pdp-stage"
                 data-view={view}
-                data-layered={layout ? "true" : "false"}
-                data-source={layout ? (kit?.register ? "register" : "kit") : fallbackImageUrl ? (showingBareBody ? "body" : "photo") : "none"}
+                data-layered={layout && !singleTola ? "true" : "false"}
+                data-source={layout ? (singleTola ? "photo" : kit?.register ? "register" : "kit") : fallbackImageUrl ? (showingBareBody ? "body" : "photo") : "none"}
                 data-studio={layout?.backdrop ? "true" : undefined}
                 data-zoomable={zoomable ? "true" : undefined}
                 data-zoomed={zoom ? "true" : undefined}
-                style={{ ...(layout?.backdrop ? { backgroundColor: layout.backdrop.wall } : {}), touchAction: zoom ? "none" : undefined }}
+                style={{ ...(layout?.backdrop ? { backgroundColor: layout.backdrop.wall } : {}), mixBlendMode: singleTola ? "multiply" : undefined, touchAction: zoom ? "none" : undefined }}
                 onPointerDown={onStagePointerDown}
                 onPointerMove={onStagePointerMove}
                 onPointerUp={onStagePointerUp}

@@ -1,3 +1,4 @@
+import { isTolaApplicator, tolaAssemblyLayout, TOLA6_ASSEMBLED_IMAGE } from "./tola-applicator";
 import heroRows from "./catalog-heroes.json";
 import pilotRows from "./catalog-hero-pilot.json";
 import crePilotRows from "./catalog-hero-cre-pilot.json";
@@ -84,14 +85,25 @@ function isPilotHero(hero?: CatalogHero | null): boolean {
         && hero && recordedGroupSlugs(hero.groupSlug).includes(candidate.groupSlug));
 }
 
+/** The complete Tola photograph must also be the default image for downstream thumbnails. */
+function fixedAssemblyHero(hero: CatalogHero | null | undefined): CatalogHero | null {
+    if (!hero || !isTolaApplicator(hero.websiteSku)) return hero ?? null;
+    const { frame, parts } = tolaAssemblyLayout(), box = parts[0].box!;
+    return { ...hero, url: TOLA6_ASSEMBLED_IMAGE, width: 1000, height: 1100,
+        alt: "6 ml Clear Tola Applicator Bottle with plastic applicator and gold cap with red bead",
+        presentation: "Complete Tola assembly", framing: { scale: box.widthPct / 100 * frame.scale,
+            translateXPercent: frame.x + box.leftPct * frame.scale, translateYPercent: frame.y + box.topPct * frame.scale } };
+}
+
 /** Exact SKU lookup only: never borrow another finish or applicator's photo. */
 export function getProductHero(websiteSku?: string | null): CatalogHero | null {
     if (!websiteSku) return null;
-    return (isCatalogHeroPilotEnabled() ? activePilotRows().find(row => row.websiteSku === websiteSku) : null) ?? bySku.get(websiteSku) ?? null;
+    return fixedAssemblyHero((isCatalogHeroPilotEnabled() ? activePilotRows().find(row => row.websiteSku === websiteSku) : null) ?? bySku.get(websiteSku));
 }
 
 /** A released Sunburst hero for exactly this SKU in this group; never an older bone-review photo. */
 export function getReleasedCatalogHero(groupSlug: string, websiteSku?: string | null): CatalogHero | null {
+    if (isTolaApplicator(websiteSku) && groupSlug === "tola-6ml-clear-14.3mm") return fixedAssemblyHero(bySku.get(websiteSku!));
     if (!websiteSku || !isCatalogHeroPilotEnabled()) return null;
     const slugs = recordedGroupSlugs(groupSlug);
     const row = activePilotRows().find(candidate => slugs.includes(candidate.groupSlug) && candidate.websiteSku === websiteSku);
@@ -116,7 +128,7 @@ export function getCatalogHero(groupSlug: string, variants: readonly { websiteSk
     const preferred = preferredWebsiteSku?.trim().toLowerCase();
     const isPreferred = (candidate: CatalogHero) => Boolean(preferred) && candidate.websiteSku.toLowerCase() === preferred;
     const hero = eligible.find(isPreferred) ?? original.find(isPreferred) ?? eligible[0] ?? original[0];
-    return hero ? { ...hero, groupSlug } : null;
+    return fixedAssemblyHero(hero ? { ...hero, groupSlug } : null);
 }
 
 export function getCatalogHeroStyle(hero: CatalogHero) {
@@ -162,6 +174,10 @@ export function resolveLiveCatalogCardHero(input: {
     const heroImageUrl = input.heroImageUrl?.trim() || null;
     // Only an exact, still-visible assembly can supersede a live group photo.
     // Keeping this ahead of Shopify precedence is essential for staging review.
+    if (isTolaApplicator(input.staticHero?.websiteSku) && input.variants?.some(variant => variant.websiteSku === input.staticHero?.websiteSku)) {
+        const hero = fixedAssemblyHero(input.staticHero)!;
+        return { catalogHero: hero, imageUrl: hero.url, picturedWebsiteSku: hero.websiteSku };
+    }
     if (isPilotHero(input.staticHero) && input.variants?.some(variant => variant.websiteSku === input.staticHero?.websiteSku)) {
         const hero = input.staticHero!;
         return { catalogHero: hero, imageUrl: hero.url, picturedWebsiteSku: hero.websiteSku };

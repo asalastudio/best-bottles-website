@@ -6,6 +6,7 @@
  * Included / Fits / Glass / Good to know bullets, one Care note, the item-type line, the meta description and
  * the image alt text for every product that passes the checks. Products it does not cover keep today's copy.
  */
+import { tolaApplicatorSku } from "../tola-applicator";
 import { rectangleApplicatorGlass, rectangleApplicatorSku } from "../rectangle-applicator";
 import siteCopy from "../../../../data/descriptions/pdp/product-copy.site.json";
 
@@ -42,6 +43,15 @@ function reviewedSmallSprayerCopy(sku: string, copy: ProductCopy): ProductCopy {
 }
 
 export function productCopyFor(variant: { websiteSku?: string | null; graceSku?: string | null }): ProductCopy | null {
+    if (tolaApplicatorSku(variant)) {
+        const title = "6 ml Clear Tola Applicator Bottle", option = "Gold Cap";
+        const sentences = ["A clear octagonal Tola bottle for perfume oil and attar.",
+            "Supplied as one bottle with a plastic applicator and a shiny gold cap with a red bead."];
+        return { title, option, variantTitle: title + " - " + option, sentences,
+            bullets: [["Included", "Plastic applicator and shiny gold cap with red bead."], ["Glass", "Clear octagonal glass."]],
+            care: "", itemType: "Tola applicator bottle", metaDescription: sentences.join(" "),
+            altText: title + ", with plastic applicator and shiny gold cap with red bead" };
+    }
     const rectangleGlass = rectangleApplicatorGlass(rectangleApplicatorSku(variant));
     if (rectangleGlass) {
         const title = "9 ml Rectangle Applicator Bottle";

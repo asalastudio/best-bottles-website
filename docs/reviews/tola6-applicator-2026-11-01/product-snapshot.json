@@ -1,0 +1,115 @@
+{
+  "group": {
+    "group": {
+      "_creationTime": 1788480147448.5168,
+      "_id": "kh7b1y4s34c9x5q0xsgj2c4y4n8dszs7",
+      "applicatorTypes": [],
+      "bottleCollection": "Decorative",
+      "capacity": "6 ml (0.2 oz)",
+      "capacityMl": 6,
+      "category": "Glass Bottle",
+      "color": "Clear",
+      "displayName": "6 ml Clear Tola Bottle",
+      "family": "Decorative",
+      "neckThreadSize": "14.3mm",
+      "priceRangeMax": 0.55,
+      "priceRangeMin": 0.55,
+      "slug": "tola-6ml-clear-14.3mm",
+      "variantCount": 1
+    },
+    "variants": [
+      {
+        "_creationTime": 1772002206801.7336,
+        "_id": "kd7fap4rh5hekh2v5hzy8ww0ss81tzpy",
+        "applicator": null,
+        "assemblyType": "complete-set",
+        "bottleCollection": "Decorative",
+        "bottleWeightG": 130,
+        "capColor": "Clear",
+        "capStyle": "Tall",
+        "capacity": "6 ml (0.2 oz)",
+        "capacityMl": 6,
+        "capacityOz": 0.2,
+        "caseQuantity": 240,
+        "caseWeightG": 21840,
+        "category": "Glass Bottle",
+        "color": "Clear",
+        "components": [],
+        "dataGrade": "C — no applicator; no cap color; no thread",
+        "diameter": "22 ±0.5 mm",
+        "family": "Decorative",
+        "fitmentStatus": null,
+        "graceDescription": null,
+        "graceSku": "GB-DEC-CLR-6ML-T",
+        "heightWithCap": "59 ±1 mm",
+        "heightWithoutCap": "48 ±0.5 mm",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB6TPlGl_b3bc101a-811c-4374-b803-3aedce657113.gif?v=1788391192",
+        "importSource": "grace_products_final_json",
+        "itemDescription": "Octagonal style 6 ml glass bottle with shiny gold cap and red bead. For use with perfume oil, aromatic oils, fragrance oils and attars. These bottles are traditionally called 'tola' bottles. Price each",
+        "itemName": "Octagonal style 6 ml glass bottle with shiny gold cap and red bead. For use with perfume oil, aromatic oils, fragrance oils and attars. These bottles are traditionally called 'tola' bottles. Price each",
+        "measurementSource": "best-bottles-master-truth@2026-07-12:f2b25bbe4ffe",
+        "neckThreadSize": "14.3mm",
+        "priceTiers": [
+          {
+            "minQty": 1,
+            "totalPrice": 0.55,
+            "unitPrice": 0.55
+          },
+          {
+            "minQty": 12,
+            "totalPrice": 6.27,
+            "unitPrice": 0.52
+          },
+          {
+            "minQty": 144,
+            "totalPrice": 71.28,
+            "unitPrice": 0.5
+          },
+          {
+            "minQty": 720,
+            "totalPrice": 336.6,
+            "unitPrice": 0.47
+          },
+          {
+            "minQty": 3600,
+            "totalPrice": 1544.4,
+            "unitPrice": 0.43
+          }
+        ],
+        "priceTiersSyncedAt": 1784530953777,
+        "productGroupId": "kh7b1y4s34c9x5q0xsgj2c4y4n8dszs7",
+        "productId": "BB-GB-006-0001",
+        "productUrl": "https://www.bestbottles.com/product/Octagonal-style-6-ml-glass-bottle-shiny-gold-cap-red-bead",
+        "qbPrice": null,
+        "shape": "Tola",
+        "shopifyInventoryItemId": "gid://shopify/InventoryItem/55366084460836",
+        "shopifyInventoryPolicy": "deny",
+        "shopifyInventoryTracked": false,
+        "shopifySellable": true,
+        "shopifySellableCheckedAt": 1790142158865,
+        "shopifySellableReason": null,
+        "shopifyUpdatedAt": 1790142158865,
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343693898020",
+        "stockStatus": "In Stock",
+        "trimColor": null,
+        "verified": false,
+        "webPrice10pc": null,
+        "webPrice12pc": 0.52,
+        "webPrice1pc": 0.55,
+        "websiteSku": "GB6TPlGl",
+        "widthMm": 22
+      }
+    ]
+  },
+  "plates": {
+    "conflicts": [],
+    "plates": {
+      "GB6TPlGl": {
+        "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+        "imageCapOff": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/4c679db72f962ba60fe297c7d23ed858875ab23d7fd62740e662237371ed56fc.front-off-1000x1100.webp",
+        "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/8da64ffcb96aa97975fe0a077865014a89d67b8412953f1d32985f3c07ed3ff3.front-on-240x240.webp",
+        "thumbCapOff": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/7b91e6ced4bebe9eee1bd05dbeb4b60f29cd0ad75114eda4baac6f5940afc069.front-off-240x240.webp"
+      }
+    }
+  }
+}

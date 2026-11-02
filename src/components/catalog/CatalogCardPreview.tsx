@@ -1,5 +1,7 @@
 "use client";
 
+import { isTolaApplicator } from "@/lib/products/tola-applicator";
+import TolaAssemblyPreview from "@/components/products/TolaAssemblyPreview";
 import { cylinderMasterSku } from "@/lib/products/cylinder-master";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-heroes";
@@ -48,11 +50,12 @@ function skuOf(variant: ProductCardVariantPreview | null | undefined): string | 
 export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroHoverImageUrl, href, variants, family, slug, selected = null, selectedHero = null }: Props) {
     const [heroHovered, setHeroHovered] = useState(false);
     const [failed, setFailed] = useState<Set<string>>(() => new Set());
+    const singleTola = isTolaApplicator(skuOf(selected) ?? catalogHero?.websiteSku ?? skuOf(variants[0]));
     const masterSku = cylinderMasterSku(skuOf(selected) ?? catalogHero?.websiteSku ?? skuOf(variants[0]));
     const skus = [...new Set([catalogHero ? null : skuOf(variants[0]), skuOf(selected)].filter((sku): sku is string => Boolean(sku)))];
     // The approved hero already supplies the default image. Fetch a plate only
     // for a selected finish, or for a card that needs its primary fallback.
-    const assemblyPlates = useQuery(api.productPlates.forSkus, !masterSku && skus.length ? { skus } : "skip");
+    const assemblyPlates = useQuery(api.productPlates.forSkus, !masterSku && !singleTola && skus.length ? { skus } : "skip");
     const assembly = (variant: ProductCardVariantPreview) => {
         const plate = assemblyPlates?.plates[skuOf(variant) ?? ""];
         const vialImage = oneMlVialApplicator(skuOf(variant))?.image;
@@ -101,6 +104,13 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
 
     // The selected exact SKU shares its body and components with PDP and Builder.
     // Keep this ahead of legacy baked-photo swaps so choosing a cap cannot restore old glass.
+    if (singleTola) return <LocaleLink href={href} aria-label={`View ${title}`}
+        className="relative block aspect-[10/11] w-full overflow-hidden bg-[#f5f3ef]"
+        data-visual-mode="fixed-assembly" data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined}
+        data-bb-product-group-slug={slug} data-bb-website-sku="GB6TPlGl">
+        <TolaAssemblyPreview title={title} />
+    </LocaleLink>;
+
     if (masterSku) {
         return <ProductCardImagePreview productTitle={title}
             defaultImage={{ url: displayImage ?? imageUrl, alt: title }}
