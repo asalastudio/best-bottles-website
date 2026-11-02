@@ -49,7 +49,7 @@ describe("approved hosted master release", () => {
     });
     it("preserves the original 267 approved configurations alongside the scoped small-sprayer extension", () => {
         expect(Object.keys(originals)).toHaveLength(267);
-        expect(Object.keys(hosted)).toHaveLength(456);
+        expect(Object.keys(hosted)).toHaveLength(463);
         expect(Object.keys(hosted)).toEqual(expect.arrayContaining(Object.keys(originals)));
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         expect(hosted.GBTallCyl9SpryGlMatt).toBeDefined();

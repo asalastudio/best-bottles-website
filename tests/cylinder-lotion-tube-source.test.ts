@@ -10,7 +10,7 @@ describe("Cylinder lotion internals from the 25 ml hero", () => {
     it("preserves all 441 other approved recipes byte for byte", () => {
         let unchanged = 0;
         for (const [sku, kit] of Object.entries(approved.rows)) {
-            if (Object.hasOwn(before.rows, sku)) continue;
+            if (Object.hasOwn(before.rows, sku) || !Object.hasOwn(prior.recipes, sku)) continue;
             expect(createHash("sha256").update(JSON.stringify(kit)).digest("hex"), sku).toBe(prior.recipes[sku as keyof typeof prior.recipes]);
             unchanged++;
         }

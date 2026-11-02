@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-02T23:13:50Z",
+  "tests": {
+    "passed": 3299,
+    "skipped": 7,
+    "filesPassed": 378,
+    "filesSkipped": 2,
+    "command": "npx vitest run --maxWorkers=4"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "npx tsc --noEmit --incremental false"
+  },
+  "lint": {
+    "errors": 0,
+    "existingWarnings": 124
+  },
+  "sourceRegistrationChanged": false,
+  "approvedBaselinePreserved": 456,
+  "newHostedConfigurations": 7,
+  "verifiedHostedPaths": 45,
+  "losslessPixelChecks": 36,
+  "vialSidecarInteractiveChecks": 10,
+  "hostedPreviewChecked": false
+}

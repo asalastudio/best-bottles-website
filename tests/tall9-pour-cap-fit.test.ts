@@ -37,7 +37,7 @@ describe('9 ml 13-415 pour-cap visible-edge registration', () => {
     it('keeps all other 436 recipes unchanged and shares the fit with current pages, pilots and builder', () => {
         let count = 0;
         for (const [sku, digest] of Object.entries(prior)) if (!before[sku]) { expect(hash(lotionTubeBefore[sku] ?? rows[sku]), sku).toBe(digest); count++; }
-        expect(count).toBe(436); expect(Object.keys(rows)).toHaveLength(456);
+        expect(count).toBe(436); expect(Object.keys(rows)).toHaveLength(463);
         expect(index.skus).toEqual(Object.keys(rows).sort()); expect(index.version).toBe(manifest.version);
         vi.stubEnv('NODE_ENV', 'development'); vi.stubEnv('VERCEL', '');
         const normal = localPdpComponentKits('localhost:3010', undefined, Object.keys(before).map(websiteSku => ({ websiteSku })));
