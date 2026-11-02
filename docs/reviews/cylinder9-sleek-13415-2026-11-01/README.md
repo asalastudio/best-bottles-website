@@ -1,5 +1,7 @@
 # 9 ml Cylinder / 13-415 and Sleek 5 / 8 ml review
 
+Current status: Jordan explicitly approved the exact 144-configuration visual batch on November 1. `visual-approval.json` pins the recipes and source hashes. Four individually labeled approved body copies are verified in the canonical Cylinder and Sleek Drive Approved masters folders. Production activation remains separate. The original candidate packets remain preserved.
+
 The requested batch contains 144 configured catalog SKUs: 9 ml Cylinder Clear (36), 9 ml Cylinder Frosted (36), Sleek 5 ml Clear (36), and Sleek 8 ml Clear (36). Each body/color has eight fine-mist sprayers, eighteen metal/plastic roll-ons, and ten pour-cap variations. All 144 exact SKUs were matched against current read-only production catalog responses.
 
 These are the existing registered candidate masters, with no new image generation or changes to the original image bytes. The tall Cylinder pair retains the existing generated material candidates. Sleek retains its recovered master material. Source outlines, glass scale, anchors and baseline are preserved. Shared 13-415 PSD sprayers, complete level roller plugs, polished short/tall gold and silver caps, matte/dotted finishes, and native ribbed-cap exceptions are reused by exact component identity. The frosted seated tube retains 16% opacity and multiply blending; its exploded view retains the natural plastic material.

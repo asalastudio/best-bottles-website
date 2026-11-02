@@ -1,0 +1,125 @@
+{
+  "version": "e5c8e5e7837363dc",
+  "beforeCount": 271,
+  "afterCount": 290,
+  "added": [
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyHash": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png"
+    },
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyHash": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png"
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyHash": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png"
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyHash": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png"
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyHash": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png"
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyHash": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png"
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyHash": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png"
+    },
+    {
+      "sku": "GBTulipAmb5WhtSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyHash": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png"
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyHash": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png"
+    },
+    {
+      "sku": "GBTulipAmb5Sl",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyHash": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png"
+    },
+    {
+      "sku": "GBTulip6BlkSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyHash": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png"
+    },
+    {
+      "sku": "GBTulip6CuSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyHash": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png"
+    },
+    {
+      "sku": "GBTulip6GlMattSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyHash": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png"
+    },
+    {
+      "sku": "GBTulip6SlMattSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyHash": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png"
+    },
+    {
+      "sku": "GBTulip6GlSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyHash": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png"
+    },
+    {
+      "sku": "GBTulip6SlSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyHash": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png"
+    },
+    {
+      "sku": "GBTulip6WhtSht",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyHash": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png"
+    },
+    {
+      "sku": "GBTulip6Gl",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyHash": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png"
+    },
+    {
+      "sku": "GBTulip6Sl",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyHash": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4",
+      "capSource": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png"
+    }
+  ],
+  "existingRecipesPreserved": true,
+  "newImageBytes": 0,
+  "source": "Existing approved Tulip body masters and approved shared 13-415 cap images. Jordan requested exact hero/PDP/body unification on 2026-11-01.",
+  "publication": "Connected in source for hosted preview; no production deployment or merge in this step."
+}

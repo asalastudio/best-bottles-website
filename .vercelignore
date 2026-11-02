@@ -43,3 +43,6 @@ public/local-kits/cylinder5-all71-2026-11-01/
 
 # Source review inventories remain local; approved recipes use immutable hosted URLs.
 public/local-kits/cylinder9-masters-2026-11-01/
+
+# The 25 ml pilot remains local until its exact sources and frame holds are reviewed.
+public/local-kits/cylinder25-18415-2026-11-01/
