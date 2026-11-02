@@ -1,9 +1,11 @@
 const fs=require('fs'), path=require('path'), P=require(process.cwd()+'/node_modules/puppeteer-core'), sharp=require(process.cwd()+'/node_modules/sharp');
-const dir='docs/reviews/image-delivery-2026-11-02';
+const dir=process.env.QA_OUT || 'docs/reviews/image-delivery-2026-11-02';
 const manifest=require(process.cwd()+'/src/lib/products/display-images.generated.json');
 const originals=new Map(Object.entries(manifest.sources).flatMap(([source,sizes])=>Object.values(sizes).map(url=>[url,source])));
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
+const origin=process.env.QA_ORIGIN || 'http://localhost:3010';
 const routes=[
+ ...(process.env.QA_ORIGIN ? ['sleek-8ml-clear-13-415-finemist?cap=matte-gold'] : []),
  'tulip-6ml-clear-13-415-finemist?cap=shiny-silver',
  'cylinder-9ml-frosted-13-415-finemist?cap=matte-black',
  'vial-2ml-amber-8-425?cap=white',
@@ -16,6 +18,7 @@ const b=await P.launch({executablePath:'/Applications/Google Chrome.app/Contents
 try{
  const p=await b.newPage();p.on('pageerror',e=>report.errors.push(e.message));
  await p.setCacheEnabled(false);
+ if(process.env.QA_ACCESS_FILE) await p.goto(fs.readFileSync(process.env.QA_ACCESS_FILE,'utf8').trim(),{waitUntil:'domcontentloaded',timeout:120000});
  let originalsMode=false;
  await p.setRequestInterception(true);
  p.on('request',r=>{const source=originalsMode?originals.get(r.url()):null;r.continue(source?{url:source}:undefined).catch(()=>{});});
@@ -23,7 +26,7 @@ try{
   await p.setViewport(viewport==='desktop'?{width:1440,height:1100,deviceScaleFactor:1}:{width:390,height:844,deviceScaleFactor:2});
   for(const [i,route]of routes.entries()){
    originalsMode=false;
-   await p.goto('http://localhost:3010/products/'+route,{waitUntil:'domcontentloaded',timeout:120000});
+   await p.goto(origin+'/products/'+route,{waitUntil:'domcontentloaded',timeout:120000});
    await p.waitForSelector('[data-testid="pdp-stage"] img',{timeout:60000});
    const inspect=async()=>{await p.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.querySelectorAll('[data-testid="pdp-stage"] img')].map(i=>i.decode()));});await pause(650);return p.$$eval('[data-testid="pdp-stage"] [data-slot] img',es=>es.map(e=>{const r=e.getBoundingClientRect();return {src:e.src,box:[r.x,r.y,r.width,r.height],loading:e.loading,priority:e.fetchPriority};}));};
    const after=await inspect();
@@ -34,7 +37,7 @@ try{
    report.states.push({route,viewport,view:'sidecar',layers:after});
    if(viewport==='desktop'){
     originalsMode=true;
-    await p.goto('http://localhost:3010/products/'+route,{waitUntil:'domcontentloaded',timeout:120000});
+    await p.goto(origin+'/products/'+route,{waitUntil:'domcontentloaded',timeout:120000});
     const original=await inspect();
     if(JSON.stringify(original.map(e=>e.box))!==JSON.stringify(after.map(e=>e.box)))throw Error('Registration changed '+route);
     const bytes=await(await p.$('[data-testid="pdp-stage"]')).screenshot({path:dir+'/visual/'+viewport+'-'+i+'-original.png'});
