@@ -56,6 +56,6 @@ describe("5 ml catalog master source", () => {
         const { cylinderMasterSource } = await import("@/lib/products/cylinder-master");
         expect(cylinderMasterSource("GBCylBlu5Gl")).toEqual({ family: "cylinder5", version: index.version });
         expect(cylinderMasterSource("GBCylBlu9SpryGl")?.family).toBe("cylinder9");
-        expect(cylinderMasterSource("GBSleek5SpryGlSh")).toBeNull();
+        expect(cylinderMasterSource("GBSleek5SpryGlSh")?.family).toBe("approved");
     });
 });

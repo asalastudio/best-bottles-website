@@ -1,0 +1,78 @@
+{
+  "bodySourceSha256": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f",
+  "shoulderDatum": "first body alpha row at 90 percent of maximum body width, mapped through unchanged body box",
+  "measurements": [
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png",
+      "sourceSha256": "75bd378a167265705fd96c08474800287e2f68178f321b919f16a608292241cb",
+      "visibleCollarBottomFraction": 0.9312977099236641,
+      "shoulderContactY": 705.2824074074074,
+      "dropPx": 35.58351154991385,
+      "clipBottomPct": 6.870229007633588
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/sprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png",
+      "sourceSha256": "b8ef681852402409386a6012b0ed705f7cbb7cc274f0609364b7e9020692fccc",
+      "visibleCollarBottomFraction": 0.9834101382488479,
+      "shoulderContactY": 705.2824074074074,
+      "dropPx": 17.038545357610246,
+      "clipBottomPct": 1.6589861751152069
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/sprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png",
+      "sourceSha256": "5b29f79825aaf81bcf8968428048685ab85706ba4173c6848a21bff788dcced3",
+      "visibleCollarBottomFraction": 0.9838872104733132,
+      "shoulderContactY": 705.2824074074074,
+      "dropPx": 16.697862971873974,
+      "clipBottomPct": 1.6112789526686822
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/sprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png",
+      "sourceSha256": "5ed12b227632e35faeb0867cb0f19597e9653bc7096dff37666b426a92133005",
+      "visibleCollarBottomFraction": 0.988360814742968,
+      "shoulderContactY": 705.2824074074074,
+      "dropPx": 15.381050535557847,
+      "clipBottomPct": 1.1639185257032003
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png",
+      "sourceSha256": "2612773a8d3e7a8267d94291add8f5c757baf3f0d1873ce71a4b03150299c301",
+      "visibleCollarBottomFraction": 0.9877049180327869,
+      "shoulderContactY": 705.2824074074074,
+      "dropPx": 15.517986671842891,
+      "clipBottomPct": 1.2295081967213073
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/sprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png",
+      "sourceSha256": "b97dd1980aee4a2b6cc4af4bcd8025f294b5611539956267152570227458c966",
+      "visibleCollarBottomFraction": 0.9735849056603774,
+      "shoulderContactY": 705.2824074074074,
+      "dropPx": 20.20736362360958,
+      "clipBottomPct": 2.6415094339622636
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/sprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png",
+      "sourceSha256": "dce84611502e4c3ce9944703ca4ad9eeb34d12b865487ed5188f0611f82beb6a",
+      "visibleCollarBottomFraction": 0.9824902723735408,
+      "shoulderContactY": 705.2824074074074,
+      "dropPx": 17.352203152961806,
+      "clipBottomPct": 1.7509727626459193
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/sprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png",
+      "sourceSha256": "78a0231ee807a6f14cf1e196b79d805b11bebcda3492a6b5c3c3c4f1100c96f1",
+      "visibleCollarBottomFraction": 0.9735849056603774,
+      "shoulderContactY": 705.2824074074074,
+      "dropPx": 20.20736362360958,
+      "clipBottomPct": 2.6415094339622636
+    }
+  ]
+}

@@ -22,7 +22,8 @@ function readLocalKitReview(): LocalKitReview | null {
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder9-masters-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/tulip-rollers-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/remaining-13-415-2026-11-01/kits.json" : undefined,
-        process.env.NODE_ENV === "development" ? "public/local-kits/cylinder25-18415-2026-11-01/kits.json" : undefined];
+        process.env.NODE_ENV === "development" ? "public/local-kits/cylinder25-18415-2026-11-01/kits.json" : undefined,
+        process.env.NODE_ENV === "development" ? "public/local-kits/tulip-amber-seating-2026-11-01/kits.json" : undefined];
     const rows: Record<string, BuilderKit> = {};
     const defaults = new Set<string>();
     let loaded = false;
@@ -59,7 +60,8 @@ export function localGpt13ComponentKits(host: string | null, flag: unknown): Rec
     // the explicit pilot until the body/component set is visually approved.
     for (const file of ["public/local-kits/tulip-shoulder-2026-11-01/kits.json",
         "public/local-kits/tulip-amber-tube-2026-11-01/kits.json",
-        "public/local-kits/tulip-rollers-2026-11-01/kits.json"]) {
+        "public/local-kits/tulip-rollers-2026-11-01/kits.json",
+        "public/local-kits/tulip-amber-seating-2026-11-01/kits.json"]) {
         try {
             const tulip = JSON.parse(readFileSync(file, "utf8")) as LocalKitReview;
             for (const [sku, kit] of Object.entries(tulip.rows ?? {})) {

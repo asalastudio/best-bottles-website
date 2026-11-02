@@ -1,0 +1,59 @@
+{
+  "pr": "https://github.com/asalastudio/best-bottles-website/pull/386",
+  "mergeCommit": "7f1f44c8bf6dfed833ef9d32decec8c0d2c04e9b",
+  "origin": "https://best-bottles-website.vercel.app",
+  "version": "b0a1d1323cd0b444",
+  "catalogSelections": 144,
+  "pdpStates": 48,
+  "exactMasterApis": 362,
+  "builderChecks": [
+    {
+      "kind": "api",
+      "matched": 72,
+      "unavailable": []
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCyl9RollBlkDot",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCyl9CuSht",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCylFrst9CuSht",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "unavailable": [],
+  "productionDataMutated": false
+}
