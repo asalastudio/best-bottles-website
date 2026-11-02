@@ -10,7 +10,7 @@ Drive library: https://drive.google.com/drive/folders/1fwXoPU9KjI8DSPjyeFyQREoAl
 
 - The imported 30 ml entry is the 25 ml, per Jordan's correction. `physical-profile-crosswalk.json` binds the two exact imported identities to the 25 ml master. Original catalog records and legacy evidence remain preserved. No live record was renamed or deleted.
 - The 25 ml offers reducers, sprayers, lotion pumps, bulbs and tassels. No roller is assigned. Three imported dropper rows remain on the reconciliation list because they fall outside that confirmed set.
-- Jumbo metal and plastic rollers belong to the 28 ml and 50 ml / 16 mm bottles. Their internal track fits around the glass rim, with no protruding lower plug. A shared roller source and two shared cap sources serve both sizes. Component proportions are registered from the original artwork and legacy bottle measurements; they are not newly measured hardware dimensions.
+- Jumbo metal and plastic rollers belong to the 28 ml and 50 ml / 16 mm bottles. Their internal track fits around the glass rim, with no protruding lower plug. Each material now reuses its original PSD ball photograph at native housing offsets, replacing the earlier generated roller candidate. The same two roller masters and two cap sources serve both sizes. Component proportions are registered from the original artwork and legacy bottle measurements; they are not newly measured hardware dimensions.
 - Bulb and tassel tops stay assembled while their finish colors change. The product page has no cap-off or exploded view control for these complete tops.
 - Original PSDs, previous masters, shadows and approval bindings are preserved. Changed image bytes require their own visual approval.
 
@@ -26,7 +26,7 @@ The jumbo 16 mm assemblies remain catalog/PDP products. Their existing explicit 
 
 The 50/100 ml lotion tubes use the cleaned shared lotion material and compact connector. Sprayers retain their own mechanism source, and bulbs use a shaft without an invented pump chamber. Mechanism width stays fixed while the shaft length is registered to each bottle. Tips stop above the visible inner floor. Seated chambers receive source-specific glass attenuation; detached tubes retain their natural plastic appearance and remain connected to their head in exploded view.
 
-Seventeen source images have four lossless WebP display sizes. All 68 encodes preserve alpha and visible RGB values against the corresponding resized reference. Across those sources the 640 px copies total 3,303,420 bytes, compared with 7,950,856 source bytes. These totals describe the asset set, not the download for one product. Master bytes, geometry and anchors do not change. This batch does not establish a two-second hosted load guarantee.
+Seventeen source images have four lossless WebP display sizes. All 68 encodes preserve alpha and visible RGB values against the corresponding resized reference. After the PSD roller substitution, the 640 px copies total 3,143,898 bytes, compared with 7,124,804 source bytes. These totals describe the asset set, not the download for one product. Master bodies, geometry and anchors do not change. This batch does not establish a two-second hosted load guarantee.
 
 ## Verification
 
@@ -41,6 +41,8 @@ Seventeen source images have four lossless WebP display sizes. All 68 encodes pr
 ## Reproduce and review
 
 Download the source/review archive from the Drive folder into this checkout. It preserves the native bodies, generated component masters, unchanged source exports, exact before/after kit snapshots, local candidate recipes, display copies and browser captures. Large image files remain outside Git. The small tracked master index and exact-SKU CSV provide retrieval and action links.
+
+The later `jumbo-roller-psd-match-2026-11-02` archive supersedes only the two generated roller candidates. It contains the original ball photographs, native registration, current recipes, and 48 desktop/mobile states. All eight bodies and caps and the other 101 recipes are unchanged. Its separate comparison is at http://localhost:3010/reviews/jumbo-roller-psd-match-2026-11-02/index.html.
 
 Use the existing dependency installation:
 

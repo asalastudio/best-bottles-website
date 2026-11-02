@@ -22,7 +22,10 @@ async function image(file:string,name:string){
     return {sourceFile:file,sourceSha256:sha(raw),sourceBytes:raw.length,alphaDifferences,visibleColorDifferences,
         image:{url:'/'+path.slice('public/'.length),key:'',sha256:hash,bytes:webp.length,width:info.width,height:info.height},bounds:{left,top,right:right+1,bottom:bottom+1}};
 }
-const inserts={metal:await image(dir+'/sources/roller16-metal-over-rim.png','roller16-metal-over-rim'),plastic:await image(dir+'/sources/roller16-plastic-over-rim.png','roller16-plastic-over-rim')};
+const nativeDir='docs/reviews/jumbo-roller-psd-match-2026-11-02';
+const nativeVerification=read(nativeDir+'/native-ball-verification.json');
+assert(nativeVerification.results.every((r:{changedBallPixels:number})=>r.changedBallPixels===0),'Original PSD ball pixels must remain unchanged');
+const inserts={metal:await image(nativeDir+'/sources/roller16-metal-native-psd.svg','roller16-metal-native-psd'),plastic:await image(nativeDir+'/sources/roller16-plastic-native-psd.svg','roller16-plastic-native-psd')};
 const caps={Black:await image(dir+'/sources/cap16-black-clean.png','cap16-black'),White:await image(dir+'/sources/cap16-white-clean.png','cap16-white')};
 const dims:Record<number,{height:number;diameter:number;closedHeight:number}>={28:{height:81,diameter:31,closedHeight:100},50:{height:98,diameter:37,closedHeight:116}};
 // Registration width from the original 28 ml photo: the white flange spans
@@ -60,12 +63,12 @@ for(const row of catalog.filter(r=>r.category==='Glass Bottle'&&r.neckThreadSize
     rows[row.websiteSku]=kit;
     configurations.push({sku:row.websiteSku,bodyId:master.bodyId,applicator:row.applicator,capColor:row.capColor,bodySha256:master.fileSha256,
         rimY:seat,flangeBottomY:roller.bounds.bottom,overRim:true,protrudingPlug:false,capBottomY:cap.bounds.bottom,shoulderY:shoulder,
-        closedCapClearancePx:roller.bounds.top-cap.bounds.top,registrationBasis:'Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform.'});
+        closedCapClearancePx:roller.bounds.top-cap.bounds.top,registrationBasis:'Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track.'});
     assert(roller.bounds.top>=cap.bounds.top-ppm,'Cap does not cover ball');
 }
 assert.equal(Object.keys(rows).length,8);
 fs.writeFileSync(out+'/roller-kits.json',JSON.stringify({rows,defaultPdpSkus:[]},null,2)+'\n');
 fs.writeFileSync(dir+'/roller-registration.json',JSON.stringify({status:'candidate-not-approved',camera:'Near eye level, flat flange',hardware:'Over-rim 16 mm roller assembly, internal seating track, no projecting lower plug',
-    sourceAuthority:'Latest explicit user clarification overrides the earlier stem reconstruction reference.',measuredBottles:dims,
+    sourceAuthority:'Original 28 ml PSD component layers supply the ball shape, exposure, and material for both 28/50 ml. User confirmed the over-rim housing has no bottom plug.',nativeBallVerification:nativeVerification,measuredBottles:dims,
     estimatedRegistration:{flangeWidthMm,capHeightMm,notice:'Image registration only. These are not confirmed physical component measurements.'},inserts,caps,configurations},null,2)+'\n');
 console.log(JSON.stringify({configurations:Object.keys(rows).length,overRim:true,protrudingPlug:false}));

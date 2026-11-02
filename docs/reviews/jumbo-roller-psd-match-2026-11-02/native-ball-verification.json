@@ -1,0 +1,30 @@
+{
+  "status": "local-review",
+  "masterMethod": "Original PSD layer pixels at native positions",
+  "results": [
+    {
+      "kind": "metal",
+      "sourceSha256": "001af9d1c245b08758027496b2bd8371fbc4b971cc60ea08fa3d31a5d7a16103",
+      "sourceSvg": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-metal-native-psd.svg",
+      "svgSha256": "6c684e37aae0896130330e808ab4e5a7b8f5f9e4a5c5bde4d4491a3873687b71",
+      "width": 336,
+      "height": 220,
+      "comparedBallPixels": 6704,
+      "changedBallPixels": 0,
+      "cleanup": "SVG clip removes only detached alpha debris; source photograph and connected edge remain unpainted",
+      "lowerPlug": false
+    },
+    {
+      "kind": "plastic",
+      "sourceSha256": "b5176bfd01982ede60b193f0f16e5d3a554b455ce4a500811701e0e2a18b9b96",
+      "sourceSvg": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-plastic-native-psd.svg",
+      "svgSha256": "e4529c78b0e929db5632609fbb039ba4d7aed9168d793f39218bb50068678608",
+      "width": 357,
+      "height": 244,
+      "comparedBallPixels": 6564,
+      "changedBallPixels": 0,
+      "cleanup": "SVG clip removes only detached alpha debris; source photograph and connected edge remain unpainted",
+      "lowerPlug": false
+    }
+  ]
+}

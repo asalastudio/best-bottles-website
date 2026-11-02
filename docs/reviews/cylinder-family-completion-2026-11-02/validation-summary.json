@@ -46,5 +46,14 @@
   "scopedLint": "passed",
   "productionManifest": "unchanged ca21bfc3c0c3ce57, 456 recipes",
   "ledger": "measurement 2283/2283; existing GBCyl5BlkShSht identity guard prevents recount; no guard bypass",
-  "publication": "not merged or deployed"
+  "publication": "not merged or deployed",
+  "psdRollerFollowup": {
+    "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02",
+    "states": 48,
+    "errors": 0,
+    "ballPixelsCompared": 13268,
+    "changedBallPixels": 0,
+    "bodiesAndCapsUnchanged": 8,
+    "unrelatedRecipesUnchanged": 101
+  }
 }

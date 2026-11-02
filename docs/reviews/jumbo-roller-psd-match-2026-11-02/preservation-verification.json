@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "configurations": 8,
+  "unrelatedRecipesUnchanged": 101,
+  "preservation": [
+    {
+      "sku": "GBMtlRoll28Wht",
+      "bodyAndCapUnchanged": true,
+      "canvasScaleUnchanged": true,
+      "onlyRollerReplaced": true
+    },
+    {
+      "sku": "GBCyl50MtlRollWht",
+      "bodyAndCapUnchanged": true,
+      "canvasScaleUnchanged": true,
+      "onlyRollerReplaced": true
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "bodyAndCapUnchanged": true,
+      "canvasScaleUnchanged": true,
+      "onlyRollerReplaced": true
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "bodyAndCapUnchanged": true,
+      "canvasScaleUnchanged": true,
+      "onlyRollerReplaced": true
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "bodyAndCapUnchanged": true,
+      "canvasScaleUnchanged": true,
+      "onlyRollerReplaced": true
+    },
+    {
+      "sku": "GBCyl50RollBlk",
+      "bodyAndCapUnchanged": true,
+      "canvasScaleUnchanged": true,
+      "onlyRollerReplaced": true
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "bodyAndCapUnchanged": true,
+      "canvasScaleUnchanged": true,
+      "onlyRollerReplaced": true
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "bodyAndCapUnchanged": true,
+      "canvasScaleUnchanged": true,
+      "onlyRollerReplaced": true
+    }
+  ],
+  "nativeBallPixelsCompared": 13268,
+  "changedBallPixels": 0,
+  "lowerPlug": false,
+  "publication": "Local visual review only. Existing approved hosted manifest untouched."
+}

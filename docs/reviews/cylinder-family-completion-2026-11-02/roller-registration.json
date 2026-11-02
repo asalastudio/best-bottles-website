@@ -2,7 +2,37 @@
   "status": "candidate-not-approved",
   "camera": "Near eye level, flat flange",
   "hardware": "Over-rim 16 mm roller assembly, internal seating track, no projecting lower plug",
-  "sourceAuthority": "Latest explicit user clarification overrides the earlier stem reconstruction reference.",
+  "sourceAuthority": "Original 28 ml PSD component layers supply the ball shape, exposure, and material for both 28/50 ml. User confirmed the over-rim housing has no bottom plug.",
+  "nativeBallVerification": {
+    "status": "local-review",
+    "masterMethod": "Original PSD layer pixels at native positions",
+    "results": [
+      {
+        "kind": "metal",
+        "sourceSha256": "001af9d1c245b08758027496b2bd8371fbc4b971cc60ea08fa3d31a5d7a16103",
+        "sourceSvg": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-metal-native-psd.svg",
+        "svgSha256": "6c684e37aae0896130330e808ab4e5a7b8f5f9e4a5c5bde4d4491a3873687b71",
+        "width": 336,
+        "height": 220,
+        "comparedBallPixels": 6704,
+        "changedBallPixels": 0,
+        "cleanup": "SVG clip removes only detached alpha debris; source photograph and connected edge remain unpainted",
+        "lowerPlug": false
+      },
+      {
+        "kind": "plastic",
+        "sourceSha256": "b5176bfd01982ede60b193f0f16e5d3a554b455ce4a500811701e0e2a18b9b96",
+        "sourceSvg": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-plastic-native-psd.svg",
+        "svgSha256": "e4529c78b0e929db5632609fbb039ba4d7aed9168d793f39218bb50068678608",
+        "width": 357,
+        "height": 244,
+        "comparedBallPixels": 6564,
+        "changedBallPixels": 0,
+        "cleanup": "SVG clip removes only detached alpha debris; source photograph and connected edge remain unpainted",
+        "lowerPlug": false
+      }
+    ]
+  },
   "measuredBottles": {
     "28": {
       "height": 81,
@@ -22,45 +52,45 @@
   },
   "inserts": {
     "metal": {
-      "sourceFile": "docs/reviews/cylinder-family-completion-2026-11-02/sources/roller16-metal-over-rim.png",
-      "sourceSha256": "ab4a12238a4fd3fb7bdea00b251da4512fb2c2673d0425792242f1b733902ef8",
-      "sourceBytes": 820214,
+      "sourceFile": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-metal-native-psd.svg",
+      "sourceSha256": "6c684e37aae0896130330e808ab4e5a7b8f5f9e4a5c5bde4d4491a3873687b71",
+      "sourceBytes": 133707,
       "alphaDifferences": 0,
       "visibleColorDifferences": 0,
       "image": {
-        "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-over-rim.b307f6b0a4f3.webp",
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-native-psd.c0f0c061ada2.webp",
         "key": "",
-        "sha256": "b307f6b0a4f3e5719f3e62944f6c040886090f8eeeaab98423ac568f45822ea8",
-        "bytes": 440028,
-        "width": 1312,
-        "height": 1199
+        "sha256": "c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b",
+        "bytes": 21776,
+        "width": 336,
+        "height": 220
       },
       "bounds": {
-        "left": 209,
-        "top": 69,
-        "right": 1102,
-        "bottom": 897
+        "left": 23,
+        "top": 4,
+        "right": 321,
+        "bottom": 220
       }
     },
     "plastic": {
-      "sourceFile": "docs/reviews/cylinder-family-completion-2026-11-02/sources/roller16-plastic-over-rim.png",
-      "sourceSha256": "647f64960b74206033ae96b74df393b3af7e82d5ea852c157077c6c54047888d",
-      "sourceBytes": 816430,
+      "sourceFile": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-plastic-native-psd.svg",
+      "sourceSha256": "e4529c78b0e929db5632609fbb039ba4d7aed9168d793f39218bb50068678608",
+      "sourceBytes": 166654,
       "alphaDifferences": 0,
       "visibleColorDifferences": 0,
       "image": {
-        "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-over-rim.32c308c4b0a1.webp",
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp",
         "key": "",
-        "sha256": "32c308c4b0a1c206be462cdafb496cd55f7cdbfbefcf8c0514fcee666d705219",
-        "bytes": 430032,
-        "width": 1312,
-        "height": 1199
+        "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+        "bytes": 22232,
+        "width": 357,
+        "height": 244
       },
       "bounds": {
-        "left": 194,
-        "top": 91,
-        "right": 1108,
-        "bottom": 922
+        "left": 44,
+        "top": 10,
+        "right": 342,
+        "bottom": 244
       }
     }
   },
@@ -121,8 +151,8 @@
       "protrudingPlug": false,
       "capBottomY": 404.92619169656587,
       "shoulderY": 404.92619169656587,
-      "closedCapClearancePx": 2.5666374168038004,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 43.50404648924126,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBCyl50MtlRollWht",
@@ -136,8 +166,8 @@
       "protrudingPlug": false,
       "capBottomY": 365.2386185243328,
       "shoulderY": 365.2386185243328,
-      "closedCapClearancePx": 16.842189212227808,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 50.67821099658934,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBCyl1ozRollWht",
@@ -151,8 +181,8 @@
       "protrudingPlug": false,
       "capBottomY": 404.92619169656587,
       "shoulderY": 404.92619169656587,
-      "closedCapClearancePx": 6.211989450337683,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 31.28576229750108,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBCyl50RollWht",
@@ -166,8 +196,8 @@
       "protrudingPlug": false,
       "capBottomY": 365.2386185243328,
       "shoulderY": 365.2386185243328,
-      "closedCapClearancePx": 19.855184260352743,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 40.579425083008175,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBRoll28Blk",
@@ -181,8 +211,8 @@
       "protrudingPlug": false,
       "capBottomY": 404.92619169656587,
       "shoulderY": 404.92619169656587,
-      "closedCapClearancePx": 6.211989450337683,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 31.28576229750108,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBCyl50RollBlk",
@@ -196,8 +226,8 @@
       "protrudingPlug": false,
       "capBottomY": 365.2386185243328,
       "shoulderY": 365.2386185243328,
-      "closedCapClearancePx": 19.855184260352743,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 40.579425083008175,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBMtlRoll28Blk",
@@ -211,8 +241,8 @@
       "protrudingPlug": false,
       "capBottomY": 404.92619169656587,
       "shoulderY": 404.92619169656587,
-      "closedCapClearancePx": 2.5666374168038004,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 43.50404648924126,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBCyl50MtlRollBlk",
@@ -226,8 +256,8 @@
       "protrudingPlug": false,
       "capBottomY": 365.2386185243328,
       "shoulderY": 365.2386185243328,
-      "closedCapClearancePx": 16.842189212227808,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 50.67821099658934,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "version": "846a011bbad260b9",
+  "version": "6bc8422a96ae83b5",
   "status": "review-candidates-not-production",
   "scopeRows": 507,
   "glassRows": 504,
@@ -1504,8 +1504,8 @@
       "protrudingPlug": false,
       "capBottomY": 404.92619169656587,
       "shoulderY": 404.92619169656587,
-      "closedCapClearancePx": 2.5666374168038004,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 43.50404648924126,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBCyl50MtlRollWht",
@@ -1519,8 +1519,8 @@
       "protrudingPlug": false,
       "capBottomY": 365.2386185243328,
       "shoulderY": 365.2386185243328,
-      "closedCapClearancePx": 16.842189212227808,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 50.67821099658934,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBCyl1ozRollWht",
@@ -1534,8 +1534,8 @@
       "protrudingPlug": false,
       "capBottomY": 404.92619169656587,
       "shoulderY": 404.92619169656587,
-      "closedCapClearancePx": 6.211989450337683,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 31.28576229750108,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBCyl50RollWht",
@@ -1549,8 +1549,8 @@
       "protrudingPlug": false,
       "capBottomY": 365.2386185243328,
       "shoulderY": 365.2386185243328,
-      "closedCapClearancePx": 19.855184260352743,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 40.579425083008175,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBRoll28Blk",
@@ -1564,8 +1564,8 @@
       "protrudingPlug": false,
       "capBottomY": 404.92619169656587,
       "shoulderY": 404.92619169656587,
-      "closedCapClearancePx": 6.211989450337683,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 31.28576229750108,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBCyl50RollBlk",
@@ -1579,8 +1579,8 @@
       "protrudingPlug": false,
       "capBottomY": 365.2386185243328,
       "shoulderY": 365.2386185243328,
-      "closedCapClearancePx": 19.855184260352743,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 40.579425083008175,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBMtlRoll28Blk",
@@ -1594,8 +1594,8 @@
       "protrudingPlug": false,
       "capBottomY": 404.92619169656587,
       "shoulderY": 404.92619169656587,
-      "closedCapClearancePx": 2.5666374168038004,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 43.50404648924126,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     },
     {
       "sku": "GBCyl50MtlRollBlk",
@@ -1609,8 +1609,8 @@
       "protrudingPlug": false,
       "capBottomY": 365.2386185243328,
       "shoulderY": 365.2386185243328,
-      "closedCapClearancePx": 16.842189212227808,
-      "registrationBasis": "Shared 16 mm hardware; user confirmed no bottom plug and an internal annular track. Source image proportions remain uniform."
+      "closedCapClearancePx": 50.67821099658934,
+      "registrationBasis": "Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track."
     }
   ],
   "publication": "Existing approved recipes untouched. No backend/catalog mutation. Localhost assetPreview=gpt13 only."
