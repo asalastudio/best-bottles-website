@@ -1,0 +1,922 @@
+{
+  "version": "501a9221b961",
+  "status": "pilot-review",
+  "catalogCount": 45,
+  "preparedCount": 36,
+  "held": [
+    {
+      "sku": "GBcyl25AnSpTslBlk",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect."
+    },
+    {
+      "sku": "GBcyl25AnSpTslGl",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect."
+    },
+    {
+      "sku": "GBcyl25AnSpTslIvyGl",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect."
+    },
+    {
+      "sku": "GBCyl25AnSpTslIvySl",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect."
+    },
+    {
+      "sku": "GBcyl25AnSpTslLvn",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect."
+    },
+    {
+      "sku": "GBCyl25AnSpTslMtSl",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect."
+    },
+    {
+      "sku": "GBcyl25AnSpTslPnk",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect."
+    },
+    {
+      "sku": "GBCyl25AnSpTslRed",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect."
+    },
+    {
+      "sku": "GBCyl25AnSpTslWht",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect."
+    }
+  ],
+  "bodySource": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054.png",
+    "sha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+    "bytes": 598595,
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/cylinder-25ml-18-415/clear/ccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png"
+  },
+  "target": {
+    "targetPct": 46.5,
+    "baselinePct": 91,
+    "landmark": "shoulder",
+    "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+    "basis": "approved-family-exception",
+    "heightBareMm": 83
+  },
+  "changes": [
+    {
+      "sku": "GBCyl25DrpCu",
+      "fitment": "Dropper",
+      "finish": "Matte Copper Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "pipette",
+          "componentId": "CMP-DRP-CPR-18415",
+          "sha256": "0b6f0fb3c62761a97f51ea98e838dc60442c314da24a21e64204e44e61acb43f"
+        },
+        {
+          "slot": "fitment",
+          "componentId": "CMP-DRP-CPR-18415",
+          "sha256": "4321fecf14d0d1e563a67b87cddf0815d211befe2b92b073c6186a1489b2ee0c"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "fitment": "Dropper",
+      "finish": "Shiny Gold Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "pipette",
+          "componentId": "CMP-DRP-SGLD-18415",
+          "sha256": "e6d8dd09cb1c3a1df23aecc0f3c73480fb27f72cc7ccd2f9ce79baf1c1df8ae2"
+        },
+        {
+          "slot": "fitment",
+          "componentId": "CMP-DRP-SGLD-18415",
+          "sha256": "18eb8ce8bb3b3d320ddd18d101bb1fe1af8fd4d059f179c6fc7f24fb35ce74d2"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl25DrpSl",
+      "fitment": "Dropper",
+      "finish": "Shiny Silver Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "pipette",
+          "componentId": "CMP-DRP-SSLV-18415",
+          "sha256": "e153c15567fa01ac225cb333e3af4bf7da44d1182b0e38898be98f5b3afaa9ec"
+        },
+        {
+          "slot": "fitment",
+          "componentId": "CMP-DRP-SSLV-18415",
+          "sha256": "16002e115c15d8160d1cc80724fd5c7f7be3985f6b196c58aebda8460fef42b5"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryCu",
+      "fitment": "Fine Mist Sprayer",
+      "finish": "Matte Copper",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-MTCP-18-415-03",
+          "sha256": "7677b2abb9266159c694f9db5173c4eadc208efa81fbf35a9d717af3bec9edf5"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-MTCP-18-415-03",
+          "sha256": "7677b2abb9266159c694f9db5173c4eadc208efa81fbf35a9d717af3bec9edf5"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-MTCP-18-415-03",
+          "sha256": "ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-SPR-MTCP-18-415-03",
+          "sha256": "d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "fitment": "Fine Mist Sprayer",
+      "finish": "Matte Gold",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-MTGD-18-415-05",
+          "sha256": "7677b2abb9266159c694f9db5173c4eadc208efa81fbf35a9d717af3bec9edf5"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-MTGD-18-415-05",
+          "sha256": "7677b2abb9266159c694f9db5173c4eadc208efa81fbf35a9d717af3bec9edf5"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-MTGD-18-415-05",
+          "sha256": "41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-SPR-MTGD-18-415-05",
+          "sha256": "2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryShnBlk",
+      "fitment": "Fine Mist Sprayer",
+      "finish": "Shiny Black",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-SHBK-18-415-06",
+          "sha256": "7677b2abb9266159c694f9db5173c4eadc208efa81fbf35a9d717af3bec9edf5"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-SHBK-18-415-06",
+          "sha256": "7677b2abb9266159c694f9db5173c4eadc208efa81fbf35a9d717af3bec9edf5"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-SHBK-18-415-06",
+          "sha256": "ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-SPR-SHBK-18-415-06",
+          "sha256": "271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryShnGl",
+      "fitment": "Fine Mist Sprayer",
+      "finish": "Shiny Gold",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-SHGD-18-415-05",
+          "sha256": "7677b2abb9266159c694f9db5173c4eadc208efa81fbf35a9d717af3bec9edf5"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-SHGD-18-415-05",
+          "sha256": "7677b2abb9266159c694f9db5173c4eadc208efa81fbf35a9d717af3bec9edf5"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-SHGD-18-415-05",
+          "sha256": "ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-SPR-SHGD-18-415-05",
+          "sha256": "1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryShnSl",
+      "fitment": "Fine Mist Sprayer",
+      "finish": "Shiny Silver",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-SHSL-18-415-06",
+          "sha256": "7677b2abb9266159c694f9db5173c4eadc208efa81fbf35a9d717af3bec9edf5"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-SHSL-18-415-06",
+          "sha256": "7677b2abb9266159c694f9db5173c4eadc208efa81fbf35a9d717af3bec9edf5"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-SHSL-18-415-06",
+          "sha256": "d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-SPR-SHSL-18-415-06",
+          "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a"
+        }
+      ]
+    },
+    {
+      "sku": "LBcyl25LtnClOvrCap",
+      "fitment": "Lotion Pump",
+      "finish": "Clear Overcap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-MSLV-18-415-02",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-MSLV-18-415-02",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "pump",
+          "componentId": "CMP-LPM-MSLV-18-415-02",
+          "sha256": "04f97d643c4a78cc93fab56a961256484ef1cba8fcd20a8367fe79b72331511e"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-LPM-MSLV-18-415-02",
+          "sha256": "b9ed7876874a50a9cda7dd44c490b0e5991b29ccc3a3a8505da1b92646c226e8"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "fitment": "Lotion Pump",
+      "finish": "Copper",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-CPR-18-415",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-CPR-18-415",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "pump",
+          "componentId": "CMP-LPM-CPR-18-415",
+          "sha256": "c81514a001b22bb6517817ae3396103562b8135937c2218de30a08191592b3db"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-LPM-CPR-18-415",
+          "sha256": "8ee55303f436df341ca07814707ff5ee39f447bb6b5582bfc7a4028537a1038b"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "fitment": "Lotion Pump",
+      "finish": "Matte Gold",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-MGLD-18-415",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-MGLD-18-415",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "pump",
+          "componentId": "CMP-LPM-MGLD-18-415",
+          "sha256": "278fe7f188430d8b83c18a5cb9221ef0a9c33e303a4d551dc2e746f35acd465b"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-LPM-MGLD-18-415",
+          "sha256": "2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtSl",
+      "fitment": "Lotion Pump",
+      "finish": "Matte Silver",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-MSLV-18-415-01",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-MSLV-18-415-01",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "pump",
+          "componentId": "CMP-LPM-MSLV-18-415-01",
+          "sha256": "976e421755bf3e03caac8127ec0c522e0e960ba65162f05b8219642bf7525c30"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-LPM-MSLV-18-415-01",
+          "sha256": "f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnBlk",
+      "fitment": "Lotion Pump",
+      "finish": "Shiny Black",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-SBLK-18-415",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-SBLK-18-415",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "pump",
+          "componentId": "CMP-LPM-SBLK-18-415",
+          "sha256": "6cc716f91c7c0531f098b8789d3666b7735e3e006851b9ee285d1d2e39a336b4"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-LPM-SBLK-18-415",
+          "sha256": "271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnGl",
+      "fitment": "Lotion Pump",
+      "finish": "Shiny Gold",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-SGLD-18-415",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-SGLD-18-415",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "pump",
+          "componentId": "CMP-LPM-SGLD-18-415",
+          "sha256": "03c8e952ce1c82e4da04bbf3b93cb5ff717486d3efab7e404537536f22b759c0"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-LPM-SGLD-18-415",
+          "sha256": "06c1e5ffc8ae3d0aa90407055e97b7694d8a81dd989d65b753c10ca04136a618"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "fitment": "Lotion Pump",
+      "finish": "Shiny Silver",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-SSLV-18-415",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "diptube",
+          "componentId": "CMP-LPM-SSLV-18-415",
+          "sha256": "5db6ed7c30a13710c2e88aba2861bf32ee1ba4aaf0165f2d27be062118593bc8"
+        },
+        {
+          "slot": "pump",
+          "componentId": "CMP-LPM-SSLV-18-415",
+          "sha256": "091bd119ea1617aa8fc8e302e5588eaa37c5b4f61eab36815d243b48f21ea672"
+        },
+        {
+          "slot": "overcap",
+          "componentId": "CMP-LPM-SSLV-18-415",
+          "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25RdcrBlkLthr",
+      "fitment": "Reducer",
+      "finish": "Black Faux Leather Cap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "CMP-CAP-BLK-18415-LTR",
+          "sha256": "f4f98940e73b926bda0ba033ed55d5fa3da0f61363c84a3150ee6b1d47a39074"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25RdcrBrwnLthr",
+      "fitment": "Reducer",
+      "finish": "Brown Faux Leather Cap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "CMP-CAP-BRN-18415-LTR",
+          "sha256": "36f86eba69f0a1f9ffe99af4094e981baa3f7b45059776679d033a7544a75222"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl25RdcrIvyLthr",
+      "fitment": "Reducer",
+      "finish": "Ivory Faux Leather Cap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "CMP-CAP-IVY-18415-LTR",
+          "sha256": "94897b5001a857a592b2cdefcd28e669fdc407d6d5ae5aa0ef336f958b81fcc0"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25RdcrLBrwnLthr",
+      "fitment": "Reducer",
+      "finish": "Light Brown Faux Leather Cap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "CMP-CAP-LBRN-18415-LTR",
+          "sha256": "2aa6413abe77d0e47ad47a98ca5f41eed5be766dd42423e2624779aa2d19fede"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25RdcrPnkLthr",
+      "fitment": "Reducer",
+      "finish": "Pink Faux Leather Cap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "CMP-CAP-PNK-18415-LTR",
+          "sha256": "057256339423d4e5abd0975c5cee723c0ec1afa3db5a406f2dde1b01926f47c6"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25RdcrShnBlk",
+      "fitment": "Reducer",
+      "finish": "Shiny Black",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "LIB-18-415-ShnBlkCap",
+          "sha256": "ba43150bc21fea2d5c8d15993da020e3118753d838ed945e28b90f72188962ea"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25RdcrMtSl",
+      "fitment": "Reducer",
+      "finish": "Short Matte Silver Cap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "CMP-CAP-MSLV-18415-S",
+          "sha256": "c4f8d253bc2910b6e2acebb9d91644573e2af8ffcda9337be65fb59efc8c0a81"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "fitment": "Reducer",
+      "finish": "Short Shiny Gold Cap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "CMP-CAP-SGLD-18415-S",
+          "sha256": "d3ef0f02ee102dd75ba91f8eec77841211e3f2a768ab3249bbfd73f2d2670eec"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25RdcrShnSl",
+      "fitment": "Reducer",
+      "finish": "Short Shiny Silver Cap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "CMP-CAP-SSLV-18415-S",
+          "sha256": "0ad0d687414eeb33760f2b77237481e030ae7ef043d63a05456ad8575808d554"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25RdcrMtSlTall",
+      "fitment": "Reducer",
+      "finish": "Tall Matte Silver Cap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "CMP-CAP-MSLV-18415-T",
+          "sha256": "d75e2af71e4c63b0405d95e83d4dddf3b2c1c772bd5e30ac40ca8a8c21b97c76"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25RdcrShnBlkTall",
+      "fitment": "Reducer",
+      "finish": "Tall Shiny Black Cap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "CMP-CAP-SBLK-18415-T",
+          "sha256": "397e9514eb967d3eccbb6ba63c63c5839b80050d4f1f5cc74ad960d6d2b46f08"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25RdcrWht",
+      "fitment": "Reducer",
+      "finish": "Tall White Cap",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "cap",
+          "componentId": "CMP-CAP-WHT-18415-T",
+          "sha256": "4676ac09fbc8d88f7aa9268838806fce01da04595096aac5b82813216792c3d4"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl25AnSpBlk",
+      "fitment": "Vintage Bulb Sprayer",
+      "finish": "Black / Shiny Silver Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-BKSL-18-415-02",
+          "sha256": "b0706bff000da977341f15b18a402c1f00caefedeb59ffaca7d1869a4ad0b709"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-BKSL-18-415-02",
+          "sha256": "99d53da2b140c13866c1a6093c7f8890286b06d448c27f05a348cbf258477a16"
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl25AnSpGl",
+      "fitment": "Vintage Bulb Sprayer",
+      "finish": "Gold / Shiny Gold Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-GLD-18-415-02",
+          "sha256": "b0706bff000da977341f15b18a402c1f00caefedeb59ffaca7d1869a4ad0b709"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-GLD-18-415-02",
+          "sha256": "5100cb7fa961a88ddafc4f18c35bb0f2129743e8c5a2eea91e45b4049bacdacc"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25AnSpIvyGl",
+      "fitment": "Vintage Bulb Sprayer",
+      "finish": "Ivory / Shiny Gold Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-IVGD-18-415-01",
+          "sha256": "b0706bff000da977341f15b18a402c1f00caefedeb59ffaca7d1869a4ad0b709"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-IVGD-18-415-01",
+          "sha256": "bc826649379e9625f3f8b4056a777bc3a9ca4ee5af91d90488adf12552b374c9"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25AnSpIvySl",
+      "fitment": "Vintage Bulb Sprayer",
+      "finish": "Ivory / Shiny Silver Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-IVSL-18-415-01",
+          "sha256": "b0706bff000da977341f15b18a402c1f00caefedeb59ffaca7d1869a4ad0b709"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-IVSL-18-415-01",
+          "sha256": "930456b7e091aac213308291a621bd7c07fe84332e65b1c28c676a41690eacc6"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25AnSpLvn",
+      "fitment": "Vintage Bulb Sprayer",
+      "finish": "Lavender / Shiny Silver Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-LVN-18-415-01",
+          "sha256": "b0706bff000da977341f15b18a402c1f00caefedeb59ffaca7d1869a4ad0b709"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-LVN-18-415-01",
+          "sha256": "631f253a7a1d01b7a15ba88a7ebe0cd546843579d0c8b9f5e0c556b2fe49960d"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25AnSpMtSl",
+      "fitment": "Vintage Bulb Sprayer",
+      "finish": "Matte Silver / Matte Silver Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-MSLV-18-415-01",
+          "sha256": "b0706bff000da977341f15b18a402c1f00caefedeb59ffaca7d1869a4ad0b709"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-MSLV-18-415-01",
+          "sha256": "4373027a5e3a3a1f1be9505921674c64e3a7d2a0b733acc35e873e7b70c7dd12"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25AnSpPnk",
+      "fitment": "Vintage Bulb Sprayer",
+      "finish": "Pink / Shiny Gold Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-CAP-PNK-18-415",
+          "sha256": "b0706bff000da977341f15b18a402c1f00caefedeb59ffaca7d1869a4ad0b709"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-CAP-PNK-18-415",
+          "sha256": "4f7f023b3b777a053a7afe26a77fb69871febb1cbdc822535bd6c8a6285095bc"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25AnSpRed",
+      "fitment": "Vintage Bulb Sprayer",
+      "finish": "Red / Shiny Silver Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-RED-18-415-01",
+          "sha256": "b0706bff000da977341f15b18a402c1f00caefedeb59ffaca7d1869a4ad0b709"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-RED-18-415-01",
+          "sha256": "7d04417b2beb7fc01befbebe4cda58dc4147343434d1607adcd42d96d89c45e7"
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25AnSpWht",
+      "fitment": "Vintage Bulb Sprayer",
+      "finish": "White / Shiny Silver Collar",
+      "bodySha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+      "bodyBoundsPreserved": true,
+      "nativeTopGeometryPreserved": true,
+      "innerFloorY": 994.9104105839415,
+      "floorBasis": "Visual inner-floor landmark in the existing 2192 px body source; not a new depth measurement",
+      "sourceComponents": [
+        {
+          "slot": "diptube",
+          "componentId": "CMP-SPR-WHT-18-415-01",
+          "sha256": "b0706bff000da977341f15b18a402c1f00caefedeb59ffaca7d1869a4ad0b709"
+        },
+        {
+          "slot": "sprayer",
+          "componentId": "CMP-SPR-WHT-18-415-01",
+          "sha256": "eb9de35693dbd9a176c97990a06a2910b177e0fa74e6403d9c53c38461b553c8"
+        }
+      ]
+    }
+  ],
+  "publication": "No production recipes or catalog records changed"
+}

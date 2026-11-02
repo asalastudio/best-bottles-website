@@ -1,0 +1,185 @@
+{
+  "source": "Read-only configured Convex exact-SKU lookup; compare separately with the public production builder snapshot",
+  "lookedUpAt": "2026-11-02T01:36:37.549Z",
+  "slug": "tulip-6ml-clear-13-415",
+  "product": {
+    "_id": "kd75eybvmbnbb00c2br2q0cgg582adf9",
+    "websiteSku": "GBTulip6BlkShSht",
+    "graceSku": "GB-TUL-CLR-6ML-CAP-SBLK",
+    "family": "Tulip",
+    "capacity": "6.0 ml",
+    "color": "Clear",
+    "applicator": "N/A",
+    "capColor": "Clear",
+    "stockStatus": "In Stock",
+    "lifecycleStatus": null,
+    "lifecycleReason": null,
+    "productGroupId": "kh7b8gqk3qxc9wgwyvzbt3f05x8dsdbn",
+    "catalogStatus": null,
+    "shopifyStatus": null,
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343633735972",
+    "components": [
+      {
+        "grace_sku": "CMP-CAP-WHT-S-13-415",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415WhtSht.gif",
+        "item_name": "White lid or closure for glass bottle, Thread size 13-415",
+        "price_1": 0.24,
+        "price_12": 0.23
+      },
+      {
+        "grace_sku": "CMP-CAP-SLV-13-415-01",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415Sl.gif",
+        "item_name": "Shiny silver lid or closure for glass bottle, Thread size 13-415",
+        "price_1": 0.3,
+        "price_12": 0.29
+      },
+      {
+        "grace_sku": "CMP-CAP-SGLD-13-415-01",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415Gl.gif",
+        "item_name": "Shiny gold lid or closure for glass bottle, Thread size 13-415",
+        "price_1": 0.3,
+        "price_12": 0.29
+      },
+      {
+        "grace_sku": "CMP-ROC-SLV-13415-DOT",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CPRoll13-415SlDot.gif",
+        "item_name": "Silver cap with dots or closure for rollon bottles, Threadsize 13-415",
+        "price_1": 0.37,
+        "price_12": 0.35
+      },
+      {
+        "grace_sku": "CMP-ROC-MSLV-13415",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CPRoll13-415SlMt.gif",
+        "item_name": "Matte silver cap or closure for rollon bottles, Threadsize 13-415",
+        "price_1": 0.3,
+        "price_12": 0.29
+      },
+      {
+        "grace_sku": "CMP-ROC-PNK-13415-DOT",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CPRoll13-415PinkDot.gif",
+        "item_name": "Pink cap with dots or closure for rollon bottles, Threadsize 13-415",
+        "price_1": 0.37,
+        "price_12": 0.35
+      },
+      {
+        "grace_sku": "CMP-ROC-MGLD-13415",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CPRoll13-415GlMt.gif",
+        "item_name": "Matte Gold cap or closure for rollon bottles, Threadsize 13-415",
+        "price_1": 0.3,
+        "price_12": 0.29
+      },
+      {
+        "grace_sku": "CMP-ROC-SSLV-13415",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CPRoll13-415SlSh.gif",
+        "item_name": "Shiny Silver cap or closure for rollon bottles, Threadsize 13-415",
+        "price_1": 0.3,
+        "price_12": 0.29
+      },
+      {
+        "grace_sku": "CMP-ROC-MCPR-13415",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CPRoll13-415Cu.gif",
+        "item_name": "Matte Copper cap or closure for rollon bottles, Threadsize 13-415",
+        "price_1": 0.3,
+        "price_12": 0.29
+      },
+      {
+        "grace_sku": "CMP-ROC-SGLD-13415",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CPRoll13-415GlSh.gif",
+        "item_name": "Shiny Gold cap or closure for rollon bottles, Threadsize 13-415",
+        "price_1": 0.3,
+        "price_12": 0.29
+      },
+      {
+        "grace_sku": "CMP-ROC-SBLK-13415",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CPRoll13-415BlkSh.gif",
+        "item_name": "Shiny Black cap or closure for rollon bottles, Threadsize 13-415",
+        "price_1": 0.3,
+        "price_12": 0.29
+      },
+      {
+        "grace_sku": "CMP-SPR-MTCP-13-415-07",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415SpryCuMt.gif",
+        "item_name": "Matte Copper Fine Mist Sprayer, Thread size 13-415",
+        "price_1": 0.65,
+        "price_12": 0.62
+      },
+      {
+        "grace_sku": "CMP-SPR-SHBK-13-415-07",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415SpryBlkSh.gif",
+        "item_name": "Shiny black Fine Mist Sprayer, Thread size 13-415",
+        "price_1": 0.65,
+        "price_12": 0.62
+      },
+      {
+        "grace_sku": "CMP-SPR-MTBL-13-415-07",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415SpryBluMt.gif",
+        "item_name": "Matte blue Fine Mist Sprayer, Thread size 13-415",
+        "price_1": 0.65,
+        "price_12": 0.62
+      },
+      {
+        "grace_sku": "CMP-SPR-SHGD-13-415-07",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415SpryGlSh.gif",
+        "item_name": "Shiny gold Fine Mist Sprayer, Thread size 13-415",
+        "price_1": 0.65,
+        "price_12": 0.62
+      },
+      {
+        "grace_sku": "CMP-SPR-MTGD-13-415-07",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415SpryGlMt.gif",
+        "item_name": "Matte gold Fine Mist Sprayer, Thread size 13-415",
+        "price_1": 0.65,
+        "price_12": 0.62
+      },
+      {
+        "grace_sku": "CMP-SPR-MTSL-13-415-07",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415SprySlMt.gif",
+        "item_name": "Matte silver Fine Mist Sprayer, Thread size 13-415",
+        "price_1": 0.65,
+        "price_12": 0.62
+      },
+      {
+        "grace_sku": "CMP-SPR-SHSL-13-415-07",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415SprySlSh.gif",
+        "item_name": "Shiny silver Fine Mist Sprayer, Thread size 13-415",
+        "price_1": 0.65,
+        "price_12": 0.62
+      },
+      {
+        "grace_sku": "CMP-SPR-CLR-30ML",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/PB1ozSpryNat.gif",
+        "item_name": "Plastic Bottle with Clear Spray Top and Clear Cap. Capacity: 1oz (28ml).",
+        "price_1": 0.65,
+        "price_12": 0.62
+      },
+      {
+        "grace_sku": "CMP-SPR-SLV-",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/PB1ozSprySl.gif",
+        "item_name": "Plastic Bottle with Silver Spray Top and Clear Cap. Capacity: 1oz (30ml).",
+        "price_1": 0.65,
+        "price_12": 0.62
+      },
+      {
+        "grace_sku": "CMP-CAP-BLK-S-13-415",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415BlkSht.gif",
+        "item_name": "Black lid or closure for glass bottle, Thread size 13-415",
+        "price_1": 0.24,
+        "price_12": 0.23
+      },
+      {
+        "grace_sku": "CMP-ROC-BLK-13415-DOT",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CPRoll13-415BlackDot.gif",
+        "item_name": "Shiny black cap with dots or closure for rollon bottles, Threadsize 13-415",
+        "price_1": 0.37,
+        "price_12": 0.35
+      },
+      {
+        "grace_sku": "CMP-SPR-MTBK-13-415-07",
+        "image_url": "https://www.bestbottles.com/images/store/enlarged_pics/CP13-415SpryBlkMt.gif",
+        "item_name": "Matte black Fine Mist Sprayer, Thread size 13-415",
+        "price_1": 0.65,
+        "price_12": 0.62
+      }
+    ]
+  }
+}
