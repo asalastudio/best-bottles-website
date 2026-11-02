@@ -1,0 +1,17 @@
+{
+  "status": "global-recount-blocked-by-stale-September-review",
+  "sku": "GBCyl5BlkShSht",
+  "matches": 1,
+  "differences": {
+    "productGroupId": {
+      "septemberReview": "kh70ryfm2hmz484j4z93mqzfwn8dp590",
+      "existingLedger": "kh758zqt053vpb9s9eans7cx6h8dsxeh"
+    }
+  },
+  "measurementPass": {
+    "plates": 2283,
+    "fetchFailures": 0,
+    "measurementFailures": 0
+  },
+  "scope": "No 25 ml artwork or catalog mutation has occurred; the failure is in a historical 5 ml review identity guard. Preserve that guard and use exact current read-only 25 ml and Tulip snapshots for this isolated preparation. Full-family ledger completion is not claimed."
+}

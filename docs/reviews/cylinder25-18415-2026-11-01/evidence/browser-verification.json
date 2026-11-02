@@ -1,0 +1,397 @@
+{
+  "records": [
+    {
+      "sku": "GBCyl25DrpGl",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-GBCyl25DrpGl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-GBcyl25SpryMtGl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-GBcyl25SpryMtGl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-GBcyl25SpryMtGl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryShnBlk",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-GBcyl25SpryShnBlk-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryShnBlk",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-GBcyl25SpryShnBlk-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryShnBlk",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-GBcyl25SpryShnBlk-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-LBCyl25LtnMtGl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-LBCyl25LtnMtGl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-LBCyl25LtnMtGl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-LBCyl25LtnShnSl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-LBCyl25LtnShnSl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-LBCyl25LtnShnSl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-GBCyl25RdcrShnGl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBCyl25AnSpGl",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.32196044921875,
+        164.49813842773438,
+        157.2064208984375,
+        341.8655090332031
+      ],
+      "screenshot": "desktop-GBCyl25AnSpGl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-GBCyl25DrpGl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-GBcyl25SpryMtGl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-GBcyl25SpryMtGl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-GBcyl25SpryMtGl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryShnBlk",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-GBcyl25SpryShnBlk-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryShnBlk",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-GBcyl25SpryShnBlk-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryShnBlk",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-GBcyl25SpryShnBlk-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-LBCyl25LtnMtGl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-LBCyl25LtnMtGl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-LBCyl25LtnMtGl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-LBCyl25LtnShnSl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-LBCyl25LtnShnSl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-LBCyl25LtnShnSl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-GBCyl25RdcrShnGl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBCyl25AnSpGl",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.45803833007812,
+        121.84286499023438,
+        116.43841552734375,
+        253.23062133789062
+      ],
+      "screenshot": "mobile-GBCyl25AnSpGl-capon.png",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "passed": true
+}

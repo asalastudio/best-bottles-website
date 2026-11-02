@@ -1,0 +1,1489 @@
+{
+  "records": [
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5BlkSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5BlkSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5BlkSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5CuSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5CuSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5CuSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5GlMattSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5GlMattSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5GlMattSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5SlMattSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5SlMattSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5SlMattSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5BlkShSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5BlkShSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5BlkShSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5GlSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5GlSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5GlSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5SlSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5SlSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5SlSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5WhtSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5WhtSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5WhtSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5WhtSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5WhtSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5WhtSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5Gl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5Gl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5Gl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Sl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5Sl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Sl",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5Sl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Sl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "screenshot": "desktop-GBTulipAmb5Sl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6BlkSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6BlkSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6BlkSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6BlkSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6BlkSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6BlkSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6CuSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6CuSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6CuSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6CuSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6CuSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6CuSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlMattSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6GlMattSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlMattSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6GlMattSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlMattSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6GlMattSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlMattSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6SlMattSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlMattSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6SlMattSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlMattSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6SlMattSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6GlSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6GlSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6GlSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6SlSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6SlSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6SlSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6WhtSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6WhtSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6WhtSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6WhtSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6WhtSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6WhtSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Gl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6Gl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Gl",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6Gl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Gl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6Gl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Sl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6Sl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Sl",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6Sl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Sl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "screenshot": "desktop-GBTulip6Sl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5BlkSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5BlkSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5BlkSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5CuSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5CuSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5CuSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5GlMattSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5GlMattSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5GlMattSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5SlMattSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5SlMattSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5SlMattSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5BlkShSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5BlkShSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5BlkShSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5GlSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5GlSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5GlSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5SlSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5SlSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5SlSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5WhtSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5WhtSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5WhtSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5WhtSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5WhtSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5WhtSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5Gl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5Gl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5Gl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Sl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5Sl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Sl",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5Sl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Sl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "screenshot": "mobile-GBTulipAmb5Sl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6BlkSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6BlkSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6BlkSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6BlkSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6BlkSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6BlkSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6CuSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6CuSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6CuSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6CuSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6CuSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6CuSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlMattSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6GlMattSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlMattSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6GlMattSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlMattSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6GlMattSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlMattSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6SlMattSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlMattSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6SlMattSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlMattSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6SlMattSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6GlSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6GlSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6GlSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6SlSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6SlSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6SlSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6WhtSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6WhtSht-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6WhtSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6WhtSht-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6WhtSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6WhtSht-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Gl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6Gl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Gl",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6Gl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Gl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6Gl-exploded.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Sl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6Sl-sidecar.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Sl",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6Sl-capon.png",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Sl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "screenshot": "mobile-GBTulip6Sl-exploded.png",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "passed": true
+}
