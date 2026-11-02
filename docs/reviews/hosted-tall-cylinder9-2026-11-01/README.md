@@ -13,3 +13,5 @@ Publication assets and source approvals are recorded in `upload-plan.json`, `ass
 Local catalog: http://localhost:3010/catalog?families=Cylinder&search=Tall&threads=13-415
 
 Reproduce: run the earlier review's `prepare.cjs`, then `node scripts/paperdoll/publish-tall-cylinder9-masters.mjs` for a dry run. `--apply` requires the existing Blob credential and release authorization. The script never overwrites or deletes hosted objects and never mutates Convex or Shopify. `verify-catalog.cjs` accepts `QA_ORIGIN`, `QA_OUT` and an optional private `QA_ACCESS_FILE`. `QA_NATIVE_ONLY=1` records preview-backend options that are unavailable instead of claiming those choices were tested.
+
+The required global recount measured 2,283 plates with zero fetch or measurement failures. Its ledger build stopped at the existing historical `GBCyl5BlkShSht` group-identity guard. That guard was not bypassed and the unrelated generated geometry file was restored. This bounded 72-SKU release does not claim family-wide ledger completion.
