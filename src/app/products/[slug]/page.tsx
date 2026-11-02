@@ -47,7 +47,7 @@ import { loadRegisterKits } from "@/lib/register/load";
 import { loadGlassStageEnvelopes } from "@/lib/register/stage-envelopes";
 import { isSoldOutStockStatus } from "@/lib/checkout";
 import { cache } from "react";
-import { preload } from "react-dom";
+import { preconnect, preload } from "react-dom";
 import { pdpHeroImagePreloads } from "@/lib/products/pdp-image-preloads";
 
 export const dynamic = "force-dynamic";
@@ -388,6 +388,8 @@ export default async function ProductPage({
     params: Promise<{ slug: string }>;
     searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
+    // Open the shared image-CDN connection while product data is loading.
+    preconnect("https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com");
     const [{ slug }, resolvedSearchParams] = await Promise.all([params, searchParams]);
     // The proxy already answers these before the page renders (a real 308 and
     // 404, src/lib/crawl/route-status.ts); these calls cover client-side
@@ -400,7 +402,8 @@ export default async function ProductPage({
     if (hasCatalogSourceHold(activeSlug)) notFound();
     const data = await getProductData(activeSlug);
     if (!data) notFound();
-    if (redesignApplies(activeSlug, data)) {
+    const redesigned = redesignApplies(activeSlug, data);
+    if (redesigned) {
         const selected = resolveVariant(data.variants, derivePicks(data.variants, data.group, {
             roller: typeof resolvedSearchParams.roller === "string" ? resolvedSearchParams.roller : null,
             cap: typeof resolvedSearchParams.cap === "string" ? resolvedSearchParams.cap : null,
@@ -413,7 +416,9 @@ export default async function ProductPage({
     const primaryVariant = getPrimaryVariant(data);
     const [siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
         getSiblingGroups(data, activeSlug),
-        getPdpBlocks(activeSlug, data?.group.family),
+        // Only the classic page renders these editorial/discovery sections.
+        // Do not delay the redesigned hero on reads whose results it never uses.
+        redesigned ? Promise.resolve([] as PdpBlock[]) : getPdpBlocks(activeSlug, data?.group.family),
         // The plates for THIS group's variants, from the Convex index -- never
         // the whole catalogue, and never a throw: a missing plate costs the
         // customer the plate, not the page.
@@ -422,8 +427,8 @@ export default async function ProductPage({
             (data?.variants ?? []).flatMap((variant) => [variant.graceSku, variant.websiteSku]),
             activeSlug,
         ),
-        getFocusedPdpRelations(activeSlug),
-        getPrimaryCompatibility(data),
+        redesigned ? Promise.resolve(null) : getFocusedPdpRelations(activeSlug),
+        redesigned ? Promise.resolve(null) : getPrimaryCompatibility(data),
     ]);
     const group = data?.group;
     const variant = primaryVariant;
@@ -474,7 +479,7 @@ export default async function ProductPage({
         ])
         : null;
 
-    if (data && redesignApplies(activeSlug, data)) {
+    if (redesigned) {
         const payload = await loadRedesignPayload(data, activeSlug, siblingGroups, platesBySku, localComponentKits, { host: requestHost, flag: resolvedSearchParams.assetPreview });
         return (
             <>

@@ -284,6 +284,8 @@ export default function PdpStage({
                                         alt=""
                                         draggable={false}
                                         decoding="async"
+                                        loading="eager"
+                                        fetchPriority="high"
                                         className={styles.stageBackdrop}
                                         style={{
                                             left: `${layout.backdrop.box.leftPct}%`, top: `${layout.backdrop.box.topPct}%`,

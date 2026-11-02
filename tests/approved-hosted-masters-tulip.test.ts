@@ -31,6 +31,9 @@ for (const source of plan.sources) {
 Object.assign(originals, JSON.parse(readFileSync("public/local-kits/tulip-amber-seating-2026-11-01/kits.json", "utf8")).rows);
 // Scoped clear-glass optical revision, with unchanged pixels and placement.
 Object.assign(originals, JSON.parse(readFileSync("public/local-kits/tulip6-glass-depth-2026-11-01/kits.json", "utf8")).rows);
+// Owner's tube-only 25 ml reference correction. Its separate invariant test
+// asserts that every original 9 ml body and exterior part remains identical.
+Object.assign(originals, JSON.parse(readFileSync("docs/reviews/cylinder-lotion-pumps-2026-11-02/after-kits.json", "utf8")).rows);
 afterEach(() => vi.unstubAllEnvs());
 
 describe("approved hosted master release", () => {

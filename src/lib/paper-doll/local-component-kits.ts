@@ -2,15 +2,20 @@ import "server-only";
 import { readFileSync } from "node:fs";
 import type { BuilderKit } from "../bottle-builder/model";
 import { approvedComponentKits } from "./approved-component-kits";
+import { withCylinder25LotionTube } from "../register/cylinder-lotion-tube";
 
 // Keep older local files and bookmarked pilots on the current shared recipes
 // for the Rectangle roll-ons and the corrected 9 ml / 13-415 pour-cap fit.
 const currentSharedMasters = Object.fromEntries(Object.entries(approvedComponentKits()).filter(([sku, kit]) =>
     (/^GBRect10(?:MtlRoll|Roll)/.test(sku) && kit.register?.bodyId === "footed-rectangle-10ml-13-415")
     || (kit.register?.bodyId === "cylinder-9ml-13-415" && kit.parts.some(part => part.slot === "cap")
-        && !kit.parts.some(part => ["sprayer", "roller"].includes(part.slot)))));
+        && !kit.parts.some(part => ["sprayer", "roller"].includes(part.slot)))
+    || (kit.register?.bodyId === "cylinder-9ml-17-415" && kit.parts.some(part => part.slot === "pump"))));
 function withCurrentSharedMasters(rows: Record<string, BuilderKit>): Record<string, BuilderKit> {
-    return { ...rows, ...Object.fromEntries(Object.entries(currentSharedMasters).filter(([sku]) => Object.hasOwn(rows, sku))) };
+    const current = { ...rows, ...Object.fromEntries(Object.entries(currentSharedMasters).filter(([sku]) => Object.hasOwn(rows, sku))) };
+    return Object.fromEntries(Object.entries(current).map(([sku, kit]) => kit.register?.bodyId !== "cylinder-25ml-18-415" ? [sku, kit] : [sku, {
+        ...kit, parts: withCylinder25LotionTube(kit.parts, kit.register?.bodyId ?? "", kit.anchors.axisX, kit.anchors.pxPerMm ?? 10.5),
+    }]));
 }
 
 type LocalKitReview = {

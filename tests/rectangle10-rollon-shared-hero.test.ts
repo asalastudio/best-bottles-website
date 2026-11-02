@@ -8,6 +8,8 @@ import { stageLayout, type KitLike } from '@/lib/products/pdp-redesign/stage';
 vi.mock('server-only', () => ({}));
 import { localGpt13ComponentKits, localPdpComponentKits, readLocalComponentKits } from '@/lib/paper-doll/local-component-kits';
 
+// Reconstruct the historical approval before the later tube-only lotion revision.
+const lotionTubeBefore = JSON.parse(readFileSync('docs/reviews/cylinder-lotion-pumps-2026-11-02/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const capFitBefore = JSON.parse(readFileSync('docs/reviews/tall9-pour-cap-fit-2026-11-01/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const source = JSON.parse(readFileSync('docs/reviews/rectangle10-rollon-hero-2026-11-01/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const rows = manifest.rows as unknown as Record<string, KitLike>;
@@ -57,7 +59,7 @@ describe('Rectangle 10 ml roll-on shared hero', () => {
         }
     });
     it('preserves every earlier recipe and excludes unrelated Rectangle products', () => {
-        for (const [sku, expected] of Object.entries(prior.recipes)) expect(hash(capFitBefore[sku] ?? rows[sku]), sku).toBe(expected);
+        for (const [sku, expected] of Object.entries(prior.recipes)) expect(hash(lotionTubeBefore[sku] ?? capFitBefore[sku] ?? rows[sku]), sku).toBe(expected);
         expect(Object.keys(rows)).toHaveLength(prior.count + 18);
         expect(index.skus).toEqual(Object.keys(rows).sort());
         expect(index.version).toBe(manifest.version);

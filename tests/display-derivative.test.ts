@@ -52,4 +52,8 @@ it("preloads the exact selected assembly URLs without fetching every finish or c
     expect(pdpHeroImageUrls(kit, kit.sku)).toHaveLength(layout.parts.length);
     expect(pdpHeroImageUrls(null, null)).toEqual([]);
     expect(JSON.stringify(kit)).toBe(before);
+    const frosted = approved.rows.GBTallCylFrst9SpryBlkMatt as unknown as KitLike;
+    const frostedLayout = stageLayout(frosted, "sidecar", { websiteSku: frosted.sku })!;
+    expect(frostedLayout.backdrop).toBeTruthy();
+    expect(pdpHeroImageUrls(frosted, frosted.sku)).toContain(frostedLayout.backdrop!.url);
 });

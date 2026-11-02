@@ -8,6 +8,8 @@ import { cylinderMasterSku, cylinderMasterSource } from '@/lib/products/cylinder
 vi.mock('server-only', () => ({}));
 import { GET } from '@/app/api/bottle-masters/approved/route';
 import { localGpt13ComponentKits, localPdpComponentKits } from '@/lib/paper-doll/local-component-kits';
+// Reconstruct the historical approval before the later tube-only lotion revision.
+const lotionTubeBefore = JSON.parse(readFileSync('docs/reviews/cylinder-lotion-pumps-2026-11-02/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const capFitBefore = JSON.parse(readFileSync('docs/reviews/tall9-pour-cap-fit-2026-11-01/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const directory = 'docs/reviews/vial2-matched-2026-11-01/';
 const read = (file: string) => JSON.parse(readFileSync(file, 'utf8'));
@@ -95,7 +97,7 @@ describe('clear Tulip 6 ml internal optics', () => {
         let count = 0;
         for (const [sku, digest] of Object.entries(prior)) {
             if (Object.hasOwn(tulipBefore, sku) || Object.hasOwn(sleekOpticsBefore, sku)) continue;
-            expect(hash(JSON.stringify(canonical(capFitBefore[sku] ?? rows[sku]))), sku).toBe(digest); count++;
+            expect(hash(JSON.stringify(canonical(lotionTubeBefore[sku] ?? capFitBefore[sku] ?? rows[sku]))), sku).toBe(digest); count++;
         }
         expect(count).toBe(419);
         expect(Object.keys(rows)).toHaveLength(456);

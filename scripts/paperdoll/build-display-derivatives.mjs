@@ -20,6 +20,7 @@ for (const kit of Object.values(manifest.rows)) for (const part of kit.parts) {
 const tola = fs.readFileSync('src/lib/products/tola-applicator.ts', 'utf8').match(/https:\/\/yzy7l20k4yt6znzz\.public\.blob\.vercel-storage\.com\/plates\/[^\s"']+\.webp/);
 if (tola) assets.set(tola[0], { source: tola[0] });
 fs.mkdirSync(dir, { recursive: true });
+const previous = fs.existsSync(path.join(dir, 'report.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'report.json'))) : { assets: {} };
 const report = { version: 1, masterManifestVersion: manifest.version, mode: 'lossless WebP display copies; original masters unchanged', assets: {} };
 const receiptPath = path.join(dir, 'receipt.json');
 const receipts = fs.existsSync(receiptPath) ? JSON.parse(fs.readFileSync(receiptPath)) : {};
@@ -37,6 +38,17 @@ async function build(asset) {
  }
  const sourceHash = sha(bytes);
  if (asset.expectedHash && asset.expectedHash !== sourceHash) throw Error('Master hash mismatch ' + asset.source);
+ // Reuse a previously pixel-verified encode only when both source and cached
+ // output bytes still match. New/changed sources always take the full check.
+ const cached = previous.assets[asset.source];
+ if (cached?.sourceHash === sourceHash && widths.every(width => {
+  const copy = cached.derivatives[width], file = copy && path.join(dir, copy.sha256 + '.' + width + '.webp');
+  return copy && copy.alphaDifferences === 0 && copy.visibleColorDifferences === 0
+   && fs.existsSync(file) && sha(fs.readFileSync(file)) === copy.sha256
+   && (!publish || receipts[copy.sha256]?.verified);
+ })) {
+  report.assets[asset.source] = cached; save(); return;
+ }
  if (ext === 'svg' && /<(?:script|foreignObject)\b|\b(?:href|xlink:href)=["'](?:https?:|\/)/i.test(bytes.toString())) throw Error('External or active SVG');
  const metadata = await sharp(bytes).metadata();
  const result = { sourceHash, sourceBytes: bytes.length, sourceWidth: metadata.width, sourceHeight: metadata.height, derivatives: {} };

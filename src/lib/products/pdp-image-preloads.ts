@@ -14,11 +14,13 @@ export function pdpHeroImagePreloads(kit: KitLike | null, websiteSku: string | n
     const layout = isTolaApplicator(websiteSku) ? tolaAssemblyLayout()
         : kit ? stageLayout(kit, "sidecar", { websiteSku: websiteSku ?? undefined }) : null;
     const seen = new Set<string>();
-    return (layout?.parts ?? []).flatMap(part => {
+    const backdrop = layout?.backdrop?.url;
+    if (backdrop) seen.add(backdrop);
+    return [...(backdrop ? [{ href: backdrop, imageSrcSet: undefined, imageSizes: undefined }] : []), ...(layout?.parts ?? []).flatMap(part => {
         const href = displayImageUrl(part.url, part.box ? 640 : 1200);
         if (seen.has(href)) return [];
         seen.add(href);
         return [{ href, imageSrcSet: part.box ? displayDerivativeSrcSet(part.url) : undefined,
             imageSizes: part.box ? registeredImageSizes(part.box.widthPct, layout!.frame.scale) : undefined }];
-    });
+    })];
 }

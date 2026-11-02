@@ -1,5 +1,5 @@
 {
-  "verifiedBy": "full source SHA-256 equality",
+  "verifiedBy": "full SHA-256 equality with an approved source; unchanged original pixels",
   "aliases": {
     "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
     "/local-kits/cylinder5-finemist-2026-11-01/mechanism-5ml.03ff39558342.svg": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/03ff39558342a2aca5841d6e8686bca12d76c89b10a065f93d9c0de778e10c9f.svg",
@@ -49,7 +49,6 @@
     "/local-kits/cylinder9-masters-2026-11-01/collar-red.e34c8674e08e.png": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e34c8674e08e3f1eed980b88caff4cbecdb81cd89d3fcbb0957526446cf466a1.png",
     "/local-kits/cylinder9-masters-2026-11-01/collar-shiny-silver.21659785df2b.png": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/21659785df2b6f8a242573a035ef4cfe40e4bab57f6b31407d2281014f3c363e.png",
     "/local-kits/cylinder9-masters-2026-11-01/collar-turquoise.430ff4c25dce.png": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/430ff4c25dced2145d0390140a89f0115c771bab5422a71944291ab23684506c.png",
-    "/local-kits/lotion9-flair-fit-2026-11-01/lotion-mechanism-slim.fd1f18d27439.svg": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
     "/local-kits/cylinder9-masters-2026-11-01/lotion-head.001736de4e94.svg": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
     "/local-kits/cylinder-cap-rims-2026-11-01/cap9-black-dotted-deeper.bf4b2de85072.svg": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f.svg",
     "/local-kits/cylinder-cap-rims-2026-11-01/cap9-final-matte-copper.c02b89e5d861.svg": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff.svg",

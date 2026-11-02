@@ -11,6 +11,8 @@ const before = JSON.parse(readFileSync(dir + 'before-kits.json', 'utf8')).rows a
 const prior = JSON.parse(readFileSync(dir + 'prior-recipe-hashes.json', 'utf8')).recipes;
 const registration = JSON.parse(readFileSync(dir + 'cap-registration.json', 'utf8'));
 const rows = manifest.rows as unknown as Record<string, KitLike>;
+// Reconstruct the earlier cap-fit release before the later tube-only revision.
+const lotionTubeBefore = JSON.parse(readFileSync('docs/reviews/cylinder-lotion-pumps-2026-11-02/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const canonical = (value: unknown): unknown => Array.isArray(value) ? value.map(canonical) : value && typeof value === 'object'
     ? Object.fromEntries(Object.keys(value).sort().map(key => [key, canonical((value as Record<string, unknown>)[key])])) : value;
 const hash = (value: unknown) => createHash('sha256').update(JSON.stringify(canonical(value))).digest('hex');
@@ -34,7 +36,7 @@ describe('9 ml 13-415 pour-cap visible-edge registration', () => {
     });
     it('keeps all other 436 recipes unchanged and shares the fit with current pages, pilots and builder', () => {
         let count = 0;
-        for (const [sku, digest] of Object.entries(prior)) if (!before[sku]) { expect(hash(rows[sku]), sku).toBe(digest); count++; }
+        for (const [sku, digest] of Object.entries(prior)) if (!before[sku]) { expect(hash(lotionTubeBefore[sku] ?? rows[sku]), sku).toBe(digest); count++; }
         expect(count).toBe(436); expect(Object.keys(rows)).toHaveLength(456);
         expect(index.skus).toEqual(Object.keys(rows).sort()); expect(index.version).toBe(manifest.version);
         vi.stubEnv('NODE_ENV', 'development'); vi.stubEnv('VERCEL', '');
