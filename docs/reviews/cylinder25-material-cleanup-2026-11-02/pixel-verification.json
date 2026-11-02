@@ -1,0 +1,18 @@
+{
+  "copperCap": [
+    {
+      "source": "original",
+      "opaqueWhitePixelsAboveRim": 9346
+    },
+    {
+      "source": "clean",
+      "opaqueWhitePixelsAboveRim": 0
+    }
+  ],
+  "originalsPreserved": true,
+  "bodyRegistration": "one uniform transform from native rim 123 and foot 1768 to stage datum 261 and 1061",
+  "scaleTarget": {
+    "heightPct": 46.5,
+    "baselinePct": 91
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "archivedAt": "2026-11-02T20:08:18.402Z",
+  "folder": {
+    "id": "1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D",
+    "url": "https://drive.google.com/drive/folders/1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D"
+  },
+  "status": "REVIEW, not appearance-approved or production",
+  "verifiedBy": "Drive parent and exact byte size readback. Source hashes recorded locally; no remote-content hash claim.",
+  "supersedes": "Only the two generated roller candidates in the previous remaining-Cylinder source package. Original files remain preserved.",
+  "files": [
+    {
+      "name": "Cylinder_JumboRoller_16mm_Metal_PSD-Matched_v2_REVIEW.webp",
+      "id": "1lQTMJ7_0muAprUHDCHoQleCIgumATWB0",
+      "url": "https://drive.google.com/file/d/1lQTMJ7_0muAprUHDCHoQleCIgumATWB0/view?usp=drivesdk",
+      "parentId": "1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D",
+      "source": "docs/reviews/jumbo-roller-psd-match-2026-11-02/Cylinder_JumboRoller_16mm_Metal_PSD-Matched_v2_REVIEW.webp",
+      "bytes": 21776,
+      "sourceSha256": "c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b",
+      "driveParentAndSizeVerified": true
+    },
+    {
+      "name": "Cylinder_JumboRoller_16mm_Plastic_PSD-Matched_v2_REVIEW.webp",
+      "id": "1XctgDinhj34aTxkZ_nSrYkzsnWeYqSNl",
+      "url": "https://drive.google.com/file/d/1XctgDinhj34aTxkZ_nSrYkzsnWeYqSNl/view?usp=drivesdk",
+      "parentId": "1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D",
+      "source": "docs/reviews/jumbo-roller-psd-match-2026-11-02/Cylinder_JumboRoller_16mm_Plastic_PSD-Matched_v2_REVIEW.webp",
+      "bytes": 22232,
+      "sourceSha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+      "driveParentAndSizeVerified": true
+    },
+    {
+      "name": "Cylinder_JumboRoller_16mm_Metal_Native-PSD_v2_REVIEW.png",
+      "id": "1Cn4qQRmkLLKM0h59CUA2L2G4z0m4pWZi",
+      "url": "https://drive.google.com/file/d/1Cn4qQRmkLLKM0h59CUA2L2G4z0m4pWZi/view?usp=drivesdk",
+      "parentId": "1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D",
+      "source": "docs/reviews/jumbo-roller-psd-match-2026-11-02/metal-native-preview.png",
+      "bytes": 46139,
+      "sourceSha256": "08876daaffcf316f197438921c76d67a066b2f88898219de1b37d3c698846fc9",
+      "driveParentAndSizeVerified": true
+    },
+    {
+      "name": "Cylinder_JumboRoller_16mm_Plastic_Native-PSD_v2_REVIEW.png",
+      "id": "1J8GBTFpAIKE4cLrVr12CZuWdn3tKLA2-",
+      "url": "https://drive.google.com/file/d/1J8GBTFpAIKE4cLrVr12CZuWdn3tKLA2-/view?usp=drivesdk",
+      "parentId": "1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D",
+      "source": "docs/reviews/jumbo-roller-psd-match-2026-11-02/plastic-native-preview.png",
+      "bytes": 47665,
+      "sourceSha256": "d62e4283e6540e07e375dd5eab998ec6951a8ba295e36d9f3bae0f03587bf61f",
+      "driveParentAndSizeVerified": true
+    },
+    {
+      "name": "Cylinder_JumboRoller_16mm_Metal_Native-PSD_Source_v2_REVIEW.svg",
+      "id": "1wxfGaYb9xM-ssTMTf1ebDez4MU00Qzux",
+      "url": "https://drive.google.com/file/d/1wxfGaYb9xM-ssTMTf1ebDez4MU00Qzux/view?usp=drivesdk",
+      "parentId": "1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D",
+      "source": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-metal-native-psd.svg",
+      "bytes": 133707,
+      "sourceSha256": "6c684e37aae0896130330e808ab4e5a7b8f5f9e4a5c5bde4d4491a3873687b71",
+      "driveParentAndSizeVerified": true
+    },
+    {
+      "name": "Cylinder_JumboRoller_16mm_Plastic_Native-PSD_Source_v2_REVIEW.svg",
+      "id": "1F7GO76-6shOdwGUP5pHA-u4hcSYxq0oZ",
+      "url": "https://drive.google.com/file/d/1F7GO76-6shOdwGUP5pHA-u4hcSYxq0oZ/view?usp=drivesdk",
+      "parentId": "1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D",
+      "source": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-plastic-native-psd.svg",
+      "bytes": 166654,
+      "sourceSha256": "e4529c78b0e929db5632609fbb039ba4d7aed9168d793f39218bb50068678608",
+      "driveParentAndSizeVerified": true
+    },
+    {
+      "name": "README_PSD-Matched_Jumbo_Rollers_v2_REVIEW.md",
+      "id": "1I1akCfOzjk17qdA1srNwMF2d1o2IZ4jL",
+      "url": "https://drive.google.com/file/d/1I1akCfOzjk17qdA1srNwMF2d1o2IZ4jL/view?usp=drivesdk",
+      "parentId": "1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D",
+      "source": "docs/reviews/jumbo-roller-psd-match-2026-11-02/README.md",
+      "bytes": 3241,
+      "sourceSha256": "f5bf8a9b02f1d9a2b9a9f7b073f6c577c4de3c870a9df5ed3736b19c75fe333f",
+      "driveParentAndSizeVerified": true
+    },
+    {
+      "name": "Native_PSD_Source_Registration_v2_REVIEW.json",
+      "id": "1t7Ameg-9oHkUGBqEnEBjEP_kmJ3Ddg9P",
+      "url": "https://drive.google.com/file/d/1t7Ameg-9oHkUGBqEnEBjEP_kmJ3Ddg9P/view?usp=drivesdk",
+      "parentId": "1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D",
+      "source": "docs/reviews/jumbo-roller-psd-match-2026-11-02/source-registration.json",
+      "bytes": 5202,
+      "sourceSha256": "f37f6e2eeaa6a4d2915307f02c87a64ab7861cc1446e58b582092a2ff83dae04",
+      "driveParentAndSizeVerified": true
+    },
+    {
+      "name": "Native_Ball_Pixel_Verification_v2_REVIEW.json",
+      "id": "1OCryv1-OWIpNyYr7z0zCVFALN4uxNybN",
+      "url": "https://drive.google.com/file/d/1OCryv1-OWIpNyYr7z0zCVFALN4uxNybN/view?usp=drivesdk",
+      "parentId": "1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D",
+      "source": "docs/reviews/jumbo-roller-psd-match-2026-11-02/native-ball-verification.json",
+      "bytes": 1259,
+      "sourceSha256": "2e772afa2d191b9005c178fc5591660606af40bfb5eac2d24da24f9d256db77b",
+      "driveParentAndSizeVerified": true
+    },
+    {
+      "name": "BB_Jumbo_16mm_PSD_Matched_v2_REVIEW_2026-11-02.zip",
+      "id": "1bvcWnEgsrGZQZ7BX6iJOty308Yui0dsU",
+      "url": "https://drive.google.com/file/d/1bvcWnEgsrGZQZ7BX6iJOty308Yui0dsU/view?usp=drivesdk",
+      "parentId": "1HEKKOiYx87AjkpfXTMX9JpvN3KVBe98D",
+      "source": "/private/tmp/BB_Jumbo_16mm_PSD_Matched_v2_REVIEW_2026-11-02.zip",
+      "bytes": 11448620,
+      "sourceSha256": "d0058af68667b4ee94cc7bcbbd2baf88ab5728f899950ef7ac4b60226313303c",
+      "driveParentAndSizeVerified": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "status": "material-approved-by-owner-registration-review",
+  "sourceSha256": "23d7d2097e9dfcd3c1b326239d3cf9dd5222bc1dd838bc43ada34e9bc03ba1de",
+  "nativeOutlineSha256": "08876daaffcf316f197438921c76d67a066b2f88898219de1b37d3c698846fc9",
+  "method": "Uniformly register the generated material within the original PSD alpha outline. No nonuniform scaling or outline replacement.",
+  "nativeWidth": 336,
+  "nativeHeight": 220,
+  "nativeBounds": {
+    "left": 23,
+    "top": 4,
+    "right": 321,
+    "bottom": 220
+  },
+  "outputWidth": 1344,
+  "outputHeight": 880,
+  "alphaDifferences": 0,
+  "generatedBounds": {
+    "left": 97,
+    "top": 14,
+    "right": 1453,
+    "bottom": 1002
+  },
+  "uniformScale": 0.21976401179941002,
+  "translation": {
+    "x": 1.6828908554572308,
+    "y": -0.203539823008839
+  },
+  "singleBottomStep": true,
+  "protrudingPlug": false,
+  "sourceReference": "Original PSD geometry; owner supplied IMG_6921/IMG_6922 to clarify the single bottom step. Last material edit approved with \"Thats good\"."
+}

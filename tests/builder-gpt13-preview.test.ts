@@ -26,4 +26,18 @@ describe("builder review kit overlay", () => {
         expect((await response.json()).kits).toEqual(baseline);
         expect(response.headers.get("Cache-Control")).toBe("public, max-age=60");
     });
+    it("can review a recovered exact configuration when its previous kit was missing", async () => {
+        const baseline = { GBMtlRoll28Wht: null, unrelated: null };
+        loadKits.mockResolvedValue(baseline);
+        pilot.mockReturnValue({ GBMtlRoll28Wht: { sku: "GBMtlRoll28Wht", parts: [
+            { slot: "body" }, { slot: "roller", views: ["sidecar", "capon"] }, { slot: "roller", views: ["exploded"] },
+        ] }, extraSku: { sku: "extraSku", parts: [] } });
+        const response = await GET(request());
+        const { kits } = await response.json();
+        expect(kits.GBMtlRoll28Wht.parts.map((p: { slot: string }) => p.slot)).toEqual(["body", "roller"]);
+        expect(kits.unrelated).toBeNull();
+        expect(kits.extraSku).toBeUndefined();
+        expect(baseline.GBMtlRoll28Wht).toBeNull();
+        expect(response.headers.get("Cache-Control")).toBe("no-store");
+    });
 });

@@ -34,7 +34,7 @@ export default function PdpKitPartImage({
     // A register master is served display-sized through the optimizer; if that
     // proxy cannot reach the Blob host (a local network quirk), show the master.
     const [raw, setRaw] = useState(false);
-    const src = raw ? part.image.url : part.box ? registerImageSrc(part.image.url, 256) : displayImageUrl(part.image.url, 640);
+    const src = raw ? part.image.url : part.box ? registerImageSrc(part.image.url, 128) : displayImageUrl(part.image.url, 640);
     return (
         <span
             className={className}
@@ -48,6 +48,7 @@ export default function PdpKitPartImage({
                 alt={alt}
                 draggable={false}
                 decoding="async"
+                loading="lazy"
                 onError={() => { if (src !== part.image.url && markRegisterOptimizerUnavailable(part.image.url)) setRaw(true); }}
                 style={{ position: "absolute", left: crop.left, top: crop.top, width: crop.imgWidth, height: crop.imgHeight, maxWidth: "none", display: "block" }}
             />

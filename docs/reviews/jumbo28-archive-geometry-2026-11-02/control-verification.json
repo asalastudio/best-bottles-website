@@ -1,0 +1,165 @@
+{
+  "states": [
+    {
+      "viewport": "desktop",
+      "cap": "black",
+      "roller": "metal",
+      "sku": "GBMtlRoll28Blk",
+      "body": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+      "selectedRoller": "metal",
+      "selectedCap": "black",
+      "thumbnails": [
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+          "width": 128
+        },
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp",
+          "width": 128
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "cap": "black",
+      "roller": "plastic",
+      "sku": "GBRoll28Blk",
+      "body": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+      "selectedRoller": "plastic",
+      "selectedCap": "black",
+      "thumbnails": [
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+          "width": 128
+        },
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp",
+          "width": 128
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "cap": "white",
+      "roller": "metal",
+      "sku": "GBMtlRoll28Wht",
+      "body": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+      "selectedRoller": "metal",
+      "selectedCap": "white",
+      "thumbnails": [
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+          "width": 128
+        },
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp",
+          "width": 128
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "cap": "white",
+      "roller": "plastic",
+      "sku": "GBCyl1ozRollWht",
+      "body": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+      "selectedRoller": "plastic",
+      "selectedCap": "white",
+      "thumbnails": [
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+          "width": 128
+        },
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp",
+          "width": 128
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "cap": "black",
+      "roller": "metal",
+      "sku": "GBMtlRoll28Blk",
+      "body": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+      "selectedRoller": "metal",
+      "selectedCap": "black",
+      "thumbnails": [
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+          "width": 128
+        },
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp",
+          "width": 128
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "cap": "black",
+      "roller": "plastic",
+      "sku": "GBRoll28Blk",
+      "body": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+      "selectedRoller": "plastic",
+      "selectedCap": "black",
+      "thumbnails": [
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+          "width": 128
+        },
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp",
+          "width": 128
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "cap": "white",
+      "roller": "metal",
+      "sku": "GBMtlRoll28Wht",
+      "body": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+      "selectedRoller": "metal",
+      "selectedCap": "white",
+      "thumbnails": [
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+          "width": 128
+        },
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp",
+          "width": 128
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "cap": "white",
+      "roller": "plastic",
+      "sku": "GBCyl1ozRollWht",
+      "body": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+      "selectedRoller": "plastic",
+      "selectedCap": "white",
+      "thumbnails": [
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+          "width": 128
+        },
+        {
+          "src": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp",
+          "width": 128
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "passed": true
+}

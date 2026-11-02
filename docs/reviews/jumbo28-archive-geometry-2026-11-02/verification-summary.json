@@ -1,0 +1,37 @@
+{
+  "verifiedAt": "2026-11-02T22:46:13.159367+00:00",
+  "unitTests": {
+    "command": "npx vitest run --maxWorkers=4",
+    "passed": 3296,
+    "skipped": 7,
+    "passedFiles": 377,
+    "skippedFiles": 2
+  },
+  "typecheck": {
+    "command": "npx tsc --noEmit --incremental false",
+    "exitCode": 0
+  },
+  "lint": {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "warnings": 124,
+    "errors": 0
+  },
+  "jumbo28": {
+    "desktopMobileViewStates": 48,
+    "interactiveSelections": 8,
+    "normalUrlsWithoutPreviewFlag": true,
+    "distinctRollerTypes": 2,
+    "distinctCaps": 2,
+    "preserved50mlBody": true,
+    "unchangedOtherCylinderRecipes": 105
+  },
+  "vial3": {
+    "desktopMobileProductStates": 18,
+    "actualBuilderEntries": 6,
+    "sharedGlassMasters": 2,
+    "existingOrderableSkus": 3,
+    "newShopifyVariants": 0
+  },
+  "release": "Draft PR preparation. Review image folders excluded from Vercel; hosted approved master manifest unchanged. No merge or production deployment."
+}

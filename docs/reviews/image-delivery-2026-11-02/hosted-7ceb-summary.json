@@ -1,0 +1,54 @@
+{
+  "commit": "7cebdf7b4ec3f85d3bb892a033dbe6374da6fa0a",
+  "deployment": "dpl_BAB8k2m9F8JDdcS2Q6gacjzdTVTr",
+  "ci": "success",
+  "hostedTubeChecks": {
+    "states": 132,
+    "builderApis": 22,
+    "builderPages": 2,
+    "passed": true,
+    "errors": 0
+  },
+  "performanceProfile": "mobile 390x844 DPR2, fast 4G 9Mbps down/1.5Mbps up/80ms RTT, native CPU, empty browser cache",
+  "performance": [
+    {
+      "route": "/products/sleek-8ml-clear-13-415-finemist?cap=matte-gold",
+      "heroReadyMs": 1890.7000000178814,
+      "lcpMs": 1876,
+      "ttfbMs": 173.80000001192093
+    },
+    {
+      "route": "/products/tulip-6ml-clear-13-415-finemist?cap=shiny-silver",
+      "heroReadyMs": 2222.699999988079,
+      "lcpMs": 1924,
+      "ttfbMs": 147.40000000596046
+    },
+    {
+      "route": "/products/cylinder-9ml-frosted-13-415-finemist?cap=matte-black",
+      "heroReadyMs": 2866.800000011921,
+      "lcpMs": 2496,
+      "ttfbMs": 176.40000000596046
+    },
+    {
+      "route": "/products/sleek-8ml-clear-13-415-finemist?cap=matte-gold",
+      "heroReadyMs": 2363.300000011921,
+      "lcpMs": 2384,
+      "ttfbMs": 127.90000000596046
+    },
+    {
+      "route": "/products/tulip-6ml-clear-13-415-finemist?cap=shiny-silver",
+      "heroReadyMs": 2052.100000023842,
+      "lcpMs": 1592,
+      "ttfbMs": 126.80000001192093
+    },
+    {
+      "route": "/products/cylinder-9ml-frosted-13-415-finemist?cap=matte-black",
+      "heroReadyMs": 1777.699999988079,
+      "lcpMs": 1416,
+      "ttfbMs": 122.39999997615814
+    }
+  ],
+  "twoSecondTargetMetConsistently": false,
+  "temporaryAccessRevoked": true,
+  "productionChanged": false
+}

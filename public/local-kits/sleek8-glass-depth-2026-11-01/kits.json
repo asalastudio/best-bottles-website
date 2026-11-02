@@ -1,0 +1,6021 @@
+{
+  "version": "sleek8-80dd51d7543a-v1",
+  "defaultPdpSkus": [
+    "GBSleek8BlkShSht",
+    "GBSleek8BlkSht",
+    "GBSleek8CuSht",
+    "GBSleek8Gl",
+    "GBSleek8GlMattSht",
+    "GBSleek8GlSht",
+    "GBSleek8MtlRollBlkDot",
+    "GBSleek8MtlRollBlkSh",
+    "GBSleek8MtlRollCuMatt",
+    "GBSleek8MtlRollGlMatt",
+    "GBSleek8MtlRollGlSh",
+    "GBSleek8MtlRollPinkDot",
+    "GBSleek8MtlRollSlDot",
+    "GBSleek8MtlRollSlMatt",
+    "GBSleek8MtlRollSlSh",
+    "GBSleek8RollBlkDot",
+    "GBSleek8RollBlkSh",
+    "GBSleek8RollCuMatt",
+    "GBSleek8RollGlMatt",
+    "GBSleek8RollGlSh",
+    "GBSleek8RollPinkDot",
+    "GBSleek8RollSlDot",
+    "GBSleek8RollSlMatt",
+    "GBSleek8RollSlSh",
+    "GBSleek8Sl",
+    "GBSleek8SlMattSht",
+    "GBSleek8SlSht",
+    "GBSleek8SpryBlkMatt",
+    "GBSleek8SpryBlkSh",
+    "GBSleek8SpryBluMatt",
+    "GBSleek8SpryCuMatt",
+    "GBSleek8SpryGlMatt",
+    "GBSleek8SpryGlSh",
+    "GBSleek8SprySlMatt",
+    "GBSleek8SprySlSh",
+    "GBSleek8WhtSht"
+  ],
+  "rows": {
+    "GBSleek8SpryBlkMatt": {
+      "sku": "GBSleek8SpryBlkMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 418.03682805402076,
+            "right": 583.4729911774727,
+            "top": 152.69453807525463,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+            "sha256": "809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f",
+            "bytes": 299364,
+            "width": 524,
+            "height": 1048,
+            "key": "reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.069190907283,
+            "y": 145.73229473739394,
+            "width": 173.72454804947668,
+            "height": 347.44909609895336
+          },
+          "componentId": "CMP-CAP-BLK-13-415-01"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 414.19752719733026,
+            "right": 585.4322725507196,
+            "top": 149.54453807525465,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg",
+            "sha256": "cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd",
+            "bytes": 64030,
+            "width": 217,
+            "height": 394,
+            "key": "reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 408.2636498831039,
+            "y": 142.76296400185305,
+            "width": 183.95019674101727,
+            "height": 333.99252311502676
+          },
+          "componentId": "CMP-CAP-BLK-13-415-01"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-01",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-01",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-BLK-13-415-01"
+        ],
+        "seatSignature": "65d09fa608220f",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8SpryBluMatt": {
+      "sku": "GBSleek8SpryBluMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 421.7945936374742,
+            "right": 580.6898557255289,
+            "top": 169.31915242588468,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0.svg",
+            "sha256": "c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0",
+            "bytes": 838113,
+            "width": 528,
+            "height": 993,
+            "key": "reviewed-master-media/2026-11-01/c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 418.99055960062617,
+            "y": 165.58044037675398,
+            "width": 164.5033301617507,
+            "height": 309.37842206556525
+          },
+          "componentId": "CMP-CAP-13-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 420.04986134787987,
+            "right": 582.1230286776956,
+            "top": 152.51100796445763,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0.svg",
+            "sha256": "5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0",
+            "bytes": 139248,
+            "width": 210,
+            "height": 394,
+            "key": "reviewed-master-media/2026-11-01/5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.03728916242164,
+            "y": 147.4984357789994,
+            "width": 175.4400264910377,
+            "height": 329.1589068450898
+          },
+          "componentId": "CMP-CAP-13-415"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-13-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-13-415",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-13-415"
+        ],
+        "seatSignature": "ab79533b042d22",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8SpryCuMatt": {
+      "sku": "GBSleek8SpryCuMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419.77746771960494,
+            "right": 581.4784037650701,
+            "top": 161.85568330089075,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg",
+            "sha256": "682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600",
+            "bytes": 444974,
+            "width": 555,
+            "height": 1031,
+            "key": "reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.1093935560027,
+            "y": 158.49328198425536,
+            "width": 169.64843006660323,
+            "height": 315.1487052228251
+          },
+          "componentId": "CMP-SPR-MTCP-13-415-07"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 418.61896762960055,
+            "right": 583.553922395975,
+            "top": 155.931095129725,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg",
+            "sha256": "0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627",
+            "bytes": 121536,
+            "width": 214,
+            "height": 395,
+            "key": "reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.121924231129,
+            "y": 149.26705655330585,
+            "width": 178.2630319192127,
+            "height": 329.0369047106964
+          },
+          "componentId": "CMP-SPR-MTCP-13-415-07"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-SPR-MTCP-13-415-07",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-SPR-MTCP-13-415-07",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-SPR-MTCP-13-415-07"
+        ],
+        "seatSignature": "8b2aed7e09a057",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8SpryGlMatt": {
+      "sku": "GBSleek8SpryGlMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.38742503181726,
+            "right": 581.1512880194481,
+            "top": 165.88605386174663,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481.svg",
+            "sha256": "e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481",
+            "bytes": 949858,
+            "width": 525,
+            "height": 976,
+            "key": "reviewed-master-media/2026-11-01/e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 417.53362864742144,
+            "y": 163.34934596450591,
+            "width": 166.47145575642244,
+            "height": 309.47836346336817
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 418.27285910895836,
+            "right": 582.2519993563418,
+            "top": 158.49594815146344,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226.svg",
+            "sha256": "f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226",
+            "bytes": 142776,
+            "width": 214,
+            "height": 396,
+            "key": "reviewed-master-media/2026-11-01/f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.50474864799514,
+            "y": 152.72783769050022,
+            "width": 176.33937694944754,
+            "height": 326.3102489344917
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-02"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-02"
+        ],
+        "seatSignature": "37e7540a097223",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8SprySlMatt": {
+      "sku": "GBSleek8SprySlMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 416.6531921541308,
+            "right": 585.8329938004192,
+            "top": 161.06412707451472,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd.svg",
+            "sha256": "40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd",
+            "bytes": 358123,
+            "width": 562,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.9537532195117,
+            "y": 153.5450247791241,
+            "width": 176.07231208372977,
+            "height": 322.06821498589716
+          },
+          "componentId": "CMP-CAP-SLV-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 413.5040170449454,
+            "right": 586.0674147241596,
+            "top": 146.52593648897135,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc.svg",
+            "sha256": "48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc",
+            "bytes": 55886,
+            "width": 217,
+            "height": 397,
+            "key": "reviewed-master-media/2026-11-01/48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 404.8324895233768,
+            "y": 134.38579795877536,
+            "width": 188.17214721803754,
+            "height": 344.2596426062714
+          },
+          "componentId": "CMP-CAP-SLV-13-415-02"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-02"
+        ],
+        "seatSignature": "f4b6064a01ba93",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8SpryBlkSh": {
+      "sku": "GBSleek8SpryBlkSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 418.5399750819978,
+            "right": 583.3370494599549,
+            "top": 158.4275587885612,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489.svg",
+            "sha256": "d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489",
+            "bytes": 394555,
+            "width": 584,
+            "height": 1085,
+            "key": "reviewed-master-media/2026-11-01/d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6226654095397,
+            "y": 154.28544201784058,
+            "width": 172.78544243577542,
+            "height": 321.01404973084993
+          },
+          "componentId": "CMP-CAP-BLK-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 417.47316650236354,
+            "right": 585.5661823678797,
+            "top": 142.45246975912204,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d.svg",
+            "sha256": "dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d",
+            "bytes": 56369,
+            "width": 235,
+            "height": 394,
+            "key": "reviewed-master-media/2026-11-01/dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.2744134343578,
+            "y": 136.3872578464488,
+            "width": 203.61782849688814,
+            "height": 341.38478479903796
+          },
+          "componentId": "CMP-CAP-BLK-13-415-02"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-BLK-13-415-02"
+        ],
+        "seatSignature": "ae6363900c9e61",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8SpryGlSh": {
+      "sku": "GBSleek8SpryGlSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.3879673724452,
+            "right": 582.0883003886204,
+            "top": 163.25902246307862,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc.svg",
+            "sha256": "a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc",
+            "bytes": 1312217,
+            "width": 570,
+            "height": 1060,
+            "key": "reviewed-master-media/2026-11-01/a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.803523985195,
+            "y": 156.58471228229843,
+            "width": 172.9253092293054,
+            "height": 321.5803996194101
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-03"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 419.0421837378115,
+            "right": 583.97652341431,
+            "top": 147.71758782939645,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33.svg",
+            "sha256": "2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33",
+            "bytes": 144369,
+            "width": 210,
+            "height": 397,
+            "key": "reviewed-master-media/2026-11-01/2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.1214638519885,
+            "y": 140.95105081702724,
+            "width": 177.62159657469078,
+            "height": 335.7893992388202
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-03"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-03",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-03",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-03"
+        ],
+        "seatSignature": "66c6bca21904a7",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8SprySlSh": {
+      "sku": "GBSleek8SprySlSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.3879673724452,
+            "right": 582.0883003886204,
+            "top": 163.25902246307862,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7.svg",
+            "sha256": "3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7",
+            "bytes": 829486,
+            "width": 570,
+            "height": 1060,
+            "key": "reviewed-master-media/2026-11-01/3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.803523985195,
+            "y": 156.58471228229843,
+            "width": 172.9253092293054,
+            "height": 321.5803996194101
+          },
+          "componentId": "CMP-CAP-SLV-13-415-03"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 419.05331291052926,
+            "right": 583.9876525870277,
+            "top": 141.84138463444424,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866.svg",
+            "sha256": "0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866",
+            "bytes": 64742,
+            "width": 206,
+            "height": 393,
+            "key": "reviewed-master-media/2026-11-01/0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.8448600786398,
+            "y": 136.63293180255482,
+            "width": 178.82354722820375,
+            "height": 341.15366048875757
+          },
+          "componentId": "CMP-CAP-SLV-13-415-03"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-03",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-03",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-03"
+        ],
+        "seatSignature": "a0f1f4f01e3401",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8MtlRollBlkDot": {
+      "sku": "GBSleek8MtlRollBlkDot",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png",
+            "key": "reviewed-master-media/2026-11-01/afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png",
+            "sha256": "afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e",
+            "bytes": 188848,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-BLK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-BLK-13415-DOT"
+        ],
+        "seatSignature": "05210b420c5887",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8MtlRollCuMatt": {
+      "sku": "GBSleek8MtlRollCuMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png",
+            "key": "reviewed-master-media/2026-11-01/9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png",
+            "sha256": "9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8",
+            "bytes": 183525,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MCPR-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-MCPR-13415"
+        ],
+        "seatSignature": "3505ae9a054fc1",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8MtlRollGlMatt": {
+      "sku": "GBSleek8MtlRollGlMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png",
+            "key": "reviewed-master-media/2026-11-01/40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png",
+            "sha256": "40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf",
+            "bytes": 181703,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-MGLD-13415"
+        ],
+        "seatSignature": "32cb099c1b6137",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8MtlRollSlMatt": {
+      "sku": "GBSleek8MtlRollSlMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png",
+            "key": "reviewed-master-media/2026-11-01/023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png",
+            "sha256": "023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153",
+            "bytes": 183056,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-MSLV-13415"
+        ],
+        "seatSignature": "fdb9901d0fcbaa",
+        "seatDropMm": 1.71
+      }
+    },
+    "GBSleek8MtlRollPinkDot": {
+      "sku": "GBSleek8MtlRollPinkDot",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png",
+            "key": "reviewed-master-media/2026-11-01/f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png",
+            "sha256": "f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1",
+            "bytes": 211964,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-PNK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-PNK-13415-DOT"
+        ],
+        "seatSignature": "365428a20cc6eb",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8MtlRollBlkSh": {
+      "sku": "GBSleek8MtlRollBlkSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png",
+            "key": "reviewed-master-media/2026-11-01/a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png",
+            "sha256": "a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8",
+            "bytes": 170243,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-SBLK-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SBLK-13415"
+        ],
+        "seatSignature": "dc115d3d03c0de",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8MtlRollGlSh": {
+      "sku": "GBSleek8MtlRollGlSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.87209959693246,
+            "right": 589.300790428643,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+            "key": "reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.7717580394121,
+            "y": 203.65060354989606,
+            "width": 180.62937394675134,
+            "height": 268.4236510511026
+          },
+          "componentId": "CMP-ROC-SGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SGLD-13415"
+        ],
+        "seatSignature": "14363ad118e46a",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8MtlRollSlSh": {
+      "sku": "GBSleek8MtlRollSlSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.87209959693246,
+            "right": 589.300790428643,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+            "key": "reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.7717580394121,
+            "y": 203.65060354989606,
+            "width": 180.62937394675134,
+            "height": 268.4236510511026
+          },
+          "componentId": "CMP-ROC-SSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SSLV-13415"
+        ],
+        "seatSignature": "73b713e4177fff",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8MtlRollSlDot": {
+      "sku": "GBSleek8MtlRollSlDot",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png",
+            "key": "reviewed-master-media/2026-11-01/e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png",
+            "sha256": "e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86",
+            "bytes": 200985,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-SLV-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SLV-13415-DOT"
+        ],
+        "seatSignature": "ed817b1515077c",
+        "seatDropMm": 1.24
+      }
+    },
+    "GBSleek8RollBlkDot": {
+      "sku": "GBSleek8RollBlkDot",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png",
+            "key": "reviewed-master-media/2026-11-01/afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png",
+            "sha256": "afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e",
+            "bytes": 188848,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-BLK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-BLK-13415-DOT"
+        ],
+        "seatSignature": "05210b420c5887",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8RollCuMatt": {
+      "sku": "GBSleek8RollCuMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png",
+            "key": "reviewed-master-media/2026-11-01/9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png",
+            "sha256": "9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8",
+            "bytes": 183525,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MCPR-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-MCPR-13415"
+        ],
+        "seatSignature": "3505ae9a054fc1",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8RollGlMatt": {
+      "sku": "GBSleek8RollGlMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png",
+            "key": "reviewed-master-media/2026-11-01/40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png",
+            "sha256": "40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf",
+            "bytes": 181703,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-MGLD-13415"
+        ],
+        "seatSignature": "32cb099c1b6137",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8RollSlMatt": {
+      "sku": "GBSleek8RollSlMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png",
+            "key": "reviewed-master-media/2026-11-01/023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png",
+            "sha256": "023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153",
+            "bytes": 183056,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-MSLV-13415"
+        ],
+        "seatSignature": "fdb9901d0fcbaa",
+        "seatDropMm": 1.71
+      }
+    },
+    "GBSleek8RollPinkDot": {
+      "sku": "GBSleek8RollPinkDot",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png",
+            "key": "reviewed-master-media/2026-11-01/f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png",
+            "sha256": "f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1",
+            "bytes": 211964,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-PNK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-PNK-13415-DOT"
+        ],
+        "seatSignature": "365428a20cc6eb",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8RollBlkSh": {
+      "sku": "GBSleek8RollBlkSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png",
+            "key": "reviewed-master-media/2026-11-01/a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png",
+            "sha256": "a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8",
+            "bytes": 170243,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-SBLK-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SBLK-13415"
+        ],
+        "seatSignature": "dc115d3d03c0de",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8RollGlSh": {
+      "sku": "GBSleek8RollGlSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.87209959693246,
+            "right": 589.300790428643,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+            "key": "reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.7717580394121,
+            "y": 203.65060354989606,
+            "width": 180.62937394675134,
+            "height": 268.4236510511026
+          },
+          "componentId": "CMP-ROC-SGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SGLD-13415"
+        ],
+        "seatSignature": "14363ad118e46a",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8RollSlSh": {
+      "sku": "GBSleek8RollSlSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.87209959693246,
+            "right": 589.300790428643,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+            "key": "reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.7717580394121,
+            "y": 203.65060354989606,
+            "width": 180.62937394675134,
+            "height": 268.4236510511026
+          },
+          "componentId": "CMP-ROC-SSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SSLV-13415"
+        ],
+        "seatSignature": "73b713e4177fff",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8RollSlDot": {
+      "sku": "GBSleek8RollSlDot",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 436.82644501278776,
+            "right": 565.3464450127877,
+            "top": 253.5653125,
+            "bottom": 459.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": "reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.39832001278774,
+            "y": 233.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 413.0821337526845,
+            "right": 589.5108245843951,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png",
+            "key": "reviewed-master-media/2026-11-01/e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png",
+            "sha256": "e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86",
+            "bytes": 200985,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6620654411804,
+            "y": 205.33087679591233,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-SLV-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SLV-13415-DOT"
+        ],
+        "seatSignature": "ed817b1515077c",
+        "seatDropMm": 1.24
+      }
+    },
+    "GBSleek8BlkSht": {
+      "sku": "GBSleek8BlkSht",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.5880075127878,
+            "top": 337.64,
+            "right": 588.7380075127878,
+            "bottom": 448.58
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -119.58
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+            "key": "",
+            "sha256": "3d1708c859fe8040acc9e79d5a79dc4219d1549e3849d46003d0c2188aba7651",
+            "bytes": 140430,
+            "width": 624,
+            "height": 393
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.5880075127878,
+            "y": 337.64,
+            "width": 176.15,
+            "height": 110.94
+          },
+          "componentId": "CMP-CAP-BLK-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-BLK-S-13-415"
+        ],
+        "seatSignature": "f3b4d0a000245f",
+        "seatDropMm": 0
+      }
+    },
+    "GBSleek8CuSht": {
+      "sku": "GBSleek8CuSht",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 417.28628621055594,
+            "right": 585.3066547363339,
+            "top": 288.93196595695247,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+            "key": "reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+            "sha256": "32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772",
+            "bytes": 119746,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 417.28628621055594,
+            "y": 288.93196595695247,
+            "width": 168.44041944709247,
+            "height": 181.0419470865258
+          },
+          "componentId": "CMP-CLS-MTCP-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CLS-MTCP-S-13-415"
+        ],
+        "seatSignature": "26512f31136abc",
+        "seatDropMm": 0
+      }
+    },
+    "GBSleek8GlMattSht": {
+      "sku": "GBSleek8GlMattSht",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 417.28628621055594,
+            "right": 585.3066547363339,
+            "top": 288.93196595695247,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+            "key": "reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+            "sha256": "fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104",
+            "bytes": 119914,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 417.28628621055594,
+            "y": 288.93196595695247,
+            "width": 168.44041944709247,
+            "height": 181.0419470865258
+          },
+          "componentId": "CMP-CLS-MTGD-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CLS-MTGD-S-13-415"
+        ],
+        "seatSignature": "44036e59077b90",
+        "seatDropMm": 0
+      }
+    },
+    "GBSleek8SlMattSht": {
+      "sku": "GBSleek8SlMattSht",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 417.28628621055594,
+            "right": 585.3066547363339,
+            "top": 288.93196595695247,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+            "key": "reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+            "sha256": "c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a",
+            "bytes": 120747,
+            "width": 401,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 417.28628621055594,
+            "y": 288.93196595695247,
+            "width": 168.44041944709247,
+            "height": 181.0419470865258
+          },
+          "componentId": "CMP-CLS-MTSL-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CLS-MTSL-S-13-415"
+        ],
+        "seatSignature": "a1d34986043f57",
+        "seatDropMm": 0
+      }
+    },
+    "GBSleek8BlkShSht": {
+      "sku": "GBSleek8BlkShSht",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 417.28611278451064,
+            "right": 585.3068290316828,
+            "top": 288.93159128715024,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+            "key": "reviewed-master-media/2026-11-01/672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+            "sha256": "672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84",
+            "bytes": 114848,
+            "width": 402,
+            "height": 431
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.86606099389275,
+            "y": 288.93159128715024,
+            "width": 168.86081982840798,
+            "height": 181.042321756328
+          },
+          "componentId": "CMP-CAP-SBLK-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SBLK-13-415"
+        ],
+        "seatSignature": "081fa7610b3a8c",
+        "seatDropMm": 0
+      }
+    },
+    "GBSleek8GlSht": {
+      "sku": "GBSleek8GlSht",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 417.07608688920163,
+            "right": 585.0968031363738,
+            "top": 288.93159128715024,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png",
+            "key": "reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png",
+            "sha256": "f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e",
+            "bytes": 2186433,
+            "width": 1230,
+            "height": 1320
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 414.975827936112,
+            "y": 286.8313323340606,
+            "width": 172.22123415335142,
+            "height": 184.82278787188935
+          },
+          "componentId": "CMP-CLS-SHGD-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CLS-SHGD-S-13-415"
+        ],
+        "seatSignature": "e67cb43e15c46f",
+        "seatDropMm": 0
+      }
+    },
+    "GBSleek8SlSht": {
+      "sku": "GBSleek8SlSht",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 417.07608688920163,
+            "right": 585.0968031363738,
+            "top": 288.93159128715024,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png",
+            "key": "reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png",
+            "sha256": "e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a",
+            "bytes": 1927768,
+            "width": 1230,
+            "height": 1320
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 414.975827936112,
+            "y": 286.8313323340606,
+            "width": 172.22123415335142,
+            "height": 184.82278787188935
+          },
+          "componentId": "CMP-CLS-SHSL-S-13-415-02"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CLS-SHSL-S-13-415-02"
+        ],
+        "seatSignature": "8bb266d60aa45d",
+        "seatDropMm": 0
+      }
+    },
+    "GBSleek8WhtSht": {
+      "sku": "GBSleek8WhtSht",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.5796667033779,
+            "top": 347.56,
+            "right": 590.1596667033779,
+            "bottom": 456.32
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -127.32
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+            "key": "",
+            "sha256": "6e7bc75b61e406c5b0b30def16404e064edc08c2cd1f66b0ea81534f624405b2",
+            "bytes": 106583,
+            "width": 627,
+            "height": 384
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.5796667033779,
+            "y": 347.56,
+            "width": 177.58,
+            "height": 108.76
+          },
+          "componentId": "CMP-CAP-WHT-S-13-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-WHT-S-13-415"
+        ],
+        "seatSignature": "e65cc7900aa763",
+        "seatDropMm": 0
+      }
+    },
+    "GBSleek8Gl": {
+      "sku": "GBSleek8Gl",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.87209959693246,
+            "right": 589.300790428643,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+            "key": "reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.7717580394121,
+            "y": 203.65060354989606,
+            "width": 180.62937394675134,
+            "height": 268.4236510511026
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-01"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-01"
+        ],
+        "seatSignature": "d1dd8d5d01fa66",
+        "seatDropMm": 1.24
+      }
+    },
+    "GBSleek8Sl": {
+      "sku": "GBSleek8Sl",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+            "key": "body-sleek8-refined.80dd51d7543a.svg",
+            "sha256": "80dd51d7543a526f7f72b3d9f70d6073c0bdb860edb76a4aee5444e0d215fc6e",
+            "bytes": 2771373,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 412.87209959693246,
+            "right": 589.300790428643,
+            "top": 205.75094510741638,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+            "key": "reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.7717580394121,
+            "y": 203.65060354989606,
+            "width": 180.62937394675134,
+            "height": 268.4236510511026
+          },
+          "componentId": "CMP-CAP-SLV-13-415-01"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-01"
+        ],
+        "seatSignature": "edaa5baf0d26ce",
+        "seatDropMm": 1.33
+      }
+    }
+  }
+}

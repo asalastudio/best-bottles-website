@@ -1,0 +1,321 @@
+{
+  "status": "candidate-review",
+  "sourceLayers": [
+    {
+      "name": "copper-pump-original",
+      "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/8. 18-415 Lotion/16. Ltn18-415Cu.psd",
+      "psdSha256": "e2ccc9139c6e8d3adaae3c1802676c68d1c030ff8b274bf998b0e53529cccaa9",
+      "layer": "Layer 1",
+      "bbox": [
+        92,
+        -11,
+        308,
+        396
+      ],
+      "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/copper-pump-original.png",
+      "size": [
+        216,
+        407
+      ],
+      "sha256": "a2db04263622f51642d133bb99a15f309b14b3e0580fc424b23594e07cdd9866",
+      "status": "unaltered native PSD layer export"
+    },
+    {
+      "name": "matte-gold-pump-original",
+      "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/8. 18-415 Lotion/16. Ltn18-415MtGl.psd",
+      "psdSha256": "427693d148f0e97bb99289f5a0783c38c0b0a25a28d53e88b2bc99f0ce1adde5",
+      "layer": "Layer 1 copy",
+      "bbox": [
+        85,
+        -1,
+        309,
+        401
+      ],
+      "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/matte-gold-pump-original.png",
+      "size": [
+        224,
+        402
+      ],
+      "sha256": "f0ab82b1bbace58bf70519f014908f8fae8f72a8e7bab19e19f4a82ae208b9a4",
+      "status": "unaltered native PSD layer export"
+    },
+    {
+      "name": "shiny-silver-pump-original",
+      "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/8. 18-415 Lotion/21. Ltn18-415ShnSl.psd",
+      "psdSha256": "8ac632f6ac78b0f4e26071a500a1865c6c2e1751966f75e15ba6c095ab608abf",
+      "layer": "Layer 2 copy",
+      "bbox": [
+        89,
+        0,
+        308,
+        395
+      ],
+      "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/shiny-silver-pump-original.png",
+      "size": [
+        219,
+        395
+      ],
+      "sha256": "84302d4511bfc0e5e11e58f38784c628822bcb48734d47c064fa3e26f6039976",
+      "status": "unaltered native PSD layer export"
+    },
+    {
+      "name": "25ml-lotion-mechanism-original",
+      "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd",
+      "psdSha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5",
+      "layer": "Layer 19",
+      "bbox": [
+        778,
+        765,
+        927,
+        1601
+      ],
+      "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/25ml-lotion-mechanism-original.png",
+      "size": [
+        149,
+        836
+      ],
+      "sha256": "a3a849811e1a51e84b34579c0d03bfa74353ead613d4ac88e2bf2f65ad1b7684",
+      "status": "unaltered native PSD layer export"
+    },
+    {
+      "name": "25ml-lotion-head-original",
+      "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd",
+      "psdSha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5",
+      "layer": "Layer 21",
+      "bbox": [
+        704,
+        221,
+        1021,
+        773
+      ],
+      "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/25ml-lotion-head-original.png",
+      "size": [
+        317,
+        552
+      ],
+      "sha256": "07c5555d93a826e3671da70252dd44dc9bfdc496d40612c36368c5e278a3a8e4",
+      "status": "unaltered native PSD layer export"
+    },
+    {
+      "name": "25ml-glass-original",
+      "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd",
+      "psdSha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5",
+      "layer": "Layer 25",
+      "bbox": [
+        636,
+        553,
+        1093,
+        1707
+      ],
+      "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/25ml-glass-original.png",
+      "size": [
+        457,
+        1154
+      ],
+      "sha256": "638388637c45152c182f6cbe85c5850e039171603b50bf61fc862b3b1097443f",
+      "status": "unaltered native PSD layer export"
+    },
+    {
+      "name": "25ml-matte-gold-overcap-original",
+      "psdPath": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd",
+      "psdSha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5",
+      "layer": "Layer 22",
+      "bbox": [
+        1203,
+        1120,
+        1541,
+        1704
+      ],
+      "file": "docs/reviews/cylinder25-material-cleanup-2026-11-02/sources/25ml-matte-gold-overcap-original.png",
+      "size": [
+        338,
+        584
+      ],
+      "sha256": "2c585c75a573a3133be77f7617f33e9f9a65b25c85814d06d474d640c72e2d9d",
+      "status": "unaltered native PSD layer export"
+    }
+  ],
+  "registration": {
+    "version": "ddb3216a07e8a478",
+    "status": "candidate-not-approved",
+    "image": {
+      "file": "public/local-kits/cylinder25-material-cleanup-2026-11-02/body-cylinder-25ml-clear.e0b0f790a992.png",
+      "sha256": "e0b0f790a9920a6beb3b1c8f7785637b57ddfa3ff96aaa0142d2f11da42c5c51",
+      "bytes": 1190237,
+      "width": 851,
+      "height": 1849,
+      "rimY": 123,
+      "baselineY": 1768,
+      "axisX": 420.4345238095238
+    },
+    "source": "docs/reviews/gpt-master-library-2026-10-31/recovered-master-lock.json",
+    "target": {
+      "shoulderSpanPct": 46.5,
+      "baselinePct": 91
+    },
+    "configurations": 36,
+    "heldTasselConfigurations": 9,
+    "preserved": [
+      "body bounds",
+      "glassSizing",
+      "canvas",
+      "anchors",
+      "neck finish",
+      "head artwork",
+      "tube material and endpoint",
+      "other closures"
+    ],
+    "capChange": "Copper overcap alone; visible width, axis and bottom retained, source white scraps excluded; new cap is uniformly scaled.",
+    "generatedWith": "built-in image editor; model version not exposed"
+  },
+  "validation": {
+    "unitPassed": 3276,
+    "unitSkipped": 7,
+    "unitFailed": 0,
+    "typecheck": "passed",
+    "scopedLint": "passed",
+    "browserStates": 58,
+    "builderApis": 10,
+    "browserErrors": 0,
+    "browserPassed": true,
+    "candidateNotApproved": true,
+    "actualBuilderPages": 1
+  },
+  "pixelCheck": {
+    "copperCap": [
+      {
+        "source": "original",
+        "opaqueWhitePixelsAboveRim": 9346
+      },
+      {
+        "source": "clean",
+        "opaqueWhitePixelsAboveRim": 0
+      }
+    ],
+    "originalsPreserved": true,
+    "bodyRegistration": "one uniform transform from native rim 123 and foot 1768 to stage datum 261 and 1061",
+    "scaleTarget": {
+      "heightPct": 46.5,
+      "baselinePct": 91
+    }
+  },
+  "builder": {
+    "candidateBodyRendered": true,
+    "body": [
+      "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75"
+    ],
+    "cap": [
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/256-63d163247a79ff9dcd2d7f825cc8e0744cd10750e56215bc69c9d8c4f842ec0a.webp",
+      "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp"
+    ]
+  },
+  "driveArchive": {
+    "folder": {
+      "id": "18OTIo2bJpu8ftRhQDWFtlskgmIK7djwl",
+      "url": "https://drive.google.com/drive/folders/18OTIo2bJpu8ftRhQDWFtlskgmIK7djwl"
+    },
+    "files": [
+      {
+        "id": "1Z1qLCf2bhRMw38VcToDuBlmMHGpo2bSk",
+        "name": "Cylinder 25 ml 18-415 - Clear Body - v2 - REVIEW.png",
+        "url": "https://drive.google.com/file/d/1Z1qLCf2bhRMw38VcToDuBlmMHGpo2bSk/view?usp=drivesdk",
+        "verified": {
+          "id": "1Z1qLCf2bhRMw38VcToDuBlmMHGpo2bSk",
+          "title": "Cylinder 25 ml 18-415 - Clear Body - v2 - REVIEW.png",
+          "mime_type": null,
+          "size": "1190237",
+          "url": "https://drive.google.com/file/d/1Z1qLCf2bhRMw38VcToDuBlmMHGpo2bSk/view?usp=drivesdk",
+          "display_url": "https://drive.google.com/file/d/1Z1qLCf2bhRMw38VcToDuBlmMHGpo2bSk/view?usp=drivesdk",
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "18OTIo2bJpu8ftRhQDWFtlskgmIK7djwl"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        }
+      },
+      {
+        "id": "1Z_dDmXUSia0CivDD0RZeffQypXjxTbEU",
+        "name": "Cylinder 25 ml 18-415 - Matte Copper Overcap - v1 - REVIEW.png",
+        "url": "https://drive.google.com/file/d/1Z_dDmXUSia0CivDD0RZeffQypXjxTbEU/view?usp=drivesdk",
+        "verified": {
+          "id": "1Z_dDmXUSia0CivDD0RZeffQypXjxTbEU",
+          "title": "Cylinder 25 ml 18-415 - Matte Copper Overcap - v1 - REVIEW.png",
+          "mime_type": null,
+          "size": "1960607",
+          "url": "https://drive.google.com/file/d/1Z_dDmXUSia0CivDD0RZeffQypXjxTbEU/view?usp=drivesdk",
+          "display_url": "https://drive.google.com/file/d/1Z_dDmXUSia0CivDD0RZeffQypXjxTbEU/view?usp=drivesdk",
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "18OTIo2bJpu8ftRhQDWFtlskgmIK7djwl"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        }
+      },
+      {
+        "id": "11f8ecCJhFSlU1IXTLH62hOacCwDc6p75",
+        "name": "Best Bottles - Cylinder 25 ml 18-415 - PSD Sources and Material Review - 2026-11-02.zip",
+        "url": "https://drive.google.com/file/d/11f8ecCJhFSlU1IXTLH62hOacCwDc6p75/view?usp=drivesdk",
+        "verified": {
+          "id": "11f8ecCJhFSlU1IXTLH62hOacCwDc6p75",
+          "title": "Best Bottles - Cylinder 25 ml 18-415 - PSD Sources and Material Review - 2026-11-02.zip",
+          "mime_type": null,
+          "size": "10391090",
+          "url": "https://drive.google.com/file/d/11f8ecCJhFSlU1IXTLH62hOacCwDc6p75/view?usp=drivesdk",
+          "display_url": "https://drive.google.com/file/d/11f8ecCJhFSlU1IXTLH62hOacCwDc6p75/view?usp=drivesdk",
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "18OTIo2bJpu8ftRhQDWFtlskgmIK7djwl"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        }
+      },
+      {
+        "id": "1CG6FXcva4TZS2HXmtRzuFUkWRQ-pNRQQ",
+        "name": "PR388 7ceb - Hosted Lotion Tube and Image Checks - 2026-11-02.zip",
+        "url": "https://drive.google.com/file/d/1CG6FXcva4TZS2HXmtRzuFUkWRQ-pNRQQ/view?usp=drivesdk",
+        "verified": {
+          "id": "1CG6FXcva4TZS2HXmtRzuFUkWRQ-pNRQQ",
+          "title": "PR388 7ceb - Hosted Lotion Tube and Image Checks - 2026-11-02.zip",
+          "mime_type": null,
+          "size": "3049147",
+          "url": "https://drive.google.com/file/d/1CG6FXcva4TZS2HXmtRzuFUkWRQ-pNRQQ/view?usp=drivesdk",
+          "display_url": "https://drive.google.com/file/d/1CG6FXcva4TZS2HXmtRzuFUkWRQ-pNRQQ/view?usp=drivesdk",
+          "file_or_folder": null,
+          "created_time": null,
+          "modified_time": null,
+          "parent_ids": [
+            "1Rr4HBUIvmTFlr8LK5iV2gZEucG1l6BML"
+          ],
+          "drive_id": null,
+          "current_user_can_share": null,
+          "has_augmented_permissions": null,
+          "shared": null,
+          "permissions": null,
+          "source_visibility_status": "access_not_verified"
+        }
+      }
+    ],
+    "status": "Review candidates; visual approval pending"
+  }
+}

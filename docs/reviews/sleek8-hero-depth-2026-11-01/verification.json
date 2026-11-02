@@ -1,0 +1,823 @@
+{
+  "status": "passed",
+  "version": "16625b508a08fa33",
+  "hostedRecipes": [
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "passed": true,
+      "bodyImage": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+      "tubeOpacity": 0.4
+    },
+    {
+      "sku": "GBSleek8SpryBlkSh",
+      "passed": true,
+      "bodyImage": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+      "tubeOpacity": 0.4
+    },
+    {
+      "sku": "GBSleek8SpryBluMatt",
+      "passed": true,
+      "bodyImage": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+      "tubeOpacity": 0.4
+    },
+    {
+      "sku": "GBSleek8SpryCuMatt",
+      "passed": true,
+      "bodyImage": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+      "tubeOpacity": 0.4
+    },
+    {
+      "sku": "GBSleek8SpryGlMatt",
+      "passed": true,
+      "bodyImage": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+      "tubeOpacity": 0.4
+    },
+    {
+      "sku": "GBSleek8SpryGlSh",
+      "passed": true,
+      "bodyImage": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+      "tubeOpacity": 0.4
+    },
+    {
+      "sku": "GBSleek8SprySlMatt",
+      "passed": true,
+      "bodyImage": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+      "tubeOpacity": 0.4
+    },
+    {
+      "sku": "GBSleek8SprySlSh",
+      "passed": true,
+      "bodyImage": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+      "tubeOpacity": 0.4
+    }
+  ],
+  "localPdp": [
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkMatt",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkMatt",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkMatt",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkSh",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkSh",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkSh",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBluMatt",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBluMatt",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBluMatt",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryCuMatt",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryCuMatt",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryCuMatt",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlMatt",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlMatt",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlMatt",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlSh",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlSh",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlSh",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlMatt",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlMatt",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlMatt",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlSh",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlSh",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlSh",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkMatt",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkMatt",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkMatt",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkSh",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkSh",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkSh",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBluMatt",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBluMatt",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBluMatt",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryCuMatt",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryCuMatt",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryCuMatt",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlMatt",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlMatt",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlMatt",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlSh",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlSh",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlSh",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlMatt",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlMatt",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlMatt",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlSh",
+      "view": "sidecar",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlSh",
+      "view": "capon",
+      "bodyBlend": "multiply",
+      "bodyZ": 2,
+      "tubeZ": 1,
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlSh",
+      "view": "exploded",
+      "bodyBlend": "multiply",
+      "bodyZ": 1,
+      "tubeZ": 2,
+      "tubeOpacity": "",
+      "tubeBlend": "",
+      "overflow": false
+    }
+  ],
+  "localCatalog": [
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBlkMatt"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBlkSh"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBluMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBluMatt"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryCuMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryCuMatt"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryGlMatt"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryGlSh"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SprySlMatt"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SprySlSh"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBlkMatt"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBlkSh"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBluMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBluMatt"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryCuMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryCuMatt"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryGlMatt"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryGlSh"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SprySlMatt"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "bodyIndex": 1,
+      "tubeIndex": 0,
+      "bodyBlend": "multiply",
+      "tubeOpacity": "0.4",
+      "tubeBlend": "multiply",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SprySlSh"
+    }
+  ],
+  "builders": [
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryBlkMatt",
+      "passed": true
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryBlkSh",
+      "passed": true
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryBluMatt",
+      "passed": true
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryCuMatt",
+      "passed": true
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryGlMatt",
+      "passed": true
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryGlSh",
+      "passed": true
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SprySlMatt",
+      "passed": true
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SprySlSh",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBSleek8SpryGlMatt",
+      "tubeIndex": 0,
+      "bodyIndex": 1,
+      "opacity": "0.4",
+      "blend": "multiply",
+      "bodyBlend": "multiply"
+    },
+    {
+      "kind": "page",
+      "sku": "GBSleek8SpryBlkSh",
+      "tubeIndex": 0,
+      "bodyIndex": 1,
+      "opacity": "0.4",
+      "blend": "multiply",
+      "bodyBlend": "multiply"
+    }
+  ],
+  "errors": []
+}

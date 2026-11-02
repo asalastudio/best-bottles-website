@@ -33,8 +33,12 @@ import {
     type PdpStageFrame,
     type StageBounds,
 } from "@/lib/products/pdp-stage-frame";
+import { isTolaApplicator, tolaAssemblyLayout } from "../tola-applicator";
+import { rectangleApplicatorGlass } from "../rectangle-applicator";
 import { allowsExplodedClosure, hangsBesideGlass, requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { placeStageBackdrop, stageBackdropFor, type StageBackdropPlacement } from "./stage-backdrops";
+
+import { sprayerPlugMask } from "../sprayer-glass-transmission";
 
 export type StageView = "sidecar" | "capon" | "exploded";
 
@@ -86,6 +90,8 @@ export type KitLike = {
 };
 
 export type StagePart = {
+    /** Optical transmission applied only while the mechanism is seated in glass. */
+    maskImage?: string;
     opacity?: number;
     blendMode?: "multiply";
     key: string;
@@ -155,6 +161,10 @@ function separableReducer(kit: KitLike | null | undefined, context: StageContext
 
 /** Which views the stage can honestly show for this SKU. */
 export function availableViews(kit: KitLike | null | undefined, context: StageContext): StageView[] {
+    if (isTolaApplicator(context.websiteSku)) return ["capon"];
+    // Only a seated stopper-and-wand photograph is registered for this set.
+    if (rectangleApplicatorGlass(context.websiteSku)) return ["capon"];
+    if (requiresAssembledClosure(context.applicator, context.websiteSku) && !separableReducer(kit, context)) return ["capon"];
     const views: StageView[] = ["sidecar"];
     if (!kit?.parts?.length) return views;
     if (context.applicator?.trim().toLowerCase() === "reducer" && !separableReducer(kit, context)) return ["capon"];
@@ -165,6 +175,7 @@ export function availableViews(kit: KitLike | null | undefined, context: StageCo
 
 /** Keep complete tops assembled unless the reducer kit explicitly supplies the separate insert. */
 export function effectiveView(view: StageView, kit: KitLike | null | undefined, context: StageContext): StageView {
+    if (isTolaApplicator(context.websiteSku)) return "capon";
     if (!kit?.parts?.length) return "sidecar";
     if (view === "sidecar" && !separableReducer(kit, context) && requiresAssembledClosure(context.applicator, context.websiteSku)) return "capon";
     if (view === "exploded" && !separableReducer(kit, context, true) && !allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) return "capon";
@@ -277,6 +288,7 @@ export function stageLayout(
     /** The kit's `glassFrame` on its page, so every SKU of the glass shares this frame. */
     options: Partial<GlassFrame> = {},
 ): StageLayout | null {
+    if (isTolaApplicator(context.websiteSku)) return tolaAssemblyLayout();
     if (!kit?.parts?.length) return null;
     const canvas = kit.canvas ?? PDP_PLATE_CANVAS;
     const view = effectiveView(requested, kit, context);
@@ -349,6 +361,7 @@ export function stageLayout(
             zIndex: index + 1,
             opacity: part.opacity,
             blendMode: part.blendMode,
+            maskImage: sprayerPlugMask(kit, part, view),
             ...(part.box ? {
                 box: {
                     leftPct: (part.box.x / canvas.width) * 100,

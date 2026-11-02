@@ -1,0 +1,22 @@
+{
+  "version": "ed1e3c6faae97332",
+  "configurations": 463,
+  "addedSkus": [
+    "GBCyl1ozRollWht",
+    "GBMtlRoll28Blk",
+    "GBMtlRoll28Wht",
+    "GBRoll28Blk",
+    "GBVBlu1o9BlackCapSht",
+    "GBVGreen2o4BlackCapSht",
+    "GBVGreen2o4WhtCapSht"
+  ],
+  "preservedRecipes": 456,
+  "preservedRecipeSha256": "138b3297d4f42d39008164fc7ae22afc7a454154ea53f812e4a495dfd2411f05",
+  "losslessChecks": 36,
+  "verifiedHostedObjects": 45,
+  "sourceImagesChanged": false,
+  "registrationChanged": false,
+  "productionDataMutated": false,
+  "merged": false,
+  "deployed": false
+}

@@ -1,0 +1,1641 @@
+{
+  "version": "2f39677801353ddd",
+  "status": "review-candidates-not-production",
+  "scopeRows": 507,
+  "glassRows": 504,
+  "preparedRows": 109,
+  "held": [
+    {
+      "sku": "GBCyl50AnSpTslBlk",
+      "bodyId": "cylinder-50ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl50AnSpTslLvn",
+      "bodyId": "cylinder-50ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl50AnSpTslIvyGl",
+      "bodyId": "cylinder-50ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl50AnSpTslIvySl",
+      "bodyId": "cylinder-50ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl50AnSpTslWht",
+      "bodyId": "cylinder-50ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl50AnSpTslPnk",
+      "bodyId": "cylinder-50ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl50AnSpTslRed",
+      "bodyId": "cylinder-50ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl50AnSpTslMtSl",
+      "bodyId": "cylinder-50ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl50AnSpTslGl",
+      "bodyId": "cylinder-50ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl100AnSpTslBlk",
+      "bodyId": "cylinder-100ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl100AnSpTslLvn",
+      "bodyId": "cylinder-100ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl100AnSpTslIvyGl",
+      "bodyId": "cylinder-100ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl100AnSpTslIvySl",
+      "bodyId": "cylinder-100ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl100AnSpTslWht",
+      "bodyId": "cylinder-100ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl100AnSpTslPnk",
+      "bodyId": "cylinder-100ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl100AnSpTslRed",
+      "bodyId": "cylinder-100ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl100AnSpTslMtSl",
+      "bodyId": "cylinder-100ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl100AnSpTslGl",
+      "bodyId": "cylinder-100ml-18-415",
+      "reason": "tassel-source-and-frame-reconciliation",
+      "detail": "The shared hanging artwork needs exact collar-color and fixed-frame reconciliation. This recipe was not substituted or silently scaled."
+    },
+    {
+      "sku": "GBCyl25DrpCu",
+      "bodyId": "cylinder-25ml-18-415",
+      "reason": "25ml-fitment-scope",
+      "detail": "Imported Dropper row is outside Jordan's confirmed 25 ml reducer, sprayer, lotion, bulb and tassel set. Original record and artwork remain preserved for reconciliation."
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "bodyId": "cylinder-25ml-18-415",
+      "reason": "25ml-fitment-scope",
+      "detail": "Imported Dropper row is outside Jordan's confirmed 25 ml reducer, sprayer, lotion, bulb and tassel set. Original record and artwork remain preserved for reconciliation."
+    },
+    {
+      "sku": "GBCyl25DrpSl",
+      "bodyId": "cylinder-25ml-18-415",
+      "reason": "25ml-fitment-scope",
+      "detail": "Imported Dropper row is outside Jordan's confirmed 25 ml reducer, sprayer, lotion, bulb and tassel set. Original record and artwork remain preserved for reconciliation."
+    },
+    {
+      "sku": "GBcyl25AnSpTslBlk",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect.",
+      "bodyId": "cylinder-25ml-18-415"
+    },
+    {
+      "sku": "GBcyl25AnSpTslGl",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect.",
+      "bodyId": "cylinder-25ml-18-415"
+    },
+    {
+      "sku": "GBcyl25AnSpTslIvyGl",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect.",
+      "bodyId": "cylinder-25ml-18-415"
+    },
+    {
+      "sku": "GBCyl25AnSpTslIvySl",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect.",
+      "bodyId": "cylinder-25ml-18-415"
+    },
+    {
+      "sku": "GBcyl25AnSpTslLvn",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect.",
+      "bodyId": "cylinder-25ml-18-415"
+    },
+    {
+      "sku": "GBCyl25AnSpTslMtSl",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect.",
+      "bodyId": "cylinder-25ml-18-415"
+    },
+    {
+      "sku": "GBcyl25AnSpTslPnk",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect.",
+      "bodyId": "cylinder-25ml-18-415"
+    },
+    {
+      "sku": "GBCyl25AnSpTslRed",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect.",
+      "bodyId": "cylinder-25ml-18-415"
+    },
+    {
+      "sku": "GBCyl25AnSpTslWht",
+      "reason": "source-and-frame-reconciliation",
+      "detail": "The current one-piece tassel layer extends below the fixed 91% glass baseline and outside the shared frame. The inspected black registered component also has a gold collar while its exact legacy product shows silver. Recover and verify exact component layers from the 25 ml master PSD before registration. No source was substituted and no glass was shrunk to conceal the defect.",
+      "bodyId": "cylinder-25ml-18-415"
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "bodyId": "cylinder-30ml-18-415",
+      "reason": "fixed-classic-spray-source",
+      "detail": "Native PSD and live reference recovered. It includes a matching metal base; a separate plain body is not yet validated. Keep the existing source until that assembly is reconciled."
+    },
+    {
+      "sku": "GBSpry1ozSl",
+      "bodyId": "cylinder-30ml-18-415",
+      "reason": "fixed-classic-spray-source",
+      "detail": "Native PSD and live reference recovered. It includes a matching metal base; a separate plain body is not yet validated. Keep the existing source until that assembly is reconciled."
+    }
+  ],
+  "tubeSources": [
+    {
+      "bodyId": "cylinder-50ml-18-415",
+      "kind": "lotion",
+      "sourceMaterialSha256": "6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa",
+      "registrationSvg": "docs/reviews/cylinder-family-completion-2026-11-02/sources/lotion-cylinder-50ml-18-415.c3b5fa27d993.svg",
+      "registrationSha256": "c3b5fa27d99355b8af523dfc64ea10ff061fe26d4db19fa3cf87138234a726e2",
+      "image": {
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/lotion-tube.cad1b0cae24a.webp",
+        "key": "",
+        "sha256": "cad1b0cae24a35bb97a3b8e2dae4bd5bad73247caf60ebc27493a2807538df7e",
+        "bytes": 195964,
+        "width": 235,
+        "height": 2931
+      },
+      "headBottom": 278,
+      "widthScale": 0.22152290082205045,
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0
+    },
+    {
+      "bodyId": "cylinder-50ml-18-415",
+      "kind": "spray",
+      "sourceMaterialSha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f",
+      "registrationSvg": "docs/reviews/cylinder-family-completion-2026-11-02/sources/spray-cylinder-50ml-18-415.39c9d5a62083.svg",
+      "registrationSha256": "39c9d5a6208388bb97d33661cc1638785ed3903d2fbf7d8f898b2a45124fb1c8",
+      "image": {
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/spray-tube.1d7b75dddaa9.webp",
+        "key": "",
+        "sha256": "1d7b75dddaa953938d810bab0638f9f8606875fa8fc1343b8d17dd94067e1694",
+        "bytes": 90128,
+        "width": 180,
+        "height": 3446
+      },
+      "headBottom": 376,
+      "widthScale": 0.18841025641025644,
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0
+    },
+    {
+      "bodyId": "cylinder-50ml-18-415",
+      "kind": "bulb",
+      "sourceMaterialSha256": "6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa",
+      "registrationSvg": "docs/reviews/cylinder-family-completion-2026-11-02/sources/bulb-cylinder-50ml-18-415.e03a66ff58c1.svg",
+      "registrationSha256": "e03a66ff58c17afedcddb6f75f2f4613d0cc2c5ccd936805d8c1f98ad3503d4b",
+      "image": {
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/bulb-tube.3a508af2a3b3.webp",
+        "key": "",
+        "sha256": "3a508af2a3b3f16370224178961897d17b4b357c7c1b63c1174880268932bdd8",
+        "bytes": 233322,
+        "width": 235,
+        "height": 4187
+      },
+      "headBottom": 0,
+      "widthScale": 0.1550660305754353,
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0
+    },
+    {
+      "bodyId": "cylinder-100ml-18-415",
+      "kind": "lotion",
+      "sourceMaterialSha256": "6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa",
+      "registrationSvg": "docs/reviews/cylinder-family-completion-2026-11-02/sources/lotion-cylinder-100ml-18-415.51dcf34a39a3.svg",
+      "registrationSha256": "51dcf34a39a30fbb763a6764f1d902b387659d27199483d6c847aa0aa50fb1ff",
+      "image": {
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/lotion-tube.4c935884bdfa.webp",
+        "key": "",
+        "sha256": "4c935884bdfad85e0ed41dea5156a56320442c437fe79d1aeccf892944c1fcc0",
+        "bytes": 244718,
+        "width": 235,
+        "height": 3844
+      },
+      "headBottom": 278,
+      "widthScale": 0.17045325003373343,
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0
+    },
+    {
+      "bodyId": "cylinder-100ml-18-415",
+      "kind": "spray",
+      "sourceMaterialSha256": "99a2a782c154680ba81e2915d50a3f0e634f5395f08fcfc6a8d37005335b0f8f",
+      "registrationSvg": "docs/reviews/cylinder-family-completion-2026-11-02/sources/spray-cylinder-100ml-18-415.07df28258377.svg",
+      "registrationSha256": "07df282583778f472dfcf4cea4908c5ad54f3d5781cf61ff3cbc4f83b8cd64fa",
+      "image": {
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/spray-tube.175e68a53415.webp",
+        "key": "",
+        "sha256": "175e68a5341550e5c2a54f1fb9674001b7ca27c14d6628162ff7d9279e740568",
+        "bytes": 88740,
+        "width": 180,
+        "height": 4520
+      },
+      "headBottom": 376,
+      "widthScale": 0.14497435897435898,
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0
+    },
+    {
+      "bodyId": "cylinder-100ml-18-415",
+      "kind": "bulb",
+      "sourceMaterialSha256": "6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa",
+      "registrationSvg": "docs/reviews/cylinder-family-completion-2026-11-02/sources/bulb-cylinder-100ml-18-415.f9c882238ae1.svg",
+      "registrationSha256": "f9c882238ae1f9991272744065d42f69321f262c36116f3065871165895b0031",
+      "image": {
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/bulb-tube.a878f16337d6.webp",
+        "key": "",
+        "sha256": "a878f16337d6fb49c09880bfa43ce5c3c42f5d9d680479b6e75b16c55ba3a448",
+        "bytes": 296050,
+        "width": 235,
+        "height": 5491
+      },
+      "headBottom": 0,
+      "widthScale": 0.1193172750236134,
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0
+    },
+    {
+      "bodyId": "cylinder-25ml-18-415",
+      "kind": "bulb",
+      "sourceMaterialSha256": "6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa",
+      "registrationSvg": "docs/reviews/cylinder-family-completion-2026-11-02/sources/bulb-cylinder-25ml-18-415.53c61a45ae1d.svg",
+      "registrationSha256": "53c61a45ae1d1d3419170630058c1d37f2fed47a8557f2959e02a104126b0d64",
+      "image": {
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/bulb-tube.de07c545d83c.webp",
+        "key": "",
+        "sha256": "de07c545d83c4d638acad423febcdb0c88367a0ad46074ba181ddf9502a4c88f",
+        "bytes": 164286,
+        "width": 235,
+        "height": 2774
+      },
+      "headBottom": 0,
+      "widthScale": 0.21611747674510523,
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0
+    }
+  ],
+  "changes": [
+    {
+      "sku": "GBCyl50SpryMtGl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": 0.3849999999999909,
+          "dy": 4.363662956204394,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.2619484240687484,
+          "dy": -0.19179626306470254,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50SpryShnGl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": -0.005103305785155499,
+          "dy": 3.6295379562044445,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": -0.10198250728865332,
+          "dy": 2.818139976406428,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50SpryShnBlk",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": -0.36849137931039877,
+          "dy": 2.0049879562043884,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.0019484240687575038,
+          "dy": 0.814045338754795,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50SpryMtSl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": -0.3627212389380361,
+          "dy": 1.208819568295155,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.25492753623188946,
+          "dy": -0.18786204379551918,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50SpryShnSl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": -0.3650663716814506,
+          "dy": 3.9388424788174916,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": -0.266011396011379,
+          "dy": 2.818238457039115,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50SpryCu",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": -0.3681877729257508,
+          "dy": 2.1593629562044043,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.7882525510204346,
+          "dy": 0.8082165939753168,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrBlkLthr",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50AnSpBlk",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl50LtnMtGl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": 0.1500000000000341,
+          "dy": 7.933237956204437,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.2619484240687484,
+          "dy": -0.19179626306470254,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl50LtnShnGl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": -0.7111715481171359,
+          "dy": 2.040212956204414,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": -0.360976676384837,
+          "dy": 0.8081399764064372,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl50LtnShnBlk",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": -0.36244635193133945,
+          "dy": 3.1328879562044563,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.0019484240687575038,
+          "dy": 0.814045338754795,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl50LtnMtSl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": -0.14543478260873144,
+          "dy": 1.2888324285661952,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.25492753623188946,
+          "dy": -0.18786204379551918,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl50LtnShnSl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": -0.36038961038957495,
+          "dy": 3.881812956204385,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": -0.266011396011379,
+          "dy": 2.818238457039115,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl50LtnCu",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": -0.004342105263162921,
+          "dy": 1.323137956204448,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": -0.2609427207637509,
+          "dy": 0.8121972154636978,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrShnGl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrShnBlkTall",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrShnBlk",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrBrwnLthr",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrLBrwnLthr",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrShnSl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrMtSlTall",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrMtSl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrWht",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrPnkLthr",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50RdcrIvyLthr",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50AnSpLvn",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50AnSpPnk",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50AnSpMtSl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50AnSpIvySl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50AnSpGl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50AnSpIvyGl",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50AnSpWht",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl50AnSpRed",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl50LtnClOvrCap",
+      "bodyId": "cylinder-50ml-18-415",
+      "bodySha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1008.386897810219,
+      "tipY": 1005.046897810219,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": -0.87245132743368,
+          "dy": 2.4721581396906345,
+          "visibleBottom": 362.45793795620443
+        },
+        {
+          "slot": "overcap",
+          "dx": -1.304083850931704,
+          "dy": 3.7003305942412226,
+          "visibleBottom": 362.45793795620443
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl100LtnClOvrCap",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": -0.67104424778762,
+          "dy": 1.5782879779682162,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": -1.0083850931677034,
+          "dy": 2.523455986073145,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrShnGl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrShnBlkTall",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrShnBlk",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrBrwnLthr",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrLBrwnLthr",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrShnSl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrMtSlTall",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrMtSl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrWht",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrIvyLthr",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrPnkLthr",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100SpryCu",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": -0.28275109170306223,
+          "dy": 1.9785423357664058,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.6057270408163049,
+          "dy": 0.9322479859212081,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100SpryMtGl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": 0.2950000000000159,
+          "dy": 4.375817335766385,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.20220630372494952,
+          "dy": 0.8621219869291963,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100SpryShnGl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": -0.0022107438016405467,
+          "dy": 2.938917335766405,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": -0.077201166180771,
+          "dy": 2.3122042044532805,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100SpryShnBlk",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": -0.28668103448273996,
+          "dy": 2.7669673357664237,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.0022063037249608897,
+          "dy": 1.8384166646254698,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100SpryMtSl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": -0.27504424778760495,
+          "dy": 1.9437692249351812,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.20536231884057088,
+          "dy": 0.8659173357664258,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100SpryShnSl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "spray",
+      "headAndCapAlignment": [
+        {
+          "slot": "sprayer",
+          "dx": -0.2798893805310172,
+          "dy": 2.7121605518468073,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": -0.19592592592596247,
+          "dy": 1.8415640803406745,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100RdcrBlkLthr",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": null,
+      "tubeKind": null,
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100AnSpBlk",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100AnSpLvn",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100AnSpPnk",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100AnSpMtSl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100AnSpIvySl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100AnSpGl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100AnSpIvyGl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100AnSpWht",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl100AnSpRed",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "bulb",
+      "headAndCapAlignment": [],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl100LtnShnBlk",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": -0.2828540772532051,
+          "dy": 3.6192673357663807,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.0022063037249608897,
+          "dy": 1.8384166646254698,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl100LtnShnGl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": -0.5488702928870453,
+          "dy": 3.261292335766427,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": -0.28626822157434617,
+          "dy": 2.3122042044532805,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl100LtnShnSl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": -0.2774458874458787,
+          "dy": 2.6578923357664053,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": -0.19592592592596247,
+          "dy": 1.8415640803406745,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl100LtnMtGl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": 0.1150000000000091,
+          "dy": 7.122567335766405,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.20220630372494952,
+          "dy": 0.8621219869291963,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl100LtnMtSl",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": -0.11124999999998408,
+          "dy": 2.0059997478267064,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": 0.20536231884057088,
+          "dy": 0.8659173357664258,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "LBCyl100LtnCu",
+      "bodyId": "cylinder-100ml-18-415",
+      "bodySha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+      "bodyGeometryPreserved": true,
+      "innerFloorY": 1009.2005565693431,
+      "tipY": 1006.6305565693431,
+      "tubeKind": "lotion",
+      "headAndCapAlignment": [
+        {
+          "slot": "pump",
+          "dx": 0.0005701754386109315,
+          "dy": 1.3281173357664215,
+          "visibleBottom": 356.5435173357664
+        },
+        {
+          "slot": "overcap",
+          "dx": -0.19627684964200398,
+          "dy": 0.935924743173814,
+          "visibleBottom": 356.5435173357664
+        }
+      ],
+      "source": "Recovered body and registered original component artwork; clean shared internal material"
+    },
+    {
+      "sku": "GBCyl25AnSpBlk",
+      "bodyId": "cylinder-25ml-18-415",
+      "tubeKind": "bulb",
+      "innerFloorY": 994.9104105839415,
+      "tipY": 990.2554105839415,
+      "presentation": "assembled color swatches only"
+    },
+    {
+      "sku": "GBCyl25AnSpGl",
+      "bodyId": "cylinder-25ml-18-415",
+      "tubeKind": "bulb",
+      "innerFloorY": 994.9104105839415,
+      "tipY": 990.2554105839415,
+      "presentation": "assembled color swatches only"
+    },
+    {
+      "sku": "GBcyl25AnSpIvyGl",
+      "bodyId": "cylinder-25ml-18-415",
+      "tubeKind": "bulb",
+      "innerFloorY": 994.9104105839415,
+      "tipY": 990.2554105839415,
+      "presentation": "assembled color swatches only"
+    },
+    {
+      "sku": "GBcyl25AnSpIvySl",
+      "bodyId": "cylinder-25ml-18-415",
+      "tubeKind": "bulb",
+      "innerFloorY": 994.9104105839415,
+      "tipY": 990.2554105839415,
+      "presentation": "assembled color swatches only"
+    },
+    {
+      "sku": "GBcyl25AnSpLvn",
+      "bodyId": "cylinder-25ml-18-415",
+      "tubeKind": "bulb",
+      "innerFloorY": 994.9104105839415,
+      "tipY": 990.2554105839415,
+      "presentation": "assembled color swatches only"
+    },
+    {
+      "sku": "GBcyl25AnSpMtSl",
+      "bodyId": "cylinder-25ml-18-415",
+      "tubeKind": "bulb",
+      "innerFloorY": 994.9104105839415,
+      "tipY": 990.2554105839415,
+      "presentation": "assembled color swatches only"
+    },
+    {
+      "sku": "GBcyl25AnSpPnk",
+      "bodyId": "cylinder-25ml-18-415",
+      "tubeKind": "bulb",
+      "innerFloorY": 994.9104105839415,
+      "tipY": 990.2554105839415,
+      "presentation": "assembled color swatches only"
+    },
+    {
+      "sku": "GBcyl25AnSpRed",
+      "bodyId": "cylinder-25ml-18-415",
+      "tubeKind": "bulb",
+      "innerFloorY": 994.9104105839415,
+      "tipY": 990.2554105839415,
+      "presentation": "assembled color swatches only"
+    },
+    {
+      "sku": "GBcyl25AnSpWht",
+      "bodyId": "cylinder-25ml-18-415",
+      "tubeKind": "bulb",
+      "innerFloorY": 994.9104105839415,
+      "tipY": 990.2554105839415,
+      "presentation": "assembled color swatches only"
+    },
+    {
+      "sku": "GBMtlRoll28Wht",
+      "bodyId": "cylinder-28ml-16mm",
+      "applicator": "Metal Roller Ball",
+      "capColor": "White",
+      "bodySha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 220.96502242152465,
+      "capHeightPx": 331.58051268422025,
+      "rimY": 261,
+      "flangeBottomY": 263.4691358024691,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 380.1031390134529,
+      "shoulderY": 380.1031390134529,
+      "closedCapClearancePx": 54.783942885822654,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBCyl50MtlRollWht",
+      "bodyId": "cylinder-50ml-16mm",
+      "applicator": "Metal Roller Ball",
+      "capColor": "White",
+      "bodySha256": "53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 212.86158401184312,
+      "capHeightPx": 284.6571830248252,
+      "rimY": 261,
+      "flangeBottomY": 263.0408163265306,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 376.4700222057735,
+      "shoulderY": 376.4700222057735,
+      "closedCapClearancePx": 16.9390437678705,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "bodyId": "cylinder-28ml-16mm",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "White",
+      "bodySha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 220.96502242152465,
+      "capHeightPx": 331.58051268422025,
+      "rimY": 261,
+      "flangeBottomY": 263.4691358024691,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 380.1031390134529,
+      "shoulderY": 380.1031390134529,
+      "closedCapClearancePx": 41.43706233687149,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "bodyId": "cylinder-50ml-16mm",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "White",
+      "bodySha256": "53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 212.86158401184312,
+      "capHeightPx": 284.6571830248252,
+      "rimY": 261,
+      "flangeBottomY": 263.0408163265306,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 376.4700222057735,
+      "shoulderY": 376.4700222057735,
+      "closedCapClearancePx": 4.081632653061206,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "bodyId": "cylinder-28ml-16mm",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black",
+      "bodySha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 220.96502242152465,
+      "capHeightPx": 331.58051268422025,
+      "rimY": 261,
+      "flangeBottomY": 263.4691358024691,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 380.1031390134529,
+      "shoulderY": 380.1031390134529,
+      "closedCapClearancePx": 41.43706233687149,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBCyl50RollBlk",
+      "bodyId": "cylinder-50ml-16mm",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black",
+      "bodySha256": "53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 212.86158401184312,
+      "capHeightPx": 284.6571830248252,
+      "rimY": 261,
+      "flangeBottomY": 263.0408163265306,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 376.4700222057735,
+      "shoulderY": 376.4700222057735,
+      "closedCapClearancePx": 4.081632653061206,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "bodyId": "cylinder-28ml-16mm",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black",
+      "bodySha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 220.96502242152465,
+      "capHeightPx": 331.58051268422025,
+      "rimY": 261,
+      "flangeBottomY": 263.4691358024691,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 380.1031390134529,
+      "shoulderY": 380.1031390134529,
+      "closedCapClearancePx": 54.783942885822654,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "bodyId": "cylinder-50ml-16mm",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black",
+      "bodySha256": "53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 212.86158401184312,
+      "capHeightPx": 284.6571830248252,
+      "rimY": 261,
+      "flangeBottomY": 263.0408163265306,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 376.4700222057735,
+      "shoulderY": 376.4700222057735,
+      "closedCapClearancePx": 16.9390437678705,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    }
+  ],
+  "publication": "Existing approved recipes untouched. No backend/catalog mutation. Localhost assetPreview=gpt13 only."
+}

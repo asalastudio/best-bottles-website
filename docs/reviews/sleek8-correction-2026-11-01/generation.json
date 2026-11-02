@@ -1,0 +1,10 @@
+{
+  "generator": "Built-in GPT image editor, exact model version not exposed",
+  "prompt": "Edit image 1, the existing uncapped 8 ml Sleek clear-glass bottle. Image 1 is the absolute geometry and camera reference: preserve its exact slender width-to-height ratio, outline, neck height and width, thread count and shape, shoulder contour, straight body walls, faceted lower foot, internal floor height, upright axis, level rim and full-bottle framing. Do not copy image 2's bottle shape. Use image 2 only for the quality of the clear glass: crisp photographic refraction, clean polished edges, natural vertical studio softbox reflections and convincing clear curved glass surfaces. Upgrade image 1's pale flat glass to the same premium studio fidelity while keeping it colorless and transparent, with subtle tonal depth. Remove the flat paper-like internal appearance without thick black outlines or frosty opaque white filling. The empty interior must remain optically clear with subtle transparency so a separately composited dip tube can be seen through the glass. Show the complete bare bottle, uncapped, with no sprayer, no cap, no tube, no pump mechanism, no liquid, no label, no text, no floor or cast shadow. Keep a truly transparent background and preserve the exact approved bottle geometry. This is a material-only restoration, not a redesign.",
+  "source": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-b89c9869-50a2-4785-a0c6-64164ffd5dfd.png",
+  "references": [
+    "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/gpt-13-415-2026-10-31/sleek-8ml-13-415-clear.a30b2604fa73.png",
+    "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png"
+  ],
+  "status": "Material candidate, not visually approved"
+}

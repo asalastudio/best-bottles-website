@@ -1,0 +1,786 @@
+{
+  "scope": "Three existing 5/8 dram vial SKUs, two glass masters, no new purchase variants",
+  "pdp": [
+    {
+      "viewport": "desktop",
+      "view": "sidecar",
+      "sku": "GBVGreen2o4BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        309.1002197265625,
+        323.780517578125,
+        77.79193115234375,
+        167.6104736328125
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\nGreen 3 ml Vial, pre-selected.\n02\nCAP\n2 finishes. Every cap shown fits.\nYOUR VISION.\nOUR EXPERTISE.\nSold assembled, from one piece.\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "view": "capon",
+      "sku": "GBVGreen2o4BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        309.1002197265625,
+        323.780517578125,
+        77.79193115234375,
+        167.6104736328125
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\nGreen 3 ml Vial, pre-selected.\n02\nCAP\n2 finishes. Every cap shown fits.\nYOUR VISION.\nOUR EXPERTISE.\nSold assembled, from one piece.\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "view": "exploded",
+      "sku": "GBVGreen2o4BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        309.1002197265625,
+        323.780517578125,
+        77.79193115234375,
+        167.6104736328125
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\nGreen 3 ml Vial, pre-selected.\n02\nCAP\n2 finishes. Every cap shown fits.\nYOUR VISION.\nOUR EXPERTISE.\nSold assembled, from one piece.\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "view": "sidecar",
+      "sku": "GBVGreen2o4WhtCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        309.1002197265625,
+        323.780517578125,
+        77.79193115234375,
+        167.6104736328125
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\nGreen 3 ml Vial, pre-selected.\n02\nCAP\n2 finishes. Every cap shown fits.\nYOUR VISION.\nOUR EXPERTISE.\nSold assembled, from one piece.\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "view": "capon",
+      "sku": "GBVGreen2o4WhtCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        309.1002197265625,
+        323.780517578125,
+        77.79193115234375,
+        167.6104736328125
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\nGreen 3 ml Vial, pre-selected.\n02\nCAP\n2 finishes. Every cap shown fits.\nYOUR VISION.\nOUR EXPERTISE.\nSold assembled, from one piece.\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "view": "exploded",
+      "sku": "GBVGreen2o4WhtCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        309.1002197265625,
+        323.780517578125,
+        77.79193115234375,
+        167.6104736328125
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\nGreen 3 ml Vial, pre-selected.\n02\nCAP\n2 finishes. Every cap shown fits.\nYOUR VISION.\nOUR EXPERTISE.\nSold assembled, from one piece.\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "view": "sidecar",
+      "sku": "GBVBlu1o9BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+      "bodyRect": [
+        307.19488525390625,
+        323.780517578125,
+        81.59500122070312,
+        167.6104736328125
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\nCobalt Blue 3 ml Vial, pre-selected.\n02\nCAP\n1 finish. Every cap shown fits.\nYOUR VISION.\nOUR EXPERTISE.\nSold assembled, from one piece.\nSTART BUILDING →",
+        "images": 3,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "view": "capon",
+      "sku": "GBVBlu1o9BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+      "bodyRect": [
+        307.19488525390625,
+        323.780517578125,
+        81.59500122070312,
+        167.6104736328125
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\nCobalt Blue 3 ml Vial, pre-selected.\n02\nCAP\n1 finish. Every cap shown fits.\nYOUR VISION.\nOUR EXPERTISE.\nSold assembled, from one piece.\nSTART BUILDING →",
+        "images": 3,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "view": "exploded",
+      "sku": "GBVBlu1o9BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+      "bodyRect": [
+        307.19488525390625,
+        323.780517578125,
+        81.59500122070312,
+        167.6104736328125
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\nCobalt Blue 3 ml Vial, pre-selected.\n02\nCAP\n1 finish. Every cap shown fits.\nYOUR VISION.\nOUR EXPERTISE.\nSold assembled, from one piece.\nSTART BUILDING →",
+        "images": 3,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "view": "sidecar",
+      "sku": "GBVGreen2o4BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        143.39590454101562,
+        237.3271484375,
+        54.00544738769531,
+        116.36395263671875
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\n02\nCAP\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "view": "capon",
+      "sku": "GBVGreen2o4BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        143.39590454101562,
+        237.3271484375,
+        54.00544738769531,
+        116.36395263671875
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\n02\nCAP\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "view": "exploded",
+      "sku": "GBVGreen2o4BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        143.39590454101562,
+        237.3271484375,
+        54.00544738769531,
+        116.36395263671875
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\n02\nCAP\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "view": "sidecar",
+      "sku": "GBVGreen2o4WhtCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        143.32139587402344,
+        237.310546875,
+        53.98258972167969,
+        116.302978515625
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\n02\nCAP\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "view": "capon",
+      "sku": "GBVGreen2o4WhtCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        143.32139587402344,
+        237.310546875,
+        53.98258972167969,
+        116.302978515625
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\n02\nCAP\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "view": "exploded",
+      "sku": "GBVGreen2o4WhtCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+      "bodyRect": [
+        143.32139587402344,
+        237.310546875,
+        53.98258972167969,
+        116.302978515625
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black",
+        "white"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\n02\nCAP\nSTART BUILDING →",
+        "images": 4,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "view": "sidecar",
+      "sku": "GBVBlu1o9BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+      "bodyRect": [
+        164.77342224121094,
+        239.83377075195312,
+        60.43792724609375,
+        124.15304565429688
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\n02\nCAP\nSTART BUILDING →",
+        "images": 3,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "view": "capon",
+      "sku": "GBVBlu1o9BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+      "bodyRect": [
+        164.77342224121094,
+        239.83377075195312,
+        60.43792724609375,
+        124.15304565429688
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\n02\nCAP\nSTART BUILDING →",
+        "images": 3,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "view": "exploded",
+      "sku": "GBVBlu1o9BlackCapSht",
+      "layered": "true",
+      "body": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+      "bodyRect": [
+        164.77342224121094,
+        239.83377075195312,
+        60.43792724609375,
+        124.15304565429688
+      ],
+      "glass": [
+        {
+          "slug": "vial-3ml-blue-13-425",
+          "images": 1
+        },
+        {
+          "slug": "vial-3ml-green-13-425",
+          "images": 1
+        }
+      ],
+      "capOptions": [
+        "black"
+      ],
+      "strip": {
+        "text": "BUILD YOUR BOTTLE.\nSTART FROM THIS 3 ML VIAL. TWO STEPS.\n01\nSHAPE & SIZE\n02\nCAP\nSTART BUILDING →",
+        "images": 3,
+        "components": "2",
+        "hasFitment": false
+      },
+      "overflow": false
+    }
+  ],
+  "builder": [
+    {
+      "sku": "GBVGreen2o4BlackCapSht",
+      "viewport": "desktop",
+      "url": "http://localhost:3010/matrix?family=Vial&shop=sample-vials&sku=GBVGreen2o4BlackCapSht&from=pdp",
+      "layers": [
+        {
+          "slot": "cap",
+          "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/256.4949217327e8.webp"
+        },
+        {
+          "slot": "body",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/640.986fd79ac5c6.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/640.4ba95ee185e3.webp"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "sku": "GBVGreen2o4WhtCapSht",
+      "viewport": "desktop",
+      "url": "http://localhost:3010/matrix?family=Vial&shop=sample-vials&sku=GBVGreen2o4WhtCapSht&from=pdp",
+      "layers": [
+        {
+          "slot": "cap",
+          "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/256.4949217327e8.webp"
+        },
+        {
+          "slot": "body",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/640.986fd79ac5c6.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/640.4949217327e8.webp"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "sku": "GBVBlu1o9BlackCapSht",
+      "viewport": "desktop",
+      "url": "http://localhost:3010/matrix?family=Vial&shop=sample-vials&sku=GBVBlu1o9BlackCapSht&from=pdp",
+      "layers": [
+        {
+          "slot": "cap",
+          "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp"
+        },
+        {
+          "slot": "body",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/640.e531695dad69.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/640.4ba95ee185e3.webp"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "sku": "GBVGreen2o4BlackCapSht",
+      "viewport": "mobile",
+      "url": "http://localhost:3010/matrix?family=Vial&shop=sample-vials&sku=GBVGreen2o4BlackCapSht&from=pdp",
+      "layers": [
+        {
+          "slot": "body",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/640.986fd79ac5c6.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/640.4ba95ee185e3.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/256.4949217327e8.webp"
+        },
+        {
+          "slot": "body",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/1200.986fd79ac5c6.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/1200.4ba95ee185e3.webp"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "sku": "GBVGreen2o4WhtCapSht",
+      "viewport": "mobile",
+      "url": "http://localhost:3010/matrix?family=Vial&shop=sample-vials&sku=GBVGreen2o4WhtCapSht&from=pdp",
+      "layers": [
+        {
+          "slot": "body",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/640.986fd79ac5c6.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/640.4949217327e8.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/256.4949217327e8.webp"
+        },
+        {
+          "slot": "body",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/1200.986fd79ac5c6.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/1200.4949217327e8.webp"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "sku": "GBVBlu1o9BlackCapSht",
+      "viewport": "mobile",
+      "url": "http://localhost:3010/matrix?family=Vial&shop=sample-vials&sku=GBVBlu1o9BlackCapSht&from=pdp",
+      "layers": [
+        {
+          "slot": "body",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/640.e531695dad69.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/640.4ba95ee185e3.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp"
+        },
+        {
+          "slot": "body",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/1200.e531695dad69.webp"
+        },
+        {
+          "slot": "cap",
+          "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/1200.4ba95ee185e3.webp"
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "retriedErrors": [
+    {
+      "sku": "GBVBlu1o9BlackCapSht",
+      "viewport": "mobile",
+      "message": "Body moved across views"
+    },
+    {
+      "type": "run",
+      "message": "[{\"sku\":\"GBVBlu1o9BlackCapSht\",\"viewport\":\"mobile\",\"message\":\"Body moved across views\"}]\n\n1 !== 0\n"
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "passed": 3246,
+  "failed": 0,
+  "skipped": 7,
+  "testFiles": 928,
+  "typecheck": "passed",
+  "targetedLint": "passed; publisher script excluded by existing lint config",
+  "independentReview": "No remaining findings after preserving immutable publisher sources"
+}

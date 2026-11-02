@@ -1,5 +1,7 @@
 "use client";
 
+import { plugMaskStyle } from "@/lib/products/sprayer-glass-transmission";
+
 /**
  * The canvas: pick line and view switch, the cap rail, the stage with its
  * three views, and the glass lineup. One DOM for desktop and mobile; the
@@ -13,12 +15,15 @@
  * 2.5x; the point under the pointer stays put, so moving it (or dragging a
  * finger) pans. Click again, press Escape or the button to zoom out.
  */
+import { isTolaApplicator } from "@/lib/products/tola-applicator";
+import { requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
 import styles from "./pdp.module.css";
 import PdpKitPartImage from "./PdpKitPartImage";
 import PdpKitStackImage from "./PdpKitStackImage";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
-import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
+import { registeredImageSizes } from "@/lib/products/display-derivative";
+import { markRegisterOptimizerUnavailable, registerImageSrc, registerImageSrcSet } from "@/lib/products/register-image";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import type { Callout } from "@/lib/products/pdp-redesign/model";
@@ -53,6 +58,7 @@ export type GlassLineupItem = {
 
 export type PdpStageProps = {
     pickLine: string;
+    finishKind?: "cap" | "glass";
     view: StageView;
     availableViews: StageView[];
     onViewChange: (view: StageView) => void;
@@ -98,9 +104,12 @@ export function useIsPdpMobile(): boolean {
 }
 
 export default function PdpStage({
-    pickLine, view, availableViews, onViewChange, kit, context, glassFrame = null, fallbackImageUrls, fallbackBodyImageUrl, fallbackAlt, callouts,
+    pickLine, finishKind = "cap", view, availableViews, onViewChange, kit, context, glassFrame = null, fallbackImageUrls, fallbackBodyImageUrl, fallbackAlt, callouts,
     caps, activeCapId, onCapPick, glasses, onGlassPick, activeCapName, activeGlassLabel,
 }: PdpStageProps) {
+    const singleTola = isTolaApplicator(context.websiteSku);
+    const swatchesOnly = requiresAssembledClosure(context.applicator, context.websiteSku)
+        && availableViews.length === 1 && !singleTola && finishKind !== "glass";
     const layout = useMemo(() => stageLayout(kit, view, context, glassFrame ?? {}), [kit, view, context, glassFrame]);
     const railRef = useRef<HTMLDivElement>(null);
     // Register masters are served display-sized through the optimizer; when that
@@ -184,11 +193,12 @@ export default function PdpStage({
     }, [callouts, layout, mobile, context.applicator, context.websiteSku]);
 
     return (
-        <section id="product-canvas" className={styles.canvas} aria-label="Product canvas" data-testid="pdp-canvas">
+        <section id="product-canvas" className={styles.canvas} aria-label="Product canvas" data-testid="pdp-canvas"
+            style={singleTola ? { width: "100%", minWidth: 0, gridTemplateColumns: "minmax(0, 1fr)", gridTemplateAreas: '"head" "stage" "lineup"' } : finishKind === "glass" ? { width: "100%", minWidth: 0 } : undefined}>
             <div className={styles.canvasHead}>
                 <span className={styles.pickLine} data-testid="pdp-pick-line">{pickLine}</span>
-                <div className={styles.viewSwitch} role="group" aria-label="View">
-                    {STAGE_VIEWS.map((option) => {
+                {!swatchesOnly && <div className={styles.viewSwitch} role="group" aria-label="View">
+                    {STAGE_VIEWS.filter(option => (!singleTola && finishKind !== "glass") || availableViews.includes(option.id)).map((option) => {
                         const enabled = availableViews.includes(option.id);
                         return (
                             <button
@@ -201,28 +211,29 @@ export default function PdpStage({
                                 onClick={() => onViewChange(option.id)}
                                 data-testid={`pdp-view-${option.id}`}
                             >
-                                {option.id === "sidecar" && context.applicator === "Reducer" ? "CAP OFF" : option.label}
+                                {singleTola ? "ASSEMBLED" : finishKind === "glass" ? "STOPPER ON" : option.id === "sidecar" && context.applicator === "Reducer" ? "CAP OFF" : option.label}
                             </button>
                         );
                     })}
-                </div>
+                </div>}
             </div>
 
-            <div className={styles.rail} role="group" aria-label="Caps" data-testid="pdp-cap-rail">
+            {!singleTola && <div className={styles.rail} role="group" aria-label={finishKind === "glass" ? "Glass colors" : "Caps"} data-testid="pdp-cap-rail">
                 <span className={styles.railLabel}>
-                    <span className={styles.railLabelDesktop}>CAPS {caps.length}</span>
-                    {activeCapName ? <span className={styles.railLabelMobile}>CAP · {activeCapName}</span> : null}
+                    <span className={styles.railLabelDesktop}>{finishKind === "glass" ? "GLASS" : "CAPS"} {caps.length}</span>
+                    {activeCapName ? <span className={styles.railLabelMobile}>{finishKind === "glass" ? "GLASS" : "CAP"} · {activeCapName}</span> : null}
                 </span>
                 <div className={styles.railTrack} ref={railRef}>
                 {caps.map((cap) => {
-                    const parts = closureParts(cap.kit);
+                    const body = finishKind === "glass" ? bodyPart(cap.kit) : null;
+                    const parts = body ? [body] : closureParts(cap.kit);
                     return (
                         <button
                             key={cap.id}
                             type="button"
                             className={styles.railButton}
                             aria-pressed={cap.id === activeCapId}
-                            aria-label={`${cap.name} cap`}
+                            aria-label={cap.name + (finishKind === "glass" ? " glass" : " cap")}
                             title={cap.name}
                             data-cap-id={cap.id}
                             data-unavailable={cap.unavailable ? "true" : undefined}
@@ -235,18 +246,18 @@ export default function PdpStage({
                     );
                 })}
                 </div>
-            </div>
+            </div>}
 
             <div
                 className={styles.stage}
                 data-testid="pdp-stage"
                 data-view={view}
-                data-layered={layout ? "true" : "false"}
-                data-source={layout ? (kit?.register ? "register" : "kit") : fallbackImageUrl ? (showingBareBody ? "body" : "photo") : "none"}
+                data-layered={layout && !singleTola ? "true" : "false"}
+                data-source={layout ? (singleTola ? "photo" : kit?.register ? "register" : "kit") : fallbackImageUrl ? (showingBareBody ? "body" : "photo") : "none"}
                 data-studio={layout?.backdrop ? "true" : undefined}
                 data-zoomable={zoomable ? "true" : undefined}
                 data-zoomed={zoom ? "true" : undefined}
-                style={{ ...(layout?.backdrop ? { backgroundColor: layout.backdrop.wall } : {}), touchAction: zoom ? "none" : undefined }}
+                style={{ ...(layout?.backdrop ? { backgroundColor: layout.backdrop.wall } : {}), mixBlendMode: singleTola ? "multiply" : undefined, touchAction: zoom ? "none" : undefined }}
                 onPointerDown={onStagePointerDown}
                 onPointerMove={onStagePointerMove}
                 onPointerUp={onStagePointerUp}
@@ -276,6 +287,8 @@ export default function PdpStage({
                                         alt=""
                                         draggable={false}
                                         decoding="async"
+                                        loading="eager"
+                                        fetchPriority="high"
                                         className={styles.stageBackdrop}
                                         style={{
                                             left: `${layout.backdrop.box.leftPct}%`, top: `${layout.backdrop.box.topPct}%`,
@@ -303,12 +316,17 @@ export default function PdpStage({
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
                                             src={rawUrls.has(part.url) ? part.url : registerImageSrc(part.url, 640)}
+                                            srcSet={rawUrls.has(part.url) ? undefined : registerImageSrcSet(part.url)}
+                                            sizes={registeredImageSizes(part.box.widthPct, layout.frame.scale, zoom ? STAGE_ZOOM : 1)}
                                             alt=""
                                             draggable={false}
                                             decoding="async"
+                                            loading="eager"
+                                            fetchPriority="high"
                                             onError={() => { if (markRegisterOptimizerUnavailable(part.url)) showRaw(part.url); }}
                                             style={{
                                                 position: "absolute", display: "block", maxWidth: "none", opacity: part.opacity,
+                                                ...plugMaskStyle(part.maskImage),
                                                 left: `${part.box.leftPct}%`, top: `${part.box.topPct}%`,
                                                 width: `${part.box.widthPct}%`, height: `${part.box.heightPct}%`,
                                                 ...(part.clipBottomPct ? { clipPath: `inset(0 0 ${part.clipBottomPct}% 0)` } : {}),
@@ -324,6 +342,8 @@ export default function PdpStage({
                                         alt=""
                                         draggable={false}
                                         decoding="async"
+                                        loading="eager"
+                                        fetchPriority="high"
                                         className={styles.stagePart}
                                         data-slot={part.slot}
                                         style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex, mixBlendMode: part.blendMode }}
@@ -340,6 +360,8 @@ export default function PdpStage({
                             src={rawUrls.has(fallbackImageUrl) ? fallbackImageUrl : displayImageUrl(fallbackImageUrl)}
                             alt={showingBareBody ? `${fallbackAlt}, uncapped bottle` : fallbackAlt}
                             decoding="async"
+                            loading="eager"
+                            fetchPriority="high"
                             onError={() => {
                                 if (!rawUrls.has(fallbackImageUrl) && markRegisterOptimizerUnavailable(fallbackImageUrl)) showRaw(fallbackImageUrl);
                                 else setFailedFallbackUrls((current) => new Set(current).add(fallbackImageUrl));
@@ -407,7 +429,7 @@ export default function PdpStage({
                 </dl>
             ) : null}
 
-            <div className={styles.lineup} data-testid="pdp-glass-lineup">
+            {glasses.length > 0 && <div className={styles.lineup} data-testid="pdp-glass-lineup">
                 <span className={styles.lineupLabel}>
                     <span className={styles.railLabelDesktop}>GLASS · {glasses.length}</span>
                     <span className={styles.railLabelMobile}>GLASS · {activeGlassLabel}</span>
@@ -435,7 +457,7 @@ export default function PdpStage({
                         );
                     })}
                 </div>
-            </div>
+            </div>}
         </section>
     );
 }

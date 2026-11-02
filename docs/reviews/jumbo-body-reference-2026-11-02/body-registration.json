@@ -1,0 +1,44 @@
+{
+  "status": "corrected-candidate-not-approved",
+  "bodyId": "cylinder-50ml-16mm",
+  "glass": "Clear",
+  "sourceFile": "docs/reviews/jumbo-body-reference-2026-11-02/sources/50ml-body-psd-geometry-studio.svg",
+  "sourceSha256": "d751ab595066ad2960e6e51e0cc2d50e0699c492bb1b57edc839def50789ad32",
+  "guideSha256": "3a52d6276fff5c30b3afbab7c69a88c65409c38b755a12a6be536e7984619918",
+  "materialSha256": "d51b45c1411069c403a98b434157bb6c531d097529c489fe0190fb20cfefcb2e",
+  "alphaDifferences": 0,
+  "image": {
+    "width": 1018,
+    "height": 2702
+  },
+  "anchors": {
+    "axisX": 509,
+    "seatY": 0,
+    "shoulderY": 390,
+    "baselineY": 2702
+  },
+  "mouthWidthPx": 698,
+  "scale": {
+    "targetPct": 53,
+    "baselinePct": 91,
+    "source": "Existing five-height canvas curve; original complete PSD neck/body silhouette"
+  },
+  "uniformMaterialProjection": {
+    "bodyScale": 0.7410256410256411,
+    "neckScale": 0.703971119133574,
+    "sourceAxis": 386.5
+  },
+  "geometry": "Complete PSD body and glass-neck retouch pixels supply the outer silhouette. Disconnected debris is excluded and internal retouch cutout holes are filled. Generated material does not define the contour.",
+  "sourceReference": "Owner supplied GBCyl50RollBlk 50 ml reference, 98 mm without cap, 37 mm diameter. The 28 ml is a separate master.",
+  "materialSampling": {
+    "naturalSize": [
+      770,
+      2043
+    ],
+    "nominalViewport": [
+      768,
+      2048
+    ],
+    "svgImageFit": "Default xMidYMid meet, uniform aspect-preserving fit"
+  }
+}

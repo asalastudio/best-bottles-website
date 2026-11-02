@@ -1,0 +1,318 @@
+{
+  "status": "candidate-not-approved",
+  "camera": "Near eye level, flat flange",
+  "hardware": "Over-rim 16 mm roller assembly, internal seating track, no projecting lower plug",
+  "sourceAuthority": "Original PSD geometry and exposure are locked. Metal uses the owner-approved studio material inside that exact outline; plastic retains native PSD material. User confirmed a single bottom step and no protruding lower plug.",
+  "nativeGeometryReferenceVerification": {
+    "status": "local-review",
+    "masterMethod": "Original PSD layer pixels at native positions",
+    "results": [
+      {
+        "kind": "metal",
+        "sourceSha256": "001af9d1c245b08758027496b2bd8371fbc4b971cc60ea08fa3d31a5d7a16103",
+        "sourceSvg": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-metal-native-psd.svg",
+        "svgSha256": "6c684e37aae0896130330e808ab4e5a7b8f5f9e4a5c5bde4d4491a3873687b71",
+        "width": 336,
+        "height": 220,
+        "comparedBallPixels": 6704,
+        "changedBallPixels": 0,
+        "cleanup": "SVG clip removes only detached alpha debris; source photograph and connected edge remain unpainted",
+        "lowerPlug": false
+      },
+      {
+        "kind": "plastic",
+        "sourceSha256": "b5176bfd01982ede60b193f0f16e5d3a554b455ce4a500811701e0e2a18b9b96",
+        "sourceSvg": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-plastic-native-psd.svg",
+        "svgSha256": "e4529c78b0e929db5632609fbb039ba4d7aed9168d793f39218bb50068678608",
+        "width": 357,
+        "height": 244,
+        "comparedBallPixels": 6564,
+        "changedBallPixels": 0,
+        "cleanup": "SVG clip removes only detached alpha debris; source photograph and connected edge remain unpainted",
+        "lowerPlug": false
+      }
+    ]
+  },
+  "metalMaterialGeometryVerification": {
+    "status": "material-approved-by-owner-registration-review",
+    "sourceSha256": "23d7d2097e9dfcd3c1b326239d3cf9dd5222bc1dd838bc43ada34e9bc03ba1de",
+    "nativeOutlineSha256": "08876daaffcf316f197438921c76d67a066b2f88898219de1b37d3c698846fc9",
+    "method": "Uniformly register the generated material within the original PSD alpha outline. No nonuniform scaling or outline replacement.",
+    "nativeWidth": 336,
+    "nativeHeight": 220,
+    "nativeBounds": {
+      "left": 23,
+      "top": 4,
+      "right": 321,
+      "bottom": 220
+    },
+    "outputWidth": 1344,
+    "outputHeight": 880,
+    "alphaDifferences": 0,
+    "generatedBounds": {
+      "left": 97,
+      "top": 14,
+      "right": 1453,
+      "bottom": 1002
+    },
+    "uniformScale": 0.21976401179941002,
+    "translation": {
+      "x": 1.6828908554572308,
+      "y": -0.203539823008839
+    },
+    "singleBottomStep": true,
+    "protrudingPlug": false,
+    "sourceReference": "Original PSD geometry; owner supplied IMG_6921/IMG_6922 to clarify the single bottom step. Last material edit approved with \"Thats good\"."
+  },
+  "measuredBottles": {
+    "28": {
+      "height": 81,
+      "diameter": 31,
+      "closedHeight": 100
+    },
+    "50": {
+      "height": 98,
+      "diameter": 37,
+      "closedHeight": 116
+    }
+  },
+  "estimatedRegistration": {
+    "flangeWidthMm": 20.480898876404492,
+    "capHeightMm": 33.5725269092773,
+    "notice": "Image registration only. These are not confirmed physical component measurements."
+  },
+  "inserts": {
+    "metal": {
+      "sourceFile": "docs/reviews/jumbo-roller-material-2026-11-02/sources/metal-registered.svg",
+      "sourceSha256": "9a882d6c846157971e8bb3d04cefb5ac41644b68f4a99f245978e24cd262b342",
+      "sourceBytes": 2198909,
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0,
+      "image": {
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp",
+        "key": "",
+        "sha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008",
+        "bytes": 581082,
+        "width": 1344,
+        "height": 880
+      },
+      "bounds": {
+        "left": 92,
+        "top": 16,
+        "right": 1284,
+        "bottom": 880
+      }
+    },
+    "plastic": {
+      "sourceFile": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-plastic-native-psd.svg",
+      "sourceSha256": "e4529c78b0e929db5632609fbb039ba4d7aed9168d793f39218bb50068678608",
+      "sourceBytes": 166654,
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0,
+      "image": {
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp",
+        "key": "",
+        "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+        "bytes": 22232,
+        "width": 357,
+        "height": 244
+      },
+      "bounds": {
+        "left": 44,
+        "top": 10,
+        "right": 342,
+        "bottom": 244
+      }
+    }
+  },
+  "caps": {
+    "Black": {
+      "sourceFile": "docs/reviews/cylinder-family-completion-2026-11-02/sources/cap16-black-clean.png",
+      "sourceSha256": "f0ab0cac58c8267f7c208e461667bf7b7b121e9ee20cc5a7cc0d5d096c8a6109",
+      "sourceBytes": 1422306,
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0,
+      "image": {
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-black.b69eeeb45b69.webp",
+        "key": "",
+        "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7",
+        "bytes": 768394,
+        "width": 1145,
+        "height": 1374
+      },
+      "bounds": {
+        "left": 71,
+        "top": 77,
+        "right": 1073,
+        "bottom": 1285
+      }
+    },
+    "White": {
+      "sourceFile": "docs/reviews/cylinder-family-completion-2026-11-02/sources/cap16-white-clean.png",
+      "sourceSha256": "2a92818005c0c1fb3e813e892282c0e5b74075dbb4b8bcf975a27de60c0f7437",
+      "sourceBytes": 1146425,
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0,
+      "image": {
+        "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-white.b941c5342eae.webp",
+        "key": "",
+        "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908",
+        "bytes": 655994,
+        "width": 1145,
+        "height": 1374
+      },
+      "bounds": {
+        "left": 72,
+        "top": 77,
+        "right": 1072,
+        "bottom": 1285
+      }
+    }
+  },
+  "configurations": [
+    {
+      "sku": "GBMtlRoll28Wht",
+      "bodyId": "cylinder-28ml-16mm",
+      "applicator": "Metal Roller Ball",
+      "capColor": "White",
+      "bodySha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 220.96502242152465,
+      "capHeightPx": 331.58051268422025,
+      "rimY": 261,
+      "flangeBottomY": 263.4691358024691,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 380.1031390134529,
+      "shoulderY": 380.1031390134529,
+      "closedCapClearancePx": 54.783942885822654,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBCyl50MtlRollWht",
+      "bodyId": "cylinder-50ml-16mm",
+      "applicator": "Metal Roller Ball",
+      "capColor": "White",
+      "bodySha256": "53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 212.86158401184312,
+      "capHeightPx": 284.6571830248252,
+      "rimY": 261,
+      "flangeBottomY": 263.0408163265306,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 376.4700222057735,
+      "shoulderY": 376.4700222057735,
+      "closedCapClearancePx": 16.9390437678705,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "bodyId": "cylinder-28ml-16mm",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "White",
+      "bodySha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 220.96502242152465,
+      "capHeightPx": 331.58051268422025,
+      "rimY": 261,
+      "flangeBottomY": 263.4691358024691,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 380.1031390134529,
+      "shoulderY": 380.1031390134529,
+      "closedCapClearancePx": 41.43706233687149,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "bodyId": "cylinder-50ml-16mm",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "White",
+      "bodySha256": "53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 212.86158401184312,
+      "capHeightPx": 284.6571830248252,
+      "rimY": 261,
+      "flangeBottomY": 263.0408163265306,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 376.4700222057735,
+      "shoulderY": 376.4700222057735,
+      "closedCapClearancePx": 4.081632653061206,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "bodyId": "cylinder-28ml-16mm",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black",
+      "bodySha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 220.96502242152465,
+      "capHeightPx": 331.58051268422025,
+      "rimY": 261,
+      "flangeBottomY": 263.4691358024691,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 380.1031390134529,
+      "shoulderY": 380.1031390134529,
+      "closedCapClearancePx": 41.43706233687149,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBCyl50RollBlk",
+      "bodyId": "cylinder-50ml-16mm",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black",
+      "bodySha256": "53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 212.86158401184312,
+      "capHeightPx": 284.6571830248252,
+      "rimY": 261,
+      "flangeBottomY": 263.0408163265306,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 376.4700222057735,
+      "shoulderY": 376.4700222057735,
+      "closedCapClearancePx": 4.081632653061206,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "bodyId": "cylinder-28ml-16mm",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black",
+      "bodySha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 220.96502242152465,
+      "capHeightPx": 331.58051268422025,
+      "rimY": 261,
+      "flangeBottomY": 263.4691358024691,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 380.1031390134529,
+      "shoulderY": 380.1031390134529,
+      "closedCapClearancePx": 54.783942885822654,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "bodyId": "cylinder-50ml-16mm",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black",
+      "bodySha256": "53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e",
+      "completePsdGlassCorrection": true,
+      "flangeWidthPx": 212.86158401184312,
+      "capHeightPx": 284.6571830248252,
+      "rimY": 261,
+      "flangeBottomY": 263.0408163265306,
+      "overRim": true,
+      "protrudingPlug": false,
+      "capBottomY": 376.4700222057735,
+      "shoulderY": 376.4700222057735,
+      "closedCapClearancePx": 16.9390437678705,
+      "registrationBasis": "Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track."
+    }
+  ]
+}

@@ -8,7 +8,9 @@ const rows=manifest.rows as unknown as Record<string,KitLike>;
 describe('Tulip pour hero and product-page master parity',()=>{
  it('routes all 19 registered pour choices through the same shared master resolver',()=>{
   expect(report.records).toHaveLength(19);
-  for(const r of report.records){expect(cylinderMasterSku(r.sku)).toBe(r.sku);const k=rows[r.sku],reference=rows[r.glass==='Amber'?'GBTulipAmb5SpryBlkSh':'GBTulip6SpryBlkSh'];expect(k.parts.find(p=>p.slot==='body'),r.sku).toEqual(reference.parts.find(p=>p.slot==='body'));expect(k.glassSizing,r.sku).toEqual(reference.glassSizing);
+  // Sprayer glass uses optical blending only to transmit its internal tube.
+  // Pour bodies keep the same exact image and geometry without that optical state.
+  for(const r of report.records){expect(cylinderMasterSku(r.sku)).toBe(r.sku);const k=rows[r.sku],reference=rows[r.glass==='Amber'?'GBTulipAmb5SpryBlkSh':'GBTulip6SpryBlkSh'];const referenceBody=structuredClone(reference.parts.find(p=>p.slot==='body')!);if(r.glass==='Clear'){expect(referenceBody.blendMode).toBe('multiply');delete referenceBody.blendMode;}expect(k.parts.find(p=>p.slot==='body'),r.sku).toEqual(referenceBody);expect(k.glassSizing,r.sku).toEqual(reference.glassSizing);
    const contexts={websiteSku:r.sku,family:'Cylinder',applicator:null};const layouts=(['sidecar','capon','exploded'] as const).map(v=>stageLayout(k,v,contexts)!);for(const l of layouts){expect(l.frame).toEqual(layouts[0].frame);expect(l.parts.find(p=>p.slot==='body')).toEqual(layouts[0].parts.find(p=>p.slot==='body'));}
   }
  });

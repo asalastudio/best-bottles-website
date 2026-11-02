@@ -1,0 +1,3692 @@
+{
+  "version": "4c6095d23d920c4f",
+  "rows": {
+    "LBCylAmb9LtnBlk": {
+      "sku": "LBCylAmb9LtnBlk",
+      "familyId": "register:cylinder-9ml-17-415|Amber",
+      "plateSha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-BLK-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png",
+            "sha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+            "bytes": 1050360,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf.png",
+            "sha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf",
+            "bytes": 860722,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-BLK-17-415"
+        ],
+        "seatSignature": "d4a4cd2b0f52ca",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCylAmb9LtnGl": {
+      "sku": "LBCylAmb9LtnGl",
+      "familyId": "register:cylinder-9ml-17-415|Amber",
+      "plateSha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-SGLD-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png",
+            "sha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+            "bytes": 1050360,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839.png",
+            "sha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839",
+            "bytes": 918131,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-SGLD-17-415"
+        ],
+        "seatSignature": "3ad903ab1271c0",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCylAmb9LtnMtSl": {
+      "sku": "LBCylAmb9LtnMtSl",
+      "familyId": "register:cylinder-9ml-17-415|Amber",
+      "plateSha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-MSLV-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png",
+            "sha256": "f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb",
+            "bytes": 1050360,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png",
+            "sha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155",
+            "bytes": 1206578,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Amber",
+        "glass": "Amber",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-MSLV-17-415"
+        ],
+        "seatSignature": "32ea668d168d7e",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCyl9LtnBlk": {
+      "sku": "LBCyl9LtnBlk",
+      "familyId": "register:cylinder-9ml-17-415|Clear",
+      "plateSha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-BLK-17-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-BLK-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+            "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+            "bytes": 1634900,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf.png",
+            "sha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf",
+            "bytes": 860722,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-BLK-17-415"
+        ],
+        "seatSignature": "12ed851a05eac3",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCyl9LtnGl": {
+      "sku": "LBCyl9LtnGl",
+      "familyId": "register:cylinder-9ml-17-415|Clear",
+      "plateSha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-SGLD-17-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-SGLD-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+            "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+            "bytes": 1634900,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839.png",
+            "sha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839",
+            "bytes": 918131,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-SGLD-17-415"
+        ],
+        "seatSignature": "ddd9f890040a03",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCyl9LtnMtSl": {
+      "sku": "LBCyl9LtnMtSl",
+      "familyId": "register:cylinder-9ml-17-415|Clear",
+      "plateSha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-MSLV-17-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.62,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-MSLV-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+            "sha256": "56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba",
+            "bytes": 1634900,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png",
+            "sha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155",
+            "bytes": 1206578,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-MSLV-17-415"
+        ],
+        "seatSignature": "fc6848ee13ab65",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCylBlu9LtnBlk": {
+      "sku": "LBCylBlu9LtnBlk",
+      "familyId": "register:cylinder-9ml-17-415|Cobalt Blue",
+      "plateSha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-BLK-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png",
+            "sha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0",
+            "bytes": 1022364,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf.png",
+            "sha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf",
+            "bytes": 860722,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+        "glass": "Cobalt Blue",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-BLK-17-415"
+        ],
+        "seatSignature": "689c5d26184ea7",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCylBlu9LtnGl": {
+      "sku": "LBCylBlu9LtnGl",
+      "familyId": "register:cylinder-9ml-17-415|Cobalt Blue",
+      "plateSha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-SGLD-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png",
+            "sha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0",
+            "bytes": 1022364,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839.png",
+            "sha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839",
+            "bytes": 918131,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+        "glass": "Cobalt Blue",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-SGLD-17-415"
+        ],
+        "seatSignature": "4fb514f417af5f",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCylBlu9LtnMattSl": {
+      "sku": "LBCylBlu9LtnMattSl",
+      "familyId": "register:cylinder-9ml-17-415|Cobalt Blue",
+      "plateSha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-MSLV-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png",
+            "sha256": "9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0",
+            "bytes": 1022364,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png",
+            "sha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155",
+            "bytes": 1206578,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Cobalt Blue",
+        "glass": "Cobalt Blue",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-MSLV-17-415"
+        ],
+        "seatSignature": "ab4155ea1cb909",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCylFrst9LtnBlk": {
+      "sku": "LBCylFrst9LtnBlk",
+      "familyId": "register:cylinder-9ml-17-415|Frosted",
+      "plateSha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-BLK-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png",
+            "sha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db",
+            "bytes": 1131945,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf.png",
+            "sha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf",
+            "bytes": 860722,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-BLK-17-415"
+        ],
+        "seatSignature": "9b5d72620a7eb3",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCylFrst9LtnGl": {
+      "sku": "LBCylFrst9LtnGl",
+      "familyId": "register:cylinder-9ml-17-415|Frosted",
+      "plateSha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-SGLD-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png",
+            "sha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db",
+            "bytes": 1131945,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839.png",
+            "sha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839",
+            "bytes": 918131,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-SGLD-17-415"
+        ],
+        "seatSignature": "b4a9f0d8158633",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCylFrst9LtnMtSl": {
+      "sku": "LBCylFrst9LtnMtSl",
+      "familyId": "register:cylinder-9ml-17-415|Frosted",
+      "plateSha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-MSLV-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png",
+            "sha256": "76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db",
+            "bytes": 1131945,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png",
+            "sha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155",
+            "bytes": 1206578,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Frosted",
+        "glass": "Frosted",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-MSLV-17-415"
+        ],
+        "seatSignature": "26e16c3613b135",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCylSwrl9LtnBlk": {
+      "sku": "LBCylSwrl9LtnBlk",
+      "familyId": "register:cylinder-9ml-17-415|Swirl",
+      "plateSha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-BLK-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png",
+            "sha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+            "bytes": 1537538,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf.png",
+            "sha256": "ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf",
+            "bytes": 860722,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-BLK-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Swirl",
+        "glass": "Swirl",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-BLK-17-415"
+        ],
+        "seatSignature": "6e5191d90a1e08",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCylSwrl9LtnGl": {
+      "sku": "LBCylSwrl9LtnGl",
+      "familyId": "register:cylinder-9ml-17-415|Swirl",
+      "plateSha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-SGLD-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png",
+            "sha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+            "bytes": 1537538,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839.png",
+            "sha256": "b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839",
+            "bytes": 918131,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-SGLD-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Swirl",
+        "glass": "Swirl",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-SGLD-17-415"
+        ],
+        "seatSignature": "cace2a89158b3e",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    },
+    "LBCylSwrl9LtnMtSl": {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "familyId": "register:cylinder-9ml-17-415|Swirl",
+      "plateSha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 309,
+        "baselineY": 1061.5,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43.5,
+        "baselinePct": 91,
+        "landmarkY": 437.1345809100999,
+        "source": "Approved Cylinder 9 ml family scale and November 1 master registration"
+      },
+      "parts": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 468.5,
+            "top": 407.0031721084887,
+            "right": 537.5576923076923,
+            "bottom": 986.2999428571428
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "key": "reviewed-master-media/2026-11-01/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e.svg",
+            "sha256": "fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e",
+            "bytes": 1203053,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410,
+            "y": 407.0031721084887,
+            "width": 180,
+            "height": 579.2967707486541
+          },
+          "componentId": "CMP-LPM-MSLV-17-415",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 398.2732598425197,
+            "right": 601.7267401574803,
+            "top": 304.51,
+            "bottom": 1061.5
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png",
+            "sha256": "032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66",
+            "bytes": 1537538,
+            "width": 743,
+            "height": 2116,
+            "key": "reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.98622047244095,
+            "y": 259.6071811023622,
+            "width": 295.24596850393704,
+            "height": 840.8350866141733
+          },
+          "componentId": null
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.40000000000003,
+            "top": 86.31088193456617,
+            "right": 579.6,
+            "bottom": 282.65
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+            "sha256": "001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe",
+            "bytes": 985854,
+            "width": 1322,
+            "height": 1190,
+            "key": "reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 350.19800853485066,
+            "y": 48.03947368421054,
+            "width": 299.37752489331433,
+            "height": 269.4850640113798
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 395.299242777043,
+            "top": 267.80388183037456,
+            "right": 607.520979639737,
+            "bottom": 449.0031721084887
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 324.4242857142857,
+            "dy": -140.58385714285714
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png",
+            "sha256": "a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155",
+            "bytes": 1206578,
+            "width": 1204,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 395.299242777043,
+            "y": 267.80388183037456,
+            "width": 212.22173686269397,
+            "height": 181.19929027811412
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 8,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 410.52,
+            "top": 40.0801,
+            "right": 589.89,
+            "bottom": 279.1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": -280,
+            "dy": 767
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png",
+            "sha256": "a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0",
+            "bytes": 300365,
+            "width": 427,
+            "height": 569,
+            "key": "reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 410.52,
+            "y": 40.0801,
+            "width": 179.37,
+            "height": 239.02
+          },
+          "componentId": "CMP-LPM-MSLV-17-415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "cylinder-9ml-17-415",
+        "plateKey": "cylinder-9ml-17-415|Swirl",
+        "glass": "Swirl",
+        "datum": {
+          "axisX": 500,
+          "seatY": 309,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-LPM-MSLV-17-415"
+        ],
+        "seatSignature": "e460aedb0d4c0c",
+        "seatDropMm": 0,
+        "bodyLayers": true
+      }
+    }
+  }
+}

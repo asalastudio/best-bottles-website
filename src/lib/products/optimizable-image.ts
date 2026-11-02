@@ -1,3 +1,5 @@
+import { displayDerivativeUrl } from "./display-derivative";
+
 /** Only proxy sources verified in both local Next and deployed Vercel. The
  * public Blob plates are already compact WebP files, and local Next rejects
  * their remote URL even though the deployed proxy accepts it. Unknown hosts
@@ -28,19 +30,22 @@ export function isRegisterAssetUrl(value: string): boolean {
     try {
         const url = new URL(value);
         return url.protocol === "https:" && url.hostname === REGISTER_BLOB_HOST && (url.pathname.startsWith("/register/")
-            || (url.pathname.startsWith("/reviewed-master-media/") && /\.(?:png|webp)$/i.test(url.pathname)));
+            || (url.pathname.startsWith("/reviewed-master-media/") && (/\.(?:png|webp)$/i.test(url.pathname)
+                || displayDerivativeUrl(value, 640) !== null)));
     } catch {
         return false;
     }
 }
 
-export type DisplayImageWidth = 256 | 384 | 640 | 828 | 1200;
+export type DisplayImageWidth = 128 | 256 | 384 | 640 | 828 | 1200;
 
 /** Registered paper-doll layers must remain plain img/SVG image elements so
  * their pixel canvas and alpha compositing stay unchanged. Give their decode
  * preload and painted element the same resized URL to avoid fetching both the
  * original and optimized bytes. Widths come from Next's default deviceSizes. */
 export function displayImageUrl(value: string, width: DisplayImageWidth = 1200): string {
+    const derivative = displayDerivativeUrl(value, width);
+    if (derivative) return derivative;
     if (!isOptimizableImageUrl(value)) return value;
     return `/_next/image?url=${encodeURIComponent(value)}&w=${width}&q=${value.includes("/reviewed-master-media/") ? 90 : 75}`;
 }

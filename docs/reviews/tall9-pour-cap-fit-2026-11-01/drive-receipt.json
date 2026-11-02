@@ -1,0 +1,47 @@
+{
+  "folderUrl": "https://drive.google.com/drive/folders/1ZbsudJiokmMqPYdVCCdm4WVfz1nXpKbP",
+  "verified": "Readback sizes and parent folders match.",
+  "registration": {
+    "id": "19AVZapNGoKHUfVKOKI4WHjpcS2SCoRbb",
+    "title": "Best_Bottles_Cylinder_Tall_9ml_Clear_Frosted_13-415_Pour_Cap_Fit_Registration_2026-11-01.json",
+    "mime_type": null,
+    "size": "15856",
+    "url": "https://drive.google.com/file/d/19AVZapNGoKHUfVKOKI4WHjpcS2SCoRbb/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/19AVZapNGoKHUfVKOKI4WHjpcS2SCoRbb/view?usp=drivesdk",
+    "file_or_folder": null,
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1ZbsudJiokmMqPYdVCCdm4WVfz1nXpKbP"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  },
+  "reviewPackage": {
+    "id": "164S1vTfsKA_OVFiymx_QLVRGFEHGOsA3",
+    "title": "Best_Bottles_Cylinder_Tall_9ml_13-415_Pour_Cap_Alignment_2026-11-01.zip",
+    "mime_type": null,
+    "size": "2511039",
+    "url": "https://drive.google.com/file/d/164S1vTfsKA_OVFiymx_QLVRGFEHGOsA3/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/164S1vTfsKA_OVFiymx_QLVRGFEHGOsA3/view?usp=drivesdk",
+    "file_or_folder": null,
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1ZbsudJiokmMqPYdVCCdm4WVfz1nXpKbP"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified",
+    "sha256": "b5773302afbe572b6e49511bf6f20f6995c7218b8c81edb2095795d7f8718b03"
+  },
+  "merged": false,
+  "deployed": false
+}

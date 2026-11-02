@@ -1,0 +1,546 @@
+{
+  "rows": {
+    "GBMtlRoll28Wht": {
+      "sku": "GBMtlRoll28Wht",
+      "familyId": "review:cylinder-28ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 9.876543209876543
+      },
+      "register": {
+        "bodyId": "cylinder-28ml-16mm",
+        "plateKey": "cylinder-28ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 9.876543209876543
+      },
+      "glassSizing": {
+        "heightPct": 50.5,
+        "baselinePct": 91,
+        "landmarkY": 380.1031390134529,
+        "source": "Existing five-height canvas curve; owner-specified archive PSD complete neck/body silhouette"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-28ml-16mm-archive-psd.d08abe4d61bf.webp",
+            "key": "",
+            "sha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+            "bytes": 874898,
+            "width": 890,
+            "height": 2230
+          },
+          "box": {
+            "x": 340.35874439461884,
+            "y": 261,
+            "width": 319.2825112107623,
+            "height": 800
+          },
+          "bounds": {
+            "left": 346.9135802469136,
+            "top": 261,
+            "right": 653.0864197530864,
+            "bottom": 1061
+          }
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-metal",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp",
+            "key": "",
+            "sha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008",
+            "bytes": 581082,
+            "width": 1344,
+            "height": 880
+          },
+          "box": {
+            "x": 372.4631414211334,
+            "y": 100.34059575973279,
+            "width": 249.14177024708817,
+            "height": 163.12854004273632
+          },
+          "bounds": {
+            "left": 389.51748878923763,
+            "top": 103.30656921505528,
+            "right": 610.4825112107623,
+            "bottom": 263.4691358024691
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-white",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-white.b941c5342eae.webp",
+            "key": "",
+            "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908",
+            "bytes": 655994,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 342.9933333978692,
+            "y": 27.38711351740733,
+            "width": 314.2878203836359,
+            "height": 377.1453844603631
+          },
+          "bounds": {
+            "left": 362.7564103128227,
+            "top": 48.52262632923262,
+            "right": 637.2435896871773,
+            "bottom": 380.1031390134529
+          }
+        }
+      ]
+    },
+    "GBCyl1ozRollWht": {
+      "sku": "GBCyl1ozRollWht",
+      "familyId": "review:cylinder-28ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 9.876543209876543
+      },
+      "register": {
+        "bodyId": "cylinder-28ml-16mm",
+        "plateKey": "cylinder-28ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 9.876543209876543
+      },
+      "glassSizing": {
+        "heightPct": 50.5,
+        "baselinePct": 91,
+        "landmarkY": 380.1031390134529,
+        "source": "Existing five-height canvas curve; owner-specified archive PSD complete neck/body silhouette"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-28ml-16mm-archive-psd.d08abe4d61bf.webp",
+            "key": "",
+            "sha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+            "bytes": 874898,
+            "width": 890,
+            "height": 2230
+          },
+          "box": {
+            "x": 340.35874439461884,
+            "y": 261,
+            "width": 319.2825112107623,
+            "height": 800
+          },
+          "bounds": {
+            "left": 346.9135802469136,
+            "top": 261,
+            "right": 653.0864197530864,
+            "bottom": 1061
+          }
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-plastic",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp",
+            "key": "",
+            "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+            "bytes": 22232,
+            "width": 357,
+            "height": 244
+          },
+          "box": {
+            "x": 356.8917807806904,
+            "y": 82.54475502779792,
+            "width": 264.7131308875312,
+            "height": 180.9243807746712
+          },
+          "bounds": {
+            "left": 389.51748878923763,
+            "top": 89.95968866610411,
+            "right": 610.4825112107623,
+            "bottom": 263.4691358024691
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-white",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-white.b941c5342eae.webp",
+            "key": "",
+            "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908",
+            "bytes": 655994,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 342.9933333978692,
+            "y": 27.38711351740733,
+            "width": 314.2878203836359,
+            "height": 377.1453844603631
+          },
+          "bounds": {
+            "left": 362.7564103128227,
+            "top": 48.52262632923262,
+            "right": 637.2435896871773,
+            "bottom": 380.1031390134529
+          }
+        }
+      ]
+    },
+    "GBRoll28Blk": {
+      "sku": "GBRoll28Blk",
+      "familyId": "review:cylinder-28ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 9.876543209876543
+      },
+      "register": {
+        "bodyId": "cylinder-28ml-16mm",
+        "plateKey": "cylinder-28ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 9.876543209876543
+      },
+      "glassSizing": {
+        "heightPct": 50.5,
+        "baselinePct": 91,
+        "landmarkY": 380.1031390134529,
+        "source": "Existing five-height canvas curve; owner-specified archive PSD complete neck/body silhouette"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-28ml-16mm-archive-psd.d08abe4d61bf.webp",
+            "key": "",
+            "sha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+            "bytes": 874898,
+            "width": 890,
+            "height": 2230
+          },
+          "box": {
+            "x": 340.35874439461884,
+            "y": 261,
+            "width": 319.2825112107623,
+            "height": 800
+          },
+          "bounds": {
+            "left": 346.9135802469136,
+            "top": 261,
+            "right": 653.0864197530864,
+            "bottom": 1061
+          }
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-plastic",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp",
+            "key": "",
+            "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+            "bytes": 22232,
+            "width": 357,
+            "height": 244
+          },
+          "box": {
+            "x": 356.8917807806904,
+            "y": 82.54475502779792,
+            "width": 264.7131308875312,
+            "height": 180.9243807746712
+          },
+          "bounds": {
+            "left": 389.51748878923763,
+            "top": 89.95968866610411,
+            "right": 610.4825112107623,
+            "bottom": 263.4691358024691
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-black",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-black.b69eeeb45b69.webp",
+            "key": "",
+            "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7",
+            "bytes": 768394,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 342.9933333978692,
+            "y": 27.38711351740733,
+            "width": 314.2878203836359,
+            "height": 377.1453844603631
+          },
+          "bounds": {
+            "left": 362.4819231334484,
+            "top": 48.52262632923262,
+            "right": 637.5180768665516,
+            "bottom": 380.1031390134529
+          }
+        }
+      ]
+    },
+    "GBMtlRoll28Blk": {
+      "sku": "GBMtlRoll28Blk",
+      "familyId": "review:cylinder-28ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 9.876543209876543
+      },
+      "register": {
+        "bodyId": "cylinder-28ml-16mm",
+        "plateKey": "cylinder-28ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 9.876543209876543
+      },
+      "glassSizing": {
+        "heightPct": 50.5,
+        "baselinePct": 91,
+        "landmarkY": 380.1031390134529,
+        "source": "Existing five-height canvas curve; owner-specified archive PSD complete neck/body silhouette"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-28ml-16mm-archive-psd.d08abe4d61bf.webp",
+            "key": "",
+            "sha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+            "bytes": 874898,
+            "width": 890,
+            "height": 2230
+          },
+          "box": {
+            "x": 340.35874439461884,
+            "y": 261,
+            "width": 319.2825112107623,
+            "height": 800
+          },
+          "bounds": {
+            "left": 346.9135802469136,
+            "top": 261,
+            "right": 653.0864197530864,
+            "bottom": 1061
+          }
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-metal",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp",
+            "key": "",
+            "sha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008",
+            "bytes": 581082,
+            "width": 1344,
+            "height": 880
+          },
+          "box": {
+            "x": 372.4631414211334,
+            "y": 100.34059575973279,
+            "width": 249.14177024708817,
+            "height": 163.12854004273632
+          },
+          "bounds": {
+            "left": 389.51748878923763,
+            "top": 103.30656921505528,
+            "right": 610.4825112107623,
+            "bottom": 263.4691358024691
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-black",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-black.b69eeeb45b69.webp",
+            "key": "",
+            "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7",
+            "bytes": 768394,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 342.9933333978692,
+            "y": 27.38711351740733,
+            "width": 314.2878203836359,
+            "height": 377.1453844603631
+          },
+          "bounds": {
+            "left": 362.4819231334484,
+            "top": 48.52262632923262,
+            "right": 637.5180768665516,
+            "bottom": 380.1031390134529
+          }
+        }
+      ]
+    }
+  },
+  "defaultPdpSkus": [
+    "GBMtlRoll28Wht",
+    "GBCyl1ozRollWht",
+    "GBRoll28Blk",
+    "GBMtlRoll28Blk"
+  ]
+}

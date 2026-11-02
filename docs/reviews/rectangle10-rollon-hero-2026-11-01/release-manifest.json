@@ -1,0 +1,30 @@
+{
+  "version": "b4e1b077ae76a6da",
+  "configurations": 456,
+  "addedSkus": [
+    "GBRect10MtlRollBlkDot",
+    "GBRect10MtlRollBlkSh",
+    "GBRect10MtlRollCuMatt",
+    "GBRect10MtlRollGlMatt",
+    "GBRect10MtlRollGlSh",
+    "GBRect10MtlRollPinkDot",
+    "GBRect10MtlRollSlDot",
+    "GBRect10MtlRollSlMatt",
+    "GBRect10MtlRollSlSh",
+    "GBRect10RollBlkDot",
+    "GBRect10RollBlkSh",
+    "GBRect10RollCuMatt",
+    "GBRect10RollGlMatt",
+    "GBRect10RollGlSh",
+    "GBRect10RollPinkDot",
+    "GBRect10RollSlDot",
+    "GBRect10RollSlMatt",
+    "GBRect10RollSlSh"
+  ],
+  "preservedRecipes": 438,
+  "sourcePixelsChanged": false,
+  "geometryChanged": false,
+  "productionDataMutated": false,
+  "merged": false,
+  "deployed": false
+}

@@ -1,3 +1,4 @@
+import { isTolaApplicator, TOLA6_ASSEMBLED_IMAGE } from "@/lib/products/tola-applicator";
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import sharp from 'sharp';
@@ -94,13 +95,16 @@ describe('Grace, Royal, Flair, and Decorative catalog hero release', () => {
   it('keeps the pictured and purchasable SKU aligned in its production group', () => {
     vi.stubEnv('NEXT_PUBLIC_CATALOG_HERO_PILOT', 'families-2026-09-22');
     for (const row of rows) {
-      expect(getProductHero(row.websiteSku)).toEqual(row);
-      expect(getCatalogHero(row.groupSlug, [{ websiteSku: row.websiteSku }])).toEqual(row);
+      const current = getProductHero(row.websiteSku)!;
+      if (isTolaApplicator(row.websiteSku)) {
+        expect(current).toMatchObject({ websiteSku: row.websiteSku, groupSlug: row.groupSlug, url: TOLA6_ASSEMBLED_IMAGE });
+      } else expect(current).toEqual(row);
+      expect(getCatalogHero(row.groupSlug, [{ websiteSku: row.websiteSku }])).toEqual(current);
       expect(getCatalogHero(row.groupSlug, [{ websiteSku: 'other-sku' }])).toBeNull();
       expect(resolveLiveCatalogCardHero({
         staticHero: row, heroImageUrl: 'https://cdn.shopify.com/older.png',
         variants: [{ websiteSku: row.websiteSku }],
-      })).toMatchObject({ imageUrl: row.url, picturedWebsiteSku: row.websiteSku });
+      })).toMatchObject({ imageUrl: current.url, picturedWebsiteSku: row.websiteSku });
     }
   });
 

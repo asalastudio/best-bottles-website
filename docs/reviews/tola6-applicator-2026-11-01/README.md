@@ -1,0 +1,17 @@
+# Tola 6 ml: one complete applicator bottle
+
+Jordan requested a single assembled Tola with its plastic applicator and gold cap. The product must not offer a cap-off or sidecar presentation. An exploded option is optional, provided the real complete applicator artwork exists.
+
+Scope is the exact existing product GB6TPlGl, Grace SKU GB-DEC-CLR-6ML-T, at /products/tola-6ml-clear-14.3mm. The group has one sellable variant. Other Tola sizes and all unrelated bottles retain their existing policies.
+
+The old register incorrectly classified LIB-14.3mm-Plug as the removable cap. The gold cap was absent, the page called the product a pour bottle without a fitment, and the default hero used a separate cap beside the bottle. The corrected presentation uses the exact existing capped photograph, with the gold cap, red bead and plastic applicator together. The historical uncapped photos and all Photoshop sources remain preserved as evidence, but the owner-directed page offers only ASSEMBLED. There is no independent full wand layer to support an honest exploded assembly yet.
+
+The source photograph is the existing immutable 1000 x 1100 cap-on plate with SHA-256 d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1. Its bytes, format and hosted response are verified. No generated image or new hosted image upload was needed. Native source photos and layers are exported for inspection without modifying the PSDs. psd-inventory.json records their paths, hashes and layers. The active source copy is sources/active-assembled.d82ca4bb5b8e.webp.
+
+The whole photograph is uniformly placed using the recorded 59 mm height with cap at 10.49 pixels/mm. Source ink bounds are x 334..704, y 41..1060. The original reviewed frame remains at 34.24% with a 91% baseline, with the same 657.3184215328467 shoulder landmark. The outer canvas uses multiply blending so the photograph's white background merges with the page. Its original source pixels are preserved. Catalog and product page share this source and placement; the default hero resolver supplies the same asset to downstream thumbnail consumers.
+
+The product title and description identify a Tola applicator bottle, including the plastic applicator and gold cap with red bead. Misleading pour copy, the cap rail, bare-glass option and interchangeable bottle-builder strip are removed for this exact SKU. SKU, route, Shopify variant ID, prices, quantity tiers, stock and all commercial records remain unchanged. The 438-row approved component manifest and index are unchanged; the single photograph is explicitly not represented as a separable component kit.
+
+Current legacy evidence: https://www.bestbottles.com/product/Octagonal-style-6-ml-glass-bottle-shiny-gold-cap-red-bead. The live page and native source photos confirm the exact product, gold cap, red bead and plastic applicator. legacy-evidence.json preserves the retrieval; uncapped views in that evidence remain physical references rather than enabled page states.
+
+Browser verification covers desktop and mobile, the default gold query and old clear/sidecar/exploded query links, the catalog hero, source identity, description, hidden controls and page overflow. Pixel samples verify that no white background rectangle remains. The complete local suite passed 3,256 tests with 7 skipped. Historical hero byte tests retain the original files and explicitly acknowledge this owner-requested presentation correction. Typecheck and scoped lint passed. Changes are prepared for PR #388, not merged or deployed.

@@ -1,0 +1,3149 @@
+{
+  "status": "passed",
+  "version": "sleek8-80dd51d7543a-v1",
+  "apis": [
+    "GBSleek8SpryBlkMatt",
+    "GBSleek8SpryBluMatt",
+    "GBSleek8SpryCuMatt",
+    "GBSleek8SpryGlMatt",
+    "GBSleek8SprySlMatt",
+    "GBSleek8SpryBlkSh",
+    "GBSleek8SpryGlSh",
+    "GBSleek8SprySlSh",
+    "GBSleek8MtlRollBlkDot",
+    "GBSleek8MtlRollCuMatt",
+    "GBSleek8MtlRollGlMatt",
+    "GBSleek8MtlRollSlMatt",
+    "GBSleek8MtlRollPinkDot",
+    "GBSleek8MtlRollBlkSh",
+    "GBSleek8MtlRollGlSh",
+    "GBSleek8MtlRollSlSh",
+    "GBSleek8MtlRollSlDot",
+    "GBSleek8RollBlkDot",
+    "GBSleek8RollCuMatt",
+    "GBSleek8RollGlMatt",
+    "GBSleek8RollSlMatt",
+    "GBSleek8RollPinkDot",
+    "GBSleek8RollBlkSh",
+    "GBSleek8RollGlSh",
+    "GBSleek8RollSlSh",
+    "GBSleek8RollSlDot",
+    "GBSleek8BlkSht",
+    "GBSleek8CuSht",
+    "GBSleek8GlMattSht",
+    "GBSleek8SlMattSht",
+    "GBSleek8BlkShSht",
+    "GBSleek8GlSht",
+    "GBSleek8SlSht",
+    "GBSleek8WhtSht",
+    "GBSleek8Gl",
+    "GBSleek8Sl"
+  ],
+  "builders": [
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryBlkMatt"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryBluMatt"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryCuMatt"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryGlMatt"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SprySlMatt"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryBlkSh"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SpryGlSh"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SprySlSh"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8MtlRollBlkDot"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8MtlRollCuMatt"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8MtlRollGlMatt"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8MtlRollSlMatt"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8MtlRollPinkDot"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8MtlRollBlkSh"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8MtlRollGlSh"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8MtlRollSlSh"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8MtlRollSlDot"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8RollBlkDot"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8RollCuMatt"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8RollGlMatt"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8RollSlMatt"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8RollPinkDot"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8RollBlkSh"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8RollGlSh"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8RollSlSh"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8RollSlDot"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8BlkSht"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8CuSht"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8GlMattSht"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SlMattSht"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8BlkShSht"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8GlSht"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8SlSht"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8WhtSht"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8Gl"
+    },
+    {
+      "kind": "api",
+      "sku": "GBSleek8Sl"
+    },
+    {
+      "kind": "page",
+      "sku": "GBSleek8SpryGlMatt",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBSleek8MtlRollBlkDot",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBSleek8RollBlkDot",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBSleek8BlkSht",
+      "passed": true
+    }
+  ],
+  "pdp": [
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBluMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBluMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBluMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryCuMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryCuMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryCuMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8MtlRollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "sidecar",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8MtlRollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "capon",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8MtlRollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "exploded",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8RollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "sidecar",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8RollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "capon",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8RollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "exploded",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8BlkSht",
+      "slug": "sleek-8ml-clear-13-415",
+      "view": "sidecar",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-S-13-415%2Fcap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8BlkSht",
+      "slug": "sleek-8ml-clear-13-415",
+      "view": "capon",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-S-13-415%2Fcap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8BlkSht",
+      "slug": "sleek-8ml-clear-13-415",
+      "view": "exploded",
+      "frame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-S-13-415%2Fcap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBluMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBluMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBluMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryCuMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryCuMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryCuMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlMatt",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "capon",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "diptube",
+          "blend": "multiply",
+          "opacity": "0.4",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlSh",
+      "slug": "sleek-8ml-clear-13-415-finemist",
+      "view": "exploded",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "multiply",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "diptube",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg"
+        },
+        {
+          "slot": "sprayer",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7.svg"
+        },
+        {
+          "slot": "overcap",
+          "blend": "",
+          "opacity": "",
+          "z": 4,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866.svg"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8MtlRollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "sidecar",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8MtlRollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "capon",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8MtlRollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "exploded",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8RollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "sidecar",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8RollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "capon",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8RollBlkDot",
+      "slug": "sleek-8ml-clear-13-415-rollon",
+      "view": "exploded",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "roller",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 3,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8BlkSht",
+      "slug": "sleek-8ml-clear-13-415",
+      "view": "sidecar",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-S-13-415%2Fcap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8BlkSht",
+      "slug": "sleek-8ml-clear-13-415",
+      "view": "capon",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-S-13-415%2Fcap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png&w=640&q=75"
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8BlkSht",
+      "slug": "sleek-8ml-clear-13-415",
+      "view": "exploded",
+      "frame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "blend": "",
+          "opacity": "",
+          "z": 1,
+          "src": "http://localhost:3010/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+        },
+        {
+          "slot": "cap",
+          "blend": "",
+          "opacity": "",
+          "z": 2,
+          "src": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-S-13-415%2Fcap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png&w=640&q=75"
+        }
+      ]
+    }
+  ],
+  "catalog": [
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBlkMatt"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBluMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBluMatt"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryCuMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryCuMatt"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryGlMatt"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SprySlMatt"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryBlkSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBlkSh"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SpryGlSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryGlSh"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SprySlSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SprySlSh"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8BlkSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8BlkSht"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8CuSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8CuSht"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8GlMattSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8GlMattSht"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SlMattSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8SlMattSht"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8BlkShSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8BlkShSht"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8GlSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8GlSht"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8SlSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8SlSht"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8WhtSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8WhtSht"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8Gl",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8Gl"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8Sl",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8Sl"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSleek8MtlRollBlkDot",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-rollon?sku=GBSleek8MtlRollBlkDot"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBlkMatt"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBluMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBluMatt"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryCuMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryCuMatt"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryGlMatt"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlMatt",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SprySlMatt"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryBlkSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryBlkSh"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SpryGlSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SpryGlSh"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SprySlSh",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-finemist?sku=GBSleek8SprySlSh"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8BlkSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8BlkSht"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8CuSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8CuSht"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8GlMattSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8GlMattSht"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SlMattSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8SlMattSht"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8BlkShSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8BlkShSht"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8GlSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8GlSht"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8SlSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8SlSht"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8WhtSht",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8WhtSht"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8Gl",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8Gl"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8Sl",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415?sku=GBSleek8Sl"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSleek8MtlRollBlkDot",
+      "version": "sleek8-80dd51d7543a-v1",
+      "body": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg",
+      "href": "http://localhost:3010/products/sleek-8ml-clear-13-415-rollon?sku=GBSleek8MtlRollBlkDot"
+    }
+  ],
+  "errors": []
+}

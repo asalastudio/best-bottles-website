@@ -1,0 +1,72 @@
+{
+  "folder": {
+    "success": true,
+    "id": "1B-qyoJ96FTX1JylDA3B2xdM3zB7CF-7I",
+    "url": "https://drive.google.com/drive/folders/1B-qyoJ96FTX1JylDA3B2xdM3zB7CF-7I",
+    "title": "Review - 2026-11-01 - 9 ml Ground-Glass Applicator - Clear Cobalt Green",
+    "parent_id": "1r0XQAavJDWKiiJACdamgyUJqub42X1A1"
+  },
+  "images": [
+    {
+      "id": "1u3h9Ku0NOMA-5-xJbOFAS8_JeEHBqne5",
+      "title": "Rectangle_9ml_Ground_Clear_GPT_CANDIDATE_v1.png",
+      "mime_type": null,
+      "size": "1094330",
+      "url": "https://drive.google.com/file/d/1u3h9Ku0NOMA-5-xJbOFAS8_JeEHBqne5/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1u3h9Ku0NOMA-5-xJbOFAS8_JeEHBqne5/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1B-qyoJ96FTX1JylDA3B2xdM3zB7CF-7I"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "id": "1lhMNUSYDh2HVfPyS3j1lzPNcyCh1hwWO",
+      "title": "Rectangle_9ml_Ground_Cobalt_Blue_GPT_CANDIDATE_v1.png",
+      "mime_type": null,
+      "size": "952183",
+      "url": "https://drive.google.com/file/d/1lhMNUSYDh2HVfPyS3j1lzPNcyCh1hwWO/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1lhMNUSYDh2HVfPyS3j1lzPNcyCh1hwWO/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1B-qyoJ96FTX1JylDA3B2xdM3zB7CF-7I"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    {
+      "id": "12TPDopNIEGPTwUys3RCxfRkMKjvtgkEp",
+      "title": "Rectangle_9ml_Ground_Green_GPT_CANDIDATE_v1.png",
+      "mime_type": null,
+      "size": "1043401",
+      "url": "https://drive.google.com/file/d/12TPDopNIEGPTwUys3RCxfRkMKjvtgkEp/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/12TPDopNIEGPTwUys3RCxfRkMKjvtgkEp/view?usp=drivesdk",
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1B-qyoJ96FTX1JylDA3B2xdM3zB7CF-7I"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    }
+  ],
+  "status": "Review candidates, not approved masters"
+}

@@ -1,0 +1,50 @@
+{
+  "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/4. 50ml Uncapped/1. GBCyl50RollBlk.psd",
+  "sourceSha256": "b7cf4e25c9c25e167a28c4b1c18c4adb944594a20c6e4e6e0e4d2913d6997101",
+  "includedLayers": [
+    {
+      "index": 1,
+      "name": "Layer 10",
+      "bounds": [
+        226,
+        453,
+        735,
+        1821
+      ]
+    },
+    {
+      "index": 3,
+      "name": "Layer 6",
+      "bounds": [
+        252,
+        173,
+        651,
+        870
+      ]
+    },
+    {
+      "index": 4,
+      "name": "Layer 7",
+      "bounds": [
+        280,
+        253,
+        674,
+        673
+      ]
+    }
+  ],
+  "viewport": [
+    226,
+    470,
+    735,
+    1821
+  ],
+  "width": 509,
+  "height": 1351,
+  "aspect": 2.654223968565815,
+  "dimensionReference": {
+    "heightWithoutCapMm": 98,
+    "diameterMm": 37
+  },
+  "method": "Native PSD composite includes glass neck pixels in the roller/retouch layers. Viewport begins below the seating flange. Original pixels and files unchanged."
+}

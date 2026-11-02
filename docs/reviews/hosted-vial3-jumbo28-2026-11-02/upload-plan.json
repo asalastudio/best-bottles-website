@@ -1,0 +1,399 @@
+{
+  "checkedAt": "2026-11-02T23:11:07.092Z",
+  "skus": [
+    "GBCyl1ozRollWht",
+    "GBMtlRoll28Blk",
+    "GBMtlRoll28Wht",
+    "GBRoll28Blk",
+    "GBVBlu1o9BlackCapSht",
+    "GBVGreen2o4BlackCapSht",
+    "GBVGreen2o4WhtCapSht"
+  ],
+  "priorVersion": "ca21bfc3c0c3ce57",
+  "preservedRecipes": 456,
+  "preservedRecipeSha256": "138b3297d4f42d39008164fc7ae22afc7a454154ea53f812e4a495dfd2411f05",
+  "sourceFiles": [
+    {
+      "file": "public/local-kits/jumbo28-archive-geometry-2026-11-02/kits.json",
+      "sha256": "2346eff0cb63ae83cb7937375123c2693948d68a4f56a5bb81a8dc963751fa00"
+    },
+    {
+      "file": "public/local-kits/vial3-swatches-builder-2026-11-02/kits.json",
+      "sha256": "d25f531662ce67bebff3262f7de18951dd1a15bd48a142ee682a6b5a6814466b"
+    }
+  ],
+  "assetCount": 9,
+  "assets": {
+    "/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-28ml-16mm-archive-psd.d08abe4d61bf.webp": {
+      "file": "public/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-28ml-16mm-archive-psd.d08abe4d61bf.webp",
+      "sha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+      "bytes": 874898,
+      "contentType": "image/webp",
+      "key": "reviewed-master-media/2026-11-02/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780.webp",
+      "derivatives": {
+        "128": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/128.5792d88595fd.webp",
+          "sha256": "5792d88595fdc359a8cd50b685b53307e311133dd6e6fe3438b68e8d6161cff7",
+          "bytes": 25850,
+          "contentType": "image/webp",
+          "key": "product-display/v1/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/128-5792d88595fdc359a8cd50b685b53307e311133dd6e6fe3438b68e8d6161cff7.webp",
+          "width": 128
+        },
+        "256": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "sha256": "ed8387e7645a7c178762fc3b6796a25fec6cefd4179c106d94bf04ac4ef26aeb",
+          "bytes": 94968,
+          "contentType": "image/webp",
+          "key": "product-display/v1/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256-ed8387e7645a7c178762fc3b6796a25fec6cefd4179c106d94bf04ac4ef26aeb.webp",
+          "width": 256
+        },
+        "640": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/640.d69df0041f2c.webp",
+          "sha256": "d69df0041f2c8c48ba77480d1341dd16ff0dff64a26172171db4bd569843d767",
+          "bytes": 498526,
+          "contentType": "image/webp",
+          "key": "product-display/v1/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/640-d69df0041f2c8c48ba77480d1341dd16ff0dff64a26172171db4bd569843d767.webp",
+          "width": 640
+        },
+        "1200": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/1200.d08abe4d61bf.webp",
+          "sha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+          "bytes": 874898,
+          "contentType": "image/webp",
+          "key": "product-display/v1/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/1200-d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780.webp",
+          "width": 890
+        }
+      }
+    },
+    "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp": {
+      "file": "public/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp",
+      "sha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008",
+      "bytes": 581082,
+      "contentType": "image/webp",
+      "key": "reviewed-master-media/2026-11-02/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008.webp",
+      "derivatives": {
+        "128": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+          "sha256": "81242a8a1d341ebfa237b3b437c704c91af8ce6182bd6da5dfde37db1f03b181",
+          "bytes": 6722,
+          "contentType": "image/webp",
+          "key": "product-display/v1/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128-81242a8a1d341ebfa237b3b437c704c91af8ce6182bd6da5dfde37db1f03b181.webp",
+          "width": 128
+        },
+        "256": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "sha256": "669c97164d859262aafea63a61b04fbd7e7d3198bf2f9015a0af79e6578fed06",
+          "bytes": 22244,
+          "contentType": "image/webp",
+          "key": "product-display/v1/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256-669c97164d859262aafea63a61b04fbd7e7d3198bf2f9015a0af79e6578fed06.webp",
+          "width": 256
+        },
+        "640": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/640.98c526ada493.webp",
+          "sha256": "98c526ada493630e53ce399456266bac9903718cd67585b4b67093b7e278609f",
+          "bytes": 128350,
+          "contentType": "image/webp",
+          "key": "product-display/v1/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/640-98c526ada493630e53ce399456266bac9903718cd67585b4b67093b7e278609f.webp",
+          "width": 640
+        },
+        "1200": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/1200.36f6fc265990.webp",
+          "sha256": "36f6fc26599044792c10f6437f448ebf0d696c983f43fc6af8150413cdd971be",
+          "bytes": 451718,
+          "contentType": "image/webp",
+          "key": "product-display/v1/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/1200-36f6fc26599044792c10f6437f448ebf0d696c983f43fc6af8150413cdd971be.webp",
+          "width": 1200
+        }
+      }
+    },
+    "/local-kits/cylinder-family-completion-2026-11-02/cap16-white.b941c5342eae.webp": {
+      "file": "public/local-kits/cylinder-family-completion-2026-11-02/cap16-white.b941c5342eae.webp",
+      "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908",
+      "bytes": 655994,
+      "contentType": "image/webp",
+      "key": "reviewed-master-media/2026-11-02/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908.webp",
+      "derivatives": {
+        "128": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/128.bcde5d108faf.webp",
+          "sha256": "bcde5d108faf795d01292f4d0cbbf62922a2e881c906736d6731457e137653a6",
+          "bytes": 10276,
+          "contentType": "image/webp",
+          "key": "product-display/v1/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/128-bcde5d108faf795d01292f4d0cbbf62922a2e881c906736d6731457e137653a6.webp",
+          "width": 128
+        },
+        "256": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "sha256": "343dd5229fd99626e10b400c10fe7479d42ca7ff47e85b852a7880b1675e73ab",
+          "bytes": 36382,
+          "contentType": "image/webp",
+          "key": "product-display/v1/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256-343dd5229fd99626e10b400c10fe7479d42ca7ff47e85b852a7880b1675e73ab.webp",
+          "width": 256
+        },
+        "640": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/640.8e385ff17642.webp",
+          "sha256": "8e385ff176420b78e3bb6f983ad6faee8e9daf90e70130654ed494c9e85a08e9",
+          "bytes": 224332,
+          "contentType": "image/webp",
+          "key": "product-display/v1/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/640-8e385ff176420b78e3bb6f983ad6faee8e9daf90e70130654ed494c9e85a08e9.webp",
+          "width": 640
+        },
+        "1200": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/1200.b941c5342eae.webp",
+          "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908",
+          "bytes": 655994,
+          "contentType": "image/webp",
+          "key": "product-display/v1/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/1200-b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908.webp",
+          "width": 1145
+        }
+      }
+    },
+    "/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp": {
+      "file": "public/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp",
+      "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+      "bytes": 22232,
+      "contentType": "image/webp",
+      "key": "reviewed-master-media/2026-11-02/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729.webp",
+      "derivatives": {
+        "128": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp",
+          "sha256": "3a3ac12e8859eef5c215fe5623111d8ac793236e9f1f1a1b3a043ae15d246f5d",
+          "bytes": 4054,
+          "contentType": "image/webp",
+          "key": "product-display/v1/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128-3a3ac12e8859eef5c215fe5623111d8ac793236e9f1f1a1b3a043ae15d246f5d.webp",
+          "width": 128
+        },
+        "256": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "sha256": "1ef8e5ac8620e9e43f3198aaef63976ef77649072e789f0974c9b5d92f09e0c3",
+          "bytes": 12644,
+          "contentType": "image/webp",
+          "key": "product-display/v1/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256-1ef8e5ac8620e9e43f3198aaef63976ef77649072e789f0974c9b5d92f09e0c3.webp",
+          "width": 256
+        },
+        "640": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/640.e3c978ea447c.webp",
+          "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+          "bytes": 22232,
+          "contentType": "image/webp",
+          "key": "product-display/v1/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/640-e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729.webp",
+          "width": 357
+        },
+        "1200": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/1200.e3c978ea447c.webp",
+          "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+          "bytes": 22232,
+          "contentType": "image/webp",
+          "key": "product-display/v1/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/1200-e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729.webp",
+          "width": 357
+        }
+      }
+    },
+    "/local-kits/cylinder-family-completion-2026-11-02/cap16-black.b69eeeb45b69.webp": {
+      "file": "public/local-kits/cylinder-family-completion-2026-11-02/cap16-black.b69eeeb45b69.webp",
+      "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7",
+      "bytes": 768394,
+      "contentType": "image/webp",
+      "key": "reviewed-master-media/2026-11-02/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7.webp",
+      "derivatives": {
+        "128": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/128.1dae7a0a4bd2.webp",
+          "sha256": "1dae7a0a4bd22915d2d9b0fa7c8080f02b77eafd23dca980d95bbf8e48a3bb33",
+          "bytes": 9508,
+          "contentType": "image/webp",
+          "key": "product-display/v1/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/128-1dae7a0a4bd22915d2d9b0fa7c8080f02b77eafd23dca980d95bbf8e48a3bb33.webp",
+          "width": 128
+        },
+        "256": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "sha256": "847a2ee574b36394108251b30bd2ef4bd4a6012f1080be0d0af0e2aa6e6ccb94",
+          "bytes": 35066,
+          "contentType": "image/webp",
+          "key": "product-display/v1/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256-847a2ee574b36394108251b30bd2ef4bd4a6012f1080be0d0af0e2aa6e6ccb94.webp",
+          "width": 256
+        },
+        "640": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/640.a75bdbaf33f5.webp",
+          "sha256": "a75bdbaf33f5c49372815f4c6c4c027bce112dcb866a2149dd86b57b1672bcb4",
+          "bytes": 230788,
+          "contentType": "image/webp",
+          "key": "product-display/v1/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/640-a75bdbaf33f5c49372815f4c6c4c027bce112dcb866a2149dd86b57b1672bcb4.webp",
+          "width": 640
+        },
+        "1200": {
+          "file": "public/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/1200.b69eeeb45b69.webp",
+          "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7",
+          "bytes": 768394,
+          "contentType": "image/webp",
+          "key": "product-display/v1/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/1200-b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7.webp",
+          "width": 1145
+        }
+      }
+    },
+    "/local-kits/vial3-swatches-builder-2026-11-02/body-green.986fd79ac5c6.webp": {
+      "file": "public/local-kits/vial3-swatches-builder-2026-11-02/body-green.986fd79ac5c6.webp",
+      "sha256": "986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90",
+      "bytes": 117178,
+      "contentType": "image/webp",
+      "key": "reviewed-master-media/2026-11-02/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90.webp",
+      "derivatives": {
+        "128": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "sha256": "6b1a5591e96f21830e27a6bfeba371e05e09165ee689870bcc4eb7a96bfcb87e",
+          "bytes": 35852,
+          "contentType": "image/webp",
+          "key": "product-display/v1/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128-6b1a5591e96f21830e27a6bfeba371e05e09165ee689870bcc4eb7a96bfcb87e.webp",
+          "width": 128
+        },
+        "256": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/256.986fd79ac5c6.webp",
+          "sha256": "986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90",
+          "bytes": 117178,
+          "contentType": "image/webp",
+          "key": "product-display/v1/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/256-986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90.webp",
+          "width": 246
+        },
+        "640": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/640.986fd79ac5c6.webp",
+          "sha256": "986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90",
+          "bytes": 117178,
+          "contentType": "image/webp",
+          "key": "product-display/v1/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/640-986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90.webp",
+          "width": 246
+        },
+        "1200": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/1200.986fd79ac5c6.webp",
+          "sha256": "986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90",
+          "bytes": 117178,
+          "contentType": "image/webp",
+          "key": "product-display/v1/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/1200-986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90.webp",
+          "width": 246
+        }
+      }
+    },
+    "/local-kits/vial3-swatches-builder-2026-11-02/cap-black.4ba95ee185e3.webp": {
+      "file": "public/local-kits/vial3-swatches-builder-2026-11-02/cap-black.4ba95ee185e3.webp",
+      "sha256": "4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade",
+      "bytes": 50184,
+      "contentType": "image/webp",
+      "key": "reviewed-master-media/2026-11-02/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade.webp",
+      "derivatives": {
+        "128": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/128.632fd0ad0c13.webp",
+          "sha256": "632fd0ad0c13ad37daa663335e027b5f15b2c6bfced5feb8164abfefd24cac13",
+          "bytes": 11902,
+          "contentType": "image/webp",
+          "key": "product-display/v1/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/128-632fd0ad0c13ad37daa663335e027b5f15b2c6bfced5feb8164abfefd24cac13.webp",
+          "width": 128
+        },
+        "256": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp",
+          "sha256": "d421e6057c2575c677f44e3c038f1765252af248666ed3cb6f282576b5824d7f",
+          "bytes": 40484,
+          "contentType": "image/webp",
+          "key": "product-display/v1/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256-d421e6057c2575c677f44e3c038f1765252af248666ed3cb6f282576b5824d7f.webp",
+          "width": 256
+        },
+        "640": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/640.4ba95ee185e3.webp",
+          "sha256": "4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade",
+          "bytes": 50184,
+          "contentType": "image/webp",
+          "key": "product-display/v1/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/640-4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade.webp",
+          "width": 257
+        },
+        "1200": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/1200.4ba95ee185e3.webp",
+          "sha256": "4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade",
+          "bytes": 50184,
+          "contentType": "image/webp",
+          "key": "product-display/v1/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/1200-4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade.webp",
+          "width": 257
+        }
+      }
+    },
+    "/local-kits/vial3-swatches-builder-2026-11-02/cap-white.4949217327e8.webp": {
+      "file": "public/local-kits/vial3-swatches-builder-2026-11-02/cap-white.4949217327e8.webp",
+      "sha256": "4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499",
+      "bytes": 8052,
+      "contentType": "image/webp",
+      "key": "reviewed-master-media/2026-11-02/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499.webp",
+      "derivatives": {
+        "128": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/128.4c75839c907b.webp",
+          "sha256": "4c75839c907bda4bf237db4f6a5f7b2a8a47e28daeedc17cfc09e6d377e41330",
+          "bytes": 4394,
+          "contentType": "image/webp",
+          "key": "product-display/v1/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/128-4c75839c907bda4bf237db4f6a5f7b2a8a47e28daeedc17cfc09e6d377e41330.webp",
+          "width": 128
+        },
+        "256": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/256.4949217327e8.webp",
+          "sha256": "4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499",
+          "bytes": 8052,
+          "contentType": "image/webp",
+          "key": "product-display/v1/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/256-4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499.webp",
+          "width": 182
+        },
+        "640": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/640.4949217327e8.webp",
+          "sha256": "4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499",
+          "bytes": 8052,
+          "contentType": "image/webp",
+          "key": "product-display/v1/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/640-4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499.webp",
+          "width": 182
+        },
+        "1200": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/1200.4949217327e8.webp",
+          "sha256": "4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499",
+          "bytes": 8052,
+          "contentType": "image/webp",
+          "key": "product-display/v1/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/1200-4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499.webp",
+          "width": 182
+        }
+      }
+    },
+    "/local-kits/vial3-swatches-builder-2026-11-02/body-blue.e531695dad69.webp": {
+      "file": "public/local-kits/vial3-swatches-builder-2026-11-02/body-blue.e531695dad69.webp",
+      "sha256": "e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24",
+      "bytes": 121868,
+      "contentType": "image/webp",
+      "key": "reviewed-master-media/2026-11-02/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24.webp",
+      "derivatives": {
+        "128": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/128.73a9ced574c9.webp",
+          "sha256": "73a9ced574c9d0e1f529f83bf34a6d728343f390dc1e7ef9cbc7fabd754d04c1",
+          "bytes": 33548,
+          "contentType": "image/webp",
+          "key": "product-display/v1/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/128-73a9ced574c9d0e1f529f83bf34a6d728343f390dc1e7ef9cbc7fabd754d04c1.webp",
+          "width": 128
+        },
+        "256": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+          "sha256": "94b7270c59d1e179c4ab5e9b68e42f7d962decb66eb6b120b12d0bf544eedc62",
+          "bytes": 111444,
+          "contentType": "image/webp",
+          "key": "product-display/v1/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256-94b7270c59d1e179c4ab5e9b68e42f7d962decb66eb6b120b12d0bf544eedc62.webp",
+          "width": 256
+        },
+        "640": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/640.e531695dad69.webp",
+          "sha256": "e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24",
+          "bytes": 121868,
+          "contentType": "image/webp",
+          "key": "product-display/v1/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/640-e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24.webp",
+          "width": 259
+        },
+        "1200": {
+          "file": "public/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/1200.e531695dad69.webp",
+          "sha256": "e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24",
+          "bytes": 121868,
+          "contentType": "image/webp",
+          "key": "product-display/v1/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/1200-e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24.webp",
+          "width": 259
+        }
+      }
+    }
+  },
+  "productionDataMutated": false,
+  "rollback": "Restore the three generated manifests from the parent commit; immutable uploaded objects may remain archived."
+}

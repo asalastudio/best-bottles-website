@@ -6,6 +6,8 @@
  * Included / Fits / Glass / Good to know bullets, one Care note, the item-type line, the meta description and
  * the image alt text for every product that passes the checks. Products it does not cover keep today's copy.
  */
+import { tolaApplicatorSku } from "../tola-applicator";
+import { rectangleApplicatorGlass, rectangleApplicatorSku } from "../rectangle-applicator";
 import siteCopy from "../../../../data/descriptions/pdp/product-copy.site.json";
 
 export type ProductCopy = {
@@ -41,6 +43,42 @@ function reviewedSmallSprayerCopy(sku: string, copy: ProductCopy): ProductCopy {
 }
 
 export function productCopyFor(variant: { websiteSku?: string | null; graceSku?: string | null }): ProductCopy | null {
+    // Owner correction, 2026-11-02: the short 13-425 amber vial has black and
+    // white caps and carries the requested 0.08 oz size wording. Scope by exact
+    // identity so the separate slender 2 ml / 8-425 vials are untouched.
+    const shortAmber = variant.websiteSku === "GBVialAmb1o5WhtCapSht" || variant.graceSku === "GB-VIA-AMB-1.5ML-WHT-S" ? "White"
+        : variant.websiteSku === "GBVAmb1o5BlackCapSht" || variant.graceSku === "GBVAmb1o5BlackCapSht" ? "Black" : null;
+    if (shortAmber) {
+        const title = "2 ml Amber Vial", option = `${shortAmber} Cap`;
+        const sentences = ["An amber glass sample vial for perfume, fragrance oil and essential oil.",
+            "Bottle size: 0.08 oz. Fill it with a pipette or a small funnel."];
+        return { title, option, variantTitle: `${title} - ${option}`, sentences,
+            bullets: [["Included", `Short ${shortAmber.toLowerCase()} screw cap`], ["Fits", "13-425 neck"],
+                ["Glass", "Amber; reduces the light that reaches the contents"]],
+            care: "", itemType: "Vial · 13-425 neck", metaDescription: sentences.join(" "),
+            altText: `2 ml amber glass vial with short ${shortAmber.toLowerCase()} screw cap` };
+    }
+    if (tolaApplicatorSku(variant)) {
+        const title = "6 ml Clear Tola Applicator Bottle", option = "Gold Cap";
+        const sentences = ["A clear octagonal Tola bottle for perfume oil and attar.",
+            "Supplied as one bottle with a plastic applicator and a shiny gold cap with a red bead."];
+        return { title, option, variantTitle: title + " - " + option, sentences,
+            bullets: [["Included", "Plastic applicator and shiny gold cap with red bead."], ["Glass", "Clear octagonal glass."]],
+            care: "", itemType: "Tola applicator bottle", metaDescription: sentences.join(" "),
+            altText: title + ", with plastic applicator and shiny gold cap with red bead" };
+    }
+    const rectangleGlass = rectangleApplicatorGlass(rectangleApplicatorSku(variant));
+    if (rectangleGlass) {
+        const title = "9 ml Rectangle Applicator Bottle";
+        const option = rectangleGlass + " Glass";
+        const sentences = ["A rectangular glass bottle for perfume oil and attar.",
+            "The faceted glass stopper has a glass applicator wand and seats in a ground-glass neck."];
+        return { title, option, variantTitle: title + " - " + option, sentences,
+            bullets: [["Included", "Matching faceted glass stopper with glass applicator wand."],
+                ["Glass", rectangleGlass + " glass."], ["Neck", "Ground-glass stopper joint."]],
+            care: "", itemType: "Glass applicator bottle",
+            metaDescription: sentences.join(" "), altText: title + ", " + rectangleGlass.toLowerCase() + " glass with matching faceted stopper" };
+    }
     const website = variant.websiteSku?.trim();
     if (website && COPY.bySku[website]) return reviewedSmallSprayerCopy(website, COPY.bySku[website]);
     const grace = variant.graceSku?.trim();

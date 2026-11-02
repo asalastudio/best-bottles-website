@@ -1,0 +1,46 @@
+[
+  {
+    "websiteSku": "GBVialClr2mlWhtCap",
+    "graceSku": "GB-VIA-CLR-2ML-WHT-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343616729380",
+    "productGroupSlug": null,
+    "capacityMl": 2,
+    "neckThreadSize": "8-425",
+    "color": "Clear",
+    "capColor": "White",
+    "capStyle": "Tall"
+  },
+  {
+    "websiteSku": "GBVialClr2mlBlackCap",
+    "graceSku": "GB-VIA-CLR-2ML-BLK-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343616794916",
+    "productGroupSlug": null,
+    "capacityMl": 2,
+    "neckThreadSize": "8-425",
+    "color": "Clear",
+    "capColor": "Black",
+    "capStyle": "Tall"
+  },
+  {
+    "websiteSku": "GBVAmb2WhtCap",
+    "graceSku": "GB-VIA-CLR-2ML-S-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343616696612",
+    "productGroupSlug": null,
+    "capacityMl": 2,
+    "neckThreadSize": "8-425",
+    "color": "Amber",
+    "capColor": "Clear",
+    "capStyle": "Short"
+  },
+  {
+    "websiteSku": "GBVAmb2BlackCap",
+    "graceSku": "GB-VIA-CLR-2ML-S-01",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343616762148",
+    "productGroupSlug": null,
+    "capacityMl": 2,
+    "neckThreadSize": "8-425",
+    "color": "Amber",
+    "capColor": "Clear",
+    "capStyle": "Short"
+  }
+]

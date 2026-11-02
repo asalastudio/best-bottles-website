@@ -1,0 +1,451 @@
+{
+  "rows": {
+    "GBVialClr2mlBlackCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 251.71428571428572,
+        "baselineY": 1000,
+        "pxPerMm": 25.714285714285715
+      },
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-clear-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 350.34285714285716,
+            "top": 100,
+            "right": 649.6571428571428,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a.body.png",
+            "key": "2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a.body.png",
+            "sha256": "2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a",
+            "bytes": 668843,
+            "width": 1122,
+            "height": 1402
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 77.41648074847063,
+            "y": 16.43952299829641,
+            "width": 845.9209787693416,
+            "height": 1074.7870528109029
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "black",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 344.35657142857144,
+            "top": 50.06305121293798,
+            "right": 655.6434285714286,
+            "bottom": 251.71428571428572
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -230
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "key": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+            "bytes": 9794,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 13.491924528301865,
+            "y": -31.18477628032349,
+            "width": 978.88948787062,
+            "height": 1076.778436657682
+          }
+        }
+      ],
+      "plateSha256": "52508a53280415b93a16451db5cbf60c93fb612488cf7e5908beb5fdc02cbc31",
+      "sku": "GBVialClr2mlBlackCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    },
+    "GBVialClr2mlWhtCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 251.71428571428572,
+        "baselineY": 1000,
+        "pxPerMm": 25.714285714285715
+      },
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-clear-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 350.34285714285716,
+            "top": 100,
+            "right": 649.6571428571428,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a.body.png",
+            "key": "2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a.body.png",
+            "sha256": "2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a",
+            "bytes": 668843,
+            "width": 1122,
+            "height": 1402
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 77.41648074847063,
+            "y": 16.43952299829641,
+            "width": 845.9209787693416,
+            "height": 1074.7870528109029
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "white",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 344.35657142857144,
+            "top": 42.21328979591836,
+            "right": 655.6434285714286,
+            "bottom": 251.71428571428572
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -230
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "key": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+            "bytes": 9370,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 5.399771428571398,
+            "y": -31.90262857142858,
+            "width": 988.2122448979592,
+            "height": 1087.033469387755
+          }
+        }
+      ],
+      "plateSha256": "c4fa1744adec04afc085cd829573d1035a8f32b290cbd2633f6fb020d653c6c8",
+      "sku": "GBVialClr2mlWhtCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    },
+    "GBVAmb2BlackCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 251.71428571428572,
+        "baselineY": 1000,
+        "pxPerMm": 25.714285714285715
+      },
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-amber-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 350.34285714285716,
+            "top": 100,
+            "right": 649.6571428571428,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7.body.png",
+            "key": "5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7.body.png",
+            "sha256": "5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7",
+            "bytes": 668010,
+            "width": 1122,
+            "height": 1402
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 81.63177769861056,
+            "y": 18.112244897959187,
+            "width": 837.4828642679018,
+            "height": 1072.9591836734694
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "black",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 344.35657142857144,
+            "top": 50.06305121293798,
+            "right": 655.6434285714286,
+            "bottom": 251.71428571428572
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -230
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "key": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.cap.webp",
+            "sha256": "2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4",
+            "bytes": 9794,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 13.491924528301865,
+            "y": -31.18477628032349,
+            "width": 978.88948787062,
+            "height": 1076.778436657682
+          }
+        }
+      ],
+      "plateSha256": "",
+      "sku": "GBVAmb2BlackCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    },
+    "GBVAmb2WhtCap": {
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 251.71428571428572,
+        "baselineY": 1000,
+        "pxPerMm": 25.714285714285715
+      },
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "completeness": "full",
+      "conflicts": [],
+      "familyId": "vial-2ml-amber-8-425",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 350.34285714285716,
+            "top": 100,
+            "right": 649.6571428571428,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7.body.png",
+            "key": "5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7.body.png",
+            "sha256": "5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7",
+            "bytes": 668010,
+            "width": 1122,
+            "height": 1402
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review",
+          "box": {
+            "x": 81.63177769861056,
+            "y": 18.112244897959187,
+            "width": 837.4828642679018,
+            "height": 1072.9591836734694
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": "white",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 344.35657142857144,
+            "top": 42.21328979591836,
+            "right": 655.6434285714286,
+            "bottom": 251.71428571428572
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -230
+          },
+          "image": {
+            "url": "/local-kits/vial-2ml-source-2026-10-31/parts/cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "key": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.cap.webp",
+            "sha256": "cfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa",
+            "bytes": 9370,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 5.399771428571398,
+            "y": -31.90262857142858,
+            "width": 988.2122448979592,
+            "height": 1087.033469387755
+          }
+        }
+      ],
+      "plateSha256": "",
+      "sku": "GBVAmb2WhtCap",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 40.24,
+        "baselinePct": 91
+      }
+    }
+  },
+  "defaultPdpSkus": [
+    "GBVialClr2mlBlackCap",
+    "GBVialClr2mlWhtCap",
+    "GBVAmb2BlackCap",
+    "GBVAmb2WhtCap"
+  ],
+  "reviewCandidate": {
+    "scope": "Localhost only; 2 ml 8-425 clear/amber; four black/white screw-cap SKUs",
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "high",
+    "measurements": {
+      "heightMm": 35,
+      "bodyDiameterMm": 11.64,
+      "shoulderFromBaseMm": 28.19,
+      "threadCrestDiameterMm": 8.96,
+      "neckBoreMm": 3,
+      "neckHeightMm": 5.9,
+      "interiorDepthMm": 34.17
+    },
+    "registration": {
+      "clear": {
+        "source": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/sunburst/clear-v5.png",
+        "sha256": "2584b13f4f589aea6f67854d8a22ec9ace1ecabf12bf1a90f8259e24677f392a",
+        "alphaBounds": {
+          "left": 362,
+          "top": 109,
+          "right": 759,
+          "bottom": 1283
+        },
+        "rawAspect": 2.957178841309824,
+        "targetAspect": 3.006872852233677,
+        "horizontalCalibrationPct": -1.6526808204390009,
+        "geometry": "2D artwork registered to the measured envelope; native pixels preserved, not a dimensional 3D model"
+      },
+      "amber": {
+        "source": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/outputs/catalog-model-repair-2026-10-31/vial-2ml-measured/sunburst/amber-v1.png",
+        "sha256": "5aa9750d5f1bd449f4fe1df007c6dde8f672da6f9c671fa363069911627878f7",
+        "alphaBounds": {
+          "left": 360,
+          "top": 107,
+          "right": 761,
+          "bottom": 1283
+        },
+        "rawAspect": 2.932668329177057,
+        "targetAspect": 3.006872852233677,
+        "horizontalCalibrationPct": -2.4678304239401316,
+        "geometry": "2D artwork registered to the measured envelope; native pixels preserved, not a dimensional 3D model"
+      }
+    },
+    "capFit": "Existing approved cap pixels; inferred outside diameter 12.11 mm and seat at shoulder/neck datum. Visual fit only."
+  }
+}

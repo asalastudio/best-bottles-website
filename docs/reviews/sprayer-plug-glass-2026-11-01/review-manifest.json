@@ -1,0 +1,240 @@
+{
+  "status": "CSS compositing correction prepared in PR 388; not deployed",
+  "recipeVersionUnchanged": "4c6095d23d920c4f",
+  "approvedManifestSha256": "63f314e5d6a7b3a6a0ad60acef50a1ffe859ad8eedc7974a57d279074d43309a",
+  "scope": [
+    "GBTulip6SpryBlkSh",
+    "GBTulip6SpryBluMatt",
+    "GBTulip6SpryCuMatt",
+    "GBTulip6SpryGlMatt",
+    "GBTulip6SpryGlSh",
+    "GBTulip6SprySlMatt",
+    "GBTulip6SprySlSh",
+    "GBSleek8SpryBlkMatt",
+    "GBSleek8SpryBluMatt",
+    "GBSleek8SpryCuMatt",
+    "GBSleek8SpryGlMatt",
+    "GBSleek8SprySlMatt",
+    "GBSleek8SpryBlkSh",
+    "GBSleek8SpryGlSh",
+    "GBSleek8SprySlSh"
+  ],
+  "transmission": {
+    "chamberSourceBottomPx": 376,
+    "topAlpha": 0.28,
+    "lowerChamberAlpha": 0.38,
+    "shaftMaskAlpha": 1,
+    "existingPartOpacity": 0.4,
+    "detached": "unchanged",
+    "sources": "existing image hashes, geometry, placement and sizing retained"
+  },
+  "fullRecipeSnapshots": "Drive ZIP 1TxfwOAE1wrpZBtuVb4Vwx_UPc4UIHZR7",
+  "registeredSources": {
+    "tulip-6ml-13-415": {
+      "glassSizing": {
+        "heightPct": 32.97,
+        "baselinePct": 91,
+        "landmarkY": 688.1,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 566,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "internals": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.8,
+            "y": 607.4041348075866,
+            "width": 50.4,
+            "height": 422.94
+          },
+          "bounds": {
+            "left": 474.8,
+            "top": 607.4041348075866,
+            "right": 525.2,
+            "bottom": 982
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png",
+            "key": "reviewed-master-media/2026-11-01/fedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png",
+            "sha256": "fedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f",
+            "bytes": 73481,
+            "width": 120,
+            "height": 1007
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "trimBottomPct": 11.430494823754355,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 474.8,
+            "y": 607.4041348075866,
+            "width": 50.4,
+            "height": 422.94
+          },
+          "bounds": {
+            "left": 474.8,
+            "top": 607.4041348075866,
+            "right": 525.2,
+            "bottom": 982
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png",
+            "key": "reviewed-master-media/2026-11-01/fedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png",
+            "sha256": "fedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f",
+            "bytes": 73481,
+            "width": 120,
+            "height": 1007
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "exploded"
+          ],
+          "trimBottomPct": 11.430494823754355
+        }
+      ]
+    },
+    "sleek-8ml-13-415": {
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "internals": [
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        }
+      ]
+    }
+  }
+}

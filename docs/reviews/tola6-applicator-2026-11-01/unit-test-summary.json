@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "numTotalTests": 3263,
+  "numPassedTests": 3256,
+  "numFailedTests": 0,
+  "numPendingTests": 7,
+  "typecheck": "passed",
+  "scopedLint": "passed",
+  "approvedManifestUnchanged": true,
+  "approvedIndexUnchanged": true,
+  "manifestSha256": "ebcc7da10364f421784e6bc1eddd3177c7b565b08d94f3c7928c22f137c48c53"
+}

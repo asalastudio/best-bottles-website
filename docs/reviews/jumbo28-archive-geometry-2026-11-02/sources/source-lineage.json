@@ -1,0 +1,53 @@
+{
+  "sourceFile": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/13. 16 mm/2. 28ml  Uncapped/4.  GBCyl28RollWht.psd",
+  "sourceSha256": "6f63bd84d0ababc7a48ab3c26c6804c7ca2e19e032c6828dcbda1fc1534534d0",
+  "includedLayers": [
+    {
+      "index": 1,
+      "name": "Layer 13",
+      "bounds": [
+        199,
+        251,
+        644,
+        1828
+      ]
+    },
+    {
+      "index": 2,
+      "name": "Layer 8",
+      "bounds": [
+        221,
+        466,
+        560,
+        1042
+      ]
+    },
+    {
+      "index": 4,
+      "name": "Layer 9",
+      "bounds": [
+        243,
+        534,
+        578,
+        885
+      ]
+    }
+  ],
+  "glassViewport": [
+    199,
+    713,
+    644,
+    1828
+  ],
+  "glassImageSize": [
+    445,
+    1115
+  ],
+  "dimensionReference": {
+    "heightWithoutCapMm": 81,
+    "diameterMm": 31,
+    "neckFinish": "16mm"
+  },
+  "identity": "28 ml only. GBCyl28RollWht is the PSD alias for the existing GBCyl1ozRollWht reference.",
+  "method": "Original archive pixels composited unchanged. Full body plus glass-neck retouch layers; original PSD remains unchanged."
+}

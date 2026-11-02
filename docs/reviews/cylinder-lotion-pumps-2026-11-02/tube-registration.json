@@ -1,0 +1,136 @@
+{
+  "version": "ca21bfc3c0c3ce57",
+  "scope": "tube and internal connector only",
+  "changes": [
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "top": 438.5031721084887,
+      "tip": 986.2999428571428,
+      "exteriorUnchanged": true,
+      "bodyUnchanged": true,
+      "clearOvercapPreserved": true
+    }
+  ],
+  "sourceImage": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-02/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa.png",
+    "key": "reviewed-master-media/2026-11-02/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa.png",
+    "sha256": "6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa",
+    "bytes": 252512,
+    "width": 725,
+    "height": 2170
+  },
+  "sourceReference": "25 ml clear Cylinder lotion hero",
+  "geometry": "Uniform source registration. Connection axis and inner-floor endpoints, not exterior pixels, are updated."
+}

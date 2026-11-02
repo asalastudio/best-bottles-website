@@ -1,0 +1,84 @@
+{
+  "folderId": "1bbRCPULGcclihr31TWzQyAGEGSYVTfUt",
+  "status": "corrected-local-candidate-awaiting-visual-review",
+  "files": [
+    {
+      "name": "REVIEW_50ml_16mm_Clear_Body_Complete_PSD_Geometry.png",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo-body-reference-2026-11-02/50ml-body-registered.png",
+      "mime": "image/png",
+      "bytes": 2485412,
+      "sha256": "fb2fafc76ce1719d4338e7f648384ad2fef2f62448848a96fef7ac541d6c72f0",
+      "id": "1zF6WkhmMH-afhmpn2bmLT11LwnFC4nTx",
+      "url": "https://drive.google.com/file/d/1zF6WkhmMH-afhmpn2bmLT11LwnFC4nTx/view?usp=drivesdk",
+      "parentId": "1bbRCPULGcclihr31TWzQyAGEGSYVTfUt",
+      "remoteVerified": {
+        "bytes": 2485412,
+        "parentId": "1bbRCPULGcclihr31TWzQyAGEGSYVTfUt",
+        "url": "https://drive.google.com/file/d/1zF6WkhmMH-afhmpn2bmLT11LwnFC4nTx/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "REVIEW_50ml_16mm_Clear_Body_Complete_PSD_Geometry.svg",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo-body-reference-2026-11-02/sources/50ml-body-psd-geometry-studio.svg",
+      "mime": "image/svg+xml",
+      "bytes": 4477176,
+      "sha256": "d751ab595066ad2960e6e51e0cc2d50e0699c492bb1b57edc839def50789ad32",
+      "id": "13K5j4Lu6ZiW2Mklf1dngprr1d2pkPl6L",
+      "url": "https://drive.google.com/file/d/13K5j4Lu6ZiW2Mklf1dngprr1d2pkPl6L/view?usp=drivesdk",
+      "parentId": "1bbRCPULGcclihr31TWzQyAGEGSYVTfUt",
+      "remoteVerified": {
+        "bytes": 4477176,
+        "parentId": "1bbRCPULGcclihr31TWzQyAGEGSYVTfUt",
+        "url": "https://drive.google.com/file/d/13K5j4Lu6ZiW2Mklf1dngprr1d2pkPl6L/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "REVIEW_50ml_16mm_Clear_Body_Lossless_Delivery.webp",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-50ml-16mm-complete-psd.53a2d1ee7a91.webp",
+      "mime": "image/webp",
+      "bytes": 1096970,
+      "sha256": "53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e",
+      "id": "1h9YNjiaDY6mco3uvo4yvQm1Q1mT8hYgT",
+      "url": "https://drive.google.com/file/d/1h9YNjiaDY6mco3uvo4yvQm1Q1mT8hYgT/view?usp=drivesdk",
+      "parentId": "1bbRCPULGcclihr31TWzQyAGEGSYVTfUt",
+      "remoteVerified": {
+        "bytes": 1096970,
+        "parentId": "1bbRCPULGcclihr31TWzQyAGEGSYVTfUt",
+        "url": "https://drive.google.com/file/d/1h9YNjiaDY6mco3uvo4yvQm1Q1mT8hYgT/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "README_50ml_Body_Correction_Visual_Review_Pending.md",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo-body-reference-2026-11-02/README.md",
+      "mime": "text/markdown",
+      "bytes": 3849,
+      "sha256": "811d41be51996fb861dd0c1c24cd26909eeb34922a0b0a5ca3dfb976b5d0db08",
+      "id": "1KhKBsCPy_jMNvMAtqUaOpwdpDeSWdXiE",
+      "url": "https://drive.google.com/file/d/1KhKBsCPy_jMNvMAtqUaOpwdpDeSWdXiE/view?usp=drivesdk",
+      "parentId": "1bbRCPULGcclihr31TWzQyAGEGSYVTfUt",
+      "remoteVerified": {
+        "bytes": 3849,
+        "parentId": "1bbRCPULGcclihr31TWzQyAGEGSYVTfUt",
+        "url": "https://drive.google.com/file/d/1KhKBsCPy_jMNvMAtqUaOpwdpDeSWdXiE/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "Best_Bottles_50ml_16mm_Complete_PSD_Body_Correction_REVIEW_2026-11-02.zip",
+      "file": "/private/tmp/Best_Bottles_50ml_16mm_Complete_PSD_Body_Correction_REVIEW_2026-11-02.zip",
+      "mime": "application/zip",
+      "bytes": 20461999,
+      "sha256": "f5086ca4c90986f30258939e28d7f0a576aef2bc862d41bedeb6d43958f4abba",
+      "entries": 91,
+      "id": "1iyDLQmc6Jk4XTbyGCyzeVD63wwKsm6fd",
+      "url": "https://drive.google.com/file/d/1iyDLQmc6Jk4XTbyGCyzeVD63wwKsm6fd/view?usp=drivesdk",
+      "parentId": "1bbRCPULGcclihr31TWzQyAGEGSYVTfUt",
+      "remoteVerified": {
+        "bytes": 20461999,
+        "parentId": "1bbRCPULGcclihr31TWzQyAGEGSYVTfUt",
+        "url": "https://drive.google.com/file/d/1iyDLQmc6Jk4XTbyGCyzeVD63wwKsm6fd/view?usp=drivesdk"
+      }
+    }
+  ],
+  "verification": "Drive parent and byte size verified for every upload. SHA-256 values are local source hashes.",
+  "archiveScope": "Snapshot before draft commit. Image and recipe bytes remain the reviewed local candidate; documentation may be clarified in Git."
+}

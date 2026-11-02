@@ -1,0 +1,2792 @@
+{
+  "states": [
+    {
+      "sku": "GBCyl25DrpGl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "pipette",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-DRP-SGLD-18415%2Fpipette-c107345f6b44c10ea2fea2aae48ddd89d534134ae7ae31b6d841b86596e29661.png&w=640&q=75",
+          "rect": [
+            301.8987121582031,
+            258.39385986328125,
+            92.4444580078125,
+            219.7188720703125
+          ]
+        },
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "fitment",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-DRP-SGLD-18415%2Ffitment-7a854df705e47536e446f617b23a3f10c88725950df84cda5fdb7c9884e3c3e5.png&w=640&q=75",
+          "rect": [
+            300.8102722167969,
+            91.70599365234375,
+            95.16555786132812,
+            151.7279052734375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "pipette",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-DRP-SGLD-18415%2Fpipette-c107345f6b44c10ea2fea2aae48ddd89d534134ae7ae31b6d841b86596e29661.png&w=640&q=75",
+          "rect": [
+            301.8987121582031,
+            258.39385986328125,
+            92.4444580078125,
+            219.7188720703125
+          ]
+        },
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "fitment",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-DRP-SGLD-18415%2Ffitment-7a854df705e47536e446f617b23a3f10c88725950df84cda5fdb7c9884e3c3e5.png&w=640&q=75",
+          "rect": [
+            300.8102722167969,
+            91.70599365234375,
+            95.16555786132812,
+            151.7279052734375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryCu",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            339.4134521484375,
+            233.2147216796875,
+            17.95916748046875,
+            231.2926025390625
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=640&q=75",
+          "rect": [
+            303.90625,
+            89.20257568359375,
+            89.34848022460938,
+            156.069580078125
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            402.3347473144531,
+            318.42425537109375,
+            113.81405639648438,
+            176.14520263671875
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryCu",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            339.4134521484375,
+            233.2147216796875,
+            17.95916748046875,
+            231.2926025390625
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=640&q=75",
+          "rect": [
+            303.90625,
+            89.20257568359375,
+            89.34848022460938,
+            156.069580078125
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            291.2562255859375,
+            69.23583984375,
+            113.8140869140625,
+            176.14517211914062
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryCu",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            459.76593017578125,
+            260.09503173828125,
+            17.95916748046875,
+            231.2926025390625
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=640&q=75",
+          "rect": [
+            424.25872802734375,
+            116.08291625976562,
+            89.34844970703125,
+            156.06954956054688
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            291.2562255859375,
+            -6.580230712890625,
+            113.8140869140625,
+            176.14517211914062
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            339.4134521484375,
+            233.2147216796875,
+            17.95916748046875,
+            231.2926025390625
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fsprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png&w=640&q=75",
+          "rect": [
+            301.13677978515625,
+            82.81710815429688,
+            93.30316162109375,
+            160.88287353515625
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            413.7371826171875,
+            324.99798583984375,
+            96.4716796875,
+            166.40972900390625
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            339.4134521484375,
+            233.2147216796875,
+            17.95916748046875,
+            231.2926025390625
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fsprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png&w=640&q=75",
+          "rect": [
+            301.13677978515625,
+            82.81710815429688,
+            93.30316162109375,
+            160.88287353515625
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            299.2017822265625,
+            78.850341796875,
+            96.4716796875,
+            166.40972900390625
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            462.53204345703125,
+            260.09503173828125,
+            17.95916748046875,
+            231.2926025390625
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fsprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png&w=640&q=75",
+          "rect": [
+            424.25537109375,
+            109.69741821289062,
+            93.30316162109375,
+            160.88290405273438
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            175.25491333007812,
+            324.99798583984375,
+            96.4716796875,
+            166.40972900390625
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBcyl25LtnClOvrCap",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.84429931640625,
+            221.10888671875,
+            84.1844482421875,
+            251.9970703125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-02%2Fpump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png&w=640&q=75",
+          "rect": [
+            304.5472412109375,
+            92.55255126953125,
+            86.56689453125,
+            150.31295776367188
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fltn-18-415-clear-overcap.webp&w=640&q=75",
+          "rect": [
+            413.7342529296875,
+            397.6986083984375,
+            80.9554443359375,
+            93.69012451171875
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBcyl25LtnClOvrCap",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.84429931640625,
+            221.10888671875,
+            84.1844482421875,
+            251.9970703125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-02%2Fpump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png&w=640&q=75",
+          "rect": [
+            304.5472412109375,
+            92.55255126953125,
+            86.56689453125,
+            150.31295776367188
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-02%2Fovercap-c4d4b9daf52cfda14d1e92d111a8c19467beadf960e1cfb558f7ed466e7966a3.png&w=640&q=75",
+          "rect": [
+            302.93878173828125,
+            65.039306640625,
+            89.00982666015625,
+            180.23284912109375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBcyl25LtnClOvrCap",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            429.5469970703125,
+            247.98919677734375,
+            84.1844482421875,
+            251.9970703125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-02%2Fpump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png&w=640&q=75",
+          "rect": [
+            424.24993896484375,
+            119.432861328125,
+            86.56695556640625,
+            150.31298828125
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fltn-18-415-clear-overcap.webp&w=640&q=75",
+          "rect": [
+            306.9538879394531,
+            10.789825439453125,
+            80.95541381835938,
+            93.69012451171875
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            310.2796630859375,
+            223.87835693359375,
+            83.22906494140625,
+            249.13079833984375
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "rect": [
+            302.47918701171875,
+            84.32879638671875,
+            91.83978271484375,
+            161.1126708984375
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            402.33612060546875,
+            318.4140625,
+            113.8140869140625,
+            176.14520263671875
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            310.2796630859375,
+            223.87835693359375,
+            83.22906494140625,
+            249.13079833984375
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "rect": [
+            302.47918701171875,
+            84.32879638671875,
+            91.83978271484375,
+            161.1126708984375
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            291.2562255859375,
+            69.2237548828125,
+            113.8140869140625,
+            176.1451416015625
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            432.05694580078125,
+            250.7586669921875,
+            83.22906494140625,
+            249.130859375
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "rect": [
+            424.25653076171875,
+            111.20913696289062,
+            91.83978271484375,
+            161.11264038085938
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            291.2562255859375,
+            -6.586944580078125,
+            113.8140869140625,
+            176.14517211914062
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.457275390625,
+            218.62969970703125,
+            85.04312133789062,
+            254.56085205078125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fpump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png&w=640&q=75",
+          "rect": [
+            300.58050537109375,
+            80.13229370117188,
+            94.669677734375,
+            160.4595947265625
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            413.7371826171875,
+            324.99798583984375,
+            96.4716796875,
+            166.40972900390625
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.457275390625,
+            218.62969970703125,
+            85.04312133789062,
+            254.56085205078125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fpump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png&w=640&q=75",
+          "rect": [
+            300.58050537109375,
+            80.13229370117188,
+            94.669677734375,
+            160.4595947265625
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            299.2017822265625,
+            78.850341796875,
+            96.4716796875,
+            166.40972900390625
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            433.1343994140625,
+            245.510009765625,
+            85.04315185546875,
+            254.5609130859375
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fpump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png&w=640&q=75",
+          "rect": [
+            424.25762939453125,
+            107.01263427734375,
+            94.66973876953125,
+            160.4595947265625
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            175.25491333007812,
+            324.99798583984375,
+            96.4716796875,
+            166.40972900390625
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtSl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.7958984375,
+            220.83074951171875,
+            84.28121948242188,
+            252.28729248046875
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fpump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png&w=640&q=75",
+          "rect": [
+            305.45428466796875,
+            90.6175537109375,
+            84.31744384765625,
+            151.99398803710938
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fovercap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png&w=640&q=75",
+          "rect": [
+            413.73797607421875,
+            325.54376220703125,
+            95.35906982421875,
+            165.85333251953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtSl",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.7958984375,
+            220.83074951171875,
+            84.28121948242188,
+            252.28729248046875
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fpump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png&w=640&q=75",
+          "rect": [
+            305.45428466796875,
+            90.6175537109375,
+            84.31744384765625,
+            151.99398803710938
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fovercap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png&w=640&q=75",
+          "rect": [
+            299.47998046875,
+            79.95086669921875,
+            95.35903930664062,
+            165.85342407226562
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtSl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            428.6019287109375,
+            247.7110595703125,
+            84.28118896484375,
+            252.287353515625
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fpump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png&w=640&q=75",
+          "rect": [
+            424.26025390625,
+            117.49786376953125,
+            84.3175048828125,
+            151.9940185546875
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fovercap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png&w=640&q=75",
+          "rect": [
+            176.36138916015625,
+            325.54376220703125,
+            95.35903930664062,
+            165.85333251953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnBlk",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.89263916015625,
+            221.447509765625,
+            84.07562255859375,
+            251.6463623046875
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fpump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png&w=640&q=75",
+          "rect": [
+            301.93499755859375,
+            88.38021850585938,
+            90.17083740234375,
+            154.79971313476562
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fovercap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png&w=640&q=75",
+          "rect": [
+            413.7333984375,
+            326.65380859375,
+            96.47174072265625,
+            164.75286865234375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnBlk",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.89263916015625,
+            221.447509765625,
+            84.07562255859375,
+            251.6463623046875
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fpump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png&w=640&q=75",
+          "rect": [
+            301.93499755859375,
+            88.38021850585938,
+            90.17083740234375,
+            154.79971313476562
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fovercap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png&w=640&q=75",
+          "rect": [
+            299.3348388671875,
+            79.56390380859375,
+            96.4716796875,
+            164.75286865234375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnBlk",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            432.20953369140625,
+            248.32781982421875,
+            84.0755615234375,
+            251.6463623046875
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fpump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png&w=640&q=75",
+          "rect": [
+            424.2518310546875,
+            115.26055908203125,
+            90.17083740234375,
+            154.79971313476562
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fovercap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png&w=640&q=75",
+          "rect": [
+            175.25115966796875,
+            326.65380859375,
+            96.4716796875,
+            164.75286865234375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnGl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.977294921875,
+            221.97964477539062,
+            83.88214111328125,
+            251.08999633789062
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fpump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png&w=640&q=75",
+          "rect": [
+            302.10430908203125,
+            93.22979736328125,
+            89.8927001953125,
+            150.45806884765625
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fovercap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png&w=640&q=75",
+          "rect": [
+            413.7379150390625,
+            327.2039794921875,
+            94.8148193359375,
+            164.196533203125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnGl",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.977294921875,
+            221.97964477539062,
+            83.88214111328125,
+            251.08999633789062
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fpump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png&w=640&q=75",
+          "rect": [
+            302.10430908203125,
+            93.22979736328125,
+            89.8927001953125,
+            150.45806884765625
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fovercap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png&w=640&q=75",
+          "rect": [
+            301.330322265625,
+            80.27740478515625,
+            94.8148193359375,
+            164.19659423828125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnGl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            432.13079833984375,
+            248.8599853515625,
+            83.882080078125,
+            251.0899658203125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fpump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png&w=640&q=75",
+          "rect": [
+            424.25775146484375,
+            120.110107421875,
+            89.8927001953125,
+            150.45809936523438
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fovercap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png&w=640&q=75",
+          "rect": [
+            176.91607666015625,
+            327.2039794921875,
+            94.8148193359375,
+            164.196533203125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.86846923828125,
+            221.290283203125,
+            84.12396240234375,
+            251.8035888671875
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fpump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png&w=640&q=75",
+          "rect": [
+            303.90625,
+            90.37567138671875,
+            88.16329956054688,
+            152.6712646484375
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fovercap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png&w=640&q=75",
+          "rect": [
+            413.73797607421875,
+            325.8209228515625,
+            97.015869140625,
+            165.5751953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            309.86846923828125,
+            221.290283203125,
+            84.12396240234375,
+            251.8035888671875
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fpump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png&w=640&q=75",
+          "rect": [
+            303.90625,
+            90.37567138671875,
+            88.16329956054688,
+            152.6712646484375
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fovercap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png&w=640&q=75",
+          "rect": [
+            299.47998046875,
+            80.27740478515625,
+            97.015869140625,
+            165.57525634765625
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            270.30987548828125,
+            164.691650390625,
+            157.24267578125,
+            341.659912109375
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            430.21331787109375,
+            248.17062377929688,
+            84.12396240234375,
+            251.80355834960938
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fpump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png&w=640&q=75",
+          "rect": [
+            424.2510986328125,
+            117.25601196289062,
+            88.16326904296875,
+            152.67123413085938
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fovercap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png&w=640&q=75",
+          "rect": [
+            174.70477294921875,
+            325.8209228515625,
+            97.015869140625,
+            165.5751953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "pipette",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-DRP-SGLD-18415%2Fpipette-c107345f6b44c10ea2fea2aae48ddd89d534134ae7ae31b6d841b86596e29661.png&w=640&q=75",
+          "rect": [
+            160.84732055664062,
+            191.406005859375,
+            68.47467041015625,
+            162.74530029296875
+          ]
+        },
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "fitment",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-DRP-SGLD-18415%2Ffitment-7a854df705e47536e446f617b23a3f10c88725950df84cda5fdb7c9884e3c3e5.png&w=640&q=75",
+          "rect": [
+            160.04913330078125,
+            67.92901611328125,
+            70.49432373046875,
+            112.38702392578125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "pipette",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-DRP-SGLD-18415%2Fpipette-c107345f6b44c10ea2fea2aae48ddd89d534134ae7ae31b6d841b86596e29661.png&w=640&q=75",
+          "rect": [
+            160.84732055664062,
+            191.406005859375,
+            68.47467041015625,
+            162.74530029296875
+          ]
+        },
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "fitment",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-DRP-SGLD-18415%2Ffitment-7a854df705e47536e446f617b23a3f10c88725950df84cda5fdb7c9884e3c3e5.png&w=640&q=75",
+          "rect": [
+            160.04913330078125,
+            67.92901611328125,
+            70.49432373046875,
+            112.38702392578125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryCu",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            188.63870239257812,
+            172.75747680664062,
+            13.291015625,
+            171.31973266601562
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=640&q=75",
+          "rect": [
+            162.3348388671875,
+            66.07867431640625,
+            66.1768798828125,
+            115.60397338867188
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            235.240478515625,
+            235.8720703125,
+            84.305419921875,
+            130.4671630859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryCu",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            188.63870239257812,
+            172.75747680664062,
+            13.291015625,
+            171.31973266601562
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=640&q=75",
+          "rect": [
+            162.3348388671875,
+            66.07867431640625,
+            66.1768798828125,
+            115.60397338867188
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            152.96218872070312,
+            51.288055419921875,
+            84.30538940429688,
+            130.46713256835938
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryCu",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            277.7864074707031,
+            192.6688232421875,
+            13.290985107421875,
+            171.31976318359375
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTCP-18-415-03%2Fsprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png&w=640&q=75",
+          "rect": [
+            251.4825439453125,
+            85.99005126953125,
+            66.1768798828125,
+            115.60394287109375
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            152.96218872070312,
+            -4.87200927734375,
+            84.30538940429688,
+            130.4671630859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            188.63870239257812,
+            172.75747680664062,
+            13.291015625,
+            171.31973266601562
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fsprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png&w=640&q=75",
+          "rect": [
+            160.29100036621094,
+            61.35003662109375,
+            69.11564636230469,
+            119.17160034179688
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            243.69070434570312,
+            240.7427978515625,
+            71.44976806640625,
+            123.25927734375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            188.63870239257812,
+            172.75747680664062,
+            13.291015625,
+            171.31973266601562
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fsprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png&w=640&q=75",
+          "rect": [
+            160.29100036621094,
+            61.35003662109375,
+            69.11564636230469,
+            119.17160034179688
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            158.85183715820312,
+            58.4112548828125,
+            71.44976806640625,
+            123.25927734375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "/local-kits/cylinder25-18415-2026-11-01/spray-tube.7677b2abb926.svg",
+          "rect": [
+            279.8353271484375,
+            192.6688232421875,
+            13.290985107421875,
+            171.31976318359375
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fsprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png&w=640&q=75",
+          "rect": [
+            251.48760986328125,
+            81.26138305664062,
+            69.11566162109375,
+            119.17160034179688
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-SPR-MTGD-18-415-05%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            67.04167175292969,
+            240.7427978515625,
+            71.44975280761719,
+            123.25927734375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBcyl25LtnClOvrCap",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.73695373535156,
+            163.783935546875,
+            62.35527038574219,
+            186.66668701171875
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-02%2Fpump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png&w=640&q=75",
+          "rect": [
+            162.81858825683594,
+            68.55789184570312,
+            64.12095642089844,
+            111.33486938476562
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fltn-18-415-clear-overcap.webp&w=640&q=75",
+          "rect": [
+            243.69091796875,
+            294.59423828125,
+            59.960693359375,
+            69.393798828125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBcyl25LtnClOvrCap",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.73695373535156,
+            163.783935546875,
+            62.35527038574219,
+            186.66668701171875
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-02%2Fpump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png&w=640&q=75",
+          "rect": [
+            162.81858825683594,
+            68.55789184570312,
+            64.12095642089844,
+            111.33486938476562
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-02%2Fovercap-c4d4b9daf52cfda14d1e92d111a8c19467beadf960e1cfb558f7ed466e7966a3.png&w=640&q=75",
+          "rect": [
+            161.62130737304688,
+            48.179962158203125,
+            65.92291259765625,
+            133.502685546875
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBcyl25LtnClOvrCap",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            255.40338134765625,
+            183.69528198242188,
+            62.35528564453125,
+            186.66671752929688
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-02%2Fpump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png&w=640&q=75",
+          "rect": [
+            251.48501586914062,
+            88.46923828125,
+            64.1209716796875,
+            111.33489990234375
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=%2Fassets%2Fregister%2Fovercaps%2Fltn-18-415-clear-overcap.webp&w=640&q=75",
+          "rect": [
+            164.59637451171875,
+            7.9951629638671875,
+            59.960693359375,
+            69.39381408691406
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            167.0634765625,
+            165.8277587890625,
+            61.653839111328125,
+            184.5382080078125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "rect": [
+            161.28268432617188,
+            62.462646484375,
+            68.0272216796875,
+            119.3409423828125
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            235.24151611328125,
+            235.86138916015625,
+            84.30538940429688,
+            130.479248046875
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            167.0634765625,
+            165.8277587890625,
+            61.653839111328125,
+            184.5382080078125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "rect": [
+            161.28268432617188,
+            62.462646484375,
+            68.0272216796875,
+            119.3409423828125
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            152.96218872070312,
+            51.27595520019531,
+            84.30538940429688,
+            130.47923278808594
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            257.2666015625,
+            185.73910522460938,
+            61.653839111328125,
+            184.53823852539062
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "rect": [
+            251.48580932617188,
+            82.3740234375,
+            68.0272216796875,
+            119.34091186523438
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/e8eb5bb9035ca88d0583c89bca01b3636f4a7ebb1aa3957f01ee2c4a0f277bdd/640-60c20a930aa60bcee4fe3634bcd7bee28f33c05bdce19b45d3009e9ec60b2155.webp",
+          "rect": [
+            152.96218872070312,
+            -4.880126953125,
+            84.30538940429688,
+            130.479248046875
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.44671630859375,
+            161.9456787109375,
+            62.9962158203125,
+            188.5533447265625
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fpump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png&w=640&q=75",
+          "rect": [
+            159.86770629882812,
+            59.366668701171875,
+            70.11944580078125,
+            118.85714721679688
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            243.69070434570312,
+            240.7427978515625,
+            71.44976806640625,
+            123.25927734375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.44671630859375,
+            161.9456787109375,
+            62.9962158203125,
+            188.5533447265625
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fpump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png&w=640&q=75",
+          "rect": [
+            159.86770629882812,
+            59.366668701171875,
+            70.11944580078125,
+            118.85714721679688
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            158.85183715820312,
+            58.4112548828125,
+            71.44976806640625,
+            123.25927734375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            258.05706787109375,
+            181.85702514648438,
+            62.996246337890625,
+            188.55331420898438
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fpump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png&w=640&q=75",
+          "rect": [
+            251.47805786132812,
+            79.27801513671875,
+            70.11947631835938,
+            118.857177734375
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+          "rect": [
+            67.04167175292969,
+            240.7427978515625,
+            71.44975280761719,
+            123.25927734375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtSl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.70068359375,
+            163.57830810546875,
+            62.427825927734375,
+            186.872314453125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fpump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png&w=640&q=75",
+          "rect": [
+            163.48373413085938,
+            67.11874389648438,
+            62.4520263671875,
+            112.59262084960938
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fovercap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png&w=640&q=75",
+          "rect": [
+            243.69085693359375,
+            241.14218139648438,
+            70.63946533203125,
+            122.86019897460938
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtSl",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.70068359375,
+            163.57830810546875,
+            62.427825927734375,
+            186.872314453125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fpump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png&w=640&q=75",
+          "rect": [
+            163.48373413085938,
+            67.11874389648438,
+            62.4520263671875,
+            112.59262084960938
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fovercap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png&w=640&q=75",
+          "rect": [
+            159.05743408203125,
+            59.221527099609375,
+            70.63946533203125,
+            122.86019897460938
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnMtSl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            254.702880859375,
+            183.48968505859375,
+            62.4278564453125,
+            186.872314453125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fpump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png&w=640&q=75",
+          "rect": [
+            251.4859619140625,
+            87.03009033203125,
+            62.4520263671875,
+            112.59262084960938
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MSLV-18-415-01%2Fovercap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png&w=640&q=75",
+          "rect": [
+            67.8608169555664,
+            241.14218139648438,
+            70.63947296142578,
+            122.86019897460938
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnBlk",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.7732391357422,
+            164.02578735351562,
+            62.27061462402344,
+            186.40066528320312
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fpump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png&w=640&q=75",
+          "rect": [
+            160.8835906982422,
+            65.46189880371094,
+            66.78157043457031,
+            114.66065979003906
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fovercap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png&w=640&q=75",
+          "rect": [
+            243.6982421875,
+            241.96087646484375,
+            71.44976806640625,
+            122.03778076171875
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnBlk",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.7732391357422,
+            164.02578735351562,
+            62.27061462402344,
+            186.40066528320312
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fpump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png&w=640&q=75",
+          "rect": [
+            160.8835906982422,
+            65.46189880371094,
+            66.78157043457031,
+            114.66065979003906
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fovercap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png&w=640&q=75",
+          "rect": [
+            158.960693359375,
+            58.93128967285156,
+            71.44973754882812,
+            122.03782653808594
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnBlk",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            257.3760070800781,
+            183.9371337890625,
+            62.2706298828125,
+            186.40069580078125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fpump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png&w=640&q=75",
+          "rect": [
+            251.48635864257812,
+            85.37326049804688,
+            66.78158569335938,
+            114.66064453125
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SBLK-18-415%2Fovercap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png&w=640&q=75",
+          "rect": [
+            67.04920196533203,
+            241.96087646484375,
+            71.44976043701172,
+            122.03778076171875
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnGl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.83370971679688,
+            164.43698120117188,
+            62.1375732421875,
+            185.98947143554688
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fpump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png&w=640&q=75",
+          "rect": [
+            161.00453186035156,
+            69.05374145507812,
+            66.58805847167969,
+            111.44369506835938
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fovercap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png&w=640&q=75",
+          "rect": [
+            243.68679809570312,
+            242.3719482421875,
+            70.22830200195312,
+            121.62664794921875
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnGl",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.83370971679688,
+            164.43698120117188,
+            62.1375732421875,
+            185.98947143554688
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fpump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png&w=640&q=75",
+          "rect": [
+            161.00453186035156,
+            69.05374145507812,
+            66.58805847167969,
+            111.44369506835938
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fovercap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png&w=640&q=75",
+          "rect": [
+            160.4240264892578,
+            59.463409423828125,
+            70.22828674316406,
+            121.62661743164062
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnGl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            257.3154602050781,
+            184.34832763671875,
+            62.1375732421875,
+            185.989501953125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fpump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png&w=640&q=75",
+          "rect": [
+            251.48626708984375,
+            88.965087890625,
+            66.58807373046875,
+            111.4437255859375
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SGLD-18-415%2Fovercap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png&w=640&q=75",
+          "rect": [
+            68.26768493652344,
+            242.3719482421875,
+            70.22828674316406,
+            121.62664794921875
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.76113891601562,
+            163.91693115234375,
+            62.306884765625,
+            186.5216064453125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fpump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png&w=640&q=75",
+          "rect": [
+            162.3348388671875,
+            66.93733215332031,
+            65.30615234375,
+            113.08845520019531
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fovercap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png&w=640&q=75",
+          "rect": [
+            243.69085693359375,
+            241.34747314453125,
+            71.86093139648438,
+            122.65460205078125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            166.76113891601562,
+            163.91693115234375,
+            62.306884765625,
+            186.5216064453125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fpump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png&w=640&q=75",
+          "rect": [
+            162.3348388671875,
+            66.93733215332031,
+            65.30615234375,
+            113.08845520019531
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fovercap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png&w=640&q=75",
+          "rect": [
+            159.05743408203125,
+            59.463409423828125,
+            71.86093139648438,
+            122.65460205078125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "/_next/image?url=%2Flocal-kits%2Fcylinder25-material-cleanup-2026-11-02%2Fbody-cylinder-25ml-clear.e0b0f790a992.png&w=640&q=75",
+          "rect": [
+            137.44595336914062,
+            122.00009155273438,
+            116.47470092773438,
+            253.08547973632812
+          ]
+        },
+        {
+          "slot": "diptube",
+          "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "rect": [
+            255.90322875976562,
+            183.82830810546875,
+            62.306884765625,
+            186.5216064453125
+          ]
+        },
+        {
+          "slot": "pump",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fpump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png&w=640&q=75",
+          "rect": [
+            251.4769287109375,
+            86.84869384765625,
+            65.30612182617188,
+            113.08843994140625
+          ]
+        },
+        {
+          "slot": "overcap",
+          "source": "/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-SSLV-18-415%2Fovercap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png&w=640&q=75",
+          "rect": [
+            66.63372039794922,
+            241.34747314453125,
+            71.8609390258789,
+            122.65460205078125
+          ]
+        }
+      ]
+    }
+  ],
+  "builderApis": [
+    {
+      "sku": "GBCyl25DrpGl",
+      "sameCandidateBody": true
+    },
+    {
+      "sku": "GBcyl25SpryCu",
+      "sameCandidateBody": true
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "sameCandidateBody": true
+    },
+    {
+      "sku": "LBcyl25LtnClOvrCap",
+      "sameCandidateBody": true
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "sameCandidateBody": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "sameCandidateBody": true
+    },
+    {
+      "sku": "LBCyl25LtnMtSl",
+      "sameCandidateBody": true
+    },
+    {
+      "sku": "LBCyl25LtnShnBlk",
+      "sameCandidateBody": true
+    },
+    {
+      "sku": "LBCyl25LtnShnGl",
+      "sameCandidateBody": true
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "sameCandidateBody": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

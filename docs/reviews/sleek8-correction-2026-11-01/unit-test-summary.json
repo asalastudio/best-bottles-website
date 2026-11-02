@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "passed": 3250,
+  "failed": 0,
+  "skipped": 7,
+  "typecheck": "passed",
+  "targetedLint": "passed",
+  "independentReview": "no findings"
+}

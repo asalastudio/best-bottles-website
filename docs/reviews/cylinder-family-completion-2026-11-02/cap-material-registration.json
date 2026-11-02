@@ -1,0 +1,27 @@
+{
+  "method": "Shared alpha outline with independently registered white material; original source PNGs unchanged",
+  "canonicalOutlineSha256": "f0ab0cac58c8267f7c208e461667bf7b7b121e9ee20cc5a7cc0d5d096c8a6109",
+  "whiteMaterialSha256": "163222a810aa02224f651bfb23b7f727f641c34d69b740cefb2eb2d91b3d3807",
+  "composedMasterSha256": "2a92818005c0c1fb3e813e892282c0e5b74075dbb4b8bcf975a27de60c0f7437",
+  "black": {
+    "width": 1145,
+    "height": 1374,
+    "left": 72,
+    "right": 1072,
+    "top": 78,
+    "bottom": 1285
+  },
+  "white": {
+    "width": 1151,
+    "height": 1366,
+    "left": 74,
+    "right": 1068,
+    "top": 72,
+    "bottom": 1296
+  },
+  "materialTransform": {
+    "sx": 1.0060362173038229,
+    "sy": 0.9861111111111112
+  },
+  "geometry": "The black cap provides the common exterior silhouette. Material fitting never changes that silhouette."
+}

@@ -1,0 +1,65 @@
+{
+  "folderId": "1Dp-9BUrdf3Z0wwXnFRtQBZa5yyajJJlm",
+  "folderUrl": "https://drive.google.com/drive/folders/1Dp-9BUrdf3Z0wwXnFRtQBZa5yyajJJlm",
+  "status": "local-review-candidate",
+  "files": [
+    {
+      "name": "REVIEW_28ml_16mm_Clear_Body_Archive_PSD_GPT_Master.png",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo28-archive-geometry-2026-11-02/28ml-body-registered.png",
+      "id": "1XllHuXywY3oVKMrVI7pbrBmtOVbTUFSq",
+      "url": "https://drive.google.com/file/d/1XllHuXywY3oVKMrVI7pbrBmtOVbTUFSq/view?usp=drivesdk",
+      "parentId": "1Dp-9BUrdf3Z0wwXnFRtQBZa5yyajJJlm",
+      "remoteVerified": {
+        "bytes": 1797611,
+        "parentId": "1Dp-9BUrdf3Z0wwXnFRtQBZa5yyajJJlm",
+        "url": "https://drive.google.com/file/d/1XllHuXywY3oVKMrVI7pbrBmtOVbTUFSq/view?usp=drivesdk"
+      },
+      "bytes": 1797611,
+      "sha256": "2e8821bef699a8f2db6e4d5404480ca569b27469245f7069dcefdae0e33f8131"
+    },
+    {
+      "name": "REVIEW_28ml_16mm_Clear_Body_Registered_Geometry.svg",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo28-archive-geometry-2026-11-02/sources/28ml-body-archive-geometry-studio.svg",
+      "id": "1MRLSZnFWu1sw-GsoI-9uz4u7BzD2SW5h",
+      "url": "https://drive.google.com/file/d/1MRLSZnFWu1sw-GsoI-9uz4u7BzD2SW5h/view?usp=drivesdk",
+      "parentId": "1Dp-9BUrdf3Z0wwXnFRtQBZa5yyajJJlm",
+      "remoteVerified": {
+        "bytes": 5124202,
+        "parentId": "1Dp-9BUrdf3Z0wwXnFRtQBZa5yyajJJlm",
+        "url": "https://drive.google.com/file/d/1MRLSZnFWu1sw-GsoI-9uz4u7BzD2SW5h/view?usp=drivesdk"
+      },
+      "bytes": 5124202,
+      "sha256": "d85f195bf5cfcff92ceb331fb20b7b6aab11793bd50bed08cf977f342b21f23f"
+    },
+    {
+      "name": "README_28ml_Archive_Geometry_Correction_REVIEW.md",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo28-archive-geometry-2026-11-02/README.md",
+      "id": "19PnIYxVcDw27Pd05TClEhFIXGXQaO8Gt",
+      "url": "https://drive.google.com/file/d/19PnIYxVcDw27Pd05TClEhFIXGXQaO8Gt/view?usp=drivesdk",
+      "parentId": "1Dp-9BUrdf3Z0wwXnFRtQBZa5yyajJJlm",
+      "remoteVerified": {
+        "bytes": 3240,
+        "parentId": "1Dp-9BUrdf3Z0wwXnFRtQBZa5yyajJJlm",
+        "url": "https://drive.google.com/file/d/19PnIYxVcDw27Pd05TClEhFIXGXQaO8Gt/view?usp=drivesdk"
+      },
+      "bytes": 3240,
+      "sha256": "9abcbcc9b87decbd51f76c66acededf12d1d78d04531f89464e0b39954638285"
+    },
+    {
+      "name": "Best_Bottles_28ml_16mm_Archive_PSD_Geometry_GPT_REVIEW_2026-11-02.zip",
+      "file": "/private/tmp/Best_Bottles_28ml_16mm_Archive_PSD_Geometry_GPT_REVIEW_2026-11-02.zip",
+      "id": "1ckeJsIaHZn2875IYhuQlLnsO8_jAPUd3",
+      "url": "https://drive.google.com/file/d/1ckeJsIaHZn2875IYhuQlLnsO8_jAPUd3/view?usp=drivesdk",
+      "parentId": "1Dp-9BUrdf3Z0wwXnFRtQBZa5yyajJJlm",
+      "remoteVerified": {
+        "bytes": 15617702,
+        "parentId": "1Dp-9BUrdf3Z0wwXnFRtQBZa5yyajJJlm",
+        "url": "https://drive.google.com/file/d/1ckeJsIaHZn2875IYhuQlLnsO8_jAPUd3/view?usp=drivesdk"
+      },
+      "bytes": 15617702,
+      "sha256": "9712773fd6b64f96ec63b3958f8a474e18b835769d86882f75c4088b7e2f3c45"
+    }
+  ],
+  "verification": "Drive parent and byte size verified for every upload. Local SHA-256 values are source hashes, not a remote hash verification.",
+  "archiveScope": "Frozen source and evidence snapshot before the draft commit. Later interface clarification and verification records are tracked in Git."
+}

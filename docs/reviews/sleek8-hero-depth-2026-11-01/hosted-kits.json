@@ -1,0 +1,1949 @@
+{
+  "version": "16625b508a08fa33",
+  "rows": {
+    "GBSleek8SpryBlkMatt": {
+      "sku": "GBSleek8SpryBlkMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "key": "reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "sha256": "d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8",
+            "bytes": 845901,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 418.03682805402076,
+            "right": 583.4729911774727,
+            "top": 152.69453807525463,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+            "sha256": "809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f",
+            "bytes": 299364,
+            "width": 524,
+            "height": 1048,
+            "key": "reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.069190907283,
+            "y": 145.73229473739394,
+            "width": 173.72454804947668,
+            "height": 347.44909609895336
+          },
+          "componentId": "CMP-CAP-BLK-13-415-01"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 414.19752719733026,
+            "right": 585.4322725507196,
+            "top": 149.54453807525465,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg",
+            "sha256": "cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd",
+            "bytes": 64030,
+            "width": 217,
+            "height": 394,
+            "key": "reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 408.2636498831039,
+            "y": 142.76296400185305,
+            "width": 183.95019674101727,
+            "height": 333.99252311502676
+          },
+          "componentId": "CMP-CAP-BLK-13-415-01"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-01",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-01",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-BLK-13-415-01"
+        ],
+        "seatSignature": "65d09fa608220f",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8SpryBlkSh": {
+      "sku": "GBSleek8SpryBlkSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "key": "reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "sha256": "d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8",
+            "bytes": 845901,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 418.5399750819978,
+            "right": 583.3370494599549,
+            "top": 158.4275587885612,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489.svg",
+            "sha256": "d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489",
+            "bytes": 394555,
+            "width": 584,
+            "height": 1085,
+            "key": "reviewed-master-media/2026-11-01/d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.6226654095397,
+            "y": 154.28544201784058,
+            "width": 172.78544243577542,
+            "height": 321.01404973084993
+          },
+          "componentId": "CMP-CAP-BLK-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 417.47316650236354,
+            "right": 585.5661823678797,
+            "top": 142.45246975912204,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d.svg",
+            "sha256": "dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d",
+            "bytes": 56369,
+            "width": 235,
+            "height": 394,
+            "key": "reviewed-master-media/2026-11-01/dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.2744134343578,
+            "y": 136.3872578464488,
+            "width": 203.61782849688814,
+            "height": 341.38478479903796
+          },
+          "componentId": "CMP-CAP-BLK-13-415-02"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-BLK-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-BLK-13-415-02"
+        ],
+        "seatSignature": "ae6363900c9e61",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8SpryBluMatt": {
+      "sku": "GBSleek8SpryBluMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "key": "reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "sha256": "d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8",
+            "bytes": 845901,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 421.7945936374742,
+            "right": 580.6898557255289,
+            "top": 169.31915242588468,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0.svg",
+            "sha256": "c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0",
+            "bytes": 838113,
+            "width": 528,
+            "height": 993,
+            "key": "reviewed-master-media/2026-11-01/c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 418.99055960062617,
+            "y": 165.58044037675398,
+            "width": 164.5033301617507,
+            "height": 309.37842206556525
+          },
+          "componentId": "CMP-CAP-13-415"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 420.04986134787987,
+            "right": 582.1230286776956,
+            "top": 152.51100796445763,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0.svg",
+            "sha256": "5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0",
+            "bytes": 139248,
+            "width": 210,
+            "height": 394,
+            "key": "reviewed-master-media/2026-11-01/5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.03728916242164,
+            "y": 147.4984357789994,
+            "width": 175.4400264910377,
+            "height": 329.1589068450898
+          },
+          "componentId": "CMP-CAP-13-415"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-13-415",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-13-415",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-13-415"
+        ],
+        "seatSignature": "ab79533b042d22",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8SpryCuMatt": {
+      "sku": "GBSleek8SpryCuMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "key": "reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "sha256": "d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8",
+            "bytes": 845901,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419.77746771960494,
+            "right": 581.4784037650701,
+            "top": 161.85568330089075,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg",
+            "sha256": "682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600",
+            "bytes": 444974,
+            "width": 555,
+            "height": 1031,
+            "key": "reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.1093935560027,
+            "y": 158.49328198425536,
+            "width": 169.64843006660323,
+            "height": 315.1487052228251
+          },
+          "componentId": "CMP-SPR-MTCP-13-415-07"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 418.61896762960055,
+            "right": 583.553922395975,
+            "top": 155.931095129725,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg",
+            "sha256": "0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627",
+            "bytes": 121536,
+            "width": 214,
+            "height": 395,
+            "key": "reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.121924231129,
+            "y": 149.26705655330585,
+            "width": 178.2630319192127,
+            "height": 329.0369047106964
+          },
+          "componentId": "CMP-SPR-MTCP-13-415-07"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-SPR-MTCP-13-415-07",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-SPR-MTCP-13-415-07",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-SPR-MTCP-13-415-07"
+        ],
+        "seatSignature": "8b2aed7e09a057",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8SpryGlMatt": {
+      "sku": "GBSleek8SpryGlMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "key": "reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "sha256": "d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8",
+            "bytes": 845901,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.38742503181726,
+            "right": 581.1512880194481,
+            "top": 165.88605386174663,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481.svg",
+            "sha256": "e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481",
+            "bytes": 949858,
+            "width": 525,
+            "height": 976,
+            "key": "reviewed-master-media/2026-11-01/e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 417.53362864742144,
+            "y": 163.34934596450591,
+            "width": 166.47145575642244,
+            "height": 309.47836346336817
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 418.27285910895836,
+            "right": 582.2519993563418,
+            "top": 158.49594815146344,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226.svg",
+            "sha256": "f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226",
+            "bytes": 142776,
+            "width": 214,
+            "height": 396,
+            "key": "reviewed-master-media/2026-11-01/f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.50474864799514,
+            "y": 152.72783769050022,
+            "width": 176.33937694944754,
+            "height": 326.3102489344917
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-02"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-02"
+        ],
+        "seatSignature": "37e7540a097223",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8SpryGlSh": {
+      "sku": "GBSleek8SpryGlSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "key": "reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "sha256": "d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8",
+            "bytes": 845901,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.3879673724452,
+            "right": 582.0883003886204,
+            "top": 163.25902246307862,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc.svg",
+            "sha256": "a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc",
+            "bytes": 1312217,
+            "width": 570,
+            "height": 1060,
+            "key": "reviewed-master-media/2026-11-01/a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.803523985195,
+            "y": 156.58471228229843,
+            "width": 172.9253092293054,
+            "height": 321.5803996194101
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-03"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 419.0421837378115,
+            "right": 583.97652341431,
+            "top": 147.71758782939645,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33.svg",
+            "sha256": "2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33",
+            "bytes": 144369,
+            "width": 210,
+            "height": 397,
+            "key": "reviewed-master-media/2026-11-01/2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.1214638519885,
+            "y": 140.95105081702724,
+            "width": 177.62159657469078,
+            "height": 335.7893992388202
+          },
+          "componentId": "CMP-CAP-SGLD-13-415-03"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-03",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SGLD-13-415-03",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SGLD-13-415-03"
+        ],
+        "seatSignature": "66c6bca21904a7",
+        "seatDropMm": 1.43
+      }
+    },
+    "GBSleek8SprySlMatt": {
+      "sku": "GBSleek8SprySlMatt",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "key": "reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "sha256": "d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8",
+            "bytes": 845901,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 416.6531921541308,
+            "right": 585.8329938004192,
+            "top": 161.06412707451472,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd.svg",
+            "sha256": "40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd",
+            "bytes": 358123,
+            "width": 562,
+            "height": 1028,
+            "key": "reviewed-master-media/2026-11-01/40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 411.9537532195117,
+            "y": 153.5450247791241,
+            "width": 176.07231208372977,
+            "height": 322.06821498589716
+          },
+          "componentId": "CMP-CAP-SLV-13-415-02"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 413.5040170449454,
+            "right": 586.0674147241596,
+            "top": 146.52593648897135,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc.svg",
+            "sha256": "48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc",
+            "bytes": 55886,
+            "width": 217,
+            "height": 397,
+            "key": "reviewed-master-media/2026-11-01/48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 404.8324895233768,
+            "y": 134.38579795877536,
+            "width": 188.17214721803754,
+            "height": 344.2596426062714
+          },
+          "componentId": "CMP-CAP-SLV-13-415-02"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-02",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-02",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-02"
+        ],
+        "seatSignature": "f4b6064a01ba93",
+        "seatDropMm": 1.33
+      }
+    },
+    "GBSleek8SprySlSh": {
+      "sku": "GBSleek8SprySlSh",
+      "familyId": "register:sleek-8ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 353,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 43,
+        "baselinePct": 91,
+        "landmarkY": 469.97391304347826,
+        "source": "docs/hero-families/sleek-2026-09-23/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 410.73,
+            "right": 589.27,
+            "top": 353,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "key": "reviewed-master-media/2026-11-01/d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8.svg",
+            "sha256": "d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8",
+            "bytes": 845901,
+            "width": 768,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 364.0132992327366,
+            "y": 301.937084398977,
+            "width": 278.12992327365725,
+            "height": 793.8291560102301
+          },
+          "componentId": null,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420.3879673724452,
+            "right": 582.0883003886204,
+            "top": 163.25902246307862,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7.svg",
+            "sha256": "3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7",
+            "bytes": 829486,
+            "width": 570,
+            "height": 1060,
+            "key": "reviewed-master-media/2026-11-01/3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 412.803523985195,
+            "y": 156.58471228229843,
+            "width": 172.9253092293054,
+            "height": 321.5803996194101
+          },
+          "componentId": "CMP-CAP-SLV-13-415-03"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 5,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 419.05331291052926,
+            "right": 583.9876525870277,
+            "top": 141.84138463444424,
+            "bottom": 469.97391304347826
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866.svg",
+            "sha256": "0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866",
+            "bytes": 64742,
+            "width": 206,
+            "height": 393,
+            "key": "reviewed-master-media/2026-11-01/0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866.svg"
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.8448600786398,
+            "y": 136.63293180255482,
+            "width": 178.82354722820375,
+            "height": 341.15366048875757
+          },
+          "componentId": "CMP-CAP-SLV-13-415-03"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 0.5,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-03",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.4,
+          "blendMode": "multiply"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 1,
+          "box": {
+            "x": 475.617214243557,
+            "y": 448.97391304347826,
+            "width": 53.30769230769231,
+            "height": 538.0760869565217
+          },
+          "bounds": {
+            "left": 475.617214243557,
+            "top": 448.97391304347826,
+            "right": 528.9249065512493,
+            "bottom": 987.0500000000001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "key": "reviewed-master-media/2026-11-01/066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201.svg",
+            "sha256": "066ac9a0ee66d24f4494bf20c50b1149e3ea649b1a7700e6ec8a763fa2cb9201",
+            "bytes": 1146313,
+            "width": 180,
+            "height": 1816.880293619424
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "componentId": "CMP-CAP-SLV-13-415-03",
+          "views": [
+            "exploded"
+          ]
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "sleek-8ml-13-415",
+        "plateKey": "sleek-8ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 353,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "CMP-CAP-SLV-13-415-03"
+        ],
+        "seatSignature": "a0f1f4f01e3401",
+        "seatDropMm": 1.43
+      }
+    }
+  }
+}

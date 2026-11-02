@@ -8,6 +8,16 @@ const frosted = ["BlkMatt", "BlkSh", "BluMatt", "CuMatt", "GlMatt", "GlSh", "SlM
     websiteSku: `GBTallCylFrst9Spry${finish}`, color: "Frosted", capColor: "Frosted", applicator: "Fine Mist Sprayer",
 }));
 describe("imported cap finish evidence", () => {
+    it("keeps the two 5/8 dram green vial caps distinct from the green glass", () => {
+        const variants = ["GBVGreen2o4BlackCapSht", "GBVGreen2o4WhtCapSht"].map(websiteSku => ({
+            _id: websiteSku, websiteSku, color: "Green", capColor: "Green", applicator: null, capStyle: "Short",
+        } as ProductVariant));
+        expect(capOptions(variants, null).map(option => option.id)).toEqual(["black", "white"]);
+        expect(resolveVariant(variants, { cap: "white", roller: null })?.websiteSku).toBe("GBVGreen2o4WhtCapSht");
+        expect(variants.every(variant => variant.color === "Green" && variant.capColor === "Green")).toBe(true);
+        const unrelated = { websiteSku: "different-green-vial", color: "Green", capColor: "Green" };
+        expect(normalizeImportedCapColor(unrelated)).toBe(unrelated);
+    });
     it("keeps eight real Frosted sprayer finishes available on the PDP", () => {
         const variants = frosted.map(normalizeImportedCapColor);
         expect(new Set(variants.map(v => v.capColor)).size).toBe(8);

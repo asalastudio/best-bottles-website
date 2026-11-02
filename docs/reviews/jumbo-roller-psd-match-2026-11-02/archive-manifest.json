@@ -1,0 +1,576 @@
+{
+  "status": "local-review-not-approved",
+  "purpose": "PSD-matched 28/50 ml 16 mm roller overlay on the existing full Cylinder review archive",
+  "files": [
+    {
+      "path": "docs/reviews/cylinder-family-completion-2026-11-02/README.md",
+      "bytes": 6752,
+      "sha256": "ecf9b62d31779b181eddc82cb243525d521f6584d7fec08e841178eff06c7aac"
+    },
+    {
+      "path": "docs/reviews/cylinder-family-completion-2026-11-02/display-verification.json",
+      "bytes": 33763,
+      "sha256": "f39b6150a33305f187865dafb224547bf96c5804aa2954e8347befca8b5abe22"
+    },
+    {
+      "path": "docs/reviews/cylinder-family-completion-2026-11-02/register-rollers.mts",
+      "bytes": 7918,
+      "sha256": "f2e2ea3750abe1ae5b2bcbe84394843f00b29783a05eb39c728b69989503c184"
+    },
+    {
+      "path": "docs/reviews/cylinder-family-completion-2026-11-02/registration.json",
+      "bytes": 64709,
+      "sha256": "d2afe259ff7658643ea8de86049936def3c6e5edd522f508230a1c9c9d28e6e9"
+    },
+    {
+      "path": "docs/reviews/cylinder-family-completion-2026-11-02/roller-registration.json",
+      "bytes": 10480,
+      "sha256": "922ccd48d6aef7fbe519e6be2aa9d3e10ccef4358daeef5f3e867950d317c956"
+    },
+    {
+      "path": "docs/reviews/cylinder-family-completion-2026-11-02/validation-summary.json",
+      "bytes": 1399,
+      "sha256": "2e241431a430ba82a3bb319a54af9243c8cacfcd1436d1bb935871d1aa689eb8"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/Cylinder_JumboRoller_16mm_Metal_PSD-Matched_v2_REVIEW.webp",
+      "bytes": 21776,
+      "sha256": "c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/Cylinder_JumboRoller_16mm_Plastic_PSD-Matched_v2_REVIEW.webp",
+      "bytes": 22232,
+      "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/README.md",
+      "bytes": 3241,
+      "sha256": "f5bf8a9b02f1d9a2b9a9f7b073f6c577c4de3c870a9df5ed3736b19c75fe333f"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/before-kits.json",
+      "bytes": 563039,
+      "sha256": "67ac4a464e0fdbdd24b37235f95e1871d5a1adf6ab166043ddb5f5f501f2b160"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/before-registration.json",
+      "bytes": 8784,
+      "sha256": "705d99ce5f570d6495aac815466051f851604a403f11d481b68aa8b78813f78a"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/browser-verification.json",
+      "bytes": 63599,
+      "sha256": "886d4fde8905cb2991a2d536104d57c4ed20b50effe2e689b31aa669d8f7539e"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl1ozRollWht-capon.png",
+      "bytes": 39944,
+      "sha256": "7093774ebcc7ede1ee4a8f3b4b43830bdccc05bc87d20af2c29a1bc1d4a0392e"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl1ozRollWht-exploded.png",
+      "bytes": 75284,
+      "sha256": "c5e70a465b54f8fb3ef715ea22be113745ff5eb323004a348d231bcc57b5adc4"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl1ozRollWht-sidecar.png",
+      "bytes": 52690,
+      "sha256": "56dbb726ad3172e18deb355f8b4c595f39e1fbc857afd69d1e24ea708217b524"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50MtlRollBlk-capon.png",
+      "bytes": 34458,
+      "sha256": "9dced7bdc9e356ba588f08f9bb73a4c241f58e289bfba3765e12f5b593dc3b8d"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50MtlRollBlk-exploded.png",
+      "bytes": 67030,
+      "sha256": "abb7261eb33b485be27f837e238bb35fe3b478e609aeb0d3dca5643e6d0dbbc4"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50MtlRollBlk-sidecar.png",
+      "bytes": 43671,
+      "sha256": "5b5ca44652a091edda65af29cd610747096c44f19b2c0453cd68fc76d85de675"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50MtlRollWht-capon.png",
+      "bytes": 35370,
+      "sha256": "8e9888656dd85d1bb6b8be6e3124750dbae931992501f03b47d07b9a98739ffe"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50MtlRollWht-exploded.png",
+      "bytes": 67527,
+      "sha256": "ffdf56d6ed21366cec4ed4e4bd2d1e8179e54d9383d30daaff080817b89b3743"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50MtlRollWht-sidecar.png",
+      "bytes": 44600,
+      "sha256": "29583549179c0fc41cb394d65506c0ab88554b1aa2b7f1a3041528d2b97b5b31"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50RollBlk-capon.png",
+      "bytes": 34398,
+      "sha256": "74d2563ac3e3c4ca1db4d9d25d3dc34452e4c365c1189d440a6abb5812ef775e"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50RollBlk-exploded.png",
+      "bytes": 67155,
+      "sha256": "b5ad1992585e0ac26f062fca56c836bc5c8517daa24b4da3a4ab9c65119e16ec"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50RollBlk-sidecar.png",
+      "bytes": 43599,
+      "sha256": "f8ef39ec8310a5825541ceb677c3407624f900b9844b7a1fd563879c7e5b4a3c"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50RollWht-capon.png",
+      "bytes": 35200,
+      "sha256": "75aa3bf78e724b1dff99ce381905eff156e318481bf312670f49b860d12f5703"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50RollWht-exploded.png",
+      "bytes": 67658,
+      "sha256": "668788cb0149ec0cd82d1366345606e2b10e5c22f1464b2066ee4aab2669e3e2"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBCyl50RollWht-sidecar.png",
+      "bytes": 44525,
+      "sha256": "1c07c7097ff6df1390f14819c761bbe92ecf5557ac7a49fde162b506f19be7da"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBMtlRoll28Blk-capon.png",
+      "bytes": 39059,
+      "sha256": "8f88009e69a800690dec9cfdd4a65c44c52babb213b1d512009761ce5f4333ed"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBMtlRoll28Blk-exploded.png",
+      "bytes": 74542,
+      "sha256": "49c32f8b1b17e5427222ff6de44294175f03f914983a31150f6c8086f39eab60"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBMtlRoll28Blk-sidecar.png",
+      "bytes": 52056,
+      "sha256": "b380332cf64e0f3acb471225a27e7696c98f131ccd8906c0f11027e5662a035b"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBMtlRoll28Wht-capon.png",
+      "bytes": 40092,
+      "sha256": "53ea4c9bdadbd7fcb9906c07c61d5352b2fe62851417123fef1e24acecd72baa"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBMtlRoll28Wht-exploded.png",
+      "bytes": 75242,
+      "sha256": "e7cb1be6b9444ee1e32b540855293bf8631a41371dc2b293b75f01172a5a9491"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBMtlRoll28Wht-sidecar.png",
+      "bytes": 52822,
+      "sha256": "19dac52d96899a7131d00f01f2c7e16cfa9bd3884591678c44e990471b5ecd0b"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBRoll28Blk-capon.png",
+      "bytes": 38958,
+      "sha256": "6e9c73bc8237767eee188894e62255a52ee92d10b14004c35e8b2191a6bf9617"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBRoll28Blk-exploded.png",
+      "bytes": 74583,
+      "sha256": "be4bb1b8ef0bdb19e058662dc7b4727a71c48dc50ccd8388cbef1343da993364"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/desktop-GBRoll28Blk-sidecar.png",
+      "bytes": 51927,
+      "sha256": "171c896c6dd694b0ecd5cca5babd302befa0dcf1cb1ad6721b24e660280b079b"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl1ozRollWht-capon.png",
+      "bytes": 81720,
+      "sha256": "ecbef1f9b45fcc74e085ea606376e135ebb1adfa0d8afd2f454bbac30e4e29b5"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl1ozRollWht-exploded.png",
+      "bytes": 118635,
+      "sha256": "02cc2a84ca92f8b6f7663fd244d134a222a665b7addeb2695c9f189f37f445b5"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl1ozRollWht-sidecar.png",
+      "bytes": 106173,
+      "sha256": "43e99b1a6fd58dd595a63cda6cd97d2b2e4d808d5991833db7842a6eac441e71"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50MtlRollBlk-capon.png",
+      "bytes": 71209,
+      "sha256": "b1020e01024fc6555f0ebe73955753532dd751a5d9173885b29d07b2e692c671"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50MtlRollBlk-exploded.png",
+      "bytes": 101695,
+      "sha256": "e1cbc9bc813796ebb6081b378098e88b9c6e35eef2208a388f1d4d2749fd7f33"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50MtlRollBlk-sidecar.png",
+      "bytes": 88871,
+      "sha256": "7e3884e8a42c577e475d35ff866f02a63200d84c6de458d405f855f200cc9d5b"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50MtlRollWht-capon.png",
+      "bytes": 72052,
+      "sha256": "e05a11b8cbe354ec0ce66ebce656ef2fc6d8c0320dd239df3003788bbc0f635d"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50MtlRollWht-exploded.png",
+      "bytes": 101648,
+      "sha256": "1481b94df3a9764659e73b6d01e0c2febd6ec431f9b83b0e6970cc1d521bf7b3"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50MtlRollWht-sidecar.png",
+      "bytes": 89337,
+      "sha256": "1d1a3af75ffcc52ebfd8ea876d8c5a04b08c7cae2ca0714f1bddfc96c65637cc"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50RollBlk-capon.png",
+      "bytes": 70966,
+      "sha256": "8a43242ac524de46b28af5064fa1166ad6fe3d9dd2a42aecd06de0fd1ad90b00"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50RollBlk-exploded.png",
+      "bytes": 101493,
+      "sha256": "d36329ed54ddb9d70c1184d251e197e97c335848df7242d9eead660178489116"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50RollBlk-sidecar.png",
+      "bytes": 88946,
+      "sha256": "b8ea553420c996badbe9b241e5668375fd3d7b57b06b7e0fcf237d1ec5affc1b"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50RollWht-capon.png",
+      "bytes": 71866,
+      "sha256": "ed89a464f0f3faddcb0f9dc02156a958ff3d0d3d38aa1a11bd49aae1bf8d723d"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50RollWht-exploded.png",
+      "bytes": 101426,
+      "sha256": "fbbae691f0a194696c1aa1d5e6cc9493561d84b713b5461b0363933e870eedfa"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBCyl50RollWht-sidecar.png",
+      "bytes": 89298,
+      "sha256": "5f1727eac169f11e4b612be99c754102b121323408875bf9d5c556c8a0f55d52"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBMtlRoll28Blk-capon.png",
+      "bytes": 80368,
+      "sha256": "0cf6d8b2672337d6cfbdb5c3d31790161c662215bafafab149de9e1f10e0f622"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBMtlRoll28Blk-exploded.png",
+      "bytes": 118050,
+      "sha256": "d6fc6d797ff3fe1a44d091530bd08a6be4245c520ad998f0c102458feb04ba6b"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBMtlRoll28Blk-sidecar.png",
+      "bytes": 105474,
+      "sha256": "7d705f1f123debe027822ef61db47bdd7d112fd259bb1d9ba3d87eb9ad2c0397"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBMtlRoll28Wht-capon.png",
+      "bytes": 82057,
+      "sha256": "2cbc3a84cb0bbe89cfe75b6c02c76f28b6e33358d04c592d1baed1b7e7e2da9d"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBMtlRoll28Wht-exploded.png",
+      "bytes": 118629,
+      "sha256": "78b1a62782d6205a4b689efcbe763e7206ec4b2bf37411ac68df057e58cee4ab"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBMtlRoll28Wht-sidecar.png",
+      "bytes": 106178,
+      "sha256": "ad09a0a247b0f32d71a37b8c2ba03e1fc55f9dd037bcdd7d2bcfe2e0134cdf27"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBRoll28Blk-capon.png",
+      "bytes": 80258,
+      "sha256": "bfdcb6bce344fd3af61fa1a73c9beac79c82f51b72d38eedcb458f9368efa284"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBRoll28Blk-exploded.png",
+      "bytes": 118035,
+      "sha256": "1da8561bda961c0955e3376e5b1ace670f1efb37088a187f3f6b56700e7aa82b"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/mobile-GBRoll28Blk-sidecar.png",
+      "bytes": 105459,
+      "sha256": "62989effd7ed7f70f60fcd2450ee1ad4272aa1297fb02fbfde9748863588517c"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/evidence/psd-comparison.png",
+      "bytes": 212086,
+      "sha256": "510e3dc13fd7b27bb5e03cac9a7af9519a3276196f10356315fe4da971b4a1a7"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/metal-native-preview.png",
+      "bytes": 46139,
+      "sha256": "08876daaffcf316f197438921c76d67a066b2f88898219de1b37d3c698846fc9"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/native-ball-verification.json",
+      "bytes": 1259,
+      "sha256": "2e772afa2d191b9005c178fc5591660606af40bfb5eac2d24da24f9d256db77b"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/plastic-native-preview.png",
+      "bytes": 47665,
+      "sha256": "d62e4283e6540e07e375dd5eab998ec6951a8ba295e36d9f3bae0f03587bf61f"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/plate-geometry-current.json",
+      "bytes": 1822866,
+      "sha256": "ea8b228bd7029ee12c9311bcbe2d3e2546c9275461a9a4cf00f467613979634c"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/prepare-native.mjs",
+      "bytes": 5500,
+      "sha256": "8cdae4336bfa36d652471d913a2ae7dfa7a79a6d31a01f10526d792c859ae38d"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/preservation-verification.json",
+      "bytes": 1468,
+      "sha256": "c5004ea662ae90c2bfb22c6fce643c8c846c3e7fd5739eb2538995c5d8c23715"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/review-template.html",
+      "bytes": 4434,
+      "sha256": "70b5fde3da9e95b7886379f4244927d83632d5494afcd5175e73384a33ac5a2c"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/source-registration.json",
+      "bytes": 5202,
+      "sha256": "f37f6e2eeaa6a4d2915307f02c87a64ab7861cc1446e58b582092a2ff83dae04"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/metal-original-psd-layer.png",
+      "bytes": 96993,
+      "sha256": "001af9d1c245b08758027496b2bd8371fbc4b971cc60ea08fa3d31a5d7a16103"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/plastic-ball-original-psd-layer.png",
+      "bytes": 35066,
+      "sha256": "b5176bfd01982ede60b193f0f16e5d3a554b455ce4a500811701e0e2a18b9b96"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/plastic-housing-original-psd-layer.png",
+      "bytes": 86296,
+      "sha256": "dc2bbd9d44b68b59a7ae186f57af3caab82060df02dbaab7fc8c53eede3faecb"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-metal-native-psd.svg",
+      "bytes": 133707,
+      "sha256": "6c684e37aae0896130330e808ab4e5a7b8f5f9e4a5c5bde4d4491a3873687b71"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/sources/roller16-plastic-native-psd.svg",
+      "bytes": 166654,
+      "sha256": "e4529c78b0e929db5632609fbb039ba4d7aed9168d793f39218bb50068678608"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/verify-and-review.mts",
+      "bytes": 3843,
+      "sha256": "24c7bf0d6e36aff79175882cf9456eb0d7970539f4d79fb0138778716f878845"
+    },
+    {
+      "path": "docs/reviews/jumbo-roller-psd-match-2026-11-02/verify-browser.cjs",
+      "bytes": 4176,
+      "sha256": "833f722acc09ea77254d45254f1ee885f80d2e35359c0ec1b2949cb59651af59"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-28ml-16mm.bd4cb95c2e2f.png",
+      "bytes": 635988,
+      "sha256": "bd4cb95c2e2f7cb1495779df5edfd82f5900c7538c91efa1643eab5ff10e12f7"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-50ml-16mm.583b5d7a43ef.png",
+      "bytes": 573361,
+      "sha256": "583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/cap16-black.b69eeeb45b69.webp",
+      "bytes": 768394,
+      "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/cap16-white.b941c5342eae.webp",
+      "bytes": 655994,
+      "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c/1200.f96d04ab35bd.webp",
+      "bytes": 353752,
+      "sha256": "f96d04ab35bda6f8ddece98dee680a521491361fb9f269c828df33fb7f4a5cc3"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c/128.974083808686.webp",
+      "bytes": 15396,
+      "sha256": "9740838086864b53e75a6d7e26cf0ce7fe70effad7a58f4bc813b624e950fa09"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c/256.55d96bae21a5.webp",
+      "bytes": 40380,
+      "sha256": "55d96bae21a5d872803a62221d11292879b9e4fc0210af6e00082a625ea2c256"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c/640.67b39b1cd258.webp",
+      "bytes": 203194,
+      "sha256": "67b39b1cd2586de4d62e971f30968878ff153f8c9f7aebbe8dc2a29bcf7e88f3"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/1200.b69eeeb45b69.webp",
+      "bytes": 768394,
+      "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/128.1dae7a0a4bd2.webp",
+      "bytes": 9508,
+      "sha256": "1dae7a0a4bd22915d2d9b0fa7c8080f02b77eafd23dca980d95bbf8e48a3bb33"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+      "bytes": 35066,
+      "sha256": "847a2ee574b36394108251b30bd2ef4bd4a6012f1080be0d0af0e2aa6e6ccb94"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/640.a75bdbaf33f5.webp",
+      "bytes": 230788,
+      "sha256": "a75bdbaf33f5c49372815f4c6c4c027bce112dcb866a2149dd86b57b1672bcb4"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/1200.b941c5342eae.webp",
+      "bytes": 655994,
+      "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/128.bcde5d108faf.webp",
+      "bytes": 10276,
+      "sha256": "bcde5d108faf795d01292f4d0cbbf62922a2e881c906736d6731457e137653a6"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+      "bytes": 36382,
+      "sha256": "343dd5229fd99626e10b400c10fe7479d42ca7ff47e85b852a7880b1675e73ab"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/640.8e385ff17642.webp",
+      "bytes": 224332,
+      "sha256": "8e385ff176420b78e3bb6f983ad6faee8e9daf90e70130654ed494c9e85a08e9"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/bd4cb95c2e2f7cb1495779df5edfd82f5900c7538c91efa1643eab5ff10e12f7/1200.8872ca5014c0.webp",
+      "bytes": 385312,
+      "sha256": "8872ca5014c01f37edfaea2528705527a5c1e8987f96e7dbc8f027c11a062565"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/bd4cb95c2e2f7cb1495779df5edfd82f5900c7538c91efa1643eab5ff10e12f7/128.89decec18a36.webp",
+      "bytes": 16328,
+      "sha256": "89decec18a3695a3cadcdcab34230fefeaa0106eafc20c305846995c2670047e"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/bd4cb95c2e2f7cb1495779df5edfd82f5900c7538c91efa1643eab5ff10e12f7/256.4add79b70894.webp",
+      "bytes": 45824,
+      "sha256": "4add79b7089409e475eee98a72a5850fb0c2f23bb183fc1417c3f0de1ae21ec6"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/bd4cb95c2e2f7cb1495779df5edfd82f5900c7538c91efa1643eab5ff10e12f7/640.a9d79903377f.webp",
+      "bytes": 216354,
+      "sha256": "a9d79903377ff41ba692df572bd86541ac74aba4dab993d62e6ce9d2d810c630"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b/1200.c0f0c061ada2.webp",
+      "bytes": 21776,
+      "sha256": "c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b/128.9fd831ce4f2d.webp",
+      "bytes": 4304,
+      "sha256": "9fd831ce4f2ddce5ee531ee678f409242a096c3f2decc2f188b3305e5dbb7959"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b/256.0cc1d8d20232.webp",
+      "bytes": 13480,
+      "sha256": "0cc1d8d2023294a84fc62d982777ae1c132c47f62834184e3605e9abad876cc8"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b/640.c0f0c061ada2.webp",
+      "bytes": 21776,
+      "sha256": "c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/1200.e3c978ea447c.webp",
+      "bytes": 22232,
+      "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp",
+      "bytes": 4054,
+      "sha256": "3a3ac12e8859eef5c215fe5623111d8ac793236e9f1f1a1b3a043ae15d246f5d"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+      "bytes": 12644,
+      "sha256": "1ef8e5ac8620e9e43f3198aaef63976ef77649072e789f0974c9b5d92f09e0c3"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/640.e3c978ea447c.webp",
+      "bytes": 22232,
+      "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/kits.json",
+      "bytes": 563041,
+      "sha256": "630b5e1b5d280fac76714ea7da4e5656b273d3bc97411435ee6174285899f466"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/roller-kits.json",
+      "bytes": 30953,
+      "sha256": "c592aef345294b5c527be492b077c99fdd5abcd67883ba5a801a486fd34ea3f8"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-native-psd.c0f0c061ada2.webp",
+      "bytes": 21776,
+      "sha256": "c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-over-rim.b307f6b0a4f3.webp",
+      "bytes": 440028,
+      "sha256": "b307f6b0a4f3e5719f3e62944f6c040886090f8eeeaab98423ac568f45822ea8"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp",
+      "bytes": 22232,
+      "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-over-rim.32c308c4b0a1.webp",
+      "bytes": 430032,
+      "sha256": "32c308c4b0a1c206be462cdafb496cd55f7cdbfbefcf8c0514fcee666d705219"
+    },
+    {
+      "path": "public/reviews/jumbo-roller-psd-match-2026-11-02/index.html",
+      "bytes": 78329,
+      "sha256": "d14486d6e5480b4cc502a5384bd414f9d699826c0d1cbf776060f821e40ad027"
+    },
+    {
+      "path": "public/reviews/jumbo-roller-psd-match-2026-11-02/metal-native-preview.png",
+      "bytes": 46139,
+      "sha256": "08876daaffcf316f197438921c76d67a066b2f88898219de1b37d3c698846fc9"
+    },
+    {
+      "path": "public/reviews/jumbo-roller-psd-match-2026-11-02/plastic-native-preview.png",
+      "bytes": 47665,
+      "sha256": "d62e4283e6540e07e375dd5eab998ec6951a8ba295e36d9f3bae0f03587bf61f"
+    },
+    {
+      "path": "src/lib/products/review-display-images.generated.json",
+      "bytes": 14196,
+      "sha256": "333b122ad88d26cff41327c0414dc6f2d13edff28dd13249a741e6a1b1d48a09"
+    }
+  ]
+}

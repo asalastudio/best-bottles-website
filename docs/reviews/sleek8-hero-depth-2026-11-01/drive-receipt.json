@@ -1,0 +1,22 @@
+{
+  "status": "verified Drive review archive; not deployed",
+  "folderId": "1Dq-H3sIROrEnr2UZf45taJrfgG0jLn2A",
+  "folderUrl": "https://drive.google.com/drive/folders/1Dq-H3sIROrEnr2UZf45taJrfgG0jLn2A",
+  "verification": "Read back exact names, byte sizes and parent folder after upload.",
+  "files": [
+    {
+      "id": "1GjbKkvaBT-6tTWtSRBaY89uvijPLa1SD",
+      "name": "Best_Bottles_Sleek_8ml_13-415_Shared_Hero_Dip_Tube_Correction_REVIEW_2026-11-01.png",
+      "bytes": 51594,
+      "url": "https://drive.google.com/file/d/1GjbKkvaBT-6tTWtSRBaY89uvijPLa1SD/view?usp=drivesdk",
+      "sha256": "9941b0207466264dca5992bcf60c3a32d7fa0c5f5d07f29271b6a8839df37d7f"
+    },
+    {
+      "id": "1pFe3VJ2T8BLBEBzMHP9ZoVhA8U_tOO72",
+      "name": "Best_Bottles_Sleek_8ml_13-415_Hero_Tube_Depth_8_Finishes_REVIEW_2026-11-01.zip",
+      "bytes": 251857,
+      "url": "https://drive.google.com/file/d/1pFe3VJ2T8BLBEBzMHP9ZoVhA8U_tOO72/view?usp=drivesdk",
+      "sha256": "b1caa87e4f1dd6320cb19b771a6ee6c66b7e7b41c9376a7adf5be539b0b4a8ce"
+    }
+  ]
+}

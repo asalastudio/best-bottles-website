@@ -1,0 +1,206 @@
+{
+  "version": "rectangle9-2026-11-01-v1",
+  "status": "candidate",
+  "defaultPdpSkus": [
+    "GBSQSTClear",
+    "GBSQSTBlue",
+    "GBSQSTGREEN"
+  ],
+  "rows": {
+    "GBSQSTClear": {
+      "sku": "GBSQSTClear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 702.02859375,
+        "baselineY": 1001,
+        "pxPerMm": 6.36109375
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 409.9915594462541,
+            "right": 590.0084405537459,
+            "top": 593.89,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/rectangle9-applicator-2026-11-01/GBSQSTClear.9d207e97894d.png",
+            "width": 1196,
+            "height": 1315,
+            "sha256": "9d207e97894d01b78c75b3a8504039f828f665794701ea6598a0746f90f4d624",
+            "bytes": 1094330
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 300.9205578175896,
+            "y": 580.9606107491857,
+            "width": 396.5012703583062,
+            "height": 435.95248371335504
+          },
+          "componentId": null,
+          "derivation": "gpt-image-edit"
+        }
+      ],
+      "glassSizing": {
+        "heightPct": 37.01,
+        "baselinePct": 91,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "register": {
+        "bodyId": "rectangle-9ml-ground",
+        "plateKey": "rectangle-9ml-ground",
+        "glass": "Clear",
+        "pxPerMm": 6.36109375,
+        "bodyLayers": false
+      }
+    },
+    "GBSQSTBlue": {
+      "sku": "GBSQSTBlue",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 702.02859375,
+        "baselineY": 1001,
+        "pxPerMm": 6.36109375
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 408.70566504460663,
+            "right": 591.2943349553933,
+            "top": 593.89,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/rectangle9-applicator-2026-11-01/GBSQSTBlue.c36ec873d508.png",
+            "width": 1197,
+            "height": 1315,
+            "sha256": "c36ec873d5083b93cc07d56c24b456c5e49a9c15256296c44dba016bce09c6a1",
+            "bytes": 952183
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 301.7278548256286,
+            "y": 582.3337550689375,
+            "width": 395.22357664233573,
+            "height": 434.1846309813463
+          },
+          "componentId": null,
+          "derivation": "gpt-image-edit"
+        }
+      ],
+      "glassSizing": {
+        "heightPct": 37.01,
+        "baselinePct": 91,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "register": {
+        "bodyId": "rectangle-9ml-ground",
+        "plateKey": "rectangle-9ml-ground",
+        "glass": "Cobalt Blue",
+        "pxPerMm": 6.36109375,
+        "bodyLayers": false
+      }
+    },
+    "GBSQSTGREEN": {
+      "sku": "GBSQSTGREEN",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 702.02859375,
+        "baselineY": 1001,
+        "pxPerMm": 6.36109375
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 409.60442463533224,
+            "right": 590.3955753646677,
+            "top": 593.89,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/rectangle9-applicator-2026-11-01/GBSQSTGREEN.4ab6517202ba.png",
+            "width": 1197,
+            "height": 1314,
+            "sha256": "4ab6517202ba5c76e03944766143f1520882e5b5849996f5d4ad059323c92954",
+            "bytes": 1043401
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 302.7133063209076,
+            "y": 582.3431199351701,
+            "width": 394.9032982171799,
+            "height": 433.50286871961106
+          },
+          "componentId": null,
+          "derivation": "gpt-image-edit"
+        }
+      ],
+      "glassSizing": {
+        "heightPct": 37.01,
+        "baselinePct": 91,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "register": {
+        "bodyId": "rectangle-9ml-ground",
+        "plateKey": "rectangle-9ml-ground",
+        "glass": "Green",
+        "pxPerMm": 6.36109375,
+        "bodyLayers": false
+      }
+    }
+  }
+}

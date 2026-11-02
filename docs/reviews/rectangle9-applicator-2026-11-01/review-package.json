@@ -1,0 +1,28 @@
+{
+  "file": "/private/tmp/Best_Bottles_Rectangle_9ml_Ground_Applicator_Review_2026-11-01.zip",
+  "bytes": 1303519,
+  "sha256": "c19e5e1b163300314738eed1a64051af2fdbf65d233b1e024cac88c72d02a1f2",
+  "entries": [
+    "README.md",
+    "sources-and-registration.json",
+    "scope.json",
+    "interactions-verification.json",
+    "unit-test-summary.json",
+    "ledger-recount.json",
+    "drive-receipt.json",
+    "verify-interactions.cjs",
+    "mobile-GBSQSTBlue.png",
+    "desktop-GBSQSTBlue.png",
+    "catalog-mobile-GBSQSTClear.png",
+    "mobile-GBSQSTClear.png",
+    "desktop-GBSQSTGREEN.png",
+    "catalog-desktop-GBSQSTBlue.png",
+    "catalog-desktop-GBSQSTClear.png",
+    "catalog-desktop-GBSQSTGREEN.png",
+    "catalog-mobile-GBSQSTBlue.png",
+    "catalog-mobile-GBSQSTGREEN.png",
+    "desktop-GBSQSTClear.png",
+    "mobile-GBSQSTGREEN.png"
+  ],
+  "status": "review candidates; publication approval pending"
+}

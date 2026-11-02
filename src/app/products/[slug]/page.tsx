@@ -37,6 +37,7 @@ import {
     type FocusedPdpRelations,
 } from "@/lib/products/pdp-relations";
 import PdpRedesignPage, { type PdpRedesignPayload } from "@/components/pdp/PdpRedesignPage";
+import { RECTANGLE_APPLICATOR_SLUG } from "@/lib/products/rectangle-applicator";
 import { parseProductSlug } from "@/lib/products/group-variant-intent";
 import { resolveItemDescriptions } from "@/lib/products/item-description/resolve";
 import { collectionDescription, collectionFor, derivePicks, pageOptionLabel, resolveVariant, variantTitle, type SiblingGlassGroup } from "@/lib/products/pdp-redesign/model";
@@ -45,6 +46,9 @@ import type { KitLike } from "@/lib/products/pdp-redesign/stage";
 import { loadRegisterKits } from "@/lib/register/load";
 import { loadGlassStageEnvelopes } from "@/lib/register/stage-envelopes";
 import { isSoldOutStockStatus } from "@/lib/checkout";
+import { cache } from "react";
+import { preconnect, preload } from "react-dom";
+import { pdpHeroImagePreloads } from "@/lib/products/pdp-image-preloads";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -68,15 +72,18 @@ function isPreferredProductImageUrl(value: string | null | undefined): boolean {
     return isShopifyCdnImageUrl(value) && !isLegacyBestBottlesImageUrl(value);
 }
 
-async function getProductData(slug: string): Promise<ProductGroupPayload | null> {
+// Metadata and the page share one live read within this request. No price,
+// stock or customer data is cached across requests.
+const getProductData = cache(async (slug: string): Promise<ProductGroupPayload | null> => {
     const data = await getConvexClient().query(api.products.getProductGroup, { slug }) as ProductGroupPayload | null;
     if (!data) return null;
     return {
         ...data,
-        group: withStorefrontFamily(data.group),
+        group: { ...withStorefrontFamily(data.group), ...(slug === RECTANGLE_APPLICATOR_SLUG
+            ? { displayName: "9 ml Rectangle Applicator Bottle", primaryWebsiteSku: "GBSQSTClear", primaryGraceSku: "GB-RCT-CLR-9ML-T-02" } : {}) },
         variants: filterVariantsForGroupIntent(slug, filterVariantsForProductGroup(data.group, data.variants)),
     };
-}
+});
 
 function getPrimaryVariant(data: ProductGroupPayload | null): ProductVariant | null {
     if (!data) return null;
@@ -199,17 +206,24 @@ async function loadRedesignPayload(
     // or the glass never moves the bottle. Only the SKUs it cannot draw read
     // their published per-SKU kit.
     const kitsBySku: Record<string, KitLike | null> = {};
-    const registerKits = await loadRegisterKits(convex, pairs.map((pair) => pair.graceSku));
+    const reviewKits = { ...approvedComponentKits(), ...localComponentKits, ...localPdpComponentKits(localReview.host, localReview.flag, pairs) };
+    const reviewedKit = (pair: typeof pairs[number]) => {
+        const kit = pair.websiteSku ? reviewKits[pair.websiteSku] : null;
+        return kit?.sku === pair.websiteSku ? kit : null;
+    };
+    // Approved immutable recipes already contain the registered body/hardware.
+    // Avoid looking them up in two databases only to replace the result below.
+    const registerKits = await loadRegisterKits(convex, pairs.filter(pair => !reviewedKit(pair)).map((pair) => pair.graceSku));
     const pending: typeof pairs = [];
     for (const pair of pairs) {
-        const kit = (pair.graceSku ? registerKits[pair.graceSku] : null) ?? (pair.websiteSku ? registerKits[pair.websiteSku] : null) ?? null;
+        const kit = reviewedKit(pair) ?? (pair.graceSku ? registerKits[pair.graceSku] : null) ?? (pair.websiteSku ? registerKits[pair.websiteSku] : null) ?? null;
         if (!kit) { pending.push(pair); continue; }
         if (pair.websiteSku) kitsBySku[pair.websiteSku] = kit;
         if (pair.graceSku) kitsBySku[pair.graceSku] = kit;
     }
     // One frame per glass: the bounds every SKU of this glass needs, across all its colours and
     // closures (cached per glass), read while the published kits load.
-    const stageEnvelopesLoad = Object.keys(registerKits).length
+    const stageEnvelopesLoad = Object.keys(registerKits).length || pairs.some(pair => reviewedKit(pair)?.register)
         ? loadGlassStageEnvelopes({ family: sourceFamilyForProduct(activeSlug, data.group.family), capacityMl: data.group.capacityMl ?? null })
         : Promise.resolve({});
     for (let index = 0; index < pending.length; index += 50) {
@@ -231,7 +245,6 @@ async function loadRedesignPayload(
     // Use the same host-gated, exact-SKU local review input as the classic PDP.
     // The loader disables candidates on Vercel; local defaults require an explicit SKU allowlist.
     // Sibling glass thumbnails must use the same reviewed body as their product page.
-    const reviewKits = { ...approvedComponentKits(), ...localComponentKits, ...localPdpComponentKits(localReview.host, localReview.flag, pairs) };
     for (const pair of pairs) {
         const localKit = pair.websiteSku ? reviewKits[pair.websiteSku] : null;
         if (!localKit || localKit.sku !== pair.websiteSku) continue;
@@ -253,7 +266,8 @@ async function loadRedesignPayload(
             }
         }));
         const found = groups.flat().filter((variant) => Boolean(variant.graceSku));
-        const kits = found.length ? await loadRegisterKits(convex, found.map((variant) => variant.graceSku)).catch(() => ({} as Record<string, KitLike>)) : {};
+        const unresolved = found.filter(variant => !reviewedKit(variant));
+        const kits = unresolved.length ? await loadRegisterKits(convex, unresolved.map((variant) => variant.graceSku)).catch(() => ({} as Record<string, KitLike>)) : {};
         for (const variant of found) {
             const kit = (variant.websiteSku ? reviewKits[variant.websiteSku] : undefined) ?? kits[variant.graceSku] ?? (variant.websiteSku ? kits[variant.websiteSku] : undefined);
             if (kit) fitmentKits.push(kit as KitLike);
@@ -374,6 +388,8 @@ export default async function ProductPage({
     params: Promise<{ slug: string }>;
     searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
+    // Open the shared image-CDN connection while product data is loading.
+    preconnect("https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com");
     const [{ slug }, resolvedSearchParams] = await Promise.all([params, searchParams]);
     // The proxy already answers these before the page renders (a real 308 and
     // 404, src/lib/crawl/route-status.ts); these calls cover client-side
@@ -386,10 +402,23 @@ export default async function ProductPage({
     if (hasCatalogSourceHold(activeSlug)) notFound();
     const data = await getProductData(activeSlug);
     if (!data) notFound();
+    const redesigned = redesignApplies(activeSlug, data);
+    if (redesigned) {
+        const selected = resolveVariant(data.variants, derivePicks(data.variants, data.group, {
+            roller: typeof resolvedSearchParams.roller === "string" ? resolvedSearchParams.roller : null,
+            cap: typeof resolvedSearchParams.cap === "string" ? resolvedSearchParams.cap : null,
+            sku: typeof resolvedSearchParams.sku === "string" ? resolvedSearchParams.sku : null,
+        }));
+        const sku = selected?.websiteSku;
+        const kit = sku ? approvedComponentKits()[sku] ?? null : null;
+        for (const { href, ...responsive } of pdpHeroImagePreloads(kit, sku)) preload(href, { as: "image", fetchPriority: "high", ...responsive });
+    }
     const primaryVariant = getPrimaryVariant(data);
     const [siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
         getSiblingGroups(data, activeSlug),
-        getPdpBlocks(activeSlug, data?.group.family),
+        // Only the classic page renders these editorial/discovery sections.
+        // Do not delay the redesigned hero on reads whose results it never uses.
+        redesigned ? Promise.resolve([] as PdpBlock[]) : getPdpBlocks(activeSlug, data?.group.family),
         // The plates for THIS group's variants, from the Convex index -- never
         // the whole catalogue, and never a throw: a missing plate costs the
         // customer the plate, not the page.
@@ -398,8 +427,8 @@ export default async function ProductPage({
             (data?.variants ?? []).flatMap((variant) => [variant.graceSku, variant.websiteSku]),
             activeSlug,
         ),
-        getFocusedPdpRelations(activeSlug),
-        getPrimaryCompatibility(data),
+        redesigned ? Promise.resolve(null) : getFocusedPdpRelations(activeSlug),
+        redesigned ? Promise.resolve(null) : getPrimaryCompatibility(data),
     ]);
     const group = data?.group;
     const variant = primaryVariant;
@@ -450,7 +479,7 @@ export default async function ProductPage({
         ])
         : null;
 
-    if (data && redesignApplies(activeSlug, data)) {
+    if (redesigned) {
         const payload = await loadRedesignPayload(data, activeSlug, siblingGroups, platesBySku, localComponentKits, { host: requestHost, flag: resolvedSearchParams.assetPreview });
         return (
             <>

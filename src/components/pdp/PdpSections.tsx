@@ -153,7 +153,7 @@ function StripWell({ entries, mobile }: { entries: StripEntry[]; mobile: boolean
     const height = wellHeight(entries.length, mobile);
     const scale = sharedScale(entries, height);
     return (
-        <div className={styles.tileWell} data-align="baseline" data-many={entries.length > 3 ? "true" : undefined}>
+        <div className={styles.tileWell} data-align="baseline" data-entry-count={entries.length} data-many={entries.length > 3 ? "true" : undefined}>
             {entries.map(({ key, kit, parts }) => <PdpKitStackImage key={key} parts={parts} canvas={kit.canvas} height={height} fit={{ scale }} />)}
         </div>
     );
@@ -203,14 +203,16 @@ export function PdpBuildStrip({
         }))
         : distinct([...ownCaps, ...fitmentKits.filter((kit) => !hasMechanism(kit)).map((kit) => stripEntry(kit, closureParts(kit)))]);
     const sharedClearOvercap = mechanism && caps.length === 1 && caps[0].parts.some(part => part.detached);
+    const capOnly = !mechanism && !reducer && fitments.length === 0 && caps.length > 0;
+    const rollersOnly = fitments.length > 0 && fitments.every(entry => entry.parts.every(part => part.slot === "roller"));
     const headName = pump ? "Lotion pump" : "Fine mist sprayer";
     return (
         <section className={styles.build} aria-labelledby="pdp-build-title" data-testid="pdp-build-strip">
             <div className={styles.buildHead}>
                 <h2 id="pdp-build-title" className={styles.buildTitle}>{productPageOnly ? "YOUR BOTTLE COMPONENTS." : "BUILD YOUR BOTTLE."}</h2>
-                <span className={styles.buildLine}>{productPageOnly ? "Choose your sprayer above. Clear overcap included." : `Start from this ${capacityLabel}. Three steps.`}</span>
+                <span className={styles.buildLine}>{productPageOnly ? "Choose your sprayer above. Clear overcap included." : `Start from this ${capacityLabel}. ${capOnly ? "Two" : "Three"} steps.`}</span>
             </div>
-            <div className={styles.buildGrid}>
+            <div className={styles.buildGrid} data-components={capOnly ? "2" : undefined}>
                 <div className={styles.tile}>
                     <span className={styles.tileNumber}>01</span>
                     <div className={styles.tileWell}>
@@ -219,7 +221,7 @@ export function PdpBuildStrip({
                     <span className={styles.tileTitle}>Shape &amp; size</span>
                     <span className={styles.tileBody}>{glassLabel} {capacityLabel}, pre-selected.</span>
                 </div>
-                <div className={styles.tile} data-testid="pdp-build-fitment">
+                {!capOnly && <div className={styles.tile} data-testid="pdp-build-fitment">
                     <span className={styles.tileNumber}>02</span>
                     <StripWell entries={fitments} mobile={mobile} />
                     <span className={styles.tileTitle}>Fitment</span>
@@ -228,15 +230,17 @@ export function PdpBuildStrip({
                             ? `Orifice reducer${neck ? ` for the ${neck} neck` : ""}. Stays seated when the cap is removed.`
                             : mechanism
                             ? `${headName}${neck ? ` for the ${neck} neck` : ""}, in ${fitments.length} finish${fitments.length === 1 ? "" : "es"}.`
+                            : rollersOnly
+                            ? `${fitments.length === 2 ? "Metal and plastic roller balls" : "Roller ball"}${neck ? ` for the ${neck} neck` : ""}.`
                             : `Roller, spray, dropper or pump${neck ? ` for the ${neck} neck` : ""}.`}
                     </span>
-                </div>
+                </div>}
                 <div className={styles.tile} data-testid="pdp-build-cap">
-                    <span className={styles.tileNumber}>03</span>
+                    <span className={styles.tileNumber}>{capOnly ? "02" : "03"}</span>
                     <StripWell entries={caps} mobile={mobile} />
                     <span className={styles.tileTitle}>{mechanism ? "Overcap" : "Cap"}</span>
                     <span className={styles.tileBody}>
-                        {sharedClearOvercap ? "One clear overcap, included with every finish." : mechanism ? `Comes in the ${pump ? "pump's" : "sprayer's"} finish.` : `${caps.length} finishes. Every cap shown fits.`}
+                        {sharedClearOvercap ? "One clear overcap, included with every finish." : mechanism ? `Comes in the ${pump ? "pump's" : "sprayer's"} finish.` : `${caps.length} ${caps.length === 1 ? "finish" : "finishes"}. Every cap shown fits.`}
                     </span>
                 </div>
                 <div className={styles.tileCta}>

@@ -49,3 +49,18 @@ public/local-kits/cylinder25-18415-2026-11-01/
 
 # Local shoulder correction mirrors the hosted approved recipe.
 public/local-kits/tulip-amber-seating-2026-11-01/
+
+# Rectangle applicator candidates require visual approval before release.
+public/local-kits/rectangle9-applicator-2026-11-01/
+
+# Source copies of approved vial bodies and the local Tulip optics mirror.
+public/local-kits/vial2-matched-2026-11-01/
+public/local-kits/tulip6-glass-depth-2026-11-01/
+
+# Local mirror of the Sleek 8 ml glass-depth correction.
+public/local-kits/sleek8-glass-depth-2026-11-01/
+
+# Local review bodies and delivery layers; production uses approved hosted media.
+public/local-kits/vial3-swatches-builder-2026-11-02/
+public/local-kits/jumbo28-archive-geometry-2026-11-02/
+public/local-kits/cylinder-family-completion-2026-11-02/

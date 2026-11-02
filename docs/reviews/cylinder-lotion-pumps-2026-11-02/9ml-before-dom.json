@@ -1,0 +1,32 @@
+[
+  {
+    "slot": "body",
+    "style": "transform:translate(0%, 0%);z-index:1",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba/640-de9aef2b8d0d2ec6b6842201e237376f6b33abc4e20c28e9dd875e682bd41efb.webp",
+    "imgStyle": "position:absolute;display:block;max-width:none;left:35.09862204724409%;top:23.60065282748747%;width:29.524596850393703%;height:76.4395533285612%"
+  },
+  {
+    "slot": "diptube",
+    "style": "transform:translate(0%, 0%);z-index:2;mix-blend-mode:multiply",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/fd1f18d2743998a0a8c8e509ca12b52e66124c092a8a5bc7c4b060babf4ced1e/256-389f10e1df92dcbb1d886efd0590c7c22a2712d6377195a2f89962335117f6fa.webp",
+    "imgStyle": "position:absolute;display:block;max-width:none;opacity:0.62;left:41%;top:37.000288373498975%;width:18%;height:52.66334279533219%"
+  },
+  {
+    "slot": "pump",
+    "style": "transform:translate(0%, 0%);z-index:3",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/640-ab1ed1915cc169358492b2394ad2210011d7e417781b5dcbb87736b58d23f31b.webp",
+    "imgStyle": "position:absolute;display:block;max-width:none;left:35.019800853485066%;top:4.367224880382777%;width:29.93775248933143%;height:24.49864218285271%"
+  },
+  {
+    "slot": "collar",
+    "style": "transform:translate(0%, 0%);z-index:4",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839/640-d9f38d1c46c02b0a41ccc4abe090e58070dda0552051372535d593acaecaae43.webp",
+    "imgStyle": "position:absolute;display:block;max-width:none;left:39.529924277704296%;top:24.34580743912496%;width:21.222173686269397%;height:16.472662752555827%"
+  },
+  {
+    "slot": "overcap",
+    "style": "transform:translate(21.520674015748035%, 71.12726363636364%);z-index:5",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/640-8f25b6dba36ceb325d808e6cc043412a478f7128c9d6a5125b5de1da927467f9.webp",
+    "imgStyle": "position:absolute;display:block;max-width:none;left:41.052%;top:3.643645454545455%;width:17.937%;height:21.72909090909091%"
+  }
+]

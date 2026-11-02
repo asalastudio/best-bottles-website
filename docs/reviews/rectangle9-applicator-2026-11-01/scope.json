@@ -1,0 +1,42 @@
+{
+  "slug": "rectangle-9ml-clear-Ground-glassapplicator",
+  "groupId": "kh78wpmtypmnrjfa6ycqd9t4998drg3n",
+  "variants": [
+    {
+      "websiteSku": "GBSQSTBlue",
+      "graceSku": "GB-RCT-CLR-9ML-T-01",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694225700",
+      "productUrl": "https://www.bestbottles.com/product/Perfume-small-Bottle-Jar-Rectangular-Blue-glass-stopper",
+      "heightWithoutCap": "47 ±0.5 mm",
+      "heightWithCap": "64 ±1 mm",
+      "widthMm": 24,
+      "storedColor": "Clear",
+      "storedCapColor": "Clear",
+      "applicator": "Glass Stopper"
+    },
+    {
+      "websiteSku": "GBSQSTClear",
+      "graceSku": "GB-RCT-CLR-9ML-T-02",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694258468",
+      "productUrl": "https://www.bestbottles.com/product/Perfume-small-Bottle-Jar-Rectangular-Clear-glass-stopper",
+      "heightWithoutCap": "47 ±0.5 mm",
+      "heightWithCap": "64 ±1 mm",
+      "widthMm": 24,
+      "storedColor": "Clear",
+      "storedCapColor": "Clear",
+      "applicator": "Glass Stopper"
+    },
+    {
+      "websiteSku": "GBSQSTGREEN",
+      "graceSku": "GB-RCT-CLR-9ML-T-03",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343694291236",
+      "productUrl": "https://www.bestbottles.com/product/Perfume-small-Bottle-Jar-Rectangular-Green-glass-stopper",
+      "heightWithoutCap": "47 ±0.5 mm",
+      "heightWithCap": "64 ±1 mm",
+      "widthMm": 24,
+      "storedColor": "Clear",
+      "storedCapColor": "Clear",
+      "applicator": "Glass Stopper"
+    }
+  ]
+}

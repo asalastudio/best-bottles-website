@@ -1,0 +1,26 @@
+{
+  "status": "verified Drive review archive; not deployed",
+  "folderId": "1q7StKAw9g_H0LIvn2npPBNyPbTUtjCyo",
+  "folderUrl": "https://drive.google.com/drive/folders/1q7StKAw9g_H0LIvn2npPBNyPbTUtjCyo",
+  "verification": "Read back exact names, byte sizes and parent folder after upload.",
+  "files": [
+    {
+      "id": "1TxfwOAE1wrpZBtuVb4Vwx_UPc4UIHZR7",
+      "name": "Best_Bottles_Clear_Sprayer_Plug_Transmission_Tulip6_Sleek8_REVIEW_2026-11-01.zip",
+      "bytes": 885420,
+      "url": "https://drive.google.com/file/d/1TxfwOAE1wrpZBtuVb4Vwx_UPc4UIHZR7/view?usp=drivesdk"
+    },
+    {
+      "id": "1LurpnAy7oblZKSY2okkfrkd5U-7GGW0o",
+      "name": "Best_Bottles_Tulip_6ml_Clear_Matte_Gold_Internal_Plug_REVIEW_2026-11-01.png",
+      "bytes": 54358,
+      "url": "https://drive.google.com/file/d/1LurpnAy7oblZKSY2okkfrkd5U-7GGW0o/view?usp=drivesdk"
+    },
+    {
+      "id": "17d7ocBh6IayhGvy7o2zUONNE44kV_6_6",
+      "name": "Best_Bottles_Sleek_8ml_Clear_Matte_Gold_Internal_Plug_REVIEW_2026-11-01.png",
+      "bytes": 50171,
+      "url": "https://drive.google.com/file/d/17d7ocBh6IayhGvy7o2zUONNE44kV_6_6/view?usp=drivesdk"
+    }
+  ]
+}

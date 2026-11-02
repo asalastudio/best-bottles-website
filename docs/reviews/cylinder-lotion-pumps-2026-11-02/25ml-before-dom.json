@@ -1,0 +1,26 @@
+[
+  {
+    "slot": "body",
+    "style": "transform: translate(0%, 0%); z-index: 1;",
+    "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+    "imgStyle": "position: absolute; display: block; max-width: none; left: 29.559%; top: 18.2418%; width: 41.375%; height: 81.7945%;"
+  },
+  {
+    "slot": "diptube",
+    "style": "transform: translate(0%, 0%); z-index: 2;",
+    "url": "http://localhost:3010/_next/image?url=%2Fimages%2Fregister%2Ftubes%2Fcylinder-25ml-18-415-clear-lotion.8365ab47547d.png&w=640&q=75",
+    "imgStyle": "position: absolute; display: block; max-width: none; left: 44.295%; top: 23.7273%; width: 8.415%; height: 66.7573%;"
+  },
+  {
+    "slot": "pump",
+    "style": "transform: translate(0%, 0%); z-index: 3;",
+    "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fpump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png&w=640&q=75",
+    "imgStyle": "position: absolute; display: block; max-width: none; left: 37.521%; top: -1.94455%; width: 24.916%; height: 38.3918%;"
+  },
+  {
+    "slot": "overcap",
+    "style": "transform: translate(30.144%, 58.8927%); z-index: 4;",
+    "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-MGLD-18-415%2Fovercap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png&w=640&q=75",
+    "imgStyle": "position: absolute; display: block; max-width: none; left: 37.159%; top: -2.25364%; width: 25.391%; height: 39.8155%;"
+  }
+]

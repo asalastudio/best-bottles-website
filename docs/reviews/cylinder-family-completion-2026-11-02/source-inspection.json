@@ -1,0 +1,587 @@
+[
+  {
+    "kind": "body",
+    "plateKey": "cylinder-25ml-18-415|Clear",
+    "file": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/ccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png",
+    "sha256": "def2dd2a9a634b65fda6e6733b2756b49cbe456fadbaaf090cbbfa666780b054",
+    "size": [
+      1008,
+      2192
+    ],
+    "alphaBounds": [
+      129,
+      146,
+      884,
+      2097
+    ],
+    "anchors": {
+      "axisX": 498,
+      "seatY": 147,
+      "shoulderY": 486,
+      "baselineY": 2096,
+      "barrelAxisX": 504.5,
+      "bodyShoulderY": 500
+    },
+    "scale": {
+      "targetPct": 46.5,
+      "baselinePct": 91,
+      "landmark": "shoulder",
+      "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+      "basis": "approved-family-exception",
+      "heightBareMm": 83
+    }
+  },
+  {
+    "kind": "body",
+    "plateKey": "cylinder-28ml-16mm|Clear",
+    "file": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/492c82d1207e30e8a89d750aaea9adc4cdbff9ede94e500339c9113e2c20501c.png",
+    "sha256": "bd4cb95c2e2f7cb1495779df5edfd82f5900c7538c91efa1643eab5ff10e12f7",
+    "size": [
+      976,
+      2192
+    ],
+    "alphaBounds": [
+      123,
+      144,
+      857,
+      2097
+    ],
+    "anchors": {
+      "axisX": 489,
+      "seatY": 145,
+      "shoulderY": 496,
+      "baselineY": 2096
+    },
+    "scale": {
+      "targetPct": 50.5,
+      "baselinePct": 91,
+      "landmark": "shoulder",
+      "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+      "basis": "approved-family-exception",
+      "heightBareMm": 81
+    }
+  },
+  {
+    "kind": "body",
+    "plateKey": "cylinder-50ml-16mm|Clear",
+    "file": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/902b57f33d8ea69a6cc2f7fa493ec610fb019cf2fad1cb74123e2b890fb134ef.png",
+    "sha256": "583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c",
+    "size": [
+      960,
+      2192
+    ],
+    "alphaBounds": [
+      126,
+      183,
+      837,
+      2097
+    ],
+    "anchors": {
+      "axisX": 480,
+      "seatY": 185,
+      "shoulderY": 434,
+      "baselineY": 2096
+    },
+    "scale": {
+      "targetPct": 53,
+      "baselinePct": 91,
+      "landmark": "shoulder",
+      "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+      "basis": "approved-family-exception",
+      "heightBareMm": 98
+    }
+  },
+  {
+    "kind": "body",
+    "plateKey": "cylinder-50ml-18-415|Clear",
+    "file": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/6da4f4e418e44d36adbfeeb11105e20f20408165f6ae7a83acf14d4f6ab84c2a.png",
+    "sha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+    "size": [
+      768,
+      2192
+    ],
+    "alphaBounds": [
+      118,
+      179,
+      651,
+      2097
+    ],
+    "anchors": {
+      "axisX": 380.5,
+      "seatY": 180,
+      "shoulderY": 415,
+      "baselineY": 2096,
+      "barrelAxisX": 384,
+      "bodyShoulderY": 423
+    },
+    "scale": {
+      "targetPct": 56,
+      "baselinePct": 91,
+      "landmark": "shoulder",
+      "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+      "basis": "approved-family-exception",
+      "heightBareMm": 117
+    }
+  },
+  {
+    "kind": "body",
+    "plateKey": "cylinder-100ml-18-415|Clear",
+    "file": "outputs/catalog-model-repair-2026-10-31/reports/glass-body-overview/historical-ai/5ad1aa3cecf3d484d2a07ed3ea34d2c1cffdeca83a815fe4d23562e82fcdfb25.png",
+    "sha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+    "size": [
+      736,
+      2192
+    ],
+    "alphaBounds": [
+      164,
+      195,
+      572,
+      2098
+    ],
+    "anchors": {
+      "axisX": 364.5,
+      "seatY": 212,
+      "shoulderY": 427,
+      "baselineY": 2096,
+      "barrelAxisX": 368,
+      "bodyShoulderY": 437
+    },
+    "scale": {
+      "targetPct": 67.5,
+      "baselinePct": 91,
+      "landmark": "shoulder",
+      "source": "docs/hero-families/cylinder-2026-09-22/manifest.json",
+      "basis": "approved-family-exception",
+      "heightBareMm": 154
+    }
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-bulb-exploded.b0f6d8bcfc1e.png",
+    "sha256": "b0f6d8bcfc1e265fb01036eb9deb15e33a52fb254dabe1024e96b1734bb404c4",
+    "size": [
+      72,
+      1548
+    ],
+    "alphaBounds": [
+      0,
+      0,
+      69,
+      1548
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-bulb.678fa5f50092.png",
+    "sha256": "678fa5f50092f60bf8dcdb4068e375dacd18495693e1bd0cdc818a6a3b4207fc",
+    "size": [
+      72,
+      1768
+    ],
+    "alphaBounds": [
+      1,
+      0,
+      69,
+      1766
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-lotion-exploded.966c63deaa44.png",
+    "sha256": "966c63deaa44c9c3b7d13ae5021aafbb978a8389a92b24cea0c9050543de1797",
+    "size": [
+      138,
+      1762
+    ],
+    "alphaBounds": [
+      9,
+      0,
+      130,
+      1762
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-lotion.d5bc7b4d31d2.png",
+    "sha256": "d5bc7b4d31d2e8a819db46fed1f550757d2b98e79a0df1aa17c89718aa0c1831",
+    "size": [
+      138,
+      1768
+    ],
+    "alphaBounds": [
+      8,
+      0,
+      130,
+      1766
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-spray-exploded.7b1bd400415b.png",
+    "sha256": "7b1bd400415bb0001f7a3438d48d1e4ec78dca2c8ba6e7e21a504d52ff2f99f0",
+    "size": [
+      213,
+      1748
+    ],
+    "alphaBounds": [
+      2,
+      0,
+      211,
+      1748
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-spray.a941bb7850ca.png",
+    "sha256": "a941bb7850ca63386acbcfb887fbcfa6b278488291020d986353216e53011006",
+    "size": [
+      213,
+      1768
+    ],
+    "alphaBounds": [
+      1,
+      0,
+      211,
+      1766
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-tassel-exploded.b0f6d8bcfc1e.png",
+    "sha256": "b0f6d8bcfc1e265fb01036eb9deb15e33a52fb254dabe1024e96b1734bb404c4",
+    "size": [
+      72,
+      1548
+    ],
+    "alphaBounds": [
+      0,
+      0,
+      69,
+      1548
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-tassel.678fa5f50092.png",
+    "sha256": "678fa5f50092f60bf8dcdb4068e375dacd18495693e1bd0cdc818a6a3b4207fc",
+    "size": [
+      72,
+      1768
+    ],
+    "alphaBounds": [
+      1,
+      0,
+      69,
+      1766
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-bulb-exploded.d899eb905755.png",
+    "sha256": "d899eb90575546b4a1d53d48fd9a79e2fc09a8824f169db8fd5514c254e674c7",
+    "size": [
+      144,
+      1279
+    ],
+    "alphaBounds": [
+      1,
+      0,
+      23,
+      1279
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-bulb.ba2aef567f79.png",
+    "sha256": "ba2aef567f79fec21060b62e246df53c12df0caf2835d40ad150157e6639cea3",
+    "size": [
+      144,
+      1797
+    ],
+    "alphaBounds": [
+      1,
+      0,
+      132,
+      1795
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-lotion-exploded.cdf086d02661.png",
+    "sha256": "cdf086d02661f40730802f60d28e5b9c018f297c133fb023c94fc7baceac609a",
+    "size": [
+      158,
+      1753
+    ],
+    "alphaBounds": [
+      28,
+      0,
+      158,
+      1753
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-lotion.ccb9d199ae0e.png",
+    "sha256": "ccb9d199ae0e612830dc39d1e93710d9519be1465d6d6f4cfa511b7690c63fd0",
+    "size": [
+      158,
+      1797
+    ],
+    "alphaBounds": [
+      16,
+      0,
+      157,
+      1795
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-spray-exploded.96e3e1ff6d9d.png",
+    "sha256": "96e3e1ff6d9d5d1581a014face0ecd83b7d3ce38159795f026960fe504b8980a",
+    "size": [
+      125,
+      1754
+    ],
+    "alphaBounds": [
+      5,
+      0,
+      124,
+      1754
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-spray.2058245482d9.png",
+    "sha256": "2058245482d9c92f79293c0399cb718262ed77be074b628d9d4457c98a4ffc80",
+    "size": [
+      125,
+      1797
+    ],
+    "alphaBounds": [
+      0,
+      0,
+      124,
+      1795
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-tassel-exploded.c730b0d05603.png",
+    "sha256": "c730b0d05603cb8b48fe9d227181f4cf60673fd3e974a8a5dd78cd4b18c3a9fa",
+    "size": [
+      138,
+      1716
+    ],
+    "alphaBounds": [
+      18,
+      0,
+      124,
+      1716
+    ]
+  },
+  {
+    "kind": "old-tube",
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-tassel.3ee823f9a262.png",
+    "sha256": "3ee823f9a26274730eb513ed0d1eef2cf43516cf29175ab95475a904f5d9df4a",
+    "size": [
+      138,
+      1797
+    ],
+    "alphaBounds": [
+      15,
+      0,
+      125,
+      1795
+    ]
+  },
+  {
+    "kind": "psd",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/2. 28ml  Uncapped/1. GBCyl28MtlRollBlk.psd",
+    "sha256": "50d44a77f0efb65fe6c3b4e569d2138799acbe4a0136fd5708cba59286fb958c",
+    "size": [
+      1400,
+      1925
+    ],
+    "layers": [
+      {
+        "index": 0,
+        "name": "Layer 0",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          0,
+          0,
+          1400,
+          1925
+        ]
+      },
+      {
+        "index": 1,
+        "name": "Layer 8",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          199,
+          251,
+          644,
+          1828
+        ]
+      },
+      {
+        "index": 2,
+        "name": "Layer 3",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          242,
+          480,
+          578,
+          884
+        ]
+      },
+      {
+        "index": 3,
+        "name": "Layer 5",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          825,
+          1313,
+          1255,
+          1822
+        ]
+      },
+      {
+        "index": 4,
+        "name": "Layer 4",
+        "kind": "pixel",
+        "visible": false,
+        "bbox": [
+          813,
+          1313,
+          1309,
+          1828
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "psd",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/13. 16 mm/4. 50ml Uncapped/3. GBCyl50MtlRollBlk.psd",
+    "sha256": "986851ecd3257d24f5f05d4f84e10b4b408802100b3019829a51c4744f694649",
+    "size": [
+      1400,
+      1925
+    ],
+    "layers": [
+      {
+        "index": 0,
+        "name": "Layer 0",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          0,
+          0,
+          1400,
+          1925
+        ]
+      },
+      {
+        "index": 1,
+        "name": "Layer 10",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          226,
+          453,
+          735,
+          1821
+        ]
+      },
+      {
+        "index": 2,
+        "name": "Layer 11",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          282,
+          182,
+          669,
+          672
+        ]
+      },
+      {
+        "index": 3,
+        "name": "Layer 5",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          867,
+          1313,
+          1305,
+          1822
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "psd",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/18. Perfume Glass Bottles with Metal Decoration/GBSpry1ozSl.psd",
+    "sha256": "c1f3997dac5a55dc8cf90bc3ac2f3ad715fbf4a4b12f440947877417ba91ba6a",
+    "size": [
+      6000,
+      4000
+    ],
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          0,
+          0,
+          6000,
+          4000
+        ]
+      },
+      {
+        "index": 1,
+        "name": "Hue/Saturation 1",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          2398,
+          325,
+          3124,
+          3146
+        ]
+      },
+      {
+        "index": 2,
+        "name": "Brightness/Contrast 1",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          2402,
+          325,
+          3880,
+          3168
+        ]
+      },
+      {
+        "index": 3,
+        "name": "Layer 1",
+        "kind": "pixel",
+        "visible": true,
+        "bbox": [
+          2451,
+          294,
+          3057,
+          1371
+        ]
+      }
+    ]
+  }
+]

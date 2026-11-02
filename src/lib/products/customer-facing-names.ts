@@ -1,3 +1,4 @@
+import { rectangleApplicatorGlass, RECTANGLE_APPLICATOR_SLUG } from "./rectangle-applicator";
 import { normalizeImportedCapColor } from "./cap-finish-evidence";
 import { decoratedCapFinish } from "./decorated-cap-finish";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
@@ -358,6 +359,13 @@ export function getCustomerFacingProductName(args: CustomerFacingNameArgs): Cust
     // A name staff typed on purpose wins over the generated one, as written. The SKU's finish is still
     // appended ("… - Shiny Gold"), so the variants of one product stay told apart the way they are now.
     const custom = clean(args.group?.customName);
+    if (!custom && (rectangleApplicatorGlass(args.variant?.websiteSku) || args.group?.slug === RECTANGLE_APPLICATOR_SLUG)) {
+        const displayName = "9 ml Rectangle Applicator Bottle";
+        const glass = rectangleApplicatorGlass(args.variant?.websiteSku);
+        return { displayName, shortName: displayName, variantLabel: glass, seoName: displayName,
+            altText: glass ? displayName + ", " + glass.toLowerCase() + " glass with matching stopper" : displayName,
+            confidence: "high", sourceReason: "exact Rectangle glass-stopper source identities" };
+    }
     if (!custom && isComponent(args)) return componentName(args);
     const baseName = custom ?? composeBaseName(args.group, args.variant);
     if (!baseName) return buildFallback(args);

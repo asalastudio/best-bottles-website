@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "version": "ca21bfc3c0c3ce57",
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "version": "ca21bfc3c0c3ce57",
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-02/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/b31c199b774b42c4f495732406f1105ba5b9939765a65ebaf5f9eb18b0e1b839.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+      ]
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "version": "ca21bfc3c0c3ce57",
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+      ]
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "version": "ca21bfc3c0c3ce57",
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+      ]
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "version": "ca21bfc3c0c3ce57",
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a05bf530026525b08fc9c097185179553d15c8f2515940e7c5a2d164172fa155.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "folderUrl": "https://drive.google.com/drive/folders/1a1DSONu3vHMid7LQIumg2iEP76diqssd",
+  "verification": "Uploaded files read back with expected byte sizes and folder parents.",
+  "source": {
+    "id": "1b05m7gMK_Ga998AZqVHAUjqfO9bH0eZx",
+    "title": "Best_Bottles_Tola_6ml_Clear_14.3mm_Gold_Red_Bead_Plastic_Applicator_Assembled_VERIFIED_SOURCE.webp",
+    "mime_type": null,
+    "size": "23286",
+    "url": "https://drive.google.com/file/d/1b05m7gMK_Ga998AZqVHAUjqfO9bH0eZx/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/1b05m7gMK_Ga998AZqVHAUjqfO9bH0eZx/view?usp=drivesdk",
+    "file_or_folder": null,
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1a1DSONu3vHMid7LQIumg2iEP76diqssd"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified",
+    "sha256": "d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1"
+  },
+  "reviewPackage": {
+    "id": "1aU9sNwxdH_6qyhHdNV625vqwfa_jXqDv",
+    "title": "Best_Bottles_Tola_6ml_14.3mm_Gold_Plastic_Applicator_Assembled_Review_2026-11-01.zip",
+    "mime_type": null,
+    "size": "1414540",
+    "url": "https://drive.google.com/file/d/1aU9sNwxdH_6qyhHdNV625vqwfa_jXqDv/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/1aU9sNwxdH_6qyhHdNV625vqwfa_jXqDv/view?usp=drivesdk",
+    "file_or_folder": null,
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1a1DSONu3vHMid7LQIumg2iEP76diqssd"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified",
+    "sha256": "7efdfb7b2f8cc5a1ddf04850f20a2a6f7b1a85ccc102bfe6b2a3249cb9e79586"
+  },
+  "merged": false,
+  "deployed": false
+}

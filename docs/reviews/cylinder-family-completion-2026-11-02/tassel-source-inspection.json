@@ -1,0 +1,41 @@
+{
+  "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps/10. 18-415 Ansp Tsl/41. AnspTsl18-415Blk.psd",
+  "layers": [
+    {
+      "i": 0,
+      "name": "Layer 0",
+      "visible": true,
+      "bbox": [
+        0,
+        0,
+        6000,
+        4000
+      ],
+      "kind": "pixel"
+    },
+    {
+      "i": 1,
+      "name": "Layer 3",
+      "visible": true,
+      "bbox": [
+        3197,
+        1098,
+        3427,
+        3599
+      ],
+      "kind": "pixel"
+    },
+    {
+      "i": 2,
+      "name": "Layer 2",
+      "visible": true,
+      "bbox": [
+        135,
+        425,
+        3573,
+        3921
+      ],
+      "kind": "pixel"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import { rectangleApplicatorGlass } from "@/lib/products/rectangle-applicator";
 import { useRegion } from "@/components/RegionProvider";
 
 import { getShopCollection } from "@/lib/shopCollections";
@@ -297,7 +298,7 @@ function ProductGroupCard({
     const cardSpecs = [
         group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity?.replace(/\s*\([^)]*\)/g, ""),
         neckLabel,
-        displayHero?.bottleColor ?? group.color,
+        rectangleApplicatorGlass(purchaseVariant?.websiteSku) ?? displayHero?.bottleColor ?? group.color,
         catalogFitmentLabel(soldRow?.applicator ?? purchaseVariant?.applicator, soldRow?.ballMaterial),
     ].filter(Boolean).join(" · ");
 

@@ -1,0 +1,612 @@
+{
+  "checkedAt": "2026-11-02T22:50:58.131Z",
+  "scope": "5/8 dram 13-425 vials, exact existing black/white cap variants, normal localhost URLs",
+  "states": [
+    {
+      "sku": "GBVGreen2o4BlackCapSht",
+      "viewport": "desktop",
+      "input": "mouse",
+      "capOn": {
+        "sku": "GBVGreen2o4BlackCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 309.1002197265625,
+          "top": 323.780517578125,
+          "width": 77.79193115234375,
+          "height": 167.6104736328125,
+          "right": 386.89215087890625,
+          "bottom": 491.3909912109375
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp",
+          "left": 308.12469482421875,
+          "top": 319.29913330078125,
+          "width": 79.74298095703125,
+          "height": 50.5758056640625,
+          "right": 387.86767578125,
+          "bottom": 369.87493896484375
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "black",
+        "overflow": false
+      },
+      "sidecar": {
+        "sku": "GBVGreen2o4BlackCapSht",
+        "view": "sidecar",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 309.1002197265625,
+          "top": 323.780517578125,
+          "width": 77.79193115234375,
+          "height": 167.6104736328125,
+          "right": 386.89215087890625,
+          "bottom": 491.3909912109375
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp",
+          "left": 392.64263916015625,
+          "top": 440.82073974609375,
+          "width": 79.74298095703125,
+          "height": 50.5758056640625,
+          "right": 472.3856201171875,
+          "bottom": 491.39654541015625
+        },
+        "selectedView": "pdp-view-sidecar",
+        "selectedCap": "black",
+        "overflow": false
+      },
+      "returnedCapOn": {
+        "sku": "GBVGreen2o4BlackCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 309.1002197265625,
+          "top": 323.780517578125,
+          "width": 77.79193115234375,
+          "height": 167.6104736328125,
+          "right": 386.89215087890625,
+          "bottom": 491.3909912109375
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp",
+          "left": 308.12469482421875,
+          "top": 319.29913330078125,
+          "width": 79.74298095703125,
+          "height": 50.5758056640625,
+          "right": 387.86767578125,
+          "bottom": 369.87493896484375
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "black",
+        "overflow": false
+      }
+    },
+    {
+      "sku": "GBVGreen2o4WhtCapSht",
+      "viewport": "desktop",
+      "input": "mouse",
+      "action": "cap-swap-while-in-sidecar",
+      "sidecar": {
+        "sku": "GBVGreen2o4WhtCapSht",
+        "view": "sidecar",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 309.1002197265625,
+          "top": 323.780517578125,
+          "width": 77.79193115234375,
+          "height": 167.6104736328125,
+          "right": 386.89215087890625,
+          "bottom": 491.3909912109375
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/256.4949217327e8.webp",
+          "left": 392.64263916015625,
+          "top": 439.25836181640625,
+          "width": 79.74298095703125,
+          "height": 52.13818359375,
+          "right": 472.3856201171875,
+          "bottom": 491.39654541015625
+        },
+        "selectedView": "pdp-view-sidecar",
+        "selectedCap": "white",
+        "overflow": false
+      }
+    },
+    {
+      "sku": "GBVGreen2o4WhtCapSht",
+      "viewport": "desktop",
+      "input": "mouse",
+      "capOn": {
+        "sku": "GBVGreen2o4WhtCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 309.1002197265625,
+          "top": 323.780517578125,
+          "width": 77.79193115234375,
+          "height": 167.6104736328125,
+          "right": 386.89215087890625,
+          "bottom": 491.3909912109375
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/256.4949217327e8.webp",
+          "left": 308.12469482421875,
+          "top": 317.73675537109375,
+          "width": 79.74298095703125,
+          "height": 52.13818359375,
+          "right": 387.86767578125,
+          "bottom": 369.87493896484375
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "white",
+        "overflow": false
+      },
+      "sidecar": {
+        "sku": "GBVGreen2o4WhtCapSht",
+        "view": "sidecar",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 309.1002197265625,
+          "top": 323.780517578125,
+          "width": 77.79193115234375,
+          "height": 167.6104736328125,
+          "right": 386.89215087890625,
+          "bottom": 491.3909912109375
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/256.4949217327e8.webp",
+          "left": 392.64263916015625,
+          "top": 439.25836181640625,
+          "width": 79.74298095703125,
+          "height": 52.13818359375,
+          "right": 472.3856201171875,
+          "bottom": 491.39654541015625
+        },
+        "selectedView": "pdp-view-sidecar",
+        "selectedCap": "white",
+        "overflow": false
+      },
+      "returnedCapOn": {
+        "sku": "GBVGreen2o4WhtCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 309.1002197265625,
+          "top": 323.780517578125,
+          "width": 77.79193115234375,
+          "height": 167.6104736328125,
+          "right": 386.89215087890625,
+          "bottom": 491.3909912109375
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/256.4949217327e8.webp",
+          "left": 308.12469482421875,
+          "top": 317.73675537109375,
+          "width": 79.74298095703125,
+          "height": 52.13818359375,
+          "right": 387.86767578125,
+          "bottom": 369.87493896484375
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "white",
+        "overflow": false
+      }
+    },
+    {
+      "sku": "GBVGreen2o4BlackCapSht",
+      "viewport": "desktop",
+      "input": "mouse",
+      "action": "cap-swap-while-in-sidecar",
+      "sidecar": {
+        "sku": "GBVGreen2o4BlackCapSht",
+        "view": "sidecar",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 309.1002197265625,
+          "top": 323.780517578125,
+          "width": 77.79193115234375,
+          "height": 167.6104736328125,
+          "right": 386.89215087890625,
+          "bottom": 491.3909912109375
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp",
+          "left": 392.64263916015625,
+          "top": 440.82073974609375,
+          "width": 79.74298095703125,
+          "height": 50.5758056640625,
+          "right": 472.3856201171875,
+          "bottom": 491.39654541015625
+        },
+        "selectedView": "pdp-view-sidecar",
+        "selectedCap": "black",
+        "overflow": false
+      }
+    },
+    {
+      "sku": "GBVBlu1o9BlackCapSht",
+      "viewport": "desktop",
+      "input": "mouse",
+      "capOn": {
+        "sku": "GBVBlu1o9BlackCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+          "left": 307.19488525390625,
+          "top": 323.780517578125,
+          "width": 81.59500122070312,
+          "height": 167.6104736328125,
+          "right": 388.7898864746094,
+          "bottom": 491.3909912109375
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp",
+          "left": 306.173583984375,
+          "top": 316.8221435546875,
+          "width": 83.6375732421875,
+          "height": 53.045166015625,
+          "right": 389.8111572265625,
+          "bottom": 369.8673095703125
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "black",
+        "overflow": false
+      },
+      "sidecar": {
+        "sku": "GBVBlu1o9BlackCapSht",
+        "view": "sidecar",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+          "left": 307.19488525390625,
+          "top": 323.780517578125,
+          "width": 81.59500122070312,
+          "height": 167.6104736328125,
+          "right": 388.7898864746094,
+          "bottom": 491.3909912109375
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp",
+          "left": 394.54248046875,
+          "top": 438.34375,
+          "width": 83.6375732421875,
+          "height": 53.045166015625,
+          "right": 478.1800537109375,
+          "bottom": 491.388916015625
+        },
+        "selectedView": "pdp-view-sidecar",
+        "selectedCap": "black",
+        "overflow": false
+      },
+      "returnedCapOn": {
+        "sku": "GBVBlu1o9BlackCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+          "left": 307.19488525390625,
+          "top": 323.780517578125,
+          "width": 81.59500122070312,
+          "height": 167.6104736328125,
+          "right": 388.7898864746094,
+          "bottom": 491.3909912109375
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp",
+          "left": 306.173583984375,
+          "top": 316.8221435546875,
+          "width": 83.6375732421875,
+          "height": 53.045166015625,
+          "right": 389.8111572265625,
+          "bottom": 369.8673095703125
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "black",
+        "overflow": false
+      }
+    },
+    {
+      "sku": "GBVGreen2o4BlackCapSht",
+      "viewport": "mobile",
+      "input": "touch",
+      "capOn": {
+        "sku": "GBVGreen2o4BlackCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 166.18338012695312,
+          "top": 239.83377075195312,
+          "width": 57.62562561035156,
+          "height": 124.15304565429688,
+          "right": 223.8090057373047,
+          "bottom": 363.98681640625
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/128.632fd0ad0c13.webp",
+          "left": 165.4593505859375,
+          "top": 236.5184326171875,
+          "width": 59.066070556640625,
+          "height": 37.459320068359375,
+          "right": 224.52542114257812,
+          "bottom": 273.9777526855469
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "black",
+        "overflow": false
+      },
+      "sidecar": {
+        "sku": "GBVGreen2o4BlackCapSht",
+        "view": "sidecar",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 166.18338012695312,
+          "top": 239.83377075195312,
+          "width": 57.62562561035156,
+          "height": 124.15304565429688,
+          "right": 223.8090057373047,
+          "bottom": 363.98681640625
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/128.632fd0ad0c13.webp",
+          "left": 228.06365966796875,
+          "top": 326.5344543457031,
+          "width": 59.0660400390625,
+          "height": 37.459320068359375,
+          "right": 287.12969970703125,
+          "bottom": 363.9937744140625
+        },
+        "selectedView": "pdp-view-sidecar",
+        "selectedCap": "black",
+        "overflow": false
+      },
+      "returnedCapOn": {
+        "sku": "GBVGreen2o4BlackCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 166.18338012695312,
+          "top": 239.83377075195312,
+          "width": 57.62562561035156,
+          "height": 124.15304565429688,
+          "right": 223.8090057373047,
+          "bottom": 363.98681640625
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/128.632fd0ad0c13.webp",
+          "left": 165.4593505859375,
+          "top": 236.5184326171875,
+          "width": 59.066070556640625,
+          "height": 37.459320068359375,
+          "right": 224.52542114257812,
+          "bottom": 273.9777526855469
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "black",
+        "overflow": false
+      }
+    },
+    {
+      "sku": "GBVGreen2o4WhtCapSht",
+      "viewport": "mobile",
+      "input": "touch",
+      "action": "cap-swap-while-in-sidecar",
+      "sidecar": {
+        "sku": "GBVGreen2o4WhtCapSht",
+        "view": "sidecar",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 166.18338012695312,
+          "top": 239.83377075195312,
+          "width": 57.62562561035156,
+          "height": 124.15304565429688,
+          "right": 223.8090057373047,
+          "bottom": 363.98681640625
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/128.4c75839c907b.webp",
+          "left": 228.06365966796875,
+          "top": 325.3759765625,
+          "width": 59.0660400390625,
+          "height": 38.6177978515625,
+          "right": 287.12969970703125,
+          "bottom": 363.9937744140625
+        },
+        "selectedView": "pdp-view-sidecar",
+        "selectedCap": "white",
+        "overflow": false
+      }
+    },
+    {
+      "sku": "GBVGreen2o4WhtCapSht",
+      "viewport": "mobile",
+      "input": "touch",
+      "capOn": {
+        "sku": "GBVGreen2o4WhtCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 166.18338012695312,
+          "top": 239.83377075195312,
+          "width": 57.62562561035156,
+          "height": 124.15304565429688,
+          "right": 223.8090057373047,
+          "bottom": 363.98681640625
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/128.4c75839c907b.webp",
+          "left": 165.4593505859375,
+          "top": 235.3599853515625,
+          "width": 59.066070556640625,
+          "height": 38.617767333984375,
+          "right": 224.52542114257812,
+          "bottom": 273.9777526855469
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "white",
+        "overflow": false
+      },
+      "sidecar": {
+        "sku": "GBVGreen2o4WhtCapSht",
+        "view": "sidecar",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 166.18338012695312,
+          "top": 239.83377075195312,
+          "width": 57.62562561035156,
+          "height": 124.15304565429688,
+          "right": 223.8090057373047,
+          "bottom": 363.98681640625
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/128.4c75839c907b.webp",
+          "left": 228.06365966796875,
+          "top": 325.3759765625,
+          "width": 59.0660400390625,
+          "height": 38.6177978515625,
+          "right": 287.12969970703125,
+          "bottom": 363.9937744140625
+        },
+        "selectedView": "pdp-view-sidecar",
+        "selectedCap": "white",
+        "overflow": false
+      },
+      "returnedCapOn": {
+        "sku": "GBVGreen2o4WhtCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 166.18338012695312,
+          "top": 239.83377075195312,
+          "width": 57.62562561035156,
+          "height": 124.15304565429688,
+          "right": 223.8090057373047,
+          "bottom": 363.98681640625
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/128.4c75839c907b.webp",
+          "left": 165.4593505859375,
+          "top": 235.3599853515625,
+          "width": 59.066070556640625,
+          "height": 38.617767333984375,
+          "right": 224.52542114257812,
+          "bottom": 273.9777526855469
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "white",
+        "overflow": false
+      }
+    },
+    {
+      "sku": "GBVGreen2o4BlackCapSht",
+      "viewport": "mobile",
+      "input": "touch",
+      "action": "cap-swap-while-in-sidecar",
+      "sidecar": {
+        "sku": "GBVGreen2o4BlackCapSht",
+        "view": "sidecar",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/128.6b1a5591e96f.webp",
+          "left": 166.18338012695312,
+          "top": 239.83377075195312,
+          "width": 57.62562561035156,
+          "height": 124.15304565429688,
+          "right": 223.8090057373047,
+          "bottom": 363.98681640625
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/128.632fd0ad0c13.webp",
+          "left": 228.06365966796875,
+          "top": 326.5344543457031,
+          "width": 59.0660400390625,
+          "height": 37.459320068359375,
+          "right": 287.12969970703125,
+          "bottom": 363.9937744140625
+        },
+        "selectedView": "pdp-view-sidecar",
+        "selectedCap": "black",
+        "overflow": false
+      }
+    },
+    {
+      "sku": "GBVBlu1o9BlackCapSht",
+      "viewport": "mobile",
+      "input": "touch",
+      "capOn": {
+        "sku": "GBVBlu1o9BlackCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+          "left": 164.77342224121094,
+          "top": 239.83377075195312,
+          "width": 60.43792724609375,
+          "height": 124.15304565429688,
+          "right": 225.2113494873047,
+          "bottom": 363.98681640625
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp",
+          "left": 164.01889038085938,
+          "top": 234.68167114257812,
+          "width": 61.95458984375,
+          "height": 39.288482666015625,
+          "right": 225.97348022460938,
+          "bottom": 273.97015380859375
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "black",
+        "overflow": false
+      },
+      "sidecar": {
+        "sku": "GBVBlu1o9BlackCapSht",
+        "view": "sidecar",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+          "left": 164.77342224121094,
+          "top": 239.83377075195312,
+          "width": 60.43792724609375,
+          "height": 124.15304565429688,
+          "right": 225.2113494873047,
+          "bottom": 363.98681640625
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp",
+          "left": 229.4756622314453,
+          "top": 324.69769287109375,
+          "width": 61.95457458496094,
+          "height": 39.2884521484375,
+          "right": 291.43023681640625,
+          "bottom": 363.98614501953125
+        },
+        "selectedView": "pdp-view-sidecar",
+        "selectedCap": "black",
+        "overflow": false
+      },
+      "returnedCapOn": {
+        "sku": "GBVBlu1o9BlackCapSht",
+        "view": "capon",
+        "body": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24/256.94b7270c59d1.webp",
+          "left": 164.77342224121094,
+          "top": 239.83377075195312,
+          "width": 60.43792724609375,
+          "height": 124.15304565429688,
+          "right": 225.2113494873047,
+          "bottom": 363.98681640625
+        },
+        "cap": {
+          "source": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp",
+          "left": 164.01889038085938,
+          "top": 234.68167114257812,
+          "width": 61.95458984375,
+          "height": 39.288482666015625,
+          "right": 225.97348022460938,
+          "bottom": 273.97015380859375
+        },
+        "selectedView": "pdp-view-capon",
+        "selectedCap": "black",
+        "overflow": false
+      }
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

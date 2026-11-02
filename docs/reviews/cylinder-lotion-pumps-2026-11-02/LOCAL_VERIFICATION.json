@@ -1,0 +1,34 @@
+{
+  "statesVerified": 132,
+  "expectedStates": 132,
+  "builderApiSkus": 22,
+  "builderRendered": [
+    {
+      "sku": "LBCyl9LtnGl",
+      "renderedNewTube": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "renderedNewTube": true
+    }
+  ],
+  "initialNavigationFailures": [
+    {
+      "area": "pdp",
+      "sku": "LBCylAmb9LtnBlk",
+      "viewport": "desktop",
+      "message": "No element found for selector: [data-testid=\"pdp-view-capon\"]"
+    },
+    {
+      "area": "pdp",
+      "sku": "LBCyl25LtnCu",
+      "viewport": "mobile",
+      "message": "Waiting for selector `[data-testid=\"pdp-stage\"] [data-slot=\"body\"] img` failed"
+    }
+  ],
+  "targetedRerunPassed": true,
+  "allRequestedStatesCovered": true,
+  "exteriorAndBodyModelInvariants": "15 nine ml recipes checked separately; every non-tube part unchanged",
+  "masterSourceSha256": "6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa",
+  "version": "ca21bfc3c0c3ce57"
+}

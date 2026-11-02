@@ -1,0 +1,19 @@
+{
+  "status": "local-review",
+  "skus": [
+    "GBVialAmb1o5WhtCapSht",
+    "GBVAmb1o5BlackCapSht"
+  ],
+  "bodySha256": "5be9929a0bde292b74b11d7122c9736b21552b1dffacebce4e52252195e6c392",
+  "bodyUnchanged": true,
+  "glassSizing": {
+    "heightPct": 25.29,
+    "baselinePct": 91
+  },
+  "blackCapSourceSku": "GBVAmb1DrmBlackCapSht",
+  "blackCapSourceSha256": "ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798",
+  "uniformCapScale": 1.551371705217859,
+  "capCenterX": 500,
+  "capBottomY": 554.5454545454545,
+  "scope": "Only the short 22 mm-high, 16 mm-diameter, 13-425 amber vial. Separate slender 8-425 vial untouched."
+}

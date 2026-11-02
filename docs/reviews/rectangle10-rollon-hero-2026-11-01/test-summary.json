@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "numTotalTests": 3266,
+  "numPassedTests": 3259,
+  "numFailedTests": 0,
+  "numPendingTests": 7,
+  "typecheck": "passed",
+  "scopedLint": "passed",
+  "catalogStates": 36,
+  "pdpStates": 18,
+  "masterApis": 18,
+  "builderChecks": 4
+}
