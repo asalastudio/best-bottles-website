@@ -1,0 +1,23 @@
+{
+  "status": "verified archive for local visual review; not approved for production",
+  "familyFolderId": "1EXiZdN_i9jxJ8vh_-LHMH50iIAgWWtXj",
+  "reviewFolderId": "1Dq-H3sIROrEnr2UZf45taJrfgG0jLn2A",
+  "reviewFolderUrl": "https://drive.google.com/drive/folders/1Dq-H3sIROrEnr2UZf45taJrfgG0jLn2A",
+  "checks": "Read back file metadata after upload; verified exact parent folder and byte sizes against local files.",
+  "files": [
+    {
+      "id": "1GGYNhtIkvs_BF-j6LpH3ZucuRaiEfshd",
+      "name": "Best_Bottles_Sleek_8ml_13-415_Clear_Registered_Body_REVIEW_v1_2026-11-01.png",
+      "bytes": 1556303,
+      "url": "https://drive.google.com/file/d/1GGYNhtIkvs_BF-j6LpH3ZucuRaiEfshd/view?usp=drivesdk",
+      "sha256": "228bf8aefbdcb991af0422334646df423bb94c6b7b7b8eee676f491fe770ec3e"
+    },
+    {
+      "id": "1Ei6oYN2oCSVaMshTDH6ad_IOhVHz1zqL",
+      "name": "Best_Bottles_Sleek_8ml_13-415_Glass_Tube_Review_2026-11-01.zip",
+      "bytes": 7365038,
+      "url": "https://drive.google.com/file/d/1Ei6oYN2oCSVaMshTDH6ad_IOhVHz1zqL/view?usp=drivesdk",
+      "sha256": "97861294acced395889ea18d25620ac4c023096a1c8f1473ceda5d4835571b68"
+    }
+  ]
+}

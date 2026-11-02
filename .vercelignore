@@ -56,3 +56,6 @@ public/local-kits/rectangle9-applicator-2026-11-01/
 # Source copies of approved vial bodies and the local Tulip optics mirror.
 public/local-kits/vial2-matched-2026-11-01/
 public/local-kits/tulip6-glass-depth-2026-11-01/
+
+# Local mirror of the Sleek 8 ml glass-depth correction.
+public/local-kits/sleek8-glass-depth-2026-11-01/
