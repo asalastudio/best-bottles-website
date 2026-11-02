@@ -13,8 +13,8 @@ const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(canonical
 describe('approved Sleek 5/8 ml shared catalog, PDP and builder masters',()=>{
  it('publishes exactly the 72 approved combinations while preserving the earlier 362',()=>{
   const release=JSON.parse(readFileSync('docs/reviews/hosted-sleek-5-8-2026-11-01/release-manifest.json','utf8'));
-  expect(selected).toHaveLength(72);expect(Object.keys(hosted)).toHaveLength(438);expect(release.addedSkus).toEqual(selected.map(([sku])=>sku).sort());
-  const selectedSkus=new Set(release.addedSkus);const prior=Object.fromEntries(Object.entries(hosted).filter(([sku])=>!selectedSkus.has(sku)&&!['GBVAmb2BlackCap','GBVAmb2WhtCap','GBVialClr2mlBlackCap','GBVialClr2mlWhtCap'].includes(sku)));Object.assign(prior,JSON.parse(readFileSync('docs/reviews/tulip6-glass-depth-2026-11-01/before-kits.json','utf8')).rows);expect(Object.keys(prior)).toHaveLength(362);expect(hash(prior)).toBe(release.preservedPriorRecipesSha256);
+  expect(selected).toHaveLength(72);expect(Object.keys(hosted)).toHaveLength(456);expect(release.addedSkus).toEqual(selected.map(([sku])=>sku).sort());
+  const selectedSkus=new Set(release.addedSkus);const prior=Object.fromEntries(Object.entries(hosted).filter(([sku])=>!selectedSkus.has(sku)&&!/^GBRect10(?:MtlRoll|Roll)/.test(sku)&&!['GBVAmb2BlackCap','GBVAmb2WhtCap','GBVialClr2mlBlackCap','GBVialClr2mlWhtCap'].includes(sku)));Object.assign(prior,JSON.parse(readFileSync('docs/reviews/tulip6-glass-depth-2026-11-01/before-kits.json','utf8')).rows);expect(Object.keys(prior)).toHaveLength(362);expect(hash(prior)).toBe(release.preservedPriorRecipesSha256);
  });
  it('routes each cap choice to the approved body without changing placement or glass appearance',()=>{
   for(const [sku,original]of selected){const kit=hosted[sku];expect(kit,sku).toBeDefined();if(!kit)continue;expect(cylinderMasterSku(sku)).toBe(sku);expect(kit.glassSizing).toEqual(original.glassSizing);expect(kit.parts).toHaveLength(original.parts.length);

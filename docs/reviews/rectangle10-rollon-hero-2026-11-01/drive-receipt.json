@@ -1,0 +1,68 @@
+{
+  "folderUrl": "https://drive.google.com/drive/folders/1KMYnIuZJDHh74gVk9OvQVrtipZXtmGTG",
+  "verification": "Read back all three files; sizes and parent folder match.",
+  "sourceSvg": {
+    "id": "1PCmBapZvFeAi1K7sx0vba1dnBnlpA6jP",
+    "title": "Best_Bottles_Rectangle_10ml_Clear_13-415_Body_Master_199d55eb53af.svg",
+    "mime_type": null,
+    "size": "1522973",
+    "url": "https://drive.google.com/file/d/1PCmBapZvFeAi1K7sx0vba1dnBnlpA6jP/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/1PCmBapZvFeAi1K7sx0vba1dnBnlpA6jP/view?usp=drivesdk",
+    "file_or_folder": null,
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1KMYnIuZJDHh74gVk9OvQVrtipZXtmGTG"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified",
+    "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6"
+  },
+  "nativePng": {
+    "id": "1lTSLb_gKdGoTz8zLNF1TsiDyHqbU3WcJ",
+    "title": "Best_Bottles_Rectangle_10ml_Clear_13-415_Body_Master_Native_1344x2192.png",
+    "mime_type": null,
+    "size": "1192473",
+    "url": "https://drive.google.com/file/d/1lTSLb_gKdGoTz8zLNF1TsiDyHqbU3WcJ/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/1lTSLb_gKdGoTz8zLNF1TsiDyHqbU3WcJ/view?usp=drivesdk",
+    "file_or_folder": null,
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1KMYnIuZJDHh74gVk9OvQVrtipZXtmGTG"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  },
+  "reviewZip": {
+    "id": "1OwxNJyaGTCBxKFaw-O8cdhNeJlGDaOKX",
+    "title": "Best_Bottles_Rectangle_10ml_Clear_13-415_Rollon_Master_and_Hero_2026-11-01.zip",
+    "mime_type": null,
+    "size": "12368961",
+    "url": "https://drive.google.com/file/d/1OwxNJyaGTCBxKFaw-O8cdhNeJlGDaOKX/view?usp=drivesdk",
+    "display_url": "https://drive.google.com/file/d/1OwxNJyaGTCBxKFaw-O8cdhNeJlGDaOKX/view?usp=drivesdk",
+    "file_or_folder": null,
+    "created_time": null,
+    "modified_time": null,
+    "parent_ids": [
+      "1KMYnIuZJDHh74gVk9OvQVrtipZXtmGTG"
+    ],
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified",
+    "sha256": "b7fc0afd7ad088b7e0b99544ad75eb52becd831835cfe29f1aa7d86903926706"
+  },
+  "merged": false,
+  "deployed": false
+}

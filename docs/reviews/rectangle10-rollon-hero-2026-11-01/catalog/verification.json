@@ -1,0 +1,1126 @@
+{
+  "origin": "http://localhost:3010",
+  "version": "b4e1b077ae76a6da",
+  "records": [
+    {
+      "sku": "GBRect10MtlRollBlkDot",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10MtlRollBlkDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollBlkDot",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollCuMatt",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10MtlRollCuMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollCuMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollGlMatt",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10MtlRollGlMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollGlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollSlMatt",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10MtlRollSlMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollSlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollPinkDot",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10MtlRollPinkDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollPinkDot",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollBlkSh",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10MtlRollBlkSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollBlkSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollGlSh",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10MtlRollGlSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollGlSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollSlSh",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10MtlRollSlSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollSlSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollSlDot",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10MtlRollSlDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollSlDot",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollBlkDot",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10RollBlkDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollBlkDot",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollCuMatt",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10RollCuMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollCuMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollGlMatt",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10RollGlMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollGlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlMatt",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10RollSlMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollSlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollPinkDot",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10RollPinkDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollPinkDot",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollBlkSh",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10RollBlkSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollBlkSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollGlSh",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10RollGlSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollGlSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlSh",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10RollSlSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollSlSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlDot",
+      "viewport": "desktop",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "desktop-GBRect10RollSlDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollSlDot",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollBlkDot",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10MtlRollBlkDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollBlkDot",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollCuMatt",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10MtlRollCuMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollCuMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollGlMatt",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10MtlRollGlMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollGlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollSlMatt",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10MtlRollSlMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollSlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollPinkDot",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10MtlRollPinkDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollPinkDot",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollBlkSh",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10MtlRollBlkSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollBlkSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollGlSh",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10MtlRollGlSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollGlSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollSlSh",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10MtlRollSlSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollSlSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollSlDot",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10MtlRollSlDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10MtlRollSlDot",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollBlkDot",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10RollBlkDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollBlkDot",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollCuMatt",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10RollCuMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollCuMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollGlMatt",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10RollGlMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollGlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlMatt",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10RollSlMatt.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollSlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollPinkDot",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10RollPinkDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollPinkDot",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollBlkSh",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10RollBlkSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollBlkSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollGlSh",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10RollGlSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollGlSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlSh",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10RollSlSh.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollSlSh",
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlDot",
+      "viewport": "mobile",
+      "slug": "footed-rectangle-10ml-clear-13-415-rollon",
+      "screenshot": "mobile-GBRect10RollSlDot.png",
+      "version": "b4e1b077ae76a6da",
+      "viewBox": "7.281789075816855 74.57814172978527 985.4364218483663 1083.9800640332028",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+      "bodyBox": [
+        "314.72185430463577",
+        "469.18237391747317",
+        "379.30514518593986",
+        "618.6286296484972"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg"
+        },
+        {
+          "slot": "cap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png"
+        }
+      ],
+      "href": "http://localhost:3010/products/footed-rectangle-10ml-clear-13-415-rollon?sku=GBRect10RollSlDot",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "unavailable": [],
+  "passed": true
+}

@@ -1,0 +1,2849 @@
+{
+  "sourceVersion": "3ebe6e73b538",
+  "rows": {
+    "GBRect10MtlRollBlkDot": {
+      "sku": "GBRect10MtlRollBlkDot",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-BLK-13415-DOT.afd2b0f2cb3c.png",
+            "key": "",
+            "sha256": "afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e",
+            "bytes": 188848,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-BLK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-BLK-13415-DOT"
+        ],
+        "seatSignature": "e71c34da0bf3e3",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10MtlRollCuMatt": {
+      "sku": "GBRect10MtlRollCuMatt",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MCPR-13415.9b809c36ba0a.png",
+            "key": "",
+            "sha256": "9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8",
+            "bytes": 183525,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MCPR-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-MCPR-13415"
+        ],
+        "seatSignature": "1115478218ba1d",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10MtlRollGlMatt": {
+      "sku": "GBRect10MtlRollGlMatt",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MGLD-13415.40270b2051e9.png",
+            "key": "",
+            "sha256": "40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf",
+            "bytes": 181703,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-MGLD-13415"
+        ],
+        "seatSignature": "490a6264019cb3",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10MtlRollSlMatt": {
+      "sku": "GBRect10MtlRollSlMatt",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MSLV-13415.023bc67c73ef.png",
+            "key": "",
+            "sha256": "023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153",
+            "bytes": 183056,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-MSLV-13415"
+        ],
+        "seatSignature": "9e4fd6750a2856",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10MtlRollPinkDot": {
+      "sku": "GBRect10MtlRollPinkDot",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-PNK-13415-DOT.f263dadacb67.png",
+            "key": "",
+            "sha256": "f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1",
+            "bytes": 211964,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-PNK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-PNK-13415-DOT"
+        ],
+        "seatSignature": "43b9ce2a01f1d7",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10MtlRollBlkSh": {
+      "sku": "GBRect10MtlRollBlkSh",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SBLK-13415.a284ff0061dd.png",
+            "key": "",
+            "sha256": "a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8",
+            "bytes": 170243,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-SBLK-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SBLK-13415"
+        ],
+        "seatSignature": "3c26fd0500fa9a",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10MtlRollGlSh": {
+      "sku": "GBRect10MtlRollGlSh",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.73674984649824,
+            "right": 592.1654406782088,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
+            "key": "",
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.63640828897786,
+            "y": 414.5248820499735,
+            "width": 180.62937394675134,
+            "height": 268.4236510511026
+          },
+          "componentId": "CMP-ROC-SGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SGLD-13415"
+        ],
+        "seatSignature": "d8acdb190f83ce",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10MtlRollSlSh": {
+      "sku": "GBRect10MtlRollSlSh",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.73674984649824,
+            "right": 592.1654406782088,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
+            "key": "",
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.63640828897786,
+            "y": 414.5248820499735,
+            "width": 180.62937394675134,
+            "height": 268.4236510511026
+          },
+          "componentId": "CMP-ROC-SSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SSLV-13415"
+        ],
+        "seatSignature": "b094c8bc168733",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10MtlRollSlDot": {
+      "sku": "GBRect10MtlRollSlDot",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+            "sha256": "576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2",
+            "bytes": 1262136,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-MtlRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SLV-13415-DOT.e1f9bbd394c9.png",
+            "key": "",
+            "sha256": "e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86",
+            "bytes": 200985,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-SLV-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-MtlRollon",
+          "CMP-ROC-SLV-13415-DOT"
+        ],
+        "seatSignature": "b271e29d0fa900",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10RollBlkDot": {
+      "sku": "GBRect10RollBlkDot",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-BLK-13415-DOT.afd2b0f2cb3c.png",
+            "key": "",
+            "sha256": "afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e",
+            "bytes": 188848,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-BLK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-BLK-13415-DOT"
+        ],
+        "seatSignature": "e71c34da0bf3e3",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10RollCuMatt": {
+      "sku": "GBRect10RollCuMatt",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MCPR-13415.9b809c36ba0a.png",
+            "key": "",
+            "sha256": "9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8",
+            "bytes": 183525,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MCPR-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-MCPR-13415"
+        ],
+        "seatSignature": "1115478218ba1d",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10RollGlMatt": {
+      "sku": "GBRect10RollGlMatt",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MGLD-13415.40270b2051e9.png",
+            "key": "",
+            "sha256": "40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf",
+            "bytes": 181703,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-MGLD-13415"
+        ],
+        "seatSignature": "490a6264019cb3",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10RollSlMatt": {
+      "sku": "GBRect10RollSlMatt",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-MSLV-13415.023bc67c73ef.png",
+            "key": "",
+            "sha256": "023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153",
+            "bytes": 183056,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-MSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-MSLV-13415"
+        ],
+        "seatSignature": "9e4fd6750a2856",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10RollPinkDot": {
+      "sku": "GBRect10RollPinkDot",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-PNK-13415-DOT.f263dadacb67.png",
+            "key": "",
+            "sha256": "f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1",
+            "bytes": 211964,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-PNK-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-PNK-13415-DOT"
+        ],
+        "seatSignature": "43b9ce2a01f1d7",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10RollBlkSh": {
+      "sku": "GBRect10RollBlkSh",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SBLK-13415.a284ff0061dd.png",
+            "key": "",
+            "sha256": "a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8",
+            "bytes": 170243,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-SBLK-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SBLK-13415"
+        ],
+        "seatSignature": "3c26fd0500fa9a",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10RollGlSh": {
+      "sku": "GBRect10RollGlSh",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.73674984649824,
+            "right": 592.1654406782088,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
+            "key": "",
+            "sha256": "08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff",
+            "bytes": 2858544,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.63640828897786,
+            "y": 414.5248820499735,
+            "width": 180.62937394675134,
+            "height": 268.4236510511026
+          },
+          "componentId": "CMP-ROC-SGLD-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SGLD-13415"
+        ],
+        "seatSignature": "d8acdb190f83ce",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10RollSlSh": {
+      "sku": "GBRect10RollSlSh",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.73674984649824,
+            "right": 592.1654406782088,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
+            "key": "",
+            "sha256": "31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a",
+            "bytes": 2585591,
+            "width": 1290,
+            "height": 1917
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 413.63640828897786,
+            "y": 414.5248820499735,
+            "width": 180.62937394675134,
+            "height": 268.4236510511026
+          },
+          "componentId": "CMP-ROC-SSLV-13415"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SSLV-13415"
+        ],
+        "seatSignature": "b094c8bc168733",
+        "seatDropMm": 0
+      }
+    },
+    "GBRect10RollSlDot": {
+      "sku": "GBRect10RollSlDot",
+      "familyId": "register:footed-rectangle-10ml-13-415|Clear",
+      "plateSha256": "",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 507,
+        "baselineY": 1061,
+        "pxPerMm": 10.5
+      },
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 35.07,
+        "baselinePct": 91,
+        "landmarkY": 680.8481915435557,
+        "source": "docs/hero-families/batch3-2026-09-25/approval.json"
+      },
+      "parts": [
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 439.69109526235354,
+            "right": 568.2110952623535,
+            "top": 407.5653125,
+            "bottom": 613.90015625
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+            "sha256": "3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16",
+            "bytes": 1233944,
+            "width": 1052,
+            "height": 1494,
+            "key": ""
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 416.2629702623535,
+            "y": 387.81875,
+            "width": 176.045625,
+            "height": 250.01156250000003
+          },
+          "componentId": "LIB-13-415-PlsticRollon"
+        },
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 347.74,
+            "right": 652.26,
+            "top": 507,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+            "key": "",
+            "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6",
+            "bytes": 1522973,
+            "width": 1344,
+            "height": 2192
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 314.72185430463577,
+            "y": 469.1823739174732,
+            "width": 379.30514518593986,
+            "height": 618.6286296484972
+          },
+          "componentId": null
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 415.9467840022503,
+            "right": 592.3754748339609,
+            "top": 416.6252236074938,
+            "bottom": 680.8481915435557
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-ROC-SLV-13415-DOT.e1f9bbd394c9.png",
+            "key": "",
+            "sha256": "e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86",
+            "bytes": 200985,
+            "width": 422,
+            "height": 631
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer",
+          "box": {
+            "x": 415.5267156907462,
+            "y": 416.20515529598975,
+            "width": 177.26882745471877,
+            "height": 265.06310455907
+          },
+          "componentId": "CMP-ROC-SLV-13415-DOT"
+        }
+      ],
+      "three": null,
+      "conflicts": [],
+      "register": {
+        "bodyId": "footed-rectangle-10ml-13-415",
+        "plateKey": "footed-rectangle-10ml-13-415|Clear",
+        "glass": "Clear",
+        "datum": {
+          "axisX": 500,
+          "seatY": 507,
+          "baselineY": 1061
+        },
+        "pxPerMm": 10.5,
+        "componentIds": [
+          "LIB-13-415-PlsticRollon",
+          "CMP-ROC-SLV-13415-DOT"
+        ],
+        "seatSignature": "b271e29d0fa900",
+        "seatDropMm": 0
+      }
+    }
+  }
+}

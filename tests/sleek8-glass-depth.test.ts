@@ -57,6 +57,8 @@ describe('Sleek 8 ml regenerated glass and internal tube candidate', () => {
     });
     it('preserves approved body pixels and shares the local candidate across PDP, catalog and builder inputs', () => {
         const baseline = structuredClone(manifest.rows) as unknown as Record<string, KitLike>;
+        // Reconstruct this historical 438-recipe approval before the later Rectangle roll-on extension.
+        for (const sku of Object.keys(baseline)) if (/^GBRect10(?:MtlRoll|Roll)/.test(sku)) delete baseline[sku];
         const opticalBefore = read('docs/reviews/sleek8-hero-depth-2026-11-01/before-kits.json').rows;
         for (const [sku, original] of Object.entries(opticalBefore)) baseline[sku] = original as KitLike;
         expect(hash(JSON.stringify(baseline))).toBe(proof.approvedManifestHash);

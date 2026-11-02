@@ -1,6 +1,15 @@
 import "server-only";
 import { readFileSync } from "node:fs";
 import type { BuilderKit } from "../bottle-builder/model";
+import { approvedComponentKits } from "./approved-component-kits";
+
+// The Rectangle roll-on hero reuses the exact PDP recipe. Keep older local
+// review files and bookmarked pilots on those same hosted master URLs.
+const rectangleRollonMasters = Object.fromEntries(Object.entries(approvedComponentKits()).filter(([sku, kit]) =>
+    /^GBRect10(?:MtlRoll|Roll)/.test(sku) && kit.register?.bodyId === "footed-rectangle-10ml-13-415"));
+function withRectangleRollonMasters(rows: Record<string, BuilderKit>): Record<string, BuilderKit> {
+    return { ...rows, ...Object.fromEntries(Object.entries(rectangleRollonMasters).filter(([sku]) => Object.hasOwn(rows, sku))) };
+}
 
 type LocalKitReview = {
     rows: Record<string, BuilderKit>;
@@ -40,7 +49,7 @@ function readLocalKitReview(): LocalKitReview | null {
             loaded = true;
         } catch { /* A review file may not be staged in this checkout. */ }
     }
-    return loaded ? { rows, defaultPdpSkus: [...defaults] } : null;
+    return loaded ? { rows: withRectangleRollonMasters(rows), defaultPdpSkus: [...defaults] } : null;
 }
 
 /** Opt-in GPT-body composition pilot. The hosted application never reads it. */
@@ -94,7 +103,7 @@ export function localGpt13ComponentKits(host: string | null, flag: unknown): Rec
             if (kit.register?.bodyId === "sleek-8ml-13-415" && kit.sku === sku) rows[sku] = kit;
         }
     } catch { /* The approved hosted recipes remain available without this local mirror. */ }
-    return rows;
+    return withRectangleRollonMasters(rows);
 }
 
 /** Shared local artwork review input for Builder and PDP. Never used on Vercel. */
