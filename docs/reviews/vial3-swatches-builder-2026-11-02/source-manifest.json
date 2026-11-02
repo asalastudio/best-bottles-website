@@ -1,0 +1,56 @@
+{
+  "status": "Local review candidate",
+  "sourceFiles": [
+    {
+      "path": "docs/reviews/vial3-swatches-builder-2026-11-02/sources/legacy-blue-black.json",
+      "bytes": 5315,
+      "sha256": "ea3756cd7fc8d936dde1133bc7aa5a96e971d3d283b7ec433d6238e4e2b89a46"
+    },
+    {
+      "path": "docs/reviews/vial3-swatches-builder-2026-11-02/sources/legacy-green-black.json",
+      "bytes": 5326,
+      "sha256": "d6b39d13399786fe6e1f7568999f10966ab9b7adea8445e8c80127c0122b11e1"
+    },
+    {
+      "path": "docs/reviews/vial3-swatches-builder-2026-11-02/sources/legacy-green-white.json",
+      "bytes": 5310,
+      "sha256": "60a28086e27267f65218c0ec37653a36c2d3dd91adc280c843a1f69afbfadd0c"
+    },
+    {
+      "path": "docs/reviews/vial3-swatches-builder-2026-11-02/sources/white-cap-lineage.json",
+      "bytes": 667,
+      "sha256": "69cd31bdabdf6abb8e08896285c6fb07a266e6508f2619d63ef938fb9901ddf1"
+    },
+    {
+      "path": "docs/reviews/vial3-swatches-builder-2026-11-02/sources/white-cap-native.png",
+      "bytes": 14468,
+      "sha256": "47cc9576519718f089dbf78580187f4afa8e94a0bacf1a6ef202d1fe76f0ddf6"
+    },
+    {
+      "path": "public/local-kits/vial3-swatches-builder-2026-11-02/body-blue.e531695dad69.webp",
+      "bytes": 121868,
+      "sha256": "e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24"
+    },
+    {
+      "path": "public/local-kits/vial3-swatches-builder-2026-11-02/body-green.986fd79ac5c6.webp",
+      "bytes": 117178,
+      "sha256": "986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90"
+    },
+    {
+      "path": "public/local-kits/vial3-swatches-builder-2026-11-02/cap-black.4ba95ee185e3.webp",
+      "bytes": 50184,
+      "sha256": "4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade"
+    },
+    {
+      "path": "public/local-kits/vial3-swatches-builder-2026-11-02/cap-white.4949217327e8.webp",
+      "bytes": 8052,
+      "sha256": "4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499"
+    },
+    {
+      "path": "public/local-kits/vial3-swatches-builder-2026-11-02/kits.json",
+      "bytes": 8372,
+      "sha256": "d25f531662ce67bebff3262f7de18951dd1a15bd48a142ee682a6b5a6814466b"
+    }
+  ],
+  "driveReceipt": "drive-receipt.json"
+}

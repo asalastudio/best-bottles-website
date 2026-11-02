@@ -76,7 +76,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: true }));
-}, ["bottle-builder-family-chooser-v11-tulip-cylinder", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v12-vial3-source", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** The cached family. When the cache has no entry to fall back on (a new key, an
  * eviction) and the register lookup fails, this one request builds the family
@@ -115,7 +115,7 @@ export const loadBuilderFamilies = unstable_cache(async () => {
         }
     }));
     return available.filter(family => family !== null);
-}, ["bottle-builder-families-bare-v9-tulip-cylinder", APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-families-bare-v10-vial3-source", APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** `strictRegister`: a failed register lookup throws instead of drawing the
  * published kits. Every cached caller sets it, so a Convex hiccup leaves the
@@ -172,7 +172,7 @@ const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null
         kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
     }
     return kits;
-}, ["bottle-builder-body-kits-v9-hosted-approved", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-body-kits-v10-vial3-source", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export async function loadBuilderBodyKits(family: string, bodyId: string) {
     if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};

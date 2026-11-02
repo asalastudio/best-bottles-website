@@ -18,6 +18,7 @@ import styles from "./pdp.module.css";
 import { formatVolumeQtyRange, type DisplayVolumeTier } from "@/lib/volumePricing";
 import { CATALOG_QUANTITY_MAX, parseCatalogQuantity } from "@/lib/products/catalog-card-purchase";
 import type { RollerOption } from "@/lib/products/pdp-redesign/model";
+import { displayDerivativeUrl } from "@/lib/products/display-derivative";
 
 export type AddState = "add" | "sold-out" | "unavailable" | "unpriced";
 
@@ -132,10 +133,9 @@ export default function PdpBuyBox({
                                 onClick={() => onRoller(roller.id)}
                                 data-roller={roller.id}
                             >
-                                {/* A register layer is already a fixed-size PNG on the Blob CDN: served as is, like the
-                                    stage's layers, rather than re-encoded by the image optimiser (whose private-IP
-                                    guard also rejects the Blob host on NAT64 networks, which left these blank). */}
-                                {rollerImage && <Image className={styles.rollerImage} src={rollerImage} alt="" width={44} height={44} loading="lazy" unoptimized />}
+                                {/* Use a verified lossless thumbnail when present. Otherwise serve the native register
+                                    layer directly: the image optimizer's private-IP guard can reject Blob on NAT64. */}
+                                {rollerImage && <Image className={styles.rollerImage} src={displayDerivativeUrl(rollerImage, 128) ?? rollerImage} alt="" width={44} height={44} loading="lazy" unoptimized />}
                                 <span>{roller.label}</span>
                             </button>
                         );

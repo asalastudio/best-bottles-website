@@ -15,6 +15,8 @@ const VERIFIED_VIAL_CAPS: Readonly<Record<string, { glass: string; finish: strin
     GBVBlu1DrmWhtCapSht: { glass: "blue", finish: "White" },
     GBVGr1DrmBlackCapSht: { glass: "green", finish: "Black" },
     GBVGr1DrmWhtCapSht: { glass: "green", finish: "White" },
+    GBVGreen2o4BlackCapSht: { glass: "green", finish: "Black" },
+    GBVGreen2o4WhtCapSht: { glass: "green", finish: "White" },
 };
 
 type CapEvidence = { websiteSku?: string | null; color?: string | null; capColor?: string | null };
@@ -27,7 +29,8 @@ export function normalizeImportedCapColor<T extends CapEvidence>(variant: T): T 
     const glass = variant.color?.trim().toLowerCase();
     const cap = variant.capColor?.trim().toLowerCase();
     const verified = VERIFIED_VIAL_CAPS[variant.websiteSku ?? ""];
-    if (verified && (glass === verified.glass || (verified.glass === "blue" && glass === "cobalt blue")) && cap === "clear") {
+    if (verified && (glass === verified.glass || (verified.glass === "blue" && glass === "cobalt blue"))
+        && (cap === "clear" || cap === glass)) {
         return { ...variant, capColor: verified.finish };
     }
     if (!glass || glass !== cap) return variant;

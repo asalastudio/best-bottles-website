@@ -1,0 +1,93 @@
+{
+  "folderId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+  "folderUrl": "https://drive.google.com/drive/folders/1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+  "status": "local-review-candidate",
+  "files": [
+    {
+      "name": "REVIEW_Vial_5-8_Dram_Green_Body.webp",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/vial3-swatches-builder-2026-11-02/body-green.986fd79ac5c6.webp",
+      "id": "1wyRDiIglP2hDipcKfiO-1_l0W0Mf-l59",
+      "url": "https://drive.google.com/file/d/1wyRDiIglP2hDipcKfiO-1_l0W0Mf-l59/view?usp=drivesdk",
+      "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+      "remoteVerified": {
+        "bytes": 117178,
+        "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+        "url": "https://drive.google.com/file/d/1wyRDiIglP2hDipcKfiO-1_l0W0Mf-l59/view?usp=drivesdk"
+      },
+      "bytes": 117178,
+      "sha256": "986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90"
+    },
+    {
+      "name": "REVIEW_Vial_5-8_Dram_Cobalt_Body.webp",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/vial3-swatches-builder-2026-11-02/body-blue.e531695dad69.webp",
+      "id": "1Zy4qZiLK00uQ07YJpcXLBMAGCo9xbQzN",
+      "url": "https://drive.google.com/file/d/1Zy4qZiLK00uQ07YJpcXLBMAGCo9xbQzN/view?usp=drivesdk",
+      "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+      "remoteVerified": {
+        "bytes": 121868,
+        "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+        "url": "https://drive.google.com/file/d/1Zy4qZiLK00uQ07YJpcXLBMAGCo9xbQzN/view?usp=drivesdk"
+      },
+      "bytes": 121868,
+      "sha256": "e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24"
+    },
+    {
+      "name": "REVIEW_Vial_5-8_Dram_Black_Short_Cap.webp",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/vial3-swatches-builder-2026-11-02/cap-black.4ba95ee185e3.webp",
+      "id": "1EzkCk-nVCGR2lI90QDLu1qI3l7wR8hKO",
+      "url": "https://drive.google.com/file/d/1EzkCk-nVCGR2lI90QDLu1qI3l7wR8hKO/view?usp=drivesdk",
+      "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+      "remoteVerified": {
+        "bytes": 50184,
+        "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+        "url": "https://drive.google.com/file/d/1EzkCk-nVCGR2lI90QDLu1qI3l7wR8hKO/view?usp=drivesdk"
+      },
+      "bytes": 50184,
+      "sha256": "4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade"
+    },
+    {
+      "name": "REVIEW_Vial_5-8_Dram_White_Short_Cap.webp",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/vial3-swatches-builder-2026-11-02/cap-white.4949217327e8.webp",
+      "id": "1VhEnoGSTeavCHwhmSMh72eassWexvby9",
+      "url": "https://drive.google.com/file/d/1VhEnoGSTeavCHwhmSMh72eassWexvby9/view?usp=drivesdk",
+      "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+      "remoteVerified": {
+        "bytes": 8052,
+        "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+        "url": "https://drive.google.com/file/d/1VhEnoGSTeavCHwhmSMh72eassWexvby9/view?usp=drivesdk"
+      },
+      "bytes": 8052,
+      "sha256": "4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499"
+    },
+    {
+      "name": "README_5-8_Dram_Vial_Shared_Swatches_Builder_REVIEW.md",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/vial3-swatches-builder-2026-11-02/README.md",
+      "id": "1SG5_4Md7J8__H8TJxzRh5G9efQcM4Rbg",
+      "url": "https://drive.google.com/file/d/1SG5_4Md7J8__H8TJxzRh5G9efQcM4Rbg/view?usp=drivesdk",
+      "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+      "remoteVerified": {
+        "bytes": 2396,
+        "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+        "url": "https://drive.google.com/file/d/1SG5_4Md7J8__H8TJxzRh5G9efQcM4Rbg/view?usp=drivesdk"
+      },
+      "bytes": 2396,
+      "sha256": "e112ba8a5ba6df3971e0bf1cb717b0c3625a0c93b02d134bdc0fc27e6859ee71"
+    },
+    {
+      "name": "Best_Bottles_5-8_Dram_Vial_Swatches_Builder_REVIEW_2026-11-02.zip",
+      "file": "/private/tmp/Best_Bottles_5-8_Dram_Vial_Swatches_Builder_REVIEW_2026-11-02.zip",
+      "id": "1rGfDSJ2a1T8gHFU2divIWCp1cqPUBxdW",
+      "url": "https://drive.google.com/file/d/1rGfDSJ2a1T8gHFU2divIWCp1cqPUBxdW/view?usp=drivesdk",
+      "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+      "remoteVerified": {
+        "bytes": 3694473,
+        "parentId": "1AwGvmJ3auRPQgmNxdBxFUkCyVP-YLTyZ",
+        "url": "https://drive.google.com/file/d/1rGfDSJ2a1T8gHFU2divIWCp1cqPUBxdW/view?usp=drivesdk"
+      },
+      "bytes": 3694473,
+      "sha256": "ea250d2c4e6d135a3203fc21e554ddccc3a629510254e4fa19c0c19f0970dba1"
+    }
+  ],
+  "verification": "Drive parent and byte size verified for every upload. Local SHA-256 values are source hashes, not a remote hash verification.",
+  "archiveScope": "Frozen source and evidence snapshot before the draft commit. Later interface clarification and verification records are tracked in Git."
+}

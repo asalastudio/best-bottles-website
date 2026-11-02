@@ -928,5 +928,52 @@
     "sourceUrl": "https://www.bestbottles.com/product/slim-design-50-ml-glass-bottle-reducer-black-shiny-cap",
     "sourceSha256": "db547a44ef02107e11c8f19165781374dfde89525f2e241340c6ad87a0265c21",
     "checkedAt": "2026-10-01T15:01:36.363Z"
+  },
+  {
+    "websiteSku": "GBVGreen2o4BlackCapSht",
+    "graceSku": "GB-VIA-CLR-3ML-GRN-S",
+    "family": "Vial",
+    "capacityMl": 3,
+    "color": "Green",
+    "neckThreadSize": "13-425",
+    "applicator": null,
+    "capColor": "Green",
+    "fitment": "Cap/Closure",
+    "finish": "Black",
+    "sourceUrl": "https://www.bestbottles.com/product/Vial-design-5-8-dram-green-glass-black-short-cap",
+    "sourceSha256": "d6b39d13399786fe6e1f7568999f10966ab9b7adea8445e8c80127c0122b11e1",
+    "checkedAt": "2026-11-02T21:55:55.780Z"
+  },
+  {
+    "websiteSku": "GBVGreen2o4WhtCapSht",
+    "graceSku": "GB-GRN-GRN-20ML",
+    "family": "Vial",
+    "capacityMl": 3,
+    "color": "Green",
+    "neckThreadSize": "13-425",
+    "applicator": null,
+    "capColor": "Green",
+    "fitment": "Cap/Closure",
+    "finish": "White",
+    "sourceUrl": "https://www.bestbottles.com/product/Vial-design-5-8-dram-green-glass-white-short-cap",
+    "sourceSha256": "60a28086e27267f65218c0ec37653a36c2d3dd91adc280c843a1f69afbfadd0c",
+    "checkedAt": "2026-11-02T21:55:55.780Z"
+  },
+  {
+    "websiteSku": "GBVBlu1o9BlackCapSht",
+    "graceSku": "GB-VIA-BLU-3ML-BLK-S",
+    "family": "Vial",
+    "capacityMl": 3,
+    "color": "Blue",
+    "neckThreadSize": "13-425",
+    "applicator": null,
+    "capColor": "Black",
+    "fitment": "Cap/Closure",
+    "finish": "Black",
+    "sourceUrl": "https://www.bestbottles.com/product/Vial-design-half-dram-blue-glass-black-short-cap",
+    "sourceSha256": "ea3756cd7fc8d936dde1133bc7aa5a96e971d3d283b7ec433d6238e4e2b89a46",
+    "checkedAt": "2026-11-02T21:55:55.780Z",
+    "sourceCapacityMl": 2,
+    "capacityReconciliation": "Existing imported 3 ml route preserved. Exact source describes 5/8 dram but its table says 2 ml; artwork and included black cap are verified for this exact SKU. This evidence does not change the capacity record."
   }
 ]

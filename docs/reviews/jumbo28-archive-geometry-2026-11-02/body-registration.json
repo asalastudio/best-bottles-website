@@ -1,0 +1,38 @@
+{
+  "status": "corrected-candidate-not-approved",
+  "bodyId": "cylinder-28ml-16mm",
+  "glass": "Clear",
+  "sourceFile": "docs/reviews/jumbo28-archive-geometry-2026-11-02/sources/28ml-body-archive-geometry-studio.svg",
+  "sourceSha256": "d85f195bf5cfcff92ceb331fb20b7b6aab11793bd50bed08cf977f342b21f23f",
+  "guideSha256": "70ae2b763634fe8202bca5c3214cdfb5a5d107731b0ee8a7c79559abaa47c7bf",
+  "materialSha256": "d9cba177bb1a66336f5c46031f2dfa303a2141a92a4db343a3d80aea10f20932",
+  "alphaDifferences": 0,
+  "image": {
+    "width": 890,
+    "height": 2230
+  },
+  "anchors": {
+    "axisX": 445,
+    "seatY": 0,
+    "shoulderY": 332,
+    "baselineY": 2230
+  },
+  "mouthWidthPx": 598,
+  "scale": {
+    "targetPct": 50.5,
+    "baselinePct": 91,
+    "source": "Existing five-height canvas curve; owner-specified archive PSD complete neck/body silhouette"
+  },
+  "uniformMaterialProjection": {
+    "bodyScale": 0.6138421733505821,
+    "neckScale": 0.5724137931034483,
+    "sourceAxis": 396,
+    "sourceSize": [
+      792,
+      1985
+    ]
+  },
+  "nativeEdgeBandPx": 4,
+  "geometry": "Complete archive PSD body and glass-neck retouch pixels supply the outer silhouette. Disconnected debris is excluded and internal retouch cutout holes are filled. Generated material does not define the contour.",
+  "sourceReference": "Owner specified archive 13. 16 mm / 2. 28ml Uncapped / GBCyl28RollWht. Physical reference is GBCyl1ozRollWht, 81 mm without cap, 31 mm diameter. The 50 ml master and hardware image pixels remain unchanged."
+}

@@ -151,14 +151,14 @@
         "GBMtlRoll28Blk"
       ],
       "heldSkus": [],
-      "sourceUrl": "/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-28ml-16mm.bd4cb95c2e2f.png",
-      "sha256": "bd4cb95c2e2f7cb1495779df5edfd82f5900c7538c91efa1643eab5ff10e12f7",
-      "masterFile": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-28ml-16mm-glass-bottle-clear.bd4cb95c2e2f.png",
+      "sourceUrl": "/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-28ml-16mm-archive-psd.d08abe4d61bf.webp",
+      "sha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780",
+      "masterFile": "docs/reviews/cylinder-family-completion-2026-11-02/masters/cylinder-28ml-16mm-glass-bottle-clear.d08abe4d61bf.webp",
       "scale": {
         "heightPct": 50.5,
         "baselinePct": 91,
-        "landmarkY": 404.92619169656587,
-        "source": "docs/hero-families/cylinder-2026-09-22/manifest.json"
+        "landmarkY": 380.1031390134529,
+        "source": "Existing five-height canvas curve; owner-specified archive PSD complete neck/body silhouette"
       },
       "reviewSku": "GBMtlRoll28Wht",
       "preservation": "Original sources retained. Distinct capacity/profile/color/neck combinations never share stretched bodies."

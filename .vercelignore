@@ -59,3 +59,8 @@ public/local-kits/tulip6-glass-depth-2026-11-01/
 
 # Local mirror of the Sleek 8 ml glass-depth correction.
 public/local-kits/sleek8-glass-depth-2026-11-01/
+
+# Local review bodies and delivery layers; production uses approved hosted media.
+public/local-kits/vial3-swatches-builder-2026-11-02/
+public/local-kits/jumbo28-archive-geometry-2026-11-02/
+public/local-kits/cylinder-family-completion-2026-11-02/

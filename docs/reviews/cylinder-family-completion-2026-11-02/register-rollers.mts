@@ -40,6 +40,10 @@ const correctedBodyFile='docs/reviews/jumbo-body-reference-2026-11-02/body-regis
 const correctedBody=fs.existsSync(correctedBodyFile)?read(correctedBodyFile):null;
 const correctedAsset=correctedBody?await image(correctedBody.sourceFile,'body-cylinder-50ml-16mm-complete-psd'):null;
 if(correctedBody)assert.equal(correctedBody.alphaDifferences,0,'Complete PSD glass outline changed');
+const corrected28File='docs/reviews/jumbo28-archive-geometry-2026-11-02/body-registration.json';
+const corrected28=fs.existsSync(corrected28File)?read(corrected28File):null;
+const corrected28Asset=corrected28?await image(corrected28.sourceFile,'body-cylinder-28ml-16mm-archive-psd'):null;
+if(corrected28)assert.equal(corrected28.alphaDifferences,0,'Archive 28 ml glass outline changed');
 const dims:Record<number,{height:number;diameter:number;closedHeight:number}>={28:{height:81,diameter:31,closedHeight:100},50:{height:98,diameter:37,closedHeight:116}};
 // Registration width from the original 28 ml photo: the white flange spans
 // approximately 294 px against 445 px of a 31 mm body. This is not a new caliper measurement.
@@ -57,9 +61,11 @@ for(const row of catalog.filter(r=>r.category==='Glass Bottle'&&r.neckThreadSize
     assert(row.capacityMl===28||row.capacityMl===50,'Unexpected jumbo roller capacity');
     assert(row.capColor==='Black'||row.capColor==='White','Unexpected jumbo roller cap finish');
     const d=dims[row.capacityMl],recovered=library.find(r=>r.bodyId==='cylinder-'+row.capacityMl+'ml-16mm'&&r.glass==='Clear');assert(recovered?.sourceAvailable);
-    const updated=row.capacityMl===50&&correctedBody&&correctedAsset;
-    const master:RecoveredMaster=updated?{...recovered,sourceFile:correctedBody.sourceFile,fileSha256:correctedBody.sourceSha256,
-        anchors:correctedBody.anchors,scale:correctedBody.scale}:recovered;
+    const correction=row.capacityMl===28?corrected28:correctedBody;
+    const correctionAsset=row.capacityMl===28?corrected28Asset:correctedAsset;
+    const updated=Boolean(correction&&correctionAsset);
+    const master:RecoveredMaster=updated?{...recovered,sourceFile:correction.sourceFile,fileSha256:correction.sourceSha256,
+        anchors:correction.anchors,scale:correction.scale}:recovered;
     const bytes=fs.readFileSync(master.sourceFile);assert.equal(sha(bytes),master.fileSha256);
     const info=await sharp(bytes).metadata(),scale=800/(master.anchors.baselineY-master.anchors.seatY),ppm=800/d.height;
     const file='body-'+master.bodyId+'.'+master.fileSha256.slice(0,12)+'.png';
@@ -67,12 +73,12 @@ for(const row of catalog.filter(r=>r.category==='Glass Bottle'&&r.neckThreadSize
     const axis=500,seat=261,foot=1061,x=axis-master.anchors.axisX*scale,y=seat-master.anchors.seatY*scale;
     const shoulder=y+master.anchors.shoulderY*scale;
     const body:KitPartLike={slot:'body',variantKey:null,componentId:null,zOrder:0,explodeIndex:0,assembled:{x:0,y:0},exploded:{dx:0,dy:0},
-        image:updated?correctedAsset!.image:{url:'/local-kits/cylinder-family-completion-2026-11-02/'+file,key:'',sha256:master.fileSha256,bytes:bytes.length,width:info.width!,height:info.height!},
+        image:updated?correctionAsset!.image:{url:'/local-kits/cylinder-family-completion-2026-11-02/'+file,key:'',sha256:master.fileSha256,bytes:bytes.length,width:info.width!,height:info.height!},
         box:{x,y,width:info.width!*scale,height:info.height!*scale},bounds:{left:axis-d.diameter*ppm/2,top:seat,right:axis+d.diameter*ppm/2,bottom:foot}};
     const kind=row.applicator==='Metal Roller Ball'?'metal':'plastic',insert=inserts[kind];
-    // Fit the over-rim flange to the mouth visible in the complete 50 ml PSD.
+    // Fit the over-rim flange to the mouth visible in each complete PSD.
     // This is source-image registration, not a newly measured hardware diameter.
-    const flangeWidth=updated?correctedBody.mouthWidthPx*scale*1.03:flangeWidthMm*ppm;
+    const flangeWidth=updated?correction.mouthWidthPx*scale*1.03:flangeWidthMm*ppm;
     const roller=part('roller',insert,axis,seat+.25*ppm,flangeWidth/(insert.bounds.right-insert.bounds.left),'review:roller-16mm-'+kind,1);
     const capAsset=caps[row.capColor as keyof typeof caps];assert(capAsset,'Unknown 16 mm cap finish');
     const plasticHeight=(inserts.plastic.bounds.bottom-inserts.plastic.bounds.top)*flangeWidth/(inserts.plastic.bounds.right-inserts.plastic.bounds.left);
@@ -90,6 +96,12 @@ for(const row of catalog.filter(r=>r.category==='Glass Bottle'&&r.neckThreadSize
 }
 assert.equal(Object.keys(rows).length,8);
 fs.writeFileSync(out+'/roller-kits.json',JSON.stringify({rows,defaultPdpSkus:[]},null,2)+'\n');
+// Owner requested the corrected 28 ml assembly on normal localhost routes.
+// Keep the remaining family candidates opt-in and the hosted manifest unchanged.
+const normal28=Object.fromEntries(Object.entries(rows).filter(([,kit])=>kit.register?.bodyId==='cylinder-28ml-16mm'));
+const normalDir='public/local-kits/jumbo28-archive-geometry-2026-11-02';
+fs.mkdirSync(normalDir,{recursive:true});
+fs.writeFileSync(normalDir+'/kits.json',JSON.stringify({rows:normal28,defaultPdpSkus:Object.keys(normal28)},null,2)+'\n');
 fs.writeFileSync(dir+'/roller-registration.json',JSON.stringify({status:'candidate-not-approved',camera:'Near eye level, flat flange',hardware:'Over-rim 16 mm roller assembly, internal seating track, no projecting lower plug',
     sourceAuthority:'Original PSD geometry and exposure are locked. Metal uses the owner-approved studio material inside that exact outline; plastic retains native PSD material. User confirmed a single bottom step and no protruding lower plug.',nativeGeometryReferenceVerification:nativeVerification,metalMaterialGeometryVerification:material,measuredBottles:dims,
     estimatedRegistration:{flangeWidthMm,capHeightMm,notice:'Image registration only. These are not confirmed physical component measurements.'},inserts,caps,configurations},null,2)+'\n');

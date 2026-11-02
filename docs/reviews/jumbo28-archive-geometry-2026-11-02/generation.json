@@ -1,0 +1,13 @@
+{
+  "mode": "built-in imagegen edit",
+  "modelVersion": "Not exposed by the built-in tool",
+  "prompt": "Use case: precise-object-edit.\nCreate one high-fidelity studio photograph of the bare clear-glass 28 ml / 16 mm Cylinder bottle.\nImage 1 is the authoritative original Photoshop glass geometry exported from the owner's archive. Preserve its exact complete neck-to-body proportions, short wide threaded neck, broad nearly flat shoulder, straight cylindrical sides, flat level rim, and thick glass base. Bare bottle height is 81 mm and body diameter is 31 mm. The neck is wider than the previously used incorrect bottle. Image 2 is ONLY the accepted glass material and studio-reflection guide; do not borrow its narrow body, tall neck, or thread arrangement.\nUpgrade the material of Image 1 to crisp premium clear glass with clean refraction, softly graduated natural vertical softbox reflections, detailed threads, and a realistic thick base. Camera stays straight-on, upright, level, with the same very shallow visible upper rim appropriate to the original photograph. The glass is empty and uncolored. Maintain the first image's silhouette, width, shoulder height and base proportions. Finish the unobstructed glass opening immediately above the top thread where the original roller previously hid the lip; keep that lip level, without enlarging or lengthening the neck.\nGenerate ONLY the complete bare glass bottle, isolated on a genuinely transparent background, centered with a small transparent margin, all edges and entire base visible. No roller, housing, cap, dip tube, pump, inserted plug, liquid, label, text, debris, gray background, floor, or cast shadow. No new geometry and no stretching. Product photography, sharply focused from rim to base.",
+  "referenceImages": [
+    "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo28-archive-geometry-2026-11-02/sources/28ml-complete-glass-geometry-guide.png",
+    "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png"
+  ],
+  "status": "generated-and-registered",
+  "approval": "Candidate for owner review; not production approved",
+  "rawFile": "docs/reviews/jumbo28-archive-geometry-2026-11-02/sources/28ml-gpt-studio-material-v1.png",
+  "rawSha256": "d9cba177bb1a66336f5c46031f2dfa303a2141a92a4db343a3d80aea10f20932"
+}

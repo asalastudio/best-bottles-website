@@ -1,0 +1,71 @@
+{
+  "status": "Local review candidate",
+  "sourceFiles": [
+    {
+      "path": "docs/reviews/jumbo28-archive-geometry-2026-11-02/sources/28ml-archive-assembly.png",
+      "bytes": 219050,
+      "sha256": "0d380240c97a3dee6d9fa73ecb58f7f1e6f266325de57ed8360bb60ebe7134a8"
+    },
+    {
+      "path": "docs/reviews/jumbo28-archive-geometry-2026-11-02/sources/28ml-body-archive-geometry-studio.svg",
+      "bytes": 5124202,
+      "sha256": "d85f195bf5cfcff92ceb331fb20b7b6aab11793bd50bed08cf977f342b21f23f"
+    },
+    {
+      "path": "docs/reviews/jumbo28-archive-geometry-2026-11-02/sources/28ml-complete-archive-reference.png",
+      "bytes": 275784,
+      "sha256": "e0e8b77ce48f31fd80086ff75b506472e72c807bfb803994c99c23111030685c"
+    },
+    {
+      "path": "docs/reviews/jumbo28-archive-geometry-2026-11-02/sources/28ml-complete-glass-geometry-guide.png",
+      "bytes": 168892,
+      "sha256": "70ae2b763634fe8202bca5c3214cdfb5a5d107731b0ee8a7c79559abaa47c7bf"
+    },
+    {
+      "path": "docs/reviews/jumbo28-archive-geometry-2026-11-02/sources/28ml-gpt-studio-material-v1.png",
+      "bytes": 1821248,
+      "sha256": "d9cba177bb1a66336f5c46031f2dfa303a2141a92a4db343a3d80aea10f20932"
+    },
+    {
+      "path": "docs/reviews/jumbo28-archive-geometry-2026-11-02/sources/28ml-neck-inspection.png",
+      "bytes": 99535,
+      "sha256": "23332dc0ee811ad3bf8644602147fd08beaa2f78c6639653331f8f42103301d8"
+    },
+    {
+      "path": "docs/reviews/jumbo28-archive-geometry-2026-11-02/sources/source-lineage.json",
+      "bytes": 1110,
+      "sha256": "60d9f66bd97feeb328cdc5034315cb58459171e44e81668dd0f26d1730fb28dc"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-28ml-16mm-archive-psd.d08abe4d61bf.webp",
+      "bytes": 874898,
+      "sha256": "d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/cap16-black.b69eeeb45b69.webp",
+      "bytes": 768394,
+      "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/cap16-white.b941c5342eae.webp",
+      "bytes": 655994,
+      "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp",
+      "bytes": 581082,
+      "sha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008"
+    },
+    {
+      "path": "public/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp",
+      "bytes": 22232,
+      "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729"
+    },
+    {
+      "path": "public/local-kits/jumbo28-archive-geometry-2026-11-02/kits.json",
+      "bytes": 15693,
+      "sha256": "2346eff0cb63ae83cb7937375123c2693948d68a4f56a5bb81a8dc963751fa00"
+    }
+  ],
+  "driveReceipt": "drive-receipt.json"
+}

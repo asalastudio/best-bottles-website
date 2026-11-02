@@ -1,0 +1,1963 @@
+{
+  "scope": "Archive-corrected 28 ml body and preserved 50 ml body, approved shared 16 mm hardware, local PDPs",
+  "states": [
+    {
+      "sku": "GBMtlRoll28Wht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            296.9210205078125,
+            106.64816284179688,
+            99.774169921875,
+            65.33059692382812
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            411.0057373046875,
+            350.13104248046875,
+            125.8681640625,
+            151.04437255859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Wht",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            296.9210205078125,
+            106.64816284179688,
+            99.774169921875,
+            65.33059692382812
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            285.1169128417969,
+            77.4310302734375,
+            125.86813354492188,
+            151.04437255859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Wht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            422.1163330078125,
+            426.06024169921875,
+            99.774169921875,
+            65.33056640625
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            285.1169128417969,
+            2.329437255859375,
+            125.86813354492188,
+            151.04434204101562
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollWht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            296.6197814941406,
+            92.072998046875,
+            100.33847045898438,
+            65.69906616210938
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            414.0784912109375,
+            364.79248046875,
+            112.7943115234375,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollWht",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            296.6197814941406,
+            92.072998046875,
+            100.33847045898438,
+            65.69906616210938
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            291.6427917480469,
+            78.59249877929688,
+            112.79428100585938,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollWht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            423.89501953125,
+            425.6973876953125,
+            100.33843994140625,
+            65.6990966796875
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            291.6427917480469,
+            3.20684814453125,
+            112.79428100585938,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            290.6748046875,
+            99.5223388671875,
+            106.00762939453125,
+            72.4564208984375
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            411.0057373046875,
+            350.13104248046875,
+            125.8681640625,
+            151.04437255859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            290.6748046875,
+            99.5223388671875,
+            106.00762939453125,
+            72.4564208984375
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            285.1169128417969,
+            77.4310302734375,
+            125.86813354492188,
+            151.04437255859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            415.87005615234375,
+            418.9344482421875,
+            106.0076904296875,
+            72.45635986328125
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            285.1169128417969,
+            2.329437255859375,
+            125.86813354492188,
+            151.04434204101562
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            290.3519592285156,
+            84.9002685546875,
+            106.60629272460938,
+            72.85848999023438
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            414.0784912109375,
+            364.79248046875,
+            112.7943115234375,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            290.3519592285156,
+            84.9002685546875,
+            106.60629272460938,
+            72.85848999023438
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            291.6427917480469,
+            78.59249877929688,
+            112.79428100585938,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            417.627197265625,
+            418.524658203125,
+            106.60626220703125,
+            72.8585205078125
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            291.6427917480469,
+            3.20684814453125,
+            112.79428100585938,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            290.6748046875,
+            99.5223388671875,
+            106.00762939453125,
+            72.4564208984375
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            411.11566162109375,
+            350.13104248046875,
+            125.8681640625,
+            151.04437255859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            290.6748046875,
+            99.5223388671875,
+            106.00762939453125,
+            72.4564208984375
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            285.1169128417969,
+            77.4310302734375,
+            125.86813354492188,
+            151.04437255859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            415.87005615234375,
+            418.9344482421875,
+            106.0076904296875,
+            72.45635986328125
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            285.1169128417969,
+            2.329437255859375,
+            125.86813354492188,
+            151.04434204101562
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollBlk",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            290.3519592285156,
+            84.9002685546875,
+            106.60629272460938,
+            72.85848999023438
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            414.177001953125,
+            364.79248046875,
+            112.7943115234375,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollBlk",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            290.3519592285156,
+            84.9002685546875,
+            106.60629272460938,
+            72.85848999023438
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            291.6427917480469,
+            78.59249877929688,
+            112.79428100585938,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollBlk",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            417.627197265625,
+            418.524658203125,
+            106.60626220703125,
+            72.8585205078125
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            291.6427917480469,
+            3.20684814453125,
+            112.79428100585938,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            296.9210205078125,
+            106.64816284179688,
+            99.774169921875,
+            65.33059692382812
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            411.11566162109375,
+            350.13104248046875,
+            125.8681640625,
+            151.04437255859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            296.9210205078125,
+            106.64816284179688,
+            99.774169921875,
+            65.33059692382812
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            285.1169128417969,
+            77.4310302734375,
+            125.86813354492188,
+            151.04437255859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            284.0588684082031,
+            170.9971923828125,
+            127.86953735351562,
+            320.39404296875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            422.1163330078125,
+            426.06024169921875,
+            99.774169921875,
+            65.33056640625
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            285.1169128417969,
+            2.329437255859375,
+            125.86813354492188,
+            151.04434204101562
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            296.6197814941406,
+            92.072998046875,
+            100.33847045898438,
+            65.69906616210938
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            414.177001953125,
+            364.79248046875,
+            112.7943115234375,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "viewport": "desktop",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            296.6197814941406,
+            92.072998046875,
+            100.33847045898438,
+            65.69906616210938
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            291.6427917480469,
+            78.59249877929688,
+            112.79428100585938,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "viewport": "desktop",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            284.9890441894531,
+            156.92037963867188,
+            126.00863647460938,
+            334.4704284667969
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            423.89501953125,
+            425.6973876953125,
+            100.33843994140625,
+            65.6990966796875
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            291.6427917480469,
+            3.20684814453125,
+            112.79428100585938,
+            135.36376953125
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollWht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            156.94058227539062,
+            68.1962890625,
+            74.32232666015625,
+            48.665496826171875
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            243.9452362060547,
+            270.2156677246094,
+            83.55769348144531,
+            100.27194213867188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollWht",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            156.94058227539062,
+            68.1962890625,
+            74.32232666015625,
+            48.665496826171875
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            153.25440979003906,
+            58.21568298339844,
+            83.55772399902344,
+            100.27192687988281
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollWht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            251.21612548828125,
+            315.3254699707031,
+            74.32232666015625,
+            48.665496826171875
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            153.25440979003906,
+            2.37445068359375,
+            83.55772399902344,
+            100.27194213867188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            152.2962646484375,
+            62.88661193847656,
+            78.96664428710938,
+            53.97517395019531
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            243.9452362060547,
+            270.2156677246094,
+            83.55769348144531,
+            100.27194213867188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            152.2962646484375,
+            62.88661193847656,
+            78.96664428710938,
+            53.97517395019531
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            153.25440979003906,
+            58.21568298339844,
+            83.55772399902344,
+            100.27192687988281
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            246.57180786132812,
+            310.01580810546875,
+            78.96664428710938,
+            53.97515869140625
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            153.25440979003906,
+            2.37445068359375,
+            83.55772399902344,
+            100.27194213867188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollBlk",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            152.2962646484375,
+            62.88661193847656,
+            78.96664428710938,
+            53.97517395019531
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            244.01820373535156,
+            270.2156677246094,
+            83.55769348144531,
+            100.27194213867188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollBlk",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            152.2962646484375,
+            62.88661193847656,
+            78.96664428710938,
+            53.97517395019531
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            153.25440979003906,
+            58.21568298339844,
+            83.55772399902344,
+            100.27192687988281
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50RollBlk",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            246.57180786132812,
+            310.01580810546875,
+            78.96664428710938,
+            53.97515869140625
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            153.25440979003906,
+            2.37445068359375,
+            83.55772399902344,
+            100.27194213867188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            156.94058227539062,
+            68.1962890625,
+            74.32232666015625,
+            48.665496826171875
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            244.01820373535156,
+            270.2156677246094,
+            83.55769348144531,
+            100.27194213867188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            156.94058227539062,
+            68.1962890625,
+            74.32232666015625,
+            48.665496826171875
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            153.25440979003906,
+            58.21568298339844,
+            83.55772399902344,
+            100.27192687988281
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "rect": [
+            148.3173370361328,
+            116.236328125,
+            93.33871459960938,
+            247.7587890625
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            251.21612548828125,
+            315.3254699707031,
+            74.32232666015625,
+            48.665496826171875
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            153.25440979003906,
+            2.37445068359375,
+            83.55772399902344,
+            100.27194213867188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Wht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            157.1528778076172,
+            79.0009765625,
+            73.90962219238281,
+            48.3892822265625
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            241.6694793701172,
+            259.3558654785156,
+            93.23472595214844,
+            111.88424682617188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Wht",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            157.1528778076172,
+            79.0009765625,
+            73.90962219238281,
+            48.3892822265625
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            148.42088317871094,
+            57.35585021972656,
+            93.2347412109375,
+            111.88423156738281
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Wht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            249.88778686523438,
+            315.6025390625,
+            73.90960693359375,
+            48.3892822265625
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            148.42088317871094,
+            1.72503662109375,
+            93.2347412109375,
+            111.88421630859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            152.53829956054688,
+            73.72355651855469,
+            78.52420043945312,
+            53.66670227050781
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            241.6694793701172,
+            259.3558654785156,
+            93.23472595214844,
+            111.88424682617188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            152.53829956054688,
+            73.72355651855469,
+            78.52420043945312,
+            53.66670227050781
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            148.42088317871094,
+            57.35585021972656,
+            93.2347412109375,
+            111.88423156738281
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            245.27320861816406,
+            310.3251037597656,
+            78.52418518066406,
+            53.666717529296875
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908/256.343dd5229fd9.webp",
+          "rect": [
+            148.42088317871094,
+            1.72503662109375,
+            93.2347412109375,
+            111.88421630859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            152.53829956054688,
+            73.72355651855469,
+            78.52420043945312,
+            53.66670227050781
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            241.75091552734375,
+            259.3558654785156,
+            93.2347412109375,
+            111.88424682617188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            152.53829956054688,
+            73.72355651855469,
+            78.52420043945312,
+            53.66670227050781
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            148.42088317871094,
+            57.35585021972656,
+            93.2347412109375,
+            111.88423156738281
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/256.1ef8e5ac8620.webp",
+          "rect": [
+            245.27320861816406,
+            310.3251037597656,
+            78.52418518066406,
+            53.666717529296875
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            148.42088317871094,
+            1.72503662109375,
+            93.2347412109375,
+            111.88421630859375
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            157.1528778076172,
+            79.0009765625,
+            73.90962219238281,
+            48.3892822265625
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            241.75091552734375,
+            259.3558654785156,
+            93.2347412109375,
+            111.88424682617188
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "viewport": "mobile",
+      "view": "capon",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            157.1528778076172,
+            79.0009765625,
+            73.90962219238281,
+            48.3892822265625
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            148.42088317871094,
+            57.35585021972656,
+            93.2347412109375,
+            111.88423156738281
+          ]
+        }
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "viewport": "mobile",
+      "view": "exploded",
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/d08abe4d61bfbdd755256d064e079d76087e13caa5b3bb37208a59c6a81f1780/256.ed8387e7645a.webp",
+          "rect": [
+            147.6305389404297,
+            126.66363525390625,
+            94.71343994140625,
+            237.33172607421875
+          ]
+        },
+        {
+          "slot": "roller",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "rect": [
+            249.88778686523438,
+            315.6025390625,
+            73.90960693359375,
+            48.3892822265625
+          ]
+        },
+        {
+          "slot": "cap",
+          "source": "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7/256.847a2ee574b3.webp",
+          "rect": [
+            148.42088317871094,
+            1.72503662109375,
+            93.2347412109375,
+            111.88421630859375
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "controls": [
+    {
+      "sku": "GBMtlRoll28Wht",
+      "viewport": "desktop",
+      "normalProductUrl": "http://localhost:3010/products/cylinder-28ml-clear-16mm-rollon?sku=GBMtlRoll28Wht",
+      "wells": [
+        2,
+        2
+      ],
+      "switches": [
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp"
+      ]
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "viewport": "desktop",
+      "normalProductUrl": "http://localhost:3010/products/cylinder-28ml-clear-16mm-rollon?sku=GBCyl1ozRollWht",
+      "wells": [
+        2,
+        2
+      ],
+      "switches": [
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp"
+      ]
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "viewport": "desktop",
+      "normalProductUrl": "http://localhost:3010/products/cylinder-28ml-clear-16mm-rollon?sku=GBRoll28Blk",
+      "wells": [
+        2,
+        2
+      ],
+      "switches": [
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp"
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "viewport": "desktop",
+      "normalProductUrl": "http://localhost:3010/products/cylinder-28ml-clear-16mm-rollon?sku=GBMtlRoll28Blk",
+      "wells": [
+        2,
+        2
+      ],
+      "switches": [
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp"
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Wht",
+      "viewport": "mobile",
+      "normalProductUrl": "http://localhost:3010/products/cylinder-28ml-clear-16mm-rollon?sku=GBMtlRoll28Wht",
+      "wells": [
+        2,
+        2
+      ],
+      "switches": [
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp"
+      ]
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "viewport": "mobile",
+      "normalProductUrl": "http://localhost:3010/products/cylinder-28ml-clear-16mm-rollon?sku=GBCyl1ozRollWht",
+      "wells": [
+        2,
+        2
+      ],
+      "switches": [
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp"
+      ]
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "viewport": "mobile",
+      "normalProductUrl": "http://localhost:3010/products/cylinder-28ml-clear-16mm-rollon?sku=GBRoll28Blk",
+      "wells": [
+        2,
+        2
+      ],
+      "switches": [
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp"
+      ]
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "viewport": "mobile",
+      "normalProductUrl": "http://localhost:3010/products/cylinder-28ml-clear-16mm-rollon?sku=GBMtlRoll28Blk",
+      "wells": [
+        2,
+        2
+      ],
+      "switches": [
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+        "http://localhost:3010/local-kits/cylinder-family-completion-2026-11-02/display/e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729/128.3a3ac12e8859.webp"
+      ]
+    }
+  ],
+  "retriedFailures": [
+    {
+      "sku": "GBMtlRoll28Wht",
+      "viewport": "mobile",
+      "message": "The expression evaluated to a falsy value:\n\n  assert(stripText.includes('Metal and plastic roller balls'))\n"
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "viewport": "mobile",
+      "message": "The expression evaluated to a falsy value:\n\n  assert(stripText.includes('Metal and plastic roller balls'))\n"
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "viewport": "mobile",
+      "message": "The expression evaluated to a falsy value:\n\n  assert(stripText.includes('Metal and plastic roller balls'))\n"
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "viewport": "mobile",
+      "message": "The expression evaluated to a falsy value:\n\n  assert(stripText.includes('Metal and plastic roller balls'))\n"
+    },
+    {
+      "kind": "run",
+      "message": "[{\"sku\":\"GBMtlRoll28Wht\",\"viewport\":\"mobile\",\"message\":\"The expression evaluated to a falsy value:\\n\\n  assert(stripText.includes('Metal and plastic roller balls'))\\n\"},{\"sku\":\"GBCyl1ozRollWht\",\"viewport\":\"mobile\",\"message\":\"The expression evaluated to a falsy value:\\n\\n  assert(stripText.includes('Metal and plastic roller balls'))\\n\"},{\"sku\":\"GBRoll28Blk\",\"viewport\":\"mobile\",\"message\":\"The expression evaluated to a falsy value:\\n\\n  assert(stripText.includes('Metal and plastic roller balls'))\\n\"},{\"sku\":\"GBMtlRoll28Blk\",\"viewport\":\"mobile\",\"message\":\"The expression evaluated to a falsy value:\\n\\n  assert(stripText.includes('Metal and plastic roller balls'))\\n\"}]\n\n4 !== 0\n"
+    }
+  ],
+  "passed": true
+}

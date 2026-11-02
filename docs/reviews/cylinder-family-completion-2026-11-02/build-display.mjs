@@ -26,5 +26,9 @@ for(const [url,image] of assets){
 }
 const entries=Object.values(report.assets);report.summary={sources:entries.length,sourceBytes:entries.reduce((n,e)=>n+e.sourceBytes,0),displayBytes:Object.fromEntries([128,256,640,1200].map(w=>[w,entries.reduce((n,e)=>n+e.derivatives[w].bytes,0)])),losslessChecksPassed:true,publication:'Local review delivery copies only; source masters unchanged'};
 fs.writeFileSync(dir+'/display-verification.json',JSON.stringify(report,null,2)+'\n');
-fs.writeFileSync('src/lib/products/review-display-images.generated.json',JSON.stringify({version:sha(Buffer.from(JSON.stringify({sources,pixelWidths}))).slice(0,16),sources,pixelWidths})+'\n');
+// Preserve separately reviewed families when refreshing the Cylinder delivery set.
+const manifestFile='src/lib/products/review-display-images.generated.json';
+const existing=JSON.parse(fs.readFileSync(manifestFile,'utf8'));
+const merged={sources:{...existing.sources,...sources},pixelWidths:{...existing.pixelWidths,...pixelWidths}};
+fs.writeFileSync(manifestFile,JSON.stringify({version:sha(Buffer.from(JSON.stringify(merged))).slice(0,16),...merged})+'\n');
 console.log(JSON.stringify(report.summary));

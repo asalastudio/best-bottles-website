@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "corrected28mlRecipes": 4,
+  "unchangedOtherRecipes": 105,
+  "body50mlUnchanged": true,
+  "approvedRollerAndCapImagesPreserved": true,
+  "canvasHeightTargetsPreserved": true,
+  "source": "Owner-specified /Volumes/Achive/.../13. 16 mm archive; full glass-neck retouch layers included",
+  "status": "corrected-local-candidate-awaiting-visual-review",
+  "hostedManifest": "unchanged"
+}

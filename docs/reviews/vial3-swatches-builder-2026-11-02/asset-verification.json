@@ -1,0 +1,125 @@
+{
+  "method": "Cut out the existing approved released photographs without regenerating, stretching or recoloring their body pixels.",
+  "assets": [
+    {
+      "image": {
+        "url": "/local-kits/vial3-swatches-builder-2026-11-02/body-green.986fd79ac5c6.webp",
+        "key": "body-green.986fd79ac5c6.webp",
+        "sha256": "986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90",
+        "bytes": 117178,
+        "width": 246,
+        "height": 530
+      },
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "right": 246,
+        "bottom": 530
+      },
+      "sourceFile": "public/images/catalog/vials-approved-2026-09-25/GBVGreen2o4BlackCapSht.d703a6db23d6.webp",
+      "sourceSha256": "d703a6db23d634f3064335f552baa5b554dbc90bf671f1774c9b3ef489997678",
+      "sourceRegion": {
+        "left": 508,
+        "top": 1031,
+        "width": 246,
+        "height": 530
+      },
+      "originalRgbChanged": 0,
+      "role": "body",
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0
+    },
+    {
+      "image": {
+        "url": "/local-kits/vial3-swatches-builder-2026-11-02/body-blue.e531695dad69.webp",
+        "key": "body-blue.e531695dad69.webp",
+        "sha256": "e531695dad6995d53156e807c17ad030f6a06674ec273e94818fd630e8cc6c24",
+        "bytes": 121868,
+        "width": 259,
+        "height": 532
+      },
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "right": 259,
+        "bottom": 532
+      },
+      "sourceFile": "public/images/catalog/vials-approved-2026-09-25/GBVBlu1o9BlackCapSht.ecc1de43a5fe.webp",
+      "sourceSha256": "ecc1de43a5fe5bc4f91813e75e40474f89d3258d442b5ee814338b8dcc901908",
+      "sourceRegion": {
+        "left": 509,
+        "top": 1029,
+        "width": 259,
+        "height": 532
+      },
+      "originalRgbChanged": 0,
+      "role": "body",
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0
+    },
+    {
+      "image": {
+        "url": "/local-kits/vial3-swatches-builder-2026-11-02/cap-black.4ba95ee185e3.webp",
+        "key": "cap-black.4ba95ee185e3.webp",
+        "sha256": "4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade",
+        "bytes": 50184,
+        "width": 257,
+        "height": 163
+      },
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "right": 257,
+        "bottom": 163
+      },
+      "sourceFile": "public/images/catalog/vials-approved-2026-09-25/GBVGreen2o4BlackCapSht.d703a6db23d6.webp",
+      "sourceSha256": "d703a6db23d634f3064335f552baa5b554dbc90bf671f1774c9b3ef489997678",
+      "sourceRegion": {
+        "left": 797,
+        "top": 1393,
+        "width": 257,
+        "height": 163
+      },
+      "originalRgbChanged": 0,
+      "role": "cap",
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0
+    },
+    {
+      "image": {
+        "url": "/local-kits/vial3-swatches-builder-2026-11-02/cap-white.4949217327e8.webp",
+        "key": "cap-white.4949217327e8.webp",
+        "sha256": "4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499",
+        "bytes": 8052,
+        "width": 182,
+        "height": 119
+      },
+      "bounds": [
+        265,
+        514,
+        447,
+        633
+      ],
+      "sourceFile": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/20. GB2o3/1.  Green 2o3 (Uncapped)/2. GBVialGreen2o3WhtCapSht.psd",
+      "sha256": "52584c28fb0d21d1606b4b43cb15ae084dd4b82727c1be04b93722c8f1d86915",
+      "layerIndex": 2,
+      "layerName": "Layer 3",
+      "role": "Detached short white cap only; bottle layer is excluded.",
+      "crosswalk": "Exact current green and blue vial pages show this short white cap silhouette and the same 13-415CpShortWhite thumbnail, while specifying 13-425 bottle necks. This does not establish thread-wide compatibility.",
+      "alphaDifferences": 0,
+      "visibleColorDifferences": 0
+    }
+  ],
+  "sourceConflicts": [
+    "The current blue source describes 5/8 dram but its capacity table says 2 ml while the existing catalog route says 3 ml. Capacity records are unchanged.",
+    "Green legacy height is 29 mm; the approved 2026-09-25 caliper scale uses 27 mm. Preserve that approved canvas scale; no new measurements are asserted.",
+    "A blue/white source exists but has no active catalog/Shopify variant. It is not made orderable by this image repair."
+  ],
+  "configurations": [
+    "GBVGreen2o4BlackCapSht",
+    "GBVGreen2o4WhtCapSht",
+    "GBVBlu1o9BlackCapSht"
+  ],
+  "singleBodyPerGlass": true,
+  "publication": "Local review candidate; hosted approved manifest unchanged"
+}
