@@ -9,6 +9,7 @@ import { builderBodyFrame, builderPreviewLayout } from "@/lib/bottle-builder/pre
 import { layerCropStyleForPart, layerTransform, previewFrame } from "@/lib/bottle-builder/preview-frame";
 import { isOptimizableImageUrl, isRegisterAssetUrl } from "@/lib/products/optimizable-image";
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
+import { plugMaskStyle, sprayerPlugMask } from "@/lib/products/sprayer-glass-transmission";
 import { BEHIND_GLASS_SLOTS } from "@/lib/products/pdp-redesign/stage";
 
 /** Clear glass and the clear dip tube take the stage colour. A published dropper
@@ -166,6 +167,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                         onError={() => onLayerError(part.image.url)} />
                 </g>;
             }
+            const transmission = plugMaskStyle(sprayerPlugMask(kit, part));
             const baselineY = kit?.anchors?.baselineY;
             const trimBottomPct = Math.max(0, Math.min(100, part.trimBottomPct ?? 0));
             const baselineVisible = part.box && BEHIND_GLASS_SLOTS.has(part.slot) && baselineY !== undefined
@@ -179,12 +181,12 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                 return <g key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} transform={layerTransform(transform, part)}>
                     <defs><clipPath id={clipId} clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width={part.image.width} height={visible} /></clipPath></defs>
                     <image href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} x="0" y="0" clipPath={`url(#${clipId})`}
-                        style={{ opacity: part.opacity, mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined) }}
+                        style={{ ...transmission, opacity: part.opacity, mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined) }}
                         onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />
                 </g>;
             }
             return <image key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} href={layerHref(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} transform={layerTransform(transform, part)}
-                x="0" y="0" style={{ opacity: part.opacity, mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined) }}
+                x="0" y="0" style={{ ...transmission, opacity: part.opacity, mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined) }}
                 onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />;
         })}
 

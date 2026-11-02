@@ -38,6 +38,8 @@ import { rectangleApplicatorGlass } from "../rectangle-applicator";
 import { allowsExplodedClosure, hangsBesideGlass, requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { placeStageBackdrop, stageBackdropFor, type StageBackdropPlacement } from "./stage-backdrops";
 
+import { sprayerPlugMask } from "../sprayer-glass-transmission";
+
 export type StageView = "sidecar" | "capon" | "exploded";
 
 export const STAGE_VIEWS: ReadonlyArray<{ id: StageView; label: string }> = [
@@ -88,6 +90,8 @@ export type KitLike = {
 };
 
 export type StagePart = {
+    /** Optical transmission applied only while the mechanism is seated in glass. */
+    maskImage?: string;
     opacity?: number;
     blendMode?: "multiply";
     key: string;
@@ -356,6 +360,7 @@ export function stageLayout(
             zIndex: index + 1,
             opacity: part.opacity,
             blendMode: part.blendMode,
+            maskImage: sprayerPlugMask(kit, part, view),
             ...(part.box ? {
                 box: {
                     leftPct: (part.box.x / canvas.width) * 100,

@@ -1,0 +1,181 @@
+{
+  "status": "passed",
+  "manifestVersion": "4c6095d23d920c4f",
+  "pdp": [],
+  "catalog": [
+    {
+      "sku": "GBTulip6SpryGlMatt",
+      "viewport": "desktop",
+      "mask": "linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.38) 29.871%, rgb(0, 0, 0) 40.339%, rgb(0, 0, 0) 100%)",
+      "origin": "fill-box",
+      "clip": "fill-box",
+      "opacity": "0.4",
+      "box": [
+        847.1366577148438,
+        3155.284912109375,
+        17.71099853515625,
+        148.624755859375
+      ]
+    },
+    {
+      "sku": "GBSleek8SpryGlMatt",
+      "viewport": "desktop",
+      "mask": "linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.38) 16.556%, rgb(0, 0, 0) 23.695%, rgb(0, 0, 0) 100%)",
+      "origin": "fill-box",
+      "clip": "fill-box",
+      "opacity": "0.4",
+      "box": [
+        486.6134033203125,
+        1173.88037109375,
+        15.414794921875,
+        155.593505859375
+      ]
+    },
+    {
+      "sku": "GBTulip6SpryGlMatt",
+      "viewport": "mobile",
+      "mask": "linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.38) 29.871%, rgb(0, 0, 0) 40.339%, rgb(0, 0, 0) 100%)",
+      "origin": "fill-box",
+      "clip": "fill-box",
+      "opacity": "0.4",
+      "box": [
+        186.27503967285156,
+        8929.068359375,
+        17.449905395507812,
+        146.43359375
+      ]
+    },
+    {
+      "sku": "GBSleek8SpryGlMatt",
+      "viewport": "mobile",
+      "mask": "linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.38) 16.556%, rgb(0, 0, 0) 23.695%, rgb(0, 0, 0) 100%)",
+      "origin": "fill-box",
+      "clip": "fill-box",
+      "opacity": "0.4",
+      "box": [
+        188.0532684326172,
+        2522.37255859375,
+        15.187545776367188,
+        153.2998046875
+      ]
+    }
+  ],
+  "builder": [
+    {
+      "sku": "GBTulip6SpryGlMatt",
+      "viewport": "desktop",
+      "mask": "linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.38) 29.871%, rgb(0, 0, 0) 40.339%, rgb(0, 0, 0) 100%)",
+      "origin": "fill-box",
+      "clip": "fill-box",
+      "opacity": "0.4",
+      "box": [
+        847.1658325195312,
+        725.8956298828125,
+        20.0902099609375,
+        168.59039306640625
+      ]
+    },
+    {
+      "sku": "GBSleek8SpryGlMatt",
+      "viewport": "desktop",
+      "mask": "linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.38) 16.556%, rgb(0, 0, 0) 23.695%, rgb(0, 0, 0) 100%)",
+      "origin": "fill-box",
+      "clip": "fill-box",
+      "opacity": "0.4",
+      "box": [
+        849.213134765625,
+        705.9542236328125,
+        17.48553466796875,
+        176.4952392578125
+      ]
+    },
+    {
+      "sku": "GBTulip6SpryGlMatt",
+      "viewport": "mobile",
+      "mask": "linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.38) 29.871%, rgb(0, 0, 0) 40.339%, rgb(0, 0, 0) 100%)",
+      "origin": "fill-box",
+      "clip": "fill-box",
+      "opacity": "0.4",
+      "box": [
+        191.43508911132812,
+        226.4324188232422,
+        7.1298065185546875,
+        59.83088684082031
+      ]
+    },
+    {
+      "sku": "GBSleek8SpryGlMatt",
+      "viewport": "mobile",
+      "mask": "linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.38) 16.556%, rgb(0, 0, 0) 23.695%, rgb(0, 0, 0) 100%)",
+      "origin": "fill-box",
+      "clip": "fill-box",
+      "opacity": "0.4",
+      "box": [
+        192.16165161132812,
+        219.35543823242188,
+        6.2054290771484375,
+        62.636199951171875
+      ]
+    }
+  ],
+  "comparisons": [],
+  "paintedMasks": [
+    {
+      "tag": "desktop-GBTulip6SpryGlMatt-catalog",
+      "changedPixels": 339,
+      "shaftChangedPixels": 0,
+      "tipRasterEdgePixels": 0,
+      "geometryUnchanged": true
+    },
+    {
+      "tag": "desktop-GBTulip6SpryGlMatt-builder",
+      "changedPixels": 404,
+      "shaftChangedPixels": 0,
+      "tipRasterEdgePixels": 0,
+      "geometryUnchanged": true
+    },
+    {
+      "tag": "desktop-GBSleek8SpryGlMatt-catalog",
+      "changedPixels": 277,
+      "shaftChangedPixels": 0,
+      "tipRasterEdgePixels": 0,
+      "geometryUnchanged": true
+    },
+    {
+      "tag": "desktop-GBSleek8SpryGlMatt-builder",
+      "changedPixels": 347,
+      "shaftChangedPixels": 0,
+      "tipRasterEdgePixels": 0,
+      "geometryUnchanged": true
+    },
+    {
+      "tag": "mobile-GBTulip6SpryGlMatt-catalog",
+      "changedPixels": 315,
+      "shaftChangedPixels": 0,
+      "tipRasterEdgePixels": 0,
+      "geometryUnchanged": true
+    },
+    {
+      "tag": "mobile-GBTulip6SpryGlMatt-builder",
+      "changedPixels": 66,
+      "shaftChangedPixels": 0,
+      "tipRasterEdgePixels": 0,
+      "geometryUnchanged": true
+    },
+    {
+      "tag": "mobile-GBSleek8SpryGlMatt-catalog",
+      "changedPixels": 268,
+      "shaftChangedPixels": 0,
+      "tipRasterEdgePixels": 2,
+      "geometryUnchanged": true
+    },
+    {
+      "tag": "mobile-GBSleek8SpryGlMatt-builder",
+      "changedPixels": 51,
+      "shaftChangedPixels": 0,
+      "tipRasterEdgePixels": 0,
+      "geometryUnchanged": true
+    }
+  ],
+  "errors": []
+}

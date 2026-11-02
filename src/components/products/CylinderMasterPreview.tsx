@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useState } from "react";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
+import { plugMaskStyle } from "@/lib/products/sprayer-glass-transmission";
 import { stageLayout } from "@/lib/products/pdp-redesign/stage";
 import { registerImageSrc } from "@/lib/products/register-image";
 import { cylinderMasterSource } from "@/lib/products/cylinder-master";
@@ -63,7 +64,7 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
                     <clipPath id={clipId} clipPathUnits="userSpaceOnUse"><rect x={x} y={y} width={width} height={visibleHeight} /></clipPath>
                 </defs>}
                 <image href={registerImageSrc(part.url, 640)} data-bb-master-source={part.url} x={x} y={y}
-                    width={width} height={height} opacity={part.opacity ?? 1} style={{ mixBlendMode: part.blendMode }}
+                    width={width} height={height} opacity={part.opacity ?? 1} style={{ mixBlendMode: part.blendMode, ...plugMaskStyle(part.maskImage) }}
                     clipPath={part.clipBottomPct !== undefined ? `url(#${clipId})` : undefined} data-bb-master-part={part.slot} />
             </g>;
         })}

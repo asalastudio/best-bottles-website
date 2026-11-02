@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "passed": 3263,
+  "failed": 0,
+  "skipped": 7,
+  "typecheck": "passed",
+  "scopedLint": "passed"
+}

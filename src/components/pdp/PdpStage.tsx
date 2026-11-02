@@ -1,5 +1,7 @@
 "use client";
 
+import { plugMaskStyle } from "@/lib/products/sprayer-glass-transmission";
+
 /**
  * The canvas: pick line and view switch, the cap rail, the stage with its
  * three views, and the glass lineup. One DOM for desktop and mobile; the
@@ -314,6 +316,7 @@ export default function PdpStage({
                                             onError={() => { if (markRegisterOptimizerUnavailable(part.url)) showRaw(part.url); }}
                                             style={{
                                                 position: "absolute", display: "block", maxWidth: "none", opacity: part.opacity,
+                                                ...plugMaskStyle(part.maskImage),
                                                 left: `${part.box.leftPct}%`, top: `${part.box.topPct}%`,
                                                 width: `${part.box.widthPct}%`, height: `${part.box.heightPct}%`,
                                                 ...(part.clipBottomPct ? { clipPath: `inset(0 0 ${part.clipBottomPct}% 0)` } : {}),
