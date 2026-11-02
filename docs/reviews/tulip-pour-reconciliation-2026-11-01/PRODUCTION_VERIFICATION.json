@@ -1,0 +1,14 @@
+{
+  "productionVerified": true,
+  "merge": "6d8cde4337640c9fd47570cdb4fc9421d85deb2f",
+  "pullRequest": "https://github.com/asalastudio/best-bottles-website/pull/385",
+  "origin": "https://best-bottles-website.vercel.app",
+  "masterVersion": "e5c8e5e7837363dc",
+  "catalogStates": 38,
+  "catalogSkus": 19,
+  "pdpStates": 12,
+  "masterApis": 290,
+  "builderChecks": 10,
+  "bodySourcesIdenticalAcrossSurfaces": true,
+  "unresolvedComponentIdentity": "GBTulip6BlkShSht"
+}
