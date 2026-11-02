@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "corrected50mlRecipes": 4,
+  "unchangedOtherRecipes": 105,
+  "body28mlUnchanged": true,
+  "approvedRollerAndCapImagesPreserved": true,
+  "canvasHeightTargetsPreserved": true,
+  "source": "Owner supplied complete GBCyl50RollBlk PSD/reference. Glass neck pixels in retouch/roller layers are included.",
+  "status": "corrected-local-candidate-awaiting-visual-review",
+  "hostedManifest": "unchanged"
+}

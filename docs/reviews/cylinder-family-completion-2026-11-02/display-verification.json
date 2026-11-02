@@ -504,43 +504,43 @@
         }
       }
     },
-    "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-native-psd.c0f0c061ada2.webp": {
-      "sourceSha256": "c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b",
-      "sourceBytes": 21776,
+    "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp": {
+      "sourceSha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008",
+      "sourceBytes": 581082,
       "derivatives": {
         "128": {
-          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b/128.9fd831ce4f2d.webp",
-          "sha256": "9fd831ce4f2ddce5ee531ee678f409242a096c3f2decc2f188b3305e5dbb7959",
-          "bytes": 4304,
+          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/128.81242a8a1d34.webp",
+          "sha256": "81242a8a1d341ebfa237b3b437c704c91af8ce6182bd6da5dfde37db1f03b181",
+          "bytes": 6722,
           "width": 128,
           "height": 84,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         },
         "256": {
-          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b/256.0cc1d8d20232.webp",
-          "sha256": "0cc1d8d2023294a84fc62d982777ae1c132c47f62834184e3605e9abad876cc8",
-          "bytes": 13480,
+          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/256.669c97164d85.webp",
+          "sha256": "669c97164d859262aafea63a61b04fbd7e7d3198bf2f9015a0af79e6578fed06",
+          "bytes": 22244,
           "width": 256,
           "height": 168,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         },
         "640": {
-          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b/640.c0f0c061ada2.webp",
-          "sha256": "c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b",
-          "bytes": 21776,
-          "width": 336,
-          "height": 220,
+          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/640.98c526ada493.webp",
+          "sha256": "98c526ada493630e53ce399456266bac9903718cd67585b4b67093b7e278609f",
+          "bytes": 128350,
+          "width": 640,
+          "height": 419,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         },
         "1200": {
-          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b/1200.c0f0c061ada2.webp",
-          "sha256": "c0f0c061ada24e43eff7f9b76b0bca1aef347070bbf442ef414878538e3a301b",
-          "bytes": 21776,
-          "width": 336,
-          "height": 220,
+          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008/1200.36f6fc265990.webp",
+          "sha256": "36f6fc26599044792c10f6437f448ebf0d696c983f43fc6af8150413cdd971be",
+          "bytes": 451718,
+          "width": 1200,
+          "height": 786,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         }
@@ -588,43 +588,43 @@
         }
       }
     },
-    "/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-50ml-16mm.583b5d7a43ef.png": {
-      "sourceSha256": "583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c",
-      "sourceBytes": 573361,
+    "/local-kits/cylinder-family-completion-2026-11-02/body-cylinder-50ml-16mm-complete-psd.53a2d1ee7a91.webp": {
+      "sourceSha256": "53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e",
+      "sourceBytes": 1096970,
       "derivatives": {
         "128": {
-          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c/128.974083808686.webp",
-          "sha256": "9740838086864b53e75a6d7e26cf0ce7fe70effad7a58f4bc813b624e950fa09",
-          "bytes": 15396,
+          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/128.e76d81d8ae87.webp",
+          "sha256": "e76d81d8ae87e4b0f4e7880a9230dfa4dd76dd7ca3e510085f178037f714c46c",
+          "bytes": 27566,
           "width": 128,
-          "height": 292,
+          "height": 340,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         },
         "256": {
-          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c/256.55d96bae21a5.webp",
-          "sha256": "55d96bae21a5d872803a62221d11292879b9e4fc0210af6e00082a625ea2c256",
-          "bytes": 40380,
+          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/256.49de0424402e.webp",
+          "sha256": "49de0424402e3924adeef6e06ded0a9d06efd463f885767b50157b3f7ab04413",
+          "bytes": 102086,
           "width": 256,
-          "height": 585,
+          "height": 679,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         },
         "640": {
-          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c/640.67b39b1cd258.webp",
-          "sha256": "67b39b1cd2586de4d62e971f30968878ff153f8c9f7aebbe8dc2a29bcf7e88f3",
-          "bytes": 203194,
+          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/640.98013c815b02.webp",
+          "sha256": "98013c815b022f57ac80881f4843f6e5f53d2e4037faf86062a7d6037b62159b",
+          "bytes": 527300,
           "width": 640,
-          "height": 1461,
+          "height": 1699,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         },
         "1200": {
-          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/583b5d7a43ef7242dff43910ff81cc1d37c4cf1fb31877b83cead5f38b1f575c/1200.f96d04ab35bd.webp",
-          "sha256": "f96d04ab35bda6f8ddece98dee680a521491361fb9f269c828df33fb7f4a5cc3",
-          "bytes": 353752,
-          "width": 960,
-          "height": 2192,
+          "url": "/local-kits/cylinder-family-completion-2026-11-02/display/53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e/1200.53a2d1ee7a91.webp",
+          "sha256": "53a2d1ee7a9159785f4ce3c8ea7a76cd64cec94ea6208388a6813cb21022e38e",
+          "bytes": 1096970,
+          "width": 1018,
+          "height": 2702,
           "alphaDifferences": 0,
           "visibleColorDifferences": 0
         }
@@ -717,12 +717,12 @@
   },
   "summary": {
     "sources": 17,
-    "sourceBytes": 7124804,
+    "sourceBytes": 8207719,
     "displayBytes": {
-      "128": 660918,
-      "256": 1737840,
-      "640": 3143898,
-      "1200": 4735588
+      "128": 675506,
+      "256": 1808310,
+      "640": 3574578,
+      "1200": 5908748
     },
     "losslessChecksPassed": true,
     "publication": "Local review delivery copies only; source masters unchanged"

@@ -25,8 +25,21 @@ async function image(file:string,name:string){
 const nativeDir='docs/reviews/jumbo-roller-psd-match-2026-11-02';
 const nativeVerification=read(nativeDir+'/native-ball-verification.json');
 assert(nativeVerification.results.every((r:{changedBallPixels:number})=>r.changedBallPixels===0),'Original PSD ball pixels must remain unchanged');
-const inserts={metal:await image(nativeDir+'/sources/roller16-metal-native-psd.svg','roller16-metal-native-psd'),plastic:await image(nativeDir+'/sources/roller16-plastic-native-psd.svg','roller16-plastic-native-psd')};
+const materialDir='docs/reviews/jumbo-roller-material-2026-11-02';
+const materialFile=materialDir+'/sources/metal-registered.svg';
+const material=fs.existsSync(materialFile)?read(materialDir+'/geometry-verification.json'):null;
+const metal=await image(material?materialFile:nativeDir+'/sources/roller16-metal-native-psd.svg',material?'roller16-metal-psd-geometry-studio':'roller16-metal-native-psd');
+if(material){
+    assert.equal(material.alphaDifferences,0,'Original PSD outline changed');
+    const s=metal.image.width/material.nativeWidth;
+    metal.bounds=Object.fromEntries(Object.entries(material.nativeBounds as Record<string,number>).map(([key,value])=>[key,value*s])) as typeof metal.bounds;
+}
+const inserts={metal,plastic:await image(nativeDir+'/sources/roller16-plastic-native-psd.svg','roller16-plastic-native-psd')};
 const caps={Black:await image(dir+'/sources/cap16-black-clean.png','cap16-black'),White:await image(dir+'/sources/cap16-white-clean.png','cap16-white')};
+const correctedBodyFile='docs/reviews/jumbo-body-reference-2026-11-02/body-registration.json';
+const correctedBody=fs.existsSync(correctedBodyFile)?read(correctedBodyFile):null;
+const correctedAsset=correctedBody?await image(correctedBody.sourceFile,'body-cylinder-50ml-16mm-complete-psd'):null;
+if(correctedBody)assert.equal(correctedBody.alphaDifferences,0,'Complete PSD glass outline changed');
 const dims:Record<number,{height:number;diameter:number;closedHeight:number}>={28:{height:81,diameter:31,closedHeight:100},50:{height:98,diameter:37,closedHeight:116}};
 // Registration width from the original 28 ml photo: the white flange spans
 // approximately 294 px against 445 px of a 31 mm body. This is not a new caliper measurement.
@@ -43,32 +56,41 @@ function part(slot:string,asset:Awaited<ReturnType<typeof image>>,axis:number,ba
 for(const row of catalog.filter(r=>r.category==='Glass Bottle'&&r.neckThreadSize==='16mm'&&[28,50].includes(r.capacityMl ?? 0))){
     assert(row.capacityMl===28||row.capacityMl===50,'Unexpected jumbo roller capacity');
     assert(row.capColor==='Black'||row.capColor==='White','Unexpected jumbo roller cap finish');
-    const d=dims[row.capacityMl],master=library.find(r=>r.bodyId==='cylinder-'+row.capacityMl+'ml-16mm'&&r.glass==='Clear');assert(master?.sourceAvailable);
+    const d=dims[row.capacityMl],recovered=library.find(r=>r.bodyId==='cylinder-'+row.capacityMl+'ml-16mm'&&r.glass==='Clear');assert(recovered?.sourceAvailable);
+    const updated=row.capacityMl===50&&correctedBody&&correctedAsset;
+    const master:RecoveredMaster=updated?{...recovered,sourceFile:correctedBody.sourceFile,fileSha256:correctedBody.sourceSha256,
+        anchors:correctedBody.anchors,scale:correctedBody.scale}:recovered;
     const bytes=fs.readFileSync(master.sourceFile);assert.equal(sha(bytes),master.fileSha256);
     const info=await sharp(bytes).metadata(),scale=800/(master.anchors.baselineY-master.anchors.seatY),ppm=800/d.height;
-    const file='body-'+master.bodyId+'.'+master.fileSha256.slice(0,12)+'.png';fs.writeFileSync(out+'/'+file,bytes);
+    const file='body-'+master.bodyId+'.'+master.fileSha256.slice(0,12)+'.png';
+    if(!updated)fs.writeFileSync(out+'/'+file,bytes);
     const axis=500,seat=261,foot=1061,x=axis-master.anchors.axisX*scale,y=seat-master.anchors.seatY*scale;
     const shoulder=y+master.anchors.shoulderY*scale;
     const body:KitPartLike={slot:'body',variantKey:null,componentId:null,zOrder:0,explodeIndex:0,assembled:{x:0,y:0},exploded:{dx:0,dy:0},
-        image:{url:'/local-kits/cylinder-family-completion-2026-11-02/'+file,key:'',sha256:master.fileSha256,bytes:bytes.length,width:info.width!,height:info.height!},
+        image:updated?correctedAsset!.image:{url:'/local-kits/cylinder-family-completion-2026-11-02/'+file,key:'',sha256:master.fileSha256,bytes:bytes.length,width:info.width!,height:info.height!},
         box:{x,y,width:info.width!*scale,height:info.height!*scale},bounds:{left:axis-d.diameter*ppm/2,top:seat,right:axis+d.diameter*ppm/2,bottom:foot}};
     const kind=row.applicator==='Metal Roller Ball'?'metal':'plastic',insert=inserts[kind];
-    const roller=part('roller',insert,axis,seat+.25*ppm,flangeWidthMm*ppm/(insert.bounds.right-insert.bounds.left),'review:roller-16mm-'+kind,1);
+    // Fit the over-rim flange to the mouth visible in the complete 50 ml PSD.
+    // This is source-image registration, not a newly measured hardware diameter.
+    const flangeWidth=updated?correctedBody.mouthWidthPx*scale*1.03:flangeWidthMm*ppm;
+    const roller=part('roller',insert,axis,seat+.25*ppm,flangeWidth/(insert.bounds.right-insert.bounds.left),'review:roller-16mm-'+kind,1);
     const capAsset=caps[row.capColor as keyof typeof caps];assert(capAsset,'Unknown 16 mm cap finish');
-    const cap=part('cap',capAsset,axis,shoulder,capHeightMm*ppm/(capAsset.bounds.bottom-capAsset.bounds.top),'review:cap-16mm-'+row.capColor.toLowerCase(),2);
+    const plasticHeight=(inserts.plastic.bounds.bottom-inserts.plastic.bounds.top)*flangeWidth/(inserts.plastic.bounds.right-inserts.plastic.bounds.left);
+    const capHeight=updated?Math.max(capHeightMm*ppm,shoulder-(seat+.25*ppm-plasticHeight)+.5*ppm):capHeightMm*ppm;
+    const cap=part('cap',capAsset,axis,shoulder,capHeight/(capAsset.bounds.bottom-capAsset.bounds.top),'review:cap-16mm-'+row.capColor.toLowerCase(),2);
     const kit:KitLike={sku:row.websiteSku,familyId:'review:'+master.plateKey,canvas:{width:1000,height:1100},
         anchors:{axisX:axis,neckAxisX:axis,seatY:seat,baselineY:foot,pxPerMm:ppm},
         register:{bodyId:master.bodyId,plateKey:master.plateKey,glass:'Clear',pxPerMm:ppm},
         glassSizing:{heightPct:master.scale.targetPct,baselinePct:master.scale.baselinePct,landmarkY:shoulder,source:master.scale.source},parts:[body,roller,cap]};
     rows[row.websiteSku]=kit;
-    configurations.push({sku:row.websiteSku,bodyId:master.bodyId,applicator:row.applicator,capColor:row.capColor,bodySha256:master.fileSha256,
+    configurations.push({sku:row.websiteSku,bodyId:master.bodyId,applicator:row.applicator,capColor:row.capColor,bodySha256:body.image.sha256,completePsdGlassCorrection:Boolean(updated),flangeWidthPx:flangeWidth,capHeightPx:capHeight,
         rimY:seat,flangeBottomY:roller.bounds.bottom,overRim:true,protrudingPlug:false,capBottomY:cap.bounds.bottom,shoulderY:shoulder,
-        closedCapClearancePx:roller.bounds.top-cap.bounds.top,registrationBasis:'Original PSD ball artwork and native housing offsets, uniformly registered as shared 16 mm hardware. User confirmed no bottom plug and an internal annular track.'});
+        closedCapClearancePx:roller.bounds.top-cap.bounds.top,registrationBasis:'Original PSD geometry and native housing offsets, uniformly registered as shared 16 mm hardware. Metal has owner-approved studio material; plastic retains PSD pixels. User confirmed one bottom step, no bottom plug and an internal annular track.'});
     assert(roller.bounds.top>=cap.bounds.top-ppm,'Cap does not cover ball');
 }
 assert.equal(Object.keys(rows).length,8);
 fs.writeFileSync(out+'/roller-kits.json',JSON.stringify({rows,defaultPdpSkus:[]},null,2)+'\n');
 fs.writeFileSync(dir+'/roller-registration.json',JSON.stringify({status:'candidate-not-approved',camera:'Near eye level, flat flange',hardware:'Over-rim 16 mm roller assembly, internal seating track, no projecting lower plug',
-    sourceAuthority:'Original 28 ml PSD component layers supply the ball shape, exposure, and material for both 28/50 ml. User confirmed the over-rim housing has no bottom plug.',nativeBallVerification:nativeVerification,measuredBottles:dims,
+    sourceAuthority:'Original PSD geometry and exposure are locked. Metal uses the owner-approved studio material inside that exact outline; plastic retains native PSD material. User confirmed a single bottom step and no protruding lower plug.',nativeGeometryReferenceVerification:nativeVerification,metalMaterialGeometryVerification:material,measuredBottles:dims,
     estimatedRegistration:{flangeWidthMm,capHeightMm,notice:'Image registration only. These are not confirmed physical component measurements.'},inserts,caps,configurations},null,2)+'\n');
 console.log(JSON.stringify({configurations:Object.keys(rows).length,overRim:true,protrudingPlug:false}));

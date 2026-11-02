@@ -55,5 +55,32 @@
     "changedBallPixels": 0,
     "bodiesAndCapsUnchanged": 8,
     "unrelatedRecipesUnchanged": 101
+  },
+  "jumboMaterialFollowup": {
+    "path": "docs/reviews/jumbo-roller-material-2026-11-02",
+    "materialApproved": true,
+    "changedMetalRecipes": 4,
+    "unchangedOtherRecipes": 105,
+    "originalOutlineAlphaDifferences": 0,
+    "bodiesCapsAnchorsRollerBoundsAndScaleUnchanged": true,
+    "desktopMobileStates": 48,
+    "errors": 0,
+    "losslessDisplayComparisons": 68,
+    "sourceBytes": 7684110,
+    "display640Bytes": 3250472,
+    "hostedManifestUnchanged": true
+  },
+  "complete50mlBodyCorrection": {
+    "status": "corrected-local-candidate-awaiting-visual-review",
+    "path": "docs/reviews/jumbo-body-reference-2026-11-02",
+    "changedRecipes": 4,
+    "unchangedRecipes": 105,
+    "body28mlUnchanged": true,
+    "approvedRollerCapImagesUnchanged": true,
+    "canvasHeightTargetsPreserved": true,
+    "browserStates": 48,
+    "browserErrors": 0,
+    "outerContourMaskAlphaDifferences": 0,
+    "hostedManifestUnchanged": true
   }
 }
