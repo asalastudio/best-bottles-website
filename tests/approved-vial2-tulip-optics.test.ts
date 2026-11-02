@@ -15,6 +15,7 @@ const canonical = (value: unknown): unknown => Array.isArray(value) ? value.map(
 const imageHash = (part: KitLike['parts'][number]) => (part.image as typeof part.image & { sha256?: string }).sha256;
 const rows = manifest.rows as unknown as Record<string, KitLike>;
 const vialSkus = ['GBVAmb2BlackCap', 'GBVAmb2WhtCap', 'GBVialClr2mlBlackCap', 'GBVialClr2mlWhtCap'];
+const sleekOpticsBefore = read('docs/reviews/sleek8-hero-depth-2026-11-01/before-kits.json').rows;
 const tulipBefore = read('docs/reviews/tulip6-glass-depth-2026-11-01/before-kits.json').rows as Record<string, KitLike>;
 afterEach(() => vi.unstubAllEnvs());
 describe('approved straight-on 2 ml vial body pair', () => {
@@ -88,14 +89,14 @@ describe('clear Tulip 6 ml internal optics', () => {
         const pilot = localGpt13ComponentKits('localhost:3010', 'gpt13');
         for (const sku of Object.keys(tulipBefore)) expect(pilot[sku]).toEqual(rows[sku]);
     });
-    it('leaves every other previously published recipe byte-equivalent', () => {
+    it('preserves prior recipes apart from the separately checked Sleek optical correction', () => {
         const prior = read(directory + 'prior-recipe-hashes.json').recipes;
         let count = 0;
         for (const [sku, digest] of Object.entries(prior)) {
-            if (Object.hasOwn(tulipBefore, sku)) continue;
+            if (Object.hasOwn(tulipBefore, sku) || Object.hasOwn(sleekOpticsBefore, sku)) continue;
             expect(hash(JSON.stringify(canonical(rows[sku]))), sku).toBe(digest); count++;
         }
-        expect(count).toBe(427);
+        expect(count).toBe(419);
         expect(Object.keys(rows)).toHaveLength(438);
         expect(index.skus).toEqual(Object.keys(rows).sort());
         expect(manifest.version).toBe(hash(JSON.stringify(manifest.rows)).slice(0, 16));

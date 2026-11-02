@@ -6,7 +6,7 @@ The generated material is uniformly registered to the existing native 768 × 219
 
 All 36 exact Sleek 8 ml configurations use one registered review body: 8 sprayers, 18 metal/plastic roller combinations and 10 pour caps. The eight seated sprayer tubes render below multiply-blended glass at 40% opacity. Their source pixels, natural bend, endpoint and exploded appearance remain unchanged. Existing sprayer, roller and cap geometry is preserved.
 
-The candidate is visible locally in the catalog, PDP, glass selector and builder. The candidate endpoint permits only exact SKUs and the current review version on development loopback hosts; production and Vercel access are disabled. All 438 previously approved recipes remain byte-identical. This new material has not been visually approved or deployed.
+The candidate is visible locally in the catalog, PDP, glass selector and builder. The candidate endpoint permits only exact SKUs and the current review version on development loopback hosts; production and Vercel access are disabled. At generation, all 438 approved recipes were unchanged. The follow-up in ../sleek8-hero-depth-2026-11-01 applies the same tube optics to the eight existing hosted sprayer recipes without changing their body images. This new glass material has not been visually approved or deployed.
 
 Review the full bottle at product size in comparison.html or on /products/sleek-8ml-clear-13-415-finemist?cap=matte-gold. The native generated PNG and registered SVG are retained under public/local-kits/sleek8-glass-depth-2026-11-01. generation.json contains the exact prompt and reference paths. registered-body-preview.png is the lossless raster export of the registered SVG, for archive review.
 

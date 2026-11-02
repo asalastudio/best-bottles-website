@@ -1,0 +1,22 @@
+{
+  "version": "16625b508a08fa33",
+  "priorVersion": "efe02f8dc1ca0973",
+  "scope": [
+    "GBSleek8SpryBlkMatt",
+    "GBSleek8SpryBlkSh",
+    "GBSleek8SpryBluMatt",
+    "GBSleek8SpryCuMatt",
+    "GBSleek8SpryGlMatt",
+    "GBSleek8SpryGlSh",
+    "GBSleek8SprySlMatt",
+    "GBSleek8SprySlSh"
+  ],
+  "configurations": 438,
+  "preservedRecipes": 430,
+  "newImages": 0,
+  "approvedBodyPixelsChanged": false,
+  "geometryChanged": false,
+  "productionDataMutated": false,
+  "deployed": false,
+  "change": "Seat tube behind multiply-blended glass at 40% opacity, matching the local review. Natural exploded tube remains unchanged."
+}

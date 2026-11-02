@@ -55,9 +55,11 @@ describe('Sleek 8 ml regenerated glass and internal tube candidate', () => {
             expect(kit.parts.find(p => p.slot === 'diptube' && p.views?.includes('exploded'))).toEqual(before[sku].parts.find(p => p.slot === 'diptube' && p.views?.includes('exploded')));
         }
     });
-    it('preserves all 438 approved recipes while sharing the local candidate across PDP, catalog and builder inputs', () => {
-        expect(hash(JSON.stringify(manifest.rows))).toBe(proof.approvedManifestHash);
-        expect(manifest.version).toBe(proof.approvedManifestVersion);
+    it('preserves approved body pixels and shares the local candidate across PDP, catalog and builder inputs', () => {
+        const baseline = structuredClone(manifest.rows) as unknown as Record<string, KitLike>;
+        const opticalBefore = read('docs/reviews/sleek8-hero-depth-2026-11-01/before-kits.json').rows;
+        for (const [sku, original] of Object.entries(opticalBefore)) baseline[sku] = original as KitLike;
+        expect(hash(JSON.stringify(baseline))).toBe(proof.approvedManifestHash);
         vi.stubEnv('NODE_ENV', 'development'); vi.stubEnv('VERCEL', '');
         const variants = Object.keys(before).map(websiteSku => ({ websiteSku }));
         const normal = localPdpComponentKits('localhost:3010', undefined, variants);

@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "passed": 3252,
+  "failed": 0,
+  "skipped": 7,
+  "typecheck": "passed",
+  "scopedLint": "passed",
+  "note": "A concurrent first full-suite run timed out in the unrelated focused PDP DOM test file. All four DOM tests passed in isolation, then the complete suite passed with four workers."
+}
