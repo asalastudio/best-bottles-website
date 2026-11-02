@@ -3,6 +3,7 @@ import manifest from "./display-images.generated.json";
 type DisplaySources = Record<string, Record<"128" | "256" | "640" | "1200", string>>;
 const sources = manifest.sources as DisplaySources;
 const aliases = manifest.aliases as Record<string, string>;
+const pixelWidths = manifest.pixelWidths as Record<string, Record<string, number>>;
 
 /** Immutable, lossless delivery copies of the exact approved sources. This
  * changes download bytes only. Keep the original source identity, registered
@@ -16,7 +17,15 @@ export function displayDerivativeUrl(source: string, width: number): string | nu
 
 export function displayDerivativeSrcSet(source: string): string | undefined {
     if (!displayDerivativeUrl(source, 640)) return undefined;
-    return [128, 256, 640, 1200].map(width => `${displayDerivativeUrl(source, width)} ${width}w`).join(", ");
+    const canonical = Object.hasOwn(aliases, source) ? aliases[source] : source;
+    const candidates = new Map<number, string>();
+    for (const width of [128, 256, 640, 1200]) {
+        const actualWidth = pixelWidths[canonical][width];
+        // Sources are never enlarged. A 50px native cap remains one 50w
+        // candidate, rather than being advertised as a fictitious 1200px copy.
+        if (!candidates.has(actualWidth)) candidates.set(actualWidth, displayDerivativeUrl(source, width)!);
+    }
+    return [...candidates].map(([width, url]) => `${url} ${width}w`).join(", ");
 }
 
 /** The canvas cannot exceed the full viewport on mobile or its 55% desktop

@@ -44,9 +44,11 @@ const save = () => fs.writeFileSync(path.join(out, 'timings.json'), JSON.stringi
    if (process.env.PERF_ACCESS_FILE) {
     const access = fs.readFileSync(process.env.PERF_ACCESS_FILE, 'utf8').trim();
     await p.goto(access, { waitUntil: 'domcontentloaded', timeout: 120000 });
+    await p.goto('about:blank'); // Stop the access landing page and its background image requests.
     reqs.clear(); // Access-link navigation and redirects are not part of the product measurement.
    }
    await p.goto(origin + route, { waitUntil: 'domcontentloaded', timeout: 120000 });
+   if (!p.url().startsWith(origin + '/products/')) throw Error('Preview access did not reach the product page');
    await p.waitForFunction(() => window.__bottlePerf.heroReadyMs, { timeout: 60000 }).catch(() => {});
    await pause(2500);
    const metrics = await p.evaluate(() => ({

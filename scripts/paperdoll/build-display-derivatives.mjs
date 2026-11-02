@@ -102,6 +102,7 @@ if (publish) {
   }
  }
  scan('public/local-kits');
- fs.writeFileSync(path.join(dir, 'display-images.generated.json'), JSON.stringify({ version: sha(JSON.stringify({ sources, aliases })).slice(0,16), sources, aliases }) + '\n');
+ const pixelWidths = Object.fromEntries(Object.entries(report.assets).map(([url, asset]) => [url, Object.fromEntries(widths.map(w => [w, asset.derivatives[w].width]))]));
+ fs.writeFileSync(path.join(dir, 'display-images.generated.json'), JSON.stringify({ version: sha(JSON.stringify({ sources, aliases, pixelWidths })).slice(0,16), sources, aliases, pixelWidths }) + '\n');
 }
 console.log(JSON.stringify(report.summary));

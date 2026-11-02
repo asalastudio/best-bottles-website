@@ -37,7 +37,9 @@ it("a failed delivery copy falls back for that source without downloading other 
 it("offers resolution choices without changing registered dimensions and increases detail for zoom", () => {
     const source = Object.keys(delivery.sources)[0];
     expect(displayDerivativeSrcSet(source)).toContain(" 128w, ");
-    expect(displayDerivativeSrcSet(source)).toContain(" 1200w");
+    const maximum = Math.max(...Object.values(delivery.pixelWidths[source as keyof typeof delivery.pixelWidths]));
+    expect(displayDerivativeSrcSet(source)).toContain(` ${maximum}w`);
+    expect(displayDerivativeSrcSet(source)?.split(", ")).toHaveLength(new Set(Object.values(delivery.pixelWidths[source as keyof typeof delivery.pixelWidths])).size);
     expect(registeredImageSizes(20, 1)).toBe("(max-width: 767px) 20vw, 11vw");
     expect(registeredImageSizes(20, 1, 2)).toBe("(max-width: 767px) 40vw, 22vw");
 });
