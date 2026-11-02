@@ -107,9 +107,11 @@ async function settle(page) {
                 } catch (error) { report.errors.push({ area: 'pdp', sku, viewport, message: safeError(error) }); save(); }
             }
             // The catalog hero must use the identical approved body and selected hardware.
-            for (const [family, search, targets] of [['Cylinder', '28 ml', newSkus.filter(sku => sku.includes('Roll'))],
-                ['Vial', '5/8', newSkus.filter(sku => !sku.includes('Roll'))]]) {
-                await page.goto(origin + '/catalog?' + new URLSearchParams({ families: family, search, sort: 'capacity-asc' }),
+            for (const [family, search, targets, roller] of [
+                ['Cylinder', '28 ml', ['GBMtlRoll28Blk', 'GBMtlRoll28Wht'], 'metal'],
+                ['Cylinder', '28 ml', ['GBRoll28Blk', 'GBCyl1ozRollWht'], 'plastic'],
+                ['Vial', '3 ml', newSkus.filter(sku => !sku.includes('Roll')), null]]) {
+                await page.goto(origin + '/catalog?' + new URLSearchParams({ families: family, search, sort: 'capacity-asc', ...(roller ? { roller } : {}) }),
                     { waitUntil: 'domcontentloaded', timeout: 120000 });
                 for (const sku of targets) {
                     try {
@@ -134,7 +136,9 @@ async function settle(page) {
                     const sku = row.websiteSku, allowed = expectedSources(manifest.rows[sku]);
                     await page.goto(origin + '/matrix?' + new URLSearchParams({ family: 'Vial', sku, from: 'pdp' }),
                         { waitUntil: 'domcontentloaded', timeout: 120000 });
-                    await page.waitForFunction(() => document.querySelector('[data-builder-layer="body"]'), { timeout: 45000 });
+                    await page.waitForFunction(expected => [...document.querySelectorAll('[data-builder-layer="body"]')]
+                        .some(element => expected.includes(element.currentSrc || element.src || element.getAttribute('href'))),
+                    { timeout: 45000 }, [...allowed]);
                     const layers = await page.$$eval('[data-builder-layer]', async elements => {
                         const sources = elements.map(element => ({ slot: element.dataset.builderLayer, source: element.currentSrc || element.src || element.getAttribute('href') }));
                         await Promise.all(sources.map(source => { const image = new Image(); image.src = source.source; return image.decode(); }));
