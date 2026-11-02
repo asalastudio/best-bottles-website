@@ -1,0 +1,16 @@
+{
+  "status": "local-kit-and-copy-verified",
+  "browserStates": 12,
+  "browserErrors": 0,
+  "bodyShared": true,
+  "whiteRecordAndCheckoutUnchanged": true,
+  "blackOptionRestored": true,
+  "blackShopifyVariantId": null,
+  "blackOnlineCheckout": "unavailable until exact Shopify mapping",
+  "ownerSizeCopy": "0.08 oz",
+  "underlyingCapacityUnchanged": "2 ml / 0.07 oz",
+  "itemDescriptionTests": 24,
+  "typecheck": "passed",
+  "scopedLint": "passed",
+  "hostedKitManifest": "unchanged; new layered vial kit is localhost-only"
+}

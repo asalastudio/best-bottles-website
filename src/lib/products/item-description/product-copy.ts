@@ -43,6 +43,21 @@ function reviewedSmallSprayerCopy(sku: string, copy: ProductCopy): ProductCopy {
 }
 
 export function productCopyFor(variant: { websiteSku?: string | null; graceSku?: string | null }): ProductCopy | null {
+    // Owner correction, 2026-11-02: the short 13-425 amber vial has black and
+    // white caps and carries the requested 0.08 oz size wording. Scope by exact
+    // identity so the separate slender 2 ml / 8-425 vials are untouched.
+    const shortAmber = variant.websiteSku === "GBVialAmb1o5WhtCapSht" || variant.graceSku === "GB-VIA-AMB-1.5ML-WHT-S" ? "White"
+        : variant.websiteSku === "GBVAmb1o5BlackCapSht" || variant.graceSku === "GBVAmb1o5BlackCapSht" ? "Black" : null;
+    if (shortAmber) {
+        const title = "2 ml Amber Vial", option = `${shortAmber} Cap`;
+        const sentences = ["An amber glass sample vial for perfume, fragrance oil and essential oil.",
+            "Bottle size: 0.08 oz. Fill it with a pipette or a small funnel."];
+        return { title, option, variantTitle: `${title} - ${option}`, sentences,
+            bullets: [["Included", `Short ${shortAmber.toLowerCase()} screw cap`], ["Fits", "13-425 neck"],
+                ["Glass", "Amber; reduces the light that reaches the contents"]],
+            care: "", itemType: "Vial · 13-425 neck", metaDescription: sentences.join(" "),
+            altText: `2 ml amber glass vial with short ${shortAmber.toLowerCase()} screw cap` };
+    }
     if (tolaApplicatorSku(variant)) {
         const title = "6 ml Clear Tola Applicator Bottle", option = "Gold Cap";
         const sentences = ["A clear octagonal Tola bottle for perfume oil and attar.",

@@ -1,0 +1,22 @@
+{
+  "websiteSku": "GBVAmb1o5BlackCapSht",
+  "graceSku": "GBVAmb1o5BlackCapSht",
+  "twinWebsiteSku": "GBVialAmb1o5WhtCapSht",
+  "groupSlug": "vial-2ml-amber-13-425",
+  "color": "Amber",
+  "capColor": "Black",
+  "itemName": "2 ml Amber Vial with Short Black Cap",
+  "itemDescription": "Amber glass sample vial with a short black screw cap, 13-425 neck. Bottle size: 0.08 oz. For perfume, fragrance oil and essential oil.",
+  "priceTiers": [
+    {
+      "minQty": 1,
+      "unitPrice": 0.38,
+      "totalPrice": 0.38
+    }
+  ],
+  "source": "2026-11-02 owner request. Exact GBVAmb1o5BlackCapSht PSD and legacy image identify the short 13-425 bottle. The historical black vial import records $0.38 each. Legacy website identifier retained until canonical Grace/Shopify mapping; quote-only.",
+  "imageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBVAmb1o5BlackCapSht.gif",
+  "checkoutPolicy": "New variant has no Shopify linkage and stays quote-only. White checkout identifiers are never copied.",
+  "alreadyPresent": false,
+  "environment": "precise-raccoon-123.convex.cloud"
+}

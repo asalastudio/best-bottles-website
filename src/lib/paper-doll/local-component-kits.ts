@@ -44,7 +44,8 @@ function readLocalKitReview(): LocalKitReview | null {
         process.env.NODE_ENV === "development" ? "public/local-kits/rectangle9-applicator-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/tulip6-glass-depth-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/vial2-matched-2026-11-01/kits.json" : undefined,
-        process.env.NODE_ENV === "development" ? "public/local-kits/sleek8-glass-depth-2026-11-01/kits.json" : undefined];
+        process.env.NODE_ENV === "development" ? "public/local-kits/sleek8-glass-depth-2026-11-01/kits.json" : undefined,
+        process.env.NODE_ENV === "development" ? "public/local-kits/vial2-short-black-2026-11-02/kits.json" : undefined];
     const rows: Record<string, BuilderKit> = {};
     const defaults = new Set<string>();
     let loaded = false;

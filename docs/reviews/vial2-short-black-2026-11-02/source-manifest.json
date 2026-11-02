@@ -1,0 +1,130 @@
+{
+  "docs/reviews/vial2-short-black-2026-11-02/README.md": {
+    "bytes": 2756,
+    "sha256": "9840bba25bf57be205f2708736f0e558aaf3127fa8aaf898901dac62dda72c50"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/black-desktop-inspect.png": {
+    "bytes": 109348,
+    "sha256": "5e9a00c1dc570617b453bc4aa2ecc50ce1df697b7de3c4f9f891f6d51af53306"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/browser-verification.json": {
+    "bytes": 7683,
+    "sha256": "983dd0f26d1f0dd81276a731f27313a7898268f591396ca850e7fc5029bf03a8"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/desktop-black-capon.png": {
+    "bytes": 22010,
+    "sha256": "2cba4945e6054fb13047f5e493a063d290de7c83d915074aba9e9a54baf98565"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/desktop-black-exploded.png": {
+    "bytes": 52652,
+    "sha256": "7f47cf996a2ca0cf95c02b85c66193913ff1fa4bda5274e3523ade782dcc0540"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/desktop-black-sidecar.png": {
+    "bytes": 30952,
+    "sha256": "6fec30bdedc0a2e656d83bcb4106ea9f29ce848434ab00696c2c2b69457ddf00"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/desktop-white-capon.png": {
+    "bytes": 19548,
+    "sha256": "0ff782deddcdb547ab12ed6ff9dc71b9fd27131784038edccd05d8b23b395a59"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/desktop-white-exploded.png": {
+    "bytes": 50374,
+    "sha256": "fe57e4e8581de96f6acc596643de1aeec5b328ee5bbb3b35c08bb0032e75a19c"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/desktop-white-sidecar.png": {
+    "bytes": 28631,
+    "sha256": "4e9b35e59bdd3aa344da7f39b5497a758f92c232b83ad8e0e38c06df718229fc"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/mobile-black-capon.png": {
+    "bytes": 36761,
+    "sha256": "22bb81b880329775420e7778afd9be46be692971ccec0192b0b0b9a24d63fc64"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/mobile-black-exploded.png": {
+    "bytes": 66957,
+    "sha256": "84dba61886c3a8c6da70831517e57f3cef1f30534207dc71840335f92720d66a"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/mobile-black-sidecar.png": {
+    "bytes": 52721,
+    "sha256": "8a28dfa84abd81726de756cf2239254ebd0376898ae1dc79df66acc5aa789afe"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/mobile-white-capon.png": {
+    "bytes": 32099,
+    "sha256": "7183466e59799057b402564cae71d9e5cf4f9eba8770455990f80c5f2e862d84"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/mobile-white-exploded.png": {
+    "bytes": 62606,
+    "sha256": "933a49b82887e2daab68b25f485ef6155316d114197b2609824448439ffa9351"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/evidence/mobile-white-sidecar.png": {
+    "bytes": 48200,
+    "sha256": "f5fee0595e86640812546ba06eea886a9d492c150422c5b3b6fb08ec2597cd07"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/legacy-kits-before.json": {
+    "bytes": 2395,
+    "sha256": "f9374599b1106a1551f0c6bf0d9f72841640e43b04bbb5d318823d594f499c5d"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/prepare.mjs": {
+    "bytes": 2916,
+    "sha256": "da5a064feca4a67dcfcf12f8608fd2b26f65bbcd9875ecf27e8827ede8aa5059"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/register-before.json": {
+    "bytes": 2431,
+    "sha256": "9866a93449544d1167061018fd06b95e9be54daec669bbdd00aff9db3ac83dcd"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/registration.json": {
+    "bytes": 636,
+    "sha256": "a854dadb519e73111ea28f571cd250c0cf5212f2356dc68b9c2c433e7e147671"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/restore-plan.json": {
+    "bytes": 1090,
+    "sha256": "cd4a1b4cb8830bbe6455e5dcb1aa06a24e5e4e4aa76b8b1a88705b225166b24c"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/restore-result.json": {
+    "bytes": 407,
+    "sha256": "1ecc43210addcc5cd158c2e06d65faaa695ddb969c1b90754852c325e29ec4f2"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/sources/GBVAmb1o5BlackCapSht.gif": {
+    "bytes": 70279,
+    "sha256": "e086f1c7ef705850b72178911cdd8fd72a148c155ab116f7f3d90641908770d1"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/sources/GBVAmb1o5BlackCapSht.png": {
+    "bytes": 105301,
+    "sha256": "00a132edc425de83f8d3f9078ff1740b1419f1a272488b63dc04e8bcb81c09d0"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/sources/GBVialAmb1o5BlackCapSht.gif": {
+    "bytes": 39013,
+    "sha256": "1ac53c4df32cae1da3c6d0384bbc99edef98c35230e05287d81db282501750b6"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/sources/GBVialAmb1o5BlackCapSht.png": {
+    "bytes": 60634,
+    "sha256": "ce9113c08e06a8d9bdd7ac8b903c03b92b5807d602a94d1ffabf72837b68dfd7"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/validation-summary.json": {
+    "bytes": 526,
+    "sha256": "40edd2fe2ba5ee7e110c9c64b642e045aa8c10296df09d1f8394fce1e7ca08fe"
+  },
+  "docs/reviews/vial2-short-black-2026-11-02/verify-browser.cjs": {
+    "bytes": 6761,
+    "sha256": "11a2e4ea8398a58705c48f5725cd8b0f95586a3bd3a929593424986d47c7aa5f"
+  },
+  "public/local-kits/vial2-short-black-2026-11-02/black-cap.ec6c05dfdf82.webp": {
+    "bytes": 10514,
+    "sha256": "ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798"
+  },
+  "public/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png": {
+    "bytes": 991128,
+    "sha256": "5be9929a0bde292b74b11d7122c9736b21552b1dffacebce4e52252195e6c392"
+  },
+  "public/local-kits/vial2-short-black-2026-11-02/cap.71c80d249922.webp": {
+    "bytes": 8874,
+    "sha256": "71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e"
+  },
+  "public/local-kits/vial2-short-black-2026-11-02/kits.json": {
+    "bytes": 5758,
+    "sha256": "448502764dae8ea45bc6846763711e0cc1a7dc3813db87bfc45e3cd316f7ad71"
+  },
+  "scripts/catalog-corrections/2026-11-02-short-amber-vial-black.mjs": {
+    "bytes": 4427,
+    "sha256": "0d40724a76a9590c932f97b3eb7a3d73c0c76faf767970f14b7b09ac3ea1e6f9"
+  }
+}

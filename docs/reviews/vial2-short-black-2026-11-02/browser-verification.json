@@ -1,0 +1,307 @@
+{
+  "scope": "Short 2 ml amber / 13-425 vial only",
+  "states": [
+    {
+      "viewport": "desktop",
+      "color": "White",
+      "view": "sidecar",
+      "selected": "White cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        273.3357849121094,
+        321.71539306640625,
+        148.90615844726562,
+        193.255126953125
+      ],
+      "bodyCanvasPct": [
+        34.7905348347285,
+        59.576924641927086,
+        30.332911517680948,
+        35.787986472800924
+      ],
+      "cta": {
+        "text": "ADD TO CART · $0.38",
+        "disabled": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "color": "White",
+      "view": "capon",
+      "selected": "White cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        273.3357849121094,
+        321.71539306640625,
+        148.90615844726562,
+        193.255126953125
+      ],
+      "bodyCanvasPct": [
+        34.7905348347285,
+        59.576924641927086,
+        30.332911517680948,
+        35.787986472800924
+      ],
+      "cta": {
+        "text": "ADD TO CART · $0.38",
+        "disabled": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "color": "White",
+      "view": "exploded",
+      "selected": "White cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        273.3357849121094,
+        321.71539306640625,
+        148.90615844726562,
+        193.255126953125
+      ],
+      "bodyCanvasPct": [
+        34.7905348347285,
+        59.576924641927086,
+        30.332911517680948,
+        35.787986472800924
+      ],
+      "cta": {
+        "text": "ADD TO CART · $0.38",
+        "disabled": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "color": "Black",
+      "view": "sidecar",
+      "selected": "Black cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        273.3357849121094,
+        321.71539306640625,
+        148.90615844726562,
+        193.255126953125
+      ],
+      "bodyCanvasPct": [
+        34.7905348347285,
+        59.576924641927086,
+        30.332911517680948,
+        35.787986472800924
+      ],
+      "cta": {
+        "text": "UNAVAILABLE ONLINE",
+        "disabled": true
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "color": "Black",
+      "view": "capon",
+      "selected": "Black cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        273.3357849121094,
+        321.71539306640625,
+        148.90615844726562,
+        193.255126953125
+      ],
+      "bodyCanvasPct": [
+        34.7905348347285,
+        59.576924641927086,
+        30.332911517680948,
+        35.787986472800924
+      ],
+      "cta": {
+        "text": "UNAVAILABLE ONLINE",
+        "disabled": true
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "color": "Black",
+      "view": "exploded",
+      "selected": "Black cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        273.3357849121094,
+        321.71539306640625,
+        148.90615844726562,
+        193.255126953125
+      ],
+      "bodyCanvasPct": [
+        34.7905348347285,
+        59.576924641927086,
+        30.332911517680948,
+        35.787986472800924
+      ],
+      "cta": {
+        "text": "UNAVAILABLE ONLINE",
+        "disabled": true
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "color": "White",
+      "view": "sidecar",
+      "selected": "White cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        119.11381530761719,
+        236.0606689453125,
+        103.85552978515625,
+        134.779296875
+      ],
+      "bodyCanvasPct": [
+        34.79045354001232,
+        59.57715974152595,
+        30.33385316835524,
+        35.78755756544829
+      ],
+      "cta": {
+        "text": "Add to cart · $0.38",
+        "disabled": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "color": "White",
+      "view": "capon",
+      "selected": "White cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        119.11381530761719,
+        236.0606689453125,
+        103.85552978515625,
+        134.779296875
+      ],
+      "bodyCanvasPct": [
+        34.79045354001232,
+        59.57715974152595,
+        30.33385316835524,
+        35.78755756544829
+      ],
+      "cta": {
+        "text": "Add to cart · $0.38",
+        "disabled": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "color": "White",
+      "view": "exploded",
+      "selected": "White cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        122.10987854003906,
+        236.97756958007812,
+        106.46977233886719,
+        138.17599487304688
+      ],
+      "bodyCanvasPct": [
+        34.78913918519632,
+        59.57735513203156,
+        30.333268472611735,
+        35.78819778176852
+      ],
+      "cta": {
+        "text": "Add to cart · $0.38",
+        "disabled": false
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "color": "Black",
+      "view": "sidecar",
+      "selected": "Black cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        119.1670913696289,
+        236.08303833007812,
+        103.89900970458984,
+        134.84140014648438
+      ],
+      "bodyCanvasPct": [
+        34.790137066217724,
+        59.57665444606868,
+        30.332709703009535,
+        35.78771505919798
+      ],
+      "cta": {
+        "text": "Unavailable online",
+        "disabled": true
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "color": "Black",
+      "view": "capon",
+      "selected": "Black cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        119.1670913696289,
+        236.08303833007812,
+        103.89900970458984,
+        134.84140014648438
+      ],
+      "bodyCanvasPct": [
+        34.790137066217724,
+        59.57665444606868,
+        30.332709703009535,
+        35.78771505919798
+      ],
+      "cta": {
+        "text": "Unavailable online",
+        "disabled": true
+      },
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "color": "Black",
+      "view": "exploded",
+      "selected": "Black cap",
+      "hasOwnerSizeCopy": true,
+      "bodySource": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+      "bodyRect": [
+        122.10987854003906,
+        236.97756958007812,
+        106.46977233886719,
+        138.17599487304688
+      ],
+      "bodyCanvasPct": [
+        34.78913918519632,
+        59.57735513203156,
+        30.333268472611735,
+        35.78819778176852
+      ],
+      "cta": {
+        "text": "Unavailable online",
+        "disabled": true
+      },
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "passed": true
+}
