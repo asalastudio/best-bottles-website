@@ -1,0 +1,42 @@
+{
+ "metal": {
+  "file": "/local-kits/boston-masters-2026-11-03/rollers/metal-20-400-full.png",
+  "pixels": [
+   823,
+   1206
+  ],
+  "component": "LIB-20-400-MtlRollon",
+  "flangeWidth": 819.0,
+  "flangeCentre": 411.50981595092026,
+  "flangeBottom": 620.0282208588957,
+  "registerScale": 4,
+  "registerFlange": {
+   "width": 819.0,
+   "centre": 443.5,
+   "bottom": 640.0,
+   "imageWidth": 880
+  },
+  "geometry": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Asala-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-branch-setup-localhost-c1fea9/795e8b2a-f68f-4ec4-9e52-bf058342e3d9/scratchpad/circle-boston/rollers-gen/metal.geometry.png",
+  "material": "GBSleek5MtlRollGlMatt"
+ },
+ "plastic": {
+  "file": "/local-kits/boston-masters-2026-11-03/rollers/plastic-20-400-full.png",
+  "pixels": [
+   839,
+   1257
+  ],
+  "component": "LIB-20-400-PlsticRollon",
+  "flangeWidth": 831.0,
+  "flangeCentre": 420.71329987452947,
+  "flangeBottom": 646.4491844416563,
+  "registerScale": 4,
+  "registerFlange": {
+   "width": 831.0,
+   "centre": 441.5,
+   "bottom": 664.0,
+   "imageWidth": 888
+  },
+  "geometry": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Asala-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-branch-setup-localhost-c1fea9/795e8b2a-f68f-4ec4-9e52-bf058342e3d9/scratchpad/circle-boston/rollers-gen/plastic.geometry.png",
+  "material": "GBSleek5RollGlMatt"
+ }
+}
