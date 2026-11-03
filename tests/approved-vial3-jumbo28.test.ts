@@ -18,7 +18,8 @@ const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(ca
 describe('hosted 28 ml archive body and 5/8 dram vial release', () => {
     it('adds seven exact configurations and preserves every earlier approved recipe', () => {
         expect(selected.size).toBe(7);
-        const previous = Object.fromEntries(Object.entries(rows).filter(([sku]) => !selected.has(sku)));
+        const later = new Set(JSON.parse(readFileSync('docs/reviews/hosted-elegant-masters-2026-11-03/release-manifest.json', 'utf8')).addedSkus as string[]);
+        const previous = Object.fromEntries(Object.entries(rows).filter(([sku]) => !selected.has(sku) && !later.has(sku)));
         expect(Object.keys(previous)).toHaveLength(456);
         expect(digest(previous)).toBe(release.preservedRecipeSha256);
         expect(index.skus).toEqual(Object.keys(rows).sort());
