@@ -1,0 +1,26 @@
+{
+  "folderId": "19uRSdQmQqFZ5px0Pf5I9tTf3PxoWCGZn",
+  "folderUrl": "https://drive.google.com/drive/folders/19uRSdQmQqFZ5px0Pf5I9tTf3PxoWCGZn",
+  "status": "verified",
+  "verification": "Exact names, byte sizes and parent folder read back after upload.",
+  "files": [
+    {
+      "id": "1gs13r8ZhVz2tDKgyY_9B6VOrSQT4kfz_",
+      "name": "Best_Bottles_PR388_Hosted_Verification_3f8fd269_2026-11-02.zip",
+      "bytes": 6308406,
+      "url": "https://drive.google.com/file/d/1gs13r8ZhVz2tDKgyY_9B6VOrSQT4kfz_/view?usp=drivesdk"
+    },
+    {
+      "id": "1jE3pdgcQqgs8DRZ2P_FqOkAN6C2QLTwk",
+      "name": "Best_Bottles_PR388_Hosted_Check_README_2026-11-02.md",
+      "bytes": 3471,
+      "url": "https://drive.google.com/file/d/1jE3pdgcQqgs8DRZ2P_FqOkAN6C2QLTwk/view?usp=drivesdk"
+    },
+    {
+      "id": "1-CAbmdcRGhKZ2vvc89HIdSVgiASI9sch",
+      "name": "Best_Bottles_PR388_Hosted_Verification_Result_2026-11-02.json",
+      "bytes": 2581,
+      "url": "https://drive.google.com/file/d/1-CAbmdcRGhKZ2vvc89HIdSVgiASI9sch/view?usp=drivesdk"
+    }
+  ]
+}

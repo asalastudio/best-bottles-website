@@ -1,0 +1,117 @@
+{
+  "status": "MERGED_AND_VERCEL_PRODUCTION_VERIFIED",
+  "verifiedAt": "2026-11-01T23:45:21.359Z",
+  "pullRequest": "https://github.com/asalastudio/best-bottles-website/pull/382",
+  "mergedBy": "asalastudio",
+  "mergedAt": "2026-11-01T23:35:10Z",
+  "mergeCommit": "9ddbe51333db85ad820553e8c3bbab1dcd9ef1af",
+  "masterVersion": "b319d9d90adc6eb9",
+  "productionOrigin": "https://best-bottles-website.vercel.app",
+  "productionDeployment": "dpl_8E7sWya29VxxKr7dm2hP4kyJU5gm",
+  "approvedConfigurations": 267,
+  "fullResolutionMasterFiles": 68,
+  "previewChecks": {
+    "exactMasterRecipes": 267,
+    "matchingBuilderKits": 267,
+    "runtimeProductStates": 96,
+    "finalHeadProductStates": 36,
+    "builderEntries": 4,
+    "readOnlyPurchasePreflights": 2,
+    "ci": "SUCCESS",
+    "vercelPreview": "READY"
+  },
+  "productionSmoke": {
+    "origin": "https://best-bottles-website.vercel.app",
+    "mergeCommit": "9ddbe51333db85ad820553e8c3bbab1dcd9ef1af",
+    "version": "b319d9d90adc6eb9",
+    "apis": [
+      "GBTulipAmb5MtlRollBlkDot",
+      "GBTulip6SpryBlkSh",
+      "LBCyl9LtnBlk",
+      "GBCylBlu5MtlRollGlSh"
+    ],
+    "pages": [
+      {
+        "slug": "tulip-5ml-amber-13-415-rollon",
+        "sku": "GBTulipAmb5MtlRollBlkDot",
+        "view": "sidecar",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+      },
+      {
+        "slug": "tulip-5ml-amber-13-415-rollon",
+        "sku": "GBTulipAmb5MtlRollBlkDot",
+        "view": "capon",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+      },
+      {
+        "slug": "tulip-5ml-amber-13-415-rollon",
+        "sku": "GBTulipAmb5MtlRollBlkDot",
+        "view": "exploded",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+      },
+      {
+        "slug": "tulip-6ml-clear-13-415-finemist",
+        "sku": "GBTulip6SpryBlkSh",
+        "view": "sidecar",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png"
+      },
+      {
+        "slug": "tulip-6ml-clear-13-415-finemist",
+        "sku": "GBTulip6SpryBlkSh",
+        "view": "capon",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png"
+      },
+      {
+        "slug": "tulip-6ml-clear-13-415-finemist",
+        "sku": "GBTulip6SpryBlkSh",
+        "view": "exploded",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png"
+      },
+      {
+        "slug": "cylinder-9ml-clear-17-415-lotionpump",
+        "sku": "LBCyl9LtnBlk",
+        "view": "sidecar",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png"
+      },
+      {
+        "slug": "cylinder-9ml-clear-17-415-lotionpump",
+        "sku": "LBCyl9LtnBlk",
+        "view": "capon",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png"
+      },
+      {
+        "slug": "cylinder-9ml-clear-17-415-lotionpump",
+        "sku": "LBCyl9LtnBlk",
+        "view": "exploded",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png"
+      },
+      {
+        "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+        "sku": "GBCylBlu5MtlRollGlSh",
+        "view": "sidecar",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg"
+      },
+      {
+        "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+        "sku": "GBCylBlu5MtlRollGlSh",
+        "view": "capon",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg"
+      },
+      {
+        "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+        "sku": "GBCylBlu5MtlRollGlSh",
+        "view": "exploded",
+        "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg"
+      }
+    ],
+    "errors": [],
+    "passed": true,
+    "verifiedAt": "2026-11-01T23:45:21.359Z"
+  },
+  "scope": "Approved Cylinder 5 ml, Cylinder 9 ml / 17-415, and Tulip sprayer/roller masters. Tulip clear 6 ml and amber 5 ml browse under Cylinder while retaining their shape, body IDs, SKUs and old product links.",
+  "remaining": "450 other 13-415 review configurations remain local candidates. Small 3.3/4 ml candidates were not promoted. Line-item and customer-portal default-hero audit remains separate.",
+  "legacyDomain": "This verification covers best-bottles-website.vercel.app. It does not claim the separate legacy bestbottles.com site changed.",
+  "archive": "https://drive.google.com/file/d/16CZOAHkTmikWWVzmxQ5YU0YuMQcfvMx5/view",
+  "archiveNote": "The PREVIEW VERIFIED ZIP records the premerge snapshot. This supplement records the subsequent owner merge and successful production smoke.",
+  "actions": "The assistant did not initiate the merge or production promotion. Production checks were read-only. No catalog database mutations or referenced source-asset deletions were performed."
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "scope": "Approved metal material; local assemblies only",
+    "folderId": "1rflghxXoh9arHzP-z1Und5qj9J4I9Co_",
+    "files": [
+      {
+        "name": "APPROVED_MATERIAL_Metal_Roller_16mm_28ml_50ml_Source.png",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo-roller-material-2026-11-02/sources/metal-approved-material.png",
+        "mime": "image/png",
+        "bytes": 1556463,
+        "sha256": "23d7d2097e9dfcd3c1b326239d3cf9dd5222bc1dd838bc43ada34e9bc03ba1de"
+      },
+      {
+        "name": "PSD_GEOMETRY_LOCKED_Metal_Roller_16mm_Master.png",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo-roller-material-2026-11-02/metal-registered.png",
+        "mime": "image/png",
+        "bytes": 1119654,
+        "sha256": "5b724ad20d2fe091c8116aa2de4e9896e48480eb6596212b597eca9dad6a3480"
+      },
+      {
+        "name": "PSD_GEOMETRY_LOCKED_Metal_Roller_16mm_Master.svg",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo-roller-material-2026-11-02/sources/metal-registered.svg",
+        "mime": "image/svg+xml",
+        "bytes": 2198909,
+        "sha256": "9a882d6c846157971e8bb3d04cefb5ac41644b68f4a99f245978e24cd262b342"
+      },
+      {
+        "name": "PSD_GEOMETRY_LOCKED_Metal_Roller_16mm_Delivery.webp",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp",
+        "mime": "image/webp",
+        "bytes": 581082,
+        "sha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008"
+      },
+      {
+        "name": "README_Roller_Approval_and_Local_Assembly_Status.md",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo-roller-material-2026-11-02/README.md",
+        "mime": "text/markdown",
+        "bytes": 2952,
+        "sha256": "a5d9239a2ae0c52da7760e4e4adc59eccf0597f62dbfc18771bbb8e253942e25"
+      },
+      {
+        "file": "/private/tmp/Best_Bottles_Jumbo16mm_v3_Approved_Material_PSD_Geometry_2026-11-02.zip",
+        "name": "Best_Bottles_Jumbo16mm_v3_Approved_Material_PSD_Geometry_2026-11-02.zip",
+        "mime": "application/zip",
+        "bytes": 21180049,
+        "sha256": "e5435d658e9e6a42746cc593f63b53c2c27a30c6a352a6f43ec7a661e87260f3",
+        "entries": 110
+      }
+    ]
+  },
+  {
+    "scope": "Short amber 2ml13-425 cap restoration; black checkout mapping pending",
+    "folderId": "1EH9xpA1aTtX4Ey5nA0yPV0rlYpJvzrOY",
+    "files": [
+      {
+        "name": "SHORT_2ML_13-425_AMBER_Shared_Body.png",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+        "mime": "image/png",
+        "bytes": 991128,
+        "sha256": "5be9929a0bde292b74b11d7122c9736b21552b1dffacebce4e52252195e6c392"
+      },
+      {
+        "name": "SHORT_2ML_13-425_Black_Cap.webp",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/vial2-short-black-2026-11-02/black-cap.ec6c05dfdf82.webp",
+        "mime": "image/webp",
+        "bytes": 10514,
+        "sha256": "ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798"
+      },
+      {
+        "name": "SHORT_2ML_13-425_White_Cap.webp",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/vial2-short-black-2026-11-02/cap.71c80d249922.webp",
+        "mime": "image/webp",
+        "bytes": 8874,
+        "sha256": "71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e"
+      },
+      {
+        "name": "README_Short_Vial_Cap_Identity_Checkout_and_Copy.md",
+        "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/vial2-short-black-2026-11-02/README.md",
+        "mime": "text/markdown",
+        "bytes": 2660,
+        "sha256": "6fc9d65be14f6fe7fe3a271b00fff66ab599ea3e1dc6cedff28fe7fd32f73f9e"
+      },
+      {
+        "file": "/private/tmp/Best_Bottles_Short_2ml_Amber_13-425_Black_White_Caps_2026-11-02.zip",
+        "name": "Best_Bottles_Short_2ml_Amber_13-425_Black_White_Caps_2026-11-02.zip",
+        "mime": "application/zip",
+        "bytes": 1512341,
+        "sha256": "2a74b9aebf646338ebafb22e06f0040e7a92eabdea9bfaf2fbe374b4753c64b8",
+        "entries": 28
+      }
+    ]
+  }
+]

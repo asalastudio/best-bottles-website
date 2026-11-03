@@ -1,0 +1,1038 @@
+{
+  "/images/register/tubes/cylinder-100ml-18-415-clear-lotion.d5bc7b4d31d2.png": {
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-lotion.d5bc7b4d31d2.png",
+    "sha256": "d5bc7b4d31d2e8a819db46fed1f550757d2b98e79a0df1aa17c89718aa0c1831",
+    "bytes": 117135,
+    "width": 138,
+    "height": 1768,
+    "visibleBounds": {
+      "left": 8,
+      "top": 0,
+      "right": 130,
+      "bottom": 1766
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-100ml-18-415-clear-lotion-exploded.966c63deaa44.png": {
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-lotion-exploded.966c63deaa44.png",
+    "sha256": "966c63deaa44c9c3b7d13ae5021aafbb978a8389a92b24cea0c9050543de1797",
+    "bytes": 131231,
+    "width": 138,
+    "height": 1762,
+    "visibleBounds": {
+      "left": 9,
+      "top": 0,
+      "right": 130,
+      "bottom": 1762
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/pump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/04f97d643c4a78cc93fab56a961256484ef1cba8fcd20a8367fe79b72331511e.png",
+    "sha256": "04f97d643c4a78cc93fab56a961256484ef1cba8fcd20a8367fe79b72331511e",
+    "bytes": 234383,
+    "width": 565,
+    "height": 981,
+    "visibleBounds": {
+      "left": 19,
+      "top": 17,
+      "right": 554,
+      "bottom": 972
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SGLD-18415-S/cap-3e51945791b1c5a47553daeea323ae74e11dae1673995e156062ad74f6192f53.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/d3ef0f02ee102dd75ba91f8eec77841211e3f2a768ab3249bbfd73f2d2670eec.png",
+    "sha256": "d3ef0f02ee102dd75ba91f8eec77841211e3f2a768ab3249bbfd73f2d2670eec",
+    "bytes": 55161,
+    "width": 233,
+    "height": 221,
+    "visibleBounds": {
+      "left": 6,
+      "top": 7,
+      "right": 215,
+      "bottom": 212
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SBLK-18415-T/cap-216376a7f597fef31d124b470c9c1a99628f36fabed4e92f42c403e0e0ed4d5d.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/397e9514eb967d3eccbb6ba63c63c5839b80050d4f1f5cc74ad960d6d2b46f08.png",
+    "sha256": "397e9514eb967d3eccbb6ba63c63c5839b80050d4f1f5cc74ad960d6d2b46f08",
+    "bytes": 24145,
+    "width": 221,
+    "height": 245,
+    "visibleBounds": {
+      "left": 6,
+      "top": 0,
+      "right": 190,
+      "bottom": 241
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/overcap-c4d4b9daf52cfda14d1e92d111a8c19467beadf960e1cfb558f7ed466e7966a3.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/b9ed7876874a50a9cda7dd44c490b0e5991b29ccc3a3a8505da1b92646c226e8.png",
+    "sha256": "b9ed7876874a50a9cda7dd44c490b0e5991b29ccc3a3a8505da1b92646c226e8",
+    "bytes": 105334,
+    "width": 322,
+    "height": 652,
+    "visibleBounds": {
+      "left": 15,
+      "top": 12,
+      "right": 316,
+      "bottom": 636
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/LIB-18-415-ShnBlkCap/cap-da8783aa11ef90ea2c0ae5dedb79ee25c192073123dad3722319690dda82f655.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/ba43150bc21fea2d5c8d15993da020e3118753d838ed945e28b90f72188962ea.png",
+    "sha256": "ba43150bc21fea2d5c8d15993da020e3118753d838ed945e28b90f72188962ea",
+    "bytes": 25071,
+    "width": 245,
+    "height": 235,
+    "visibleBounds": {
+      "left": 13,
+      "top": 12,
+      "right": 233,
+      "bottom": 220
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-BRN-18415-LTR/cap-1a315abd51583519d964763719e510489ad65d41157649bb17af66481e4b36a8.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/36f86eba69f0a1f9ffe99af4094e981baa3f7b45059776679d033a7544a75222.png",
+    "sha256": "36f86eba69f0a1f9ffe99af4094e981baa3f7b45059776679d033a7544a75222",
+    "bytes": 106218,
+    "width": 227,
+    "height": 244,
+    "visibleBounds": {
+      "left": 6,
+      "top": 6,
+      "right": 205,
+      "bottom": 240
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-LBRN-18415-LTR/cap-334320d38cfb4759b15438ed2edf9a9a51ee5b7401cbb4b85c9364fa67631a69.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/2aa6413abe77d0e47ad47a98ca5f41eed5be766dd42423e2624779aa2d19fede.png",
+    "sha256": "2aa6413abe77d0e47ad47a98ca5f41eed5be766dd42423e2624779aa2d19fede",
+    "bytes": 101258,
+    "width": 227,
+    "height": 244,
+    "visibleBounds": {
+      "left": 6,
+      "top": 6,
+      "right": 205,
+      "bottom": 240
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SSLV-18415-S/cap-47b100d5600877255dfa86c8ecc117f8ecc2e5cad8ae3165a52d64e6f475949c.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/0ad0d687414eeb33760f2b77237481e030ae7ef043d63a05456ad8575808d554.png",
+    "sha256": "0ad0d687414eeb33760f2b77237481e030ae7ef043d63a05456ad8575808d554",
+    "bytes": 25781,
+    "width": 233,
+    "height": 236,
+    "visibleBounds": {
+      "left": 8,
+      "top": 10,
+      "right": 224,
+      "bottom": 218
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-MSLV-18415-S/cap-ab1f6159d1e145299e2a6d78327fe5652877c76b4c9b3b643aa181c509a3c02d.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/c4f8d253bc2910b6e2acebb9d91644573e2af8ffcda9337be65fb59efc8c0a81.png",
+    "sha256": "c4f8d253bc2910b6e2acebb9d91644573e2af8ffcda9337be65fb59efc8c0a81",
+    "bytes": 19611,
+    "width": 233,
+    "height": 226,
+    "visibleBounds": {
+      "left": 8,
+      "top": 10,
+      "right": 227,
+      "bottom": 220
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-MSLV-18415-T/cap-25cdbc112e3e99fab06d1f3cee450933d40ef6841593c8b86ebbe6e72fb397f9.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/d75e2af71e4c63b0405d95e83d4dddf3b2c1c772bd5e30ac40ca8a8c21b97c76.png",
+    "sha256": "d75e2af71e4c63b0405d95e83d4dddf3b2c1c772bd5e30ac40ca8a8c21b97c76",
+    "bytes": 34894,
+    "width": 204,
+    "height": 245,
+    "visibleBounds": {
+      "left": 8,
+      "top": 3,
+      "right": 198,
+      "bottom": 239
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-WHT-18415-T/cap-b2a62926377b89e2b34fea1be5ab2849186494e1210fde5bf8aa22ea2748dfa7.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/4676ac09fbc8d88f7aa9268838806fce01da04595096aac5b82813216792c3d4.png",
+    "sha256": "4676ac09fbc8d88f7aa9268838806fce01da04595096aac5b82813216792c3d4",
+    "bytes": 11252,
+    "width": 203,
+    "height": 245,
+    "visibleBounds": {
+      "left": 13,
+      "top": 5,
+      "right": 196,
+      "bottom": 238
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-PNK-18415-LTR/cap-05058e25010d340ada26a7b4710134d02e27087604191a7de3f60cf544ee5c97.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/057256339423d4e5abd0975c5cee723c0ec1afa3db5a406f2dde1b01926f47c6.png",
+    "sha256": "057256339423d4e5abd0975c5cee723c0ec1afa3db5a406f2dde1b01926f47c6",
+    "bytes": 909744,
+    "width": 794,
+    "height": 875,
+    "visibleBounds": {
+      "left": 2,
+      "top": 21,
+      "right": 784,
+      "bottom": 862
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-IVY-18415-LTR/cap-a8408ded928b19b85ab86622c68710570e26019c8d700529725937486f320422.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/94897b5001a857a592b2cdefcd28e669fdc407d6d5ae5aa0ef336f958b81fcc0.png",
+    "sha256": "94897b5001a857a592b2cdefcd28e669fdc407d6d5ae5aa0ef336f958b81fcc0",
+    "bytes": 1069521,
+    "width": 793,
+    "height": 870,
+    "visibleBounds": {
+      "left": 5,
+      "top": 21,
+      "right": 785,
+      "bottom": 858
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-50ml-18-415-clear-spray-exploded.96e3e1ff6d9d.png": {
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-spray-exploded.96e3e1ff6d9d.png",
+    "sha256": "96e3e1ff6d9d5d1581a014face0ecd83b7d3ce38159795f026960fe504b8980a",
+    "bytes": 94750,
+    "width": 125,
+    "height": 1754,
+    "visibleBounds": {
+      "left": 5,
+      "top": 0,
+      "right": 124,
+      "bottom": 1754
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-50ml-18-415-clear-spray.2058245482d9.png": {
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-spray.2058245482d9.png",
+    "sha256": "2058245482d9c92f79293c0399cb718262ed77be074b628d9d4457c98a4ffc80",
+    "bytes": 85630,
+    "width": 125,
+    "height": 1797,
+    "visibleBounds": {
+      "left": 0,
+      "top": 0,
+      "right": 124,
+      "bottom": 1795
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97.png",
+    "sha256": "41688cb5fc3608eef96295e07cab51a64a7cc321ba92e3a82b3be58a3b65cf97",
+    "bytes": 80326,
+    "width": 232,
+    "height": 400,
+    "visibleBounds": {
+      "left": 10,
+      "top": 7,
+      "right": 222,
+      "bottom": 391
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52.png",
+    "sha256": "2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52",
+    "bytes": 196848,
+    "width": 349,
+    "height": 602,
+    "visibleBounds": {
+      "left": 11,
+      "top": 15,
+      "right": 341,
+      "bottom": 592
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1.png",
+    "sha256": "ff179fd5c59620080bcdf17bf3665021008b1779e0584a179a8ca75cb3d032b1",
+    "bytes": 88567,
+    "width": 242,
+    "height": 400,
+    "visibleBounds": {
+      "left": 13,
+      "top": 8,
+      "right": 230,
+      "bottom": 392
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512.png",
+    "sha256": "ce3d4751ac8cd8014143123314a802569dd2cb65cf5e3972928956031c09a512",
+    "bytes": 36674,
+    "width": 232,
+    "height": 400,
+    "visibleBounds": {
+      "left": 12,
+      "top": 3,
+      "right": 226,
+      "bottom": 394
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00.png",
+    "sha256": "1506ab24d979eda6cba1a817cfa863905e6070e07756a8aff2e6c8db4f54db00",
+    "bytes": 188231,
+    "width": 343,
+    "height": 594,
+    "visibleBounds": {
+      "left": 6,
+      "top": 10,
+      "right": 334,
+      "bottom": 584
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2.png",
+    "sha256": "271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2",
+    "bytes": 81639,
+    "width": 349,
+    "height": 596,
+    "visibleBounds": {
+      "left": 11,
+      "top": 12,
+      "right": 341,
+      "bottom": 588
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/cylinder-100ml-18-415/clear/5ad1aa3cecf3d484d2a07ed3ea34d2c1cffdeca83a815fe4d23562e82fcdfb25.png": {
+    "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366.png",
+    "sha256": "ae9a7bfccc375336a27edef6ab5b63f1f2c615375bd7576d8aa9f3e1c0716366",
+    "bytes": 328523,
+    "width": 736,
+    "height": 2192,
+    "visibleBounds": {
+      "left": 165,
+      "top": 195,
+      "right": 571,
+      "bottom": 2096
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d.png",
+    "sha256": "d6b38068d4f00a2716e56799ed870b8df22a22b7961e1159d4df8125925e1c1d",
+    "bytes": 41289,
+    "width": 226,
+    "height": 398,
+    "visibleBounds": {
+      "left": 7,
+      "top": 7,
+      "right": 220,
+      "bottom": 392
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a.png",
+    "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a",
+    "bytes": 86874,
+    "width": 351,
+    "height": 599,
+    "visibleBounds": {
+      "left": 15,
+      "top": 16,
+      "right": 337,
+      "bottom": 584
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491.png",
+    "sha256": "ec9873b841cd763deefcdc87b5d90772fc5862cb99e7b5ba84b85cc30079f491",
+    "bytes": 101622,
+    "width": 229,
+    "height": 400,
+    "visibleBounds": {
+      "left": 7,
+      "top": 5,
+      "right": 220,
+      "bottom": 391
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e.png",
+    "sha256": "d7bd26752b4c1827fa5b14860fc87b16bd865e1c074e18b205703397ae42766e",
+    "bytes": 169164,
+    "width": 392,
+    "height": 646,
+    "visibleBounds": {
+      "left": 13,
+      "top": 64,
+      "right": 346,
+      "bottom": 636
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-100ml-18-415-clear-spray.a941bb7850ca.png": {
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-spray.a941bb7850ca.png",
+    "sha256": "a941bb7850ca63386acbcfb887fbcfa6b278488291020d986353216e53011006",
+    "bytes": 128497,
+    "width": 213,
+    "height": 1768,
+    "visibleBounds": {
+      "left": 1,
+      "top": 0,
+      "right": 211,
+      "bottom": 1766
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-100ml-18-415-clear-spray-exploded.7b1bd400415b.png": {
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-spray-exploded.7b1bd400415b.png",
+    "sha256": "7b1bd400415bb0001f7a3438d48d1e4ec78dca2c8ba6e7e21a504d52ff2f99f0",
+    "bytes": 139427,
+    "width": 213,
+    "height": 1748,
+    "visibleBounds": {
+      "left": 2,
+      "top": 0,
+      "right": 211,
+      "bottom": 1748
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-BLK-18415-LTR/cap-8bd04d6c5a282ea76c16bc8ec98df1f148e7f8e2740688a3ed44788dc7a182e7.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/f4f98940e73b926bda0ba033ed55d5fa3da0f61363c84a3150ee6b1d47a39074.png",
+    "sha256": "f4f98940e73b926bda0ba033ed55d5fa3da0f61363c84a3150ee6b1d47a39074",
+    "bytes": 88569,
+    "width": 229,
+    "height": 245,
+    "visibleBounds": {
+      "left": 6,
+      "top": 6,
+      "right": 209,
+      "bottom": 241
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-50ml-18-415-clear-bulb.ba2aef567f79.png": {
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-bulb.ba2aef567f79.png",
+    "sha256": "ba2aef567f79fec21060b62e246df53c12df0caf2835d40ad150157e6639cea3",
+    "bytes": 102209,
+    "width": 144,
+    "height": 1797,
+    "visibleBounds": {
+      "left": 1,
+      "top": 0,
+      "right": 132,
+      "bottom": 1795
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-50ml-18-415-clear-bulb-exploded.d899eb905755.png": {
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-bulb-exploded.d899eb905755.png",
+    "sha256": "d899eb90575546b4a1d53d48fd9a79e2fc09a8824f169db8fd5514c254e674c7",
+    "bytes": 66484,
+    "width": 144,
+    "height": 1279,
+    "visibleBounds": {
+      "left": 1,
+      "top": 0,
+      "right": 23,
+      "bottom": 1279
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-BKSL-18-415-02/sprayer-56014b6a9c88597dae905be7f316d6e959c759b6049fa902e038cf9ce2c4c82b.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/99d53da2b140c13866c1a6093c7f8890286b06d448c27f05a348cbf258477a16.png",
+    "sha256": "99d53da2b140c13866c1a6093c7f8890286b06d448c27f05a348cbf258477a16",
+    "bytes": 437162,
+    "width": 931,
+    "height": 624,
+    "visibleBounds": {
+      "left": 19,
+      "top": 20,
+      "right": 925,
+      "bottom": 618
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-50ml-18-415-clear-tassel.3ee823f9a262.png": {
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-tassel.3ee823f9a262.png",
+    "sha256": "3ee823f9a26274730eb513ed0d1eef2cf43516cf29175ab95475a904f5d9df4a",
+    "bytes": 101924,
+    "width": 138,
+    "height": 1797,
+    "visibleBounds": {
+      "left": 15,
+      "top": 0,
+      "right": 125,
+      "bottom": 1795
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-50ml-18-415-clear-tassel-exploded.c730b0d05603.png": {
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-tassel-exploded.c730b0d05603.png",
+    "sha256": "c730b0d05603cb8b48fe9d227181f4cf60673fd3e974a8a5dd78cd4b18c3a9fa",
+    "bytes": 108965,
+    "width": 138,
+    "height": 1716,
+    "visibleBounds": {
+      "left": 18,
+      "top": 0,
+      "right": 124,
+      "bottom": 1716
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png": {
+    "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3.png",
+    "sha256": "ed138b1a40c93e646abb42f96b5a382edb327465adc944545ff27220b35a75b3",
+    "bytes": 39076,
+    "width": 226,
+    "height": 397,
+    "visibleBounds": {
+      "left": 9,
+      "top": 6,
+      "right": 220,
+      "bottom": 391
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-100ml-18-415-clear-bulb.678fa5f50092.png": {
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-bulb.678fa5f50092.png",
+    "sha256": "678fa5f50092f60bf8dcdb4068e375dacd18495693e1bd0cdc818a6a3b4207fc",
+    "bytes": 60720,
+    "width": 72,
+    "height": 1768,
+    "visibleBounds": {
+      "left": 1,
+      "top": 0,
+      "right": 69,
+      "bottom": 1766
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-100ml-18-415-clear-bulb-exploded.b0f6d8bcfc1e.png": {
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-bulb-exploded.b0f6d8bcfc1e.png",
+    "sha256": "b0f6d8bcfc1e265fb01036eb9deb15e33a52fb254dabe1024e96b1734bb404c4",
+    "bytes": 61249,
+    "width": 72,
+    "height": 1548,
+    "visibleBounds": {
+      "left": 1,
+      "top": 0,
+      "right": 68,
+      "bottom": 1548
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-BLK-18-415-02/sprayer-8c0a1fc75690da707d6ca5a89cc820b9124ff5af2535eb1fa0e37b1811367505.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/0cec13725fef36c701307f399eff5c53aad5e6f72282487cd8d10a0b1b62f671.png",
+    "sha256": "0cec13725fef36c701307f399eff5c53aad5e6f72282487cd8d10a0b1b62f671",
+    "bytes": 873726,
+    "width": 1628,
+    "height": 1800,
+    "visibleBounds": {
+      "left": 0,
+      "top": 6,
+      "right": 1620,
+      "bottom": 1792
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-100ml-18-415-clear-tassel.678fa5f50092.png": {
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-tassel.678fa5f50092.png",
+    "sha256": "678fa5f50092f60bf8dcdb4068e375dacd18495693e1bd0cdc818a6a3b4207fc",
+    "bytes": 60720,
+    "width": 72,
+    "height": 1768,
+    "visibleBounds": {
+      "left": 1,
+      "top": 0,
+      "right": 69,
+      "bottom": 1766
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-100ml-18-415-clear-tassel-exploded.b0f6d8bcfc1e.png": {
+    "file": "public/images/register/tubes/cylinder-100ml-18-415-clear-tassel-exploded.b0f6d8bcfc1e.png",
+    "sha256": "b0f6d8bcfc1e265fb01036eb9deb15e33a52fb254dabe1024e96b1734bb404c4",
+    "bytes": 61249,
+    "width": 72,
+    "height": 1548,
+    "visibleBounds": {
+      "left": 1,
+      "top": 0,
+      "right": 68,
+      "bottom": 1548
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-LVN-18-415-01/sprayer-fb3882c11bede6f49e7741c52e8376b1aa7ecd94fa2f910e52eaa98ec005ece4.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/631f253a7a1d01b7a15ba88a7ebe0cd546843579d0c8b9f5e0c556b2fe49960d.png",
+    "sha256": "631f253a7a1d01b7a15ba88a7ebe0cd546843579d0c8b9f5e0c556b2fe49960d",
+    "bytes": 707184,
+    "width": 909,
+    "height": 615,
+    "visibleBounds": {
+      "left": 9,
+      "top": 13,
+      "right": 903,
+      "bottom": 609
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-PNK-18-415/sprayer-fe2b9f4a6911dff87628135ed9ed2fc74e19e4b890bf10e6ddcd6c68a0627727.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/4f7f023b3b777a053a7afe26a77fb69871febb1cbdc822535bd6c8a6285095bc.png",
+    "sha256": "4f7f023b3b777a053a7afe26a77fb69871febb1cbdc822535bd6c8a6285095bc",
+    "bytes": 771197,
+    "width": 895,
+    "height": 605,
+    "visibleBounds": {
+      "left": 10,
+      "top": 12,
+      "right": 889,
+      "bottom": 599
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MSLV-18-415-01/sprayer-099f66c6982497245525b930a03661058e5ef5bcf77b10538a0e3270bc83f85b.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/4373027a5e3a3a1f1be9505921674c64e3a7d2a0b733acc35e873e7b70c7dd12.png",
+    "sha256": "4373027a5e3a3a1f1be9505921674c64e3a7d2a0b733acc35e873e7b70c7dd12",
+    "bytes": 567172,
+    "width": 919,
+    "height": 607,
+    "visibleBounds": {
+      "left": 8,
+      "top": 14,
+      "right": 910,
+      "bottom": 601
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVSL-18-415-01/sprayer-52d56b0edf6a752c7686ab3caefd1a5aa3c1f60e5f39ce1197b090b127412ff0.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/930456b7e091aac213308291a621bd7c07fe84332e65b1c28c676a41690eacc6.png",
+    "sha256": "930456b7e091aac213308291a621bd7c07fe84332e65b1c28c676a41690eacc6",
+    "bytes": 532758,
+    "width": 895,
+    "height": 594,
+    "visibleBounds": {
+      "left": 10,
+      "top": 12,
+      "right": 889,
+      "bottom": 588
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-GLD-18-415-02/sprayer-848c7bd50bb6d1aeb8797964e7ee84f6c21cdc31e9d1e97f692bae55ce5ef6dd.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/5100cb7fa961a88ddafc4f18c35bb0f2129743e8c5a2eea91e45b4049bacdacc.png",
+    "sha256": "5100cb7fa961a88ddafc4f18c35bb0f2129743e8c5a2eea91e45b4049bacdacc",
+    "bytes": 762833,
+    "width": 908,
+    "height": 601,
+    "visibleBounds": {
+      "left": 10,
+      "top": 13,
+      "right": 901,
+      "bottom": 595
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png": {
+    "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71.png",
+    "sha256": "f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71",
+    "bytes": 75860,
+    "width": 345,
+    "height": 600,
+    "visibleBounds": {
+      "left": 13,
+      "top": 16,
+      "right": 337,
+      "bottom": 588
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVGD-18-415-01/sprayer-5c10da82ef2bba1e99ea2bb55d7e39846e2da40a0d206c87fadb0cfd5fbc3119.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/bc826649379e9625f3f8b4056a777bc3a9ca4ee5af91d90488adf12552b374c9.png",
+    "sha256": "bc826649379e9625f3f8b4056a777bc3a9ca4ee5af91d90488adf12552b374c9",
+    "bytes": 643998,
+    "width": 903,
+    "height": 601,
+    "visibleBounds": {
+      "left": 10,
+      "top": 13,
+      "right": 897,
+      "bottom": 595
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-WHT-18-415-01/sprayer-dc778d02391bae45222b728542eec2cbaba5d42d7d96c0d8ec4e7fa2680c5d33.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/eb9de35693dbd9a176c97990a06a2910b177e0fa74e6403d9c53c38461b553c8.png",
+    "sha256": "eb9de35693dbd9a176c97990a06a2910b177e0fa74e6403d9c53c38461b553c8",
+    "bytes": 317939,
+    "width": 935,
+    "height": 621,
+    "visibleBounds": {
+      "left": 7,
+      "top": 7,
+      "right": 929,
+      "bottom": 615
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-RED-18-415-01/sprayer-de409ea9e8d475eb4fa76257d368108c228a606f892cfc5089d80386b9ce8dca.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/7d04417b2beb7fc01befbebe4cda58dc4147343434d1607adcd42d96d89c45e7.png",
+    "sha256": "7d04417b2beb7fc01befbebe4cda58dc4147343434d1607adcd42d96d89c45e7",
+    "bytes": 593599,
+    "width": 937,
+    "height": 630,
+    "visibleBounds": {
+      "left": 10,
+      "top": 12,
+      "right": 931,
+      "bottom": 624
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-LVN-18-415-02/sprayer-f7d88c6ee47c769a088b231b5df53883c7ec262ec08badeed0633db1771c8b3b.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/407329e775793776f973802e989b9e4aec5e765b3f493eb7f2db2c239d8220fc.png",
+    "sha256": "407329e775793776f973802e989b9e4aec5e765b3f493eb7f2db2c239d8220fc",
+    "bytes": 1556313,
+    "width": 1595,
+    "height": 1739,
+    "visibleBounds": {
+      "left": 7,
+      "top": 7,
+      "right": 1588,
+      "bottom": 1731
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVGD-18-415-02/sprayer-65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/a3357cf773739028a5df2e2190007c906b01e0d4d49d905e12bcf920c24ecac8.png",
+    "sha256": "a3357cf773739028a5df2e2190007c906b01e0d4d49d905e12bcf920c24ecac8",
+    "bytes": 1409535,
+    "width": 1628,
+    "height": 1723,
+    "visibleBounds": {
+      "left": 0,
+      "top": 6,
+      "right": 1620,
+      "bottom": 1715
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVSL-18-415-02/sprayer-65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/a3357cf773739028a5df2e2190007c906b01e0d4d49d905e12bcf920c24ecac8.png",
+    "sha256": "a3357cf773739028a5df2e2190007c906b01e0d4d49d905e12bcf920c24ecac8",
+    "bytes": 1409535,
+    "width": 1628,
+    "height": 1723,
+    "visibleBounds": {
+      "left": 0,
+      "top": 6,
+      "right": 1620,
+      "bottom": 1715
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-WHT-18-415-02/sprayer-b56c72b9bf1522d31333604bdf49703812bff10f9a53b21453da8a8b41ff438d.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/ff3a3dce50a73015c4283db2a8afa5636dca698c8c9b70defaeec210a2fb138f.png",
+    "sha256": "ff3a3dce50a73015c4283db2a8afa5636dca698c8c9b70defaeec210a2fb138f",
+    "bytes": 1228642,
+    "width": 1628,
+    "height": 1737,
+    "visibleBounds": {
+      "left": 0,
+      "top": 6,
+      "right": 1620,
+      "bottom": 1731
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-RED-18-415-02/sprayer-de03bde7cdcbb3b85f17572ad955744fb6a518ca3a26f782e005b5f97e77b302.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/d60341b5958b122bb6c00ff11e493e4ddf1938e32b6c7ec930e4d808e8c5ff25.png",
+    "sha256": "d60341b5958b122bb6c00ff11e493e4ddf1938e32b6c7ec930e4d808e8c5ff25",
+    "bytes": 1263587,
+    "width": 1628,
+    "height": 1706,
+    "visibleBounds": {
+      "left": 0,
+      "top": 6,
+      "right": 1620,
+      "bottom": 1698
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-PNK-18-415/sprayer-3debade8363940ccb81dcbb816cd241ad794c42d76a450f95b15cdfebe36056c.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/26cba9d9cd74aac327257c7980b3aba74aca12d815739fc5bd36af6fea76da52.png",
+    "sha256": "26cba9d9cd74aac327257c7980b3aba74aca12d815739fc5bd36af6fea76da52",
+    "bytes": 1391996,
+    "width": 1628,
+    "height": 1738,
+    "visibleBounds": {
+      "left": 6,
+      "top": 6,
+      "right": 1620,
+      "bottom": 1732
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-50ml-18-415-clear-lotion.ccb9d199ae0e.png": {
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-lotion.ccb9d199ae0e.png",
+    "sha256": "ccb9d199ae0e612830dc39d1e93710d9519be1465d6d6f4cfa511b7690c63fd0",
+    "bytes": 130810,
+    "width": 158,
+    "height": 1797,
+    "visibleBounds": {
+      "left": 16,
+      "top": 0,
+      "right": 157,
+      "bottom": 1795
+    },
+    "alphaThreshold": 32
+  },
+  "/images/register/tubes/cylinder-50ml-18-415-clear-lotion-exploded.cdf086d02661.png": {
+    "file": "public/images/register/tubes/cylinder-50ml-18-415-clear-lotion-exploded.cdf086d02661.png",
+    "sha256": "cdf086d02661f40730802f60d28e5b9c018f297c133fb023c94fc7baceac609a",
+    "bytes": 140687,
+    "width": 158,
+    "height": 1753,
+    "visibleBounds": {
+      "left": 28,
+      "top": 0,
+      "right": 157,
+      "bottom": 1753
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MSLV-18-415-02/sprayer-2db04d2b0302648aba85244fbe820d2751a97df88638c96dffbd8f2d1596d2b6.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/013b2e11b7cdd0d7c8a2be5cb95e388803fb93dcf257a6bc325df9e5cdfe433f.png",
+    "sha256": "013b2e11b7cdd0d7c8a2be5cb95e388803fb93dcf257a6bc325df9e5cdfe433f",
+    "bytes": 991636,
+    "width": 1634,
+    "height": 1796,
+    "visibleBounds": {
+      "left": 0,
+      "top": 7,
+      "right": 1628,
+      "bottom": 1788
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/pump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/278fe7f188430d8b83c18a5cb9221ef0a9c33e303a4d551dc2e746f35acd465b.png",
+    "sha256": "278fe7f188430d8b83c18a5cb9221ef0a9c33e303a4d551dc2e746f35acd465b",
+    "bytes": 82910,
+    "width": 236,
+    "height": 400,
+    "visibleBounds": {
+      "left": 10,
+      "top": 2,
+      "right": 226,
+      "bottom": 394
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52.png",
+    "sha256": "2e13c3f6090b95e2839dbc75e0537d2b6940a1b0fe10def4c8c5a20f656dbb52",
+    "bytes": 196848,
+    "width": 349,
+    "height": 602,
+    "visibleBounds": {
+      "left": 11,
+      "top": 15,
+      "right": 341,
+      "bottom": 592
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/pump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/03c8e952ce1c82e4da04bbf3b93cb5ff717486d3efab7e404537536f22b759c0.png",
+    "sha256": "03c8e952ce1c82e4da04bbf3b93cb5ff717486d3efab7e404537536f22b759c0",
+    "bytes": 89639,
+    "width": 239,
+    "height": 400,
+    "visibleBounds": {
+      "left": 13,
+      "top": 5,
+      "right": 233,
+      "bottom": 393
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/pump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/6cc716f91c7c0531f098b8789d3666b7735e3e006851b9ee285d1d2e39a336b4.png",
+    "sha256": "6cc716f91c7c0531f098b8789d3666b7735e3e006851b9ee285d1d2e39a336b4",
+    "bytes": 37222,
+    "width": 233,
+    "height": 400,
+    "visibleBounds": {
+      "left": 12,
+      "top": 4,
+      "right": 227,
+      "bottom": 394
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/overcap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/06c1e5ffc8ae3d0aa90407055e97b7694d8a81dd989d65b753c10ca04136a618.png",
+    "sha256": "06c1e5ffc8ae3d0aa90407055e97b7694d8a81dd989d65b753c10ca04136a618",
+    "bytes": 187782,
+    "width": 343,
+    "height": 594,
+    "visibleBounds": {
+      "left": 6,
+      "top": 10,
+      "right": 333,
+      "bottom": 584
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2.png",
+    "sha256": "271573d8c23a35eb19a8e2136c494e91ff5c319b5811a21945cbaeab0f1a5ac2",
+    "bytes": 81639,
+    "width": 349,
+    "height": 596,
+    "visibleBounds": {
+      "left": 11,
+      "top": 12,
+      "right": 341,
+      "bottom": 588
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71.png",
+    "sha256": "f3ef537447a0e2d27134d72a871e057b5480dffc252d4f21531f271fdb075f71",
+    "bytes": 75860,
+    "width": 345,
+    "height": 600,
+    "visibleBounds": {
+      "left": 13,
+      "top": 16,
+      "right": 337,
+      "bottom": 588
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-GLD-18415-TSL/sprayer-e55cea34d77f95d743ee6965f693cad020d6d1e5d4ef9e3d27866ba9b65901b9.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/cea0e8a95b957b92aa3fc14079d56f76bb5a639fea5df0abde8897dfba2838b0.png",
+    "sha256": "cea0e8a95b957b92aa3fc14079d56f76bb5a639fea5df0abde8897dfba2838b0",
+    "bytes": 1505162,
+    "width": 1616,
+    "height": 1731,
+    "visibleBounds": {
+      "left": 8,
+      "top": 6,
+      "right": 1608,
+      "bottom": 1724
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/pump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/976e421755bf3e03caac8127ec0c522e0e960ba65162f05b8219642bf7525c30.png",
+    "sha256": "976e421755bf3e03caac8127ec0c522e0e960ba65162f05b8219642bf7525c30",
+    "bytes": 209267,
+    "width": 552,
+    "height": 995,
+    "visibleBounds": {
+      "left": 12,
+      "top": 16,
+      "right": 546,
+      "bottom": 989
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/pump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/091bd119ea1617aa8fc8e302e5588eaa37c5b4f61eab36815d243b48f21ea672.png",
+    "sha256": "091bd119ea1617aa8fc8e302e5588eaa37c5b4f61eab36815d243b48f21ea672",
+    "bytes": 43214,
+    "width": 231,
+    "height": 400,
+    "visibleBounds": {
+      "left": 7,
+      "top": 9,
+      "right": 225,
+      "bottom": 395
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/pump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/c81514a001b22bb6517817ae3396103562b8135937c2218de30a08191592b3db.png",
+    "sha256": "c81514a001b22bb6517817ae3396103562b8135937c2218de30a08191592b3db",
+    "bytes": 101117,
+    "width": 228,
+    "height": 400,
+    "visibleBounds": {
+      "left": 7,
+      "top": 7,
+      "right": 219,
+      "bottom": 392
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a.png",
+    "sha256": "a960223629d4e2f5446809d1ded2cf9f04d05c813f6c3639ae345e524c558c6a",
+    "bytes": 86874,
+    "width": 351,
+    "height": 599,
+    "visibleBounds": {
+      "left": 15,
+      "top": 16,
+      "right": 337,
+      "bottom": 584
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/overcap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png": {
+    "file": "docs/reviews/cylinder25-18415-2026-11-01/sources/8ee55303f436df341ca07814707ff5ee39f447bb6b5582bfc7a4028537a1038b.png",
+    "sha256": "8ee55303f436df341ca07814707ff5ee39f447bb6b5582bfc7a4028537a1038b",
+    "bytes": 172227,
+    "width": 419,
+    "height": 648,
+    "visibleBounds": {
+      "left": 6,
+      "top": 0,
+      "right": 409,
+      "bottom": 636
+    },
+    "alphaThreshold": 32
+  },
+  "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/cylinder-50ml-18-415/clear/6da4f4e418e44d36adbfeeb11105e20f20408165f6ae7a83acf14d4f6ab84c2a.png": {
+    "file": "docs/reviews/cylinder-family-completion-2026-11-02/sources/c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf.png",
+    "sha256": "c21649897a68badcd9a6ca142cf3dde7c0270d75d61192270d328548000b2daf",
+    "bytes": 468773,
+    "width": 768,
+    "height": 2192,
+    "visibleBounds": {
+      "left": 120,
+      "top": 180,
+      "right": 649,
+      "bottom": 2096
+    },
+    "alphaThreshold": 32
+  }
+}

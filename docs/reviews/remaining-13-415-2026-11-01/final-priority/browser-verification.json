@@ -1,0 +1,210 @@
+{
+  "records": [
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek8SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek8SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek8SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9SpryCuMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9SpryCuMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryCuMatt&from=pdp"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9SpryCuMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryCuMatt&from=pdp"
+    }
+  ],
+  "failures": [],
+  "pageErrors": []
+}

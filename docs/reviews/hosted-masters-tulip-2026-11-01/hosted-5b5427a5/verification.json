@@ -1,0 +1,2125 @@
+{
+  "commit": "5b5427a5ef67fc71ddd556dae7369d17b99fe835",
+  "origin": "https://best-bottles-website-mx9b0ctgt-asala.vercel.app",
+  "version": "b319d9d90adc6eb9",
+  "api": [
+    "GBCyl5Sl",
+    "GBCyl5Gl",
+    "GBCyl5CuSht",
+    "GBCyl5SlMattSht",
+    "GBCyl5BlkSht",
+    "GBCyl5BlkShSht",
+    "GBCyl5WhtSht",
+    "GBCyl5GlSht",
+    "GBCyl5SlSht",
+    "GBCylBlu5Sl",
+    "GBCylBlu5Gl",
+    "GBCylBlu5WhtSht",
+    "GBCylBlu5CuSht",
+    "GBCylBlu5BlkSht",
+    "GBCylBlu5GlMattSht",
+    "GBCylBlu5SlMattSht",
+    "GBCyl5GlMattSht",
+    "GBCylBlu5GlSht",
+    "GBCylBlu5SlSht",
+    "GBCylBlu5BlkShSht",
+    "GBCyl5MtlRollCuMatt",
+    "GBCyl5MtlRollGlMatt",
+    "GBCyl5MtlRollBlkSh",
+    "GBCyl5MtlRollPinkDot",
+    "GBCyl5MtlRollGlSh",
+    "GBCyl5MtlRollSlDot",
+    "GBCyl5RollBlkDot",
+    "GBCyl5RollSlSh",
+    "GBCyl5MtlRollSlMatt",
+    "GBCyl5MtlRollSlSh",
+    "GBCyl5RollBlkSh",
+    "GBCyl5RollSlDot",
+    "GBCyl5RollGlSh",
+    "GBCyl5RollPinkDot",
+    "GBCyl5RollGlMatt",
+    "GBCyl5RollSlMatt",
+    "GBCyl5RollCuMatt",
+    "GBCylBlu5MtlRollBlkSh",
+    "GBCylBlu5MtlRollCuMatt",
+    "GBCylBlu5MtlRollGlMatt",
+    "GBCylBlu5MtlRollPinkDot",
+    "GBCylBlu5MtlRollGlSh",
+    "GBCylBlu5MtlRollSlDot",
+    "GBCylBlu5MtlRollSlMatt",
+    "GBCylBlu5RollBlkDot",
+    "GBCylBlu5MtlRollSlSh",
+    "GBCyl5MtlRollBlkDot",
+    "GBCylBlu5RollGlSh",
+    "GBCylBlu5RollBlkSh",
+    "GBCylBlu5RollSlSh",
+    "GBCylBlu5RollGlMatt",
+    "GBCylBlu5RollPinkDot",
+    "GBCylBlu5RollSlDot",
+    "GBCylBlu5RollCuMatt",
+    "GBCylBlu5RollSlMatt",
+    "GBCylBlu5MtlRollBlkDot",
+    "GBCyl5SpryBlkMatt",
+    "GBCyl5SpryBlkSh",
+    "GBCyl5SprySlMatt",
+    "GBCyl5SpryGlSh",
+    "GBCyl5SprySlSh",
+    "GBCyl5SpryBluMatt",
+    "GBCyl5SpryCuMatt",
+    "GBCyl5SpryGlMatt",
+    "GBCylBlu5SprySlSh",
+    "GBCylBlu5SpryBlkSh",
+    "GBCylBlu5SpryGlSh",
+    "GBCylBlu5SpryGlMatt",
+    "GBCylBlu5SpryCuMatt",
+    "GBCylBlu5SpryBluMatt",
+    "GBCylAmb9SpryBlk",
+    "GBCylAmb9SpryGl",
+    "GBCylBlu5SprySlMatt",
+    "GBCylAmb9SpryMattSl",
+    "GBCylAmb9SpryRd",
+    "GBCylAmb9SpryShSl",
+    "LBCylAmb9LtnBlk",
+    "GBCylAmb9SpryTur",
+    "LBCylAmb9LtnMtSl",
+    "LBCylAmb9LtnGl",
+    "GBCylAmb9MtlRollBlkDot",
+    "GBCylAmb9MtlRollMattSl",
+    "GBCylAmb9MtlRollMattGl",
+    "GBCylAmb9MtlRollPnkDot",
+    "GBCylAmb9MtlRollShBlk",
+    "GBCylAmb9MtlRollShnGl",
+    "GBCylAmb9MtlRollShnSl",
+    "GBCylAmb9MtlRollSlDot",
+    "GBCylAmb9RollBlkDot",
+    "GBCylAmb9MtlRollWht",
+    "GBCylAmb9RollMattCu",
+    "GBCylAmb9MtlRollMattCu",
+    "GBCylAmb9RollMattGl",
+    "GBCylAmb9RollMattSl",
+    "GBCylAmb9RollPnkDot",
+    "GBCylAmb9RollShnGl",
+    "GBCylAmb9RollSlDot",
+    "GBCylAmb9RollShnSl",
+    "GBCylAmb9RollWht",
+    "GBCylAmb9RollShBlk",
+    "GBCyl9SpryBlk",
+    "GBCyl9SpryGl",
+    "GBCyl9SpryMattSl",
+    "GBCyl9SpryShSl",
+    "GBCyl9SpryRd",
+    "GBCyl9SpryTur",
+    "LBCyl9LtnBlk",
+    "LBCyl9LtnGl",
+    "LBCyl9LtnMtSl",
+    "GBCyl9MtlRollBlkDot",
+    "GBCyl9MtlRollMattCu",
+    "GBCyl9MtlRollMattGl",
+    "GBCyl9MtlRollPnkDot",
+    "GBCyl9MtlRollMattSl",
+    "GBCyl9MtlRollShBlk",
+    "GBCyl9MtlRollShnGl",
+    "GBCyl9MtlRollShnSl",
+    "GBCyl9MtlRollSlDot",
+    "GBCyl9MtlRollWht",
+    "GBCyl9RollBlkDot",
+    "GBCyl9RollMattCu",
+    "GBCyl9RollMattSl",
+    "GBCyl9RollPnkDot",
+    "GBCyl9RollMattGl",
+    "GBCyl9RollShBlk",
+    "GBCyl9RollShnSl",
+    "GBCyl9RollSlDot",
+    "GBCyl9RollWht",
+    "GBCyl9RollShnGl",
+    "GBCylBlu9SpryBlk",
+    "GBCylBlu9SpryGl",
+    "GBCylBlu9SpryMattSl",
+    "GBCylBlu9SpryRd",
+    "GBCylBlu9SpryShSl",
+    "GBCylBlu9SpryTur",
+    "LBCylBlu9LtnBlk",
+    "LBCylBlu9LtnGl",
+    "LBCylBlu9LtnMattSl",
+    "GBCylBlu9MtlRollBlkDot",
+    "GBCylBlu9MtlRollMattCu",
+    "GBCylBlu9MtlRollMattGl",
+    "GBCylBlu9MtlRollMattSl",
+    "GBCylBlu9MtlRollShBlk",
+    "GBCylBlu9MtlRollShnGl",
+    "GBCylBlu9MtlRollShnSl",
+    "GBCylBlu9MtlRollSlDot",
+    "GBCylBlu9MtlRollPnkDot",
+    "GBCylBlu9MtlRollWht",
+    "GBCylBlu9RollBlkDot",
+    "GBCylBlu9RollMattCu",
+    "GBCylBlu9RollMattGl",
+    "GBCylBlu9RollMattSl",
+    "GBCylBlu9RollPnkDot",
+    "GBCylBlu9RollShnGl",
+    "GBCylBlu9RollShBlk",
+    "GBCylBlu9RollShnSl",
+    "GBCylBlu9RollWht",
+    "GBCylBlu9RollSlDot",
+    "GBCylFrst9SpryBlk",
+    "GBCylFrst9SpryGl",
+    "GBCylFrst9SpryRd",
+    "GBCylFrst9SpryMattSl",
+    "GBCylFrst9SpryShSl",
+    "GBCylFrst9SpryTur",
+    "LBCylFrst9LtnBlk",
+    "LBCylFrst9LtnGl",
+    "LBCylFrst9LtnMtSl",
+    "GBCylFrst9MtlRollBlkDot",
+    "GBCylFrst9MtlRollMattCu",
+    "GBCylFrst9MtlRollMattGl",
+    "GBCylFrst9MtlRollMattSl",
+    "GBCylFrst9MtlRollPnkDot",
+    "GBCylFrst9MtlRollShBlk",
+    "GBCylFrst9MtlRollShnSl",
+    "GBCylFrst9MtlRollShnGl",
+    "GBCylFrst9MtlRollSlDot",
+    "GBCylFrst9RollBlkDot",
+    "GBCylFrst9RollMattCu",
+    "GBCylFrst9RollMattGl",
+    "GBCylFrst9MtlRollWht",
+    "GBCylFrst9RollMattSl",
+    "GBCylFrst9RollPnkDot",
+    "GBCylFrst9RollShBlk",
+    "GBCylFrst9RollShnGl",
+    "GBCylFrst9RollShnSl",
+    "GBCylFrst9RollWht",
+    "GBCylFrst9RollSlDot",
+    "GBCylSwrl9SpryBlk",
+    "GBCylSwrl9SpryGl",
+    "GBCylSwrl9SpryMattSl",
+    "GBCylSwrl9SpryRd",
+    "GBCylSwrl9SpryShSl",
+    "GBCylSwrl9SpryTur",
+    "LBCylSwrl9LtnBlk",
+    "LBCylSwrl9LtnGl",
+    "LBCylSwrl9LtnMtSl",
+    "GBCylSwrl9MtlRollBlkDot",
+    "GBCylSwrl9MtlRollMattCu",
+    "GBCylSwrl9MtlRollMattGl",
+    "GBCylSwrl9MtlRollMattSl",
+    "GBCylSwrl9MtlRollPnkDot",
+    "GBCylSwrl9MtlRollShBlk",
+    "GBCylSwrl9MtlRollShnGl",
+    "GBCylSwrl9MtlRollShnSl",
+    "GBCylSwrl9MtlRollSlDot",
+    "GBCylSwrl9MtlRollWht",
+    "GBCylSwrl9RollMattCu",
+    "GBCylSwrl9RollBlkDot",
+    "GBCylSwrl9RollMattGl",
+    "GBCylSwrl9RollMattSl",
+    "GBCylSwrl9RollPnkDot",
+    "GBCylSwrl9RollShBlk",
+    "GBCylSwrl9RollShnGl",
+    "GBCylSwrl9RollShnSl",
+    "GBCylSwrl9RollWht",
+    "GBTulipAmb5SpryBlkMatt",
+    "GBTulipAmb5SpryBlkSh",
+    "GBCylSwrl9RollSlDot",
+    "GBTulipAmb5SpryBluMatt",
+    "GBTulipAmb5SpryCuMatt",
+    "GBTulipAmb5SpryGlMatt",
+    "GBTulipAmb5SpryGlSh",
+    "GBTulipAmb5SprySlMatt",
+    "GBTulipAmb5SprySlSh",
+    "GBTulip6SpryBlkSh",
+    "GBTulip6SpryBluMatt",
+    "GBTulip6SpryGlMatt",
+    "GBTulip6SpryCuMatt",
+    "GBTulip6SpryGlSh",
+    "GBTulip6SprySlMatt",
+    "GBTulip6SprySlSh",
+    "GBTulipAmb5MtlRollBlkDot",
+    "GBTulipAmb5MtlRollCuMatt",
+    "GBTulipAmb5MtlRollGlMatt",
+    "GBTulipAmb5MtlRollSlMatt",
+    "GBTulipAmb5MtlRollPinkDot",
+    "GBTulipAmb5MtlRollGlSh",
+    "GBTulipAmb5MtlRollBlkSh",
+    "GBTulipAmb5MtlRollSlSh",
+    "GBTulipAmb5MtlRollSlDot",
+    "GBTulipAmb5RollBlkDot",
+    "GBTulipAmb5RollCuMatt",
+    "GBTulipAmb5RollSlMatt",
+    "GBTulipAmb5RollGlMatt",
+    "GBTulipAmb5RollBlkSh",
+    "GBTulipAmb5RollPinkDot",
+    "GBTulipAmb5RollSlSh",
+    "GBTulipAmb5RollGlSh",
+    "GBTulip6MtlRollBlkDot",
+    "GBTulip6MtlRollCuMatt",
+    "GBTulip6MtlRollGlMatt",
+    "GBTulip6MtlRollSlMatt",
+    "GBTulip6MtlRollBlkSh",
+    "GBTulip6MtlRollPinkDot",
+    "GBTulip6MtlRollGlSh",
+    "GBTulip6MtlRollSlSh",
+    "GBTulip6MtlRollSlDot",
+    "GBTulip6RollBlkDot",
+    "GBTulip6RollCuMatt",
+    "GBTulip6RollGlMatt",
+    "GBTulipAmb5RollSlDot",
+    "GBTulip6RollSlMatt",
+    "GBTulip6RollPinkDot",
+    "GBTulip6RollBlkSh",
+    "GBTulip6RollGlSh",
+    "GBTulip6RollSlDot",
+    "GBTulip6RollSlSh"
+  ],
+  "builders": [
+    {
+      "bodyId": "cylinder-5ml|13-415|Glass Bottle",
+      "exactKits": 71
+    },
+    {
+      "bodyId": "cylinder-9ml|17-415|Glass Bottle",
+      "exactKits": 145
+    },
+    {
+      "bodyId": "tulip-5ml|13-415|Glass Bottle",
+      "exactKits": 26
+    },
+    {
+      "bodyId": "tulip-6ml|13-415|Glass Bottle",
+      "exactKits": 25
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "readOnlyPurchasePreflight": true
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "readOnlyPurchasePreflight": true
+    },
+    {
+      "family": "Cylinder",
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "rendered": true
+    },
+    {
+      "family": "Cylinder",
+      "sku": "LBCyl9LtnBlk",
+      "rendered": true
+    },
+    {
+      "family": "Cylinder",
+      "sku": "GBTulipAmb5RollBlkDot",
+      "rendered": true
+    },
+    {
+      "family": "Tulip",
+      "sku": "GBTulip6SpryBlkSh",
+      "rendered": true
+    }
+  ],
+  "pages": [
+    {
+      "sku": "GBCyl5WhtSht",
+      "slug": "cylinder-5ml-clear-13-415",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "title": "5 ML CLEAR CYLINDER POUR BOTTLE\n-\nShort Ribbed White Cap",
+      "screenshot": "desktop-GBCyl5WhtSht-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCyl5WhtSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "slug": "cylinder-5ml-clear-13-415",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "title": "5 ML CLEAR CYLINDER POUR BOTTLE\n-\nShort Ribbed White Cap",
+      "screenshot": "desktop-GBCyl5WhtSht-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCyl5WhtSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "slug": "cylinder-5ml-clear-13-415",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "title": "5 ML CLEAR CYLINDER POUR BOTTLE\n-\nShort Ribbed White Cap",
+      "screenshot": "desktop-GBCyl5WhtSht-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCyl5WhtSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "slug": "cylinder-5ml-cobalt-blue-13-415",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER POUR BOTTLE\n-\nShort Shiny Black Cap",
+      "screenshot": "desktop-GBCylBlu5BlkShSht-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "slug": "cylinder-5ml-cobalt-blue-13-415",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER POUR BOTTLE\n-\nShort Shiny Black Cap",
+      "screenshot": "desktop-GBCylBlu5BlkShSht-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "slug": "cylinder-5ml-cobalt-blue-13-415",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER POUR BOTTLE\n-\nShort Shiny Black Cap",
+      "screenshot": "desktop-GBCylBlu5BlkShSht-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "slug": "cylinder-5ml-clear-13-415-finemist",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "title": "5 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nMatte Black Sprayer",
+      "screenshot": "desktop-GBCyl5SpryBlkMatt-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "slug": "cylinder-5ml-clear-13-415-finemist",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "title": "5 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nMatte Black Sprayer",
+      "screenshot": "desktop-GBCyl5SpryBlkMatt-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "slug": "cylinder-5ml-clear-13-415-finemist",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "title": "5 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nMatte Black Sprayer",
+      "screenshot": "desktop-GBCyl5SpryBlkMatt-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "desktop-GBCylBlu5SpryBlkSh-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "desktop-GBCylBlu5SpryBlkSh-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "desktop-GBCylBlu5SpryBlkSh-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "slug": "cylinder-5ml-clear-13-415-rollon",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "title": "5 ML CLEAR CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBCyl5RollBlkDot-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "slug": "cylinder-5ml-clear-13-415-rollon",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "title": "5 ML CLEAR CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBCyl5RollBlkDot-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "slug": "cylinder-5ml-clear-13-415-rollon",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        275.86004638671875,
+        225.2978515625,
+        143.48065185546875,
+        270.1622314453125
+      ],
+      "title": "5 ML CLEAR CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBCyl5RollBlkDot-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "desktop-GBCylBlu5MtlRollGlSh-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollGlSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "desktop-GBCylBlu5MtlRollGlSh-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollGlSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        276.5556945800781,
+        225.78631591796875,
+        142.87387084960938,
+        269.03729248046875
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "desktop-GBCylBlu5MtlRollGlSh-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollGlSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "slug": "cylinder-9ml-clear-17-415-finemist",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nGold Sprayer",
+      "screenshot": "desktop-GBCyl9SpryGl-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl9SpryGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "slug": "cylinder-9ml-clear-17-415-finemist",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nGold Sprayer",
+      "screenshot": "desktop-GBCyl9SpryGl-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl9SpryGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "slug": "cylinder-9ml-clear-17-415-finemist",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nGold Sprayer",
+      "screenshot": "desktop-GBCyl9SpryGl-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl9SpryGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylFrst9SpryBlk",
+      "slug": "cylinder-9ml-frosted-17-415-finemist",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML FROSTED CYLINDER FINE-MIST SPRAY BOTTLE\n-\nBlack Sprayer",
+      "screenshot": "desktop-GBCylFrst9SpryBlk-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylFrst9SpryBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylFrst9SpryBlk",
+      "slug": "cylinder-9ml-frosted-17-415-finemist",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML FROSTED CYLINDER FINE-MIST SPRAY BOTTLE\n-\nBlack Sprayer",
+      "screenshot": "desktop-GBCylFrst9SpryBlk-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylFrst9SpryBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylFrst9SpryBlk",
+      "slug": "cylinder-9ml-frosted-17-415-finemist",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML FROSTED CYLINDER FINE-MIST SPRAY BOTTLE\n-\nBlack Sprayer",
+      "screenshot": "desktop-GBCylFrst9SpryBlk-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylFrst9SpryBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "slug": "cylinder-9ml-amber-17-415-rollon",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML AMBER CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBCylAmb9RollBlkDot-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylAmb9RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "slug": "cylinder-9ml-amber-17-415-rollon",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML AMBER CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBCylAmb9RollBlkDot-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylAmb9RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "slug": "cylinder-9ml-amber-17-415-rollon",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML AMBER CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBCylAmb9RollBlkDot-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylAmb9RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "desktop-GBCylBlu9MtlRollShnGl-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9MtlRollShnGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "desktop-GBCylBlu9MtlRollShnGl-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9MtlRollShnGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "desktop-GBCylBlu9MtlRollShnGl-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9MtlRollShnGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "slug": "cylinder-9ml-swirl-17-415-rollon",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML SWIRL CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Matte Silver Cap",
+      "screenshot": "desktop-GBCylSwrl9MtlRollMattSl-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylSwrl9MtlRollMattSl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "slug": "cylinder-9ml-swirl-17-415-rollon",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML SWIRL CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Matte Silver Cap",
+      "screenshot": "desktop-GBCylSwrl9MtlRollMattSl-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylSwrl9MtlRollMattSl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "slug": "cylinder-9ml-swirl-17-415-rollon",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML SWIRL CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Matte Silver Cap",
+      "screenshot": "desktop-GBCylSwrl9MtlRollMattSl-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylSwrl9MtlRollMattSl&from=pdp"
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "slug": "cylinder-9ml-clear-17-415-lotionpump",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML CLEAR CYLINDER TREATMENT PUMP BOTTLE\n-\nBlack Pump",
+      "screenshot": "desktop-LBCyl9LtnBlk-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "slug": "cylinder-9ml-clear-17-415-lotionpump",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML CLEAR CYLINDER TREATMENT PUMP BOTTLE\n-\nBlack Pump",
+      "screenshot": "desktop-LBCyl9LtnBlk-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "slug": "cylinder-9ml-clear-17-415-lotionpump",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "title": "9 ML CLEAR CYLINDER TREATMENT PUMP BOTTLE\n-\nBlack Pump",
+      "screenshot": "desktop-LBCyl9LtnBlk-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "title": "5 ML AMBER TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkSh-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "title": "5 ML AMBER TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkSh-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "title": "5 ML AMBER TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkSh-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "slug": "tulip-5ml-amber-13-415-rollon",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "title": "5 ML AMBER TULIP ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBTulipAmb5RollBlkDot-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "slug": "tulip-5ml-amber-13-415-rollon",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "title": "5 ML AMBER TULIP ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBTulipAmb5RollBlkDot-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "slug": "tulip-5ml-amber-13-415-rollon",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "title": "5 ML AMBER TULIP ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBTulipAmb5RollBlkDot-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "slug": "tulip-6ml-clear-13-415-finemist",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "title": "6 ML CLEAR TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "desktop-GBTulip6SpryBlkSh-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "slug": "tulip-6ml-clear-13-415-finemist",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "title": "6 ML CLEAR TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "desktop-GBTulip6SpryBlkSh-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "slug": "tulip-6ml-clear-13-415-finemist",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "title": "6 ML CLEAR TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "desktop-GBTulip6SpryBlkSh-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "slug": "tulip-6ml-clear-13-415-rollon",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "title": "6 ML CLEAR TULIP ROLL-ON BOTTLE\n-\nMetal Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBTulip6MtlRollBlkDot-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "slug": "tulip-6ml-clear-13-415-rollon",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "title": "6 ML CLEAR TULIP ROLL-ON BOTTLE\n-\nMetal Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBTulip6MtlRollBlkDot-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "slug": "tulip-6ml-clear-13-415-rollon",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "title": "6 ML CLEAR TULIP ROLL-ON BOTTLE\n-\nMetal Ball, Black with Dots Cap",
+      "screenshot": "desktop-GBTulip6MtlRollBlkDot-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "slug": "cylinder-5ml-clear-13-415",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "title": "5 ML CLEAR CYLINDER POUR BOTTLE\n-\nShort Ribbed White Cap",
+      "screenshot": "mobile-GBCyl5WhtSht-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCyl5WhtSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "slug": "cylinder-5ml-clear-13-415",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "title": "5 ML CLEAR CYLINDER POUR BOTTLE\n-\nShort Ribbed White Cap",
+      "screenshot": "mobile-GBCyl5WhtSht-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCyl5WhtSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "slug": "cylinder-5ml-clear-13-415",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "title": "5 ML CLEAR CYLINDER POUR BOTTLE\n-\nShort Ribbed White Cap",
+      "screenshot": "mobile-GBCyl5WhtSht-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCyl5WhtSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "slug": "cylinder-5ml-cobalt-blue-13-415",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER POUR BOTTLE\n-\nShort Shiny Black Cap",
+      "screenshot": "mobile-GBCylBlu5BlkShSht-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "slug": "cylinder-5ml-cobalt-blue-13-415",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER POUR BOTTLE\n-\nShort Shiny Black Cap",
+      "screenshot": "mobile-GBCylBlu5BlkShSht-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "slug": "cylinder-5ml-cobalt-blue-13-415",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER POUR BOTTLE\n-\nShort Shiny Black Cap",
+      "screenshot": "mobile-GBCylBlu5BlkShSht-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&sku=GBCylBlu5BlkShSht&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "slug": "cylinder-5ml-clear-13-415-finemist",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "title": "5 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nMatte Black Sprayer",
+      "screenshot": "mobile-GBCyl5SpryBlkMatt-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "slug": "cylinder-5ml-clear-13-415-finemist",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "title": "5 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nMatte Black Sprayer",
+      "screenshot": "mobile-GBCyl5SpryBlkMatt-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "slug": "cylinder-5ml-clear-13-415-finemist",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "title": "5 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nMatte Black Sprayer",
+      "screenshot": "mobile-GBCyl5SpryBlkMatt-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl5SpryBlkMatt&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "mobile-GBCylBlu5SpryBlkSh-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "mobile-GBCylBlu5SpryBlkSh-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "mobile-GBCylBlu5SpryBlkSh-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylBlu5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "slug": "cylinder-5ml-clear-13-415-rollon",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "title": "5 ML CLEAR CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBCyl5RollBlkDot-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "slug": "cylinder-5ml-clear-13-415-rollon",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "title": "5 ML CLEAR CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBCyl5RollBlkDot-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "slug": "cylinder-5ml-clear-13-415-rollon",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d366e116958291978d060b4a74ad2dd92020bd9fe1718ae4f84ceebebab42cb.png",
+      "bodyFrame": [
+        141.5684814453125,
+        166.89007568359375,
+        106.27099609375,
+        200.12396240234375
+      ],
+      "title": "5 ML CLEAR CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBCyl5RollBlkDot-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "mobile-GBCylBlu5MtlRollGlSh-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollGlSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "mobile-GBCylBlu5MtlRollGlSh-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollGlSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "slug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e66d97c3587f87ac02a55e0fb5cbbbdfcb62ca33fed8e39490b4bcdb76452212.svg",
+      "bodyFrame": [
+        142.07171630859375,
+        167.24530029296875,
+        105.82696533203125,
+        199.2802734375
+      ],
+      "title": "5 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "mobile-GBCylBlu5MtlRollGlSh-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu5MtlRollGlSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "slug": "cylinder-9ml-clear-17-415-finemist",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nGold Sprayer",
+      "screenshot": "mobile-GBCyl9SpryGl-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl9SpryGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "slug": "cylinder-9ml-clear-17-415-finemist",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nGold Sprayer",
+      "screenshot": "mobile-GBCyl9SpryGl-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl9SpryGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "slug": "cylinder-9ml-clear-17-415-finemist",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML CLEAR CYLINDER FINE-MIST SPRAY BOTTLE\n-\nGold Sprayer",
+      "screenshot": "mobile-GBCyl9SpryGl-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCyl9SpryGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylFrst9SpryBlk",
+      "slug": "cylinder-9ml-frosted-17-415-finemist",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML FROSTED CYLINDER FINE-MIST SPRAY BOTTLE\n-\nBlack Sprayer",
+      "screenshot": "mobile-GBCylFrst9SpryBlk-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylFrst9SpryBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylFrst9SpryBlk",
+      "slug": "cylinder-9ml-frosted-17-415-finemist",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML FROSTED CYLINDER FINE-MIST SPRAY BOTTLE\n-\nBlack Sprayer",
+      "screenshot": "mobile-GBCylFrst9SpryBlk-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylFrst9SpryBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylFrst9SpryBlk",
+      "slug": "cylinder-9ml-frosted-17-415-finemist",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/76402e4bb5a5c13e7364a1d9dcbe21739f1a051223838f3a25a52fd7f38440db.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML FROSTED CYLINDER FINE-MIST SPRAY BOTTLE\n-\nBlack Sprayer",
+      "screenshot": "mobile-GBCylFrst9SpryBlk-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBCylFrst9SpryBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "slug": "cylinder-9ml-amber-17-415-rollon",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML AMBER CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBCylAmb9RollBlkDot-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylAmb9RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "slug": "cylinder-9ml-amber-17-415-rollon",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML AMBER CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBCylAmb9RollBlkDot-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylAmb9RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "slug": "cylinder-9ml-amber-17-415-rollon",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML AMBER CYLINDER ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBCylAmb9RollBlkDot-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylAmb9RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "mobile-GBCylBlu9MtlRollShnGl-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9MtlRollShnGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "mobile-GBCylBlu9MtlRollShnGl-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9MtlRollShnGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "slug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9499ee1576084c9ec72e0d79d8df99a937f43a89955a974c3b1094802f3d6db0.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML COBALT BLUE CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Shiny Gold Cap",
+      "screenshot": "mobile-GBCylBlu9MtlRollShnGl-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9MtlRollShnGl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "slug": "cylinder-9ml-swirl-17-415-rollon",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML SWIRL CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Matte Silver Cap",
+      "screenshot": "mobile-GBCylSwrl9MtlRollMattSl-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylSwrl9MtlRollMattSl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "slug": "cylinder-9ml-swirl-17-415-rollon",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML SWIRL CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Matte Silver Cap",
+      "screenshot": "mobile-GBCylSwrl9MtlRollMattSl-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylSwrl9MtlRollMattSl&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "slug": "cylinder-9ml-swirl-17-415-rollon",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/032e641c93c470c72e3faba6c222e763d15e695cc005ed6cc4766e7be4b3cc66.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML SWIRL CYLINDER ROLL-ON BOTTLE\n-\nMetal Ball, Matte Silver Cap",
+      "screenshot": "mobile-GBCylSwrl9MtlRollMattSl-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylSwrl9MtlRollMattSl&from=pdp"
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "slug": "cylinder-9ml-clear-17-415-lotionpump",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML CLEAR CYLINDER TREATMENT PUMP BOTTLE\n-\nBlack Pump",
+      "screenshot": "mobile-LBCyl9LtnBlk-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "slug": "cylinder-9ml-clear-17-415-lotionpump",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML CLEAR CYLINDER TREATMENT PUMP BOTTLE\n-\nBlack Pump",
+      "screenshot": "mobile-LBCyl9LtnBlk-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "slug": "cylinder-9ml-clear-17-415-lotionpump",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/56f95ad35e5161a8d7153d24cd6ff9fb0c3bb9d4658f21cbb26baebda0c16dba.png",
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "title": "9 ML CLEAR CYLINDER TREATMENT PUMP BOTTLE\n-\nBlack Pump",
+      "screenshot": "mobile-LBCyl9LtnBlk-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnBlk&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "title": "5 ML AMBER TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkSh-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "title": "5 ML AMBER TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkSh-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "title": "5 ML AMBER TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkSh-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulipAmb5SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "slug": "tulip-5ml-amber-13-415-rollon",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "title": "5 ML AMBER TULIP ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBTulipAmb5RollBlkDot-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "slug": "tulip-5ml-amber-13-415-rollon",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "title": "5 ML AMBER TULIP ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBTulipAmb5RollBlkDot-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "slug": "tulip-5ml-amber-13-415-rollon",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "title": "5 ML AMBER TULIP ROLL-ON BOTTLE\n-\nPlastic Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBTulipAmb5RollBlkDot-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "slug": "tulip-6ml-clear-13-415-finemist",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "title": "6 ML CLEAR TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "mobile-GBTulip6SpryBlkSh-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "slug": "tulip-6ml-clear-13-415-finemist",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "title": "6 ML CLEAR TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "mobile-GBTulip6SpryBlkSh-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "slug": "tulip-6ml-clear-13-415-finemist",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "title": "6 ML CLEAR TULIP FINE-MIST SPRAY BOTTLE\n-\nShiny Black Sprayer",
+      "screenshot": "mobile-GBTulip6SpryBlkSh-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTulip6SpryBlkSh&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "slug": "tulip-6ml-clear-13-415-rollon",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "title": "6 ML CLEAR TULIP ROLL-ON BOTTLE\n-\nMetal Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBTulip6MtlRollBlkDot-sidecar.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "slug": "tulip-6ml-clear-13-415-rollon",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "title": "6 ML CLEAR TULIP ROLL-ON BOTTLE\n-\nMetal Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBTulip6MtlRollBlkDot-capon.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+      ]
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "slug": "tulip-6ml-clear-13-415-rollon",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyURL": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "title": "6 ML CLEAR TULIP ROLL-ON BOTTLE\n-\nMetal Ball, Black with Dots Cap",
+      "screenshot": "mobile-GBTulip6MtlRollBlkDot-exploded.png",
+      "builder": [
+        "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+      ]
+    }
+  ],
+  "catalog": [
+    {
+      "family": "Cylinder",
+      "totalCount": 6,
+      "slugs": [
+        "tulip-5ml-amber-13-415-finemist",
+        "tulip-5ml-amber-13-415",
+        "tulip-5ml-amber-13-415-rollon",
+        "tulip-6ml-clear-13-415",
+        "tulip-6ml-clear-13-415-rollon",
+        "tulip-6ml-clear-13-415-finemist"
+      ]
+    },
+    {
+      "family": "Tulip",
+      "totalCount": 6,
+      "slugs": [
+        "tulip-5ml-amber-13-415-finemist",
+        "tulip-5ml-amber-13-415",
+        "tulip-5ml-amber-13-415-rollon",
+        "tulip-6ml-clear-13-415",
+        "tulip-6ml-clear-13-415-rollon",
+        "tulip-6ml-clear-13-415-finemist"
+      ]
+    },
+    {
+      "rendered": [
+        {
+          "sku": "GBTulipAmb5SpryGlMatt",
+          "version": "b319d9d90adc6eb9",
+          "href": "https://best-bottles-website-mx9b0ctgt-asala.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryGlMatt",
+          "sources": [
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png"
+          ]
+        },
+        {
+          "sku": "GBTulipAmb5MtlRollBlkDot",
+          "version": "b319d9d90adc6eb9",
+          "href": "https://best-bottles-website-mx9b0ctgt-asala.vercel.app/products/tulip-5ml-amber-13-415-rollon?sku=GBTulipAmb5MtlRollBlkDot",
+          "sources": [
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-BLK-13415-DOT/cap-1600b3dbeb4e0f59186934bb7a5fde2388437fdf0c5b1e12daf5a5a64548f6ba.png"
+          ]
+        },
+        {
+          "sku": "GBTulip6SpryGlMatt",
+          "version": "b319d9d90adc6eb9",
+          "href": "https://best-bottles-website-mx9b0ctgt-asala.vercel.app/products/tulip-6ml-clear-13-415-finemist?sku=GBTulip6SpryGlMatt",
+          "sources": [
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fedeba5153ac107e87aadebd466100f24bcd87f42d46978944ee63fb36fd8f8f.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png"
+          ]
+        },
+        {
+          "sku": "GBTulip6MtlRollBlkDot",
+          "version": "b319d9d90adc6eb9",
+          "href": "https://best-bottles-website-mx9b0ctgt-asala.vercel.app/products/tulip-6ml-clear-13-415-rollon?sku=GBTulip6MtlRollBlkDot",
+          "sources": [
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-BLK-13415-DOT/cap-1600b3dbeb4e0f59186934bb7a5fde2388437fdf0c5b1e12daf5a5a64548f6ba.png"
+          ]
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "passed": true
+}

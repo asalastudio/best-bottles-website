@@ -1,5 +1,7 @@
 "use client";
 
+import { bostonDropperCutout } from "@/lib/products/boston-dropper-cutout";
+
 import { plugMaskStyle } from "@/lib/products/sprayer-glass-transmission";
 
 /**
@@ -351,7 +353,7 @@ export default function PdpStage({
                                         fetchPriority="high"
                                         className={styles.stagePart}
                                         data-slot={part.slot}
-                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex, mixBlendMode: part.blendMode }}
+                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex, mixBlendMode: part.blendMode, clipPath: bostonDropperCutout(part.url) }}
                                     />
                                 ))}
                             </div>

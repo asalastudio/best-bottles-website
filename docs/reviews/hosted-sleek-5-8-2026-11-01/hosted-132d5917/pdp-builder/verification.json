@@ -1,0 +1,12 @@
+{
+  "origin": "https://best-bottles-website-rhuc7zvnv-asala.vercel.app",
+  "version": "17f5c90053bcdf59",
+  "apis": [],
+  "pages": [],
+  "builders": [],
+  "unavailable": [],
+  "errors": [],
+  "failures": [
+    "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+  ]
+}

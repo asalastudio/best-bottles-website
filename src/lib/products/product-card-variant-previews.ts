@@ -1,3 +1,4 @@
+import { bostonDropperFinish } from "./boston-dropper-finish";
 import { isMissingHeroSource } from "./catalog-listing-visibility";
 import { rectangleApplicatorGlass } from "./rectangle-applicator";
 import { normalizeImportedCapColor } from "./cap-finish-evidence";
@@ -310,6 +311,8 @@ function finishFromName(itemName: string | null | undefined): string | null {
 }
 
 function resolveCapFinish(variant: ProductCardVariantPreviewSource): string | null {
+    const bostonFinish = bostonDropperFinish(variant);
+    if (bostonFinish) return bostonFinish;
     const rectangleGlass = rectangleApplicatorGlass(variant.websiteSku);
     if (rectangleGlass) return rectangleGlass;
     const vial = oneMlVialApplicator(variant.websiteSku);

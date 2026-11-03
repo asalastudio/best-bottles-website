@@ -1,0 +1,44 @@
+{
+  "pr": "https://github.com/asalastudio/best-bottles-website/pull/387",
+  "commit": "132d5917ba1db68defd482557f43ae6019f199b4",
+  "mergeCommit": "59d00aa7732879dd40b8e58fcc64e255b847d33f",
+  "version": "17f5c90053bcdf59",
+  "configurationCount": 434,
+  "newSleekConfigurations": 72,
+  "correctedTulipAmberSprayers": 8,
+  "ciRun": 41382979182,
+  "ciConclusion": "success",
+  "previewAccessRevoked": true,
+  "independentReview": "no release-blocking findings",
+  "archive": {
+    "sleekFolderId": "1BB-jbhOgED_1oEKD17xtKIxOd1IzEPjw",
+    "sleekSourceFileId": "10lqJSDR0rLlTQLxZLjBH8lyTG_drRGdU",
+    "sleekPreviewFileId": "1ZJkQjDrEaKaRgUpjPxyvq1kB1SjABm8a",
+    "tulipFolderId": "1ihfxjBITo-YJYeN2q9ckx33WhzqnNQdm",
+    "tulipSourceFileId": "1KHN8YfPgWnnEx_PsPCoDuA-65PcCqyWt",
+    "tulipPreviewFileId": "1ByRqLZGQhqMHPoWPKQQTV8dkMsqSirc2"
+  },
+  "productionBrowserVerification": "passed",
+  "productionDeployment": "dpl_5ENh77vcJg2sPEpDghXKKY3cwVHQ",
+  "productionOrigin": "https://best-bottles-website.vercel.app",
+  "verifiedAt": "2026-11-02T03:53:52.593767+00:00",
+  "sleek": {
+    "catalogStates": 144,
+    "pdpStates": 48,
+    "builderRecipes": 72,
+    "actualBuilderPages": 8,
+    "unavailable": 0
+  },
+  "tulip": {
+    "catalogStates": 16,
+    "pdpStates": 48,
+    "builderPages": 8,
+    "clipAuditStates": 48,
+    "unavailable": 0
+  },
+  "exactMasterApis": 434,
+  "completeCatalogAssemblies": 160,
+  "independentPriorRecipesCompared": 362,
+  "authorizedExistingRevisions": 8,
+  "codeRabbit": "Review cancelled after merge; minor audit-script follow-ups independently checked during production verification."
+}

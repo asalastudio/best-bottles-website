@@ -105,6 +105,7 @@ export type RegisterStagePayload = {
 export type RegisterKitPart = {
     /** Optical attenuation for a seated tube behind frosted glass. */
     opacity?: number;
+    blendMode?: "multiply";
     slot: KitSlot;
     variantKey: string | null;
     zOrder: number;
@@ -247,6 +248,20 @@ export function kitFromRegister(
             right: round(x + photoBody.bounds.right * scale), bottom: round(y + photoBody.bounds.bottom * scale),
         };
         bodyPart.image = { ...bodyPart.image, url: photoBody.url, width: photoBody.width, height: photoBody.height };
+        // This opaque photographic plate otherwise hides the original glass
+        // pipette completely. Composite it over the plate at the same anchors.
+        if (assembly.plateKey === "elegant-60ml-18-415|Clear") {
+            parts = parts.map((part) => {
+                if (part.slot !== "pipette") return part;
+                const collar = parts.find(candidate => candidate.slot === "fitment" && candidate.componentId === part.componentId);
+                // Bridge only the upper gap, retaining the original tip position.
+                // The small overlap hides the source layer's transparent top edge.
+                const collarBottom = collar ? collar.box.y + collar.box.height : part.box.y;
+                const top = Math.min(part.box.y, collarBottom - part.box.height * 0.02);
+                const box = { ...part.box, y: round(top), height: round(part.box.y + part.box.height - top) };
+                return { ...part, box, bounds: { ...part.bounds, top: box.y }, zOrder: bodyPart.zOrder + 0.5, opacity: 0.55, blendMode: "multiply" as const };
+            });
+        }
         // The register's broad "diptube" crops still contain fragments of the
         // unfinished glass wall. Keep only the narrow, physical tube layers.
         const glassWidth = bodyPart.bounds.right - bodyPart.bounds.left;

@@ -1,0 +1,130 @@
+[
+  {
+    "family": "Tulip",
+    "key": "tulip-5ml-13-415|Amber",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/tulip-5ml-13-415_Amber_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+    "sha256": "1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f"
+  },
+  {
+    "family": "Sleek",
+    "key": "sleek-5ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/sleek-5ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+    "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec"
+  },
+  {
+    "family": "Sleek",
+    "key": "sleek-8ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/sleek-8ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+    "sha256": "d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8"
+  },
+  {
+    "family": "Rectangle",
+    "key": "tall-rectangle-10ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/tall-rectangle-10ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-tall-rectangle-10ml-13-415-clear.889ce59502d9.svg",
+    "sha256": "889ce59502d92a45d08876dce42484c6eec779e058cfe7f2efc483c940f6bf7b"
+  },
+  {
+    "family": "Rectangle",
+    "key": "footed-rectangle-10ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/footed-rectangle-10ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg",
+    "sha256": "199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6"
+  },
+  {
+    "family": "Cylinder",
+    "key": "cylinder-9ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/cylinder-9ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+    "sha256": "254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e"
+  },
+  {
+    "family": "Cylinder",
+    "key": "cylinder-9ml-13-415|Frosted",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/cylinder-9ml-13-415_Frosted_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+    "sha256": "3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414"
+  },
+  {
+    "family": "Flair",
+    "key": "flair-15ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/flair-15ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-flair-15ml-13-415-clear.70e54611db30.svg",
+    "sha256": "70e54611db3069428b95c6a9d7ca9f1c35f9dd505c626f0d989b9c67e646093d"
+  },
+  {
+    "family": "Tulip",
+    "key": "tulip-6ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/tulip-6ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+    "sha256": "545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4"
+  },
+  {
+    "family": "Circle",
+    "key": "circle-15ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/circle-15ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-circle-15ml-13-415-clear.0bbb11f4b48f.svg",
+    "sha256": "0bbb11f4b48fa792f06a010b8b241f6d2a670161532469ff6f9b110a5643881c"
+  },
+  {
+    "family": "Elegant",
+    "key": "elegant-15ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/elegant-15ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-elegant-15ml-13-415-clear.24ffa06a2f7a.svg",
+    "sha256": "24ffa06a2f7a60e7710aa78a30b295f90ba9a493b73b04ec031943ebddde9d12"
+  },
+  {
+    "family": "Elegant",
+    "key": "elegant-15ml-13-415|Frosted",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/elegant-15ml-13-415_Frosted_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-elegant-15ml-13-415-frosted.9cd3ea6ce476.svg",
+    "sha256": "9cd3ea6ce4765361c4c99cf4394fe625c6b7159e882ad09937d0b3c5c2b24d99"
+  },
+  {
+    "family": "Royal",
+    "key": "royal-13ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/royal-13ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-royal-13ml-13-415-clear.2bd2a62cec3e.svg",
+    "sha256": "2bd2a62cec3e982f7216665c23329ea5d53fc6a50a677f54bc00a55ec0893dde"
+  },
+  {
+    "family": "Pillar",
+    "key": "pillar-9ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/pillar-9ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-pillar-9ml-13-415-clear.1e302e509c23.svg",
+    "sha256": "1e302e509c23a9e1df46d38daa3995655eb1a5e2e003228b3acf87ecc55bf2f8"
+  },
+  {
+    "family": "Square",
+    "key": "square-15ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/square-15ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-square-15ml-13-415-clear.ece6da9d62bf.svg",
+    "sha256": "ece6da9d62bf652d047103f57451f385ac632da48103b7569a109b0b57b17da2"
+  },
+  {
+    "family": "Bell",
+    "key": "bell-10ml-13-415|Clear",
+    "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/remaining-13-415-2026-11-01/exports/bell-10ml-13-415_Clear_REVIEW-b408e95f7a97.png",
+    "kitVersion": "b408e95f7a97",
+    "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-bell-10ml-13-415-clear.b78b9267b7cd.svg",
+    "sha256": "b78b9267b7cd805a2fd928af19748e31b9b15ae21a3cd807aeb4644b2c3507c7"
+  }
+]

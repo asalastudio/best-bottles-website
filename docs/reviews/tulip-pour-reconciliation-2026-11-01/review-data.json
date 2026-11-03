@@ -1,0 +1,3770 @@
+{
+  "order": [
+    "tulip-5ml-13-415|Amber",
+    "tulip-6ml-13-415|Clear"
+  ],
+  "entries": [
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "group": "tulip-5ml-13-415|Amber",
+      "title": "5 ml Amber Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Black Short",
+      "url": "/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5BlkSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-BLK-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+              "dxPct": 23.316322115384622,
+              "dyPct": 36.31454545454546,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15467788461538,
+                "topPct": 50.05909090909091,
+                "widthPct": 17.605999999999998,
+                "heightPct": 10.08090909090909
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 81.66139945114344,
+              "yPct": 86.0248513022113
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-BLK-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15467788461538,
+                "topPct": 50.05909090909091,
+                "widthPct": 17.605999999999998,
+                "heightPct": 10.08090909090909
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.64717155493363,
+              "yPct": 50.18080948024947
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-BLK-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+              "dxPct": 0,
+              "dyPct": -43.772796052732346,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15467788461538,
+                "topPct": 50.05909090909091,
+                "widthPct": 17.605999999999998,
+                "heightPct": 10.08090909090909
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.64717155493363,
+              "yPct": 6.9751486977887005
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "group": "tulip-5ml-13-415|Amber",
+      "title": "5 ml Amber Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short Matte Copper",
+      "url": "/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5CuSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTCP-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTCP-S-13-415.32b055ffaedc.png",
+              "dxPct": 22.851015880223187,
+              "dyPct": 31.920959595959598,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 48.07522703253806,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 80.86785272437558,
+              "yPct": 82.87744064124215
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTCP-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTCP-S-13-415.32b055ffaedc.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 48.07522703253806,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.31290239709534,
+              "yPct": 51.37005988146138
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTCP-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTCP-S-13-415.32b055ffaedc.png",
+              "dxPct": 0,
+              "dyPct": -41.7889321761795,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 48.07522703253806,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.31290239709534,
+              "yPct": 10.122559358757862
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "group": "tulip-5ml-13-415|Amber",
+      "title": "5 ml Amber Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short Matte Gold",
+      "url": "/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5GlMattSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTGD-S-13-415.fda428af1afd.png",
+              "dxPct": 22.851015880223187,
+              "dyPct": 31.920959595959598,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 48.07522703253806,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 80.86785272437558,
+              "yPct": 82.87744064124215
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTGD-S-13-415.fda428af1afd.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 48.07522703253806,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.31290239709534,
+              "yPct": 51.37005988146138
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTGD-S-13-415.fda428af1afd.png",
+              "dxPct": 0,
+              "dyPct": -41.7889321761795,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 48.07522703253806,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.31290239709534,
+              "yPct": 10.122559358757862
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "group": "tulip-5ml-13-415|Amber",
+      "title": "5 ml Amber Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short Matte Silver",
+      "url": "/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5SlMattSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTSL-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTSL-S-13-415.c2a5e084f15a.png",
+              "dxPct": 22.851015880223187,
+              "dyPct": 31.920959595959598,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 48.07522703253806,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 80.86785272437558,
+              "yPct": 82.87744064124215
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTSL-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTSL-S-13-415.c2a5e084f15a.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 48.07522703253806,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.31290239709534,
+              "yPct": 51.37005988146138
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTSL-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTSL-S-13-415.c2a5e084f15a.png",
+              "dxPct": 0,
+              "dyPct": -41.7889321761795,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 48.07522703253806,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.31290239709534,
+              "yPct": 10.122559358757862
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "group": "tulip-5ml-13-415|Amber",
+      "title": "5 ml Amber Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short Shiny Black",
+      "url": "/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5BlkShSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SBLK-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SBLK-13-415.672aa00a7c1b.png",
+              "dxPct": 22.851033222827716,
+              "dyPct": 31.920959595959598,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.577961598110505,
+                "topPct": 48.07519297164695,
+                "widthPct": 16.886081982840796,
+                "heightPct": 16.458392886938906
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 80.8678870459953,
+              "yPct": 82.87742383144884
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SBLK-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SBLK-13-415.672aa00a7c1b.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.577961598110505,
+                "topPct": 48.07519297164695,
+                "widthPct": 16.886081982840796,
+                "heightPct": 16.458392886938906
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.31291960080722,
+              "yPct": 51.37004307166808
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SBLK-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SBLK-13-415.672aa00a7c1b.png",
+              "dxPct": 0,
+              "dyPct": -41.78889811528839,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.577961598110505,
+                "topPct": 48.07519297164695,
+                "widthPct": 16.886081982840796,
+                "heightPct": 16.458392886938906
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.31291960080722,
+              "yPct": 10.122576168551152
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "group": "tulip-5ml-13-415|Amber",
+      "title": "5 ml Amber Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short Shiny Gold",
+      "url": "/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5GlSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-gold.f5240b98053b.png",
+              "dxPct": 22.872035812358614,
+              "dyPct": 31.920959595959598,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.88426033954789,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 80.8678870459953,
+              "yPct": 82.87742383144884
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-gold.f5240b98053b.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.88426033954789,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.29218912798724,
+              "yPct": 51.37004307166808
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-gold.f5240b98053b.png",
+              "dxPct": 0,
+              "dyPct": -41.78889811528839,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.88426033954789,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.29218912798724,
+              "yPct": 10.122576168551152
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "group": "tulip-5ml-13-415|Amber",
+      "title": "5 ml Amber Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short Shiny Silver",
+      "url": "/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5SlSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHSL-S-13-415-02-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-silver.e7fa6410ca1c.png",
+              "dxPct": 22.872035812358614,
+              "dyPct": 31.920959595959598,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.88426033954789,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 80.8678870459953,
+              "yPct": 82.87742383144884
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHSL-S-13-415-02-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-silver.e7fa6410ca1c.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.88426033954789,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.29218912798724,
+              "yPct": 51.37004307166808
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHSL-S-13-415-02-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-silver.e7fa6410ca1c.png",
+              "dxPct": 0,
+              "dyPct": -41.78889811528839,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.88426033954789,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.29218912798724,
+              "yPct": 10.122576168551152
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulipAmb5WhtSht",
+      "group": "tulip-5ml-13-415|Amber",
+      "title": "5 ml Amber Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short White",
+      "url": "/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5WhtSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-WHT-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+              "dxPct": 23.31719218500798,
+              "dyPct": 35.61272727272728,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15380781499202,
+                "topPct": 50.959999999999994,
+                "widthPct": 17.749000000000002,
+                "heightPct": 9.881818181818183
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 81.8025466943867,
+              "yPct": 86.123107011907
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-WHT-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15380781499202,
+                "topPct": 50.959999999999994,
+                "widthPct": 17.749000000000002,
+                "heightPct": 9.881818181818183
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.78746000147221,
+              "yPct": 50.97179037611036
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-WHT-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+              "dxPct": 0,
+              "dyPct": -44.673705143641435,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15380781499202,
+                "topPct": 50.959999999999994,
+                "widthPct": 17.749000000000002,
+                "heightPct": 9.881818181818183
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.78746000147221,
+              "yPct": 6.8768929880929885
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "group": "tulip-5ml-13-415|Amber",
+      "title": "5 ml Amber Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Tall Gold",
+      "url": "/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5Gl&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SGLD-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
+              "dxPct": 23.292434541585532,
+              "dyPct": 31.920959595959598,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 40.32237590462383,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 81.6977908459022,
+              "yPct": 79.14547249659155
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SGLD-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 40.32237590462383,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.7071410279407,
+              "yPct": 47.63809173681078
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SGLD-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
+              "dxPct": 0,
+              "dyPct": -34.22702118985803,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 40.32237590462383,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.7071410279407,
+              "yPct": 13.854527503408448
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulipAmb5Sl",
+      "group": "tulip-5ml-13-415|Amber",
+      "title": "5 ml Amber Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Tall Silver",
+      "url": "/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5Sl&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SLV-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
+              "dxPct": 23.292434541585532,
+              "dyPct": 31.920959595959598,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 40.32237590462383,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 81.6977908459022,
+              "yPct": 79.14547249659155
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SLV-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 40.32237590462383,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.7071410279407,
+              "yPct": 47.63809173681078
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.9870436590436591,
+            "x": 0.6478170478170426,
+            "y": -4.20484747684749
+          },
+          "frameCss": "translate(0.6478170478170426%, -4.20484747684749%) scale(0.9870436590436591)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 33.95833333333333,
+                "topPct": 47.936026936026934,
+                "widthPct": 32.5925925925926,
+                "heightPct": 50.74074074074074
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SLV-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
+              "dxPct": 0,
+              "dyPct": -34.22702118985803,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 40.32237590462383,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.7071410279407,
+              "yPct": 13.854527503408448
+            },
+            "neck": {
+              "xPct": 61.914604008316005,
+              "yPct": 46.58303534303532
+            },
+            "body": {
+              "xPct": 61.914604008316005,
+              "yPct": 68.79151767151765
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulip6BlkSht",
+      "group": "tulip-6ml-13-415|Clear",
+      "title": "6 ml Clear Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Black Short",
+      "url": "/products/tulip-6ml-clear-13-415?sku=GBTulip6BlkSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-BLK-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+              "dxPct": 23.316322115384622,
+              "dyPct": 36.31454545454546,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15467788461538,
+                "topPct": 50.05909090909091,
+                "widthPct": 17.605999999999998,
+                "heightPct": 10.08090909090909
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 81.19701150442478,
+              "yPct": 86.09782341110218
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-BLK-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15467788461538,
+                "topPct": 50.05909090909091,
+                "widthPct": 17.605999999999998,
+                "heightPct": 10.08090909090909
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.520340703710005,
+              "yPct": 50.77951769911504
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-BLK-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+              "dxPct": 0,
+              "dyPct": -45.115009512780205,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15467788461538,
+                "topPct": 50.05909090909091,
+                "widthPct": 17.605999999999998,
+                "heightPct": 10.08090909090909
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.520340703710005,
+              "yPct": 6.902176588897833
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulip6CuSht",
+      "group": "tulip-6ml-13-415|Clear",
+      "title": "6 ml Clear Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short Matte Copper",
+      "url": "/products/tulip-6ml-clear-13-415?sku=GBTulip6CuSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTCP-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTCP-S-13-415.32b055ffaedc.png",
+              "dxPct": 22.851015880223187,
+              "dyPct": 32.41818181818182,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 47.57800481031584,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 80.41510398317081,
+              "yPct": 82.99657683635995
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTCP-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTCP-S-13-415.32b055ffaedc.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 47.57800481031584,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.190974379307725,
+              "yPct": 51.46774336894241
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTCP-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTCP-S-13-415.32b055ffaedc.png",
+              "dxPct": 0,
+              "dyPct": -42.63392341400514,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 47.57800481031584,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.190974379307725,
+              "yPct": 10.003423163640063
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulip6GlMattSht",
+      "group": "tulip-6ml-13-415|Clear",
+      "title": "6 ml Clear Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short Matte Gold",
+      "url": "/products/tulip-6ml-clear-13-415?sku=GBTulip6GlMattSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTGD-S-13-415.fda428af1afd.png",
+              "dxPct": 22.851015880223187,
+              "dyPct": 32.41818181818182,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 47.57800481031584,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 80.41510398317081,
+              "yPct": 82.99657683635995
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTGD-S-13-415.fda428af1afd.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 47.57800481031584,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.190974379307725,
+              "yPct": 51.46774336894241
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTGD-S-13-415.fda428af1afd.png",
+              "dxPct": 0,
+              "dyPct": -42.63392341400514,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 47.57800481031584,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.190974379307725,
+              "yPct": 10.003423163640063
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulip6SlMattSht",
+      "group": "tulip-6ml-13-415|Clear",
+      "title": "6 ml Clear Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short Matte Silver",
+      "url": "/products/tulip-6ml-clear-13-415?sku=GBTulip6SlMattSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTSL-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTSL-S-13-415.c2a5e084f15a.png",
+              "dxPct": 22.851015880223187,
+              "dyPct": 32.41818181818182,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 47.57800481031584,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 80.41510398317081,
+              "yPct": 82.99657683635995
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTSL-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTSL-S-13-415.c2a5e084f15a.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 47.57800481031584,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.190974379307725,
+              "yPct": 51.46774336894241
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-MTSL-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CLS-MTSL-S-13-415.c2a5e084f15a.png",
+              "dxPct": 0,
+              "dyPct": -42.63392341400514,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.619984119776824,
+                "topPct": 47.57800481031584,
+                "widthPct": 16.844041944709247,
+                "heightPct": 16.4583588260478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.190974379307725,
+              "yPct": 10.003423163640063
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulip6GlSht",
+      "group": "tulip-6ml-13-415|Clear",
+      "title": "6 ml Clear Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short Shiny Gold",
+      "url": "/products/tulip-6ml-clear-13-415?sku=GBTulip6GlSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-gold.f5240b98053b.png",
+              "dxPct": 22.872035812358614,
+              "dyPct": 32.41818181818182,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.387038117325666,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 80.41513780138428,
+              "yPct": 82.9965602731213
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-gold.f5240b98053b.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.387038117325666,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.17056491839124,
+              "yPct": 51.467726805703755
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHGD-S-13-415-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-gold.f5240b98053b.png",
+              "dxPct": 0,
+              "dyPct": -42.63388935311402,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.387038117325666,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.17056491839124,
+              "yPct": 10.003439726878701
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulip6SlSht",
+      "group": "tulip-6ml-13-415|Clear",
+      "title": "6 ml Clear Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short Shiny Silver",
+      "url": "/products/tulip-6ml-clear-13-415?sku=GBTulip6SlSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHSL-S-13-415-02-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-silver.e7fa6410ca1c.png",
+              "dxPct": 22.872035812358614,
+              "dyPct": 32.41818181818182,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.387038117325666,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 80.41513780138428,
+              "yPct": 82.9965602731213
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHSL-S-13-415-02-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-silver.e7fa6410ca1c.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.387038117325666,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.17056491839124,
+              "yPct": 51.467726805703755
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CLS-SHSL-S-13-415-02-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/short-silver.e7fa6410ca1c.png",
+              "dxPct": 0,
+              "dyPct": -42.63388935311402,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.388938292332426,
+                "topPct": 47.387038117325666,
+                "widthPct": 17.22212341533514,
+                "heightPct": 16.802071624717215
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.17056491839124,
+              "yPct": 10.003439726878701
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulip6WhtSht",
+      "group": "tulip-6ml-13-415|Clear",
+      "title": "6 ml Clear Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Short White",
+      "url": "/products/tulip-6ml-clear-13-415?sku=GBTulip6WhtSht&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-WHT-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+              "dxPct": 23.31719218500798,
+              "dyPct": 35.61272727272728,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15380781499202,
+                "topPct": 50.959999999999994,
+                "widthPct": 17.749000000000002,
+                "heightPct": 9.881818181818183
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 81.33608849557521,
+              "yPct": 86.19463797264682
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-WHT-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15380781499202,
+                "topPct": 50.959999999999994,
+                "widthPct": 17.749000000000002,
+                "heightPct": 9.881818181818183
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.658571494403745,
+              "yPct": 51.55889702333065
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-WHT-S-13-415-0",
+              "slot": "cap",
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+              "dxPct": 0,
+              "dyPct": -46.01591860368929,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 41.15380781499202,
+                "topPct": 50.959999999999994,
+                "widthPct": 17.749000000000002,
+                "heightPct": 9.881818181818183
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.658571494403745,
+              "yPct": 6.805362027353182
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulip6Gl",
+      "group": "tulip-6ml-13-415|Clear",
+      "title": "6 ml Clear Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Tall Gold",
+      "url": "/products/tulip-6ml-clear-13-415?sku=GBTulip6Gl&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SGLD-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
+              "dxPct": 23.292434541585532,
+              "dyPct": 32.41818181818182,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 39.82515368240161,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 81.23286913487169,
+              "yPct": 79.3193466708877
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SGLD-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 39.82515368240161,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.57943058513494,
+              "yPct": 47.790513203470155
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SGLD-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-gold.08341277ad29.png",
+              "dxPct": 0,
+              "dyPct": -35.07201242768367,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 39.82515368240161,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.57943058513494,
+              "yPct": 13.68065332911231
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    },
+    {
+      "sku": "GBTulip6Sl",
+      "group": "tulip-6ml-13-415|Clear",
+      "title": "6 ml Clear Tulip",
+      "fitment": "Screw Cap",
+      "finish": "Tall Silver",
+      "url": "/products/tulip-6ml-clear-13-415?sku=GBTulip6Sl&assetPreview=kits",
+      "allowed": [
+        "sidecar",
+        "capon",
+        "exploded"
+      ],
+      "views": {
+        "sidecar": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SLV-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
+              "dxPct": 23.292434541585532,
+              "dyPct": 32.41818181818182,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 39.82515368240161,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 81.23286913487169,
+              "yPct": 79.3193466708877
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "capon": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SLV-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 39.82515368240161,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.57943058513494,
+              "yPct": 47.790513203470155
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": true,
+          "baselinePct": 91,
+          "grid": false,
+          "backdrop": null
+        },
+        "exploded": {
+          "frame": {
+            "scale": 0.972566371681416,
+            "x": 1.3716814159291957,
+            "y": -2.8084473049074887
+          },
+          "frameCss": "translate(1.3716814159291957%, -2.8084473049074887%) scale(0.972566371681416)",
+          "parts": [
+            {
+              "key": "body-body-0",
+              "slot": "body",
+              "url": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+              "dxPct": 0,
+              "dyPct": 0,
+              "zIndex": 1,
+              "box": {
+                "leftPct": 34.160000000000004,
+                "topPct": 48.062237762237764,
+                "widthPct": 31.679999999999996,
+                "heightPct": 50.58461538461538
+              }
+            },
+            {
+              "key": "cap-CMP-CAP-SLV-13-415-01-0",
+              "slot": "cap",
+              "url": "/local-kits/cylinder-cap-rims-2026-11-01/tall-silver.31368590174d.png",
+              "dxPct": 0,
+              "dyPct": -35.07201242768367,
+              "zIndex": 2,
+              "box": {
+                "leftPct": 40.968531302662434,
+                "topPct": 39.82515368240161,
+                "widthPct": 18.062937394675135,
+                "heightPct": 24.40215009555478
+              }
+            }
+          ],
+          "canvas": {
+            "width": 1000,
+            "height": 1100
+          },
+          "anchors": {
+            "cap": {
+              "xPct": 58.57943058513494,
+              "yPct": 13.68065332911231
+            },
+            "neck": {
+              "xPct": 61.73984867256637,
+              "yPct": 47.23451327433629
+            },
+            "body": {
+              "xPct": 61.73984867256637,
+              "yPct": 69.11725663716815
+            }
+          },
+          "floorShadows": [],
+          "baseline": false,
+          "baselinePct": 91,
+          "grid": true,
+          "backdrop": null
+        }
+      }
+    }
+  ]
+}

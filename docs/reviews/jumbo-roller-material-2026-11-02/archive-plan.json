@@ -1,0 +1,49 @@
+{
+  "scope": "Approved metal material; local assemblies only",
+  "folderId": "1rflghxXoh9arHzP-z1Und5qj9J4I9Co_",
+  "files": [
+    {
+      "name": "APPROVED_MATERIAL_Metal_Roller_16mm_28ml_50ml_Source.png",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo-roller-material-2026-11-02/sources/metal-approved-material.png",
+      "mime": "image/png",
+      "bytes": 1556463,
+      "sha256": "23d7d2097e9dfcd3c1b326239d3cf9dd5222bc1dd838bc43ada34e9bc03ba1de"
+    },
+    {
+      "name": "PSD_GEOMETRY_LOCKED_Metal_Roller_16mm_Master.png",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo-roller-material-2026-11-02/metal-registered.png",
+      "mime": "image/png",
+      "bytes": 1119654,
+      "sha256": "5b724ad20d2fe091c8116aa2de4e9896e48480eb6596212b597eca9dad6a3480"
+    },
+    {
+      "name": "PSD_GEOMETRY_LOCKED_Metal_Roller_16mm_Master.svg",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo-roller-material-2026-11-02/sources/metal-registered.svg",
+      "mime": "image/svg+xml",
+      "bytes": 2198909,
+      "sha256": "9a882d6c846157971e8bb3d04cefb5ac41644b68f4a99f245978e24cd262b342"
+    },
+    {
+      "name": "PSD_GEOMETRY_LOCKED_Metal_Roller_16mm_Delivery.webp",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/public/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp",
+      "mime": "image/webp",
+      "bytes": 581082,
+      "sha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008"
+    },
+    {
+      "name": "README_Roller_Approval_and_Local_Assembly_Status.md",
+      "file": "/Users/jordanrichter/Projects/Asala/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/branch-setup-localhost-c1fea9/docs/reviews/jumbo-roller-material-2026-11-02/README.md",
+      "mime": "text/markdown",
+      "bytes": 3048,
+      "sha256": "276523321a8c0e82e6745d98b561fe57ba0432268f4df083d4a34fa9fed618ef"
+    },
+    {
+      "file": "/private/tmp/Best_Bottles_Jumbo16mm_v3_Approved_Material_PSD_Geometry_2026-11-02.zip",
+      "name": "Best_Bottles_Jumbo16mm_v3_Approved_Material_PSD_Geometry_2026-11-02.zip",
+      "mime": "application/zip",
+      "bytes": 21180136,
+      "sha256": "1270908d1870f6843f75c648d5a2d3e13545a5ba693887cf9f1a03f66b4ff2ed",
+      "entries": 110
+    }
+  ]
+}

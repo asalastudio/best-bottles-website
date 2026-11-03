@@ -1,0 +1,159 @@
+{
+  "records": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSpry3mlClBlk-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg"
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSpry3mlClBlk-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg"
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSpry3mlClBlk-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "White",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSpry4mlClWh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-4-continuous.e6f9b8379296.svg"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "White",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSpry4mlClWh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-4-continuous.e6f9b8379296.svg"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "White",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSpry4mlClWh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-4-continuous.e6f9b8379296.svg"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSpry4mlClBlk-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-4-continuous.e6f9b8379296.svg"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSpry4mlClBlk-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-4-continuous.e6f9b8379296.svg"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSpry4mlClBlk-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-4-continuous.e6f9b8379296.svg"
+    }
+  ],
+  "failures": [],
+  "pageErrors": []
+}

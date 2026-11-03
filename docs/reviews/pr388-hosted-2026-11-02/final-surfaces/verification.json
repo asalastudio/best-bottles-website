@@ -1,0 +1,244 @@
+{
+  "origin": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app",
+  "vialCatalog": [
+    {
+      "viewport": "desktop",
+      "sku": "GBVAmb2BlackCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBVAmb2WhtCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBVialClr2mlBlackCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBVialClr2mlWhtCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBVAmb2BlackCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBVAmb2WhtCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBVialClr2mlBlackCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBVialClr2mlWhtCap",
+      "body": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png"
+    }
+  ],
+  "vialBuilder": [
+    {
+      "sku": "GBVAmb2BlackCap",
+      "passed": true
+    },
+    {
+      "sku": "GBVialClr2mlWhtCap",
+      "passed": true
+    }
+  ],
+  "rectanglePdp": [
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTClear",
+      "title": "9 ml Rectangle Applicator Bottle - Clear | Best Bottles",
+      "view": "capon",
+      "views": [
+        "pdp-view-capon"
+      ],
+      "labels": [
+        "Cobalt Blue glass",
+        "Clear glass",
+        "Green glass"
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-9ml-clear-ground/GBSQSTClear/6445376e8f8de1120bc7eb7f687812f89938789e1aa90abc6773a0452ca36d74.front-on-1000x1100.webp"
+      ],
+      "frame": [
+        696,
+        540
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTBlue",
+      "title": "9 ml Rectangle Applicator Bottle - Cobalt Blue | Best Bottles",
+      "view": "capon",
+      "views": [
+        "pdp-view-capon"
+      ],
+      "labels": [
+        "Cobalt Blue glass",
+        "Clear glass",
+        "Green glass"
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-9ml-clear-ground/GBSQSTBlue/56dcc52a8153d153c194720852532bb6fab0d68aa3cedfe14bc121f0753e65b1.front-on-1000x1100.webp"
+      ],
+      "frame": [
+        696,
+        540
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTGREEN",
+      "title": "9 ml Rectangle Applicator Bottle - Green | Best Bottles",
+      "view": "capon",
+      "views": [
+        "pdp-view-capon"
+      ],
+      "labels": [
+        "Cobalt Blue glass",
+        "Clear glass",
+        "Green glass"
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-9ml-clear-ground/GBSQSTGREEN/ec7908f5f62e728d51ad0fc9c378ee3e898a149b3f744ab1360f32e719909824.front-on-1000x1100.webp"
+      ],
+      "frame": [
+        696,
+        540
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTClear",
+      "title": "9 ml Rectangle Applicator Bottle - Clear | Best Bottles",
+      "view": "capon",
+      "views": [
+        "pdp-view-capon"
+      ],
+      "labels": [
+        "Cobalt Blue glass",
+        "Clear glass",
+        "Green glass"
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-9ml-clear-ground/GBSQSTClear/6445376e8f8de1120bc7eb7f687812f89938789e1aa90abc6773a0452ca36d74.front-on-1000x1100.webp"
+      ],
+      "frame": [
+        390,
+        400
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTBlue",
+      "title": "9 ml Rectangle Applicator Bottle - Cobalt Blue | Best Bottles",
+      "view": "capon",
+      "views": [
+        "pdp-view-capon"
+      ],
+      "labels": [
+        "Cobalt Blue glass",
+        "Clear glass",
+        "Green glass"
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-9ml-clear-ground/GBSQSTBlue/56dcc52a8153d153c194720852532bb6fab0d68aa3cedfe14bc121f0753e65b1.front-on-1000x1100.webp"
+      ],
+      "frame": [
+        390,
+        400
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTGREEN",
+      "title": "9 ml Rectangle Applicator Bottle - Green | Best Bottles",
+      "view": "capon",
+      "views": [
+        "pdp-view-capon"
+      ],
+      "labels": [
+        "Cobalt Blue glass",
+        "Clear glass",
+        "Green glass"
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-9ml-clear-ground/GBSQSTGREEN/ec7908f5f62e728d51ad0fc9c378ee3e898a149b3f744ab1360f32e719909824.front-on-1000x1100.webp"
+      ],
+      "frame": [
+        390,
+        400
+      ],
+      "overflow": false
+    }
+  ],
+  "rectangleCatalog": [
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTClear",
+      "selected": "true",
+      "href": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTClear",
+      "sources": []
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTBlue",
+      "selected": "true",
+      "href": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTBlue",
+      "sources": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=%2Fimages%2Fpdp%2Freconciled-2026-09-27%2FGBSQSTBlue.webp&w=3840&q=75&dpl=dpl_DVH6yW8Vx4DMEhyXRwouX2LnEznX"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "sku": "GBSQSTGREEN",
+      "selected": "true",
+      "href": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTGREEN",
+      "sources": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=%2Fimages%2Fpdp%2Freconciled-2026-09-27%2FGBSQSTGREEN.webp&w=3840&q=75&dpl=dpl_DVH6yW8Vx4DMEhyXRwouX2LnEznX"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTClear",
+      "selected": "true",
+      "href": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTClear",
+      "sources": []
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTBlue",
+      "selected": "true",
+      "href": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTBlue",
+      "sources": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=%2Fimages%2Fpdp%2Freconciled-2026-09-27%2FGBSQSTBlue.webp&w=3840&q=75&dpl=dpl_DVH6yW8Vx4DMEhyXRwouX2LnEznX"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "sku": "GBSQSTGREEN",
+      "selected": "true",
+      "href": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/rectangle-9ml-clear-Ground-glassapplicator?sku=GBSQSTGREEN",
+      "sources": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=%2Fimages%2Fpdp%2Freconciled-2026-09-27%2FGBSQSTGREEN.webp&w=3840&q=75&dpl=dpl_DVH6yW8Vx4DMEhyXRwouX2LnEznX"
+      ]
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "passed": true
+}

@@ -1,3 +1,4 @@
+import { bostonDropperFinish } from "@/lib/products/boston-dropper-finish";
 /**
  * Product page model (design handoff `design_handoff_pdp_3a`, option 3a
  * desktop / 4a mobile). One page per shape + size + fitment type; the customer
@@ -79,6 +80,8 @@ export function capFinishName(variant: ProductVariant): string {
     const rectangleGlass = rectangleApplicatorGlass(variant.websiteSku);
     if (rectangleGlass) return rectangleGlass;
     const normalised = normalizeImportedCapColor(variant);
+    const bostonFinish = bostonDropperFinish(normalised);
+    if (bostonFinish) return bostonFinish;
     const dotted = decoratedCapFinish(normalised);
     if (dotted) return dotted;
     const stored = clean(normalised.capColor);

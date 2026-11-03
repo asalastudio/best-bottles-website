@@ -1,0 +1,85 @@
+{
+  "assemblies": {
+    "GB-VIA-AMB-1.5ML-WHT-S": {
+      "bodyId": "vial-2ml-13-425",
+      "glass": "Amber",
+      "graceSku": "GB-VIA-AMB-1.5ML-WHT-S",
+      "neck": "13-425",
+      "parts": [],
+      "plateKey": "vial-2ml-13-425|Amber",
+      "reason": "own parts unresolved: own-part rules not written for 13-425 yet (pilot neck is 17-415)",
+      "renderable": false,
+      "websiteSku": "GBVialAmb1o5WhtCapSht"
+    },
+    "GB-VIA-CLR-3ML-S-03": {
+      "bodyId": "vial-4ml-13-425",
+      "glass": "Amber",
+      "graceSku": "GB-VIA-CLR-3ML-S-03",
+      "neck": "13-425",
+      "parts": [],
+      "plateKey": "vial-4ml-13-425|Amber",
+      "reason": "own parts unresolved: own-part rules not written for 13-425 yet (pilot neck is 17-415)",
+      "renderable": false,
+      "websiteSku": "GBVAmb1DrmBlackCapSht"
+    }
+  },
+  "bodies": {
+    "vial-2ml-13-425": {
+      "bodyId": "vial-2ml-13-425",
+      "capacityMl": 2,
+      "dims": {
+        "diameterMm": 16,
+        "heightBareMm": 22,
+        "widthMm": 16
+      },
+      "family": "Vial",
+      "neck": "13-425"
+    },
+    "vial-4ml-13-425": {
+      "bodyId": "vial-4ml-13-425",
+      "capacityMl": 4,
+      "dims": {
+        "diameterMm": 15,
+        "heightBareMm": 45,
+        "widthMm": 15
+      },
+      "family": "Vial",
+      "neck": "13-425"
+    }
+  },
+  "components": {},
+  "plates": {
+    "vial-2ml-13-425|Amber": {
+      "anchors": {
+        "axisX": 844,
+        "baselineY": 2097,
+        "seatY": 407,
+        "shoulderY": 1842
+      },
+      "approved": true,
+      "bodyId": "vial-2ml-13-425",
+      "glass": "Amber",
+      "height": 2192,
+      "plateKey": "vial-2ml-13-425|Amber",
+      "pxPerMm": 71.7563,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/vial-2ml-13-425/amber/07785d85d6b2faa2caa262f96a2f17ce9cfa2a628e87063f3dbeecb61dc52dfc.png",
+      "width": 1696
+    },
+    "vial-4ml-13-425|Amber": {
+      "anchors": {
+        "axisX": 469,
+        "baselineY": 2093,
+        "seatY": 180,
+        "shoulderY": 552
+      },
+      "approved": true,
+      "bodyId": "vial-4ml-13-425",
+      "glass": "Amber",
+      "height": 2192,
+      "plateKey": "vial-4ml-13-425|Amber",
+      "pxPerMm": 41.2984,
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/vial-4ml-13-425/amber/64a5e46fc6ed17a1f3b6b421b1d55418aecabcbbaa17871f27d92a259a3c220c.png",
+      "width": 944
+    }
+  }
+}

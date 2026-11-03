@@ -1,0 +1,466 @@
+{
+  "apis": [
+    {
+      "sku": "GBCyl50SpryMtGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50SpryShnGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50SpryShnBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50SpryMtSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50SpryShnSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50SpryCu",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrBlkLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50AnSpBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl50LtnMtGl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl50LtnShnGl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl50LtnShnBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl50LtnMtSl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl50LtnShnSl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl50LtnCu",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrShnGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrShnBlkTall",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrShnBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrBrwnLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrLBrwnLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrShnSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrMtSlTall",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrMtSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrWht",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrPnkLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50RdcrIvyLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50AnSpLvn",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50AnSpPnk",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50AnSpMtSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50AnSpIvySl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50AnSpGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50AnSpIvyGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50AnSpWht",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50AnSpRed",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl50LtnClOvrCap",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl100LtnClOvrCap",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrShnGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrShnBlkTall",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrShnBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrBrwnLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrLBrwnLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrShnSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrMtSlTall",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrMtSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrWht",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrIvyLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrPnkLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100SpryCu",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100SpryMtGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100SpryShnGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100SpryShnBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100SpryMtSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100SpryShnSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100RdcrBlkLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100AnSpBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100AnSpLvn",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100AnSpPnk",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100AnSpMtSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100AnSpIvySl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100AnSpGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100AnSpIvyGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100AnSpWht",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl100AnSpRed",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl100LtnShnBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl100LtnShnGl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl100LtnShnSl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl100LtnMtGl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl100LtnMtSl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl100LtnCu",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25SpryCu",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25SpryShnBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25SpryShnGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25SpryShnSl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBcyl25LtnClOvrCap",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl25LtnMtSl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl25LtnShnBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl25LtnShnGl",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25RdcrBlkLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25RdcrBrwnLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl25RdcrIvyLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25RdcrLBrwnLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25RdcrPnkLthr",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25RdcrShnBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25RdcrMtSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25RdcrShnSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25RdcrMtSlTall",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25RdcrShnBlkTall",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25RdcrWht",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl25AnSpBlk",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl25AnSpGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25AnSpIvyGl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25AnSpIvySl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25AnSpLvn",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25AnSpMtSl",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25AnSpPnk",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25AnSpRed",
+      "exactParts": true
+    },
+    {
+      "sku": "GBcyl25AnSpWht",
+      "exactParts": true
+    }
+  ],
+  "exclusions": [
+    {
+      "sku": "GBMtlRoll28Wht",
+      "reason": "Existing explicit catalog-only jumbo roller policy preserved"
+    },
+    {
+      "sku": "GBCyl1ozRollWht",
+      "reason": "Existing explicit catalog-only jumbo roller policy preserved"
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "reason": "Existing explicit catalog-only jumbo roller policy preserved"
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "reason": "Existing explicit catalog-only jumbo roller policy preserved"
+    },
+    {
+      "sku": "GBCyl50MtlRollWht",
+      "reason": "Existing explicit catalog-only jumbo roller policy preserved"
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "reason": "Existing explicit catalog-only jumbo roller policy preserved"
+    },
+    {
+      "sku": "GBCyl50RollBlk",
+      "reason": "Existing explicit catalog-only jumbo roller policy preserved"
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "reason": "Existing explicit catalog-only jumbo roller policy preserved"
+    }
+  ],
+  "pages": [
+    {
+      "sku": "LBCyl50LtnMtGl",
+      "url": "http://localhost:3010/matrix?family=Cylinder&sku=LBCyl50LtnMtGl&from=pdp&assetPreview=gpt13",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl50SpryCu",
+      "url": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl50SpryCu&from=pdp&assetPreview=gpt13",
+      "exactParts": true
+    },
+    {
+      "sku": "LBCyl100LtnMtGl",
+      "url": "http://localhost:3010/matrix?family=Cylinder&sku=LBCyl100LtnMtGl&from=pdp&assetPreview=gpt13",
+      "exactParts": true
+    },
+    {
+      "sku": "GBCyl25AnSpBlk",
+      "url": "http://localhost:3010/matrix?family=Cylinder&sku=GBCyl25AnSpBlk&from=pdp&assetPreview=gpt13",
+      "exactParts": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

@@ -1,0 +1,597 @@
+{
+  "capturedAt": "2026-11-02T03:58:50.064Z",
+  "records": [
+    {
+      "sku": "GBSleek5MtlRollGlMatt",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "view": "sidecar",
+      "file": "normal-live-GBSleek5MtlRollGlMatt-sidecar.png",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-rollon?roller=metal&cap=matte-gold",
+      "parts": [
+        {
+          "slot": "roller",
+          "transform": "translate(0%, 0%)",
+          "z": "1",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+          "clip": "",
+          "rect": {
+            "x": 418.7417297363281,
+            "y": 427.75469970703125,
+            "width": 79.265625,
+            "height": 112.56982421875,
+            "top": 427.75469970703125,
+            "right": 498.0073547363281,
+            "bottom": 540.3245239257812,
+            "left": 418.7417297363281
+          }
+        },
+        {
+          "slot": "body",
+          "transform": "translate(0%, 0%)",
+          "z": "2",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "clip": "",
+          "rect": {
+            "x": 400.0850830078125,
+            "y": 465.3114013671875,
+            "width": 117.080078125,
+            "height": 246.7601318359375,
+            "top": 465.3114013671875,
+            "right": 517.1651611328125,
+            "bottom": 712.071533203125,
+            "left": 400.0850830078125
+          }
+        },
+        {
+          "slot": "cap",
+          "transform": "translate(19.8665%, 32.738%)",
+          "z": "3",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png&w=640&q=90",
+          "clip": "",
+          "rect": {
+            "x": 507.7819519042969,
+            "y": 582.2232666015625,
+            "width": 79.80972290039062,
+            "height": 119.3424072265625,
+            "top": 582.2232666015625,
+            "right": 587.5916748046875,
+            "bottom": 701.565673828125,
+            "left": 507.7819519042969
+          }
+        }
+      ],
+      "chooser": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+          "style": "color: transparent;"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+          "style": "color: transparent;"
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5MtlRollGlMatt",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "view": "exploded",
+      "file": "normal-live-GBSleek5MtlRollGlMatt-exploded.png",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-rollon?roller=metal&cap=matte-gold",
+      "parts": [
+        {
+          "slot": "roller",
+          "transform": "translate(19.4549%, 34.7271%)",
+          "z": "1",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+          "clip": "",
+          "rect": {
+            "x": 500.0975036621094,
+            "y": 587.498046875,
+            "width": 79.26565551757812,
+            "height": 112.56982421875,
+            "top": 587.498046875,
+            "right": 579.3631591796875,
+            "bottom": 700.06787109375,
+            "left": 500.0975036621094
+          }
+        },
+        {
+          "slot": "body",
+          "transform": "translate(0%, 0%)",
+          "z": "2",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "clip": "",
+          "rect": {
+            "x": 400.0850830078125,
+            "y": 465.3114013671875,
+            "width": 117.080078125,
+            "height": 246.7601318359375,
+            "top": 465.3114013671875,
+            "right": 517.1651611328125,
+            "bottom": 712.071533203125,
+            "left": 400.0850830078125
+          }
+        },
+        {
+          "slot": "cap",
+          "transform": "translate(0%, -34.8555%)",
+          "z": "3",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png&w=640&q=90",
+          "clip": "",
+          "rect": {
+            "x": 424.704833984375,
+            "y": 271.2957763671875,
+            "width": 79.80975341796875,
+            "height": 119.34234619140625,
+            "top": 271.2957763671875,
+            "right": 504.51458740234375,
+            "bottom": 390.63812255859375,
+            "left": 424.704833984375
+          }
+        }
+      ],
+      "chooser": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+          "style": "color: transparent;"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+          "style": "color: transparent;"
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5RollGlMatt",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "view": "sidecar",
+      "file": "normal-live-GBSleek5RollGlMatt-sidecar.png",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-rollon?roller=plastic&cap=matte-gold",
+      "parts": [
+        {
+          "slot": "roller",
+          "transform": "translate(0%, 0%)",
+          "z": "1",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+          "clip": "",
+          "rect": {
+            "x": 418.7417297363281,
+            "y": 427.75469970703125,
+            "width": 79.265625,
+            "height": 112.56982421875,
+            "top": 427.75469970703125,
+            "right": 498.0073547363281,
+            "bottom": 540.3245239257812,
+            "left": 418.7417297363281
+          }
+        },
+        {
+          "slot": "body",
+          "transform": "translate(0%, 0%)",
+          "z": "2",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "clip": "",
+          "rect": {
+            "x": 400.0850830078125,
+            "y": 465.3114013671875,
+            "width": 117.080078125,
+            "height": 246.7601318359375,
+            "top": 465.3114013671875,
+            "right": 517.1651611328125,
+            "bottom": 712.071533203125,
+            "left": 400.0850830078125
+          }
+        },
+        {
+          "slot": "cap",
+          "transform": "translate(19.8665%, 32.738%)",
+          "z": "3",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png&w=640&q=90",
+          "clip": "",
+          "rect": {
+            "x": 507.7819519042969,
+            "y": 582.2232666015625,
+            "width": 79.80972290039062,
+            "height": 119.3424072265625,
+            "top": 582.2232666015625,
+            "right": 587.5916748046875,
+            "bottom": 701.565673828125,
+            "left": 507.7819519042969
+          }
+        }
+      ],
+      "chooser": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+          "style": "color: transparent;"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+          "style": "color: transparent;"
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5RollGlMatt",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "view": "exploded",
+      "file": "normal-live-GBSleek5RollGlMatt-exploded.png",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-rollon?roller=plastic&cap=matte-gold",
+      "parts": [
+        {
+          "slot": "roller",
+          "transform": "translate(19.4549%, 34.7271%)",
+          "z": "1",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+          "clip": "",
+          "rect": {
+            "x": 500.09698486328125,
+            "y": 587.4970703125,
+            "width": 79.265625,
+            "height": 112.56982421875,
+            "top": 587.4970703125,
+            "right": 579.3626098632812,
+            "bottom": 700.06689453125,
+            "left": 500.09698486328125
+          }
+        },
+        {
+          "slot": "body",
+          "transform": "translate(0%, 0%)",
+          "z": "2",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "clip": "",
+          "rect": {
+            "x": 400.0850830078125,
+            "y": 465.3114013671875,
+            "width": 117.080078125,
+            "height": 246.7601318359375,
+            "top": 465.3114013671875,
+            "right": 517.1651611328125,
+            "bottom": 712.071533203125,
+            "left": 400.0850830078125
+          }
+        },
+        {
+          "slot": "cap",
+          "transform": "translate(0%, -34.8555%)",
+          "z": "3",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png&w=640&q=90",
+          "clip": "",
+          "rect": {
+            "x": 424.70538330078125,
+            "y": 271.29779052734375,
+            "width": 79.80972290039062,
+            "height": 119.34231567382812,
+            "top": 271.29779052734375,
+            "right": 504.5151062011719,
+            "bottom": 390.6401062011719,
+            "left": 424.70538330078125
+          }
+        }
+      ],
+      "chooser": [
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+          "style": "color: transparent;"
+        },
+        {
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+          "style": "color: transparent;"
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "view": "sidecar",
+      "file": "normal-live-GBSleek5SpryBlkMatt-sidecar.png",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-finemist?cap=matte-black",
+      "parts": [
+        {
+          "slot": "body",
+          "transform": "translate(0%, 0%)",
+          "z": "1",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "clip": "",
+          "rect": {
+            "x": 400.0850830078125,
+            "y": 465.3114013671875,
+            "width": 117.080078125,
+            "height": 246.7601318359375,
+            "top": 465.3114013671875,
+            "right": 517.1651611328125,
+            "bottom": 712.071533203125,
+            "left": 400.0850830078125
+          }
+        },
+        {
+          "slot": "diptube",
+          "transform": "translate(0%, 0%)",
+          "z": "2",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2f9ebbeb014319ce08e9a4e85dbf3aeb2f5fc036415bc69796d335b38cb14cf3.svg",
+          "clip": "",
+          "rect": {
+            "x": 446.7624816894531,
+            "y": 529.94384765625,
+            "width": 23.997314453125,
+            "height": 148.0360107421875,
+            "top": 529.94384765625,
+            "right": 470.7597961425781,
+            "bottom": 677.9798583984375,
+            "left": 446.7624816894531
+          }
+        },
+        {
+          "slot": "sprayer",
+          "transform": "translate(0%, 0%)",
+          "z": "3",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+          "clip": "",
+          "rect": {
+            "x": 418.1546630859375,
+            "y": 393.3909912109375,
+            "width": 78.22042846679688,
+            "height": 156.4407958984375,
+            "top": 393.3909912109375,
+            "right": 496.3750915527344,
+            "bottom": 549.831787109375,
+            "left": 418.1546630859375
+          }
+        },
+        {
+          "slot": "overcap",
+          "transform": "translate(19.7549%, 32.738%)",
+          "z": "4",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg",
+          "clip": "",
+          "rect": {
+            "x": 505.30377197265625,
+            "y": 554.0593872070312,
+            "width": 82.81658935546875,
+            "height": 150.38421630859375,
+            "top": 554.0593872070312,
+            "right": 588.120361328125,
+            "bottom": 704.443603515625,
+            "left": 505.30377197265625
+          }
+        }
+      ],
+      "chooser": []
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "view": "exploded",
+      "file": "normal-live-GBSleek5SpryBlkMatt-exploded.png",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-finemist?cap=matte-black",
+      "parts": [
+        {
+          "slot": "body",
+          "transform": "translate(0%, 0%)",
+          "z": "1",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "clip": "",
+          "rect": {
+            "x": 400.0850830078125,
+            "y": 465.3114013671875,
+            "width": 117.080078125,
+            "height": 246.7601318359375,
+            "top": 465.3114013671875,
+            "right": 517.1651611328125,
+            "bottom": 712.071533203125,
+            "left": 400.0850830078125
+          }
+        },
+        {
+          "slot": "diptube",
+          "transform": "translate(21.3357%, 4.73209%)",
+          "z": "2",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2f9ebbeb014319ce08e9a4e85dbf3aeb2f5fc036415bc69796d335b38cb14cf3.svg",
+          "clip": "",
+          "rect": {
+            "x": 535.9837646484375,
+            "y": 551.71142578125,
+            "width": 23.99737548828125,
+            "height": 148.0360107421875,
+            "top": 551.71142578125,
+            "right": 559.9811401367188,
+            "bottom": 699.7474365234375,
+            "left": 535.9837646484375
+          }
+        },
+        {
+          "slot": "sprayer",
+          "transform": "translate(21.3357%, 4.73209%)",
+          "z": "3",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+          "clip": "",
+          "rect": {
+            "x": 507.3760070800781,
+            "y": 415.1585998535156,
+            "width": 78.22042846679688,
+            "height": 156.44088745117188,
+            "top": 415.1585998535156,
+            "right": 585.596435546875,
+            "bottom": 571.5994873046875,
+            "left": 507.3760070800781
+          }
+        },
+        {
+          "slot": "overcap",
+          "transform": "translate(0%, -35.2271%)",
+          "z": "4",
+          "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg",
+          "clip": "",
+          "rect": {
+            "x": 422.69293212890625,
+            "y": 241.41995239257812,
+            "width": 82.81655883789062,
+            "height": 150.38418579101562,
+            "top": 241.41995239257812,
+            "right": 505.5094909667969,
+            "bottom": 391.80413818359375,
+            "left": 422.69293212890625
+          }
+        }
+      ],
+      "chooser": []
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "view": "sidecar",
+      "file": "normal-live-GBTulipAmb5SpryBlkMatt-sidecar.png",
+      "url": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?cap=matte-black",
+      "parts": [
+        {
+          "slot": "diptube",
+          "transform": "translate(0%, 0%)",
+          "z": "1",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fe5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png&w=640&q=90",
+          "clip": "inset(0px 0px 13.46%)",
+          "rect": {
+            "x": 444.78533935546875,
+            "y": 498.84490966796875,
+            "width": 24.413909912109375,
+            "height": 204.9349365234375,
+            "top": 498.84490966796875,
+            "right": 469.1992492675781,
+            "bottom": 703.7798461914062,
+            "left": 444.78533935546875
+          }
+        },
+        {
+          "slot": "body",
+          "transform": "translate(0%, 0%)",
+          "z": "2",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png&w=640&q=90",
+          "clip": "",
+          "rect": {
+            "x": 379.27032470703125,
+            "y": 442.7839050292969,
+            "width": 157.91156005859375,
+            "height": 270.4499816894531,
+            "top": 442.7839050292969,
+            "right": 537.181884765625,
+            "bottom": 713.23388671875,
+            "left": 379.27032470703125
+          }
+        },
+        {
+          "slot": "sprayer",
+          "transform": "translate(0%, 0%)",
+          "z": "3",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png&w=640&q=75",
+          "clip": "inset(0px 0px 6.87023%)",
+          "rect": {
+            "x": 414.49542236328125,
+            "y": 372.24114990234375,
+            "width": 84.17633056640625,
+            "height": 168.35260009765625,
+            "top": 372.24114990234375,
+            "right": 498.6717529296875,
+            "bottom": 540.59375,
+            "left": 414.49542236328125
+          }
+        },
+        {
+          "slot": "overcap",
+          "transform": "translate(24.5654%, 31.921%)",
+          "z": "4",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fovercap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png&w=640&q=75",
+          "clip": "",
+          "rect": {
+            "x": 527.1102294921875,
+            "y": 522.9485473632812,
+            "width": 98.27252197265625,
+            "height": 178.43902587890625,
+            "top": 522.9485473632812,
+            "right": 625.3827514648438,
+            "bottom": 701.3875732421875,
+            "left": 527.1102294921875
+          }
+        }
+      ],
+      "chooser": []
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "view": "exploded",
+      "file": "normal-live-GBTulipAmb5SpryBlkMatt-exploded.png",
+      "url": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?cap=matte-black",
+      "parts": [
+        {
+          "slot": "body",
+          "transform": "translate(0%, 0%)",
+          "z": "1",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png&w=640&q=90",
+          "clip": "",
+          "rect": {
+            "x": 379.27032470703125,
+            "y": 442.7839050292969,
+            "width": 157.91156005859375,
+            "height": 270.4499816894531,
+            "top": 442.7839050292969,
+            "right": 537.181884765625,
+            "bottom": 713.23388671875,
+            "left": 379.27032470703125
+          }
+        },
+        {
+          "slot": "diptube",
+          "transform": "translate(24.8932%, 4.72727%)",
+          "z": "2",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fe5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png&w=640&q=90",
+          "clip": "inset(0px 0px 13.46%)",
+          "rect": {
+            "x": 565.4041137695312,
+            "y": 524.0414428710938,
+            "width": 24.41387939453125,
+            "height": 204.9349365234375,
+            "top": 524.0414428710938,
+            "right": 589.8179931640625,
+            "bottom": 728.9763793945312,
+            "left": 565.4041137695312
+          }
+        },
+        {
+          "slot": "sprayer",
+          "transform": "translate(24.8932%, 4.72727%)",
+          "z": "3",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fsprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png&w=640&q=75",
+          "clip": "inset(0px 0px 6.87023%)",
+          "rect": {
+            "x": 526.623046875,
+            "y": 395.6639099121094,
+            "width": 84.17626953125,
+            "height": 168.35263061523438,
+            "top": 395.6639099121094,
+            "right": 610.79931640625,
+            "bottom": 564.0165405273438,
+            "left": 526.623046875
+          }
+        },
+        {
+          "slot": "overcap",
+          "transform": "translate(0%, -24.7692%)",
+          "z": "4",
+          "image": "https://best-bottles-website.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F13-415%2FCMP-CAP-BLK-13-415-01%2Fovercap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png&w=640&q=75",
+          "clip": "",
+          "rect": {
+            "x": 416.4590148925781,
+            "y": 242.05921936035156,
+            "width": 98.27255249023438,
+            "height": 178.4390106201172,
+            "top": 242.05921936035156,
+            "right": 514.7315673828125,
+            "bottom": 420.49822998046875,
+            "left": 416.4590148925781
+          }
+        }
+      ],
+      "chooser": []
+    }
+  ]
+}

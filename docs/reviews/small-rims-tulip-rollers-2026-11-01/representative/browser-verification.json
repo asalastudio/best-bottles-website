@@ -1,0 +1,540 @@
+{
+  "records": [
+    {
+      "sku": "GBSpry3mlClWht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "White",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSpry3mlClWht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        311.30450439453125,
+        306.7728271484375,
+        73.17584228515625,
+        187.5032958984375
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "White",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSpry3mlClWht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        311.30450439453125,
+        306.7728271484375,
+        73.17584228515625,
+        187.5032958984375
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "White",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSpry3mlClWht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        311.30450439453125,
+        306.7728271484375,
+        73.17584228515625,
+        187.5032958984375
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "glass": "Amber",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "glass": "Amber",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "glass": "Amber",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulip6MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulip6MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulip6MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulip6RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulip6RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulip6RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        272.3677673339844,
+        237.2457275390625,
+        151.24929809570312,
+        265.66259765625
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "White",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSpry3mlClWht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "White",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSpry3mlClWht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "White",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSpry3mlClWht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "bodyUrl": "/local-kits/small-sprayer-rims-2026-11-01/glass-3.3-continuous.bcebf76efcc3.svg"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollBlkDot",
+      "glass": "Amber",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollBlkDot",
+      "glass": "Amber",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollBlkDot",
+      "glass": "Amber",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "glass": "Amber",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "glass": "Amber",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "glass": "Amber",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulip6MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulip6MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulip6MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulip6RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulip6RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulip6RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulip6RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        138.9710693359375,
+        175.72689819335938,
+        112.02748107910156,
+        196.77749633789062
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-6ml-13-415-clear.545e756d1bdb.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulip6RollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollBlkDot",
+      "glass": "Amber",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollBlkDot",
+      "glass": "Amber",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollBlkDot",
+      "glass": "Amber",
+      "roller": "metal",
+      "cap": "CMP-ROC-BLK-13415-DOT",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyUrl": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png",
+      "builder": "/matrix?family=Tulip&shop=roll-on-bottles&sku=GBTulipAmb5MtlRollBlkDot&from=pdp"
+    }
+  ],
+  "failures": [],
+  "pageErrors": []
+}

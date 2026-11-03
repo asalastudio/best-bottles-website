@@ -1,0 +1,2325 @@
+{
+  "origin": "https://best-bottles-website-6fnza4p8v-asala.vercel.app",
+  "version": "b0a1d1323cd0b444",
+  "apis": [
+    "GBCyl5Sl",
+    "GBCyl5CuSht",
+    "GBCyl5GlMattSht",
+    "GBCyl5WhtSht",
+    "GBCyl5Gl",
+    "GBCyl5BlkSht",
+    "GBCyl5BlkShSht",
+    "GBCyl5GlSht",
+    "GBCyl5SlSht",
+    "GBCylBlu5Sl",
+    "GBCylBlu5WhtSht",
+    "GBCylBlu5Gl",
+    "GBCylBlu5BlkSht",
+    "GBCylBlu5CuSht",
+    "GBCyl5SlMattSht",
+    "GBCylBlu5BlkShSht",
+    "GBCylBlu5GlMattSht",
+    "GBCylBlu5SlMattSht",
+    "GBCylBlu5GlSht",
+    "GBCyl5MtlRollBlkSh",
+    "GBCylBlu5SlSht",
+    "GBCyl5MtlRollCuMatt",
+    "GBCyl5MtlRollGlMatt",
+    "GBCyl5MtlRollPinkDot",
+    "GBCyl5MtlRollGlSh",
+    "GBCyl5MtlRollSlDot",
+    "GBCyl5MtlRollSlSh",
+    "GBCyl5MtlRollSlMatt",
+    "GBCyl5RollBlkDot",
+    "GBCyl5RollSlSh",
+    "GBCyl5RollBlkSh",
+    "GBCyl5RollGlSh",
+    "GBCyl5RollSlDot",
+    "GBCyl5RollPinkDot",
+    "GBCyl5RollCuMatt",
+    "GBCyl5RollGlMatt",
+    "GBCyl5RollSlMatt",
+    "GBCyl5MtlRollBlkDot",
+    "GBCylBlu5MtlRollBlkSh",
+    "GBCylBlu5MtlRollGlMatt",
+    "GBCylBlu5MtlRollCuMatt",
+    "GBCylBlu5MtlRollGlSh",
+    "GBCylBlu5MtlRollPinkDot",
+    "GBCylBlu5MtlRollSlDot",
+    "GBCylBlu5MtlRollSlMatt",
+    "GBCylBlu5MtlRollSlSh",
+    "GBCylBlu5RollBlkDot",
+    "GBCylBlu5RollGlSh",
+    "GBCylBlu5RollSlSh",
+    "GBCylBlu5RollBlkSh",
+    "GBCylBlu5RollGlMatt",
+    "GBCylBlu5RollPinkDot",
+    "GBCylBlu5RollSlDot",
+    "GBCylBlu5RollSlMatt",
+    "GBCylBlu5RollCuMatt",
+    "GBCylBlu5MtlRollBlkDot",
+    "GBCyl5SpryBlkSh",
+    "GBCyl5SprySlMatt",
+    "GBCyl5SpryBlkMatt",
+    "GBCyl5SpryGlSh",
+    "GBCyl5SprySlSh",
+    "GBCyl5SpryBluMatt",
+    "GBCyl5SpryCuMatt",
+    "GBCyl5SpryGlMatt",
+    "GBCylBlu5SprySlSh",
+    "GBCylBlu5SpryGlSh",
+    "GBCylBlu5SpryBlkSh",
+    "GBCylBlu5SpryGlMatt",
+    "GBCylBlu5SpryBluMatt",
+    "GBCylBlu5SpryCuMatt",
+    "GBCylAmb9SpryBlk",
+    "GBCylBlu5SprySlMatt",
+    "GBCylAmb9SpryMattSl",
+    "GBCylAmb9SpryGl",
+    "GBCylAmb9SpryRd",
+    "GBCylAmb9SpryShSl",
+    "LBCylAmb9LtnBlk",
+    "GBCylAmb9SpryTur",
+    "LBCylAmb9LtnGl",
+    "LBCylAmb9LtnMtSl",
+    "GBCylAmb9MtlRollBlkDot",
+    "GBCylAmb9MtlRollMattCu",
+    "GBCylAmb9MtlRollMattGl",
+    "GBCylAmb9MtlRollMattSl",
+    "GBCylAmb9MtlRollPnkDot",
+    "GBCylAmb9MtlRollShBlk",
+    "GBCylAmb9MtlRollShnSl",
+    "GBCylAmb9MtlRollShnGl",
+    "GBCylAmb9MtlRollSlDot",
+    "GBCylAmb9MtlRollWht",
+    "GBCylAmb9RollMattCu",
+    "GBCylAmb9RollBlkDot",
+    "GBCylAmb9RollMattSl",
+    "GBCylAmb9RollMattGl",
+    "GBCylAmb9RollPnkDot",
+    "GBCylAmb9RollShBlk",
+    "GBCylAmb9RollShnGl",
+    "GBCylAmb9RollShnSl",
+    "GBCylAmb9RollWht",
+    "GBCyl9SpryGl",
+    "GBCylAmb9RollSlDot",
+    "GBCyl9SpryBlk",
+    "GBCyl9SpryMattSl",
+    "GBCyl9SpryRd",
+    "GBCyl9SpryTur",
+    "GBCyl9SpryShSl",
+    "LBCyl9LtnGl",
+    "LBCyl9LtnMtSl",
+    "GBCyl9MtlRollBlkDot",
+    "LBCyl9LtnBlk",
+    "GBCyl9MtlRollMattCu",
+    "GBCyl9MtlRollMattGl",
+    "GBCyl9MtlRollMattSl",
+    "GBCyl9MtlRollPnkDot",
+    "GBCyl9MtlRollShBlk",
+    "GBCyl9MtlRollShnGl",
+    "GBCyl9MtlRollShnSl",
+    "GBCyl9MtlRollSlDot",
+    "GBCyl9MtlRollWht",
+    "GBCyl9RollBlkDot",
+    "GBCyl9RollMattCu",
+    "GBCyl9RollMattSl",
+    "GBCyl9RollMattGl",
+    "GBCyl9RollPnkDot",
+    "GBCyl9RollShBlk",
+    "GBCyl9RollShnGl",
+    "GBCyl9RollShnSl",
+    "GBCyl9RollWht",
+    "GBCyl9RollSlDot",
+    "GBCylBlu9SpryBlk",
+    "GBCylBlu9SpryGl",
+    "GBCylBlu9SpryMattSl",
+    "GBCylBlu9SpryRd",
+    "GBCylBlu9SpryShSl",
+    "GBCylBlu9SpryTur",
+    "LBCylBlu9LtnBlk",
+    "LBCylBlu9LtnGl",
+    "LBCylBlu9LtnMattSl",
+    "GBCylBlu9MtlRollMattCu",
+    "GBCylBlu9MtlRollBlkDot",
+    "GBCylBlu9MtlRollMattGl",
+    "GBCylBlu9MtlRollMattSl",
+    "GBCylBlu9MtlRollPnkDot",
+    "GBCylBlu9MtlRollShBlk",
+    "GBCylBlu9MtlRollShnGl",
+    "GBCylBlu9MtlRollShnSl",
+    "GBCylBlu9MtlRollWht",
+    "GBCylBlu9RollMattCu",
+    "GBCylBlu9RollBlkDot",
+    "GBCylBlu9MtlRollSlDot",
+    "GBCylBlu9RollMattGl",
+    "GBCylBlu9RollMattSl",
+    "GBCylBlu9RollPnkDot",
+    "GBCylBlu9RollShBlk",
+    "GBCylBlu9RollShnGl",
+    "GBCylBlu9RollShnSl",
+    "GBCylBlu9RollWht",
+    "GBCylBlu9RollSlDot",
+    "GBCylFrst9SpryBlk",
+    "GBCylFrst9SpryGl",
+    "GBCylFrst9SpryMattSl",
+    "GBCylFrst9SpryRd",
+    "GBCylFrst9SpryShSl",
+    "GBCylFrst9SpryTur",
+    "LBCylFrst9LtnGl",
+    "LBCylFrst9LtnBlk",
+    "LBCylFrst9LtnMtSl",
+    "GBCylFrst9MtlRollBlkDot",
+    "GBCylFrst9MtlRollMattGl",
+    "GBCylFrst9MtlRollMattCu",
+    "GBCylFrst9MtlRollMattSl",
+    "GBCylFrst9MtlRollPnkDot",
+    "GBCylFrst9MtlRollShBlk",
+    "GBCylFrst9MtlRollShnGl",
+    "GBCylFrst9MtlRollShnSl",
+    "GBCylFrst9MtlRollSlDot",
+    "GBCylFrst9RollBlkDot",
+    "GBCylFrst9MtlRollWht",
+    "GBCylFrst9RollMattCu",
+    "GBCylFrst9RollMattGl",
+    "GBCylFrst9RollPnkDot",
+    "GBCylFrst9RollMattSl",
+    "GBCylFrst9RollShBlk",
+    "GBCylFrst9RollShnGl",
+    "GBCylFrst9RollSlDot",
+    "GBCylFrst9RollShnSl",
+    "GBCylSwrl9SpryBlk",
+    "GBCylFrst9RollWht",
+    "GBCylSwrl9SpryGl",
+    "GBCylSwrl9SpryMattSl",
+    "GBCylSwrl9SpryRd",
+    "GBCylSwrl9SpryShSl",
+    "GBCylSwrl9SpryTur",
+    "LBCylSwrl9LtnBlk",
+    "LBCylSwrl9LtnGl",
+    "LBCylSwrl9LtnMtSl",
+    "GBCylSwrl9MtlRollBlkDot",
+    "GBCylSwrl9MtlRollMattCu",
+    "GBCylSwrl9MtlRollMattSl",
+    "GBCylSwrl9MtlRollMattGl",
+    "GBCylSwrl9MtlRollPnkDot",
+    "GBCylSwrl9MtlRollShBlk",
+    "GBCylSwrl9MtlRollShnGl",
+    "GBCylSwrl9MtlRollShnSl",
+    "GBCylSwrl9MtlRollSlDot",
+    "GBCylSwrl9MtlRollWht",
+    "GBCylSwrl9RollBlkDot",
+    "GBCylSwrl9RollMattCu",
+    "GBCylSwrl9RollMattGl",
+    "GBCylSwrl9RollMattSl",
+    "GBCylSwrl9RollPnkDot",
+    "GBCylSwrl9RollShBlk",
+    "GBCylSwrl9RollShnGl",
+    "GBCylSwrl9RollShnSl",
+    "GBCylSwrl9RollSlDot",
+    "GBCylSwrl9RollWht",
+    "GBTulipAmb5SpryBlkMatt",
+    "GBTulipAmb5SpryBlkSh",
+    "GBTulipAmb5SpryBluMatt",
+    "GBTulipAmb5SpryCuMatt",
+    "GBTulipAmb5SpryGlMatt",
+    "GBTulipAmb5SpryGlSh",
+    "GBTulipAmb5SprySlMatt",
+    "GBTulipAmb5SprySlSh",
+    "GBTulip6SpryBlkSh",
+    "GBTulip6SpryBluMatt",
+    "GBTulip6SpryCuMatt",
+    "GBTulip6SpryGlSh",
+    "GBTulip6SpryGlMatt",
+    "GBTulip6SprySlMatt",
+    "GBTulip6SprySlSh",
+    "GBTulipAmb5MtlRollCuMatt",
+    "GBTulipAmb5MtlRollBlkDot",
+    "GBTulipAmb5MtlRollGlMatt",
+    "GBTulipAmb5MtlRollSlMatt",
+    "GBTulipAmb5MtlRollPinkDot",
+    "GBTulipAmb5MtlRollBlkSh",
+    "GBTulipAmb5MtlRollGlSh",
+    "GBTulipAmb5MtlRollSlSh",
+    "GBTulipAmb5MtlRollSlDot",
+    "GBTulipAmb5RollBlkDot",
+    "GBTulipAmb5RollCuMatt",
+    "GBTulipAmb5RollGlMatt",
+    "GBTulipAmb5RollSlMatt",
+    "GBTulipAmb5RollBlkSh",
+    "GBTulipAmb5RollPinkDot",
+    "GBTulipAmb5RollGlSh",
+    "GBTulipAmb5RollSlSh",
+    "GBTulipAmb5RollSlDot",
+    "GBTulip6MtlRollBlkDot",
+    "GBTulip6MtlRollCuMatt",
+    "GBTulip6MtlRollGlMatt",
+    "GBTulip6MtlRollSlMatt",
+    "GBTulip6MtlRollPinkDot",
+    "GBTulip6MtlRollBlkSh",
+    "GBTulip6MtlRollSlSh",
+    "GBTulip6MtlRollGlSh",
+    "GBTulip6MtlRollSlDot",
+    "GBTulip6RollBlkDot",
+    "GBTulip6RollCuMatt",
+    "GBTulip6RollSlMatt",
+    "GBTulip6RollGlMatt",
+    "GBTulip6RollPinkDot",
+    "GBTulip6RollBlkSh",
+    "GBTulip6RollSlSh",
+    "GBTulip6RollGlSh",
+    "GBTulip6RollSlDot",
+    "GBSpry3mlClBlk",
+    "GBSpry3mlClWht",
+    "GBSpry4mlClBlk",
+    "GBSpry4mlClWh",
+    "GBTulipAmb5BlkSht",
+    "GBTulipAmb5GlMattSht",
+    "GBTulipAmb5CuSht",
+    "GBTulipAmb5SlMattSht",
+    "GBTulipAmb5BlkShSht",
+    "GBTulipAmb5GlSht",
+    "GBTulipAmb5SlSht",
+    "GBTulipAmb5WhtSht",
+    "GBTulipAmb5Gl",
+    "GBTulipAmb5Sl",
+    "GBTulip6BlkSht",
+    "GBTulip6CuSht",
+    "GBTulip6GlMattSht",
+    "GBTulip6SlMattSht",
+    "GBTulip6SlSht",
+    "GBTulip6GlSht",
+    "GBTulip6WhtSht",
+    "GBTallCyl9SpryBlkMatt",
+    "GBTulip6Gl",
+    "GBTulip6Sl",
+    "GBTallCyl9SpryBluMatt",
+    "GBTallCyl9SpryCuMatt",
+    "GBTallCyl9SpryGlMatt",
+    "GBTallCyl9SprySlMatt",
+    "GBTallCyl9SpryBlkSh",
+    "GBTallCyl9SpryGlSh",
+    "GBTallCyl9SprySlSh",
+    "GBTallCyl9MtlRollBlkDot",
+    "GBTallCyl9MtlRollCuMatt",
+    "GBTallCyl9MtlRollSlMatt",
+    "GBTallCyl9MtlRollGlMatt",
+    "GBTallCyl9MtlRollBlkSh",
+    "GBTallCyl9MtlRollGlSh",
+    "GBTallCyl9MtlRollSlSh",
+    "GBTallCyl9MtlRollSlDot",
+    "GBTallCyl9MtlRollPinkDot",
+    "GBTallCyl9RollBlkDot",
+    "GBTallCyl9RollCuMatt",
+    "GBTallCyl9RollGlMatt",
+    "GBTallCyl9RollSlMatt",
+    "GBTallCyl9RollBlkSh",
+    "GBTallCyl9RollGlSh",
+    "GBTallCyl9RollPinkDot",
+    "GBTallCyl9GlMattSht",
+    "GBTallCyl9CuSht",
+    "GBTallCyl9RollSlDot",
+    "GBTallCyl9RollSlSh",
+    "GBTallCyl9SlMattSht",
+    "GBTallCyl9BlkShSht",
+    "GBTallCyl9SlSht",
+    "GBTallCyl9GlSht",
+    "GBTallCyl9WhtSht",
+    "GBTallCyl9Gl",
+    "GBTallCyl9Sl",
+    "GBTallCyl9BlkSht",
+    "GBTallCylFrst9SpryBlkMatt",
+    "GBTallCylFrst9SpryGlMatt",
+    "GBTallCylFrst9SpryCuMatt",
+    "GBTallCylFrst9SprySlMatt",
+    "GBTallCylFrst9SpryBlkSh",
+    "GBTallCylFrst9SpryGlSh",
+    "GBTallCylFrst9SpryBluMatt",
+    "GBTallCylFrst9MtlRollBlkDot",
+    "GBTallCylFrst9SprySlSh",
+    "GBTallCylFrst9MtlRollCuMatt",
+    "GBTallCylFrst9MtlRollGlMatt",
+    "GBTallCylFrst9MtlRollSlMatt",
+    "GBTallCylFrst9MtlRollBlkSh",
+    "GBTallCylFrst9MtlRollPinkDot",
+    "GBTallCylFrst9MtlRollGlSh",
+    "GBTallCylFrst9RollBlkDot",
+    "GBTallCylFrst9MtlRollSlSh",
+    "GBTallCylFrst9MtlRollSlDot",
+    "GBTallCylFrst9RollCuMatt",
+    "GBTallCylFrst9RollGlMatt",
+    "GBTallCylFrst9RollSlMatt",
+    "GBTallCylFrst9RollPinkDot",
+    "GBTallCylFrst9RollBlkSh",
+    "GBTallCylFrst9RollGlSh",
+    "GBTallCylFrst9RollSlSh",
+    "GBTallCylFrst9GlMattSht",
+    "GBTallCylFrst9RollSlDot",
+    "GBTallCylFrst9CuSht",
+    "GBTallCylFrst9SlMattSht",
+    "GBTallCylFrst9BlkShSht",
+    "GBTallCylFrst9GlSht",
+    "GBTallCylFrst9SlSht",
+    "GBTallCylFrst9BlkSht",
+    "GBTallCylFrst9WhtSht",
+    "GBTallCylFrst9Gl",
+    "GBTallCylFrst9Sl"
+  ],
+  "pages": [
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-sidecar.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/613d4e00d93f01280bc87cf2b59647db46457c2d1d2d45c80d75a24681aa33ec.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.7462%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-capon.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/613d4e00d93f01280bc87cf2b59647db46457c2d1d2d45c80d75a24681aa33ec.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-exploded.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/613d4e00d93f01280bc87cf2b59647db46457c2d1d2d45c80d75a24681aa33ec.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.2402%, 9.85255%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.2402%, 9.85255%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(-16.7612%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9MtlRollBlkDot-sidecar.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.8265%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9MtlRollBlkDot-capon.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9MtlRollBlkDot-exploded.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -13.5565%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.5969%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9RollBlkDot-sidecar.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.8265%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9RollBlkDot-capon.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9RollBlkDot-exploded.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -13.5565%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.5969%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9CuSht-sidecar.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.5238%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9CuSht-capon.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9CuSht-exploded.png",
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -16.6882%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9SpryCuMatt-sidecar.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/7fafc89c8536f6cb0e2c73d2622c90ebade3d7cdbeddbaba341834a240598554.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "multiply",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.4278%, 64.9641%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9SpryCuMatt-capon.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/7fafc89c8536f6cb0e2c73d2622c90ebade3d7cdbeddbaba341834a240598554.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "multiply",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9SpryCuMatt-exploded.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/7fafc89c8536f6cb0e2c73d2622c90ebade3d7cdbeddbaba341834a240598554.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.1196%, 9.85255%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.1196%, 9.85255%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(-16.6307%, 64.9641%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9MtlRollBlkDot-sidecar.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.8265%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9MtlRollBlkDot-capon.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9MtlRollBlkDot-exploded.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -13.6615%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.6016%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9RollBlkDot-sidecar.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.8265%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9RollBlkDot-capon.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9RollBlkDot-exploded.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -13.6615%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.6016%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9CuSht-sidecar.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.5238%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9CuSht-capon.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9CuSht-exploded.png",
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -16.7195%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9SpryBlkMatt-sidecar.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/613d4e00d93f01280bc87cf2b59647db46457c2d1d2d45c80d75a24681aa33ec.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.7462%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9SpryBlkMatt-capon.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/613d4e00d93f01280bc87cf2b59647db46457c2d1d2d45c80d75a24681aa33ec.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9SpryBlkMatt-exploded.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/613d4e00d93f01280bc87cf2b59647db46457c2d1d2d45c80d75a24681aa33ec.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.2402%, 9.85255%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.2402%, 9.85255%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(-16.7612%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9MtlRollBlkDot-sidecar.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.8265%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9MtlRollBlkDot-capon.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9MtlRollBlkDot-exploded.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -13.5565%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.5969%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9RollBlkDot-sidecar.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.8265%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9RollBlkDot-capon.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9RollBlkDot-exploded.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -13.5565%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.5969%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9CuSht-sidecar.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.5238%, 64.254%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9CuSht-capon.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-clear.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9CuSht-exploded.png",
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/254d72521e495efba2a7f57302206b32db4bf17ebbaaadacf07fbea34bcb105e.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -16.6882%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9SpryCuMatt-sidecar.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/7fafc89c8536f6cb0e2c73d2622c90ebade3d7cdbeddbaba341834a240598554.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "multiply",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.4278%, 64.9641%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9SpryCuMatt-capon.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/7fafc89c8536f6cb0e2c73d2622c90ebade3d7cdbeddbaba341834a240598554.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "multiply",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9SpryCuMatt-exploded.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/7fafc89c8536f6cb0e2c73d2622c90ebade3d7cdbeddbaba341834a240598554.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/682c910084171299c08dd65a5357db1fdd114a3e4c6d30f4b03ee2060f336600.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0056c53ff25d5c342ef10abf0737f66734f89d8fa93e3e505bfd8a3601022627.svg"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.1196%, 9.85255%)"
+        },
+        {
+          "slot": "sprayer",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.1196%, 9.85255%)"
+        },
+        {
+          "slot": "overcap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(-16.6307%, 64.9641%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9MtlRollBlkDot-sidecar.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.8265%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9MtlRollBlkDot-capon.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9MtlRollBlkDot-exploded.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -13.6615%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.6016%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9RollBlkDot-sidecar.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.8265%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9RollBlkDot-capon.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9RollBlkDot-exploded.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -13.6615%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(17.6016%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9CuSht-sidecar.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(15.5238%, 64.3278%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9CuSht-capon.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/images/pdp/backdrops/cylinder-9ml-13-415-frosted.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9CuSht-exploded.png",
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3d82baa9a8bd2f3e7cfa5e71b6853a35c62fc36b17bfb18f0ce59fb6e913e414.svg",
+        "https://best-bottles-website-6fnza4p8v-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -16.7195%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    }
+  ],
+  "builders": [
+    {
+      "kind": "api",
+      "matched": 72,
+      "unavailable": []
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCyl9RollBlkDot",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCyl9CuSht",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBTallCylFrst9CuSht",
+      "passed": true
+    }
+  ],
+  "unavailable": [],
+  "errors": [],
+  "failures": [],
+  "passed": true
+}

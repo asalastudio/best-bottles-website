@@ -1,0 +1,29 @@
+{
+  "head": "132d5917ba1db68defd482557f43ae6019f199b4",
+  "version": "17f5c90053bcdf59",
+  "catalogStatesPassed": 120,
+  "catalogStatesUnavailable": 24,
+  "previewBuilderRecipesMatched": 60,
+  "masterApisPassed": 434,
+  "pdpStatesPassed": 48,
+  "actualBuilderPagesPassed": 8,
+  "unavailablePreviewSkus": [
+    "GBSleek5BlkShSht",
+    "GBSleek5CuSht",
+    "GBSleek5GlMattSht",
+    "GBSleek5GlSht",
+    "GBSleek5SlMattSht",
+    "GBSleek5SlSht",
+    "GBSleek8BlkShSht",
+    "GBSleek8CuSht",
+    "GBSleek8GlMattSht",
+    "GBSleek8GlSht",
+    "GBSleek8SlMattSht",
+    "GBSleek8SlSht"
+  ],
+  "unavailablePreviewSkusVerifiedPresentInProduction": true,
+  "productionCatalogScope": 72,
+  "productionBrowserVerificationPending": true,
+  "ciRun": 41382979182,
+  "ciConclusion": "success"
+}

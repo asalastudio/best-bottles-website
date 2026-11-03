@@ -1,0 +1,162 @@
+[
+  {
+    "id": "CMP-ROC-BLK-17415-DOT",
+    "file": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-BLK-17415-DOT-original-full.png",
+    "psd": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/20. Caps/12. 17-415 Roll on/2. CpRoll17-415BlkDot.psd",
+    "layer": "Layer 8",
+    "size": [
+      304,
+      419
+    ],
+    "bbox": [
+      121,
+      163,
+      425,
+      582
+    ]
+  },
+  {
+    "id": "CMP-ROC-CPR-17415",
+    "file": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-CPR-17415-original-full.png",
+    "psd": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/20. Caps/12. 17-415 Roll on/8. CpRoll17-415Cu.psd",
+    "layer": "Layer 2",
+    "size": [
+      295,
+      427
+    ],
+    "bbox": [
+      133,
+      156,
+      428,
+      583
+    ]
+  },
+  {
+    "id": "CMP-ROC-MGLD-17415",
+    "file": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-MGLD-17415-original-full.png",
+    "psd": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/20. Caps/12. 17-415 Roll on/5. CpRoll17-415MattGl.psd",
+    "layer": "Layer 5",
+    "size": [
+      292,
+      420
+    ],
+    "bbox": [
+      129,
+      162,
+      421,
+      582
+    ]
+  },
+  {
+    "id": "CMP-ROC-MSLV-17415",
+    "file": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-MSLV-17415-original-full.png",
+    "psd": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/20. Caps/12. 17-415 Roll on/1. CpRoll17-415MattSl.psd",
+    "layer": "Layer 9",
+    "size": [
+      295,
+      426
+    ],
+    "bbox": [
+      125,
+      165,
+      420,
+      591
+    ]
+  },
+  {
+    "id": "CMP-ROC-PNK-17415-DOT",
+    "file": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-PNK-17415-DOT-original-full.png",
+    "psd": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/20. Caps/12. 17-415 Roll on/4. CpRoll17-415PnkDot.psd",
+    "layer": "Layer 6",
+    "size": [
+      294,
+      421
+    ],
+    "bbox": [
+      128,
+      163,
+      422,
+      584
+    ]
+  },
+  {
+    "id": "CMP-ROC-SBLK-17415",
+    "file": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-SBLK-17415-original-full.png",
+    "psd": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/20. Caps/12. 17-415 Roll on/9. CpRoll17-415ShnBlk.psd",
+    "layer": "Layer 1",
+    "size": [
+      300,
+      429
+    ],
+    "bbox": [
+      131,
+      153,
+      431,
+      582
+    ]
+  },
+  {
+    "id": "CMP-ROC-SGLD-17415",
+    "file": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-SGLD-17415-original-full.png",
+    "psd": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/20. Caps/12. 17-415 Roll on/6. CpRoll17-415ShnGl.psd",
+    "layer": "Layer 4",
+    "size": [
+      295,
+      428
+    ],
+    "bbox": [
+      128,
+      152,
+      423,
+      580
+    ]
+  },
+  {
+    "id": "CMP-ROC-SLV-17415-DOT",
+    "file": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-SLV-17415-DOT-original-full.png",
+    "psd": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/20. Caps/12. 17-415 Roll on/3. CpRoll17-415SlDot.psd",
+    "layer": "Layer 7",
+    "size": [
+      295,
+      423
+    ],
+    "bbox": [
+      128,
+      163,
+      423,
+      586
+    ]
+  },
+  {
+    "id": "CMP-ROC-SSLV-17415",
+    "file": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-SSLV-17415-original-full.png",
+    "psd": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/20. Caps/12. 17-415 Roll on/7. CpRoll17-415ShnSl.psd",
+    "layer": "Layer 3",
+    "size": [
+      292,
+      426
+    ],
+    "bbox": [
+      131,
+      158,
+      423,
+      584
+    ]
+  },
+  {
+    "id": "CMP-ROC-WHT-17415",
+    "file": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-WHT-17415-original-full.png",
+    "psd": "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master/20. Caps/12. 17-415 Roll on/10. CpRoll17-415White.psd",
+    "layer": "Layer 1 copy",
+    "size": [
+      300,
+      436
+    ],
+    "bbox": [
+      128,
+      148,
+      428,
+      584
+    ]
+  }
+]

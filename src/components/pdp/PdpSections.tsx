@@ -183,11 +183,13 @@ export function PdpBuildStrip({
     // black overcap); a roller is the fitment and its roll-on caps the caps.
     const mechanism = capKits.some(hasMechanism);
     const reducer = capKits.some(kit => kit.parts.some(part => part.slot === "reducer"));
-    const cylinder25Dropper = capKits.some(kit => /^GBCyl25Drp(?:Cu|Gl|Sl)$/.test(kit.sku ?? ""));
+    const integratedDropper = capKits.some(kit => /^GBCyl25Drp(?:Cu|Gl|Sl)$/.test(kit.sku ?? "")
+        || (kit.register?.bodyId === "elegant-60ml-18-415" && kit.parts.some(part => part.slot === "pipette")
+            && kit.parts.some(part => part.slot === "fitment")));
     const pump = capKits.some((kit) => kit.parts.some((part) => part.slot === "pump"));
     const ownCaps = distinct(capKits.map((kit) => stripEntry(kit, closureParts(kit))));
     const rollerKits = [...groupKits, ...fitmentKits].filter((kit) => !hasMechanism(kit));
-    const fitments = cylinder25Dropper ? [] : reducer
+    const fitments = integratedDropper ? [] : reducer
         ? distinct(capKits.map(kit => stripEntry(kit, [fitmentPart(kit)])))
         : mechanism
         ? ownCaps
@@ -204,7 +206,7 @@ export function PdpBuildStrip({
         }))
         : distinct([...ownCaps, ...fitmentKits.filter((kit) => !hasMechanism(kit)).map((kit) => stripEntry(kit, closureParts(kit)))]);
     const sharedClearOvercap = mechanism && caps.length === 1 && caps[0].parts.some(part => part.detached);
-    const capOnly = !cylinder25Dropper && !mechanism && !reducer && fitments.length === 0 && caps.length > 0;
+    const capOnly = !integratedDropper && !mechanism && !reducer && fitments.length === 0 && caps.length > 0;
     const rollersOnly = fitments.length > 0 && fitments.every(entry => entry.parts.every(part => part.slot === "roller"));
     const headName = pump ? "Lotion pump" : "Fine mist sprayer";
     return (
@@ -227,7 +229,7 @@ export function PdpBuildStrip({
                     <StripWell entries={fitments} mobile={mobile} />
                     <span className={styles.tileTitle}>Fitment</span>
                     <span className={styles.tileBody}>
-                        {cylinder25Dropper ? null : reducer
+                        {integratedDropper ? null : reducer
                             ? `Orifice reducer${neck ? ` for the ${neck} neck` : ""}. Stays seated when the cap is removed.`
                             : mechanism
                             ? `${headName}${neck ? ` for the ${neck} neck` : ""}, in ${fitments.length} finish${fitments.length === 1 ? "" : "es"}.`

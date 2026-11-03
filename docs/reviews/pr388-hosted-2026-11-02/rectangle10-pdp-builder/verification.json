@@ -1,0 +1,754 @@
+{
+  "origin": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app",
+  "version": "4c6095d23d920c4f",
+  "apis": [
+    "GBRect10MtlRollBlkDot",
+    "GBRect10MtlRollSlMatt",
+    "GBRect10MtlRollGlMatt",
+    "GBRect10MtlRollBlkSh",
+    "GBRect10MtlRollPinkDot",
+    "GBRect10MtlRollGlSh",
+    "GBRect10RollBlkDot",
+    "GBRect10MtlRollSlSh",
+    "GBRect10MtlRollSlDot",
+    "GBRect10RollCuMatt",
+    "GBRect10RollGlMatt",
+    "GBRect10RollSlMatt",
+    "GBRect10RollPinkDot",
+    "GBRect10RollBlkSh",
+    "GBRect10RollGlSh",
+    "GBRect10RollSlSh",
+    "GBRect10RollSlDot",
+    "GBRect10MtlRollCuMatt"
+  ],
+  "pages": [
+    {
+      "sku": "GBRect10MtlRollBlkDot",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBRect10MtlRollBlkDot-sidecar.png",
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(26.0313%, 34.5593%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollBlkDot",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBRect10MtlRollBlkDot-capon.png",
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollBlkDot",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBRect10MtlRollBlkDot-exploded.png",
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(25.1986%, 40.6454%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -29.1243%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollGlSh",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBRect10MtlRollGlSh-sidecar.png",
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(26.0523%, 34.5593%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollGlSh",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBRect10MtlRollGlSh-capon.png",
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollGlSh",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBRect10MtlRollGlSh-exploded.png",
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(25.1986%, 40.6454%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -29.1243%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlSh",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBRect10RollSlSh-sidecar.png",
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(26.0523%, 34.5593%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlSh",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBRect10RollSlSh-capon.png",
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlSh",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBRect10RollSlSh-exploded.png",
+      "bodyFrame": [
+        255.68682861328125,
+        196.5640869140625,
+        188.95501708984375,
+        308.1756591796875
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(25.1986%, 40.6454%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -29.1243%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollBlkDot",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBRect10MtlRollBlkDot-sidecar.png",
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(26.0313%, 34.5593%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollBlkDot",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBRect10MtlRollBlkDot-capon.png",
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollBlkDot",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBRect10MtlRollBlkDot-exploded.png",
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fafd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(25.1986%, 40.6454%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -29.1243%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollGlSh",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBRect10MtlRollGlSh-sidecar.png",
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(26.0523%, 34.5593%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollGlSh",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBRect10MtlRollGlSh-capon.png",
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10MtlRollGlSh",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBRect10MtlRollGlSh-exploded.png",
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(25.1986%, 40.6454%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -29.1243%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlSh",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBRect10RollSlSh-sidecar.png",
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(26.0523%, 34.5593%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlSh",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBRect10RollSlSh-capon.png",
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBRect10RollSlSh",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBRect10RollSlSh-exploded.png",
+      "bodyFrame": [
+        126.62928009033203,
+        145.61065673828125,
+        139.960205078125,
+        228.27764892578125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/199d55eb53afd408fae955066d4b4326e8d0caebbbb1e50fb672ad9cc79451a6.svg",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png&w=640&q=90"
+      ],
+      "parts": [
+        {
+          "slot": "roller",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(25.1986%, 40.6454%)"
+        },
+        {
+          "slot": "body",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "cap",
+          "opacity": "",
+          "blend": "",
+          "transform": "translate(0%, -29.1243%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    }
+  ],
+  "builders": [
+    {
+      "kind": "api",
+      "matched": 18,
+      "unavailable": []
+    },
+    {
+      "kind": "page",
+      "sku": "GBRect10MtlRollBlkDot",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBRect10MtlRollGlSh",
+      "passed": true
+    },
+    {
+      "kind": "page",
+      "sku": "GBRect10RollSlSh",
+      "passed": true
+    }
+  ],
+  "unavailable": [],
+  "errors": [],
+  "failures": [],
+  "passed": true
+}

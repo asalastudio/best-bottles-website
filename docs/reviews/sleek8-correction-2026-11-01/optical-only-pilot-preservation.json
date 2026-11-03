@@ -1,0 +1,26 @@
+{
+  "beforeVersion": "efe02f8dc1ca0973",
+  "scope": [
+    "GBSleek8SpryBlkMatt",
+    "GBSleek8SpryBlkSh",
+    "GBSleek8SpryBluMatt",
+    "GBSleek8SpryCuMatt",
+    "GBSleek8SpryGlMatt",
+    "GBSleek8SpryGlSh",
+    "GBSleek8SprySlMatt",
+    "GBSleek8SprySlSh"
+  ],
+  "unchangedRecipes": 430,
+  "unchangedRecipeHash": "1c69a69acbec27bc7dbcf9a2e6f3a891caadeb7f0c69987f8f48cc67e390a485",
+  "preservedBodyHash": "d0e6e55766ecfc57b5aba081a81d2645d855347788c8c231c53c7c07eaf1c3b8",
+  "changes": [
+    "body.multiply",
+    "seatedTube.zOrder",
+    "seatedTube.opacity",
+    "seatedTube.multiply"
+  ],
+  "imageBytesChanged": false,
+  "geometryChanged": false,
+  "productionDataMutated": false,
+  "afterVersion": "16625b508a08fa33"
+}

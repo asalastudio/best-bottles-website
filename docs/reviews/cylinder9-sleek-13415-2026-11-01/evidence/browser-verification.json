@@ -1,0 +1,2598 @@
+{
+  "records": [
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5BlkSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5BlkSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5BlkSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek5CuSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek5CuSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek5CuSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.0850830078125,
+        255.3114013671875,
+        117.080078125,
+        246.7601318359375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek8SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek8SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek8SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek8SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek8SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek8SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek8MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek8MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek8MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek8RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek8RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek8RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek8BlkSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek8BlkSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek8BlkSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBSleek8CuSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBSleek8CuSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBSleek8CuSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        294.5672607421875,
+        193.17843627929688,
+        109.266357421875,
+        311.8680725097656
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9CuSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9CuSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9CuSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCyl9BlkSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCyl9BlkSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCyl9BlkSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        280.38116455078125,
+        90.8319091796875,
+        140.64776611328125,
+        418.901123046875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Copper",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9SpryCuMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Copper",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9SpryCuMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Copper",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9SpryCuMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlSh",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlSh",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlSh",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "glass": "Frosted",
+      "roller": "metal",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "glass": "Frosted",
+      "roller": "metal",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "glass": "Frosted",
+      "roller": "metal",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "glass": "Frosted",
+      "roller": "plastic",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "glass": "Frosted",
+      "roller": "plastic",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "glass": "Frosted",
+      "roller": "plastic",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9CuSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9CuSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9CuSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTallCylFrst9BlkSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTallCylFrst9BlkSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTallCylFrst9BlkSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        279.8887939453125,
+        91.2850341796875,
+        140.48870849609375,
+        418.42724609375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek5SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek5RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5BlkSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5BlkSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5BlkSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek5CuSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek5CuSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek5CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek5CuSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        152.83285522460938,
+        189.12643432617188,
+        86.71110534667969,
+        182.78628540039062
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek5CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek8SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek8SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek8SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek8SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek8SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek8SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&shop=glass-spray-bottles&sku=GBSleek8SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek8MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek8MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek8MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek8RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek8RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek8RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Sleek&shop=roll-on-bottles&sku=GBSleek8RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek8BlkSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek8BlkSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Black Short",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek8BlkSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBSleek8CuSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBSleek8CuSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBSleek8CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Matte Copper",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBSleek8CuSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        155.42251586914062,
+        143.0867919921875,
+        80.9306640625,
+        231.012451171875
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-sleek-8ml-13-415-clear.d0e6e55766ec.svg",
+      "builder": "/matrix?family=Sleek&sku=GBSleek8CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9SpryBlkMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9SpryBlkMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryBlkMatt",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Matte Black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9SpryBlkMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryBlkMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9SpryGlSh",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCyl9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "glass": "Clear",
+      "roller": "plastic",
+      "cap": "Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCyl9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9CuSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9CuSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9CuSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCyl9BlkSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCyl9BlkSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCyl9BlkSht",
+      "glass": "Clear",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCyl9BlkSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.91529846191406,
+        67.27789306640625,
+        104.18576049804688,
+        310.29437255859375
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCyl9BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Copper",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9SpryCuMatt-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Copper",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9SpryCuMatt-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryCuMatt",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Copper",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9SpryCuMatt-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryCuMatt&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlSh",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9SpryGlSh-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlSh",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9SpryGlSh-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlSh",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9SpryGlSh-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&shop=glass-spray-bottles&sku=GBTallCylFrst9SpryGlSh&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "glass": "Frosted",
+      "roller": "metal",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "glass": "Frosted",
+      "roller": "metal",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "glass": "Frosted",
+      "roller": "metal",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9MtlRollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "glass": "Frosted",
+      "roller": "plastic",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9RollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "glass": "Frosted",
+      "roller": "plastic",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9RollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "glass": "Frosted",
+      "roller": "plastic",
+      "cap": "Tall Black with Dots Cap",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9RollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBTallCylFrst9RollBlkDot&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9CuSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9CuSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Lined Matte Copper",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9CuSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9CuSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTallCylFrst9BlkSht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTallCylFrst9BlkSht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9BlkSht&from=pdp&assetPreview=gpt13"
+    },
+    {
+      "sku": "GBTallCylFrst9BlkSht",
+      "glass": "Frosted",
+      "roller": null,
+      "cap": "Short Ribbed Black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTallCylFrst9BlkSht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        144.537841796875,
+        67.61355590820312,
+        104.06790161132812,
+        309.9433288574219
+      ],
+      "bodyUrl": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-frosted.3d82baa9a8bd.svg",
+      "builder": "/matrix?family=Cylinder&sku=GBTallCylFrst9BlkSht&from=pdp&assetPreview=gpt13"
+    }
+  ],
+  "failures": [],
+  "pageErrors": []
+}

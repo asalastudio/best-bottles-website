@@ -1,0 +1,546 @@
+{
+  "origin": "http://localhost:3010",
+  "version": "ca21bfc3c0c3ce57",
+  "states": [
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "tubes": 0,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/640-20313fd9ac28d72cbf6623bd975ba95ddfe4d4ae54ec9760bef7b05c9ec7c0e3.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/256-51c4b9363d1afc50f589f816970cb0515071b13161c860c2afb5a8c17afc1656.webp",
+          "style": "transform:translate(0%, 0%);z-index:1",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:35.09862204724409%;top:23.60065282748747%;width:29.524596850393703%;height:76.4395533285612%"
+        },
+        {
+          "slot": "pump",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/640-ab1ed1915cc169358492b2394ad2210011d7e417781b5dcbb87736b58d23f31b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/256-4dabc12d23ccbdd8659744b8500bc3417f93f9671274a6f25c26e67f6249dd71.webp",
+          "style": "transform:translate(0%, 0%);z-index:2",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:35.019800853485066%;top:4.367224880382777%;width:29.93775248933143%;height:24.49864218285271%"
+        },
+        {
+          "slot": "collar",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/640-eb7d8ba45f56d03bc8a48ea57b5ef0a92eebc5aeac5076684588ea67e24cf82b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/256-bd89e28c2b542934408b58204e411637a9b4692ba482f34b8c539d7a31c0d906.webp",
+          "style": "transform:translate(0%, 0%);z-index:3",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:39.529924277704296%;top:24.34580743912496%;width:21.222173686269397%;height:16.472662752555827%"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/640-8f25b6dba36ceb325d808e6cc043412a478f7128c9d6a5125b5de1da927467f9.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/128-4ce6f531f14d726928283627d1065273935cc677015b10e2292d9737680ff13f.webp",
+          "style": "transform:translate(21.520674015748035%, 71.12726363636364%);z-index:4",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:41.052%;top:3.643645454545455%;width:17.937%;height:21.72909090909091%"
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "viewport": "desktop",
+      "view": "capon",
+      "tubes": 0,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/640-20313fd9ac28d72cbf6623bd975ba95ddfe4d4ae54ec9760bef7b05c9ec7c0e3.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/256-51c4b9363d1afc50f589f816970cb0515071b13161c860c2afb5a8c17afc1656.webp",
+          "style": "transform:translate(0%, 0%);z-index:1",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:35.09862204724409%;top:23.60065282748747%;width:29.524596850393703%;height:76.4395533285612%"
+        },
+        {
+          "slot": "pump",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/640-ab1ed1915cc169358492b2394ad2210011d7e417781b5dcbb87736b58d23f31b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/256-4dabc12d23ccbdd8659744b8500bc3417f93f9671274a6f25c26e67f6249dd71.webp",
+          "style": "transform:translate(0%, 0%);z-index:2",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:35.019800853485066%;top:4.367224880382777%;width:29.93775248933143%;height:24.49864218285271%"
+        },
+        {
+          "slot": "collar",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/640-eb7d8ba45f56d03bc8a48ea57b5ef0a92eebc5aeac5076684588ea67e24cf82b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/256-bd89e28c2b542934408b58204e411637a9b4692ba482f34b8c539d7a31c0d906.webp",
+          "style": "transform:translate(0%, 0%);z-index:3",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:39.529924277704296%;top:24.34580743912496%;width:21.222173686269397%;height:16.472662752555827%"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/640-8f25b6dba36ceb325d808e6cc043412a478f7128c9d6a5125b5de1da927467f9.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/128-4ce6f531f14d726928283627d1065273935cc677015b10e2292d9737680ff13f.webp",
+          "style": "transform: translate(0%, 0%); z-index: 4;",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:41.052%;top:3.643645454545455%;width:17.937%;height:21.72909090909091%"
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "viewport": "desktop",
+      "view": "exploded",
+      "tubes": 1,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/128-6e1c2a72ae1177294a8a2c3e39bba985f0c90e2127a9c23608c90b5bc1ea1f8a.webp",
+          "style": "transform: translate(25.8621%, 6.83637%); z-index: 1;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 40.7194%; top: 35.8317%; width: 20.4823%; height: 55.7325%; clip-path: inset(0px 0px 3.41014%);"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/640-20313fd9ac28d72cbf6623bd975ba95ddfe4d4ae54ec9760bef7b05c9ec7c0e3.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/256-51c4b9363d1afc50f589f816970cb0515071b13161c860c2afb5a8c17afc1656.webp",
+          "style": "transform: translate(0%, 0%); z-index: 2;",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:35.09862204724409%;top:23.60065282748747%;width:29.524596850393703%;height:76.4395533285612%"
+        },
+        {
+          "slot": "pump",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/640-ab1ed1915cc169358492b2394ad2210011d7e417781b5dcbb87736b58d23f31b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/256-4dabc12d23ccbdd8659744b8500bc3417f93f9671274a6f25c26e67f6249dd71.webp",
+          "style": "transform: translate(25.8621%, 6.83637%); z-index: 3;",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:35.019800853485066%;top:4.367224880382777%;width:29.93775248933143%;height:24.49864218285271%"
+        },
+        {
+          "slot": "collar",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/640-eb7d8ba45f56d03bc8a48ea57b5ef0a92eebc5aeac5076684588ea67e24cf82b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/256-bd89e28c2b542934408b58204e411637a9b4692ba482f34b8c539d7a31c0d906.webp",
+          "style": "transform: translate(25.8621%, 6.83637%); z-index: 4;",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:39.529924277704296%;top:24.34580743912496%;width:21.222173686269397%;height:16.472662752555827%"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/640-8f25b6dba36ceb325d808e6cc043412a478f7128c9d6a5125b5de1da927467f9.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/128-4ce6f531f14d726928283627d1065273935cc677015b10e2292d9737680ff13f.webp",
+          "style": "transform: translate(0%, -23.2743%); z-index: 5;",
+          "imgStyle": "position:absolute;display:block;max-width:none;left:41.052%;top:3.643645454545455%;width:17.937%;height:21.72909090909091%"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "tubes": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 1;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 29.559%; top: 18.2418%; width: 41.375%; height: 81.7945%;"
+        },
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/256-0397cc9aa4a342b124f44ab25e630c6f31d70b8d2bd77cc34543eed09625d84b.webp",
+          "style": "transform: translate(0%, 0%); z-index: 2; mix-blend-mode: multiply;",
+          "imgStyle": "position: absolute; display: block; max-width: none; opacity: 0.62; left: 40.447%; top: 32.6099%; width: 21.0835%; height: 57.3681%;"
+        },
+        {
+          "slot": "pump",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 3;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 38.021%; top: -0.942727%; width: 24.171%; height: 38.55%;"
+        },
+        {
+          "slot": "overcap",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "style": "transform: translate(32.363%, 58.7609%); z-index: 4;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 34.94%; top: -5.16455%; width: 30.484%; height: 42.8582%;"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "desktop",
+      "view": "capon",
+      "tubes": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 1;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 29.559%; top: 18.2418%; width: 41.375%; height: 81.7945%;"
+        },
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/256-0397cc9aa4a342b124f44ab25e630c6f31d70b8d2bd77cc34543eed09625d84b.webp",
+          "style": "transform: translate(0%, 0%); z-index: 2; mix-blend-mode: multiply;",
+          "imgStyle": "position: absolute; display: block; max-width: none; opacity: 0.62; left: 40.447%; top: 32.6099%; width: 21.0835%; height: 57.3681%;"
+        },
+        {
+          "slot": "pump",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 3;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 38.021%; top: -0.942727%; width: 24.171%; height: 38.55%;"
+        },
+        {
+          "slot": "overcap",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 4;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 34.94%; top: -5.16455%; width: 30.484%; height: 42.8582%;"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "desktop",
+      "view": "exploded",
+      "tubes": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 1;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 29.559%; top: 18.2418%; width: 41.375%; height: 81.7945%;"
+        },
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/256-0397cc9aa4a342b124f44ab25e630c6f31d70b8d2bd77cc34543eed09625d84b.webp",
+          "style": "transform: translate(0%, -66.4764%); z-index: 2;",
+          "imgStyle": "position: absolute; display: block; max-width: none; opacity: 1; left: 40.447%; top: 32.6099%; width: 21.0835%; height: 57.3681%;"
+        },
+        {
+          "slot": "pump",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "style": "transform: translate(0%, -66.4764%); z-index: 3;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 38.021%; top: -0.942727%; width: 24.171%; height: 38.55%;"
+        },
+        {
+          "slot": "overcap",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "style": "transform: translate(0%, -107.295%); z-index: 4;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 34.94%; top: -5.16455%; width: 30.484%; height: 42.8582%;"
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "tubes": 0,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/640-20313fd9ac28d72cbf6623bd975ba95ddfe4d4ae54ec9760bef7b05c9ec7c0e3.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/256-51c4b9363d1afc50f589f816970cb0515071b13161c860c2afb5a8c17afc1656.webp",
+          "style": "transform: translate(0%, 0%); z-index: 1;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 35.0986%; top: 23.6007%; width: 29.5246%; height: 76.4396%;"
+        },
+        {
+          "slot": "pump",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/640-ab1ed1915cc169358492b2394ad2210011d7e417781b5dcbb87736b58d23f31b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/256-4dabc12d23ccbdd8659744b8500bc3417f93f9671274a6f25c26e67f6249dd71.webp",
+          "style": "transform: translate(0%, 0%); z-index: 2;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 35.0198%; top: 4.36722%; width: 29.9378%; height: 24.4986%;"
+        },
+        {
+          "slot": "collar",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/640-eb7d8ba45f56d03bc8a48ea57b5ef0a92eebc5aeac5076684588ea67e24cf82b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/256-bd89e28c2b542934408b58204e411637a9b4692ba482f34b8c539d7a31c0d906.webp",
+          "style": "transform: translate(0%, 0%); z-index: 3;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 39.5299%; top: 24.3458%; width: 21.2222%; height: 16.4727%;"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/640-8f25b6dba36ceb325d808e6cc043412a478f7128c9d6a5125b5de1da927467f9.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/128-4ce6f531f14d726928283627d1065273935cc677015b10e2292d9737680ff13f.webp",
+          "style": "transform: translate(21.5207%, 71.1273%); z-index: 4;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 41.052%; top: 3.64365%; width: 17.937%; height: 21.7291%;"
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "viewport": "mobile",
+      "view": "capon",
+      "tubes": 0,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/640-20313fd9ac28d72cbf6623bd975ba95ddfe4d4ae54ec9760bef7b05c9ec7c0e3.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/256-51c4b9363d1afc50f589f816970cb0515071b13161c860c2afb5a8c17afc1656.webp",
+          "style": "transform: translate(0%, 0%); z-index: 1;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 35.0986%; top: 23.6007%; width: 29.5246%; height: 76.4396%;"
+        },
+        {
+          "slot": "pump",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/640-ab1ed1915cc169358492b2394ad2210011d7e417781b5dcbb87736b58d23f31b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/256-4dabc12d23ccbdd8659744b8500bc3417f93f9671274a6f25c26e67f6249dd71.webp",
+          "style": "transform: translate(0%, 0%); z-index: 2;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 35.0198%; top: 4.36722%; width: 29.9378%; height: 24.4986%;"
+        },
+        {
+          "slot": "collar",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/640-eb7d8ba45f56d03bc8a48ea57b5ef0a92eebc5aeac5076684588ea67e24cf82b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/256-bd89e28c2b542934408b58204e411637a9b4692ba482f34b8c539d7a31c0d906.webp",
+          "style": "transform: translate(0%, 0%); z-index: 3;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 39.5299%; top: 24.3458%; width: 21.2222%; height: 16.4727%;"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/640-8f25b6dba36ceb325d808e6cc043412a478f7128c9d6a5125b5de1da927467f9.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/128-4ce6f531f14d726928283627d1065273935cc677015b10e2292d9737680ff13f.webp",
+          "style": "transform: translate(0%, 0%); z-index: 4;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 41.052%; top: 3.64365%; width: 17.937%; height: 21.7291%;"
+        }
+      ]
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "viewport": "mobile",
+      "view": "exploded",
+      "tubes": 1,
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/256-0397cc9aa4a342b124f44ab25e630c6f31d70b8d2bd77cc34543eed09625d84b.webp",
+          "style": "transform: translate(25.8621%, 6.83637%); z-index: 1;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 40.7194%; top: 35.8317%; width: 20.4823%; height: 55.7325%; clip-path: inset(0px 0px 3.41014%);"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/640-20313fd9ac28d72cbf6623bd975ba95ddfe4d4ae54ec9760bef7b05c9ec7c0e3.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/f45c288e0b6c40d4069bd8691f548a9f601b1a8960418ed82fe2a478a32e9ebb/256-51c4b9363d1afc50f589f816970cb0515071b13161c860c2afb5a8c17afc1656.webp",
+          "style": "transform: translate(0%, 0%); z-index: 2;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 35.0986%; top: 23.6007%; width: 29.5246%; height: 76.4396%;"
+        },
+        {
+          "slot": "pump",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/640-ab1ed1915cc169358492b2394ad2210011d7e417781b5dcbb87736b58d23f31b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/001736de4e9467db79dcd7d63d55125f790dd09d64365e81b2ed6021978957fe/256-4dabc12d23ccbdd8659744b8500bc3417f93f9671274a6f25c26e67f6249dd71.webp",
+          "style": "transform: translate(25.8621%, 6.83637%); z-index: 3;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 35.0198%; top: 4.36722%; width: 29.9378%; height: 24.4986%;"
+        },
+        {
+          "slot": "collar",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/640-eb7d8ba45f56d03bc8a48ea57b5ef0a92eebc5aeac5076684588ea67e24cf82b.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/ee72ac48811e8bdb673bb3074e69c751dc91f9e02b4b3a89884272674eed7dbf/256-bd89e28c2b542934408b58204e411637a9b4692ba482f34b8c539d7a31c0d906.webp",
+          "style": "transform: translate(25.8621%, 6.83637%); z-index: 4;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 39.5299%; top: 24.3458%; width: 21.2222%; height: 16.4727%;"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/640-8f25b6dba36ceb325d808e6cc043412a478f7128c9d6a5125b5de1da927467f9.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/a8ffedd460b5f26590c17c729638e4d56864b4faae83039efa5a089ee70f0db0/128-4ce6f531f14d726928283627d1065273935cc677015b10e2292d9737680ff13f.webp",
+          "style": "transform: translate(0%, -23.2743%); z-index: 5;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 41.052%; top: 3.64365%; width: 17.937%; height: 21.7291%;"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "tubes": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 1;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 29.559%; top: 18.2418%; width: 41.375%; height: 81.7945%;"
+        },
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/256-0397cc9aa4a342b124f44ab25e630c6f31d70b8d2bd77cc34543eed09625d84b.webp",
+          "style": "transform: translate(0%, 0%); z-index: 2; mix-blend-mode: multiply;",
+          "imgStyle": "position: absolute; display: block; max-width: none; opacity: 0.62; left: 40.447%; top: 32.6099%; width: 21.0835%; height: 57.3681%;"
+        },
+        {
+          "slot": "pump",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 3;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 38.021%; top: -0.942727%; width: 24.171%; height: 38.55%;"
+        },
+        {
+          "slot": "overcap",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "style": "transform: translate(32.363%, 58.7609%); z-index: 4;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 34.94%; top: -5.16455%; width: 30.484%; height: 42.8582%;"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "mobile",
+      "view": "capon",
+      "tubes": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 1;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 29.559%; top: 18.2418%; width: 41.375%; height: 81.7945%;"
+        },
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/256-0397cc9aa4a342b124f44ab25e630c6f31d70b8d2bd77cc34543eed09625d84b.webp",
+          "style": "transform: translate(0%, 0%); z-index: 2; mix-blend-mode: multiply;",
+          "imgStyle": "position: absolute; display: block; max-width: none; opacity: 0.62; left: 40.447%; top: 32.6099%; width: 21.0835%; height: 57.3681%;"
+        },
+        {
+          "slot": "pump",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 3;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 38.021%; top: -0.942727%; width: 24.171%; height: 38.55%;"
+        },
+        {
+          "slot": "overcap",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 4;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 34.94%; top: -5.16455%; width: 30.484%; height: 42.8582%;"
+        }
+      ]
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "viewport": "mobile",
+      "view": "exploded",
+      "tubes": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fplates%2Fcylinder-25ml-18-415%2Fclear%2Fccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png&w=640&q=75",
+          "style": "transform: translate(0%, 0%); z-index: 1;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 29.559%; top: 18.2418%; width: 41.375%; height: 81.7945%;"
+        },
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/640-e5a03b23b750b02cb51ad89a5384879438845adfbe21ff5277a6f135c803d7a1.webp",
+          "currentSrc": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/product-display/v1/6c26aa96b7c791e53319c78bd519514479170d45f27f17a61ff5b4b07d435ffa/256-0397cc9aa4a342b124f44ab25e630c6f31d70b8d2bd77cc34543eed09625d84b.webp",
+          "style": "transform: translate(0%, -66.4764%); z-index: 2;",
+          "imgStyle": "position: absolute; display: block; max-width: none; opacity: 1; left: 40.447%; top: 32.6099%; width: 21.0835%; height: 57.3681%;"
+        },
+        {
+          "slot": "pump",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fpump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png&w=640&q=75",
+          "style": "transform: translate(0%, -66.4764%); z-index: 3;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 38.021%; top: -0.942727%; width: 24.171%; height: 38.55%;"
+        },
+        {
+          "slot": "overcap",
+          "url": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "currentSrc": "http://localhost:3010/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Fregister%2Fcomponents%2F18-415%2FCMP-LPM-CPR-18-415%2Fovercap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png&w=640&q=75",
+          "style": "transform: translate(0%, -107.295%); z-index: 4;",
+          "imgStyle": "position: absolute; display: block; max-width: none; left: 34.94%; top: -5.16455%; width: 30.484%; height: 42.8582%;"
+        }
+      ]
+    }
+  ],
+  "apis": [
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "builder": true,
+      "tubes": 1
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "builder": true,
+      "tubes": 1
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "builder": true,
+      "tubes": 1
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "builder": true,
+      "tubes": 0
+    },
+    {
+      "sku": "LBCyl25LtnCu",
+      "builder": true,
+      "tubes": 1
+    }
+  ],
+  "builders": [
+    {
+      "sku": "LBCyl9LtnGl",
+      "renderedNewTube": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "renderedNewTube": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

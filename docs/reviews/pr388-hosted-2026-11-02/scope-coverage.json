@@ -1,0 +1,204 @@
+{
+  "changedSkus": [
+    "GBTulip6SpryBlkSh",
+    "GBTulip6SpryBluMatt",
+    "GBTulip6SpryCuMatt",
+    "GBTulip6SpryGlMatt",
+    "GBTulip6SpryGlSh",
+    "GBTulip6SprySlMatt",
+    "GBTulip6SprySlSh",
+    "GBTallCyl9CuSht",
+    "GBTallCyl9GlMattSht",
+    "GBTallCyl9SlMattSht",
+    "GBTallCyl9BlkShSht",
+    "GBTallCyl9GlSht",
+    "GBTallCyl9SlSht",
+    "GBTallCyl9BlkSht",
+    "GBTallCyl9WhtSht",
+    "GBTallCyl9Gl",
+    "GBTallCyl9Sl",
+    "GBTallCylFrst9CuSht",
+    "GBTallCylFrst9GlMattSht",
+    "GBTallCylFrst9SlMattSht",
+    "GBTallCylFrst9BlkShSht",
+    "GBTallCylFrst9GlSht",
+    "GBTallCylFrst9SlSht",
+    "GBTallCylFrst9BlkSht",
+    "GBTallCylFrst9WhtSht",
+    "GBTallCylFrst9Gl",
+    "GBTallCylFrst9Sl",
+    "GBSleek8SpryBlkMatt",
+    "GBSleek8SpryBluMatt",
+    "GBSleek8SpryCuMatt",
+    "GBSleek8SpryGlMatt",
+    "GBSleek8SprySlMatt",
+    "GBSleek8SpryBlkSh",
+    "GBSleek8SpryGlSh",
+    "GBSleek8SprySlSh",
+    "GBVialClr2mlBlackCap",
+    "GBVialClr2mlWhtCap",
+    "GBVAmb2BlackCap",
+    "GBVAmb2WhtCap",
+    "GBRect10MtlRollBlkDot",
+    "GBRect10MtlRollCuMatt",
+    "GBRect10MtlRollGlMatt",
+    "GBRect10MtlRollSlMatt",
+    "GBRect10MtlRollPinkDot",
+    "GBRect10MtlRollBlkSh",
+    "GBRect10MtlRollGlSh",
+    "GBRect10MtlRollSlSh",
+    "GBRect10MtlRollSlDot",
+    "GBRect10RollBlkDot",
+    "GBRect10RollCuMatt",
+    "GBRect10RollGlMatt",
+    "GBRect10RollSlMatt",
+    "GBRect10RollPinkDot",
+    "GBRect10RollBlkSh",
+    "GBRect10RollGlSh",
+    "GBRect10RollSlSh",
+    "GBRect10RollSlDot"
+  ],
+  "changedSkuCount": 57,
+  "allChangedRecipesAvailableInPreview": true,
+  "preExistingPreviewInventoryGap": [
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBTulip6CuSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBTulip6GlMattSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBTulip6SlMattSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBTulip6GlSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBTulip6SlSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek5CuSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek5GlMattSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek5SlMattSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek5BlkShSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek5GlSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek5SlSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek8CuSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek8GlMattSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek8SlMattSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek8BlkShSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek8GlSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    },
+    {
+      "sku": "GBSleek8SlSht",
+      "unchangedRecipe": true,
+      "productionKitMatches": true,
+      "changedByThisPR": false
+    }
+  ],
+  "productionWrites": false
+}

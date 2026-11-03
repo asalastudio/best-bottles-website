@@ -12,6 +12,7 @@
  * registered paper-doll layer on the site.
  */
 import { useState, type CSSProperties } from "react";
+import { bostonDropperCutout } from "@/lib/products/boston-dropper-cutout";
 import { partCrop, type KitPartLike } from "@/lib/products/pdp-redesign/stage";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { markRegisterOptimizerUnavailable, registerImageSrc } from "@/lib/products/register-image";
@@ -50,7 +51,7 @@ export default function PdpKitPartImage({
                 decoding="async"
                 loading="lazy"
                 onError={() => { if (src !== part.image.url && markRegisterOptimizerUnavailable(part.image.url)) setRaw(true); }}
-                style={{ position: "absolute", left: crop.left, top: crop.top, width: crop.imgWidth, height: crop.imgHeight, maxWidth: "none", display: "block" }}
+                style={{ position: "absolute", left: crop.left, top: crop.top, width: crop.imgWidth, height: crop.imgHeight, maxWidth: "none", display: "block", clipPath: bostonDropperCutout(part.image.url) }}
             />
         </span>
     );

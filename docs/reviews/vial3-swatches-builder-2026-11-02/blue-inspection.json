@@ -1,0 +1,334 @@
+[
+  {
+    "type": "navigate",
+    "url": "http://localhost:3010/products/vial-3ml-blue-13-425?cap=black"
+  },
+  {
+    "type": "navigate",
+    "url": "http://localhost:3010/products/vial-3ml-blue-13-425?cap=black"
+  },
+  {
+    "type": "before",
+    "view": "sidecar",
+    "buttons": [
+      {
+        "id": "pdp-view-sidecar",
+        "disabled": false
+      },
+      {
+        "id": "pdp-view-capon",
+        "disabled": false
+      },
+      {
+        "id": "pdp-view-exploded",
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "type": "after",
+    "url": "http://localhost:3010/products/vial-3ml-blue-13-425?cap=black",
+    "rect": [
+      144.31524658203125,
+      237.91470336914062,
+      57.541778564453125,
+      118.19308471679688
+    ],
+    "ancestors": [
+      {
+        "tag": "IMG",
+        "classes": "",
+        "style": "position: absolute; display: block; max-width: none; left: 32.9605%; top: 27.2727%; width: 34.0789%; height: 63.6364%;",
+        "transform": "none",
+        "rect": [
+          144.31524658203125,
+          237.91470336914062,
+          57.541778564453125,
+          118.19308471679688
+        ]
+      },
+      {
+        "tag": "SPAN",
+        "classes": "pdp-module__KRfOPq__stagePart",
+        "style": "transform: translate(0%, 0%); z-index: 1;",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "rect": [
+          88.66356658935547,
+          187.2626953125,
+          168.8603515625,
+          185.7418212890625
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageFrame",
+        "style": "transform: translate(25.6114%, 46.6571%) scale(0.487771);",
+        "transform": "matrix(0.487771, 0, 0, 0.487771, 88.6636, 177.669)",
+        "rect": [
+          88.66356658935547,
+          187.2626953125,
+          168.8603515625,
+          185.7418212890625
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageCanvas",
+        "style": null,
+        "transform": "none",
+        "rect": [
+          0,
+          9.59375,
+          346.1875,
+          380.796875
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageCanvasHost",
+        "style": null,
+        "transform": "none",
+        "rect": [
+          0,
+          0,
+          346.1875,
+          400
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageZoom",
+        "style": null,
+        "transform": "none",
+        "rect": [
+          0,
+          0,
+          346.1875,
+          400
+        ]
+      }
+    ],
+    "stage": "<div class=\"pdp-module__KRfOPq__stage\" data-testid=\"pdp-stage\" data-view=\"sidecar\" data-layered=\"true\" data-source=\"kit\" data-zoomable=\"true\"><div class=\"pdp-module__KRfOPq__stageGrid\" data-on=\"false\" aria-hidden=\"true\"></div><div class=\"pdp-module__KRfOPq__stageBaseline\" data-on=\"false\" aria-hidden",
+    "buttons": [
+      "pdp-view-sidecar",
+      "pdp-view-capon",
+      "pdp-view-exploded"
+    ]
+  },
+  {
+    "type": "before",
+    "view": "capon",
+    "buttons": [
+      {
+        "id": "pdp-view-sidecar",
+        "disabled": false
+      },
+      {
+        "id": "pdp-view-capon",
+        "disabled": false
+      },
+      {
+        "id": "pdp-view-exploded",
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "type": "after",
+    "url": "http://localhost:3010/products/vial-3ml-blue-13-425?cap=black",
+    "rect": [
+      144.31524658203125,
+      237.91470336914062,
+      57.541778564453125,
+      118.19308471679688
+    ],
+    "ancestors": [
+      {
+        "tag": "IMG",
+        "classes": "",
+        "style": "position: absolute; display: block; max-width: none; left: 32.9605%; top: 27.2727%; width: 34.0789%; height: 63.6364%;",
+        "transform": "none",
+        "rect": [
+          144.31524658203125,
+          237.91470336914062,
+          57.541778564453125,
+          118.19308471679688
+        ]
+      },
+      {
+        "tag": "SPAN",
+        "classes": "pdp-module__KRfOPq__stagePart",
+        "style": "transform: translate(0%, 0%); z-index: 1;",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "rect": [
+          88.66356658935547,
+          187.2626953125,
+          168.8603515625,
+          185.7418212890625
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageFrame",
+        "style": "transform: translate(25.6114%, 46.6571%) scale(0.487771);",
+        "transform": "matrix(0.487771, 0, 0, 0.487771, 88.6636, 177.669)",
+        "rect": [
+          88.66356658935547,
+          187.2626953125,
+          168.8603515625,
+          185.7418212890625
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageCanvas",
+        "style": null,
+        "transform": "none",
+        "rect": [
+          0,
+          9.59375,
+          346.1875,
+          380.796875
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageCanvasHost",
+        "style": null,
+        "transform": "none",
+        "rect": [
+          0,
+          0,
+          346.1875,
+          400
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageZoom",
+        "style": null,
+        "transform": "none",
+        "rect": [
+          0,
+          0,
+          346.1875,
+          400
+        ]
+      }
+    ],
+    "stage": "<div class=\"pdp-module__KRfOPq__stage\" data-testid=\"pdp-stage\" data-view=\"capon\" data-layered=\"true\" data-source=\"kit\" data-zoomable=\"true\"><div class=\"pdp-module__KRfOPq__stageGrid\" data-on=\"false\" aria-hidden=\"true\"></div><div class=\"pdp-module__KRfOPq__stageBaseline\" data-on=\"false\" aria-hidden=\"",
+    "buttons": [
+      "pdp-view-sidecar",
+      "pdp-view-capon",
+      "pdp-view-exploded"
+    ]
+  },
+  {
+    "type": "before",
+    "view": "exploded",
+    "buttons": [
+      {
+        "id": "pdp-view-sidecar",
+        "disabled": false
+      },
+      {
+        "id": "pdp-view-capon",
+        "disabled": false
+      },
+      {
+        "id": "pdp-view-exploded",
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "type": "after",
+    "url": "http://localhost:3010/products/vial-3ml-blue-13-425?cap=black",
+    "rect": [
+      161.30467224121094,
+      239.83377075195312,
+      60.43792724609375,
+      124.15304565429688
+    ],
+    "ancestors": [
+      {
+        "tag": "IMG",
+        "classes": "",
+        "style": "position: absolute; display: block; max-width: none; left: 32.9605%; top: 27.2727%; width: 34.0789%; height: 63.6364%;",
+        "transform": "none",
+        "rect": [
+          161.30467224121094,
+          239.83377075195312,
+          60.43792724609375,
+          124.15304565429688
+        ]
+      },
+      {
+        "tag": "SPAN",
+        "classes": "pdp-module__KRfOPq__stagePart",
+        "style": "transform: translate(0%, 0%); z-index: 1;",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "rect": [
+          102.84831237792969,
+          186.62857055664062,
+          177.3658905029297,
+          195.10855102539062
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageFrame",
+        "style": "transform: translate(25.6114%, 46.6571%) scale(0.487771);",
+        "transform": "matrix(0.487771, 0, 0, 0.487771, 93.1296, 186.629)",
+        "rect": [
+          102.84831237792969,
+          186.62857055664062,
+          177.3658905029297,
+          195.10855102539062
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageCanvas",
+        "style": null,
+        "transform": "none",
+        "rect": [
+          9.71875,
+          0,
+          363.625,
+          400
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageCanvasHost",
+        "style": null,
+        "transform": "none",
+        "rect": [
+          0,
+          0,
+          383.0625,
+          400
+        ]
+      },
+      {
+        "tag": "DIV",
+        "classes": "pdp-module__KRfOPq__stageZoom",
+        "style": null,
+        "transform": "none",
+        "rect": [
+          0,
+          0,
+          383.0625,
+          400
+        ]
+      }
+    ],
+    "stage": "<div class=\"pdp-module__KRfOPq__stage\" data-testid=\"pdp-stage\" data-view=\"exploded\" data-layered=\"true\" data-source=\"kit\" data-zoomable=\"true\"><div class=\"pdp-module__KRfOPq__stageGrid\" data-on=\"true\" aria-hidden=\"true\"></div><div class=\"pdp-module__KRfOPq__stageBaseline\" data-on=\"false\" aria-hidden",
+    "buttons": [
+      "pdp-view-sidecar",
+      "pdp-view-capon",
+      "pdp-view-exploded"
+    ]
+  }
+]

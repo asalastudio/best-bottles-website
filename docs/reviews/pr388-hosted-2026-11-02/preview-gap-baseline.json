@@ -1,0 +1,236 @@
+{
+  "baseCommit": "59d00aa7732879dd40b8e58fcc64e255b847d33f",
+  "headCommit": "3f8fd269b1183ac44fe7a72b29251fb455efcfb3",
+  "rows": [
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-5ml|13-415|Glass Bottle",
+      "sku": "GBTulipAmb5CuSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-5ml|13-415|Glass Bottle",
+      "sku": "GBTulipAmb5GlMattSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-5ml|13-415|Glass Bottle",
+      "sku": "GBTulipAmb5SlMattSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-5ml|13-415|Glass Bottle",
+      "sku": "GBTulipAmb5BlkShSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-5ml|13-415|Glass Bottle",
+      "sku": "GBTulipAmb5GlSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-5ml|13-415|Glass Bottle",
+      "sku": "GBTulipAmb5SlSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-6ml|13-415|Glass Bottle",
+      "sku": "GBTulip6CuSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-6ml|13-415|Glass Bottle",
+      "sku": "GBTulip6GlMattSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-6ml|13-415|Glass Bottle",
+      "sku": "GBTulip6SlMattSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-6ml|13-415|Glass Bottle",
+      "sku": "GBTulip6GlSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-6ml|13-415|Glass Bottle",
+      "sku": "GBTulip6SlSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-5ml|13-415|Glass Bottle",
+      "sku": "GBSleek5CuSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-5ml|13-415|Glass Bottle",
+      "sku": "GBSleek5GlMattSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-5ml|13-415|Glass Bottle",
+      "sku": "GBSleek5SlMattSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-5ml|13-415|Glass Bottle",
+      "sku": "GBSleek5BlkShSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-5ml|13-415|Glass Bottle",
+      "sku": "GBSleek5GlSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-5ml|13-415|Glass Bottle",
+      "sku": "GBSleek5SlSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-8ml|13-415|Glass Bottle",
+      "sku": "GBSleek8CuSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-8ml|13-415|Glass Bottle",
+      "sku": "GBSleek8GlMattSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-8ml|13-415|Glass Bottle",
+      "sku": "GBSleek8SlMattSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-8ml|13-415|Glass Bottle",
+      "sku": "GBSleek8BlkShSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-8ml|13-415|Glass Bottle",
+      "sku": "GBSleek8GlSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-8ml|13-415|Glass Bottle",
+      "sku": "GBSleek8SlSht",
+      "recipeUnchangedFromBase": true,
+      "slots": [
+        "body",
+        "cap"
+      ]
+    }
+  ]
+}

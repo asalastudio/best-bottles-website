@@ -1,0 +1,2359 @@
+{
+  "records": [
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkMatt-sidecar.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.5654%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkMatt-capon.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkMatt-exploded.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8932%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8932%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.7692%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkSh-sidecar.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.0049%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkSh-capon.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkSh-exploded.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.9251%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.9251%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(-28.5547%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5SpryBluMatt-sidecar.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(23.958%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5SpryBluMatt-capon.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5SpryBluMatt-exploded.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.3177%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.3177%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.7692%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5SpryCuMatt-sidecar.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.5184%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5SpryCuMatt-capon.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5SpryCuMatt-exploded.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.5605%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.5605%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.6838%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5SpryGlMatt-sidecar.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.3786%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5SpryGlMatt-capon.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5SpryGlMatt-exploded.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.3677%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.3677%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.5984%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5SpryGlSh-sidecar.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.1917%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5SpryGlSh-capon.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5SpryGlSh-exploded.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8732%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8732%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.514%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5SprySlMatt-sidecar.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.6593%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5SprySlMatt-capon.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5SprySlMatt-exploded.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(25.052%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(25.052%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.514%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBTulipAmb5SprySlSh-sidecar.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(23.8641%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBTulipAmb5SprySlSh-capon.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBTulipAmb5SprySlSh-exploded.png",
+      "frame": [
+        270.27032470703125,
+        232.78390502929688,
+        157.91156005859375,
+        270.4499816894531
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8612%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8612%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.8536%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkMatt-sidecar.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.5654%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkMatt-capon.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkMatt-exploded.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8932%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8932%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.7692%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkSh-sidecar.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.0049%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkSh-capon.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkSh-exploded.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.9251%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.9251%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(-28.5547%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5SpryBluMatt-sidecar.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(23.958%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5SpryBluMatt-capon.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5SpryBluMatt-exploded.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.3177%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.3177%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.7692%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5SpryCuMatt-sidecar.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.5184%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5SpryCuMatt-capon.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5SpryCuMatt-exploded.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.5605%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.5605%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.6838%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5SpryGlMatt-sidecar.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.3786%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5SpryGlMatt-capon.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5SpryGlMatt-exploded.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.3677%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.3677%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.5984%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5SpryGlSh-sidecar.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.1917%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5SpryGlSh-capon.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5SpryGlSh-exploded.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8732%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8732%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.514%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5SprySlMatt-sidecar.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.6593%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5SprySlMatt-capon.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5SprySlMatt-exploded.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(25.052%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(25.052%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.514%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBTulipAmb5SprySlSh-sidecar.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(23.8641%, 31.921%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBTulipAmb5SprySlSh-capon.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 2,
+      "parts": [
+        {
+          "slot": "diptube",
+          "z": 1,
+          "opacity": "0.18",
+          "blend": "multiply",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "body",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBTulipAmb5SprySlSh-exploded.png",
+      "frame": [
+        137.41217041015625,
+        172.43081665039062,
+        116.96467590332031,
+        200.32357788085938
+      ],
+      "bodyZ": 1,
+      "parts": [
+        {
+          "slot": "body",
+          "z": 1,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, 0%)"
+        },
+        {
+          "slot": "diptube",
+          "z": 2,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8612%, 4.72727%)"
+        },
+        {
+          "slot": "sprayer",
+          "z": 3,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(24.8612%, 4.72727%)"
+        },
+        {
+          "slot": "overcap",
+          "z": 4,
+          "opacity": "",
+          "blend": "",
+          "clip": "",
+          "transform": "translate(0%, -24.8536%)"
+        }
+      ],
+      "overflow": false,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "passed": true
+}

@@ -82,6 +82,19 @@ const VARIANTS: ProductVariant[] = [
 ];
 
 describe("picks", () => {
+    it("keeps Boston dropper bulb and trim combinations as distinct exact SKU selections", () => {
+        const rows = [
+            variant({ family: "Boston Round", applicator: "Dropper", color: "Amber", capColor: "White", websiteSku: "GBBstnAmb15mlWhtDropper", graceSku: "white" }),
+            variant({ family: "Boston Round", applicator: "Dropper", color: "Amber", capColor: "White", websiteSku: "GBBstnAmb15mlWhtDropperGlTrim", graceSku: "white-gold" }),
+            variant({ family: "Boston Round", applicator: "Dropper", color: "Amber", capColor: "White", websiteSku: "GBBstnAmb15mlWhtDropperSlTrim", graceSku: "white-silver" }),
+        ];
+        expect(capOptions(rows, null).map(option => option.id)).toEqual(["white", "white-shiny-gold-trim", "white-shiny-silver-trim"]);
+        for (const row of rows) {
+            const picks = derivePicks(rows, { primaryWebsiteSku: rows[0].websiteSku, primaryGraceSku: rows[0].graceSku }, { sku: row.websiteSku });
+            expect(resolveVariant(rows, picks)?.websiteSku).toBe(row.websiteSku);
+        }
+    });
+
     it("offers both rollers and the caps sold for the active roller", () => {
         expect(rollerOptions(VARIANTS).map((option) => option.id)).toEqual(["metal", "plastic"]);
         expect(capOptions(VARIANTS, "metal").map((option) => option.name)).toEqual(["Black with Dots", "Matte Copper", "Shiny Black"]);

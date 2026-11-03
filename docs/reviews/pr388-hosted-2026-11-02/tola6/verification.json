@@ -1,0 +1,173 @@
+{
+  "status": "passed",
+  "pdp": [
+    {
+      "viewport": "desktop",
+      "query": "cap=gold",
+      "title": "6 ml Clear Tola Applicator Bottle - Gold Cap | Best Bottles",
+      "blend": "multiply",
+      "text": "Item type\nTola applicator bottle\nItem name\nGB6TPlGl\nItem description\nA clear octagonal Tola bottle for perfume oil and attar. Supplied as one bottle with a plastic applicator and a shiny gold cap with a red bead.\nIncluded: Plastic applicator and shiny gold cap with red bead.\nGlass: Clear octagonal glass.",
+      "view": "capon",
+      "source": "photo",
+      "slots": [
+        "assembly"
+      ],
+      "views": [
+        "ASSEMBLED"
+      ],
+      "capRail": false,
+      "lineup": false,
+      "builder": false,
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+      "overflow": false,
+      "backgroundSamples": {
+        "corner": [
+          246,
+          244,
+          243
+        ],
+        "inside": [
+          246,
+          244,
+          243
+        ]
+      }
+    },
+    {
+      "viewport": "desktop",
+      "query": "cap=clear&view=sidecar",
+      "title": "6 ml Clear Tola Applicator Bottle - Gold Cap | Best Bottles",
+      "blend": "multiply",
+      "text": "Item type\nTola applicator bottle\nItem name\nGB6TPlGl\nItem description\nA clear octagonal Tola bottle for perfume oil and attar. Supplied as one bottle with a plastic applicator and a shiny gold cap with a red bead.\nIncluded: Plastic applicator and shiny gold cap with red bead.\nGlass: Clear octagonal glass.",
+      "view": "capon",
+      "source": "photo",
+      "slots": [
+        "assembly"
+      ],
+      "views": [
+        "ASSEMBLED"
+      ],
+      "capRail": false,
+      "lineup": false,
+      "builder": false,
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+      "overflow": false
+    },
+    {
+      "viewport": "desktop",
+      "query": "sku=GB6TPlGl&view=exploded",
+      "title": "6 ml Clear Tola Applicator Bottle - Gold Cap | Best Bottles",
+      "blend": "multiply",
+      "text": "Item type\nTola applicator bottle\nItem name\nGB6TPlGl\nItem description\nA clear octagonal Tola bottle for perfume oil and attar. Supplied as one bottle with a plastic applicator and a shiny gold cap with a red bead.\nIncluded: Plastic applicator and shiny gold cap with red bead.\nGlass: Clear octagonal glass.",
+      "view": "capon",
+      "source": "photo",
+      "slots": [
+        "assembly"
+      ],
+      "views": [
+        "ASSEMBLED"
+      ],
+      "capRail": false,
+      "lineup": false,
+      "builder": false,
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "query": "cap=gold",
+      "title": "6 ml Clear Tola Applicator Bottle - Gold Cap | Best Bottles",
+      "blend": "multiply",
+      "text": "ITEM TYPE\nTola applicator bottle\nITEM NAME\nGB6TPlGl\nITEM DESCRIPTION\nA clear octagonal Tola bottle for perfume oil and attar. Supplied as one bottle with a plastic applicator and a shiny gold cap with a red bead.\nIncluded: Plastic applicator and shiny gold cap with red bead.\nGlass: Clear octagonal glass.",
+      "view": "capon",
+      "source": "photo",
+      "slots": [
+        "assembly"
+      ],
+      "views": [
+        "ASSEMBLED"
+      ],
+      "capRail": false,
+      "lineup": false,
+      "builder": false,
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+      "overflow": false,
+      "backgroundSamples": {
+        "corner": [
+          246,
+          244,
+          243
+        ],
+        "inside": [
+          246,
+          244,
+          243
+        ]
+      }
+    },
+    {
+      "viewport": "mobile",
+      "query": "cap=clear&view=sidecar",
+      "title": "6 ml Clear Tola Applicator Bottle - Gold Cap | Best Bottles",
+      "blend": "multiply",
+      "text": "ITEM TYPE\nTola applicator bottle\nITEM NAME\nGB6TPlGl\nITEM DESCRIPTION\nA clear octagonal Tola bottle for perfume oil and attar. Supplied as one bottle with a plastic applicator and a shiny gold cap with a red bead.\nIncluded: Plastic applicator and shiny gold cap with red bead.\nGlass: Clear octagonal glass.",
+      "view": "capon",
+      "source": "photo",
+      "slots": [
+        "assembly"
+      ],
+      "views": [
+        "ASSEMBLED"
+      ],
+      "capRail": false,
+      "lineup": false,
+      "builder": false,
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+      "overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "query": "sku=GB6TPlGl&view=exploded",
+      "title": "6 ml Clear Tola Applicator Bottle - Gold Cap | Best Bottles",
+      "blend": "multiply",
+      "text": "ITEM TYPE\nTola applicator bottle\nITEM NAME\nGB6TPlGl\nITEM DESCRIPTION\nA clear octagonal Tola bottle for perfume oil and attar. Supplied as one bottle with a plastic applicator and a shiny gold cap with a red bead.\nIncluded: Plastic applicator and shiny gold cap with red bead.\nGlass: Clear octagonal glass.",
+      "view": "capon",
+      "source": "photo",
+      "slots": [
+        "assembly"
+      ],
+      "views": [
+        "ASSEMBLED"
+      ],
+      "capRail": false,
+      "lineup": false,
+      "builder": false,
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+      "overflow": false
+    }
+  ],
+  "catalog": [
+    {
+      "viewport": "desktop",
+      "blend": "multiply",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+      "href": "/products/tola-6ml-clear-14.3mm?sku=GB6TPlGl",
+      "paintedDarkPixels": 3473
+    },
+    {
+      "viewport": "mobile",
+      "blend": "multiply",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+      "href": "/products/tola-6ml-clear-14.3mm?sku=GB6TPlGl",
+      "paintedDarkPixels": 3345
+    }
+  ],
+  "errors": [],
+  "hostedPhoto": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+    "bytes": 23286,
+    "contentType": "image/webp",
+    "cacheControl": "public, max-age=31536000",
+    "sha256": "d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1"
+  }
+}

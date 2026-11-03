@@ -1,0 +1,170 @@
+{
+  "capturedAt": "2026-11-02T03:59:54.214Z",
+  "version": "17f5c90053bcdf59",
+  "implementationChangeRequired": false,
+  "reason": "Current normal public and localhost routes use the full-plug roller sources and corrected Tulip collar, unlike the earlier screenshots.",
+  "priorPr": "https://github.com/asalastudio/best-bottles-website/pull/387",
+  "checks": [
+    {
+      "file": "normal-live.json",
+      "sku": "GBSleek5MtlRollGlMatt",
+      "view": "sidecar",
+      "slot": "roller",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-rollon?roller=metal&cap=matte-gold",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-live.json",
+      "sku": "GBSleek5MtlRollGlMatt",
+      "view": "exploded",
+      "slot": "roller",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-rollon?roller=metal&cap=matte-gold",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/576c9beecf5d36794e223ff3ce1cf00e1a2cd43df416a8653958861b1486a7e2.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-live.json",
+      "sku": "GBSleek5RollGlMatt",
+      "view": "sidecar",
+      "slot": "roller",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-rollon?roller=plastic&cap=matte-gold",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-live.json",
+      "sku": "GBSleek5RollGlMatt",
+      "view": "exploded",
+      "slot": "roller",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-rollon?roller=plastic&cap=matte-gold",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3336060f6a965344b855d037c25c51a4310db6e43bbb3a8093f0f9fe8e907b16.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-live.json",
+      "sku": "GBSleek5SpryBlkMatt",
+      "view": "sidecar",
+      "slot": "sprayer",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-finemist?cap=matte-black",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-live.json",
+      "sku": "GBSleek5SpryBlkMatt",
+      "view": "exploded",
+      "slot": "sprayer",
+      "url": "https://best-bottles-website.vercel.app/products/sleek-5ml-clear-13-415-finemist?cap=matte-black",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-live.json",
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "view": "sidecar",
+      "slot": "sprayer",
+      "url": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?cap=matte-black",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png",
+      "clip": "inset(0px 0px 6.87023%)",
+      "passed": true
+    },
+    {
+      "file": "normal-live.json",
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "view": "exploded",
+      "slot": "sprayer",
+      "url": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?cap=matte-black",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png",
+      "clip": "inset(0px 0px 6.87023%)",
+      "passed": true
+    },
+    {
+      "file": "normal-local.json",
+      "sku": "GBSleek5MtlRollGlMatt",
+      "view": "sidecar",
+      "slot": "roller",
+      "url": "http://localhost:3010/products/sleek-5ml-clear-13-415-rollon?roller=metal&cap=matte-gold",
+      "source": "http://localhost:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-local.json",
+      "sku": "GBSleek5MtlRollGlMatt",
+      "view": "exploded",
+      "slot": "roller",
+      "url": "http://localhost:3010/products/sleek-5ml-clear-13-415-rollon?roller=metal&cap=matte-gold",
+      "source": "http://localhost:3010/local-kits/cylinder9-masters-2026-11-01/roller-metal.576c9beecf5d.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-local.json",
+      "sku": "GBSleek5RollGlMatt",
+      "view": "sidecar",
+      "slot": "roller",
+      "url": "http://localhost:3010/products/sleek-5ml-clear-13-415-rollon?roller=plastic&cap=matte-gold",
+      "source": "http://localhost:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-local.json",
+      "sku": "GBSleek5RollGlMatt",
+      "view": "exploded",
+      "slot": "roller",
+      "url": "http://localhost:3010/products/sleek-5ml-clear-13-415-rollon?roller=plastic&cap=matte-gold",
+      "source": "http://localhost:3010/local-kits/cylinder9-masters-2026-11-01/roller-plastic.3336060f6a96.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-local.json",
+      "sku": "GBSleek5SpryBlkMatt",
+      "view": "sidecar",
+      "slot": "sprayer",
+      "url": "http://localhost:3010/products/sleek-5ml-clear-13-415-finemist?cap=matte-black",
+      "source": "http://localhost:3010/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-sprayer.809c14cf93e1.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-local.json",
+      "sku": "GBSleek5SpryBlkMatt",
+      "view": "exploded",
+      "slot": "sprayer",
+      "url": "http://localhost:3010/products/sleek-5ml-clear-13-415-finemist?cap=matte-black",
+      "source": "http://localhost:3010/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-sprayer.809c14cf93e1.svg",
+      "clip": "",
+      "passed": true
+    },
+    {
+      "file": "normal-local.json",
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "view": "sidecar",
+      "slot": "sprayer",
+      "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-black",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png",
+      "clip": "inset(0px 0px 6.87023%)",
+      "passed": true
+    },
+    {
+      "file": "normal-local.json",
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "view": "exploded",
+      "slot": "sprayer",
+      "url": "http://localhost:3010/products/tulip-5ml-amber-13-415-finemist?cap=matte-black",
+      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png",
+      "clip": "inset(0px 0px 6.87023%)",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

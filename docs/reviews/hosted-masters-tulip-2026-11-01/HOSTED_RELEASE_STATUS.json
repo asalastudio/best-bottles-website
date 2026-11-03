@@ -1,0 +1,75 @@
+{
+  "status": "hosted-preview-verified-awaiting-user-merge-approval",
+  "verifiedAt": "2026-11-01T23:35:50.819911+00:00",
+  "commit": "c446a5ee4b61a0738f5f55cd1487d47fa02dbca7",
+  "preview": "https://best-bottles-website-csxtr9o2t-asala.vercel.app",
+  "pr": "https://github.com/asalastudio/best-bottles-website/pull/382",
+  "configurations": 267,
+  "masterFiles": 68,
+  "hostedStatesRuntimeRevision": 96,
+  "hostedStatesFinalHead": 36,
+  "builderChecks": [
+    {
+      "bodyId": "cylinder-5ml|13-415|Glass Bottle",
+      "exactKits": 71
+    },
+    {
+      "bodyId": "cylinder-9ml|17-415|Glass Bottle",
+      "exactKits": 145
+    },
+    {
+      "bodyId": "tulip-5ml|13-415|Glass Bottle",
+      "exactKits": 26
+    },
+    {
+      "bodyId": "tulip-6ml|13-415|Glass Bottle",
+      "exactKits": 25
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "readOnlyPurchasePreflight": true
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "readOnlyPurchasePreflight": true
+    },
+    {
+      "family": "Cylinder",
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "rendered": true
+    },
+    {
+      "family": "Cylinder",
+      "sku": "LBCyl9LtnBlk",
+      "rendered": true
+    },
+    {
+      "family": "Cylinder",
+      "sku": "GBTulipAmb5RollBlkDot",
+      "rendered": true
+    },
+    {
+      "family": "Tulip",
+      "sku": "GBTulip6SpryBlkSh",
+      "rendered": true
+    }
+  ],
+  "imageDelivery": {
+    "origin": "https://best-bottles-website-csxtr9o2t-asala.vercel.app",
+    "commit": "c446a5ee4b61a0738f5f55cd1487d47fa02dbca7",
+    "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+    "sourceBytes": 2858544,
+    "displayBytes": 24016,
+    "width": 640,
+    "format": "webp",
+    "quality": 90,
+    "passed": true
+  },
+  "mergeable": "MERGEABLE",
+  "mergeStateStatus": "CLEAN",
+  "productionMerged": false,
+  "productionDataMutated": false,
+  "candidatesHeldOutsideRelease": 450,
+  "lineItemPortalHeroAudit": "follow-up",
+  "driveFolder": "https://drive.google.com/drive/folders/1W2_0_ggTjZtYJ1iHTEQEarubP3xoHwAa"
+}

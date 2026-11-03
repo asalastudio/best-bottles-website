@@ -1,0 +1,28 @@
+{
+  "origin": "https://best-bottles-website-fiikh0w2d-asala.vercel.app",
+  "version": "e5c8e5e7837363dc",
+  "records": [
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "glass": "Amber",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulipAmb5BlkSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website-fiikh0w2d-asala.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5BlkSht",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failures": [
+    "Cannot read properties of null (reading 'click')"
+  ]
+}

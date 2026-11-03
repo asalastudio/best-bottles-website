@@ -1,0 +1,26 @@
+{
+  "origin": "https://best-bottles-website-pyr9w4e1q-asala.vercel.app",
+  "version": "a63043cf5188f86a",
+  "skus": [
+    "GBTulipAmb5SpryBlkMatt",
+    "GBTulipAmb5SpryBlkSh",
+    "GBTulipAmb5SpryBluMatt",
+    "GBTulipAmb5SpryCuMatt",
+    "GBTulipAmb5SpryGlMatt",
+    "GBTulipAmb5SpryGlSh",
+    "GBTulipAmb5SprySlMatt",
+    "GBTulipAmb5SprySlSh",
+    "GBTulip6SpryBlkSh",
+    "GBTulip6SpryBluMatt",
+    "GBTulip6SpryCuMatt",
+    "GBTulip6SpryGlMatt",
+    "GBTulip6SpryGlSh",
+    "GBTulip6SprySlMatt",
+    "GBTulip6SprySlSh"
+  ],
+  "catalog": [],
+  "pdp": [],
+  "errors": [],
+  "failures": [],
+  "failure": "Timed out after waiting 60000ms"
+}

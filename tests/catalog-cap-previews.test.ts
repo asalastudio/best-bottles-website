@@ -11,6 +11,13 @@ const variants = [
 ];
 
 describe("catalog top previews", () => {
+    it("keeps Boston bulb and trim finishes selectable in the grid", () => {
+        const rows = ["GBBstnAmb15mlWhtDropper", "GBBstnAmb15mlWhtDropperGlTrim", "GBBstnAmb15mlWhtDropperSlTrim"].map(websiteSku => ({ id: websiteSku, websiteSku, color: "Amber", applicator: "Dropper", capColor: "White" }));
+        const previews = getCatalogCardVariantPreviews(rows, { productTitle: "15 ml Amber Boston Dropper", groupColor: "Amber" });
+        expect(previews.map(p => p.label)).toEqual(["White", "White Shiny Gold Trim", "White Shiny Silver Trim"]);
+        expect(previews.map(p => p.websiteSku)).toEqual(rows.map(r => r.websiteSku));
+    });
+
     it("keeps distinct frosted-bottle finishes despite imported glass colors in capColor", () => {
         const sources = ["BlkMatt", "BlkSh", "BluMatt", "CuMatt", "GlMatt", "GlSh", "SlMatt", "SlSh"].map((finish) => ({
             id: finish, websiteSku: `GBTallCylFrst9Spry${finish}`, color: "Frosted", capColor: "Frosted", applicator: "Fine Mist Sprayer", capStyle: "Tall",

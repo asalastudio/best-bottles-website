@@ -1,0 +1,20 @@
+{
+  "commit": "be38e8f68e161a4edbc6ee1dde1987e3c6211964",
+  "pullRequest": "https://github.com/asalastudio/best-bottles-website/pull/383",
+  "preview": "https://best-bottles-website-pyr9w4e1q-asala.vercel.app",
+  "previewState": "READY",
+  "localCatalogFinishStates": 30,
+  "regressionTests": 34,
+  "typecheck": "passed",
+  "lint": "passed",
+  "merged": false,
+  "productionDeployed": false,
+  "ci": "in_progress",
+  "sourceImagesChanged": false,
+  "hostedCatalogStates": 30,
+  "hostedPdpComparisons": 2,
+  "hostedSmallSprayerStates": 24,
+  "hostedRecipes": 271,
+  "verificationPassed": true,
+  "verifiedAt": "2026-11-02T00:23:53.173Z"
+}
