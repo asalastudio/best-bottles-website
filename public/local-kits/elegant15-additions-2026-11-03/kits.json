@@ -1,0 +1,128 @@
+{
+ "version": "303e66351e64",
+ "rows": {
+  "GBElgFrst15BlkShSht": {
+   "sku": "GBElgFrst15BlkShSht",
+   "familyId": "register:elegant-15ml-13-415|Frosted",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 384,
+    "baselineY": 1061,
+    "pxPerMm": 10.51
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 39,
+    "baselinePct": 91,
+    "landmarkY": 513.0671072699542,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 310.86,
+      "right": 689.14,
+      "top": 384,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/body-elegant-15ml-13-415-frosted.9cd3ea6ce476.svg",
+      "key": "",
+      "sha256": "9cd3ea6ce4765361c4c99cf4394fe625c6b7159e882ad09937d0b3c5c2b24d99",
+      "bytes": 2758795,
+      "width": 1392,
+      "height": 2192
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 263.8932384341637,
+      "y": 339.60091509913576,
+      "width": 479.0971021860701,
+      "height": 754.4402643619725
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 419.73373693506426,
+      "right": 587.9144729119956,
+      "top": 331.8523642548107,
+      "bottom": 513.0671072699542
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-masters-2026-11-01/cap-CMP-CAP-SBLK-13-415.672aa00a7c1b.png",
+      "key": "",
+      "sha256": "672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84",
+      "bytes": 114848,
+      "width": 402,
+      "height": 431
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 419.3132850951219,
+      "y": 331.8523642548107,
+      "width": 169.021639656816,
+      "height": 181.21474301514354
+     },
+     "componentId": "CMP-CAP-SBLK-13-415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "elegant-15ml-13-415",
+    "plateKey": "elegant-15ml-13-415|Frosted",
+    "glass": "Frosted",
+    "datum": {
+     "axisX": 500,
+     "seatY": 384,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.51,
+    "componentIds": [
+     "CMP-CAP-SBLK-13-415"
+    ],
+    "seatSignature": "b2ab3783032e54",
+    "seatDropMm": 0
+   }
+  }
+ },
+ "defaultPdpSkus": [
+  "GBElgFrst15BlkShSht"
+ ],
+ "note": "GB-ELG-FRS-15ML-CAP-SBLK: production has no cap or applicator on this record. Frosted 15 ml master body (as GBElgFrst15CuSht) with the shiny black short cap of its clear twin GBElg15BlkShSht, at the frosted kits' cap seat."
+}

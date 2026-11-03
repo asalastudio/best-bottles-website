@@ -105,6 +105,8 @@ const ADDED_FLASH_MS = 1800;
  * no drawn closure.
  */
 function materialSwatch(kit: KitLike | null | undefined, name: string | null | undefined): CSSProperties {
+    // A closure photographed close up stands in for an assembly too wide to read in the chip.
+    if (kit?.capCloseUp) return { background: `url("${registerImageSrc(kit.capCloseUp.url, 128)}") 50% 50% / cover no-repeat, #f5f3ef` };
     const part = finishPart(kit);
     if (!part) return getMaterialSwatchStyle(name, {});
     const drawn = getMaterialSwatchBackground(name);

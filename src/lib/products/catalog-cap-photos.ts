@@ -1,5 +1,6 @@
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import reviewedCapPhotos from "./cylinder-cap-thumbnails.generated.json";
+import localCloseUps from "./local-cap-close-ups.json";
 import sprayTops from "./tall-cylinder-spray-tops.json";
 import type { ProductCardVariantPreview } from "./product-card-variant-previews";
 
@@ -29,6 +30,10 @@ export function catalogCapPhoto(
     // This family has a complete spray-top set. Never fall back to the mixed
     // standalone index (some of those photographs are overcaps).
     if (top) return failed.has(top.url) ? undefined : top.url;
+    // Close-ups under review (scripts/elegant-masters/cap-close-ups.py) are served from public/local-kits: localhost only.
+    const local = process.env.NODE_ENV === "development" && preview.websiteSku
+        ? (localCloseUps as Record<string, string>)[preview.websiteSku] : undefined;
+    if (local && !failed.has(local)) return local;
     const exact = preview.websiteSku ? (reviewedCapPhotos as Record<string, string>)[preview.websiteSku] : undefined;
     if (exact && !failed.has(exact)) return exact;
     const finish = getFinishFromWebsiteSku(preview.websiteSku)?.label ?? preview.capLabel ?? preview.label;

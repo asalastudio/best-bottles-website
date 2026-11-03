@@ -4,6 +4,7 @@ import type { BuilderKit } from "../bottle-builder/model";
 import { approvedComponentKits, revisedCylinderKit } from "./approved-component-kits";
 import { withCylinder25LotionTube, withSelected25LotionTube } from "../register/cylinder-lotion-tube";
 import { withCylinder25CopperOvercap } from "../register/cylinder25-copper-overcap";
+import { ELEGANT_PHOTO_BODIES } from "../register/elegant-photo-bodies";
 
 // Keep older local files and bookmarked pilots on the current shared recipes
 // for the Rectangle roll-ons and the corrected 9 ml / 13-415 pour-cap fit.
@@ -17,6 +18,30 @@ function withCurrentSharedMasters(rows: Record<string, BuilderKit>): Record<stri
     return Object.fromEntries(Object.entries(current).map(([sku, kit]) => {
         const revised = revisedCylinderKit(sku);
         if (revised) return [sku, revised];
+        if (kit.register?.bodyId === "elegant-60ml-18-415" && kit.parts.some(part => part.slot === "reducer")) {
+            const master = ELEGANT_PHOTO_BODIES[kit.register.plateKey];
+            const body = kit.parts.find(part => part.slot === "body" && part.image.url.startsWith("/local-kits/elegant60-reducer-2026-10-31/"));
+            if (master && body) {
+                const target = body.bounds;
+                const scale = (target.bottom - target.top) / (master.bounds.bottom - master.bounds.top);
+                const x = (target.left + target.right) / 2 - (master.bounds.left + master.bounds.right) / 2 * scale;
+                const y = target.top - master.bounds.top * scale;
+                const round = (value: number) => Math.round(value * 100) / 100;
+                const replacement = { ...body, image: { ...body.image, url: master.url, key: "", sha256: "", bytes: 0, width: master.width, height: master.height },
+                    box: { x: round(x), y: round(y), width: round(master.width * scale), height: round(master.height * scale) },
+                    bounds: { left: round(x + master.bounds.left * scale), top: round(y + master.bounds.top * scale),
+                        right: round(x + master.bounds.right * scale), bottom: round(y + master.bounds.bottom * scale) } };
+                // The photographed frosted body's shoulder is lower than the
+                // original review art. Seat its cap against the visible shoulder.
+                const capDrop = kit.register.plateKey === "elegant-60ml-18-415|Frosted" ? 26 : 0;
+                return [sku, { ...kit, parts: kit.parts.map(part => {
+                    if (part === body) return replacement;
+                    if (!capDrop || part.slot !== "cap" || !part.box) return part;
+                    return { ...part, box: { ...part.box, y: part.box.y + capDrop },
+                        bounds: { ...part.bounds, top: part.bounds.top + capDrop, bottom: part.bounds.bottom + capDrop } };
+                }) }];
+            }
+        }
         if (kit.register?.bodyId !== "cylinder-25ml-18-415") return [sku, kit];
         return [sku, {
             ...kit, parts: withCylinder25CopperOvercap(withSelected25LotionTube(withCylinder25LotionTube(kit.parts, kit.register.bodyId, kit.anchors.axisX, kit.anchors.pxPerMm ?? 10.5), kit.register.bodyId, kit.anchors.axisX), kit.register.bodyId),
@@ -44,6 +69,9 @@ function readLocalKitReview(): LocalKitReview | null {
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder9-masters-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/tulip-rollers-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/remaining-13-415-2026-11-01/kits.json" : undefined,
+        process.env.NODE_ENV === "development" ? "public/local-kits/elegant15-additions-2026-11-03/kits.json" : undefined,
+        process.env.NODE_ENV === "development" ? "public/local-kits/elegant30-master-2026-11-03/kits.json" : undefined,
+        process.env.NODE_ENV === "development" ? "public/local-kits/elegant60-100-masters-2026-11-03/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder25-18415-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/tulip-amber-seating-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/rectangle9-applicator-2026-11-01/kits.json" : undefined,

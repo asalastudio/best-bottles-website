@@ -34,6 +34,9 @@ export type PdpGlassSizing = {
     heightPct: number;
     baselinePct: number;
     landmarkY?: number;
+    /** Where the glass axis stands, % of the stage width (default 50). A kit whose closure reaches far
+     * to one side (an Elegant vintage bulb with its tassel on the floor) sets it so the whole assembly shows. */
+    axisPct?: number;
     source?: string;
 };
 
@@ -48,7 +51,7 @@ export function pdpReviewedGlassFrame(
     const scale = (sizing.heightPct / 100) * height / glassHeight;
     return {
         scale,
-        x: 50 - axisX * scale / width * 100,
+        x: (sizing.axisPct ?? 50) - axisX * scale / width * 100,
         y: sizing.baselinePct - body.bottom * scale / height * 100,
     };
 }

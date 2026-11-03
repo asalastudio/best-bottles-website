@@ -80,6 +80,8 @@ export type KitPartLike = {
 
 export type KitLike = {
     sku: string;
+    /** The published kit family (e.g. "elegant-30ml-clear-15-415"); the stage exposes it for family-scoped styling. */
+    familyId?: string;
     canvas: { width: number; height: number };
     anchors: { axisX: number; neckAxisX: number | null; seatY: number; baselineY: number; pxPerMm?: number | null };
     parts: KitPartLike[];
@@ -87,6 +89,9 @@ export type KitLike = {
     glassSizing?: PdpGlassSizing;
     /** Set when the kit was composed from the component register rather than published per SKU. */
     register?: { bodyId: string; plateKey: string; glass: string; pxPerMm?: number; bodyLayers?: boolean } | null;
+    /** A close-up photograph of the closure for swatches (cap rail, finish chip), where the drawn layer is a
+     * whole assembly that reads tiny at swatch size, e.g. a bulb sprayer with its hose and tube (Jordan 2026-11-03). */
+    capCloseUp?: { url: string; width: number; height: number } | null;
 };
 
 export type StagePart = {
@@ -159,11 +164,19 @@ function separableReducer(kit: KitLike | null | undefined, context: StageContext
             && (!part.views || part.views.includes(full ? "exploded" : "capon"))));
 }
 
+/** A dropper kit that carries the complete dropper (bulb, collar and pipette in one layer, EXPLODED only)
+ * can lift it out of the glass; otherwise a dropper stays assembled (Jordan 2026-11-03, 18-415 Elegant). */
+function separableDropper(kit: KitLike | null | undefined, context: StageContext): boolean {
+    return context.applicator?.trim().toLowerCase() === "dropper"
+        && Boolean(kit?.parts.some(part => part.slot === "fitment" && part.views?.length === 1 && part.views[0] === "exploded"));
+}
+
 /** Which views the stage can honestly show for this SKU. */
 export function availableViews(kit: KitLike | null | undefined, context: StageContext): StageView[] {
     if (isTolaApplicator(context.websiteSku)) return ["capon"];
     // Only a seated stopper-and-wand photograph is registered for this set.
     if (rectangleApplicatorGlass(context.websiteSku)) return ["capon"];
+    if (separableDropper(kit, context)) return ["capon", "exploded"];
     if (requiresAssembledClosure(context.applicator, context.websiteSku) && !separableReducer(kit, context)) return ["capon"];
     const views: StageView[] = ["sidecar"];
     if (!kit?.parts?.length) return views;
@@ -178,7 +191,7 @@ export function effectiveView(view: StageView, kit: KitLike | null | undefined, 
     if (isTolaApplicator(context.websiteSku)) return "capon";
     if (!kit?.parts?.length) return "sidecar";
     if (view === "sidecar" && !separableReducer(kit, context) && requiresAssembledClosure(context.applicator, context.websiteSku)) return "capon";
-    if (view === "exploded" && !separableReducer(kit, context, true) && !allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) return "capon";
+    if (view === "exploded" && !separableReducer(kit, context, true) && !separableDropper(kit, context) && !allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) return "capon";
     return view;
 }
 
