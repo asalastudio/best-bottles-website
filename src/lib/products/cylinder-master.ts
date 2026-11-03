@@ -7,6 +7,7 @@ export function cylinderMasterSku(sku: string | null | undefined): string | null
     return approvedMasterSku(sku) ?? (process.env.NODE_ENV === "development" ? cylinder5MasterSku(sku) ?? cylinder9MasterSku(sku) ?? rectangleApplicatorReviewSku(sku) : null);
 }
 export function cylinderMasterSource(sku: string) {
+    if (/^(?:GBCyl|LBCyl)(?:Amb|Blu)9/.test(sku) && approvedMasterSku(sku)) return { family: "approved", version: APPROVED_KIT_VERSION };
     if (/^LBCyl.*9Ltn/.test(sku) && approvedMasterSku(sku)) return { family: "approved", version: APPROVED_KIT_VERSION };
     if (sleek8ReviewSku(sku)) return { family: "sleek8", version: SLEEK8_MASTER_REVIEW_VERSION };
     if (rectangleApplicatorReviewSku(sku)) return { family: "rectangle9", version: RECTANGLE_APPLICATOR_REVIEW_VERSION };

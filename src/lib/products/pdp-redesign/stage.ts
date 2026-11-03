@@ -338,6 +338,17 @@ export function stageLayout(
         });
     }
 
+    // Lift the assembled fine-mist sprayer slightly to expose the glass shoulder.
+    if (view !== "exploded" && kit.register?.bodyId === "cylinder-9ml-17-415"
+        && sorted.some(part => part.slot === "sprayer") && sorted.some(part => part.slot === "collar")) {
+        for (const part of sorted) {
+            if (part.slot === "sprayer" || part.slot === "collar" || (view === "capon" && part.slot === "overcap")) {
+                const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+                offsets.set(part, { ...offset, dy: offset.dy - 20 });
+            }
+        }
+    }
+
     // Stable physical-layer keys let CSS translate the same DOM element between views.
     const occurrences = new Map<string, number>();
     const parts: StagePart[] = sorted.map((part, index) => {

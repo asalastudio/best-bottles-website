@@ -74,7 +74,9 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
         width: canvas.width / frame.scale,
         height: canvas.height / frame.scale,
     };
+    const smallSprayer = ["GBSpry3mlClBlk", "GBSpry3mlClWht"].includes(sku);
     return <span ref={target} className="absolute inset-0"><svg className="absolute inset-0 h-full w-full" viewBox={`${viewport.x} ${viewport.y} ${viewport.width} ${viewport.height}`}
+        style={smallSprayer ? { transform: "scale(0.94)", transformOrigin: "50% 91%" } : undefined}
         role="img" aria-label={title} data-bb-master-version={cylinderMasterSource(sku)?.version} data-bb-master-sku={sku}>
         {layout.parts.map((part, i) => {
             const x = ((part.box?.leftPct ?? 0) + part.dxPct) / 100 * canvas.width;

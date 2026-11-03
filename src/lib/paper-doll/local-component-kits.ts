@@ -1,7 +1,7 @@
 import "server-only";
 import { readFileSync } from "node:fs";
 import type { BuilderKit } from "../bottle-builder/model";
-import { approvedComponentKits } from "./approved-component-kits";
+import { approvedComponentKits, revisedCylinderKit } from "./approved-component-kits";
 import { withCylinder25LotionTube } from "../register/cylinder-lotion-tube";
 import { withCylinder25CopperOvercap } from "../register/cylinder25-copper-overcap";
 
@@ -14,9 +14,14 @@ const currentSharedMasters = Object.fromEntries(Object.entries(approvedComponent
     || (kit.register?.bodyId === "cylinder-9ml-17-415" && kit.parts.some(part => part.slot === "pump"))));
 function withCurrentSharedMasters(rows: Record<string, BuilderKit>): Record<string, BuilderKit> {
     const current = { ...rows, ...Object.fromEntries(Object.entries(currentSharedMasters).filter(([sku]) => Object.hasOwn(rows, sku))) };
-    return Object.fromEntries(Object.entries(current).map(([sku, kit]) => kit.register?.bodyId !== "cylinder-25ml-18-415" ? [sku, kit] : [sku, {
-        ...kit, parts: withCylinder25CopperOvercap(withCylinder25LotionTube(kit.parts, kit.register?.bodyId ?? "", kit.anchors.axisX, kit.anchors.pxPerMm ?? 10.5), kit.register?.bodyId ?? ""),
-    }]));
+    return Object.fromEntries(Object.entries(current).map(([sku, kit]) => {
+        const revised = revisedCylinderKit(sku);
+        if (revised) return [sku, revised];
+        if (kit.register?.bodyId !== "cylinder-25ml-18-415") return [sku, kit];
+        return [sku, {
+            ...kit, parts: withCylinder25CopperOvercap(withCylinder25LotionTube(kit.parts, kit.register.bodyId, kit.anchors.axisX, kit.anchors.pxPerMm ?? 10.5), kit.register.bodyId),
+        }];
+    }));
 }
 
 type LocalKitReview = {
