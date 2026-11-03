@@ -1,0 +1,28 @@
+{
+ "clear": {
+  "source": "*/*/5.  GBBstn15BlkDrp.psd",
+  "derivation": "psd-layer"
+ },
+ "amber": {
+  "registeredOutlineIoU": 0.9695,
+  "scale": 0.5288,
+  "shift": [
+   -114,
+   0
+  ],
+  "geometry": "*/*/5.  GBBstn15BlkDrp.psd",
+  "material": "*/*/5. GBBstnAmb15mlBlkDropper.psd",
+  "alpha": "clear PSD layer alpha"
+ },
+ "cobalt": {
+  "registeredOutlineIoU": 0.9832,
+  "scale": 0.527,
+  "shift": [
+   -114,
+   0
+  ],
+  "geometry": "*/*/5.  GBBstn15BlkDrp.psd",
+  "material": "*/5. GBBstnBlu15BlkDrp.psd",
+  "alpha": "clear PSD layer alpha"
+ }
+}

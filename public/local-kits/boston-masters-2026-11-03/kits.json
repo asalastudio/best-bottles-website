@@ -1,0 +1,2419 @@
+{
+ "version": "b93321322fa1",
+ "rows": {
+  "GBBstnAmb15mlBlkDropperSlTrim": {
+   "sku": "GBBstnAmb15mlBlkDropperSlTrim",
+   "familyId": "register:boston-round-15ml-18-400|Amber",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-amber.87a65d152931.png",
+      "key": "",
+      "sha256": "87a65d1529313a15d7288c1cfb44936c0b2acfdf9f7608437888dd0f7b3657f0",
+      "bytes": 298300,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDROPPERSLTRIM",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 385.736,
+      "top": 199.559,
+      "right": 598.868,
+      "bottom": 488.867
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-amber-BlkDropperSlTrim.fd07cd063fda.png",
+      "key": "",
+      "sha256": "fd07cd063fdacc43d5200224f8989b11bf09d1c23814841b0614fc01b37904c5",
+      "bytes": 91385,
+      "width": 263,
+      "height": 357
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 385.736,
+      "y": 199.559,
+      "width": 213.132,
+      "height": 289.308
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDROPPERSLTRIM"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Amber",
+    "glass": "Amber",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-BLKDROPPERSLTRIM"
+    ],
+    "source": "1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/2. GBBstnAmb15mlBlkDropperSlTrim.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnAmb15mlWhtDropper": {
+   "sku": "GBBstnAmb15mlWhtDropper",
+   "familyId": "register:boston-round-15ml-18-400|Amber",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-amber.87a65d152931.png",
+      "key": "",
+      "sha256": "87a65d1529313a15d7288c1cfb44936c0b2acfdf9f7608437888dd0f7b3657f0",
+      "bytes": 298300,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDROPPER",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 390.265,
+      "top": 206.138,
+      "right": 596.603,
+      "bottom": 479.086
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-white-18-400.a4cf40088839.png",
+      "key": "",
+      "sha256": "a4cf4008883936d98581095774c714fd4db096aba3af70fd7dc57d3a2a8c3e35",
+      "bytes": 174535,
+      "width": 666,
+      "height": 881
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 390.265,
+      "y": 206.138,
+      "width": 206.338,
+      "height": 272.948
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDROPPER",
+     "source": "Droppers only images/1. 18-400Drp15mlWhiteBulb.psd (Layer 1)"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Amber",
+    "glass": "Amber",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-WHTDROPPER"
+    ],
+    "source": "1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/6. GBBstnAmb15mlWhtDropper.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnAmb15mlWhtDropperGlTrim": {
+   "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+   "familyId": "register:boston-round-15ml-18-400|Amber",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-amber.87a65d152931.png",
+      "key": "",
+      "sha256": "87a65d1529313a15d7288c1cfb44936c0b2acfdf9f7608437888dd0f7b3657f0",
+      "bytes": 298300,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDROPPERGLTRIM",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 390.598,
+      "top": 197.938,
+      "right": 597.247,
+      "bottom": 488.867
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-amber-WhtDropperGlTrim.66fdc76c5498.png",
+      "key": "",
+      "sha256": "66fdc76c5498435c3d93eb59db71b134a45835696ba90f98cba9085c74a41388",
+      "bytes": 70385,
+      "width": 255,
+      "height": 359
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 390.598,
+      "y": 197.938,
+      "width": 206.649,
+      "height": 290.929
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDROPPERGLTRIM"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Amber",
+    "glass": "Amber",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-WHTDROPPERGLTRIM"
+    ],
+    "source": "1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/4. GBBstnAmb15mlWhtDropperGlTrim.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnAmb15mlWhtDropperSlTrim": {
+   "sku": "GBBstnAmb15mlWhtDropperSlTrim",
+   "familyId": "register:boston-round-15ml-18-400|Amber",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-amber.87a65d152931.png",
+      "key": "",
+      "sha256": "87a65d1529313a15d7288c1cfb44936c0b2acfdf9f7608437888dd0f7b3657f0",
+      "bytes": 298300,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDROPPERSLTRIM",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 385.736,
+      "top": 202.801,
+      "right": 597.247,
+      "bottom": 493.73
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-amber-WhtDropperSlTrim.b9ed606299b5.png",
+      "key": "",
+      "sha256": "b9ed606299b54961a7fba749d983f3ffd7d4342be0a02e512e3e09ceaac840c1",
+      "bytes": 68261,
+      "width": 261,
+      "height": 359
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 385.736,
+      "y": 202.801,
+      "width": 211.511,
+      "height": 290.929
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDROPPERSLTRIM"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Amber",
+    "glass": "Amber",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-WHTDROPPERSLTRIM"
+    ],
+    "source": "1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/3. GBBstnAmb15mlWhtDropperSlTrim.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnAmb15mlBlkDropperGlTrim": {
+   "sku": "GBBstnAmb15mlBlkDropperGlTrim",
+   "familyId": "register:boston-round-15ml-18-400|Amber",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-amber.87a65d152931.png",
+      "key": "",
+      "sha256": "87a65d1529313a15d7288c1cfb44936c0b2acfdf9f7608437888dd0f7b3657f0",
+      "bytes": 298300,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDROPPERGLTRIM",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 390.598,
+      "top": 199.559,
+      "right": 597.247,
+      "bottom": 493.729
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-amber-BlkDropperGlTrim.a07176290b99.png",
+      "key": "",
+      "sha256": "a07176290b99debaa93b64b24ff58d4056ffa0aceb4aded29c7f1d28e4e72a36",
+      "bytes": 89086,
+      "width": 255,
+      "height": 363
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 390.598,
+      "y": 199.559,
+      "width": 206.649,
+      "height": 294.17
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDROPPERGLTRIM"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Amber",
+    "glass": "Amber",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-BLKDROPPERGLTRIM"
+    ],
+    "source": "1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/7. GBBstnAmb15mlBlkDropperGlTrim.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnBlu15WhtDrpr": {
+   "sku": "GBBstnBlu15WhtDrpr",
+   "familyId": "register:boston-round-15ml-18-400|Cobalt Blue",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-cobalt.36ffc0f795ad.png",
+      "key": "",
+      "sha256": "36ffc0f795ad950cc71d8c250b8b1a4ff70d73b8d5f986b21c323a54e07404f7",
+      "bytes": 314908,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDRPR",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 389.999,
+      "top": 205.698,
+      "right": 596.836,
+      "bottom": 479.307
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-white-18-400.a4cf40088839.png",
+      "key": "",
+      "sha256": "a4cf4008883936d98581095774c714fd4db096aba3af70fd7dc57d3a2a8c3e35",
+      "bytes": 174535,
+      "width": 666,
+      "height": 881
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 389.999,
+      "y": 205.698,
+      "width": 206.837,
+      "height": 273.609
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDRPR",
+     "source": "Droppers only images/1. 18-400Drp15mlWhiteBulb.psd (Layer 1)"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Cobalt Blue",
+    "glass": "Cobalt Blue",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-WHTDRPR"
+    ],
+    "source": "2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/6. GBBstnBlu15WhtDrp.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnBlu15WhtDrprSlTrim": {
+   "sku": "GBBstnBlu15WhtDrprSlTrim",
+   "familyId": "register:boston-round-15ml-18-400|Cobalt Blue",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-cobalt.36ffc0f795ad.png",
+      "key": "",
+      "sha256": "36ffc0f795ad950cc71d8c250b8b1a4ff70d73b8d5f986b21c323a54e07404f7",
+      "bytes": 314908,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDRPRSLTRIM",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 386.271,
+      "top": 202.347,
+      "right": 598.294,
+      "bottom": 493.98
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-cobalt-WhtDrprSlTrim.b9ed606299b5.png",
+      "key": "",
+      "sha256": "b9ed606299b54961a7fba749d983f3ffd7d4342be0a02e512e3e09ceaac840c1",
+      "bytes": 68261,
+      "width": 261,
+      "height": 359
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 386.271,
+      "y": 202.347,
+      "width": 212.023,
+      "height": 291.633
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDRPRSLTRIM"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Cobalt Blue",
+    "glass": "Cobalt Blue",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-WHTDRPRSLTRIM"
+    ],
+    "source": "2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/3. GBBstnBlu15WhtDrpSlTrim.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnBlu15WhtDrprGlTrim": {
+   "sku": "GBBstnBlu15WhtDrprGlTrim",
+   "familyId": "register:boston-round-15ml-18-400|Cobalt Blue",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-cobalt.36ffc0f795ad.png",
+      "key": "",
+      "sha256": "36ffc0f795ad950cc71d8c250b8b1a4ff70d73b8d5f986b21c323a54e07404f7",
+      "bytes": 314908,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDRPRGLTRIM",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 390.333,
+      "top": 198.286,
+      "right": 597.482,
+      "bottom": 489.919
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-cobalt-WhtDrprGlTrim.66fdc76c5498.png",
+      "key": "",
+      "sha256": "66fdc76c5498435c3d93eb59db71b134a45835696ba90f98cba9085c74a41388",
+      "bytes": 70385,
+      "width": 255,
+      "height": 359
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 390.333,
+      "y": 198.286,
+      "width": 207.149,
+      "height": 291.633
+     },
+     "componentId": "PSD-BSTN15-DRP-WHTDRPRGLTRIM"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Cobalt Blue",
+    "glass": "Cobalt Blue",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-WHTDRPRGLTRIM"
+    ],
+    "source": "2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/4. GBBstnBlu15WhtDrpGlTrim.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnBlu15mlBlkDropperSlTrim": {
+   "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+   "familyId": "register:boston-round-15ml-18-400|Cobalt Blue",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-cobalt.36ffc0f795ad.png",
+      "key": "",
+      "sha256": "36ffc0f795ad950cc71d8c250b8b1a4ff70d73b8d5f986b21c323a54e07404f7",
+      "bytes": 314908,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDROPPERSLTRIM",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 386.271,
+      "top": 199.91,
+      "right": 601.543,
+      "bottom": 490.731
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-cobalt-BlkDropperSlTrim.25125a698682.png",
+      "key": "",
+      "sha256": "25125a6986827609e25147faa3bdd8c3eb4b154afc48a74a0ed905fe3466da09",
+      "bytes": 93199,
+      "width": 265,
+      "height": 358
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 386.271,
+      "y": 199.91,
+      "width": 215.272,
+      "height": 290.821
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDROPPERSLTRIM"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Cobalt Blue",
+    "glass": "Cobalt Blue",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-BLKDROPPERSLTRIM"
+    ],
+    "source": "2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/2. GBBstnBlu15mlBlkDropperSlTrim.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnBlu15BlkDrprGlTrim": {
+   "sku": "GBBstnBlu15BlkDrprGlTrim",
+   "familyId": "register:boston-round-15ml-18-400|Cobalt Blue",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-cobalt.36ffc0f795ad.png",
+      "key": "",
+      "sha256": "36ffc0f795ad950cc71d8c250b8b1a4ff70d73b8d5f986b21c323a54e07404f7",
+      "bytes": 314908,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDRPRGLTRIM",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 389.521,
+      "top": 199.91,
+      "right": 596.67,
+      "bottom": 494.793
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-cobalt-BlkDrprGlTrim.a07176290b99.png",
+      "key": "",
+      "sha256": "a07176290b99debaa93b64b24ff58d4056ffa0aceb4aded29c7f1d28e4e72a36",
+      "bytes": 89086,
+      "width": 255,
+      "height": 363
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 389.521,
+      "y": 199.91,
+      "width": 207.149,
+      "height": 294.883
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDRPRGLTRIM"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Cobalt Blue",
+    "glass": "Cobalt Blue",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-BLKDRPRGLTRIM"
+    ],
+    "source": "2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/7. GBBstnBlu15BlkDrpGlTrim.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstn15BlkCapSht": {
+   "sku": "GBBstn15BlkCapSht",
+   "familyId": "register:boston-round-15ml-18-400|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-clear.f19e460762d8.png",
+      "key": "",
+      "sha256": "f19e460762d8feb3660f803f8bf37d436b5d55260065c0150f6b380ae835bd4e",
+      "bytes": 247023,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 390.095,
+      "top": 372.647,
+      "right": 604.947,
+      "bottom": 485.031
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/cap-clear-BlkCapSht.f711c8079ee7.png",
+      "key": "",
+      "sha256": "f711c8079ee70137cc002a6115ce738cfe8773a9021060ec9298c51f401c9bb1",
+      "bytes": 24998,
+      "width": 260,
+      "height": 136
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 390.095,
+      "y": 372.647,
+      "width": 214.852,
+      "height": 112.384
+     },
+     "componentId": "PSD-BSTN15-CAP-BLK"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-CAP-BLK"
+    ],
+    "source": "3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnAmb15mlBlkCapSht": {
+   "sku": "GBBstnAmb15mlBlkCapSht",
+   "familyId": "register:boston-round-15ml-18-400|Amber",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-amber.87a65d152931.png",
+      "key": "",
+      "sha256": "87a65d1529313a15d7288c1cfb44936c0b2acfdf9f7608437888dd0f7b3657f0",
+      "bytes": 298300,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 388.708,
+      "top": 377.815,
+      "right": 599.919,
+      "bottom": 489.107
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/cap-amber-BlkCapSht.d44ec39cce0d.png",
+      "key": "",
+      "sha256": "d44ec39cce0d9c711294c06a93ab1d0ab1ebd33537f127610b21e74553a7b0e5",
+      "bytes": 25222,
+      "width": 260,
+      "height": 137
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 388.708,
+      "y": 377.815,
+      "width": 211.211,
+      "height": 111.292
+     },
+     "componentId": "PSD-BSTN15-CAP-BLK"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Amber",
+    "glass": "Amber",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-CAP-BLK"
+    ],
+    "source": "1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/1. GBBstnAmb15mlBlkCapSht.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnBlu15BlkCapSht": {
+   "sku": "GBBstnBlu15BlkCapSht",
+   "familyId": "register:boston-round-15ml-18-400|Cobalt Blue",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-cobalt.36ffc0f795ad.png",
+      "key": "",
+      "sha256": "36ffc0f795ad950cc71d8c250b8b1a4ff70d73b8d5f986b21c323a54e07404f7",
+      "bytes": 314908,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 388.708,
+      "top": 377.815,
+      "right": 599.919,
+      "bottom": 489.107
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/cap-cobalt-BlkCapSht.d44ec39cce0d.png",
+      "key": "",
+      "sha256": "d44ec39cce0d9c711294c06a93ab1d0ab1ebd33537f127610b21e74553a7b0e5",
+      "bytes": 25222,
+      "width": 260,
+      "height": 137
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 388.708,
+      "y": 377.815,
+      "width": 211.211,
+      "height": 111.292
+     },
+     "componentId": "PSD-BSTN15-CAP-BLK"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Cobalt Blue",
+    "glass": "Cobalt Blue",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-CAP-BLK"
+    ],
+    "source": "2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/1. GBBstnBlu15BlkCapSht.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnAmb15mlBlkDropper": {
+   "sku": "GBBstnAmb15mlBlkDropper",
+   "familyId": "register:boston-round-15ml-18-400|Amber",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-amber.87a65d152931.png",
+      "key": "",
+      "sha256": "87a65d1529313a15d7288c1cfb44936c0b2acfdf9f7608437888dd0f7b3657f0",
+      "bytes": 298300,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDROPPER",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 388.167,
+      "top": 197.938,
+      "right": 597.247,
+      "bottom": 493.729
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-amber-BlkDropper.1f002b535f6c.png",
+      "key": "",
+      "sha256": "1f002b535f6c2615e0efd672b2e76053e61791d69dfc61cb530fa33b582f099d",
+      "bytes": 68246,
+      "width": 258,
+      "height": 365
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 388.167,
+      "y": 197.938,
+      "width": 209.08,
+      "height": 295.791
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDROPPER"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Amber",
+    "glass": "Amber",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-BLKDROPPER"
+    ],
+    "source": "1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/5. GBBstnAmb15mlBlkDropper.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstnBlu15BlkDrpr": {
+   "sku": "GBBstnBlu15BlkDrpr",
+   "familyId": "register:boston-round-15ml-18-400|Cobalt Blue",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-cobalt.36ffc0f795ad.png",
+      "key": "",
+      "sha256": "36ffc0f795ad950cc71d8c250b8b1a4ff70d73b8d5f986b21c323a54e07404f7",
+      "bytes": 314908,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400-through-glass.0c437d84fd91.png",
+      "key": "",
+      "sha256": "0c437d84fd91e5ec4dfc6ade70dc711f753effd1f2b977a23aa4e33ae8814438",
+      "bytes": 24481,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDRPR",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 387.896,
+      "top": 197.473,
+      "right": 597.482,
+      "bottom": 493.98
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-cobalt-BlkDrpr.1f002b535f6c.png",
+      "key": "",
+      "sha256": "1f002b535f6c2615e0efd672b2e76053e61791d69dfc61cb530fa33b582f099d",
+      "bytes": 68246,
+      "width": 258,
+      "height": 365
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 387.896,
+      "y": 197.473,
+      "width": 209.586,
+      "height": 296.507
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDRPR"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Cobalt Blue",
+    "glass": "Cobalt Blue",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-BLKDRPR"
+    ],
+    "source": "2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/5. GBBstnBlu15BlkDrp.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  },
+  "GBBstn15BlkDrp": {
+   "sku": "GBBstn15BlkDrp",
+   "familyId": "register:boston-round-15ml-18-400|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 390,
+    "baselineY": 1061,
+    "pxPerMm": 9.87
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 371.599,
+      "right": 628.401,
+      "top": 390,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/body-boston-round-15ml-18-400-clear.f19e460762d8.png",
+      "key": "",
+      "sha256": "f19e460762d8feb3660f803f8bf37d436b5d55260065c0150f6b380ae835bd4e",
+      "bytes": 247023,
+      "width": 310,
+      "height": 810
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 371.599,
+      "y": 390.0,
+      "width": 256.802,
+      "height": 671.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 482.647,
+      "top": 474.288,
+      "right": 521.486,
+      "bottom": 985.802
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/pipette-18-400.0821b789978d.png",
+      "key": "",
+      "sha256": "0821b789978dcd74d2d173f5d714e8d6067f0a255bd2e9e74c7def48d3f88395",
+      "bytes": 22379,
+      "width": 47,
+      "height": 619
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 482.647,
+      "y": 474.288,
+      "width": 38.839,
+      "height": 511.514
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDRP"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 388.442,
+      "top": 183.411,
+      "right": 601.642,
+      "bottom": 485.03
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/boston-masters-2026-11-03/boston15/dropper-clear-BlkDrp.1f002b535f6c.png",
+      "key": "",
+      "sha256": "1f002b535f6c2615e0efd672b2e76053e61791d69dfc61cb530fa33b582f099d",
+      "bytes": 68246,
+      "width": 258,
+      "height": 365
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 388.442,
+      "y": 183.411,
+      "width": 213.2,
+      "height": 301.619
+     },
+     "componentId": "PSD-BSTN15-DRP-BLKDRP"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "boston-round-15ml-18-400",
+    "plateKey": "boston-round-15ml-18-400|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 390,
+     "baselineY": 1061
+    },
+    "pxPerMm": 9.87,
+    "componentIds": [
+     "PSD-BSTN15-DRP-BLKDRP"
+    ],
+    "source": "3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/5.  GBBstn15BlkDrp.psd"
+   },
+   "glassSizing": {
+    "heightPct": 42,
+    "baselinePct": 91,
+    "landmarkY": 596.27,
+    "source": "docs/hero-families/boston-diva-2026-09-23/approval.json"
+   }
+  }
+ },
+ "defaultPdpSkus": [
+  "GBBstn15BlkCapSht",
+  "GBBstn15BlkDrp",
+  "GBBstnAmb15mlBlkCapSht",
+  "GBBstnAmb15mlBlkDropper",
+  "GBBstnAmb15mlBlkDropperGlTrim",
+  "GBBstnAmb15mlBlkDropperSlTrim",
+  "GBBstnAmb15mlWhtDropper",
+  "GBBstnAmb15mlWhtDropperGlTrim",
+  "GBBstnAmb15mlWhtDropperSlTrim",
+  "GBBstnBlu15BlkCapSht",
+  "GBBstnBlu15BlkDrpr",
+  "GBBstnBlu15BlkDrprGlTrim",
+  "GBBstnBlu15WhtDrpr",
+  "GBBstnBlu15WhtDrprGlTrim",
+  "GBBstnBlu15WhtDrprSlTrim",
+  "GBBstnBlu15mlBlkDropperSlTrim"
+ ]
+}
