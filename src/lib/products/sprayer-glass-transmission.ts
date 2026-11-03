@@ -27,6 +27,11 @@ type InternalPart = { slot: string; image: { url: string; height: number }; view
 /** Reduce the chamber's contrast beneath clear glass; keep the narrow shaft at
  * its existing opacity. Source pixels, placement and detached plastic stay intact. */
 export function sprayerPlugMask(kit: GlassKit, part: InternalPart, view: string = "capon"): string | undefined {
+    // Remove the generated pipette's surrounding studio glow. The shaft
+    // remains translucent and follows the same mask in every stage view.
+    if (part.slot === "pipette" && part.image.url.endsWith("/cylinder25-glass-pipette-v1.png")) {
+        return "linear-gradient(to right, transparent 0%, transparent 42.5%, black 43%, black 57%, transparent 57.5%, transparent 100%)";
+    }
     const bodyId = kit.register?.bodyId ?? "";
     const chamber = CHAMBERS[bodyId] ?? CYLINDER_CHAMBERS[bodyId]?.find(entry => part.image.url.endsWith("/" + entry.source));
     if (!chamber || kit.register?.glass !== "Clear" || view === "exploded" || part.slot !== "diptube"

@@ -2,7 +2,7 @@ import "server-only";
 import { readFileSync } from "node:fs";
 import type { BuilderKit } from "../bottle-builder/model";
 import { approvedComponentKits, revisedCylinderKit } from "./approved-component-kits";
-import { withCylinder25LotionTube } from "../register/cylinder-lotion-tube";
+import { withCylinder25LotionTube, withSelected25LotionTube } from "../register/cylinder-lotion-tube";
 import { withCylinder25CopperOvercap } from "../register/cylinder25-copper-overcap";
 
 // Keep older local files and bookmarked pilots on the current shared recipes
@@ -19,7 +19,7 @@ function withCurrentSharedMasters(rows: Record<string, BuilderKit>): Record<stri
         if (revised) return [sku, revised];
         if (kit.register?.bodyId !== "cylinder-25ml-18-415") return [sku, kit];
         return [sku, {
-            ...kit, parts: withCylinder25CopperOvercap(withCylinder25LotionTube(kit.parts, kit.register.bodyId, kit.anchors.axisX, kit.anchors.pxPerMm ?? 10.5), kit.register.bodyId),
+            ...kit, parts: withCylinder25CopperOvercap(withSelected25LotionTube(withCylinder25LotionTube(kit.parts, kit.register.bodyId, kit.anchors.axisX, kit.anchors.pxPerMm ?? 10.5), kit.register.bodyId, kit.anchors.axisX), kit.register.bodyId),
         }];
     }));
 }

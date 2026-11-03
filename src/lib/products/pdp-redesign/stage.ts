@@ -281,6 +281,44 @@ export function glassFrame(
     return { envelope: envelopeOf(key), standOn: key === bodyId ? null : envelopeOf(bodyId) };
 }
 
+/** Catalog-only framing for the long hose and tassel on the Cylinder spray sets. */
+export function catalogTasselViewport(sku: string, layout: Pick<StageLayout, "canvas" | "frame" | "parts">) {
+    const { canvas, frame } = layout;
+    const original = {
+        x: -frame.x / 100 * canvas.width / frame.scale,
+        y: -frame.y / 100 * canvas.height / frame.scale,
+        width: canvas.width / frame.scale,
+        height: canvas.height / frame.scale,
+    };
+    if (!/^gbcyl(?:25|50|100)ansptsl/i.test(sku)) return original;
+    const parts = layout.parts.filter(part => part.slot === "body" || part.slot === "sprayer");
+    if (parts.length < 2) return original;
+    const bounds = parts.map(part => {
+        const left = ((part.box?.leftPct ?? 0) + part.dxPct) / 100 * canvas.width;
+        const top = ((part.box?.topPct ?? 0) + part.dyPct) / 100 * canvas.height;
+        return {
+            left, top,
+            right: left + (part.box?.widthPct ?? 100) / 100 * canvas.width,
+            bottom: top + (part.box?.heightPct ?? 100) / 100 * canvas.height,
+        };
+    });
+    const left = Math.min(...bounds.map(box => box.left));
+    const right = Math.max(...bounds.map(box => box.right));
+    const top = Math.min(...bounds.map(box => box.top));
+    const bottom = Math.max(...bounds.map(box => box.bottom));
+    // Leave a small margin around the entire assembly, enlarging the frame only if necessary.
+    const factor = Math.max(1, (right - left) / (original.width * 0.94), (bottom - top) / (original.height * 0.94));
+    const width = original.width * factor;
+    const height = original.height * factor;
+    const marginX = width * 0.03;
+    const marginY = height * 0.03;
+    return {
+        x: Math.max(right + marginX - width, Math.min(original.x, left - marginX)),
+        y: Math.max(bottom + marginY - height, Math.min(original.y, top - marginY)),
+        width, height,
+    };
+}
+
 export function stageLayout(
     kit: KitLike | null | undefined,
     requested: StageView,
@@ -385,6 +423,13 @@ export function stageLayout(
         };
     });
 
+    // The 25 ml tassel also extends beyond the product-page canvas.
+    if (view !== "exploded" && /^gbcyl25ansptsl/i.test(context.websiteSku ?? "")) {
+        const viewport = catalogTasselViewport(context.websiteSku!, { canvas, frame, parts });
+        const scale = canvas.width / viewport.width;
+        frame = { scale, x: -viewport.x * scale / canvas.width * 100, y: -viewport.y * scale / canvas.height * 100 };
+    }
+
     const anchors: StageLayout["anchors"] = {};
     const body = sorted.find((part) => part.slot === "body") ?? null;
     const closure = [...sorted].reverse().find((part) => isClosureSlot(part.slot)) ?? null;
@@ -432,7 +477,9 @@ export function stageLayout(
         floorShadows,
         // the studio's own floor replaces the drawn baseline
         baseline: view !== "exploded" && !backdrop,
-        ...(reviewedFrame ? { baselinePct: kit.glassSizing!.baselinePct } : {}),
+        ...(reviewedFrame ? { baselinePct: view !== "exploded" && /^gbcyl25ansptsl/i.test(context.websiteSku ?? "")
+            ? frame.y + kit.anchors.baselineY * frame.scale / canvas.height * 100
+            : kit.glassSizing!.baselinePct } : {}),
         grid: view === "exploded",
         backdrop,
     };
