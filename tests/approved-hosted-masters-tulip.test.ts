@@ -91,7 +91,8 @@ describe("approved hosted master release", () => {
             expect(response.status).toBe(200);
             expect((await response.json()).kit).toEqual(hosted[actual]);
             expect(response.headers.get("cache-control")).toContain("immutable");
-            expect(cylinderMasterSource(actual)).toEqual({ family: "approved", version: index.version });
+            const expectedVersion = actual.startsWith("GBCylAmb9") ? index.version + "-cylinder9-colors-v2-20261102" : index.version;
+            expect(cylinderMasterSource(actual)).toEqual({ family: "approved", version: expectedVersion });
         }
         expect(cylinderMasterSku("not-a-sku")).toBeNull();
         expect((await GET(new Request("https://preview.vercel.app/api/bottle-masters/approved?sku=not-a-sku"))).status).toBe(404);

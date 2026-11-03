@@ -344,7 +344,7 @@ export function stageLayout(
         for (const part of sorted) {
             if (part.slot === "sprayer" || part.slot === "collar" || (view === "capon" && part.slot === "overcap")) {
                 const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
-                offsets.set(part, { ...offset, dy: offset.dy - 20 });
+                offsets.set(part, { ...offset, dy: offset.dy - 14 });
             }
         }
     }

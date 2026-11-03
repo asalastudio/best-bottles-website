@@ -30,6 +30,9 @@ export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {
     return Object.hasOwn(revisedRows, sku) ? revisedRows[sku] : undefined;
 }
+export function originalApprovedComponentKit(sku: string | null): BuilderKit | null {
+    return sku && Object.hasOwn(existingRows, sku) ? existingRows[sku] : null;
+}
 export function approvedComponentKit(sku: string | null | undefined): BuilderKit | null {
     return sku && Object.hasOwn(rows, sku) ? rows[sku] : null;
 }

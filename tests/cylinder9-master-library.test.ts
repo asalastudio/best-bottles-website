@@ -6,6 +6,7 @@ import index from "@/lib/products/cylinder9-master-index.json";
 import { pdpReviewedGlassViewport } from "@/lib/products/pdp-stage-frame";
 vi.mock("server-only", () => ({}));
 import { localPdpComponentKits } from "@/lib/paper-doll/local-component-kits";
+import { approvedComponentKit } from "@/lib/paper-doll/approved-component-kits";
 import { GET } from "@/app/api/bottle-masters/cylinder9/route";
 const library = JSON.parse(readFileSync(index.kitFile, "utf8")) as { version: string; rows: Record<string, BuilderKit> };
 afterEach(() => vi.unstubAllEnvs());
@@ -45,7 +46,8 @@ describe("approved Cylinder 9 ml master reuse", () => {
         const variants = [...Object.keys(library.rows), "unrelated-product"].map(websiteSku => ({ websiteSku }));
         const selected = localPdpComponentKits("localhost:3010", undefined, variants);
         expect(Object.keys(selected)).toHaveLength(145);
-        expect(selected.GBCylAmb9SpryGl).toEqual(library.rows.GBCylAmb9SpryGl);
+        expect(selected.GBCylAmb9SpryGl).toEqual(approvedComponentKit("GBCylAmb9SpryGl"));
+        expect(selected.GBCylAmb9SpryGl.parts.find(part => part.slot === "body")?.image.url).toBe("/images/cylinder9-masters-2026-11-02/amber.webp");
         expect(selected["unrelated-product"]).toBeUndefined();
         expect(localPdpComponentKits("example.com", "kits", variants)).toEqual({});
     });
