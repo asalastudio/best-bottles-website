@@ -1,4 +1,4 @@
-"""Regenerate the Circle 15/50/100 ml dip tubes from the original Photoshop sources.
+"""Regenerate the Circle 15/30/50/100 ml dip tubes from the original Photoshop sources.
 
 The same pipeline as the Elegant tubes (scripts/elegant-masters/psd-tubes-60-100.py, whose helpers
 this imports): the PSD layer fixes shape, size and position against the bottle layer in the same
@@ -26,6 +26,7 @@ C50 = "2. 18-415 Bottles/4. Circle Glass 50ml/1. Circle Glass 50ml PSD"
 C100 = "2. 18-415 Bottles/5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD"
 # (size, kind): (PSD, bottle layer, tube layer)
 SOURCES = {
+    ("30", "spray"): ("15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/1. GBCrcl30SpryBlk.psd", "Layer 2", "Layer 3"),
     ("15", "spray"): ("5. 13-415 Bottles PSD/17. Circle 15ml/6. GBCrcl15SpryGlSh.psd", "Layer 7", "Layer 16"),
     ("50", "spray"): (f"{C50}/56. GBCrcl50SpryCu.psd", "Layer 13", "Layer 10"),
     ("50", "atomizer"): (f"{C50}/39. GBCrcl50AnSpBlk.psd", "Layer 29", "Layer 4 copy"),

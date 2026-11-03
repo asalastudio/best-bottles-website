@@ -1,5 +1,5 @@
 {
- "version": "88097ed90196",
+ "version": "1886e5fd1d46",
  "rows": {
   "LBCrcl100LtnClOvrCap": {
    "sku": "LBCrcl100LtnClOvrCap",
@@ -39838,207 +39838,1408 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json"
    },
    "glassShoulderY": 511
+  },
+  "GBCrcl30SpryBlk": {
+   "sku": "GBCrcl30SpryBlk",
+   "familyId": "register:circle-30ml-15-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 10.811
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 196.596,
+      "right": 803.405,
+      "top": 261,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/body-circle-30ml-15-415-clear.4c5aab8443ff.png",
+      "key": "",
+      "sha256": "4c5aab8443ff3b5592f939124076796101ec08c170118d3338eb669d9d273b6f",
+      "bytes": 621277,
+      "width": 713,
+      "height": 940
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 196.596,
+      "y": 261.0,
+      "width": 606.809,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 468.936,
+      "top": 405.681,
+      "right": 527.659,
+      "bottom": 984.404
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/tubes/30-spray.024479f4db84.png",
+      "key": "",
+      "sha256": "024479f4db84b3bda0e55631331267c66b1f3c00111b82399e7aacf197f31094",
+      "bytes": 45758,
+      "width": 69,
+      "height": 680
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-tube:spray",
+     "box": {
+      "x": 468.936,
+      "y": 405.681,
+      "width": 58.723,
+      "height": 578.723
+     },
+     "componentId": "PSD-CRCL30-SPR-BLK",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 405.106,
+      "top": 67.0,
+      "right": 588.936,
+      "bottom": 434.66
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/sprayer-Blk.e5568b60b0bd.png",
+      "key": "",
+      "sha256": "e5568b60b0bd7bd6d4e9c11336f86b8190618a5c8fa3713fd991ff52cbc206a4",
+      "bytes": 40390,
+      "width": 216,
+      "height": 432
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 405.106,
+      "y": 67.0,
+      "width": 183.83,
+      "height": 367.66
+     },
+     "componentId": "PSD-CRCL30-SPR-BLK",
+     "seatBottomY": 434,
+     "collarWidth": 125
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 391.489,
+      "top": 21.893,
+      "right": 597.446,
+      "bottom": 434.659
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-Blk.72852ddbffba.png",
+      "key": "",
+      "sha256": "72852ddbffba1c1228d277db6b306aba011966b75e67e91a1b2b502052e7884b",
+      "bytes": 52359,
+      "width": 242,
+      "height": 485
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 391.489,
+      "y": 21.893,
+      "width": 205.957,
+      "height": 412.766
+     },
+     "componentId": "PSD-CRCL30-SPR-BLK",
+     "seatWith": "sprayer"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "circle-30ml-15-415",
+    "plateKey": "circle-30ml-15-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.811,
+    "componentIds": [
+     "PSD-CRCL30-SPR-BLK"
+    ],
+    "source": "PSD 15-415 Bottles/1. Circle Clear 30ml - Capped/1. GBCrcl30SpryBlk.psd"
+   },
+   "glassSizing": {
+    "heightPct": 46,
+    "baselinePct": 91,
+    "landmarkY": 430.36,
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json"
+   },
+   "glassShoulderY": 433
+  },
+  "GBCrcl30SpryShnGl": {
+   "sku": "GBCrcl30SpryShnGl",
+   "familyId": "register:circle-30ml-15-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 10.811
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 196.596,
+      "right": 803.405,
+      "top": 261,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/body-circle-30ml-15-415-clear.4c5aab8443ff.png",
+      "key": "",
+      "sha256": "4c5aab8443ff3b5592f939124076796101ec08c170118d3338eb669d9d273b6f",
+      "bytes": 621277,
+      "width": 713,
+      "height": 940
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 196.596,
+      "y": 261.0,
+      "width": 606.809,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 468.936,
+      "top": 405.681,
+      "right": 527.659,
+      "bottom": 984.404
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/tubes/30-spray.024479f4db84.png",
+      "key": "",
+      "sha256": "024479f4db84b3bda0e55631331267c66b1f3c00111b82399e7aacf197f31094",
+      "bytes": 45758,
+      "width": 69,
+      "height": 680
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-tube:spray",
+     "box": {
+      "x": 468.936,
+      "y": 405.681,
+      "width": 58.723,
+      "height": 578.723
+     },
+     "componentId": "PSD-CRCL30-SPR-SHNGL",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.255,
+      "top": 70.0,
+      "right": 587.234,
+      "bottom": 438.511
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/sprayer-ShnGl.435b0a499b35.png",
+      "key": "",
+      "sha256": "435b0a499b350f61ff306276f838ee58e79697052545ae74e5185a1620b192da",
+      "bytes": 101321,
+      "width": 215,
+      "height": 433
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.255,
+      "y": 70.0,
+      "width": 182.979,
+      "height": 368.511
+     },
+     "componentId": "PSD-CRCL30-SPR-SHNGL",
+     "seatBottomY": 434,
+     "collarWidth": 179
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 388.936,
+      "top": 30.851,
+      "right": 594.893,
+      "bottom": 437.66
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-ShnGl.54b17312db80.png",
+      "key": "",
+      "sha256": "54b17312db80f709ef5c7e7119d46a9b5dfec95081386af958ce04b724793ccb",
+      "bytes": 114930,
+      "width": 242,
+      "height": 478
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 388.936,
+      "y": 30.851,
+      "width": 205.957,
+      "height": 406.809
+     },
+     "componentId": "PSD-CRCL30-SPR-SHNGL",
+     "seatWith": "sprayer"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "circle-30ml-15-415",
+    "plateKey": "circle-30ml-15-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.811,
+    "componentIds": [
+     "PSD-CRCL30-SPR-SHNGL"
+    ],
+    "source": "PSD 15-415 Bottles/1. Circle Clear 30ml - Capped/2. GBCrcl30SpryShnGl.psd"
+   },
+   "glassSizing": {
+    "heightPct": 46,
+    "baselinePct": 91,
+    "landmarkY": 430.36,
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json"
+   },
+   "glassShoulderY": 433
+  },
+  "GBCrcl30SpryShSl": {
+   "sku": "GBCrcl30SpryShSl",
+   "familyId": "register:circle-30ml-15-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 10.811
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 196.596,
+      "right": 803.405,
+      "top": 261,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/body-circle-30ml-15-415-clear.4c5aab8443ff.png",
+      "key": "",
+      "sha256": "4c5aab8443ff3b5592f939124076796101ec08c170118d3338eb669d9d273b6f",
+      "bytes": 621277,
+      "width": 713,
+      "height": 940
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 196.596,
+      "y": 261.0,
+      "width": 606.809,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 468.936,
+      "top": 405.681,
+      "right": 527.659,
+      "bottom": 984.404
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/tubes/30-spray.024479f4db84.png",
+      "key": "",
+      "sha256": "024479f4db84b3bda0e55631331267c66b1f3c00111b82399e7aacf197f31094",
+      "bytes": 45758,
+      "width": 69,
+      "height": 680
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-tube:spray",
+     "box": {
+      "x": 468.936,
+      "y": 405.681,
+      "width": 58.723,
+      "height": 578.723
+     },
+     "componentId": "PSD-CRCL30-SPR-SHSL",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 407.66,
+      "top": 71.0,
+      "right": 583.83,
+      "bottom": 434.404
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/sprayer-ShSl.bdecde146185.png",
+      "key": "",
+      "sha256": "bdecde146185778f8a735dec138fdf6b9a7936b7ac7b3e59fb6c41f985e9c46f",
+      "bytes": 42701,
+      "width": 207,
+      "height": 427
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 407.66,
+      "y": 71.0,
+      "width": 176.17,
+      "height": 363.404
+     },
+     "componentId": "PSD-CRCL30-SPR-SHSL",
+     "seatBottomY": 434,
+     "collarWidth": 175
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 393.191,
+      "top": 31.851,
+      "right": 601.702,
+      "bottom": 443.766
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-ShSl.8db1930cf012.png",
+      "key": "",
+      "sha256": "8db1930cf012d426822312c15b069a58582e01be90203c4b258b49aa5d45ed6d",
+      "bytes": 47121,
+      "width": 245,
+      "height": 484
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 393.191,
+      "y": 31.851,
+      "width": 208.511,
+      "height": 411.915
+     },
+     "componentId": "PSD-CRCL30-SPR-SHSL",
+     "seatWith": "sprayer"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "circle-30ml-15-415",
+    "plateKey": "circle-30ml-15-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.811,
+    "componentIds": [
+     "PSD-CRCL30-SPR-SHSL"
+    ],
+    "source": "PSD 15-415 Bottles/1. Circle Clear 30ml - Capped/3. GBCrcl30SpryShSl.psd"
+   },
+   "glassSizing": {
+    "heightPct": 46,
+    "baselinePct": 91,
+    "landmarkY": 430.36,
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json"
+   },
+   "glassShoulderY": 433
+  },
+  "GBCrcl30SpryMattSl": {
+   "sku": "GBCrcl30SpryMattSl",
+   "familyId": "register:circle-30ml-15-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 10.811
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 196.596,
+      "right": 803.405,
+      "top": 261,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/body-circle-30ml-15-415-clear.4c5aab8443ff.png",
+      "key": "",
+      "sha256": "4c5aab8443ff3b5592f939124076796101ec08c170118d3338eb669d9d273b6f",
+      "bytes": 621277,
+      "width": 713,
+      "height": 940
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 196.596,
+      "y": 261.0,
+      "width": 606.809,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 468.936,
+      "top": 405.681,
+      "right": 527.659,
+      "bottom": 984.404
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/tubes/30-spray.024479f4db84.png",
+      "key": "",
+      "sha256": "024479f4db84b3bda0e55631331267c66b1f3c00111b82399e7aacf197f31094",
+      "bytes": 45758,
+      "width": 69,
+      "height": 680
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-tube:spray",
+     "box": {
+      "x": 468.936,
+      "y": 405.681,
+      "width": 58.723,
+      "height": 578.723
+     },
+     "componentId": "PSD-CRCL30-SPR-MATTSL",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 405.957,
+      "top": 73.0,
+      "right": 586.383,
+      "bottom": 434.702
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/sprayer-MattSl.ef80ddd9f2d7.png",
+      "key": "",
+      "sha256": "ef80ddd9f2d7dc840e16b2871a9260b540ee32acbdc4c9406a3b4b2c15345378",
+      "bytes": 39903,
+      "width": 212,
+      "height": 425
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 405.957,
+      "y": 73.0,
+      "width": 180.426,
+      "height": 361.702
+     },
+     "componentId": "PSD-CRCL30-SPR-MATTSL",
+     "seatBottomY": 434,
+     "collarWidth": 126
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 388.085,
+      "top": 28.745,
+      "right": 588.936,
+      "bottom": 443.213
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-MattSl.78a96c22728e.png",
+      "key": "",
+      "sha256": "78a96c22728e4457481616f76afa1a94072e866bd525c8e27c8b8714226115d0",
+      "bytes": 41002,
+      "width": 236,
+      "height": 487
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 388.085,
+      "y": 28.745,
+      "width": 200.851,
+      "height": 414.468
+     },
+     "componentId": "PSD-CRCL30-SPR-MATTSL",
+     "seatWith": "sprayer"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "circle-30ml-15-415",
+    "plateKey": "circle-30ml-15-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.811,
+    "componentIds": [
+     "PSD-CRCL30-SPR-MATTSL"
+    ],
+    "source": "PSD 15-415 Bottles/1. Circle Clear 30ml - Capped/4. GBCrcl30SpryMattSl.psd"
+   },
+   "glassSizing": {
+    "heightPct": 46,
+    "baselinePct": 91,
+    "landmarkY": 430.36,
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json"
+   },
+   "glassShoulderY": 433
+  },
+  "GBCrcl30SpryMattGl": {
+   "sku": "GBCrcl30SpryMattGl",
+   "familyId": "register:circle-30ml-15-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 10.811
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 196.596,
+      "right": 803.405,
+      "top": 261,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/body-circle-30ml-15-415-clear.4c5aab8443ff.png",
+      "key": "",
+      "sha256": "4c5aab8443ff3b5592f939124076796101ec08c170118d3338eb669d9d273b6f",
+      "bytes": 621277,
+      "width": 713,
+      "height": 940
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 196.596,
+      "y": 261.0,
+      "width": 606.809,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 468.936,
+      "top": 405.681,
+      "right": 527.659,
+      "bottom": 984.404
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/tubes/30-spray.024479f4db84.png",
+      "key": "",
+      "sha256": "024479f4db84b3bda0e55631331267c66b1f3c00111b82399e7aacf197f31094",
+      "bytes": 45758,
+      "width": 69,
+      "height": 680
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-tube:spray",
+     "box": {
+      "x": 468.936,
+      "y": 405.681,
+      "width": 58.723,
+      "height": 578.723
+     },
+     "componentId": "PSD-CRCL30-SPR-MATTGL",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 397.447,
+      "top": 59.0,
+      "right": 595.745,
+      "bottom": 440.277
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/sprayer-MattGl.c2ee9ab67ada.png",
+      "key": "",
+      "sha256": "c2ee9ab67adaa0fb5d4efdf574d180eea1559c0a82906a9487bd7a9293792a4e",
+      "bytes": 100823,
+      "width": 233,
+      "height": 448
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 397.447,
+      "y": 59.0,
+      "width": 198.298,
+      "height": 381.277
+     },
+     "componentId": "PSD-CRCL30-SPR-MATTGL",
+     "seatBottomY": 434,
+     "collarWidth": 154
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 390.638,
+      "top": 28.362,
+      "right": 594.042,
+      "bottom": 441.979
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-MattGl.4c8d54b8d374.png",
+      "key": "",
+      "sha256": "4c8d54b8d374c60f1df658a467d73f7f0fa833a6cd1e3c3e4bd40acdc309f1db",
+      "bytes": 123215,
+      "width": 239,
+      "height": 486
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 390.638,
+      "y": 28.362,
+      "width": 203.404,
+      "height": 413.617
+     },
+     "componentId": "PSD-CRCL30-SPR-MATTGL",
+     "seatWith": "sprayer"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "circle-30ml-15-415",
+    "plateKey": "circle-30ml-15-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.811,
+    "componentIds": [
+     "PSD-CRCL30-SPR-MATTGL"
+    ],
+    "source": "PSD 15-415 Bottles/1. Circle Clear 30ml - Capped/5. GBCrcl30SpryMattGl.psd"
+   },
+   "glassSizing": {
+    "heightPct": 46,
+    "baselinePct": 91,
+    "landmarkY": 430.36,
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json"
+   },
+   "glassShoulderY": 433
+  },
+  "GBCrcl30SlCap": {
+   "sku": "GBCrcl30SlCap",
+   "familyId": "register:circle-30ml-15-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 10.811
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 196.596,
+      "right": 803.405,
+      "top": 261,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/body-circle-30ml-15-415-clear.4c5aab8443ff.png",
+      "key": "",
+      "sha256": "4c5aab8443ff3b5592f939124076796101ec08c170118d3338eb669d9d273b6f",
+      "bytes": 621277,
+      "width": 713,
+      "height": 940
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 196.596,
+      "y": 261.0,
+      "width": 606.809,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 391.489,
+      "top": 110.0,
+      "right": 591.489,
+      "bottom": 439.362
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/cap-Sl.def5ad399501.png",
+      "key": "",
+      "sha256": "def5ad39950165b89b38e0301e002df7e4fe889b82a5612235ebd62a28830d3f",
+      "bytes": 40981,
+      "width": 235,
+      "height": 387
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 391.489,
+      "y": 110.0,
+      "width": 200.0,
+      "height": 329.362
+     },
+     "componentId": "PSD-CRCL30-CAP-SL",
+     "seatBottomY": 434,
+     "collarWidth": 135
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "circle-30ml-15-415",
+    "plateKey": "circle-30ml-15-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.811,
+    "componentIds": [
+     "PSD-CRCL30-CAP-SL"
+    ],
+    "source": "PSD 15-415 Bottles/1. Circle Clear 30ml - Capped/6. GBCrcl30SlCap..psd"
+   },
+   "glassSizing": {
+    "heightPct": 46,
+    "baselinePct": 91,
+    "landmarkY": 430.36,
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json"
+   },
+   "glassShoulderY": 433
+  },
+  "GBCrcl30GlCap": {
+   "sku": "GBCrcl30GlCap",
+   "familyId": "register:circle-30ml-15-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 10.811
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 196.596,
+      "right": 803.405,
+      "top": 261,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/body-circle-30ml-15-415-clear.4c5aab8443ff.png",
+      "key": "",
+      "sha256": "4c5aab8443ff3b5592f939124076796101ec08c170118d3338eb669d9d273b6f",
+      "bytes": 621277,
+      "width": 713,
+      "height": 940
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 196.596,
+      "y": 261.0,
+      "width": 606.809,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 390.638,
+      "top": 108.0,
+      "right": 590.638,
+      "bottom": 434.809
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/cap-Gl.37c4761e4993.png",
+      "key": "",
+      "sha256": "37c4761e4993e0f8369a2b839aaac9a9bc8d468f4a41bb1868dd0b1663e21108",
+      "bytes": 103955,
+      "width": 235,
+      "height": 384
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 390.638,
+      "y": 108.0,
+      "width": 200.0,
+      "height": 326.809
+     },
+     "componentId": "PSD-CRCL30-CAP-GL",
+     "seatBottomY": 434,
+     "collarWidth": 126
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "circle-30ml-15-415",
+    "plateKey": "circle-30ml-15-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.811,
+    "componentIds": [
+     "PSD-CRCL30-CAP-GL"
+    ],
+    "source": "PSD 15-415 Bottles/1. Circle Clear 30ml - Capped/7. GBCrcl30GlCap..psd"
+   },
+   "glassSizing": {
+    "heightPct": 46,
+    "baselinePct": 91,
+    "landmarkY": 430.36,
+    "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json"
+   },
+   "glassShoulderY": 433
   }
  },
  "defaultPdpSkus": [
-  "LBCrcl100LtnClOvrCap",
-  "LBCrclFrst100LtnClOvrCap",
-  "GBCrcl15RollBlkSh",
-  "GBCrcl15RollCuMatt",
-  "GBCrcl100RdcrPnkLthr",
-  "GBCrcl15RollGlMatt",
-  "GBCrcl100RdcrShnGl",
-  "GBCrcl15RollGlSh",
-  "GBCrcl100RdcrShnBlkTall",
-  "GBCrcl15RollPinkDot",
-  "GBCrcl100RdcrShnBlk",
-  "GBCrcl15RollSlDot",
-  "GBCrcl100RdcrBrwnLthr",
-  "GBCrcl15RollSlMatt",
-  "GBCrcl15RollSlSh",
-  "GBCrcl100RdcrLBrwnLthr",
-  "GBCrcl100RdcrShnSl",
-  "GBCrcl100RdcrMtSlTall",
-  "GBCrcl100RdcrMtSl",
-  "GBCrcl100RdcrWht",
-  "GBCrcl100RdcrIvyLthr",
-  "GBCrclFrst100RdcrShnSl",
-  "GBCrclFrst100RdcrShnGl",
-  "GBCrclFrst100RdcrIvyLthr",
-  "GBCrclFrst100RdcrPnkLthr",
-  "GBCrclFrst100RdcrShnBlkTall",
-  "GBCrclFrst100RdcrShnBlk",
-  "GBCrclFrst100RdcrBrwnLthr",
-  "GBCrclFrst100RdcrLBrwnLthr",
-  "GBCrclFrst100RdcrMtSlTall",
-  "GBCrclFrst100RdcrMtSl",
-  "GBCrclFrst100RdcrWht",
-  "GBCrcl50SpryMtSl",
-  "GBCrcl50SpryMtGl",
-  "GBCrcl50SpryShnGl",
-  "GBCrcl50SpryShnBlk",
-  "GBCrcl50SpryShnSl",
-  "GBCrclFrst50SpryMtGl",
-  "GBCrclFrst50SpryShnGl",
-  "GBCrclFrst50SpryShnBlk",
-  "GBCrclFrst50SpryMtSl",
-  "GBCrcl15SpryBlkMatt",
-  "GBCrclFrst50SpryShnSl",
-  "GBCrcl50SpryCu",
-  "GBCrcl50DrpSl",
-  "GBCrclFrst50SpryCu",
-  "GBCrcl50DrpGl",
-  "GBCrclFrst50DrpSl",
-  "GBCrcl15Gl",
-  "GBCrclFrst50DrpGl",
-  "GBCrcl15Sl",
-  "GBCrcl15WhtSht",
-  "GBCrcl15BlkSht",
-  "GBCrcl100SpryCu",
-  "GBCrclFrst100SpryCu",
-  "GBCrcl100SpryMtGl",
-  "GBCrcl50RdcrBlkLthr",
-  "GBCrcl100SpryShnGl",
-  "GBCrclFrst50RdcrBlkLthr",
-  "GBCrcl100SpryShnBlk",
-  "GBCrcl100SpryMtSl",
-  "GBCrcl100SpryShnSl",
-  "GBCrclFrst100SpryMtGl",
-  "GBCrclFrst100SpryShnGl",
-  "GBCrclFrst100SpryShnBlk",
-  "GBCrclFrst100SpryMtSl",
-  "GBCrclFrst100SpryShnSl",
-  "GBCrcl50AnSpBlk",
-  "GBCrcl100RdcrBlkLthr",
-  "GBCrcl50AnSpTslBlk",
-  "GBCrclFrst100RdcrBlkLthr",
-  "GBCrclFrst50AnSpBlk",
   "GBCrcl100AnSpBlk",
-  "GBCrcl100AnSpTslBlk",
-  "GBCrclFrst100AnSpBlk",
-  "GBCrclFrst100AnSpTslBlk",
   "GBCrcl100AnSpGl",
-  "GBCrcl100AnSpLvn",
-  "GBCrcl100AnSpIvySl",
-  "GBCrcl100AnSpRed",
-  "GBCrcl100AnSpMtSl",
   "GBCrcl100AnSpIvyGl",
-  "GBCrcl100AnSpWht",
+  "GBCrcl100AnSpIvySl",
+  "GBCrcl100AnSpLvn",
+  "GBCrcl100AnSpMtSl",
   "GBCrcl100AnSpPnk",
+  "GBCrcl100AnSpRed",
+  "GBCrcl100AnSpTslBlk",
   "GBCrcl100AnSpTslGl",
   "GBCrcl100AnSpTslIvyGl",
-  "GBCrcl100AnSpTslLvn",
-  "GBCrcl100AnSpTslPnk",
   "GBCrcl100AnSpTslIvySl",
+  "GBCrcl100AnSpTslLvn",
+  "GBCrcl100AnSpTslMtSl",
+  "GBCrcl100AnSpTslPnk",
   "GBCrcl100AnSpTslRed",
   "GBCrcl100AnSpTslWht",
-  "GBCrcl15RollBlkDot",
-  "GBCrcl100AnSpTslMtSl",
-  "GBCrclFrst100AnSpGl",
-  "GBCrclFrst100AnSpIvyGl",
-  "GBCrclFrst100AnSpLvn",
-  "GBCrclFrst100AnSpPnk",
-  "GBCrclFrst100AnSpRed",
-  "GBCrclFrst100AnSpMtSl",
-  "GBCrclFrst100AnSpWht",
-  "GBCrclFrst100AnSpIvySl",
-  "GBCrclFrst100AnSpTslIvyGl",
-  "GBCrclFrst100AnSpTslIvySl",
-  "GBCrclFrst100AnSpTslGl",
-  "GBCrclFrst100AnSpTslLvn",
-  "GBCrclFrst100AnSpTslPnk",
-  "GBCrclFrst100AnSpTslRed",
-  "GBCrclFrst100AnSpTslWht",
-  "GBCrclFrst100AnSpTslMtSl",
-  "LBCrcl50LtnMtGl",
-  "GBCrcl50RdcrShnSl",
-  "LBCrcl50LtnShnGl",
-  "LBCrcl50LtnShnBlk",
-  "GBCrcl50RdcrShnGl",
-  "LBCrcl50LtnMtSl",
-  "GBCrcl50RdcrIvyLthr",
-  "LBCrcl50LtnShnSl",
-  "GBCrcl50RdcrPnkLthr",
-  "LBCrcl50LtnCu",
-  "GBCrcl50RdcrShnBlkTall",
-  "LBCrclFrst50LtnMtGl",
-  "GBCrcl50RdcrShnBlk",
-  "LBCrclFrst50LtnShnGl",
-  "GBCrcl50RdcrBrwnLthr",
-  "LBCrclFrst50LtnShnBlk",
-  "GBCrcl50RdcrLBrwnLthr",
-  "LBCrclFrst50LtnMtSl",
-  "GBCrcl50RdcrMtSlTall",
-  "LBCrclFrst50LtnShnSl",
-  "GBCrcl50RdcrWht",
-  "LBCrclFrst50LtnCu",
-  "GBCrcl50RdcrMtSl",
-  "GBCrclFrst50RdcrShnGl",
+  "GBCrcl100AnSpWht",
+  "GBCrcl100RdcrBlkLthr",
+  "GBCrcl100RdcrBrwnLthr",
+  "GBCrcl100RdcrIvyLthr",
+  "GBCrcl100RdcrLBrwnLthr",
+  "GBCrcl100RdcrMtSl",
+  "GBCrcl100RdcrMtSlTall",
+  "GBCrcl100RdcrPnkLthr",
+  "GBCrcl100RdcrShnBlk",
+  "GBCrcl100RdcrShnBlkTall",
+  "GBCrcl100RdcrShnGl",
+  "GBCrcl100RdcrShnSl",
+  "GBCrcl100RdcrWht",
+  "GBCrcl100SpryCu",
+  "GBCrcl100SpryMtGl",
+  "GBCrcl100SpryMtSl",
+  "GBCrcl100SpryShnBlk",
+  "GBCrcl100SpryShnGl",
+  "GBCrcl100SpryShnSl",
+  "GBCrcl15BlkShSht",
+  "GBCrcl15BlkSht",
+  "GBCrcl15CuSht",
+  "GBCrcl15Gl",
+  "GBCrcl15GlMattSht",
+  "GBCrcl15GlSht",
   "GBCrcl15MtlRollBlkDot",
-  "GBCrclFrst50RdcrShnBlkTall",
-  "GBCrclFrst50RdcrShnBlk",
-  "GBCrclFrst50RdcrBrwnLthr",
-  "GBCrclFrst50RdcrLBrwnLthr",
-  "GBCrclFrst50RdcrShnSl",
-  "GBCrclFrst50RdcrMtSl",
-  "GBCrclFrst50RdcrWht",
-  "GBCrclFrst50RdcrPnkLthr",
-  "GBCrclFrst50RdcrIvyLthr",
-  "GBCrcl15SpryBlkSh",
-  "GBCrcl50AnSpLvn",
-  "GBCrcl15SpryBluMatt",
-  "GBCrcl50AnSpPnk",
-  "GBCrcl15SpryCuMatt",
-  "GBCrcl50AnSpMtSl",
-  "GBCrcl15SpryGlMatt",
-  "GBCrcl50AnSpIvySl",
-  "GBCrcl15SpryGlSh",
-  "GBCrcl50AnSpGl",
-  "GBCrcl15SprySlMatt",
-  "GBCrcl50AnSpIvyGl",
-  "GBCrcl15SprySlSh",
-  "GBCrcl50AnSpWht",
-  "GBCrcl50AnSpRed",
-  "GBCrcl50AnSpTslLvn",
-  "GBCrcl50AnSpTslIvyGl",
-  "GBCrcl50AnSpTslIvySl",
-  "LBCrcl100LtnMtGl",
-  "GBCrcl50AnSpTslWht",
-  "LBCrcl100LtnShnGl",
-  "GBCrcl50AnSpTslPnk",
-  "LBCrcl100LtnShnBlk",
-  "GBCrcl50AnSpTslRed",
-  "LBCrcl100LtnMtSl",
-  "GBCrcl50DrpCu",
-  "GBCrcl50AnSpTslMtSl",
-  "LBCrcl100LtnShnSl",
-  "GBCrclFrst50DrpCu",
-  "GBCrcl50AnSpTslGl",
-  "LBCrcl100LtnCu",
-  "GBCrclFrst50AnSpLvn",
-  "LBCrclFrst100LtnMtGl",
-  "GBCrclFrst50AnSpPnk",
-  "LBCrclFrst100LtnShnGl",
-  "GBCrclFrst50AnSpMtSl",
-  "LBCrclFrst100LtnShnBlk",
-  "GBCrclFrst50AnSpIvySl",
-  "LBCrclFrst100LtnMtSl",
-  "GBCrclFrst50AnSpGl",
-  "LBCrclFrst100LtnShnSl",
-  "GBCrclFrst50AnSpIvyGl",
-  "LBCrclFrst100LtnCu",
   "GBCrcl15MtlRollBlkSh",
-  "GBCrclFrst50AnSpWht",
   "GBCrcl15MtlRollCuMatt",
-  "GBCrclFrst50AnSpRed",
   "GBCrcl15MtlRollGlMatt",
   "GBCrcl15MtlRollGlSh",
   "GBCrcl15MtlRollPinkDot",
   "GBCrcl15MtlRollSlDot",
   "GBCrcl15MtlRollSlMatt",
   "GBCrcl15MtlRollSlSh",
-  "LBCrcl50LtnClOvrCap",
-  "LBCrclFrst50LtnClOvrCap",
+  "GBCrcl15RollBlkDot",
+  "GBCrcl15RollBlkSh",
+  "GBCrcl15RollCuMatt",
+  "GBCrcl15RollGlMatt",
+  "GBCrcl15RollGlSh",
+  "GBCrcl15RollPinkDot",
+  "GBCrcl15RollSlDot",
+  "GBCrcl15RollSlMatt",
+  "GBCrcl15RollSlSh",
+  "GBCrcl15Sl",
+  "GBCrcl15SlMattSht",
+  "GBCrcl15SlSht",
+  "GBCrcl15SpryBlkMatt",
+  "GBCrcl15SpryBlkSh",
+  "GBCrcl15SpryBluMatt",
+  "GBCrcl15SpryCuMatt",
+  "GBCrcl15SpryGlMatt",
+  "GBCrcl15SpryGlSh",
+  "GBCrcl15SprySlMatt",
+  "GBCrcl15SprySlSh",
+  "GBCrcl15WhtSht",
+  "GBCrcl30GlCap",
+  "GBCrcl30SlCap",
+  "GBCrcl30SpryBlk",
+  "GBCrcl30SpryMattGl",
+  "GBCrcl30SpryMattSl",
+  "GBCrcl30SpryShSl",
+  "GBCrcl30SpryShnGl",
+  "GBCrcl50AnSpBlk",
+  "GBCrcl50AnSpGl",
+  "GBCrcl50AnSpIvyGl",
+  "GBCrcl50AnSpIvySl",
+  "GBCrcl50AnSpLvn",
+  "GBCrcl50AnSpMtSl",
+  "GBCrcl50AnSpPnk",
+  "GBCrcl50AnSpRed",
+  "GBCrcl50AnSpTslBlk",
+  "GBCrcl50AnSpTslGl",
+  "GBCrcl50AnSpTslIvyGl",
+  "GBCrcl50AnSpTslIvySl",
+  "GBCrcl50AnSpTslLvn",
+  "GBCrcl50AnSpTslMtSl",
+  "GBCrcl50AnSpTslPnk",
+  "GBCrcl50AnSpTslRed",
+  "GBCrcl50AnSpTslWht",
+  "GBCrcl50AnSpWht",
+  "GBCrcl50DrpCu",
+  "GBCrcl50DrpGl",
+  "GBCrcl50DrpSl",
+  "GBCrcl50RdcrBlkLthr",
+  "GBCrcl50RdcrBrwnLthr",
+  "GBCrcl50RdcrIvyLthr",
+  "GBCrcl50RdcrLBrwnLthr",
+  "GBCrcl50RdcrMtSl",
+  "GBCrcl50RdcrMtSlTall",
+  "GBCrcl50RdcrPnkLthr",
+  "GBCrcl50RdcrShnBlk",
+  "GBCrcl50RdcrShnBlkTall",
+  "GBCrcl50RdcrShnGl",
+  "GBCrcl50RdcrShnSl",
+  "GBCrcl50RdcrWht",
+  "GBCrcl50SpryCu",
+  "GBCrcl50SpryMtGl",
+  "GBCrcl50SpryMtSl",
+  "GBCrcl50SpryShnBlk",
+  "GBCrcl50SpryShnGl",
+  "GBCrcl50SpryShnSl",
+  "GBCrclFrst100AnSpBlk",
+  "GBCrclFrst100AnSpGl",
+  "GBCrclFrst100AnSpIvyGl",
+  "GBCrclFrst100AnSpIvySl",
+  "GBCrclFrst100AnSpLvn",
+  "GBCrclFrst100AnSpMtSl",
+  "GBCrclFrst100AnSpPnk",
+  "GBCrclFrst100AnSpRed",
+  "GBCrclFrst100AnSpTslBlk",
+  "GBCrclFrst100AnSpTslGl",
+  "GBCrclFrst100AnSpTslIvyGl",
+  "GBCrclFrst100AnSpTslIvySl",
+  "GBCrclFrst100AnSpTslLvn",
+  "GBCrclFrst100AnSpTslMtSl",
+  "GBCrclFrst100AnSpTslPnk",
+  "GBCrclFrst100AnSpTslRed",
+  "GBCrclFrst100AnSpTslWht",
+  "GBCrclFrst100AnSpWht",
+  "GBCrclFrst100RdcrBlkLthr",
+  "GBCrclFrst100RdcrBrwnLthr",
+  "GBCrclFrst100RdcrIvyLthr",
+  "GBCrclFrst100RdcrLBrwnLthr",
+  "GBCrclFrst100RdcrMtSl",
+  "GBCrclFrst100RdcrMtSlTall",
+  "GBCrclFrst100RdcrPnkLthr",
+  "GBCrclFrst100RdcrShnBlk",
+  "GBCrclFrst100RdcrShnBlkTall",
+  "GBCrclFrst100RdcrShnGl",
+  "GBCrclFrst100RdcrShnSl",
+  "GBCrclFrst100RdcrWht",
+  "GBCrclFrst100SpryCu",
+  "GBCrclFrst100SpryMtGl",
+  "GBCrclFrst100SpryMtSl",
+  "GBCrclFrst100SpryShnBlk",
+  "GBCrclFrst100SpryShnGl",
+  "GBCrclFrst100SpryShnSl",
+  "GBCrclFrst50AnSpBlk",
+  "GBCrclFrst50AnSpGl",
+  "GBCrclFrst50AnSpIvyGl",
+  "GBCrclFrst50AnSpIvySl",
+  "GBCrclFrst50AnSpLvn",
+  "GBCrclFrst50AnSpMtSl",
+  "GBCrclFrst50AnSpPnk",
+  "GBCrclFrst50AnSpRed",
   "GBCrclFrst50AnSpTslBlk",
   "GBCrclFrst50AnSpTslGl",
   "GBCrclFrst50AnSpTslIvyGl",
@@ -40048,12 +41249,55 @@
   "GBCrclFrst50AnSpTslPnk",
   "GBCrclFrst50AnSpTslRed",
   "GBCrclFrst50AnSpTslWht",
-  "GBCrcl15CuSht",
-  "GBCrcl15GlMattSht",
-  "GBCrcl15SlMattSht",
-  "GBCrcl15BlkShSht",
-  "GBCrcl15GlSht",
-  "GBCrcl15SlSht"
+  "GBCrclFrst50AnSpWht",
+  "GBCrclFrst50DrpCu",
+  "GBCrclFrst50DrpGl",
+  "GBCrclFrst50DrpSl",
+  "GBCrclFrst50RdcrBlkLthr",
+  "GBCrclFrst50RdcrBrwnLthr",
+  "GBCrclFrst50RdcrIvyLthr",
+  "GBCrclFrst50RdcrLBrwnLthr",
+  "GBCrclFrst50RdcrMtSl",
+  "GBCrclFrst50RdcrPnkLthr",
+  "GBCrclFrst50RdcrShnBlk",
+  "GBCrclFrst50RdcrShnBlkTall",
+  "GBCrclFrst50RdcrShnGl",
+  "GBCrclFrst50RdcrShnSl",
+  "GBCrclFrst50RdcrWht",
+  "GBCrclFrst50SpryCu",
+  "GBCrclFrst50SpryMtGl",
+  "GBCrclFrst50SpryMtSl",
+  "GBCrclFrst50SpryShnBlk",
+  "GBCrclFrst50SpryShnGl",
+  "GBCrclFrst50SpryShnSl",
+  "LBCrcl100LtnClOvrCap",
+  "LBCrcl100LtnCu",
+  "LBCrcl100LtnMtGl",
+  "LBCrcl100LtnMtSl",
+  "LBCrcl100LtnShnBlk",
+  "LBCrcl100LtnShnGl",
+  "LBCrcl100LtnShnSl",
+  "LBCrcl50LtnClOvrCap",
+  "LBCrcl50LtnCu",
+  "LBCrcl50LtnMtGl",
+  "LBCrcl50LtnMtSl",
+  "LBCrcl50LtnShnBlk",
+  "LBCrcl50LtnShnGl",
+  "LBCrcl50LtnShnSl",
+  "LBCrclFrst100LtnClOvrCap",
+  "LBCrclFrst100LtnCu",
+  "LBCrclFrst100LtnMtGl",
+  "LBCrclFrst100LtnMtSl",
+  "LBCrclFrst100LtnShnBlk",
+  "LBCrclFrst100LtnShnGl",
+  "LBCrclFrst100LtnShnSl",
+  "LBCrclFrst50LtnClOvrCap",
+  "LBCrclFrst50LtnCu",
+  "LBCrclFrst50LtnMtGl",
+  "LBCrclFrst50LtnMtSl",
+  "LBCrclFrst50LtnShnBlk",
+  "LBCrclFrst50LtnShnGl",
+  "LBCrclFrst50LtnShnSl"
  ],
  "universalDipTube": {
   "100-lotion": {
@@ -40228,6 +41472,17 @@
     "LBCrclFrst50LtnShnBlk",
     "LBCrclFrst50LtnShnGl",
     "LBCrclFrst50LtnShnSl"
+   ]
+  },
+  "30-spray": {
+   "url": "/local-kits/circle-masters-2026-11-03/tubes/30-spray.024479f4db84.png",
+   "psd": "15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/1. GBCrcl30SpryBlk.psd",
+   "skus": [
+    "GBCrcl30SpryBlk",
+    "GBCrcl30SpryMattGl",
+    "GBCrcl30SpryMattSl",
+    "GBCrcl30SpryShSl",
+    "GBCrcl30SpryShnGl"
    ]
   }
  }

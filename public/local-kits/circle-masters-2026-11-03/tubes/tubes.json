@@ -1,4 +1,23 @@
 {
+ "30-spray": {
+  "psd": "15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/1. GBCrcl30SpryBlk.psd",
+  "layer": "Layer 3",
+  "left": -0.038829787234042554,
+  "top": 0.18085106382978725,
+  "width": 0.07340425531914893,
+  "height": 0.723404255319149,
+  "registeredOutlineIoU": 0.6851,
+  "scale": 0.9956,
+  "shift": [
+   2,
+   0
+  ],
+  "file": "/local-kits/circle-masters-2026-11-03/tubes/30-spray.024479f4db84.png",
+  "pixels": [
+   69,
+   680
+  ]
+ },
  "15-spray": {
   "psd": "5. 13-415 Bottles PSD/17. Circle 15ml/6. GBCrcl15SpryGlSh.psd",
   "layer": "Layer 16",
