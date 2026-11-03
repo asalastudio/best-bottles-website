@@ -377,7 +377,9 @@ export function stageLayout(
 
     const glass = sorted.find((part) => part.slot === "body");
     const reviewedFrame = kit.glassSizing && glass
-        ? pdpReviewedGlassFrame(glass.bounds, kit.anchors.axisX, kit.glassSizing, canvas.width, canvas.height)
+        ? pdpReviewedGlassFrame(glass.bounds, kit.anchors.axisX,
+            { ...kit.glassSizing, axisPct: (view === "exploded" ? kit.glassSizing.explodedAxisPct : view === "sidecar" ? kit.glassSizing.sidecarAxisPct : undefined) ?? kit.glassSizing.axisPct },
+            canvas.width, canvas.height)
         : null;
     // Size the bare glass, with one uniform transform for the entire assembly.
     // Keep its size and foot fixed when a cap changes or the parts are lifted.
