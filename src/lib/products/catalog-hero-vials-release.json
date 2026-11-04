@@ -283,24 +283,5 @@
       "translateXPercent": 0,
       "translateYPercent": 0
     }
-  },
-  {
-    "groupSlug": "lotion-bottle-3ml-clear-snap",
-    "websiteSku": "LB3mlClear",
-    "graceSku": "LB-LTB-CLR-3ML-CLR-T",
-    "shopifyVariantId": "gid://shopify/ProductVariant/53343698092324",
-    "family": "Lotion Bottle",
-    "capacityMl": 3,
-    "bottleColor": "Clear",
-    "alt": "3 ml Clear Plastic Sample Vial with Fine Mist Sprayer and Cap",
-    "presentation": "Empty · cap beside",
-    "url": "/images/catalog/vials-approved-2026-09-25/LB3mlClear.fb8867d925b7.webp",
-    "width": 1560,
-    "height": 1716,
-    "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
-    }
   }
 ]

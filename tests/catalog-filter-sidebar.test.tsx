@@ -60,7 +60,30 @@ describe("catalog filter sidebar (design 8a)", () => {
         expect(families.join(" ")).not.toMatch(/Cream Jar|Atomizer/);
         const empty = rows("catalog-filter-family").find((row) => row.textContent?.startsWith("Circle"))!;
         expect(empty.querySelector("input")!.disabled).toBe(true);
-        expect(section("catalog-filter-family").textContent).toContain("Show all 22");
+        // 2026-11-03: Teardrop and Pillar left the list (Apothecary, Cylinder) and six families share the Unique Shapes row.
+        expect(section("catalog-filter-family").textContent).toContain("Show all 15");
+    });
+
+    it("groups Royal, Rectangle, Square, Flair, Bell and Tulip under Unique Shapes, each still listed by name", () => {
+        facets.families = { ...facets.families, Royal: 4, Square: 3, Tulip: 2 };
+        try {
+            const { onFilterChange } = render();
+            const group = el.querySelector<HTMLElement>('[data-testid="catalog-filter-family-group"]')!;
+            expect(group.textContent).toMatch(/^Unique Shapes9/);
+            expect(rows("catalog-filter-family").some((row) => row.textContent === "Royal4")).toBe(false);
+            click(group.querySelector('button[aria-expanded]')!);
+            expect([...group.querySelectorAll('[data-testid="catalog-filter-option"]')].map((row) => row.textContent))
+                .toEqual(["Unique Shapes9", "Royal4", "Square3", "Tulip2", "Rectangle0", "Flair0", "Bell0"]);
+            click(group.querySelector("input")!);
+            expect(onFilterChange).toHaveBeenLastCalledWith({ families: ["Royal", "Square", "Tulip"] });
+            act(() => root.unmount()); el.remove();
+            const second = render({ families: ["Royal", "Square", "Tulip", "Cylinder"] });
+            const checked = el.querySelector<HTMLElement>('[data-testid="catalog-filter-family-group"]')!;
+            click(checked.querySelector("input")!);
+            expect(second.onFilterChange).toHaveBeenLastCalledWith({ families: ["Cylinder"] });
+        } finally {
+            facets.families = { Cylinder: 9, Elegant: 3, "Cream Jar": 2, Atomizer: 4 };
+        }
     });
 
     it("counts capacity ranges from the exact sizes, decimals included", () => {

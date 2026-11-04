@@ -11,9 +11,11 @@ import nextBatchReleaseRows from "./catalog-hero-next-batch-release.json";
 import batch3ReleaseRows from "./catalog-hero-batch3-release.json";
 import vialsReleaseRows from "./catalog-hero-vials-release.json";
 import batch6ReleaseRows from "./catalog-hero-batch6-release.json";
+// 2026-11-03 reshoots (heart flat lays, 3 ml tola and spray straight-on): first, so they win over earlier rows.
+import reshoot20261103Rows from "./catalog-hero-reshoot-2026-11-03.json";
 
 export type CatalogHero = Omit<(typeof heroRows)[number], "shopifyVariantId"> & { shopifyVariantId: string | null };
-const completePilotRows = [...pilotRows, ...crePilotRows, ...elegantReleaseRows, ...bostonDivaReleaseRows, ...sleekReleaseRows, ...apothecaryReleaseRows, ...remaining42ReleaseRows, ...nextBatchReleaseRows, ...batch3ReleaseRows, ...vialsReleaseRows, ...batch6ReleaseRows];
+const completePilotRows = [...reshoot20261103Rows, ...pilotRows, ...crePilotRows, ...elegantReleaseRows, ...bostonDivaReleaseRows, ...sleekReleaseRows, ...apothecaryReleaseRows, ...remaining42ReleaseRows, ...nextBatchReleaseRows, ...batch3ReleaseRows, ...vialsReleaseRows, ...batch6ReleaseRows];
 function activePilotRows(): CatalogHero[] {
     return process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT === "families-2026-09-22"
         ? completePilotRows : pilotRows;
