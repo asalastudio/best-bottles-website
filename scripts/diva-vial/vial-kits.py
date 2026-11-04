@@ -14,7 +14,8 @@ one glass per size, on the stage datum at the size's bare height and catalog-sca
 - 2 ml amber 8-425 (GBVAmb2BlackCap, GBVAmb2WhtCap): the approved kits, untouched in production; Jordan (3 Nov 2026)
   asked for the vial "a tad bit thinner", then "more slim ... and the mouth the neck should be narrower as well": the
   review copy reshapes the photographs in place, the body BODY_2ML as wide and the neck, finish and mouth NECK_2ML
-  (blended through the shoulder), the cap NECK_2ML to fit the finish; heights and boxes unchanged.
+  (blended through the shoulder), the cap NECK_2ML to fit the finish; heights and boxes unchanged. Jordan (4 Nov 2026):
+  "slim clear too": the 2 ml clear 8-425 (GBVialClr2mlBlackCap, GBVialClr2mlWhtCap) reshaped the same way.
 - 3 ml clear tola (GB3TPlGl) and 3 ml clear spray bottle (LB3mlClear): Jordan (3 Nov 2026) "the product page needs to
   be corrected. The plastic applicator is missing. The cap is missing. And it looks like it's the 6 mL". The register
   drew the tola from a generic 14.3 mm plug and plate; these kits take each SKU's own PSD: the tola glass with its white
@@ -39,6 +40,7 @@ SEAT = BASE - BARE_PX
 THROUGH_GLASS = 2.6
 BODY_2ML = 0.90         # the 2 ml amber's body width against the approved photograph
 NECK_2ML = 0.85         # its neck, finish and mouth (and the cap that fits them)
+SLIM_2ML = ("GBVAmb2BlackCap", "GBVAmb2WhtCap", "GBVialClr2mlBlackCap", "GBVialClr2mlWhtCap")
 CLEAR_PROMPT = """1. Keep geometry locked to the first image: the same small tubular vial, its rim, walls, rounded base and thickness, at the same position and size in the frame. Do not redraw the shape.
 2. Clear, colourless glass as in the second image (a photograph of the same vial): fully transparent, the background seen through it unchanged, crisp dark refraction lines along the walls, a thick clear base. Not amber, no tint, no liquid, no cap, no rod, no label.
 3. Crisp clean edges, photographic studio packshot quality.
@@ -287,9 +289,9 @@ def main():
     # Its page is the legacy PDP, whose mobile viewer draws kit layers as whole-canvas images: give it full-canvas layers.
     rows["LB3mlClear"] = full_canvas(rows["LB3mlClear"])
 
-    # 2 ml amber: the approved kits reshaped in place (boxes unchanged): the body slimmer, the neck and mouth narrower.
+    # 2 ml amber and clear: the approved kits reshaped in place (boxes unchanged): the body slimmer, the neck and mouth narrower.
     approved = json.load(open("src/lib/paper-doll/approved-kits.generated.json"))["rows"]
-    for sku in ("GBVAmb2BlackCap", "GBVAmb2WhtCap"):
+    for sku in SLIM_2ML:
         k = json.loads(json.dumps(approved[sku]))
         for p in k["parts"]:
             src = Image.open(io.BytesIO(urllib.request.urlopen(p["image"]["url"]).read())).convert("RGBA")

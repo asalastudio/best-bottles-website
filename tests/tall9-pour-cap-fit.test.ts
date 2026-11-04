@@ -6,6 +6,7 @@ import index from '@/lib/paper-doll/approved-kit-index.json';
 import { stageLayout, type KitLike } from '@/lib/products/pdp-redesign/stage';
 vi.mock('server-only', () => ({}));
 import { localGpt13ComponentKits, localPdpComponentKits, readLocalComponentKits } from '@/lib/paper-doll/local-component-kits';
+import { beforeVialRelease } from './helpers/vial-release-2026-11-04';
 const dir = 'docs/reviews/tall9-pour-cap-fit-2026-11-01/';
 const before = JSON.parse(readFileSync(dir + 'before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const prior = JSON.parse(readFileSync(dir + 'prior-recipe-hashes.json', 'utf8')).recipes;
@@ -36,8 +37,8 @@ describe('9 ml 13-415 pour-cap visible-edge registration', () => {
     });
     it('keeps all other 436 recipes unchanged and shares the fit with current pages, pilots and builder', () => {
         let count = 0;
-        for (const [sku, digest] of Object.entries(prior)) if (!before[sku]) { expect(hash(lotionTubeBefore[sku] ?? rows[sku]), sku).toBe(digest); count++; }
-        expect(count).toBe(436); expect(Object.keys(rows)).toHaveLength(659);
+        for (const [sku, digest] of Object.entries(prior)) if (!before[sku]) { expect(hash(lotionTubeBefore[sku] ?? beforeVialRelease(rows)[sku]), sku).toBe(digest); count++; }
+        expect(count).toBe(436); expect(Object.keys(rows)).toHaveLength(671);
         expect(index.skus).toEqual(Object.keys(rows).sort()); expect(index.version).toBe(manifest.version);
         vi.stubEnv('NODE_ENV', 'development'); vi.stubEnv('VERCEL', '');
         const normal = localPdpComponentKits('localhost:3010', undefined, Object.keys(before).map(websiteSku => ({ websiteSku })));

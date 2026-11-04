@@ -9,6 +9,7 @@ import { SLEEK8_MASTER_REVIEW_VERSION, sleek8ReviewSku } from '@/lib/products/sl
 vi.mock('server-only', () => ({}));
 import { localGpt13ComponentKits, localPdpComponentKits } from '@/lib/paper-doll/local-component-kits';
 import { GET } from '@/app/api/bottle-masters/sleek8/route';
+import { beforeVialRelease } from './helpers/vial-release-2026-11-04';
 // Reconstruct the historical approval before the later tube-only lotion revision.
 const lotionTubeBefore = JSON.parse(readFileSync('docs/reviews/cylinder-lotion-pumps-2026-11-02/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const capFitBefore = JSON.parse(readFileSync('docs/reviews/tall9-pour-cap-fit-2026-11-01/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
@@ -59,7 +60,7 @@ describe('Sleek 8 ml regenerated glass and internal tube candidate', () => {
         }
     });
     it('preserves approved body pixels and shares the local candidate across PDP, catalog and builder inputs', () => {
-        const baseline = structuredClone(manifest.rows) as unknown as Record<string, KitLike>;
+        const baseline = structuredClone(beforeVialRelease(manifest.rows)) as unknown as Record<string, KitLike>;   // as before the Vial release (2026-11-04)
         const laterAdditions = [...read('docs/reviews/hosted-vial3-jumbo28-2026-11-02/release-manifest.json').addedSkus as string[],
             ...read('docs/reviews/hosted-elegant-masters-2026-11-03/release-manifest.json').addedSkus as string[]];
         for (const sku of laterAdditions) delete baseline[sku];

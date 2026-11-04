@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import manifest from '@/lib/paper-doll/approved-kits.generated.json';
+import { beforeVialRelease } from './helpers/vial-release-2026-11-04';
 import index from '@/lib/paper-doll/approved-kit-index.json';
 import { cylinderMasterSku, cylinderMasterSource } from '@/lib/products/cylinder-master';
 import { stageLayout, type KitLike } from '@/lib/products/pdp-redesign/stage';
@@ -59,8 +60,8 @@ describe('Rectangle 10 ml roll-on shared hero', () => {
         }
     });
     it('preserves every earlier recipe and excludes unrelated Rectangle products', () => {
-        for (const [sku, expected] of Object.entries(prior.recipes)) expect(hash(lotionTubeBefore[sku] ?? capFitBefore[sku] ?? rows[sku]), sku).toBe(expected);
-        expect(Object.keys(rows)).toHaveLength(prior.count + 18 + 7 + 196);   // + the Elegant masters (2026-11-03)
+        for (const [sku, expected] of Object.entries(prior.recipes)) expect(hash(lotionTubeBefore[sku] ?? capFitBefore[sku] ?? beforeVialRelease(rows)[sku]), sku).toBe(expected);
+        expect(Object.keys(rows)).toHaveLength(prior.count + 18 + 7 + 196 + 12);   // + the Elegant masters (2026-11-03) + 12 Vial masters (2026-11-04)
         expect(index.skus).toEqual(Object.keys(rows).sort());
         expect(index.version).toBe(manifest.version);
         expect(cylinderMasterSku('GBRect10SpryGlMatt')).toBeNull();

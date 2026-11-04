@@ -1,0 +1,21 @@
+[
+  {
+    "groupSlug": "vial-2ml-amber-13-425",
+    "websiteSku": "GBVAmb1o5BlackCapSht",
+    "graceSku": "GBVAmb1o5BlackCapSht",
+    "shopifyVariantId": "gid://shopify/ProductVariant/67997290234148",
+    "family": "Vial",
+    "capacityMl": 2,
+    "bottleColor": "Amber",
+    "alt": "2 ml Amber Vial with Black Screw Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/vial2-black-cap-2026-11-04/GBVAmb1o5BlackCapSht.4fe4654a25ca.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  }
+]
