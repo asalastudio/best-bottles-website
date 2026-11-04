@@ -1,0 +1,1564 @@
+{
+ "version": "137dcae8cd91",
+ "rows": {
+  "GB1mlAmbVBlk": {
+   "sku": "GB1mlAmbVBlk",
+   "familyId": "register:vial-1ml-Plug|Amber",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 22.857
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 415.455,
+      "top": 261,
+      "right": 584.546,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.7131a32187bd.png",
+      "key": "",
+      "sha256": "7131a32187bdba3e2767ec777dbb8fbf906ba0766295e5e0a659fd378ce07adf",
+      "bytes": 55067,
+      "width": 93,
+      "height": 440
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 415.455,
+      "y": 261.0,
+      "width": 169.091,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 356.364,
+      "top": 101.0,
+      "right": 587.273,
+      "bottom": 917.364
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.b3f9e4c45e2d.png",
+      "key": "",
+      "sha256": "b3f9e4c45e2d2047d517ff5afdcc723aa7898f78ebd66c1e9d8cb0bbf4ddb67a",
+      "bytes": 19405,
+      "width": 127,
+      "height": 449
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 356.364,
+      "y": 101.0,
+      "width": 230.909,
+      "height": 816.364
+     },
+     "componentId": "PSD-VIAL1-PLUG-BLK"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "vial-1ml-Plug",
+    "plateKey": "vial-1ml-Plug|Amber",
+    "glass": "Amber",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 22.857,
+    "componentIds": [
+     "PSD-VIAL1-PLUG-BLK"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 40.24,
+    "baselinePct": 91,
+    "landmarkY": 261,
+    "source": "docs/hero-families/vials-2026-09-25/approval.json"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "GB1mlAmbVialWht": {
+   "sku": "GB1mlAmbVialWht",
+   "familyId": "register:vial-1ml-Plug|Amber",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 22.857
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 415.455,
+      "top": 261,
+      "right": 584.546,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.7131a32187bd.png",
+      "key": "",
+      "sha256": "7131a32187bdba3e2767ec777dbb8fbf906ba0766295e5e0a659fd378ce07adf",
+      "bytes": 55067,
+      "width": 93,
+      "height": 440
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 415.455,
+      "y": 261.0,
+      "width": 169.091,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 350.0,
+      "top": 86.455,
+      "right": 591.818,
+      "bottom": 911.91
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.cfae9072c2a9.png",
+      "key": "",
+      "sha256": "cfae9072c2a9317221fa6fb5a492b86eb7f3d6ebff7eaa3709620cc8ef48cd65",
+      "bytes": 19426,
+      "width": 133,
+      "height": 454
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 350.0,
+      "y": 86.455,
+      "width": 241.818,
+      "height": 825.455
+     },
+     "componentId": "PSD-VIAL1-PLUG-WHT",
+     "blendMode": "multiply"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "vial-1ml-Plug",
+    "plateKey": "vial-1ml-Plug|Amber",
+    "glass": "Amber",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 22.857,
+    "componentIds": [
+     "PSD-VIAL1-PLUG-WHT"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 40.24,
+    "baselinePct": 91,
+    "landmarkY": 261,
+    "source": "docs/hero-families/vials-2026-09-25/approval.json"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "GB1mlVBlk": {
+   "sku": "GB1mlVBlk",
+   "familyId": "register:vial-1ml-Plug|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 22.857
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 415.455,
+      "top": 261,
+      "right": 584.546,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-clear.3a9dee87188b.png",
+      "key": "",
+      "sha256": "3a9dee87188b03895d6170e13194bef4263c8ec4ddaea20426db5989653d9f93",
+      "bytes": 44141,
+      "width": 93,
+      "height": 440
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 415.455,
+      "y": 261.0,
+      "width": 169.091,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 356.364,
+      "top": 101.0,
+      "right": 587.273,
+      "bottom": 917.364
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.b3f9e4c45e2d.png",
+      "key": "",
+      "sha256": "b3f9e4c45e2d2047d517ff5afdcc723aa7898f78ebd66c1e9d8cb0bbf4ddb67a",
+      "bytes": 19405,
+      "width": 127,
+      "height": 449
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 356.364,
+      "y": 101.0,
+      "width": 230.909,
+      "height": 816.364
+     },
+     "componentId": "PSD-VIAL1-PLUG-BLK"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "vial-1ml-Plug",
+    "plateKey": "vial-1ml-Plug|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 22.857,
+    "componentIds": [
+     "PSD-VIAL1-PLUG-BLK"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 40.24,
+    "baselinePct": 91,
+    "landmarkY": 261,
+    "source": "docs/hero-families/vials-2026-09-25/approval.json"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "GB1mlVWht": {
+   "sku": "GB1mlVWht",
+   "familyId": "register:vial-1ml-Plug|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 22.857
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 415.455,
+      "top": 261,
+      "right": 584.546,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-clear.3a9dee87188b.png",
+      "key": "",
+      "sha256": "3a9dee87188b03895d6170e13194bef4263c8ec4ddaea20426db5989653d9f93",
+      "bytes": 44141,
+      "width": 93,
+      "height": 440
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 415.455,
+      "y": 261.0,
+      "width": 169.091,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 350.0,
+      "top": 86.455,
+      "right": 591.818,
+      "bottom": 911.91
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.cfae9072c2a9.png",
+      "key": "",
+      "sha256": "cfae9072c2a9317221fa6fb5a492b86eb7f3d6ebff7eaa3709620cc8ef48cd65",
+      "bytes": 19426,
+      "width": 133,
+      "height": 454
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 350.0,
+      "y": 86.455,
+      "width": 241.818,
+      "height": 825.455
+     },
+     "componentId": "PSD-VIAL1-PLUG-WHT",
+     "blendMode": "multiply"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "vial-1ml-Plug",
+    "plateKey": "vial-1ml-Plug|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 22.857,
+    "componentIds": [
+     "PSD-VIAL1-PLUG-WHT"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 40.24,
+    "baselinePct": 91,
+    "landmarkY": 261,
+    "source": "docs/hero-families/vials-2026-09-25/approval.json"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "GBV1DrmBlkDropper": {
+   "sku": "GBV1DrmBlkDropper",
+   "familyId": "register:vial-4ml-13-425|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 17.778
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 362.379,
+      "top": 261,
+      "right": 637.62,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-clear.1639b820d979.png",
+      "key": "",
+      "sha256": "1639b820d9796d9a506d41737532129d7fcd2053e0c30d6596c1d6499f6427cd",
+      "bytes": 20701,
+      "width": 107,
+      "height": 311
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 362.379,
+      "y": 261.0,
+      "width": 275.241,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 436.977,
+      "top": 361.322,
+      "right": 560.45,
+      "bottom": 1009.554
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/pipette-13-425.7608bec5cff4.png",
+      "key": "",
+      "sha256": "7608bec5cff4055bfd4f2e9cfd2435a6628e96a3eb0551f82cff292b07212341",
+      "bytes": 6213,
+      "width": 48,
+      "height": 252
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 436.977,
+      "y": 361.322,
+      "width": 123.473,
+      "height": 648.232
+     },
+     "componentId": "PSD-VIAL4-DROPPER"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 364.952,
+      "top": -27.103,
+      "right": 635.048,
+      "bottom": 417.913
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.5b7e37abd835.png",
+      "key": "",
+      "sha256": "5b7e37abd835ba82c5a9c83f892d19cf63e76ae892eefd7a61c8723070f321ec",
+      "bytes": 15193,
+      "width": 105,
+      "height": 173
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 364.952,
+      "y": -27.103,
+      "width": 270.096,
+      "height": 445.016
+     },
+     "componentId": "PSD-VIAL4-DROPPER"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "vial-4ml-13-425",
+    "plateKey": "vial-4ml-13-425|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 17.778,
+    "componentIds": [
+     "PSD-VIAL4-DROPPER"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 51.74,
+    "baselinePct": 91,
+    "landmarkY": 261,
+    "source": "docs/hero-families/vials-2026-09-25/approval.json"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "GBVAmb1DrmBlkDrpr": {
+   "sku": "GBVAmb1DrmBlkDrpr",
+   "familyId": "register:vial-4ml-13-425|Amber",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 17.778
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 366.912,
+      "top": 261,
+      "right": 633.088,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-amber.a3bc264285a0.png",
+      "key": "",
+      "sha256": "a3bc264285a091eb9260bfa850809dde8149a25ed464abb64ceadc63bd7969a1",
+      "bytes": 116209,
+      "width": 181,
+      "height": 544
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 366.912,
+      "y": 261.0,
+      "width": 266.176,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 436.977,
+      "top": 361.322,
+      "right": 560.45,
+      "bottom": 1009.554
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/pipette-13-425-through-glass.f4b1bb20d5f4.png",
+      "key": "",
+      "sha256": "f4b1bb20d5f47c23dbd6e4d756238c38db888ed0c1a6d63f5f4c190c4daf2945",
+      "bytes": 5985,
+      "width": 48,
+      "height": 252
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 436.977,
+      "y": 361.322,
+      "width": 123.473,
+      "height": 648.232
+     },
+     "componentId": "PSD-VIAL4-DROPPER",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 364.952,
+      "top": -27.103,
+      "right": 635.048,
+      "bottom": 417.913
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.5b7e37abd835.png",
+      "key": "",
+      "sha256": "5b7e37abd835ba82c5a9c83f892d19cf63e76ae892eefd7a61c8723070f321ec",
+      "bytes": 15193,
+      "width": 105,
+      "height": 173
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 364.952,
+      "y": -27.103,
+      "width": 270.096,
+      "height": 445.016
+     },
+     "componentId": "PSD-VIAL4-DROPPER"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "vial-4ml-13-425",
+    "plateKey": "vial-4ml-13-425|Amber",
+    "glass": "Amber",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 17.778,
+    "componentIds": [
+     "PSD-VIAL4-DROPPER"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 51.74,
+    "baselinePct": 91,
+    "landmarkY": 261,
+    "source": "docs/hero-families/vials-2026-09-25/approval.json"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "GBVBlu1DrmBlkDropper": {
+   "sku": "GBVBlu1DrmBlkDropper",
+   "familyId": "register:vial-4ml-13-425|Blue",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 17.778
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 367.647,
+      "top": 261,
+      "right": 632.353,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-blue.bd9311300fc6.png",
+      "key": "",
+      "sha256": "bd9311300fc67de7d8bf07052b1ec1e7fc61894f4bd1e9c55626d3701b34d1b5",
+      "bytes": 116766,
+      "width": 180,
+      "height": 544
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 367.647,
+      "y": 261.0,
+      "width": 264.706,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 436.977,
+      "top": 361.322,
+      "right": 560.45,
+      "bottom": 1009.554
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/pipette-13-425-through-glass.f4b1bb20d5f4.png",
+      "key": "",
+      "sha256": "f4b1bb20d5f47c23dbd6e4d756238c38db888ed0c1a6d63f5f4c190c4daf2945",
+      "bytes": 5985,
+      "width": 48,
+      "height": 252
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 436.977,
+      "y": 361.322,
+      "width": 123.473,
+      "height": 648.232
+     },
+     "componentId": "PSD-VIAL4-DROPPER",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 364.952,
+      "top": -27.103,
+      "right": 635.048,
+      "bottom": 417.913
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.5b7e37abd835.png",
+      "key": "",
+      "sha256": "5b7e37abd835ba82c5a9c83f892d19cf63e76ae892eefd7a61c8723070f321ec",
+      "bytes": 15193,
+      "width": 105,
+      "height": 173
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 364.952,
+      "y": -27.103,
+      "width": 270.096,
+      "height": 445.016
+     },
+     "componentId": "PSD-VIAL4-DROPPER"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "vial-4ml-13-425",
+    "plateKey": "vial-4ml-13-425|Blue",
+    "glass": "Blue",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 17.778,
+    "componentIds": [
+     "PSD-VIAL4-DROPPER"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 51.74,
+    "baselinePct": 91,
+    "landmarkY": 261,
+    "source": "docs/hero-families/vials-2026-09-25/approval.json"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "GBVGr1DrmBlkDropper": {
+   "sku": "GBVGr1DrmBlkDropper",
+   "familyId": "register:vial-4ml-13-425|Green",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 17.778
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 363.226,
+      "top": 261,
+      "right": 636.774,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-green.c2bdb2c31e74.png",
+      "key": "",
+      "sha256": "c2bdb2c31e743d9b19f8cb9ce64399e74e80e68b6456561f5e95e4e27fe1cb44",
+      "bytes": 41534,
+      "width": 106,
+      "height": 310
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 363.226,
+      "y": 261.0,
+      "width": 273.548,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "pipette",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 436.977,
+      "top": 361.322,
+      "right": 560.45,
+      "bottom": 1009.554
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/pipette-13-425-through-glass.f4b1bb20d5f4.png",
+      "key": "",
+      "sha256": "f4b1bb20d5f47c23dbd6e4d756238c38db888ed0c1a6d63f5f4c190c4daf2945",
+      "bytes": 5985,
+      "width": 48,
+      "height": 252
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 436.977,
+      "y": 361.322,
+      "width": 123.473,
+      "height": 648.232
+     },
+     "componentId": "PSD-VIAL4-DROPPER",
+     "blendMode": "multiply"
+    },
+    {
+     "slot": "fitment",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 364.952,
+      "top": -27.103,
+      "right": 635.048,
+      "bottom": 417.913
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.5b7e37abd835.png",
+      "key": "",
+      "sha256": "5b7e37abd835ba82c5a9c83f892d19cf63e76ae892eefd7a61c8723070f321ec",
+      "bytes": 15193,
+      "width": 105,
+      "height": 173
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 364.952,
+      "y": -27.103,
+      "width": 270.096,
+      "height": 445.016
+     },
+     "componentId": "PSD-VIAL4-DROPPER"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "vial-4ml-13-425",
+    "plateKey": "vial-4ml-13-425|Green",
+    "glass": "Green",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 17.778,
+    "componentIds": [
+     "PSD-VIAL4-DROPPER"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 51.74,
+    "baselinePct": 91,
+    "landmarkY": 261,
+    "source": "docs/hero-families/vials-2026-09-25/approval.json"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "GB09BlackCapSht": {
+   "sku": "GB09BlackCapSht",
+   "familyId": "register:vial-9ml-18-400|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 10.076
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 306.193,
+      "top": 261,
+      "right": 693.807,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.950652910585.png",
+      "key": "",
+      "sha256": "950652910585080c3dd158b765f8d433cd4f75c2840ab55d207ae01dfc304429",
+      "bytes": 56005,
+      "width": 266,
+      "height": 549
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 306.193,
+      "y": 261.0,
+      "width": 387.614,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 312.022,
+      "top": 207.084,
+      "right": 671.949,
+      "bottom": 416.92
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black.acdf32c49507.png",
+      "key": "",
+      "sha256": "acdf32c4950764c6dd313452cfe599057cc830e6bf7d8fa2cb8c57509e9c77bf",
+      "bytes": 23148,
+      "width": 247,
+      "height": 144
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 312.022,
+      "y": 207.084,
+      "width": 359.927,
+      "height": 209.836
+     },
+     "componentId": "PSD-VIAL9-CAP-BLK"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "vial-9ml-18-400",
+    "plateKey": "vial-9ml-18-400|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.076,
+    "componentIds": [
+     "PSD-VIAL9-CAP-BLK"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 46.0004,
+    "baselinePct": 91,
+    "landmarkY": 428.58,
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "GB09BlackCapApp": {
+   "sku": "GB09BlackCapApp",
+   "familyId": "register:vial-9ml-18-400|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 10.076
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 306.193,
+      "top": 261,
+      "right": 693.807,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.950652910585.png",
+      "key": "",
+      "sha256": "950652910585080c3dd158b765f8d433cd4f75c2840ab55d207ae01dfc304429",
+      "bytes": 56005,
+      "width": 266,
+      "height": 549
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 306.193,
+      "y": 261.0,
+      "width": 387.614,
+      "height": 800.0
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 316.393,
+      "top": 201.255,
+      "right": 676.32,
+      "bottom": 1001.255
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black-rod.a1b1fbffc0a7.png",
+      "key": "",
+      "sha256": "a1b1fbffc0a70e4b2771679844e59467e5b57162fba8e8b071555b0567183447",
+      "bytes": 43605,
+      "width": 247,
+      "height": 549
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 316.393,
+      "y": 201.255,
+      "width": 359.927,
+      "height": 800.0
+     },
+     "componentId": "PSD-VIAL9-CAP-ROD"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "vial-9ml-18-400",
+    "plateKey": "vial-9ml-18-400|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.076,
+    "componentIds": [
+     "PSD-VIAL9-CAP-ROD"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 46.0004,
+    "baselinePct": 91,
+    "landmarkY": 428.58,
+    "source": "docs/hero-families/next-batch-2026-09-25/README.md"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "GBVAmb2BlackCap": {
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 251.71428571428572,
+    "baselineY": 1000,
+    "pxPerMm": 25.714285714285715
+   },
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "vial-2ml-amber-8-425",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 365.482,
+      "right": 634.518,
+      "top": 100,
+      "bottom": 1000
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2BlackCap-body-narrow.c15f844b9def.png",
+      "key": "",
+      "sha256": "c15f844b9defbfca8211f82b5e8db1f70c13ae03abcfb7599af0ae510f943f28",
+      "bytes": 683127,
+      "width": 922,
+      "height": 1620
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "owner-approved-gpt-material-and-geometry",
+     "box": {
+      "x": 212.93,
+      "y": 39.00414937759336,
+      "width": 574.139,
+      "height": 1008.298755186722
+     }
+    },
+    {
+     "slot": "cap",
+     "variantKey": "black",
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 359.55,
+      "right": 640.45,
+      "top": 60.17098998829181,
+      "bottom": 251.71428571428572
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -230
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2BlackCap-cap-narrow.eaca49ea4fae.png",
+      "key": "",
+      "sha256": "eaca49ea4fae900b1c14e300260ed011441e397187b465ffe6de6fc7d4bb5739",
+      "bytes": 46992,
+      "width": 950,
+      "height": 1100
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 60.985,
+      "y": -17.004221396453318,
+      "width": 883.331,
+      "height": 1022.8040063038509
+     }
+    }
+   ],
+   "plateSha256": "",
+   "sku": "GBVAmb2BlackCap",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 40.24,
+    "baselinePct": 91
+   },
+   "reviewMaster": "vial-2026-11-03",
+   "narrowedFrom": {
+    "approved": "ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f",
+    "width": 0.95
+   }
+  },
+  "GBVAmb2WhtCap": {
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 251.71428571428572,
+    "baselineY": 1000,
+    "pxPerMm": 25.714285714285715
+   },
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "vial-2ml-amber-8-425",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 365.482,
+      "right": 634.518,
+      "top": 100,
+      "bottom": 1000
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2WhtCap-body-narrow.c15f844b9def.png",
+      "key": "",
+      "sha256": "c15f844b9defbfca8211f82b5e8db1f70c13ae03abcfb7599af0ae510f943f28",
+      "bytes": 683127,
+      "width": 922,
+      "height": 1620
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "owner-approved-gpt-material-and-geometry",
+     "box": {
+      "x": 212.93,
+      "y": 39.00414937759336,
+      "width": 574.139,
+      "height": 1008.298755186722
+     }
+    },
+    {
+     "slot": "cap",
+     "variantKey": "white",
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 359.55,
+      "right": 640.45,
+      "top": 52.71470450510702,
+      "bottom": 251.71428571428572
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -230
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2WhtCap-cap-narrow.4481a2f1f015.png",
+      "key": "",
+      "sha256": "4481a2f1f0156e7416ccc5c440f06758a73a6f47020e3314c6dc0309151a1ea0",
+      "bytes": 36014,
+      "width": 950,
+      "height": 1100
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 53.682,
+      "y": -17.686090733989204,
+      "width": 891.743,
+      "height": 1032.5449968400778
+     }
+    }
+   ],
+   "plateSha256": "",
+   "sku": "GBVAmb2WhtCap",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 40.24,
+    "baselinePct": 91
+   },
+   "reviewMaster": "vial-2026-11-03",
+   "narrowedFrom": {
+    "approved": "ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f",
+    "width": 0.95
+   }
+  }
+ },
+ "defaultPdpSkus": [
+  "GB09BlackCapApp",
+  "GB09BlackCapSht",
+  "GB1mlAmbVBlk",
+  "GB1mlAmbVialWht",
+  "GB1mlVBlk",
+  "GB1mlVWht",
+  "GBV1DrmBlkDropper",
+  "GBVAmb1DrmBlkDrpr",
+  "GBVAmb2BlackCap",
+  "GBVAmb2WhtCap",
+  "GBVBlu1DrmBlkDropper",
+  "GBVGr1DrmBlkDropper"
+ ]
+}

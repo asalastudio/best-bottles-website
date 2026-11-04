@@ -39,6 +39,8 @@ BULB_MARGIN = 8                # % of the stage kept clear above and beside a pl
 FROST_DIR = "public/local-kits/circle-masters-2026-11-03/droppers"
 BULB = re.compile(r"GBCrcl(?:Frst)?(?:50|100)(AnSpTsl|AnSp)(\w+)$")
 EMPTY_COVER = "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png"   # empty-lotion-cover.py
+SEATED_PIPETTE = True            # False: no glass pipette inside the glass (the lifted dropper keeps its own)
+TUBE_ON_AXIS = False             # with TUBE_ANCHOR "register": stand the tube on the glass axis, not the register tube's centre
 TUBE_ANCHOR = "psd"              # "psd": the PSD's bottle-to-tube geometry; "register": the register tube's place
 tube_key = lambda kit: kit["register"]["bodyId"].split("-")[1].removesuffix("ml")
 DROPPER = re.compile(r"GBCrcl(?:Frst)?50Drp(Cu|Gl|Sl)$")
@@ -278,6 +280,8 @@ def main():
                     seated = {**whole, "slot": "pipette", "views": ["sidecar", "capon"], "zOrder": body["zOrder"] + 0.5}
                     kit["parts"] = [p for p in kit["parts"] if p is not pipette] + [seated]
             kit["parts"].append(whole)
+        if not SEATED_PIPETTE:
+            kit["parts"] = [p for p in kit["parts"] if not (p["slot"] == "pipette" and p.get("views") == ["sidecar", "capon"])]
         # The round glass is too wide for the lifted dropper to stand beside it at the centre axis (the stage
         # then leaves it running off the top): in EXPLODED only, stand the glass left so glass, gap and
         # dropper sit centred together (fixed-stage-placement: 2% margins, a 4% gap).
@@ -310,7 +314,8 @@ def main():
         if TUBE_ANCHOR == "register":
             # The register tube's place: its top at the pump (moved with the seated head), its foot near the floor.
             b = seated_tube["bounds"]; h = b["bottom"] - b["top"]; w = h * t["pixels"][0] / t["pixels"][1]
-            boxed(tube, {"x": round((b["left"] + b["right"]) / 2 - w / 2, 3), "y": round(b["top"] + fit.get("seatDy", 0), 3),
+            cx = d["axisX"] if TUBE_ON_AXIS else (b["left"] + b["right"]) / 2
+            boxed(tube, {"x": round(cx - w / 2, 3), "y": round(b["top"] + fit.get("seatDy", 0), 3),
                          "width": round(w, 3), "height": round(h, 3)})
         else:
             boxed(tube, {"x": round(d["axisX"] + t["left"] * H, 3), "y": round(d["seatY"] + t["top"] * H, 3),

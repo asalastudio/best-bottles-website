@@ -5,13 +5,14 @@ import { circleReviewSku, CIRCLE_MASTER_REVIEW_VERSION } from "./circle-master";
 import { bostonReviewSku, BOSTON_MASTER_REVIEW_VERSION } from "./boston-master";
 import { roundSleekReviewSku, ROUND_SLEEK_MASTER_REVIEW_VERSION } from "./round-sleek-master";
 import { divaReviewSku, DIVA_MASTER_REVIEW_VERSION } from "./diva-master";
+import { vialReviewSku, VIAL_MASTER_REVIEW_VERSION } from "./vial-master";
 import { sleek8ReviewSku, SLEEK8_MASTER_REVIEW_VERSION } from "./sleek8-master";
 import { rectangleApplicatorReviewSku, RECTANGLE_APPLICATOR_REVIEW_VERSION } from "./rectangle-applicator";
 import { cylinder5MasterSku, CYLINDER5_MASTER_VERSION } from "./cylinder5-master";
 import { cylinder9MasterSku, CYLINDER9_MASTER_VERSION } from "./cylinder9-master";
 import { approvedMasterSku, APPROVED_KIT_VERSION, CYLINDER9_COLOR_VERSION, updatedCylinderKitVersion } from "@/lib/paper-doll/approved-kit-index";
 export function cylinderMasterSku(sku: string | null | undefined): string | null {
-    return approvedMasterSku(sku) ?? (process.env.NODE_ENV === "development" ? cylinder5MasterSku(sku) ?? cylinder9MasterSku(sku) ?? rectangleApplicatorReviewSku(sku) ?? elegant15ReviewSku(sku) ?? elegant30ReviewSku(sku) ?? elegant60100ReviewSku(sku) ?? circleReviewSku(sku) ?? bostonReviewSku(sku) ?? roundSleekReviewSku(sku) ?? divaReviewSku(sku) : null);
+    return approvedMasterSku(sku) ?? (process.env.NODE_ENV === "development" ? cylinder5MasterSku(sku) ?? cylinder9MasterSku(sku) ?? rectangleApplicatorReviewSku(sku) ?? elegant15ReviewSku(sku) ?? elegant30ReviewSku(sku) ?? elegant60100ReviewSku(sku) ?? circleReviewSku(sku) ?? bostonReviewSku(sku) ?? roundSleekReviewSku(sku) ?? divaReviewSku(sku) ?? vialReviewSku(sku) : null);
 }
 export function cylinderMasterSource(sku: string) {
     if (process.env.NODE_ENV === "development" && elegant30ReviewSku(sku)) return { family: "elegant30", version: ELEGANT30_MASTER_REVIEW_VERSION };
@@ -21,6 +22,7 @@ export function cylinderMasterSource(sku: string) {
     if (process.env.NODE_ENV === "development" && bostonReviewSku(sku)) return { family: "boston", version: BOSTON_MASTER_REVIEW_VERSION };
     if (process.env.NODE_ENV === "development" && roundSleekReviewSku(sku)) return { family: "round-sleek", version: ROUND_SLEEK_MASTER_REVIEW_VERSION };
     if (process.env.NODE_ENV === "development" && divaReviewSku(sku)) return { family: "diva", version: DIVA_MASTER_REVIEW_VERSION };
+    if (process.env.NODE_ENV === "development" && vialReviewSku(sku)) return { family: "vial", version: VIAL_MASTER_REVIEW_VERSION };
     const updatedVersion = updatedCylinderKitVersion(sku);
     if (updatedVersion) return { family: "approved", version: updatedVersion };
     if (/^(?:GBCyl|LBCyl)(?:Amb|Blu)9/.test(sku) && approvedMasterSku(sku)) return { family: "approved", version: CYLINDER9_COLOR_VERSION };
