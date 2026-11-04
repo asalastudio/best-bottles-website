@@ -1,5 +1,5 @@
 {
- "version": "860e1d65af9c",
+ "version": "858402a704fa",
  "rows": {
   "GB1mlAmbVBlk": {
    "sku": "GB1mlAmbVBlk",
@@ -1177,16 +1177,16 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black.64a167c0d05b.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black-sunburst.85875ae7f1a8.png",
       "key": "",
-      "sha256": "64a167c0d05bd4cc623e493c44af218a1931d9eb7ee6943c3c3543c2fba246c2",
-      "bytes": 23146,
-      "width": 247,
-      "height": 144
+      "sha256": "85875ae7f1a81711e0e85999c97d6c72637d92652fe5a06bda17a39824140037",
+      "bytes": 1117042,
+      "width": 988,
+      "height": 576
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-layer",
+     "derivation": "sunburst-vial9",
      "box": {
       "x": 312.022,
       "y": 207.084,
@@ -1295,16 +1295,16 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black-rod.a1b1fbffc0a7.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black-rod-sunburst.c385629fd8cf.png",
       "key": "",
-      "sha256": "a1b1fbffc0a70e4b2771679844e59467e5b57162fba8e8b071555b0567183447",
-      "bytes": 43605,
-      "width": 247,
-      "height": 549
+      "sha256": "c385629fd8cf7c0dc689a3ec1865eddca90e0c249942e1e991e0592655fd7c26",
+      "bytes": 1314642,
+      "width": 988,
+      "height": 2196
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-layer",
+     "derivation": "sunburst-vial9",
      "box": {
       "x": 316.393,
       "y": 201.255,
