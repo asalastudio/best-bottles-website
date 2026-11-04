@@ -60,7 +60,8 @@ describe('Sleek 8 ml regenerated glass and internal tube candidate', () => {
     });
     it('preserves approved body pixels and shares the local candidate across PDP, catalog and builder inputs', () => {
         const baseline = structuredClone(manifest.rows) as unknown as Record<string, KitLike>;
-        const laterAdditions = read('docs/reviews/hosted-vial3-jumbo28-2026-11-02/release-manifest.json').addedSkus as string[];
+        const laterAdditions = [...read('docs/reviews/hosted-vial3-jumbo28-2026-11-02/release-manifest.json').addedSkus as string[],
+            ...read('docs/reviews/hosted-elegant-masters-2026-11-03/release-manifest.json').addedSkus as string[]];
         for (const sku of laterAdditions) delete baseline[sku];
         // Reconstruct this historical 438-recipe approval before the later Rectangle roll-on extension.
         for (const sku of Object.keys(baseline)) if (/^GBRect10(?:MtlRoll|Roll)/.test(sku)) delete baseline[sku];

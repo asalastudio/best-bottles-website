@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState, type CSSProperties, type ReactNode } from "react";
+import { bostonDropperCutout } from "@/lib/products/boston-dropper-cutout";
 import Image from "next/image";
 import { dropperGlassStartY } from "@/lib/bottle-builder/dropper-compositing";
 import exposedSprayers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
@@ -145,7 +146,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                 <Image key={`${part.image.url}:${attempt(part.image.url)}`} src={deliveryCopy(part.image.url) ?? part.image.url} alt={label} {...imgProps} width={part.image.width} height={part.image.height}
                     sizes={thumbnail ? "(max-width: 640px) 42vw, 220px" : "(max-width: 640px) 90vw, 520px"}
                     unoptimized={Boolean(deliveryCopy(part.image.url)) || !isOptimizableImageUrl(part.image.url) || (rawRegister && isRegisterAssetUrl(part.image.url))} data-builder-layer={part.slot}
-                    onError={() => onLayerError(part.image.url)} style={crop} />
+                    onError={() => onLayerError(part.image.url)} style={{ ...crop, clipPath: bostonDropperCutout(part.image.url) }} />
             </span>
             </span>
         </span>);
@@ -183,12 +184,12 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
                 return <g key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} transform={layerTransform(transform, part)}>
                     <defs><clipPath id={clipId} clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width={part.image.width} height={visible} /></clipPath></defs>
                     <image href={layerHref(part.image.url)} width={part.image.width} height={part.image.height} x="0" y="0" clipPath={`url(#${clipId})`}
-                        style={{ ...transmission, opacity: part.opacity, mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined) }}
+                        style={{ ...transmission, opacity: part.opacity, clipPath: bostonDropperCutout(part.image.url), mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) ? "multiply" : undefined) }}
                         onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />
                 </g>;
             }
             return <image key={`${part.slot}-${part.componentId ?? ""}-${part.image.url}:${attempt(part.image.url)}`} href={layerHref(part.image.url)} width={part.image.width} height={part.image.height} transform={layerTransform(transform, part)}
-                x="0" y="0" style={{ ...transmission, opacity: part.opacity, mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined) }}
+                x="0" y="0" style={{ ...transmission, opacity: part.opacity, clipPath: bostonDropperCutout(part.image.url), mixBlendMode: part.blendMode ?? (blendsIntoGlass(config, part, stage, splitDropper) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined) }}
                 onLoad={markLoaded} onError={() => onLayerError(part.image.url)} data-builder-layer={part.slot} />;
         })}
 

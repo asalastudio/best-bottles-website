@@ -1,5 +1,7 @@
 "use client";
 
+import { bostonDropperCutout } from "@/lib/products/boston-dropper-cutout";
+
 import { plugMaskStyle } from "@/lib/products/sprayer-glass-transmission";
 
 /**
@@ -239,7 +241,11 @@ export default function PdpStage({
                             data-unavailable={cap.unavailable ? "true" : undefined}
                             onClick={() => onCapPick(cap.id)}
                         >
-                            {parts.length && cap.kit
+                            {finishKind !== "glass" && cap.kit?.capCloseUp
+                                // eslint-disable-next-line @next/next/no-img-element
+                                ? <img src={registerImageSrc(cap.kit.capCloseUp.url, 128)} alt="" width={capThumbWidth} height={capThumbHeight}
+                                    style={{ objectFit: "contain", width: capThumbWidth, height: capThumbHeight }} draggable={false} />
+                                : parts.length && cap.kit
                                 ? <PdpKitStackImage parts={parts} canvas={cap.kit.canvas} height={capThumbHeight} fit={{ width: capThumbWidth }} />
                                 : <span className={styles.railSwatch} style={getMaterialSwatchStyle(cap.swatchName, {})} aria-hidden />}
                         </button>
@@ -255,6 +261,7 @@ export default function PdpStage({
                 data-layered={layout && !singleTola ? "true" : "false"}
                 data-source={layout ? (singleTola ? "photo" : kit?.register ? "register" : "kit") : fallbackImageUrl ? (showingBareBody ? "body" : "photo") : "none"}
                 data-studio={layout?.backdrop ? "true" : undefined}
+                data-family={kit?.familyId}
                 data-zoomable={zoomable ? "true" : undefined}
                 data-zoomed={zoom ? "true" : undefined}
                 style={{ ...(layout?.backdrop ? { backgroundColor: layout.backdrop.wall } : {}), mixBlendMode: singleTola ? "multiply" : undefined, touchAction: zoom ? "none" : undefined }}
@@ -346,7 +353,7 @@ export default function PdpStage({
                                         fetchPriority="high"
                                         className={styles.stagePart}
                                         data-slot={part.slot}
-                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex, mixBlendMode: part.blendMode }}
+                                        style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex, mixBlendMode: part.blendMode, clipPath: bostonDropperCutout(part.url) }}
                                     />
                                 ))}
                             </div>

@@ -1,0 +1,24 @@
+{
+  "head": "439fff70aa5d462f26c1685a5690d7ca8669b45f",
+  "pr": "https://github.com/asalastudio/best-bottles-website/pull/385",
+  "masterVersion": "e5c8e5e7837363dc",
+  "previewPassed": true,
+  "catalogStates": 16,
+  "pdpStates": 12,
+  "masterApis": 290,
+  "builderChecks": 10,
+  "previewUnavailableSkus": [
+    "GBTulipAmb5CuSht",
+    "GBTulipAmb5GlMattSht",
+    "GBTulipAmb5SlMattSht",
+    "GBTulipAmb5BlkShSht",
+    "GBTulipAmb5GlSht",
+    "GBTulipAmb5SlSht",
+    "GBTulip6CuSht",
+    "GBTulip6GlMattSht",
+    "GBTulip6SlMattSht",
+    "GBTulip6GlSht",
+    "GBTulip6SlSht"
+  ],
+  "production": "Not yet deployed; CI build must pass before merge"
+}

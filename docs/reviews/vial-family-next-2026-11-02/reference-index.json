@@ -1,0 +1,34 @@
+{
+  "status": "Queued intake, not approved masters",
+  "driveFolderId": "17xO2gF5L4iY3iA5vYUjLRJoqlrN0TinN",
+  "references": [
+    {
+      "file": "references/01-4ml-pdp-and-four-glass-colors.png",
+      "role": "4 ml 13-425 PDP: amber with black cap, clear/amber/cobalt/green glass choices",
+      "originalName": "Screenshot 2026-11-02 at 6.38.53\u202fAM.png",
+      "bytes": 266119,
+      "sha256": "c47844afa6b59abc3e059ca20b307ee7d4b09a5c502b09d62f1525a937aa8784"
+    },
+    {
+      "file": "references/02-4ml-catalog-dropper-variants.png",
+      "role": "4 ml amber, blue and green dropper catalog references",
+      "originalName": "Screenshot 2026-11-02 at 6.39.38\u202fAM.png",
+      "bytes": 192815,
+      "sha256": "bb534bba022b77e805a32cbfabec3fccd8d86b6f6019498f8bef57e201af01aa"
+    },
+    {
+      "file": "references/03-3ml-vial-and-adjacent-products.png",
+      "role": "3 ml blue vial; adjacent Tola and lotion products are separate families",
+      "originalName": "Screenshot 2026-11-02 at 6.39.55\u202fAM.png",
+      "bytes": 154169,
+      "sha256": "c4cda00a1e4aa603980473399056d3c842d7d11a3499f82d0fe5e2d83b860309"
+    },
+    {
+      "file": "references/04-distinct-2ml-13-425-and-3ml-green.png",
+      "role": "Separate 2 ml 13-425 amber and 3 ml 13-425 green vial references",
+      "originalName": "Screenshot 2026-11-02 at 6.40.09\u202fAM.png",
+      "bytes": 97747,
+      "sha256": "d989fdd88ed775f4e25d5b31fe887198c5e5281a78b9cf0cc057482cbc04184a"
+    }
+  ]
+}

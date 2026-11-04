@@ -1,0 +1,993 @@
+{
+  "version": "a63043cf5188f86a",
+  "rows": {
+    "GBSpry3mlClBlk": {
+      "sku": "GBSpry3mlClBlk",
+      "familyId": "cylinder-3.3ml-clear-12mm",
+      "completeness": "full",
+      "conflicts": [],
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1004.6039379119873,
+        "seatY": 691,
+        "pxPerMm": 10
+      },
+      "plateSha256": "",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 28,
+        "baselinePct": 91,
+        "landmarkY": 691.424919128418,
+        "source": "approved Cylinder family exception; full native glass, 2026-10-31"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+            "key": "reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+            "width": 758,
+            "height": 1942,
+            "sha256": "bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd",
+            "bytes": 2256027
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 424,
+            "y": 622.2039379119873,
+            "width": 151.6,
+            "height": 388.40000000000003
+          },
+          "bounds": {
+            "left": 429.6,
+            "top": 628.2039379119873,
+            "right": 570.4,
+            "bottom": 1004.6039379119873
+          },
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "componentId": null,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+            "key": "reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+            "sha256": "a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5",
+            "bytes": 60557,
+            "width": 120,
+            "height": 753
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 476,
+            "y": 670.6039379119873,
+            "width": 48,
+            "height": 301.2
+          },
+          "bounds": {
+            "left": 480.8,
+            "top": 675.0039379119872,
+            "right": 519.2,
+            "bottom": 967.4039379119872
+          },
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-black",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.75
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+            "key": "reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+            "sha256": "a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5",
+            "bytes": 60557,
+            "width": 120,
+            "height": 753
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 476,
+            "y": 670.6039379119873,
+            "width": 48,
+            "height": 301.2
+          },
+          "bounds": {
+            "left": 480.8,
+            "top": 675.0039379119872,
+            "right": 519.2,
+            "bottom": 967.4039379119872
+          },
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-black",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+            "key": "reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+            "sha256": "691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2",
+            "bytes": 43828,
+            "width": 220,
+            "height": 384
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 423,
+            "y": 422.2,
+            "width": 154,
+            "height": 268.8
+          },
+          "bounds": {
+            "left": 431.4,
+            "top": 425.7,
+            "right": 571.4,
+            "bottom": 690.3
+          },
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-black",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+            "key": "reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+            "sha256": "0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52",
+            "bytes": 324597,
+            "width": 374,
+            "height": 555
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 425.2,
+            "y": 379.3,
+            "width": 149.6,
+            "height": 222
+          },
+          "bounds": {
+            "left": 429.59999999999997,
+            "top": 384.1,
+            "right": 570.4,
+            "bottom": 596.5
+          },
+          "zOrder": 4,
+          "explodeIndex": 2,
+          "componentId": "review-small-clear-overcap",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "detached": {
+            "image": {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+              "width": 374,
+              "height": 555,
+              "key": "reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+              "sha256": "0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52",
+              "bytes": 324597
+            },
+            "box": {
+              "x": 425.2,
+              "y": 379.3,
+              "width": 149.6,
+              "height": 222
+            },
+            "bounds": {
+              "left": 429.59999999999997,
+              "top": 384.1,
+              "right": 570.4,
+              "bottom": 596.5
+            }
+          }
+        }
+      ]
+    },
+    "GBSpry3mlClWht": {
+      "sku": "GBSpry3mlClWht",
+      "familyId": "cylinder-3.3ml-clear-12mm",
+      "completeness": "full",
+      "conflicts": [],
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1004.6039379119873,
+        "seatY": 691,
+        "pxPerMm": 10
+      },
+      "plateSha256": "",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 28,
+        "baselinePct": 91,
+        "landmarkY": 691.424919128418,
+        "source": "approved Cylinder family exception; full native glass, 2026-10-31"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+            "key": "reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+            "width": 758,
+            "height": 1942,
+            "sha256": "bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd",
+            "bytes": 2256027
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 424,
+            "y": 622.2039379119873,
+            "width": 151.6,
+            "height": 388.40000000000003
+          },
+          "bounds": {
+            "left": 429.6,
+            "top": 628.2039379119873,
+            "right": 570.4,
+            "bottom": 1004.6039379119873
+          },
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "componentId": null,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+            "key": "reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+            "sha256": "a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5",
+            "bytes": 60557,
+            "width": 120,
+            "height": 753
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 476,
+            "y": 670.6039379119873,
+            "width": 48,
+            "height": 301.2
+          },
+          "bounds": {
+            "left": 480.8,
+            "top": 675.0039379119872,
+            "right": 519.2,
+            "bottom": 967.4039379119872
+          },
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-white",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.75
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+            "key": "reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+            "sha256": "a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5",
+            "bytes": 60557,
+            "width": 120,
+            "height": 753
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 476,
+            "y": 670.6039379119873,
+            "width": 48,
+            "height": 301.2
+          },
+          "bounds": {
+            "left": 480.8,
+            "top": 675.0039379119872,
+            "right": 519.2,
+            "bottom": 967.4039379119872
+          },
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-white",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+            "key": "reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+            "sha256": "ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7",
+            "bytes": 24512,
+            "width": 220,
+            "height": 384
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 423,
+            "y": 422.2,
+            "width": 154,
+            "height": 268.8
+          },
+          "bounds": {
+            "left": 425.8,
+            "top": 429.2,
+            "right": 572.8,
+            "bottom": 691
+          },
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-white",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+            "key": "reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+            "sha256": "0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52",
+            "bytes": 324597,
+            "width": 374,
+            "height": 555
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 425.2,
+            "y": 379.3,
+            "width": 149.6,
+            "height": 222
+          },
+          "bounds": {
+            "left": 429.59999999999997,
+            "top": 384.1,
+            "right": 570.4,
+            "bottom": 596.5
+          },
+          "zOrder": 4,
+          "explodeIndex": 2,
+          "componentId": "review-small-clear-overcap",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "detached": {
+            "image": {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+              "width": 374,
+              "height": 555,
+              "key": "reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+              "sha256": "0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52",
+              "bytes": 324597
+            },
+            "box": {
+              "x": 425.2,
+              "y": 379.3,
+              "width": 149.6,
+              "height": 222
+            },
+            "bounds": {
+              "left": 429.59999999999997,
+              "top": 384.1,
+              "right": 570.4,
+              "bottom": 596.5
+            }
+          }
+        }
+      ]
+    },
+    "GBSpry4mlClBlk": {
+      "sku": "GBSpry4mlClBlk",
+      "familyId": "cylinder-4ml-clear-12mm",
+      "completeness": "full",
+      "conflicts": [],
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1004.6039379119873,
+        "seatY": 571,
+        "pxPerMm": 10
+      },
+      "plateSha256": "",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 32.5,
+        "baselinePct": 91,
+        "landmarkY": 571.5893039703369,
+        "source": "approved Cylinder family exception; full native glass, 2026-10-31"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+            "key": "reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+            "width": 758,
+            "height": 2540,
+            "sha256": "e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448",
+            "bytes": 1990579
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 424,
+            "y": 502.60393791198726,
+            "width": 151.6,
+            "height": 508
+          },
+          "bounds": {
+            "left": 429.6,
+            "top": 508.2039379119873,
+            "right": 570.4,
+            "bottom": 1004.6039379119873
+          },
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "componentId": null,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+            "key": "reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+            "sha256": "241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc",
+            "bytes": 78005,
+            "width": 129,
+            "height": 1053
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 476,
+            "y": 550.6039379119873,
+            "width": 51.6,
+            "height": 421.20000000000005
+          },
+          "bounds": {
+            "left": 480.8,
+            "top": 555.4039379119872,
+            "right": 522.8,
+            "bottom": 967.0039379119874
+          },
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-black",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.75
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+            "key": "reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+            "sha256": "241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc",
+            "bytes": 78005,
+            "width": 129,
+            "height": 1053
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 476,
+            "y": 550.6039379119873,
+            "width": 51.6,
+            "height": 421.20000000000005
+          },
+          "bounds": {
+            "left": 480.8,
+            "top": 555.4039379119872,
+            "right": 522.8,
+            "bottom": 967.0039379119874
+          },
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-black",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+            "key": "reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+            "sha256": "691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2",
+            "bytes": 43828,
+            "width": 220,
+            "height": 384
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 423,
+            "y": 302.2,
+            "width": 154,
+            "height": 268.8
+          },
+          "bounds": {
+            "left": 431.4,
+            "top": 305.7,
+            "right": 571.4,
+            "bottom": 570.3
+          },
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-black",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+            "key": "reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+            "sha256": "0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52",
+            "bytes": 324597,
+            "width": 374,
+            "height": 555
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 425.2,
+            "y": 259.3,
+            "width": 149.6,
+            "height": 222
+          },
+          "bounds": {
+            "left": 429.59999999999997,
+            "top": 264.1,
+            "right": 570.4,
+            "bottom": 476.5
+          },
+          "zOrder": 4,
+          "explodeIndex": 2,
+          "componentId": "review-small-clear-overcap",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "detached": {
+            "image": {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+              "width": 374,
+              "height": 555,
+              "key": "reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+              "sha256": "0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52",
+              "bytes": 324597
+            },
+            "box": {
+              "x": 425.2,
+              "y": 259.3,
+              "width": 149.6,
+              "height": 222
+            },
+            "bounds": {
+              "left": 429.59999999999997,
+              "top": 264.1,
+              "right": 570.4,
+              "bottom": 476.5
+            }
+          }
+        }
+      ]
+    },
+    "GBSpry4mlClWh": {
+      "sku": "GBSpry4mlClWh",
+      "familyId": "cylinder-4ml-clear-12mm",
+      "completeness": "full",
+      "conflicts": [],
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1004.6039379119873,
+        "seatY": 571,
+        "pxPerMm": 10
+      },
+      "plateSha256": "",
+      "three": null,
+      "glassSizing": {
+        "heightPct": 32.5,
+        "baselinePct": 91,
+        "landmarkY": 571.5893039703369,
+        "source": "approved Cylinder family exception; full native glass, 2026-10-31"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+            "key": "reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+            "width": 758,
+            "height": 2540,
+            "sha256": "e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448",
+            "bytes": 1990579
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 424,
+            "y": 502.60393791198726,
+            "width": 151.6,
+            "height": 508
+          },
+          "bounds": {
+            "left": 429.6,
+            "top": 508.2039379119873,
+            "right": 570.4,
+            "bottom": 1004.6039379119873
+          },
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "componentId": null,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+            "key": "reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+            "sha256": "241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc",
+            "bytes": 78005,
+            "width": 129,
+            "height": 1053
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 476,
+            "y": 550.6039379119873,
+            "width": 51.6,
+            "height": 421.20000000000005
+          },
+          "bounds": {
+            "left": 480.8,
+            "top": 555.4039379119872,
+            "right": 522.8,
+            "bottom": 967.0039379119874
+          },
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-white",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "views": [
+            "sidecar",
+            "capon"
+          ],
+          "opacity": 0.75
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+            "key": "reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+            "sha256": "241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc",
+            "bytes": 78005,
+            "width": 129,
+            "height": 1053
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 476,
+            "y": 550.6039379119873,
+            "width": 51.6,
+            "height": 421.20000000000005
+          },
+          "bounds": {
+            "left": 480.8,
+            "top": 555.4039379119872,
+            "right": 522.8,
+            "bottom": 967.0039379119874
+          },
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-white",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "views": [
+            "exploded"
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+            "key": "reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+            "sha256": "ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7",
+            "bytes": 24512,
+            "width": 220,
+            "height": 384
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 423,
+            "y": 302.2,
+            "width": 154,
+            "height": 268.8
+          },
+          "bounds": {
+            "left": 425.8,
+            "top": 309.2,
+            "right": 572.8,
+            "bottom": 571
+          },
+          "zOrder": 3,
+          "explodeIndex": 1,
+          "componentId": "review-small-sprayer-white",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "image": {
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+            "key": "reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+            "sha256": "0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52",
+            "bytes": 324597,
+            "width": 374,
+            "height": 555
+          },
+          "image2x": null,
+          "mask": null,
+          "box": {
+            "x": 425.2,
+            "y": 259.3,
+            "width": 149.6,
+            "height": 222
+          },
+          "bounds": {
+            "left": 429.59999999999997,
+            "top": 264.1,
+            "right": 570.4,
+            "bottom": 476.5
+          },
+          "zOrder": 4,
+          "explodeIndex": 2,
+          "componentId": "review-small-clear-overcap",
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "derivation": "psd-layer",
+          "detached": {
+            "image": {
+              "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+              "width": 374,
+              "height": 555,
+              "key": "reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png",
+              "sha256": "0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52",
+              "bytes": 324597
+            },
+            "box": {
+              "x": 425.2,
+              "y": 259.3,
+              "width": 149.6,
+              "height": 222
+            },
+            "bounds": {
+              "left": 429.59999999999997,
+              "top": 264.1,
+              "right": 570.4,
+              "bottom": 476.5
+            }
+          }
+        }
+      ]
+    }
+  }
+}

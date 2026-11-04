@@ -1,6 +1,43 @@
 import index from "./approved-kit-index.json";
-const skus = new Set<string>(index.skus);
+import sprays from "./cylinder-spray-index.json";
+import jumbo from "./cylinder-jumbo-overcap-index.json";
+import lotions from "./cylinder-lotion-index.json";
+import sleekTubes from "./sleek-large-tubes-index.json";
+import dropper from "./cylinder25-dropper-index.json";
+import reducers25 from "./cylinder25-reducers-index.json";
+import body25 from "./cylinder25-body-index.json";
+
+const lotionSkus = new Set<string>(lotions.skus);
+const skus = new Set<string>([...index.skus, ...sprays.skus, ...jumbo.skus, ...lotionSkus, ...sleekTubes.skus, ...dropper.skus, ...reducers25.skus]);
+const sleekSkus = new Set<string>(sleekTubes.skus);
+const dropperSkus = new Set<string>(dropper.skus);
+const reducer25Skus = new Set<string>(reducers25.skus);
+const body25Skus = new Set<string>(body25.skus);
+const jumbo28MeasuredSkus = new Set(["GBMtlRoll28Wht", "GBCyl1ozRollWht", "GBRoll28Blk", "GBMtlRoll28Blk"]);
 export const APPROVED_KIT_VERSION = index.version;
+export const CYLINDER9_COLOR_VERSION = index.version + "-cylinder9-colors-v2-20261102";
+const spraySkus = new Set<string>(sprays.skus);
+const jumboSkus = new Set<string>(jumbo.skus);
+const nineLotionSkus = new Set([
+    "LBCylAmb9LtnBlk", "LBCylAmb9LtnGl", "LBCylAmb9LtnMtSl",
+    "LBCyl9LtnBlk", "LBCyl9LtnGl", "LBCyl9LtnMtSl",
+    "LBCylBlu9LtnBlk", "LBCylBlu9LtnGl", "LBCylBlu9LtnMattSl",
+    "LBCylFrst9LtnBlk", "LBCylFrst9LtnGl", "LBCylFrst9LtnMtSl",
+    "LBCylSwrl9LtnBlk", "LBCylSwrl9LtnGl", "LBCylSwrl9LtnMtSl",
+]);
+export function updatedCylinderKitVersion(sku: string | null | undefined): string | null {
+    if (!sku) return null;
+    if (jumbo28MeasuredSkus.has(sku)) return `${index.version}-jumbo28-measured-v1`;
+    if (body25Skus.has(sku)) return body25.version;
+    if (reducer25Skus.has(sku)) return reducers25.version;
+    if (sleekSkus.has(sku)) return sleekTubes.version;
+    if (dropperSkus.has(sku)) return dropper.version;
+    if (nineLotionSkus.has(sku)) return `${index.version}-lotion9-physical-reference-v1`;
+    if (lotionSkus.has(sku)) return `${lotions.version}-separate-psd-v4`;
+    if (jumboSkus.has(sku)) return `${jumbo.version}-lotion-generated-v3`;
+    if (spraySkus.has(sku)) return `${sprays.version}-generated-tubes-v7`;
+    return null;
+}
 export function approvedMasterSku(sku: string | null | undefined): string | null {
     return sku && skus.has(sku) ? sku : null;
 }

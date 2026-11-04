@@ -1,0 +1,771 @@
+{
+  "records": [
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "glass": "Amber",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylAmb9LtnBlk-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylAmb9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "glass": "Amber",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylAmb9LtnBlk-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylAmb9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "glass": "Amber",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylAmb9LtnBlk-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylAmb9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "glass": "Amber",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylAmb9LtnGl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylAmb9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "glass": "Amber",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylAmb9LtnGl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylAmb9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "glass": "Amber",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylAmb9LtnGl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylAmb9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "glass": "Amber",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylAmb9LtnMtSl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylAmb9LtnMtSl&from=pdp"
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "glass": "Amber",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylAmb9LtnMtSl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylAmb9LtnMtSl&from=pdp"
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "glass": "Amber",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylAmb9LtnMtSl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-amber.f45c288e0b6c.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylAmb9LtnMtSl&from=pdp"
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCyl9LtnBlk-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCyl9LtnBlk-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCyl9LtnBlk-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCyl9LtnGl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCyl9LtnGl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCyl9LtnGl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCyl9LtnMtSl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnMtSl&from=pdp"
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCyl9LtnMtSl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnMtSl&from=pdp"
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "glass": "Clear",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCyl9LtnMtSl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCyl9LtnMtSl&from=pdp"
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "glass": "Cobalt Blue",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylBlu9LtnBlk-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "glass": "Cobalt Blue",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylBlu9LtnBlk-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "glass": "Cobalt Blue",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylBlu9LtnBlk-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "glass": "Cobalt Blue",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylBlu9LtnGl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "glass": "Cobalt Blue",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylBlu9LtnGl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "glass": "Cobalt Blue",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylBlu9LtnGl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "glass": "Cobalt Blue",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylBlu9LtnMattSl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnMattSl&from=pdp"
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "glass": "Cobalt Blue",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylBlu9LtnMattSl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnMattSl&from=pdp"
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "glass": "Cobalt Blue",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylBlu9LtnMattSl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylBlu9LtnMattSl&from=pdp"
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylFrst9LtnBlk-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylFrst9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylFrst9LtnBlk-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylFrst9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylFrst9LtnBlk-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylFrst9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylFrst9LtnGl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylFrst9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylFrst9LtnGl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylFrst9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylFrst9LtnGl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylFrst9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylFrst9LtnMtSl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylFrst9LtnMtSl&from=pdp"
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylFrst9LtnMtSl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylFrst9LtnMtSl&from=pdp"
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "glass": "Frosted",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylFrst9LtnMtSl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-frosted.76402e4bb5a5.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylFrst9LtnMtSl&from=pdp"
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "glass": "Swirl",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylSwrl9LtnBlk-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylSwrl9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "glass": "Swirl",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylSwrl9LtnBlk-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylSwrl9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "glass": "Swirl",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylSwrl9LtnBlk-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylSwrl9LtnBlk&from=pdp"
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "glass": "Swirl",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylSwrl9LtnGl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylSwrl9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "glass": "Swirl",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylSwrl9LtnGl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylSwrl9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "glass": "Swirl",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylSwrl9LtnGl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylSwrl9LtnGl&from=pdp"
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "glass": "Swirl",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-LBCylSwrl9LtnMtSl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylSwrl9LtnMtSl&from=pdp"
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "glass": "Swirl",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-LBCylSwrl9LtnMtSl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylSwrl9LtnMtSl&from=pdp"
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "glass": "Swirl",
+      "roller": null,
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-LBCylSwrl9LtnMtSl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-swirl.032e641c93c4.png",
+      "builder": "/matrix?family=Cylinder&shop=lotion-pump-bottles&sku=LBCylSwrl9LtnMtSl&from=pdp"
+    }
+  ],
+  "failures": [],
+  "pageErrors": []
+}

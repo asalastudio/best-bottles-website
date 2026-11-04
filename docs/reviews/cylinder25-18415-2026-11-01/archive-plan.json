@@ -1,0 +1,20 @@
+[
+  {
+    "batch": "cylinder25-18415-2026-11-01",
+    "file": "/private/tmp/cylinder25-18415-2026-11-01-review-and-source-evidence.zip",
+    "bytes": 36259246,
+    "sha256": "5a6d42fa5fd9844d19c5119b83cbf53fddee3f67570f9d3b395850afccc43b8f",
+    "configurations": 36,
+    "images": 53,
+    "verified": true
+  },
+  {
+    "batch": "tulip-pour-reconciliation-2026-11-01",
+    "file": "/private/tmp/tulip-pour-reconciliation-2026-11-01-review-and-source-evidence.zip",
+    "bytes": 17659907,
+    "sha256": "9e83341d89ef35b88aff219ca7da9f0aae79454a1e9a20de8f1c9ecd1c314538",
+    "configurations": 19,
+    "images": 12,
+    "verified": true
+  }
+]

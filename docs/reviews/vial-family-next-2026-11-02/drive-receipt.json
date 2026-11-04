@@ -1,0 +1,94 @@
+{
+  "linearIssue": "ASA-218",
+  "order": "After Cylinder family completion",
+  "status": "Backlog",
+  "folderId": "17xO2gF5L4iY3iA5vYUjLRJoqlrN0TinN",
+  "files": [
+    {
+      "upload": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1ImAXKGMA0Z8Ot6q3MlqA8kywZtlVyfm2",
+        "title": "Vial family next after Cylinder - 4 ml matched master brief - 2026-11-02.md",
+        "file_name": "Vial family next after Cylinder - 4 ml matched master brief - 2026-11-02.md",
+        "mime_type": "text/markdown",
+        "url": "https://drive.google.com/file/d/1ImAXKGMA0Z8Ot6q3MlqA8kywZtlVyfm2/view?usp=drivesdk",
+        "parent_id": "17xO2gF5L4iY3iA5vYUjLRJoqlrN0TinN",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1ImAXKGMA0Z8Ot6q3MlqA8kywZtlVyfm2",
+          "title": "Vial family next after Cylinder - 4 ml matched master brief - 2026-11-02.md",
+          "file_name": "Vial family next after Cylinder - 4 ml matched master brief - 2026-11-02.md",
+          "mime_type": "text/markdown",
+          "url": "https://drive.google.com/file/d/1ImAXKGMA0Z8Ot6q3MlqA8kywZtlVyfm2/view?usp=drivesdk",
+          "parent_id": "17xO2gF5L4iY3iA5vYUjLRJoqlrN0TinN"
+        }
+      },
+      "metadata": {
+        "id": "1ImAXKGMA0Z8Ot6q3MlqA8kywZtlVyfm2",
+        "title": "Vial family next after Cylinder - 4 ml matched master brief - 2026-11-02.md",
+        "mime_type": null,
+        "size": "2707",
+        "url": "https://drive.google.com/file/d/1ImAXKGMA0Z8Ot6q3MlqA8kywZtlVyfm2/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1ImAXKGMA0Z8Ot6q3MlqA8kywZtlVyfm2/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "17xO2gF5L4iY3iA5vYUjLRJoqlrN0TinN"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "error": null
+    },
+    {
+      "upload": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "16qxNzYyDk8u2_EEtFuwqbpLnsAhh0AJn",
+        "title": "Vial family next after Cylinder - Screenshot references and 4 ml measurements - 2026-11-02.zip",
+        "file_name": "Vial family next after Cylinder - Screenshot references and 4 ml measurements - 2026-11-02.zip",
+        "mime_type": "application/zip",
+        "url": "https://drive.google.com/file/d/16qxNzYyDk8u2_EEtFuwqbpLnsAhh0AJn/view?usp=drivesdk",
+        "parent_id": "17xO2gF5L4iY3iA5vYUjLRJoqlrN0TinN",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "16qxNzYyDk8u2_EEtFuwqbpLnsAhh0AJn",
+          "title": "Vial family next after Cylinder - Screenshot references and 4 ml measurements - 2026-11-02.zip",
+          "file_name": "Vial family next after Cylinder - Screenshot references and 4 ml measurements - 2026-11-02.zip",
+          "mime_type": "application/zip",
+          "url": "https://drive.google.com/file/d/16qxNzYyDk8u2_EEtFuwqbpLnsAhh0AJn/view?usp=drivesdk",
+          "parent_id": "17xO2gF5L4iY3iA5vYUjLRJoqlrN0TinN"
+        }
+      },
+      "metadata": {
+        "id": "16qxNzYyDk8u2_EEtFuwqbpLnsAhh0AJn",
+        "title": "Vial family next after Cylinder - Screenshot references and 4 ml measurements - 2026-11-02.zip",
+        "mime_type": null,
+        "size": "674793",
+        "url": "https://drive.google.com/file/d/16qxNzYyDk8u2_EEtFuwqbpLnsAhh0AJn/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/16qxNzYyDk8u2_EEtFuwqbpLnsAhh0AJn/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "17xO2gF5L4iY3iA5vYUjLRJoqlrN0TinN"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "error": null
+    }
+  ]
+}

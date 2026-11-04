@@ -1,0 +1,1633 @@
+{
+  "origin": "https://best-bottles-website-8bxdowcg4-asala.vercel.app",
+  "version": "a63043cf5188f86a",
+  "before": false,
+  "apis": [
+    {
+      "sku": "GBCyl5WhtSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5BlkSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5Sl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5Gl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5Gl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5BlkSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5MtlRollCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5MtlRollPinkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5MtlRollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5MtlRollSlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5MtlRollGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5MtlRollSlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5RollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5MtlRollCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5MtlRollGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5MtlRollPinkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5RollGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5RollSlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5RollBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5RollGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5RollPinkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5RollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5RollCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5SpryBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5SpryGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5SprySlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5SpryBluMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5SpryCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5SprySlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5SpryGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5SpryBluMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5SpryCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9SpryBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9SpryGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9SpryMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9SpryRd",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9SpryShSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9SpryTur",
+      "status": 200
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "status": 200
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5SpryBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "LBCylAmb9LtnBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattCu",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9MtlRollPnkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9MtlRollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9RollMattCu",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9RollMattGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9RollMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9RollPnkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9RollShBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9MtlRollWht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9RollShnGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9RollShnSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9RollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylAmb9RollWht",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9SpryBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9SpryMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9SpryRd",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9SpryShSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9SpryTur",
+      "status": 200
+    },
+    {
+      "sku": "LBCyl9LtnBlk",
+      "status": 200
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "status": 200
+    },
+    {
+      "sku": "LBCyl9LtnMtSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9MtlRollMattCu",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9MtlRollShBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9MtlRollShnSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9MtlRollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9MtlRollWht",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9SpryBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9SpryGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9SpryMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9SpryRd",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9SpryShSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9SpryTur",
+      "status": 200
+    },
+    {
+      "sku": "LBCylBlu9LtnGl",
+      "status": 200
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "LBCylBlu9LtnBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattCu",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9MtlRollPnkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9MtlRollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9MtlRollWht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9RollMattCu",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9RollMattGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9RollMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9RollPnkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9RollShBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9RollShnGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9RollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9SpryBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu9RollWht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9SpryGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9SpryMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9SpryRd",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9SpryShSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9SpryTur",
+      "status": 200
+    },
+    {
+      "sku": "LBCylFrst9LtnBlk",
+      "status": 200
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "status": 200
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattCu",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9MtlRollPnkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9MtlRollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9MtlRollWht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9RollMattCu",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9RollMattGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9RollMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9RollPnkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9RollShBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9RollShnGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9RollShnSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9RollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylFrst9RollWht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9SpryBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9SpryGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9SpryMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9SpryShSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9SpryTur",
+      "status": 200
+    },
+    {
+      "sku": "LBCylSwrl9LtnBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9SpryRd",
+      "status": 200
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "status": 200
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattCu",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollPnkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9RollMattCu",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9RollMattGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollWht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9RollMattSl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9RollPnkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9RollShBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9RollShnGl",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9RollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9RollWht",
+      "status": 200
+    },
+    {
+      "sku": "GBCylSwrl9RollShnSl",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6SpryBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6SpryBluMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6SpryCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6SpryGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6SpryGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6SprySlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6SprySlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollSlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollPinkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollSlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5MtlRollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5RollGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5RollCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5RollSlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5RollPinkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5RollGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5RollSlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5RollBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulipAmb5RollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6MtlRollCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6MtlRollGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6MtlRollSlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6MtlRollPinkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6MtlRollBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6MtlRollGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6MtlRollSlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6MtlRollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6RollCuMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6RollBlkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6RollGlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6RollSlMatt",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6RollPinkDot",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6RollBlkSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6RollGlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6RollSlSh",
+      "status": 200
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBTulip6RollSlDot",
+      "status": 200
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "status": 200
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "status": 200
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "status": 200
+    }
+  ],
+  "pages": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        311.30450439453125,
+        306.7728271484375,
+        73.17584228515625,
+        187.5032958984375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry3mlClBlk-sidecar.png"
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        311.30450439453125,
+        306.7728271484375,
+        73.17584228515625,
+        187.5032958984375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry3mlClBlk-capon.png"
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        311.30450439453125,
+        306.7728271484375,
+        73.17584228515625,
+        187.5032958984375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry3mlClBlk-exploded.png"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        311.30450439453125,
+        306.7728271484375,
+        73.17584228515625,
+        187.5032958984375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry3mlClWht-sidecar.png"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        311.30450439453125,
+        306.7728271484375,
+        73.17584228515625,
+        187.5032958984375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry3mlClWht-capon.png"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        311.30450439453125,
+        306.7728271484375,
+        73.17584228515625,
+        187.5032958984375
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry3mlClWht-exploded.png"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        317.19451904296875,
+        287.9287109375,
+        61.43035888671875,
+        205.88580322265625
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry4mlClBlk-sidecar.png"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        317.19451904296875,
+        287.9287109375,
+        61.43035888671875,
+        205.88580322265625
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry4mlClBlk-capon.png"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        317.19451904296875,
+        287.9287109375,
+        61.43035888671875,
+        205.88580322265625
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry4mlClBlk-exploded.png"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        317.19451904296875,
+        287.9287109375,
+        61.43035888671875,
+        205.88580322265625
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry4mlClWh-sidecar.png"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "desktop",
+      "view": "capon",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        317.19451904296875,
+        287.9287109375,
+        61.43035888671875,
+        205.88580322265625
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry4mlClWh-capon.png"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "desktop",
+      "view": "exploded",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        317.19451904296875,
+        287.9287109375,
+        61.43035888671875,
+        205.88580322265625
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "desktop-GBSpry4mlClWh-exploded.png"
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry3mlClBlk-sidecar.png"
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry3mlClBlk-capon.png"
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry3mlClBlk-exploded.png"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry3mlClWht-sidecar.png"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry3mlClWht-capon.png"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "slug": "cylinder-3.3ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+      "bodyFrame": [
+        167.81646728515625,
+        227.23910522460938,
+        54.21339416503906,
+        138.89883422851562
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry3mlClWht-exploded.png"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry4mlClBlk-sidecar.png"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry4mlClBlk-capon.png"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry4mlClBlk-exploded.png"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry4mlClWh-sidecar.png"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "mobile",
+      "view": "capon",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry4mlClWh-capon.png"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "slug": "cylinder-4ml-clear-12mm-finemist",
+      "cap": "white",
+      "viewport": "mobile",
+      "view": "exploded",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+      "bodyFrame": [
+        172.17970275878906,
+        213.2767333984375,
+        45.51158142089844,
+        152.505126953125
+      ],
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ff37d551b68ad0c107f6b0565b0094ebdd11473697d82b25decfb78420419bb7.png",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+      ],
+      "screenshot": "mobile-GBSpry4mlClWh-exploded.png"
+    }
+  ],
+  "catalog": [
+    {
+      "search": "3.3",
+      "cards": [
+        {
+          "sku": "GBSpry3mlClBlk",
+          "version": "a63043cf5188f86a",
+          "sources": [
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bcebf76efcc372028e2cc21bbf9ab9a010b903725306118e2da85d2c1ed76cfd.svg",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a292196d0fe7674c5da082d02a459e84061de3e1cf0a8feaa91c684438c325e5.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+          ]
+        }
+      ]
+    },
+    {
+      "search": "4 ml",
+      "cards": [
+        {
+          "sku": "GBSpry4mlClBlk",
+          "version": "a63043cf5188f86a",
+          "sources": [
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e6f9b8379296de8a4e4a2b00091eef24227893e311bf9248db8cb96d83d45448.svg",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/241a4f6754a787f42cf01db0e4fe1d9c9e471e566267a04644ef18f2f3c95ecc.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/691340cd3fdeb509004447629edefddf3a2e48e190b0b50cf2b0a82a3f1248c2.png",
+            "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0e1b14f02d357176ffa53c9304bc149dab3c6c0d04fdadf8696b4e28d9405d52.png"
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "passed": true,
+  "verifiedAt": "2026-11-02T00:07:02.197Z"
+}

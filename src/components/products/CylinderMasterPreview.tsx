@@ -3,7 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
 import { plugMaskStyle } from "@/lib/products/sprayer-glass-transmission";
-import { stageLayout } from "@/lib/products/pdp-redesign/stage";
+import { catalogTasselViewport, stageLayout } from "@/lib/products/pdp-redesign/stage";
 import { registerImageSrc } from "@/lib/products/register-image";
 import { cylinderMasterSource } from "@/lib/products/cylinder-master";
 
@@ -67,14 +67,11 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
     const layout = kit ? stageLayout(kit, "sidecar", { websiteSku: sku }) : null;
     if (kit && !layout) return fallback;
     if (!layout) return <span ref={target} className="absolute inset-0" role="status" aria-label="Loading bottle image" />;
-    const { canvas, frame } = layout;
-    const viewport = {
-        x: -frame.x / 100 * canvas.width / frame.scale,
-        y: -frame.y / 100 * canvas.height / frame.scale,
-        width: canvas.width / frame.scale,
-        height: canvas.height / frame.scale,
-    };
+    const { canvas } = layout;
+    const viewport = catalogTasselViewport(sku, layout);
+    const smallSprayer = ["GBSpry3mlClBlk", "GBSpry3mlClWht"].includes(sku);
     return <span ref={target} className="absolute inset-0"><svg className="absolute inset-0 h-full w-full" viewBox={`${viewport.x} ${viewport.y} ${viewport.width} ${viewport.height}`}
+        style={smallSprayer ? { transform: "scale(0.94)", transformOrigin: "50% 91%" } : undefined}
         role="img" aria-label={title} data-bb-master-version={cylinderMasterSource(sku)?.version} data-bb-master-sku={sku}>
         {layout.parts.map((part, i) => {
             const x = ((part.box?.leftPct ?? 0) + part.dxPct) / 100 * canvas.width;
@@ -91,6 +88,7 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
                 </defs>}
                 <image href={registerImageSrc(part.url, deliveryWidth)} data-bb-master-source={part.url} x={x} y={y}
                     width={width} height={height} opacity={part.opacity ?? 1} style={{ mixBlendMode: part.blendMode, ...plugMaskStyle(part.maskImage) }}
+                    preserveAspectRatio={/\/(?:lotion9-mechanism-e912bf1bf96d|lotion50-571a47a5cc8b|lotion100-b1a4e22a8bfc)\.png/.test(part.url) ? "none" : undefined}
                     clipPath={part.clipBottomPct !== undefined ? `url(#${clipId})` : undefined} data-bb-master-part={part.slot} />
             </g>;
         })}

@@ -1,0 +1,1591 @@
+{
+  "verifiedAt": "2026-11-02T04:04:30.769Z",
+  "records": [
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Black",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5SpryBluMatt",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Blue",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5SpryCuMatt",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Copper",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Gold",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5SprySlMatt",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Matte Silver",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5SpryBlkSh",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Shiny Black",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Shiny Gold",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5SprySlSh",
+      "fitment": "Fine Mist Sprayer",
+      "closure": "Shiny Silver",
+      "slug": "sleek-5ml-clear-13-415-finemist",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkDot",
+      "fitment": "Metal Roller",
+      "closure": "Black with Dots Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5MtlRollCuMatt",
+      "fitment": "Metal Roller",
+      "closure": "Matte Copper Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5MtlRollGlMatt",
+      "fitment": "Metal Roller",
+      "closure": "Matte Gold Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5MtlRollSlMatt",
+      "fitment": "Metal Roller",
+      "closure": "Matte Silver Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5MtlRollPinkDot",
+      "fitment": "Metal Roller",
+      "closure": "Pink with Dots Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkSh",
+      "fitment": "Metal Roller",
+      "closure": "Shiny Black Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5MtlRollGlSh",
+      "fitment": "Metal Roller",
+      "closure": "Shiny Gold Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5MtlRollSlSh",
+      "fitment": "Metal Roller",
+      "closure": "Shiny Silver Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5MtlRollSlDot",
+      "fitment": "Metal Roller",
+      "closure": "Silver with Dots Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "fitment": "Plastic Roller",
+      "closure": "Black with Dots Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5RollCuMatt",
+      "fitment": "Plastic Roller",
+      "closure": "Matte Copper Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5RollGlMatt",
+      "fitment": "Plastic Roller",
+      "closure": "Matte Gold Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5RollSlMatt",
+      "fitment": "Plastic Roller",
+      "closure": "Matte Silver Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5RollPinkDot",
+      "fitment": "Plastic Roller",
+      "closure": "Pink with Dots Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5RollBlkSh",
+      "fitment": "Plastic Roller",
+      "closure": "Shiny Black Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5RollGlSh",
+      "fitment": "Plastic Roller",
+      "closure": "Shiny Gold Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5RollSlSh",
+      "fitment": "Plastic Roller",
+      "closure": "Shiny Silver Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5RollSlDot",
+      "fitment": "Plastic Roller",
+      "closure": "Silver with Dots Cap",
+      "slug": "sleek-5ml-clear-13-415-rollon",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5BlkSht",
+      "fitment": "Screw Cap",
+      "closure": "Black Short",
+      "slug": "sleek-5ml-clear-13-415",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5CuSht",
+      "fitment": "Screw Cap",
+      "closure": "Short Matte Copper",
+      "slug": "sleek-5ml-clear-13-415",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5GlMattSht",
+      "fitment": "Screw Cap",
+      "closure": "Short Matte Gold",
+      "slug": "sleek-5ml-clear-13-415",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5SlMattSht",
+      "fitment": "Screw Cap",
+      "closure": "Short Matte Silver",
+      "slug": "sleek-5ml-clear-13-415",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5BlkShSht",
+      "fitment": "Screw Cap",
+      "closure": "Short Shiny Black",
+      "slug": "sleek-5ml-clear-13-415",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5GlSht",
+      "fitment": "Screw Cap",
+      "closure": "Short Shiny Gold",
+      "slug": "sleek-5ml-clear-13-415",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5SlSht",
+      "fitment": "Screw Cap",
+      "closure": "Short Shiny Silver",
+      "slug": "sleek-5ml-clear-13-415",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5WhtSht",
+      "fitment": "Screw Cap",
+      "closure": "Short White",
+      "slug": "sleek-5ml-clear-13-415",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5Gl",
+      "fitment": "Screw Cap",
+      "closure": "Tall Gold",
+      "slug": "sleek-5ml-clear-13-415",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    },
+    {
+      "sku": "GBSleek5Sl",
+      "fitment": "Screw Cap",
+      "closure": "Tall Silver",
+      "slug": "sleek-5ml-clear-13-415",
+      "body": {
+        "slot": "body",
+        "variantKey": null,
+        "zOrder": 1,
+        "explodeIndex": 0,
+        "bounds": {
+          "left": 410.67,
+          "right": 589.33,
+          "top": 572,
+          "bottom": 1061
+        },
+        "assembled": {
+          "x": 0,
+          "y": 0
+        },
+        "exploded": {
+          "dx": 0,
+          "dy": 0
+        },
+        "image": {
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "key": "reviewed-master-media/2026-11-01/87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec.svg",
+          "sha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+          "bytes": 1338890,
+          "width": 1040,
+          "height": 2192
+        },
+        "image2x": null,
+        "mask": null,
+        "derivation": "psd-layer",
+        "box": {
+          "x": 373.4956499488229,
+          "y": 536.2134083930399,
+          "width": 260.2661207778915,
+          "height": 548.560900716479
+        },
+        "componentId": null
+      }
+    }
+  ],
+  "uniqueMasterBodies": 1,
+  "passed": true
+}

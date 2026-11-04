@@ -1,0 +1,68 @@
+{
+  "status": "PASS_FOR_CHANGED_MEDIA_WITH_DOCUMENTED_PREVIEW_DATA_GAP",
+  "pr": "https://github.com/asalastudio/best-bottles-website/pull/388",
+  "verifiedCommit": "3f8fd269b1183ac44fe7a72b29251fb455efcfb3",
+  "baseCommit": "59d00aa7732879dd40b8e58fcc64e255b847d33f",
+  "checkedAt": "2026-11-02T15:03:58.120Z",
+  "preview": {
+    "id": "dpl_DVH6yW8Vx4DMEhyXRwouX2LnEznX",
+    "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app",
+    "state": "READY",
+    "commit": "3f8fd269b1183ac44fe7a72b29251fb455efcfb3",
+    "masterVersion": "4c6095d23d920c4f"
+  },
+  "ci": {
+    "runId": 41406878174,
+    "job": "verify",
+    "conclusion": "success"
+  },
+  "coverage": {
+    "exactMasterApis": 456,
+    "changedRecipeSkus": 57,
+    "changedRecipesAvailableInPreview": 57,
+    "eligibleBuilderRecipes": 452,
+    "previewBuilderRecipesMatched": 429,
+    "previewOnlyMissingUnchangedChoices": 23,
+    "catalogSelectionsDesktopMobile": 122,
+    "pdpStatesDesktopMobile": 103,
+    "additionalBookmarkedTulipChecks": 4,
+    "actualBuilderPages": 13,
+    "sourceAssetsHashed": 13,
+    "svgPaintChecks": 8
+  },
+  "gaps": {
+    "kind": "unchanged baseline options missing from preview data",
+    "productionOptionsAvailable": 23,
+    "productionRecipesMatchBaseline": 23,
+    "codeChangesToInventoryLoader": [],
+    "affectsChangedMediaScope": false,
+    "requiresSeparatePreviewDataReconciliation": true
+  },
+  "candidatesNotPromoted": [
+    "Sleek 8 ml replacement glass (36 configurations)",
+    "Rectangle 9 ml new Clear/Cobalt/Green glass images"
+  ],
+  "browser": "Chrome, desktop 1440x1100 and mobile viewport 390x844",
+  "production": {
+    "deployment": "dpl_5ENh77vcJg2sPEpDghXKKY3cwVHQ",
+    "commit": "59d00aa7732879dd40b8e58fcc64e255b847d33f",
+    "unchanged": true,
+    "writes": false
+  },
+  "protection": {
+    "revoked": true,
+    "deploymentId": "dpl_DVH6yW8Vx4DMEhyXRwouX2LnEznX",
+    "revokedAt": "2026-11-02T15:01:49.115Z",
+    "ttlSeconds": 3600,
+    "freshUnauthenticatedRequestStatus": 302
+  },
+  "operationalCleanup": {
+    "unintendedTestProject": "bb-pr388-auth-probe",
+    "id": "prj_UJaeA6LfXEsdQ1u7TtCp2KIhmCjr",
+    "deleted": true,
+    "deletionConfirmedBy": "Vercel project lookup returned 404; Best Bottles project and production deployment unchanged"
+  },
+  "recommendation": "Ready for owner merge approval for the reviewed media scope. Do not count the 23 missing preview-only baseline options as tested on preview. Unapproved candidate artwork and whole-catalog reconciliation remain outside this release.",
+  "merged": false,
+  "deployed": false
+}

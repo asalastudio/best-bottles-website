@@ -1,0 +1,693 @@
+{
+  "origin": "https://best-bottles-website.vercel.app",
+  "version": "e5c8e5e7837363dc",
+  "records": [
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "glass": "Amber",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulipAmb5BlkSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5BlkSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "glass": "Amber",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulipAmb5CuSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5CuSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "glass": "Amber",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulipAmb5GlMattSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5GlMattSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "glass": "Amber",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulipAmb5SlMattSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5SlMattSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "glass": "Amber",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulipAmb5BlkShSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5BlkShSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "glass": "Amber",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulipAmb5GlSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5GlSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "glass": "Amber",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulipAmb5SlSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5SlSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5WhtSht",
+      "glass": "Amber",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulipAmb5WhtSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5WhtSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "glass": "Amber",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulipAmb5Gl.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5Gl",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Sl",
+      "glass": "Amber",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulipAmb5Sl.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5Sl",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6BlkSht",
+      "glass": "Clear",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulip6BlkSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6BlkSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6CuSht",
+      "glass": "Clear",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulip6CuSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6CuSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlMattSht",
+      "glass": "Clear",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulip6GlMattSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6GlMattSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlMattSht",
+      "glass": "Clear",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulip6SlMattSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6SlMattSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlSht",
+      "glass": "Clear",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulip6GlSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6GlSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlSht",
+      "glass": "Clear",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulip6SlSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6SlSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6WhtSht",
+      "glass": "Clear",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulip6WhtSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6WhtSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Gl",
+      "glass": "Clear",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulip6Gl.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6Gl",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Sl",
+      "glass": "Clear",
+      "viewport": "desktop",
+      "screenshot": "desktop-GBTulip6Sl.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6Sl",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkSht",
+      "glass": "Amber",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulipAmb5BlkSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5BlkSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5CuSht",
+      "glass": "Amber",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulipAmb5CuSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5CuSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlMattSht",
+      "glass": "Amber",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulipAmb5GlMattSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5GlMattSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlMattSht",
+      "glass": "Amber",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulipAmb5SlMattSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5SlMattSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5BlkShSht",
+      "glass": "Amber",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulipAmb5BlkShSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5BlkShSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5GlSht",
+      "glass": "Amber",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulipAmb5GlSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5GlSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SlSht",
+      "glass": "Amber",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulipAmb5SlSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5SlSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5WhtSht",
+      "glass": "Amber",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulipAmb5WhtSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5WhtSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Gl",
+      "glass": "Amber",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulipAmb5Gl.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5Gl",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5Sl",
+      "glass": "Amber",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulipAmb5Sl.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415?sku=GBTulipAmb5Sl",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6BlkSht",
+      "glass": "Clear",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulip6BlkSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6BlkSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6CuSht",
+      "glass": "Clear",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulip6CuSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6CuSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlMattSht",
+      "glass": "Clear",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulip6GlMattSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6GlMattSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlMattSht",
+      "glass": "Clear",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulip6SlMattSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6SlMattSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6GlSht",
+      "glass": "Clear",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulip6GlSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6GlSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6SlSht",
+      "glass": "Clear",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulip6SlSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6SlSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6WhtSht",
+      "glass": "Clear",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulip6WhtSht.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6WhtSht",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Gl",
+      "glass": "Clear",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulip6Gl.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6Gl",
+      "passed": true
+    },
+    {
+      "sku": "GBTulip6Sl",
+      "glass": "Clear",
+      "viewport": "mobile",
+      "screenshot": "mobile-GBTulip6Sl.png",
+      "version": "e5c8e5e7837363dc",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/545e756d1bdbab00a7fa167af0aa9d004eaa0b86d6f21024c196dbda311013d4.png",
+      "capUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+      "viewBox": "-14.103730664240135 31.764331210191155 1028.2074613284803 1131.0282074613283",
+      "bodyBox": [
+        "341.6",
+        "528.6846153846154",
+        "316.79999999999995",
+        "556.4307692307692"
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-6ml-clear-13-415?sku=GBTulip6Sl",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "passed": true
+}

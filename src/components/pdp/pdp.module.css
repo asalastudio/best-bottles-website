@@ -332,6 +332,16 @@
     user-select: none;
 }
 
+/* Exploded: the lifted overcap stops at the canvas top; drop it clear of the edge.
+   Sidecar: the cap beside the bottle gets the same soft floor contact as the glass. */
+.stage[data-family^="elegant-30ml"][data-view="exploded"] .stagePart[data-slot="overcap"] {
+    translate: 0 3%;
+}
+
+.stage[data-family^="elegant-30ml"][data-view="sidecar"] .stagePart[data-slot="overcap"] {
+    filter: drop-shadow(0 1.5px 1.5px rgba(46, 38, 30, .16));
+}
+
 .stageFallback {
     position: absolute;
     inset: 24px 24px 48px;

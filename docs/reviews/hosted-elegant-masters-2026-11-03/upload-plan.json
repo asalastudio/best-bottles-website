@@ -1,0 +1,372 @@
+{
+  "checkedAt": "2026-11-03T20:50:36.320Z",
+  "configurations": 196,
+  "priorVersion": "ed1e3c6faae97332",
+  "priorRecipes": 463,
+  "preservedRecipeSha256": "f833c3b0634b5ba8e5958ff2faef94e5743eb3a300693e0aa4eabcfb460a7f92",
+  "sourceFiles": [
+    {
+      "file": "public/local-kits/elegant30-master-2026-11-03/kits.json",
+      "sha256": "b3320b4bb5ef051e1ec8c0bf25fa3c620325e1fa7f659a9b71fee59b06e43eca"
+    },
+    {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/kits.json",
+      "sha256": "2aedcf77fb2539186534d119569da1cf23feb61f5832969c0b68369954945dd2"
+    }
+  ],
+  "assetCount": 58,
+  "derivativeCount": 232,
+  "assets": {
+    "/reviews/elegant-master-candidates-2026-11-03/elegant30-clear-master-r3.png": {
+      "file": "public/reviews/elegant-master-candidates-2026-11-03/elegant30-clear-master-r3.png",
+      "sha256": "ddcb307bd88e04c02289b1eda43bf95c70edb1cb68542c92997a324fd6e42af8",
+      "bytes": 1638493,
+      "key": "reviewed-master-media/2026-11-03/ddcb307bd88e04c02289b1eda43bf95c70edb1cb68542c92997a324fd6e42af8.png"
+    },
+    "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png": {
+      "file": "public/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+      "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+      "bytes": 105534,
+      "key": "reviewed-master-media/2026-11-03/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.png"
+    },
+    "/reviews/elegant-master-candidates-2026-11-03/elegant30-frosted-candidate.png": {
+      "file": "public/reviews/elegant-master-candidates-2026-11-03/elegant30-frosted-candidate.png",
+      "sha256": "787583769607af4545699b4f5d19f8245d8e07a2b7b1d230367eb48ce7eab413",
+      "bytes": 602606,
+      "key": "reviewed-master-media/2026-11-03/787583769607af4545699b4f5d19f8245d8e07a2b7b1d230367eb48ce7eab413.png"
+    },
+    "/local-kits/elegant30-master-2026-11-03/parts/d842ca6fd4962600327aba4c7e80021dcd6a70aec8f5efac920add138b41d61e.sprayer.webp": {
+      "file": "public/local-kits/elegant30-master-2026-11-03/parts/d842ca6fd4962600327aba4c7e80021dcd6a70aec8f5efac920add138b41d61e.sprayer.webp",
+      "sha256": "d842ca6fd4962600327aba4c7e80021dcd6a70aec8f5efac920add138b41d61e",
+      "bytes": 65338,
+      "key": "reviewed-master-media/2026-11-03/d842ca6fd4962600327aba4c7e80021dcd6a70aec8f5efac920add138b41d61e.webp"
+    },
+    "/local-kits/elegant30-master-2026-11-03/parts/b191fa26a34adfb45ab45e1845b834a111817b337ce644141f3892e8a67aa0d3.overcap.webp": {
+      "file": "public/local-kits/elegant30-master-2026-11-03/parts/b191fa26a34adfb45ab45e1845b834a111817b337ce644141f3892e8a67aa0d3.overcap.webp",
+      "sha256": "b191fa26a34adfb45ab45e1845b834a111817b337ce644141f3892e8a67aa0d3",
+      "bytes": 76032,
+      "key": "reviewed-master-media/2026-11-03/b191fa26a34adfb45ab45e1845b834a111817b337ce644141f3892e8a67aa0d3.webp"
+    },
+    "/local-kits/elegant30-master-2026-11-03/parts/42b1ca24577dda6f1ded572a83333f204d18f5b0880e88d47756b479b1bfc2c9.sprayer.webp": {
+      "file": "public/local-kits/elegant30-master-2026-11-03/parts/42b1ca24577dda6f1ded572a83333f204d18f5b0880e88d47756b479b1bfc2c9.sprayer.webp",
+      "sha256": "42b1ca24577dda6f1ded572a83333f204d18f5b0880e88d47756b479b1bfc2c9",
+      "bytes": 20702,
+      "key": "reviewed-master-media/2026-11-03/42b1ca24577dda6f1ded572a83333f204d18f5b0880e88d47756b479b1bfc2c9.webp"
+    },
+    "/local-kits/elegant30-master-2026-11-03/parts/f5e06a5d47d8b3dcfd0f7544260043c0a3ce53fe423a668fca6861a53321df69.overcap.webp": {
+      "file": "public/local-kits/elegant30-master-2026-11-03/parts/f5e06a5d47d8b3dcfd0f7544260043c0a3ce53fe423a668fca6861a53321df69.overcap.webp",
+      "sha256": "f5e06a5d47d8b3dcfd0f7544260043c0a3ce53fe423a668fca6861a53321df69",
+      "bytes": 24496,
+      "key": "reviewed-master-media/2026-11-03/f5e06a5d47d8b3dcfd0f7544260043c0a3ce53fe423a668fca6861a53321df69.webp"
+    },
+    "/local-kits/elegant30-master-2026-11-03/parts/e20ce220b1b2cdd5175c5663ec64cce875c7a138421b09400d7c72aa26b748ff.sprayer.webp": {
+      "file": "public/local-kits/elegant30-master-2026-11-03/parts/e20ce220b1b2cdd5175c5663ec64cce875c7a138421b09400d7c72aa26b748ff.sprayer.webp",
+      "sha256": "e20ce220b1b2cdd5175c5663ec64cce875c7a138421b09400d7c72aa26b748ff",
+      "bytes": 21542,
+      "key": "reviewed-master-media/2026-11-03/e20ce220b1b2cdd5175c5663ec64cce875c7a138421b09400d7c72aa26b748ff.webp"
+    },
+    "/local-kits/elegant30-master-2026-11-03/parts/3538b53a0e51b8c657ab57e542d673f117936dd28d4e7bcffbbedd62010a7afd.overcap.webp": {
+      "file": "public/local-kits/elegant30-master-2026-11-03/parts/3538b53a0e51b8c657ab57e542d673f117936dd28d4e7bcffbbedd62010a7afd.overcap.webp",
+      "sha256": "3538b53a0e51b8c657ab57e542d673f117936dd28d4e7bcffbbedd62010a7afd",
+      "bytes": 27966,
+      "key": "reviewed-master-media/2026-11-03/3538b53a0e51b8c657ab57e542d673f117936dd28d4e7bcffbbedd62010a7afd.webp"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/body-elegant-60ml-18-415-clear.bf220850cfd3.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/body-elegant-60ml-18-415-clear.bf220850cfd3.png",
+      "sha256": "bf220850cfd3918dbfd4e66f09b7a1331ab4b6cc062d1bbe70c0c05a242c5f61",
+      "bytes": 1725122,
+      "key": "reviewed-master-media/2026-11-03/bf220850cfd3918dbfd4e66f09b7a1331ab4b6cc062d1bbe70c0c05a242c5f61.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tubes/60-atomizer.2ab1774eb96d.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tubes/60-atomizer.2ab1774eb96d.png",
+      "sha256": "2ab1774eb96dd9fbd3496f8d17f76283a231a7ccf3541430e29dd489adb7788c",
+      "bytes": 16705,
+      "key": "reviewed-master-media/2026-11-03/2ab1774eb96dd9fbd3496f8d17f76283a231a7ccf3541430e29dd489adb7788c.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Lvn-c36e59e65330.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Lvn-c36e59e65330.png",
+      "sha256": "c36e59e653303fcd5b19fca8564f16e2edbc3a4cc915f5a03faf7ec7e7bc41f9",
+      "bytes": 267160,
+      "key": "reviewed-master-media/2026-11-03/c36e59e653303fcd5b19fca8564f16e2edbc3a4cc915f5a03faf7ec7e7bc41f9.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Pnk-3b9d029cd893.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Pnk-3b9d029cd893.png",
+      "sha256": "3b9d029cd893063817ee9af754eff4441a358005a3455b7cfdfd850e7037061a",
+      "bytes": 296067,
+      "key": "reviewed-master-media/2026-11-03/3b9d029cd893063817ee9af754eff4441a358005a3455b7cfdfd850e7037061a.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-MtSl-a4fc3b374013.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-MtSl-a4fc3b374013.png",
+      "sha256": "a4fc3b374013ad3132b83c72f2a53a86ebe963dc659a99faa3e674686ea449e6",
+      "bytes": 213708,
+      "key": "reviewed-master-media/2026-11-03/a4fc3b374013ad3132b83c72f2a53a86ebe963dc659a99faa3e674686ea449e6.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvySl-4764b5f4c29d.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvySl-4764b5f4c29d.png",
+      "sha256": "4764b5f4c29da23615a5b6fe71f27125b8265cfbac5341232695a7e4b1f1d670",
+      "bytes": 208819,
+      "key": "reviewed-master-media/2026-11-03/4764b5f4c29da23615a5b6fe71f27125b8265cfbac5341232695a7e4b1f1d670.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Gl-e467bf5b4ddc.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Gl-e467bf5b4ddc.png",
+      "sha256": "e467bf5b4ddc76a7cdf27d684c06ad4293cf3fbe215d4b5447d7433ed44b41fd",
+      "bytes": 288574,
+      "key": "reviewed-master-media/2026-11-03/e467bf5b4ddc76a7cdf27d684c06ad4293cf3fbe215d4b5447d7433ed44b41fd.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvyGl-08ec920a63eb.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvyGl-08ec920a63eb.png",
+      "sha256": "08ec920a63eb88e4c34a32bb43ca7e5d2e0da3a5cb3fd2d01c9b481ec21dd9c5",
+      "bytes": 240748,
+      "key": "reviewed-master-media/2026-11-03/08ec920a63eb88e4c34a32bb43ca7e5d2e0da3a5cb3fd2d01c9b481ec21dd9c5.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Wht-f680ce1bc3ad.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Wht-f680ce1bc3ad.png",
+      "sha256": "f680ce1bc3adab8623e64158f07e052aa450750eec6fb5a8a9f14fa08f6505d9",
+      "bytes": 136008,
+      "key": "reviewed-master-media/2026-11-03/f680ce1bc3adab8623e64158f07e052aa450750eec6fb5a8a9f14fa08f6505d9.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Red-65432d9c09e0.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Red-65432d9c09e0.png",
+      "sha256": "65432d9c09e02ccd82e87b906f537b655e0ea36b44dadfaa61b9954e7a84dd09",
+      "bytes": 221846,
+      "key": "reviewed-master-media/2026-11-03/65432d9c09e02ccd82e87b906f537b655e0ea36b44dadfaa61b9954e7a84dd09.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Blk-603cfde3a4b9.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Blk-603cfde3a4b9.png",
+      "sha256": "603cfde3a4b988f455b2b3890076ada21127e01ef894a425002c34cb9ab401f9",
+      "bytes": 166664,
+      "key": "reviewed-master-media/2026-11-03/603cfde3a4b988f455b2b3890076ada21127e01ef894a425002c34cb9ab401f9.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tubes/60-spray.b87f311e0c75.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tubes/60-spray.b87f311e0c75.png",
+      "sha256": "b87f311e0c75f5df9fbd3a9255c7e5e2ed42953c7f4ecc4eb3fe80f99667b804",
+      "bytes": 151507,
+      "key": "reviewed-master-media/2026-11-03/b87f311e0c75f5df9fbd3a9255c7e5e2ed42953c7f4ecc4eb3fe80f99667b804.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslLvn-84ea541a4e24.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslLvn-84ea541a4e24.png",
+      "sha256": "84ea541a4e24241ef19cfdbf21621f3c6daf89d68810c8836cd0dc84871eeca3",
+      "bytes": 1255379,
+      "key": "reviewed-master-media/2026-11-03/84ea541a4e24241ef19cfdbf21621f3c6daf89d68810c8836cd0dc84871eeca3.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Lvn-9469c5d0a169.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Lvn-9469c5d0a169.png",
+      "sha256": "9469c5d0a1693290bc62a4deae16dd81159631e0520c43cd191a1900b998f981",
+      "bytes": 112694,
+      "key": "reviewed-master-media/2026-11-03/9469c5d0a1693290bc62a4deae16dd81159631e0520c43cd191a1900b998f981.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslIvyGl-dfd827a51003.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslIvyGl-dfd827a51003.png",
+      "sha256": "dfd827a510036cb613917ea0b77a3a33254d782b4dfc3be04de8ee62d831b67b",
+      "bytes": 1096809,
+      "key": "reviewed-master-media/2026-11-03/dfd827a510036cb613917ea0b77a3a33254d782b4dfc3be04de8ee62d831b67b.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvyGl-702d170cc249.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvyGl-702d170cc249.png",
+      "sha256": "702d170cc249a3e648a12f26f09edfab88e7348a396138a642c7b9945861dcec",
+      "bytes": 146609,
+      "key": "reviewed-master-media/2026-11-03/702d170cc249a3e648a12f26f09edfab88e7348a396138a642c7b9945861dcec.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslIvySl-5cf8aa95d454.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslIvySl-5cf8aa95d454.png",
+      "sha256": "5cf8aa95d454f193d5ab1c705aba0d14678de3f559e600ef37d8c591174f6c59",
+      "bytes": 1013859,
+      "key": "reviewed-master-media/2026-11-03/5cf8aa95d454f193d5ab1c705aba0d14678de3f559e600ef37d8c591174f6c59.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvySl-657d4e2ad642.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvySl-657d4e2ad642.png",
+      "sha256": "657d4e2ad642e34bfec95b16c16e9d92639b046f671899a9cc194cb769ee3ba5",
+      "bytes": 109325,
+      "key": "reviewed-master-media/2026-11-03/657d4e2ad642e34bfec95b16c16e9d92639b046f671899a9cc194cb769ee3ba5.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslWht-001a778e128c.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslWht-001a778e128c.png",
+      "sha256": "001a778e128c9002da327a524e4217b5095c94395d0b03932fb5af41711ffaa9",
+      "bytes": 878960,
+      "key": "reviewed-master-media/2026-11-03/001a778e128c9002da327a524e4217b5095c94395d0b03932fb5af41711ffaa9.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Wht-6bb170ef0b8c.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Wht-6bb170ef0b8c.png",
+      "sha256": "6bb170ef0b8c9f1e1d5f759d1801699bac98cddf119b7f073ba64678c4d658c0",
+      "bytes": 103029,
+      "key": "reviewed-master-media/2026-11-03/6bb170ef0b8c9f1e1d5f759d1801699bac98cddf119b7f073ba64678c4d658c0.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslPnk-dc60949087a0.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslPnk-dc60949087a0.png",
+      "sha256": "dc60949087a08b7c141569f593a5bd846bbebbf1bb579298f5070c63116a9ab1",
+      "bytes": 1078340,
+      "key": "reviewed-master-media/2026-11-03/dc60949087a08b7c141569f593a5bd846bbebbf1bb579298f5070c63116a9ab1.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Pnk-36578e7b4f2c.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Pnk-36578e7b4f2c.png",
+      "sha256": "36578e7b4f2c53192c979d241631225c3e857c0461de67d85ae87cb6e5298a4f",
+      "bytes": 145346,
+      "key": "reviewed-master-media/2026-11-03/36578e7b4f2c53192c979d241631225c3e857c0461de67d85ae87cb6e5298a4f.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslRed-ea42bbee4223.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslRed-ea42bbee4223.png",
+      "sha256": "ea42bbee4223274fbeae9e9e32b3d1df3235b98a3851ffacff26fb368d4b42b3",
+      "bytes": 974585,
+      "key": "reviewed-master-media/2026-11-03/ea42bbee4223274fbeae9e9e32b3d1df3235b98a3851ffacff26fb368d4b42b3.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Red-025a3f96ef0f.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Red-025a3f96ef0f.png",
+      "sha256": "025a3f96ef0f7aa45042cb189bb05c6cf081a41c547d50746a7a4ed95a993a6a",
+      "bytes": 103853,
+      "key": "reviewed-master-media/2026-11-03/025a3f96ef0f7aa45042cb189bb05c6cf081a41c547d50746a7a4ed95a993a6a.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslMtSl-92c444f83a69.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslMtSl-92c444f83a69.png",
+      "sha256": "92c444f83a694241c4277712a48a97a49c8b2b878f5e1d35a9e9a1f7f3546ac4",
+      "bytes": 765628,
+      "key": "reviewed-master-media/2026-11-03/92c444f83a694241c4277712a48a97a49c8b2b878f5e1d35a9e9a1f7f3546ac4.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-MtSl-fd45d19bed3d.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-MtSl-fd45d19bed3d.png",
+      "sha256": "fd45d19bed3d757066d56da9e0c6800767e694ab85fe1eb722de015e6b234535",
+      "bytes": 85806,
+      "key": "reviewed-master-media/2026-11-03/fd45d19bed3d757066d56da9e0c6800767e694ab85fe1eb722de015e6b234535.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslGl-ec800d216f0e.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslGl-ec800d216f0e.png",
+      "sha256": "ec800d216f0ed104db6e367b8da1d9d0335c4883b7f3781dfa1f4ff618b155c0",
+      "bytes": 1177723,
+      "key": "reviewed-master-media/2026-11-03/ec800d216f0ed104db6e367b8da1d9d0335c4883b7f3781dfa1f4ff618b155c0.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Gl-619bde2f3dcd.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Gl-619bde2f3dcd.png",
+      "sha256": "619bde2f3dcdaa81a3cecf83f179d045cf9f897ec884bb3fcaed3eaa3d934ba8",
+      "bytes": 150542,
+      "key": "reviewed-master-media/2026-11-03/619bde2f3dcdaa81a3cecf83f179d045cf9f897ec884bb3fcaed3eaa3d934ba8.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslBlk-6d444801821f.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tassel/GBElg60AnSpTslBlk-6d444801821f.png",
+      "sha256": "6d444801821f224d61636272251a8c9e5c7d7e7eea48f8be38a70126132fe74b",
+      "bytes": 640161,
+      "key": "reviewed-master-media/2026-11-03/6d444801821f224d61636272251a8c9e5c7d7e7eea48f8be38a70126132fe74b.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Blk-87e908c68513.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Blk-87e908c68513.png",
+      "sha256": "87e908c6851366b89d470a2a087cef147c4bb3bc53bd553c14f10fdf6d97e7ed",
+      "bytes": 85722,
+      "key": "reviewed-master-media/2026-11-03/87e908c6851366b89d470a2a087cef147c4bb3bc53bd553c14f10fdf6d97e7ed.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/body-elegant-60ml-18-415-frosted.ec73392aff80.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/body-elegant-60ml-18-415-frosted.ec73392aff80.png",
+      "sha256": "ec73392aff800a75e2d12bdffcffcd4cf59b2b9c19ac039e608fbdf07599495f",
+      "bytes": 2262418,
+      "key": "reviewed-master-media/2026-11-03/ec73392aff800a75e2d12bdffcffcd4cf59b2b9c19ac039e608fbdf07599495f.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Sl-head-5f0a0b2de87d.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Sl-head-5f0a0b2de87d.png",
+      "sha256": "5f0a0b2de87d5cc71909d90476968ecdb7320338b09b8c960cf40fa2f67d1b7e",
+      "bytes": 433595,
+      "key": "reviewed-master-media/2026-11-03/5f0a0b2de87d5cc71909d90476968ecdb7320338b09b8c960cf40fa2f67d1b7e.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Sl-pipette-84c774f95349.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Sl-pipette-84c774f95349.png",
+      "sha256": "84c774f95349b7072399cf1fd8b6365b4268e8eff924d5b502edaf88504f4bc8",
+      "bytes": 383467,
+      "key": "reviewed-master-media/2026-11-03/84c774f95349b7072399cf1fd8b6365b4268e8eff924d5b502edaf88504f4bc8.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Gl-head-865778405dfd.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Gl-head-865778405dfd.png",
+      "sha256": "865778405dfdcdc2ed2d925f003a8a4407304d97a716b87ef9091d732f748539",
+      "bytes": 354921,
+      "key": "reviewed-master-media/2026-11-03/865778405dfdcdc2ed2d925f003a8a4407304d97a716b87ef9091d732f748539.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Gl-pipette-0b13e2e95a87.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Gl-pipette-0b13e2e95a87.png",
+      "sha256": "0b13e2e95a8781ddd397823cb1ccb4fe61a5d3f615daff8a31ab1df126517bc4",
+      "bytes": 373017,
+      "key": "reviewed-master-media/2026-11-03/0b13e2e95a8781ddd397823cb1ccb4fe61a5d3f615daff8a31ab1df126517bc4.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Cu-head-0dff9418eb1c.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Cu-head-0dff9418eb1c.png",
+      "sha256": "0dff9418eb1cbc7b2abb01725780e81cb0eb3e8075321b0837764edd58de23b8",
+      "bytes": 403461,
+      "key": "reviewed-master-media/2026-11-03/0dff9418eb1cbc7b2abb01725780e81cb0eb3e8075321b0837764edd58de23b8.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Cu-pipette-8d13d00d2786.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/droppers/Drp18-415Cu-pipette-8d13d00d2786.png",
+      "sha256": "8d13d00d2786eef965632a57eba33b8cb5e451307a66cdd26a9bc2fb3c36d750",
+      "bytes": 388030,
+      "key": "reviewed-master-media/2026-11-03/8d13d00d2786eef965632a57eba33b8cb5e451307a66cdd26a9bc2fb3c36d750.png"
+    },
+    "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png": {
+      "file": "public/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
+      "bytes": 18427,
+      "key": "reviewed-master-media/2026-11-03/9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d.png"
+    },
+    "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png": {
+      "file": "public/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
+      "bytes": 51329,
+      "key": "reviewed-master-media/2026-11-03/df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tubes/60-lotion.e0e55e48715c.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tubes/60-lotion.e0e55e48715c.png",
+      "sha256": "e0e55e48715c61ef822877c973fdbf5023f33157ae3dd0d4130f381530d77ca6",
+      "bytes": 99506,
+      "key": "reviewed-master-media/2026-11-03/e0e55e48715c61ef822877c973fdbf5023f33157ae3dd0d4130f381530d77ca6.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/body-elegant-100ml-18-415-frosted.24326569acfb.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/body-elegant-100ml-18-415-frosted.24326569acfb.png",
+      "sha256": "24326569acfb4ba4534870336272a23234bcfd929aa313e83719df94aa8001db",
+      "bytes": 2089149,
+      "key": "reviewed-master-media/2026-11-03/24326569acfb4ba4534870336272a23234bcfd929aa313e83719df94aa8001db.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tubes/100-lotion.7293c5de26a0.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tubes/100-lotion.7293c5de26a0.png",
+      "sha256": "7293c5de26a09ea46f9744c13dda0fa11f3e71cac1cc4ab5e49157fbdc1cea08",
+      "bytes": 128632,
+      "key": "reviewed-master-media/2026-11-03/7293c5de26a09ea46f9744c13dda0fa11f3e71cac1cc4ab5e49157fbdc1cea08.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/body-elegant-100ml-18-415-clear.369573a272d8.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/body-elegant-100ml-18-415-clear.369573a272d8.png",
+      "sha256": "369573a272d8157c40f109dfccae7902b77da9fede0d2fb9fa8d0211e5744c7e",
+      "bytes": 692533,
+      "key": "reviewed-master-media/2026-11-03/369573a272d8157c40f109dfccae7902b77da9fede0d2fb9fa8d0211e5744c7e.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tubes/100-spray.d6e5cd31d074.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tubes/100-spray.d6e5cd31d074.png",
+      "sha256": "d6e5cd31d07483f4171b8b73387915fcf4f4753214ebe13a865206b6aa0d0c09",
+      "bytes": 202739,
+      "key": "reviewed-master-media/2026-11-03/d6e5cd31d07483f4171b8b73387915fcf4f4753214ebe13a865206b6aa0d0c09.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/tubes/100-atomizer.2e0d71415590.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/tubes/100-atomizer.2e0d71415590.png",
+      "sha256": "2e0d714155904e82f8d5fe7924a9a6b70b798cf897f2163c1bbe414e21ff921c",
+      "bytes": 22778,
+      "key": "reviewed-master-media/2026-11-03/2e0d714155904e82f8d5fe7924a9a6b70b798cf897f2163c1bbe414e21ff921c.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/white-lotion/2-03a5e972f9ba.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/white-lotion/2-03a5e972f9ba.png",
+      "sha256": "03a5e972f9ba6baabff7127d0ccc8fc498ee5c25556061a8d09cdaa2f103b789",
+      "bytes": 72041,
+      "key": "reviewed-master-media/2026-11-03/03a5e972f9ba6baabff7127d0ccc8fc498ee5c25556061a8d09cdaa2f103b789.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/white-lotion/cover-empty-c5b5c0829698.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/white-lotion/cover-empty-c5b5c0829698.png",
+      "sha256": "c5b5c0829698382a19c4f633b5b70fe4b36e458fa6a7d3877e16f033545d70fd",
+      "bytes": 207583,
+      "key": "reviewed-master-media/2026-11-03/c5b5c0829698382a19c4f633b5b70fe4b36e458fa6a7d3877e16f033545d70fd.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/white-lotion/2-4d3787b43eda.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/white-lotion/2-4d3787b43eda.png",
+      "sha256": "4d3787b43eda47f1a1c3dc977830032d1e50d1648e1a447625d1fcec3dbf8413",
+      "bytes": 71447,
+      "key": "reviewed-master-media/2026-11-03/4d3787b43eda47f1a1c3dc977830032d1e50d1648e1a447625d1fcec3dbf8413.png"
+    },
+    "/local-kits/elegant60-100-masters-2026-11-03/white-lotion/cover-empty-27b93d6b1383.png": {
+      "file": "public/local-kits/elegant60-100-masters-2026-11-03/white-lotion/cover-empty-27b93d6b1383.png",
+      "sha256": "27b93d6b1383e20aebf8760387996714b5365e1217de1900299df6f4b0914d72",
+      "bytes": 199122,
+      "key": "reviewed-master-media/2026-11-03/27b93d6b1383e20aebf8760387996714b5365e1217de1900299df6f4b0914d72.png"
+    }
+  },
+  "capThumbnails": 72,
+  "productionDataMutated": false,
+  "rollback": "Restore the four generated JSON files from the parent commit; immutable uploaded objects may remain archived."
+}

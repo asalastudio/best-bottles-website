@@ -1,0 +1,232 @@
+{
+  "GBCyl50SpryMtGl": {
+    "sprayer": -4.0808,
+    "overcap": -3.2742
+  },
+  "GBCyl50SpryShnGl": {
+    "sprayer": -4.8403,
+    "overcap": -3.2742
+  },
+  "GBCyl50SpryShnBlk": {
+    "sprayer": -4.0991,
+    "overcap": -3.7963
+  },
+  "GBCyl50SpryMtSl": {
+    "sprayer": -4.8403,
+    "overcap": -3.2742
+  },
+  "GBCyl50SpryShnSl": {
+    "sprayer": -4.8403,
+    "overcap": -4.3183
+  },
+  "GBCyl50SpryCu": {
+    "sprayer": -4.1035,
+    "overcap": -5.7106
+  },
+  "GBCyl100SpryCu": {
+    "sprayer": -5.1791,
+    "overcap": -6.4163
+  },
+  "GBCyl100SpryMtGl": {
+    "sprayer": -5.1616,
+    "overcap": -4.5407
+  },
+  "GBCyl100SpryShnGl": {
+    "sprayer": -5.7463,
+    "overcap": -4.5407
+  },
+  "GBCyl100SpryShnBlk": {
+    "sprayer": -5.1757,
+    "overcap": -4.9426
+  },
+  "GBCyl100SpryMtSl": {
+    "sprayer": -5.7463,
+    "overcap": -4.5407
+  },
+  "GBCyl100SpryShnSl": {
+    "sprayer": -5.7463,
+    "overcap": -5.3444
+  },
+  "GBCyl50AnSpBlk": {
+    "sprayer": -19.3637
+  },
+  "GBCyl50AnSpTslBlk": {
+    "sprayer": -1.2904
+  },
+  "GBCyl100AnSpBlk": {
+    "sprayer": -1.4936
+  },
+  "GBCyl100AnSpTslBlk": {
+    "sprayer": -1.3387
+  },
+  "GBCyl100AnSpLvn": {
+    "sprayer": -3.5586
+  },
+  "GBCyl100AnSpPnk": {
+    "sprayer": -3.3657
+  },
+  "GBCyl100AnSpMtSl": {
+    "sprayer": -1.5228
+  },
+  "GBCyl100AnSpIvySl": {
+    "sprayer": -1.995
+  },
+  "GBCyl100AnSpGl": {
+    "sprayer": -3.5643
+  },
+  "GBCyl100AnSpIvyGl": {
+    "sprayer": -2.1429
+  },
+  "GBCyl100AnSpWht": {
+    "sprayer": -2.6929
+  },
+  "GBCyl100AnSpRed": {
+    "sprayer": -3.4898
+  },
+  "GBCyl100AnSpTslLvn": {
+    "sprayer": -1.3347
+  },
+  "GBCyl100AnSpTslIvyGl": {
+    "sprayer": -1.4306
+  },
+  "GBCyl100AnSpTslIvySl": {
+    "sprayer": -1.59
+  },
+  "GBCyl100AnSpTslWht": {
+    "sprayer": -1.5947
+  },
+  "GBCyl100AnSpTslPnk": {
+    "sprayer": -1.5617
+  },
+  "GBCyl100AnSpTslRed": {
+    "sprayer": -1.5018
+  },
+  "GBCyl100AnSpTslMtSl": {
+    "sprayer": -1.6337
+  },
+  "GBCyl100AnSpTslGl": {
+    "sprayer": -1.5054
+  },
+  "GBCyl50AnSpLvn": {
+    "sprayer": -22.0453
+  },
+  "GBCyl50AnSpPnk": {
+    "sprayer": -20.5235
+  },
+  "GBCyl50AnSpMtSl": {
+    "sprayer": -22.0117
+  },
+  "GBCyl50AnSpIvySl": {
+    "sprayer": -20.0026
+  },
+  "GBCyl50AnSpGl": {
+    "sprayer": -19.4426
+  },
+  "GBCyl50AnSpIvyGl": {
+    "sprayer": -18.9238
+  },
+  "GBCyl50AnSpWht": {
+    "sprayer": -18.3098
+  },
+  "GBCyl50AnSpRed": {
+    "sprayer": -19.3459
+  },
+  "GBCyl50AnSpTslLvn": {
+    "sprayer": -1.2852
+  },
+  "GBCyl50AnSpTslIvyGl": {
+    "sprayer": -1.4097
+  },
+  "GBCyl50AnSpTslIvySl": {
+    "sprayer": -1.617
+  },
+  "GBCyl50AnSpTslWht": {
+    "sprayer": -1.623
+  },
+  "GBCyl50AnSpTslPnk": {
+    "sprayer": -1.5802
+  },
+  "GBCyl50AnSpTslRed": {
+    "sprayer": -1.5023
+  },
+  "GBCyl50AnSpTslMtSl": {
+    "sprayer": -1.6738
+  },
+  "GBCyl50AnSpTslGl": {
+    "sprayer": -1.507
+  },
+  "GBcyl25SpryShnBlk": {
+    "sprayer": -3.533,
+    "overcap": -4.7785
+  },
+  "GBCyl25AnSpBlk": {
+    "sprayer": -23.999
+  },
+  "GBCyl25AnSpGl": {
+    "sprayer": -24.1089
+  },
+  "GBCyl25AnSpTslIvySl": {
+    "sprayer": -1.6631
+  },
+  "GBCyl25AnSpTslMtSl": {
+    "sprayer": -1.7422
+  },
+  "GBCyl25AnSpTslRed": {
+    "sprayer": -1.5033
+  },
+  "GBCyl25AnSpTslWht": {
+    "sprayer": -1.6714
+  },
+  "GBcyl25AnSpIvyGl": {
+    "sprayer": -23.3944
+  },
+  "GBcyl25AnSpIvySl": {
+    "sprayer": -24.8846
+  },
+  "GBcyl25AnSpLvn": {
+    "sprayer": -27.7286
+  },
+  "GBcyl25AnSpMtSl": {
+    "sprayer": -27.6819
+  },
+  "GBcyl25AnSpPnk": {
+    "sprayer": -25.6258
+  },
+  "GBcyl25AnSpRed": {
+    "sprayer": -23.9741
+  },
+  "GBcyl25AnSpTslBlk": {
+    "sprayer": -1.2079
+  },
+  "GBcyl25AnSpTslGl": {
+    "sprayer": -1.5098
+  },
+  "GBcyl25AnSpTslIvyGl": {
+    "sprayer": -1.3742
+  },
+  "GBcyl25AnSpTslLvn": {
+    "sprayer": -1.2006
+  },
+  "GBcyl25AnSpTslPnk": {
+    "sprayer": -1.6118
+  },
+  "GBcyl25AnSpWht": {
+    "sprayer": -22.5196
+  },
+  "GBcyl25SpryCu": {
+    "sprayer": -4.3549,
+    "overcap": -7.7439
+  },
+  "GBcyl25SpryMtGl": {
+    "sprayer": 0,
+    "overcap": -5.076
+  },
+  "GBcyl25SpryShnGl": {
+    "sprayer": -4.0741,
+    "overcap": -3.026
+  },
+  "GBcyl25SpryShnSl": {
+    "sprayer": -3.6447,
+    "overcap": -4.4834
+  }
+}

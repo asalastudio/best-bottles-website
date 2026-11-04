@@ -1,0 +1,570 @@
+{
+  "origin": "https://best-bottles-website.vercel.app",
+  "version": "17f5c90053bcdf59",
+  "records": [
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "viewport": "desktop",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkMatt.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/overcap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryBlkMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "viewport": "desktop",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "desktop-GBTulipAmb5SpryBluMatt.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/sprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/overcap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryBluMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "viewport": "desktop",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "desktop-GBTulipAmb5SpryCuMatt.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/sprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/overcap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryCuMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "viewport": "desktop",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "desktop-GBTulipAmb5SpryGlMatt.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryGlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "viewport": "desktop",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "desktop-GBTulipAmb5SprySlMatt.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/sprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/overcap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SprySlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "viewport": "desktop",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "desktop-GBTulipAmb5SpryBlkSh.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/sprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/overcap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryBlkSh",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "viewport": "desktop",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "desktop-GBTulipAmb5SpryGlSh.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/sprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/overcap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryGlSh",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "viewport": "desktop",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "desktop-GBTulipAmb5SprySlSh.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/sprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/overcap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SprySlSh",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "viewport": "mobile",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkMatt.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/overcap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryBlkMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "viewport": "mobile",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "mobile-GBTulipAmb5SpryBluMatt.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/sprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/overcap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryBluMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "viewport": "mobile",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "mobile-GBTulipAmb5SpryCuMatt.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/sprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/overcap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryCuMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "viewport": "mobile",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "mobile-GBTulipAmb5SpryGlMatt.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryGlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "viewport": "mobile",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "mobile-GBTulipAmb5SprySlMatt.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/sprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/overcap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SprySlMatt",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "viewport": "mobile",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "mobile-GBTulipAmb5SpryBlkSh.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/sprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/overcap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryBlkSh",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "viewport": "mobile",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "mobile-GBTulipAmb5SpryGlSh.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/sprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/overcap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SpryGlSh",
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "viewport": "mobile",
+      "slug": "tulip-5ml-amber-13-415-finemist",
+      "screenshot": "mobile-GBTulipAmb5SprySlSh.png",
+      "version": "17f5c90053bcdf59",
+      "viewBox": "-6.563205607791542 46.86046237320137 1013.1264112155832 1114.4390523371414",
+      "bodyUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png",
+      "bodyBox": [
+        "339.5833333333333",
+        "527.2962962962963",
+        "325.925925925926",
+        "558.1481481481482"
+      ],
+      "parts": [
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e5dc3c7fa6a84755b881b0ef591825ec050563a4e5c332a1767e60e875a5c7ea.png"
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/1987a24ec5e99b3b83e24bfa233c55beb98f7d82157ef968b093cf633338318f.png"
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/sprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png"
+        },
+        {
+          "slot": "overcap",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/overcap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png"
+        }
+      ],
+      "href": "https://best-bottles-website.vercel.app/products/tulip-5ml-amber-13-415-finemist?sku=GBTulipAmb5SprySlSh",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "unavailable": [],
+  "passed": true
+}

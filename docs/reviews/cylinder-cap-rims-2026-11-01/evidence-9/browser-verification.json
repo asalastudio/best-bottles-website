@@ -1,0 +1,924 @@
+{
+  "records": [
+    {
+      "sku": "GBCylBlu9RollMattCu",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Copper",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu9RollMattCu-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattCu&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollMattCu",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Copper",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu9RollMattCu-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattCu&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollMattCu",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Copper",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu9RollMattCu-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattCu&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Matte Gold",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl9MtlRollMattGl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollMattGl&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Matte Gold",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl9MtlRollMattGl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollMattGl&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Matte Gold",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl9MtlRollMattGl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollMattGl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollMattSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu9RollMattSl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattSl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollMattSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu9RollMattSl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattSl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollMattSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Silver",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu9RollMattSl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattSl&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Pink Dotted",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl9MtlRollPnkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollPnkDot&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Pink Dotted",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl9MtlRollPnkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollPnkDot&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Pink Dotted",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl9MtlRollPnkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollPnkDot&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShBlk",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Black",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu9RollShBlk-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShBlk&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShBlk",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Black",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu9RollShBlk-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShBlk&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShBlk",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Black",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu9RollShBlk-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShBlk&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl9MtlRollShnGl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollShnGl&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl9MtlRollShnGl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollShnGl&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Shiny Gold",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl9MtlRollShnGl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollShnGl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Silver",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu9RollShnSl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShnSl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Silver",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu9RollShnSl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShnSl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Silver",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu9RollShnSl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShnSl&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollSlDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Silver Dotted",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCyl9MtlRollSlDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollSlDot&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollSlDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Silver Dotted",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCyl9MtlRollSlDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollSlDot&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollSlDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Silver Dotted",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCyl9MtlRollSlDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollSlDot&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollWht",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "White",
+      "viewport": "desktop",
+      "view": "sidecar",
+      "screenshot": "desktop-GBCylBlu9RollWht-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollWht&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollWht",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "White",
+      "viewport": "desktop",
+      "view": "capon",
+      "screenshot": "desktop-GBCylBlu9RollWht-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollWht&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollWht",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "White",
+      "viewport": "desktop",
+      "view": "exploded",
+      "screenshot": "desktop-GBCylBlu9RollWht-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        291.93463134765625,
+        189.70565795898438,
+        111.07696533203125,
+        316.3345031738281
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollWht&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Black Dotted",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl9MtlRollBlkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Black Dotted",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl9MtlRollBlkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Black Dotted",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl9MtlRollBlkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollBlkDot&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollMattCu",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Copper",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu9RollMattCu-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattCu&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollMattCu",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Copper",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu9RollMattCu-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattCu&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollMattCu",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Copper",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu9RollMattCu-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattCu&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Matte Gold",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl9MtlRollMattGl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollMattGl&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Matte Gold",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl9MtlRollMattGl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollMattGl&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Matte Gold",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl9MtlRollMattGl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollMattGl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollMattSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Silver",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu9RollMattSl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattSl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollMattSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Silver",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu9RollMattSl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattSl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollMattSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Matte Silver",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu9RollMattSl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollMattSl&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Pink Dotted",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl9MtlRollPnkDot-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollPnkDot&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Pink Dotted",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl9MtlRollPnkDot-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollPnkDot&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Pink Dotted",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl9MtlRollPnkDot-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollPnkDot&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShBlk",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Black",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu9RollShBlk-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShBlk&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShBlk",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Black",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu9RollShBlk-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShBlk&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShBlk",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Black",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu9RollShBlk-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShBlk&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCyl9MtlRollShnGl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollShnGl&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCyl9MtlRollShnGl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollShnGl&from=pdp"
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "glass": "Clear",
+      "roller": "metal-roller",
+      "cap": "Shiny Gold",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCyl9MtlRollShnGl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-clear.56f95ad35e51.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCyl9MtlRollShnGl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Silver",
+      "viewport": "mobile",
+      "view": "sidecar",
+      "screenshot": "mobile-GBCylBlu9RollShnSl-sidecar.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShnSl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Silver",
+      "viewport": "mobile",
+      "view": "capon",
+      "screenshot": "mobile-GBCylBlu9RollShnSl-capon.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShnSl&from=pdp"
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "glass": "Cobalt Blue",
+      "roller": "plastic-roller",
+      "cap": "Shiny Silver",
+      "viewport": "mobile",
+      "view": "exploded",
+      "screenshot": "mobile-GBCylBlu9RollShnSl-exploded.png",
+      "passed": true,
+      "bodyFrame": [
+        153.4718780517578,
+        140.51693725585938,
+        82.26589965820312,
+        234.32009887695312
+      ],
+      "bodyUrl": "/local-kits/cylinder9-masters-2026-11-01/body-cobalt.9499ee157608.png",
+      "builder": "/matrix?family=Cylinder&shop=roll-on-bottles&sku=GBCylBlu9RollShnSl&from=pdp"
+    }
+  ],
+  "failures": [],
+  "pageErrors": []
+}

@@ -1,0 +1,34 @@
+{
+  "origin": "https://best-bottles-website.vercel.app",
+  "checkedAt": "2026-11-02T14:49:24.994Z",
+  "groups": [
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-5ml|13-415|Glass Bottle",
+      "expected": 36,
+      "matched": 36,
+      "missing": []
+    },
+    {
+      "family": "Cylinder",
+      "bodyId": "tulip-6ml|13-415|Glass Bottle",
+      "expected": 34,
+      "matched": 34,
+      "missing": []
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-5ml|13-415|Glass Bottle",
+      "expected": 36,
+      "matched": 36,
+      "missing": []
+    },
+    {
+      "family": "Sleek",
+      "bodyId": "sleek-8ml|13-415|Glass Bottle",
+      "expected": 36,
+      "matched": 36,
+      "missing": []
+    }
+  ]
+}

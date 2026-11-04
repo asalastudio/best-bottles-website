@@ -1,0 +1,98 @@
+{
+  "origin": "https://best-bottles-website.vercel.app",
+  "version": "a63043cf5188f86a",
+  "before": true,
+  "apis": [
+    {
+      "sku": "GBSpry3mlClWht",
+      "status": 404
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "status": 404
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "status": 404
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "status": 404
+    }
+  ],
+  "pages": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "viewport": "desktop",
+      "sources": [
+        "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry3mlClBlk.5e55db395cfa.png&w=1200&q=75"
+      ]
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "viewport": "desktop",
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac.body.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6.sprayer.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/171893154f35133b49cf1904364064bb63260cf4c3da62e8fe7c9b704d0c044f.overcap.webp"
+      ]
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "viewport": "desktop",
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/40800e21eee8c78b419b80f9889d09eb142121d907303d109bcfca8848a339b3.body.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/be2aa7373f58fe1cf9c624aa914da92d880b896262cd394912ea2661612acaae.sprayer.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/eeb6c5ab1653fc113aa6172249291abe84996e6a4dbcda97824111e20ea1f13c.overcap.webp"
+      ]
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "viewport": "desktop",
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/58258cb621bf1ed555c03fd4ca9d175da4b52c3001ed70367b0476432c7784fe.body.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/22a0d131ecd3c081a3f387835bf04603b02f416b5bbdf38e6a3eb3730dd0b55f.sprayer.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/0d1c6b8b713a6005662c344b64dfc13954774bf8ce3c8cde8a3d4560e8b45129.overcap.webp"
+      ]
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "viewport": "mobile",
+      "sources": [
+        "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry3mlClBlk.5e55db395cfa.png&w=1200&q=75"
+      ]
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "viewport": "mobile",
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac.body.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6.sprayer.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/171893154f35133b49cf1904364064bb63260cf4c3da62e8fe7c9b704d0c044f.overcap.webp"
+      ]
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "viewport": "mobile",
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/40800e21eee8c78b419b80f9889d09eb142121d907303d109bcfca8848a339b3.body.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/be2aa7373f58fe1cf9c624aa914da92d880b896262cd394912ea2661612acaae.sprayer.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/eeb6c5ab1653fc113aa6172249291abe84996e6a4dbcda97824111e20ea1f13c.overcap.webp"
+      ]
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "viewport": "mobile",
+      "sources": [
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/58258cb621bf1ed555c03fd4ca9d175da4b52c3001ed70367b0476432c7784fe.body.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/22a0d131ecd3c081a3f387835bf04603b02f416b5bbdf38e6a3eb3730dd0b55f.sprayer.webp",
+        "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/0d1c6b8b713a6005662c344b64dfc13954774bf8ce3c8cde8a3d4560e8b45129.overcap.webp"
+      ]
+    }
+  ],
+  "catalog": [],
+  "errors": [],
+  "failures": [],
+  "passed": true,
+  "verifiedAt": "2026-11-02T00:01:05.949Z"
+}

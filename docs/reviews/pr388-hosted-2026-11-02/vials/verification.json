@@ -1,0 +1,1421 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "viewport": "desktop",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlBlackCap",
+      "view": "sidecar",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=black",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 412.2264404296875,
+            "y": 640.6260986328125,
+            "width": 241.4385986328125,
+            "height": 265.58392333984375,
+            "top": 640.6260986328125,
+            "right": 653.6650390625,
+            "bottom": 906.2100219726562,
+            "left": 412.2264404296875
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVialClr2mlBlackCap-sidecar.png"
+    },
+    {
+      "viewport": "desktop",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlBlackCap",
+      "view": "capon",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=black",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVialClr2mlBlackCap-capon.png"
+    },
+    {
+      "viewport": "desktop",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlBlackCap",
+      "view": "exploded",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=black",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 206.2722930908203,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 206.2722930908203,
+            "right": 577.7192993164062,
+            "bottom": 471.8562774658203,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVialClr2mlBlackCap-exploded.png"
+    },
+    {
+      "viewport": "desktop",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlWhtCap",
+      "view": "sidecar",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=white",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 412.2264404296875,
+            "y": 640.6260986328125,
+            "width": 241.4385986328125,
+            "height": 265.58392333984375,
+            "top": 640.6260986328125,
+            "right": 653.6650390625,
+            "bottom": 906.2100219726562,
+            "left": 412.2264404296875
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVialClr2mlWhtCap-sidecar.png"
+    },
+    {
+      "viewport": "desktop",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlWhtCap",
+      "view": "capon",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=white",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVialClr2mlWhtCap-capon.png"
+    },
+    {
+      "viewport": "desktop",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlWhtCap",
+      "view": "exploded",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=white",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 208.07252502441406,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 208.07252502441406,
+            "right": 577.7192993164062,
+            "bottom": 473.65650939941406,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVialClr2mlWhtCap-exploded.png"
+    },
+    {
+      "viewport": "desktop",
+      "glass": "Amber",
+      "sku": "GBVAmb2BlackCap",
+      "view": "sidecar",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=black",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 411.95703125,
+            "y": 640.6260986328125,
+            "width": 241.4385986328125,
+            "height": 265.58392333984375,
+            "top": 640.6260986328125,
+            "right": 653.3956298828125,
+            "bottom": 906.2100219726562,
+            "left": 411.95703125
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVAmb2BlackCap-sidecar.png"
+    },
+    {
+      "viewport": "desktop",
+      "glass": "Amber",
+      "sku": "GBVAmb2BlackCap",
+      "view": "capon",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=black",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVAmb2BlackCap-capon.png"
+    },
+    {
+      "viewport": "desktop",
+      "glass": "Amber",
+      "sku": "GBVAmb2BlackCap",
+      "view": "exploded",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=black",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 206.2722930908203,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 206.2722930908203,
+            "right": 577.7192993164062,
+            "bottom": 471.8562774658203,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVAmb2BlackCap-exploded.png"
+    },
+    {
+      "viewport": "desktop",
+      "glass": "Amber",
+      "sku": "GBVAmb2WhtCap",
+      "view": "sidecar",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=white",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 411.95703125,
+            "y": 640.6260986328125,
+            "width": 241.4385986328125,
+            "height": 265.58392333984375,
+            "top": 640.6260986328125,
+            "right": 653.3956298828125,
+            "bottom": 906.2100219726562,
+            "left": 411.95703125
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVAmb2WhtCap-sidecar.png"
+    },
+    {
+      "viewport": "desktop",
+      "glass": "Amber",
+      "sku": "GBVAmb2WhtCap",
+      "view": "capon",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=white",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVAmb2WhtCap-capon.png"
+    },
+    {
+      "viewport": "desktop",
+      "glass": "Amber",
+      "sku": "GBVAmb2WhtCap",
+      "view": "exploded",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=white",
+      "stage": {
+        "x": 109,
+        "y": 210,
+        "width": 696,
+        "height": 540,
+        "top": 210,
+        "right": 805,
+        "bottom": 750,
+        "left": 109
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 459.9599609375,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 459.9599609375,
+            "right": 577.7192993164062,
+            "bottom": 725.5439453125,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 336.28070068359375,
+            "y": 208.07252502441406,
+            "width": 241.4385986328125,
+            "height": 265.583984375,
+            "top": 208.07252502441406,
+            "right": 577.7192993164062,
+            "bottom": 473.65650939941406,
+            "left": 336.28070068359375
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "desktop-GBVAmb2WhtCap-exploded.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlBlackCap",
+      "view": "sidecar",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=black",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 338.40625,
+        "height": 400,
+        "top": 178.5,
+        "right": 338.40625,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 85.98527526855469,
+            "y": 364.67816162109375,
+            "width": 166.4357147216797,
+            "height": 183.0731201171875,
+            "top": 364.67816162109375,
+            "right": 252.42098999023438,
+            "bottom": 547.7512817382812,
+            "left": 85.98527526855469
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 138.33847045898438,
+            "y": 489.2154235839844,
+            "width": 166.43569946289062,
+            "height": 183.07315063476562,
+            "top": 489.2154235839844,
+            "right": 304.774169921875,
+            "bottom": 672.28857421875,
+            "left": 138.33847045898438
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVialClr2mlBlackCap-sidecar.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlBlackCap",
+      "view": "capon",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=black",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 338.40625,
+        "height": 400,
+        "top": 178.5,
+        "right": 338.40625,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 85.98527526855469,
+            "y": 364.67816162109375,
+            "width": 166.4357147216797,
+            "height": 183.0731201171875,
+            "top": 364.67816162109375,
+            "right": 252.42098999023438,
+            "bottom": 547.7512817382812,
+            "left": 85.98527526855469
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 85.98527526855469,
+            "y": 364.67816162109375,
+            "width": 166.4357147216797,
+            "height": 183.0731201171875,
+            "top": 364.67816162109375,
+            "right": 252.42098999023438,
+            "bottom": 547.7512817382812,
+            "left": 85.98527526855469
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVialClr2mlBlackCap-capon.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlBlackCap",
+      "view": "exploded",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=black",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 338.40625,
+        "height": 400,
+        "top": 178.5,
+        "right": 338.40625,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 85.98527526855469,
+            "y": 364.67816162109375,
+            "width": 166.4357147216797,
+            "height": 183.0731201171875,
+            "top": 364.67816162109375,
+            "right": 252.42098999023438,
+            "bottom": 547.7512817382812,
+            "left": 85.98527526855469
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 85.98527526855469,
+            "y": 189.805419921875,
+            "width": 166.4357147216797,
+            "height": 183.0731201171875,
+            "top": 189.805419921875,
+            "right": 252.42098999023438,
+            "bottom": 372.8785400390625,
+            "left": 85.98527526855469
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVialClr2mlBlackCap-exploded.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlWhtCap",
+      "view": "sidecar",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=white",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 338.25,
+        "height": 400,
+        "top": 178.5,
+        "right": 338.25,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 85.94556427001953,
+            "y": 364.69232177734375,
+            "width": 166.35885620117188,
+            "height": 182.98858642578125,
+            "top": 364.69232177734375,
+            "right": 252.3044204711914,
+            "bottom": 547.680908203125,
+            "left": 85.94556427001953
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 138.27459716796875,
+            "y": 489.172119140625,
+            "width": 166.35885620117188,
+            "height": 182.98858642578125,
+            "top": 489.172119140625,
+            "right": 304.6334533691406,
+            "bottom": 672.1607055664062,
+            "left": 138.27459716796875
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVialClr2mlWhtCap-sidecar.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlWhtCap",
+      "view": "capon",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=white",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 338.25,
+        "height": 400,
+        "top": 178.5,
+        "right": 338.25,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 85.94556427001953,
+            "y": 364.69232177734375,
+            "width": 166.35885620117188,
+            "height": 182.98858642578125,
+            "top": 364.69232177734375,
+            "right": 252.3044204711914,
+            "bottom": 547.680908203125,
+            "left": 85.94556427001953
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 85.94556427001953,
+            "y": 364.69232177734375,
+            "width": 166.35885620117188,
+            "height": 182.98858642578125,
+            "top": 364.69232177734375,
+            "right": 252.3044204711914,
+            "bottom": 547.680908203125,
+            "left": 85.94556427001953
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVialClr2mlWhtCap-capon.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Clear",
+      "sku": "GBVialClr2mlWhtCap",
+      "view": "exploded",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-clear-8-425?cap=white",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 338.25,
+        "height": 400,
+        "top": 178.5,
+        "right": 338.25,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 85.94556427001953,
+            "y": 364.69232177734375,
+            "width": 166.35885620117188,
+            "height": 182.98858642578125,
+            "top": 364.69232177734375,
+            "right": 252.3044204711914,
+            "bottom": 547.680908203125,
+            "left": 85.94556427001953
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 85.94556427001953,
+            "y": 191.14071655273438,
+            "width": 166.35885620117188,
+            "height": 182.98861694335938,
+            "top": 191.14071655273438,
+            "right": 252.3044204711914,
+            "bottom": 374.12933349609375,
+            "left": 85.94556427001953
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVialClr2mlWhtCap-exploded.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Amber",
+      "sku": "GBVAmb2BlackCap",
+      "view": "sidecar",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=black",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 342.53125,
+        "height": 400,
+        "top": 178.5,
+        "right": 342.53125,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 87.03338623046875,
+            "y": 364.5172119140625,
+            "width": 168.4644775390625,
+            "height": 185.30938720703125,
+            "top": 364.5172119140625,
+            "right": 255.49786376953125,
+            "bottom": 549.8265991210938,
+            "left": 87.03338623046875
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 139.83676147460938,
+            "y": 490.57574462890625,
+            "width": 168.4644775390625,
+            "height": 185.30938720703125,
+            "top": 490.57574462890625,
+            "right": 308.3012390136719,
+            "bottom": 675.8851318359375,
+            "left": 139.83676147460938
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVAmb2BlackCap-sidecar.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Amber",
+      "sku": "GBVAmb2BlackCap",
+      "view": "capon",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=black",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 342.53125,
+        "height": 400,
+        "top": 178.5,
+        "right": 342.53125,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 87.03338623046875,
+            "y": 364.5172119140625,
+            "width": 168.4644775390625,
+            "height": 185.30938720703125,
+            "top": 364.5172119140625,
+            "right": 255.49786376953125,
+            "bottom": 549.8265991210938,
+            "left": 87.03338623046875
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 87.03338623046875,
+            "y": 364.5172119140625,
+            "width": 168.4644775390625,
+            "height": 185.30938720703125,
+            "top": 364.5172119140625,
+            "right": 255.49786376953125,
+            "bottom": 549.8265991210938,
+            "left": 87.03338623046875
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVAmb2BlackCap-capon.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Amber",
+      "sku": "GBVAmb2BlackCap",
+      "view": "exploded",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=black",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 351,
+        "height": 400,
+        "top": 178.5,
+        "right": 351,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 89.1852035522461,
+            "y": 364.171630859375,
+            "width": 172.62957763671875,
+            "height": 189.88946533203125,
+            "top": 364.171630859375,
+            "right": 261.81478118896484,
+            "bottom": 554.0610961914062,
+            "left": 89.1852035522461
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 89.1852035522461,
+            "y": 182.78785705566406,
+            "width": 172.62957763671875,
+            "height": 189.8894805908203,
+            "top": 182.78785705566406,
+            "right": 261.81478118896484,
+            "bottom": 372.6773376464844,
+            "left": 89.1852035522461
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F2ab2e0173cf771f00b84c9edd38e2b8e83f3c95e14ad110722a6c443519c7ce4.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVAmb2BlackCap-exploded.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Amber",
+      "sku": "GBVAmb2WhtCap",
+      "view": "sidecar",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=white",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 342.375,
+        "height": 400,
+        "top": 178.5,
+        "right": 342.375,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 86.99368286132812,
+            "y": 364.5157775878906,
+            "width": 168.38763427734375,
+            "height": 185.22482299804688,
+            "top": 364.5157775878906,
+            "right": 255.38131713867188,
+            "bottom": 549.7406005859375,
+            "left": 86.99368286132812
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 139.77296447753906,
+            "y": 490.51678466796875,
+            "width": 168.3876190185547,
+            "height": 185.224853515625,
+            "top": 490.51678466796875,
+            "right": 308.16058349609375,
+            "bottom": 675.7416381835938,
+            "left": 139.77296447753906
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVAmb2WhtCap-sidecar.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Amber",
+      "sku": "GBVAmb2WhtCap",
+      "view": "capon",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=white",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 342.375,
+        "height": 400,
+        "top": 178.5,
+        "right": 342.375,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 86.99368286132812,
+            "y": 364.5157775878906,
+            "width": 168.38763427734375,
+            "height": 185.22482299804688,
+            "top": 364.5157775878906,
+            "right": 255.38131713867188,
+            "bottom": 549.7406005859375,
+            "left": 86.99368286132812
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 86.99368286132812,
+            "y": 364.5157775878906,
+            "width": 168.38763427734375,
+            "height": 185.22482299804688,
+            "top": 364.5157775878906,
+            "right": 255.38131713867188,
+            "bottom": 549.7406005859375,
+            "left": 86.99368286132812
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVAmb2WhtCap-capon.png"
+    },
+    {
+      "viewport": "mobile",
+      "glass": "Amber",
+      "sku": "GBVAmb2WhtCap",
+      "view": "exploded",
+      "url": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/products/vial-2ml-amber-8-425?cap=white",
+      "stage": {
+        "x": 0,
+        "y": 178.5,
+        "width": 351,
+        "height": 400,
+        "top": 178.5,
+        "right": 351,
+        "bottom": 578.5,
+        "left": 0
+      },
+      "overflow": false,
+      "parts": [
+        {
+          "slot": "body",
+          "box": {
+            "x": 89.1852035522461,
+            "y": 364.171630859375,
+            "width": 172.62957763671875,
+            "height": 189.88946533203125,
+            "top": 364.171630859375,
+            "right": 261.81478118896484,
+            "bottom": 554.0610961914062,
+            "left": 89.1852035522461
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "1"
+        },
+        {
+          "slot": "cap",
+          "box": {
+            "x": 89.1852035522461,
+            "y": 184.0750274658203,
+            "width": 172.62957763671875,
+            "height": 189.8894805908203,
+            "top": 184.0750274658203,
+            "right": 261.81478118896484,
+            "bottom": 373.9645080566406,
+            "left": 89.1852035522461
+          },
+          "src": "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fcfc3c31f5d17d157f90211e3ff70049c7a09a5e634965592a4e622a42fe466fa.webp&w=640&q=90",
+          "opacity": "",
+          "blend": "",
+          "z": "2"
+        }
+      ],
+      "lineup": [
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2F1d42a5bc05b56bde743d71f4307187fcf2990ae76529752fcb74ce86e64bccdd.png&w=256&q=90",
+        "https://best-bottles-website-oj4zrkd4q-asala.vercel.app/_next/image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-storage.com%2Freviewed-master-media%2F2026-11-01%2Fce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f.png&w=256&q=90"
+      ],
+      "shot": "mobile-GBVAmb2WhtCap-exploded.png"
+    }
+  ]
+}

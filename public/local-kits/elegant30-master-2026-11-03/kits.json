@@ -1,0 +1,2087 @@
+{
+ "version": "7642cc0f9f2d",
+ "rows": {
+  "GBElg30SpryMattSl": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1061,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 1012.52
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-clear-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 280.8,
+      "top": 343.95,
+      "right": 731.2,
+      "bottom": 1064
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-clear-master-r3.png",
+      "key": "",
+      "sha256": "ddcb307bd88e04c02289b1eda43bf95c70edb1cb68542c92997a324fd6e42af8",
+      "bytes": 1638493,
+      "width": 1472,
+      "height": 2192
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": 235.614,
+      "y": 293.987,
+      "width": 540.772,
+      "height": 805.28
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 478.63,
+      "top": 437,
+      "right": 539.06,
+      "bottom": 1012.52
+     },
+     "derivation": "family-universal",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 282,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+      "key": "",
+      "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+      "bytes": 105534,
+      "width": 153,
+      "height": 1457
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "box": {
+      "x": 478.63,
+      "y": 437,
+      "width": 60.435,
+      "height": 575.52
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 445,
+      "left": 414,
+      "right": 595,
+      "top": 85
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 2,
+     "exploded": {
+      "dx": 424,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 6634,
+      "height": 1100,
+      "key": "kits/master-parts/25c5cbb3f45936f76bd2bed534e3f72ee8d7e4c8f953e850d302a32a5a7d8e35.sprayer.webp",
+      "sha256": "25c5cbb3f45936f76bd2bed534e3f72ee8d7e4c8f953e850d302a32a5a7d8e35",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/25c5cbb3f45936f76bd2bed534e3f72ee8d7e4c8f953e850d302a32a5a7d8e35.sprayer.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 448,
+      "left": 401,
+      "right": 600,
+      "top": 42
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 3,
+     "exploded": {
+      "dx": 642,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 7472,
+      "height": 1100,
+      "key": "kits/master-parts/acb77a0ec05f0b32e6c01061fcecea34273fc34924d234f0b688813ac2e9b5d6.overcap.webp",
+      "sha256": "acb77a0ec05f0b32e6c01061fcecea34273fc34924d234f0b688813ac2e9b5d6",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/acb77a0ec05f0b32e6c01061fcecea34273fc34924d234f0b688813ac2e9b5d6.overcap.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3
+    }
+   ],
+   "plateSha256": "2485dee69ae92834b5ec7994a59c6c1dddd0e19185e36c6faab3311496dcec5f",
+   "sku": "GBElg30SpryMattSl",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 438.73,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   }
+  },
+  "GBElg30SpryMattGl": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1061,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 1011.52
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-clear-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 275.8,
+      "top": 342.95,
+      "right": 726.2,
+      "bottom": 1063
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-clear-master-r3.png",
+      "key": "",
+      "sha256": "ddcb307bd88e04c02289b1eda43bf95c70edb1cb68542c92997a324fd6e42af8",
+      "bytes": 1638493,
+      "width": 1472,
+      "height": 2192
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": 230.614,
+      "y": 292.987,
+      "width": 540.772,
+      "height": 805.28
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 476.22,
+      "top": 438,
+      "right": 536.44,
+      "bottom": 1011.52
+     },
+     "derivation": "family-universal",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 282,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+      "key": "",
+      "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+      "bytes": 105534,
+      "width": 153,
+      "height": 1457
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "box": {
+      "x": 476.22,
+      "y": 438,
+      "width": 60.225,
+      "height": 573.52
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 446,
+      "left": 404,
+      "right": 600,
+      "top": 68
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 2,
+     "exploded": {
+      "dx": 429,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 10816,
+      "height": 1100,
+      "key": "kits/master-parts/0534369f9cae32482aed689a5948c1c8f2bd01c2d5dee8cf33748828f919ad05.sprayer.webp",
+      "sha256": "0534369f9cae32482aed689a5948c1c8f2bd01c2d5dee8cf33748828f919ad05",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/0534369f9cae32482aed689a5948c1c8f2bd01c2d5dee8cf33748828f919ad05.sprayer.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 444,
+      "left": 399,
+      "right": 600,
+      "top": 36
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 3,
+     "exploded": {
+      "dx": 654,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 8878,
+      "height": 1100,
+      "key": "kits/master-parts/75716929294f0fa52011c1d28ee9dd45bb591cbe27bdef352cccc7a2915e7303.overcap.webp",
+      "sha256": "75716929294f0fa52011c1d28ee9dd45bb591cbe27bdef352cccc7a2915e7303",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/75716929294f0fa52011c1d28ee9dd45bb591cbe27bdef352cccc7a2915e7303.overcap.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3
+    }
+   ],
+   "plateSha256": "50dd3ce666d6f5d7bb0356eeb43f432218d2bb0989f6ac472807155c85a715d2",
+   "sku": "GBElg30SpryMattGl",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 437.73,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   }
+  },
+  "GBElgFrst30SpryShnGl": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1046.9,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 435
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-frosted-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 278,
+      "right": 722,
+      "top": 336.06,
+      "bottom": 1049
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-frosted-candidate.png",
+      "key": "",
+      "sha256": "787583769607af4545699b4f5d19f8245d8e07a2b7b1d230367eb48ce7eab413",
+      "bytes": 602606,
+      "width": 1196,
+      "height": 1315
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": -1.93,
+      "y": 13.85,
+      "width": 1011.47,
+      "height": 1112.11
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 476.83,
+      "top": 427,
+      "right": 536.79,
+      "bottom": 998.03
+     },
+     "derivation": "family-universal",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 282,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+      "key": "",
+      "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+      "bytes": 105534,
+      "width": 153,
+      "height": 1457
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "box": {
+      "x": 476.83,
+      "y": 427,
+      "width": 59.964,
+      "height": 571.03
+     },
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 435,
+      "left": 414,
+      "right": 591,
+      "top": 80
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 2,
+     "exploded": {
+      "dx": 332,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 11742,
+      "height": 1100,
+      "key": "kits/master-parts/b7d38450efac78e1991255e23f0a598868be3387215f1f6833b05a875471beed.sprayer.webp",
+      "sha256": "b7d38450efac78e1991255e23f0a598868be3387215f1f6833b05a875471beed",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/b7d38450efac78e1991255e23f0a598868be3387215f1f6833b05a875471beed.sprayer.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 436,
+      "left": 400,
+      "right": 598,
+      "top": 43
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 3,
+     "exploded": {
+      "dx": 547,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 12154,
+      "height": 1100,
+      "key": "kits/master-parts/bd9ff80f4016aba914dbaa926ad0f3e6dc118194a84cb6b2ce04c9b451711efd.overcap.webp",
+      "sha256": "bd9ff80f4016aba914dbaa926ad0f3e6dc118194a84cb6b2ce04c9b451711efd",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/bd9ff80f4016aba914dbaa926ad0f3e6dc118194a84cb6b2ce04c9b451711efd.overcap.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3
+    }
+   ],
+   "plateSha256": "f2f9fd6ae71f25a60e3de7274129aa713ff76aa994080a5bab466d3a13acb932",
+   "sku": "GBElgFrst30SpryShnGl",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 438.4,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   }
+  },
+  "GBElgFrst30SpryShSl": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1046.9,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 432
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-frosted-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 282,
+      "right": 726,
+      "top": 336.06,
+      "bottom": 1049
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-frosted-candidate.png",
+      "key": "",
+      "sha256": "787583769607af4545699b4f5d19f8245d8e07a2b7b1d230367eb48ce7eab413",
+      "bytes": 602606,
+      "width": 1196,
+      "height": 1315
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": 2.07,
+      "y": 13.85,
+      "width": 1011.47,
+      "height": 1112.11
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 479.69,
+      "top": 424,
+      "right": 539.97,
+      "bottom": 998.03
+     },
+     "derivation": "family-universal",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 282,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+      "key": "",
+      "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+      "bytes": 105534,
+      "width": 153,
+      "height": 1457
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "box": {
+      "x": 479.69,
+      "y": 424,
+      "width": 60.279,
+      "height": 574.03
+     },
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 432,
+      "left": 420,
+      "right": 591,
+      "top": 82
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 2,
+     "exploded": {
+      "dx": 330,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 8968,
+      "height": 1100,
+      "key": "kits/master-parts/2097e558e40abb557059254513c8a03c3fcbf9c17776db009d6ce49c31604d62.sprayer.webp",
+      "sha256": "2097e558e40abb557059254513c8a03c3fcbf9c17776db009d6ce49c31604d62",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/2097e558e40abb557059254513c8a03c3fcbf9c17776db009d6ce49c31604d62.sprayer.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 438,
+      "left": 401,
+      "right": 601,
+      "top": 41
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 3,
+     "exploded": {
+      "dx": 544,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 9510,
+      "height": 1100,
+      "key": "kits/master-parts/6865aa0e2063eda592ef8085d18d35f245ae180b671b73d501a8e74d132fd8b7.overcap.webp",
+      "sha256": "6865aa0e2063eda592ef8085d18d35f245ae180b671b73d501a8e74d132fd8b7",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/6865aa0e2063eda592ef8085d18d35f245ae180b671b73d501a8e74d132fd8b7.overcap.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3
+    }
+   ],
+   "plateSha256": "bfa160f723fc9b2ca3310736ba17f16a2d7b7fb83865a54d80aab85ca5a9965f",
+   "sku": "GBElgFrst30SpryShSl",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 438.4,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   }
+  },
+  "GBElgFrst30SpryMattSl": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1046.9,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 433
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-frosted-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 279,
+      "right": 723,
+      "top": 336.06,
+      "bottom": 1049
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-frosted-candidate.png",
+      "key": "",
+      "sha256": "787583769607af4545699b4f5d19f8245d8e07a2b7b1d230367eb48ce7eab413",
+      "bytes": 602606,
+      "width": 1196,
+      "height": 1315
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": -0.93,
+      "y": 13.85,
+      "width": 1011.47,
+      "height": 1112.11
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 475.74,
+      "top": 425,
+      "right": 535.91,
+      "bottom": 998.03
+     },
+     "derivation": "family-universal",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 282,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+      "key": "",
+      "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+      "bytes": 105534,
+      "width": 153,
+      "height": 1457
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "box": {
+      "x": 475.74,
+      "y": 425,
+      "width": 60.174,
+      "height": 573.03
+     },
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 433,
+      "left": 414,
+      "right": 589,
+      "top": 84
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 2,
+     "exploded": {
+      "dx": 333,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 6460,
+      "height": 1100,
+      "key": "kits/master-parts/77b1b8dfa93d04dfc954c8980bfe1156ced3a73775d6d0273f9117909a0f9660.sprayer.webp",
+      "sha256": "77b1b8dfa93d04dfc954c8980bfe1156ced3a73775d6d0273f9117909a0f9660",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/77b1b8dfa93d04dfc954c8980bfe1156ced3a73775d6d0273f9117909a0f9660.sprayer.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 439,
+      "left": 403,
+      "right": 597,
+      "top": 44
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 3,
+     "exploded": {
+      "dx": 543,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 7328,
+      "height": 1100,
+      "key": "kits/master-parts/7b64fceb390dd04bf16c7cfcbfe61027ae3520741948ed9a269fa05667a84ca1.overcap.webp",
+      "sha256": "7b64fceb390dd04bf16c7cfcbfe61027ae3520741948ed9a269fa05667a84ca1",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/7b64fceb390dd04bf16c7cfcbfe61027ae3520741948ed9a269fa05667a84ca1.overcap.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3
+    }
+   ],
+   "plateSha256": "b46b8a8862d708cca760de81c9a8a6f5d8c60afcf5432c1068ab971413f560d2",
+   "sku": "GBElgFrst30SpryMattSl",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 438.4,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   }
+  },
+  "GBElgFrst30SpryMattGl": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1046.9,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 439
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-frosted-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 279,
+      "right": 724,
+      "top": 334.46,
+      "bottom": 1049
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-frosted-candidate.png",
+      "key": "",
+      "sha256": "787583769607af4545699b4f5d19f8245d8e07a2b7b1d230367eb48ce7eab413",
+      "bytes": 602606,
+      "width": 1196,
+      "height": 1315
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": -1.56,
+      "y": 11.51,
+      "width": 1013.75,
+      "height": 1114.62
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 478.51,
+      "top": 431,
+      "right": 538.05,
+      "bottom": 997.91
+     },
+     "derivation": "family-universal",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 282,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+      "key": "",
+      "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+      "bytes": 105534,
+      "width": 153,
+      "height": 1457
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "box": {
+      "x": 478.51,
+      "y": 431,
+      "width": 59.532,
+      "height": 566.91
+     },
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 439,
+      "left": 409,
+      "right": 599,
+      "top": 72
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 2,
+     "exploded": {
+      "dx": 339,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 10396,
+      "height": 1100,
+      "key": "kits/master-parts/fe5d85d68b50a31f7ebbf931a8898e68d4e87b023b82799a2a5ad52809497c23.sprayer.webp",
+      "sha256": "fe5d85d68b50a31f7ebbf931a8898e68d4e87b023b82799a2a5ad52809497c23",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/fe5d85d68b50a31f7ebbf931a8898e68d4e87b023b82799a2a5ad52809497c23.sprayer.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 440,
+      "left": 402,
+      "right": 598,
+      "top": 41
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 3,
+     "exploded": {
+      "dx": 560,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 8972,
+      "height": 1100,
+      "key": "kits/master-parts/377a943636a5f3f2fe2c2680485d86f1496d09eda0dda0804d88ab939d5b0b23.overcap.webp",
+      "sha256": "377a943636a5f3f2fe2c2680485d86f1496d09eda0dda0804d88ab939d5b0b23",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/377a943636a5f3f2fe2c2680485d86f1496d09eda0dda0804d88ab939d5b0b23.overcap.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3
+    }
+   ],
+   "plateSha256": "855907b0004bdbd6ba122c395c08f34449bdf84e5b1a87329f3e78645a15152c",
+   "sku": "GBElgFrst30SpryMattGl",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 437.02,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   }
+  },
+  "GBElgFrst30SpryBlk": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1046.9,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 431
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-frosted-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 274,
+      "right": 719,
+      "top": 334.46,
+      "bottom": 1049
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-frosted-candidate.png",
+      "key": "",
+      "sha256": "787583769607af4545699b4f5d19f8245d8e07a2b7b1d230367eb48ce7eab413",
+      "bytes": 602606,
+      "width": 1196,
+      "height": 1315
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": -6.56,
+      "y": 11.51,
+      "width": 1013.75,
+      "height": 1114.62
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 474.15,
+      "top": 423,
+      "right": 534.53,
+      "bottom": 997.91
+     },
+     "derivation": "family-universal",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 282,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+      "key": "",
+      "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+      "bytes": 105534,
+      "width": 153,
+      "height": 1457
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "box": {
+      "x": 474.15,
+      "y": 423,
+      "width": 60.372,
+      "height": 574.91
+     },
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 431,
+      "left": 412,
+      "right": 588,
+      "top": 77
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 2,
+     "exploded": {
+      "dx": 331,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 9170,
+      "height": 1100,
+      "key": "kits/master-parts/41aa5b675e078cf37de3c0168575a02e9e9e01a46f073da45555ccab07ca75c8.sprayer.webp",
+      "sha256": "41aa5b675e078cf37de3c0168575a02e9e9e01a46f073da45555ccab07ca75c8",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/41aa5b675e078cf37de3c0168575a02e9e9e01a46f073da45555ccab07ca75c8.sprayer.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 432,
+      "left": 401,
+      "right": 599,
+      "top": 35
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 3,
+     "exploded": {
+      "dx": 542,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 9972,
+      "height": 1100,
+      "key": "kits/master-parts/89edfeb56b4cd6d89e820206c74df48782f74bd5aac06b7b0be3e6ff452ca2f7.overcap.webp",
+      "sha256": "89edfeb56b4cd6d89e820206c74df48782f74bd5aac06b7b0be3e6ff452ca2f7",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/89edfeb56b4cd6d89e820206c74df48782f74bd5aac06b7b0be3e6ff452ca2f7.overcap.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3
+    }
+   ],
+   "plateSha256": "7e642ef1a5e24a208c016d387217907cc0bec75f69899b70c83abd11b2f72eb7",
+   "sku": "GBElgFrst30SpryBlk",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 437.02,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   }
+  },
+  "GBElg30GlCap": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1061,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 390
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-clear-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 263.96,
+      "top": 280.92,
+      "right": 755.04,
+      "bottom": 1066
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-clear-master-r3.png",
+      "key": "",
+      "sha256": "ddcb307bd88e04c02289b1eda43bf95c70edb1cb68542c92997a324fd6e42af8",
+      "bytes": 1638493,
+      "width": 1472,
+      "height": 2192
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": 214.694,
+      "y": 226.445,
+      "width": 589.611,
+      "height": 878.008
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 390,
+      "left": 393,
+      "right": 609,
+      "top": 37
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": -371,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 12112,
+      "height": 1100,
+      "key": "kits/master-parts/4f3800811ce1f089e61d5970bea96143b2c16a958801ecb329e1b55144ef14ce.cap.webp",
+      "sha256": "4f3800811ce1f089e61d5970bea96143b2c16a958801ecb329e1b55144ef14ce",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/4f3800811ce1f089e61d5970bea96143b2c16a958801ecb329e1b55144ef14ce.cap.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1
+    }
+   ],
+   "plateSha256": "72619a68978b108642d19e833f9aa3b6940dfa4515f8f0e3f6b4be79f8425a1d",
+   "sku": "GBElg30GlCap",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 384.26,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   }
+  },
+  "GBElgFrst30GlCap": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1059.1,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 384
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-frosted-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 258,
+      "right": 747,
+      "top": 275.81,
+      "bottom": 1061
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-frosted-candidate.png",
+      "key": "",
+      "sha256": "787583769607af4545699b4f5d19f8245d8e07a2b7b1d230367eb48ce7eab413",
+      "bytes": 602606,
+      "width": 1196,
+      "height": 1315
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": -50.3,
+      "y": -79.07,
+      "width": 1113.99,
+      "height": 1224.83
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 384,
+      "left": 395,
+      "right": 607,
+      "top": 37
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 376,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 11916,
+      "height": 1100,
+      "key": "kits/master-parts/75b9688335b20a8fef9c72b9387e607c5d9865c1db7a72ee6b5e0b5f8a5f255f.cap.webp",
+      "sha256": "75b9688335b20a8fef9c72b9387e607c5d9865c1db7a72ee6b5e0b5f8a5f255f",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/75b9688335b20a8fef9c72b9387e607c5d9865c1db7a72ee6b5e0b5f8a5f255f.cap.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1
+    }
+   ],
+   "plateSha256": "17590b8cb014069c1657686e97b47bc592ee0bd200d8e18222e93883c4313b0f",
+   "sku": "GBElgFrst30GlCap",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 388.51,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   }
+  },
+  "GBElg30SlCap": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1061,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 389
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-clear-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 258.96,
+      "top": 279.92,
+      "right": 750.04,
+      "bottom": 1065
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-clear-master-r3.png",
+      "key": "",
+      "sha256": "ddcb307bd88e04c02289b1eda43bf95c70edb1cb68542c92997a324fd6e42af8",
+      "bytes": 1638493,
+      "width": 1472,
+      "height": 2192
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": 209.694,
+      "y": 225.445,
+      "width": 589.611,
+      "height": 878.008
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 389,
+      "left": 395,
+      "right": 610,
+      "top": 34
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 381,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 9260,
+      "height": 1100,
+      "key": "kits/master-parts/2421ff0704c326096d0937618d853c0ffaf94f7bc0ff90c3a07e381d26b7b87e.cap.webp",
+      "sha256": "2421ff0704c326096d0937618d853c0ffaf94f7bc0ff90c3a07e381d26b7b87e",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/2421ff0704c326096d0937618d853c0ffaf94f7bc0ff90c3a07e381d26b7b87e.cap.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1
+    }
+   ],
+   "plateSha256": "01c30acd8f58b31394a5f11a97d661f4b5e3a02efabe4e1fba363b6c75c999b9",
+   "sku": "GBElg30SlCap",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 383.26,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   }
+  },
+  "GBElgFrst30SlCap": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1061,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 384
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-frosted-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 259,
+      "right": 749,
+      "top": 274.2,
+      "bottom": 1061
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-frosted-candidate.png",
+      "key": "",
+      "sha256": "787583769607af4545699b4f5d19f8245d8e07a2b7b1d230367eb48ce7eab413",
+      "bytes": 602606,
+      "width": 1196,
+      "height": 1315
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": -49.93,
+      "y": -81.4,
+      "width": 1116.27,
+      "height": 1227.33
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "bottom": 384,
+      "left": 396,
+      "right": 608,
+      "top": 34
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 377,
+      "dy": 0
+     },
+     "image": {
+      "bytes": 8924,
+      "height": 1100,
+      "key": "kits/master-parts/d45e4a7643bb55363a149f800bcee4d714cd26f47d1115c8da283cea8349d0ce.cap.webp",
+      "sha256": "d45e4a7643bb55363a149f800bcee4d714cd26f47d1115c8da283cea8349d0ce",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/d45e4a7643bb55363a149f800bcee4d714cd26f47d1115c8da283cea8349d0ce.cap.webp",
+      "width": 1000
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1
+    }
+   ],
+   "plateSha256": "21b54f11f1d3ea79715400753d319dfe5d909a91af1658364889e2060acae6a8",
+   "sku": "GBElgFrst30SlCap",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 387.13,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   }
+  },
+  "GBElg30SpryShGl": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1061,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 1011.89
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-clear-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 281.4,
+      "top": 341.65,
+      "right": 732.92,
+      "bottom": 1063.5
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-clear-master-r3.png",
+      "key": "",
+      "sha256": "ddcb307bd88e04c02289b1eda43bf95c70edb1cb68542c92997a324fd6e42af8",
+      "bytes": 1638493,
+      "width": 1472,
+      "height": 2192
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": 236.098,
+      "y": 291.562,
+      "width": 542.124,
+      "height": 807.293
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 478.07,
+      "top": 435,
+      "right": 538.65,
+      "bottom": 1011.89
+     },
+     "derivation": "family-universal",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 282,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+      "key": "",
+      "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+      "bytes": 105534,
+      "width": 153,
+      "height": 1457
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "box": {
+      "x": 478.07,
+      "y": 435,
+      "width": 60.579,
+      "height": 576.89
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 415,
+      "top": 84,
+      "right": 593,
+      "bottom": 443
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 2,
+     "exploded": {
+      "dx": 429,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/d842ca6fd4962600327aba4c7e80021dcd6a70aec8f5efac920add138b41d61e.sprayer.webp",
+      "key": "",
+      "sha256": "d842ca6fd4962600327aba4c7e80021dcd6a70aec8f5efac920add138b41d61e",
+      "bytes": 65338,
+      "width": 1000,
+      "height": 1100
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 398,
+      "top": 44,
+      "right": 602,
+      "bottom": 445
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 3,
+     "exploded": {
+      "dx": 654,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/b191fa26a34adfb45ab45e1845b834a111817b337ce644141f3892e8a67aa0d3.overcap.webp",
+      "key": "",
+      "sha256": "b191fa26a34adfb45ab45e1845b834a111817b337ce644141f3892e8a67aa0d3",
+      "bytes": 76032,
+      "width": 1000,
+      "height": 1100
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3
+    }
+   ],
+   "plateSha256": "",
+   "sku": "GBElg30SpryShGl",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 436.67,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   },
+   "source": {
+    "psd": "4.  15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/2. GBElg30SpryShnGl.psd",
+    "skippedLayers": [],
+    "builtBy": "scripts/elegant30/build-clear-sprayer-kits.py"
+   }
+  },
+  "GBElg30SpryShnSl": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1061,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 1011.89
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-clear-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 278.45,
+      "top": 341.65,
+      "right": 729.97,
+      "bottom": 1063.5
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-clear-master-r3.png",
+      "key": "",
+      "sha256": "ddcb307bd88e04c02289b1eda43bf95c70edb1cb68542c92997a324fd6e42af8",
+      "bytes": 1638493,
+      "width": 1472,
+      "height": 2192
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": 233.148,
+      "y": 291.562,
+      "width": 542.124,
+      "height": 807.293
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 476.48,
+      "top": 433,
+      "right": 537.27,
+      "bottom": 1011.89
+     },
+     "derivation": "family-universal",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 282,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+      "key": "",
+      "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+      "bytes": 105534,
+      "width": 153,
+      "height": 1457
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "box": {
+      "x": 476.48,
+      "y": 433,
+      "width": 60.789,
+      "height": 578.89
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 415,
+      "top": 89,
+      "right": 590,
+      "bottom": 441
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 2,
+     "exploded": {
+      "dx": 429,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/42b1ca24577dda6f1ded572a83333f204d18f5b0880e88d47756b479b1bfc2c9.sprayer.webp",
+      "key": "",
+      "sha256": "42b1ca24577dda6f1ded572a83333f204d18f5b0880e88d47756b479b1bfc2c9",
+      "bytes": 20702,
+      "width": 1000,
+      "height": 1100
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 400,
+      "top": 45,
+      "right": 601,
+      "bottom": 444
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 3,
+     "exploded": {
+      "dx": 654,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/f5e06a5d47d8b3dcfd0f7544260043c0a3ce53fe423a668fca6861a53321df69.overcap.webp",
+      "key": "",
+      "sha256": "f5e06a5d47d8b3dcfd0f7544260043c0a3ce53fe423a668fca6861a53321df69",
+      "bytes": 24496,
+      "width": 1000,
+      "height": 1100
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3
+    }
+   ],
+   "plateSha256": "",
+   "sku": "GBElg30SpryShnSl",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 436.67,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   },
+   "source": {
+    "psd": "4.  15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/3. GBElg30SpryShSl.psd",
+    "skippedLayers": [],
+    "builtBy": "scripts/elegant30/build-clear-sprayer-kits.py"
+   }
+  },
+  "GBElg30SpryBlk": {
+   "anchors": {
+    "axisX": 500,
+    "baselineY": 1061,
+    "neckAxisX": 500,
+    "pxPerMm": null,
+    "seatY": 1011.89
+   },
+   "canvas": {
+    "height": 1100,
+    "width": 1000
+   },
+   "completeness": "full",
+   "conflicts": [],
+   "familyId": "elegant-30ml-clear-15-415",
+   "parts": [
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 274.66,
+      "top": 341.65,
+      "right": 726.18,
+      "bottom": 1063.5
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 0,
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/reviews/elegant-master-candidates-2026-11-03/elegant30-clear-master-r3.png",
+      "key": "",
+      "sha256": "ddcb307bd88e04c02289b1eda43bf95c70edb1cb68542c92997a324fd6e42af8",
+      "bytes": 1638493,
+      "width": 1472,
+      "height": 2192
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "box": {
+      "x": 229.358,
+      "y": 291.562,
+      "width": 542.124,
+      "height": 807.293
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 471.61,
+      "top": 436,
+      "right": 532.08,
+      "bottom": 1011.89
+     },
+     "derivation": "family-universal",
+     "explodeIndex": 1,
+     "exploded": {
+      "dx": 282,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+      "key": "",
+      "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+      "bytes": 105534,
+      "width": 153,
+      "height": 1457
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 1,
+     "box": {
+      "x": 471.61,
+      "y": 436,
+      "width": 60.474,
+      "height": 575.89
+     }
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 407,
+      "top": 84,
+      "right": 588,
+      "bottom": 444
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 2,
+     "exploded": {
+      "dx": 429,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/e20ce220b1b2cdd5175c5663ec64cce875c7a138421b09400d7c72aa26b748ff.sprayer.webp",
+      "key": "",
+      "sha256": "e20ce220b1b2cdd5175c5663ec64cce875c7a138421b09400d7c72aa26b748ff",
+      "bytes": 21542,
+      "width": 1000,
+      "height": 1100
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 2
+    },
+    {
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "bounds": {
+      "left": 400,
+      "top": 40,
+      "right": 601,
+      "bottom": 444
+     },
+     "derivation": "psd-layer",
+     "explodeIndex": 3,
+     "exploded": {
+      "dx": 654,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/elegant30-master-2026-11-03/parts/3538b53a0e51b8c657ab57e542d673f117936dd28d4e7bcffbbedd62010a7afd.overcap.webp",
+      "key": "",
+      "sha256": "3538b53a0e51b8c657ab57e542d673f117936dd28d4e7bcffbbedd62010a7afd",
+      "bytes": 27966,
+      "width": 1000,
+      "height": 1100
+     },
+     "image2x": null,
+     "mask": null,
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 3
+    }
+   ],
+   "plateSha256": "",
+   "sku": "GBElg30SpryBlk",
+   "three": null,
+   "glassSizing": {
+    "heightPct": 43,
+    "baselinePct": 91,
+    "landmarkY": 436.67,
+    "source": "docs/hero-families/elegant-2026-09-23/approval.json"
+   },
+   "source": {
+    "psd": "4.  15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/1. GBElg30SpryBlk..psd",
+    "skippedLayers": [
+     [
+      "Layer 0",
+      "full-canvas backdrop"
+     ],
+     [
+      "Layer 13",
+      "198x196 at 486,379: bottle detail (neck threads)"
+     ]
+    ],
+    "builtBy": "scripts/elegant30/build-clear-sprayer-kits.py"
+   }
+  }
+ },
+ "defaultPdpSkus": [
+  "GBElg30SpryMattSl",
+  "GBElg30SpryMattGl",
+  "GBElgFrst30SpryShnGl",
+  "GBElgFrst30SpryShSl",
+  "GBElgFrst30SpryMattSl",
+  "GBElgFrst30SpryMattGl",
+  "GBElgFrst30SpryBlk",
+  "GBElg30GlCap",
+  "GBElgFrst30GlCap",
+  "GBElg30SlCap",
+  "GBElgFrst30SlCap",
+  "GBElg30SpryShGl",
+  "GBElg30SpryShnSl",
+  "GBElg30SpryBlk"
+ ],
+ "universalDipTube": {
+  "url": "/local-kits/elegant30-master-2026-11-03/parts/4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990.diptube.png",
+  "sha256": "4f1d6a928b1814da6150e09a12cc61009f146261f5ad18d6ea0a32abff038990",
+  "from": "public/local-kits/cylinder9-masters-2026-11-01/tube-fitted.f5a5592f59a0.png (the approved 9 ml Cylinder fine-mist tube), resampled once to the 30 ml tube proportion and placed per kit at its own aspect; frosted kits draw it in EXPLODED only",
+  "skus": [
+   "GBElg30SpryBlk",
+   "GBElg30SpryMattGl",
+   "GBElg30SpryMattSl",
+   "GBElg30SpryShGl",
+   "GBElg30SpryShnSl",
+   "GBElgFrst30SpryBlk",
+   "GBElgFrst30SpryMattGl",
+   "GBElgFrst30SpryMattSl",
+   "GBElgFrst30SpryShSl",
+   "GBElgFrst30SpryShnGl"
+  ]
+ }
+}

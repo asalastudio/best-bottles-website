@@ -1,0 +1,13 @@
+{
+  "baselineCommit": "9ddbe51333db85ad820553e8c3bbab1dcd9ef1af",
+  "headCommit": "10f4b63cee232c040e70d906f90409fff8d08d77",
+  "priorRecipesExactlyPreserved": 267,
+  "addedSkus": [
+    "GBSpry3mlClBlk",
+    "GBSpry3mlClWht",
+    "GBSpry4mlClBlk",
+    "GBSpry4mlClWh"
+  ],
+  "hostedVersion": "a63043cf5188f86a",
+  "sourceFilesTracked": true
+}

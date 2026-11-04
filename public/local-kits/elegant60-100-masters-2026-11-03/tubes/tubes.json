@@ -1,0 +1,106 @@
+{
+ "60-spray": {
+  "psd": "17. Elegant 60ml/1. Elegant 60ml PSD/17. GBElg60SpryShnGl.psd",
+  "layer": "Layer 17",
+  "left": -0.03937653814602133,
+  "top": 0.1657095980311731,
+  "width": 0.1681706316652994,
+  "height": 0.7243642329778507,
+  "registeredOutlineIoU": 0.5788,
+  "scale": 0.9977,
+  "shift": [
+   -6,
+   12
+  ],
+  "file": "/local-kits/elegant60-100-masters-2026-11-03/tubes/60-spray.b87f311e0c75.png",
+  "pixels": [
+   205,
+   883
+  ]
+ },
+ "60-lotion": {
+  "psd": "17. Elegant 60ml/1. Elegant 60ml PSD/12. LBElg60LtnMtGl.psd",
+  "layer": "Layer 12",
+  "left": -0.03527481542247744,
+  "top": 0.1763740771123872,
+  "width": 0.08531583264971287,
+  "height": 0.7128794093519278,
+  "registeredOutlineIoU": 0.795,
+  "scale": 0.9953,
+  "shift": [
+   2,
+   0
+  ],
+  "file": "/local-kits/elegant60-100-masters-2026-11-03/tubes/60-lotion.e0e55e48715c.png",
+  "pixels": [
+   104,
+   869
+  ]
+ },
+ "100-spray": {
+  "psd": "18. Elegant 100ml/1. Elegant 100ml PSD/55. GBElg100SpryCu.psd",
+  "layer": "Layer 19 copy",
+  "left": -0.04104234527687296,
+  "top": 0.1244299674267101,
+  "width": 0.14332247557003258,
+  "height": 0.7628664495114007,
+  "registeredOutlineIoU": 0.6247,
+  "scale": 1.0097,
+  "shift": [
+   -1,
+   0
+  ],
+  "file": "/local-kits/elegant60-100-masters-2026-11-03/tubes/100-spray.d6e5cd31d074.png",
+  "pixels": [
+   220,
+   1171
+  ]
+ },
+ "100-lotion": {
+  "psd": "18. Elegant 100ml/1. Elegant 100ml PSD/58. LBElg100LtnCu.psd",
+  "layer": "Layer 24",
+  "left": -0.028664495114006514,
+  "top": 0.12117263843648209,
+  "width": 0.0749185667752443,
+  "height": 0.7446254071661238,
+  "registeredOutlineIoU": 0.756,
+  "scale": 1.0027,
+  "shift": [
+   -5,
+   -1
+  ],
+  "file": "/local-kits/elegant60-100-masters-2026-11-03/tubes/100-lotion.7293c5de26a0.png",
+  "pixels": [
+   115,
+   1143
+  ]
+ },
+ "60-atomizer": {
+  "psd": "17. Elegant 60ml/1. Elegant 60ml PSD/39. GBElg60AnSpBlk.psd",
+  "layer": "Layer 15",
+  "left": -0.04922067268252666,
+  "top": 0.162428219852338,
+  "width": 0.07629204265791632,
+  "height": 0.7153404429860541,
+  "swept": "60-spray material along the PSD centre line",
+  "file": "/local-kits/elegant60-100-masters-2026-11-03/tubes/60-atomizer.2ab1774eb96d.png",
+  "pixels": [
+   93,
+   872
+  ]
+ },
+ "100-atomizer": {
+  "psd": "18. Elegant 100ml/1. Elegant 100ml PSD/39. GBElg100AnSpBlk.psd",
+  "layer": "Layer 13",
+  "left": -0.028664495114006514,
+  "top": 0.12117263843648209,
+  "width": 0.06514657980456026,
+  "height": 0.7628664495114007,
+  "swept": "100-spray material along the PSD centre line",
+  "file": "/local-kits/elegant60-100-masters-2026-11-03/tubes/100-atomizer.2e0d71415590.png",
+  "pixels": [
+   100,
+   1171
+  ]
+ }
+}

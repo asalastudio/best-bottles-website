@@ -5,6 +5,18 @@ import { catalogIncludedAssembly } from "../convex/catalogIncludedAssemblies";
 import { compatibleFinishComponent, isBuilderCandidate, type CatalogRow } from "@/lib/bottle-builder/model";
 
 describe("exact catalog assemblies without a separately sold loose component", () => {
+    it("admits each exact 60 ml Elegant dropper assembly, not neighboring or unavailable variants", () => {
+        for (const color of ["Clear", "Frosted"]) for (const capColor of ["Gold", "Silver", "Copper"]) {
+            const source = assemblies.find(row => row.family === "Elegant" && row.capacityMl === 60 && row.color === color && row.capColor === capColor && row.fitment === "Dropper");
+            expect(source, `${color} ${capColor}`).toBeDefined();
+            const row = { ...source!, category: "Glass Bottle", itemName: "Exact Elegant dropper assembly", resolution: "fitment_rule", components: {}, shopifyVariantId: "assembly-variant", shopifySellable: true, stockStatus: "In Stock", webPrice1pc: 1.9 } as unknown as CatalogRow;
+            expect(isBuilderCandidate(row)).toBe(true);
+            expect(compatibleFinishComponent(row)?.websiteSku).toBe(source!.websiteSku);
+            expect(isBuilderCandidate({ ...row, shopifySellable: false })).toBe(false);
+            expect(isBuilderCandidate({ ...row, color: color === "Clear" ? "Frosted" : "Clear" })).toBe(false);
+        }
+    });
+
     it.each(assemblies)("retains only the included hardware for $websiteSku", source => {
         const row = { ...source, category: "Glass Bottle", itemName: "Catalog bottle assembly", resolution: "unknown",
             components: {}, shopifyVariantId: "assembly-variant", shopifySellable: true, stockStatus: "In Stock", webPrice1pc: 1 } as unknown as CatalogRow;

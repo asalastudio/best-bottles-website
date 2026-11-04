@@ -1,0 +1,10 @@
+{
+  "origin": "https://best-bottles-website-rhuc7zvnv-asala.vercel.app",
+  "version": "17f5c90053bcdf59",
+  "records": [],
+  "failures": [
+    "Waiting failed: 60000ms exceeded"
+  ],
+  "errors": [],
+  "unavailable": []
+}

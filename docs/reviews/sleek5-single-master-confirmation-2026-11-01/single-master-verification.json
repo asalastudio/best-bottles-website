@@ -1,0 +1,21 @@
+{
+  "status": "verified-live-existing-release",
+  "pr": "https://github.com/asalastudio/best-bottles-website/pull/387",
+  "version": "17f5c90053bcdf59",
+  "scope": "Sleek Clear 5ml 13-415",
+  "combinations": 36,
+  "assemblies": {
+    "fineMist": 8,
+    "metalRoller": 9,
+    "plasticRoller": 9,
+    "pourCaps": 10
+  },
+  "masterBodies": 1,
+  "bodySha256": "87084cf3360e2eb7338040d22d64559a1fefc83d3e8f12fa8f2c88ef872b3dec",
+  "heroStates": 72,
+  "builderCombinations": 36,
+  "bodyPlacementConstant": true,
+  "catalogBodyFramingConstant": true,
+  "implementationChangeRequired": false,
+  "passed": true
+}

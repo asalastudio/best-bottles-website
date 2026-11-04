@@ -1,0 +1,40 @@
+{
+  "status": 200,
+  "errors": [],
+  "url": "http://localhost:3010/matrix?family=Vial&from=pdp&shop=sample-vials&sku=GBVGreen2o4BlackCapSht",
+  "text": "$50 minimum per order. Need fitment help? Talk with Grace.\n\n$50 MINIMUM PER ORDER. NEED FITMENT HELP? TALK WITH GRACE.\nEN\n|\nES\nUS · USD $\nFRAGRANCE & BEAUTY PACKAGING\nBOTTLE FAMILIES\nCLOSURES\nCOLLECTIONS\nCATALOG\nBUILD YOUR BOTTLE\nJOURNAL\nABOUT\nBack to bottles\nBuild Your Bottle\n\nChoose your bottle and glass, then how it dispenses or closes and the finish you like.\n\nBottle\nGlass\nFitment\nFinish\n5\nReview\nSTEP 4 OF 5\nStart over\nChoose your cap finish\n\nChoose the look of your screw cap. Every option shown fits your selection.\n\nScrew Cap\n13-425 neck · Green glass\nChange fitment\n\nChange your cap finish to customize this bottle.\n\nBlack\nWhite\nBack\nYOUR BOTTLE, TAKING SHAPE\nYour bottle preview\n3 ml Vial\n\nGreen · Screw Cap\n\nYour Build\nReview Your Bottle\nBottle\n3 ml Vial\n13-425 neck\nEdit\nGlass\nGreen\nEdit\nFitment\nScrew Cap\nEdit\nCap finish\nBlack\nEdit\nUnit price\n$1.08\nTotal (12 units)\n$12.96\nSet your quantity at review. $37.04 more reaches the $50.00 order minimum.\n\nMade to work together.\nOnly compatible combinations are shown.\n\nSAME BOTTLES. MORE POSSIBILITIES.\n\n$50 ORDER MINIMUM\n\nPer cart at checkout\n\nFITMENT VERIFIED\n\nCompatibility checked\n\nPACKAGING GUIDANCE\n\nAsk Grace without leaving the page\n\nBEST BOTTLES\nFRAGRANCE & BEAUTY PACKAGING\n\nPremium glass bottles and closures for beauty, fragrance, and wellness brands.\n\nBEAUTIFULLY CONTAINED.\n\nSHOP\nAll Bottles\nBottle Families\nCylinder\nClosures & Applicators\nRESOURCES\nFitment Guide\nBuild Your Bottle\nPackaging Insights\nShipping & Returns\nHelp Me Choose\nTalk with Grace\nCOMPANY\nOur Story\nContact\nWholesale Inquiry\nNemat International\nCONTACT & NOTES\n1-800-936-3628\nsales@nematinternational.com\n\nMon–Fri, 8am–5pm PT\n\nPACKAGING NOTES BY EMAIL\n\n© 2026 Best Bottles, a division of Nemat International.\n\nTerms\nPrivacy\nSitemap\nASK GRACE",
+  "layers": [
+    {
+      "layer": "cap",
+      "tag": "IMG",
+      "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/256.d421e6057c25.webp"
+    },
+    {
+      "layer": "cap",
+      "tag": "IMG",
+      "src": "http://localhost:3010/local-kits/vial3-swatches-builder-2026-11-02/display/4949217327e80d4585774eb8cb6bd54a36321cbe3d0ca36f74e1c9ce3d98e499/256.4949217327e8.webp"
+    },
+    {
+      "layer": "body",
+      "tag": "image",
+      "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/986fd79ac5c62b96da53bc4b40699d02bbfc7504f73f9ab511d702d33d946e90/640.986fd79ac5c6.webp"
+    },
+    {
+      "layer": "cap",
+      "tag": "image",
+      "src": "/local-kits/vial3-swatches-builder-2026-11-02/display/4ba95ee185e3df2d7617939fccb59274dece7141447523dfea4c20619caa1ade/640.4ba95ee185e3.webp"
+    }
+  ],
+  "images": [
+    {
+      "src": "",
+      "complete": false,
+      "width": 0
+    },
+    {
+      "src": "",
+      "complete": false,
+      "width": 0
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "version": "bf89db316a18e8d2",
+  "rows": {
+    "GBVialAmb1o5WhtCapSht": {
+      "sku": "GBVialAmb1o5WhtCapSht",
+      "familyId": "vial-2ml-amber-13-425",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1000,
+        "seatY": 554.5454545454545,
+        "pxPerMm": 31.818181818181817
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 245.45454545454547,
+            "top": 300,
+            "right": 754.5454545454545,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "box": {
+            "x": 117.29675053736253,
+            "y": 130.26188166828322,
+            "width": 763.2823365785813,
+            "height": 990.5916585838992
+          },
+          "image": {
+            "url": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+            "key": "short-amber-5be9929a0bde.png",
+            "sha256": "5be9929a0bde292b74b11d7122c9736b21552b1dffacebce4e52252195e6c392",
+            "bytes": 991128,
+            "width": 1078,
+            "height": 1459
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review"
+        },
+        {
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "bounds": {
+            "left": 237.81818181818187,
+            "top": 214.5035812672175,
+            "right": 762.1818181818182,
+            "bottom": 554.5454545454545
+          },
+          "derivation": "psd-layer",
+          "explodeIndex": 1,
+          "exploded": {
+            "dx": 0,
+            "dy": -180
+          },
+          "image": {
+            "bytes": 8874,
+            "height": 1100,
+            "key": "71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e.cap.webp",
+            "sha256": "71c80d2499227dede71ec488585011692e2770ecb8990a542ae64871b4d03c8e",
+            "url": "/local-kits/vial2-short-black-2026-11-02/cap.71c80d249922.webp",
+            "width": 1000
+          },
+          "image2x": null,
+          "mask": null,
+          "slot": "cap",
+          "variantKey": "white",
+          "zOrder": 1,
+          "box": {
+            "x": -294.49035812672184,
+            "y": 152.53333333333322,
+            "width": 1588.980716253444,
+            "height": 1747.8787878787882
+          }
+        }
+      ],
+      "plateSha256": "",
+      "three": null,
+      "conflicts": [],
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 25.29,
+        "baselinePct": 91
+      }
+    },
+    "GBVAmb1o5BlackCapSht": {
+      "sku": "GBVAmb1o5BlackCapSht",
+      "familyId": "vial-2ml-amber-13-425",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "baselineY": 1000,
+        "seatY": 554.5454545454545,
+        "pxPerMm": 31.818181818181817
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 245.45454545454547,
+            "top": 300,
+            "right": 754.5454545454545,
+            "bottom": 1000
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "box": {
+            "x": 117.29675053736253,
+            "y": 130.26188166828322,
+            "width": 763.2823365785813,
+            "height": 990.5916585838992
+          },
+          "image": {
+            "url": "/local-kits/vial2-short-black-2026-11-02/body.5be9929a0bde.png",
+            "key": "short-amber-5be9929a0bde.png",
+            "sha256": "5be9929a0bde292b74b11d7122c9736b21552b1dffacebce4e52252195e6c392",
+            "bytes": 991128,
+            "width": 1078,
+            "height": 1459
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "image-generation-review"
+        },
+        {
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "bounds": {
+            "left": 237.8181818181818,
+            "right": 762.1818181818182,
+            "top": 213.2436793975255,
+            "bottom": 554.5454545454545
+          },
+          "derivation": "psd-layer",
+          "explodeIndex": 1,
+          "exploded": {
+            "dx": 0,
+            "dy": -180
+          },
+          "image": {
+            "bytes": 10514,
+            "height": 1100,
+            "key": "kits/master-parts/ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798.cap.webp",
+            "sha256": "ec6c05dfdf82e3cea7531331bd91311e4174e48ee97fa672b4b0e1f8be96d798",
+            "url": "/local-kits/vial2-short-black-2026-11-02/black-cap.ec6c05dfdf82.webp",
+            "width": 1000
+          },
+          "image2x": null,
+          "mask": null,
+          "slot": "cap",
+          "variantKey": "black",
+          "zOrder": 1,
+          "box": {
+            "x": -271.03173749327595,
+            "y": 154.29155459924687,
+            "width": 1551.371705217859,
+            "height": 1706.508875739645
+          }
+        }
+      ],
+      "plateSha256": "",
+      "three": null,
+      "conflicts": [],
+      "completeness": "full",
+      "glassSizing": {
+        "heightPct": 25.29,
+        "baselinePct": 91
+      }
+    }
+  },
+  "defaultPdpSkus": [
+    "GBVialAmb1o5WhtCapSht",
+    "GBVAmb1o5BlackCapSht"
+  ]
+}

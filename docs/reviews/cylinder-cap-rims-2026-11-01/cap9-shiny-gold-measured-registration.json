@@ -1,0 +1,120 @@
+{
+  "version": "3fc9608e2f41",
+  "heightMm": 26.94,
+  "diameterMm": 19.19,
+  "raw": "/Users/jordanrichter/.codex/generated_images/01a190e7-4abb-7e82-8786-970248f1c27f/exec-712a7b61-4576-4987-ae42-2a39611891bb.png",
+  "registered": "public/local-kits/cylinder-cap-rims-2026-11-01/cap9-shiny-gold-measured.46afa5cac287.svg",
+  "approval": "User approved shiny gold material in voice. Measured assembly requires visual verification.",
+  "changed": [
+    {
+      "sku": "GBCylAmb9MtlRollShnGl",
+      "widthMm": 19.19,
+      "heightMm": 26.94,
+      "bounds": {
+        "left": 399.2525,
+        "right": 600.7475,
+        "top": 167.66646337388,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9RollShnGl",
+      "widthMm": 19.19,
+      "heightMm": 26.94,
+      "bounds": {
+        "left": 399.2525,
+        "right": 600.7475,
+        "top": 167.66646337388,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "widthMm": 19.19,
+      "heightMm": 26.94,
+      "bounds": {
+        "left": 399.2525,
+        "right": 600.7475,
+        "top": 167.66646337388,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "widthMm": 19.19,
+      "heightMm": 26.94,
+      "bounds": {
+        "left": 399.2525,
+        "right": 600.7475,
+        "top": 167.66646337388,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "widthMm": 19.19,
+      "heightMm": 26.94,
+      "bounds": {
+        "left": 399.2525,
+        "right": 600.7475,
+        "top": 167.66646337388,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9RollShnGl",
+      "widthMm": 19.19,
+      "heightMm": 26.94,
+      "bounds": {
+        "left": 399.2525,
+        "right": 600.7475,
+        "top": 167.66646337388,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnGl",
+      "widthMm": 19.19,
+      "heightMm": 26.94,
+      "bounds": {
+        "left": 399.2525,
+        "right": 600.7475,
+        "top": 167.66646337388,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9RollShnGl",
+      "widthMm": 19.19,
+      "heightMm": 26.94,
+      "bounds": {
+        "left": 399.2525,
+        "right": 600.7475,
+        "top": 167.66646337388,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnGl",
+      "widthMm": 19.19,
+      "heightMm": 26.94,
+      "bounds": {
+        "left": 399.2525,
+        "right": 600.7475,
+        "top": 167.66646337388,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9RollShnGl",
+      "widthMm": 19.19,
+      "heightMm": 26.94,
+      "bounds": {
+        "left": 399.2525,
+        "right": 600.7475,
+        "top": 167.66646337388,
+        "bottom": 450.53646337388
+      }
+    }
+  ]
+}

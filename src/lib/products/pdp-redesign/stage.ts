@@ -80,6 +80,8 @@ export type KitPartLike = {
 
 export type KitLike = {
     sku: string;
+    /** The published kit family (e.g. "elegant-30ml-clear-15-415"); the stage exposes it for family-scoped styling. */
+    familyId?: string;
     canvas: { width: number; height: number };
     anchors: { axisX: number; neckAxisX: number | null; seatY: number; baselineY: number; pxPerMm?: number | null };
     parts: KitPartLike[];
@@ -87,6 +89,9 @@ export type KitLike = {
     glassSizing?: PdpGlassSizing;
     /** Set when the kit was composed from the component register rather than published per SKU. */
     register?: { bodyId: string; plateKey: string; glass: string; pxPerMm?: number; bodyLayers?: boolean } | null;
+    /** A close-up photograph of the closure for swatches (cap rail, finish chip), where the drawn layer is a
+     * whole assembly that reads tiny at swatch size, e.g. a bulb sprayer with its hose and tube (Jordan 2026-11-03). */
+    capCloseUp?: { url: string; width: number; height: number } | null;
 };
 
 export type StagePart = {
@@ -159,11 +164,19 @@ function separableReducer(kit: KitLike | null | undefined, context: StageContext
             && (!part.views || part.views.includes(full ? "exploded" : "capon"))));
 }
 
+/** A dropper kit that carries the complete dropper (bulb, collar and pipette in one layer, EXPLODED only)
+ * can lift it out of the glass; otherwise a dropper stays assembled (Jordan 2026-11-03, 18-415 Elegant). */
+function separableDropper(kit: KitLike | null | undefined, context: StageContext): boolean {
+    return context.applicator?.trim().toLowerCase() === "dropper"
+        && Boolean(kit?.parts.some(part => part.slot === "fitment" && part.views?.length === 1 && part.views[0] === "exploded"));
+}
+
 /** Which views the stage can honestly show for this SKU. */
 export function availableViews(kit: KitLike | null | undefined, context: StageContext): StageView[] {
     if (isTolaApplicator(context.websiteSku)) return ["capon"];
     // Only a seated stopper-and-wand photograph is registered for this set.
     if (rectangleApplicatorGlass(context.websiteSku)) return ["capon"];
+    if (separableDropper(kit, context)) return ["capon", "exploded"];
     if (requiresAssembledClosure(context.applicator, context.websiteSku) && !separableReducer(kit, context)) return ["capon"];
     const views: StageView[] = ["sidecar"];
     if (!kit?.parts?.length) return views;
@@ -178,7 +191,7 @@ export function effectiveView(view: StageView, kit: KitLike | null | undefined, 
     if (isTolaApplicator(context.websiteSku)) return "capon";
     if (!kit?.parts?.length) return "sidecar";
     if (view === "sidecar" && !separableReducer(kit, context) && requiresAssembledClosure(context.applicator, context.websiteSku)) return "capon";
-    if (view === "exploded" && !separableReducer(kit, context, true) && !allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) return "capon";
+    if (view === "exploded" && !separableReducer(kit, context, true) && !separableDropper(kit, context) && !allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) return "capon";
     return view;
 }
 
@@ -281,6 +294,44 @@ export function glassFrame(
     return { envelope: envelopeOf(key), standOn: key === bodyId ? null : envelopeOf(bodyId) };
 }
 
+/** Catalog-only framing for the long hose and tassel on the Cylinder spray sets. */
+export function catalogTasselViewport(sku: string, layout: Pick<StageLayout, "canvas" | "frame" | "parts">) {
+    const { canvas, frame } = layout;
+    const original = {
+        x: -frame.x / 100 * canvas.width / frame.scale,
+        y: -frame.y / 100 * canvas.height / frame.scale,
+        width: canvas.width / frame.scale,
+        height: canvas.height / frame.scale,
+    };
+    if (!/^gbcyl(?:25|50|100)ansptsl/i.test(sku)) return original;
+    const parts = layout.parts.filter(part => part.slot === "body" || part.slot === "sprayer");
+    if (parts.length < 2) return original;
+    const bounds = parts.map(part => {
+        const left = ((part.box?.leftPct ?? 0) + part.dxPct) / 100 * canvas.width;
+        const top = ((part.box?.topPct ?? 0) + part.dyPct) / 100 * canvas.height;
+        return {
+            left, top,
+            right: left + (part.box?.widthPct ?? 100) / 100 * canvas.width,
+            bottom: top + (part.box?.heightPct ?? 100) / 100 * canvas.height,
+        };
+    });
+    const left = Math.min(...bounds.map(box => box.left));
+    const right = Math.max(...bounds.map(box => box.right));
+    const top = Math.min(...bounds.map(box => box.top));
+    const bottom = Math.max(...bounds.map(box => box.bottom));
+    // Leave a small margin around the entire assembly, enlarging the frame only if necessary.
+    const factor = Math.max(1, (right - left) / (original.width * 0.94), (bottom - top) / (original.height * 0.94));
+    const width = original.width * factor;
+    const height = original.height * factor;
+    const marginX = width * 0.03;
+    const marginY = height * 0.03;
+    return {
+        x: Math.max(right + marginX - width, Math.min(original.x, left - marginX)),
+        y: Math.max(bottom + marginY - height, Math.min(original.y, top - marginY)),
+        width, height,
+    };
+}
+
 export function stageLayout(
     kit: KitLike | null | undefined,
     requested: StageView,
@@ -338,6 +389,17 @@ export function stageLayout(
         });
     }
 
+    // Lift the assembled fine-mist sprayer slightly to expose the glass shoulder.
+    if (view !== "exploded" && kit.register?.bodyId === "cylinder-9ml-17-415"
+        && sorted.some(part => part.slot === "sprayer") && sorted.some(part => part.slot === "collar")) {
+        for (const part of sorted) {
+            if (part.slot === "sprayer" || part.slot === "collar" || (view === "capon" && part.slot === "overcap")) {
+                const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+                offsets.set(part, { ...offset, dy: offset.dy - 14 });
+            }
+        }
+    }
+
     // Stable physical-layer keys let CSS translate the same DOM element between views.
     const occurrences = new Map<string, number>();
     const parts: StagePart[] = sorted.map((part, index) => {
@@ -373,6 +435,13 @@ export function stageLayout(
             ...(clipBottomPct !== undefined ? { clipBottomPct } : {}),
         };
     });
+
+    // The 25 ml tassel also extends beyond the product-page canvas.
+    if (view !== "exploded" && /^gbcyl25ansptsl/i.test(context.websiteSku ?? "")) {
+        const viewport = catalogTasselViewport(context.websiteSku!, { canvas, frame, parts });
+        const scale = canvas.width / viewport.width;
+        frame = { scale, x: -viewport.x * scale / canvas.width * 100, y: -viewport.y * scale / canvas.height * 100 };
+    }
 
     const anchors: StageLayout["anchors"] = {};
     const body = sorted.find((part) => part.slot === "body") ?? null;
@@ -421,7 +490,9 @@ export function stageLayout(
         floorShadows,
         // the studio's own floor replaces the drawn baseline
         baseline: view !== "exploded" && !backdrop,
-        ...(reviewedFrame ? { baselinePct: kit.glassSizing!.baselinePct } : {}),
+        ...(reviewedFrame ? { baselinePct: view !== "exploded" && /^gbcyl25ansptsl/i.test(context.websiteSku ?? "")
+            ? frame.y + kit.anchors.baselineY * frame.scale / canvas.height * 100
+            : kit.glassSizing!.baselinePct } : {}),
         grid: view === "exploded",
         backdrop,
     };

@@ -1,0 +1,1129 @@
+{
+  "baseCommit": "7f1f44c8bf6dfed833ef9d32decec8c0d2c04e9b",
+  "earlierRecipesCompared": 362,
+  "authorizedRevisions": 8,
+  "priorRecipesPreserved": true,
+  "records": [
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SpryBluMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SpryCuMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SprySlMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SpryBlkSh",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SprySlSh",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollCuMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollGlMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollSlMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollPinkDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollGlSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollSlSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollSlDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollCuMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollGlMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollSlMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollPinkDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollBlkSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollGlSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollSlSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollSlDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5BlkSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5CuSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5GlMattSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SlMattSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5BlkShSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5GlSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SlSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5WhtSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5Gl",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5Sl",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryBluMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryCuMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryGlMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SprySlMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryBlkSh",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryGlSh",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SprySlSh",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollBlkDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollCuMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollGlMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollSlMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollPinkDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollBlkSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollGlSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollSlSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollSlDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollBlkDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollCuMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollGlMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollSlMatt",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollPinkDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollBlkSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollGlSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollSlSh",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollSlDot",
+      "viewport": "desktop",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8BlkSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8CuSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8GlMattSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SlMattSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8BlkShSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8GlSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SlSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8WhtSht",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8Gl",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8Sl",
+      "viewport": "desktop",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SpryBluMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SpryCuMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SprySlMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SpryBlkSh",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SprySlSh",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollCuMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollGlMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollSlMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollPinkDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollGlSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollSlSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5MtlRollSlDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollCuMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollGlMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollSlMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollPinkDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollBlkSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollGlSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollSlSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5RollSlDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5BlkSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5CuSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5GlMattSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SlMattSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5BlkShSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5GlSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5SlSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5WhtSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5Gl",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek5Sl",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryBlkMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryBluMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryCuMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryGlMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SprySlMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryBlkSh",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SpryGlSh",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SprySlSh",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollBlkDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollCuMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollGlMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollSlMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollPinkDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollBlkSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollGlSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollSlSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8MtlRollSlDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollBlkDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollCuMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollGlMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollSlMatt",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollPinkDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollBlkSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollGlSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollSlSh",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8RollSlDot",
+      "viewport": "mobile",
+      "expectedParts": 3,
+      "renderedParts": 3,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8BlkSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8CuSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8GlMattSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SlMattSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8BlkShSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8GlSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8SlSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8WhtSht",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8Gl",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBSleek8Sl",
+      "viewport": "mobile",
+      "expectedParts": 2,
+      "renderedParts": 2,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "viewport": "desktop",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBluMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryCuMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlMatt",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryBlkSh",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SpryGlSh",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    },
+    {
+      "sku": "GBTulipAmb5SprySlSh",
+      "viewport": "mobile",
+      "expectedParts": 4,
+      "renderedParts": 4,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -16,6 +16,7 @@ import manifest from "@/lib/paper-doll/approved-kits.generated.json";
 import index from "@/lib/paper-doll/approved-kit-index.json";
 vi.mock("server-only", () => ({}));
 import { GET } from "@/app/api/bottle-masters/approved/route";
+import { approvedComponentKit } from "@/lib/paper-doll/approved-component-kits";
 import { localPdpComponentKits } from "@/lib/paper-doll/local-component-kits";
 import { cylinderMasterSource, cylinderMasterSku, masterProductHref } from "@/lib/products/cylinder-master";
 const directory = "docs/reviews/hosted-masters-tulip-2026-11-01/";
@@ -49,7 +50,7 @@ describe("approved hosted master release", () => {
     });
     it("preserves the original 267 approved configurations alongside the scoped small-sprayer extension", () => {
         expect(Object.keys(originals)).toHaveLength(267);
-        expect(Object.keys(hosted)).toHaveLength(463);
+        expect(Object.keys(hosted)).toHaveLength(659);   // 463 + the 196 Elegant masters (2026-11-03)
         expect(Object.keys(hosted)).toEqual(expect.arrayContaining(Object.keys(originals)));
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         expect(hosted.GBTallCyl9SpryGlMatt).toBeDefined();
@@ -91,7 +92,15 @@ describe("approved hosted master release", () => {
             expect(response.status).toBe(200);
             expect((await response.json()).kit).toEqual(hosted[actual]);
             expect(response.headers.get("cache-control")).toContain("immutable");
-            expect(cylinderMasterSource(actual)).toEqual({ family: "approved", version: index.version });
+            const expectedVersion = actual.startsWith("GBCylAmb9") ? index.version + "-cylinder9-colors-v2-20261102"
+                : actual === "LBCyl9LtnBlk" ? index.version + "-lotion9-physical-reference-v1" : index.version;
+            expect(cylinderMasterSource(actual)).toEqual({ family: "approved", version: expectedVersion });
+            const current = await GET(new Request(`https://preview.vercel.app/api/bottle-masters/approved?sku=${actual}&v=${expectedVersion}`));
+            expect(current.status).toBe(200);
+            const currentBody = await current.json();
+            expect(currentBody.version).toBe(expectedVersion);
+            expect(currentBody.kit).toEqual(expectedVersion === index.version ? hosted[actual] : approvedComponentKit(actual));
+            expect(current.headers.get("cache-control")).toContain("immutable");
         }
         expect(cylinderMasterSku("not-a-sku")).toBeNull();
         expect((await GET(new Request("https://preview.vercel.app/api/bottle-masters/approved?sku=not-a-sku"))).status).toBe(404);

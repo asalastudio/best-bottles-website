@@ -1,0 +1,1748 @@
+{
+  "version": "26bf1d5880c8",
+  "assets": {
+    "CMP-ROC-BLK-17415-DOT": {
+      "image": {
+        "url": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-BLK-17415-DOT.b9d4bac8918a.png",
+        "key": "",
+        "width": 312,
+        "height": 427,
+        "bytes": 103065,
+        "sha256": "b9d4bac8918abf07ebb1eee035eee4761b63c9f179f09bc07fc47fa108881c42"
+      },
+      "originalWidth": 304,
+      "originalHeight": 419,
+      "source": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-BLK-17415-DOT-original-full.png",
+      "method": "Complete original Photoshop layer, with transparent safety padding"
+    },
+    "CMP-ROC-CPR-17415": {
+      "image": {
+        "url": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-CPR-17415.46e2882e3e1e.png",
+        "key": "",
+        "width": 303,
+        "height": 435,
+        "bytes": 301211,
+        "sha256": "46e2882e3e1e93618e8848c8ad438e90a73fb9701267999dafa898a29ea9899e"
+      },
+      "originalWidth": 295,
+      "originalHeight": 427,
+      "source": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-CPR-17415-original-full.png",
+      "method": "Complete original Photoshop layer, with transparent safety padding"
+    },
+    "CMP-ROC-MGLD-17415": {
+      "image": {
+        "url": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MGLD-17415.bc90473d3e10.png",
+        "key": "",
+        "width": 300,
+        "height": 428,
+        "bytes": 281323,
+        "sha256": "bc90473d3e102565089ef86012e38b47d3d7afeb4c9305876991a766949076a4"
+      },
+      "originalWidth": 292,
+      "originalHeight": 420,
+      "source": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-MGLD-17415-original-full.png",
+      "method": "Complete original Photoshop layer, with transparent safety padding"
+    },
+    "CMP-ROC-MSLV-17415": {
+      "image": {
+        "url": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-MSLV-17415.7baffb6d9271.png",
+        "key": "",
+        "width": 303,
+        "height": 434,
+        "bytes": 96317,
+        "sha256": "7baffb6d9271b1d5469bfa0c5f8ae2cf14fd68ad69ebf623a3ef18e2568cefc4"
+      },
+      "originalWidth": 295,
+      "originalHeight": 426,
+      "source": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-MSLV-17415-original-full.png",
+      "method": "Complete original Photoshop layer, with transparent safety padding"
+    },
+    "CMP-ROC-PNK-17415-DOT": {
+      "image": {
+        "url": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-PNK-17415-DOT.127ace97ecc4.png",
+        "key": "",
+        "width": 302,
+        "height": 429,
+        "bytes": 267750,
+        "sha256": "127ace97ecc4ac90e76d76376fb65dc60a1812513c4f73c0f7d78fcaca9581ba"
+      },
+      "originalWidth": 294,
+      "originalHeight": 421,
+      "source": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-PNK-17415-DOT-original-full.png",
+      "method": "Complete original Photoshop layer, with transparent safety padding"
+    },
+    "CMP-ROC-SBLK-17415": {
+      "image": {
+        "url": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SBLK-17415.b89416ba3c15.png",
+        "key": "",
+        "width": 308,
+        "height": 437,
+        "bytes": 88388,
+        "sha256": "b89416ba3c15440ee129ae876dce81b5266496a81917d55b4280226582584907"
+      },
+      "originalWidth": 300,
+      "originalHeight": 429,
+      "source": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-SBLK-17415-original-full.png",
+      "method": "Complete original Photoshop layer, with transparent safety padding"
+    },
+    "CMP-ROC-SGLD-17415": {
+      "image": {
+        "url": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SGLD-17415.7730d4ce22ac.png",
+        "key": "",
+        "width": 909,
+        "height": 1308,
+        "bytes": 1704740,
+        "sha256": "7730d4ce22ac81f7154f58b0f35aa39a529f759add3ea4332d807147758d2694"
+      },
+      "originalWidth": 295,
+      "originalHeight": 428,
+      "source": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-SGLD-17415-original-full.png",
+      "method": "Approved GPT metal registered to the complete original 17-415 cap silhouette"
+    },
+    "CMP-ROC-SSLV-17415": {
+      "image": {
+        "url": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SSLV-17415.7f5e94437ab3.png",
+        "key": "",
+        "width": 900,
+        "height": 1302,
+        "bytes": 1521820,
+        "sha256": "7f5e94437ab3391d11da004487d0f5716fcd7848be2ecf7896772955b3110738"
+      },
+      "originalWidth": 292,
+      "originalHeight": 426,
+      "source": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-SSLV-17415-original-full.png",
+      "method": "Approved GPT metal registered to the complete original 17-415 cap silhouette"
+    },
+    "CMP-ROC-SLV-17415-DOT": {
+      "image": {
+        "url": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-SLV-17415-DOT.f722e9fc16b2.png",
+        "key": "",
+        "width": 303,
+        "height": 431,
+        "bytes": 99544,
+        "sha256": "f722e9fc16b229aa071e9db37a81344c7904619640a1fd61c7eb4988be6e46ab"
+      },
+      "originalWidth": 295,
+      "originalHeight": 423,
+      "source": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-SLV-17415-DOT-original-full.png",
+      "method": "Complete original Photoshop layer, with transparent safety padding"
+    },
+    "CMP-ROC-WHT-17415": {
+      "image": {
+        "url": "/local-kits/cylinder-cap-rims-2026-11-01/CMP-ROC-WHT-17415.00e2726361df.png",
+        "key": "",
+        "width": 308,
+        "height": 444,
+        "bytes": 31592,
+        "sha256": "00e2726361dfcd5a943f4408ea7762ffc9794592b64a7cc5b3064ff18405170a"
+      },
+      "originalWidth": 300,
+      "originalHeight": 436,
+      "source": "docs/reviews/cylinder-cap-rims-2026-11-01/sources/CMP-ROC-WHT-17415-original-full.png",
+      "method": "Complete original Photoshop layer, with transparent safety padding"
+    }
+  },
+  "changed": [
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "id": "CMP-ROC-BLK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 174.9337002159852,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattCu",
+      "id": "CMP-ROC-CPR-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.1028362552359,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "id": "CMP-ROC-MGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 162.92276474374296,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattSl",
+      "id": "CMP-ROC-MSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.78066676371049,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9MtlRollPnkDot",
+      "id": "CMP-ROC-PNK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.19918446231532,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShBlk",
+      "id": "CMP-ROC-SBLK-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.59366337387996,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnGl",
+      "id": "CMP-ROC-SGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 160.42500574676131,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9MtlRollShnSl",
+      "id": "CMP-ROC-SSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 158.81399762045527,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9MtlRollSlDot",
+      "id": "CMP-ROC-SLV-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 163.81415828913418,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9MtlRollWht",
+      "id": "CMP-ROC-WHT-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 159.92793004054664,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "id": "CMP-ROC-BLK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 174.9337002159852,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9RollMattCu",
+      "id": "CMP-ROC-CPR-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.1028362552359,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9RollMattGl",
+      "id": "CMP-ROC-MGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 162.92276474374296,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9RollMattSl",
+      "id": "CMP-ROC-MSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.78066676371049,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9RollPnkDot",
+      "id": "CMP-ROC-PNK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.19918446231532,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9RollShBlk",
+      "id": "CMP-ROC-SBLK-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.59366337387996,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9RollShnGl",
+      "id": "CMP-ROC-SGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 160.42500574676131,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9RollShnSl",
+      "id": "CMP-ROC-SSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 158.81399762045527,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9RollSlDot",
+      "id": "CMP-ROC-SLV-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 163.81415828913418,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylAmb9RollWht",
+      "id": "CMP-ROC-WHT-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 159.92793004054664,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "id": "CMP-ROC-BLK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 174.9337002159852,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9MtlRollMattCu",
+      "id": "CMP-ROC-CPR-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.1028362552359,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "id": "CMP-ROC-MGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 162.92276474374296,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9MtlRollMattSl",
+      "id": "CMP-ROC-MSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.78066676371049,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9MtlRollPnkDot",
+      "id": "CMP-ROC-PNK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.19918446231532,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9MtlRollShBlk",
+      "id": "CMP-ROC-SBLK-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.59366337387996,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9MtlRollShnGl",
+      "id": "CMP-ROC-SGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 160.42500574676131,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9MtlRollShnSl",
+      "id": "CMP-ROC-SSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 158.81399762045527,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9MtlRollSlDot",
+      "id": "CMP-ROC-SLV-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 163.81415828913418,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9MtlRollWht",
+      "id": "CMP-ROC-WHT-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 159.92793004054664,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "id": "CMP-ROC-BLK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 174.9337002159852,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9RollMattCu",
+      "id": "CMP-ROC-CPR-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.1028362552359,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9RollMattGl",
+      "id": "CMP-ROC-MGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 162.92276474374296,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9RollMattSl",
+      "id": "CMP-ROC-MSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.78066676371049,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9RollPnkDot",
+      "id": "CMP-ROC-PNK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.19918446231532,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9RollShBlk",
+      "id": "CMP-ROC-SBLK-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.59366337387996,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9RollShnGl",
+      "id": "CMP-ROC-SGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 160.42500574676131,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9RollShnSl",
+      "id": "CMP-ROC-SSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 158.81399762045527,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9RollSlDot",
+      "id": "CMP-ROC-SLV-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 163.81415828913418,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCyl9RollWht",
+      "id": "CMP-ROC-WHT-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 159.92793004054664,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "id": "CMP-ROC-BLK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 174.9337002159852,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattCu",
+      "id": "CMP-ROC-CPR-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.1028362552359,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattGl",
+      "id": "CMP-ROC-MGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 162.92276474374296,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattSl",
+      "id": "CMP-ROC-MSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.78066676371049,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9MtlRollPnkDot",
+      "id": "CMP-ROC-PNK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.19918446231532,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShBlk",
+      "id": "CMP-ROC-SBLK-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.59366337387996,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnGl",
+      "id": "CMP-ROC-SGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 160.42500574676131,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9MtlRollShnSl",
+      "id": "CMP-ROC-SSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 158.81399762045527,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9MtlRollSlDot",
+      "id": "CMP-ROC-SLV-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 163.81415828913418,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9MtlRollWht",
+      "id": "CMP-ROC-WHT-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 159.92793004054664,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "id": "CMP-ROC-BLK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 174.9337002159852,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9RollMattCu",
+      "id": "CMP-ROC-CPR-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.1028362552359,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9RollMattGl",
+      "id": "CMP-ROC-MGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 162.92276474374296,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9RollMattSl",
+      "id": "CMP-ROC-MSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.78066676371049,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9RollPnkDot",
+      "id": "CMP-ROC-PNK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.19918446231532,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9RollShBlk",
+      "id": "CMP-ROC-SBLK-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.59366337387996,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9RollShnGl",
+      "id": "CMP-ROC-SGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 160.42500574676131,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9RollShnSl",
+      "id": "CMP-ROC-SSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 158.81399762045527,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9RollSlDot",
+      "id": "CMP-ROC-SLV-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 163.81415828913418,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylBlu9RollWht",
+      "id": "CMP-ROC-WHT-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 159.92793004054664,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "id": "CMP-ROC-BLK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 174.9337002159852,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattCu",
+      "id": "CMP-ROC-CPR-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.1028362552359,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattGl",
+      "id": "CMP-ROC-MGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 162.92276474374296,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattSl",
+      "id": "CMP-ROC-MSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.78066676371049,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9MtlRollPnkDot",
+      "id": "CMP-ROC-PNK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.19918446231532,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShBlk",
+      "id": "CMP-ROC-SBLK-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.59366337387996,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnGl",
+      "id": "CMP-ROC-SGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 160.42500574676131,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9MtlRollShnSl",
+      "id": "CMP-ROC-SSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 158.81399762045527,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9MtlRollSlDot",
+      "id": "CMP-ROC-SLV-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 163.81415828913418,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9MtlRollWht",
+      "id": "CMP-ROC-WHT-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 159.92793004054664,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "id": "CMP-ROC-BLK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 174.9337002159852,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9RollMattCu",
+      "id": "CMP-ROC-CPR-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.1028362552359,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9RollMattGl",
+      "id": "CMP-ROC-MGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 162.92276474374296,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9RollMattSl",
+      "id": "CMP-ROC-MSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.78066676371049,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9RollPnkDot",
+      "id": "CMP-ROC-PNK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.19918446231532,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9RollShBlk",
+      "id": "CMP-ROC-SBLK-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.59366337387996,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9RollShnGl",
+      "id": "CMP-ROC-SGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 160.42500574676131,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9RollShnSl",
+      "id": "CMP-ROC-SSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 158.81399762045527,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9RollSlDot",
+      "id": "CMP-ROC-SLV-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 163.81415828913418,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylFrst9RollWht",
+      "id": "CMP-ROC-WHT-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 159.92793004054664,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "id": "CMP-ROC-BLK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 174.9337002159852,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattCu",
+      "id": "CMP-ROC-CPR-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.1028362552359,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattGl",
+      "id": "CMP-ROC-MGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 162.92276474374296,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattSl",
+      "id": "CMP-ROC-MSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.78066676371049,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollPnkDot",
+      "id": "CMP-ROC-PNK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.19918446231532,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShBlk",
+      "id": "CMP-ROC-SBLK-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.59366337387996,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnGl",
+      "id": "CMP-ROC-SGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 160.42500574676131,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollShnSl",
+      "id": "CMP-ROC-SSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 158.81399762045527,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollSlDot",
+      "id": "CMP-ROC-SLV-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 163.81415828913418,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollWht",
+      "id": "CMP-ROC-WHT-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 159.92793004054664,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "id": "CMP-ROC-BLK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 174.9337002159852,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9RollMattCu",
+      "id": "CMP-ROC-CPR-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.1028362552359,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9RollMattGl",
+      "id": "CMP-ROC-MGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 162.92276474374296,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9RollMattSl",
+      "id": "CMP-ROC-MSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 161.78066676371049,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9RollPnkDot",
+      "id": "CMP-ROC-PNK-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.19918446231532,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9RollShBlk",
+      "id": "CMP-ROC-SBLK-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 164.59366337387996,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9RollShnGl",
+      "id": "CMP-ROC-SGLD-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 160.42500574676131,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9RollShnSl",
+      "id": "CMP-ROC-SSLV-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 158.81399762045527,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9RollSlDot",
+      "id": "CMP-ROC-SLV-17415-DOT",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 163.81415828913418,
+        "bottom": 450.53646337388
+      }
+    },
+    {
+      "sku": "GBCylSwrl9RollWht",
+      "id": "CMP-ROC-WHT-17415",
+      "beforeBounds": {
+        "left": 400.02,
+        "top": 161.93646337388,
+        "right": 599.98,
+        "bottom": 450.53646337388
+      },
+      "afterBounds": {
+        "left": 400.02,
+        "right": 599.98,
+        "top": 159.92793004054664,
+        "bottom": 450.53646337388
+      }
+    }
+  ],
+  "status": "Superseded local attempt: user rejected the top-down perspective on November 1. Regenerate all ten 9 ml caps at eye level with matching glass lighting."
+}

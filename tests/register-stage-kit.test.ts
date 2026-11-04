@@ -308,6 +308,29 @@ describe("9 mL Cylinder body-scoped Blender layers (Jordan 2026-09-30)", () => {
 });
 
 describe("Elegant photographed body stand-ins", () => {
+    it("renders the clear 60 ml pipette through its photographed glass", () => {
+        const plateKey = "elegant-60ml-18-415|Clear";
+        const plate = { ...PLATE, plateKey, bodyId: "elegant-60ml-18-415" };
+        const pipette = { slot: "pipette" as const, z: "behind-body" as const, explodeIndex: 1, url: "https://blob/pipette.png", width: 70, height: 500, pxPerMm: 27.2142, anchor: { x: 35, y: -200 }, approved: true };
+        const fitment = { ...pipette, slot: "fitment" as const, z: "front" as const, url: "https://blob/dropper.png", height: 150, anchor: { x: 35, y: 0 } };
+        const id = "CMP-DRP-TEST", sku = "GB-ELG-CLR-60ML-DRP";
+        const payload: RegisterStagePayload = { ...PAYLOAD, plates: { [plateKey]: plate },
+            bodies: { [plate.bodyId]: { bodyId: plate.bodyId, family: "Elegant", capacityMl: 60, neck: "18-415", dims: { heightBareMm: 86, diameterMm: 54, widthMm: 54 } } },
+            components: { [id]: { componentId: id, type: "dropper", approved: true, layers: [pipette, fitment] } },
+            assemblies: { [sku]: { graceSku: sku, websiteSku: "GBElg60DrpGl", bodyId: plate.bodyId, plateKey, glass: "Clear", neck: "18-415", parts: [{ role: "dropper", componentId: id }], renderable: true, reason: null } } };
+        const kit = kitFromRegister(sku, payload)!;
+        const glass = kit.parts.find(p => p.slot === "body")!;
+        const tube = kit.parts.find(p => p.slot === "pipette")!;
+        expect(tube.zOrder).toBeGreaterThan(glass.zOrder);
+        expect(tube.zOrder).toBeLessThan(kit.parts.find(p => p.slot === "fitment")!.zOrder);
+        expect(tube.opacity).toBe(0.55);
+        expect(tube.blendMode).toBe("multiply");
+        const collar = kit.parts.find(p => p.slot === "fitment" && p.componentId === tube.componentId)!;
+        expect(tube.box.y).toBeLessThanOrEqual(collar.box.y + collar.box.height);
+        expect(stageLayout(kit, "capon", { family: "Elegant", capacityMl: 60, color: "Clear", applicator: "Dropper" })!.parts.find(p => p.slot === "pipette")).toMatchObject({ opacity: 0.55, blendMode: "multiply" });
+        expect(assembledKit(kit).parts.find(p => p.slot === "pipette")!.zOrder).toBeGreaterThan(glass.zOrder);
+    });
+
     it("keeps one photo body aligned across cap swaps while preserving register components", () => {
         const plateKey = "elegant-60ml-18-415|Clear";
         const plate = { ...PLATE, plateKey, bodyId: "elegant-60ml-18-415", url: "https://blob/register/unfinished-elegant.png" };
