@@ -1,6 +1,6 @@
 {
  "date": "2026-11-03",
- "approvedBy": "Jordan (hearts); tola and spray proposed",
+ "approvedBy": "Jordan",
  "rows": [
   {
    "sku": "GBHeartFrst4KeyGld",
@@ -35,8 +35,8 @@
   {
    "sku": "GB3TPlGl",
    "groupSlug": "tola-3ml-clear-14.3mm",
-   "status": "proposed",
-   "note": "straight-on reshoot at higher fidelity; awaiting Jordan's approval",
+   "status": "approved",
+   "note": "Jordan 2026-11-03: approved the straight-on reshoot",
    "model": "gpt-image-2.5-sunburst",
    "script": "scripts/catalog-heroes/front-on-2026-11-03.py",
    "sourceRender": "docs/hero-families/reshoot-2026-11-03/front-on/GB3TPlGl.3d84a6249668.png",
@@ -50,8 +50,8 @@
   {
    "sku": "LB3mlClear",
    "groupSlug": "lotion-bottle-3ml-clear-Snap-On",
-   "status": "proposed",
-   "note": "straight-on reshoot at higher fidelity; awaiting Jordan's approval",
+   "status": "approved",
+   "note": "Jordan 2026-11-03: approved the straight-on reshoot",
    "model": "gpt-image-2.5-sunburst",
    "script": "scripts/catalog-heroes/front-on-2026-11-03.py",
    "sourceRender": "docs/hero-families/reshoot-2026-11-03/front-on/LB3mlClear.088f1e56d057.png",

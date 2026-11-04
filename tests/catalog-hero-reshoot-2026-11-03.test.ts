@@ -24,7 +24,7 @@ describe('2026-11-03 catalog hero reshoots', () => {
       expect([meta.format, meta.width, meta.height]).toEqual(['webp', 1560, 1716]);
       expect(hero.framing).toEqual({ scale: 1, translateXPercent: 0, translateYPercent: 0 });
     }
-    expect(approval.rows.filter(row => row.status === 'approved').map(row => row.sku).sort()).toEqual(['GBHeartFrst4KeyGld', 'GBHeartFrst4TslRed']);
+    expect(approval.rows.every(row => row.status === 'approved')).toBe(true);
   });
 
   it('replaces the earlier release rows rather than shadowing them', () => {

@@ -4,8 +4,7 @@ Sources (both drawn with gpt-image-2.5-sunburst):
 - flat-lay-2026-11-03.py: the two 4 ml frosted heart bottles (keychain, tassel) as overhead flat lays. Jordan: "Only
   the heart shapes were to be done with flat lay, which they look fine."
 - front-on-2026-11-03.py: the 3 ml clear tola and 3 ml clear spray bottle as straight-on shots at higher fidelity
-  ("regular, straight on image shots. Same like we have on the grid ... improve the fidelity"); proposed, awaiting
-  Jordan's approval.
+  ("regular, straight on image shots. Same like we have on the grid ... improve the fidelity"); approved.
 Each replaces the SKU's earlier hero: GB3TPlGl leaves catalog-hero-next-batch-release.json and LB3mlClear leaves
 catalog-hero-vials-release.json (as the vials release took the batch-3 vials); the hearts' base rows in
 catalog-heroes.json stay as their approved record, and this release takes precedence over them.
@@ -23,8 +22,8 @@ APPROVAL = "docs/hero-families/reshoot-2026-11-03/approval.json"
 ROWS = [  # sku, source index, presentation, status, note
     ("GBHeartFrst4KeyGld", "flat-lay", "Overhead flat lay", "approved", "Jordan 2026-11-03: the heart flat lays look fine"),
     ("GBHeartFrst4TslRed", "flat-lay", "Overhead flat lay", "approved", "Jordan 2026-11-03: the heart flat lays look fine"),
-    ("GB3TPlGl", "front-on", "Original product assembly", "proposed", "straight-on reshoot at higher fidelity; awaiting Jordan's approval"),
-    ("LB3mlClear", "front-on", "Empty · cap beside", "proposed", "straight-on reshoot at higher fidelity; awaiting Jordan's approval"),
+    ("GB3TPlGl", "front-on", "Original product assembly", "approved", "Jordan 2026-11-03: approved the straight-on reshoot"),
+    ("LB3mlClear", "front-on", "Empty · cap beside", "approved", "Jordan 2026-11-03: approved the straight-on reshoot"),
 ]
 
 
@@ -52,7 +51,7 @@ def main():
                          "replaces": b["url"], "url": url, "sha256": sha, "bytes": len(data), "encoding": "lossless WebP"})
         print(sku, status, url, len(data))
     open(RELEASE, "w").write(json.dumps(release, indent=2, ensure_ascii=False) + "\n")
-    json.dump({"date": "2026-11-03", "approvedBy": "Jordan (hearts); tola and spray proposed", "rows": approval},
+    json.dump({"date": "2026-11-03", "approvedBy": "Jordan", "rows": approval},
               open(APPROVAL, "w"), indent=1, ensure_ascii=False)
     open(APPROVAL, "a").write("\n")
 
