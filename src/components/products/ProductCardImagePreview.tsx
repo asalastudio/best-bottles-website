@@ -293,7 +293,7 @@ export default function ProductCardImagePreview({
             }}
         >
             <div
-                className={`relative w-full overflow-hidden ${catalogHero ? `aspect-[10/11] ${styles.heroFrame}` : "aspect-[4/3] sm:aspect-[10/11] bg-[#efe2d0]"}`}
+                className={`relative w-full overflow-hidden ${catalogHero || canonicalHero ? `aspect-[10/11] ${styles.heroFrame}` : "aspect-[4/3] sm:aspect-[10/11] bg-[#efe2d0]"}`}
                 data-bb-image-audit={auditMeta?.surface}
                 data-bb-family={auditMeta?.family ?? undefined}
                 data-bb-product-group-slug={auditMeta?.productGroupSlug ?? undefined}
