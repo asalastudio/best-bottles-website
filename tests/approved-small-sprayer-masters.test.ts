@@ -35,7 +35,7 @@ describe("approved 3.3/4 ml sprayer publication", () => {
     });
     it("includes both finishes of both sizes in the hosted release", async () => {
         expect(Object.keys(source).sort()).toEqual(["GBSpry3mlClBlk", "GBSpry3mlClWht", "GBSpry4mlClBlk", "GBSpry4mlClWh"].sort());
-        expect(Object.keys(hosted)).toHaveLength(671);   // 463 + the 196 Elegant masters (2026-11-03) + 12 Vial masters (2026-11-04)
+        expect(Object.keys(hosted)).toHaveLength(850);   // 463 + the 196 Elegant masters (2026-11-03) + 12 Vial masters (2026-11-04) + 179 Diva masters (2026-11-04)
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         for (const sku of Object.keys(source)) {
             const response = await GET(new Request(`https://preview.vercel.app/api/bottle-masters/approved?sku=${sku}&v=${index.version}`));

@@ -10,14 +10,14 @@ import { stageLayout, type KitLike } from "@/lib/products/pdp-redesign/stage";
 it("covers every approved source with immutable display copies and leaves unknown images alone", () => {
     const urls = new Set(Object.values(approved.rows).flatMap(kit => kit.parts.flatMap(part =>
         [part.image.url, (part as { detached?: { image: { url: string } } }).detached?.image.url].filter((url): url is string => Boolean(url)))));
-    expect(urls.size).toBe(264);   // 126 + the Elegant masters' layers (2026-11-03) + the Vial masters' (2026-11-04)
+    expect(urls.size).toBe(377);   // 126 + the Elegant masters' layers (2026-11-03) + the Vial masters' and the Diva masters' (2026-11-04)
     for (const source of urls) {
         for (const width of [128, 256, 640, 1200]) {
             expect(displayDerivativeUrl(source, width)).toMatch(/^https:\/\/yzy7l20k4yt6znzz\.public\.blob\.vercel-storage\.com\/product-display\/v1\/[a-f0-9]{64}\/(128|256|640|1200)-[a-f0-9]{64}\.webp$/);
             expect(displayImageUrl(source, width as 128 | 256 | 640 | 1200)).toBe(displayDerivativeUrl(source, width));
         }
     }
-    expect(Object.keys(delivery.sources)).toHaveLength(288); // Includes Tola, the cleaned 25 ml copper overcap, the Elegant masters (128 + 58 + 80) and the Vial masters (22).
+    expect(Object.keys(delivery.sources)).toHaveLength(419); // Includes Tola, the cleaned 25 ml copper overcap, the Elegant masters (128 + 58 + 80), the Vial masters (22), the Diva masters (127) and the four Diva glass plates.
     expect(displayDerivativeUrl("https://unknown.example/master.png", 640)).toBeNull();
     expect(displayDerivativeUrl("/local-kits/unapproved-candidate.svg", 640)).toBeNull();
     for (const [alias, source] of Object.entries(delivery.aliases)) {

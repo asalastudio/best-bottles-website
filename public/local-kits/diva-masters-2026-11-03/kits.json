@@ -1,5 +1,5 @@
 {
- "version": "fb12d0496a9a",
+ "version": "32a89f9270c0",
  "rows": {
   "LBDiva100LtnClOvrCap": {
    "sku": "LBDiva100LtnClOvrCap",
@@ -62,9 +62,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 470.962,
+      "left": 450.962,
       "top": 356.142,
-      "right": 529.962,
+      "right": 549.962,
       "bottom": 886.142
      },
      "assembled": {
@@ -76,20 +76,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-530.c9d96c979a1a.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-530.d8bba04aeb2a.png",
       "key": "",
-      "sha256": "c9d96c979a1a3a370c34f9ead393bd411174b99000e22d6d378969cb7b75b495",
-      "bytes": 21227,
-      "width": 59,
+      "sha256": "d8bba04aeb2ae6d8df206c5816a67ae7cb1c6d7bef88e34d4f4ae2bd8e84b7ff",
+      "bytes": 26669,
+      "width": 99,
       "height": 530
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 470.962,
+      "x": 450.962,
       "y": 356.142,
-      "width": 59,
+      "width": 99,
       "height": 530
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
@@ -269,10 +269,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 459.735,
-      "top": 363.879,
-      "right": 537.735,
-      "bottom": 887.879
+      "left": 448.735,
+      "top": 384.233,
+      "right": 548.735,
+      "bottom": 888.233
      },
      "assembled": {
       "x": 0,
@@ -283,21 +283,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-524.7a79ba5b8f0d.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-504.244d0eca4d2f.png",
       "key": "",
-      "sha256": "7a79ba5b8f0de37ca16c65f835d9afb33dab6d8de372580c8403b6a5335fd152",
-      "bytes": 23767,
-      "width": 78,
-      "height": 524
+      "sha256": "244d0eca4d2f8f9c5cae5e8cef8d63c6743a8ee4cf997c97ce219ff9a22d31c1",
+      "bytes": 20968,
+      "width": 100,
+      "height": 504
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 459.735,
-      "y": 363.879,
-      "width": 78,
-      "height": 524
+      "x": 448.735,
+      "y": 384.233,
+      "width": 100,
+      "height": 504
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
      "views": [
@@ -475,10 +475,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 462.265,
-      "top": 365.041,
-      "right": 540.265,
-      "bottom": 888.041
+      "left": 451.265,
+      "top": 385.395,
+      "right": 551.265,
+      "bottom": 887.395
      },
      "assembled": {
       "x": 0,
@@ -489,21 +489,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-523.d08223cf528d.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-502.97edf72e5ea9.png",
       "key": "",
-      "sha256": "d08223cf528d9de4794fea9b32ca14b6969c9dc45b2e5bba9bdfd8015651f98e",
-      "bytes": 23737,
-      "width": 78,
-      "height": 523
+      "sha256": "97edf72e5ea96dbe4e624d385adb8fcb3ccc98da0ca95b5afd282f1913141d43",
+      "bytes": 20935,
+      "width": 100,
+      "height": 502
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 462.265,
-      "y": 365.041,
-      "width": 78,
-      "height": 523
+      "x": 451.265,
+      "y": 385.395,
+      "width": 100,
+      "height": 502
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
      "views": [
@@ -681,10 +681,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 462.897,
-      "top": 366.409,
-      "right": 540.897,
-      "bottom": 887.409
+      "left": 451.897,
+      "top": 386.763,
+      "right": 551.897,
+      "bottom": 887.763
      },
      "assembled": {
       "x": 0,
@@ -695,21 +695,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-521.602a17d91f97.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-501.93f01356ee7a.png",
       "key": "",
-      "sha256": "602a17d91f972bda7ff54db09d1db2d487d8e6d5e4592a7e451b3bd163100097",
-      "bytes": 23692,
-      "width": 78,
-      "height": 521
+      "sha256": "93f01356ee7a712b4fc14a8382d29ca8fb3f8a7acfec0dd8379a2c960294db92",
+      "bytes": 20964,
+      "width": 100,
+      "height": 501
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 462.897,
-      "y": 366.409,
-      "width": 78,
-      "height": 521
+      "x": 451.897,
+      "y": 386.763,
+      "width": 100,
+      "height": 501
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
      "views": [
@@ -887,10 +887,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 461.633,
-      "top": 366.188,
-      "right": 539.633,
-      "bottom": 888.188
+      "left": 450.633,
+      "top": 386.542,
+      "right": 550.633,
+      "bottom": 887.542
      },
      "assembled": {
       "x": 0,
@@ -901,21 +901,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-522.dd14bc5aa20c.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-501.93f01356ee7a.png",
       "key": "",
-      "sha256": "dd14bc5aa20cbac6d72e08d00113eb16f8c1c2464829bc1d96a0426d1468497b",
-      "bytes": 23688,
-      "width": 78,
-      "height": 522
+      "sha256": "93f01356ee7a712b4fc14a8382d29ca8fb3f8a7acfec0dd8379a2c960294db92",
+      "bytes": 20964,
+      "width": 100,
+      "height": 501
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 461.633,
-      "y": 366.188,
-      "width": 78,
-      "height": 522
+      "x": 450.633,
+      "y": 386.542,
+      "width": 100,
+      "height": 501
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
      "views": [
@@ -1093,10 +1093,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 456.889,
-      "top": 365.307,
-      "right": 534.889,
-      "bottom": 888.307
+      "left": 445.889,
+      "top": 385.66,
+      "right": 545.889,
+      "bottom": 887.66
      },
      "assembled": {
       "x": 0,
@@ -1107,21 +1107,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-523.d08223cf528d.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-502.97edf72e5ea9.png",
       "key": "",
-      "sha256": "d08223cf528d9de4794fea9b32ca14b6969c9dc45b2e5bba9bdfd8015651f98e",
-      "bytes": 23737,
-      "width": 78,
-      "height": 523
+      "sha256": "97edf72e5ea96dbe4e624d385adb8fcb3ccc98da0ca95b5afd282f1913141d43",
+      "bytes": 20935,
+      "width": 100,
+      "height": 502
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 456.889,
-      "y": 365.307,
-      "width": 78,
-      "height": 523
+      "x": 445.889,
+      "y": 385.66,
+      "width": 100,
+      "height": 502
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
      "views": [
@@ -1299,10 +1299,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 457.003,
-      "top": 362.617,
-      "right": 535.003,
-      "bottom": 886.617
+      "left": 446.003,
+      "top": 382.97,
+      "right": 546.003,
+      "bottom": 885.97
      },
      "assembled": {
       "x": 0,
@@ -1313,21 +1313,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-524.7a79ba5b8f0d.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-503.cd7a1ad03824.png",
       "key": "",
-      "sha256": "7a79ba5b8f0de37ca16c65f835d9afb33dab6d8de372580c8403b6a5335fd152",
-      "bytes": 23767,
-      "width": 78,
-      "height": 524
+      "sha256": "cd7a1ad0382467791ba208d550e348db2d92cf659010c36f18d09421a7a052ff",
+      "bytes": 21060,
+      "width": 100,
+      "height": 503
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 457.003,
-      "y": 362.617,
-      "width": 78,
-      "height": 524
+      "x": 446.003,
+      "y": 382.97,
+      "width": 100,
+      "height": 503
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
      "views": [
@@ -1505,10 +1505,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 459.463,
-      "top": 363.692,
-      "right": 537.463,
-      "bottom": 886.692
+      "left": 448.463,
+      "top": 384.046,
+      "right": 548.463,
+      "bottom": 886.046
      },
      "assembled": {
       "x": 0,
@@ -1519,21 +1519,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-523.d08223cf528d.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-502.97edf72e5ea9.png",
       "key": "",
-      "sha256": "d08223cf528d9de4794fea9b32ca14b6969c9dc45b2e5bba9bdfd8015651f98e",
-      "bytes": 23737,
-      "width": 78,
-      "height": 523
+      "sha256": "97edf72e5ea96dbe4e624d385adb8fcb3ccc98da0ca95b5afd282f1913141d43",
+      "bytes": 20935,
+      "width": 100,
+      "height": 502
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 459.463,
-      "y": 363.692,
-      "width": 78,
-      "height": 523
+      "x": 448.463,
+      "y": 384.046,
+      "width": 100,
+      "height": 502
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
      "views": [
@@ -1711,10 +1711,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 460.078,
-      "top": 364.077,
-      "right": 538.078,
-      "bottom": 886.077
+      "left": 449.078,
+      "top": 384.43,
+      "right": 549.078,
+      "bottom": 886.43
      },
      "assembled": {
       "x": 0,
@@ -1725,21 +1725,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-522.dd14bc5aa20c.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-502.97edf72e5ea9.png",
       "key": "",
-      "sha256": "dd14bc5aa20cbac6d72e08d00113eb16f8c1c2464829bc1d96a0426d1468497b",
-      "bytes": 23688,
-      "width": 78,
-      "height": 522
+      "sha256": "97edf72e5ea96dbe4e624d385adb8fcb3ccc98da0ca95b5afd282f1913141d43",
+      "bytes": 20935,
+      "width": 100,
+      "height": 502
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 460.078,
-      "y": 364.077,
-      "width": 78,
-      "height": 522
+      "x": 449.078,
+      "y": 384.43,
+      "width": 100,
+      "height": 502
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
      "views": [
@@ -1917,10 +1917,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 458.847,
-      "top": 364.082,
-      "right": 536.847,
-      "bottom": 886.082
+      "left": 447.847,
+      "top": 384.436,
+      "right": 547.847,
+      "bottom": 886.436
      },
      "assembled": {
       "x": 0,
@@ -1931,21 +1931,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-522.dd14bc5aa20c.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-502.97edf72e5ea9.png",
       "key": "",
-      "sha256": "dd14bc5aa20cbac6d72e08d00113eb16f8c1c2464829bc1d96a0426d1468497b",
-      "bytes": 23688,
-      "width": 78,
-      "height": 522
+      "sha256": "97edf72e5ea96dbe4e624d385adb8fcb3ccc98da0ca95b5afd282f1913141d43",
+      "bytes": 20935,
+      "width": 100,
+      "height": 502
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 458.847,
-      "y": 364.082,
-      "width": 78,
-      "height": 522
+      "x": 447.847,
+      "y": 384.436,
+      "width": 100,
+      "height": 502
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
      "views": [
@@ -2123,10 +2123,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 456.081,
-      "top": 363.921,
-      "right": 534.081,
-      "bottom": 885.921
+      "left": 445.081,
+      "top": 384.275,
+      "right": 545.081,
+      "bottom": 886.275
      },
      "assembled": {
       "x": 0,
@@ -2137,21 +2137,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-522.dd14bc5aa20c.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-502.97edf72e5ea9.png",
       "key": "",
-      "sha256": "dd14bc5aa20cbac6d72e08d00113eb16f8c1c2464829bc1d96a0426d1468497b",
-      "bytes": 23688,
-      "width": 78,
-      "height": 522
+      "sha256": "97edf72e5ea96dbe4e624d385adb8fcb3ccc98da0ca95b5afd282f1913141d43",
+      "bytes": 20935,
+      "width": 100,
+      "height": 502
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 456.081,
-      "y": 363.921,
-      "width": 78,
-      "height": 522
+      "x": 445.081,
+      "y": 384.275,
+      "width": 100,
+      "height": 502
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
      "views": [
@@ -4646,10 +4646,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 455.283,
-      "top": 382.247,
-      "right": 541.283,
-      "bottom": 896.247
+      "left": 443.783,
+      "top": 404.674,
+      "right": 552.783,
+      "bottom": 896.674
      },
      "assembled": {
       "x": 0,
@@ -4660,21 +4660,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-514.7eb08107ccbd.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-492.c57b05958dd2.png",
       "key": "",
-      "sha256": "7eb08107ccbd1d9bd665d18b7849e252ef007fb876b9deee0551c416cd1ef983",
-      "bytes": 25629,
-      "width": 86,
-      "height": 514
+      "sha256": "c57b05958dd2bcac7f497a1db0d5cd5b757f014d2a74fa90f7b3a8a8c23ac49e",
+      "bytes": 22926,
+      "width": 109,
+      "height": 492
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 455.283,
-      "y": 382.247,
-      "width": 86,
-      "height": 514
+      "x": 443.783,
+      "y": 404.674,
+      "width": 109,
+      "height": 492
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
      "views": [
@@ -4846,10 +4846,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 454.676,
-      "top": 366.424,
-      "right": 532.676,
-      "bottom": 887.424
+      "left": 443.676,
+      "top": 386.778,
+      "right": 543.676,
+      "bottom": 887.778
      },
      "assembled": {
       "x": 0,
@@ -4860,21 +4860,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-521.602a17d91f97.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-501.93f01356ee7a.png",
       "key": "",
-      "sha256": "602a17d91f972bda7ff54db09d1db2d487d8e6d5e4592a7e451b3bd163100097",
-      "bytes": 23692,
-      "width": 78,
-      "height": 521
+      "sha256": "93f01356ee7a712b4fc14a8382d29ca8fb3f8a7acfec0dd8379a2c960294db92",
+      "bytes": 20964,
+      "width": 100,
+      "height": 501
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 454.676,
-      "y": 366.424,
-      "width": 78,
-      "height": 521
+      "x": 443.676,
+      "y": 386.778,
+      "width": 100,
+      "height": 501
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
      "views": [
@@ -5268,10 +5268,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 455.774,
-      "top": 363.76,
-      "right": 533.774,
-      "bottom": 886.76
+      "left": 444.774,
+      "top": 384.113,
+      "right": 544.774,
+      "bottom": 886.113
      },
      "assembled": {
       "x": 0,
@@ -5282,21 +5282,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-523.d08223cf528d.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-502.97edf72e5ea9.png",
       "key": "",
-      "sha256": "d08223cf528d9de4794fea9b32ca14b6969c9dc45b2e5bba9bdfd8015651f98e",
-      "bytes": 23737,
-      "width": 78,
-      "height": 523
+      "sha256": "97edf72e5ea96dbe4e624d385adb8fcb3ccc98da0ca95b5afd282f1913141d43",
+      "bytes": 20935,
+      "width": 100,
+      "height": 502
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 455.774,
-      "y": 363.76,
-      "width": 78,
-      "height": 523
+      "x": 444.774,
+      "y": 384.113,
+      "width": 100,
+      "height": 502
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
      "views": [
@@ -5690,10 +5690,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 468.731,
-      "top": 340.919,
-      "right": 531.731,
-      "bottom": 885.919
+      "left": 459.231,
+      "top": 357.245,
+      "right": 541.231,
+      "bottom": 886.245
      },
      "assembled": {
       "x": 0,
@@ -5704,21 +5704,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-545.29185ac143a0.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-529.4db26804d851.png",
       "key": "",
-      "sha256": "29185ac143a065d03aa61045f722642107887791d36b6e0fd926b6ba578b283c",
-      "bytes": 19894,
-      "width": 63,
-      "height": 545
+      "sha256": "4db26804d851fc0c36224e3db03df9e07c2d3f7f46b0bf94b655aac83672de03",
+      "bytes": 16361,
+      "width": 82,
+      "height": 529
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 468.731,
-      "y": 340.919,
-      "width": 63,
-      "height": 545
+      "x": 459.231,
+      "y": 357.245,
+      "width": 82,
+      "height": 529
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
      "views": [
@@ -6533,9 +6533,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 224.103,
+      "left": 212.603,
       "top": 449.272,
-      "right": 310.103,
+      "right": 321.603,
       "bottom": 896.272
      },
      "assembled": {
@@ -6547,20 +6547,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.59ee7ad326c2.png",
       "key": "",
-      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
-      "bytes": 15248,
-      "width": 86,
+      "sha256": "59ee7ad326c2603fc59e7f3c252941a0d57c3a9f13aa8aa6592d31ad8439bfbd",
+      "bytes": 17059,
+      "width": 109,
       "height": 447
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 224.103,
+      "x": 212.603,
       "y": 449.272,
-      "width": 86,
+      "width": 109,
       "height": 447
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
@@ -6697,9 +6697,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 249.447,
+      "left": 238.447,
       "top": 428.556,
-      "right": 327.447,
+      "right": 338.447,
       "bottom": 887.556
      },
      "assembled": {
@@ -6711,20 +6711,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.88b5e96110f0.png",
       "key": "",
-      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
-      "bytes": 14529,
-      "width": 78,
+      "sha256": "88b5e96110f0136dc022a2014122ebdc879320bb3e79b140887e063a3f82266f",
+      "bytes": 15764,
+      "width": 100,
       "height": 459
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 249.447,
+      "x": 238.447,
       "y": 428.556,
-      "width": 78,
+      "width": 100,
       "height": 459
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
@@ -6868,10 +6868,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -228.385,
+      "left": -239.385,
       "top": 1275.041,
-      "right": -150.385,
-      "bottom": 1301.041
+      "right": -139.385,
+      "bottom": 1295.041
      },
      "assembled": {
       "x": 0,
@@ -6882,21 +6882,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--387.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--387.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -228.385,
+      "x": -239.385,
       "y": 1275.041,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
      "views": [
@@ -7039,9 +7039,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 249.447,
+      "left": 238.447,
       "top": 426.586,
-      "right": 327.447,
+      "right": 338.447,
       "bottom": 886.586
      },
      "assembled": {
@@ -7053,20 +7053,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.dc85e6c8a08d.png",
       "key": "",
-      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
-      "bytes": 14543,
-      "width": 78,
+      "sha256": "dc85e6c8a08d5c30f4a8e400e08d707f0ae4648bf6833a2b1ddb4255a6d91393",
+      "bytes": 15780,
+      "width": 100,
       "height": 460
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 249.447,
+      "x": 238.447,
       "y": 426.586,
-      "width": 78,
+      "width": 100,
       "height": 460
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
@@ -7420,10 +7420,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -228.385,
+      "left": -239.385,
       "top": 1273.071,
-      "right": -150.385,
-      "bottom": 1299.071
+      "right": -139.385,
+      "bottom": 1293.071
      },
      "assembled": {
       "x": 0,
@@ -7434,21 +7434,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--387.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--387.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -228.385,
+      "x": -239.385,
       "y": 1273.071,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
      "views": [
@@ -8641,10 +8641,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 469.655,
-      "top": 340.29,
-      "right": 532.655,
-      "bottom": 886.29
+      "left": 460.155,
+      "top": 356.616,
+      "right": 542.155,
+      "bottom": 886.616
      },
      "assembled": {
       "x": 0,
@@ -8655,21 +8655,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-546.5f0792e593f8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-530.2a02121be618.png",
       "key": "",
-      "sha256": "5f0792e593f88a7db1ec86aad91fa982fd40a5ec31ba2cb866c1dcf610b69685",
-      "bytes": 19948,
-      "width": 63,
-      "height": 546
+      "sha256": "2a02121be618c75cd113d401324026c1e28239ef9401743cde997dad541ce8c5",
+      "bytes": 16374,
+      "width": 82,
+      "height": 530
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 469.655,
-      "y": 340.29,
-      "width": 63,
-      "height": 546
+      "x": 460.155,
+      "y": 356.616,
+      "width": 82,
+      "height": 530
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
      "views": [
@@ -9267,10 +9267,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 466.42,
-      "top": 341.138,
-      "right": 529.42,
-      "bottom": 886.138
+      "left": 456.92,
+      "top": 357.464,
+      "right": 538.92,
+      "bottom": 886.464
      },
      "assembled": {
       "x": 0,
@@ -9281,21 +9281,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-545.29185ac143a0.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-529.4db26804d851.png",
       "key": "",
-      "sha256": "29185ac143a065d03aa61045f722642107887791d36b6e0fd926b6ba578b283c",
-      "bytes": 19894,
-      "width": 63,
-      "height": 545
+      "sha256": "4db26804d851fc0c36224e3db03df9e07c2d3f7f46b0bf94b655aac83672de03",
+      "bytes": 16361,
+      "width": 82,
+      "height": 529
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 466.42,
-      "y": 341.138,
-      "width": 63,
-      "height": 545
+      "x": 456.92,
+      "y": 357.464,
+      "width": 82,
+      "height": 529
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
      "views": [
@@ -9683,10 +9683,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 468.269,
-      "top": 341.139,
-      "right": 531.269,
-      "bottom": 886.139
+      "left": 458.769,
+      "top": 357.465,
+      "right": 540.769,
+      "bottom": 886.465
      },
      "assembled": {
       "x": 0,
@@ -9697,21 +9697,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-545.29185ac143a0.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-529.4db26804d851.png",
       "key": "",
-      "sha256": "29185ac143a065d03aa61045f722642107887791d36b6e0fd926b6ba578b283c",
-      "bytes": 19894,
-      "width": 63,
-      "height": 545
+      "sha256": "4db26804d851fc0c36224e3db03df9e07c2d3f7f46b0bf94b655aac83672de03",
+      "bytes": 16361,
+      "width": 82,
+      "height": 529
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 468.269,
-      "y": 341.139,
-      "width": 63,
-      "height": 545
+      "x": 458.769,
+      "y": 357.465,
+      "width": 82,
+      "height": 529
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
      "views": [
@@ -10099,10 +10099,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 466.42,
-      "top": 340.517,
-      "right": 529.42,
-      "bottom": 886.517
+      "left": 456.92,
+      "top": 356.843,
+      "right": 538.92,
+      "bottom": 885.843
      },
      "assembled": {
       "x": 0,
@@ -10113,21 +10113,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-546.5f0792e593f8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-529.4db26804d851.png",
       "key": "",
-      "sha256": "5f0792e593f88a7db1ec86aad91fa982fd40a5ec31ba2cb866c1dcf610b69685",
-      "bytes": 19948,
-      "width": 63,
-      "height": 546
+      "sha256": "4db26804d851fc0c36224e3db03df9e07c2d3f7f46b0bf94b655aac83672de03",
+      "bytes": 16361,
+      "width": 82,
+      "height": 529
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 466.42,
-      "y": 340.517,
-      "width": 63,
-      "height": 546
+      "x": 456.92,
+      "y": 356.843,
+      "width": 82,
+      "height": 529
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
      "views": [
@@ -10515,10 +10515,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 468.038,
-      "top": 340.138,
-      "right": 531.038,
-      "bottom": 886.138
+      "left": 458.538,
+      "top": 356.464,
+      "right": 540.538,
+      "bottom": 886.464
      },
      "assembled": {
       "x": 0,
@@ -10529,21 +10529,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-546.5f0792e593f8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-530.2a02121be618.png",
       "key": "",
-      "sha256": "5f0792e593f88a7db1ec86aad91fa982fd40a5ec31ba2cb866c1dcf610b69685",
-      "bytes": 19948,
-      "width": 63,
-      "height": 546
+      "sha256": "2a02121be618c75cd113d401324026c1e28239ef9401743cde997dad541ce8c5",
+      "bytes": 16374,
+      "width": 82,
+      "height": 530
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 468.038,
-      "y": 340.138,
-      "width": 63,
-      "height": 546
+      "x": 458.538,
+      "y": 356.464,
+      "width": 82,
+      "height": 530
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
      "views": [
@@ -10937,9 +10937,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 457.44,
+      "left": 431.44,
       "top": 401.602,
-      "right": 538.44,
+      "right": 564.44,
       "bottom": 896.602
      },
      "assembled": {
@@ -10951,20 +10951,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.effe33db8d14.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.a7efc65a50dd.png",
       "key": "",
-      "sha256": "effe33db8d144951b5611d3c1ee70863ca5ed135de808624f19a238259398d1c",
-      "bytes": 28293,
-      "width": 81,
+      "sha256": "a7efc65a50dd7951be46df2f706d8241ff3580d955c998642b9ffbd3ab7be2b9",
+      "bytes": 34979,
+      "width": 133,
       "height": 495
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 457.44,
+      "x": 431.44,
       "y": 401.602,
-      "width": 81,
+      "width": 133,
       "height": 495
      },
      "componentId": "CMP-LPM-MGLD-18-415",
@@ -11143,9 +11143,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 460.873,
+      "left": 434.873,
       "top": 402.037,
-      "right": 541.873,
+      "right": 567.873,
       "bottom": 897.037
      },
      "assembled": {
@@ -11157,20 +11157,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.effe33db8d14.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.a7efc65a50dd.png",
       "key": "",
-      "sha256": "effe33db8d144951b5611d3c1ee70863ca5ed135de808624f19a238259398d1c",
-      "bytes": 28293,
-      "width": 81,
+      "sha256": "a7efc65a50dd7951be46df2f706d8241ff3580d955c998642b9ffbd3ab7be2b9",
+      "bytes": 34979,
+      "width": 133,
       "height": 495
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 460.873,
+      "x": 434.873,
       "y": 402.037,
-      "width": 81,
+      "width": 133,
       "height": 495
      },
      "componentId": "CMP-LPM-SGLD-18-415",
@@ -11349,9 +11349,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 456.409,
+      "left": 430.409,
       "top": 402.037,
-      "right": 537.409,
+      "right": 563.409,
       "bottom": 897.037
      },
      "assembled": {
@@ -11363,20 +11363,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.effe33db8d14.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.a7efc65a50dd.png",
       "key": "",
-      "sha256": "effe33db8d144951b5611d3c1ee70863ca5ed135de808624f19a238259398d1c",
-      "bytes": 28293,
-      "width": 81,
+      "sha256": "a7efc65a50dd7951be46df2f706d8241ff3580d955c998642b9ffbd3ab7be2b9",
+      "bytes": 34979,
+      "width": 133,
       "height": 495
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 456.409,
+      "x": 430.409,
       "y": 402.037,
-      "width": 81,
+      "width": 133,
       "height": 495
      },
      "componentId": "CMP-LPM-SBLK-18-415",
@@ -11549,9 +11549,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 298.885,
+      "left": 289.385,
       "top": 389.52,
-      "right": 361.885,
+      "right": 371.385,
       "bottom": 886.52
      },
      "assembled": {
@@ -11563,20 +11563,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-497.e59de9a2aa32.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-497.dde6499b4ced.png",
       "key": "",
-      "sha256": "e59de9a2aa32c86bc5345289b3be65897ba73ba75cb4b0d0604f70862b37f591",
-      "bytes": 12824,
-      "width": 63,
+      "sha256": "dde6499b4ced02a9189d83a875164788a691c00ab02c3315baa649e957c2bc99",
+      "bytes": 12699,
+      "width": 82,
       "height": 497
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 298.885,
+      "x": 289.385,
       "y": 389.52,
-      "width": 63,
+      "width": 82,
       "height": 497
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
@@ -11726,9 +11726,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 458.47,
+      "left": 432.47,
       "top": 401.856,
-      "right": 539.47,
+      "right": 565.47,
       "bottom": 896.856
      },
      "assembled": {
@@ -11740,20 +11740,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.effe33db8d14.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.a7efc65a50dd.png",
       "key": "",
-      "sha256": "effe33db8d144951b5611d3c1ee70863ca5ed135de808624f19a238259398d1c",
-      "bytes": 28293,
-      "width": 81,
+      "sha256": "a7efc65a50dd7951be46df2f706d8241ff3580d955c998642b9ffbd3ab7be2b9",
+      "bytes": 34979,
+      "width": 133,
       "height": 495
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 458.47,
+      "x": 432.47,
       "y": 401.856,
-      "width": 81,
+      "width": 133,
       "height": 495
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
@@ -11926,10 +11926,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -84.208,
+      "left": -93.708,
       "top": 1068.68,
-      "right": -21.208,
-      "bottom": 1091.68
+      "right": -11.708,
+      "bottom": 1086.68
      },
      "assembled": {
       "x": 0,
@@ -11940,21 +11940,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--183.d0460d923262.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--183.b51704a4bf6a.png",
       "key": "",
-      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
-      "bytes": 1179,
-      "width": 63,
-      "height": 23
+      "sha256": "b51704a4bf6a8d3e0ca8078d872b90afb18d2870011c49afcd0b8b6ee1ffd7b3",
+      "bytes": 1439,
+      "width": 82,
+      "height": 18
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -84.208,
+      "x": -93.708,
       "y": 1068.68,
-      "width": 63,
-      "height": 23
+      "width": 82,
+      "height": 18
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
      "views": [
@@ -12103,9 +12103,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 460.874,
+      "left": 434.874,
       "top": 403.036,
-      "right": 541.874,
+      "right": 567.874,
       "bottom": 897.036
      },
      "assembled": {
@@ -12117,20 +12117,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-494.d2f982f6c4dd.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-494.689c08060eff.png",
       "key": "",
-      "sha256": "d2f982f6c4dd3c1b7a07a6b4582fa9e30f0b2a7d1e11737c58a8b6f6e2c59642",
-      "bytes": 28260,
-      "width": 81,
+      "sha256": "689c08060eff56e9cb7be72130643fbd3dd1c06974c23ccbe1609b1f139d13b8",
+      "bytes": 34961,
+      "width": 133,
       "height": 494
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 460.874,
+      "x": 434.874,
       "y": 403.036,
-      "width": 81,
+      "width": 133,
       "height": 494
      },
      "componentId": "CMP-LPM-SSLV-18-415",
@@ -12309,9 +12309,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 456.409,
+      "left": 430.409,
       "top": 401.65,
-      "right": 537.409,
+      "right": 563.409,
       "bottom": 896.65
      },
      "assembled": {
@@ -12323,20 +12323,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.effe33db8d14.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.a7efc65a50dd.png",
       "key": "",
-      "sha256": "effe33db8d144951b5611d3c1ee70863ca5ed135de808624f19a238259398d1c",
-      "bytes": 28293,
-      "width": 81,
+      "sha256": "a7efc65a50dd7951be46df2f706d8241ff3580d955c998642b9ffbd3ab7be2b9",
+      "bytes": 34979,
+      "width": 133,
       "height": 495
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 456.409,
+      "x": 430.409,
       "y": 401.65,
-      "width": 81,
+      "width": 133,
       "height": 495
      },
      "componentId": "CMP-LPM-CPR-18-415",
@@ -14399,9 +14399,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 460.47,
+      "left": 436.47,
       "top": 382.396,
-      "right": 534.47,
+      "right": 558.47,
       "bottom": 887.396
      },
      "assembled": {
@@ -14413,20 +14413,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-505.b076fa6a6c59.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-505.6f433b0d6c6f.png",
       "key": "",
-      "sha256": "b076fa6a6c5917a773df2ee218e6f684ebb0c66073286eb7678412060740ecf4",
-      "bytes": 26225,
-      "width": 74,
+      "sha256": "6f433b0d6c6f882c16f692619bc45c454faa6ec1703f5ed5f95caa6d09dddb57",
+      "bytes": 32034,
+      "width": 122,
       "height": 505
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 460.47,
+      "x": 436.47,
       "y": 382.396,
-      "width": 74,
+      "width": 122,
       "height": 505
      },
      "componentId": "CMP-LPM-MGLD-18-415",
@@ -14815,9 +14815,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 462.367,
+      "left": 438.367,
       "top": 383.557,
-      "right": 536.367,
+      "right": 560.367,
       "bottom": 887.557
      },
      "assembled": {
@@ -14829,20 +14829,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.795e43360714.png",
       "key": "",
-      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
-      "bytes": 26196,
-      "width": 74,
+      "sha256": "795e43360714c544472307820ac7bb24c3ee0dc49f934f4e268b567a192cc014",
+      "bytes": 32156,
+      "width": 122,
       "height": 504
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 462.367,
+      "x": 438.367,
       "y": 383.557,
-      "width": 74,
+      "width": 122,
       "height": 504
      },
      "componentId": "CMP-LPM-SGLD-18-415",
@@ -15231,9 +15231,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 463.949,
+      "left": 439.949,
       "top": 384.926,
-      "right": 537.949,
+      "right": 561.949,
       "bottom": 887.926
      },
      "assembled": {
@@ -15245,20 +15245,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-503.263227684d22.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-503.61f08a279ce8.png",
       "key": "",
-      "sha256": "263227684d2285776b6ab153ac0d018b0d2b57d33de9dd9505ce45cbc9360a1b",
-      "bytes": 26149,
-      "width": 74,
+      "sha256": "61f08a279ce8450ac028477b3f5eaba1ab58ac82ad297ab860f7ab92a3b18e24",
+      "bytes": 32030,
+      "width": 122,
       "height": 503
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 463.949,
+      "x": 439.949,
       "y": 384.926,
-      "width": 74,
+      "width": 122,
       "height": 503
      },
      "componentId": "CMP-LPM-SBLK-18-415",
@@ -15647,9 +15647,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 463.0,
+      "left": 439.0,
       "top": 384.66,
-      "right": 537.0,
+      "right": 561.0,
       "bottom": 887.66
      },
      "assembled": {
@@ -15661,20 +15661,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-503.263227684d22.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-503.61f08a279ce8.png",
       "key": "",
-      "sha256": "263227684d2285776b6ab153ac0d018b0d2b57d33de9dd9505ce45cbc9360a1b",
-      "bytes": 26149,
-      "width": 74,
+      "sha256": "61f08a279ce8450ac028477b3f5eaba1ab58ac82ad297ab860f7ab92a3b18e24",
+      "bytes": 32030,
+      "width": 122,
       "height": 503
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 463.0,
+      "x": 439.0,
       "y": 384.66,
-      "width": 74,
+      "width": 122,
       "height": 503
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
@@ -16063,9 +16063,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 461.419,
+      "left": 437.419,
       "top": 383.823,
-      "right": 535.419,
+      "right": 559.419,
       "bottom": 887.823
      },
      "assembled": {
@@ -16077,20 +16077,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.795e43360714.png",
       "key": "",
-      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
-      "bytes": 26196,
-      "width": 74,
+      "sha256": "795e43360714c544472307820ac7bb24c3ee0dc49f934f4e268b567a192cc014",
+      "bytes": 32156,
+      "width": 122,
       "height": 504
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 461.419,
+      "x": 437.419,
       "y": 383.823,
-      "width": 74,
+      "width": 122,
       "height": 504
      },
      "componentId": "CMP-LPM-SSLV-18-415",
@@ -16479,9 +16479,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 459.838,
+      "left": 435.838,
       "top": 384.162,
-      "right": 533.838,
+      "right": 557.838,
       "bottom": 888.162
      },
      "assembled": {
@@ -16493,20 +16493,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.795e43360714.png",
       "key": "",
-      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
-      "bytes": 26196,
-      "width": 74,
+      "sha256": "795e43360714c544472307820ac7bb24c3ee0dc49f934f4e268b567a192cc014",
+      "bytes": 32156,
+      "width": 122,
       "height": 504
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 459.838,
+      "x": 435.838,
       "y": 384.162,
-      "width": 74,
+      "width": 122,
       "height": 504
      },
      "componentId": "CMP-LPM-CPR-18-415",
@@ -16895,9 +16895,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 463.923,
+      "left": 439.923,
       "top": 381.133,
-      "right": 537.923,
+      "right": 561.923,
       "bottom": 886.133
      },
      "assembled": {
@@ -16909,20 +16909,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-505.b076fa6a6c59.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-505.6f433b0d6c6f.png",
       "key": "",
-      "sha256": "b076fa6a6c5917a773df2ee218e6f684ebb0c66073286eb7678412060740ecf4",
-      "bytes": 26225,
-      "width": 74,
+      "sha256": "6f433b0d6c6f882c16f692619bc45c454faa6ec1703f5ed5f95caa6d09dddb57",
+      "bytes": 32034,
+      "width": 122,
       "height": 505
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 463.923,
+      "x": 439.923,
       "y": 381.133,
-      "width": 74,
+      "width": 122,
       "height": 505
      },
      "componentId": "CMP-LPM-MGLD-18-415",
@@ -17318,9 +17318,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 223.727,
+      "left": 212.227,
       "top": 449.782,
-      "right": 309.727,
+      "right": 321.227,
       "bottom": 896.782
      },
      "assembled": {
@@ -17332,20 +17332,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.59ee7ad326c2.png",
       "key": "",
-      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
-      "bytes": 15248,
-      "width": 86,
+      "sha256": "59ee7ad326c2603fc59e7f3c252941a0d57c3a9f13aa8aa6592d31ad8439bfbd",
+      "bytes": 17059,
+      "width": 109,
       "height": 447
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 223.727,
+      "x": 212.227,
       "y": 449.782,
-      "width": 86,
+      "width": 109,
       "height": 447
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
@@ -17482,9 +17482,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 460.233,
+      "left": 436.233,
       "top": 381.183,
-      "right": 534.233,
+      "right": 558.233,
       "bottom": 886.183
      },
      "assembled": {
@@ -17496,20 +17496,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-505.b076fa6a6c59.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-505.6f433b0d6c6f.png",
       "key": "",
-      "sha256": "b076fa6a6c5917a773df2ee218e6f684ebb0c66073286eb7678412060740ecf4",
-      "bytes": 26225,
-      "width": 74,
+      "sha256": "6f433b0d6c6f882c16f692619bc45c454faa6ec1703f5ed5f95caa6d09dddb57",
+      "bytes": 32034,
+      "width": 122,
       "height": 505
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 460.233,
+      "x": 436.233,
       "y": 381.183,
-      "width": 74,
+      "width": 122,
       "height": 505
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
@@ -17905,9 +17905,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 220.792,
+      "left": 209.292,
       "top": 449.072,
-      "right": 306.792,
+      "right": 318.292,
       "bottom": 897.072
      },
      "assembled": {
@@ -17919,20 +17919,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-448.318967e0c875.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-448.453f354ecf72.png",
       "key": "",
-      "sha256": "318967e0c8752e840de6d77b7e3c6764e59820b52008edb96439f7dad7b75fe0",
-      "bytes": 15274,
-      "width": 86,
+      "sha256": "453f354ecf72beefa78e3822218e0f7975eca740ee334642bb6b6f2305877bb5",
+      "bytes": 17153,
+      "width": 109,
       "height": 448
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 220.792,
+      "x": 209.292,
       "y": 449.072,
-      "width": 86,
+      "width": 109,
       "height": 448
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
@@ -18069,9 +18069,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 463.307,
+      "left": 439.307,
       "top": 382.27,
-      "right": 537.307,
+      "right": 561.307,
       "bottom": 886.27
      },
      "assembled": {
@@ -18083,20 +18083,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.795e43360714.png",
       "key": "",
-      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
-      "bytes": 26196,
-      "width": 74,
+      "sha256": "795e43360714c544472307820ac7bb24c3ee0dc49f934f4e268b567a192cc014",
+      "bytes": 32156,
+      "width": 122,
       "height": 504
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 463.307,
+      "x": 439.307,
       "y": 382.27,
-      "width": 74,
+      "width": 122,
       "height": 504
      },
      "componentId": "CMP-LPM-CPR-18-415",
@@ -18492,9 +18492,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 223.359,
+      "left": 211.859,
       "top": 448.682,
-      "right": 309.359,
+      "right": 320.859,
       "bottom": 896.682
      },
      "assembled": {
@@ -18506,20 +18506,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-448.318967e0c875.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-448.453f354ecf72.png",
       "key": "",
-      "sha256": "318967e0c8752e840de6d77b7e3c6764e59820b52008edb96439f7dad7b75fe0",
-      "bytes": 15274,
-      "width": 86,
+      "sha256": "453f354ecf72beefa78e3822218e0f7975eca740ee334642bb6b6f2305877bb5",
+      "bytes": 17153,
+      "width": 109,
       "height": 448
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 223.359,
+      "x": 211.859,
       "y": 448.682,
-      "width": 86,
+      "width": 109,
       "height": 448
      },
      "componentId": "CMP-SPR-RED-18-415-01",
@@ -18656,9 +18656,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 460.233,
+      "left": 436.233,
       "top": 382.208,
-      "right": 534.233,
+      "right": 558.233,
       "bottom": 886.208
      },
      "assembled": {
@@ -18670,20 +18670,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.795e43360714.png",
       "key": "",
-      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
-      "bytes": 26196,
-      "width": 74,
+      "sha256": "795e43360714c544472307820ac7bb24c3ee0dc49f934f4e268b567a192cc014",
+      "bytes": 32156,
+      "width": 122,
       "height": 504
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 460.233,
+      "x": 436.233,
       "y": 382.208,
-      "width": 74,
+      "width": 122,
       "height": 504
      },
      "componentId": "CMP-LPM-SGLD-18-415",
@@ -19079,9 +19079,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 231.074,
+      "left": 219.574,
       "top": 449.372,
-      "right": 317.074,
+      "right": 328.574,
       "bottom": 896.372
      },
      "assembled": {
@@ -19093,20 +19093,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.59ee7ad326c2.png",
       "key": "",
-      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
-      "bytes": 15248,
-      "width": 86,
+      "sha256": "59ee7ad326c2603fc59e7f3c252941a0d57c3a9f13aa8aa6592d31ad8439bfbd",
+      "bytes": 17059,
+      "width": 109,
       "height": 447
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 231.074,
+      "x": 219.574,
       "y": 449.372,
-      "width": 86,
+      "width": 109,
       "height": 447
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
@@ -19243,9 +19243,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 461.463,
+      "left": 437.463,
       "top": 383.133,
-      "right": 535.463,
+      "right": 559.463,
       "bottom": 886.133
      },
      "assembled": {
@@ -19257,20 +19257,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-503.263227684d22.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-503.61f08a279ce8.png",
       "key": "",
-      "sha256": "263227684d2285776b6ab153ac0d018b0d2b57d33de9dd9505ce45cbc9360a1b",
-      "bytes": 26149,
-      "width": 74,
+      "sha256": "61f08a279ce8450ac028477b3f5eaba1ab58ac82ad297ab860f7ab92a3b18e24",
+      "bytes": 32030,
+      "width": 122,
       "height": 503
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 461.463,
+      "x": 437.463,
       "y": 383.133,
-      "width": 74,
+      "width": 122,
       "height": 503
      },
      "componentId": "CMP-LPM-SBLK-18-415",
@@ -19666,9 +19666,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 233.281,
+      "left": 221.781,
       "top": 449.372,
-      "right": 319.281,
+      "right": 330.781,
       "bottom": 896.372
      },
      "assembled": {
@@ -19680,20 +19680,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.59ee7ad326c2.png",
       "key": "",
-      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
-      "bytes": 15248,
-      "width": 86,
+      "sha256": "59ee7ad326c2603fc59e7f3c252941a0d57c3a9f13aa8aa6592d31ad8439bfbd",
+      "bytes": 17059,
+      "width": 109,
       "height": 447
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 233.281,
+      "x": 221.781,
       "y": 449.372,
-      "width": 86,
+      "width": 109,
       "height": 447
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
@@ -19830,9 +19830,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 458.696,
+      "left": 434.696,
       "top": 382.437,
-      "right": 532.696,
+      "right": 556.696,
       "bottom": 886.437
      },
      "assembled": {
@@ -19844,20 +19844,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.795e43360714.png",
       "key": "",
-      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
-      "bytes": 26196,
-      "width": 74,
+      "sha256": "795e43360714c544472307820ac7bb24c3ee0dc49f934f4e268b567a192cc014",
+      "bytes": 32156,
+      "width": 122,
       "height": 504
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 458.696,
+      "x": 434.696,
       "y": 382.437,
-      "width": 74,
+      "width": 122,
       "height": 504
      },
      "componentId": "CMP-LPM-SSLV-18-415",
@@ -20253,9 +20253,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 232.179,
+      "left": 220.679,
       "top": 449.232,
-      "right": 318.179,
+      "right": 329.679,
       "bottom": 896.232
      },
      "assembled": {
@@ -20267,20 +20267,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.59ee7ad326c2.png",
       "key": "",
-      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
-      "bytes": 15248,
-      "width": 86,
+      "sha256": "59ee7ad326c2603fc59e7f3c252941a0d57c3a9f13aa8aa6592d31ad8439bfbd",
+      "bytes": 17059,
+      "width": 109,
       "height": 447
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 232.179,
+      "x": 220.679,
       "y": 449.232,
-      "width": 86,
+      "width": 109,
       "height": 447
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
@@ -20634,9 +20634,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 233.277,
+      "left": 221.777,
       "top": 448.662,
-      "right": 319.277,
+      "right": 330.777,
       "bottom": 896.662
      },
      "assembled": {
@@ -20648,20 +20648,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-448.318967e0c875.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-448.453f354ecf72.png",
       "key": "",
-      "sha256": "318967e0c8752e840de6d77b7e3c6764e59820b52008edb96439f7dad7b75fe0",
-      "bytes": 15274,
-      "width": 86,
+      "sha256": "453f354ecf72beefa78e3822218e0f7975eca740ee334642bb6b6f2305877bb5",
+      "bytes": 17153,
+      "width": 109,
       "height": 448
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 233.277,
+      "x": 221.777,
       "y": 448.662,
-      "width": 86,
+      "width": 109,
       "height": 448
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
@@ -20805,9 +20805,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 238.789,
+      "left": 227.289,
       "top": 449.312,
-      "right": 324.789,
+      "right": 336.289,
       "bottom": 896.312
      },
      "assembled": {
@@ -20819,20 +20819,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.59ee7ad326c2.png",
       "key": "",
-      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
-      "bytes": 15248,
-      "width": 86,
+      "sha256": "59ee7ad326c2603fc59e7f3c252941a0d57c3a9f13aa8aa6592d31ad8439bfbd",
+      "bytes": 17059,
+      "width": 109,
       "height": 447
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 238.789,
+      "x": 227.289,
       "y": 449.312,
-      "width": 86,
+      "width": 109,
       "height": 447
      },
      "componentId": "CMP-CAP-PNK-18-415",
@@ -20969,9 +20969,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 298.618,
+      "left": 289.118,
       "top": 390.43,
-      "right": 361.618,
+      "right": 371.118,
       "bottom": 886.43
      },
      "assembled": {
@@ -20983,20 +20983,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.ba20c2a05c70.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.3945902083a7.png",
       "key": "",
-      "sha256": "ba20c2a05c707320deb3bdf30bc3cd6658f86f59d0dff0fa92444e4e54e05212",
-      "bytes": 12872,
-      "width": 63,
+      "sha256": "3945902083a77342a74cb2f464c9b2d8660d8e52d2e19c1b2527f7fa28447690",
+      "bytes": 12741,
+      "width": 82,
       "height": 496
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 298.618,
+      "x": 289.118,
       "y": 390.43,
-      "width": 63,
+      "width": 82,
       "height": 496
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
@@ -21140,9 +21140,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 303.97,
+      "left": 294.47,
       "top": 390.22,
-      "right": 366.97,
+      "right": 376.47,
       "bottom": 886.22
      },
      "assembled": {
@@ -21154,20 +21154,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.ba20c2a05c70.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.3945902083a7.png",
       "key": "",
-      "sha256": "ba20c2a05c707320deb3bdf30bc3cd6658f86f59d0dff0fa92444e4e54e05212",
-      "bytes": 12872,
-      "width": 63,
+      "sha256": "3945902083a77342a74cb2f464c9b2d8660d8e52d2e19c1b2527f7fa28447690",
+      "bytes": 12741,
+      "width": 82,
       "height": 496
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 303.97,
+      "x": 294.47,
       "y": 390.22,
-      "width": 63,
+      "width": 82,
       "height": 496
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
@@ -21311,9 +21311,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 305.578,
+      "left": 296.078,
       "top": 390.22,
-      "right": 368.578,
+      "right": 378.078,
       "bottom": 886.22
      },
      "assembled": {
@@ -21325,20 +21325,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.ba20c2a05c70.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.3945902083a7.png",
       "key": "",
-      "sha256": "ba20c2a05c707320deb3bdf30bc3cd6658f86f59d0dff0fa92444e4e54e05212",
-      "bytes": 12872,
-      "width": 63,
+      "sha256": "3945902083a77342a74cb2f464c9b2d8660d8e52d2e19c1b2527f7fa28447690",
+      "bytes": 12741,
+      "width": 82,
       "height": 496
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 305.578,
+      "x": 296.078,
       "y": 390.22,
-      "width": 63,
+      "width": 82,
       "height": 496
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
@@ -21482,9 +21482,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 296.478,
+      "left": 286.978,
       "top": 389.92,
-      "right": 359.478,
+      "right": 368.978,
       "bottom": 885.92
      },
      "assembled": {
@@ -21496,20 +21496,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.ba20c2a05c70.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.3945902083a7.png",
       "key": "",
-      "sha256": "ba20c2a05c707320deb3bdf30bc3cd6658f86f59d0dff0fa92444e4e54e05212",
-      "bytes": 12872,
-      "width": 63,
+      "sha256": "3945902083a77342a74cb2f464c9b2d8660d8e52d2e19c1b2527f7fa28447690",
+      "bytes": 12741,
+      "width": 82,
       "height": 496
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 296.478,
+      "x": 286.978,
       "y": 389.92,
-      "width": 63,
+      "width": 82,
       "height": 496
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
@@ -21653,9 +21653,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 304.77,
+      "left": 295.27,
       "top": 389.47,
-      "right": 367.77,
+      "right": 377.27,
       "bottom": 886.47
      },
      "assembled": {
@@ -21667,20 +21667,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-497.e59de9a2aa32.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-497.dde6499b4ced.png",
       "key": "",
-      "sha256": "e59de9a2aa32c86bc5345289b3be65897ba73ba75cb4b0d0604f70862b37f591",
-      "bytes": 12824,
-      "width": 63,
+      "sha256": "dde6499b4ced02a9189d83a875164788a691c00ab02c3315baa649e957c2bc99",
+      "bytes": 12699,
+      "width": 82,
       "height": 497
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 304.77,
+      "x": 295.27,
       "y": 389.47,
-      "width": 63,
+      "width": 82,
       "height": 497
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
@@ -21824,9 +21824,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 305.573,
+      "left": 296.073,
       "top": 390.71,
-      "right": 368.573,
+      "right": 378.073,
       "bottom": 885.71
      },
      "assembled": {
@@ -21838,20 +21838,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-495.10c2f56f799e.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-495.9418ec0ba3e9.png",
       "key": "",
-      "sha256": "10c2f56f799e0835ccbf89e41b9bf11428255696773ea3ad8727d089161d21a9",
-      "bytes": 12830,
-      "width": 63,
+      "sha256": "9418ec0ba3e9f3c28726d804483ba98eaefd0ec681236e35b3994f024f6a91aa",
+      "bytes": 12761,
+      "width": 82,
       "height": 495
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 305.573,
+      "x": 296.073,
       "y": 390.71,
-      "width": 63,
+      "width": 82,
       "height": 495
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
@@ -21995,9 +21995,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 309.59,
+      "left": 300.09,
       "top": 389.36,
-      "right": 372.59,
+      "right": 382.09,
       "bottom": 886.36
      },
      "assembled": {
@@ -22009,20 +22009,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-497.e59de9a2aa32.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-497.dde6499b4ced.png",
       "key": "",
-      "sha256": "e59de9a2aa32c86bc5345289b3be65897ba73ba75cb4b0d0604f70862b37f591",
-      "bytes": 12824,
-      "width": 63,
+      "sha256": "dde6499b4ced02a9189d83a875164788a691c00ab02c3315baa649e957c2bc99",
+      "bytes": 12699,
+      "width": 82,
       "height": 497
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 309.59,
+      "x": 300.09,
       "y": 389.36,
-      "width": 63,
+      "width": 82,
       "height": 497
      },
      "componentId": "CMP-CAP-PNK-18-415",
@@ -22166,9 +22166,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 298.355,
+      "left": 288.855,
       "top": 389.73,
-      "right": 361.355,
+      "right": 370.855,
       "bottom": 885.73
      },
      "assembled": {
@@ -22180,20 +22180,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.ba20c2a05c70.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.3945902083a7.png",
       "key": "",
-      "sha256": "ba20c2a05c707320deb3bdf30bc3cd6658f86f59d0dff0fa92444e4e54e05212",
-      "bytes": 12872,
-      "width": 63,
+      "sha256": "3945902083a77342a74cb2f464c9b2d8660d8e52d2e19c1b2527f7fa28447690",
+      "bytes": 12741,
+      "width": 82,
       "height": 496
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 298.355,
+      "x": 288.855,
       "y": 389.73,
-      "width": 63,
+      "width": 82,
       "height": 496
      },
      "componentId": "CMP-SPR-RED-18-415-01",
@@ -22337,10 +22337,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -60.665,
+      "left": -70.165,
       "top": 1035.505,
-      "right": 2.335,
-      "bottom": 1058.505
+      "right": 11.835,
+      "bottom": 1053.505
      },
      "assembled": {
       "x": 0,
@@ -22351,21 +22351,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--149.d0460d923262.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--149.b51704a4bf6a.png",
       "key": "",
-      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
-      "bytes": 1179,
-      "width": 63,
-      "height": 23
+      "sha256": "b51704a4bf6a8d3e0ca8078d872b90afb18d2870011c49afcd0b8b6ee1ffd7b3",
+      "bytes": 1439,
+      "width": 82,
+      "height": 18
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -60.665,
+      "x": -70.165,
       "y": 1035.505,
-      "width": 63,
-      "height": 23
+      "width": 82,
+      "height": 18
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
      "views": [
@@ -22508,10 +22508,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -83.405,
+      "left": -92.905,
       "top": 1017.845,
-      "right": -20.405,
-      "bottom": 1040.845
+      "right": -10.905,
+      "bottom": 1035.845
      },
      "assembled": {
       "x": 0,
@@ -22522,21 +22522,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--132.d0460d923262.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--132.b51704a4bf6a.png",
       "key": "",
-      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
-      "bytes": 1179,
-      "width": 63,
-      "height": 23
+      "sha256": "b51704a4bf6a8d3e0ca8078d872b90afb18d2870011c49afcd0b8b6ee1ffd7b3",
+      "bytes": 1439,
+      "width": 82,
+      "height": 18
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -83.405,
+      "x": -92.905,
       "y": 1017.845,
-      "width": 63,
-      "height": 23
+      "width": 82,
+      "height": 18
      },
      "componentId": "CMP-SPR-RED-18-415-02",
      "views": [
@@ -22679,10 +22679,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -74.577,
+      "left": -84.077,
       "top": 1055.54,
-      "right": -11.577,
-      "bottom": 1078.54
+      "right": -2.077,
+      "bottom": 1073.54
      },
      "assembled": {
       "x": 0,
@@ -22693,21 +22693,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--169.d0460d923262.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--169.b51704a4bf6a.png",
       "key": "",
-      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
-      "bytes": 1179,
-      "width": 63,
-      "height": 23
+      "sha256": "b51704a4bf6a8d3e0ca8078d872b90afb18d2870011c49afcd0b8b6ee1ffd7b3",
+      "bytes": 1439,
+      "width": 82,
+      "height": 18
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -74.577,
+      "x": -84.077,
       "y": 1055.54,
-      "width": 63,
-      "height": 23
+      "width": 82,
+      "height": 18
      },
      "componentId": "CMP-SPR-MSLV-18-415-02",
      "views": [
@@ -22850,10 +22850,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -48.359,
+      "left": -57.859,
       "top": 1032.295,
-      "right": 14.641,
-      "bottom": 1055.295
+      "right": 24.141,
+      "bottom": 1050.295
      },
      "assembled": {
       "x": 0,
@@ -22864,21 +22864,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--146.d0460d923262.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--146.b51704a4bf6a.png",
       "key": "",
-      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
-      "bytes": 1179,
-      "width": 63,
-      "height": 23
+      "sha256": "b51704a4bf6a8d3e0ca8078d872b90afb18d2870011c49afcd0b8b6ee1ffd7b3",
+      "bytes": 1439,
+      "width": 82,
+      "height": 18
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -48.359,
+      "x": -57.859,
       "y": 1032.295,
-      "width": 63,
-      "height": 23
+      "width": 82,
+      "height": 18
      },
      "componentId": "CMP-SPR-GLD-18415-TSL",
      "views": [
@@ -23021,10 +23021,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -60.665,
+      "left": -70.165,
       "top": 1027.48,
-      "right": 2.335,
-      "bottom": 1050.48
+      "right": 11.835,
+      "bottom": 1045.48
      },
      "assembled": {
       "x": 0,
@@ -23035,21 +23035,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--141.d0460d923262.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--141.b51704a4bf6a.png",
       "key": "",
-      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
-      "bytes": 1179,
-      "width": 63,
-      "height": 23
+      "sha256": "b51704a4bf6a8d3e0ca8078d872b90afb18d2870011c49afcd0b8b6ee1ffd7b3",
+      "bytes": 1439,
+      "width": 82,
+      "height": 18
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -60.665,
+      "x": -70.165,
       "y": 1027.48,
-      "width": 63,
-      "height": 23
+      "width": 82,
+      "height": 18
      },
      "componentId": "CMP-SPR-IVGD-18-415-02",
      "views": [
@@ -23192,10 +23192,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -60.665,
+      "left": -70.165,
       "top": 1027.48,
-      "right": 2.335,
-      "bottom": 1050.48
+      "right": 11.835,
+      "bottom": 1045.48
      },
      "assembled": {
       "x": 0,
@@ -23206,21 +23206,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--141.d0460d923262.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--141.b51704a4bf6a.png",
       "key": "",
-      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
-      "bytes": 1179,
-      "width": 63,
-      "height": 23
+      "sha256": "b51704a4bf6a8d3e0ca8078d872b90afb18d2870011c49afcd0b8b6ee1ffd7b3",
+      "bytes": 1439,
+      "width": 82,
+      "height": 18
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -60.665,
+      "x": -70.165,
       "y": 1027.48,
-      "width": 63,
-      "height": 23
+      "width": 82,
+      "height": 18
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
      "views": [
@@ -23363,10 +23363,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -61.208,
+      "left": -70.708,
       "top": 1034.04,
-      "right": 1.792,
-      "bottom": 1057.04
+      "right": 11.292,
+      "bottom": 1052.04
      },
      "assembled": {
       "x": 0,
@@ -23377,21 +23377,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--148.d0460d923262.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--148.b51704a4bf6a.png",
       "key": "",
-      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
-      "bytes": 1179,
-      "width": 63,
-      "height": 23
+      "sha256": "b51704a4bf6a8d3e0ca8078d872b90afb18d2870011c49afcd0b8b6ee1ffd7b3",
+      "bytes": 1439,
+      "width": 82,
+      "height": 18
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -61.208,
+      "x": -70.708,
       "y": 1034.04,
-      "width": 63,
-      "height": 23
+      "width": 82,
+      "height": 18
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
      "views": [
@@ -23534,10 +23534,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -59.328,
+      "left": -68.828,
       "top": 1036.58,
-      "right": 3.672,
-      "bottom": 1059.58
+      "right": 13.172,
+      "bottom": 1054.58
      },
      "assembled": {
       "x": 0,
@@ -23548,21 +23548,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--150.d0460d923262.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--150.b51704a4bf6a.png",
       "key": "",
-      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
-      "bytes": 1179,
-      "width": 63,
-      "height": 23
+      "sha256": "b51704a4bf6a8d3e0ca8078d872b90afb18d2870011c49afcd0b8b6ee1ffd7b3",
+      "bytes": 1439,
+      "width": 82,
+      "height": 18
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -59.328,
+      "x": -68.828,
       "y": 1036.58,
-      "width": 63,
-      "height": 23
+      "width": 82,
+      "height": 18
      },
      "componentId": "CMP-SPR-PNK-18-415",
      "views": [
@@ -23705,9 +23705,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 257.786,
+      "left": 246.786,
       "top": 427.556,
-      "right": 335.786,
+      "right": 346.786,
       "bottom": 887.556
      },
      "assembled": {
@@ -23719,20 +23719,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.dc85e6c8a08d.png",
       "key": "",
-      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
-      "bytes": 14543,
-      "width": 78,
+      "sha256": "dc85e6c8a08d5c30f4a8e400e08d707f0ae4648bf6833a2b1ddb4255a6d91393",
+      "bytes": 15780,
+      "width": 100,
       "height": 460
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 257.786,
+      "x": 246.786,
       "y": 427.556,
-      "width": 78,
+      "width": 100,
       "height": 460
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
@@ -23876,9 +23876,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 262.797,
+      "left": 251.797,
       "top": 427.876,
-      "right": 340.797,
+      "right": 351.797,
       "bottom": 887.876
      },
      "assembled": {
@@ -23890,20 +23890,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.dc85e6c8a08d.png",
       "key": "",
-      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
-      "bytes": 14543,
-      "width": 78,
+      "sha256": "dc85e6c8a08d5c30f4a8e400e08d707f0ae4648bf6833a2b1ddb4255a6d91393",
+      "bytes": 15780,
+      "width": 100,
       "height": 460
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 262.797,
+      "x": 251.797,
       "y": 427.876,
-      "width": 78,
+      "width": 100,
       "height": 460
      },
      "componentId": "CMP-CAP-PNK-18-415",
@@ -24047,9 +24047,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 255.782,
+      "left": 244.782,
       "top": 427.206,
-      "right": 333.782,
+      "right": 344.782,
       "bottom": 888.206
      },
      "assembled": {
@@ -24061,20 +24061,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.75e5939222a3.png",
       "key": "",
-      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
-      "bytes": 14598,
-      "width": 78,
+      "sha256": "75e5939222a30899ed4ae751993523aad624e4d16a61c4888d80beaec69c5ed6",
+      "bytes": 15825,
+      "width": 100,
       "height": 461
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 255.782,
+      "x": 244.782,
       "y": 427.206,
-      "width": 78,
+      "width": 100,
       "height": 461
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
@@ -24218,9 +24218,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 257.791,
+      "left": 246.791,
       "top": 427.206,
-      "right": 335.791,
+      "right": 346.791,
       "bottom": 888.206
      },
      "assembled": {
@@ -24232,20 +24232,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.75e5939222a3.png",
       "key": "",
-      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
-      "bytes": 14598,
-      "width": 78,
+      "sha256": "75e5939222a30899ed4ae751993523aad624e4d16a61c4888d80beaec69c5ed6",
+      "bytes": 15825,
+      "width": 100,
       "height": 461
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 257.791,
+      "x": 246.791,
       "y": 427.206,
-      "width": 78,
+      "width": 100,
       "height": 461
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
@@ -24389,9 +24389,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 248.779,
+      "left": 237.779,
       "top": 428.566,
-      "right": 326.779,
+      "right": 337.779,
       "bottom": 887.566
      },
      "assembled": {
@@ -24403,20 +24403,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.88b5e96110f0.png",
       "key": "",
-      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
-      "bytes": 14529,
-      "width": 78,
+      "sha256": "88b5e96110f0136dc022a2014122ebdc879320bb3e79b140887e063a3f82266f",
+      "bytes": 15764,
+      "width": 100,
       "height": 459
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 248.779,
+      "x": 237.779,
       "y": 428.566,
-      "width": 78,
+      "width": 100,
       "height": 459
      },
      "componentId": "CMP-SPR-RED-18-415-01",
@@ -24560,9 +24560,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 256.787,
+      "left": 245.787,
       "top": 427.536,
-      "right": 334.787,
+      "right": 345.787,
       "bottom": 887.536
      },
      "assembled": {
@@ -24574,20 +24574,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.dc85e6c8a08d.png",
       "key": "",
-      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
-      "bytes": 14543,
-      "width": 78,
+      "sha256": "dc85e6c8a08d5c30f4a8e400e08d707f0ae4648bf6833a2b1ddb4255a6d91393",
+      "bytes": 15780,
+      "width": 100,
       "height": 460
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 256.787,
+      "x": 245.787,
       "y": 427.536,
-      "width": 78,
+      "width": 100,
       "height": 460
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
@@ -24731,9 +24731,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 249.114,
+      "left": 238.114,
       "top": 427.216,
-      "right": 327.114,
+      "right": 338.114,
       "bottom": 888.216
      },
      "assembled": {
@@ -24745,20 +24745,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.75e5939222a3.png",
       "key": "",
-      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
-      "bytes": 14598,
-      "width": 78,
+      "sha256": "75e5939222a30899ed4ae751993523aad624e4d16a61c4888d80beaec69c5ed6",
+      "bytes": 15825,
+      "width": 100,
       "height": 461
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 249.114,
+      "x": 238.114,
       "y": 427.216,
-      "width": 78,
+      "width": 100,
       "height": 461
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
@@ -24902,9 +24902,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 246.438,
+      "left": 235.438,
       "top": 428.556,
-      "right": 324.438,
+      "right": 335.438,
       "bottom": 887.556
      },
      "assembled": {
@@ -24916,20 +24916,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.88b5e96110f0.png",
       "key": "",
-      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
-      "bytes": 14529,
-      "width": 78,
+      "sha256": "88b5e96110f0136dc022a2014122ebdc879320bb3e79b140887e063a3f82266f",
+      "bytes": 15764,
+      "width": 100,
       "height": 459
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 246.438,
+      "x": 235.438,
       "y": 428.556,
-      "width": 78,
+      "width": 100,
       "height": 459
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
@@ -25073,10 +25073,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -199.021,
+      "left": -210.021,
       "top": 1223.651,
-      "right": -121.021,
-      "bottom": 1249.651
+      "right": -110.021,
+      "bottom": 1243.651
      },
      "assembled": {
       "x": 0,
@@ -25087,21 +25087,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--336.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--336.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -199.021,
+      "x": -210.021,
       "y": 1223.651,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-IVGD-18-415-02",
      "views": [
@@ -25244,10 +25244,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -197.353,
+      "left": -208.353,
       "top": 1234.996,
-      "right": -119.353,
-      "bottom": 1260.996
+      "right": -108.353,
+      "bottom": 1254.996
      },
      "assembled": {
       "x": 0,
@@ -25258,21 +25258,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--347.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--347.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -197.353,
+      "x": -208.353,
       "y": 1234.996,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-PNK-18-415",
      "views": [
@@ -25415,10 +25415,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -199.69,
+      "left": -210.69,
       "top": 1229.331,
-      "right": -121.69,
-      "bottom": 1255.331
+      "right": -110.69,
+      "bottom": 1249.331
      },
      "assembled": {
       "x": 0,
@@ -25429,21 +25429,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -199.69,
+      "x": -210.69,
       "y": 1229.331,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
      "views": [
@@ -25586,10 +25586,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -183.671,
+      "left": -194.671,
       "top": 1229.658,
-      "right": -105.671,
-      "bottom": 1255.658
+      "right": -94.671,
+      "bottom": 1249.658
      },
      "assembled": {
       "x": 0,
@@ -25600,21 +25600,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--342.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--342.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -183.671,
+      "x": -194.671,
       "y": 1229.658,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-GLD-18415-TSL",
      "views": [
@@ -25757,10 +25757,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -199.021,
+      "left": -210.021,
       "top": 1223.651,
-      "right": -121.021,
-      "bottom": 1249.651
+      "right": -110.021,
+      "bottom": 1243.651
      },
      "assembled": {
       "x": 0,
@@ -25771,21 +25771,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--336.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--336.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -199.021,
+      "x": -210.021,
       "y": 1223.651,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
      "views": [
@@ -25928,10 +25928,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -227.384,
+      "left": -238.384,
       "top": 1211.644,
-      "right": -149.384,
-      "bottom": 1237.644
+      "right": -138.384,
+      "bottom": 1231.644
      },
      "assembled": {
       "x": 0,
@@ -25942,21 +25942,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--324.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--324.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -227.384,
+      "x": -238.384,
       "y": 1211.644,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-RED-18-415-02",
      "views": [
@@ -26099,10 +26099,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -199.021,
+      "left": -210.021,
       "top": 1233.668,
-      "right": -121.021,
-      "bottom": 1259.668
+      "right": -110.021,
+      "bottom": 1253.668
      },
      "assembled": {
       "x": 0,
@@ -26113,21 +26113,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--346.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--346.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -199.021,
+      "x": -210.021,
       "y": 1233.668,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
      "views": [
@@ -26270,10 +26270,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -216.371,
+      "left": -227.371,
       "top": 1258.371,
-      "right": -138.371,
-      "bottom": 1284.371
+      "right": -127.371,
+      "bottom": 1278.371
      },
      "assembled": {
       "x": 0,
@@ -26284,21 +26284,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--371.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--371.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -216.371,
+      "x": -227.371,
       "y": 1258.371,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-MSLV-18-415-02",
      "views": [
@@ -26441,9 +26441,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 257.786,
+      "left": 246.786,
       "top": 425.586,
-      "right": 335.786,
+      "right": 346.786,
       "bottom": 886.586
      },
      "assembled": {
@@ -26455,20 +26455,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.75e5939222a3.png",
       "key": "",
-      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
-      "bytes": 14598,
-      "width": 78,
+      "sha256": "75e5939222a30899ed4ae751993523aad624e4d16a61c4888d80beaec69c5ed6",
+      "bytes": 15825,
+      "width": 100,
       "height": 461
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 257.786,
+      "x": 246.786,
       "y": 425.586,
-      "width": 78,
+      "width": 100,
       "height": 461
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
@@ -26612,9 +26612,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 262.797,
+      "left": 251.797,
       "top": 425.906,
-      "right": 340.797,
+      "right": 351.797,
       "bottom": 885.906
      },
      "assembled": {
@@ -26626,20 +26626,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.dc85e6c8a08d.png",
       "key": "",
-      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
-      "bytes": 14543,
-      "width": 78,
+      "sha256": "dc85e6c8a08d5c30f4a8e400e08d707f0ae4648bf6833a2b1ddb4255a6d91393",
+      "bytes": 15780,
+      "width": 100,
       "height": 460
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 262.797,
+      "x": 251.797,
       "y": 425.906,
-      "width": 78,
+      "width": 100,
       "height": 460
      },
      "componentId": "CMP-CAP-PNK-18-415",
@@ -26783,9 +26783,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 249.119,
+      "left": 238.119,
       "top": 425.246,
-      "right": 327.119,
+      "right": 338.119,
       "bottom": 886.246
      },
      "assembled": {
@@ -26797,20 +26797,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.75e5939222a3.png",
       "key": "",
-      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
-      "bytes": 14598,
-      "width": 78,
+      "sha256": "75e5939222a30899ed4ae751993523aad624e4d16a61c4888d80beaec69c5ed6",
+      "bytes": 15825,
+      "width": 100,
       "height": 461
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 249.119,
+      "x": 238.119,
       "y": 425.246,
-      "width": 78,
+      "width": 100,
       "height": 461
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
@@ -26954,9 +26954,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 256.787,
+      "left": 245.787,
       "top": 426.566,
-      "right": 334.787,
+      "right": 345.787,
       "bottom": 886.566
      },
      "assembled": {
@@ -26968,20 +26968,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.dc85e6c8a08d.png",
       "key": "",
-      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
-      "bytes": 14543,
-      "width": 78,
+      "sha256": "dc85e6c8a08d5c30f4a8e400e08d707f0ae4648bf6833a2b1ddb4255a6d91393",
+      "bytes": 15780,
+      "width": 100,
       "height": 460
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 256.787,
+      "x": 245.787,
       "y": 426.566,
-      "width": 78,
+      "width": 100,
       "height": 460
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
@@ -27125,9 +27125,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 255.782,
+      "left": 244.782,
       "top": 425.236,
-      "right": 333.782,
+      "right": 344.782,
       "bottom": 886.236
      },
      "assembled": {
@@ -27139,20 +27139,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.75e5939222a3.png",
       "key": "",
-      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
-      "bytes": 14598,
-      "width": 78,
+      "sha256": "75e5939222a30899ed4ae751993523aad624e4d16a61c4888d80beaec69c5ed6",
+      "bytes": 15825,
+      "width": 100,
       "height": 461
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 255.782,
+      "x": 244.782,
       "y": 425.236,
-      "width": 78,
+      "width": 100,
       "height": 461
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
@@ -27296,9 +27296,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 257.791,
+      "left": 246.791,
       "top": 425.236,
-      "right": 335.791,
+      "right": 346.791,
       "bottom": 886.236
      },
      "assembled": {
@@ -27310,20 +27310,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.75e5939222a3.png",
       "key": "",
-      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
-      "bytes": 14598,
-      "width": 78,
+      "sha256": "75e5939222a30899ed4ae751993523aad624e4d16a61c4888d80beaec69c5ed6",
+      "bytes": 15825,
+      "width": 100,
       "height": 461
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 257.791,
+      "x": 246.791,
       "y": 425.236,
-      "width": 78,
+      "width": 100,
       "height": 461
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
@@ -27467,9 +27467,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 246.438,
+      "left": 235.438,
       "top": 426.586,
-      "right": 324.438,
+      "right": 335.438,
       "bottom": 886.586
      },
      "assembled": {
@@ -27481,20 +27481,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.dc85e6c8a08d.png",
       "key": "",
-      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
-      "bytes": 14543,
-      "width": 78,
+      "sha256": "dc85e6c8a08d5c30f4a8e400e08d707f0ae4648bf6833a2b1ddb4255a6d91393",
+      "bytes": 15780,
+      "width": 100,
       "height": 460
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 246.438,
+      "x": 235.438,
       "y": 426.586,
-      "width": 78,
+      "width": 100,
       "height": 460
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
@@ -27638,9 +27638,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 248.779,
+      "left": 237.779,
       "top": 426.596,
-      "right": 326.779,
+      "right": 337.779,
       "bottom": 886.596
      },
      "assembled": {
@@ -27652,20 +27652,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.dc85e6c8a08d.png",
       "key": "",
-      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
-      "bytes": 14543,
-      "width": 78,
+      "sha256": "dc85e6c8a08d5c30f4a8e400e08d707f0ae4648bf6833a2b1ddb4255a6d91393",
+      "bytes": 15780,
+      "width": 100,
       "height": 460
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 248.779,
+      "x": 237.779,
       "y": 426.596,
-      "width": 78,
+      "width": 100,
       "height": 460
      },
      "componentId": "CMP-SPR-RED-18-415-01",
@@ -27809,10 +27809,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -199.69,
+      "left": -210.69,
       "top": 1227.361,
-      "right": -121.69,
-      "bottom": 1253.361
+      "right": -110.69,
+      "bottom": 1247.361
      },
      "assembled": {
       "x": 0,
@@ -27823,21 +27823,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -199.69,
+      "x": -210.69,
       "y": 1227.361,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
      "views": [
@@ -27980,10 +27980,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -199.021,
+      "left": -210.021,
       "top": 1221.681,
-      "right": -121.021,
-      "bottom": 1247.681
+      "right": -110.021,
+      "bottom": 1241.681
      },
      "assembled": {
       "x": 0,
@@ -27994,21 +27994,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--335.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--335.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -199.021,
+      "x": -210.021,
       "y": 1221.681,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-IVGD-18-415-02",
      "views": [
@@ -28151,10 +28151,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -199.021,
+      "left": -210.021,
       "top": 1221.681,
-      "right": -121.021,
-      "bottom": 1247.681
+      "right": -110.021,
+      "bottom": 1241.681
      },
      "assembled": {
       "x": 0,
@@ -28165,21 +28165,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--335.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--335.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -199.021,
+      "x": -210.021,
       "y": 1221.681,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
      "views": [
@@ -28322,10 +28322,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -199.021,
+      "left": -210.021,
       "top": 1231.698,
-      "right": -121.021,
-      "bottom": 1257.698
+      "right": -110.021,
+      "bottom": 1251.698
      },
      "assembled": {
       "x": 0,
@@ -28336,21 +28336,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--345.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--345.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -199.021,
+      "x": -210.021,
       "y": 1231.698,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
      "views": [
@@ -28493,10 +28493,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -197.353,
+      "left": -208.353,
       "top": 1233.026,
-      "right": -119.353,
-      "bottom": 1259.026
+      "right": -108.353,
+      "bottom": 1253.026
      },
      "assembled": {
       "x": 0,
@@ -28507,21 +28507,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--347.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--347.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -197.353,
+      "x": -208.353,
       "y": 1233.026,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-PNK-18-415",
      "views": [
@@ -28664,10 +28664,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -216.371,
+      "left": -227.371,
       "top": 1256.401,
-      "right": -138.371,
-      "bottom": 1282.401
+      "right": -127.371,
+      "bottom": 1276.401
      },
      "assembled": {
       "x": 0,
@@ -28678,21 +28678,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--370.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--370.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -216.371,
+      "x": -227.371,
       "y": 1256.401,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-MSLV-18-415-02",
      "views": [
@@ -28835,10 +28835,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -183.668,
+      "left": -194.668,
       "top": 1227.688,
-      "right": -105.668,
-      "bottom": 1253.688
+      "right": -94.668,
+      "bottom": 1247.688
      },
      "assembled": {
       "x": 0,
@@ -28849,21 +28849,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -183.668,
+      "x": -194.668,
       "y": 1227.688,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-GLD-18415-TSL",
      "views": [
@@ -29006,10 +29006,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -227.384,
+      "left": -238.384,
       "top": 1209.674,
-      "right": -149.384,
-      "bottom": 1235.674
+      "right": -138.384,
+      "bottom": 1229.674
      },
      "assembled": {
       "x": 0,
@@ -29020,21 +29020,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--323.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--323.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -227.384,
+      "x": -238.384,
       "y": 1209.674,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-RED-18-415-02",
      "views": [
@@ -29393,9 +29393,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 470.269,
+      "left": 450.269,
       "top": 355.142,
-      "right": 529.269,
+      "right": 549.269,
       "bottom": 886.142
      },
      "assembled": {
@@ -29407,20 +29407,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.376a4de0e05d.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.b25d6c3c82f8.png",
       "key": "",
-      "sha256": "376a4de0e05d850f440f3c292717f493aac2fbef7f015b869840e569685ded47",
-      "bytes": 21282,
-      "width": 59,
+      "sha256": "b25d6c3c82f8ad6e59a481a0fa3d8260c3e1f2898593514846257a16b943b55d",
+      "bytes": 26692,
+      "width": 99,
       "height": 531
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 470.269,
+      "x": 450.269,
       "y": 355.142,
-      "width": 59,
+      "width": 99,
       "height": 531
      },
      "componentId": "CMP-LPM-MGLD-18-415",
@@ -29599,9 +29599,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 470.731,
+      "left": 450.731,
       "top": 355.99,
-      "right": 529.731,
+      "right": 549.731,
       "bottom": 885.99
      },
      "assembled": {
@@ -29613,20 +29613,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-530.c9d96c979a1a.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-530.d8bba04aeb2a.png",
       "key": "",
-      "sha256": "c9d96c979a1a3a370c34f9ead393bd411174b99000e22d6d378969cb7b75b495",
-      "bytes": 21227,
-      "width": 59,
+      "sha256": "d8bba04aeb2ae6d8df206c5816a67ae7cb1c6d7bef88e34d4f4ae2bd8e84b7ff",
+      "bytes": 26669,
+      "width": 99,
       "height": 530
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 470.731,
+      "x": 450.731,
       "y": 355.99,
-      "width": 59,
+      "width": 99,
       "height": 530
      },
      "componentId": "CMP-LPM-SGLD-18-415",
@@ -29805,9 +29805,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 470.731,
+      "left": 450.731,
       "top": 355.453,
-      "right": 529.731,
+      "right": 549.731,
       "bottom": 886.453
      },
      "assembled": {
@@ -29819,20 +29819,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.376a4de0e05d.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.b25d6c3c82f8.png",
       "key": "",
-      "sha256": "376a4de0e05d850f440f3c292717f493aac2fbef7f015b869840e569685ded47",
-      "bytes": 21282,
-      "width": 59,
+      "sha256": "b25d6c3c82f8ad6e59a481a0fa3d8260c3e1f2898593514846257a16b943b55d",
+      "bytes": 26692,
+      "width": 99,
       "height": 531
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 470.731,
+      "x": 450.731,
       "y": 355.453,
-      "width": 59,
+      "width": 99,
       "height": 531
      },
      "componentId": "CMP-LPM-SBLK-18-415",
@@ -30011,9 +30011,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 468.42,
+      "left": 448.42,
       "top": 355.369,
-      "right": 527.42,
+      "right": 547.42,
       "bottom": 886.369
      },
      "assembled": {
@@ -30025,20 +30025,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.376a4de0e05d.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.b25d6c3c82f8.png",
       "key": "",
-      "sha256": "376a4de0e05d850f440f3c292717f493aac2fbef7f015b869840e569685ded47",
-      "bytes": 21282,
-      "width": 59,
+      "sha256": "b25d6c3c82f8ad6e59a481a0fa3d8260c3e1f2898593514846257a16b943b55d",
+      "bytes": 26692,
+      "width": 99,
       "height": 531
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 468.42,
+      "x": 448.42,
       "y": 355.369,
-      "width": 59,
+      "width": 99,
       "height": 531
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
@@ -30217,9 +30217,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 471.425,
+      "left": 451.425,
       "top": 354.99,
-      "right": 530.425,
+      "right": 550.425,
       "bottom": 885.99
      },
      "assembled": {
@@ -30231,20 +30231,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.376a4de0e05d.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.b25d6c3c82f8.png",
       "key": "",
-      "sha256": "376a4de0e05d850f440f3c292717f493aac2fbef7f015b869840e569685ded47",
-      "bytes": 21282,
-      "width": 59,
+      "sha256": "b25d6c3c82f8ad6e59a481a0fa3d8260c3e1f2898593514846257a16b943b55d",
+      "bytes": 26692,
+      "width": 99,
       "height": 531
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 471.425,
+      "x": 451.425,
       "y": 354.99,
-      "width": 59,
+      "width": 99,
       "height": 531
      },
      "componentId": "CMP-LPM-SSLV-18-415",
@@ -30423,9 +30423,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 471.193,
+      "left": 451.193,
       "top": 355.78,
-      "right": 530.193,
+      "right": 550.193,
       "bottom": 885.78
      },
      "assembled": {
@@ -30437,20 +30437,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-530.c9d96c979a1a.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-530.d8bba04aeb2a.png",
       "key": "",
-      "sha256": "c9d96c979a1a3a370c34f9ead393bd411174b99000e22d6d378969cb7b75b495",
-      "bytes": 21227,
-      "width": 59,
+      "sha256": "d8bba04aeb2ae6d8df206c5816a67ae7cb1c6d7bef88e34d4f4ae2bd8e84b7ff",
+      "bytes": 26669,
+      "width": 99,
       "height": 530
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 471.193,
+      "x": 451.193,
       "y": 355.78,
-      "width": 59,
+      "width": 99,
       "height": 530
      },
      "componentId": "CMP-LPM-CPR-18-415",
@@ -30635,9 +30635,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 458.127,
+      "left": 432.127,
       "top": 402.41,
-      "right": 539.127,
+      "right": 565.127,
       "bottom": 896.41
      },
      "assembled": {
@@ -30649,20 +30649,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-494.d2f982f6c4dd.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-494.689c08060eff.png",
       "key": "",
-      "sha256": "d2f982f6c4dd3c1b7a07a6b4582fa9e30f0b2a7d1e11737c58a8b6f6e2c59642",
-      "bytes": 28260,
-      "width": 81,
+      "sha256": "689c08060eff56e9cb7be72130643fbd3dd1c06974c23ccbe1609b1f139d13b8",
+      "bytes": 34961,
+      "width": 133,
       "height": 494
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 458.127,
+      "x": 432.127,
       "y": 402.41,
-      "width": 81,
+      "width": 133,
       "height": 494
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
@@ -30836,9 +30836,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 460.471,
+      "left": 436.471,
       "top": 383.661,
-      "right": 534.471,
+      "right": 558.471,
       "bottom": 887.661
      },
      "assembled": {
@@ -30850,20 +30850,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.795e43360714.png",
       "key": "",
-      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
-      "bytes": 26196,
-      "width": 74,
+      "sha256": "795e43360714c544472307820ac7bb24c3ee0dc49f934f4e268b567a192cc014",
+      "bytes": 32156,
+      "width": 122,
       "height": 504
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 460.471,
+      "x": 436.471,
       "y": 383.661,
-      "width": 74,
+      "width": 122,
       "height": 504
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
@@ -31043,9 +31043,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 459.619,
+      "left": 435.619,
       "top": 382.364,
-      "right": 533.619,
+      "right": 557.619,
       "bottom": 886.364
      },
      "assembled": {
@@ -31057,20 +31057,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.795e43360714.png",
       "key": "",
-      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
-      "bytes": 26196,
-      "width": 74,
+      "sha256": "795e43360714c544472307820ac7bb24c3ee0dc49f934f4e268b567a192cc014",
+      "bytes": 32156,
+      "width": 122,
       "height": 504
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 459.619,
+      "x": 435.619,
       "y": 382.364,
-      "width": 74,
+      "width": 122,
       "height": 504
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
@@ -31256,10 +31256,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 455.627,
-      "top": 381.2,
-      "right": 541.627,
-      "bottom": 896.2
+      "left": 444.127,
+      "top": 403.627,
+      "right": 553.127,
+      "bottom": 896.627
      },
      "assembled": {
       "x": 0,
@@ -31270,21 +31270,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-515.87dd3afdb832.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-493.f4424302d617.png",
       "key": "",
-      "sha256": "87dd3afdb83277ea3aaf69a256723ac1149b792ecee36a88f7d3e1261ae429ee",
-      "bytes": 25627,
-      "width": 86,
-      "height": 515
+      "sha256": "f4424302d61799df91bb0539765099669922fb782cd14c3be119b46c9e4f6580",
+      "bytes": 23055,
+      "width": 109,
+      "height": 493
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 455.627,
-      "y": 381.2,
-      "width": 86,
-      "height": 515
+      "x": 444.127,
+      "y": 403.627,
+      "width": 109,
+      "height": 493
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
      "views": [
@@ -31462,10 +31462,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 457.0,
-      "top": 381.634,
-      "right": 543.0,
-      "bottom": 896.634
+      "left": 445.5,
+      "top": 404.061,
+      "right": 554.5,
+      "bottom": 897.061
      },
      "assembled": {
       "x": 0,
@@ -31476,21 +31476,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-515.87dd3afdb832.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-493.f4424302d617.png",
       "key": "",
-      "sha256": "87dd3afdb83277ea3aaf69a256723ac1149b792ecee36a88f7d3e1261ae429ee",
-      "bytes": 25627,
-      "width": 86,
-      "height": 515
+      "sha256": "f4424302d61799df91bb0539765099669922fb782cd14c3be119b46c9e4f6580",
+      "bytes": 23055,
+      "width": 109,
+      "height": 493
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 457.0,
-      "y": 381.634,
-      "width": 86,
-      "height": 515
+      "x": 445.5,
+      "y": 404.061,
+      "width": 109,
+      "height": 493
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
      "views": [
@@ -31668,10 +31668,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 458.716,
-      "top": 381.634,
-      "right": 544.716,
-      "bottom": 896.634
+      "left": 447.216,
+      "top": 404.061,
+      "right": 556.216,
+      "bottom": 897.061
      },
      "assembled": {
       "x": 0,
@@ -31682,21 +31682,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-515.87dd3afdb832.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-493.f4424302d617.png",
       "key": "",
-      "sha256": "87dd3afdb83277ea3aaf69a256723ac1149b792ecee36a88f7d3e1261ae429ee",
-      "bytes": 25627,
-      "width": 86,
-      "height": 515
+      "sha256": "f4424302d61799df91bb0539765099669922fb782cd14c3be119b46c9e4f6580",
+      "bytes": 23055,
+      "width": 109,
+      "height": 493
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 458.716,
-      "y": 381.634,
-      "width": 86,
-      "height": 515
+      "x": 447.216,
+      "y": 404.061,
+      "width": 109,
+      "height": 493
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
      "views": [
@@ -31874,10 +31874,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 455.97,
-      "top": 381.453,
-      "right": 541.97,
-      "bottom": 896.453
+      "left": 444.47,
+      "top": 403.881,
+      "right": 553.47,
+      "bottom": 896.881
      },
      "assembled": {
       "x": 0,
@@ -31888,21 +31888,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-515.87dd3afdb832.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-493.f4424302d617.png",
       "key": "",
-      "sha256": "87dd3afdb83277ea3aaf69a256723ac1149b792ecee36a88f7d3e1261ae429ee",
-      "bytes": 25627,
-      "width": 86,
-      "height": 515
+      "sha256": "f4424302d61799df91bb0539765099669922fb782cd14c3be119b46c9e4f6580",
+      "bytes": 23055,
+      "width": 109,
+      "height": 493
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 455.97,
-      "y": 381.453,
-      "width": 86,
-      "height": 515
+      "x": 444.47,
+      "y": 403.881,
+      "width": 109,
+      "height": 493
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
      "views": [
@@ -32080,10 +32080,10 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 457.687,
-      "top": 382.634,
-      "right": 543.687,
-      "bottom": 896.634
+      "left": 446.187,
+      "top": 405.061,
+      "right": 555.187,
+      "bottom": 897.061
      },
      "assembled": {
       "x": 0,
@@ -32094,21 +32094,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-514.7eb08107ccbd.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-492.c57b05958dd2.png",
       "key": "",
-      "sha256": "7eb08107ccbd1d9bd665d18b7849e252ef007fb876b9deee0551c416cd1ef983",
-      "bytes": 25629,
-      "width": 86,
-      "height": 514
+      "sha256": "c57b05958dd2bcac7f497a1db0d5cd5b757f014d2a74fa90f7b3a8a8c23ac49e",
+      "bytes": 22926,
+      "width": 109,
+      "height": 492
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 457.687,
-      "y": 382.634,
-      "width": 86,
-      "height": 514
+      "x": 446.187,
+      "y": 405.061,
+      "width": 109,
+      "height": 492
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
      "views": [
@@ -32928,9 +32928,9 @@
      "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 249.447,
+      "left": 238.447,
       "top": 428.556,
-      "right": 327.447,
+      "right": 338.447,
       "bottom": 887.556
      },
      "assembled": {
@@ -32942,20 +32942,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.88b5e96110f0.png",
       "key": "",
-      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
-      "bytes": 14529,
-      "width": 78,
+      "sha256": "88b5e96110f0136dc022a2014122ebdc879320bb3e79b140887e063a3f82266f",
+      "bytes": 15764,
+      "width": 100,
       "height": 459
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 249.447,
+      "x": 238.447,
       "y": 428.556,
-      "width": 78,
+      "width": 100,
       "height": 459
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
@@ -33143,9 +33143,9 @@
      "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 257.786,
+      "left": 246.786,
       "top": 427.556,
-      "right": 335.786,
+      "right": 346.786,
       "bottom": 887.556
      },
      "assembled": {
@@ -33157,20 +33157,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.dc85e6c8a08d.png",
       "key": "",
-      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
-      "bytes": 14543,
-      "width": 78,
+      "sha256": "dc85e6c8a08d5c30f4a8e400e08d707f0ae4648bf6833a2b1ddb4255a6d91393",
+      "bytes": 15780,
+      "width": 100,
       "height": 460
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 257.786,
+      "x": 246.786,
       "y": 427.556,
-      "width": 78,
+      "width": 100,
       "height": 460
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
@@ -33358,9 +33358,9 @@
      "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 256.787,
+      "left": 245.787,
       "top": 427.536,
-      "right": 334.787,
+      "right": 345.787,
       "bottom": 887.536
      },
      "assembled": {
@@ -33372,20 +33372,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.dc85e6c8a08d.png",
       "key": "",
-      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
-      "bytes": 14543,
-      "width": 78,
+      "sha256": "dc85e6c8a08d5c30f4a8e400e08d707f0ae4648bf6833a2b1ddb4255a6d91393",
+      "bytes": 15780,
+      "width": 100,
       "height": 460
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 256.787,
+      "x": 245.787,
       "y": 427.536,
-      "width": 78,
+      "width": 100,
       "height": 460
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
@@ -33573,9 +33573,9 @@
      "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 248.779,
+      "left": 237.779,
       "top": 428.566,
-      "right": 326.779,
+      "right": 337.779,
       "bottom": 887.566
      },
      "assembled": {
@@ -33587,20 +33587,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.88b5e96110f0.png",
       "key": "",
-      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
-      "bytes": 14529,
-      "width": 78,
+      "sha256": "88b5e96110f0136dc022a2014122ebdc879320bb3e79b140887e063a3f82266f",
+      "bytes": 15764,
+      "width": 100,
       "height": 459
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 248.779,
+      "x": 237.779,
       "y": 428.566,
-      "width": 78,
+      "width": 100,
       "height": 459
      },
      "componentId": "CMP-SPR-RED-18-415-01",
@@ -33788,9 +33788,9 @@
      "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 246.438,
+      "left": 235.438,
       "top": 428.556,
-      "right": 324.438,
+      "right": 335.438,
       "bottom": 887.556
      },
      "assembled": {
@@ -33802,20 +33802,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.88b5e96110f0.png",
       "key": "",
-      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
-      "bytes": 14529,
-      "width": 78,
+      "sha256": "88b5e96110f0136dc022a2014122ebdc879320bb3e79b140887e063a3f82266f",
+      "bytes": 15764,
+      "width": 100,
       "height": 459
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 246.438,
+      "x": 235.438,
       "y": 428.556,
-      "width": 78,
+      "width": 100,
       "height": 459
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
@@ -34003,10 +34003,10 @@
      "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -228.385,
+      "left": -239.385,
       "top": 1275.041,
-      "right": -150.385,
-      "bottom": 1301.041
+      "right": -139.385,
+      "bottom": 1295.041
      },
      "assembled": {
       "x": 0,
@@ -34017,21 +34017,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--387.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--387.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -228.385,
+      "x": -239.385,
       "y": 1275.041,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
      "views": [
@@ -34218,10 +34218,10 @@
      "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -199.69,
+      "left": -210.69,
       "top": 1229.331,
-      "right": -121.69,
-      "bottom": 1255.331
+      "right": -110.69,
+      "bottom": 1249.331
      },
      "assembled": {
       "x": 0,
@@ -34232,21 +34232,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -199.69,
+      "x": -210.69,
       "y": 1229.331,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
      "views": [
@@ -34433,10 +34433,10 @@
      "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -199.021,
+      "left": -210.021,
       "top": 1223.651,
-      "right": -121.021,
-      "bottom": 1249.651
+      "right": -110.021,
+      "bottom": 1243.651
      },
      "assembled": {
       "x": 0,
@@ -34447,21 +34447,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--336.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--336.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -199.021,
+      "x": -210.021,
       "y": 1223.651,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
      "views": [
@@ -34648,10 +34648,10 @@
      "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -227.384,
+      "left": -238.384,
       "top": 1211.644,
-      "right": -149.384,
-      "bottom": 1237.644
+      "right": -138.384,
+      "bottom": 1231.644
      },
      "assembled": {
       "x": 0,
@@ -34662,21 +34662,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--324.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--324.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -227.384,
+      "x": -238.384,
       "y": 1211.644,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-RED-18-415-02",
      "views": [
@@ -34863,10 +34863,10 @@
      "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": -199.021,
+      "left": -210.021,
       "top": 1233.668,
-      "right": -121.021,
-      "bottom": 1259.668
+      "right": -110.021,
+      "bottom": 1253.668
      },
      "assembled": {
       "x": 0,
@@ -34877,21 +34877,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--346.65d543be88f3.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--346.c8cd94d905ee.png",
       "key": "",
-      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
-      "bytes": 1530,
-      "width": 78,
-      "height": 26
+      "sha256": "c8cd94d905ee529930174b8db130d72960cf8eaec7ebf7a97a4484a40964927b",
+      "bytes": 1723,
+      "width": 100,
+      "height": 20
      },
      "image2x": null,
      "mask": null,
      "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": -199.021,
+      "x": -210.021,
       "y": 1233.668,
-      "width": 78,
-      "height": 26
+      "width": 100,
+      "height": 20
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
      "views": [
