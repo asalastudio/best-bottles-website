@@ -313,6 +313,18 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
     const [mobileOpenSection, setMobileOpenSection] = useState<MegaMenuId | null>(null);
     const megaRef = useRef<HTMLDivElement>(null);
     const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    // The open panel hangs from the header's bottom edge, measured, so no strip of page shows between them
+    // (Jordan 2026-11-04: "close the gap between the mega menu and the navigation links").
+    const headerRef = useRef<HTMLElement>(null);
+    const [megaTop, setMegaTop] = useState<number | null>(null);
+    useEffect(() => {
+        if (!activeMega) return;
+        const measure = () => setMegaTop(headerRef.current ? headerRef.current.getBoundingClientRect().bottom : null);
+        measure();
+        window.addEventListener("resize", measure);
+        window.addEventListener("scroll", measure, { passive: true });
+        return () => { window.removeEventListener("resize", measure); window.removeEventListener("scroll", measure); };
+    }, [activeMega]);
 
     const openMega = useCallback((id: MegaMenuId) => {
         if (closeTimerRef.current) {
@@ -359,6 +371,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
     return (
         <>
             <header
+                ref={headerRef}
                 data-site-header=""
                 data-builder-header={builderMobile || undefined}
                 className={`${headerClassName} fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-bone/95 shadow-sm backdrop-blur-md" : "bg-bone"
@@ -499,8 +512,8 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
 
                                         {isOpen && (
                                             <div
-                                                className="fixed left-0 right-0 mt-[22px] z-50"
-                                                style={{ right: "var(--grace-content-inset, 0px)" }}
+                                                className={`fixed left-0 right-0 z-50 ${megaTop === null ? "mt-[22px]" : ""}`}
+                                                style={{ right: "var(--grace-content-inset, 0px)", ...(megaTop === null ? {} : { top: megaTop }) }}
                                                 onMouseEnter={cancelClose}
                                                 onMouseLeave={closeMega}
                                             >
