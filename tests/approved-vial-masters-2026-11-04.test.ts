@@ -27,7 +27,7 @@ describe('Vial review masters published (2026-11-04)', () => {
         expect(vialReleaseReplacedSkus).toEqual(['GBVAmb2BlackCap', 'GBVAmb2WhtCap', 'GBVialClr2mlBlackCap', 'GBVialClr2mlWhtCap']);
         expect(vialReleaseNewSkus).toHaveLength(12);
         for (const sku of vialSkus) expect(hosted[sku], sku).toBeDefined();
-        expect(Object.keys(hosted)).toHaveLength(671);
+        expect(Object.keys(hosted)).toHaveLength(850);   /* + 179 Diva masters (2026-11-04) */
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         expect(index.version).toBe(manifest.version);
     });

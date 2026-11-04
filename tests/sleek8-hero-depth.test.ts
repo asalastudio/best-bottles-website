@@ -55,7 +55,7 @@ describe('Sleek 8 ml hero tube depth', () => {
         const prior = read(dir + 'prior-recipe-hashes.json').recipes;
         expect(Object.keys(prior)).toHaveLength(430);
         for (const [sku, digest] of Object.entries(prior)) expect(hash(lotionTubeBefore[sku] ?? capFitBefore[sku] ?? beforeVialRelease(rows)[sku]), sku).toBe(digest);
-        expect(Object.keys(rows)).toHaveLength(671); expect(index.skus).toEqual(Object.keys(rows).sort());
+        expect(Object.keys(rows)).toHaveLength(850);   /* + 179 Diva masters (2026-11-04) */ expect(index.skus).toEqual(Object.keys(rows).sort());
         expect(index.version).toBe(manifest.version);
         expect(manifest.version).toBe(createHash('sha256').update(JSON.stringify(manifest.rows)).digest('hex').slice(0, 16));
     });
