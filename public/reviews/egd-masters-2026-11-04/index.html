@@ -1,0 +1,28 @@
+<!doctype html><meta charset="utf-8"><title>Empire · Grace · Diamond — review</title>
+<style>body{margin:0;background:#F5F3EF;font:13px system-ui;color:#333}h1{font-size:15px;margin:12px 16px}
+.grid{display:flex;flex-wrap:wrap;gap:10px;padding:0 10px}.kit{border:1px solid #ddd}
+.kit h2{font-size:12px;margin:6px 8px}.pair{display:flex}.stage{position:relative;width:var(--w);height:var(--h);overflow:hidden}
+.stage .inner{position:absolute;width:1000px;height:1100px;transform-origin:0 0}.stage img{position:absolute}.label{font-size:11px;text-align:center;color:#777}
+form{margin:0 16px 8px}</style>
+<h1>Empire · Grace · Diamond review kits</h1>
+<form>SKU pattern <input name="q" size="30"> scale <input name="s" size="4"> <button>show</button></form>
+<div class="grid" id="g"></div>
+<script>
+const P=new URLSearchParams(location.search), q=new RegExp(P.get('q')||'Rdcr(ShnGl|BlkLthr)$'), S=+(P.get('s')||0.55);
+document.querySelector('[name=q]').value=q.source; document.querySelector('[name=s]').value=S;
+fetch('/local-kits/egd-masters-2026-11-04/kits.json').then(r=>r.json()).then(k=>{
+ document.querySelector('h1').textContent+=' · kits '+k.version;
+ for(const [sku,kit] of Object.entries(k.rows)){ if(!q.test(sku))continue;
+  const el=document.createElement('div');el.className='kit';el.innerHTML='<h2>'+sku+'</h2><div class="pair"></div>';
+  const xs=kit.parts.flatMap(p=>[p.box.x,p.box.x+p.box.width]), ys=kit.parts.flatMap(p=>[p.box.y,p.box.y+p.box.height]);
+  const x0=Math.max(0,Math.min(...xs)-20), y0=Math.max(0,Math.min(...ys)-20), w=(Math.min(1000,Math.max(...xs)+20)-x0), h=(Math.min(1100,Math.max(...ys)+20)-y0);
+  for(const view of ['capon','sidecar']){
+   const st=document.createElement('div');st.className='stage';st.style.setProperty('--w',w*S+'px');st.style.setProperty('--h',h*S+'px');
+   const inner=document.createElement('div');inner.className='inner';inner.style.transform=`scale(${S}) translate(${-x0}px,${-y0}px)`;st.appendChild(inner);
+   for(const p of [...kit.parts].sort((a,b)=>a.zOrder-b.zOrder)){
+    if(p.views&&!p.views.includes(view))continue; if(view==='sidecar'&&['overcap','cap'].includes(p.slot))continue;
+    const i=document.createElement('img');i.src=p.image.url;Object.assign(i.style,{left:p.box.x+'px',top:p.box.y+'px',width:p.box.width+'px',height:p.box.height+'px',opacity:p.opacity??1,mixBlendMode:p.blendMode||'normal'});inner.appendChild(i);}
+   const wr=document.createElement('div');wr.appendChild(st);const l=document.createElement('div');l.className='label';l.textContent=view==='capon'?'cap on':'cap off';wr.appendChild(l);el.querySelector('.pair').appendChild(wr);}
+  document.getElementById('g').appendChild(el);}
+});
+</script>

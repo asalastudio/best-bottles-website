@@ -1,0 +1,174 @@
+{
+ "empire50-spray": {
+  "psd": "31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/53. GBRnd78SpryCu.psd",
+  "layer": "Layer 11",
+  "registeredOutlineIoU": 0.64,
+  "scale": 1.0086,
+  "shift": [
+   -8,
+   7
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+  "pixels": [
+   138,
+   716
+  ],
+  "sharedFrom": "round78-spray"
+ },
+ "empire50-lotion": {
+  "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/58. LBRnd128LtnCu.psd",
+  "layer": "Layer 18",
+  "registeredOutlineIoU": 0.6046,
+  "scale": 0.9824,
+  "shift": [
+   22,
+   4
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+  "pixels": [
+   180,
+   1050
+  ],
+  "sharedFrom": "round78-lotion"
+ },
+ "empire50-atomizer": {
+  "psd": "9. Round 78ml/1. Round 78ml PSD/39. GBRnd78AnSpBlk.psd",
+  "layer": "Layer 4 copy",
+  "swept": "round78-spray material along the PSD centre line",
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+  "pixels": [
+   92,
+   697
+  ],
+  "sharedFrom": "round78-atomizer"
+ },
+ "empire100-spray": {
+  "psd": "31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/7.  128ml Round, Ltn & Spry, capped/57. GBRnd128SpryCu.psd",
+  "layer": "Layer 18",
+  "registeredOutlineIoU": 0.2242,
+  "scale": 1.0348,
+  "shift": [
+   -57,
+   -2
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-spray.780b804aff87.png",
+  "pixels": [
+   243,
+   2025
+  ],
+  "sharedFrom": "round128-spray"
+ },
+ "empire100-lotion": {
+  "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/58. LBRnd128LtnCu.psd",
+  "layer": "Layer 18",
+  "registeredOutlineIoU": 0.5897,
+  "scale": 0.9748,
+  "shift": [
+   26,
+   8
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-lotion.9e71d37cd4f5.png",
+  "pixels": [
+   180,
+   1050
+  ],
+  "sharedFrom": "round128-lotion"
+ },
+ "empire100-atomizer": {
+  "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/39. GBRnd128AnSpBlk.psd",
+  "layer": "Layer 4 copy",
+  "swept": "round128-spray material along the PSD centre line",
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+  "pixels": [
+   141,
+   1018
+  ],
+  "sharedFrom": "round128-atomizer"
+ },
+ "grace55-spray": {
+  "psd": "31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/53. GBRnd78SpryCu.psd",
+  "layer": "Layer 11",
+  "registeredOutlineIoU": 0.64,
+  "scale": 1.0086,
+  "shift": [
+   -8,
+   7
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+  "pixels": [
+   138,
+   716
+  ],
+  "sharedFrom": "round78-spray"
+ },
+ "grace55-lotion": {
+  "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/58. LBRnd128LtnCu.psd",
+  "layer": "Layer 18",
+  "registeredOutlineIoU": 0.6046,
+  "scale": 0.9824,
+  "shift": [
+   22,
+   4
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+  "pixels": [
+   180,
+   1050
+  ],
+  "sharedFrom": "round78-lotion"
+ },
+ "grace55-atomizer": {
+  "psd": "9. Round 78ml/1. Round 78ml PSD/39. GBRnd78AnSpBlk.psd",
+  "layer": "Layer 4 copy",
+  "swept": "round78-spray material along the PSD centre line",
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+  "pixels": [
+   92,
+   697
+  ],
+  "sharedFrom": "round78-atomizer"
+ },
+ "diamond60-spray": {
+  "psd": "31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/53. GBRnd78SpryCu.psd",
+  "layer": "Layer 11",
+  "registeredOutlineIoU": 0.64,
+  "scale": 1.0086,
+  "shift": [
+   -8,
+   7
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+  "pixels": [
+   138,
+   716
+  ],
+  "sharedFrom": "round78-spray"
+ },
+ "diamond60-lotion": {
+  "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/58. LBRnd128LtnCu.psd",
+  "layer": "Layer 18",
+  "registeredOutlineIoU": 0.6046,
+  "scale": 0.9824,
+  "shift": [
+   22,
+   4
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+  "pixels": [
+   180,
+   1050
+  ],
+  "sharedFrom": "round78-lotion"
+ },
+ "diamond60-atomizer": {
+  "psd": "9. Round 78ml/1. Round 78ml PSD/39. GBRnd78AnSpBlk.psd",
+  "layer": "Layer 4 copy",
+  "swept": "round78-spray material along the PSD centre line",
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+  "pixels": [
+   92,
+   697
+  ],
+  "sharedFrom": "round78-atomizer"
+ }
+}
