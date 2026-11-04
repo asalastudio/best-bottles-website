@@ -15,6 +15,11 @@ one glass per size, on the stage datum at the size's bare height and catalog-sca
   asked for the vial "a tad bit thinner", then "more slim ... and the mouth the neck should be narrower as well": the
   review copy reshapes the photographs in place, the body BODY_2ML as wide and the neck, finish and mouth NECK_2ML
   (blended through the shoulder), the cap NECK_2ML to fit the finish; heights and boxes unchanged.
+- 3 ml clear tola (GB3TPlGl) and 3 ml clear spray bottle (LB3mlClear): Jordan (3 Nov 2026) "the product page needs to
+  be corrected. The plastic applicator is missing. The cap is missing. And it looks like it's the 6 mL". The register
+  drew the tola from a generic 14.3 mm plug and plate; these kits take each SKU's own PSD: the tola glass with its white
+  applicator stem (16. 14.3mm/Uncapped) and its gold jewel cap seated as the capped PSD seats it; the spray bottle with
+  its sprayer and its clear overcap seated as LB3mlClear..psd seats it. They ride with the Vial review masters.
 Writes public/local-kits/vial-masters-2026-11-03/kits.json.
 Usage: python3 scripts/diva-vial/vial-kits.py <work-dir>
 """
@@ -64,14 +69,22 @@ def layer(rel, name):
     return im.crop(bb), (l.bbox[0] + bb[0], l.bbox[1] + bb[1])
 
 
+def layer_at(path, name):
+    """(image cropped to its alpha, absolute top-left) of one layer of a PSD outside 12. Vials."""
+    p = PSDImage.open(path); l = {x.name: x for x in p.descendants()}[name]
+    im = l.composite().convert("RGBA"); bb = im.getchannel("A").getbbox()
+    return im.crop(bb), (l.bbox[0] + bb[0], l.bbox[1] + bb[1])
+
+
 def frame(img, xy):
     """(top, foot, axis) of a bottle layer in its PSD's px."""
     return xy[1], xy[1] + img.height, xy[0] + img.width / 2
 
 
-def part(slot, image, xy, fr, z, explode, comp, extra=None):
-    top, foot, axis = fr; s = BARE_PX / (foot - top)
-    box = {"x": round(AXIS + (xy[0] - axis) * s, 3), "y": round(SEAT + (xy[1] - top) * s, 3),
+def part(slot, image, xy, fr, z, explode, comp, extra=None, bare=BARE_PX):
+    """`bare`: the stage px from seat to foot (shorter for a kit whose closure stands tall above its seat)."""
+    top, foot, axis = fr; s = bare / (foot - top); seat = BASE - bare
+    box = {"x": round(AXIS + (xy[0] - axis) * s, 3), "y": round(seat + (xy[1] - top) * s, 3),
            "width": round(image["width"] * s, 3), "height": round(image["height"] * s, 3)}
     p = {"slot": slot, "variantKey": None, "zOrder": z, "explodeIndex": explode,
          "bounds": {"left": box["x"], "top": box["y"], "right": round(box["x"] + box["width"], 3), "bottom": round(box["y"] + box["height"], 3)},
@@ -81,8 +94,8 @@ def part(slot, image, xy, fr, z, explode, comp, extra=None):
     return p
 
 
-def kit(sku, body_id, glass, parts, landmark, scale_key):
-    sc = SCALE[scale_key]; px_mm = round(BARE_PX / sc["heightBareMm"], 3)
+def kit(sku, body_id, glass, parts, landmark, scale_key, bare=BARE_PX):
+    sc = SCALE[scale_key]; px_mm = round(bare / sc["heightBareMm"], 3); SEAT = BASE - bare
     body = next(p for p in parts if p["slot"] == "body")
     body["bounds"] = {**body["bounds"], "top": SEAT, "bottom": BASE}
     return {"sku": sku, "familyId": f"register:{body_id}|{glass}", "plateSha256": "", "canvas": {"width": W, "height": H},
@@ -166,6 +179,18 @@ def slimmed(img):
     return Image.fromarray(warp(a, f, axis).astype(np.uint8))
 
 
+def full_canvas(k):
+    """The kit with each part drawn onto the whole canvas (no box), the form every viewer draws."""
+    for p in k["parts"]:
+        src = Image.open("public" + p["image"]["url"]).convert("RGBA"); b = p["box"]
+        layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        im = src.resize((max(1, round(b["width"])), max(1, round(b["height"]))), Image.LANCZOS)
+        layer.alpha_composite(im, (round(b["x"]), round(b["y"]))) if b["x"] >= 0 and b["y"] >= 0 else layer.paste(im, (round(b["x"]), round(b["y"])), im)
+        name = p["image"]["url"].rsplit("/", 1)[1].split(".")[0] + "-canvas"
+        p["image"] = save(layer, name); p.pop("box", None)
+    return k
+
+
 def through_glass(img):
     a = np.asarray(img).astype(np.float32); dark = 255 - (255 - a[..., :3]) * THROUGH_GLASS
     return Image.fromarray(np.dstack([dark.clip(0, 255), a[..., 3]]).astype(np.uint8))
@@ -236,6 +261,31 @@ def main():
     rows["GB09BlackCapApp"] = kit("GB09BlackCapApp", "vial-9ml-18-400", "Clear",
                                   [part("body", body9, b9_xy, fr9, 0, 0, None), part("cap", save(combo, "cap-9ml-black-rod"), (left, top), fr9, 1, 1, "PSD-VIAL9-CAP-ROD")],
                                   land9, "vial-9ml-18-400")
+
+    # 3 ml tola and 3 ml spray bottle: each SKU's own PSD (the register drew them from generic parts).
+    M = "/Volumes/Achive/Client Work/Nemat-International/BB-PSD-Files-Master"
+    tola, tola_xy = layer_at(f"{M}/16. 14.3mm/14.3mm/Uncapped/GB3TPlGl..psd", "Layer 5")        # glass + applicator stem
+    tola_glass, tg_xy = layer_at(f"{M}/16. 14.3mm/14.3mm/Capped/GB3TPlGl. copy.psd", "Layer 1")  # glass alone (seat)
+    cap_t, cap_t_xy = layer_at(f"{M}/16. 14.3mm/14.3mm/Capped/GB3TPlGl. copy.psd", "Layer 3")    # gold cap, seated
+    dx = (tola_xy[0] + tola.width / 2) - (tg_xy[0] + tola_glass.width / 2)                        # capped -> uncapped px
+    fr_t = (tg_xy[1], tg_xy[1] + tola_glass.height, tola_xy[0] + tola.width / 2)
+    rows["GB3TPlGl"] = kit("GB3TPlGl", "tola-decorative-3ml-14.3mm", "Clear",
+                           [part("body", save(tola, "tola-3ml-clear-applicator"), tola_xy, fr_t, 0, 0, None),
+                            part("cap", save(cap_t, "tola-cap-gold-jewel"), (cap_t_xy[0] + dx, cap_t_xy[1]), fr_t, 1, 1, "PSD-TOLA-CAP-GL")],
+                           SEAT, "tola-decorative-3ml-14.3mm")
+    spray, spray_xy = layer_at(f"{M}/18. Perfume Glass Bottles with Metal Decoration/LB3mlClear.psd", "Layer 1")
+    cover, cover_xy = layer_at(f"{M}/18. Perfume Glass Bottles with Metal Decoration/LB3mlClear..psd", "Layer 2")   # seated
+    w = (np.asarray(spray)[..., 3] > 40).sum(1); tube_top = int(np.argmax(w >= 0.95 * w.max()))
+    # The sprayer stands ~36% above the tube: a shorter tube span keeps the whole bottle on the canvas (top ~5% down).
+    SPRAY_BARE = round(0.9 * BASE * (spray.height - tube_top) / spray.height)
+    fr_s = (spray_xy[1] + tube_top, spray_xy[1] + spray.height, spray_xy[0] + spray.width / 2)
+    rows["LB3mlClear"] = kit("LB3mlClear", "lotion-bottle-3ml-snap", "Clear",
+                             [part("body", save(spray, "spray-3ml-clear"), spray_xy, fr_s, 0, 0, None, bare=SPRAY_BARE),
+                              part("cap", save(cover, "spray-3ml-clear-overcap"), cover_xy, fr_s, 1, 1, "PSD-LB3-OVERCAP",
+                                   {"blendMode": "multiply"}, bare=SPRAY_BARE)],
+                             BASE - SPRAY_BARE, "lotion-bottle-3ml-snap", bare=SPRAY_BARE)
+    # Its page is the legacy PDP, whose mobile viewer draws kit layers as whole-canvas images: give it full-canvas layers.
+    rows["LB3mlClear"] = full_canvas(rows["LB3mlClear"])
 
     # 2 ml amber: the approved kits reshaped in place (boxes unchanged): the body slimmer, the neck and mouth narrower.
     approved = json.load(open("src/lib/paper-doll/approved-kits.generated.json"))["rows"]

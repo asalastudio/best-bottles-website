@@ -1,5 +1,5 @@
 {
- "version": "2565e401f7eb",
+ "version": "a4fc85190ecd",
  "rows": {
   "GB1mlAmbVBlk": {
    "sku": "GB1mlAmbVBlk",
@@ -38,10 +38,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.fd30b0acdfd6.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.cbdd01b99bfe.png",
       "key": "",
-      "sha256": "fd30b0acdfd6efa9088092fef0f995f9a370ee06596b8f2b34ffb242c0456f26",
-      "bytes": 55066,
+      "sha256": "cbdd01b99bfe65197d2ced44a5314e39a3d407a58de2f3c4938d30073417889f",
+      "bytes": 55065,
       "width": 93,
       "height": 440
      },
@@ -76,10 +76,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.0f461655a11c.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.4c58f4e3b8ed.png",
       "key": "",
-      "sha256": "0f461655a11ccca6cdbcc5074a878c1f1439d1dc670bd145781707750bfbb798",
-      "bytes": 19404,
+      "sha256": "4c58f4e3b8ed4150781287dee7861f7a22eed3f525588735973dd0e956d5041a",
+      "bytes": 19403,
       "width": 127,
       "height": 449
      },
@@ -156,10 +156,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.fd30b0acdfd6.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.cbdd01b99bfe.png",
       "key": "",
-      "sha256": "fd30b0acdfd6efa9088092fef0f995f9a370ee06596b8f2b34ffb242c0456f26",
-      "bytes": 55066,
+      "sha256": "cbdd01b99bfe65197d2ced44a5314e39a3d407a58de2f3c4938d30073417889f",
+      "bytes": 55065,
       "width": 93,
       "height": 440
      },
@@ -194,10 +194,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.4ab16f64b328.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.b477d543c094.png",
       "key": "",
-      "sha256": "4ab16f64b328c1332d06bed6b3573287aeb00dc62b69270801949230e8b78a11",
-      "bytes": 19425,
+      "sha256": "b477d543c094a53b7d6c66a340248def54d8e3503c67f9934ffb9c03ae8d3a66",
+      "bytes": 19424,
       "width": 133,
       "height": 454
      },
@@ -313,10 +313,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.0f461655a11c.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.4c58f4e3b8ed.png",
       "key": "",
-      "sha256": "0f461655a11ccca6cdbcc5074a878c1f1439d1dc670bd145781707750bfbb798",
-      "bytes": 19404,
+      "sha256": "4c58f4e3b8ed4150781287dee7861f7a22eed3f525588735973dd0e956d5041a",
+      "bytes": 19403,
       "width": 127,
       "height": 449
      },
@@ -431,10 +431,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.4ab16f64b328.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.b477d543c094.png",
       "key": "",
-      "sha256": "4ab16f64b328c1332d06bed6b3573287aeb00dc62b69270801949230e8b78a11",
-      "bytes": 19425,
+      "sha256": "b477d543c094a53b7d6c66a340248def54d8e3503c67f9934ffb9c03ae8d3a66",
+      "bytes": 19424,
       "width": 133,
       "height": 454
      },
@@ -512,10 +512,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-clear.bede5f7fa264.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-clear.3ac9418c7705.png",
       "key": "",
-      "sha256": "bede5f7fa26499f020d74a1221100da066e6a4cb056994670573df03e1400c9e",
-      "bytes": 20700,
+      "sha256": "3ac9418c7705b44767a2ff649eeb8f2a8ca79e095a2b9e354f653703ae4679c9",
+      "bytes": 20699,
       "width": 107,
       "height": 311
      },
@@ -550,10 +550,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/pipette-13-425.74af46a10ae7.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/pipette-13-425.d3bf7347cc16.png",
       "key": "",
-      "sha256": "74af46a10ae7b0fcd7d93e778cd4b50268a65d247a18ad5c6f0ea99e5d784fde",
-      "bytes": 6212,
+      "sha256": "d3bf7347cc162c88fabda32d7a520a8269ea4887204fd359dc7a4b89149de526",
+      "bytes": 6211,
       "width": 48,
       "height": 252
      },
@@ -588,10 +588,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.aafc5a0bb14d.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.2d88a6877ce2.png",
       "key": "",
-      "sha256": "aafc5a0bb14da837c74938965165ca90aab1e27a4c4277ce28d1b537db5595eb",
-      "bytes": 15192,
+      "sha256": "2d88a6877ce2b62ce34a09c39a980b62c9f9798b52396bca1dc6bdfe89fdf7d5",
+      "bytes": 15191,
       "width": 105,
       "height": 173
      },
@@ -668,10 +668,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-amber.6f086b48bbfa.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-amber.d630b894a844.png",
       "key": "",
-      "sha256": "6f086b48bbfaaa1210b477368fa89a2d8b18aa197a95dbffd730a5f32ded580a",
-      "bytes": 116208,
+      "sha256": "d630b894a8441705034ec920113d51275622611ef37b2a88f026be9ca05ef8b9",
+      "bytes": 116207,
       "width": 181,
       "height": 544
      },
@@ -745,10 +745,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.aafc5a0bb14d.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.2d88a6877ce2.png",
       "key": "",
-      "sha256": "aafc5a0bb14da837c74938965165ca90aab1e27a4c4277ce28d1b537db5595eb",
-      "bytes": 15192,
+      "sha256": "2d88a6877ce2b62ce34a09c39a980b62c9f9798b52396bca1dc6bdfe89fdf7d5",
+      "bytes": 15191,
       "width": 105,
       "height": 173
      },
@@ -825,10 +825,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-blue.78f2e8925e26.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-blue.6be973ef8c5c.png",
       "key": "",
-      "sha256": "78f2e8925e26fb049223221ac5890a62a0e8cf053a59ff978e81038cf601c79c",
-      "bytes": 116765,
+      "sha256": "6be973ef8c5ce2c1f5dc9c7dd28faf9452cd74e3378d5c384d31af6663b7b0bd",
+      "bytes": 116764,
       "width": 180,
       "height": 544
      },
@@ -902,10 +902,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.aafc5a0bb14d.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.2d88a6877ce2.png",
       "key": "",
-      "sha256": "aafc5a0bb14da837c74938965165ca90aab1e27a4c4277ce28d1b537db5595eb",
-      "bytes": 15192,
+      "sha256": "2d88a6877ce2b62ce34a09c39a980b62c9f9798b52396bca1dc6bdfe89fdf7d5",
+      "bytes": 15191,
       "width": 105,
       "height": 173
      },
@@ -982,10 +982,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-green.78d8c2e8e27c.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-green.f90be1f91a2b.png",
       "key": "",
-      "sha256": "78d8c2e8e27c435b252fe04fcbbb0f332e6761d815edf10988358b43f6f8d15c",
-      "bytes": 41533,
+      "sha256": "f90be1f91a2be07fd414ecc68f43843f12943a328f2caaa93394d3511884c69d",
+      "bytes": 41532,
       "width": 106,
       "height": 310
      },
@@ -1059,10 +1059,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.aafc5a0bb14d.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.2d88a6877ce2.png",
       "key": "",
-      "sha256": "aafc5a0bb14da837c74938965165ca90aab1e27a4c4277ce28d1b537db5595eb",
-      "bytes": 15192,
+      "sha256": "2d88a6877ce2b62ce34a09c39a980b62c9f9798b52396bca1dc6bdfe89fdf7d5",
+      "bytes": 15191,
       "width": 105,
       "height": 173
      },
@@ -1139,10 +1139,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.e2fc5d047851.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.1c86294b8bec.png",
       "key": "",
-      "sha256": "e2fc5d0478513262467775ae0275a82168bb36178eafa1460e8dbdb9b61e01aa",
-      "bytes": 56004,
+      "sha256": "1c86294b8bec5ba73278122fd0995f9a16367cbe037c6409401aab5783ec211e",
+      "bytes": 56003,
       "width": 266,
       "height": 549
      },
@@ -1177,10 +1177,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black.ae482c419cb3.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black.64a167c0d05b.png",
       "key": "",
-      "sha256": "ae482c419cb3be1790d0a3c9c3b0c536f23cda0640cc7b2cbcbcda61783b5695",
-      "bytes": 23147,
+      "sha256": "64a167c0d05bd4cc623e493c44af218a1931d9eb7ee6943c3c3543c2fba246c2",
+      "bytes": 23146,
       "width": 247,
       "height": 144
      },
@@ -1257,10 +1257,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.e2fc5d047851.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.1c86294b8bec.png",
       "key": "",
-      "sha256": "e2fc5d0478513262467775ae0275a82168bb36178eafa1460e8dbdb9b61e01aa",
-      "bytes": 56004,
+      "sha256": "1c86294b8bec5ba73278122fd0995f9a16367cbe037c6409401aab5783ec211e",
+      "bytes": 56003,
       "width": 266,
       "height": 549
      },
@@ -1335,6 +1335,231 @@
     "baselinePct": 91,
     "landmarkY": 428.58,
     "source": "docs/hero-families/next-batch-2026-09-25/README.md"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "GB3TPlGl": {
+   "sku": "GB3TPlGl",
+   "familyId": "register:tola-decorative-3ml-14.3mm|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 261,
+    "baselineY": 1061,
+    "pxPerMm": 19.048
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 344.934,
+      "top": 261,
+      "right": 655.066,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/tola-3ml-clear-applicator.eb332e3e084c.png",
+      "key": "",
+      "sha256": "eb332e3e084c824508253175ad483e9c7db6889660caaf5562d85070b1bcd02e",
+      "bytes": 110293,
+      "width": 264,
+      "height": 715
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 344.934,
+      "y": 221.059,
+      "width": 310.132,
+      "height": 839.941
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 324.963,
+      "top": 181.117,
+      "right": 632.746,
+      "bottom": 532.365
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/tola-cap-gold-jewel.a763e31db16e.png",
+      "key": "",
+      "sha256": "a763e31db16e4db4df9ed217a0993b7e7d1f1bcb5762ed3a993e0006ae45b1d7",
+      "bytes": 109247,
+      "width": 262,
+      "height": 299
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 324.963,
+      "y": 181.117,
+      "width": 307.783,
+      "height": 351.248
+     },
+     "componentId": "PSD-TOLA-CAP-GL"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "tola-decorative-3ml-14.3mm",
+    "plateKey": "tola-decorative-3ml-14.3mm|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 261,
+     "baselineY": 1061
+    },
+    "pxPerMm": 19.048,
+    "componentIds": [
+     "PSD-TOLA-CAP-GL"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 31.66,
+    "baselinePct": 91,
+    "landmarkY": 261,
+    "source": "docs/hero-families/next-batch-2026-09-25/approval.json"
+   },
+   "reviewMaster": "vial-2026-11-03"
+  },
+  "LB3mlClear": {
+   "sku": "LB3mlClear",
+   "familyId": "register:lotion-bottle-3ml-snap|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 368,
+    "baselineY": 1061,
+    "pxPerMm": 5.873
+   },
+   "completeness": "full",
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 407.714,
+      "top": 368,
+      "right": 592.287,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/spray-3ml-clear-canvas.c40624137ca5.png",
+      "key": "",
+      "sha256": "c40624137ca5e6178942287898fb108599f777e99f8fc50f7fb192d747d4113d",
+      "bytes": 102640,
+      "width": 1000,
+      "height": 1100
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 407.714,
+      "top": 96.254,
+      "right": 592.287,
+      "bottom": 393.324
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/vial-masters-2026-11-03/parts/spray-3ml-clear-overcap-canvas.72326a026fc3.png",
+      "key": "",
+      "sha256": "72326a026fc34a6e3f75e8bc6f6d5d4b1d33ec66999c99693e8c9a5907e363e1",
+      "bytes": 33961,
+      "width": 1000,
+      "height": 1100
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "PSD-LB3-OVERCAP",
+     "blendMode": "multiply"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "lotion-bottle-3ml-snap",
+    "plateKey": "lotion-bottle-3ml-snap|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 368,
+     "baselineY": 1061
+    },
+    "pxPerMm": 5.873,
+    "componentIds": [
+     "PSD-LB3-OVERCAP"
+    ]
+   },
+   "glassSizing": {
+    "heightPct": 35,
+    "baselinePct": 91,
+    "landmarkY": 368,
+    "source": "docs/hero-families/vials-2026-09-25/approval.json"
    },
    "reviewMaster": "vial-2026-11-03"
   },
@@ -1556,11 +1781,13 @@
   "GB1mlAmbVialWht",
   "GB1mlVBlk",
   "GB1mlVWht",
+  "GB3TPlGl",
   "GBV1DrmBlkDropper",
   "GBVAmb1DrmBlkDrpr",
   "GBVAmb2BlackCap",
   "GBVAmb2WhtCap",
   "GBVBlu1DrmBlkDropper",
-  "GBVGr1DrmBlkDropper"
+  "GBVGr1DrmBlkDropper",
+  "LB3mlClear"
  ]
 }
