@@ -76,6 +76,7 @@ function readLocalKitReview(): LocalKitReview | null {
         process.env.NODE_ENV === "development" ? "public/local-kits/circle-masters-2026-11-03/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/boston-masters-2026-11-03/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/round-sleek-masters-2026-11-03/kits.json" : undefined,
+        process.env.NODE_ENV === "development" ? "public/local-kits/diva-masters-2026-11-03/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder25-18415-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/tulip-amber-seating-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/rectangle9-applicator-2026-11-01/kits.json" : undefined,
