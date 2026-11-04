@@ -1,0 +1,21 @@
+<!doctype html><meta charset="utf-8"><title>Pillar 9 ml sprayers — review</title>
+<style>body{margin:0;background:#F5F3EF;font:13px system-ui;color:#333}h1{font-size:15px;margin:12px 16px}
+.grid{display:flex;flex-wrap:wrap;gap:10px;padding:0 10px}.kit{background:#F5F3EF;border:1px solid #ddd}
+.kit h2{font-size:12px;margin:6px 8px}.pair{display:flex}.stage{position:relative;width:240px;height:450px;overflow:hidden}
+.stage .inner{position:absolute;left:-130px;top:-95px;width:1000px;height:1100px;transform-origin:0 0;transform:scale(.5)}
+.stage img{position:absolute}.label{font-size:11px;text-align:center;color:#777}</style>
+<h1>Pillar 9 ml / 13-415 — the 7 sprayer finishes (photographed body)</h1><div class="grid" id="g"></div>
+<script>
+fetch('/local-kits/pillar-masters-2026-11-04/kits.json').then(r=>r.json()).then(k=>{
+ document.querySelector('h1').textContent+=' · kits '+k.version;
+ for(const [sku,kit] of Object.entries(k.rows)){
+  const el=document.createElement('div');el.className='kit';el.innerHTML='<h2>'+sku+'</h2><div class="pair"></div>';
+  for(const view of ['capon','sidecar']){
+   const st=document.createElement('div');st.className='stage';const inner=document.createElement('div');inner.className='inner';st.appendChild(inner);
+   for(const p of [...kit.parts].sort((a,b)=>a.zOrder-b.zOrder)){
+    if(p.views&&!p.views.includes(view))continue; if(view==='sidecar'&&p.slot==='overcap')continue;
+    const i=document.createElement('img');i.src=p.image.url;Object.assign(i.style,{left:p.box.x+'px',top:p.box.y+'px',width:p.box.width+'px',height:p.box.height+'px',opacity:p.opacity??1});inner.appendChild(i);}
+   const w=document.createElement('div');w.appendChild(st);const l=document.createElement('div');l.className='label';l.textContent=view==='capon'?'cap on':'cap off';w.appendChild(l);el.querySelector('.pair').appendChild(w);}
+  document.getElementById('g').appendChild(el);}
+});
+</script>
