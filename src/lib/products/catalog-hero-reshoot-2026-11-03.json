@@ -1,0 +1,78 @@
+[
+  {
+    "groupSlug": "heart-4ml-frosted-8mm-keychain-glassapplicator",
+    "websiteSku": "GBHeartFrst4KeyGld",
+    "graceSku": "GB-DEC-FRS-4ML-GST-GLD-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343692128548",
+    "family": "Decorative",
+    "capacityMl": 4,
+    "bottleColor": "Frosted",
+    "alt": "4 ml Frosted Heart Bottle with Keychain",
+    "presentation": "Overhead flat lay",
+    "url": "/images/catalog/reshoot-2026-11-03/GBHeartFrst4KeyGld.90f26bfb3f90.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "heart-4ml-frosted-8mm-tassel-glassapplicator",
+    "websiteSku": "GBHeartFrst4TslRed",
+    "graceSku": "GB-DEC-FRS-4ML-GST-RED-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343692226852",
+    "family": "Decorative",
+    "capacityMl": 4,
+    "bottleColor": "Frosted",
+    "alt": "4 ml Frosted Heart Bottle with Tassel",
+    "presentation": "Overhead flat lay",
+    "url": "/images/catalog/reshoot-2026-11-03/GBHeartFrst4TslRed.9b3f3d55e41d.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "tola-3ml-clear-14.3mm",
+    "websiteSku": "GB3TPlGl",
+    "graceSku": "GB-DEC-CLR-3ML-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343693603108",
+    "family": "Decorative",
+    "capacityMl": 3,
+    "bottleColor": "Clear",
+    "alt": "3 ml Clear Tola Bottle",
+    "presentation": "Original product assembly",
+    "url": "/images/catalog/reshoot-2026-11-03/GB3TPlGl.4b3ff73adfa1.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "lotion-bottle-3ml-clear-Snap-On",
+    "websiteSku": "LB3mlClear",
+    "graceSku": "LB-LTB-CLR-3ML-CLR-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343698092324",
+    "family": "Lotion Bottle",
+    "capacityMl": 3,
+    "bottleColor": "Clear",
+    "alt": "3 ml Clear Lotion Bottle Bottle with Cap",
+    "presentation": "Empty · cap beside",
+    "url": "/images/catalog/reshoot-2026-11-03/LB3mlClear.a76de1ce9a5d.webp",
+    "width": 1560,
+    "height": 1716,
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  }
+]

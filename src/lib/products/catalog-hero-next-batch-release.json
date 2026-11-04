@@ -228,25 +228,6 @@
     }
   },
   {
-    "groupSlug": "tola-3ml-clear-14.3mm",
-    "websiteSku": "GB3TPlGl",
-    "graceSku": "GB-DEC-CLR-3ML-T",
-    "shopifyVariantId": "gid://shopify/ProductVariant/53343693603108",
-    "family": "Decorative",
-    "capacityMl": 3,
-    "bottleColor": "Clear",
-    "alt": "3 ml Clear Tola Bottle with Shiny Gold Cap and Red Bead",
-    "presentation": "Original product assembly",
-    "url": "/images/catalog/next-batch-approved-2026-09-25/GB3TPlGl.30f0dba0bc9d.webp",
-    "width": 1560,
-    "height": 1716,
-    "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
-    }
-  },
-  {
     "groupSlug": "grace-55ml-clear-18-415-antiquespray-tassel",
     "websiteSku": "GBGrce55AnSpTslMtSl",
     "graceSku": "GB-GRC-CLR-55ML-AST-MSLV",

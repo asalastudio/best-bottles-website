@@ -90,9 +90,18 @@ export const COMPONENT_CATEGORIES: ReadonlySet<string> = new Set([
 export const FAMILY_ORDER: readonly string[] = [
     "Cylinder", "Elegant", "Circle", "Sleek", "Diva", "Empire", "Boston Round",
     "Slim", "Diamond", "Royal", "Round", "Square", "Rectangle", "Flair",
-    "Tulip", "Bell", "Grace", "Vial", "Apothecary", "Decorative", "Teardrop",
-    "Pillar", "Atomizer", "Tall Cylinder",
+    "Tulip", "Bell", "Grace", "Vial", "Apothecary", "Decorative",
+    "Atomizer", "Tall Cylinder",
 ];
+
+/**
+ * Families the Bottle family filter shows together under one row, each still listed by its own name beneath it
+ * (Jordan, 3 Nov 2026: Royal, Rectangle, Square, Flair, Bell and Tulip "under the unique shapes ... we'll still keep
+ * the names for now"). The data keeps each family; checking the group row selects all of its families.
+ */
+export const FAMILY_GROUPS: Readonly<Record<string, readonly string[]>> = {
+    "Unique Shapes": ["Royal", "Rectangle", "Square", "Flair", "Bell", "Tulip"],
+};
 
 /** Product-type lines that live in the `family` column but are not design families. */
 export const PRODUCT_TYPE_FAMILIES = ["Cream Jar", "Aluminum Bottle", "Lotion Bottle", "Plastic Bottle"] as const;

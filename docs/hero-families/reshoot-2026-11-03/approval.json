@@ -1,0 +1,66 @@
+{
+ "date": "2026-11-03",
+ "approvedBy": "Jordan",
+ "rows": [
+  {
+   "sku": "GBHeartFrst4KeyGld",
+   "groupSlug": "heart-4ml-frosted-8mm-keychain-glassapplicator",
+   "status": "approved",
+   "note": "Jordan 2026-11-03: the heart flat lays look fine",
+   "model": "gpt-image-2.5-sunburst",
+   "script": "scripts/catalog-heroes/flat-lay-2026-11-03.py",
+   "sourceRender": "docs/hero-families/reshoot-2026-11-03/flat-lay/GBHeartFrst4KeyGld.24002d01e936.png",
+   "sourceRenderSha256": "24002d01e936a805ea2020633e035bfb91b6b2b38949b62c8c2b1495375176af",
+   "replaces": "/images/catalog/bone-review/GBHeartFrst4KeyGld.a32ac93d6cc2.png",
+   "url": "/images/catalog/reshoot-2026-11-03/GBHeartFrst4KeyGld.90f26bfb3f90.webp",
+   "sha256": "90f26bfb3f9049a30a2b0f752773ba3611d2f01680b3de4e5b81cc74eb375630",
+   "bytes": 995714,
+   "encoding": "lossless WebP"
+  },
+  {
+   "sku": "GBHeartFrst4TslRed",
+   "groupSlug": "heart-4ml-frosted-8mm-tassel-glassapplicator",
+   "status": "approved",
+   "note": "Jordan 2026-11-03: the heart flat lays look fine",
+   "model": "gpt-image-2.5-sunburst",
+   "script": "scripts/catalog-heroes/flat-lay-2026-11-03.py",
+   "sourceRender": "docs/hero-families/reshoot-2026-11-03/flat-lay/GBHeartFrst4TslRed.432e4ab34bbb.png",
+   "sourceRenderSha256": "432e4ab34bbb5a522a1d4d2e6415ca0d13470f40838f55e87c41108ade7364a7",
+   "replaces": "/images/catalog/bone-review/GBHeartFrst4TslRed.72085c2aa183.png",
+   "url": "/images/catalog/reshoot-2026-11-03/GBHeartFrst4TslRed.9b3f3d55e41d.webp",
+   "sha256": "9b3f3d55e41dfbeb92ca7d519414bb8b6de6fb7404376047030449f51b9144fe",
+   "bytes": 1197220,
+   "encoding": "lossless WebP"
+  },
+  {
+   "sku": "GB3TPlGl",
+   "groupSlug": "tola-3ml-clear-14.3mm",
+   "status": "approved",
+   "note": "Jordan 2026-11-03: approved the straight-on reshoot",
+   "model": "gpt-image-2.5-sunburst",
+   "script": "scripts/catalog-heroes/front-on-2026-11-03.py",
+   "sourceRender": "docs/hero-families/reshoot-2026-11-03/front-on/GB3TPlGl.3d84a6249668.png",
+   "sourceRenderSha256": "3d84a624966880360f1db4cb0dfe21e5a4f944bc8f8c56e3aaa42fbf1222de31",
+   "replaces": "/images/catalog/bone-review/GB3TPlGl.3f8144514e31.png",
+   "url": "/images/catalog/reshoot-2026-11-03/GB3TPlGl.4b3ff73adfa1.webp",
+   "sha256": "4b3ff73adfa1f9116ac027dafbd787078acc9e67030b9a9e67169f68e47247d0",
+   "bytes": 863700,
+   "encoding": "lossless WebP"
+  },
+  {
+   "sku": "LB3mlClear",
+   "groupSlug": "lotion-bottle-3ml-clear-Snap-On",
+   "status": "approved",
+   "note": "Jordan 2026-11-03: approved the straight-on reshoot",
+   "model": "gpt-image-2.5-sunburst",
+   "script": "scripts/catalog-heroes/front-on-2026-11-03.py",
+   "sourceRender": "docs/hero-families/reshoot-2026-11-03/front-on/LB3mlClear.088f1e56d057.png",
+   "sourceRenderSha256": "088f1e56d05743a5789b96b69eebd6132a01fd4c171ca1860417bc9b04f49e4a",
+   "replaces": "/images/catalog/bone-review/LB3mlClear.b842982a7ee5.png",
+   "url": "/images/catalog/reshoot-2026-11-03/LB3mlClear.a76de1ce9a5d.webp",
+   "sha256": "a76de1ce9a5d1a4af0059274ee3721c36845c7d8f444db18c9d9be0d4f2790ab",
+   "bytes": 700778,
+   "encoding": "lossless WebP"
+  }
+ ]
+}

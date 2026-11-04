@@ -19,6 +19,7 @@ import {
     CANONICAL_GLASS_COLORS,
     CAPACITY_RANGES,
     COMPONENT_FAMILIES,
+    FAMILY_GROUPS,
     FAMILY_ORDER,
     PRODUCT_TYPE_FAMILIES,
     capacityInRange,
@@ -121,6 +122,47 @@ function CheckRow({ label, detail, count, checked, onChange, testId }: {
     );
 }
 
+/** A family group's row: one checkbox for all its families, and the families themselves listed by name beneath. */
+function FamilyGroupRow({ label, count, members, selected, labelFor, onChange }: {
+    label: string;
+    count: number;
+    members: { family: string; count: number }[];
+    selected: readonly string[];
+    labelFor: (family: string) => string;
+    onChange: (families: string[]) => void;
+}) {
+    const chosen = members.filter(({ family }) => selected.includes(family));
+    const available = members.filter(({ count: n, family }) => n > 0 || selected.includes(family));
+    const all = chosen.length > 0 && available.every(({ family }) => selected.includes(family));
+    const [open, setOpen] = useState(chosen.length > 0);
+    const names = members.map(({ family }) => family);
+    return (
+        <div data-testid="catalog-filter-family-group">
+            <div className="flex items-center">
+                <div className="min-w-0 flex-1">
+                    <CheckRow label={label} count={count} checked={all} testId="catalog-filter-option"
+                        onChange={() => onChange(all
+                            ? selected.filter((family) => !names.includes(family))
+                            : [...selected.filter((family) => !names.includes(family)), ...available.map(({ family }) => family)])} />
+                </div>
+                <button type="button" onClick={() => setOpen((current) => !current)} aria-expanded={open}
+                    aria-label={`${open ? "Hide" : "Show"} the ${label} families`}
+                    className="ml-1 flex h-7 w-7 shrink-0 items-center justify-center text-[14px] text-[#8a93a0] hover:text-[#1c1c1e]">
+                    {open ? "−" : "+"}
+                </button>
+            </div>
+            {open && (
+                <div className="ml-[7px] border-l border-[#e5dccd] pl-4">
+                    {members.map(({ family, count: n }) => (
+                        <CheckRow key={family} label={labelFor(family)} count={n} checked={selected.includes(family)}
+                            onChange={() => onChange(toggle([...selected], family))} testId="catalog-filter-option" />
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+}
+
 function Truncated<T>({ items, limit, isSelected, render, noun, showAll, showFewer }: {
     items: T[];
     limit: number;
@@ -198,9 +240,16 @@ export default function CatalogFilterSidebar({ facets, filters, onFilterChange, 
 
     const familyCounts = facets?.families ?? {};
     const extraFamilies = Object.keys(familyCounts).filter((family) => !NOT_GLASS_FAMILIES.has(family) && !GLASS_FAMILIES.includes(family));
-    const families = [...GLASS_FAMILIES, ...extraFamilies]
-        .map((family) => ({ family, count: familyCounts[family] ?? 0 }))
-        .sort((a, b) => b.count - a.count);
+    const grouped = new Set(Object.values(FAMILY_GROUPS).flat());
+    const families: { family: string; count: number; members?: { family: string; count: number }[] }[] = [
+        ...[...GLASS_FAMILIES, ...extraFamilies]
+            .filter((family) => !grouped.has(family))
+            .map((family) => ({ family, count: familyCounts[family] ?? 0 })),
+        ...Object.entries(FAMILY_GROUPS).map(([family, names]) => {
+            const members = names.map((name) => ({ family: name, count: familyCounts[name] ?? 0 })).sort((a, b) => b.count - a.count);
+            return { family, count: members.reduce((sum, member) => sum + member.count, 0), members };
+        }),
+    ].sort((a, b) => b.count - a.count);
 
     const capacityRows = Object.values(facets?.capacities ?? {});
     const capacities = CAPACITY_RANGES.map((range) => ({
@@ -238,8 +287,14 @@ export default function CatalogFilterSidebar({ facets, filters, onFilterChange, 
                             noun="bottle families"
                             showAll={t("showAllCount", { count: families.length })}
                             {...more}
-                            isSelected={({ family }) => filters.families.includes(family)}
-                            render={({ family, count }) => (
+                            isSelected={({ family, members }) => members
+                                ? members.some((member) => filters.families.includes(member.family))
+                                : filters.families.includes(family)}
+                            render={({ family, count, members }) => members ? (
+                                <FamilyGroupRow key={family} label={localizeFamilyName(locale, family)} count={count} members={members}
+                                    selected={filters.families} labelFor={(name) => localizeFamilyName(locale, name)}
+                                    onChange={(next) => onFilterChange({ families: next })} />
+                            ) : (
                                 <CheckRow key={family} label={localizeFamilyName(locale, family)} count={count}
                                     checked={filters.families.includes(family)}
                                     onChange={() => onFilterChange({ families: toggle(filters.families, family) })}

@@ -7,6 +7,7 @@ import { CATALOG_FACET_PARAM_KEYS } from "./catalogFilters";
 
 export type ShapeMatch = { primary: string[]; also: string[] };
 
+// 2026-11-03: Pillar moved into Cylinder and Teardrop into Apothecary (scripts/catalog-corrections/2026-11-03-*.mjs).
 export const SHAPE_TO_FAMILIES: Record<string, ShapeMatch> = {
     square:      { primary: ["Square", "Empire", "Elegant", "Flair", "Rectangle"], also: [] },
     rectangular: { primary: ["Elegant", "Rectangle", "Flair", "Square", "Empire"], also: ["Grace"] },
@@ -19,9 +20,9 @@ export const SHAPE_TO_FAMILIES: Record<string, ShapeMatch> = {
     globe:       { primary: ["Round", "Diva", "Circle"],                also: [] },
     spherical:   { primary: ["Round", "Diva"],                          also: ["Circle"] },
 
-    cylindrical: { primary: ["Cylinder", "Slim", "Sleek", "Pillar"],    also: ["Royal"] },
-    tube:        { primary: ["Cylinder", "Slim", "Sleek"],              also: ["Pillar"] },
-    tubular:     { primary: ["Cylinder", "Slim", "Sleek"],              also: ["Pillar"] },
+    cylindrical: { primary: ["Cylinder", "Slim", "Sleek"],    also: ["Royal"] },
+    tube:        { primary: ["Cylinder", "Slim", "Sleek"],              also: [] },
+    tubular:     { primary: ["Cylinder", "Slim", "Sleek"],              also: [] },
 
     tall:        { primary: ["Sleek", "Slim", "Cylinder"],              also: [] },
     skinny:      { primary: ["Sleek", "Slim", "Cylinder"],              also: [] },
@@ -32,28 +33,28 @@ export const SHAPE_TO_FAMILIES: Record<string, ShapeMatch> = {
     squat:       { primary: ["Round", "Diva", "Tulip", "Bell"],         also: ["Circle"] },
 
     oval:        { primary: ["Grace", "Diva", "Circle"],                also: [] },
-    teardrop:    { primary: ["Teardrop", "Apothecary"],                 also: [] },
-    pear:        { primary: ["Apothecary", "Teardrop"],                 also: [] },
+    teardrop:    { primary: ["Apothecary"],                 also: [] },
+    pear:        { primary: ["Apothecary"],                 also: [] },
 
     diamond:     { primary: ["Diamond"],                                also: [] },
     faceted:     { primary: ["Diamond"],                                also: [] },
     gem:         { primary: ["Diamond"],                                also: [] },
     bell:        { primary: ["Bell"],                                   also: [] },
     heart:       { primary: ["Decorative"],                             also: [] },
-    /** Traditional attar / tola octagonal glass — lives under Decorative, not Teardrop or Apothecary */
+    /** Traditional attar / tola octagonal glass — lives under Decorative, not Apothecary */
     octagonal:   { primary: ["Decorative"],                             also: [] },
     octagon:     { primary: ["Decorative"],                             also: [] },
     tola:        { primary: ["Decorative"],                             also: [] },
     bulb:        { primary: ["Tulip", "Bell"],                          also: [] },
     tulip:       { primary: ["Tulip", "Bell"],                          also: [] },
-    pillar:      { primary: ["Pillar", "Cylinder", "Royal"],            also: [] },
-    column:      { primary: ["Pillar", "Cylinder"],                     also: [] },
+    pillar:      { primary: ["Cylinder", "Royal"],            also: [] },
+    column:      { primary: ["Cylinder"],                     also: [] },
 
     apothecary:  { primary: ["Apothecary", "Boston Round"],             also: [] },
     pharmacy:    { primary: ["Apothecary", "Boston Round"],             also: [] },
     lab:         { primary: ["Boston Round", "Apothecary"],             also: [] },
     laboratory:  { primary: ["Boston Round", "Apothecary"],             also: [] },
-    decorative:  { primary: ["Decorative", "Diamond", "Apothecary", "Teardrop", "Bell"], also: [] },
+    decorative:  { primary: ["Decorative", "Diamond", "Apothecary", "Bell"], also: [] },
     ornate:      { primary: ["Decorative", "Diamond", "Apothecary"],    also: [] },
     classic:     { primary: ["Empire", "Diva", "Elegant", "Grace", "Diamond"], also: [] },
 };

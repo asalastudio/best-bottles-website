@@ -21,13 +21,15 @@ const ON_SIGHT = [...ROUND2_ON_SIGHT, 'GB1ozGenieBl'];
 // The Royal 13 ml and Flair 15 ml heroes of this release were regenerated on 2026-09-25
 // (batch 6) and moved to catalog-hero-batch6-release.json; see that test.
 describe('Grace, Royal, Flair, and Decorative catalog hero release', () => {
-  it('ships the 15 remaining approved exact-SKU Sunburst renders with intact image files', async () => {
-    expect(rows).toHaveLength(15);
-    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(15);
+  // GB3TPlGl's hero moved to the 2026-11-03 reshoot release (catalog-hero-reshoot-2026-11-03.json); its approval row stays.
+  it('ships the 14 remaining approved exact-SKU Sunburst renders with intact image files', async () => {
+    expect(rows).toHaveLength(14);
+    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(14);
+    expect(rows.some(row => row.websiteSku === 'GB3TPlGl')).toBe(false);
     expect(rows.filter(row => row.family === 'Grace')).toHaveLength(5);
     expect(rows.filter(row => row.family === 'Royal')).toHaveLength(0);
     expect(rows.filter(row => row.family === 'Flair')).toHaveLength(0);
-    expect(rows.filter(row => row.family === 'Decorative')).toHaveLength(10);
+    expect(rows.filter(row => row.family === 'Decorative')).toHaveLength(9);
     expect(approval.rows).toHaveLength(15);
     expect(approval.supersededBy['batch6-2026-09-25'].skus).toHaveLength(6);
     for (const hero of rows) {
@@ -63,6 +65,8 @@ describe('Grace, Royal, Flair, and Decorative catalog hero release', () => {
       GBCB12ozPear: { registryBottleColor: 'Cobalt Blue', productionColor: 'Clear' },
     });
     for (const row of approval.rows) {
+      // An approval row whose hero a later release replaced (GB3TPlGl, 2026-11-03) has no row here to label.
+      if (!rows.some(hero => hero.websiteSku === row.sku)) continue;
       if (!(row.sku in approval.labelFollowUps)) {
         expect(row.production.color).toBe(rows.find(hero => hero.websiteSku === row.sku)?.bottleColor);
       }

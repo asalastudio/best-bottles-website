@@ -19,11 +19,12 @@ const GLASS_MM: Record<string, number> = {
 const LEGACY_PHOTO = ['GBVBlu1o9BlackCapSht', 'GBVGreen2o4BlackCapSht', 'LB3mlClear'];
 
 describe('Vial family catalog hero release', () => {
-  it('ships the 16 approved heroes with intact image files and replaces the batch-3 vials', async () => {
-    expect(rows).toHaveLength(16);
-    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(16);
+  // LB3mlClear's hero moved to the 2026-11-03 reshoot release (catalog-hero-reshoot-2026-11-03.json); its approval row stays.
+  it('ships the 15 approved heroes with intact image files and replaces the batch-3 vials', async () => {
+    expect(rows).toHaveLength(15);
+    expect(new Set(rows.map(row => row.websiteSku)).size).toBe(15);
     expect(rows.filter(row => row.family === 'Vial')).toHaveLength(15);
-    expect(rows.filter(row => row.family === 'Lotion Bottle')).toHaveLength(1);
+    expect(rows.filter(row => row.family === 'Lotion Bottle')).toHaveLength(0);
     expect(batch3.some(row => row.family === 'Vial')).toBe(false);
     expect(approval.rows).toHaveLength(16);
     for (const hero of rows) {
