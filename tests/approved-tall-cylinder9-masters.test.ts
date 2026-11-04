@@ -8,7 +8,7 @@ import { stageLayout, type KitLike } from '@/lib/products/pdp-redesign/stage';
 // Reconstruct the historical approval before the later tube-only lotion revision.
 const lotionTubeBefore = JSON.parse(readFileSync('docs/reviews/cylinder-lotion-pumps-2026-11-02/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const capFitBefore = JSON.parse(readFileSync('docs/reviews/tall9-pour-cap-fit-2026-11-01/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
-const laterAdditions=new Set<string>(['docs/reviews/hosted-vial3-jumbo28-2026-11-02/release-manifest.json','docs/reviews/hosted-elegant-masters-2026-11-03/release-manifest.json'].flatMap(file=>JSON.parse(readFileSync(file,'utf8')).addedSkus));
+const laterAdditions=new Set<string>(['docs/reviews/hosted-vial3-jumbo28-2026-11-02/release-manifest.json','docs/reviews/hosted-elegant-masters-2026-11-03/release-manifest.json'].flatMap(file=>JSON.parse(readFileSync(file,'utf8')).addedSkus).concat(JSON.parse(readFileSync('docs/reviews/hosted-vial-masters-2026-11-04/release-manifest.json','utf8')).publishedSkus));
 const hosted=manifest.rows as unknown as Record<string,KitLike>;
 const selected=Object.entries(source.rows as unknown as Record<string,KitLike>).filter(([,kit])=>['cylinder-9ml-13-415|Clear','cylinder-9ml-13-415|Frosted'].includes(kit.register?.plateKey??''));
 const canonical=(value:unknown):unknown=>Array.isArray(value)?value.map(canonical):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,canonical((value as Record<string,unknown>)[key])])):value;
@@ -16,7 +16,7 @@ const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(canonical
 describe('approved tall 9 ml shared catalog, PDP and builder masters',()=>{
  it('publishes exactly the 72 approved combinations while preserving the earlier 290',()=>{
   const release=JSON.parse(readFileSync('docs/reviews/hosted-tall-cylinder9-2026-11-01/release-manifest.json','utf8'));
-  expect(selected).toHaveLength(72);expect(Object.keys(hosted)).toHaveLength(659);expect(release.addedSkus).toEqual(selected.map(([sku])=>sku).sort());
+  expect(selected).toHaveLength(72);expect(Object.keys(hosted)).toHaveLength(671);expect(release.addedSkus).toEqual(selected.map(([sku])=>sku).sort());
   const selectedSkus=new Set(release.addedSkus);const prior=Object.fromEntries(Object.entries(hosted).filter(([sku,kit])=>!laterAdditions.has(sku)&&!selectedSkus.has(sku)&&!/^GBRect10(?:MtlRoll|Roll)/.test(sku)&&!['GBVAmb2BlackCap','GBVAmb2WhtCap','GBVialClr2mlBlackCap','GBVialClr2mlWhtCap'].includes(sku)&&!['sleek-5ml-13-415','sleek-8ml-13-415'].includes(kit.register?.bodyId??'')));Object.assign(prior,JSON.parse(readFileSync('docs/reviews/tulip6-glass-depth-2026-11-01/before-kits.json','utf8')).rows);Object.assign(prior,JSON.parse(readFileSync('docs/reviews/tulip-amber-seating-2026-11-01/before-kits.json','utf8')).rows);Object.assign(prior,lotionTubeBefore);expect(Object.keys(prior)).toHaveLength(290);expect(hash(prior)).toBe(release.preservedPriorRecipesSha256);
  });
  it('routes each cap choice to the approved body without changing placement or glass appearance',()=>{

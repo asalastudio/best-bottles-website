@@ -5,6 +5,7 @@ import manifest from '@/lib/paper-doll/approved-kits.generated.json';
 import index from '@/lib/paper-doll/approved-kit-index.json';
 import { displayDerivativeUrl } from '@/lib/products/display-derivative';
 import { stageLayout, type KitLike } from '@/lib/products/pdp-redesign/stage';
+import { beforeVialRelease } from './helpers/vial-release-2026-11-04';
 
 const directory = 'docs/reviews/hosted-vial3-jumbo28-2026-11-02/';
 const release = JSON.parse(readFileSync(directory + 'release-manifest.json', 'utf8'));
@@ -19,7 +20,7 @@ describe('hosted 28 ml archive body and 5/8 dram vial release', () => {
     it('adds seven exact configurations and preserves every earlier approved recipe', () => {
         expect(selected.size).toBe(7);
         const later = new Set(JSON.parse(readFileSync('docs/reviews/hosted-elegant-masters-2026-11-03/release-manifest.json', 'utf8')).addedSkus as string[]);
-        const previous = Object.fromEntries(Object.entries(rows).filter(([sku]) => !selected.has(sku) && !later.has(sku)));
+        const previous = Object.fromEntries(Object.entries(beforeVialRelease(rows)).filter(([sku]) => !selected.has(sku) && !later.has(sku)));
         expect(Object.keys(previous)).toHaveLength(456);
         expect(digest(previous)).toBe(release.preservedRecipeSha256);
         expect(index.skus).toEqual(Object.keys(rows).sort());

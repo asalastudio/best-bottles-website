@@ -5,11 +5,12 @@ import prior from "../docs/reviews/cylinder-lotion-pumps-2026-11-02/previous-rec
 import approved from "@/lib/paper-doll/approved-kits.generated.json";
 import { CYLINDER_LOTION_TUBE_IMAGE, lotionTubeGeometry, withCylinder25LotionTube } from "@/lib/register/cylinder-lotion-tube";
 import { stageLayout, type KitLike, type KitPartLike } from "@/lib/products/pdp-redesign/stage";
+import { beforeVialRelease } from './helpers/vial-release-2026-11-04';
 
 describe("Cylinder lotion internals from the 25 ml hero", () => {
     it("preserves all 441 other approved recipes byte for byte", () => {
         let unchanged = 0;
-        for (const [sku, kit] of Object.entries(approved.rows)) {
+        for (const [sku, kit] of Object.entries(beforeVialRelease(approved.rows))) {   // as before the Vial release (2026-11-04)
             if (Object.hasOwn(before.rows, sku) || !Object.hasOwn(prior.recipes, sku)) continue;
             expect(createHash("sha256").update(JSON.stringify(kit)).digest("hex"), sku).toBe(prior.recipes[sku as keyof typeof prior.recipes]);
             unchanged++;

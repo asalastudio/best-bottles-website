@@ -8,6 +8,7 @@ import { cylinderMasterSku, cylinderMasterSource } from '@/lib/products/cylinder
 vi.mock('server-only', () => ({}));
 import { GET } from '@/app/api/bottle-masters/approved/route';
 import { localGpt13ComponentKits, localPdpComponentKits } from '@/lib/paper-doll/local-component-kits';
+import { beforeVialRelease } from './helpers/vial-release-2026-11-04';
 // Reconstruct the historical approval before the later tube-only lotion revision.
 const lotionTubeBefore = JSON.parse(readFileSync('docs/reviews/cylinder-lotion-pumps-2026-11-02/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
 const capFitBefore = JSON.parse(readFileSync('docs/reviews/tall9-pour-cap-fit-2026-11-01/before-kits.json', 'utf8')).rows as Record<string, KitLike>;
@@ -17,6 +18,8 @@ const hash = (bytes: string | Buffer) => createHash('sha256').update(bytes).dige
 const canonical = (value: unknown): unknown => Array.isArray(value) ? value.map(canonical) : value && typeof value === 'object' ? Object.fromEntries(Object.keys(value).sort().map(key => [key, canonical((value as Record<string, unknown>)[key])])) : value;
 const imageHash = (part: KitLike['parts'][number]) => (part.image as typeof part.image & { sha256?: string }).sha256;
 const rows = manifest.rows as unknown as Record<string, KitLike>;
+// The 2 ml pair as approved on 1 Nov; the Vial release (2026-11-04) replaced the four rows with the slimmer reshape.
+const pairRows = beforeVialRelease(rows);
 const vialSkus = ['GBVAmb2BlackCap', 'GBVAmb2WhtCap', 'GBVialClr2mlBlackCap', 'GBVialClr2mlWhtCap'];
 const sleekOpticsBefore = read('docs/reviews/sleek8-hero-depth-2026-11-01/before-kits.json').rows;
 const tulipBefore = read('docs/reviews/tulip6-glass-depth-2026-11-01/before-kits.json').rows as Record<string, KitLike>;
@@ -28,7 +31,7 @@ describe('approved straight-on 2 ml vial body pair', () => {
         const before = read(directory + 'before-kits.json').rows as Record<string, KitLike>;
         expect(Object.keys(before).sort()).toEqual(vialSkus);
         for (const sku of vialSkus) {
-            const kit = rows[sku], body = kit.parts.find(p => p.slot === 'body')!;
+            const kit = pairRows[sku], body = kit.parts.find(p => p.slot === 'body')!;
             const glass = sku.startsWith('GBVAmb') ? 'Amber' : 'Clear';
             const source = registration.assets[glass];
             expect(hash(readFileSync(source.file))).toBe(approval.images[glass].sha256);
@@ -41,7 +44,7 @@ describe('approved straight-on 2 ml vial body pair', () => {
     it('keeps approved silhouettes uniform, the original height curve, centered caps, and existing cap pixels', () => {
         const before = read(directory + 'before-kits.json').rows as Record<string, KitLike>;
         for (const sku of vialSkus) {
-            const kit = rows[sku], body = kit.parts.find(p => p.slot === 'body')!;
+            const kit = pairRows[sku], body = kit.parts.find(p => p.slot === 'body')!;
             const cap = kit.parts.find(p => p.slot === 'cap')!, originalCap = before[sku].parts.find(p => p.slot === 'cap')!;
             expect(kit.glassSizing).toEqual({ heightPct: 40.24, baselinePct: 91 });
             expect(kit.anchors).toEqual(before[sku].anchors);
@@ -100,7 +103,7 @@ describe('clear Tulip 6 ml internal optics', () => {
             expect(hash(JSON.stringify(canonical(lotionTubeBefore[sku] ?? capFitBefore[sku] ?? rows[sku]))), sku).toBe(digest); count++;
         }
         expect(count).toBe(419);
-        expect(Object.keys(rows)).toHaveLength(659);
+        expect(Object.keys(rows)).toHaveLength(671);
         expect(index.skus).toEqual(Object.keys(rows).sort());
         expect(manifest.version).toBe(hash(JSON.stringify(manifest.rows)).slice(0, 16));
     });
