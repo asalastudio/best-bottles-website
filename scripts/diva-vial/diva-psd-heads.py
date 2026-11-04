@@ -29,6 +29,16 @@ def save(img, name):
     return {"url": "/" + path.removeprefix("public/"), "key": "", "sha256": sha, "bytes": len(data), "width": img.width, "height": img.height}
 
 
+def prune(folder, rows):
+    """Remove only the files in `folder` that no row references any more (after the rows are built, so a failed run
+    leaves the committed manifest's files in place)."""
+    keep = {p["image"]["url"].rsplit("/", 1)[1] for kit in rows.values() for p in kit["parts"]
+            if isinstance(p.get("image"), dict) and p["image"].get("url", "").startswith("/" + folder.removeprefix("public/") + "/")}
+    for old in os.listdir(folder):
+        if old not in keep:
+            os.remove(f"{folder}/{old}")
+
+
 def piece(layer, size):
     c = Image.new("RGBA", size, (0, 0, 0, 0)); c.alpha_composite(layer.composite().convert("RGBA"), (max(0, layer.bbox[0]), max(0, layer.bbox[1])))
     bb = c.getchannel("A").getbbox(); return c.crop(bb), bb
@@ -63,9 +73,6 @@ def parked(sku, psds):
 
 
 def main():
-    if os.path.isdir(OUT):
-        for old in os.listdir(OUT):
-            os.remove(f"{OUT}/{old}")
     psds = {}
     for f in glob.glob(f"{ROOT}/2[3-7]. Diva*/**/*.psd", recursive=True):
         psds.setdefault(os.path.basename(f).split(". ", 1)[-1].strip().removesuffix(".psd").rstrip("."), []).append(f)
@@ -99,6 +106,8 @@ def main():
         else:
             cover_part.pop("blendMode", None)
         done.append(sku)
+    if os.path.isdir(OUT):
+        prune(OUT, rows)
     kits["version"] = hashlib.sha256(json.dumps(rows, sort_keys=True).encode()).hexdigest()[:12]
     open(KITS, "w").write(json.dumps(kits, indent=1) + "\n")
     print(len(done), "Diva kits on their own PSD head and overcap; version", kits["version"])

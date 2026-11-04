@@ -47,6 +47,16 @@ def save(img, name):
     return {"url": "/" + path.removeprefix("public/"), "key": "", "sha256": sha, "bytes": len(data), "width": img.width, "height": img.height}
 
 
+def prune(folder, rows):
+    """Remove only the files in `folder` that no row references any more (after the rows are built, so a failed run
+    leaves the committed manifest's files in place)."""
+    keep = {p["image"]["url"].rsplit("/", 1)[1] for kit in rows.values() for p in kit["parts"]
+            if isinstance(p.get("image"), dict) and p["image"].get("url", "").startswith("/" + folder.removeprefix("public/") + "/")}
+    for old in os.listdir(folder):
+        if old not in keep:
+            os.remove(f"{folder}/{old}")
+
+
 def layer(rel, name):
     """(image cropped to its alpha, absolute top-left) of one layer."""
     p = PSDImage.open(f"{V}/{rel}"); l = {x.name: x for x in p.descendants()}[name]
@@ -165,9 +175,6 @@ def main():
     work = sys.argv[1]; os.makedirs(work, exist_ok=True)
     ASSEMBLED.update({"Blk": assembled("2. 1ml Amber PSD Uncapped/1. GB1mlAmbVBlk.psd", "Layer 3", "Layer 4"),
                       "Wht": assembled("2. 1ml Amber PSD Uncapped/2. GB1mlAmbVialWht.psd", "Layer 1", "Layer 3")})
-    if os.path.isdir(OUT):
-        for old in os.listdir(OUT):
-            os.remove(f"{OUT}/{old}")
     rows = {}
 
     # 1 ml plug vials.
@@ -242,6 +249,7 @@ def main():
         k["slimmedFrom"] = {"approved": approved[sku]["parts"][0]["image"]["sha256"], "body": BODY_2ML, "neck": NECK_2ML}
         rows[sku] = k
 
+    prune(OUT, rows)
     version = hashlib.sha256(json.dumps(rows, sort_keys=True).encode()).hexdigest()[:12]
     json.dump({"version": version, "rows": rows, "defaultPdpSkus": sorted(rows)}, open(f"{DIR}/kits.json", "w"), indent=1)
     open(f"{DIR}/kits.json", "a").write("\n")

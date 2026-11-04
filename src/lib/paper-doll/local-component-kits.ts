@@ -77,7 +77,6 @@ function readLocalKitReview(): LocalKitReview | null {
         process.env.NODE_ENV === "development" ? "public/local-kits/boston-masters-2026-11-03/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/round-sleek-masters-2026-11-03/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/diva-masters-2026-11-03/kits.json" : undefined,
-        process.env.NODE_ENV === "development" ? "public/local-kits/vial-masters-2026-11-03/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/cylinder25-18415-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/tulip-amber-seating-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/rectangle9-applicator-2026-11-01/kits.json" : undefined,
@@ -86,7 +85,9 @@ function readLocalKitReview(): LocalKitReview | null {
         process.env.NODE_ENV === "development" ? "public/local-kits/sleek8-glass-depth-2026-11-01/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/vial2-short-black-2026-11-02/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/vial3-swatches-builder-2026-11-02/kits.json" : undefined,
-        process.env.NODE_ENV === "development" ? "public/local-kits/jumbo28-archive-geometry-2026-11-02/kits.json" : undefined];
+        process.env.NODE_ENV === "development" ? "public/local-kits/jumbo28-archive-geometry-2026-11-02/kits.json" : undefined,
+        // Last: the Vial review kits (2 ml amber reshaped) must win over the vial2 lists above.
+        process.env.NODE_ENV === "development" ? "public/local-kits/vial-masters-2026-11-03/kits.json" : undefined];
     const rows: Record<string, BuilderKit> = {};
     const defaults = new Set<string>();
     let loaded = false;

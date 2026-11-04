@@ -65,6 +65,16 @@ def fitted(tube, kind_top, length, scale):
     return out
 
 
+def prune(folder, rows):
+    """Remove only the files in `folder` that no row references any more (after the rows are built, so a failed run
+    leaves the committed manifest's files in place)."""
+    keep = {p["image"]["url"].rsplit("/", 1)[1] for kit in rows.values() for p in kit["parts"]
+            if isinstance(p.get("image"), dict) and p["image"].get("url", "").startswith("/" + folder.removeprefix("public/") + "/")}
+    for old in os.listdir(folder):
+        if old not in keep:
+            os.remove(f"{folder}/{old}")
+
+
 def save(img, name):
     buf = io.BytesIO(); img.save(buf, "PNG", optimize=True); data = buf.getvalue()
     sha = hashlib.sha256(data).hexdigest(); path = f"{OUT}/{name}.{sha[:12]}.png"
@@ -78,8 +88,6 @@ def load(url):
 
 def main():
     work = sys.argv[1]; os.makedirs(work, exist_ok=True); os.makedirs(OUT, exist_ok=True)
-    for old in os.listdir(OUT):
-        os.remove(f"{OUT}/{old}")
     # 1. One Sunburst tube per fitment, from the Round tube straightened.
     rnd = json.load(open(ROUND)); geo = {}
     for kind in ("spray", "lotion"):
@@ -141,6 +149,7 @@ def main():
                      "views": ["exploded"], "zOrder": head["zOrder"] - 0.05})
         tube.pop("blendMode", None)
         n += 1
+    prune(OUT, kits["rows"])
     kits["universalDipTube"] = {}
     kits["version"] = hashlib.sha256(json.dumps(kits["rows"], sort_keys=True).encode()).hexdigest()[:12]
     open(KITS, "w").write(json.dumps(kits, indent=1) + "\n")
