@@ -38,7 +38,7 @@ describe('Pillar 9 ml sprayer masters published (2026-11-04)', () => {
         expect([...pillarReleaseSkus].sort()).toEqual(pillarSkus);
         expect(plan.replacedRecipes).toEqual([]);
         for (const sku of pillarSkus) expect(hosted[sku], sku).toBeDefined();
-        expect(Object.keys(hosted)).toHaveLength(857);
+        expect(Object.keys(hosted)).toHaveLength(1034);
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         expect(index.version).toBe(manifest.version);
     });

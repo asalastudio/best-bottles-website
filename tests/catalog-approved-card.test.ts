@@ -12,15 +12,17 @@ vi.mock("next/image", () => ({ default: (props: ImgHTMLAttributes<HTMLImageEleme
 let root: Root;
 let container: HTMLDivElement;
 afterEach(() => { act(() => root?.unmount()); container?.remove(); });
+// The pictured SKU is a Slim 100 ml sprayer: it has a catalog hero and no approved master (the Empire 100 ml sprayer used
+// here before now has one, 4 Nov 2026), so the card shows the hero photograph.
 it("keeps the new catalog wrapper static and falls back only to the pictured SKU", () => {
-    const hero = getProductHero("GBEmp100SpryMtGl")!;
+    const hero = getProductHero("GBSlm100SpryMtGl")!;
     container = document.createElement("div"); document.body.append(container); root = createRoot(container);
     act(() => root.render(createElement(CatalogCardPreview, {
         title: "Atomizer", catalogHero: hero, imageUrl: "/wrong-group-default.webp", heroHoverImageUrl: "/filled.webp",
-        href: "/products/atomizer-10ml?sku=GBEmp100SpryMtGl", family: "Atomizer", slug: "atomizer-10ml",
+        href: "/products/atomizer-10ml?sku=GBSlm100SpryMtGl", family: "Atomizer", slug: "atomizer-10ml",
         variants: [
-            { id: "black", label: "Black", websiteSku: "GBEmp100SpryBlack", imageUrl: "/black.webp", optionType: "capColor" },
-            { id: "gold", label: "Gold", websiteSku: "GBEmp100SpryMtGl", imageUrl: "/exact-gold.webp", optionType: "capColor" },
+            { id: "black", label: "Black", websiteSku: "GBSlm100SpryBlack", imageUrl: "/black.webp", optionType: "capColor" },
+            { id: "gold", label: "Gold", websiteSku: "GBSlm100SpryMtGl", imageUrl: "/exact-gold.webp", optionType: "capColor" },
         ],
     })));
     expect(container.querySelectorAll("img")).toHaveLength(1);
