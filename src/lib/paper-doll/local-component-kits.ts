@@ -87,7 +87,9 @@ function readLocalKitReview(): LocalKitReview | null {
         process.env.NODE_ENV === "development" ? "public/local-kits/vial3-swatches-builder-2026-11-02/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/jumbo28-archive-geometry-2026-11-02/kits.json" : undefined,
         // Last: the Vial review kits (2 ml amber reshaped) must win over the vial2 lists above.
-        process.env.NODE_ENV === "development" ? "public/local-kits/vial-masters-2026-11-03/kits.json" : undefined];
+        process.env.NODE_ENV === "development" ? "public/local-kits/vial-masters-2026-11-03/kits.json" : undefined,
+        // The Pillar 9 ml sprayers on the photographed body (4 Nov 2026) supersede the 13-415 pilot row.
+        process.env.NODE_ENV === "development" ? "public/local-kits/pillar-masters-2026-11-04/kits.json" : undefined];
     const rows: Record<string, BuilderKit> = {};
     const defaults = new Set<string>();
     let loaded = false;

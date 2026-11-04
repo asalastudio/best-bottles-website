@@ -2122,6 +2122,10 @@ export const createProductFromTwin = mutation({
         // can show "$33.06 (12 pcs)" without recomputing money
         priceTiers: v.array(v.object({ minQty: v.number(), unitPrice: v.number(), totalPrice: v.number() })),
         source: v.string(),
+        // 2026-11-04 (Pillar sprayer finishes): a sprayer twin also names its finish in trimColor and graceDescription;
+        // when given, these replace the twin's instead of copying its finish onto the new SKU.
+        trimColor: v.optional(v.union(v.string(), v.null())),
+        graceDescription: v.optional(v.union(v.string(), v.null())),
     },
     returns: v.object({ created: v.boolean(), detail: v.string() }),
     handler: async (ctx, args) => {
@@ -2146,6 +2150,8 @@ export const createProductFromTwin = mutation({
             productGroupId: groups[0]._id,
             color: args.color,
             capColor: args.capColor,
+            ...(args.trimColor !== undefined ? { trimColor: args.trimColor } : {}),
+            ...(args.graceDescription !== undefined ? { graceDescription: args.graceDescription } : {}),
             itemName: args.itemName,
             itemDescription: args.itemDescription,
             priceTiers: args.priceTiers,

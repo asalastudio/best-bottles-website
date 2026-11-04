@@ -1,0 +1,90 @@
+{
+  "at": "2026-11-04T21:03:34.895Z",
+  "deployment": "dev",
+  "apply": false,
+  "page": "pillar-9ml-clear-17-415-finemist",
+  "twin": "GBPillar9SpryBlkMatt",
+  "ladder": [
+    {
+      "minQty": 1,
+      "unitPrice": 0.97,
+      "totalPrice": 0.97
+    },
+    {
+      "minQty": 12,
+      "unitPrice": 0.92,
+      "totalPrice": 11.06
+    },
+    {
+      "minQty": 144,
+      "unitPrice": 0.87,
+      "totalPrice": 125.71
+    },
+    {
+      "minQty": 526,
+      "unitPrice": 0.82,
+      "totalPrice": 433.69
+    },
+    {
+      "minQty": 2630,
+      "unitPrice": 0.76,
+      "totalPrice": 1989.86
+    }
+  ],
+  "plan": [
+    {
+      "websiteSku": "GBPillar9SpryBlkShn",
+      "action": "would create",
+      "graceSku": "GB-PIL-CLR-9ML-SPR-SBLK",
+      "capColor": "Shiny Black",
+      "graceDescription": "9ml Clear Pillar bottle with shiny black spray. Thread 13-415.",
+      "itemName": "Pillar design 9ml Clear glass bottle with shiny black spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "ladder": "1+ $0.97, 12+ $0.92, 144+ $0.87, 526+ $0.82, 2630+ $0.76"
+    },
+    {
+      "websiteSku": "GBPillar9SpryBluMatt",
+      "action": "would create",
+      "graceSku": "GB-PIL-CLR-9ML-SPR-MBLU",
+      "capColor": "Matte Blue",
+      "graceDescription": "9ml Clear Pillar bottle with matte blue spray. Thread 13-415.",
+      "itemName": "Pillar design 9ml Clear glass bottle with matte blue spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "ladder": "1+ $0.97, 12+ $0.92, 144+ $0.87, 526+ $0.82, 2630+ $0.76"
+    },
+    {
+      "websiteSku": "GBPillar9SpryGlMatt",
+      "action": "would create",
+      "graceSku": "GB-PIL-CLR-9ML-SPR-MGLD",
+      "capColor": "Matte Gold",
+      "graceDescription": "9ml Clear Pillar bottle with matte gold spray. Thread 13-415.",
+      "itemName": "Pillar design 9ml Clear glass bottle with matte gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "ladder": "1+ $0.97, 12+ $0.92, 144+ $0.87, 526+ $0.82, 2630+ $0.76"
+    },
+    {
+      "websiteSku": "GBPillar9SpryGlShn",
+      "action": "would create",
+      "graceSku": "GB-PIL-CLR-9ML-SPR-SGLD",
+      "capColor": "Shiny Gold",
+      "graceDescription": "9ml Clear Pillar bottle with shiny gold spray. Thread 13-415.",
+      "itemName": "Pillar design 9ml Clear glass bottle with shiny gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "ladder": "1+ $0.97, 12+ $0.92, 144+ $0.87, 526+ $0.82, 2630+ $0.76"
+    },
+    {
+      "websiteSku": "GBPillar9SprySlMatt",
+      "action": "would create",
+      "graceSku": "GB-PIL-CLR-9ML-SPR-MSLV",
+      "capColor": "Matte Silver",
+      "graceDescription": "9ml Clear Pillar bottle with matte silver spray. Thread 13-415.",
+      "itemName": "Pillar design 9ml Clear glass bottle with matte silver spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "ladder": "1+ $0.97, 12+ $0.92, 144+ $0.87, 526+ $0.82, 2630+ $0.76"
+    },
+    {
+      "websiteSku": "GBPillar9SprySlShn",
+      "action": "would create",
+      "graceSku": "GB-PIL-CLR-9ML-SPR-SSLV",
+      "capColor": "Shiny Silver",
+      "graceDescription": "9ml Clear Pillar bottle with shiny silver spray. Thread 13-415.",
+      "itemName": "Pillar design 9ml Clear glass bottle with shiny silver spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "ladder": "1+ $0.97, 12+ $0.92, 144+ $0.87, 526+ $0.82, 2630+ $0.76"
+    }
+  ]
+}

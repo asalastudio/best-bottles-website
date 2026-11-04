@@ -38,7 +38,7 @@ describe('Diva review masters published (2026-11-04)', () => {
         expect([...divaReleaseSkus].sort()).toEqual([...divaSkus].sort());
         expect(plan.replacedRecipes).toEqual([]);
         for (const sku of divaSkus) expect(hosted[sku], sku).toBeDefined();
-        expect(Object.keys(hosted)).toHaveLength(850);
+        expect(Object.keys(hosted)).toHaveLength(857);   // + 7 Pillar sprayers (2026-11-04)
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         expect(index.version).toBe(manifest.version);
     });

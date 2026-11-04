@@ -61,7 +61,7 @@ describe('Rectangle 10 ml roll-on shared hero', () => {
     });
     it('preserves every earlier recipe and excludes unrelated Rectangle products', () => {
         for (const [sku, expected] of Object.entries(prior.recipes)) expect(hash(lotionTubeBefore[sku] ?? capFitBefore[sku] ?? beforeVialRelease(rows)[sku]), sku).toBe(expected);
-        expect(Object.keys(rows)).toHaveLength(prior.count + 18 + 7 + 196 + 12 + 179);   // + the Elegant masters (2026-11-03) + 12 Vial masters + 179 Diva masters (2026-11-04)
+        expect(Object.keys(rows)).toHaveLength(prior.count + 18 + 7 + 196 + 12 + 179 + 7);   // + the Elegant masters (2026-11-03) + 12 Vial masters + 179 Diva masters + 7 Pillar sprayers (2026-11-04)
         expect(index.skus).toEqual(Object.keys(rows).sort());
         expect(index.version).toBe(manifest.version);
         expect(cylinderMasterSku('GBRect10SpryGlMatt')).toBeNull();
