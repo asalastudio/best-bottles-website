@@ -1,0 +1,145 @@
+{
+ "30-spray": {
+  "psd": "15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/1. GBCrcl30SpryBlk.psd",
+  "layer": "Layer 3",
+  "left": -0.038829787234042554,
+  "top": 0.18085106382978725,
+  "width": 0.07340425531914893,
+  "height": 0.723404255319149,
+  "registeredOutlineIoU": 0.6851,
+  "scale": 0.9956,
+  "shift": [
+   2,
+   0
+  ],
+  "file": "/local-kits/circle-masters-2026-11-03/tubes/30-spray.024479f4db84.png",
+  "pixels": [
+   69,
+   680
+  ]
+ },
+ "15-spray": {
+  "psd": "5. 13-415 Bottles PSD/17. Circle 15ml/6. GBCrcl15SpryGlSh.psd",
+  "layer": "Layer 16",
+  "left": -0.030695770804911322,
+  "top": 0.15688949522510232,
+  "width": 0.08321964529331514,
+  "height": 0.6875852660300137,
+  "registeredOutlineIoU": 0.6545,
+  "scale": 1.002,
+  "shift": [
+   -5,
+   4
+  ],
+  "file": "/local-kits/circle-masters-2026-11-03/tubes/15-spray.6f66fcc2f1b0.png",
+  "pixels": [
+   61,
+   504
+  ]
+ },
+ "50-spray": {
+  "psd": "2. 18-415 Bottles/4. Circle Glass 50ml/1. Circle Glass 50ml PSD/56. GBCrcl50SpryCu.psd",
+  "layer": "Layer 10",
+  "left": -0.05134474327628362,
+  "top": 0.18744906275468623,
+  "width": 0.10513447432762836,
+  "height": 0.7432762836185819,
+  "registeredOutlineIoU": 0.5547,
+  "scale": 0.9739,
+  "shift": [
+   14,
+   12
+  ],
+  "file": "/local-kits/circle-masters-2026-11-03/tubes/50-spray.c0c0c52f7aec.png",
+  "pixels": [
+   129,
+   912
+  ]
+ },
+ "100-spray": {
+  "psd": "2. 18-415 Bottles/5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/53. GBCrcl100SpryCu.psd",
+  "layer": "Layer 2",
+  "left": -0.039014373716632446,
+  "top": 0.14989733059548255,
+  "width": 0.07255304585900069,
+  "height": 0.7125256673511293,
+  "registeredOutlineIoU": 0.7287,
+  "scale": 0.9895,
+  "shift": [
+   8,
+   6
+  ],
+  "file": "/local-kits/circle-masters-2026-11-03/tubes/100-spray.09e5bba19a78.png",
+  "pixels": [
+   106,
+   1041
+  ]
+ },
+ "100-lotion": {
+  "psd": "2. 18-415 Bottles/5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/55. LBCrcl100LtnCu.psd",
+  "layer": "Layer 4",
+  "left": -0.057494866529774126,
+  "top": 0.14784394250513347,
+  "width": 0.10951403148528405,
+  "height": 0.7084188911704312,
+  "registeredOutlineIoU": 0.5763,
+  "scale": 1.0291,
+  "shift": [
+   -2,
+   3
+  ],
+  "file": "/local-kits/circle-masters-2026-11-03/tubes/100-lotion.4b4d2d4dbe8f.png",
+  "pixels": [
+   160,
+   1035
+  ]
+ },
+ "50-atomizer": {
+  "psd": "2. 18-415 Bottles/4. Circle Glass 50ml/1. Circle Glass 50ml PSD/39. GBCrcl50AnSpBlk.psd",
+  "layer": "Layer 4 copy",
+  "left": -0.034229828850855744,
+  "top": 0.10594947025264874,
+  "width": 0.07986960065199673,
+  "height": 0.8076609616951915,
+  "swept": "50-spray material along the PSD centre line",
+  "file": "/local-kits/circle-masters-2026-11-03/tubes/50-atomizer.4849b4a81ddb.png",
+  "pixels": [
+   98,
+   991
+  ]
+ },
+ "100-atomizer": {
+  "psd": "2. 18-415 Bottles/5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/39. GBCrcl100AnSpBlk.psd",
+  "layer": "Layer 4 copy",
+  "left": -0.06570841889117043,
+  "top": 0.15195071868583163,
+  "width": 0.09034907597535935,
+  "height": 0.731690622861054,
+  "swept": "100-spray material along the PSD centre line",
+  "file": "/local-kits/circle-masters-2026-11-03/tubes/100-atomizer.69062c25f506.png",
+  "pixels": [
+   132,
+   1069
+  ]
+ },
+ "50-lotion": {
+  "psd": "2. 18-415 Bottles/4. Circle Glass 50ml/1. Circle Glass 50ml PSD/56. GBCrcl50SpryCu.psd",
+  "layer": "Layer 10",
+  "left": -0.05134474327628362,
+  "top": 0.18744906275468623,
+  "width": 0.10513447432762836,
+  "height": 0.7432762836185819,
+  "registeredOutlineIoU": 0.5547,
+  "scale": 0.9739,
+  "shift": [
+   14,
+   12
+  ],
+  "file": "/local-kits/circle-masters-2026-11-03/tubes/50-spray.c0c0c52f7aec.png",
+  "pixels": [
+   129,
+   912
+  ],
+  "sharedWith": "50-spray (58. LBCrcl50LtnCu photographs the spray tube)"
+ }
+}

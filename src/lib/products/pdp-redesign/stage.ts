@@ -171,6 +171,12 @@ function separableDropper(kit: KitLike | null | undefined, context: StageContext
         && Boolean(kit?.parts.some(part => part.slot === "fitment" && part.views?.length === 1 && part.views[0] === "exploded"));
 }
 
+/** A roll-on whose seated insert is cut at the neck may still explode when its kit carries the complete insert
+ * for EXPLODED (the Boston Round 20-400 rollers, generate-boston-rollers.py). */
+function separableRoller(kit: KitLike | null | undefined): boolean {
+    return Boolean(kit?.parts.some(part => part.slot === "roller" && part.views?.length === 1 && part.views[0] === "exploded"));
+}
+
 /** Which views the stage can honestly show for this SKU. */
 export function availableViews(kit: KitLike | null | undefined, context: StageContext): StageView[] {
     if (isTolaApplicator(context.websiteSku)) return ["capon"];
@@ -182,7 +188,7 @@ export function availableViews(kit: KitLike | null | undefined, context: StageCo
     if (!kit?.parts?.length) return views;
     if (context.applicator?.trim().toLowerCase() === "reducer" && !separableReducer(kit, context)) return ["capon"];
     views.push("capon");
-    if (separableReducer(kit, context, true) || allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) views.push("exploded");
+    if (separableReducer(kit, context, true) || separableRoller(kit) || allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) views.push("exploded");
     return views;
 }
 
@@ -191,7 +197,7 @@ export function effectiveView(view: StageView, kit: KitLike | null | undefined, 
     if (isTolaApplicator(context.websiteSku)) return "capon";
     if (!kit?.parts?.length) return "sidecar";
     if (view === "sidecar" && !separableReducer(kit, context) && requiresAssembledClosure(context.applicator, context.websiteSku)) return "capon";
-    if (view === "exploded" && !separableReducer(kit, context, true) && !separableDropper(kit, context) && !allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) return "capon";
+    if (view === "exploded" && !separableReducer(kit, context, true) && !separableDropper(kit, context) && !separableRoller(kit) && !allowsExplodedClosure(context.applicator, context.family, context.websiteSku)) return "capon";
     return view;
 }
 
@@ -377,7 +383,9 @@ export function stageLayout(
 
     const glass = sorted.find((part) => part.slot === "body");
     const reviewedFrame = kit.glassSizing && glass
-        ? pdpReviewedGlassFrame(glass.bounds, kit.anchors.axisX, kit.glassSizing, canvas.width, canvas.height)
+        ? pdpReviewedGlassFrame(glass.bounds, kit.anchors.axisX,
+            { ...kit.glassSizing, axisPct: (view === "exploded" ? kit.glassSizing.explodedAxisPct : view === "sidecar" ? kit.glassSizing.sidecarAxisPct : undefined) ?? kit.glassSizing.axisPct },
+            canvas.width, canvas.height)
         : null;
     // Size the bare glass, with one uniform transform for the entire assembly.
     // Keep its size and foot fixed when a cap changes or the parts are lifted.

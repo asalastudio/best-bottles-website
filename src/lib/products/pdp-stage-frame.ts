@@ -37,6 +37,12 @@ export type PdpGlassSizing = {
     /** Where the glass axis stands, % of the stage width (default 50). A kit whose closure reaches far
      * to one side (an Elegant vintage bulb with its tassel on the floor) sets it so the whole assembly shows. */
     axisPct?: number;
+    /** The axis in EXPLODED only, when the lifted closure needs room beside wide glass (a Circle 50 ml
+     * dropper's complete dropper); CAP ON and SIDECAR keep axisPct. */
+    explodedAxisPct?: number;
+    /** The axis in SIDECAR only, when the parked cap needs room beside wide glass (a Circle 50 ml overcap ran to
+     * the stage's edge); CAP ON keeps axisPct. */
+    sidecarAxisPct?: number;
     source?: string;
 };
 
