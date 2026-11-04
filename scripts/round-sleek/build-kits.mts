@@ -62,6 +62,8 @@ async function main() {
         const box = body.box ?? { x: 0, y: 0, width: kit.canvas.width, height: kit.canvas.height };
         kit.glassSizing = { heightPct: target.targetPct, baselinePct: target.baselinePct,
             landmarkY: Math.round((box.y + n.row * box.height / n.height) * 100) / 100, source: target.source };
+        // The local loader keeps the earlier corrected Sleek tube recipes for kits without this mark.
+        kit.reviewMaster = "round-sleek-2026-11-03";
         rows[v.websiteSku] = kit;
     }
     mkdirSync(OUT, { recursive: true });

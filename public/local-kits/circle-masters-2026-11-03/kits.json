@@ -1,5 +1,5 @@
 {
- "version": "1886e5fd1d46",
+ "version": "e099a396bb18",
  "rows": {
   "LBCrcl100LtnClOvrCap": {
    "sku": "LBCrcl100LtnClOvrCap",
@@ -133,6 +133,7 @@
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "seatBottomY": 391,
+     "seatDy": 3.23,
      "collarWidth": 161
     },
     {
@@ -155,7 +156,7 @@
       "dy": -964.26
      },
      "image": {
-      "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+      "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
       "key": "",
       "sha256": "",
       "bytes": 0,
@@ -174,7 +175,7 @@
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "detached": {
       "image": {
-       "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+       "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
        "width": 299,
        "height": 346
       },
@@ -357,6 +358,7 @@
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "seatBottomY": 388,
+     "seatDy": 0.21,
      "collarWidth": 161
     },
     {
@@ -379,7 +381,7 @@
       "dy": -964.17
      },
      "image": {
-      "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+      "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
       "key": "",
       "sha256": "",
       "bytes": 0,
@@ -398,7 +400,7 @@
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "detached": {
       "image": {
-       "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+       "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
        "width": 299,
        "height": 346
       },
@@ -578,6 +580,7 @@
      },
      "componentId": "CMP-ROC-SBLK-13415",
      "seatBottomY": 512,
+     "seatDy": 0.64,
      "collarWidth": 139
     }
    ],
@@ -740,6 +743,7 @@
      },
      "componentId": "CMP-ROC-MCPR-13415",
      "seatBottomY": 512,
+     "seatDy": -0.84,
      "collarWidth": 171
     }
    ],
@@ -948,6 +952,7 @@
      },
      "componentId": "CMP-CAP-PNK-18415-LTR",
      "seatBottomY": 391,
+     "seatDy": -3.77,
      "collarWidth": 171
     }
    ],
@@ -1111,6 +1116,7 @@
      },
      "componentId": "CMP-ROC-MGLD-13415",
      "seatBottomY": 513,
+     "seatDy": -0.6,
      "collarWidth": 181
     }
    ],
@@ -1319,6 +1325,7 @@
      },
      "componentId": "CMP-CAP-SGLD-18415-S",
      "seatBottomY": 391,
+     "seatDy": 3.41,
      "collarWidth": 162
     }
    ],
@@ -1482,6 +1489,7 @@
      },
      "componentId": "CMP-ROC-SGLD-13415",
      "seatBottomY": 512,
+     "seatDy": -0.98,
      "collarWidth": 129
     }
    ],
@@ -1690,6 +1698,7 @@
      },
      "componentId": "CMP-CAP-SBLK-18415-T",
      "seatBottomY": 391,
+     "seatDy": 2.27,
      "collarWidth": 160
     }
    ],
@@ -1853,6 +1862,7 @@
      },
      "componentId": "CMP-ROC-PNK-13415-DOT",
      "seatBottomY": 512,
+     "seatDy": -6.1,
      "collarWidth": 143
     }
    ],
@@ -2061,6 +2071,7 @@
      },
      "componentId": "LIB-18-415-ShnBlkCap",
      "seatBottomY": 391,
+     "seatDy": 2.92,
      "collarWidth": 161
     }
    ],
@@ -2224,6 +2235,7 @@
      },
      "componentId": "CMP-ROC-SLV-13415-DOT",
      "seatBottomY": 512,
+     "seatDy": -3.26,
      "collarWidth": 175
     }
    ],
@@ -2432,6 +2444,7 @@
      },
      "componentId": "CMP-CAP-BRN-18415-LTR",
      "seatBottomY": 391,
+     "seatDy": -0.91,
      "collarWidth": 108
     }
    ],
@@ -2595,6 +2608,7 @@
      },
      "componentId": "CMP-ROC-MSLV-13415",
      "seatBottomY": 512,
+     "seatDy": -4.78,
      "collarWidth": 133
     }
    ],
@@ -2757,6 +2771,7 @@
      },
      "componentId": "CMP-ROC-SSLV-13415",
      "seatBottomY": 512,
+     "seatDy": -1.76,
      "collarWidth": 160
     }
    ],
@@ -2965,6 +2980,7 @@
      },
      "componentId": "CMP-CAP-LBRN-18415-LTR",
      "seatBottomY": 391,
+     "seatDy": -2.45,
      "collarWidth": 1
     }
    ],
@@ -3174,6 +3190,7 @@
      },
      "componentId": "CMP-CAP-SSLV-18415-S",
      "seatBottomY": 391,
+     "seatDy": 4.24,
      "collarWidth": 157
     }
    ],
@@ -3383,6 +3400,7 @@
      },
      "componentId": "CMP-CAP-MSLV-18415-T",
      "seatBottomY": 391,
+     "seatDy": 4.2,
      "collarWidth": 165
     }
    ],
@@ -3592,6 +3610,7 @@
      },
      "componentId": "CMP-CAP-MSLV-18415-S",
      "seatBottomY": 391,
+     "seatDy": 2.69,
      "collarWidth": 161
     }
    ],
@@ -3801,6 +3820,7 @@
      },
      "componentId": "CMP-CAP-WHT-18415-T",
      "seatBottomY": 391,
+     "seatDy": 4.91,
      "collarWidth": 158
     }
    ],
@@ -4010,6 +4030,7 @@
      },
      "componentId": "CMP-CAP-IVY-18415-LTR",
      "seatBottomY": 391,
+     "seatDy": -4.82,
      "collarWidth": 141
     }
    ],
@@ -4219,6 +4240,7 @@
      },
      "componentId": "CMP-CAP-SSLV-18415-S",
      "seatBottomY": 388,
+     "seatDy": 1.22,
      "collarWidth": 157
     }
    ],
@@ -4428,6 +4450,7 @@
      },
      "componentId": "CMP-CAP-SGLD-18415-S",
      "seatBottomY": 388,
+     "seatDy": 3.42,
      "collarWidth": 162
     }
    ],
@@ -4637,6 +4660,7 @@
      },
      "componentId": "CMP-CAP-IVY-18415-LTR",
      "seatBottomY": 388,
+     "seatDy": -4.89,
      "collarWidth": 141
     }
    ],
@@ -4846,6 +4870,7 @@
      },
      "componentId": "CMP-CAP-PNK-18415-LTR",
      "seatBottomY": 388,
+     "seatDy": -3.76,
      "collarWidth": 171
     }
    ],
@@ -5055,6 +5080,7 @@
      },
      "componentId": "CMP-CAP-SBLK-18415-T",
      "seatBottomY": 388,
+     "seatDy": -0.75,
      "collarWidth": 160
     }
    ],
@@ -5264,6 +5290,7 @@
      },
      "componentId": "LIB-18-415-ShnBlkCap",
      "seatBottomY": 388,
+     "seatDy": 1.87,
      "collarWidth": 161
     }
    ],
@@ -5473,6 +5500,7 @@
      },
      "componentId": "CMP-CAP-BRN-18415-LTR",
      "seatBottomY": 388,
+     "seatDy": -1.89,
      "collarWidth": 108
     }
    ],
@@ -5682,6 +5710,7 @@
      },
      "componentId": "CMP-CAP-LBRN-18415-LTR",
      "seatBottomY": 388,
+     "seatDy": -2.45,
      "collarWidth": 1
     }
    ],
@@ -5891,6 +5920,7 @@
      },
      "componentId": "CMP-CAP-MSLV-18415-T",
      "seatBottomY": 388,
+     "seatDy": 1.18,
      "collarWidth": 165
     }
    ],
@@ -6100,6 +6130,7 @@
      },
      "componentId": "CMP-CAP-MSLV-18415-S",
      "seatBottomY": 388,
+     "seatDy": -0.33,
      "collarWidth": 161
     }
    ],
@@ -6309,6 +6340,7 @@
      },
      "componentId": "CMP-CAP-WHT-18415-T",
      "seatBottomY": 388,
+     "seatDy": 1.89,
      "collarWidth": 158
     }
    ],
@@ -6472,6 +6504,7 @@
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
      "seatBottomY": 425,
+     "seatDy": -1.35,
      "collarWidth": 194
     },
     {
@@ -6673,6 +6706,7 @@
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
      "seatBottomY": 425,
+     "seatDy": 2.13,
      "collarWidth": 199
     },
     {
@@ -6874,6 +6908,7 @@
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
      "seatBottomY": 425,
+     "seatDy": -0.37,
      "collarWidth": 199
     },
     {
@@ -7075,6 +7110,7 @@
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
      "seatBottomY": 425,
+     "seatDy": -0.51,
      "collarWidth": 201
     },
     {
@@ -7276,6 +7312,7 @@
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
      "seatBottomY": 425,
+     "seatDy": -1.0,
      "collarWidth": 199
     },
     {
@@ -7480,6 +7517,7 @@
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
      "seatBottomY": 420,
+     "seatDy": 1.13,
      "collarWidth": 199
     },
     {
@@ -7684,6 +7722,7 @@
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
      "seatBottomY": 420,
+     "seatDy": -1.37,
      "collarWidth": 199
     },
     {
@@ -7888,6 +7927,7 @@
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
      "seatBottomY": 421,
+     "seatDy": -0.52,
      "collarWidth": 201
     },
     {
@@ -8092,6 +8132,7 @@
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
      "seatBottomY": 420,
+     "seatDy": -2.35,
      "collarWidth": 194
     },
     {
@@ -8293,6 +8334,7 @@
      },
      "componentId": "CMP-CAP-BLK-13-415-01",
      "seatBottomY": 512,
+     "seatDy": 11.82,
      "collarWidth": 165
     },
     {
@@ -8496,6 +8538,7 @@
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
      "seatBottomY": 420,
+     "seatDy": -2.0,
      "collarWidth": 199
     },
     {
@@ -8697,6 +8740,7 @@
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
      "seatBottomY": 425,
+     "seatDy": -0.95,
      "collarWidth": 194
     },
     {
@@ -8859,6 +8903,7 @@
      },
      "componentId": "CMP-DRP-SSLV-18415",
      "seatBottomY": 425,
+     "seatDy": -6.32,
      "collarWidth": 176,
      "views": [
       "sidecar",
@@ -8902,6 +8947,7 @@
       "height": 357.88
      },
      "componentId": "CMP-DRP-SSLV-18415",
+     "seatDy": -6.32,
      "views": [
       "exploded"
      ],
@@ -8944,6 +8990,7 @@
       "height": 522.439
      },
      "componentId": "CMP-DRP-SSLV-18415",
+     "seatDy": -6.32,
      "views": [
       "sidecar",
       "capon"
@@ -8988,6 +9035,7 @@
       "height": 522.439
      },
      "componentId": "CMP-DRP-SSLV-18415",
+     "seatDy": -6.32,
      "views": [
       "exploded"
      ],
@@ -9157,6 +9205,7 @@
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
      "seatBottomY": 420,
+     "seatDy": -1.96,
      "collarWidth": 194
     },
     {
@@ -9319,6 +9368,7 @@
      },
      "componentId": "CMP-DRP-SGLD-18415",
      "seatBottomY": 426,
+     "seatDy": -5.32,
      "collarWidth": 214,
      "views": [
       "sidecar",
@@ -9362,6 +9412,7 @@
       "height": 357.583
      },
      "componentId": "CMP-DRP-SGLD-18415",
+     "seatDy": -5.32,
      "views": [
       "exploded"
      ],
@@ -9404,6 +9455,7 @@
       "height": 522.736
      },
      "componentId": "CMP-DRP-SGLD-18415",
+     "seatDy": -5.32,
      "views": [
       "sidecar",
       "capon"
@@ -9448,6 +9500,7 @@
       "height": 522.736
      },
      "componentId": "CMP-DRP-SGLD-18415",
+     "seatDy": -5.32,
      "views": [
       "exploded"
      ],
@@ -9575,6 +9628,7 @@
      },
      "componentId": "CMP-DRP-SSLV-18415",
      "seatBottomY": 420,
+     "seatDy": -11.32,
      "collarWidth": 176,
      "views": [
       "sidecar",
@@ -9618,6 +9672,7 @@
       "height": 357.88
      },
      "componentId": "CMP-DRP-SSLV-18415",
+     "seatDy": -11.32,
      "views": [
       "exploded"
      ],
@@ -9660,6 +9715,7 @@
       "height": 522.439
      },
      "componentId": "CMP-DRP-SSLV-18415",
+     "seatDy": -11.32,
      "views": [
       "sidecar",
       "capon"
@@ -9704,6 +9760,7 @@
       "height": 522.439
      },
      "componentId": "CMP-DRP-SSLV-18415",
+     "seatDy": -11.32,
      "views": [
       "exploded"
      ],
@@ -9831,6 +9888,7 @@
      },
      "componentId": "CMP-CAP-SGLD-13-415-01",
      "seatBottomY": 512,
+     "seatDy": -1.59,
      "collarWidth": 165
     }
    ],
@@ -9953,6 +10011,7 @@
      },
      "componentId": "CMP-DRP-SGLD-18415",
      "seatBottomY": 423,
+     "seatDy": -8.32,
      "collarWidth": 214,
      "views": [
       "sidecar",
@@ -9996,6 +10055,7 @@
       "height": 357.583
      },
      "componentId": "CMP-DRP-SGLD-18415",
+     "seatDy": -8.32,
      "views": [
       "exploded"
      ],
@@ -10038,6 +10098,7 @@
       "height": 522.736
      },
      "componentId": "CMP-DRP-SGLD-18415",
+     "seatDy": -8.32,
      "views": [
       "sidecar",
       "capon"
@@ -10082,6 +10143,7 @@
       "height": 522.736
      },
      "componentId": "CMP-DRP-SGLD-18415",
+     "seatDy": -8.32,
      "views": [
       "exploded"
      ],
@@ -10209,6 +10271,7 @@
      },
      "componentId": "CMP-CAP-SLV-13-415-01",
      "seatBottomY": 512,
+     "seatDy": -1.59,
      "collarWidth": 140
     }
    ],
@@ -10331,6 +10394,7 @@
      },
      "componentId": "CMP-CAP-WHT-S-13-415",
      "seatBottomY": 512,
+     "seatDy": 35.06,
      "collarWidth": 173
     }
    ],
@@ -10453,6 +10517,7 @@
      },
      "componentId": "CMP-CAP-BLK-S-13-415",
      "seatBottomY": 512,
+     "seatDy": 39.97,
      "collarWidth": 172
     }
    ],
@@ -10614,6 +10679,7 @@
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
      "seatBottomY": 391,
+     "seatDy": 0.22,
      "collarWidth": 153
     },
     {
@@ -10818,6 +10884,7 @@
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
      "seatBottomY": 388,
+     "seatDy": 0.22,
      "collarWidth": 153
     },
     {
@@ -11019,6 +11086,7 @@
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
      "seatBottomY": 391,
+     "seatDy": 3.61,
      "collarWidth": 163
     },
     {
@@ -11266,6 +11334,7 @@
      },
      "componentId": "CMP-CAP-BLK-18415-LTR",
      "seatBottomY": 429,
+     "seatDy": 1.37,
      "collarWidth": 228
     }
    ],
@@ -11429,6 +11498,7 @@
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
      "seatBottomY": 391,
+     "seatDy": 2.16,
      "collarWidth": 164
     },
     {
@@ -11676,6 +11746,7 @@
      },
      "componentId": "CMP-CAP-BLK-18415-LTR",
      "seatBottomY": 426,
+     "seatDy": 0.41,
      "collarWidth": 228
     }
    ],
@@ -11839,6 +11910,7 @@
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
      "seatBottomY": 391,
+     "seatDy": 0.86,
      "collarWidth": 166
     },
     {
@@ -12040,6 +12112,7 @@
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
      "seatBottomY": 391,
+     "seatDy": -0.07,
      "collarWidth": 160
     },
     {
@@ -12241,6 +12314,7 @@
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
      "seatBottomY": 391,
+     "seatDy": 1.05,
      "collarWidth": 165
     },
     {
@@ -12445,6 +12519,7 @@
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
      "seatBottomY": 388,
+     "seatDy": 2.56,
      "collarWidth": 163
     },
     {
@@ -12649,6 +12724,7 @@
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
      "seatBottomY": 388,
+     "seatDy": 2.17,
      "collarWidth": 164
     },
     {
@@ -12853,6 +12929,7 @@
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
      "seatBottomY": 388,
+     "seatDy": -0.19,
      "collarWidth": 166
     },
     {
@@ -13057,6 +13134,7 @@
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
      "seatBottomY": 388,
+     "seatDy": -0.07,
      "collarWidth": 160
     },
     {
@@ -13261,6 +13339,7 @@
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
      "seatBottomY": 388,
+     "seatDy": 0.07,
      "collarWidth": 165
     },
     {
@@ -13462,6 +13541,7 @@
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
      "seatBottomY": 425,
+     "seatDy": 4.23,
      "collarWidth": 196
     }
    ],
@@ -13675,6 +13755,7 @@
      },
      "componentId": "CMP-CAP-BLK-18415-LTR",
      "seatBottomY": 393,
+     "seatDy": 0.1,
      "collarWidth": 189
     }
    ],
@@ -13838,6 +13919,7 @@
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
      "seatBottomY": 425,
+     "seatDy": 2.73,
      "collarWidth": 192
     }
    ],
@@ -14051,6 +14133,7 @@
      },
      "componentId": "CMP-CAP-BLK-18415-LTR",
      "seatBottomY": 390,
+     "seatDy": -0.95,
      "collarWidth": 189
     }
    ],
@@ -14217,6 +14300,7 @@
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
      "seatBottomY": 420,
+     "seatDy": 5.19,
      "collarWidth": 196
     }
    ],
@@ -14384,6 +14468,7 @@
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
      "seatBottomY": 391,
+     "seatDy": 6.48,
      "collarWidth": 161
     }
    ],
@@ -14551,6 +14636,7 @@
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
      "seatBottomY": 391,
+     "seatDy": 7.12,
      "collarWidth": 163
     }
    ],
@@ -14721,6 +14807,7 @@
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
      "seatBottomY": 388,
+     "seatDy": 5.43,
      "collarWidth": 161
     }
    ],
@@ -14891,6 +14978,7 @@
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
      "seatBottomY": 388,
+     "seatDy": 5.09,
      "collarWidth": 163
     }
    ],
@@ -15058,6 +15146,7 @@
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
      "seatBottomY": 391,
+     "seatDy": 5.81,
      "collarWidth": 161
     }
    ],
@@ -15225,6 +15314,7 @@
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
      "seatBottomY": 391,
+     "seatDy": 6.76,
      "collarWidth": 165
     }
    ],
@@ -15392,6 +15482,7 @@
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
      "seatBottomY": 391,
+     "seatDy": 6.45,
      "collarWidth": 154
     }
    ],
@@ -15559,6 +15650,7 @@
      },
      "componentId": "CMP-SPR-RED-18-415-01",
      "seatBottomY": 391,
+     "seatDy": 5.72,
      "collarWidth": 165
     }
    ],
@@ -15726,6 +15818,7 @@
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
      "seatBottomY": 391,
+     "seatDy": 6.36,
      "collarWidth": 159
     }
    ],
@@ -15893,6 +15986,7 @@
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
      "seatBottomY": 391,
+     "seatDy": 7.34,
      "collarWidth": 161
     }
    ],
@@ -16060,6 +16154,7 @@
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
      "seatBottomY": 391,
+     "seatDy": 6.88,
      "collarWidth": 161
     }
    ],
@@ -16227,6 +16322,7 @@
      },
      "componentId": "CMP-CAP-PNK-18-415",
      "seatBottomY": 391,
+     "seatDy": 4.89,
      "collarWidth": 163
     }
    ],
@@ -16394,6 +16490,7 @@
      },
      "componentId": "CMP-SPR-GLD-18415-TSL",
      "seatBottomY": 391,
+     "seatDy": 8.11,
      "collarWidth": 163
     }
    ],
@@ -16561,6 +16658,7 @@
      },
      "componentId": "CMP-SPR-IVGD-18-415-02",
      "seatBottomY": 391,
+     "seatDy": 6.12,
      "collarWidth": 160
     }
    ],
@@ -16728,6 +16826,7 @@
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
      "seatBottomY": 391,
+     "seatDy": 5.81,
      "collarWidth": 167
     }
    ],
@@ -16895,6 +16994,7 @@
      },
      "componentId": "CMP-SPR-PNK-18-415",
      "seatBottomY": 391,
+     "seatDy": 7.12,
      "collarWidth": 163
     }
    ],
@@ -17062,6 +17162,7 @@
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
      "seatBottomY": 391,
+     "seatDy": 6.12,
      "collarWidth": 160
     }
    ],
@@ -17229,6 +17330,7 @@
      },
      "componentId": "CMP-SPR-RED-18-415-02",
      "seatBottomY": 391,
+     "seatDy": 7.12,
      "collarWidth": 163
     }
    ],
@@ -17396,6 +17498,7 @@
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
      "seatBottomY": 391,
+     "seatDy": 7.12,
      "collarWidth": 163
     }
    ],
@@ -17563,6 +17666,7 @@
      },
      "componentId": "CMP-ROC-BLK-13415-DOT",
      "seatBottomY": 512,
+     "seatDy": -3.95,
      "collarWidth": 169
     }
    ],
@@ -17725,6 +17829,7 @@
      },
      "componentId": "CMP-SPR-MSLV-18-415-02",
      "seatBottomY": 391,
+     "seatDy": 4.78,
      "collarWidth": 163
     }
    ],
@@ -17895,6 +18000,7 @@
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
      "seatBottomY": 388,
+     "seatDy": 3.77,
      "collarWidth": 161
     }
    ],
@@ -18065,6 +18171,7 @@
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
      "seatBottomY": 388,
+     "seatDy": 4.37,
      "collarWidth": 124
     }
    ],
@@ -18235,6 +18342,7 @@
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
      "seatBottomY": 388,
+     "seatDy": 2.74,
      "collarWidth": 125
     }
    ],
@@ -18405,6 +18513,7 @@
      },
      "componentId": "CMP-CAP-PNK-18-415",
      "seatBottomY": 388,
+     "seatDy": 2.92,
      "collarWidth": 163
     }
    ],
@@ -18575,6 +18684,7 @@
      },
      "componentId": "CMP-SPR-RED-18-415-01",
      "seatBottomY": 388,
+     "seatDy": 3.76,
      "collarWidth": 165
     }
    ],
@@ -18745,6 +18855,7 @@
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
      "seatBottomY": 388,
+     "seatDy": 3.34,
      "collarWidth": 159
     }
    ],
@@ -18915,6 +19026,7 @@
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
      "seatBottomY": 388,
+     "seatDy": 4.91,
      "collarWidth": 161
     }
    ],
@@ -19085,6 +19197,7 @@
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
      "seatBottomY": 388,
+     "seatDy": 5.4,
      "collarWidth": 154
     }
    ],
@@ -19255,6 +19368,7 @@
      },
      "componentId": "CMP-SPR-IVGD-18-415-02",
      "seatBottomY": 388,
+     "seatDy": 4.09,
      "collarWidth": 160
     }
    ],
@@ -19425,6 +19539,7 @@
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
      "seatBottomY": 388,
+     "seatDy": 4.09,
      "collarWidth": 160
     }
    ],
@@ -19595,6 +19710,7 @@
      },
      "componentId": "CMP-SPR-GLD-18415-TSL",
      "seatBottomY": 388,
+     "seatDy": 6.07,
      "collarWidth": 163
     }
    ],
@@ -19765,6 +19881,7 @@
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
      "seatBottomY": 388,
+     "seatDy": 3.85,
      "collarWidth": 167
     }
    ],
@@ -19935,6 +20052,7 @@
      },
      "componentId": "CMP-SPR-PNK-18-415",
      "seatBottomY": 388,
+     "seatDy": 5.09,
      "collarWidth": 163
     }
    ],
@@ -20105,6 +20223,7 @@
      },
      "componentId": "CMP-SPR-RED-18-415-02",
      "seatBottomY": 388,
+     "seatDy": 5.09,
      "collarWidth": 163
     }
    ],
@@ -20275,6 +20394,7 @@
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
      "seatBottomY": 388,
+     "seatDy": 5.09,
      "collarWidth": 163
     }
    ],
@@ -20445,6 +20565,7 @@
      },
      "componentId": "CMP-SPR-MSLV-18-415-02",
      "seatBottomY": 388,
+     "seatDy": 2.75,
      "collarWidth": 163
     }
    ],
@@ -20612,6 +20733,7 @@
      },
      "componentId": "CMP-LPM-MGLD-18-415",
      "seatBottomY": 425,
+     "seatDy": 6.57,
      "collarWidth": 203
     },
     {
@@ -20859,6 +20981,7 @@
      },
      "componentId": "CMP-CAP-SSLV-18415-S",
      "seatBottomY": 425,
+     "seatDy": 2.66,
      "collarWidth": 190
     }
    ],
@@ -21022,6 +21145,7 @@
      },
      "componentId": "CMP-LPM-SGLD-18-415",
      "seatBottomY": 425,
+     "seatDy": 0.13,
      "collarWidth": 198
     },
     {
@@ -21223,6 +21347,7 @@
      },
      "componentId": "CMP-LPM-SBLK-18-415",
      "seatBottomY": 425,
+     "seatDy": -0.28,
      "collarWidth": 200
     },
     {
@@ -21470,6 +21595,7 @@
      },
      "componentId": "CMP-CAP-SGLD-18415-S",
      "seatBottomY": 425,
+     "seatDy": 0.99,
      "collarWidth": 195
     }
    ],
@@ -21633,6 +21759,7 @@
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
      "seatBottomY": 425,
+     "seatDy": -0.3,
      "collarWidth": 194
     },
     {
@@ -21880,6 +22007,7 @@
      },
      "componentId": "CMP-CAP-IVY-18415-LTR",
      "seatBottomY": 425,
+     "seatDy": -7.15,
      "collarWidth": 170
     }
    ],
@@ -22043,6 +22171,7 @@
      },
      "componentId": "CMP-LPM-SSLV-18-415",
      "seatBottomY": 425,
+     "seatDy": -0.99,
      "collarWidth": 197
     },
     {
@@ -22290,6 +22419,7 @@
      },
      "componentId": "CMP-CAP-PNK-18415-LTR",
      "seatBottomY": 425,
+     "seatDy": -5.5,
      "collarWidth": 207
     }
    ],
@@ -22453,6 +22583,7 @@
      },
      "componentId": "CMP-LPM-CPR-18-415",
      "seatBottomY": 425,
+     "seatDy": -2.19,
      "collarWidth": 178
     },
     {
@@ -22700,6 +22831,7 @@
      },
      "componentId": "CMP-CAP-SBLK-18415-T",
      "seatBottomY": 425,
+     "seatDy": 1.77,
      "collarWidth": 194
     }
    ],
@@ -22866,6 +22998,7 @@
      },
      "componentId": "CMP-LPM-MGLD-18-415",
      "seatBottomY": 421,
+     "seatDy": 6.57,
      "collarWidth": 203
     },
     {
@@ -23113,6 +23246,7 @@
      },
      "componentId": "LIB-18-415-ShnBlkCap",
      "seatBottomY": 425,
+     "seatDy": 1.11,
      "collarWidth": 197
     }
    ],
@@ -23279,6 +23413,7 @@
      },
      "componentId": "CMP-LPM-SGLD-18-415",
      "seatBottomY": 420,
+     "seatDy": -0.87,
      "collarWidth": 198
     },
     {
@@ -23526,6 +23661,7 @@
      },
      "componentId": "CMP-CAP-BRN-18415-LTR",
      "seatBottomY": 425,
+     "seatDy": -0.7,
      "collarWidth": 129
     }
    ],
@@ -23692,6 +23828,7 @@
      },
      "componentId": "CMP-LPM-SBLK-18-415",
      "seatBottomY": 420,
+     "seatDy": -1.28,
      "collarWidth": 200
     },
     {
@@ -23939,6 +24076,7 @@
      },
      "componentId": "CMP-CAP-LBRN-18415-LTR",
      "seatBottomY": 425,
+     "seatDy": -1.24,
      "collarWidth": 128
     }
    ],
@@ -24105,6 +24243,7 @@
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
      "seatBottomY": 420,
+     "seatDy": -1.31,
      "collarWidth": 194
     },
     {
@@ -24352,6 +24491,7 @@
      },
      "componentId": "CMP-CAP-MSLV-18415-T",
      "seatBottomY": 425,
+     "seatDy": 0.7,
      "collarWidth": 200
     }
    ],
@@ -24518,6 +24658,7 @@
      },
      "componentId": "CMP-LPM-SSLV-18-415",
      "seatBottomY": 420,
+     "seatDy": -1.99,
      "collarWidth": 197
     },
     {
@@ -24765,6 +24906,7 @@
      },
      "componentId": "CMP-CAP-WHT-18415-T",
      "seatBottomY": 425,
+     "seatDy": 2.08,
      "collarWidth": 191
     }
    ],
@@ -24931,6 +25073,7 @@
      },
      "componentId": "CMP-LPM-CPR-18-415",
      "seatBottomY": 420,
+     "seatDy": -3.2,
      "collarWidth": 178
     },
     {
@@ -25178,6 +25321,7 @@
      },
      "componentId": "CMP-CAP-MSLV-18415-S",
      "seatBottomY": 425,
+     "seatDy": 0.81,
      "collarWidth": 191
     }
    ],
@@ -25387,6 +25531,7 @@
      },
      "componentId": "CMP-CAP-SGLD-18415-S",
      "seatBottomY": 420,
+     "seatDy": -0.01,
      "collarWidth": 195
     }
    ],
@@ -25550,6 +25695,7 @@
      },
      "componentId": "CMP-ROC-BLK-13415-DOT",
      "seatBottomY": 512,
+     "seatDy": -3.95,
      "collarWidth": 169
     }
    ],
@@ -25758,6 +25904,7 @@
      },
      "componentId": "CMP-CAP-SBLK-18415-T",
      "seatBottomY": 420,
+     "seatDy": 1.78,
      "collarWidth": 194
     }
    ],
@@ -25967,6 +26114,7 @@
      },
      "componentId": "LIB-18-415-ShnBlkCap",
      "seatBottomY": 420,
+     "seatDy": 1.12,
      "collarWidth": 197
     }
    ],
@@ -26176,6 +26324,7 @@
      },
      "componentId": "CMP-CAP-BRN-18415-LTR",
      "seatBottomY": 420,
+     "seatDy": -2.73,
      "collarWidth": 129
     }
    ],
@@ -26385,6 +26534,7 @@
      },
      "componentId": "CMP-CAP-LBRN-18415-LTR",
      "seatBottomY": 420,
+     "seatDy": -3.26,
      "collarWidth": 128
     }
    ],
@@ -26594,6 +26744,7 @@
      },
      "componentId": "CMP-CAP-SSLV-18415-S",
      "seatBottomY": 420,
+     "seatDy": 2.68,
      "collarWidth": 190
     }
    ],
@@ -26803,6 +26954,7 @@
      },
      "componentId": "CMP-CAP-MSLV-18415-S",
      "seatBottomY": 420,
+     "seatDy": 0.83,
      "collarWidth": 191
     }
    ],
@@ -27012,6 +27164,7 @@
      },
      "componentId": "CMP-CAP-WHT-18415-T",
      "seatBottomY": 420,
+     "seatDy": 2.1,
      "collarWidth": 191
     }
    ],
@@ -27221,6 +27374,7 @@
      },
      "componentId": "CMP-CAP-PNK-18415-LTR",
      "seatBottomY": 422,
+     "seatDy": -5.44,
      "collarWidth": 207
     }
    ],
@@ -27430,6 +27584,7 @@
      },
      "componentId": "CMP-CAP-IVY-18415-LTR",
      "seatBottomY": 420,
+     "seatDy": -8.15,
      "collarWidth": 170
     }
    ],
@@ -27593,6 +27748,7 @@
      },
      "componentId": "CMP-CAP-BLK-13-415-02",
      "seatBottomY": 512,
+     "seatDy": 4.55,
      "collarWidth": 164
     },
     {
@@ -27794,6 +27950,7 @@
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
      "seatBottomY": 425,
+     "seatDy": 1.95,
      "collarWidth": 157
     }
    ],
@@ -27961,6 +28118,7 @@
      },
      "componentId": "CMP-CAP-13-415",
      "seatBottomY": 512,
+     "seatDy": 4.01,
      "collarWidth": 160
     },
     {
@@ -28161,6 +28319,7 @@
      },
      "componentId": "CMP-CAP-PNK-18-415",
      "seatBottomY": 425,
+     "seatDy": 2.26,
      "collarWidth": 198
     }
    ],
@@ -28328,6 +28487,7 @@
      },
      "componentId": "CMP-SPR-MTCP-13-415-07",
      "seatBottomY": 512,
+     "seatDy": 4.6,
      "collarWidth": 161
     },
     {
@@ -28528,6 +28688,7 @@
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
      "seatBottomY": 425,
+     "seatDy": 2.64,
      "collarWidth": 159
     }
    ],
@@ -28695,6 +28856,7 @@
      },
      "componentId": "CMP-CAP-SGLD-13-415-02",
      "seatBottomY": 512,
+     "seatDy": 4.8,
      "collarWidth": 158
     },
     {
@@ -28895,6 +29057,7 @@
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
      "seatBottomY": 425,
+     "seatDy": 2.62,
      "collarWidth": 190
     }
    ],
@@ -29062,6 +29225,7 @@
      },
      "componentId": "CMP-CAP-SGLD-13-415-03",
      "seatBottomY": 512,
+     "seatDy": 5.65,
      "collarWidth": 154
     },
     {
@@ -29262,6 +29426,7 @@
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
      "seatBottomY": 425,
+     "seatDy": 2.98,
      "collarWidth": 194
     }
    ],
@@ -29429,6 +29594,7 @@
      },
      "componentId": "CMP-CAP-SLV-13-415-02",
      "seatBottomY": 512,
+     "seatDy": 2.5,
      "collarWidth": 168
     },
     {
@@ -29629,6 +29795,7 @@
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
      "seatBottomY": 425,
+     "seatDy": 3.58,
      "collarWidth": 160
     }
    ],
@@ -29796,6 +29963,7 @@
      },
      "componentId": "CMP-CAP-SLV-13-415-03",
      "seatBottomY": 512,
+     "seatDy": 6.59,
      "collarWidth": 154
     },
     {
@@ -29996,6 +30164,7 @@
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
      "seatBottomY": 425,
+     "seatDy": 4.55,
      "collarWidth": 196
     }
    ],
@@ -30163,6 +30332,7 @@
      },
      "componentId": "CMP-SPR-RED-18-415-01",
      "seatBottomY": 425,
+     "seatDy": 3.2,
      "collarWidth": 199
     }
    ],
@@ -30330,6 +30500,7 @@
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
      "seatBottomY": 425,
+     "seatDy": 2.11,
      "collarWidth": 200
     }
    ],
@@ -30497,6 +30668,7 @@
      },
      "componentId": "CMP-SPR-IVGD-18-415-02",
      "seatBottomY": 425,
+     "seatDy": 2.73,
      "collarWidth": 195
     }
    ],
@@ -30664,6 +30836,7 @@
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
      "seatBottomY": 425,
+     "seatDy": 2.73,
      "collarWidth": 195
     }
    ],
@@ -30831,6 +31004,7 @@
      },
      "componentId": "CMP-LPM-MGLD-18-415",
      "seatBottomY": 391,
+     "seatDy": 7.94,
      "collarWidth": 168
     },
     {
@@ -31032,6 +31206,7 @@
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
      "seatBottomY": 425,
+     "seatDy": 3.73,
      "collarWidth": 197
     }
    ],
@@ -31199,6 +31374,7 @@
      },
      "componentId": "CMP-LPM-SGLD-18-415",
      "seatBottomY": 391,
+     "seatDy": 2.27,
      "collarWidth": 164
     },
     {
@@ -31400,6 +31576,7 @@
      },
      "componentId": "CMP-SPR-PNK-18-415",
      "seatBottomY": 425,
+     "seatDy": 2.73,
      "collarWidth": 195
     }
    ],
@@ -31567,6 +31744,7 @@
      },
      "componentId": "CMP-LPM-SBLK-18-415",
      "seatBottomY": 391,
+     "seatDy": 0.75,
      "collarWidth": 165
     },
     {
@@ -31768,6 +31946,7 @@
      },
      "componentId": "CMP-SPR-RED-18-415-02",
      "seatBottomY": 425,
+     "seatDy": 3.73,
      "collarWidth": 197
     }
    ],
@@ -31935,6 +32114,7 @@
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
      "seatBottomY": 391,
+     "seatDy": 1.13,
      "collarWidth": 162
     },
     {
@@ -32097,6 +32277,7 @@
      },
      "componentId": "CMP-DRP-CPR-18415",
      "seatBottomY": 426,
+     "seatDy": -5.32,
      "collarWidth": 212,
      "views": [
       "sidecar",
@@ -32140,6 +32321,7 @@
       "height": 357.88
      },
      "componentId": "CMP-DRP-CPR-18415",
+     "seatDy": -5.32,
      "views": [
       "exploded"
      ],
@@ -32182,6 +32364,7 @@
       "height": 522.143
      },
      "componentId": "CMP-DRP-CPR-18415",
+     "seatDy": -5.32,
      "views": [
       "sidecar",
       "capon"
@@ -32226,6 +32409,7 @@
       "height": 522.143
      },
      "componentId": "CMP-DRP-CPR-18415",
+     "seatDy": -5.32,
      "views": [
       "exploded"
      ],
@@ -32392,6 +32576,7 @@
      },
      "componentId": "CMP-SPR-MSLV-18-415-02",
      "seatBottomY": 425,
+     "seatDy": 3.03,
      "collarWidth": 197
     }
    ],
@@ -32559,6 +32744,7 @@
      },
      "componentId": "CMP-LPM-SSLV-18-415",
      "seatBottomY": 391,
+     "seatDy": 2.27,
      "collarWidth": 166
     },
     {
@@ -32721,6 +32907,7 @@
      },
      "componentId": "CMP-DRP-CPR-18415",
      "seatBottomY": 423,
+     "seatDy": -8.32,
      "collarWidth": 212,
      "views": [
       "sidecar",
@@ -32764,6 +32951,7 @@
       "height": 357.88
      },
      "componentId": "CMP-DRP-CPR-18415",
+     "seatDy": -8.32,
      "views": [
       "exploded"
      ],
@@ -32806,6 +32994,7 @@
       "height": 522.143
      },
      "componentId": "CMP-DRP-CPR-18415",
+     "seatDy": -8.32,
      "views": [
       "sidecar",
       "capon"
@@ -32850,6 +33039,7 @@
       "height": 522.143
      },
      "componentId": "CMP-DRP-CPR-18415",
+     "seatDy": -8.32,
      "views": [
       "exploded"
      ],
@@ -33016,6 +33206,7 @@
      },
      "componentId": "CMP-SPR-GLD-18415-TSL",
      "seatBottomY": 425,
+     "seatDy": 3.73,
      "collarWidth": 197
     }
    ],
@@ -33183,6 +33374,7 @@
      },
      "componentId": "CMP-LPM-CPR-18-415",
      "seatBottomY": 391,
+     "seatDy": -0.06,
      "collarWidth": 166
     },
     {
@@ -33387,6 +33579,7 @@
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
      "seatBottomY": 420,
+     "seatDy": 1.89,
      "collarWidth": 157
     }
    ],
@@ -33557,6 +33750,7 @@
      },
      "componentId": "CMP-LPM-MGLD-18-415",
      "seatBottomY": 388,
+     "seatDy": 6.89,
      "collarWidth": 168
     },
     {
@@ -33761,6 +33955,7 @@
      },
      "componentId": "CMP-CAP-PNK-18-415",
      "seatBottomY": 420,
+     "seatDy": 2.28,
      "collarWidth": 198
     }
    ],
@@ -33931,6 +34126,7 @@
      },
      "componentId": "CMP-LPM-SGLD-18-415",
      "seatBottomY": 388,
+     "seatDy": 2.27,
      "collarWidth": 164
     },
     {
@@ -34135,6 +34331,7 @@
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
      "seatBottomY": 420,
+     "seatDy": 3.59,
      "collarWidth": 159
     }
    ],
@@ -34305,6 +34502,7 @@
      },
      "componentId": "CMP-LPM-SBLK-18-415",
      "seatBottomY": 388,
+     "seatDy": -0.3,
      "collarWidth": 165
     },
     {
@@ -34509,6 +34707,7 @@
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
      "seatBottomY": 420,
+     "seatDy": 3.66,
      "collarWidth": 190
     }
    ],
@@ -34679,6 +34878,7 @@
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
      "seatBottomY": 388,
+     "seatDy": 1.14,
      "collarWidth": 162
     },
     {
@@ -34883,6 +35083,7 @@
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
      "seatBottomY": 420,
+     "seatDy": 2.91,
      "collarWidth": 194
     }
    ],
@@ -35053,6 +35254,7 @@
      },
      "componentId": "CMP-LPM-SSLV-18-415",
      "seatBottomY": 388,
+     "seatDy": 1.29,
      "collarWidth": 166
     },
     {
@@ -35257,6 +35459,7 @@
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
      "seatBottomY": 420,
+     "seatDy": 3.59,
      "collarWidth": 160
     }
    ],
@@ -35427,6 +35630,7 @@
      },
      "componentId": "CMP-LPM-CPR-18-415",
      "seatBottomY": 388,
+     "seatDy": -1.04,
      "collarWidth": 166
     },
     {
@@ -35628,6 +35832,7 @@
      },
      "componentId": "CMP-ROC-SBLK-13415",
      "seatBottomY": 512,
+     "seatDy": 0.64,
      "collarWidth": 139
     }
    ],
@@ -35793,6 +35998,7 @@
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
      "seatBottomY": 420,
+     "seatDy": 4.57,
      "collarWidth": 196
     }
    ],
@@ -35960,6 +36166,7 @@
      },
      "componentId": "CMP-ROC-MCPR-13415",
      "seatBottomY": 512,
+     "seatDy": -0.84,
      "collarWidth": 171
     }
    ],
@@ -36125,6 +36332,7 @@
      },
      "componentId": "CMP-SPR-RED-18-415-01",
      "seatBottomY": 420,
+     "seatDy": 3.22,
      "collarWidth": 199
     }
    ],
@@ -36292,6 +36500,7 @@
      },
      "componentId": "CMP-ROC-MGLD-13415",
      "seatBottomY": 513,
+     "seatDy": -0.6,
      "collarWidth": 181
     }
    ],
@@ -36454,6 +36663,7 @@
      },
      "componentId": "CMP-ROC-SGLD-13415",
      "seatBottomY": 512,
+     "seatDy": -0.98,
      "collarWidth": 129
     }
    ],
@@ -36616,6 +36826,7 @@
      },
      "componentId": "CMP-ROC-PNK-13415-DOT",
      "seatBottomY": 512,
+     "seatDy": -6.1,
      "collarWidth": 143
     }
    ],
@@ -36778,6 +36989,7 @@
      },
      "componentId": "CMP-ROC-SLV-13415-DOT",
      "seatBottomY": 512,
+     "seatDy": -3.26,
      "collarWidth": 175
     }
    ],
@@ -36940,6 +37152,7 @@
      },
      "componentId": "CMP-ROC-MSLV-13415",
      "seatBottomY": 512,
+     "seatDy": -4.78,
      "collarWidth": 133
     }
    ],
@@ -37102,6 +37315,7 @@
      },
      "componentId": "CMP-ROC-SSLV-13415",
      "seatBottomY": 512,
+     "seatDy": -1.76,
      "collarWidth": 160
     }
    ],
@@ -37264,6 +37478,7 @@
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "seatBottomY": 425,
+     "seatDy": 0.67,
      "collarWidth": 196
     },
     {
@@ -37286,7 +37501,7 @@
       "dy": -1128.48
      },
      "image": {
-      "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+      "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
       "key": "",
       "sha256": "",
       "bytes": 0,
@@ -37305,7 +37520,7 @@
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "detached": {
       "image": {
-       "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+       "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
        "width": 299,
        "height": 346
       },
@@ -37488,6 +37703,7 @@
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "seatBottomY": 420,
+     "seatDy": -0.33,
      "collarWidth": 196
     },
     {
@@ -37510,7 +37726,7 @@
       "dy": -1128.49
      },
      "image": {
-      "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+      "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
       "key": "",
       "sha256": "",
       "bytes": 0,
@@ -37529,7 +37745,7 @@
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "detached": {
       "image": {
-       "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+       "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
        "width": 299,
        "height": 346
       },
@@ -37712,6 +37928,7 @@
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
      "seatBottomY": 420,
+     "seatDy": 3.77,
      "collarWidth": 192
     }
    ],
@@ -37882,6 +38099,7 @@
      },
      "componentId": "CMP-SPR-GLD-18415-TSL",
      "seatBottomY": 420,
+     "seatDy": 4.77,
      "collarWidth": 197
     }
    ],
@@ -38052,6 +38270,7 @@
      },
      "componentId": "CMP-SPR-IVGD-18-415-02",
      "seatBottomY": 420,
+     "seatDy": 3.77,
      "collarWidth": 195
     }
    ],
@@ -38222,6 +38441,7 @@
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
      "seatBottomY": 420,
+     "seatDy": 3.77,
      "collarWidth": 195
     }
    ],
@@ -38392,6 +38612,7 @@
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
      "seatBottomY": 420,
+     "seatDy": 2.05,
      "collarWidth": 200
     }
    ],
@@ -38562,6 +38783,7 @@
      },
      "componentId": "CMP-SPR-MSLV-18-415-02",
      "seatBottomY": 420,
+     "seatDy": 3.05,
      "collarWidth": 197
     }
    ],
@@ -38732,6 +38954,7 @@
      },
      "componentId": "CMP-SPR-PNK-18-415",
      "seatBottomY": 420,
+     "seatDy": 3.77,
      "collarWidth": 195
     }
    ],
@@ -38902,6 +39125,7 @@
      },
      "componentId": "CMP-SPR-RED-18-415-02",
      "seatBottomY": 420,
+     "seatDy": 4.77,
      "collarWidth": 197
     }
    ],
@@ -39072,6 +39296,7 @@
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
      "seatBottomY": 420,
+     "seatDy": 4.77,
      "collarWidth": 197
     }
    ],
@@ -39200,6 +39425,7 @@
      },
      "componentId": "CMP-CLS-MTCP-S-13-415",
      "seatBottomY": 512,
+     "seatDy": 14.64,
      "collarWidth": 149
     }
    ],
@@ -39322,6 +39548,7 @@
      },
      "componentId": "CMP-CLS-MTGD-S-13-415",
      "seatBottomY": 512,
+     "seatDy": 14.64,
      "collarWidth": 149
     }
    ],
@@ -39444,6 +39671,7 @@
      },
      "componentId": "CMP-CLS-MTSL-S-13-415",
      "seatBottomY": 512,
+     "seatDy": 14.64,
      "collarWidth": 149
     }
    ],
@@ -39566,6 +39794,7 @@
      },
      "componentId": "CMP-CAP-SBLK-13-415",
      "seatBottomY": 512,
+     "seatDy": 14.64,
      "collarWidth": 149
     }
    ],
@@ -39688,6 +39917,7 @@
      },
      "componentId": "CMP-CLS-SHGD-S-13-415",
      "seatBottomY": 512,
+     "seatDy": 15.06,
      "collarWidth": 149
     }
    ],
@@ -39810,6 +40040,7 @@
      },
      "componentId": "CMP-CLS-SHSL-S-13-415-02",
      "seatBottomY": 512,
+     "seatDy": 15.06,
      "collarWidth": 149
     }
    ],
@@ -39971,6 +40202,7 @@
      },
      "componentId": "PSD-CRCL30-SPR-BLK",
      "seatBottomY": 434,
+     "seatDy": -4.213,
      "collarWidth": 125
     },
     {
@@ -39993,9 +40225,9 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-Blk.72852ddbffba.png",
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-Blk.5c30d1d0b734.png",
       "key": "",
-      "sha256": "72852ddbffba1c1228d277db6b306aba011966b75e67e91a1b2b502052e7884b",
+      "sha256": "5c30d1d0b734c7c43aa8402bd82638cfc9b317d7662e5df9ae80776cbbf19e43",
       "bytes": 52359,
       "width": 242,
       "height": 485
@@ -40170,6 +40402,7 @@
      },
      "componentId": "PSD-CRCL30-SPR-SHNGL",
      "seatBottomY": 434,
+     "seatDy": -2.915,
      "collarWidth": 179
     },
     {
@@ -40192,9 +40425,9 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-ShnGl.54b17312db80.png",
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-ShnGl.c37fb752ef69.png",
       "key": "",
-      "sha256": "54b17312db80f709ef5c7e7119d46a9b5dfec95081386af958ce04b724793ccb",
+      "sha256": "c37fb752ef6989d868245186d182330dd6e075b7479568fa0302d850cd6d5fd8",
       "bytes": 114930,
       "width": 242,
       "height": 478
@@ -40369,6 +40602,7 @@
      },
      "componentId": "PSD-CRCL30-SPR-SHSL",
      "seatBottomY": 434,
+     "seatDy": -0.213,
      "collarWidth": 175
     },
     {
@@ -40391,9 +40625,9 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-ShSl.8db1930cf012.png",
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-ShSl.610f34979117.png",
       "key": "",
-      "sha256": "8db1930cf012d426822312c15b069a58582e01be90203c4b258b49aa5d45ed6d",
+      "sha256": "610f34979117a4c9c9c57a32c5cde335a9c9e21518ab79c4c54f3abc8be90291",
       "bytes": 47121,
       "width": 245,
       "height": 484
@@ -40568,6 +40802,7 @@
      },
      "componentId": "PSD-CRCL30-SPR-MATTSL",
      "seatBottomY": 434,
+     "seatDy": -0.766,
      "collarWidth": 126
     },
     {
@@ -40590,10 +40825,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-MattSl.78a96c22728e.png",
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-MattSl.272b84f1a09f.png",
       "key": "",
-      "sha256": "78a96c22728e4457481616f76afa1a94072e866bd525c8e27c8b8714226115d0",
-      "bytes": 41002,
+      "sha256": "272b84f1a09fbaa6a65f615a1b47f7f561aeacf209d82e93e01081ea3ce88ed4",
+      "bytes": 41001,
       "width": 236,
       "height": 487
      },
@@ -40767,6 +41002,7 @@
      },
      "componentId": "PSD-CRCL30-SPR-MATTGL",
      "seatBottomY": 434,
+     "seatDy": -2.851,
      "collarWidth": 154
     },
     {
@@ -40789,10 +41025,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-MattGl.4c8d54b8d374.png",
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/overcap-MattGl.95fafa551daa.png",
       "key": "",
-      "sha256": "4c8d54b8d374c60f1df658a467d73f7f0fa833a6cd1e3c3e4bd40acdc309f1db",
-      "bytes": 123215,
+      "sha256": "95fafa551daa11f5ca310832392e200972c17f09468510b7b38ff3aea3415cda",
+      "bytes": 123214,
       "width": 239,
       "height": 486
      },
@@ -40909,10 +41145,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/circle-masters-2026-11-03/circle30/cap-Sl.def5ad399501.png",
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/cap-Sl.04bb67bb4cc3.png",
       "key": "",
-      "sha256": "def5ad39950165b89b38e0301e002df7e4fe889b82a5612235ebd62a28830d3f",
-      "bytes": 40981,
+      "sha256": "04bb67bb4cc3cafdf005beae0048aaf4ce8211aad771df53ed17c87c51fae57f",
+      "bytes": 40980,
       "width": 235,
       "height": 387
      },
@@ -40927,6 +41163,7 @@
      },
      "componentId": "PSD-CRCL30-CAP-SL",
      "seatBottomY": 434,
+     "seatDy": 10.702,
      "collarWidth": 135
     }
    ],
@@ -41030,10 +41267,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/circle-masters-2026-11-03/circle30/cap-Gl.37c4761e4993.png",
+      "url": "/local-kits/circle-masters-2026-11-03/circle30/cap-Gl.e6a62330f245.png",
       "key": "",
-      "sha256": "37c4761e4993e0f8369a2b839aaac9a9bc8d468f4a41bb1868dd0b1663e21108",
-      "bytes": 103955,
+      "sha256": "e6a62330f245f92f90204593666a4c5997fa8f9380900cd55da3dbd661555609",
+      "bytes": 103954,
       "width": 235,
       "height": 384
      },
@@ -41048,6 +41285,7 @@
      },
      "componentId": "PSD-CRCL30-CAP-GL",
      "seatBottomY": 434,
+     "seatDy": 10.404,
      "collarWidth": 126
     }
    ],

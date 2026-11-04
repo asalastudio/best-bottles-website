@@ -17,7 +17,8 @@ function withCurrentSharedMasters(rows: Record<string, BuilderKit>): Record<stri
     const current = { ...rows, ...Object.fromEntries(Object.entries(currentSharedMasters).filter(([sku]) => Object.hasOwn(rows, sku))) };
     return Object.fromEntries(Object.entries(current).map(([sku, kit]) => {
         const revised = revisedCylinderKit(sku);
-        if (revised) return [sku, revised];
+        // A family review master (Round and Sleek, 3 Nov 2026) supersedes the earlier corrected Sleek tube recipes.
+        if (revised && !(kit as { reviewMaster?: string }).reviewMaster) return [sku, revised];
         if (kit.register?.bodyId === "elegant-60ml-18-415" && kit.parts.some(part => part.slot === "reducer")) {
             const master = ELEGANT_PHOTO_BODIES[kit.register.plateKey];
             const body = kit.parts.find(part => part.slot === "body" && part.image.url.startsWith("/local-kits/elegant60-reducer-2026-10-31/"));

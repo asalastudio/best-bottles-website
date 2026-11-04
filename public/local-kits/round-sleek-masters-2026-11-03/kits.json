@@ -1,5 +1,5 @@
 {
- "version": "95cc838eac63",
+ "version": "b33fd5403f60",
  "rows": {
   "GBRndFrst78RdcrMtSlTall": {
    "sku": "GBRndFrst78RdcrMtSlTall",
@@ -209,6 +209,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.41
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBRndFrst128AnSpRed": {
@@ -375,6 +376,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.928 so the bulb stays on the stage",
     "axisPct": 54.92
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Red-65432d9c09e0.png",
@@ -590,6 +592,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.84
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBRndFrst128AnSpMtSl": {
@@ -756,6 +759,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.943 so the bulb stays on the stage",
     "axisPct": 54.98
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-MtSl-a4fc3b374013.png",
@@ -971,6 +975,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.52
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBRndFrst128AnSpWht": {
@@ -1137,6 +1142,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.931 so the bulb stays on the stage",
     "axisPct": 55.28
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Wht-f680ce1bc3ad.png",
@@ -1352,6 +1358,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.4
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBSlk50AnSpLvn": {
@@ -1515,6 +1522,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Lvn-c36e59e65330.png",
@@ -1686,6 +1694,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.754 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Red-025a3f96ef0f.png",
@@ -1901,6 +1910,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.31
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBSlk50AnSpPnk": {
@@ -2064,6 +2074,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Pnk-3b9d029cd893.png",
@@ -2235,6 +2246,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.762 so the whole assembly fits the stage",
     "axisPct": 75.2
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Gl-619bde2f3dcd.png",
@@ -2403,6 +2415,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-MtSl-a4fc3b374013.png",
@@ -2574,6 +2587,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.754 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvyGl-702d170cc249.png",
@@ -2736,7 +2750,7 @@
       "dy": -966.94
      },
      "image": {
-      "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+      "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
       "key": "",
       "sha256": "",
       "bytes": 0,
@@ -2755,7 +2769,7 @@
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "detached": {
       "image": {
-       "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+       "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
        "width": 299,
        "height": 346
       },
@@ -2800,6 +2814,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBSlk50AnSpIvySl": {
@@ -2963,6 +2978,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvySl-4764b5f4c29d.png",
@@ -3134,6 +3150,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.754 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvySl-657d4e2ad642.png",
@@ -3302,6 +3319,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Gl-e467bf5b4ddc.png",
@@ -3473,6 +3491,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.771 so the whole assembly fits the stage",
     "axisPct": 74.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Lvn-9469c5d0a169.png",
@@ -3641,6 +3660,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvyGl-08ec920a63eb.png",
@@ -3812,6 +3832,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.756 so the whole assembly fits the stage",
     "axisPct": 75.37
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Pnk-36578e7b4f2c.png",
@@ -4019,6 +4040,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.81
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBSlk50AnSpWht": {
@@ -4182,6 +4204,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Wht-f680ce1bc3ad.png",
@@ -4353,6 +4376,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.754 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Wht-6bb170ef0b8c.png",
@@ -4560,6 +4584,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.74
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "LBRnd128LtnClOvrCap": {
@@ -4717,7 +4742,7 @@
       "dy": -1152.62
      },
      "image": {
-      "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+      "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
       "key": "",
       "sha256": "",
       "bytes": 0,
@@ -4736,7 +4761,7 @@
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "detached": {
       "image": {
-       "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+       "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
        "width": 299,
        "height": 346
       },
@@ -4782,6 +4807,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 39.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBSlk50AnSpRed": {
@@ -4945,6 +4971,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Red-65432d9c09e0.png",
@@ -5116,6 +5143,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.754 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-MtSl-fd45d19bed3d.png",
@@ -5323,6 +5351,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.35
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "LBRndFrst128LtnClOvrCap": {
@@ -5483,7 +5512,7 @@
       "dy": -1152.54
      },
      "image": {
-      "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+      "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
       "key": "",
       "sha256": "",
       "bytes": 0,
@@ -5502,7 +5531,7 @@
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "detached": {
       "image": {
-       "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+       "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
        "width": 299,
        "height": 346
       },
@@ -5548,6 +5577,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 39.4
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBSlk50AnSpTslLvn": {
@@ -5711,6 +5741,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 58.64
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Lvn-9469c5d0a169.png",
@@ -5918,6 +5949,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.61
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBSlk30SpryMtGl": {
@@ -6119,6 +6151,7 @@
     "seatSignature": "ecfdbcc41d4ee3",
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk50AnSpTslIvyGl": {
@@ -6282,6 +6315,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 60.33
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvyGl-702d170cc249.png",
@@ -6489,6 +6523,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.61
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBSlk30SpryShnGl": {
@@ -6690,6 +6725,7 @@
     "seatSignature": "b08f70b915a642",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk50AnSpTslIvySl": {
@@ -6853,6 +6889,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 60.33
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvySl-657d4e2ad642.png",
@@ -7060,6 +7097,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.55
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBSlk30SpryShnBlk": {
@@ -7261,6 +7299,7 @@
     "seatSignature": "867221650edcd2",
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk50AnSpTslWht": {
@@ -7424,6 +7463,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 60.33
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Wht-6bb170ef0b8c.png",
@@ -7634,6 +7674,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.58
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBSlk30SpryMtSl": {
@@ -7835,6 +7876,7 @@
     "seatSignature": "373df3d30158ec",
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk50AnSpTslPnk": {
@@ -7998,6 +8040,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 60.07
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Pnk-36578e7b4f2c.png",
@@ -8208,6 +8251,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.77
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBSlk30SpryShnSl": {
@@ -8409,6 +8453,7 @@
     "seatSignature": "e78aa2f40b0d23",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk50AnSpTslRed": {
@@ -8572,6 +8617,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 60.33
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Red-025a3f96ef0f.png",
@@ -8782,6 +8828,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.58
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBSlk50AnSpTslMtSl": {
@@ -8945,6 +8992,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 60.33
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-MtSl-fd45d19bed3d.png",
@@ -9155,6 +9203,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.71
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBSlk50AnSpTslGl": {
@@ -9318,6 +9367,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 59.52
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Gl-619bde2f3dcd.png",
@@ -9528,6 +9578,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.51
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "LBRndFrst128LtnCu": {
@@ -9733,6 +9784,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.31
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBSlk50SpryShnBlk": {
@@ -9934,6 +9986,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50SpryShnGl": {
@@ -10135,6 +10188,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50SpryMtSl": {
@@ -10336,6 +10390,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50SpryShnSl": {
@@ -10537,6 +10592,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50SpryMtGl": {
@@ -10738,6 +10794,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk30DrpSl": {
@@ -10998,6 +11055,7 @@
     "seatSignature": "24bea07c1006fd",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk30DrpGl": {
@@ -11258,6 +11316,7 @@
     "seatSignature": "bc932c480d5311",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk30SpryCu": {
@@ -11459,6 +11518,7 @@
     "seatSignature": "17acd37210b469",
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk50SpryCu": {
@@ -11660,6 +11720,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBRnd78SpryCu": {
@@ -11862,6 +11923,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.12
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRndFrst78SpryCu": {
@@ -12067,6 +12129,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.18
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBSlk100RdcrIvyLthr": {
@@ -12276,6 +12339,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRnd78SpryMtGl": {
@@ -12478,6 +12542,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.53
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBSlk100RdcrPnkLthr": {
@@ -12687,6 +12752,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRnd78SpryMtSl": {
@@ -12889,6 +12955,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.66
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBSlk100RdcrShnGl": {
@@ -13098,6 +13165,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRnd78SpryShnGl": {
@@ -13300,6 +13368,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.73
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBSlk100RdcrShnBlkTall": {
@@ -13509,6 +13578,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRnd78SpryShnBlk": {
@@ -13711,6 +13781,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.53
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBSlk100RdcrShnBlk": {
@@ -13920,6 +13991,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRnd78SpryShnSl": {
@@ -14122,6 +14194,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.46
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBSlk100RdcrBrwnLthr": {
@@ -14331,6 +14404,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRndFrst78SpryShnGl": {
@@ -14536,6 +14610,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.78
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBSlk100SpryCu": {
@@ -14737,6 +14812,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBSlk100RdcrLBrwnLthr": {
@@ -14946,6 +15022,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRndFrst78SpryMtSl": {
@@ -15151,6 +15228,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.72
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBSlk30RdcrBlkLthr": {
@@ -15360,6 +15438,7 @@
     "seatSignature": "06a42cb40f85d3",
     "seatDropMm": 0.5
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk100RdcrShnSl": {
@@ -15569,6 +15648,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRndFrst78SpryShnSl": {
@@ -15774,6 +15854,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.52
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBRnd128SpryCu": {
@@ -15976,6 +16057,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.22
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBSlk100RdcrMtSlTall": {
@@ -16185,6 +16267,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRndFrst78SpryShnBlk": {
@@ -16390,6 +16473,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.59
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBSlk100RdcrMtSl": {
@@ -16599,6 +16683,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRndFrst128SpryCu": {
@@ -16804,6 +16889,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.19
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst78SpryMtGl": {
@@ -17009,6 +17095,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.59
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBSlk100RdcrWht": {
@@ -17218,6 +17305,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRnd128DrpSl": {
@@ -17478,6 +17566,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "explodedAxisPct": 37.83
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd128DrpGl": {
@@ -17738,6 +17827,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "explodedAxisPct": 37.85
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRndFrst128DrpSl": {
@@ -17998,6 +18088,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "explodedAxisPct": 37.8
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBSlk30AnSpBlk": {
@@ -18161,6 +18252,7 @@
     "seatSignature": "31fd119619fb2f",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Blk-603cfde3a4b9.png",
@@ -18426,6 +18518,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "explodedAxisPct": 37.82
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBSlk50RdcrBlkLthr": {
@@ -18635,6 +18728,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBRnd78AnSpPnk": {
@@ -18798,6 +18892,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 56.49
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Pnk-3b9d029cd893.png",
@@ -18966,6 +19061,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 57.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Lvn-c36e59e65330.png",
@@ -19134,6 +19230,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 57.28
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvyGl-08ec920a63eb.png",
@@ -19302,6 +19399,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 57.61
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Gl-e467bf5b4ddc.png",
@@ -19517,6 +19615,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.62
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRnd78AnSpIvySl": {
@@ -19680,6 +19779,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 57.08
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvySl-4764b5f4c29d.png",
@@ -19895,6 +19995,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.68
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBRnd128RdcrIvyLthr": {
@@ -20105,6 +20206,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.44
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd78AnSpRed": {
@@ -20268,6 +20370,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.993 so the bulb stays on the stage",
     "axisPct": 58.96
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Red-65432d9c09e0.png",
@@ -20483,6 +20586,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.2
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd78AnSpMtSl": {
@@ -20646,6 +20750,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 58.63
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-MtSl-a4fc3b374013.png",
@@ -20861,6 +20966,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.56
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd78AnSpWht": {
@@ -21024,6 +21130,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.995 so the bulb stays on the stage",
     "axisPct": 59.28
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Wht-f680ce1bc3ad.png",
@@ -21239,6 +21346,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.19
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd78AnSpTslGl": {
@@ -21402,6 +21510,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.777 so the whole assembly fits the stage",
     "axisPct": 77.71
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Gl-619bde2f3dcd.png",
@@ -21617,6 +21726,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.55
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd78AnSpTslIvyGl": {
@@ -21780,6 +21890,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.768 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvyGl-702d170cc249.png",
@@ -21995,6 +22106,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.81
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd78AnSpTslLvn": {
@@ -22158,6 +22270,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.787 so the whole assembly fits the stage",
     "axisPct": 77.46
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Lvn-9469c5d0a169.png",
@@ -22373,6 +22486,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.8
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd78AnSpTslWht": {
@@ -22536,6 +22650,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.768 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Wht-6bb170ef0b8c.png",
@@ -22751,6 +22866,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd78AnSpTslPnk": {
@@ -22914,6 +23030,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.771 so the whole assembly fits the stage",
     "axisPct": 77.86
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Pnk-36578e7b4f2c.png",
@@ -23129,6 +23246,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.85
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBSlk100RdcrBlkLthr": {
@@ -23338,6 +23456,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBSlk50AnSpBlk": {
@@ -23501,6 +23620,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Blk-603cfde3a4b9.png",
@@ -23669,6 +23789,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.768 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Red-025a3f96ef0f.png",
@@ -23837,6 +23958,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 60.33
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Blk-87e908c68513.png",
@@ -24052,6 +24174,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.53
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd78AnSpTslMtSl": {
@@ -24215,6 +24338,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.768 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-MtSl-fd45d19bed3d.png",
@@ -24430,6 +24554,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.73
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd128RdcrPnkLthr": {
@@ -24640,6 +24765,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.36
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd78AnSpTslIvySl": {
@@ -24803,6 +24929,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.768 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvySl-657d4e2ad642.png",
@@ -25018,6 +25145,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.69
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst128RdcrShnSl": {
@@ -25228,6 +25356,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.77
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst78AnSpGl": {
@@ -25394,6 +25523,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 57.39
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Gl-e467bf5b4ddc.png",
@@ -25609,6 +25739,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.16
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst78AnSpIvyGl": {
@@ -25775,6 +25906,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 57.06
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvyGl-08ec920a63eb.png",
@@ -25990,6 +26122,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.52
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst78AnSpIvySl": {
@@ -26156,6 +26289,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 56.87
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvySl-4764b5f4c29d.png",
@@ -26371,6 +26505,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.16
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst78AnSpPnk": {
@@ -26537,6 +26672,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 56.28
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Pnk-3b9d029cd893.png",
@@ -26752,6 +26888,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.51
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst78AnSpLvn": {
@@ -26918,6 +27055,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 57.21
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Lvn-c36e59e65330.png",
@@ -27133,6 +27271,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.77
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst78AnSpRed": {
@@ -27299,6 +27438,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.996 so the bulb stays on the stage",
     "axisPct": 58.87
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Red-65432d9c09e0.png",
@@ -27514,6 +27654,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.39
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst78AnSpMtSl": {
@@ -27680,6 +27821,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "axisPct": 58.41
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-MtSl-a4fc3b374013.png",
@@ -27895,6 +28037,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.82
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst78AnSpWht": {
@@ -28061,6 +28204,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.997 so the bulb stays on the stage",
     "axisPct": 59.19
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Wht-f680ce1bc3ad.png",
@@ -28276,6 +28420,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.5
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst78AnSpTslGl": {
@@ -28442,6 +28587,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.780 so the whole assembly fits the stage",
     "axisPct": 77.71
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Gl-619bde2f3dcd.png",
@@ -28657,6 +28803,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.32
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRnd78AnSpBlk": {
@@ -28820,6 +28967,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.997 so the bulb stays on the stage",
     "axisPct": 58.5
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Blk-603cfde3a4b9.png",
@@ -28991,6 +29139,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.771 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvyGl-702d170cc249.png",
@@ -29206,6 +29355,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.4
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRnd78AnSpTslBlk": {
@@ -29369,6 +29519,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.768 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Blk-87e908c68513.png",
@@ -29540,6 +29691,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.790 so the whole assembly fits the stage",
     "axisPct": 77.46
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Lvn-9469c5d0a169.png",
@@ -29711,6 +29863,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.999 so the bulb stays on the stage",
     "axisPct": 58.41
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Blk-603cfde3a4b9.png",
@@ -29925,6 +30078,7 @@
     "seatSignature": "311c74f61aea49",
     "seatDropMm": 0.63
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBRndFrst78AnSpTslPnk": {
@@ -30091,6 +30245,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.774 so the whole assembly fits the stage",
     "axisPct": 77.86
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Pnk-36578e7b4f2c.png",
@@ -30262,6 +30417,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.771 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Blk-87e908c68513.png",
@@ -30476,6 +30632,7 @@
     "seatSignature": "84bf51960abea5",
     "seatDropMm": 0.38
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk100SpryShnBlk": {
@@ -30677,6 +30834,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRndFrst78AnSpTslIvySl": {
@@ -30843,6 +31001,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.771 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvySl-657d4e2ad642.png",
@@ -31057,6 +31216,7 @@
     "seatSignature": "e15fafe202ce6b",
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk100SpryShnGl": {
@@ -31258,6 +31418,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRndFrst78AnSpTslWht": {
@@ -31424,6 +31585,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.771 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Wht-6bb170ef0b8c.png",
@@ -31638,6 +31800,7 @@
     "seatSignature": "aa91965c1657a1",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk100SpryMtGl": {
@@ -31839,6 +32002,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRndFrst78AnSpTslMtSl": {
@@ -32005,6 +32169,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.771 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-MtSl-fd45d19bed3d.png",
@@ -32219,6 +32384,7 @@
     "seatSignature": "14491fc50fe83c",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk100SpryMtSl": {
@@ -32420,6 +32586,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRndFrst78AnSpTslRed": {
@@ -32586,6 +32753,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.771 so the whole assembly fits the stage",
     "axisPct": 77.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Red-025a3f96ef0f.png",
@@ -32800,6 +32968,7 @@
     "seatSignature": "d205f17e167ea1",
     "seatDropMm": 0.38
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk100SpryShnSl": {
@@ -33001,6 +33170,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBSlk30RdcrLBrwnLthr": {
@@ -33210,6 +33380,7 @@
     "seatSignature": "4753c1d4165e69",
     "seatDropMm": 0.38
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk30RdcrShnSl": {
@@ -33419,6 +33590,7 @@
     "seatSignature": "7ae571f91794c8",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk30RdcrMtSlTall": {
@@ -33628,6 +33800,7 @@
     "seatSignature": "92b5ddf7154b6e",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk30RdcrMtSl": {
@@ -33837,6 +34010,7 @@
     "seatSignature": "a0347eb90ede90",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk30RdcrWht": {
@@ -34046,6 +34220,7 @@
     "seatSignature": "c57f37d10e30ea",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBRnd128SpryMtGl": {
@@ -34248,6 +34423,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.61
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd128SpryShnGl": {
@@ -34450,6 +34626,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.81
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd128SpryShnBlk": {
@@ -34652,6 +34829,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.61
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd128SpryMtSl": {
@@ -34854,6 +35032,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.74
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBRnd128SpryShnSl": {
@@ -35056,6 +35235,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.55
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBSlk100AnSpBlk": {
@@ -35219,6 +35399,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Blk-603cfde3a4b9.png",
@@ -35429,6 +35610,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.58
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBSlk100AnSpTslBlk": {
@@ -35592,6 +35774,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 59.29
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Blk-87e908c68513.png",
@@ -35802,6 +35985,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.71
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBRndFrst128SpryShnGl": {
@@ -36007,6 +36191,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.77
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "LBSlk30LtnShnBlk": {
@@ -36208,6 +36393,7 @@
     "seatSignature": "a64c57cf193e3e",
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBRndFrst128SpryShnBlk": {
@@ -36413,6 +36599,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.58
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "LBSlk30LtnShnGl": {
@@ -36614,6 +36801,7 @@
     "seatSignature": "c2ac596a195da3",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBRnd128AnSpBlk": {
@@ -36777,6 +36965,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.937 so the bulb stays on the stage",
     "axisPct": 54.65
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Blk-603cfde3a4b9.png",
@@ -36987,6 +37176,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.51
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "LBSlk30LtnShnSl": {
@@ -37188,6 +37378,7 @@
     "seatSignature": "6eff918612a15b",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBRnd128AnSpTslBlk": {
@@ -37351,6 +37542,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.756 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Blk-87e908c68513.png",
@@ -37557,6 +37749,7 @@
     "seatSignature": "57671a2600d75f",
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBRndFrst128AnSpBlk": {
@@ -37723,6 +37916,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.937 so the bulb stays on the stage",
     "axisPct": 54.78
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Blk-603cfde3a4b9.png",
@@ -37929,6 +38123,7 @@
     "seatSignature": "61a774b31aa98a",
     "seatDropMm": 0.5
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBRndFrst128AnSpTslBlk": {
@@ -38095,6 +38290,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.754 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Blk-87e908c68513.png",
@@ -38301,6 +38497,7 @@
     "seatSignature": "b3f3d7ee0cf697",
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk30AnSpLvn": {
@@ -38464,6 +38661,7 @@
     "seatSignature": "a582d816168f31",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Lvn-c36e59e65330.png",
@@ -38632,6 +38830,7 @@
     "seatSignature": "a7d12bb81ec031",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Pnk-3b9d029cd893.png",
@@ -38800,6 +38999,7 @@
     "seatSignature": "9a79a06a11a65f",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-MtSl-a4fc3b374013.png",
@@ -38968,6 +39168,7 @@
     "seatSignature": "e115418515f304",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvySl-4764b5f4c29d.png",
@@ -39136,6 +39337,7 @@
     "seatSignature": "443594e50cbe36",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Gl-e467bf5b4ddc.png",
@@ -39304,6 +39506,7 @@
     "seatSignature": "007569551f5614",
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvyGl-08ec920a63eb.png",
@@ -39472,6 +39675,7 @@
     "seatSignature": "7c11bf8100c2be",
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Wht-f680ce1bc3ad.png",
@@ -39640,6 +39844,7 @@
     "seatSignature": "be920f151c2caa",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Red-65432d9c09e0.png",
@@ -39846,6 +40051,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "LBSlk50LtnShnGl": {
@@ -40047,6 +40253,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "LBSlk50LtnMtGl": {
@@ -40248,6 +40455,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "LBSlk50LtnMtSl": {
@@ -40449,6 +40657,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "LBSlk50LtnCu": {
@@ -40650,6 +40859,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "LBSlk50LtnShnSl": {
@@ -40851,6 +41061,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50RdcrIvyLthr": {
@@ -41060,6 +41271,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50RdcrPnkLthr": {
@@ -41269,6 +41481,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50RdcrShnGl": {
@@ -41478,6 +41691,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50RdcrShnBlkTall": {
@@ -41687,6 +41901,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50RdcrShnBlk": {
@@ -41896,6 +42111,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50RdcrBrwnLthr": {
@@ -42105,6 +42321,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50RdcrLBrwnLthr": {
@@ -42314,6 +42531,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50RdcrShnSl": {
@@ -42523,6 +42741,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50RdcrMtSlTall": {
@@ -42732,6 +42951,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50RdcrMtSl": {
@@ -42941,6 +43161,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBSlk50RdcrWht": {
@@ -43150,6 +43371,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "LBRnd78LtnMtGl": {
@@ -43352,6 +43574,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.53
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "LBRnd78LtnShnGl": {
@@ -43554,6 +43777,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.73
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "LBRnd78LtnShnBlk": {
@@ -43756,6 +43980,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.53
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "LBRnd78LtnMtSl": {
@@ -43958,6 +44183,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.66
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "LBRnd78LtnShnSl": {
@@ -44160,6 +44386,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.46
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "LBRnd78LtnCu": {
@@ -44362,6 +44589,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.23
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "LBRndFrst78LtnMtGl": {
@@ -44567,6 +44795,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.59
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "LBRndFrst78LtnShnGl": {
@@ -44772,6 +45001,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.78
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "LBRndFrst78LtnShnBlk": {
@@ -44977,6 +45207,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.59
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "LBRndFrst78LtnMtSl": {
@@ -45182,6 +45413,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.72
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBSlk100AnSpLvn": {
@@ -45345,6 +45577,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Lvn-c36e59e65330.png",
@@ -45555,6 +45788,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.52
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBSlk100AnSpPnk": {
@@ -45718,6 +45952,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Pnk-3b9d029cd893.png",
@@ -45928,6 +46163,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.29
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBSlk100AnSpMtSl": {
@@ -46091,6 +46327,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-MtSl-a4fc3b374013.png",
@@ -46356,6 +46593,7 @@
     "seatSignature": "4152e001117ebe",
     "seatDropMm": 0
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBSlk100AnSpIvySl": {
@@ -46519,6 +46757,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvySl-4764b5f4c29d.png",
@@ -46687,6 +46926,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Gl-e467bf5b4ddc.png",
@@ -46855,6 +47095,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvyGl-08ec920a63eb.png",
@@ -47023,6 +47264,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Wht-f680ce1bc3ad.png",
@@ -47191,6 +47433,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 50
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Red-65432d9c09e0.png",
@@ -47359,6 +47602,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 57.61
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Lvn-9469c5d0a169.png",
@@ -47527,6 +47771,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 59.29
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvyGl-702d170cc249.png",
@@ -47695,6 +47940,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 59.29
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvySl-657d4e2ad642.png",
@@ -47863,6 +48109,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 59.29
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Wht-6bb170ef0b8c.png",
@@ -48031,6 +48278,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 59.02
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Pnk-36578e7b4f2c.png",
@@ -48199,6 +48447,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 59.29
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Red-025a3f96ef0f.png",
@@ -48464,6 +48713,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "explodedAxisPct": 37.83
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425
   },
   "GBSlk100AnSpTslMtSl": {
@@ -48627,6 +48877,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 59.29
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-MtSl-fd45d19bed3d.png",
@@ -48892,6 +49143,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "explodedAxisPct": 37.8
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428
   },
   "GBSlk100AnSpTslGl": {
@@ -49055,6 +49307,7 @@
     "source": "docs/hero-families/sleek-2026-09-23/approval.json",
     "axisPct": 58.47
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Gl-619bde2f3dcd.png",
@@ -49223,6 +49476,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.944 so the bulb stays on the stage",
     "axisPct": 52.97
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Pnk-3b9d029cd893.png",
@@ -49391,6 +49645,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.947 so the bulb stays on the stage",
     "axisPct": 53.83
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvyGl-08ec920a63eb.png",
@@ -49559,6 +49814,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.938 so the bulb stays on the stage",
     "axisPct": 53.55
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Lvn-c36e59e65330.png",
@@ -49727,6 +49983,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.948 so the bulb stays on the stage",
     "axisPct": 54.18
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Gl-e467bf5b4ddc.png",
@@ -49942,6 +50199,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.12
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "LBSlk30LtnClOvrCap": {
@@ -50105,7 +50363,7 @@
       "dy": -1111.45
      },
      "image": {
-      "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+      "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
       "key": "",
       "sha256": "",
       "bytes": 0,
@@ -50124,7 +50382,7 @@
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "detached": {
       "image": {
-       "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+       "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
        "width": 299,
        "height": 346
       },
@@ -50163,6 +50421,7 @@
     "seatSignature": "d30152b300b266",
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 398
   },
   "GBRnd128AnSpIvySl": {
@@ -50326,6 +50585,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.949 so the bulb stays on the stage",
     "axisPct": 53.78
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvySl-4764b5f4c29d.png",
@@ -50541,6 +50801,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.74
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRnd128AnSpMtSl": {
@@ -50704,6 +50965,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.943 so the bulb stays on the stage",
     "axisPct": 54.84
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-MtSl-a4fc3b374013.png",
@@ -50919,6 +51181,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.34
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRnd128AnSpWht": {
@@ -51082,6 +51345,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.931 so the bulb stays on the stage",
     "axisPct": 55.15
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Wht-f680ce1bc3ad.png",
@@ -51297,6 +51561,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 36.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRnd128AnSpRed": {
@@ -51460,6 +51725,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.928 so the bulb stays on the stage",
     "axisPct": 54.78
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Red-65432d9c09e0.png",
@@ -51675,6 +51941,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.47
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRnd128AnSpTslPnk": {
@@ -51838,6 +52105,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.758 so the whole assembly fits the stage",
     "axisPct": 75.37
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Pnk-36578e7b4f2c.png",
@@ -52044,6 +52312,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRnd78RdcrShnBlk": {
@@ -52254,6 +52523,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.12
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRnd128AnSpTslIvyGl": {
@@ -52417,6 +52687,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.756 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvyGl-702d170cc249.png",
@@ -52623,6 +52894,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRnd78RdcrBrwnLthr": {
@@ -52833,6 +53105,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRnd128AnSpTslLvn": {
@@ -52996,6 +53269,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.774 so the whole assembly fits the stage",
     "axisPct": 74.93
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Lvn-9469c5d0a169.png",
@@ -53202,6 +53476,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRnd78RdcrLBrwnLthr": {
@@ -53412,6 +53687,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.69
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRnd128AnSpTslGl": {
@@ -53575,6 +53851,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.764 so the whole assembly fits the stage",
     "axisPct": 75.2
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Gl-619bde2f3dcd.png",
@@ -53790,6 +54067,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.36
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "LBSlk50LtnClOvrCap": {
@@ -53947,7 +54225,7 @@
       "dy": -982.8
      },
      "image": {
-      "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+      "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
       "key": "",
       "sha256": "",
       "bytes": 0,
@@ -53966,7 +54244,7 @@
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "detached": {
       "image": {
-       "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+       "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
        "width": 299,
        "height": 346
       },
@@ -54011,6 +54289,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 356
   },
   "GBRnd128AnSpTslIvySl": {
@@ -54174,6 +54453,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.756 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-IvySl-657d4e2ad642.png",
@@ -54380,6 +54660,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRnd78RdcrWht": {
@@ -54590,6 +54871,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.46
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRnd128AnSpTslRed": {
@@ -54753,6 +55035,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.756 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Red-025a3f96ef0f.png",
@@ -54959,6 +55242,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRnd78RdcrMtSl": {
@@ -55169,6 +55453,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.79
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRnd128AnSpTslWht": {
@@ -55332,6 +55617,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.756 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-Wht-6bb170ef0b8c.png",
@@ -55538,6 +55824,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 339
   },
   "GBRndFrst78RdcrShnGl": {
@@ -55748,6 +56035,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.18
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBRnd128AnSpTslMtSl": {
@@ -55911,6 +56199,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; tassel kit drawn at 0.756 so the whole assembly fits the stage",
     "axisPct": 75.43
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 425,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSpTsl-MtSl-fd45d19bed3d.png",
@@ -56126,6 +56415,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 37.53
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBRndFrst128AnSpGl": {
@@ -56292,6 +56582,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.948 so the bulb stays on the stage",
     "axisPct": 54.32
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Gl-e467bf5b4ddc.png",
@@ -56507,6 +56798,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.17
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBRndFrst128AnSpIvyGl": {
@@ -56673,6 +56965,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.947 so the bulb stays on the stage",
     "axisPct": 53.96
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvyGl-08ec920a63eb.png",
@@ -56888,6 +57181,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.49
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBRndFrst128AnSpIvySl": {
@@ -57054,6 +57348,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.949 so the bulb stays on the stage",
     "axisPct": 53.91
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-IvySl-4764b5f4c29d.png",
@@ -57269,6 +57564,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 35.75
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "LBRnd78LtnClOvrCap": {
@@ -57426,7 +57722,7 @@
       "dy": -1211.67
      },
      "image": {
-      "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+      "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
       "key": "",
       "sha256": "",
       "bytes": 0,
@@ -57445,7 +57741,7 @@
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "detached": {
       "image": {
-       "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+       "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
        "width": 299,
        "height": 346
       },
@@ -57491,6 +57787,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 39.38
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 429
   },
   "GBRndFrst128AnSpLvn": {
@@ -57657,6 +57954,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.938 so the bulb stays on the stage",
     "axisPct": 53.67
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Lvn-c36e59e65330.png",
@@ -57872,6 +58170,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 38.79
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "LBRndFrst78LtnClOvrCap": {
@@ -58032,7 +58331,7 @@
       "dy": -1211.67
      },
      "image": {
-      "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+      "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
       "key": "",
       "sha256": "",
       "bytes": 0,
@@ -58051,7 +58350,7 @@
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "detached": {
       "image": {
-       "url": "/assets/register/overcaps/ltn-18-415-clear-overcap.webp",
+       "url": "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png",
        "width": 299,
        "height": 346
       },
@@ -58097,6 +58396,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json",
     "sidecarAxisPct": 39.42
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 427
   },
   "GBRndFrst128AnSpPnk": {
@@ -58263,6 +58563,7 @@
     "source": "docs/hero-families/circle-round-empire-2026-09-22/complete-family-approval.json; bulb kit drawn at 0.944 so the bulb stays on the stage",
     "axisPct": 53.1
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "glassShoulderY": 428,
    "capCloseUp": {
     "url": "/local-kits/elegant60-100-masters-2026-11-03/caps/AnSp-Pnk-3b9d029cd893.png",
@@ -58390,10 +58691,10 @@
       "dy": -743.6
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/white-rect/pump-30-699baf75aa98.png",
+      "url": "/local-kits/round-sleek-masters-2026-11-03/white-rect/pump-30-70ddefcd0241.png",
       "key": "",
-      "sha256": "699baf75aa984cbaede7ecc6596f989030bc85b76e4169d6e7a85947c7a5c64d",
-      "bytes": 60620,
+      "sha256": "70ddefcd0241508ab6e28456e74939fd89ad8e29e351a75fa298c613ae2d4ed5",
+      "bytes": 60621,
       "width": 306,
       "height": 506
      },
@@ -58490,6 +58791,7 @@
     "seatSignature": null,
     "seatDropMm": 0.25
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "source": {
     "template": "LBSlk30LtnClOvrCap",
     "psd": {
@@ -58613,10 +58915,10 @@
       "dy": -714.27
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/white-rect/pump-50-699baf75aa98.png",
+      "url": "/local-kits/round-sleek-masters-2026-11-03/white-rect/pump-50-70ddefcd0241.png",
       "key": "",
-      "sha256": "699baf75aa984cbaede7ecc6596f989030bc85b76e4169d6e7a85947c7a5c64d",
-      "bytes": 60620,
+      "sha256": "70ddefcd0241508ab6e28456e74939fd89ad8e29e351a75fa298c613ae2d4ed5",
+      "bytes": 60621,
       "width": 306,
       "height": 506
      },
@@ -58719,6 +59021,7 @@
     "landmarkY": 355.4,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "source": {
     "template": "LBSlk50LtnClOvrCap",
     "psd": {
@@ -58842,10 +59145,10 @@
       "dy": -715.77
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/white-rect/pump-100-6a2a87cc0e02.png",
+      "url": "/local-kits/round-sleek-masters-2026-11-03/white-rect/pump-100-60224601f3a8.png",
       "key": "",
-      "sha256": "6a2a87cc0e0243d8ed6a510c2adc60b29fa926b52cdf77fef9993107a96f77dd",
-      "bytes": 77523,
+      "sha256": "60224601f3a89b9dfe4ef167456d9d83c2f085d1a0e3d0280fb33538cf1e01b1",
+      "bytes": 77524,
       "width": 355,
       "height": 587
      },
@@ -58948,6 +59251,7 @@
     "landmarkY": 339.75,
     "source": "docs/hero-families/sleek-2026-09-23/approval.json"
    },
+   "reviewMaster": "round-sleek-2026-11-03",
    "source": {
     "template": "LBSlk100LtnClOvrCap",
     "psd": {

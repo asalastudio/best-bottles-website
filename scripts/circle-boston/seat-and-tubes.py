@@ -38,6 +38,7 @@ BULB_MARGIN = 8                # % of the stage kept clear above and beside a pl
 # Family settings: scripts/round-sleek/seat-and-tubes.py imports this module and replaces them.
 FROST_DIR = "public/local-kits/circle-masters-2026-11-03/droppers"
 BULB = re.compile(r"GBCrcl(?:Frst)?(?:50|100)(AnSpTsl|AnSp)(\w+)$")
+EMPTY_COVER = "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png"   # empty-lotion-cover.py
 TUBE_ANCHOR = "psd"              # "psd": the PSD's bottle-to-tube geometry; "register": the register tube's place
 tube_key = lambda kit: kit["register"]["bodyId"].split("-")[1].removesuffix("ml")
 DROPPER = re.compile(r"GBCrcl(?:Frst)?50Drp(Cu|Gl|Sl)$")
@@ -219,6 +220,10 @@ def main():
             m, x, y = U.alpha(part)
             top = y + int(np.argmax(m.any(1)))
             b = {**look["box"], "y": round(float(top), 3)}
+            if EMPTY_COVER and look["image"]["url"].endswith("/ltn-18-415-clear-overcap.webp"):
+                # The register's empty cover still shows where the pump stood in it (Jordan, 3 Nov 2026: "same ghost
+                # issue on the side car"): draw the Sunburst-emptied cover, same frame (empty-lotion-cover.py).
+                look = {**look, "image": {**look["image"], "url": EMPTY_COVER}}
             part.update({"image": {**part["image"], **look["image"], "key": "", "sha256": "", "bytes": 0}, "image2x": None, "mask": None,
                          "derivation": "empty-cover-seated", "blendMode": "multiply"})
             boxed(part, b)
