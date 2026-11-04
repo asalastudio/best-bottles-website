@@ -7,7 +7,7 @@ off its axis, ran past Diva's foot and read pale. Here each fitment's tube is:
 - drawn with Sunburst from the Round tube straightened (its own fitting kept at the top), as a crisp clear
   polyethylene tube in the approved tube material; the atomizer tube is the same run without a fitting;
 - hung from the centre of Diva's own collar (the PSD head's foot), its fitting tucked under the collar;
-- cut to Diva's depth: its foot on the bowl's floor (the glass's waist above the pedestal), its run TUBE_MM wide.
+- cut to Diva's depth: its foot on the bowl's floor (the glass's waist above the pedestal), its run TUBE_MM[kind] wide (2 mm for the sprayers, 3 mm for the lotion pump).
 It stays EXPLODED only (not seen through the glass). Run after seat-and-tubes.py.
 Usage: python3 scripts/diva-vial/diva-exploded-tubes.py <work-dir>
 """
@@ -21,8 +21,9 @@ E = importlib.util.module_from_spec(spec); spec.loader.exec_module(E)
 KITS = "public/local-kits/diva-masters-2026-11-03/kits.json"
 OUT = "public/local-kits/diva-masters-2026-11-03/exploded-tubes"
 ROUND = "public/local-kits/round-sleek-masters-2026-11-03/tubes/tubes.json"
-TUBE_MM = 3.0            # the run's outer width, an 18-415 dip tube
+TUBE_MM = {"spray": 2.0, "atomizer": 2.0, "lotion": 3.0}   # the run's outer width (Jordan 4 Nov: 3 mm spray tubes "too thick")
 FLOOR_MM = 1.5           # the foot stands this far above the waist (the bowl's glass floor)
+BEND_MM = 2.5            # a real tube keeps a slight curve from its coil: the foot swings this far off the axis
 TUCK = 0.4               # how much of the fitting sits up inside the collar
 PROMPT = """1. Keep geometry locked to the first image (shown on grey only so its outline is visible): the same straight vertical dip tube, its thickness, length and cut end, and {top}, at the same position and size in the frame. Keep it perfectly straight and vertical. Do not bend, move or resize it.
 2. Material of the tube from the second image: a clear, slightly translucent polyethylene dip tube, cool light grey walls with a bright soft core and crisp thin darker edges on both sides, so it reads clearly as a real translucent tube. Natural, not flat bright white, no glow.
@@ -63,6 +64,18 @@ def fitted(tube, kind_top, length, scale):
     out.paste(run.resize((t.width, need), Image.LANCZOS), (0, head))
     out.paste(t.crop((0, t.height - end, t.width, t.height)), (0, head + need))
     return out
+
+
+def bent(tube, head, amp):
+    """The run below `head` bowed sideways: straight where it leaves the fitting, its foot `amp` px off the axis
+    (a smooth t^1.8 curve, sub-pixel per row). Padded equally both sides so the fitting stays centred in the image."""
+    a = np.asarray(tube).astype(np.float32); h, w = a.shape[:2]; pad = int(np.ceil(amp)) + 2
+    out = np.zeros((h, w + 2 * pad, 4), np.float32); out[:, pad:pad + w] = a
+    for y in range(head, h):
+        t = (y - head) / max(1, h - 1 - head); dx = amp * t ** 1.8; i = int(np.floor(dx)); f = dx - i
+        row = np.zeros((w + 2 * pad, 4), np.float32); row[pad:pad + w] = a[y]
+        out[y] = (1 - f) * np.roll(row, i, 0) + f * np.roll(row, i + 1, 0)
+    return Image.fromarray(np.clip(out + 0.5, 0, 255).astype(np.uint8))
 
 
 def prune(folder, rows):
@@ -137,11 +150,11 @@ def main():
         sx, sy = head["box"]["width"] / h.shape[1], head["box"]["height"] / h.shape[0]
         collar_foot = head["box"]["y"] + foot * sy; axis = head["box"]["x"] + (xs.min() + xs.max() + 1) / 2 * sx
         t = tubes[kind]; fit_top, run_w = anatomy(t)
-        scale = TUBE_MM * ppm / run_w
+        scale = TUBE_MM[kind] * ppm / run_w
         y0 = collar_foot - TUCK * fit_top * scale
         key = (kind, round(scale, 4), round(floor - y0))
         if key not in made:
-            made[key] = save(fitted(t, fit_top, floor - y0, scale), f"diva-{kind}-{key[2]}")
+            made[key] = save(bent(fitted(t, fit_top, floor - y0, scale), round(fit_top * scale), BEND_MM * ppm), f"diva-{kind}-{key[2]}")
         img = made[key]
         box = {"x": round(axis - img["width"] / 2, 3), "y": round(y0, 3), "width": img["width"], "height": img["height"]}
         tube.update({"image": img, "image2x": None, "mask": None, "box": box, "derivation": f"sunburst-diva-tube:{kind}",
