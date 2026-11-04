@@ -33,6 +33,9 @@ const groupFields = v.object({
     primaryGraceSku: v.optional(v.union(v.string(), v.null())),
     primaryWebsiteSku: v.optional(v.union(v.string(), v.null())),
     variantCount: v.optional(v.number()),
+    // 2026-11-04: moving the Pillar rollers into their own page leaves both pages' "From $" ranges stale.
+    priceRangeMin: v.optional(v.union(v.number(), v.null())),
+    priceRangeMax: v.optional(v.union(v.number(), v.null())),
 });
 
 type Fields = Record<string, string | number | null | undefined>;
@@ -93,6 +96,35 @@ export const restoreGroupFields = mutation({
             out.restored++; out.fieldsWritten += Object.keys(write).length;
         }
         return out;
+    },
+});
+
+/**
+ * Give a product its price ladder when it has none (2026-11-04: GBPillar9SpryBlkMatt was imported with only the 1-piece
+ * price, so its page offered "Set of 1" alone). Refuses a product that already has tiers, or whose 1-piece price is not
+ * the ladder's first rung, so it can only fill a gap, never reprice. Dry run unless dryRun is false.
+ */
+export const setMissingPriceLadder = mutation({
+    args: {
+        writeToken: v.string(),
+        dryRun: v.optional(v.boolean()),
+        websiteSku: v.string(),
+        priceTiers: v.array(v.object({ minQty: v.number(), unitPrice: v.number(), totalPrice: v.number() })),
+    },
+    returns: v.object({ dryRun: v.boolean(), written: v.boolean(), detail: v.string() }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        const dryRun = args.dryRun !== false;
+        const rows = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku)).take(2);
+        if (rows.length !== 1) return { dryRun, written: false, detail: `${rows.length} products carry this websiteSku` };
+        const row = rows[0];
+        if ((row.priceTiers ?? []).length > 0) return { dryRun, written: false, detail: "already has a price ladder" };
+        const tiers = [...args.priceTiers].sort((a, b) => a.minQty - b.minQty);
+        if (tiers.length < 2 || tiers[0].minQty !== 1) return { dryRun, written: false, detail: "a ladder starts at 1 piece and has at least two rungs" };
+        if (row.webPrice1pc !== tiers[0].unitPrice) return { dryRun, written: false, detail: `the 1-piece price is ${row.webPrice1pc}, not ${tiers[0].unitPrice}` };
+        const at12 = tiers.find((t) => t.minQty === 12)?.unitPrice ?? null;
+        if (!dryRun) await ctx.db.patch(row._id, { priceTiers: tiers, webPrice12pc: at12 ?? row.webPrice12pc });
+        return { dryRun, written: !dryRun, detail: `ladder ${tiers.map((t) => `${t.minQty}+ $${t.unitPrice}`).join(", ")}` };
     },
 });
 

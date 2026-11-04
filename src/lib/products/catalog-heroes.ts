@@ -39,6 +39,9 @@ const verifiedGroupAliases: Readonly<Record<string, readonly string[]>> = {
     // Production retained this older Cylinder group slug while development uses
     // the applicator-qualified slug. Both identify the same exact 30 ml assembly.
     "cylinder-30ml-clear-18-415": ["cylinder-30ml-clear-18-415-finemist"],
+    // 2026-11-04: the two Pillar rollers moved from the cap page into their own page; their heroes are recorded
+    // under the cap page's slug.
+    "pillar-9ml-clear-13-415-rollon": ["pillar-9ml-clear-13-415"],
     // Production's 2026-09-20 Shopify webhook split the three 5 ml Slim atomizers
     // into this group; their approved heroes are recorded under atomizer-5ml.
     "atomizer-5ml-slim": ["atomizer-5ml"],
