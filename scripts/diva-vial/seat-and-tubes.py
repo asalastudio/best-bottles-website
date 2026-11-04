@@ -1,4 +1,4 @@
-"""Seat every Diva closure and draw its dip tube: the Circle treatment (scripts/circle-boston/seat-and-tubes.py) with
+"""Seat every Diva closure and its dip tube (EXPLODED only: see SEATED_TUBE): the Circle treatment (scripts/circle-boston/seat-and-tubes.py) with
 Diva's paths and SKU patterns. Tubes are fitted to the register tube's place (TUBE_ANCHOR "register").
 Run after build-kits.mts, diva-ring-kits.py and diva-tubes.py.
 Usage: python3 scripts/diva-vial/seat-and-tubes.py
@@ -17,7 +17,10 @@ C.TUBE_ANCHOR = "register"
 # Jordan (3 Nov 2026): the glass pipette seen inside Diva's fluted glass "doesn't look correct": the droppers show
 # the head on the glass only; EXPLODED still lifts the whole dropper with its pipette.
 C.SEATED_PIPETTE = False
-C.TUBE_ON_AXIS = True            # the straightened tubes (diva-tubes.py) stand on the axis
+# Jordan (3 Nov 2026): the dip tubes seen through the glass "are wrong" and look fake. No Diva PSD in the master
+# library has a tube (325 files; every spray, lotion and bulb photograph shows the glass without one), so the Round
+# tube of the same fitment shows only in EXPLODED, lifted out with the head ("we don't need to show it through the glass").
+C.SEATED_TUBE = False
 C.tube_key = lambda kit: kit["register"]["bodyId"].removesuffix("-18-415").replace("ml", "").replace("-", "")   # diva46
 
 if __name__ == "__main__":

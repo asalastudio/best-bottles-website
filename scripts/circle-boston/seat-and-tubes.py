@@ -40,7 +40,7 @@ FROST_DIR = "public/local-kits/circle-masters-2026-11-03/droppers"
 BULB = re.compile(r"GBCrcl(?:Frst)?(?:50|100)(AnSpTsl|AnSp)(\w+)$")
 EMPTY_COVER = "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png"   # empty-lotion-cover.py
 SEATED_PIPETTE = True            # False: no glass pipette inside the glass (the lifted dropper keeps its own)
-TUBE_ON_AXIS = False             # with TUBE_ANCHOR "register": stand the tube on the glass axis, not the register tube's centre
+SEATED_TUBE = True               # False: the dip tube shows only lifted out in EXPLODED, never through the glass
 TUBE_ANCHOR = "psd"              # "psd": the PSD's bottle-to-tube geometry; "register": the register tube's place
 tube_key = lambda kit: kit["register"]["bodyId"].split("-")[1].removesuffix("ml")
 DROPPER = re.compile(r"GBCrcl(?:Frst)?50Drp(Cu|Gl|Sl)$")
@@ -314,14 +314,13 @@ def main():
         if TUBE_ANCHOR == "register":
             # The register tube's place: its top at the pump (moved with the seated head), its foot near the floor.
             b = seated_tube["bounds"]; h = b["bottom"] - b["top"]; w = h * t["pixels"][0] / t["pixels"][1]
-            cx = d["axisX"] if TUBE_ON_AXIS else (b["left"] + b["right"]) / 2
-            boxed(tube, {"x": round(cx - w / 2, 3), "y": round(b["top"] + fit.get("seatDy", 0), 3),
+            boxed(tube, {"x": round((b["left"] + b["right"]) / 2 - w / 2, 3), "y": round(b["top"] + fit.get("seatDy", 0), 3),
                          "width": round(w, 3), "height": round(h, 3)})
         else:
             boxed(tube, {"x": round(d["axisX"] + t["left"] * H, 3), "y": round(d["seatY"] + t["top"] * H, 3),
                          "width": round(t["width"] * H, 3), "height": round(t["height"] * H, 3)})
         tube.pop("views", None)
-        if kit["register"]["glass"] == "Frosted":
+        if kit["register"]["glass"] == "Frosted" or not SEATED_TUBE:
             tube["views"] = ["exploded"]
         rest = [p for p in kit["parts"] if p["slot"] != "diptube"]
         kit["parts"] = [p for p in rest if p["slot"] == "body"] + [tube] + [p for p in rest if p["slot"] != "body"]
