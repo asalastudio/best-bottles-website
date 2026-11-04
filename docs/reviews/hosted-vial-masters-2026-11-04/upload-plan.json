@@ -1,0 +1,196 @@
+{
+  "checkedAt": "2026-11-04T14:09:10.897Z",
+  "configurations": 16,
+  "priorVersion": "75cd3dc3771f8bc6",
+  "priorRecipes": 659,
+  "preservedRecipeSha256": "9a9805ba7269e12238d0f1a18be4e1f028b3b46884c58c4cc9723da1e914eba0",
+  "sourceFiles": [
+    {
+      "file": "public/local-kits/vial-masters-2026-11-03/kits.json",
+      "sha256": "9ad1353a3d1c356e1e4467c819fdc77c999b014151b02d97a4d679a875e1ed9f"
+    }
+  ],
+  "assetCount": 26,
+  "derivativeCount": 104,
+  "assets": {
+    "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.cbdd01b99bfe.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.cbdd01b99bfe.png",
+      "sha256": "cbdd01b99bfe65197d2ced44a5314e39a3d407a58de2f3c4938d30073417889f",
+      "bytes": 55065,
+      "key": "reviewed-master-media/2026-11-04/cbdd01b99bfe65197d2ced44a5314e39a3d407a58de2f3c4938d30073417889f.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.4c58f4e3b8ed.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.4c58f4e3b8ed.png",
+      "sha256": "4c58f4e3b8ed4150781287dee7861f7a22eed3f525588735973dd0e956d5041a",
+      "bytes": 19403,
+      "key": "reviewed-master-media/2026-11-04/4c58f4e3b8ed4150781287dee7861f7a22eed3f525588735973dd0e956d5041a.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.b477d543c094.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.b477d543c094.png",
+      "sha256": "b477d543c094a53b7d6c66a340248def54d8e3503c67f9934ffb9c03ae8d3a66",
+      "bytes": 19424,
+      "key": "reviewed-master-media/2026-11-04/b477d543c094a53b7d6c66a340248def54d8e3503c67f9934ffb9c03ae8d3a66.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-clear.3a9dee87188b.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/vial-1ml-clear.3a9dee87188b.png",
+      "sha256": "3a9dee87188b03895d6170e13194bef4263c8ec4ddaea20426db5989653d9f93",
+      "bytes": 44141,
+      "key": "reviewed-master-media/2026-11-04/3a9dee87188b03895d6170e13194bef4263c8ec4ddaea20426db5989653d9f93.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-clear.3ac9418c7705.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/vial-4ml-clear.3ac9418c7705.png",
+      "sha256": "3ac9418c7705b44767a2ff649eeb8f2a8ca79e095a2b9e354f653703ae4679c9",
+      "bytes": 20699,
+      "key": "reviewed-master-media/2026-11-04/3ac9418c7705b44767a2ff649eeb8f2a8ca79e095a2b9e354f653703ae4679c9.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/pipette-13-425.d3bf7347cc16.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/pipette-13-425.d3bf7347cc16.png",
+      "sha256": "d3bf7347cc162c88fabda32d7a520a8269ea4887204fd359dc7a4b89149de526",
+      "bytes": 6211,
+      "key": "reviewed-master-media/2026-11-04/d3bf7347cc162c88fabda32d7a520a8269ea4887204fd359dc7a4b89149de526.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.2d88a6877ce2.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.2d88a6877ce2.png",
+      "sha256": "2d88a6877ce2b62ce34a09c39a980b62c9f9798b52396bca1dc6bdfe89fdf7d5",
+      "bytes": 15191,
+      "key": "reviewed-master-media/2026-11-04/2d88a6877ce2b62ce34a09c39a980b62c9f9798b52396bca1dc6bdfe89fdf7d5.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-amber.d630b894a844.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/vial-4ml-amber.d630b894a844.png",
+      "sha256": "d630b894a8441705034ec920113d51275622611ef37b2a88f026be9ca05ef8b9",
+      "bytes": 116207,
+      "key": "reviewed-master-media/2026-11-04/d630b894a8441705034ec920113d51275622611ef37b2a88f026be9ca05ef8b9.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/pipette-13-425-through-glass.f4b1bb20d5f4.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/pipette-13-425-through-glass.f4b1bb20d5f4.png",
+      "sha256": "f4b1bb20d5f47c23dbd6e4d756238c38db888ed0c1a6d63f5f4c190c4daf2945",
+      "bytes": 5985,
+      "key": "reviewed-master-media/2026-11-04/f4b1bb20d5f47c23dbd6e4d756238c38db888ed0c1a6d63f5f4c190c4daf2945.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-blue.6be973ef8c5c.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/vial-4ml-blue.6be973ef8c5c.png",
+      "sha256": "6be973ef8c5ce2c1f5dc9c7dd28faf9452cd74e3378d5c384d31af6663b7b0bd",
+      "bytes": 116764,
+      "key": "reviewed-master-media/2026-11-04/6be973ef8c5ce2c1f5dc9c7dd28faf9452cd74e3378d5c384d31af6663b7b0bd.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-green.f90be1f91a2b.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/vial-4ml-green.f90be1f91a2b.png",
+      "sha256": "f90be1f91a2be07fd414ecc68f43843f12943a328f2caaa93394d3511884c69d",
+      "bytes": 41532,
+      "key": "reviewed-master-media/2026-11-04/f90be1f91a2be07fd414ecc68f43843f12943a328f2caaa93394d3511884c69d.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.1c86294b8bec.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.1c86294b8bec.png",
+      "sha256": "1c86294b8bec5ba73278122fd0995f9a16367cbe037c6409401aab5783ec211e",
+      "bytes": 56003,
+      "key": "reviewed-master-media/2026-11-04/1c86294b8bec5ba73278122fd0995f9a16367cbe037c6409401aab5783ec211e.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black.64a167c0d05b.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black.64a167c0d05b.png",
+      "sha256": "64a167c0d05bd4cc623e493c44af218a1931d9eb7ee6943c3c3543c2fba246c2",
+      "bytes": 23146,
+      "key": "reviewed-master-media/2026-11-04/64a167c0d05bd4cc623e493c44af218a1931d9eb7ee6943c3c3543c2fba246c2.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black-rod.a1b1fbffc0a7.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black-rod.a1b1fbffc0a7.png",
+      "sha256": "a1b1fbffc0a70e4b2771679844e59467e5b57162fba8e8b071555b0567183447",
+      "bytes": 43605,
+      "key": "reviewed-master-media/2026-11-04/a1b1fbffc0a70e4b2771679844e59467e5b57162fba8e8b071555b0567183447.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/tola-3ml-clear-applicator.eb332e3e084c.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/tola-3ml-clear-applicator.eb332e3e084c.png",
+      "sha256": "eb332e3e084c824508253175ad483e9c7db6889660caaf5562d85070b1bcd02e",
+      "bytes": 110293,
+      "key": "reviewed-master-media/2026-11-04/eb332e3e084c824508253175ad483e9c7db6889660caaf5562d85070b1bcd02e.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/tola-cap-gold-jewel.a763e31db16e.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/tola-cap-gold-jewel.a763e31db16e.png",
+      "sha256": "a763e31db16e4db4df9ed217a0993b7e7d1f1bcb5762ed3a993e0006ae45b1d7",
+      "bytes": 109247,
+      "key": "reviewed-master-media/2026-11-04/a763e31db16e4db4df9ed217a0993b7e7d1f1bcb5762ed3a993e0006ae45b1d7.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/spray-3ml-clear-canvas.c40624137ca5.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/spray-3ml-clear-canvas.c40624137ca5.png",
+      "sha256": "c40624137ca5e6178942287898fb108599f777e99f8fc50f7fb192d747d4113d",
+      "bytes": 102640,
+      "key": "reviewed-master-media/2026-11-04/c40624137ca5e6178942287898fb108599f777e99f8fc50f7fb192d747d4113d.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/spray-3ml-clear-overcap-canvas.72326a026fc3.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/spray-3ml-clear-overcap-canvas.72326a026fc3.png",
+      "sha256": "72326a026fc34a6e3f75e8bc6f6d5d4b1d33ec66999c99693e8c9a5907e363e1",
+      "bytes": 33961,
+      "key": "reviewed-master-media/2026-11-04/72326a026fc34a6e3f75e8bc6f6d5d4b1d33ec66999c99693e8c9a5907e363e1.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2BlackCap-body-slim.b2897e99c6df.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/GBVAmb2BlackCap-body-slim.b2897e99c6df.png",
+      "sha256": "b2897e99c6dfee2a3dc46ba6ca4aa05506272c8f178fe914f5c94b24780abddb",
+      "bytes": 598185,
+      "key": "reviewed-master-media/2026-11-04/b2897e99c6dfee2a3dc46ba6ca4aa05506272c8f178fe914f5c94b24780abddb.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2BlackCap-cap-slim.870f866e4558.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/GBVAmb2BlackCap-cap-slim.870f866e4558.png",
+      "sha256": "870f866e45589c916e423886beaa24ea1cadc3a5b4a8aafd3601e8362fb18d85",
+      "bytes": 42910,
+      "key": "reviewed-master-media/2026-11-04/870f866e45589c916e423886beaa24ea1cadc3a5b4a8aafd3601e8362fb18d85.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2WhtCap-body-slim.b2897e99c6df.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/GBVAmb2WhtCap-body-slim.b2897e99c6df.png",
+      "sha256": "b2897e99c6dfee2a3dc46ba6ca4aa05506272c8f178fe914f5c94b24780abddb",
+      "bytes": 598185,
+      "key": "reviewed-master-media/2026-11-04/b2897e99c6dfee2a3dc46ba6ca4aa05506272c8f178fe914f5c94b24780abddb.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2WhtCap-cap-slim.8cfb841697a0.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/GBVAmb2WhtCap-cap-slim.8cfb841697a0.png",
+      "sha256": "8cfb841697a098311d87079874ea13d33a8ed7a570f494481f957fbe9c5e8b19",
+      "bytes": 33061,
+      "key": "reviewed-master-media/2026-11-04/8cfb841697a098311d87079874ea13d33a8ed7a570f494481f957fbe9c5e8b19.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/GBVialClr2mlBlackCap-body-slim.ba474f8c7fc8.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/GBVialClr2mlBlackCap-body-slim.ba474f8c7fc8.png",
+      "sha256": "ba474f8c7fc8eec773fe7b89509c67d139a58a2dddbaa84a4c6073424e33741c",
+      "bytes": 800745,
+      "key": "reviewed-master-media/2026-11-04/ba474f8c7fc8eec773fe7b89509c67d139a58a2dddbaa84a4c6073424e33741c.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/GBVialClr2mlBlackCap-cap-slim.870f866e4558.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/GBVialClr2mlBlackCap-cap-slim.870f866e4558.png",
+      "sha256": "870f866e45589c916e423886beaa24ea1cadc3a5b4a8aafd3601e8362fb18d85",
+      "bytes": 42910,
+      "key": "reviewed-master-media/2026-11-04/870f866e45589c916e423886beaa24ea1cadc3a5b4a8aafd3601e8362fb18d85.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/GBVialClr2mlWhtCap-body-slim.ba474f8c7fc8.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/GBVialClr2mlWhtCap-body-slim.ba474f8c7fc8.png",
+      "sha256": "ba474f8c7fc8eec773fe7b89509c67d139a58a2dddbaa84a4c6073424e33741c",
+      "bytes": 800745,
+      "key": "reviewed-master-media/2026-11-04/ba474f8c7fc8eec773fe7b89509c67d139a58a2dddbaa84a4c6073424e33741c.png"
+    },
+    "/local-kits/vial-masters-2026-11-03/parts/GBVialClr2mlWhtCap-cap-slim.8cfb841697a0.png": {
+      "file": "public/local-kits/vial-masters-2026-11-03/parts/GBVialClr2mlWhtCap-cap-slim.8cfb841697a0.png",
+      "sha256": "8cfb841697a098311d87079874ea13d33a8ed7a570f494481f957fbe9c5e8b19",
+      "bytes": 33061,
+      "key": "reviewed-master-media/2026-11-04/8cfb841697a098311d87079874ea13d33a8ed7a570f494481f957fbe9c5e8b19.png"
+    }
+  },
+  "replacedRecipes": [
+    "GBVAmb2BlackCap",
+    "GBVAmb2WhtCap",
+    "GBVialClr2mlBlackCap",
+    "GBVialClr2mlWhtCap"
+  ],
+  "newRecipes": [
+    "GB09BlackCapApp",
+    "GB09BlackCapSht",
+    "GB1mlAmbVBlk",
+    "GB1mlAmbVialWht",
+    "GB1mlVBlk",
+    "GB1mlVWht",
+    "GB3TPlGl",
+    "GBV1DrmBlkDropper",
+    "GBVAmb1DrmBlkDrpr",
+    "GBVBlu1DrmBlkDropper",
+    "GBVGr1DrmBlkDropper",
+    "LB3mlClear"
+  ],
+  "capThumbnails": 0,
+  "productionDataMutated": false,
+  "rollback": "Revert the release commit (restores the four generated JSON files); immutable uploaded objects may remain archived."
+}
