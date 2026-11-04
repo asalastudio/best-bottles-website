@@ -103,7 +103,7 @@ describe('clear Tulip 6 ml internal optics', () => {
             expect(hash(JSON.stringify(canonical(lotionTubeBefore[sku] ?? capFitBefore[sku] ?? rows[sku]))), sku).toBe(digest); count++;
         }
         expect(count).toBe(419);
-        expect(Object.keys(rows)).toHaveLength(1034);   /* + 179 Diva masters + 7 Pillar sprayers + 177 Empire/Grace/Diamond (2026-11-04) */
+        expect(Object.keys(rows)).toHaveLength(1037);   /* + 179 Diva masters + 7 Pillar sprayers + 177 Empire/Grace/Diamond + 3 Pillar caps/rollers (2026-11-04) */
         expect(index.skus).toEqual(Object.keys(rows).sort());
         expect(manifest.version).toBe(hash(JSON.stringify(manifest.rows)).slice(0, 16));
     });

@@ -50,7 +50,7 @@ describe("approved hosted master release", () => {
     });
     it("preserves the original 267 approved configurations alongside the scoped small-sprayer extension", () => {
         expect(Object.keys(originals)).toHaveLength(267);
-        expect(Object.keys(hosted)).toHaveLength(1034);   // 463 + the 196 Elegant masters (2026-11-03) + 12 Vial masters (2026-11-04) + 179 Diva masters (2026-11-04) + 7 Pillar sprayers (2026-11-04) + 177 Empire/Grace/Diamond (2026-11-04)
+        expect(Object.keys(hosted)).toHaveLength(1037);   // 463 + the 196 Elegant masters (2026-11-03) + 12 Vial masters (2026-11-04) + 179 Diva masters (2026-11-04) + 7 Pillar sprayers (2026-11-04) + 177 Empire/Grace/Diamond + 3 Pillar caps/rollers (2026-11-04)
         expect(Object.keys(hosted)).toEqual(expect.arrayContaining(Object.keys(originals)));
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         expect(hosted.GBTallCyl9SpryGlMatt).toBeDefined();

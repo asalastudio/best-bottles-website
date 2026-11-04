@@ -13,14 +13,14 @@ it("covers every approved source with immutable display copies and leaves unknow
     const rows = approved.rows as unknown as Record<string, { parts: Part[] }>;
     const urls = new Set(Object.values(rows).flatMap(kit => kit.parts.flatMap(part =>
         [part.image.url, part.detached?.image.url].filter((url): url is string => Boolean(url)))));
-    expect(urls.size).toBe(448);   // 126 + the Elegant masters' layers (2026-11-03) + the Vial, Diva, Pillar and Empire/Grace/Diamond masters' (2026-11-04)
+    expect(urls.size).toBe(451);   // 126 + the Elegant masters' layers (2026-11-03) + the Vial, Diva, Pillar, Empire/Grace/Diamond and Pillar cap/roller masters' (2026-11-04)
     for (const source of urls) {
         for (const width of [128, 256, 640, 1200]) {
             expect(displayDerivativeUrl(source, width)).toMatch(/^https:\/\/yzy7l20k4yt6znzz\.public\.blob\.vercel-storage\.com\/product-display\/v1\/[a-f0-9]{64}\/(128|256|640|1200)-[a-f0-9]{64}\.webp$/);
             expect(displayImageUrl(source, width as 128 | 256 | 640 | 1200)).toBe(displayDerivativeUrl(source, width));
         }
     }
-    expect(Object.keys(delivery.sources)).toHaveLength(490); // Includes Tola, the cleaned 25 ml copper overcap, the Elegant masters (128 + 58 + 80), the Vial masters (22), the Diva masters (127), the four Diva glass plates, the Pillar body and dip tube (2), the Empire/Grace/Diamond layers (65) and their four glass plates.
+    expect(Object.keys(delivery.sources)).toHaveLength(493); // Includes Tola, the cleaned 25 ml copper overcap, the Elegant masters (128 + 58 + 80), the Vial masters (22), the Diva masters (127), the four Diva glass plates, the Pillar body and dip tube (2), the Empire/Grace/Diamond layers (65), their four glass plates and the Pillar cap and two rollers (3).
     expect(displayDerivativeUrl("https://unknown.example/master.png", 640)).toBeNull();
     expect(displayDerivativeUrl("/local-kits/unapproved-candidate.svg", 640)).toBeNull();
     for (const [alias, source] of Object.entries(delivery.aliases)) {
