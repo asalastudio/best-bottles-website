@@ -13,6 +13,7 @@ describe('2026-11-04 2 ml amber black-cap photo', () => {
     expect(rows.map(row => row.websiteSku)).toEqual(['GBVAmb1o5BlackCapSht']);
     const [hero] = rows; const [evidence] = approval.rows;
     expect(evidence.sku).toBe(hero.websiteSku);
+    expect(evidence.status).toBe('approved');
     expect(hero.url).toBe(`/images/catalog/vial2-black-cap-2026-11-04/${hero.websiteSku}.${evidence.sha256.slice(0, 12)}.webp`);
     const bytes = readFileSync(`public${hero.url}`);
     expect(createHash('sha256').update(bytes).digest('hex')).toBe(evidence.sha256);

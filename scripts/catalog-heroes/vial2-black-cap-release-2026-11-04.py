@@ -33,9 +33,9 @@ def main():
            "presentation": "Empty · cap beside", "url": url, "width": 1560, "height": 1716,
            "framing": {"scale": 1, "translateXPercent": 0, "translateYPercent": 0}}
     open(RELEASE, "w").write(json.dumps([row], indent=2, ensure_ascii=False) + "\n")
-    approval = {"date": "2026-11-04", "requestedBy": "Jordan", "rows": [{
-        "sku": SKU, "groupSlug": row["groupSlug"], "status": "awaiting-review",
-        "note": "Jordan 2026-11-04 asked for a black-cap photo so the black cap can be picked on the grid",
+    approval = {"date": "2026-11-04", "requestedBy": "Jordan", "approvedBy": "Jordan", "rows": [{
+        "sku": SKU, "groupSlug": row["groupSlug"], "status": "approved",
+        "note": "Jordan 2026-11-04 asked for a black-cap photo so the black cap can be picked on the grid; approved it the same day",
         "method": "composite of two approved heroes; no image generated", "script": "scripts/catalog-heroes/vial2-black-cap-2026-11-04.py",
         "sources": [white["url"], blue["url"]], "sourceRender": SRC,
         "sourceRenderSha256": hashlib.sha256(open(SRC, "rb").read()).hexdigest(),

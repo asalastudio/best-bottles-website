@@ -5,8 +5,8 @@
   {
    "sku": "GBVAmb1o5BlackCapSht",
    "groupSlug": "vial-2ml-amber-13-425",
-   "status": "awaiting-review",
-   "note": "Jordan 2026-11-04 asked for a black-cap photo so the black cap can be picked on the grid",
+   "status": "approved",
+   "note": "Jordan 2026-11-04 asked for a black-cap photo so the black cap can be picked on the grid; approved it the same day",
    "method": "composite of two approved heroes; no image generated",
    "script": "scripts/catalog-heroes/vial2-black-cap-2026-11-04.py",
    "sources": [
@@ -20,5 +20,6 @@
    "bytes": 1815886,
    "encoding": "lossless WebP"
   }
- ]
+ ],
+ "approvedBy": "Jordan"
 }
