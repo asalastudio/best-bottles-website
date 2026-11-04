@@ -1,5 +1,6 @@
 "use client";
 
+import { canOptimizeWithNextImage } from "@/lib/products/optimizable-image";
 import Image from "next/image";
 import type { ReferenceMatchPayload } from "@/components/GraceContext";
 import GraceProductCard from "@/components/grace/cards/GraceProductCard";
@@ -58,7 +59,7 @@ export default function PatternH_ReferenceMatch({ payload }: PatternHReferenceMa
                             fill
                             className="object-cover"
                             sizes="80px"
-                            unoptimized
+                            unoptimized={!canOptimizeWithNextImage(payload.referenceUrl)}
                         />
                     </div>
                     <div className="text-[8.5px] uppercase tracking-[0.18em] text-slate mt-1 text-center font-semibold">

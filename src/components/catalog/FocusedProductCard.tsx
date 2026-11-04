@@ -1,5 +1,6 @@
 "use client";
 
+import type { CatalogCardImageLoading } from "@/lib/products/catalog-card-image";
 import { useState } from "react";
 import LocaleLink from "@/components/LocaleLink";
 import CatalogCardPurchase from "@/components/catalog/CatalogCardPurchase";
@@ -15,6 +16,8 @@ type FocusedProductCardProps = {
     product: GuidedFinderProduct;
     finderUrl: string;
     onOpen?: (product: GuidedFinderProduct) => void;
+    /** Set for the first row of results so the likely LCP image is not lazy. */
+    imageLoading?: CatalogCardImageLoading;
 };
 
 export function buildFocusedProductHref(productHref: string, finderUrl: string): string {
@@ -38,7 +41,11 @@ function detailLine(product: GuidedFinderProduct): string {
     ].filter(Boolean).join(" · ");
 }
 
-export default function FocusedProductCard({ product, finderUrl, onOpen }: FocusedProductCardProps) {
+// Family results: one column, two from 640px, three from 1280px; an 18rem
+// refinement column may sit beside them, so these widths err slightly large.
+const FOCUSED_CARD_IMAGE_SIZES = "(max-width: 639px) calc(100vw - 32px), (max-width: 1279px) 50vw, 33vw";
+
+export default function FocusedProductCard({ product, finderUrl, onOpen, imageLoading }: FocusedProductCardProps) {
     const productHref = buildFocusedProductHref(product.href, finderUrl);
     const heroTitle = product.catalogHero?.alt ? displayApplicatorName(product.catalogHero.alt) : null;
     const productTitle = heroTitle ?? getCustomerFacingProductName({
@@ -94,6 +101,8 @@ export default function FocusedProductCard({ product, finderUrl, onOpen }: Focus
                 family={product.family}
                 slug={product.slug}
                 selected={pickedCap}
+                imageLoading={imageLoading}
+                sizes={FOCUSED_CARD_IMAGE_SIZES}
             />
             <LocaleLink href={productHref} onClick={() => onOpen?.(product)} className="flex flex-1 flex-col px-4 pb-5 pt-4 focus-visible:outline-none">
                 <h3 className="font-serif text-xl font-medium leading-tight text-obsidian">{productTitle}</h3>

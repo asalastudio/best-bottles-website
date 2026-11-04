@@ -1,5 +1,6 @@
 "use client";
 
+import type { CatalogCardImageLoading } from "@/lib/products/catalog-card-image";
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import LocaleLink from "@/components/LocaleLink";
@@ -29,6 +30,10 @@ type ProductCardImagePreviewProps = {
     productHref: string;
     onOpen?: () => void;
     maxVisibleSwatches?: number;
+    /** next/image `sizes`; the catalog grid passes its real column width. */
+    sizes?: string;
+    /** First-row cards load eagerly (the first one preloaded) so the LCP image is not lazy. */
+    imageLoading?: CatalogCardImageLoading;
     auditMeta?: {
         surface: string;
         family?: string | null;
@@ -183,6 +188,8 @@ export default function ProductCardImagePreview({
     productHref,
     onOpen,
     maxVisibleSwatches = 3,
+    sizes = "(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 320px",
+    imageLoading,
     auditMeta,
 }: ProductCardImagePreviewProps) {
     const previews = useMemo(
@@ -273,7 +280,8 @@ export default function ProductCardImagePreview({
             className={isStudioHero ? "object-contain" : "object-contain transition duration-500 ease-out group-hover/catalog-card:scale-[1.03]"}
             style={isStudioHero && catalogHero ? getCatalogHeroStyle(catalogHero) : undefined}
             data-bb-hero-state={isStudioHero ? "empty" : undefined}
-            sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 320px"
+            sizes={sizes}
+            {...imageLoading}
             onError={() => markImageFailed(resolvedImageUrl)}
         />
     ) : (

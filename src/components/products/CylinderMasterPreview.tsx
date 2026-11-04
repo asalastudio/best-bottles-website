@@ -66,7 +66,9 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
     const kit = current?.kit;
     const layout = kit ? stageLayout(kit, "sidecar", { websiteSku: sku }) : null;
     if (kit && !layout) return fallback;
-    if (!layout) return <span ref={target} className="absolute inset-0" role="status" aria-label="Loading bottle image" />;
+    // Until the master kit arrives (a client fetch after hydration), show the
+    // card's own photo so the server HTML paints an image instead of an empty box.
+    if (!layout) return <span ref={target} className="absolute inset-0" aria-busy="true" data-bb-master-placeholder="photo">{fallback}</span>;
     const { canvas } = layout;
     const viewport = catalogTasselViewport(sku, layout);
     const smallSprayer = ["GBSpry3mlClBlk", "GBSpry3mlClWht"].includes(sku);

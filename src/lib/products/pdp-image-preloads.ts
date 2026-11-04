@@ -16,11 +16,15 @@ export function pdpHeroImagePreloads(kit: KitLike | null, websiteSku: string | n
     const seen = new Set<string>();
     const backdrop = layout?.backdrop?.url;
     if (backdrop) seen.add(backdrop);
-    return [...(backdrop ? [{ href: backdrop, imageSrcSet: undefined, imageSizes: undefined }] : []), ...(layout?.parts ?? []).flatMap(part => {
+    // Match PdpStage: every layer carries the derivative srcset (register parts
+    // sized to their box, canvas layers to the canvas), and only the body is high priority.
+    return [...(backdrop ? [{ href: backdrop, imageSrcSet: undefined, imageSizes: undefined, fetchPriority: "auto" as const }] : []), ...(layout?.parts ?? []).flatMap(part => {
         const href = displayImageUrl(part.url, part.box ? 640 : 1200);
         if (seen.has(href)) return [];
         seen.add(href);
-        return [{ href, imageSrcSet: part.box ? displayDerivativeSrcSet(part.url) : undefined,
-            imageSizes: part.box ? registeredImageSizes(part.box.widthPct, layout!.frame.scale) : undefined }];
+        const imageSrcSet = displayDerivativeSrcSet(part.url);
+        return [{ href, imageSrcSet,
+            imageSizes: imageSrcSet ? registeredImageSizes(part.box?.widthPct ?? 100, layout!.frame.scale) : undefined,
+            fetchPriority: part.slot === "body" ? "high" as const : "auto" as const }];
     })];
 }

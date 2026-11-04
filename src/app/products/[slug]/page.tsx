@@ -411,7 +411,7 @@ export default async function ProductPage({
         }));
         const sku = selected?.websiteSku;
         const kit = sku ? approvedComponentKits()[sku] ?? null : null;
-        for (const { href, ...responsive } of pdpHeroImagePreloads(kit, sku)) preload(href, { as: "image", fetchPriority: "high", ...responsive });
+        for (const { href, ...responsive } of pdpHeroImagePreloads(kit, sku)) preload(href, { as: "image", ...responsive });
     }
     const primaryVariant = getPrimaryVariant(data);
     const [siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([

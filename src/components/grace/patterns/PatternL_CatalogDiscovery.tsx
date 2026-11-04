@@ -1,5 +1,6 @@
 "use client";
 
+import { canOptimizeWithNextImage } from "@/lib/products/optimizable-image";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -82,7 +83,7 @@ export default function PatternL_CatalogDiscovery({ payload }: PatternLCatalogDi
                                         fill
                                         className="object-cover"
                                         sizes="140px"
-                                        unoptimized
+                                        unoptimized={!canOptimizeWithNextImage(f.heroImageUrl)}
                                     />
                                 ) : (
                                     <div
