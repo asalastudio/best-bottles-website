@@ -35,6 +35,12 @@ APPROVED = "src/lib/paper-doll/approved-kits.generated.json"
 ROLLERS = {"LIB-13-415-MtlRollon": "GBSleek5MtlRollGlMatt", "LIB-13-415-PlsticRollon": "GBSleek5RollGlMatt"}
 PARK_MARGIN = 6                # % of the stage kept clear right of a parked cap
 BULB_MARGIN = 8                # % of the stage kept clear above and beside a plain bulb (it crowded the card's corner)
+# Family settings: scripts/round-sleek/seat-and-tubes.py imports this module and replaces them.
+FROST_DIR = "public/local-kits/circle-masters-2026-11-03/droppers"
+BULB = re.compile(r"GBCrcl(?:Frst)?(?:50|100)(AnSpTsl|AnSp)(\w+)$")
+EMPTY_COVER = "/local-kits/shared-2026-11-03/ltn-18-415-clear-overcap-empty.png"   # empty-lotion-cover.py
+TUBE_ANCHOR = "psd"              # "psd": the PSD's bottle-to-tube geometry; "register": the register tube's place
+tube_key = lambda kit: kit["register"]["bodyId"].split("-")[1].removesuffix("ml")
 DROPPER = re.compile(r"GBCrcl(?:Frst)?50Drp(Cu|Gl|Sl)$")
 
 
@@ -60,7 +66,7 @@ def frosted_pipette(img, finish):
     out = Image.fromarray(np.dstack([tone, b[..., 3]]).clip(0, 255).astype(np.uint8)).crop((pad, pad, pad + src.width, pad + src.height))
     buf = io.BytesIO(); out.save(buf, "PNG", optimize=True); data = buf.getvalue()
     sha = hashlib.sha256(data).hexdigest()
-    folder = "public/local-kits/circle-masters-2026-11-03/droppers"; os.makedirs(folder, exist_ok=True)
+    folder = FROST_DIR; os.makedirs(folder, exist_ok=True)
     for old in os.listdir(folder):
         if old.startswith(f"Drp18-415{finish}-pipette-frost-"):
             os.remove(f"{folder}/{old}")
@@ -146,6 +152,7 @@ def main():
             U.shift(part, dy)
             moved[part["slot"]] = dy
             part["seatBottomY"] = int(rest + U.SEAT_GAP)
+            part["seatDy"] = round(float(dy), 3)
             part["collarWidth"] = int(width)
             if part["slot"] == "fitment":
                 for pip in (p for p in kit["parts"] if p["slot"] == "pipette"):
@@ -213,6 +220,10 @@ def main():
             m, x, y = U.alpha(part)
             top = y + int(np.argmax(m.any(1)))
             b = {**look["box"], "y": round(float(top), 3)}
+            if EMPTY_COVER and look["image"]["url"].endswith("/ltn-18-415-clear-overcap.webp"):
+                # The register's empty cover still shows where the pump stood in it (Jordan, 3 Nov 2026: "same ghost
+                # issue on the side car"): draw the Sunburst-emptied cover, same frame (empty-lotion-cover.py).
+                look = {**look, "image": {**look["image"], "url": EMPTY_COVER}}
             part.update({"image": {**part["image"], **look["image"], "key": "", "sha256": "", "bytes": 0}, "image2x": None, "mask": None,
                          "derivation": "empty-cover-seated", "blendMode": "multiply"})
             boxed(part, b)
@@ -220,8 +231,12 @@ def main():
 
     # 1c. 50 ml droppers: one shared scale (the median seated collar), the complete dropper in EXPLODED.
     droppers = {"Sl": U.complete_dropper("Sl")}
-    seated = sorted(next(p for p in k["parts"] if p["slot"] == "fitment")["collarWidth"] for s, k in rows.items() if DROPPER.match(s))
-    collar_px = seated[len(seated) // 2] if seated else 0
+    # One collar size per glass body (bodies differ in px/mm): the median of its dropper kits' seated collars.
+    by_body = {}
+    for s, k in rows.items():
+        if DROPPER.match(s):
+            by_body.setdefault(k["register"]["bodyId"], []).append(next(p for p in k["parts"] if p["slot"] == "fitment")["collarWidth"])
+    collar_of = {b: sorted(v)[len(v) // 2] for b, v in by_body.items()}
     for sku, kit in rows.items():
         m = DROPPER.match(sku)
         if not m:
@@ -237,7 +252,7 @@ def main():
         for p in (fit, pipette):
             p["views"] = ["sidecar", "capon"]
         axis = kit["register"]["datum"]["axisX"]
-        s_ = collar_px / droppers["Sl"]["collarWidth"]
+        s_ = collar_of[kit["register"]["bodyId"]] / droppers["Sl"]["collarWidth"]
         box = {"x": round(axis - d["collarCentre"] * s_, 3), "y": round(fit["seatBottomY"] - d["collarBottom"] * s_, 3),
                "width": round(d["image"]["width"] * s_, 3), "height": round(d["image"]["height"] * s_, 3)}
         for half, top_ in (("head", 0), ("pipette", d["collarBottom"])):
@@ -284,7 +299,7 @@ def main():
         seated_tube = next(p for p in old if p.get("views") != ["exploded"])
         url = seated_tube["image"]["url"]
         kind = "lotion" if fit["slot"] == "pump" else "spray" if "-spray." in url else "atomizer"
-        size = kit["register"]["bodyId"].split("-")[1].removesuffix("ml")
+        size = tube_key(kit)
         t = tubes[f"{size}-{kind}"]
         d = kit["register"]["datum"]; H = d["baselineY"] - d["seatY"]
         sha = hashlib.sha256(open("public" + t["file"], "rb").read()).hexdigest()
@@ -292,8 +307,14 @@ def main():
                                          "width": t["pixels"][0], "height": t["pixels"][1]},
                 "image2x": None, "mask": None, "derivation": f"psd-tube:{kind}", "blendMode": "multiply",
                 "explodeIndex": fit.get("explodeIndex", 1), "componentId": fit.get("componentId")}
-        boxed(tube, {"x": round(d["axisX"] + t["left"] * H, 3), "y": round(d["seatY"] + t["top"] * H, 3),
-                     "width": round(t["width"] * H, 3), "height": round(t["height"] * H, 3)})
+        if TUBE_ANCHOR == "register":
+            # The register tube's place: its top at the pump (moved with the seated head), its foot near the floor.
+            b = seated_tube["bounds"]; h = b["bottom"] - b["top"]; w = h * t["pixels"][0] / t["pixels"][1]
+            boxed(tube, {"x": round((b["left"] + b["right"]) / 2 - w / 2, 3), "y": round(b["top"] + fit.get("seatDy", 0), 3),
+                         "width": round(w, 3), "height": round(h, 3)})
+        else:
+            boxed(tube, {"x": round(d["axisX"] + t["left"] * H, 3), "y": round(d["seatY"] + t["top"] * H, 3),
+                         "width": round(t["width"] * H, 3), "height": round(t["height"] * H, 3)})
         tube.pop("views", None)
         if kit["register"]["glass"] == "Frosted":
             tube["views"] = ["exploded"]
@@ -311,12 +332,12 @@ def main():
             looks[(m.group(1), m.group(2))] = "/" + f"{caps}/{name}".removeprefix("public/")
     mapped = json.load(open(CLOSE_UPS))
     for sku, kit in rows.items():
-        m = re.match(r"GBCrcl(?:Frst)?(?:50|100)(AnSpTsl|AnSp)(\w+)$", sku)
+        m = BULB.match(sku)
         if m and (m.group(1), m.group(2)) in looks:
             kit["capCloseUp"] = {"url": looks[(m.group(1), m.group(2))], "width": 512, "height": 512}
             mapped[sku] = kit["capCloseUp"]["url"]
     open(CLOSE_UPS, "w").write(json.dumps(dict(sorted(mapped.items())), indent=1) + "\n")
-    print(sum("capCloseUp" in k for k in rows.values()), "Circle bulb kits carry a cap close-up")
+    print(sum("capCloseUp" in k for k in rows.values()), "bulb kits carry a cap close-up")
 
     kits["universalDipTube"] ={key: {"url": tubes[key]["file"], "psd": tubes[key]["psd"], "skus": sorted(skus)} for key, skus in shared.items()}
     kits["version"] = hashlib.sha256(json.dumps(kits["rows"], sort_keys=True).encode()).hexdigest()[:12]

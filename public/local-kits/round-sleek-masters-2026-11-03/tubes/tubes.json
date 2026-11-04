@@ -1,0 +1,202 @@
+{
+ "round78-spray": {
+  "psd": "31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/53. GBRnd78SpryCu.psd",
+  "layer": "Layer 11",
+  "registeredOutlineIoU": 0.64,
+  "scale": 1.0086,
+  "shift": [
+   -8,
+   7
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+  "pixels": [
+   138,
+   716
+  ]
+ },
+ "round78-lotion": {
+  "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/58. LBRnd128LtnCu.psd",
+  "layer": "Layer 18",
+  "registeredOutlineIoU": 0.6046,
+  "scale": 0.9824,
+  "shift": [
+   22,
+   4
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+  "pixels": [
+   180,
+   1050
+  ]
+ },
+ "round128-spray": {
+  "psd": "31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/7.  128ml Round, Ltn & Spry, capped/57. GBRnd128SpryCu.psd",
+  "layer": "Layer 18",
+  "registeredOutlineIoU": 0.2242,
+  "scale": 1.0348,
+  "shift": [
+   -57,
+   -2
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-spray.780b804aff87.png",
+  "pixels": [
+   243,
+   2025
+  ]
+ },
+ "round128-lotion": {
+  "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/58. LBRnd128LtnCu.psd",
+  "layer": "Layer 18",
+  "registeredOutlineIoU": 0.5897,
+  "scale": 0.9748,
+  "shift": [
+   26,
+   8
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-lotion.9e71d37cd4f5.png",
+  "pixels": [
+   180,
+   1050
+  ]
+ },
+ "sleek30-spray": {
+  "psd": "11. Sleek 30ml\uf028/1. Sleek 30ml PSD/49. GBSlk30SpryCu.psd",
+  "layer": "Layer 19",
+  "registeredOutlineIoU": 0.446,
+  "scale": 1.0078,
+  "shift": [
+   -13,
+   4
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/sleek30-spray.0dbdb19d1013.png",
+  "pixels": [
+   70,
+   780
+  ]
+ },
+ "sleek30-lotion": {
+  "psd": "11. Sleek 30ml\uf028/1. Sleek 30ml PSD/51. LBSlk30LtnCu.psd",
+  "layer": "Layer 21",
+  "registeredOutlineIoU": 0.772,
+  "scale": 1.0026,
+  "shift": [
+   -1,
+   0
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/sleek30-lotion.e9ab24d68b02.png",
+  "pixels": [
+   94,
+   798
+  ]
+ },
+ "sleek50-spray": {
+  "psd": "13. Sleek 100ml/1. Sleek 100ml PSD/56. GBSlk100SpryCu.psd",
+  "layer": "Layer 32",
+  "registeredOutlineIoU": 0.6644,
+  "scale": 0.9751,
+  "shift": [
+   25,
+   8
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/sleek50-spray.496eb3d8d44a.png",
+  "pixels": [
+   232,
+   1937
+  ]
+ },
+ "sleek50-lotion": {
+  "psd": "13. Sleek 100ml/1. Sleek 100ml PSD/57. LBSlk100LtnCu.psd",
+  "layer": "Layer 30",
+  "registeredOutlineIoU": 0.4555,
+  "scale": 0.9949,
+  "shift": [
+   -8,
+   3
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/sleek50-lotion.e38b4bc42d5b.png",
+  "pixels": [
+   193,
+   1582
+  ]
+ },
+ "sleek100-spray": {
+  "psd": "13. Sleek 100ml/1. Sleek 100ml PSD/56. GBSlk100SpryCu.psd",
+  "layer": "Layer 32",
+  "registeredOutlineIoU": 0.7022,
+  "scale": 0.9467,
+  "shift": [
+   48,
+   12
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/sleek100-spray.4f1ec0398297.png",
+  "pixels": [
+   232,
+   1937
+  ]
+ },
+ "sleek100-lotion": {
+  "psd": "13. Sleek 100ml/1. Sleek 100ml PSD/57. LBSlk100LtnCu.psd",
+  "layer": "Layer 30",
+  "registeredOutlineIoU": 0.4491,
+  "scale": 0.9981,
+  "shift": [
+   -10,
+   3
+  ],
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/sleek100-lotion.7146085c84fe.png",
+  "pixels": [
+   193,
+   1582
+  ]
+ },
+ "round78-atomizer": {
+  "psd": "9. Round 78ml/1. Round 78ml PSD/39. GBRnd78AnSpBlk.psd",
+  "layer": "Layer 4 copy",
+  "swept": "round78-spray material along the PSD centre line",
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+  "pixels": [
+   92,
+   697
+  ]
+ },
+ "round128-atomizer": {
+  "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/39. GBRnd128AnSpBlk.psd",
+  "layer": "Layer 4 copy",
+  "swept": "round128-spray material along the PSD centre line",
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+  "pixels": [
+   141,
+   1018
+  ]
+ },
+ "sleek30-atomizer": {
+  "psd": "11. Sleek 30ml\uf028/1. Sleek 30ml PSD/39. GBSlk30AnSpBlk.psd",
+  "layer": "Layer 4 copy",
+  "swept": "sleek30-spray material along the PSD centre line",
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/sleek30-atomizer.f17402991e61.png",
+  "pixels": [
+   77,
+   775
+  ]
+ },
+ "sleek50-atomizer": {
+  "psd": "13. Sleek 100ml/1. Sleek 100ml PSD/39. GBSlk100AnSpBlk.psd",
+  "layer": "Layer 11",
+  "swept": "sleek50-spray material along the PSD centre line",
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/sleek50-atomizer.ad5b51008327.png",
+  "pixels": [
+   144,
+   1526
+  ]
+ },
+ "sleek100-atomizer": {
+  "psd": "13. Sleek 100ml/1. Sleek 100ml PSD/39. GBSlk100AnSpBlk.psd",
+  "layer": "Layer 11",
+  "swept": "sleek100-spray material along the PSD centre line",
+  "file": "/local-kits/round-sleek-masters-2026-11-03/tubes/sleek100-atomizer.062c3c163e71.png",
+  "pixels": [
+   144,
+   1526
+  ]
+ }
+}
