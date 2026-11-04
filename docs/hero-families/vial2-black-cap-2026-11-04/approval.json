@@ -1,0 +1,24 @@
+{
+ "date": "2026-11-04",
+ "requestedBy": "Jordan",
+ "rows": [
+  {
+   "sku": "GBVAmb1o5BlackCapSht",
+   "groupSlug": "vial-2ml-amber-13-425",
+   "status": "awaiting-review",
+   "note": "Jordan 2026-11-04 asked for a black-cap photo so the black cap can be picked on the grid",
+   "method": "composite of two approved heroes; no image generated",
+   "script": "scripts/catalog-heroes/vial2-black-cap-2026-11-04.py",
+   "sources": [
+    "/images/catalog/vials-approved-2026-09-25/GBVialAmb1o5WhtCapSht.d0c06b55854f.webp",
+    "/images/catalog/vials-approved-2026-09-25/GBVBlu1o9BlackCapSht.ecc1de43a5fe.webp"
+   ],
+   "sourceRender": "docs/hero-families/vial2-black-cap-2026-11-04/GBVAmb1o5BlackCapSht.png",
+   "sourceRenderSha256": "bed4e4f236ef8de7f7b12c1005dd0d04b6af14a87f3bc2c722c89e28eb573c3d",
+   "url": "/images/catalog/vial2-black-cap-2026-11-04/GBVAmb1o5BlackCapSht.4fe4654a25ca.webp",
+   "sha256": "4fe4654a25ca36581db0477f4e277f9050dc200bfe7dd14aab9d9208d3861a62",
+   "bytes": 1815886,
+   "encoding": "lossless WebP"
+  }
+ ]
+}

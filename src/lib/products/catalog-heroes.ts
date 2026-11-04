@@ -13,9 +13,12 @@ import vialsReleaseRows from "./catalog-hero-vials-release.json";
 import batch6ReleaseRows from "./catalog-hero-batch6-release.json";
 // 2026-11-03 reshoots (heart flat lays, 3 ml tola and spray straight-on): first, so they win over earlier rows.
 import reshoot20261103Rows from "./catalog-hero-reshoot-2026-11-03.json";
+// 2026-11-04: the 2 ml amber 13-425 black-cap photo (a composite of two approved heroes): last, so the group's
+// default card keeps the white-cap hero and this one shows only when the black cap is picked.
+import vial2BlackCap20261104Rows from "./catalog-hero-vial2-black-cap-2026-11-04.json";
 
 export type CatalogHero = Omit<(typeof heroRows)[number], "shopifyVariantId"> & { shopifyVariantId: string | null };
-const completePilotRows = [...reshoot20261103Rows, ...pilotRows, ...crePilotRows, ...elegantReleaseRows, ...bostonDivaReleaseRows, ...sleekReleaseRows, ...apothecaryReleaseRows, ...remaining42ReleaseRows, ...nextBatchReleaseRows, ...batch3ReleaseRows, ...vialsReleaseRows, ...batch6ReleaseRows];
+const completePilotRows = [...reshoot20261103Rows, ...pilotRows, ...crePilotRows, ...elegantReleaseRows, ...bostonDivaReleaseRows, ...sleekReleaseRows, ...apothecaryReleaseRows, ...remaining42ReleaseRows, ...nextBatchReleaseRows, ...batch3ReleaseRows, ...vialsReleaseRows, ...batch6ReleaseRows, ...vial2BlackCap20261104Rows];
 function activePilotRows(): CatalogHero[] {
     return process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT === "families-2026-09-22"
         ? completePilotRows : pilotRows;
