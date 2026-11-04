@@ -1,13 +1,13 @@
 import skus from "./diva-master-skus.json";
 
 /** Local review masters for every Diva 30/46/100 ml SKU (scripts/diva-vial). */
-// 445a19ae3216: scaler sizing on every kit with Diva's own shoulder landmark (build-kits.mts); closures seated on the
-// shoulder, the Round tubes fitted to the register tubes' places shown in EXPLODED only (no Diva
-// PSD has a tube, and seen through the glass they read as fakes), reducers,
+// fb12d0496a9a: scaler sizing on every kit with Diva's own shoulder landmark (build-kits.mts); closures seated on the
+// shoulder, Diva's own Sunburst dip tubes in EXPLODED only, hung from the collar and cut to the
+// bowl's floor (diva-exploded-tubes.py; no Diva PSD has a tube), reducers,
 // droppers, bulb and tassel kits fitted to the stage, bulb cap close-ups (seat-and-tubes.py), and the ten 46 ml ring
 // bulb sprayers from their PSDs (diva-ring-kits.py); the spray and lotion kits on Diva's own short-collar PSD heads and overcaps (diva-psd-heads.py); no glass pipette inside the
 // dropper glass.
-export const DIVA_MASTER_REVIEW_VERSION = "445a19ae3216";
+export const DIVA_MASTER_REVIEW_VERSION = "fb12d0496a9a";
 const exactSkus = new Map(skus.map(sku => [sku.toLowerCase(), sku]));
 export function divaReviewSku(sku: string | null | undefined): string | null {
     return sku ? exactSkus.get(sku.trim().toLowerCase()) ?? null : null;

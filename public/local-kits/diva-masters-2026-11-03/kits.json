@@ -1,5 +1,5 @@
 {
- "version": "445a19ae3216",
+ "version": "fb12d0496a9a",
  "rows": {
   "LBDiva100LtnClOvrCap": {
    "sku": "LBDiva100LtnClOvrCap",
@@ -59,13 +59,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 508.218,
-      "top": 390.562,
-      "right": 586.031,
-      "bottom": 844.472
+      "left": 470.962,
+      "top": 356.142,
+      "right": 529.962,
+      "bottom": 886.142
      },
      "assembled": {
       "x": 0,
@@ -76,24 +76,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-lotion.9e71d37cd4f5.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-530.c9d96c979a1a.png",
       "key": "",
-      "sha256": "9e71d37cd4f51b8c9aa7219c69cdad7fe39afd43d52711d89ebc9e98d58b17d7",
-      "bytes": 158931,
-      "width": 180,
-      "height": 1050
+      "sha256": "c9d96c979a1a3a370c34f9ead393bd411174b99000e22d6d378969cb7b75b495",
+      "bytes": 21227,
+      "width": 59,
+      "height": 530
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 508.218,
-      "y": 390.562,
-      "width": 77.813,
-      "height": 453.91
+      "x": 470.962,
+      "y": 356.142,
+      "width": 59,
+      "height": 530
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -267,13 +266,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.474,
-      "top": 249.13,
-      "right": 535.296,
-      "bottom": 917.51
+      "left": 459.735,
+      "top": 363.879,
+      "right": 537.735,
+      "bottom": 887.879
      },
      "assembled": {
       "x": 0,
@@ -284,24 +283,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-524.7a79ba5b8f0d.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "7a79ba5b8f0de37ca16c65f835d9afb33dab6d8de372580c8403b6a5335fd152",
+      "bytes": 23767,
+      "width": 78,
+      "height": 524
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.474,
-      "y": 249.13,
-      "width": 128.822,
-      "height": 668.38
+      "x": 459.735,
+      "y": 363.879,
+      "width": 78,
+      "height": 524
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -474,13 +472,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.474,
-      "top": 250.292,
-      "right": 535.296,
-      "bottom": 918.672
+      "left": 462.265,
+      "top": 365.041,
+      "right": 540.265,
+      "bottom": 888.041
      },
      "assembled": {
       "x": 0,
@@ -491,24 +489,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-523.d08223cf528d.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "d08223cf528d9de4794fea9b32ca14b6969c9dc45b2e5bba9bdfd8015651f98e",
+      "bytes": 23737,
+      "width": 78,
+      "height": 523
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.474,
-      "y": 250.292,
-      "width": 128.822,
-      "height": 668.38
+      "x": 462.265,
+      "y": 365.041,
+      "width": 78,
+      "height": 523
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -681,13 +678,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.474,
-      "top": 252.924,
-      "right": 535.296,
-      "bottom": 921.304
+      "left": 462.897,
+      "top": 366.409,
+      "right": 540.897,
+      "bottom": 887.409
      },
      "assembled": {
       "x": 0,
@@ -698,24 +695,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-521.602a17d91f97.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "602a17d91f972bda7ff54db09d1db2d487d8e6d5e4592a7e451b3bd163100097",
+      "bytes": 23692,
+      "width": 78,
+      "height": 521
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.474,
-      "y": 252.924,
-      "width": 128.822,
-      "height": 668.38
+      "x": 462.897,
+      "y": 366.409,
+      "width": 78,
+      "height": 521
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -888,13 +884,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.474,
-      "top": 251.438,
-      "right": 535.296,
-      "bottom": 919.818
+      "left": 461.633,
+      "top": 366.188,
+      "right": 539.633,
+      "bottom": 888.188
      },
      "assembled": {
       "x": 0,
@@ -905,24 +901,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-522.dd14bc5aa20c.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "dd14bc5aa20cbac6d72e08d00113eb16f8c1c2464829bc1d96a0426d1468497b",
+      "bytes": 23688,
+      "width": 78,
+      "height": 522
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.474,
-      "y": 251.438,
-      "width": 128.822,
-      "height": 668.38
+      "x": 461.633,
+      "y": 366.188,
+      "width": 78,
+      "height": 522
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -1095,13 +1090,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.474,
-      "top": 248.66,
-      "right": 535.296,
-      "bottom": 917.04
+      "left": 456.889,
+      "top": 365.307,
+      "right": 534.889,
+      "bottom": 888.307
      },
      "assembled": {
       "x": 0,
@@ -1112,24 +1107,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-523.d08223cf528d.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "d08223cf528d9de4794fea9b32ca14b6969c9dc45b2e5bba9bdfd8015651f98e",
+      "bytes": 23737,
+      "width": 78,
+      "height": 523
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.474,
-      "y": 248.66,
-      "width": 128.822,
-      "height": 668.38
+      "x": 456.889,
+      "y": 365.307,
+      "width": 78,
+      "height": 523
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -1302,13 +1296,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.488,
-      "top": 233.055,
-      "right": 535.321,
-      "bottom": 901.495
+      "left": 457.003,
+      "top": 362.617,
+      "right": 535.003,
+      "bottom": 886.617
      },
      "assembled": {
       "x": 0,
@@ -1319,24 +1313,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-524.7a79ba5b8f0d.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "7a79ba5b8f0de37ca16c65f835d9afb33dab6d8de372580c8403b6a5335fd152",
+      "bytes": 23767,
+      "width": 78,
+      "height": 524
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.488,
-      "y": 233.055,
-      "width": 128.833,
-      "height": 668.44
+      "x": 457.003,
+      "y": 362.617,
+      "width": 78,
+      "height": 524
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -1509,13 +1502,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.488,
-      "top": 234.13,
-      "right": 535.321,
-      "bottom": 902.57
+      "left": 459.463,
+      "top": 363.692,
+      "right": 537.463,
+      "bottom": 886.692
      },
      "assembled": {
       "x": 0,
@@ -1526,24 +1519,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-523.d08223cf528d.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "d08223cf528d9de4794fea9b32ca14b6969c9dc45b2e5bba9bdfd8015651f98e",
+      "bytes": 23737,
+      "width": 78,
+      "height": 523
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.488,
-      "y": 234.13,
-      "width": 128.833,
-      "height": 668.44
+      "x": 459.463,
+      "y": 363.692,
+      "width": 78,
+      "height": 523
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -1716,13 +1708,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.488,
-      "top": 235.745,
-      "right": 535.321,
-      "bottom": 904.185
+      "left": 460.078,
+      "top": 364.077,
+      "right": 538.078,
+      "bottom": 886.077
      },
      "assembled": {
       "x": 0,
@@ -1733,24 +1725,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-522.dd14bc5aa20c.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "dd14bc5aa20cbac6d72e08d00113eb16f8c1c2464829bc1d96a0426d1468497b",
+      "bytes": 23688,
+      "width": 78,
+      "height": 522
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.488,
-      "y": 235.745,
-      "width": 128.833,
-      "height": 668.44
+      "x": 460.078,
+      "y": 364.077,
+      "width": 78,
+      "height": 522
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -1923,13 +1914,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.488,
-      "top": 234.521,
-      "right": 535.321,
-      "bottom": 902.961
+      "left": 458.847,
+      "top": 364.082,
+      "right": 536.847,
+      "bottom": 886.082
      },
      "assembled": {
       "x": 0,
@@ -1940,24 +1931,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-522.dd14bc5aa20c.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "dd14bc5aa20cbac6d72e08d00113eb16f8c1c2464829bc1d96a0426d1468497b",
+      "bytes": 23688,
+      "width": 78,
+      "height": 522
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.488,
-      "y": 234.521,
-      "width": 128.833,
-      "height": 668.44
+      "x": 458.847,
+      "y": 364.082,
+      "width": 78,
+      "height": 522
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -2130,13 +2120,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.488,
-      "top": 232.515,
-      "right": 535.321,
-      "bottom": 900.955
+      "left": 456.081,
+      "top": 363.921,
+      "right": 534.081,
+      "bottom": 885.921
      },
      "assembled": {
       "x": 0,
@@ -2147,24 +2137,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-522.dd14bc5aa20c.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "dd14bc5aa20cbac6d72e08d00113eb16f8c1c2464829bc1d96a0426d1468497b",
+      "bytes": 23688,
+      "width": 78,
+      "height": 522
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.488,
-      "y": 232.515,
-      "width": 128.833,
-      "height": 668.44
+      "x": 456.081,
+      "y": 363.921,
+      "width": 78,
+      "height": 522
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -4654,13 +4643,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 443.972,
-      "top": 254.508,
-      "right": 575.419,
-      "bottom": 936.508
+      "left": 455.283,
+      "top": 382.247,
+      "right": 541.283,
+      "bottom": 896.247
      },
      "assembled": {
       "x": 0,
@@ -4671,24 +4660,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-514.7eb08107ccbd.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "7eb08107ccbd1d9bd665d18b7849e252ef007fb876b9deee0551c416cd1ef983",
+      "bytes": 25629,
+      "width": 86,
+      "height": 514
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 443.972,
-      "y": 254.508,
-      "width": 131.447,
-      "height": 682
+      "x": 455.283,
+      "y": 382.247,
+      "width": 86,
+      "height": 514
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -4855,13 +4843,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.474,
-      "top": 251.675,
-      "right": 535.296,
-      "bottom": 920.055
+      "left": 454.676,
+      "top": 366.424,
+      "right": 532.676,
+      "bottom": 887.424
      },
      "assembled": {
       "x": 0,
@@ -4872,24 +4860,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-521.602a17d91f97.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "602a17d91f972bda7ff54db09d1db2d487d8e6d5e4592a7e451b3bd163100097",
+      "bytes": 23692,
+      "width": 78,
+      "height": 521
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.474,
-      "y": 251.675,
-      "width": 128.822,
-      "height": 668.38
+      "x": 454.676,
+      "y": 366.424,
+      "width": 78,
+      "height": 521
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -5278,13 +5265,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 406.488,
-      "top": 234.198,
-      "right": 535.321,
-      "bottom": 902.638
+      "left": 455.774,
+      "top": 363.76,
+      "right": 533.774,
+      "bottom": 886.76
      },
      "assembled": {
       "x": 0,
@@ -5295,24 +5282,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-523.d08223cf528d.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "d08223cf528d9de4794fea9b32ca14b6969c9dc45b2e5bba9bdfd8015651f98e",
+      "bytes": 23737,
+      "width": 78,
+      "height": 523
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 406.488,
-      "y": 234.198,
-      "width": 128.833,
-      "height": 668.44
+      "x": 455.774,
+      "y": 363.76,
+      "width": 78,
+      "height": 523
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -5701,13 +5687,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 512.631,
-      "top": 387.523,
-      "right": 567.199,
-      "bottom": 842.253
+      "left": 468.731,
+      "top": 340.919,
+      "right": 531.731,
+      "bottom": 885.919
      },
      "assembled": {
       "x": 0,
@@ -5718,24 +5704,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-spray.780b804aff87.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-545.29185ac143a0.png",
       "key": "",
-      "sha256": "780b804aff87c8f64cfaa2f713e3673cacd6e136e6051a6d5f71f75e69e39b64",
-      "bytes": 241709,
-      "width": 243,
-      "height": 2025
+      "sha256": "29185ac143a065d03aa61045f722642107887791d36b6e0fd926b6ba578b283c",
+      "bytes": 19894,
+      "width": 63,
+      "height": 545
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 512.631,
-      "y": 387.523,
-      "width": 54.568,
-      "height": 454.73
+      "x": 468.731,
+      "y": 340.919,
+      "width": 63,
+      "height": 545
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -6545,13 +6530,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 448.002,
-      "top": 278.17,
-      "right": 537.968,
-      "bottom": 959.76
+      "left": 224.103,
+      "top": 449.272,
+      "right": 310.103,
+      "bottom": 896.272
      },
      "assembled": {
       "x": 0,
@@ -6562,24 +6547,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
+      "bytes": 15248,
+      "width": 86,
+      "height": 447
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 448.002,
-      "y": 278.17,
-      "width": 89.966,
-      "height": 681.59
+      "x": 224.103,
+      "y": 449.272,
+      "width": 86,
+      "height": 447
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -6710,13 +6694,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 539.43,
-      "right": 481.063,
-      "bottom": 935.94
+      "left": 249.447,
+      "top": 428.556,
+      "right": 327.447,
+      "bottom": 887.556
      },
      "assembled": {
       "x": 0,
@@ -6727,24 +6711,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
+      "bytes": 14529,
+      "width": 78,
+      "height": 459
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 539.43,
-      "width": 52.337,
-      "height": 396.51
+      "x": 249.447,
+      "y": 428.556,
+      "width": 78,
+      "height": 459
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -6882,13 +6865,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.75,
-      "right": 481.063,
-      "bottom": 935.26
+      "left": -228.385,
+      "top": 1275.041,
+      "right": -150.385,
+      "bottom": 1301.041
      },
      "assembled": {
       "x": 0,
@@ -6899,24 +6882,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--387.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.75,
-      "width": 52.337,
-      "height": 396.51
+      "x": -228.385,
+      "y": 1275.041,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -7054,13 +7036,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 528.35,
-      "right": 481.076,
-      "bottom": 924.66
+      "left": 249.447,
+      "top": 426.586,
+      "right": 327.447,
+      "bottom": 886.586
      },
      "assembled": {
       "x": 0,
@@ -7071,24 +7053,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
+      "bytes": 14543,
+      "width": 78,
+      "height": 460
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 528.35,
-      "width": 52.311,
-      "height": 396.31
+      "x": 249.447,
+      "y": 426.586,
+      "width": 78,
+      "height": 460
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -7436,13 +7417,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 527.67,
-      "right": 481.076,
-      "bottom": 923.98
+      "left": -228.385,
+      "top": 1273.071,
+      "right": -150.385,
+      "bottom": 1299.071
      },
      "assembled": {
       "x": 0,
@@ -7453,24 +7434,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--387.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 527.67,
-      "width": 52.311,
-      "height": 396.31
+      "x": -228.385,
+      "y": 1273.071,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -8658,13 +8638,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 512.631,
-      "top": 386.431,
-      "right": 567.199,
-      "bottom": 841.161
+      "left": 469.655,
+      "top": 340.29,
+      "right": 532.655,
+      "bottom": 886.29
      },
      "assembled": {
       "x": 0,
@@ -8675,24 +8655,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-spray.780b804aff87.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-546.5f0792e593f8.png",
       "key": "",
-      "sha256": "780b804aff87c8f64cfaa2f713e3673cacd6e136e6051a6d5f71f75e69e39b64",
-      "bytes": 241709,
-      "width": 243,
-      "height": 2025
+      "sha256": "5f0792e593f88a7db1ec86aad91fa982fd40a5ec31ba2cb866c1dcf610b69685",
+      "bytes": 19948,
+      "width": 63,
+      "height": 546
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 512.631,
-      "y": 386.431,
-      "width": 54.568,
-      "height": 454.73
+      "x": 469.655,
+      "y": 340.29,
+      "width": 63,
+      "height": 546
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -9285,13 +9264,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 512.631,
-      "top": 388.666,
-      "right": 567.199,
-      "bottom": 843.396
+      "left": 466.42,
+      "top": 341.138,
+      "right": 529.42,
+      "bottom": 886.138
      },
      "assembled": {
       "x": 0,
@@ -9302,24 +9281,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-spray.780b804aff87.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-545.29185ac143a0.png",
       "key": "",
-      "sha256": "780b804aff87c8f64cfaa2f713e3673cacd6e136e6051a6d5f71f75e69e39b64",
-      "bytes": 241709,
-      "width": 243,
-      "height": 2025
+      "sha256": "29185ac143a065d03aa61045f722642107887791d36b6e0fd926b6ba578b283c",
+      "bytes": 19894,
+      "width": 63,
+      "height": 545
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 512.631,
-      "y": 388.666,
-      "width": 54.568,
-      "height": 454.73
+      "x": 466.42,
+      "y": 341.138,
+      "width": 63,
+      "height": 545
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -9702,13 +9680,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 512.631,
-      "top": 390.053,
-      "right": 567.199,
-      "bottom": 844.783
+      "left": 468.269,
+      "top": 341.139,
+      "right": 531.269,
+      "bottom": 886.139
      },
      "assembled": {
       "x": 0,
@@ -9719,24 +9697,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-spray.780b804aff87.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-545.29185ac143a0.png",
       "key": "",
-      "sha256": "780b804aff87c8f64cfaa2f713e3673cacd6e136e6051a6d5f71f75e69e39b64",
-      "bytes": 241709,
-      "width": 243,
-      "height": 2025
+      "sha256": "29185ac143a065d03aa61045f722642107887791d36b6e0fd926b6ba578b283c",
+      "bytes": 19894,
+      "width": 63,
+      "height": 545
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 512.631,
-      "y": 390.053,
-      "width": 54.568,
-      "height": 454.73
+      "x": 468.269,
+      "y": 341.139,
+      "width": 63,
+      "height": 545
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -10119,13 +10096,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 512.631,
-      "top": 388.507,
-      "right": 567.199,
-      "bottom": 843.237
+      "left": 466.42,
+      "top": 340.517,
+      "right": 529.42,
+      "bottom": 886.517
      },
      "assembled": {
       "x": 0,
@@ -10136,24 +10113,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-spray.780b804aff87.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-546.5f0792e593f8.png",
       "key": "",
-      "sha256": "780b804aff87c8f64cfaa2f713e3673cacd6e136e6051a6d5f71f75e69e39b64",
-      "bytes": 241709,
-      "width": 243,
-      "height": 2025
+      "sha256": "5f0792e593f88a7db1ec86aad91fa982fd40a5ec31ba2cb866c1dcf610b69685",
+      "bytes": 19948,
+      "width": 63,
+      "height": 546
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 512.631,
-      "y": 388.507,
-      "width": 54.568,
-      "height": 454.73
+      "x": 466.42,
+      "y": 340.517,
+      "width": 63,
+      "height": 546
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -10536,13 +10512,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 512.631,
-      "top": 385.817,
-      "right": 567.199,
-      "bottom": 840.547
+      "left": 468.038,
+      "top": 340.138,
+      "right": 531.038,
+      "bottom": 886.138
      },
      "assembled": {
       "x": 0,
@@ -10553,24 +10529,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-spray.780b804aff87.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-546.5f0792e593f8.png",
       "key": "",
-      "sha256": "780b804aff87c8f64cfaa2f713e3673cacd6e136e6051a6d5f71f75e69e39b64",
-      "bytes": 241709,
-      "width": 243,
-      "height": 2025
+      "sha256": "5f0792e593f88a7db1ec86aad91fa982fd40a5ec31ba2cb866c1dcf610b69685",
+      "bytes": 19948,
+      "width": 63,
+      "height": 546
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 512.631,
-      "y": 385.817,
-      "width": 54.568,
-      "height": 454.73
+      "x": 468.038,
+      "y": 340.138,
+      "width": 63,
+      "height": 546
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -10959,13 +10934,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 450.618,
-      "top": 252.774,
-      "right": 567.532,
-      "bottom": 934.774
+      "left": 457.44,
+      "top": 401.602,
+      "right": 538.44,
+      "bottom": 896.602
      },
      "assembled": {
       "x": 0,
@@ -10976,24 +10951,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.effe33db8d14.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "effe33db8d144951b5611d3c1ee70863ca5ed135de808624f19a238259398d1c",
+      "bytes": 28293,
+      "width": 81,
+      "height": 495
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 450.618,
-      "y": 252.774,
-      "width": 116.914,
-      "height": 682
+      "x": 457.44,
+      "y": 401.602,
+      "width": 81,
+      "height": 495
      },
      "componentId": "CMP-LPM-MGLD-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -11166,13 +11140,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 450.618,
-      "top": 253.207,
-      "right": 567.532,
-      "bottom": 935.207
+      "left": 460.873,
+      "top": 402.037,
+      "right": 541.873,
+      "bottom": 897.037
      },
      "assembled": {
       "x": 0,
@@ -11183,24 +11157,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.effe33db8d14.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "effe33db8d144951b5611d3c1ee70863ca5ed135de808624f19a238259398d1c",
+      "bytes": 28293,
+      "width": 81,
+      "height": 495
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 450.618,
-      "y": 253.207,
-      "width": 116.914,
-      "height": 682
+      "x": 460.873,
+      "y": 402.037,
+      "width": 81,
+      "height": 495
      },
      "componentId": "CMP-LPM-SGLD-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -11373,13 +11346,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 450.618,
-      "top": 250.46,
-      "right": 567.532,
-      "bottom": 932.46
+      "left": 456.409,
+      "top": 402.037,
+      "right": 537.409,
+      "bottom": 897.037
      },
      "assembled": {
       "x": 0,
@@ -11390,24 +11363,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.effe33db8d14.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "effe33db8d144951b5611d3c1ee70863ca5ed135de808624f19a238259398d1c",
+      "bytes": 28293,
+      "width": 81,
+      "height": 495
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 450.618,
-      "y": 250.46,
-      "width": 116.914,
-      "height": 682
+      "x": 456.409,
+      "y": 402.037,
+      "width": 81,
+      "height": 495
      },
      "componentId": "CMP-LPM-SBLK-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -11574,13 +11546,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 512.72,
-      "right": 596.991,
-      "bottom": 923.83
+      "left": 298.885,
+      "top": 389.52,
+      "right": 361.885,
+      "bottom": 886.52
      },
      "assembled": {
       "x": 0,
@@ -11591,24 +11563,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-497.e59de9a2aa32.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "e59de9a2aa32c86bc5345289b3be65897ba73ba75cb4b0d0604f70862b37f591",
+      "bytes": 12824,
+      "width": 63,
+      "height": 497
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 512.72,
-      "width": 56.942,
-      "height": 411.11
+      "x": 298.885,
+      "y": 389.52,
+      "width": 63,
+      "height": 497
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -11752,13 +11723,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 450.618,
-      "top": 251.653,
-      "right": 567.532,
-      "bottom": 933.653
+      "left": 458.47,
+      "top": 401.856,
+      "right": 539.47,
+      "bottom": 896.856
      },
      "assembled": {
       "x": 0,
@@ -11769,24 +11740,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.effe33db8d14.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "effe33db8d144951b5611d3c1ee70863ca5ed135de808624f19a238259398d1c",
+      "bytes": 28293,
+      "width": 81,
+      "height": 495
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 450.618,
-      "y": 251.653,
-      "width": 116.914,
-      "height": 682
+      "x": 458.47,
+      "y": 401.856,
+      "width": 81,
+      "height": 495
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -11953,13 +11923,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 510.61,
-      "right": 596.991,
-      "bottom": 921.72
+      "left": -84.208,
+      "top": 1068.68,
+      "right": -21.208,
+      "bottom": 1091.68
      },
      "assembled": {
       "x": 0,
@@ -11970,24 +11940,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--183.d0460d923262.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
+      "bytes": 1179,
+      "width": 63,
+      "height": 23
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 510.61,
-      "width": 56.942,
-      "height": 411.11
+      "x": -84.208,
+      "y": 1068.68,
+      "width": 63,
+      "height": 23
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -12131,13 +12100,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 450.618,
-      "top": 258.327,
-      "right": 567.532,
-      "bottom": 940.327
+      "left": 460.874,
+      "top": 403.036,
+      "right": 541.874,
+      "bottom": 897.036
      },
      "assembled": {
       "x": 0,
@@ -12148,24 +12117,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-494.d2f982f6c4dd.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "d2f982f6c4dd3c1b7a07a6b4582fa9e30f0b2a7d1e11737c58a8b6f6e2c59642",
+      "bytes": 28260,
+      "width": 81,
+      "height": 494
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 450.618,
-      "y": 258.327,
-      "width": 116.914,
-      "height": 682
+      "x": 460.874,
+      "y": 403.036,
+      "width": 81,
+      "height": 494
      },
      "componentId": "CMP-LPM-SSLV-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -12338,13 +12306,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 450.618,
-      "top": 257.628,
-      "right": 567.532,
-      "bottom": 939.628
+      "left": 456.409,
+      "top": 401.65,
+      "right": 537.409,
+      "bottom": 896.65
      },
      "assembled": {
       "x": 0,
@@ -12355,24 +12323,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-495.effe33db8d14.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "effe33db8d144951b5611d3c1ee70863ca5ed135de808624f19a238259398d1c",
+      "bytes": 28293,
+      "width": 81,
+      "height": 495
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 450.618,
-      "y": 257.628,
-      "width": 116.914,
-      "height": 682
+      "x": 456.409,
+      "y": 401.65,
+      "width": 81,
+      "height": 495
      },
      "componentId": "CMP-LPM-CPR-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -14429,13 +14396,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.792,
-      "top": 245.336,
-      "right": 561.277,
-      "bottom": 895.666
+      "left": 460.47,
+      "top": 382.396,
+      "right": 534.47,
+      "bottom": 887.396
      },
      "assembled": {
       "x": 0,
@@ -14446,24 +14413,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-505.b076fa6a6c59.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "b076fa6a6c5917a773df2ee218e6f684ebb0c66073286eb7678412060740ecf4",
+      "bytes": 26225,
+      "width": 74,
+      "height": 505
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.792,
-      "y": 245.336,
-      "width": 111.485,
-      "height": 650.33
+      "x": 460.47,
+      "y": 382.396,
+      "width": 74,
+      "height": 505
      },
      "componentId": "CMP-LPM-MGLD-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -14846,13 +14812,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.792,
-      "top": 250.292,
-      "right": 561.277,
-      "bottom": 900.622
+      "left": 462.367,
+      "top": 383.557,
+      "right": 536.367,
+      "bottom": 887.557
      },
      "assembled": {
       "x": 0,
@@ -14863,24 +14829,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
+      "bytes": 26196,
+      "width": 74,
+      "height": 504
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.792,
-      "y": 250.292,
-      "width": 111.485,
-      "height": 650.33
+      "x": 462.367,
+      "y": 383.557,
+      "width": 74,
+      "height": 504
      },
      "componentId": "CMP-LPM-SGLD-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -15263,13 +15228,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.792,
-      "top": 252.924,
-      "right": 561.277,
-      "bottom": 903.254
+      "left": 463.949,
+      "top": 384.926,
+      "right": 537.949,
+      "bottom": 887.926
      },
      "assembled": {
       "x": 0,
@@ -15280,24 +15245,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-503.263227684d22.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "263227684d2285776b6ab153ac0d018b0d2b57d33de9dd9505ce45cbc9360a1b",
+      "bytes": 26149,
+      "width": 74,
+      "height": 503
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.792,
-      "y": 252.924,
-      "width": 111.485,
-      "height": 650.33
+      "x": 463.949,
+      "y": 384.926,
+      "width": 74,
+      "height": 503
      },
      "componentId": "CMP-LPM-SBLK-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -15680,13 +15644,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.792,
-      "top": 250.13,
-      "right": 561.277,
-      "bottom": 900.46
+      "left": 463.0,
+      "top": 384.66,
+      "right": 537.0,
+      "bottom": 887.66
      },
      "assembled": {
       "x": 0,
@@ -15697,24 +15661,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-503.263227684d22.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "263227684d2285776b6ab153ac0d018b0d2b57d33de9dd9505ce45cbc9360a1b",
+      "bytes": 26149,
+      "width": 74,
+      "height": 503
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.792,
-      "y": 250.13,
-      "width": 111.485,
-      "height": 650.33
+      "x": 463.0,
+      "y": 384.66,
+      "width": 74,
+      "height": 503
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -16097,13 +16060,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.792,
-      "top": 248.66,
-      "right": 561.277,
-      "bottom": 898.99
+      "left": 461.419,
+      "top": 383.823,
+      "right": 535.419,
+      "bottom": 887.823
      },
      "assembled": {
       "x": 0,
@@ -16114,24 +16077,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
+      "bytes": 26196,
+      "width": 74,
+      "height": 504
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.792,
-      "y": 248.66,
-      "width": 111.485,
-      "height": 650.33
+      "x": 461.419,
+      "y": 383.823,
+      "width": 74,
+      "height": 504
      },
      "componentId": "CMP-LPM-SSLV-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -16514,13 +16476,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.792,
-      "top": 246.47,
-      "right": 561.277,
-      "bottom": 896.8
+      "left": 459.838,
+      "top": 384.162,
+      "right": 533.838,
+      "bottom": 888.162
      },
      "assembled": {
       "x": 0,
@@ -16531,24 +16493,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
+      "bytes": 26196,
+      "width": 74,
+      "height": 504
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.792,
-      "y": 246.47,
-      "width": 111.485,
-      "height": 650.33
+      "x": 459.838,
+      "y": 384.162,
+      "width": 74,
+      "height": 504
      },
      "componentId": "CMP-LPM-CPR-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -16931,13 +16892,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.781,
-      "top": 233.055,
-      "right": 561.28,
-      "bottom": 883.465
+      "left": 463.923,
+      "top": 381.133,
+      "right": 537.923,
+      "bottom": 886.133
      },
      "assembled": {
       "x": 0,
@@ -16948,24 +16909,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-505.b076fa6a6c59.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "b076fa6a6c5917a773df2ee218e6f684ebb0c66073286eb7678412060740ecf4",
+      "bytes": 26225,
+      "width": 74,
+      "height": 505
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.781,
-      "y": 233.055,
-      "width": 111.499,
-      "height": 650.41
+      "x": 463.923,
+      "y": 381.133,
+      "width": 74,
+      "height": 505
      },
      "componentId": "CMP-LPM-MGLD-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -17355,13 +17315,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 448.002,
-      "top": 281.03,
-      "right": 537.968,
-      "bottom": 962.62
+      "left": 223.727,
+      "top": 449.782,
+      "right": 309.727,
+      "bottom": 896.782
      },
      "assembled": {
       "x": 0,
@@ -17372,24 +17332,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
+      "bytes": 15248,
+      "width": 86,
+      "height": 447
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 448.002,
-      "y": 281.03,
-      "width": 89.966,
-      "height": 681.59
+      "x": 223.727,
+      "y": 449.782,
+      "width": 86,
+      "height": 447
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -17520,13 +17479,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.781,
-      "top": 233.105,
-      "right": 561.28,
-      "bottom": 883.515
+      "left": 460.233,
+      "top": 381.183,
+      "right": 534.233,
+      "bottom": 886.183
      },
      "assembled": {
       "x": 0,
@@ -17537,24 +17496,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-505.b076fa6a6c59.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "b076fa6a6c5917a773df2ee218e6f684ebb0c66073286eb7678412060740ecf4",
+      "bytes": 26225,
+      "width": 74,
+      "height": 505
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.781,
-      "y": 233.105,
-      "width": 111.499,
-      "height": 650.41
+      "x": 460.233,
+      "y": 381.183,
+      "width": 74,
+      "height": 505
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -17944,13 +17902,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 448.002,
-      "top": 274.45,
-      "right": 537.968,
-      "bottom": 956.04
+      "left": 220.792,
+      "top": 449.072,
+      "right": 306.792,
+      "bottom": 897.072
      },
      "assembled": {
       "x": 0,
@@ -17961,24 +17919,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-448.318967e0c875.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "318967e0c8752e840de6d77b7e3c6764e59820b52008edb96439f7dad7b75fe0",
+      "bytes": 15274,
+      "width": 86,
+      "height": 448
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 448.002,
-      "y": 274.45,
-      "width": 89.966,
-      "height": 681.59
+      "x": 220.792,
+      "y": 449.072,
+      "width": 86,
+      "height": 448
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -18109,13 +18066,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.781,
-      "top": 233.577,
-      "right": 561.28,
-      "bottom": 883.987
+      "left": 463.307,
+      "top": 382.27,
+      "right": 537.307,
+      "bottom": 886.27
      },
      "assembled": {
       "x": 0,
@@ -18126,24 +18083,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
+      "bytes": 26196,
+      "width": 74,
+      "height": 504
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.781,
-      "y": 233.577,
-      "width": 111.499,
-      "height": 650.41
+      "x": 463.307,
+      "y": 382.27,
+      "width": 74,
+      "height": 504
      },
      "componentId": "CMP-LPM-CPR-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -18533,13 +18489,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 448.002,
-      "top": 264.6,
-      "right": 537.968,
-      "bottom": 946.19
+      "left": 223.359,
+      "top": 448.682,
+      "right": 309.359,
+      "bottom": 896.682
      },
      "assembled": {
       "x": 0,
@@ -18550,24 +18506,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-448.318967e0c875.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "318967e0c8752e840de6d77b7e3c6764e59820b52008edb96439f7dad7b75fe0",
+      "bytes": 15274,
+      "width": 86,
+      "height": 448
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 448.002,
-      "y": 264.6,
-      "width": 89.966,
-      "height": 681.59
+      "x": 223.359,
+      "y": 448.682,
+      "width": 86,
+      "height": 448
      },
      "componentId": "CMP-SPR-RED-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -18698,13 +18653,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.781,
-      "top": 234.13,
-      "right": 561.28,
-      "bottom": 884.54
+      "left": 460.233,
+      "top": 382.208,
+      "right": 534.233,
+      "bottom": 886.208
      },
      "assembled": {
       "x": 0,
@@ -18715,24 +18670,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
+      "bytes": 26196,
+      "width": 74,
+      "height": 504
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.781,
-      "y": 234.13,
-      "width": 111.499,
-      "height": 650.41
+      "x": 460.233,
+      "y": 382.208,
+      "width": 74,
+      "height": 504
      },
      "componentId": "CMP-LPM-SGLD-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -19122,13 +19076,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 448.002,
-      "top": 274.23,
-      "right": 537.968,
-      "bottom": 955.82
+      "left": 231.074,
+      "top": 449.372,
+      "right": 317.074,
+      "bottom": 896.372
      },
      "assembled": {
       "x": 0,
@@ -19139,24 +19093,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
+      "bytes": 15248,
+      "width": 86,
+      "height": 447
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 448.002,
-      "y": 274.23,
-      "width": 89.966,
-      "height": 681.59
+      "x": 231.074,
+      "y": 449.372,
+      "width": 86,
+      "height": 447
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -19287,13 +19240,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.781,
-      "top": 238.745,
-      "right": 561.28,
-      "bottom": 889.155
+      "left": 461.463,
+      "top": 383.133,
+      "right": 535.463,
+      "bottom": 886.133
      },
      "assembled": {
       "x": 0,
@@ -19304,24 +19257,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-503.263227684d22.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "263227684d2285776b6ab153ac0d018b0d2b57d33de9dd9505ce45cbc9360a1b",
+      "bytes": 26149,
+      "width": 74,
+      "height": 503
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.781,
-      "y": 238.745,
-      "width": 111.499,
-      "height": 650.41
+      "x": 461.463,
+      "y": 383.133,
+      "width": 74,
+      "height": 503
      },
      "componentId": "CMP-LPM-SBLK-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -19711,13 +19663,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 448.002,
-      "top": 274.02,
-      "right": 537.968,
-      "bottom": 955.61
+      "left": 233.281,
+      "top": 449.372,
+      "right": 319.281,
+      "bottom": 896.372
      },
      "assembled": {
       "x": 0,
@@ -19728,24 +19680,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
+      "bytes": 15248,
+      "width": 86,
+      "height": 447
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 448.002,
-      "y": 274.02,
-      "width": 89.966,
-      "height": 681.59
+      "x": 233.281,
+      "y": 449.372,
+      "width": 86,
+      "height": 447
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -19876,13 +19827,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.781,
-      "top": 232.515,
-      "right": 561.28,
-      "bottom": 882.925
+      "left": 458.696,
+      "top": 382.437,
+      "right": 532.696,
+      "bottom": 886.437
      },
      "assembled": {
       "x": 0,
@@ -19893,24 +19844,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
+      "bytes": 26196,
+      "width": 74,
+      "height": 504
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.781,
-      "y": 232.515,
-      "width": 111.499,
-      "height": 650.41
+      "x": 458.696,
+      "y": 382.437,
+      "width": 74,
+      "height": 504
      },
      "componentId": "CMP-LPM-SSLV-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -20300,13 +20250,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 448.002,
-      "top": 281.34,
-      "right": 537.968,
-      "bottom": 962.93
+      "left": 232.179,
+      "top": 449.232,
+      "right": 318.179,
+      "bottom": 896.232
      },
      "assembled": {
       "x": 0,
@@ -20317,24 +20267,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
+      "bytes": 15248,
+      "width": 86,
+      "height": 447
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 448.002,
-      "y": 281.34,
-      "width": 89.966,
-      "height": 681.59
+      "x": 232.179,
+      "y": 449.232,
+      "width": 86,
+      "height": 447
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -20682,13 +20631,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 448.002,
-      "top": 260.9,
-      "right": 537.968,
-      "bottom": 942.49
+      "left": 233.277,
+      "top": 448.662,
+      "right": 319.277,
+      "bottom": 896.662
      },
      "assembled": {
       "x": 0,
@@ -20699,24 +20648,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-448.318967e0c875.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "318967e0c8752e840de6d77b7e3c6764e59820b52008edb96439f7dad7b75fe0",
+      "bytes": 15274,
+      "width": 86,
+      "height": 448
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 448.002,
-      "y": 260.9,
-      "width": 89.966,
-      "height": 681.59
+      "x": 233.277,
+      "y": 448.662,
+      "width": 86,
+      "height": 448
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -20854,13 +20802,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 448.002,
-      "top": 261.79,
-      "right": 537.968,
-      "bottom": 943.38
+      "left": 238.789,
+      "top": 449.312,
+      "right": 324.789,
+      "bottom": 896.312
      },
      "assembled": {
       "x": 0,
@@ -20871,24 +20819,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-447.af7ae6299eec.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "af7ae6299eecf9d2197953e7a747bd75eeb7161077e25d10a56fb59dd4704460",
+      "bytes": 15248,
+      "width": 86,
+      "height": 447
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 448.002,
-      "y": 261.79,
-      "width": 89.966,
-      "height": 681.59
+      "x": 238.789,
+      "y": 449.312,
+      "width": 86,
+      "height": 447
      },
      "componentId": "CMP-CAP-PNK-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -21019,13 +20966,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 510.95,
-      "right": 596.991,
-      "bottom": 922.06
+      "left": 298.618,
+      "top": 390.43,
+      "right": 361.618,
+      "bottom": 886.43
      },
      "assembled": {
       "x": 0,
@@ -21036,24 +20983,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.ba20c2a05c70.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "ba20c2a05c707320deb3bdf30bc3cd6658f86f59d0dff0fa92444e4e54e05212",
+      "bytes": 12872,
+      "width": 63,
+      "height": 496
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 510.95,
-      "width": 56.942,
-      "height": 411.11
+      "x": 298.618,
+      "y": 390.43,
+      "width": 63,
+      "height": 496
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -21191,13 +21137,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 510.4,
-      "right": 596.991,
-      "bottom": 921.51
+      "left": 303.97,
+      "top": 390.22,
+      "right": 366.97,
+      "bottom": 886.22
      },
      "assembled": {
       "x": 0,
@@ -21208,24 +21154,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.ba20c2a05c70.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "ba20c2a05c707320deb3bdf30bc3cd6658f86f59d0dff0fa92444e4e54e05212",
+      "bytes": 12872,
+      "width": 63,
+      "height": 496
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 510.4,
-      "width": 56.942,
-      "height": 411.11
+      "x": 303.97,
+      "y": 390.22,
+      "width": 63,
+      "height": 496
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -21363,13 +21308,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 511.96,
-      "right": 596.991,
-      "bottom": 923.07
+      "left": 305.578,
+      "top": 390.22,
+      "right": 368.578,
+      "bottom": 886.22
      },
      "assembled": {
       "x": 0,
@@ -21380,24 +21325,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.ba20c2a05c70.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "ba20c2a05c707320deb3bdf30bc3cd6658f86f59d0dff0fa92444e4e54e05212",
+      "bytes": 12872,
+      "width": 63,
+      "height": 496
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 511.96,
-      "width": 56.942,
-      "height": 411.11
+      "x": 305.578,
+      "y": 390.22,
+      "width": 63,
+      "height": 496
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -21535,13 +21479,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 511.17,
-      "right": 596.991,
-      "bottom": 922.28
+      "left": 296.478,
+      "top": 389.92,
+      "right": 359.478,
+      "bottom": 885.92
      },
      "assembled": {
       "x": 0,
@@ -21552,24 +21496,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.ba20c2a05c70.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "ba20c2a05c707320deb3bdf30bc3cd6658f86f59d0dff0fa92444e4e54e05212",
+      "bytes": 12872,
+      "width": 63,
+      "height": 496
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 511.17,
-      "width": 56.942,
-      "height": 411.11
+      "x": 296.478,
+      "y": 389.92,
+      "width": 63,
+      "height": 496
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -21707,13 +21650,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 512.14,
-      "right": 596.991,
-      "bottom": 923.25
+      "left": 304.77,
+      "top": 389.47,
+      "right": 367.77,
+      "bottom": 886.47
      },
      "assembled": {
       "x": 0,
@@ -21724,24 +21667,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-497.e59de9a2aa32.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "e59de9a2aa32c86bc5345289b3be65897ba73ba75cb4b0d0604f70862b37f591",
+      "bytes": 12824,
+      "width": 63,
+      "height": 497
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 512.14,
-      "width": 56.942,
-      "height": 411.11
+      "x": 304.77,
+      "y": 389.47,
+      "width": 63,
+      "height": 497
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -21879,13 +21821,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 511.23,
-      "right": 596.991,
-      "bottom": 922.34
+      "left": 305.573,
+      "top": 390.71,
+      "right": 368.573,
+      "bottom": 885.71
      },
      "assembled": {
       "x": 0,
@@ -21896,24 +21838,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-495.10c2f56f799e.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "10c2f56f799e0835ccbf89e41b9bf11428255696773ea3ad8727d089161d21a9",
+      "bytes": 12830,
+      "width": 63,
+      "height": 495
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 511.23,
-      "width": 56.942,
-      "height": 411.11
+      "x": 305.573,
+      "y": 390.71,
+      "width": 63,
+      "height": 495
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -22051,13 +21992,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 509.5,
-      "right": 596.991,
-      "bottom": 920.61
+      "left": 309.59,
+      "top": 389.36,
+      "right": 372.59,
+      "bottom": 886.36
      },
      "assembled": {
       "x": 0,
@@ -22068,24 +22009,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-497.e59de9a2aa32.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "e59de9a2aa32c86bc5345289b3be65897ba73ba75cb4b0d0604f70862b37f591",
+      "bytes": 12824,
+      "width": 63,
+      "height": 497
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 509.5,
-      "width": 56.942,
-      "height": 411.11
+      "x": 309.59,
+      "y": 389.36,
+      "width": 63,
+      "height": 497
      },
      "componentId": "CMP-CAP-PNK-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -22223,13 +22163,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 510.95,
-      "right": 596.991,
-      "bottom": 922.06
+      "left": 298.355,
+      "top": 389.73,
+      "right": 361.355,
+      "bottom": 885.73
      },
      "assembled": {
       "x": 0,
@@ -22240,24 +22180,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-496.ba20c2a05c70.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "ba20c2a05c707320deb3bdf30bc3cd6658f86f59d0dff0fa92444e4e54e05212",
+      "bytes": 12872,
+      "width": 63,
+      "height": 496
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 510.95,
-      "width": 56.942,
-      "height": 411.11
+      "x": 298.355,
+      "y": 389.73,
+      "width": 63,
+      "height": 496
      },
      "componentId": "CMP-SPR-RED-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -22395,13 +22334,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 510.61,
-      "right": 596.991,
-      "bottom": 921.72
+      "left": -60.665,
+      "top": 1035.505,
+      "right": 2.335,
+      "bottom": 1058.505
      },
      "assembled": {
       "x": 0,
@@ -22412,24 +22351,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--149.d0460d923262.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
+      "bytes": 1179,
+      "width": 63,
+      "height": 23
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 510.61,
-      "width": 56.942,
-      "height": 411.11
+      "x": -60.665,
+      "y": 1035.505,
+      "width": 63,
+      "height": 23
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -22567,13 +22505,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 511.64,
-      "right": 596.991,
-      "bottom": 922.75
+      "left": -83.405,
+      "top": 1017.845,
+      "right": -20.405,
+      "bottom": 1040.845
      },
      "assembled": {
       "x": 0,
@@ -22584,24 +22522,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--132.d0460d923262.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
+      "bytes": 1179,
+      "width": 63,
+      "height": 23
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 511.64,
-      "width": 56.942,
-      "height": 411.11
+      "x": -83.405,
+      "y": 1017.845,
+      "width": 63,
+      "height": 23
      },
      "componentId": "CMP-SPR-RED-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -22739,13 +22676,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 511.14,
-      "right": 596.991,
-      "bottom": 922.25
+      "left": -74.577,
+      "top": 1055.54,
+      "right": -11.577,
+      "bottom": 1078.54
      },
      "assembled": {
       "x": 0,
@@ -22756,24 +22693,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--169.d0460d923262.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
+      "bytes": 1179,
+      "width": 63,
+      "height": 23
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 511.14,
-      "width": 56.942,
-      "height": 411.11
+      "x": -74.577,
+      "y": 1055.54,
+      "width": 63,
+      "height": 23
      },
      "componentId": "CMP-SPR-MSLV-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -22911,13 +22847,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 510.61,
-      "right": 596.991,
-      "bottom": 921.72
+      "left": -48.359,
+      "top": 1032.295,
+      "right": 14.641,
+      "bottom": 1055.295
      },
      "assembled": {
       "x": 0,
@@ -22928,24 +22864,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--146.d0460d923262.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
+      "bytes": 1179,
+      "width": 63,
+      "height": 23
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 510.61,
-      "width": 56.942,
-      "height": 411.11
+      "x": -48.359,
+      "y": 1032.295,
+      "width": 63,
+      "height": 23
      },
      "componentId": "CMP-SPR-GLD-18415-TSL",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -23083,13 +23018,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 511.64,
-      "right": 596.991,
-      "bottom": 922.75
+      "left": -60.665,
+      "top": 1027.48,
+      "right": 2.335,
+      "bottom": 1050.48
      },
      "assembled": {
       "x": 0,
@@ -23100,24 +23035,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--141.d0460d923262.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
+      "bytes": 1179,
+      "width": 63,
+      "height": 23
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 511.64,
-      "width": 56.942,
-      "height": 411.11
+      "x": -60.665,
+      "y": 1027.48,
+      "width": 63,
+      "height": 23
      },
      "componentId": "CMP-SPR-IVGD-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -23255,13 +23189,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 511.64,
-      "right": 596.991,
-      "bottom": 922.75
+      "left": -60.665,
+      "top": 1027.48,
+      "right": 2.335,
+      "bottom": 1050.48
      },
      "assembled": {
       "x": 0,
@@ -23272,24 +23206,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--141.d0460d923262.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
+      "bytes": 1179,
+      "width": 63,
+      "height": 23
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 511.64,
-      "width": 56.942,
-      "height": 411.11
+      "x": -60.665,
+      "y": 1027.48,
+      "width": 63,
+      "height": 23
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -23427,13 +23360,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 511.28,
-      "right": 596.991,
-      "bottom": 922.39
+      "left": -61.208,
+      "top": 1034.04,
+      "right": 1.792,
+      "bottom": 1057.04
      },
      "assembled": {
       "x": 0,
@@ -23444,24 +23377,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--148.d0460d923262.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
+      "bytes": 1179,
+      "width": 63,
+      "height": 23
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 511.28,
-      "width": 56.942,
-      "height": 411.11
+      "x": -61.208,
+      "y": 1034.04,
+      "width": 63,
+      "height": 23
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -23599,13 +23531,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 540.049,
-      "top": 511.64,
-      "right": 596.991,
-      "bottom": 922.75
+      "left": -59.328,
+      "top": 1036.58,
+      "right": 3.672,
+      "bottom": 1059.58
      },
      "assembled": {
       "x": 0,
@@ -23616,24 +23548,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--150.d0460d923262.png",
       "key": "",
-      "sha256": "d7833f5b0e215100db48da12d0dc18d4b4468d92e154dd2d1154aa51516fcb7a",
-      "bytes": 24665,
-      "width": 141,
-      "height": 1018
+      "sha256": "d0460d923262702f3ddfbbd39eb9de6d409eaa7d9e0281514d41b866e1236586",
+      "bytes": 1179,
+      "width": 63,
+      "height": 23
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 540.049,
-      "y": 511.64,
-      "width": 56.942,
-      "height": 411.11
+      "x": -59.328,
+      "y": 1036.58,
+      "width": 63,
+      "height": 23
      },
      "componentId": "CMP-SPR-PNK-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -23771,13 +23702,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 525.09,
-      "right": 481.063,
-      "bottom": 921.6
+      "left": 257.786,
+      "top": 427.556,
+      "right": 335.786,
+      "bottom": 887.556
      },
      "assembled": {
       "x": 0,
@@ -23788,24 +23719,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
+      "bytes": 14543,
+      "width": 78,
+      "height": 460
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 525.09,
-      "width": 52.337,
-      "height": 396.51
+      "x": 257.786,
+      "y": 427.556,
+      "width": 78,
+      "height": 460
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -23943,13 +23873,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 526.48,
-      "right": 481.063,
-      "bottom": 922.99
+      "left": 262.797,
+      "top": 427.876,
+      "right": 340.797,
+      "bottom": 887.876
      },
      "assembled": {
       "x": 0,
@@ -23960,24 +23890,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
+      "bytes": 14543,
+      "width": 78,
+      "height": 460
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 526.48,
-      "width": 52.337,
-      "height": 396.51
+      "x": 262.797,
+      "y": 427.876,
+      "width": 78,
+      "height": 460
      },
      "componentId": "CMP-CAP-PNK-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -24115,13 +24044,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 524.16,
-      "right": 481.063,
-      "bottom": 920.67
+      "left": 255.782,
+      "top": 427.206,
+      "right": 333.782,
+      "bottom": 888.206
      },
      "assembled": {
       "x": 0,
@@ -24132,24 +24061,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
+      "bytes": 14598,
+      "width": 78,
+      "height": 461
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 524.16,
-      "width": 52.337,
-      "height": 396.51
+      "x": 255.782,
+      "y": 427.206,
+      "width": 78,
+      "height": 461
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -24287,13 +24215,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 524.83,
-      "right": 481.063,
-      "bottom": 921.34
+      "left": 257.791,
+      "top": 427.206,
+      "right": 335.791,
+      "bottom": 888.206
      },
      "assembled": {
       "x": 0,
@@ -24304,24 +24232,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
+      "bytes": 14598,
+      "width": 78,
+      "height": 461
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 524.83,
-      "width": 52.337,
-      "height": 396.51
+      "x": 257.791,
+      "y": 427.206,
+      "width": 78,
+      "height": 461
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -24459,13 +24386,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 527.48,
-      "right": 481.063,
-      "bottom": 923.99
+      "left": 248.779,
+      "top": 428.566,
+      "right": 326.779,
+      "bottom": 887.566
      },
      "assembled": {
       "x": 0,
@@ -24476,24 +24403,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
+      "bytes": 14529,
+      "width": 78,
+      "height": 459
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 527.48,
-      "width": 52.337,
-      "height": 396.51
+      "x": 248.779,
+      "y": 428.566,
+      "width": 78,
+      "height": 459
      },
      "componentId": "CMP-SPR-RED-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -24631,13 +24557,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.77,
-      "right": 481.063,
-      "bottom": 935.28
+      "left": 256.787,
+      "top": 427.536,
+      "right": 334.787,
+      "bottom": 887.536
      },
      "assembled": {
       "x": 0,
@@ -24648,24 +24574,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
+      "bytes": 14543,
+      "width": 78,
+      "height": 460
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.77,
-      "width": 52.337,
-      "height": 396.51
+      "x": 256.787,
+      "y": 427.536,
+      "width": 78,
+      "height": 460
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -24803,13 +24728,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 539.79,
-      "right": 481.063,
-      "bottom": 936.3
+      "left": 249.114,
+      "top": 427.216,
+      "right": 327.114,
+      "bottom": 888.216
      },
      "assembled": {
       "x": 0,
@@ -24820,24 +24745,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
+      "bytes": 14598,
+      "width": 78,
+      "height": 461
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 539.79,
-      "width": 52.337,
-      "height": 396.51
+      "x": 249.114,
+      "y": 427.216,
+      "width": 78,
+      "height": 461
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -24975,13 +24899,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 526.84,
-      "right": 481.063,
-      "bottom": 923.35
+      "left": 246.438,
+      "top": 428.556,
+      "right": 324.438,
+      "bottom": 887.556
      },
      "assembled": {
       "x": 0,
@@ -24992,24 +24916,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
+      "bytes": 14529,
+      "width": 78,
+      "height": 459
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 526.84,
-      "width": 52.337,
-      "height": 396.51
+      "x": 246.438,
+      "y": 428.556,
+      "width": 78,
+      "height": 459
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -25147,13 +25070,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.75,
-      "right": 481.063,
-      "bottom": 935.26
+      "left": -199.021,
+      "top": 1223.651,
+      "right": -121.021,
+      "bottom": 1249.651
      },
      "assembled": {
       "x": 0,
@@ -25164,24 +25087,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--336.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.75,
-      "width": 52.337,
-      "height": 396.51
+      "x": -199.021,
+      "y": 1223.651,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-IVGD-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -25319,13 +25241,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.75,
-      "right": 481.063,
-      "bottom": 935.26
+      "left": -197.353,
+      "top": 1234.996,
+      "right": -119.353,
+      "bottom": 1260.996
      },
      "assembled": {
       "x": 0,
@@ -25336,24 +25258,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--347.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.75,
-      "width": 52.337,
-      "height": 396.51
+      "x": -197.353,
+      "y": 1234.996,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-PNK-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -25491,13 +25412,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 525.04,
-      "right": 481.063,
-      "bottom": 921.55
+      "left": -199.69,
+      "top": 1229.331,
+      "right": -121.69,
+      "bottom": 1255.331
      },
      "assembled": {
       "x": 0,
@@ -25508,24 +25429,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 525.04,
-      "width": 52.337,
-      "height": 396.51
+      "x": -199.69,
+      "y": 1229.331,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -25663,13 +25583,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.75,
-      "right": 481.063,
-      "bottom": 935.26
+      "left": -183.671,
+      "top": 1229.658,
+      "right": -105.671,
+      "bottom": 1255.658
      },
      "assembled": {
       "x": 0,
@@ -25680,24 +25600,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--342.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.75,
-      "width": 52.337,
-      "height": 396.51
+      "x": -183.671,
+      "y": 1229.658,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-GLD-18415-TSL",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -25835,13 +25754,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.75,
-      "right": 481.063,
-      "bottom": 935.26
+      "left": -199.021,
+      "top": 1223.651,
+      "right": -121.021,
+      "bottom": 1249.651
      },
      "assembled": {
       "x": 0,
@@ -25852,24 +25771,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--336.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.75,
-      "width": 52.337,
-      "height": 396.51
+      "x": -199.021,
+      "y": 1223.651,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -26007,13 +25925,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.75,
-      "right": 481.063,
-      "bottom": 935.26
+      "left": -227.384,
+      "top": 1211.644,
+      "right": -149.384,
+      "bottom": 1237.644
      },
      "assembled": {
       "x": 0,
@@ -26024,24 +25942,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--324.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.75,
-      "width": 52.337,
-      "height": 396.51
+      "x": -227.384,
+      "y": 1211.644,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-RED-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -26179,13 +26096,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.75,
-      "right": 481.063,
-      "bottom": 935.26
+      "left": -199.021,
+      "top": 1233.668,
+      "right": -121.021,
+      "bottom": 1259.668
      },
      "assembled": {
       "x": 0,
@@ -26196,24 +26113,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--346.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.75,
-      "width": 52.337,
-      "height": 396.51
+      "x": -199.021,
+      "y": 1233.668,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -26351,13 +26267,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 526.06,
-      "right": 481.063,
-      "bottom": 922.57
+      "left": -216.371,
+      "top": 1258.371,
+      "right": -138.371,
+      "bottom": 1284.371
      },
      "assembled": {
       "x": 0,
@@ -26368,24 +26284,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--371.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 526.06,
-      "width": 52.337,
-      "height": 396.51
+      "x": -216.371,
+      "y": 1258.371,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-MSLV-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -26523,13 +26438,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 524.01,
-      "right": 481.076,
-      "bottom": 920.32
+      "left": 257.786,
+      "top": 425.586,
+      "right": 335.786,
+      "bottom": 886.586
      },
      "assembled": {
       "x": 0,
@@ -26540,24 +26455,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
+      "bytes": 14598,
+      "width": 78,
+      "height": 461
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 524.01,
-      "width": 52.311,
-      "height": 396.31
+      "x": 257.786,
+      "y": 425.586,
+      "width": 78,
+      "height": 461
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -26695,13 +26609,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 526.34,
-      "right": 481.076,
-      "bottom": 922.65
+      "left": 262.797,
+      "top": 425.906,
+      "right": 340.797,
+      "bottom": 885.906
      },
      "assembled": {
       "x": 0,
@@ -26712,24 +26626,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
+      "bytes": 14543,
+      "width": 78,
+      "height": 460
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 526.34,
-      "width": 52.311,
-      "height": 396.31
+      "x": 262.797,
+      "y": 425.906,
+      "width": 78,
+      "height": 460
      },
      "componentId": "CMP-CAP-PNK-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -26867,13 +26780,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 537.68,
-      "right": 481.076,
-      "bottom": 933.99
+      "left": 249.119,
+      "top": 425.246,
+      "right": 327.119,
+      "bottom": 886.246
      },
      "assembled": {
       "x": 0,
@@ -26884,24 +26797,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
+      "bytes": 14598,
+      "width": 78,
+      "height": 461
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 537.68,
-      "width": 52.311,
-      "height": 396.31
+      "x": 249.119,
+      "y": 425.246,
+      "width": 78,
+      "height": 461
      },
      "componentId": "CMP-SPR-MSLV-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -27039,13 +26951,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 537.66,
-      "right": 481.076,
-      "bottom": 933.97
+      "left": 256.787,
+      "top": 426.566,
+      "right": 334.787,
+      "bottom": 886.566
      },
      "assembled": {
       "x": 0,
@@ -27056,24 +26968,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
+      "bytes": 14543,
+      "width": 78,
+      "height": 460
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 537.66,
-      "width": 52.311,
-      "height": 396.31
+      "x": 256.787,
+      "y": 426.566,
+      "width": 78,
+      "height": 460
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -27211,13 +27122,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 524.01,
-      "right": 481.076,
-      "bottom": 920.32
+      "left": 255.782,
+      "top": 425.236,
+      "right": 333.782,
+      "bottom": 886.236
      },
      "assembled": {
       "x": 0,
@@ -27228,24 +27139,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
+      "bytes": 14598,
+      "width": 78,
+      "height": 461
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 524.01,
-      "width": 52.311,
-      "height": 396.31
+      "x": 255.782,
+      "y": 425.236,
+      "width": 78,
+      "height": 461
      },
      "componentId": "CMP-SPR-GLD-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -27383,13 +27293,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 524.68,
-      "right": 481.076,
-      "bottom": 920.99
+      "left": 257.791,
+      "top": 425.236,
+      "right": 335.791,
+      "bottom": 886.236
      },
      "assembled": {
       "x": 0,
@@ -27400,24 +27310,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-461.569213d58921.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "569213d58921524913bf61d88ee05c289bd17d17f782b6307ea166175160a40b",
+      "bytes": 14598,
+      "width": 78,
+      "height": 461
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 524.68,
-      "width": 52.311,
-      "height": 396.31
+      "x": 257.791,
+      "y": 425.236,
+      "width": 78,
+      "height": 461
      },
      "componentId": "CMP-SPR-IVGD-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -27555,13 +27464,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 526.7,
-      "right": 481.076,
-      "bottom": 923.01
+      "left": 246.438,
+      "top": 426.586,
+      "right": 324.438,
+      "bottom": 886.586
      },
      "assembled": {
       "x": 0,
@@ -27572,24 +27481,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
+      "bytes": 14543,
+      "width": 78,
+      "height": 460
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 526.7,
-      "width": 52.311,
-      "height": 396.31
+      "x": 246.438,
+      "y": 426.586,
+      "width": 78,
+      "height": 460
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -27727,13 +27635,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 526.39,
-      "right": 481.076,
-      "bottom": 922.7
+      "left": 248.779,
+      "top": 426.596,
+      "right": 326.779,
+      "bottom": 886.596
      },
      "assembled": {
       "x": 0,
@@ -27744,24 +27652,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
+      "bytes": 14543,
+      "width": 78,
+      "height": 460
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 526.39,
-      "width": 52.311,
-      "height": 396.31
+      "x": 248.779,
+      "y": 426.596,
+      "width": 78,
+      "height": 460
      },
      "componentId": "CMP-SPR-RED-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -27899,13 +27806,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 523.96,
-      "right": 481.076,
-      "bottom": 920.27
+      "left": -199.69,
+      "top": 1227.361,
+      "right": -121.69,
+      "bottom": 1253.361
      },
      "assembled": {
       "x": 0,
@@ -27916,24 +27823,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 523.96,
-      "width": 52.311,
-      "height": 396.31
+      "x": -199.69,
+      "y": 1227.361,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -28071,13 +27977,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 527.67,
-      "right": 481.076,
-      "bottom": 923.98
+      "left": -199.021,
+      "top": 1221.681,
+      "right": -121.021,
+      "bottom": 1247.681
      },
      "assembled": {
       "x": 0,
@@ -28088,24 +27994,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--335.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 527.67,
-      "width": 52.311,
-      "height": 396.31
+      "x": -199.021,
+      "y": 1221.681,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-IVGD-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -28243,13 +28148,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 527.67,
-      "right": 481.076,
-      "bottom": 923.98
+      "left": -199.021,
+      "top": 1221.681,
+      "right": -121.021,
+      "bottom": 1247.681
      },
      "assembled": {
       "x": 0,
@@ -28260,24 +28165,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--335.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 527.67,
-      "width": 52.311,
-      "height": 396.31
+      "x": -199.021,
+      "y": 1221.681,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -28415,13 +28319,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 527.67,
-      "right": 481.076,
-      "bottom": 923.98
+      "left": -199.021,
+      "top": 1231.698,
+      "right": -121.021,
+      "bottom": 1257.698
      },
      "assembled": {
       "x": 0,
@@ -28432,24 +28336,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--345.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 527.67,
-      "width": 52.311,
-      "height": 396.31
+      "x": -199.021,
+      "y": 1231.698,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -28587,13 +28490,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 527.67,
-      "right": 481.076,
-      "bottom": 923.98
+      "left": -197.353,
+      "top": 1233.026,
+      "right": -119.353,
+      "bottom": 1259.026
      },
      "assembled": {
       "x": 0,
@@ -28604,24 +28507,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--347.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 527.67,
-      "width": 52.311,
-      "height": 396.31
+      "x": -197.353,
+      "y": 1233.026,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-PNK-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -28759,13 +28661,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 524.98,
-      "right": 481.076,
-      "bottom": 921.29
+      "left": -216.371,
+      "top": 1256.401,
+      "right": -138.371,
+      "bottom": 1282.401
      },
      "assembled": {
       "x": 0,
@@ -28776,24 +28678,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--370.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 524.98,
-      "width": 52.311,
-      "height": 396.31
+      "x": -216.371,
+      "y": 1256.401,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-MSLV-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -28931,13 +28832,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 527.67,
-      "right": 481.076,
-      "bottom": 923.98
+      "left": -183.668,
+      "top": 1227.688,
+      "right": -105.668,
+      "bottom": 1253.688
      },
      "assembled": {
       "x": 0,
@@ -28948,24 +28849,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 527.67,
-      "width": 52.311,
-      "height": 396.31
+      "x": -183.668,
+      "y": 1227.688,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-GLD-18415-TSL",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -29103,13 +29003,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.765,
-      "top": 527.67,
-      "right": 481.076,
-      "bottom": 923.98
+      "left": -227.384,
+      "top": 1209.674,
+      "right": -149.384,
+      "bottom": 1235.674
      },
      "assembled": {
       "x": 0,
@@ -29120,24 +29020,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--323.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.765,
-      "y": 527.67,
-      "width": 52.311,
-      "height": 396.31
+      "x": -227.384,
+      "y": 1209.674,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-RED-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -29491,13 +29390,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 508.218,
-      "top": 389.1,
-      "right": 586.031,
-      "bottom": 843.01
+      "left": 470.269,
+      "top": 355.142,
+      "right": 529.269,
+      "bottom": 886.142
      },
      "assembled": {
       "x": 0,
@@ -29508,24 +29407,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-lotion.9e71d37cd4f5.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.376a4de0e05d.png",
       "key": "",
-      "sha256": "9e71d37cd4f51b8c9aa7219c69cdad7fe39afd43d52711d89ebc9e98d58b17d7",
-      "bytes": 158931,
-      "width": 180,
-      "height": 1050
+      "sha256": "376a4de0e05d850f440f3c292717f493aac2fbef7f015b869840e569685ded47",
+      "bytes": 21282,
+      "width": 59,
+      "height": 531
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 508.218,
-      "y": 389.1,
-      "width": 77.813,
-      "height": 453.91
+      "x": 470.269,
+      "y": 355.142,
+      "width": 59,
+      "height": 531
      },
      "componentId": "CMP-LPM-MGLD-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -29698,13 +29596,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 508.218,
-      "top": 386.713,
-      "right": 586.031,
-      "bottom": 840.623
+      "left": 470.731,
+      "top": 355.99,
+      "right": 529.731,
+      "bottom": 885.99
      },
      "assembled": {
       "x": 0,
@@ -29715,24 +29613,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-lotion.9e71d37cd4f5.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-530.c9d96c979a1a.png",
       "key": "",
-      "sha256": "9e71d37cd4f51b8c9aa7219c69cdad7fe39afd43d52711d89ebc9e98d58b17d7",
-      "bytes": 158931,
-      "width": 180,
-      "height": 1050
+      "sha256": "c9d96c979a1a3a370c34f9ead393bd411174b99000e22d6d378969cb7b75b495",
+      "bytes": 21227,
+      "width": 59,
+      "height": 530
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 508.218,
-      "y": 386.713,
-      "width": 77.813,
-      "height": 453.91
+      "x": 470.731,
+      "y": 355.99,
+      "width": 59,
+      "height": 530
      },
      "componentId": "CMP-LPM-SGLD-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -29905,13 +29802,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 508.218,
-      "top": 387.1,
-      "right": 586.031,
-      "bottom": 841.01
+      "left": 470.731,
+      "top": 355.453,
+      "right": 529.731,
+      "bottom": 886.453
      },
      "assembled": {
       "x": 0,
@@ -29922,24 +29819,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-lotion.9e71d37cd4f5.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.376a4de0e05d.png",
       "key": "",
-      "sha256": "9e71d37cd4f51b8c9aa7219c69cdad7fe39afd43d52711d89ebc9e98d58b17d7",
-      "bytes": 158931,
-      "width": 180,
-      "height": 1050
+      "sha256": "376a4de0e05d850f440f3c292717f493aac2fbef7f015b869840e569685ded47",
+      "bytes": 21282,
+      "width": 59,
+      "height": 531
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 508.218,
-      "y": 387.1,
-      "width": 77.813,
-      "height": 453.91
+      "x": 470.731,
+      "y": 355.453,
+      "width": 59,
+      "height": 531
      },
      "componentId": "CMP-LPM-SBLK-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -30112,13 +30008,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 508.218,
-      "top": 389.327,
-      "right": 586.031,
-      "bottom": 843.237
+      "left": 468.42,
+      "top": 355.369,
+      "right": 527.42,
+      "bottom": 886.369
      },
      "assembled": {
       "x": 0,
@@ -30129,24 +30025,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-lotion.9e71d37cd4f5.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.376a4de0e05d.png",
       "key": "",
-      "sha256": "9e71d37cd4f51b8c9aa7219c69cdad7fe39afd43d52711d89ebc9e98d58b17d7",
-      "bytes": 158931,
-      "width": 180,
-      "height": 1050
+      "sha256": "376a4de0e05d850f440f3c292717f493aac2fbef7f015b869840e569685ded47",
+      "bytes": 21282,
+      "width": 59,
+      "height": 531
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 508.218,
-      "y": 389.327,
-      "width": 77.813,
-      "height": 453.91
+      "x": 468.42,
+      "y": 355.369,
+      "width": 59,
+      "height": 531
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -30319,13 +30214,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 508.218,
-      "top": 388.948,
-      "right": 586.031,
-      "bottom": 842.858
+      "left": 471.425,
+      "top": 354.99,
+      "right": 530.425,
+      "bottom": 885.99
      },
      "assembled": {
       "x": 0,
@@ -30336,24 +30231,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-lotion.9e71d37cd4f5.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-531.376a4de0e05d.png",
       "key": "",
-      "sha256": "9e71d37cd4f51b8c9aa7219c69cdad7fe39afd43d52711d89ebc9e98d58b17d7",
-      "bytes": 158931,
-      "width": 180,
-      "height": 1050
+      "sha256": "376a4de0e05d850f440f3c292717f493aac2fbef7f015b869840e569685ded47",
+      "bytes": 21282,
+      "width": 59,
+      "height": 531
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 508.218,
-      "y": 388.948,
-      "width": 77.813,
-      "height": 453.91
+      "x": 471.425,
+      "y": 354.99,
+      "width": 59,
+      "height": 531
      },
      "componentId": "CMP-LPM-SSLV-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -30526,13 +30420,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 508.218,
-      "top": 389.275,
-      "right": 586.031,
-      "bottom": 843.185
+      "left": 471.193,
+      "top": 355.78,
+      "right": 530.193,
+      "bottom": 885.78
      },
      "assembled": {
       "x": 0,
@@ -30543,24 +30437,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-lotion.9e71d37cd4f5.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-530.c9d96c979a1a.png",
       "key": "",
-      "sha256": "9e71d37cd4f51b8c9aa7219c69cdad7fe39afd43d52711d89ebc9e98d58b17d7",
-      "bytes": 158931,
-      "width": 180,
-      "height": 1050
+      "sha256": "c9d96c979a1a3a370c34f9ead393bd411174b99000e22d6d378969cb7b75b495",
+      "bytes": 21227,
+      "width": 59,
+      "height": 530
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 508.218,
-      "y": 389.275,
-      "width": 77.813,
-      "height": 453.91
+      "x": 471.193,
+      "y": 355.78,
+      "width": 59,
+      "height": 530
      },
      "componentId": "CMP-LPM-CPR-18-415",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -30739,13 +30632,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 450.618,
-      "top": 252.207,
-      "right": 567.532,
-      "bottom": 934.207
+      "left": 458.127,
+      "top": 402.41,
+      "right": 539.127,
+      "bottom": 896.41
      },
      "assembled": {
       "x": 0,
@@ -30756,24 +30649,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-494.d2f982f6c4dd.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "d2f982f6c4dd3c1b7a07a6b4582fa9e30f0b2a7d1e11737c58a8b6f6e2c59642",
+      "bytes": 28260,
+      "width": 81,
+      "height": 494
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 450.618,
-      "y": 252.207,
-      "width": 116.914,
-      "height": 682
+      "x": 458.127,
+      "y": 402.41,
+      "width": 81,
+      "height": 494
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -30941,13 +30833,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.792,
-      "top": 250.395,
-      "right": 561.277,
-      "bottom": 900.725
+      "left": 460.471,
+      "top": 383.661,
+      "right": 534.471,
+      "bottom": 887.661
      },
      "assembled": {
       "x": 0,
@@ -30958,24 +30850,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
+      "bytes": 26196,
+      "width": 74,
+      "height": 504
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.792,
-      "y": 250.395,
-      "width": 111.485,
-      "height": 650.33
+      "x": 460.471,
+      "y": 383.661,
+      "width": 74,
+      "height": 504
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -31149,13 +31040,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 449.781,
-      "top": 234.285,
-      "right": 561.28,
-      "bottom": 884.695
+      "left": 459.619,
+      "top": 382.364,
+      "right": 533.619,
+      "bottom": 886.364
      },
      "assembled": {
       "x": 0,
@@ -31166,24 +31057,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-lotion-504.69f6c257b498.png",
       "key": "",
-      "sha256": "dc21c31a4e3048a5f26bfea87d6cfcbe7d608b92cba5936862e437f224d9f541",
-      "bytes": 159591,
-      "width": 180,
-      "height": 1050
+      "sha256": "69f6c257b4981ddbad8e685b20c6cd6156b01847ae35125eeb7e020c1b372c3e",
+      "bytes": 26196,
+      "width": 74,
+      "height": 504
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:lotion",
+     "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 449.781,
-      "y": 234.285,
-      "width": 111.499,
-      "height": 650.41
+      "x": 459.619,
+      "y": 382.364,
+      "width": 74,
+      "height": 504
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -31363,13 +31253,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 443.972,
-      "top": 254.147,
-      "right": 575.419,
-      "bottom": 936.147
+      "left": 455.627,
+      "top": 381.2,
+      "right": 541.627,
+      "bottom": 896.2
      },
      "assembled": {
       "x": 0,
@@ -31380,24 +31270,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-515.87dd3afdb832.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "87dd3afdb83277ea3aaf69a256723ac1149b792ecee36a88f7d3e1261ae429ee",
+      "bytes": 25627,
+      "width": 86,
+      "height": 515
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 443.972,
-      "y": 254.147,
-      "width": 131.447,
-      "height": 682
+      "x": 455.627,
+      "y": 381.2,
+      "width": 86,
+      "height": 515
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -31570,13 +31459,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 443.972,
-      "top": 256.641,
-      "right": 575.419,
-      "bottom": 938.641
+      "left": 457.0,
+      "top": 381.634,
+      "right": 543.0,
+      "bottom": 896.634
      },
      "assembled": {
       "x": 0,
@@ -31587,24 +31476,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-515.87dd3afdb832.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "87dd3afdb83277ea3aaf69a256723ac1149b792ecee36a88f7d3e1261ae429ee",
+      "bytes": 25627,
+      "width": 86,
+      "height": 515
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 443.972,
-      "y": 256.641,
-      "width": 131.447,
-      "height": 682
+      "x": 457.0,
+      "y": 381.634,
+      "width": 86,
+      "height": 515
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -31777,13 +31665,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 443.972,
-      "top": 251.147,
-      "right": 575.419,
-      "bottom": 933.147
+      "left": 458.716,
+      "top": 381.634,
+      "right": 544.716,
+      "bottom": 896.634
      },
      "assembled": {
       "x": 0,
@@ -31794,24 +31682,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-515.87dd3afdb832.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "87dd3afdb83277ea3aaf69a256723ac1149b792ecee36a88f7d3e1261ae429ee",
+      "bytes": 25627,
+      "width": 86,
+      "height": 515
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 443.972,
-      "y": 251.147,
-      "width": 131.447,
-      "height": 682
+      "x": 458.716,
+      "y": 381.634,
+      "width": 86,
+      "height": 515
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -31984,13 +31871,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 443.972,
-      "top": 251.653,
-      "right": 575.419,
-      "bottom": 933.653
+      "left": 455.97,
+      "top": 381.453,
+      "right": 541.97,
+      "bottom": 896.453
      },
      "assembled": {
       "x": 0,
@@ -32001,24 +31888,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-515.87dd3afdb832.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "87dd3afdb83277ea3aaf69a256723ac1149b792ecee36a88f7d3e1261ae429ee",
+      "bytes": 25627,
+      "width": 86,
+      "height": 515
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 443.972,
-      "y": 251.653,
-      "width": 131.447,
-      "height": 682
+      "x": 455.97,
+      "y": 381.453,
+      "width": 86,
+      "height": 515
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -32191,13 +32077,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 443.972,
-      "top": 256.954,
-      "right": 575.419,
-      "bottom": 938.954
+      "left": 457.687,
+      "top": 382.634,
+      "right": 543.687,
+      "bottom": 896.634
      },
      "assembled": {
       "x": 0,
@@ -32208,24 +32094,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-spray-514.7eb08107ccbd.png",
       "key": "",
-      "sha256": "2a73d25fadc8ded0189a969d37eb4f124317fd7575f0d367f67d248f830277c7",
-      "bytes": 94267,
-      "width": 138,
-      "height": 716
+      "sha256": "7eb08107ccbd1d9bd665d18b7849e252ef007fb876b9deee0551c416cd1ef983",
+      "bytes": 25629,
+      "width": 86,
+      "height": 514
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:spray",
+     "derivation": "sunburst-diva-tube:spray",
      "box": {
-      "x": 443.972,
-      "y": 256.954,
-      "width": 131.447,
-      "height": 682
+      "x": 457.687,
+      "y": 382.634,
+      "width": 86,
+      "height": 514
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -33040,13 +32925,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 539.43,
-      "right": 481.063,
-      "bottom": 935.94
+      "left": 249.447,
+      "top": 428.556,
+      "right": 327.447,
+      "bottom": 887.556
      },
      "assembled": {
       "x": 0,
@@ -33057,24 +32942,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
+      "bytes": 14529,
+      "width": 78,
+      "height": 459
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 539.43,
-      "width": 52.337,
-      "height": 396.51
+      "x": 249.447,
+      "y": 428.556,
+      "width": 78,
+      "height": 459
      },
      "componentId": "CMP-SPR-BKSL-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -33256,13 +33140,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 525.09,
-      "right": 481.063,
-      "bottom": 921.6
+      "left": 257.786,
+      "top": 427.556,
+      "right": 335.786,
+      "bottom": 887.556
      },
      "assembled": {
       "x": 0,
@@ -33273,24 +33157,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
+      "bytes": 14543,
+      "width": 78,
+      "height": 460
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 525.09,
-      "width": 52.337,
-      "height": 396.51
+      "x": 257.786,
+      "y": 427.556,
+      "width": 78,
+      "height": 460
      },
      "componentId": "CMP-SPR-LVN-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -33472,13 +33355,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.77,
-      "right": 481.063,
-      "bottom": 935.28
+      "left": 256.787,
+      "top": 427.536,
+      "right": 334.787,
+      "bottom": 887.536
      },
      "assembled": {
       "x": 0,
@@ -33489,24 +33372,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-460.f7226ab99234.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "f7226ab9923403e04f53e6bb4550bc9b60d6c1968e7b0f8844f11dc5b400fba5",
+      "bytes": 14543,
+      "width": 78,
+      "height": 460
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.77,
-      "width": 52.337,
-      "height": 396.51
+      "x": 256.787,
+      "y": 427.536,
+      "width": 78,
+      "height": 460
      },
      "componentId": "CMP-SPR-IVSL-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -33688,13 +33570,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 527.48,
-      "right": 481.063,
-      "bottom": 923.99
+      "left": 248.779,
+      "top": 428.566,
+      "right": 326.779,
+      "bottom": 887.566
      },
      "assembled": {
       "x": 0,
@@ -33705,24 +33587,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
+      "bytes": 14529,
+      "width": 78,
+      "height": 459
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 527.48,
-      "width": 52.337,
-      "height": 396.51
+      "x": 248.779,
+      "y": 428.566,
+      "width": 78,
+      "height": 459
      },
      "componentId": "CMP-SPR-RED-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -33904,13 +33785,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 526.84,
-      "right": 481.063,
-      "bottom": 923.35
+      "left": 246.438,
+      "top": 428.556,
+      "right": 324.438,
+      "bottom": 887.556
      },
      "assembled": {
       "x": 0,
@@ -33921,24 +33802,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer-459.0b0e9347c3d7.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "0b0e9347c3d75cc043fc5af5971c4041bd1996661b5f9ec31f447bebc715b29a",
+      "bytes": 14529,
+      "width": 78,
+      "height": 459
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 526.84,
-      "width": 52.337,
-      "height": 396.51
+      "x": 246.438,
+      "y": 428.556,
+      "width": 78,
+      "height": 459
      },
      "componentId": "CMP-SPR-WHT-18-415-01",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -34120,13 +34000,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.75,
-      "right": 481.063,
-      "bottom": 935.26
+      "left": -228.385,
+      "top": 1275.041,
+      "right": -150.385,
+      "bottom": 1301.041
      },
      "assembled": {
       "x": 0,
@@ -34137,24 +34017,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--387.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.75,
-      "width": 52.337,
-      "height": 396.51
+      "x": -228.385,
+      "y": 1275.041,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-BLK-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -34336,13 +34215,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 525.04,
-      "right": 481.063,
-      "bottom": 921.55
+      "left": -199.69,
+      "top": 1229.331,
+      "right": -121.69,
+      "bottom": 1255.331
      },
      "assembled": {
       "x": 0,
@@ -34353,24 +34232,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--341.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 525.04,
-      "width": 52.337,
-      "height": 396.51
+      "x": -199.69,
+      "y": 1229.331,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-LVN-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -34552,13 +34430,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.75,
-      "right": 481.063,
-      "bottom": 935.26
+      "left": -199.021,
+      "top": 1223.651,
+      "right": -121.021,
+      "bottom": 1249.651
      },
      "assembled": {
       "x": 0,
@@ -34569,24 +34447,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--336.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.75,
-      "width": 52.337,
-      "height": 396.51
+      "x": -199.021,
+      "y": 1223.651,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-IVSL-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -34768,13 +34645,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.75,
-      "right": 481.063,
-      "bottom": 935.26
+      "left": -227.384,
+      "top": 1211.644,
+      "right": -149.384,
+      "bottom": 1237.644
      },
      "assembled": {
       "x": 0,
@@ -34785,24 +34662,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--324.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.75,
-      "width": 52.337,
-      "height": 396.51
+      "x": -227.384,
+      "y": 1211.644,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-RED-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -34984,13 +34860,13 @@
     {
      "slot": "diptube",
      "variantKey": null,
-     "zOrder": 1,
+     "zOrder": 2.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 428.726,
-      "top": 538.75,
-      "right": 481.063,
-      "bottom": 935.26
+      "left": -199.021,
+      "top": 1233.668,
+      "right": -121.021,
+      "bottom": 1259.668
      },
      "assembled": {
       "x": 0,
@@ -35001,24 +34877,23 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
+      "url": "/local-kits/diva-masters-2026-11-03/exploded-tubes/diva-atomizer--346.65d543be88f3.png",
       "key": "",
-      "sha256": "2b3faa639dfe2a55de07f4a85fda81ec9f0f8a7dd2cff5769e3f26f05e08104c",
-      "bytes": 15979,
-      "width": 92,
-      "height": 697
+      "sha256": "65d543be88f37218af8c80074b32a38cff330d4488075e6193266a9e4d5128b2",
+      "bytes": 1530,
+      "width": 78,
+      "height": 26
      },
      "image2x": null,
      "mask": null,
-     "derivation": "psd-tube:atomizer",
+     "derivation": "sunburst-diva-tube:atomizer",
      "box": {
-      "x": 428.726,
-      "y": 538.75,
-      "width": 52.337,
-      "height": 396.51
+      "x": -199.021,
+      "y": 1233.668,
+      "width": 78,
+      "height": 26
      },
      "componentId": "CMP-SPR-WHT-18-415-02",
-     "blendMode": "multiply",
      "views": [
       "exploded"
      ]
@@ -35324,185 +35199,5 @@
   "GBDiva46AnSpTslRedRng",
   "GBDiva46AnSpTslWhtRng"
  ],
- "universalDipTube": {
-  "diva100-lotion": {
-   "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-lotion.9e71d37cd4f5.png",
-   "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/58. LBRnd128LtnCu.psd",
-   "skus": [
-    "LBDiva100LtnClOvrCap",
-    "LBDiva100LtnCu",
-    "LBDiva100LtnMtGl",
-    "LBDiva100LtnMtSl",
-    "LBDiva100LtnShnBlk",
-    "LBDiva100LtnShnGl",
-    "LBDiva100LtnShnSl"
-   ]
-  },
-  "diva46-spray": {
-   "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
-   "psd": "31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/53. GBRnd78SpryCu.psd",
-   "skus": [
-    "GBDiva46SpryCu",
-    "GBDiva46SpryMtGl",
-    "GBDiva46SpryMtSl",
-    "GBDiva46SpryShnBlk",
-    "GBDiva46SpryShnGl",
-    "GBDiva46SpryShnSl",
-    "GBDivaFrst46SpryCu",
-    "GBDivaFrst46SpryMtGl",
-    "GBDivaFrst46SpryMtSl",
-    "GBDivaFrst46SpryShnBlk",
-    "GBDivaFrst46SpryShnGl",
-    "GBDivaFrst46SpryShnSl"
-   ]
-  },
-  "diva30-spray": {
-   "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-spray.2a73d25fadc8.png",
-   "psd": "31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/53. GBRnd78SpryCu.psd",
-   "skus": [
-    "GBDiva30SpryCu",
-    "GBDiva30SpryMtGl",
-    "GBDiva30SpryMtSl",
-    "GBDiva30SpryShnBlk",
-    "GBDiva30SpryShnGl",
-    "GBDiva30SpryShnSl"
-   ]
-  },
-  "diva100-spray": {
-   "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-spray.780b804aff87.png",
-   "psd": "31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/7.  128ml Round, Ltn & Spry, capped/57. GBRnd128SpryCu.psd",
-   "skus": [
-    "GBDiva100SpryCu",
-    "GBDiva100SpryMtGl",
-    "GBDiva100SpryMtSl",
-    "GBDiva100SpryShnBlk",
-    "GBDiva100SpryShnGl",
-    "GBDiva100SpryShnSl"
-   ]
-  },
-  "diva30-atomizer": {
-   "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
-   "psd": "9. Round 78ml/1. Round 78ml PSD/39. GBRnd78AnSpBlk.psd",
-   "skus": [
-    "GBDiva30AnSpBlk",
-    "GBDiva30AnSpGl",
-    "GBDiva30AnSpIvyGl",
-    "GBDiva30AnSpIvySl",
-    "GBDiva30AnSpLvn",
-    "GBDiva30AnSpMtSl",
-    "GBDiva30AnSpPnk",
-    "GBDiva30AnSpRed",
-    "GBDiva30AnSpWht"
-   ]
-  },
-  "diva46-atomizer": {
-   "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-atomizer.2b3faa639dfe.png",
-   "psd": "9. Round 78ml/1. Round 78ml PSD/39. GBRnd78AnSpBlk.psd",
-   "skus": [
-    "GBDiva46AnSpBlk",
-    "GBDiva46AnSpBlkRng",
-    "GBDiva46AnSpGl",
-    "GBDiva46AnSpIvyGl",
-    "GBDiva46AnSpIvySl",
-    "GBDiva46AnSpIvySlRng",
-    "GBDiva46AnSpLvn",
-    "GBDiva46AnSpLvnRng",
-    "GBDiva46AnSpMtSl",
-    "GBDiva46AnSpPnk",
-    "GBDiva46AnSpRed",
-    "GBDiva46AnSpRedRng",
-    "GBDiva46AnSpTslBlk",
-    "GBDiva46AnSpTslBlkRng",
-    "GBDiva46AnSpTslGl",
-    "GBDiva46AnSpTslIvyGl",
-    "GBDiva46AnSpTslIvySl",
-    "GBDiva46AnSpTslIvySlRng",
-    "GBDiva46AnSpTslLvn",
-    "GBDiva46AnSpTslLvnRng",
-    "GBDiva46AnSpTslMtSl",
-    "GBDiva46AnSpTslPnk",
-    "GBDiva46AnSpTslRed",
-    "GBDiva46AnSpTslRedRng",
-    "GBDiva46AnSpTslWht",
-    "GBDiva46AnSpTslWhtRng",
-    "GBDiva46AnSpWht",
-    "GBDiva46AnSpWhtRng",
-    "GBDivaFrst46AnSpBlk",
-    "GBDivaFrst46AnSpGl",
-    "GBDivaFrst46AnSpIvyGl",
-    "GBDivaFrst46AnSpIvySl",
-    "GBDivaFrst46AnSpLvn",
-    "GBDivaFrst46AnSpMtSl",
-    "GBDivaFrst46AnSpPnk",
-    "GBDivaFrst46AnSpRed",
-    "GBDivaFrst46AnSpTslBlk",
-    "GBDivaFrst46AnSpTslGl",
-    "GBDivaFrst46AnSpTslIvyGl",
-    "GBDivaFrst46AnSpTslIvySl",
-    "GBDivaFrst46AnSpTslLvn",
-    "GBDivaFrst46AnSpTslMtSl",
-    "GBDivaFrst46AnSpTslPnk",
-    "GBDivaFrst46AnSpTslRed",
-    "GBDivaFrst46AnSpTslWht",
-    "GBDivaFrst46AnSpWht"
-   ]
-  },
-  "diva30-lotion": {
-   "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
-   "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/58. LBRnd128LtnCu.psd",
-   "skus": [
-    "LBDiva30LtnClOvrCap",
-    "LBDiva30LtnCu",
-    "LBDiva30LtnMtGl",
-    "LBDiva30LtnMtSl",
-    "LBDiva30LtnShnBlk",
-    "LBDiva30LtnShnGl",
-    "LBDiva30LtnShnSl"
-   ]
-  },
-  "diva100-atomizer": {
-   "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round128-atomizer.d7833f5b0e21.png",
-   "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/39. GBRnd128AnSpBlk.psd",
-   "skus": [
-    "GBDiva100AnSpBlk",
-    "GBDiva100AnSpGl",
-    "GBDiva100AnSpIvyGl",
-    "GBDiva100AnSpIvySl",
-    "GBDiva100AnSpLvn",
-    "GBDiva100AnSpMtSl",
-    "GBDiva100AnSpPnk",
-    "GBDiva100AnSpRed",
-    "GBDiva100AnSpTslBlk",
-    "GBDiva100AnSpTslGl",
-    "GBDiva100AnSpTslIvyGl",
-    "GBDiva100AnSpTslIvySl",
-    "GBDiva100AnSpTslLvn",
-    "GBDiva100AnSpTslMtSl",
-    "GBDiva100AnSpTslPnk",
-    "GBDiva100AnSpTslRed",
-    "GBDiva100AnSpTslWht",
-    "GBDiva100AnSpWht"
-   ]
-  },
-  "diva46-lotion": {
-   "url": "/local-kits/round-sleek-masters-2026-11-03/tubes/round78-lotion.dc21c31a4e30.png",
-   "psd": "7. Round (clear) 128ml\uf028/1. Round (clear) 128ml  Psd/58. LBRnd128LtnCu.psd",
-   "skus": [
-    "LBDiva46LtnClOvrCap",
-    "LBDiva46LtnCu",
-    "LBDiva46LtnMtGl",
-    "LBDiva46LtnMtSl",
-    "LBDiva46LtnShnBlk",
-    "LBDiva46LtnShnGl",
-    "LBDiva46LtnShnSl",
-    "LBDivaFrst46LtnClOvrCap",
-    "LBDivaFrst46LtnCu",
-    "LBDivaFrst46LtnMtGl",
-    "LBDivaFrst46LtnMtSl",
-    "LBDivaFrst46LtnShnBlk",
-    "LBDivaFrst46LtnShnGl",
-    "LBDivaFrst46LtnShnSl"
-   ]
-  }
- }
+ "universalDipTube": {}
 }
