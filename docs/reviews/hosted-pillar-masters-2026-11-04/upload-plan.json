@@ -1,0 +1,144 @@
+{
+  "checkedAt": "2026-11-04T22:44:27.911Z",
+  "configurations": 7,
+  "priorVersion": "dabbf771ee728f12",
+  "priorRecipes": 850,
+  "preservedRecipeSha256": "d874d474b3ec7725a063f2bbc40dbb9ae20df37b60eb5866ab4dcdc074d53c5a",
+  "sourceFiles": [
+    {
+      "file": "public/local-kits/pillar-masters-2026-11-04/kits.json",
+      "sha256": "12d6319a4d92417b172b76c7421467d86847797a2f1896d79cefd8740a79c089"
+    }
+  ],
+  "hostedLayersChecked": 0,
+  "assetCount": 16,
+  "derivativeCount": 8,
+  "reusedHosted": 14,
+  "assets": {
+    "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png": {
+      "file": "public/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
+      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
+      "bytes": 83949,
+      "key": "reviewed-master-media/2026-11-04/70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7.png",
+      "reuse": null
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-sprayer.809c14cf93e1.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-sprayer.809c14cf93e1.svg",
+      "sha256": "809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f",
+      "bytes": 299364,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-overcap.cd9e1c80f58d.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-overcap.cd9e1c80f58d.svg",
+      "sha256": "cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd",
+      "bytes": 64030,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd.svg"
+    },
+    "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg": {
+      "file": "public/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "key": "reviewed-master-media/2026-11-04/41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53.svg",
+      "reuse": null
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-sprayer.d600b45fd94f.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-sprayer.d600b45fd94f.svg",
+      "sha256": "d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489",
+      "bytes": 394555,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-overcap.dd88361f3fed.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-overcap.dd88361f3fed.svg",
+      "sha256": "dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d",
+      "bytes": 56369,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-sprayer.c6e4df7cab34.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-sprayer.c6e4df7cab34.svg",
+      "sha256": "c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0",
+      "bytes": 838113,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-overcap.5abe54c88dca.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-overcap.5abe54c88dca.svg",
+      "sha256": "5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0",
+      "bytes": 139248,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-sprayer.e853d044d5b8.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-sprayer.e853d044d5b8.svg",
+      "sha256": "e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481",
+      "bytes": 949858,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-overcap.f3ef10365bdc.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-overcap.f3ef10365bdc.svg",
+      "sha256": "f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226",
+      "bytes": 142776,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-sprayer.a31e7cdc0a03.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-sprayer.a31e7cdc0a03.svg",
+      "sha256": "a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc",
+      "bytes": 1312217,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-overcap.2d8f48c7c9b5.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-overcap.2d8f48c7c9b5.svg",
+      "sha256": "2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33",
+      "bytes": 144369,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-sprayer.40b457cd8831.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-sprayer.40b457cd8831.svg",
+      "sha256": "40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd",
+      "bytes": 358123,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-overcap.48fe1f6f78e9.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-overcap.48fe1f6f78e9.svg",
+      "sha256": "48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc",
+      "bytes": 55886,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-sprayer.3fff04080b71.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-sprayer.3fff04080b71.svg",
+      "sha256": "3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7",
+      "bytes": 829486,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7.svg"
+    },
+    "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-overcap.0b1dc7e7b639.svg": {
+      "file": "public/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-overcap.0b1dc7e7b639.svg",
+      "sha256": "0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866",
+      "bytes": 64742,
+      "key": null,
+      "reuse": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866.svg"
+    }
+  },
+  "replacedRecipes": [],
+  "newRecipes": [
+    "GBPillar9SpryBlkMatt",
+    "GBPillar9SpryBlkShn",
+    "GBPillar9SpryBluMatt",
+    "GBPillar9SpryGlMatt",
+    "GBPillar9SpryGlShn",
+    "GBPillar9SprySlMatt",
+    "GBPillar9SprySlShn"
+  ],
+  "capThumbnails": 0,
+  "productionDataMutated": false,
+  "rollback": "Revert the release commit (restores the four generated JSON files); immutable uploaded objects may remain archived."
+}
