@@ -12,8 +12,9 @@ one glass per size, on the stage datum at the size's bare height and catalog-sca
 - 9 ml (GB09BlackCapSht, GB09BlackCapApp): the clean glass of the short-cap PSD for both; the black cap, and for the
   applicator its glass rod hanging from the cap (one cap layer, so it parks with the cap).
 - 2 ml amber 8-425 (GBVAmb2BlackCap, GBVAmb2WhtCap): the approved kits, untouched in production; Jordan (3 Nov 2026)
-  asked for the vial "a tad bit thinner ... maybe by 4%, 5%": the review copy draws glass and cap 5% narrower about
-  the axis (heights unchanged).
+  asked for the vial "a tad bit thinner", then "more slim ... and the mouth the neck should be narrower as well": the
+  review copy reshapes the photographs in place, the body BODY_2ML as wide and the neck, finish and mouth NECK_2ML
+  (blended through the shoulder), the cap NECK_2ML to fit the finish; heights and boxes unchanged.
 Writes public/local-kits/vial-masters-2026-11-03/kits.json.
 Usage: python3 scripts/diva-vial/vial-kits.py <work-dir>
 """
@@ -31,7 +32,8 @@ SCALE = json.load(open("src/lib/register/catalog-scale.generated.json"))
 W, H, AXIS, BASE, BARE_PX = 1000, 1100, 500, 1061, 800
 SEAT = BASE - BARE_PX
 THROUGH_GLASS = 2.6
-NARROW_2ML = 0.95
+BODY_2ML = 0.90         # the 2 ml amber's body width against the approved photograph
+NECK_2ML = 0.85         # its neck, finish and mouth (and the cap that fits them)
 CLEAR_PROMPT = """1. Keep geometry locked to the first image: the same small tubular vial, its rim, walls, rounded base and thickness, at the same position and size in the frame. Do not redraw the shape.
 2. Clear, colourless glass as in the second image (a photograph of the same vial): fully transparent, the background seen through it unchanged, crisp dark refraction lines along the walls, a thick clear base. Not amber, no tint, no liquid, no cap, no rod, no label.
 3. Crisp clean edges, photographic studio packshot quality.
@@ -122,6 +124,38 @@ def assembled(rel, cap_name, vial_name):
 ASSEMBLED = {}
 
 
+def squeezed(img, f, axis=None):
+    """The image narrowed by f about its alpha's centre (or `axis`), row by row; size unchanged."""
+    a = np.asarray(img).astype(np.float32); m = a[..., 3] > 60; xs = np.where(m.any(0))[0]
+    axis = (xs.min() + xs.max() + 1) / 2 if axis is None else axis
+    return Image.fromarray(warp(a, np.full(a.shape[0], f), axis).astype(np.uint8))
+
+
+def warp(a, f, axis):
+    """Each row y resampled about `axis` by its own factor f[y] (premultiplied, so edges stay clean)."""
+    x = np.arange(a.shape[1], dtype=np.float32) + 0.5
+    pm = a.copy(); pm[..., :3] *= a[..., 3:4] / 255
+    out = np.zeros_like(a)
+    for y in range(a.shape[0]):
+        if a[y, :, 3].any():
+            src = axis + (x - axis) / f[y] - 0.5
+            for c in range(4):
+                out[y, :, c] = np.interp(src, np.arange(a.shape[1]), pm[y, :, c], left=0, right=0)
+    rgb = np.where(out[..., 3:4] > 0, out[..., :3] * 255 / np.maximum(out[..., 3:4], 1e-3), 0)
+    return np.dstack([rgb.clip(0, 255), out[..., 3].clip(0, 255)])
+
+
+def slimmed(img):
+    """The vial's body BODY_2ML as wide, its neck and finish NECK_2ML, blended through the shoulder by row width."""
+    a = np.asarray(img).astype(np.float32); m = a[..., 3] > 60; w = m.sum(1); ys = np.where(w > 0)[0]
+    body_w = float(np.median(w[ys[len(ys) // 2]:ys[-1]])); xs = np.where(m.any(0))[0]; axis = (xs.min() + xs.max() + 1) / 2
+    shoulder = int(ys[np.argmax(w[ys] >= 0.95 * body_w)])
+    neck_w = float(np.median(w[ys[0]:shoulder][w[ys[0]:shoulder] > 0]))
+    t = np.clip((w - neck_w) / max(1.0, body_w - neck_w), 0, 1)
+    f = np.where(np.arange(len(w)) >= shoulder, BODY_2ML, NECK_2ML + (BODY_2ML - NECK_2ML) * t)
+    return Image.fromarray(warp(a, f, axis).astype(np.uint8))
+
+
 def through_glass(img):
     a = np.asarray(img).astype(np.float32); dark = 255 - (255 - a[..., :3]) * THROUGH_GLASS
     return Image.fromarray(np.dstack([dark.clip(0, 255), a[..., 3]]).astype(np.uint8))
@@ -196,23 +230,16 @@ def main():
                                   [part("body", body9, b9_xy, fr9, 0, 0, None), part("cap", save(combo, "cap-9ml-black-rod"), (left, top), fr9, 1, 1, "PSD-VIAL9-CAP-ROD")],
                                   land9, "vial-9ml-18-400")
 
-    # 2 ml amber: the approved kits, 5% narrower about the axis.
+    # 2 ml amber: the approved kits reshaped in place (boxes unchanged): the body slimmer, the neck and mouth narrower.
     approved = json.load(open("src/lib/paper-doll/approved-kits.generated.json"))["rows"]
     for sku in ("GBVAmb2BlackCap", "GBVAmb2WhtCap"):
-        k = json.loads(json.dumps(approved[sku])); axis = k["anchors"]["axisX"]
+        k = json.loads(json.dumps(approved[sku]))
         for p in k["parts"]:
             src = Image.open(io.BytesIO(urllib.request.urlopen(p["image"]["url"]).read())).convert("RGBA")
-            p["image"] = save(src.resize((round(src.width * NARROW_2ML), src.height), Image.LANCZOS), f"{sku}-{p['slot']}-narrow")
-            p["image2x"] = None
-            for key in ("box", "bounds"):
-                b = p.get(key)
-                if not b:
-                    continue
-                if key == "box":
-                    b["x"] = round(axis + (b["x"] - axis) * NARROW_2ML, 3); b["width"] = round(b["width"] * NARROW_2ML, 3)
-                else:
-                    b["left"] = round(axis + (b["left"] - axis) * NARROW_2ML, 3); b["right"] = round(axis + (b["right"] - axis) * NARROW_2ML, 3)
-        k["reviewMaster"] = "vial-2026-11-03"; k["narrowedFrom"] = {"approved": approved[sku]["parts"][0]["image"]["sha256"], "width": NARROW_2ML}
+            out = slimmed(src) if p["slot"] == "body" else squeezed(src, NECK_2ML)      # the cap fits the narrower finish
+            p["image"] = save(out, f"{sku}-{p['slot']}-slim"); p["image2x"] = None
+        k["reviewMaster"] = "vial-2026-11-03"
+        k["slimmedFrom"] = {"approved": approved[sku]["parts"][0]["image"]["sha256"], "body": BODY_2ML, "neck": NECK_2ML}
         rows[sku] = k
 
     version = hashlib.sha256(json.dumps(rows, sort_keys=True).encode()).hexdigest()[:12]

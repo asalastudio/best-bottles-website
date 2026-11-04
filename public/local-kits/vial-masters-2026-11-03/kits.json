@@ -1,5 +1,5 @@
 {
- "version": "137dcae8cd91",
+ "version": "2565e401f7eb",
  "rows": {
   "GB1mlAmbVBlk": {
    "sku": "GB1mlAmbVBlk",
@@ -38,10 +38,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.7131a32187bd.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.fd30b0acdfd6.png",
       "key": "",
-      "sha256": "7131a32187bdba3e2767ec777dbb8fbf906ba0766295e5e0a659fd378ce07adf",
-      "bytes": 55067,
+      "sha256": "fd30b0acdfd6efa9088092fef0f995f9a370ee06596b8f2b34ffb242c0456f26",
+      "bytes": 55066,
       "width": 93,
       "height": 440
      },
@@ -76,10 +76,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.b3f9e4c45e2d.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.0f461655a11c.png",
       "key": "",
-      "sha256": "b3f9e4c45e2d2047d517ff5afdcc723aa7898f78ebd66c1e9d8cb0bbf4ddb67a",
-      "bytes": 19405,
+      "sha256": "0f461655a11ccca6cdbcc5074a878c1f1439d1dc670bd145781707750bfbb798",
+      "bytes": 19404,
       "width": 127,
       "height": 449
      },
@@ -156,10 +156,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.7131a32187bd.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-1ml-amber.fd30b0acdfd6.png",
       "key": "",
-      "sha256": "7131a32187bdba3e2767ec777dbb8fbf906ba0766295e5e0a659fd378ce07adf",
-      "bytes": 55067,
+      "sha256": "fd30b0acdfd6efa9088092fef0f995f9a370ee06596b8f2b34ffb242c0456f26",
+      "bytes": 55066,
       "width": 93,
       "height": 440
      },
@@ -194,10 +194,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.cfae9072c2a9.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.4ab16f64b328.png",
       "key": "",
-      "sha256": "cfae9072c2a9317221fa6fb5a492b86eb7f3d6ebff7eaa3709620cc8ef48cd65",
-      "bytes": 19426,
+      "sha256": "4ab16f64b328c1332d06bed6b3573287aeb00dc62b69270801949230e8b78a11",
+      "bytes": 19425,
       "width": 133,
       "height": 454
      },
@@ -313,10 +313,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.b3f9e4c45e2d.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Blk.0f461655a11c.png",
       "key": "",
-      "sha256": "b3f9e4c45e2d2047d517ff5afdcc723aa7898f78ebd66c1e9d8cb0bbf4ddb67a",
-      "bytes": 19405,
+      "sha256": "0f461655a11ccca6cdbcc5074a878c1f1439d1dc670bd145781707750bfbb798",
+      "bytes": 19404,
       "width": 127,
       "height": 449
      },
@@ -431,10 +431,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.cfae9072c2a9.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/plug-cap-Wht.4ab16f64b328.png",
       "key": "",
-      "sha256": "cfae9072c2a9317221fa6fb5a492b86eb7f3d6ebff7eaa3709620cc8ef48cd65",
-      "bytes": 19426,
+      "sha256": "4ab16f64b328c1332d06bed6b3573287aeb00dc62b69270801949230e8b78a11",
+      "bytes": 19425,
       "width": 133,
       "height": 454
      },
@@ -512,10 +512,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-clear.1639b820d979.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-clear.bede5f7fa264.png",
       "key": "",
-      "sha256": "1639b820d9796d9a506d41737532129d7fcd2053e0c30d6596c1d6499f6427cd",
-      "bytes": 20701,
+      "sha256": "bede5f7fa26499f020d74a1221100da066e6a4cb056994670573df03e1400c9e",
+      "bytes": 20700,
       "width": 107,
       "height": 311
      },
@@ -550,10 +550,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/pipette-13-425.7608bec5cff4.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/pipette-13-425.74af46a10ae7.png",
       "key": "",
-      "sha256": "7608bec5cff4055bfd4f2e9cfd2435a6628e96a3eb0551f82cff292b07212341",
-      "bytes": 6213,
+      "sha256": "74af46a10ae7b0fcd7d93e778cd4b50268a65d247a18ad5c6f0ea99e5d784fde",
+      "bytes": 6212,
       "width": 48,
       "height": 252
      },
@@ -588,10 +588,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.5b7e37abd835.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.aafc5a0bb14d.png",
       "key": "",
-      "sha256": "5b7e37abd835ba82c5a9c83f892d19cf63e76ae892eefd7a61c8723070f321ec",
-      "bytes": 15193,
+      "sha256": "aafc5a0bb14da837c74938965165ca90aab1e27a4c4277ce28d1b537db5595eb",
+      "bytes": 15192,
       "width": 105,
       "height": 173
      },
@@ -668,10 +668,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-amber.a3bc264285a0.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-amber.6f086b48bbfa.png",
       "key": "",
-      "sha256": "a3bc264285a091eb9260bfa850809dde8149a25ed464abb64ceadc63bd7969a1",
-      "bytes": 116209,
+      "sha256": "6f086b48bbfaaa1210b477368fa89a2d8b18aa197a95dbffd730a5f32ded580a",
+      "bytes": 116208,
       "width": 181,
       "height": 544
      },
@@ -745,10 +745,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.5b7e37abd835.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.aafc5a0bb14d.png",
       "key": "",
-      "sha256": "5b7e37abd835ba82c5a9c83f892d19cf63e76ae892eefd7a61c8723070f321ec",
-      "bytes": 15193,
+      "sha256": "aafc5a0bb14da837c74938965165ca90aab1e27a4c4277ce28d1b537db5595eb",
+      "bytes": 15192,
       "width": 105,
       "height": 173
      },
@@ -825,10 +825,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-blue.bd9311300fc6.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-blue.78f2e8925e26.png",
       "key": "",
-      "sha256": "bd9311300fc67de7d8bf07052b1ec1e7fc61894f4bd1e9c55626d3701b34d1b5",
-      "bytes": 116766,
+      "sha256": "78f2e8925e26fb049223221ac5890a62a0e8cf053a59ff978e81038cf601c79c",
+      "bytes": 116765,
       "width": 180,
       "height": 544
      },
@@ -902,10 +902,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.5b7e37abd835.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.aafc5a0bb14d.png",
       "key": "",
-      "sha256": "5b7e37abd835ba82c5a9c83f892d19cf63e76ae892eefd7a61c8723070f321ec",
-      "bytes": 15193,
+      "sha256": "aafc5a0bb14da837c74938965165ca90aab1e27a4c4277ce28d1b537db5595eb",
+      "bytes": 15192,
       "width": 105,
       "height": 173
      },
@@ -982,10 +982,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-green.c2bdb2c31e74.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-green.78d8c2e8e27c.png",
       "key": "",
-      "sha256": "c2bdb2c31e743d9b19f8cb9ce64399e74e80e68b6456561f5e95e4e27fe1cb44",
-      "bytes": 41534,
+      "sha256": "78d8c2e8e27c435b252fe04fcbbb0f332e6761d815edf10988358b43f6f8d15c",
+      "bytes": 41533,
       "width": 106,
       "height": 310
      },
@@ -1059,10 +1059,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.5b7e37abd835.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/dropper-head-13-425.aafc5a0bb14d.png",
       "key": "",
-      "sha256": "5b7e37abd835ba82c5a9c83f892d19cf63e76ae892eefd7a61c8723070f321ec",
-      "bytes": 15193,
+      "sha256": "aafc5a0bb14da837c74938965165ca90aab1e27a4c4277ce28d1b537db5595eb",
+      "bytes": 15192,
       "width": 105,
       "height": 173
      },
@@ -1139,10 +1139,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.950652910585.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.e2fc5d047851.png",
       "key": "",
-      "sha256": "950652910585080c3dd158b765f8d433cd4f75c2840ab55d207ae01dfc304429",
-      "bytes": 56005,
+      "sha256": "e2fc5d0478513262467775ae0275a82168bb36178eafa1460e8dbdb9b61e01aa",
+      "bytes": 56004,
       "width": 266,
       "height": 549
      },
@@ -1177,10 +1177,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black.acdf32c49507.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/cap-9ml-black.ae482c419cb3.png",
       "key": "",
-      "sha256": "acdf32c4950764c6dd313452cfe599057cc830e6bf7d8fa2cb8c57509e9c77bf",
-      "bytes": 23148,
+      "sha256": "ae482c419cb3be1790d0a3c9c3b0c536f23cda0640cc7b2cbcbcda61783b5695",
+      "bytes": 23147,
       "width": 247,
       "height": 144
      },
@@ -1257,10 +1257,10 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.950652910585.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear.e2fc5d047851.png",
       "key": "",
-      "sha256": "950652910585080c3dd158b765f8d433cd4f75c2840ab55d207ae01dfc304429",
-      "bytes": 56005,
+      "sha256": "e2fc5d0478513262467775ae0275a82168bb36178eafa1460e8dbdb9b61e01aa",
+      "bytes": 56004,
       "width": 266,
       "height": 549
      },
@@ -1360,8 +1360,8 @@
      "zOrder": 0,
      "explodeIndex": 0,
      "bounds": {
-      "left": 365.482,
-      "right": 634.518,
+      "left": 358.402489626556,
+      "right": 641.597510373444,
       "top": 100,
       "bottom": 1000
      },
@@ -1374,20 +1374,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2BlackCap-body-narrow.c15f844b9def.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2BlackCap-body-slim.b2897e99c6df.png",
       "key": "",
-      "sha256": "c15f844b9defbfca8211f82b5e8db1f70c13ae03abcfb7599af0ae510f943f28",
-      "bytes": 683127,
-      "width": 922,
+      "sha256": "b2897e99c6dfee2a3dc46ba6ca4aa05506272c8f178fe914f5c94b24780abddb",
+      "bytes": 598185,
+      "width": 971,
       "height": 1620
      },
      "image2x": null,
      "mask": null,
      "derivation": "owner-approved-gpt-material-and-geometry",
      "box": {
-      "x": 212.93,
+      "x": 197.8215767634855,
       "y": 39.00414937759336,
-      "width": 574.139,
+      "width": 604.356846473029,
       "height": 1008.298755186722
      }
     },
@@ -1397,8 +1397,8 @@
      "zOrder": 1,
      "explodeIndex": 1,
      "bounds": {
-      "left": 359.55,
-      "right": 640.45,
+      "left": 352.1583299978979,
+      "right": 647.8416700021021,
       "top": 60.17098998829181,
       "bottom": 251.71428571428572
      },
@@ -1411,20 +1411,20 @@
       "dy": -230
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2BlackCap-cap-narrow.eaca49ea4fae.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2BlackCap-cap-slim.870f866e4558.png",
       "key": "",
-      "sha256": "eaca49ea4fae900b1c14e300260ed011441e397187b465ffe6de6fc7d4bb5739",
-      "bytes": 46992,
-      "width": 950,
+      "sha256": "870f866e45589c916e423886beaa24ea1cadc3a5b4a8aafd3601e8362fb18d85",
+      "bytes": 42910,
+      "width": 1000,
       "height": 1100
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 60.985,
+      "x": 37.87855351544192,
       "y": -17.004221396453318,
-      "width": 883.331,
+      "width": 929.8218239125916,
       "height": 1022.8040063038509
      }
     }
@@ -1437,9 +1437,10 @@
     "baselinePct": 91
    },
    "reviewMaster": "vial-2026-11-03",
-   "narrowedFrom": {
+   "slimmedFrom": {
     "approved": "ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f",
-    "width": 0.95
+    "body": 0.9,
+    "neck": 0.85
    }
   },
   "GBVAmb2WhtCap": {
@@ -1464,8 +1465,8 @@
      "zOrder": 0,
      "explodeIndex": 0,
      "bounds": {
-      "left": 365.482,
-      "right": 634.518,
+      "left": 358.402489626556,
+      "right": 641.597510373444,
       "top": 100,
       "bottom": 1000
      },
@@ -1478,20 +1479,20 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2WhtCap-body-narrow.c15f844b9def.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2WhtCap-body-slim.b2897e99c6df.png",
       "key": "",
-      "sha256": "c15f844b9defbfca8211f82b5e8db1f70c13ae03abcfb7599af0ae510f943f28",
-      "bytes": 683127,
-      "width": 922,
+      "sha256": "b2897e99c6dfee2a3dc46ba6ca4aa05506272c8f178fe914f5c94b24780abddb",
+      "bytes": 598185,
+      "width": 971,
       "height": 1620
      },
      "image2x": null,
      "mask": null,
      "derivation": "owner-approved-gpt-material-and-geometry",
      "box": {
-      "x": 212.93,
+      "x": 197.8215767634855,
       "y": 39.00414937759336,
-      "width": 574.139,
+      "width": 604.356846473029,
       "height": 1008.298755186722
      }
     },
@@ -1501,8 +1502,8 @@
      "zOrder": 1,
      "explodeIndex": 1,
      "bounds": {
-      "left": 359.55,
-      "right": 640.45,
+      "left": 352.1583299978979,
+      "right": 647.8416700021021,
       "top": 52.71470450510702,
       "bottom": 251.71428571428572
      },
@@ -1515,20 +1516,20 @@
       "dy": -230
      },
      "image": {
-      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2WhtCap-cap-narrow.4481a2f1f015.png",
+      "url": "/local-kits/vial-masters-2026-11-03/parts/GBVAmb2WhtCap-cap-slim.8cfb841697a0.png",
       "key": "",
-      "sha256": "4481a2f1f0156e7416ccc5c440f06758a73a6f47020e3314c6dc0309151a1ea0",
-      "bytes": 36014,
-      "width": 950,
+      "sha256": "8cfb841697a098311d87079874ea13d33a8ed7a570f494481f957fbe9c5e8b19",
+      "bytes": 33061,
+      "width": 1000,
       "height": 1100
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 53.682,
+      "x": 30.192026437764525,
       "y": -17.686090733989204,
-      "width": 891.743,
+      "width": 938.6772698546163,
       "height": 1032.5449968400778
      }
     }
@@ -1541,9 +1542,10 @@
     "baselinePct": 91
    },
    "reviewMaster": "vial-2026-11-03",
-   "narrowedFrom": {
+   "slimmedFrom": {
     "approved": "ce83e925c88fbd599f309624a51449431b66bc3b4d6fd2a3d8b383b28872437f",
-    "width": 0.95
+    "body": 0.9,
+    "neck": 0.85
    }
   }
  },
