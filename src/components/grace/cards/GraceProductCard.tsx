@@ -1,5 +1,6 @@
 "use client";
 
+import { canOptimizeWithNextImage } from "@/lib/products/optimizable-image";
 import Image from "next/image";
 import Link from "next/link";
 import type { MouseEvent } from "react";
@@ -85,7 +86,7 @@ export default function GraceProductCard({
         return <div className="flex min-w-0 flex-col gap-2 border border-[#e6dccd] bg-white p-2 text-center">
             <Link href={pdpHref} onClick={productHandoff} data-grace-product-handoff={productHandoff ? "true" : undefined} className="flex flex-col gap-2">
                 <div className="relative h-[88px] w-full">
-                    {hero ? <Image src={hero} alt={customerDisplayName} fill className="object-contain" sizes="120px" unoptimized /> : <FallbackThumb family={product.family} />}
+                    {hero ? <Image src={hero} alt={customerDisplayName} fill className="object-contain" sizes="120px" unoptimized={!canOptimizeWithNextImage(hero)} /> : <FallbackThumb family={product.family} />}
                 </div>
                 <span className="text-[11px] font-medium leading-snug">{customerDisplayName}</span>
             </Link>
@@ -105,7 +106,7 @@ export default function GraceProductCard({
             >
                 <div className="relative aspect-[4/5] w-full bg-travertine">
                     {hero ? (
-                        <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="120px" unoptimized />
+                        <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="120px" unoptimized={!canOptimizeWithNextImage(hero)} />
                     ) : (
                         <FallbackThumb family={product.family} />
                     )}
@@ -139,7 +140,7 @@ export default function GraceProductCard({
             >
                 <div className="relative aspect-[4/5] w-full bg-travertine">
                     {hero ? (
-                        <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="160px" unoptimized />
+                        <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="160px" unoptimized={!canOptimizeWithNextImage(hero)} />
                     ) : (
                         <FallbackThumb family={product.family} />
                     )}
@@ -176,7 +177,7 @@ export default function GraceProductCard({
                         title="Open product page"
                     >
                         {hero ? (
-                            <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="84px" unoptimized />
+                            <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="84px" unoptimized={!canOptimizeWithNextImage(hero)} />
                         ) : (
                             <FallbackThumb family={product.family} />
                         )}
@@ -184,7 +185,7 @@ export default function GraceProductCard({
                 ) : (
                     <div className="relative shrink-0 rounded-[2px] overflow-hidden bg-travertine" style={{ width: 84, height: 105 }}>
                         {hero ? (
-                            <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="84px" unoptimized />
+                            <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="84px" unoptimized={!canOptimizeWithNextImage(hero)} />
                         ) : (
                             <FallbackThumb family={product.family} />
                         )}

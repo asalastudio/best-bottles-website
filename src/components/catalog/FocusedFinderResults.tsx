@@ -1,5 +1,6 @@
 "use client";
 
+import { catalogCardImageLoading } from "@/lib/products/catalog-card-image";
 import type { ReactNode } from "react";
 import LocaleLink from "@/components/LocaleLink";
 import FocusedProductCard from "@/components/catalog/FocusedProductCard";
@@ -60,7 +61,7 @@ export default function FocusedFinderResults({
                 <div aria-busy={isUpdating}>
                     {families.length ? (
                         <div className="space-y-10">
-                            {families.map((family) => {
+                            {families.map((family, familyIndex) => {
                                 const expanded = !hasControlledExpansion || expandedFamily === family.family;
                                 const productsId = `focused-family-${family.family.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
                                 return (
@@ -91,8 +92,9 @@ export default function FocusedFinderResults({
                                                 id={productsId}
                                                 className="grid grid-cols-1 gap-px border border-champagne/70 bg-champagne/70 sm:grid-cols-2 xl:grid-cols-3"
                                             >
-                                                {family.exactProducts.map((product) => (
-                                                    <FocusedProductCard key={product.id} product={product} finderUrl={finderUrl} onOpen={onProductOpen} />
+                                                {family.exactProducts.map((product, productIndex) => (
+                                                    <FocusedProductCard key={product.id} product={product} finderUrl={finderUrl} onOpen={onProductOpen}
+                                                        imageLoading={familyIndex === 0 ? catalogCardImageLoading(productIndex) : undefined} />
                                                 ))}
                                             </div>
                                         ) : null}

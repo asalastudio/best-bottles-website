@@ -1,5 +1,6 @@
 "use client";
 
+import { canOptimizeWithNextImage } from "@/lib/products/optimizable-image";
 import Image from "next/image";
 import type { AnatomyPayload } from "@/components/GraceContext";
 
@@ -54,7 +55,7 @@ export default function PatternE_Anatomy({ payload }: PatternEAnatomyProps) {
                         fill
                         className="object-contain p-3"
                         sizes="240px"
-                        unoptimized
+                        unoptimized={!canOptimizeWithNextImage(hero)}
                     />
                     {/* Pin dots */}
                     {payload.pins.map((pin, i) => (

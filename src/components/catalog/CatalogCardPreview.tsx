@@ -8,7 +8,8 @@ import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-he
 import { capSwapFraming, capSwapPlateBox, capSwapPlateUrl } from "@/lib/products/catalog-cap-swap";
 import { catalogCapOnlySwap, capOnlyBox } from "@/lib/products/catalog-cap-only-swap";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
+import { CATALOG_CARD_IMAGE_SIZES, type CatalogCardImageLoading } from "@/lib/products/catalog-card-image";
 import LocaleLink from "@/components/LocaleLink";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
@@ -41,13 +42,20 @@ type Props = {
      * another finish's bottle on screen.
      */
     selectedHero?: CatalogHero | null;
+    /** Set for first-row cards so the likely LCP image is not lazy. */
+    imageLoading?: CatalogCardImageLoading;
+    /** next/image `sizes` for the card's grid; defaults to the main catalog grid. */
+    sizes?: string;
 };
+
+/** Hero overlays are drawn with multiply blends, so they keep a higher quality than the default 75. */
+const OVERLAY_QUALITY = 90;
 
 function skuOf(variant: ProductCardVariantPreview | null | undefined): string | null {
     return variant?.websiteSku ?? variant?.graceSku ?? null;
 }
 
-export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroHoverImageUrl, href, variants, family, slug, selected = null, selectedHero = null }: Props) {
+export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroHoverImageUrl, href, variants, family, slug, selected = null, selectedHero = null, imageLoading, sizes = CATALOG_CARD_IMAGE_SIZES }: Props) {
     const [heroHovered, setHeroHovered] = useState(false);
     const [failed, setFailed] = useState<Set<string>>(() => new Set());
     const singleTola = isTolaApplicator(skuOf(selected) ?? catalogHero?.websiteSku ?? skuOf(variants[0]));
@@ -91,13 +99,22 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     const preloadUrls = heroHoverImageUrl ?? "";
     useEffect(() => {
         if (!preloadUrls || masterSku) return;
+        // Warm the exact optimized URL the hover <Image> will request, not the
+        // raw original (which would download the full file and then a second copy).
         const images = preloadUrls.split("\n").map((url) => {
             const image = new window.Image();
-            image.src = url;
+            if (url.includes(".public.blob.vercel-storage.com/")) {
+                image.src = url;
+                return image;
+            }
+            const { props } = getImageProps({ src: url, alt: "", fill: true, sizes });
+            if (props.sizes) image.sizes = props.sizes;
+            if (props.srcSet) image.srcset = props.srcSet;
+            image.src = props.src;
             return image;
         });
         return () => { images.forEach((image) => { image.onload = null; }); };
-    }, [preloadUrls, masterSku]);
+    }, [preloadUrls, masterSku, sizes]);
 
     const approvedHero = catalogHero && !("hoverUrl" in catalogHero);
     const exactVariant = variants.find(variant => variant.websiteSku === catalogHero?.websiteSku);
@@ -115,7 +132,7 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
         return <ProductCardImagePreview productTitle={title}
             defaultImage={{ url: displayImage ?? imageUrl, alt: title }}
             catalogHero={catalogHero ? { ...catalogHero, websiteSku: masterSku } : null}
-            productHref={href} variantPreviews={[]}
+            productHref={href} variantPreviews={[]} sizes={sizes} imageLoading={imageLoading}
             auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: masterSku }} />;
     }
 
@@ -125,13 +142,13 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
             data-visual-mode="selected-cap" data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined}
             data-bb-product-group-slug={slug} data-bb-website-sku={skuOf(selected) ?? undefined}>
             <span className="absolute inset-0 block" style={getCatalogHeroStyle(catalogHero)} data-testid="catalog-card-cap-only-swap">
-                <Image src={catalogHero.url} alt={`${title}, ${selected.label}`} fill unoptimized className="object-fill" />
+                <Image src={catalogHero.url} alt={`${title}, ${selected.label}`} fill quality={OVERLAY_QUALITY} sizes={sizes} className="object-fill" />
                 <span className="absolute block overflow-hidden" style={capOnlyBox(capOnly.patch)} data-testid="catalog-card-cap-patch" aria-hidden>
                     <span className="absolute block" style={capOnlyBox(capOnly.backdrop)}>
-                        <Image src={catalogHero.url} alt="" fill unoptimized className="object-fill" />
+                        <Image src={catalogHero.url} alt="" fill quality={OVERLAY_QUALITY} sizes={sizes} className="object-fill" />
                     </span>
                     <span className="absolute block" style={{ ...capOnlyBox(capOnly.plate), mixBlendMode: "multiply" }}>
-                        <Image key={capOnlyUrl} src={capOnlyUrl} alt="" fill unoptimized className="object-fill"
+                        <Image key={capOnlyUrl} src={capOnlyUrl} alt="" fill quality={OVERLAY_QUALITY} sizes={sizes} className="object-fill"
                             onError={() => fail(capOnlyUrl)} />
                     </span>
                 </span>
@@ -148,10 +165,10 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
             data-visual-mode="selected-cap" data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined}
             data-bb-product-group-slug={slug} data-bb-website-sku={skuOf(selected) ?? undefined}>
             <span className="absolute inset-0 block bg-[#f5f3ef]" style={getCatalogHeroStyle(catalogHero)} data-testid="catalog-card-cap-swap">
-                <Image src={heroSwap.shadow} alt="" fill unoptimized aria-hidden className="object-fill" style={{ mixBlendMode: "multiply" }} />
+                <Image src={heroSwap.shadow} alt="" fill quality={OVERLAY_QUALITY} sizes={sizes} aria-hidden className="object-fill" style={{ mixBlendMode: "multiply" }} />
                 <span className="absolute block" style={{ ...capSwapPlateBox(heroSwap), mixBlendMode: "multiply" }}>
-                    <Image key={heroSwapUrl} src={heroSwapUrl} alt={`${title}, ${selected!.label}`} fill unoptimized
-                        className="object-fill" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    <Image key={heroSwapUrl} src={heroSwapUrl} alt={`${title}, ${selected!.label}`} fill quality={OVERLAY_QUALITY}
+                        className="object-fill" sizes={sizes}
                         onError={() => fail(heroSwapUrl)} />
                 </span>
             </span>
@@ -165,7 +182,7 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
         && selectedHero.url !== catalogHero.url && !(heroSwap && assemblyPlates === undefined)) {
         return <ProductCardImagePreview
             productTitle={`${title}, ${selected.label}`} defaultImage={{ url: null, alt: `${title}, ${selected.label}` }} catalogHero={selectedHero}
-            productHref={href} variantPreviews={[]}
+            productHref={href} variantPreviews={[]} sizes={sizes}
             auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: selectedHero.websiteSku }}
         />;
     }
@@ -183,7 +200,7 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
                 fill className="object-contain" style={isBlueHalfDramVialImage(selectedExactPhoto)
                     ? { mixBlendMode: "multiply", transform: "translateY(22%) scale(0.41)" }
                     : isReconciledLocalSkuAssetUrl(selectedExactPhoto) ? { mixBlendMode: "multiply" } : undefined}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                sizes={sizes}
                 onError={() => fail(selectedExactPhoto)} />
         </LocaleLink>;
     }
@@ -191,7 +208,7 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     if (catalogHero) {
         return <ProductCardImagePreview
             productTitle={title} defaultImage={{ url: approvedHero ? exactVariant?.imageUrl ?? null : imageUrl, alt: title }} catalogHero={catalogHero}
-            productHref={href} variantPreviews={[]}
+            productHref={href} variantPreviews={[]} sizes={sizes} imageLoading={imageLoading}
             auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: approvedHero ? exactVariant?.websiteSku : undefined }}
         />;
     }
@@ -204,7 +221,7 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
         {displayImage ? <Image key={displayImage} src={displayImage} alt={selected ? `${title}, ${selected.label}` : title} fill
             unoptimized={displayImage.includes(".public.blob.vercel-storage.com/")}
             className="object-contain" style={isAssembledOneMlVialImage(displayImage) ? { mixBlendMode: "multiply", transform: "scale(0.62)" } : isReconciledLocalSkuAssetUrl(displayImage) ? { mixBlendMode: "multiply" } : undefined}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes={sizes} {...(selected ? {} : imageLoading)}
             onError={() => fail(displayImage)} />
             : <span className="flex h-full flex-col items-center justify-center gap-3 text-xs text-slate"><Package className="h-10 w-10" />Product image coming soon</span>}
     </LocaleLink>;

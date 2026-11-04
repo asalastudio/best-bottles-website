@@ -1,5 +1,6 @@
 "use client";
 
+import { canOptimizeWithNextImage } from "@/lib/products/optimizable-image";
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -783,7 +784,8 @@ function MegaMenuPanel({
                                         alt={title}
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                        unoptimized
+                                        sizes="264px"
+                                        unoptimized={!canOptimizeWithNextImage(featuredImageUrl)}
                                     />
                                 </div>
                             ) : (

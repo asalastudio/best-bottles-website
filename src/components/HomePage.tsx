@@ -1,5 +1,6 @@
 "use client";
 
+import { canOptimizeWithNextImage } from "@/lib/products/optimizable-image";
 import React, { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -860,7 +861,8 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
                                         alt={article.title}
                                         fill
                                         className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.025]"
-                                        unoptimized={article.img.startsWith("http")}
+                                        sizes="(max-width: 767px) calc(100vw - 32px), 33vw"
+                                        unoptimized={!canOptimizeWithNextImage(article.img)}
                                     />
                                 </div>
                                 <span className="mb-2 block text-[9px] font-semibold uppercase tracking-[0.17em] text-muted-gold">{article.category}</span>

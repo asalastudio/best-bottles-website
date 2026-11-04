@@ -49,3 +49,18 @@ export function displayImageUrl(value: string, width: DisplayImageWidth = 1200):
     if (!isOptimizableImageUrl(value)) return value;
     return `/_next/image?url=${encodeURIComponent(value)}&w=${width}&q=${value.includes("/reviewed-master-media/") ? 90 : 75}`;
 }
+
+/** True when next/image may resize this src: the sources above plus Sanity's
+ * CDN (both are in next.config remotePatterns). Unknown hosts, data:/blob:
+ * URLs and SVGs return false, so callers pass `unoptimized` for them instead
+ * of letting next/image throw on an unlisted host. */
+export function canOptimizeWithNextImage(value: string | null | undefined): boolean {
+    if (!value) return false;
+    if (isOptimizableImageUrl(value)) return true;
+    try {
+        const url = new URL(value);
+        return url.protocol === "https:" && url.hostname === "cdn.sanity.io";
+    } catch {
+        return false;
+    }
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import { canOptimizeWithNextImage } from "@/lib/products/optimizable-image";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import type { ComparisonPayload, ProductCard } from "@/components/GraceContext";
@@ -109,7 +110,7 @@ export default function PatternF_DeepCompare({ payload, onAddToShortlist }: Patt
                                         fill
                                         className="object-contain"
                                         sizes="56px"
-                                        unoptimized
+                                        unoptimized={!canOptimizeWithNextImage(hero)}
                                     />
                                 ) : (
                                     <div

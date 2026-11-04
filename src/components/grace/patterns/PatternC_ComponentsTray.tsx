@@ -1,5 +1,6 @@
 "use client";
 
+import { canOptimizeWithNextImage } from "@/lib/products/optimizable-image";
 import Image from "next/image";
 import { Check } from "@phosphor-icons/react";
 import type { CompatibilityPayload, ProductCard } from "@/components/GraceContext";
@@ -55,7 +56,7 @@ export default function PatternC_ComponentsTray({ payload, onAddToShortlist }: P
                                             fill
                                             className="object-contain p-2"
                                             sizes="165px"
-                                            unoptimized
+                                            unoptimized={!canOptimizeWithNextImage(hero)}
                                         />
                                     ) : (
                                         <div

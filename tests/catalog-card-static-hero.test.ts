@@ -7,7 +7,7 @@ import { getProductHero } from "@/lib/products/catalog-heroes";
 vi.mock("convex/react", () => ({ useQuery: () => undefined }));
 vi.mock("next/image", () => ({ default: (props: ImgHTMLAttributes<HTMLImageElement> & { fill?: boolean }) => {
     const p = { ...props }; delete p.fill; return createElement("img", p);
-} }));
+}, getImageProps: ({ src }: { src: string }) => ({ props: { src } }) }));
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
 let root: Root;
 let container: HTMLDivElement;

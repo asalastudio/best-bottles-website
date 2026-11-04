@@ -1,5 +1,6 @@
 "use client";
 
+import { canOptimizeWithNextImage } from "@/lib/products/optimizable-image";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import type { FamilyCardPayload, ProductCard } from "@/components/GraceContext";
@@ -95,7 +96,7 @@ export default function PatternB_FamilyCard({
                             fill
                             className="object-cover"
                             sizes="96px"
-                            unoptimized
+                            unoptimized={!canOptimizeWithNextImage(hero)}
                         />
                     ) : (
                         <div

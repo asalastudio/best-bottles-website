@@ -76,6 +76,11 @@ const nextConfig: NextConfig = {
     images: {
         // Reviewed raster masters retain a high-quality display derivative; source files stay immutable.
         qualities: [75, 90],
+        // AVIF first (typically 20-30% smaller than WebP for these photos), WebP for browsers without it.
+        formats: ["image/avif", "image/webp"],
+        // Every catalog source is content-hashed or otherwise immutable, so an
+        // optimized copy can be kept for 31 days instead of re-validated.
+        minimumCacheTTL: 2678400,
         remotePatterns: [
             {
                 protocol: "https",

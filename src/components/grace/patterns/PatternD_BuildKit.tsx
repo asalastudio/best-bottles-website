@@ -1,5 +1,6 @@
 "use client";
 
+import { canOptimizeWithNextImage } from "@/lib/products/optimizable-image";
 import Image from "next/image";
 import { ArrowsLeftRight } from "@phosphor-icons/react";
 import type { BuildKitPayload, ProductCard } from "@/components/GraceContext";
@@ -115,7 +116,7 @@ export default function PatternD_BuildKit({
                                 fill
                                 className="object-cover"
                                 sizes="40px"
-                                unoptimized
+                                unoptimized={!canOptimizeWithNextImage(s.product.heroImageUrl)}
                             />
                         ) : (
                             <div

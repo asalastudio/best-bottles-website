@@ -1,5 +1,6 @@
 "use client";
 
+import { catalogCardImageLoading } from "@/lib/products/catalog-card-image";
 import { rectangleApplicatorGlass } from "@/lib/products/rectangle-applicator";
 import { useRegion } from "@/components/RegionProvider";
 
@@ -303,11 +304,9 @@ function ProductGroupCard({
     ].filter(Boolean).join(" · ");
 
     return (
-        <motion.article
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.3) }}
+        // Plain <article>: an opacity-0 entrance kept every card (and the LCP
+        // image) invisible in the server HTML until hydration and scroll.
+        <article
             className="group/catalog-card relative flex h-full flex-col bg-white focus-within:z-10 has-[[role=listbox]]:z-20 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-[#9a7a48] has-[:focus-visible]:outline-offset-[-2px]"
             data-testid="catalog-card"
         >
@@ -322,6 +321,7 @@ function ProductGroupCard({
                 family={group.family}
                 slug={group.slug}
                 selected={pickedCap}
+                imageLoading={catalogCardImageLoading(index)}
             />
             <div className="flex flex-1 flex-col gap-2.5 px-[18px] pb-[18px] pt-3.5">
                 <LocaleLink href={pickedCap ? productCardVariantHref(href, pickedCap) : href} className="flex flex-col gap-1 focus-visible:outline-none">
@@ -352,7 +352,7 @@ function ProductGroupCard({
                     }}
                 />
             </div>
-        </motion.article>
+        </article>
     );
 }
 

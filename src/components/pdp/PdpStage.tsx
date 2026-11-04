@@ -295,7 +295,6 @@ export default function PdpStage({
                                         draggable={false}
                                         decoding="async"
                                         loading="eager"
-                                        fetchPriority="high"
                                         className={styles.stageBackdrop}
                                         style={{
                                             left: `${layout.backdrop.box.leftPct}%`, top: `${layout.backdrop.box.topPct}%`,
@@ -329,7 +328,8 @@ export default function PdpStage({
                                             draggable={false}
                                             decoding="async"
                                             loading="eager"
-                                            fetchPriority="high"
+                                            // Only the body is the LCP candidate; closures at high priority would compete with it.
+                                            fetchPriority={part.slot === "body" ? "high" : "auto"}
                                             onError={() => { if (markRegisterOptimizerUnavailable(part.url)) showRaw(part.url); }}
                                             style={{
                                                 position: "absolute", display: "block", maxWidth: "none", opacity: part.opacity,
@@ -346,11 +346,14 @@ export default function PdpStage({
                                     <img
                                         key={part.key}
                                         src={displayImageUrl(part.url)}
+                                        // Canvas-sized layer: same derivative set as the register parts, sized to the full canvas.
+                                        srcSet={registerImageSrcSet(part.url)}
+                                        sizes={registeredImageSizes(100, layout.frame.scale, zoom ? STAGE_ZOOM : 1)}
                                         alt=""
                                         draggable={false}
                                         decoding="async"
                                         loading="eager"
-                                        fetchPriority="high"
+                                        fetchPriority={part.slot === "body" ? "high" : "auto"}
                                         className={styles.stagePart}
                                         data-slot={part.slot}
                                         style={{ transform: `translate(${part.dxPct}%, ${part.dyPct}%)`, zIndex: part.zIndex, mixBlendMode: part.blendMode, clipPath: bostonDropperCutout(part.url) }}

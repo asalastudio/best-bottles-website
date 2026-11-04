@@ -1,5 +1,6 @@
 "use client";
 
+import { canOptimizeWithNextImage } from "@/lib/products/optimizable-image";
 import Image from "next/image";
 import type { BrandMockupPayload } from "@/components/GraceContext";
 
@@ -61,7 +62,7 @@ export default function PatternI_BrandMockup({
                         fill
                         className="object-contain p-4"
                         sizes="(max-width: 768px) 100vw, 460px"
-                        unoptimized
+                        unoptimized={!canOptimizeWithNextImage(bottleHero)}
                     />
                 ) : (
                     <div
