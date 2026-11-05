@@ -41,7 +41,7 @@ describe('Empire, Grace and Diamond masters published (2026-11-04)', () => {
         expect([...egdReleaseSkus].sort()).toEqual(egdSkus);
         expect(plan.replacedRecipes).toEqual([]);
         for (const sku of egdSkus) expect(hosted[sku], sku).toBeDefined();
-        expect(Object.keys(hosted)).toHaveLength(1034);
+        expect(Object.keys(hosted)).toHaveLength(1037);
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         expect(index.version).toBe(manifest.version);
     });

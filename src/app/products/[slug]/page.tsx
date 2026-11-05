@@ -163,6 +163,16 @@ function redesignApplies(slug: string, data: ProductGroupPayload): boolean {
 
 /** The fitment groups a cap-only glass is also sold as, in the strip's order (spray, then roller). */
 const STRIP_FITMENT_CLOSURES = ["finemist", "rollon"] as const;
+/** Fitment groups the strip finds under another slug (Jordan, 4 Nov 2026: the Pillar "is missing all the fitments"):
+ * - the Pillar sprayers kept "17-415" in their slug when the neck was corrected to 13-415
+ *   (scripts/catalog-corrections/2026-09-25-pillar-spray-neck.mjs), so `${slug}-finemist` missed them;
+ * - the Pillar rollers live in the cap page's own group (no "-rollon" page); the lookup still filters by the
+ *   requested closure, so only the roller SKUs come back. */
+const STRIP_FITMENT_SLUG_ALIASES: Readonly<Record<string, string>> = {
+    "pillar-9ml-clear-13-415-finemist": "pillar-9ml-clear-17-415-finemist",
+    "pillar-9ml-clear-13-415-rollon": "pillar-9ml-clear-13-415",
+};
+const stripFitmentSlug = (slug: string) => STRIP_FITMENT_SLUG_ALIASES[slug] ?? slug;
 
 async function loadRedesignPayload(
     data: ProductGroupPayload,
@@ -259,8 +269,14 @@ async function loadRedesignPayload(
     if (parseProductSlug(activeSlug)?.closure === null) {
         const groups = await Promise.all(STRIP_FITMENT_CLOSURES.map(async (closure) => {
             try {
-                const payload = await convex.query(api.products.getProductGroup, { slug: `${activeSlug}-${closure}` }) as ProductGroupPayload | null;
-                return payload ? filterVariantsForGroupIntent(`${activeSlug}-${closure}`, filterVariantsForProductGroup(payload.group, payload.variants)) : [];
+                const wanted = `${activeSlug}-${closure}`;
+                // The group's own slug first; the alias only while that group does not exist.
+                const payload = (await convex.query(api.products.getProductGroup, { slug: wanted }) as ProductGroupPayload | null)
+                    ?? (stripFitmentSlug(wanted) !== wanted
+                        ? await convex.query(api.products.getProductGroup, { slug: stripFitmentSlug(wanted) }) as ProductGroupPayload | null
+                        : null);
+                // The intent comes from the slug asked for (spray, roller), not from the group it resolved to.
+                return payload ? filterVariantsForGroupIntent(wanted, filterVariantsForProductGroup(payload.group, payload.variants)) : [];
             } catch {
                 return [];
             }

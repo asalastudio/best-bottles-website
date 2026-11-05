@@ -38,7 +38,7 @@ describe('Diva review masters published (2026-11-04)', () => {
         expect([...divaReleaseSkus].sort()).toEqual([...divaSkus].sort());
         expect(plan.replacedRecipes).toEqual([]);
         for (const sku of divaSkus) expect(hosted[sku], sku).toBeDefined();
-        expect(Object.keys(hosted)).toHaveLength(1034);   // + 7 Pillar sprayers + 177 Empire/Grace/Diamond (2026-11-04) + 177 Empire/Grace/Diamond (2026-11-04)
+        expect(Object.keys(hosted)).toHaveLength(1037);   // + 7 Pillar sprayers + 177 Empire/Grace/Diamond (2026-11-04) + 177 Empire/Grace/Diamond + 3 Pillar caps/rollers (2026-11-04)
         expect(index.skus).toEqual(Object.keys(hosted).sort());
         expect(index.version).toBe(manifest.version);
     });

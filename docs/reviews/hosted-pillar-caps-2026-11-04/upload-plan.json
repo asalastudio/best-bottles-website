@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-11-04T23:38:15.913Z",
+  "configurations": 3,
+  "priorVersion": "140e024db5498878",
+  "priorRecipes": 1034,
+  "preservedRecipeSha256": "063ba723e74e7e30a013671e83b5ed887b0f124a6dff2e6c1253a9bb65c13df1",
+  "sourceFiles": [
+    {
+      "file": "public/local-kits/pillar-caps-2026-11-04/kits.json",
+      "sha256": "a3d307ea99ce50c83e528e61604cf2a28093f8c9af7fa7bcd628588440b04bc6"
+    }
+  ],
+  "hostedLayersChecked": 5,
+  "assetCount": 0,
+  "derivativeCount": 0,
+  "reusedHosted": 0,
+  "assets": {},
+  "replacedRecipes": [],
+  "newRecipes": [
+    "GBPillar9BlkShSht",
+    "GBPillar9MtlRollBlkdot",
+    "GBPillar9RollBlkDot"
+  ],
+  "capThumbnails": 0,
+  "productionDataMutated": false,
+  "rollback": "Revert the release commit (restores the four generated JSON files); immutable uploaded objects may remain archived."
+}

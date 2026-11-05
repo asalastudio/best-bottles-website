@@ -91,7 +91,9 @@ function readLocalKitReview(): LocalKitReview | null {
         // The Pillar 9 ml sprayers on the photographed body (4 Nov 2026) supersede the 13-415 pilot row.
         process.env.NODE_ENV === "development" ? "public/local-kits/pillar-masters-2026-11-04/kits.json" : undefined,
         // Empire, Grace and Diamond review kits (4 Nov 2026, scripts/empire-grace-diamond/).
-        process.env.NODE_ENV === "development" ? "public/local-kits/egd-masters-2026-11-04/kits.json" : undefined];
+        process.env.NODE_ENV === "development" ? "public/local-kits/egd-masters-2026-11-04/kits.json" : undefined,
+        // The Pillar cap and roller SKUs on the photographed Pillar body (4 Nov 2026, scripts/pillar/pillar-cap-kits.mts).
+        process.env.NODE_ENV === "development" ? "public/local-kits/pillar-caps-2026-11-04/kits.json" : undefined];
     const rows: Record<string, BuilderKit> = {};
     const defaults = new Set<string>();
     let loaded = false;
