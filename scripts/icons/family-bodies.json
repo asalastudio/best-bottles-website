@@ -1,0 +1,92 @@
+{
+ "Royal": {
+  "sku": "GBRoyal13BlkSht",
+  "capacityMl": 13,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/royal-13ml-13-415/clear/86f13e6e51994a7af074d95d45c69cdd6ec07dafaa0fa2a2078c356b8626e852.png"
+ },
+ "Circle": {
+  "sku": "GBCrcl50AnSpBlk",
+  "capacityMl": 50,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/circle-50ml-18-415/clear/a2de54f983754d3e1b42753abaaa2f235e36f5df9177de9b92053628066418f1.png"
+ },
+ "Round": {
+  "sku": "GBRnd128DrpGl",
+  "capacityMl": 128,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-128ml-18-415/clear/5b74b6e01df47ff01e5f96e7ed4d2db2e78aeb789097245f07c39b227246fda8.png"
+ },
+ "Empire": {
+  "sku": "GBEmp50AnSpBlk",
+  "capacityMl": 50,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/empire-50ml-18-415/clear/d260dcd1fd95003ad6a9cb4398f5ef34f0b6ca2cdda79833daa9bb7b1f27d4aa.png"
+ },
+ "Elegant": {
+  "sku": "GBElg60AnSpTslGl",
+  "capacityMl": 60,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/58165fd317cadaaed55186664e754056328839abd9cf229b479434412b052773.body.webp"
+ },
+ "Square": {
+  "sku": "GBSqr15MtlRollBlkDot",
+  "capacityMl": 15,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/square-15ml-13-415/clear/b17dc553b7d483fcd46fbf342f4df644f7615503bc08d00c32506d0109ee4da3.png"
+ },
+ "Cylinder": {
+  "sku": "GBTallCyl9Gl",
+  "capacityMl": 9,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/cylinder-9ml-13-415/clear/15ba3fdd00c1384064230ec9f1d2bba7ceec5d2f47f2d24b01657778dc719f2c.png"
+ },
+ "Diva": {
+  "sku": "GBDiva46AnSpBlk",
+  "capacityMl": 46,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png"
+ },
+ "Sleek": {
+  "sku": "GBSlk50AnSpBlk",
+  "capacityMl": 50,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/sleek-50ml-18-415/clear/9b42d0f6ff218b4607550a681eec96b25ac8814669936d4af918007a2fb82eed.png"
+ },
+ "Slim": {
+  "sku": "GBSlm100AnSpBlk",
+  "capacityMl": 100,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/slim-100ml-18-415/clear/dac9aaf9d8e082cea9fbecaee4d3f9009b9807db4fa16bae2b4f86f5c21771f2.png"
+ },
+ "Boston Round": {
+  "sku": "GBBstn2ozBlkCapSht",
+  "capacityMl": 60,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/boston-round-60ml-20-400/clear/f5843f966a54e2359dfff5e53b364a512d97b6951f6b895577d0959a725c55ee.png"
+ },
+ "Tulip": {
+  "sku": "GBTulip6Gl",
+  "capacityMl": 6,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tulip-6ml-13-415/clear/db7071b85180341984ab8ef5940f030ac41a819d287f355b7e222e19b66d03d6.png"
+ },
+ "Flair": {
+  "sku": "GBFlair15BlkSht",
+  "capacityMl": 15,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/flair-15ml-13-415/clear/45f1e797b698679a23951775710320921f69f0998830644829a7bc3fdee68a6a.png"
+ },
+ "Grace": {
+  "sku": "GBGrce55AnSpBlk",
+  "capacityMl": 55,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/grace-55ml-18-415/clear/6d19501374251ffd86b2cc78fc2fffda91332d7e220c469f203af48e28b1b3dd.png"
+ },
+ "Rectangle": {
+  "sku": "GBRect10BlkSht",
+  "capacityMl": 10,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/footed-rectangle-10ml-13-415/clear/9467f39302483f3f4fd7be936a93c986dbe1eb3d1911d3e53c6a0105425665a2.png"
+ },
+ "Diamond": {
+  "sku": "GBDmnd2ozAnSpBlk",
+  "capacityMl": 60,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diamond-60ml-18-415/clear/9f5ed12391c2fda7eac78482fc42087aa00a02e31f8cf2a3ad59c58b43dfb514.png"
+ },
+ "Decorative": {
+  "sku": "GB3TPlGl",
+  "capacityMl": 3,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/tola-decorative-3ml-14.3mm/clear/83a7fcec620af5705032d7a5609fefe91e59a24cf845beffe03af7391e53e535.png"
+ },
+ "Bell": {
+  "sku": "GBBell10MtlRollBlkDot",
+  "capacityMl": 10,
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/bell-10ml-13-415/clear/c74d6e393f7981278be769a323bc78b4c6cf7d5de78133424717eb45cf8ca366.png"
+ }
+}

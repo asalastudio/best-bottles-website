@@ -448,3 +448,46 @@
   .hero[data-scene="diva-circle-stone"] .heroCopy h1 {order:3;margin:0;padding:30px 22px 0;font-size:30px;line-height:1.05}
   .hero[data-scene="diva-circle-stone"] .heroCopy p {order:4;margin:12px 0 0;padding:0 22px 30px;font-size:15px}
 }
+/* Navigation redesign (2026-11-04): shape icons in the mega menus; a quiet phone menu with plain rows, no arrows. */
+.megaShapeGrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px 18px;padding-top:22px}
+.megaShapeGrid a{display:grid;justify-items:center;gap:10px;padding:16px 8px;border-radius:2px;color:#2a2a2c;transition:background-color .15s,color .15s}
+.megaShapeGrid a:hover,.megaShapeGrid a:focus-visible{background:#f2eee6;color:#1c1c1e}
+.megaShapeGrid svg{color:#5a5248}
+.megaShapeGrid span{font-family:var(--font-brand);font-size:16px}
+.megaCollectionGrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px 28px;padding-top:18px}
+.megaCollectionGrid a{display:grid;grid-template-columns:30px minmax(0,1fr);align-items:start;gap:14px;padding:14px 0;border-bottom:1px solid #ece6dc}
+.megaCollectionGrid a svg{color:#5a5248;margin-top:1px}
+.megaCollectionGrid a>span{display:grid;gap:3px;color:inherit;font-size:inherit}
+.megaCollectionGrid strong{font-size:18px}
+.megaCollectionGrid small{color:#637588;font-size:12px;line-height:1.35}
+.megaCollectionGrid a:hover strong{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+@media(max-width:1100px){.megaShapeGrid{grid-template-columns:repeat(4,minmax(0,1fr))}.megaCollectionGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.phoneGraceButton{display:none}
+.menu{padding:6px 22px 30px;gap:0;max-height:calc(100svh - var(--home-header-height,64px));overflow-y:auto;overscroll-behavior:contain;border-top:1px solid #ece6dc}
+.menuSearch{display:flex;align-items:center;gap:10px;margin:10px 0 14px;padding:0 2px 10px;border-bottom:1px solid #ded4c4;color:#5a5248}
+.menuSearch input{flex:1;min-width:0;padding:8px 0;font-size:16px;background:transparent;outline-offset:3px}
+.menuPrimary{display:grid;padding:4px 0 18px}
+.menuPrimary a,.menuPrimary button{display:block;width:100%;text-align:left;padding:10px 0;font-family:var(--font-brand);font-size:23px;text-transform:none;letter-spacing:.01em;font-weight:400;line-height:1.2;color:#1c1c1e;background:none;border:0}
+.menuSecondary{display:grid;padding:16px 0 18px;border-top:1px solid #ece6dc}
+.menuSecondary a,.menuSecondary button{display:block;width:100%;text-align:left;padding:9px 0;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#4a4f57;background:none;border:0}
+.menuUtility{display:grid;gap:12px;padding-top:16px;border-top:1px solid #ece6dc;font-size:13px}
+.menuUtility .regionMobile{padding-top:0;border-top:0}
+.menuPanel{display:grid;padding-top:8px;animation:menuPanelIn .2s ease-out}
+.menuBack{justify-self:start;padding:8px 0;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#637588;background:none;border:0}
+.menuPanel h2{font-family:var(--font-brand);font-size:27px;font-weight:400;margin:6px 0 14px}
+.menuShapes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 10px}
+.menuShapes a,.menuCollections a{text-transform:none;letter-spacing:normal}
+.menuShapes a{display:grid;justify-items:center;gap:8px;padding:14px 4px;color:#2a2a2c;text-align:center}
+.menuShapes svg{color:#5a5248}
+.menuShapes span{font-family:var(--font-brand);font-size:15px}
+.menuCollections{display:grid}
+.menuCollections a{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;align-items:start;padding:12px 0}
+.menuCollections a svg{color:#5a5248}
+.menuCollections a>span{display:grid;gap:2px}
+.menuCollections strong{font-family:var(--font-brand);font-size:18px;font-weight:400}
+.menuCollections small{color:#637588;font-size:12px;line-height:1.35}
+.menuViewAll{justify-self:start;margin-top:14px;font-size:12px;text-transform:uppercase;letter-spacing:.1em;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+@keyframes menuPanelIn{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.menuPanel{animation:none}}
+.leftIcons{display:contents}
+@media(max-width:640px){.leftIcons{display:flex;align-items:center;grid-column:1;grid-row:1}.headerMain{grid-template-columns:84px minmax(0,1fr) 84px}.phoneGraceButton{display:grid;place-items:center;width:40px;height:44px;padding:0;background:none;border:0;color:inherit}.leftIcons .menuButton,.headerRight .phoneSearchButton,.headerRight .cartButton{width:42px}}

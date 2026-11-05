@@ -17,12 +17,21 @@ import { SHOP_COLLECTIONS, shopCollectionHref } from '@/lib/shopCollections';
 import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName } from '@/i18n/catalogCopy';
 import { localizeHref } from '@/i18n/paths';
 import { useAppLocale, useCopy } from '@/i18n/useCopy';
+import FamilyShapeIcon from '@/components/icons/FamilyShapeIcon';
+import CollectionIcon from '@/components/icons/CollectionIcon';
+import GraceMark from '@/components/icons/GraceMark';
+import { NAV_FAMILIES } from '@/lib/navFamilies';
 import styles from './CollectionShopping.module.css';
 
+
+
 type MegaMenu = 'families' | 'collections' | 'search';
+type MenuView = 'root' | 'families' | 'collections';
 
 export default function ShoppingHeader() {
     const [menu, setMenu] = useState(false);
+    // Phones: the menu opens on its main rows; families and collections each open their own panel.
+    const [menuView, setMenuView] = useState<MenuView>('root');
     const [activeMega, setActiveMega] = useState<MegaMenu | null>(null);
     const [cart, setCart] = useState(false);
     // Phones: the search field opens from an icon in the one-row header (2026-11-04).
@@ -56,10 +65,23 @@ export default function ShoppingHeader() {
         };
     }, []);
 
+    // The open phone menu covers the page, so the floating Grace launcher steps aside (globals.css).
+    useEffect(() => {
+        const root = document.documentElement;
+        if (menu) root.dataset.shopMenu = 'open';
+        else delete root.dataset.shopMenu;
+        return () => { delete root.dataset.shopMenu; };
+    }, [menu]);
+
     const toggleMega = (name: MegaMenu) => setActiveMega(current => current === name ? null : name);
     const closeNavigation = () => {
         setActiveMega(null);
         setMenu(false);
+        setMenuView('root');
+    };
+    const askGrace = () => {
+        closeNavigation();
+        open();
     };
 
     return <>
@@ -67,7 +89,10 @@ export default function ShoppingHeader() {
             <AnnouncementMarquee/>
             <div className={styles.headerMain}>
                 <div className={styles.headerLeft}>
-                    <button className={styles.menuButton} aria-label={menu ? t('closeMenu') : t('openMenu')} aria-expanded={menu} aria-controls="shopping-menu" onClick={() => setMenu(!menu)}>{menu ? <X size={22}/> : <List size={22}/>}</button>
+                    <div className={styles.leftIcons}>
+                        <button className={styles.menuButton} aria-label={menu ? t('closeMenu') : t('openMenu')} aria-expanded={menu} aria-controls="shopping-menu" onClick={() => { setMenuView('root'); setMenu(!menu); }}>{menu ? <X size={22}/> : <List size={22}/>}</button>
+                        <button type="button" className={styles.phoneGraceButton} aria-label={t('askGrace')} onClick={askGrace}><GraceMark/></button>
+                    </div>
                     <form action={catalogAction} className={`${styles.search} ${phoneSearch ? styles.searchOpen : ""}`} role="search" id="header-search">
                         <button type="submit" aria-label={t('search')}><MagnifyingGlass size={18}/></button>
                         <input name="search" aria-label={t('searchCatalog')} placeholder={t('searchPlaceholder')} type="search" autoFocus={phoneSearch}/>
@@ -94,7 +119,7 @@ export default function ShoppingHeader() {
             {activeMega && <div className={styles.megaBackdrop} onClick={() => setActiveMega(null)} aria-hidden="true"/>}
             {activeMega === 'families' && <div className={styles.megaMenu} id="families-mega-menu">
                 <div className={styles.megaHeading}><div><span>{t('findSilhouette')}</span><h2>{t('bottleFamilies')}</h2></div><LocaleLink href="/bottle-families" onClick={closeNavigation}>{t('viewAll')}</LocaleLink></div>
-                <div className={styles.megaFamilyGrid}>{Object.entries(FAMILY_ART).map(([family, image]) => <LocaleLink href={familyFinderHref(family)} onClick={closeNavigation} key={family}><Image src={familySketchSrc(family) ?? `/assets/homepage/${image}.webp`} alt="" width={400} height={300}/><span>{localizeFamilyName(locale, family)}</span></LocaleLink>)}</div>
+                <div className={styles.megaShapeGrid}>{NAV_FAMILIES.map(family => <LocaleLink href={familyFinderHref(family)} onClick={closeNavigation} key={family}><FamilyShapeIcon family={family} size={44} strokeWidth={1}/><span>{localizeFamilyName(locale, family)}</span></LocaleLink>)}</div>
             </div>}
             {activeMega === 'search' && <div className={styles.megaMenu} id="search-mega-menu">
                 <form action={catalogAction} className={styles.megaSearch} role="search">
@@ -109,14 +134,44 @@ export default function ShoppingHeader() {
             </div>}
             {activeMega === 'collections' && <div className={styles.megaMenu} id="collections-mega-menu">
                 <div className={styles.megaHeading}><div><span>{t('beginApplication')}</span><h2>{t('collections')}</h2></div><LocaleLink href="/collections" onClick={closeNavigation}>{t('viewAll')}</LocaleLink></div>
-                <div className={styles.megaCollectionGrid}>{SHOP_COLLECTIONS.map(collection => <LocaleLink key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}><strong>{localizeCollectionName(locale, collection.key, collection.title)}</strong><span>{localizeCollectionSubtitle(locale, collection.key, collection.subtitle)}</span></LocaleLink>)}</div>
+                <div className={styles.megaCollectionGrid}>{SHOP_COLLECTIONS.map(collection => <LocaleLink key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}><CollectionIcon collection={collection.key} size={30} strokeWidth={1.1}/><span><strong>{localizeCollectionName(locale, collection.key, collection.title)}</strong><small>{localizeCollectionSubtitle(locale, collection.key, collection.subtitle)}</small></span></LocaleLink>)}</div>
             </div>}
             {menu && <nav id="shopping-menu" className={styles.menu} aria-label={t('mobileNav')}>
-                <details><summary>{t('bottleFamilies')}</summary><LocaleLink href="/bottle-families" onClick={closeNavigation}>{t('viewAll')}</LocaleLink>{Object.keys(FAMILY_ART).map(family => <LocaleLink key={family} href={familyFinderHref(family)} onClick={closeNavigation}>{localizeFamilyName(locale, family)}</LocaleLink>)}</details>
-                <details><summary>{t('collections')}</summary><LocaleLink href="/collections" onClick={closeNavigation}>{t('viewAll')}</LocaleLink>{SHOP_COLLECTIONS.map(collection => <LocaleLink key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}>{localizeCollectionName(locale, collection.key, collection.title)}</LocaleLink>)}</details>
-                <LocaleLink href="/catalog" onClick={closeNavigation}>{t('fullCatalog')}</LocaleLink><LocaleLink href="/matrix" onClick={closeNavigation}>{t('buildYourBottle')}</LocaleLink><LocaleLink href="/blog" onClick={closeNavigation}>{t('journal')}</LocaleLink><LocaleLink href="/sign-in?redirect_url=%2Fportal" onClick={closeNavigation}>{t('clientPortal')}</LocaleLink>
-                <LanguageSwitcher className={styles.regionMobile}/>
-                <RegionSelector inline className={styles.regionMobile}/>
+                {menuView === 'root' && <>
+                    <form action={catalogAction} className={styles.menuSearch} role="search">
+                        <MagnifyingGlass size={18}/>
+                        <input name="search" aria-label={t('searchCatalog')} placeholder={t('searchPlaceholder')} type="search"/>
+                    </form>
+                    <div className={styles.menuPrimary}>
+                        <button type="button" onClick={() => setMenuView('families')}>{t('bottleFamilies')}</button>
+                        <button type="button" onClick={() => setMenuView('collections')}>{t('collections')}</button>
+                        <LocaleLink href="/catalog" onClick={closeNavigation}>{t('fullCatalog')}</LocaleLink>
+                        <LocaleLink href="/matrix" onClick={closeNavigation}>{t('buildYourBottle')}</LocaleLink>
+                    </div>
+                    <div className={styles.menuSecondary}>
+                        <LocaleLink href="/blog" onClick={closeNavigation}>{t('journal')}</LocaleLink>
+                        <LocaleLink href="/about" onClick={closeNavigation}>{t('about')}</LocaleLink>
+                        <LocaleLink href="/resources" onClick={closeNavigation}>{t('guides')}</LocaleLink>
+                        <button type="button" onClick={askGrace}>{t('askGrace')}</button>
+                    </div>
+                    <div className={styles.menuUtility}>
+                        <LocaleLink href="/sign-in?redirect_url=%2Fportal" onClick={closeNavigation}>{t('clientPortal')}</LocaleLink>
+                        <LanguageSwitcher className={styles.regionMobile}/>
+                        <RegionSelector inline className={styles.regionMobile}/>
+                    </div>
+                </>}
+                {menuView === 'families' && <div className={styles.menuPanel}>
+                    <button type="button" className={styles.menuBack} onClick={() => setMenuView('root')}>{t('back')}</button>
+                    <h2>{t('bottleFamilies')}</h2>
+                    <div className={styles.menuShapes}>{NAV_FAMILIES.map(family => <LocaleLink key={family} href={familyFinderHref(family)} onClick={closeNavigation}><FamilyShapeIcon family={family} size={36} strokeWidth={1}/><span>{localizeFamilyName(locale, family)}</span></LocaleLink>)}</div>
+                    <LocaleLink className={styles.menuViewAll} href="/bottle-families" onClick={closeNavigation}>{t('viewAll')}</LocaleLink>
+                </div>}
+                {menuView === 'collections' && <div className={styles.menuPanel}>
+                    <button type="button" className={styles.menuBack} onClick={() => setMenuView('root')}>{t('back')}</button>
+                    <h2>{t('collections')}</h2>
+                    <div className={styles.menuCollections}>{SHOP_COLLECTIONS.map(collection => <LocaleLink key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}><CollectionIcon collection={collection.key} size={26} strokeWidth={1.1}/><span><strong>{localizeCollectionName(locale, collection.key, collection.title)}</strong><small>{localizeCollectionSubtitle(locale, collection.key, collection.subtitle)}</small></span></LocaleLink>)}</div>
+                    <LocaleLink className={styles.menuViewAll} href="/collections" onClick={closeNavigation}>{t('viewAll')}</LocaleLink>
+                </div>}
             </nav>}
         </header>
         <CartDrawer isOpen={cart} onClose={() => setCart(false)}/>
