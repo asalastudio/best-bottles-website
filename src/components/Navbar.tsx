@@ -459,9 +459,9 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                             {/* Grace AI trigger removed from navbar in v3 — Grace now opens
                                 via the floating bottom-right launcher (GraceLauncher.tsx)
                                 so the entry point matches the PRD's collapsed-launcher spec.
-                                Mobile keeps the tab-bar Grace button, PDPs keep PdpGraceTrigger. */}
+                                Mobile uses the same launcher (no tab bar since 2026-11-04), PDPs keep PdpGraceTrigger. */}
 
-                            <LocaleLink href="/sign-in" aria-label="Account" className="hidden xl:flex items-center p-2 hover:text-muted-gold transition-colors">
+                            <LocaleLink href="/sign-in" aria-label="Account" className="flex items-center p-2 hover:text-muted-gold transition-colors">
                                 <User className="text-obsidian" size={20} />
                             </LocaleLink>
 

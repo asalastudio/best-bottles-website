@@ -9,7 +9,6 @@ import {
     SanityMegaMenuProvider,
     type MegaMenuPanelsData,
 } from "@/components/SanityMegaMenuProvider";
-import MobileTabBar from "@/components/mobile/MobileTabBar";
 import GraceProvider from "@/components/grace/GraceProvider";
 import GraceChatDrawer from "@/components/grace/GraceChatDrawer";
 import GraceLauncher from "@/components/grace/GraceLauncher";
@@ -53,7 +52,6 @@ function ProviderContent({
                         <GraceLayoutShell>
                             <SanityMegaMenuProvider initialData={megaMenuPanels}>
                                 {children}
-                                <MobileTabBar />
                             </SanityMegaMenuProvider>
                         </GraceLayoutShell>
                         <GraceChatDrawer />

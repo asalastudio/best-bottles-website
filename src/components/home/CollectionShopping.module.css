@@ -172,6 +172,7 @@
 
 /* Desktop keeps current labels; mobile uses the approved compact copy. */
 .headingMobile,.heroLeadMobile,.secondaryMobile,.viewAllArrow{display:none}
+.phoneSearchButton{display:none}
 .heroCopy h1 span{display:block}
 
 /* Approved mobile homepage (2026-09-15): compact chrome, overlay hero, Popular Families in the first viewport.
@@ -185,12 +186,19 @@
 
   .header{background:#fbfaf7}
   .headerMain{
-    grid-template-columns:44px minmax(0,1fr) 44px;
+    /* One row, as luxury e-commerce headers on phones: menu | logo | search, cart (Jordan 2026-11-04). */
+    grid-template-columns:88px minmax(0,1fr) 88px;
     gap:8px 8px;
     padding:8px 16px 12px;
     min-height:62px;
   }
-  .headerLeft,.headerRight{display:contents}
+  .headerLeft{display:contents}
+  .headerRight{display:flex;align-items:center;justify-content:flex-end;grid-column:3;grid-row:1}
+  .menuButton{justify-self:start}
+  /* The lockup is wider than the space between the icons on a 390px phone: draw it smaller, centred. */
+  .brand{transform:scale(.78);transform-origin:center}
+  .phoneSearchButton{display:grid;place-items:center;width:44px;height:44px;padding:0;background:none;border:0;color:inherit}
+  .search:not(.searchOpen){display:none}
   .grace,.searchTrigger,.portal{display:none}
   .menuButton,.cartButton{
     display:grid;
@@ -397,7 +405,8 @@
 @media(max-width:640px) {
   .hero[data-scene="diva-circle-stone"] {display:flex;flex-direction:column;aspect-ratio:auto;height:auto}
   .hero[data-scene="diva-circle-stone"] .stoneArt {position:relative;inset:auto;width:100%;aspect-ratio:1.35}
-  .hero[data-scene="diva-circle-stone"] .stoneArt {--stone-offset:24px;overflow:hidden}
+  /* The phone photograph is its own crop, framed for this box: no shift, so no mirrored strip above it. */
+  .hero[data-scene="diva-circle-stone"] .stoneArt {--stone-offset:0px;overflow:hidden}
   .hero[data-scene="diva-circle-stone"] .stoneMirrorImage {position:absolute;top:0;right:0;width:auto;height:calc(100vw / 1.35)}
   .hero[data-scene="diva-circle-stone"] .stoneImage {
     height:100%;object-fit:cover;object-position:right center;
@@ -412,4 +421,30 @@
   .hero[data-scene="diva-circle-stone"] .buttons {flex-direction:row;gap:10px}
   .hero[data-scene="diva-circle-stone"] .primary,
   .hero[data-scene="diva-circle-stone"] .secondary {font-size:11px;padding:12px 16px;min-height:44px}
+}
+
+/* Phone hero, 2026-11-04 (Jordan): the first screen is the photograph alone, full height under the one-row header, with
+   Shop Bottles / Build Your Bottle in a bar stuck to the bottom of the screen; the headline and line follow just below
+   the fold (still the page's h1). The copy block's children join the hero's column so the bar can sit between them. */
+@media(max-width:640px) {
+  .hero[data-scene="diva-circle-stone"] {display:flex;flex-direction:column;height:auto;background:#f5f0e8}
+  .hero[data-scene="diva-circle-stone"] .stoneArt {
+    position:relative;inset:auto;order:1;width:100%;aspect-ratio:auto;
+    height:calc(100svh - var(--home-header-height, 91px));min-height:520px;max-height:940px;
+  }
+  .hero[data-scene="diva-circle-stone"] .stoneMirror {display:none}
+  .hero[data-scene="diva-circle-stone"] .stoneArt picture {display:contents}
+  .hero[data-scene="diva-circle-stone"] .stoneImage {width:100%;height:100%;object-fit:cover;object-position:center 62%;transform:none}
+  .hero[data-scene="diva-circle-stone"] .heroCopy {display:contents}
+  .hero[data-scene="diva-circle-stone"] .buttons {
+    order:2;position:sticky;bottom:0;z-index:2;margin-top:-60px;
+    display:grid;grid-template-columns:1fr 1fr;gap:8px;
+    padding:8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+    background:rgba(245,240,232,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-top:1px solid rgba(53,50,46,.08);
+  }
+  .hero[data-scene="diva-circle-stone"] .primary,
+  .hero[data-scene="diva-circle-stone"] .secondary {width:100%;justify-content:center;text-align:center;font-size:11.5px;min-height:44px;padding:11px 8px}
+  .hero[data-scene="diva-circle-stone"] .heroCopy h1 {order:3;margin:0;padding:30px 22px 0;font-size:30px;line-height:1.05}
+  .hero[data-scene="diva-circle-stone"] .heroCopy p {order:4;margin:12px 0 0;padding:0 22px 30px;font-size:15px}
 }
