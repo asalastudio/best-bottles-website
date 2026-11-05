@@ -52,12 +52,10 @@ import {
     graceRefineDestination,
     type GraceRefinementProposal,
 } from "@/lib/grace/refineState";
-import {
-    createGraceOpenAIRealtimeAdapter,
-    GraceRealtimeConnectionCancelledError,
-    type GraceOpenAIRealtimeAdapter,
-    type GraceRealtimeToolImplementations,
-} from "@/lib/grace/openaiRealtimeAdapter";
+// Type-only: the SDK module itself loads on the first voice connect (lazyRealtimeAdapter).
+import type { GraceOpenAIRealtimeAdapter, GraceRealtimeToolImplementations } from "@/lib/grace/openaiRealtimeAdapter";
+import { createLazyGraceRealtimeAdapter } from "@/lib/grace/lazyRealtimeAdapter";
+import { GraceRealtimeConnectionCancelledError } from "@/lib/grace/realtimeErrors";
 import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
 import { formatGraceMemoryLines, normalizeRememberNoteKind, resolveRememberNoteHref, type GraceMemoryNote } from "@/lib/grace/memoryNotes";
 import { buildGraceSiteCapabilities } from "@/lib/grace/siteCapabilities";
@@ -2687,7 +2685,7 @@ function GraceProviderBase({
     }, []);
 
     const openAIAdapter = useMemo<GraceOpenAIRealtimeAdapter>(() =>
-        createGraceOpenAIRealtimeAdapter({
+        createLazyGraceRealtimeAdapter({
             baseInstructions: GRACE_REALTIME_INSTRUCTIONS,
             toolImplementations: clientTools as unknown as GraceRealtimeToolImplementations,
             knowledgeContext: {

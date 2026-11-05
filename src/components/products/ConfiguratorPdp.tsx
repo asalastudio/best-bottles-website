@@ -43,7 +43,6 @@ import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 import { isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
 import { isAssembledOneMlVialImage } from "@/lib/products/one-ml-vial-applicators";
 
-import { useGLTF } from "@react-three/drei";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import FocusedPdpLayout from "./FocusedPdpLayout";
 import type { LocalKitPilot } from "@/lib/products/local-kit-pilot";
@@ -365,9 +364,17 @@ export default function ConfiguratorPdp({
       const b = fam.bodyForGlass?.[g];
       if (b) ids.add(b);
     }
-    for (const id of ids) {
-      try { useGLTF.preload(`/models/bodies-thickness/${id}.glb`); } catch {}
-    }
+    // drei (and three.js with it) loads here on demand, not with the page:
+    // photo-only and mobile PDPs never need it. Same module instance as the
+    // viewer's, so the warmed GLBs land in the cache the viewer reads.
+    let cancelled = false;
+    void import("@react-three/drei").then(({ useGLTF }) => {
+      if (cancelled) return;
+      for (const id of ids) {
+        try { useGLTF.preload(`/models/bodies-thickness/${id}.glb`); } catch {}
+      }
+    }).catch(() => {});
+    return () => { cancelled = true; };
   }, [fam]);
 
   const activeMeta = activeBase === "none" ? null : CLOSURE_META[activeBase] ?? null;

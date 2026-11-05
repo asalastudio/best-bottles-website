@@ -19,7 +19,10 @@ describe("Sentry is wired into every runtime", () => {
         expect(source).toContain("export const onRequestError = Sentry.captureRequestError");
         expect(source).toContain('await import("./sentry.server.config")');
         expect(source).toContain('await import("./sentry.edge.config")');
-        expect(read("src/instrumentation-client.ts")).toContain("export const onRouterTransitionStart = Sentry.captureRouterTransitionStart");
+        // The client SDK loads after the page's load event; router transitions still reach it.
+        expect(read("src/instrumentation-client.ts")).toContain("export function onRouterTransitionStart");
+        expect(read("src/instrumentation-client.ts")).toContain("Sentry.captureRouterTransitionStart(href, navigationType)");
+        expect(read("src/instrumentation-client.ts")).not.toMatch(/^import \* as Sentry/m);
     });
 
     it("the SDK is a no-op without a DSN and never sends PII by default", () => {
