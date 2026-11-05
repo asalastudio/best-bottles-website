@@ -11,7 +11,6 @@ import {
 } from "@/components/SanityMegaMenuProvider";
 import GraceProvider from "@/components/grace/GraceProvider";
 import GraceChatDrawer from "@/components/grace/GraceChatDrawer";
-import GraceLauncher from "@/components/grace/GraceLauncher";
 import GraceLayoutShell from "@/components/grace/GraceLayoutShell";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import { CLERK_ENABLED } from "@/lib/clerk";
@@ -55,7 +54,7 @@ function ProviderContent({
                             </SanityMegaMenuProvider>
                         </GraceLayoutShell>
                         <GraceChatDrawer />
-                        <GraceLauncher />
+                        {/* No floating Grace bubble (2026-11-04): Grace opens from the header, the phone menu and the product buy box. */}
                     </GraceProvider>
                 </Suspense>
                 <AnalyticsProvider withClerk={withClerk} />

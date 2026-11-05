@@ -825,6 +825,37 @@
     color: var(--pdp-muted);
 }
 
+.askGrace {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--pdp-line, #e8e2d9);
+    font-size: 12px;
+    color: var(--pdp-muted);
+    text-align: left;
+    background: none;
+    cursor: pointer;
+}
+
+.askGrace svg {
+    flex-shrink: 0;
+    color: var(--pdp-gold);
+}
+
+.askGraceLink {
+    color: var(--pdp-ink, #1c1c1e);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+.askGrace:hover .askGraceLink {
+    color: var(--pdp-gold);
+}
+
 .caseLink {
     color: var(--pdp-gold);
     text-decoration: underline;
