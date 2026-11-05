@@ -86,6 +86,7 @@ function readLocalKitReview(): LocalKitReview | null {
         process.env.NODE_ENV === "development" ? "public/local-kits/vial2-short-black-2026-11-02/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/vial3-swatches-builder-2026-11-02/kits.json" : undefined,
         process.env.NODE_ENV === "development" ? "public/local-kits/jumbo28-archive-geometry-2026-11-02/kits.json" : undefined,
+        process.env.NODE_ENV === "development" ? "public/local-kits/jumbo-glass-2026-11-04/kits.json" : undefined,
         // Last: the Vial review kits (2 ml amber reshaped) must win over the vial2 lists above.
         process.env.NODE_ENV === "development" ? "public/local-kits/vial-masters-2026-11-03/kits.json" : undefined,
         // The Pillar 9 ml sprayers on the photographed body (4 Nov 2026) supersede the 13-415 pilot row.
@@ -176,6 +177,10 @@ export function localGpt13ComponentKits(host: string | null, flag: unknown): Rec
                 "cylinder-50ml-18-415", "cylinder-100ml-18-415"].includes(kit.register?.bodyId ?? "")) rows[sku] = kit;
         }
     } catch { /* Missing review files do not affect production or older pilots. */ }
+    const jumbo = readLocalKitReview();
+    for (const [sku, kit] of Object.entries(jumbo?.rows ?? {})) {
+        if ((kit as { reviewMaster?: string }).reviewMaster === "jumbo-glass-2026-11-04") rows[sku] = kit;
+    }
     return withCurrentSharedMasters(rows);
 }
 
