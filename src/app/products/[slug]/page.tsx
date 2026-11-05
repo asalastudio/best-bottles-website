@@ -92,7 +92,7 @@ function getPrimaryVariant(data: ProductGroupPayload | null): ProductVariant | n
 
 async function getSiblingGroups(data: ProductGroupPayload | null, activeSlug: string): Promise<SiblingGroup[]> {
     const group = data?.group;
-    if (!group) return [];
+    if (!group || activeSlug.startsWith("pillar-9ml-")) return [];
     return await getConvexClient().query(api.products.getSiblingGroups, {
         family: sourceFamilyForProduct(activeSlug, group.family),
         capacityMl: group.capacityMl ?? 0,

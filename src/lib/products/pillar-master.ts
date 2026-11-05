@@ -4,8 +4,10 @@ const PILLAR_MASTER_SKUS = new Set([
     "GBPillar9SprySlShn", "GBPillar9BlkShSht", "GBPillar9RollBlkDot", "GBPillar9MtlRollBlkdot",
 ]);
 
-export const PILLAR_MASTER_VERSION = "pillar-9ml-owner-reference-v1";
+const PILLAR_ROLLON_FINISH = /^GBPillar9(?:Mtl)?Roll(?:BlkSh|CuMatt|GlMatt|GlSh|PinkDot|SlDot|SlMatt|SlSh)$/;
+
+export const PILLAR_MASTER_VERSION = "pillar-9ml-owner-reference-v3";
 
 export function pillarReviewSku(sku?: string | null): string | null {
-    return process.env.NODE_ENV === "development" && sku && PILLAR_MASTER_SKUS.has(sku) ? sku : null;
+    return process.env.NODE_ENV === "development" && sku && (PILLAR_MASTER_SKUS.has(sku) || PILLAR_ROLLON_FINISH.test(sku)) ? sku : null;
 }
