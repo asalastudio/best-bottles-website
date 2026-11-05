@@ -27,9 +27,9 @@ import {
 } from "@/lib/materials/registry";
 import * as THREE from "three";
 import {
-  GLASS_PRESETS, applyGlassPreset, roleOf,
-  type GlassPresetId, type GlassPreset,
+  GLASS_PRESETS, roleOf, type GlassPresetId, type GlassPreset,
 } from "@/lib/materials/glassPresets";
+import { applyGlassPreset } from "@/lib/materials/glassMaterial";
 
 export type ClosureMode =
   | "none" | "capped" | "roller" | "rollerCapped"

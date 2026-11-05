@@ -10,7 +10,6 @@
  * React boundaries, tool fallbacks). Unhandled errors are captured by the SDK
  * automatically — do not wrap those.
  */
-import * as Sentry from "@sentry/nextjs";
 
 export type ReportErrorContext = {
     /** Subsystem label, e.g. "grace-rate-limit", "catalog-search", "viewer-3d". */
@@ -29,7 +28,9 @@ export function reportError(error: unknown, context: ReportErrorContext): void {
         console.error(label, error);
     }
 
-    try {
+    // The SDK is imported on demand so client components that use this helper
+    // (the 3D viewer boundary, the Grace workspace) do not ship it with the page.
+    void import("@sentry/nextjs").then((Sentry) => {
         Sentry.withScope((scope) => {
             scope.setTag("area", context.area);
             for (const [key, value] of Object.entries(context.tags ?? {})) {
@@ -39,7 +40,7 @@ export function reportError(error: unknown, context: ReportErrorContext): void {
             if (context.level) scope.setLevel(context.level);
             Sentry.captureException(error instanceof Error ? error : new Error(typeof error === "string" ? error : JSON.stringify(error)));
         });
-    } catch {
+    }).catch(() => {
         // Telemetry is best-effort by design.
-    }
+    });
 }

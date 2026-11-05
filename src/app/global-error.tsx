@@ -1,6 +1,5 @@
 "use client";
 
-import * as Sentry from "@sentry/nextjs";
 import { useEffect } from "react";
 
 /**
@@ -16,7 +15,8 @@ export default function GlobalError({
     reset: () => void;
 }) {
     useEffect(() => {
-        Sentry.captureException(error);
+        // Loaded on demand: this boundary ships with every page, the SDK need not.
+        void import("@sentry/nextjs").then((Sentry) => Sentry.captureException(error)).catch(() => {});
     }, [error]);
 
     return (

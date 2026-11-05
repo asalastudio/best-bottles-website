@@ -5,6 +5,7 @@ import {
     tool,
     type FunctionTool,
 } from "@openai/agents/realtime";
+import { GraceRealtimeConnectionCancelledError, GraceRealtimeDisconnectedError } from "./realtimeErrors";
 import { GRACE_REALTIME_MODEL, GRACE_REALTIME_SPEED, GRACE_REALTIME_VOICE } from "./openaiRealtimeConfig";
 import {
     type GraceOpenAIToolSpec,
@@ -123,13 +124,6 @@ export type GraceRealtimeSessionLike = {
     };
 }
 
-/** The live Realtime transport is gone; reconnect before sending again. */
-export class GraceRealtimeDisconnectedError extends Error {
-    constructor(message = "Grace Realtime is not connected.") {
-        super(message);
-        this.name = "GraceRealtimeDisconnectedError";
-    }
-}
 
 function muteRealtimeMicrophone(session: GraceRealtimeSessionLike, muted: boolean): void {
     try {
@@ -196,12 +190,6 @@ export type GraceOpenAIRealtimeAdapter = {
     compressSession(catalogNote: string): Promise<void>;
 };
 
-export class GraceRealtimeConnectionCancelledError extends Error {
-    constructor() {
-        super("Grace Realtime connection was cancelled.");
-        this.name = "GraceRealtimeConnectionCancelledError";
-    }
-}
 
 function serializeToolResult(result: unknown): string {
     if (typeof result === "string") return result;
@@ -713,3 +701,5 @@ export function createGraceOpenAIRealtimeAdapter({
         },
     };
 }
+
+export { GraceRealtimeConnectionCancelledError, GraceRealtimeDisconnectedError };

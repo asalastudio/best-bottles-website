@@ -228,7 +228,9 @@ describe("Grace 100-point hardening contracts", () => {
 
   it("runs Grace exclusively on OpenAI Realtime — no ElevenLabs pathway remains", () => {
     const provider = read("src/components/grace/GraceProvider.tsx");
-    expect(provider).toContain("createGraceOpenAIRealtimeAdapter");
+    // The provider builds the realtime adapter through a lazy facade so the SDK loads on first connect.
+    expect(provider).toContain("createLazyGraceRealtimeAdapter");
+    expect(read("src/lib/grace/lazyRealtimeAdapter.ts")).toContain("createGraceOpenAIRealtimeAdapter");
     expect(provider).toContain('"/api/openai/realtime-token"');
     expect(provider).toContain('"/api/grace/chat"');
     expect(provider).not.toContain("@elevenlabs/react");

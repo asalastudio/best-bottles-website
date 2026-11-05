@@ -18,9 +18,9 @@ import * as THREE from "three";
 import { useMetalStudioHdri, METAL_STUDIO_DEFAULTS, APPROVED_METAL_STUDIO,
          type MetalStudioParams, type MetalStudioId } from "@/lib/materials/metalStudio";
 import {
-  GLASS_PRESETS, applyGlassPreset, roleOf,
-  type GlassPreset, type GlassPresetId,
+  GLASS_PRESETS, roleOf, type GlassPreset, type GlassPresetId,
 } from "@/lib/materials/glassPresets";
+import { applyGlassPreset } from "@/lib/materials/glassMaterial";
 import {
   STUDIO_PRESETS, APPROVED_STUDIO,
   type StudioPresetId,
