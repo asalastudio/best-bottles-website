@@ -1,4 +1,6 @@
 import "server-only";
+import pillarCaps from "../../../public/local-kits/pillar-caps-2026-11-04/kits.json";
+import { isPillarRollOnSku } from "../products/pillar-master";
 import manifest from "./approved-kits.generated.json";
 import sprays from "./cylinder-spray-kits.generated.json";
 import jumbo from "./cylinder-jumbo-overcap.generated.json";
@@ -283,7 +285,8 @@ const revisedRows = Object.fromEntries(Object.entries(proposedRows).map(([sku, k
 
     }) }];
 })) as Record<string, BuilderKit>;
-const rows = { ...manifest.rows, ...revisedRows } as unknown as Record<string, BuilderKit>;
+const pillarRollOnRows = Object.fromEntries(Object.entries(pillarCaps.rows).filter(([sku]) => isPillarRollOnSku(sku)));
+const rows = { ...manifest.rows, ...revisedRows, ...pillarRollOnRows } as unknown as Record<string, BuilderKit>;
 export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {

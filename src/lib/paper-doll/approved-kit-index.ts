@@ -1,3 +1,4 @@
+import { isPillarRollOnSku } from "../products/pillar-master";
 import index from "./approved-kit-index.json";
 import sprays from "./cylinder-spray-index.json";
 import jumbo from "./cylinder-jumbo-overcap-index.json";
@@ -38,6 +39,7 @@ export function cylinderLargeReducerGraceSku(sku: string): string | null {
 
 export function updatedCylinderKitVersion(sku: string | null | undefined): string | null {
     if (!sku) return null;
+    if (isPillarRollOnSku(sku)) return "pillar-rollon-8f3982db65f6";
     if (jumbo28MeasuredSkus.has(sku)) return `${index.version}-jumbo28-measured-v1`;
     if (body25Skus.has(sku)) return body25.version + "-clear-refraction-v3";
     if (cylinderLargeReducerGraceSku(sku)) return "cylinder-large-reducer-refraction-v3";
@@ -54,5 +56,5 @@ export function updatedCylinderKitVersion(sku: string | null | undefined): strin
     return null;
 }
 export function approvedMasterSku(sku: string | null | undefined): string | null {
-    return sku && (skus.has(sku) || cylinderLargeReducerGraceSku(sku)) ? sku : null;
+    return sku && (skus.has(sku) || isPillarRollOnSku(sku) || cylinderLargeReducerGraceSku(sku)) ? sku : null;
 }
