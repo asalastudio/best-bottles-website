@@ -4,7 +4,9 @@
 /* ── shadcn/ui radius token (used by shadcn components) ─────────────────── */
 :root {
   --radius: 0.375rem;
-  --mobile-tab-bar-height: calc(3.5rem + 1px); /* 56px rail + 1px top border */
+  /* 2026-11-04 (Jordan): no app-style bottom tab bar on the mobile web; the header carries menu, search, account
+     and cart, as e-commerce sites do. The variables stay so fixed bars still clear the home indicator. */
+  --mobile-tab-bar-height: 0px;
   --mobile-tab-bar-clearance: calc(var(--mobile-tab-bar-height) + env(safe-area-inset-bottom, 0px));
 }
 
@@ -870,3 +872,8 @@ img.app-wordmark {
   body:has([data-mobile-builder]) footer .grid > * { min-width: 0; overflow-wrap: anywhere; }
 }
 
+
+/* Phone homepage (2026-11-04): Ask Grace floats above the sticky Shop / Build bar instead of covering it. */
+@media (max-width: 640px) {
+  body:has([data-scene="diva-circle-stone"]) [data-grace-launcher] { bottom: calc(68px + env(safe-area-inset-bottom, 0px)); }
+}

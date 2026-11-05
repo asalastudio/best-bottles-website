@@ -25,6 +25,8 @@ export default function ShoppingHeader() {
     const [menu, setMenu] = useState(false);
     const [activeMega, setActiveMega] = useState<MegaMenu | null>(null);
     const [cart, setCart] = useState(false);
+    // Phones: the search field opens from an icon in the one-row header (2026-11-04).
+    const [phoneSearch, setPhoneSearch] = useState(false);
     const header = useRef<HTMLElement>(null);
     const { itemCount, isCartHydrated } = useCart();
     const { open } = useGrace();
@@ -37,6 +39,7 @@ export default function ShoppingHeader() {
             if (event.key === 'Escape') {
                 setMenu(false);
                 setActiveMega(null);
+                setPhoneSearch(false);
             }
         };
         const closeOutside = (event: PointerEvent) => {
@@ -65,9 +68,9 @@ export default function ShoppingHeader() {
             <div className={styles.headerMain}>
                 <div className={styles.headerLeft}>
                     <button className={styles.menuButton} aria-label={menu ? t('closeMenu') : t('openMenu')} aria-expanded={menu} aria-controls="shopping-menu" onClick={() => setMenu(!menu)}>{menu ? <X size={22}/> : <List size={22}/>}</button>
-                    <form action={catalogAction} className={styles.search} role="search">
+                    <form action={catalogAction} className={`${styles.search} ${phoneSearch ? styles.searchOpen : ""}`} role="search" id="header-search">
                         <button type="submit" aria-label={t('search')}><MagnifyingGlass size={18}/></button>
-                        <input name="search" aria-label={t('searchCatalog')} placeholder={t('searchPlaceholder')} type="search"/>
+                        <input name="search" aria-label={t('searchCatalog')} placeholder={t('searchPlaceholder')} type="search" autoFocus={phoneSearch}/>
                     </form>
                     <div className={styles.region}>
                         <LanguageSwitcher />
@@ -78,6 +81,7 @@ export default function ShoppingHeader() {
                 <div className={styles.headerRight}>
                     <button type="button" className={styles.searchTrigger} aria-expanded={activeMega === 'search'} aria-controls="search-mega-menu" onClick={() => toggleMega('search')}><MagnifyingGlass size={18}/><span>{t('search')}</span></button>
                     <button className={styles.grace} onClick={() => open()}>{t('askGrace')}</button>
+                    <button type="button" className={styles.phoneSearchButton} aria-label={t('search')} aria-expanded={phoneSearch} aria-controls="header-search" onClick={() => setPhoneSearch(open => !open)}>{phoneSearch ? <X size={22}/> : <MagnifyingGlass size={22}/>}</button>
                     <LocaleLink className={styles.portal} href="/sign-in?redirect_url=%2Fportal" aria-label={t('signInPortal')}><User size={22}/></LocaleLink>
                     <button className={styles.cartButton} aria-label={isCartHydrated ? t('openCartWithCount', { count: itemCount }) : t('openCart')} onClick={() => setCart(true)}><ShoppingBag size={22}/>{isCartHydrated && itemCount > 0 && <span>{itemCount}</span>}</button>
                 </div>

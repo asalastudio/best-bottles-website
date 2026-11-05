@@ -25,17 +25,18 @@ describe("responsive shell contract", () => {
         expect(navbar).not.toContain('src="/assets/best-bottles-logo.png"');
     });
 
-    it("uses one safe-area-aware tab-bar clearance for page content and the cart drawer", () => {
+    it("has no app-style bottom tab bar; fixed bars still clear the home indicator through one variable", () => {
+        // 2026-11-04 (Jordan): the mobile web follows e-commerce practice, with menu, search and cart in the header.
         const globals = read("src/app/globals.css");
-        const mobileTabs = read("src/components/mobile/MobileTabBar.tsx");
+        const providers = read("src/components/AppProviders.tsx");
         const cartDrawer = read("src/components/CartDrawer.tsx");
         const footer = read("src/components/Footer.tsx");
 
+        expect(providers).not.toContain("<MobileTabBar");
+        expect(globals).toContain("--mobile-tab-bar-height: 0px");
         expect(globals).toContain("--mobile-tab-bar-clearance:");
-        expect(globals).toContain("--mobile-tab-bar-height: calc(3.5rem + 1px)");
         expect(globals).toContain("padding-bottom: calc(var(--mobile-tab-bar-clearance) + 0.75rem)");
         expect(globals).toContain("@media (max-width: 1279px)");
-        expect(mobileTabs).toContain("xl:hidden");
         expect(cartDrawer).toContain("bottom-[var(--mobile-tab-bar-clearance)]");
         expect(cartDrawer).toContain("xl:bottom-0");
         expect(footer).toContain("pb-[calc(2rem+var(--mobile-tab-bar-clearance))] xl:pb-8");
