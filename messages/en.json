@@ -140,7 +140,12 @@
     "buildStepClosureAlt": "Shiny black, shiny gold and brown leather caps",
     "buildStepCompleteAlt": "A clear 25 ml Cylinder bottle with a shiny gold spray cap",
     "buildStepsTagline": "Your vision.\nOur expertise.",
-    "buildStepsCta": "Start building"
+    "buildStepsCta": "Start building",
+    "sheetEyebrow": "Shop bottles",
+    "sheetTitle": "Choose a bottle shape",
+    "sheetAllFamilies": "See all families",
+    "sheetOrBuild": "or build your bottle",
+    "sheetClose": "Close"
   },
   "catalog": {
     "title": "Catalog",

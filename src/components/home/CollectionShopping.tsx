@@ -13,6 +13,10 @@ import LocaleLink from '@/components/LocaleLink';
 import { localizeCollectionName, localizeCollectionSubtitle } from '@/i18n/catalogCopy';
 import { useAppLocale, useCopy } from '@/i18n/useCopy';
 import styles from './CollectionShopping.module.css';
+import dynamic from 'next/dynamic';
+
+// Loaded on tap only, so the homepage carries no extra script for it.
+const FamilySheet = dynamic(() => import('./FamilySheet'), { ssr: false });
 import ShopThreeWays from './ShopThreeWays';
 import { collectionCardImage } from './collectionCardImage';
 import type { HomeBrowseData } from '@/lib/homepageBrowse';
@@ -43,6 +47,8 @@ const DEMO_HOTSPOTS: NonNullable<HomepageData['heroHotspots']> = [
 ];
 export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSlides']; hotspots?:HomepageData['heroHotspots']}) {
     const [index,setIndex]=useState(0);
+    // Phones: Shop bottles opens the bottle-shape sheet; desktop follows the link to the Bottle Families page.
+    const [familySheet,setFamilySheet]=useState(false);
     const heroVideo=useRef<HTMLVideoElement>(null);
     // Keep previous scenes available for comparison while using the selected stone photograph.
     const scene=useSyncExternalStore(()=>()=>{}, ()=>{
@@ -72,10 +78,15 @@ export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSl
             <p className={styles.heroLead}>{slide?.subheadline || t("lead")}</p>
             {!slide?.subheadline && <p className={styles.heroLeadMobile}>{t("leadMobile")}</p>}
             <div className={styles.buttons}>
-                <LocaleLink className={styles.primary} href={slide?.ctaHref || '/catalog'}>{slide?.ctaText || t("shopBottles")}</LocaleLink>
+                <LocaleLink className={styles.primary} href={slide?.ctaHref || '/bottle-families'} data-testid="hero-shop-bottles" onClick={event => {
+                    if (slide?.ctaHref || !window.matchMedia('(max-width: 640px)').matches) return;
+                    event.preventDefault();
+                    setFamilySheet(true);
+                }}>{slide?.ctaText || t("shopBottles")}</LocaleLink>
                 <LocaleLink className={styles.secondary} href="/matrix"><span className={styles.secondaryDesktop}>{t("buildYourBottle")}</span><span className={styles.secondaryMobile}>{t("buildYourBottleTitle")}</span></LocaleLink>
             </div>
         </div>
+        {familySheet && <FamilySheet onClose={() => setFamilySheet(false)}/>}
         {(slides?.length??0)>1 && <div className={styles.heroControls}>{slides!.map((_,i)=><button key={i} aria-label={`Show hero ${i+1}`} aria-pressed={index===i} onClick={()=>setIndex(i)}>{i+1}</button>)}</div>}
     </section>;
 }

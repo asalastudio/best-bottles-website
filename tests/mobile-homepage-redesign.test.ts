@@ -51,7 +51,9 @@ describe("mobile homepage redesign", () => {
         expect(html).toContain("Build Your Bottle");
         expect(html).not.toContain("Build Your Bottle →");
         expect(html).toContain('href="/matrix"');
-        expect(html).toContain('href="/catalog"');
+        // Shop bottles leads to the shape choice (2026-11-04): the Bottle Families page on desktop, the shape sheet on phones.
+        expect(html).toContain('href="/bottle-families"');
+        expect(html).toContain('data-testid="hero-shop-bottles"');
     });
 
     it("opens the family rail with Cylinder, Boston Round, Round, then Circle", () => {

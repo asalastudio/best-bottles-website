@@ -140,7 +140,12 @@
     "buildStepClosureAlt": "Tapas negra brillante, dorada brillante y de piel marrón",
     "buildStepCompleteAlt": "Un frasco Cylinder transparente de 25 ml con tapa atomizadora dorada brillante",
     "buildStepsTagline": "Tu visión.\nNuestra experiencia.",
-    "buildStepsCta": "Empieza a crear"
+    "buildStepsCta": "Empieza a crear",
+    "sheetEyebrow": "Comprar frascos",
+    "sheetTitle": "Elige una forma de frasco",
+    "sheetAllFamilies": "Ver todas las familias",
+    "sheetOrBuild": "o arma tu frasco",
+    "sheetClose": "Cerrar"
   },
   "catalog": {
     "title": "Catálogo",
