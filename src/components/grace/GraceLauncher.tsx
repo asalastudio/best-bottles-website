@@ -32,7 +32,11 @@ export default function GraceLauncher() {
         // A reply counts as read only while its conversation is visible.
         if (isOpen || route.startsWith("/grace-workspace")) setLastReadId(lastReply); // eslint-disable-line react-hooks/set-state-in-effect
     }, [isOpen, lastReply, route]);
-    if (isOpen || ownsViewport) return null;
+    // The floating launcher lives on the homepage only (2026-11-04): on catalog, product and builder pages it sat over
+    // filters and buttons. There Grace opens from the header (desktop link, phone icon and menu). It still shows while a
+    // reply is coming or unread, so an answer is never lost.
+    const homeOnly = route !== "/" && !working && !unread;
+    if (isOpen || ownsViewport || homeOnly) return null;
     return <button type="button" data-grace-launcher="" className={`${styles.launcher} ${edge ? styles.edge : ""} ${scrolled ? styles.collapsed : ""}`}
         onClick={() => openPanel()} aria-label={unread ? `${t("openAria")} · ${c.unread}` : t("openAria")} title={t("openTitle")}
         data-grace-agentic={companionMode === "agentic" ? "true" : "false"}>

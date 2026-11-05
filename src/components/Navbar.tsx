@@ -20,6 +20,15 @@ import { urlFor } from "@/sanity/lib/image";
 import { MEGA_MENU_PANELS, type MegaMenuId, type MegaMenuPanelContent } from "@/lib/megaMenu";
 import { localizeHref } from "@/i18n/paths";
 import { useAppLocale, useCopy } from "@/i18n/useCopy";
+import { useGrace } from "@/components/useGrace";
+import FamilyShapeIcon from "@/components/icons/FamilyShapeIcon";
+import CollectionIcon from "@/components/icons/CollectionIcon";
+import GraceMark from "@/components/icons/GraceMark";
+import { NAV_FAMILIES } from "@/lib/navFamilies";
+import { familyFinderHref } from "@/lib/products/focused-shopping";
+import { SHOP_COLLECTIONS, shopCollectionHref } from "@/lib/shopCollections";
+import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName } from "@/i18n/catalogCopy";
+import menuStyles from "@/components/home/CollectionShopping.module.css";
 
 interface NavbarProps {
     variant?: "home" | "catalog";
@@ -108,7 +117,8 @@ const SEARCH_SUGGESTIONS = [
 
 export default function Navbar({ variant = "home", initialSearchValue, hideSearch = false, hideMobileSearch = false, builderMobile = false, headerClassName = "" }: NavbarProps) {
     const router = useRouter();
-    // Grace trigger moved to the floating launcher; useGrace no longer needed here.
+    // Grace opens from the header on inner pages; the floating launcher is homepage-only (2026-11-04).
+    const { open: openGrace } = useGrace();
     const { itemCount, isCartHydrated } = useCart();
     const megaMenuPanels = useMegaMenuPanels();
     const locale = useAppLocale();
@@ -310,7 +320,9 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
     const links = NAV_LINKS[variant];
     const [activeMega, setActiveMega] = useState<MegaMenuId | null>(null);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [mobileOpenSection, setMobileOpenSection] = useState<MegaMenuId | null>(null);
+    // Phone drawer: plain rows; families, collections and closures each open their own panel (2026-11-04).
+    const [mobileView, setMobileView] = useState<"root" | "families" | "collections" | MegaMenuId>("root");
+    const closeMobileMenu = () => { setMobileMenuOpen(false); setMobileView("root"); };
     const megaRef = useRef<HTMLDivElement>(null);
     const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     // The open panel hangs from the header's bottom edge, measured, so no strip of page shows between them
@@ -456,10 +468,15 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                             </form>
                         )}
 
-                            {/* Grace AI trigger removed from navbar in v3 — Grace now opens
-                                via the floating bottom-right launcher (GraceLauncher.tsx)
-                                so the entry point matches the PRD's collapsed-launcher spec.
-                                Mobile uses the same launcher (no tab bar since 2026-11-04), PDPs keep PdpGraceTrigger. */}
+                            <button
+                                type="button"
+                                onClick={() => openGrace()}
+                                aria-label={t("askGrace")}
+                                className="flex items-center gap-2 p-2 text-obsidian hover:text-muted-gold transition-colors"
+                            >
+                                <GraceMark size={19} />
+                                <span className="hidden xl:inline text-[13px]">{t("askGrace")}</span>
+                            </button>
 
                             <LocaleLink href="/sign-in" aria-label="Account" className="flex items-center p-2 hover:text-muted-gold transition-colors">
                                 <User className="text-obsidian" size={20} />
@@ -609,14 +626,14 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                 <>
                     <div
                         className="fixed inset-0 bg-obsidian/40 z-[60] xl:hidden"
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={closeMobileMenu}
                     />
                     <div className="fixed top-0 left-0 bottom-0 z-[61] w-[360px] max-w-[88vw] bg-bone border-r border-champagne shadow-2xl xl:hidden flex flex-col">
                         <div className="h-[44px] bg-obsidian" />
                         <div className="h-[72px] px-4 flex items-center justify-between border-b border-champagne">
                             <LocaleLink
                                 href="/"
-                                onClick={() => setMobileMenuOpen(false)}
+                                onClick={closeMobileMenu}
                                 aria-label={t("home")}
                                 className="flex min-h-11 items-center"
                                 data-testid="mobile-menu-wordmark"
@@ -625,97 +642,56 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                             </LocaleLink>
                             <button
                                 aria-label={t("closeMenu")}
-                                onClick={() => setMobileMenuOpen(false)}
+                                onClick={closeMobileMenu}
                                 className="p-2 text-obsidian hover:text-muted-gold transition-colors"
                             >
                                 <X size={20} />
                             </button>
                         </div>
-                        <div className="px-4 py-2 border-b border-champagne flex flex-col gap-2">
-                            <LanguageSwitcher />
-                            <RegionSelector inline />
-                        </div>
-
-                        <div className="flex-1 overflow-y-auto px-4 py-4">
-                            <nav className="space-y-2">
-                                {links.map((link) => {
-                                    if (!("megaId" in link)) {
-                                        return (
-                                            <LocaleLink
-                                                key={link.label}
-                                                href={link.href}
-                                                onClick={() => setMobileMenuOpen(false)}
-                                                className="flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold tracking-wide text-obsidian border-b border-champagne/40"
-                                            >
-                                                {navLabel(link.label)}
-                                                <ArrowRight className="text-slate" size={16} />
-                                            </LocaleLink>
-                                        );
-                                    }
-
-                                    const isExpanded = mobileOpenSection === link.megaId;
-                                    const panel = MEGA_PANELS[link.megaId];
-
-                                    return (
-                                        <div key={link.label} className="border-b border-champagne/40 pb-2">
-                                            <button
-                                                onClick={() => setMobileOpenSection(isExpanded ? null : link.megaId)}
-                                                className="w-full flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold uppercase tracking-wide text-obsidian"
-                                                aria-expanded={isExpanded}
-                                            >
-                                                {navLabel(link.label)}
-                                                <CaretDown className={`transition-transform ${isExpanded ? "rotate-180" : ""}`} size={16} />
-                                            </button>
-                                            {isExpanded && (
-                                                <div className="pb-2 space-y-4">
-                                                    <LocaleLink
-                                                        href={link.href}
-                                                        onClick={() => setMobileMenuOpen(false)}
-                                                        data-testid="mobile-menu-primary-link"
-                                                        className="flex items-center justify-between rounded-sm bg-obsidian px-3 py-3 min-h-[44px] text-xs font-bold uppercase tracking-wider text-white"
-                                                    >
-                                                        View {navLabel(link.label)}
-                                                        <ArrowRight size={14} />
-                                                    </LocaleLink>
-                                                    {panel.columns.map((col) => (
-                                                        <div key={col.heading}>
-                                                            <p className="text-[10px] uppercase tracking-[0.2em] text-slate font-bold mb-2">
-                                                                {col.heading}
-                                                            </p>
-                                                            <div className="space-y-1">
-                                                                {col.links.map((item) => (
-                                                                    <LocaleLink
-                                                                        key={item.label}
-                                                                        href={item.href}
-                                                                        onClick={() => setMobileMenuOpen(false)}
-                                                                        className="flex items-center justify-between py-2 text-[13px] text-obsidian"
-                                                                    >
-                                                                        <span>{item.label}</span>
-                                                                        {item.badge && (
-                                                                            <span className="text-[10px] text-slate/60">{item.badge}</span>
-                                                                        )}
-                                                                    </LocaleLink>
-                                                                ))}
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            )}
-                                        </div>
-                                    );
-                                })}
-                            </nav>
-                        </div>
-
-                        <div className="p-4 border-t border-champagne bg-white/60">
-                            <LocaleLink
-                                href="/catalog"
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="w-full inline-flex items-center justify-center gap-2 py-3 bg-obsidian text-white text-xs uppercase tracking-wider font-bold"
-                            >
-                                {t("browseFullCatalog")}
-                                <ArrowRight size={14} />
-                            </LocaleLink>
+                        <div className={`flex-1 ${menuStyles.menu}`} style={{ maxHeight: "none", borderTop: 0 }}>
+                            {mobileView === "root" && <>
+                                <div className={menuStyles.menuPrimary}>
+                                    <button type="button" onClick={() => setMobileView("families")}>{t("bottleFamilies")}</button>
+                                    <button type="button" onClick={() => setMobileView("collections")}>{t("collections")}</button>
+                                    <button type="button" onClick={() => setMobileView("closures")}>{navLabel("Closures")}</button>
+                                    <LocaleLink href="/catalog" onClick={closeMobileMenu}>{t("fullCatalog")}</LocaleLink>
+                                    <LocaleLink href="/matrix" onClick={closeMobileMenu}>{t("buildYourBottle")}</LocaleLink>
+                                </div>
+                                <div className={menuStyles.menuSecondary}>
+                                    <LocaleLink href="/blog" onClick={closeMobileMenu}>{t("journal")}</LocaleLink>
+                                    <LocaleLink href="/about" onClick={closeMobileMenu}>{t("about")}</LocaleLink>
+                                    <LocaleLink href="/resources" onClick={closeMobileMenu}>{t("guides")}</LocaleLink>
+                                    <button type="button" onClick={() => { closeMobileMenu(); openGrace(); }}>{t("askGrace")}</button>
+                                </div>
+                                <div className={menuStyles.menuUtility}>
+                                    <LocaleLink href="/sign-in?redirect_url=%2Fportal" onClick={closeMobileMenu}>{t("clientPortal")}</LocaleLink>
+                                    <LanguageSwitcher />
+                                    <RegionSelector inline />
+                                </div>
+                            </>}
+                            {mobileView === "families" && <div className={menuStyles.menuPanel}>
+                                <button type="button" className={menuStyles.menuBack} onClick={() => setMobileView("root")}>{t("back")}</button>
+                                <h2>{t("bottleFamilies")}</h2>
+                                <div className={menuStyles.menuShapes}>{NAV_FAMILIES.map(family => <LocaleLink key={family} href={familyFinderHref(family)} onClick={closeMobileMenu}><FamilyShapeIcon family={family} size={36} strokeWidth={1} /><span>{localizeFamilyName(locale, family)}</span></LocaleLink>)}</div>
+                                <LocaleLink data-testid="mobile-menu-primary-link" className={menuStyles.menuViewAll} href="/bottle-families" onClick={closeMobileMenu}>{t("viewAll")}</LocaleLink>
+                            </div>}
+                            {mobileView === "collections" && <div className={menuStyles.menuPanel}>
+                                <button type="button" className={menuStyles.menuBack} onClick={() => setMobileView("root")}>{t("back")}</button>
+                                <h2>{t("collections")}</h2>
+                                <div className={menuStyles.menuCollections}>{SHOP_COLLECTIONS.map(collection => <LocaleLink key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeMobileMenu}><CollectionIcon collection={collection.key} size={26} strokeWidth={1.1} /><span><strong>{localizeCollectionName(locale, collection.key, collection.title)}</strong><small>{localizeCollectionSubtitle(locale, collection.key, collection.subtitle)}</small></span></LocaleLink>)}</div>
+                                <LocaleLink data-testid="mobile-menu-primary-link" className={menuStyles.menuViewAll} href="/collections" onClick={closeMobileMenu}>{t("viewAll")}</LocaleLink>
+                            </div>}
+                            {mobileView === "closures" && <div className={menuStyles.menuPanel}>
+                                <button type="button" className={menuStyles.menuBack} onClick={() => setMobileView("root")}>{t("back")}</button>
+                                <h2>{navLabel("Closures")}</h2>
+                                {MEGA_PANELS.closures.columns.map((col) => (
+                                    <div key={col.heading} className={menuStyles.menuSecondary} style={{ borderTop: 0, paddingTop: 4 }}>
+                                        <p className="text-[11px] uppercase tracking-[0.12em] text-slate mb-1">{col.heading}</p>
+                                        {col.links.map((item) => <LocaleLink key={item.label} href={item.href} onClick={closeMobileMenu} style={{ textTransform: "none", letterSpacing: 0, fontSize: 15, color: "#1c1c1e" }}>{item.label}</LocaleLink>)}
+                                    </div>
+                                ))}
+                                <LocaleLink data-testid="mobile-menu-primary-link" className={menuStyles.menuViewAll} href="/catalog?category=Component" onClick={closeMobileMenu}>{t("viewAll")}</LocaleLink>
+                            </div>}
                         </div>
                     </div>
                 </>

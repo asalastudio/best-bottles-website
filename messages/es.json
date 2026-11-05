@@ -33,7 +33,9 @@
     "mobileNav": "Navegación móvil",
     "closures": "Cierres",
     "home": "Inicio de Best Bottles",
-    "backToBottles": "Volver a los frascos"
+    "backToBottles": "Volver a los frascos",
+    "back": "Atrás",
+    "guides": "Guías de compatibilidad"
   },
   "tabs": {
     "home": "Inicio",

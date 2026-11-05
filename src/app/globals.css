@@ -877,3 +877,6 @@ img.app-wordmark {
 @media (max-width: 640px) {
   body:has([data-scene="diva-circle-stone"]) [data-grace-launcher] { bottom: calc(68px + env(safe-area-inset-bottom, 0px)); }
 }
+
+/* Phone menu open: the floating Grace launcher steps aside (2026-11-04). */
+html[data-shop-menu="open"] [data-grace-launcher]{display:none !important}

@@ -31,6 +31,8 @@ import {
     type CatalogFilters,
 } from "@/lib/catalogFilters";
 import { SHOP_COLLECTIONS } from "@/lib/shopCollections";
+import FamilyShapeIcon from "@/components/icons/FamilyShapeIcon";
+import CollectionIcon from "@/components/icons/CollectionIcon";
 import { MASTER_CATALOG_SURFACE, type CatalogSurfaceManifest } from "@/lib/catalogSurface";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import type { CatalogSearchResultShape } from "@/lib/catalogSearchFallback";
@@ -92,8 +94,10 @@ function Section({ title, selected, defaultOpen, children, testId }: {
     );
 }
 
-function CheckRow({ label, detail, count, checked, onChange, testId }: {
+function CheckRow({ label, detail, icon, count, checked, onChange, testId }: {
     label: string;
+    /** A small line drawing beside the name: the family's shape, or the collection's icon (2026-11-04). */
+    icon?: ReactNode;
     detail?: string;
     count: number;
     checked: boolean;
@@ -113,6 +117,7 @@ function CheckRow({ label, detail, count, checked, onChange, testId }: {
             >
                 {checked ? "✓" : ""}
             </span>
+            {icon && <span aria-hidden className="flex h-5 w-5 shrink-0 items-center justify-center text-[#6b6358]">{icon}</span>}
             <span className="min-w-0 flex-1 truncate">
                 {label}
                 {detail && <span className="ml-1.5 text-[11px] text-[#8a93a0]">{detail}</span>}
@@ -140,7 +145,7 @@ function FamilyGroupRow({ label, count, members, selected, labelFor, onChange }:
         <div data-testid="catalog-filter-family-group">
             <div className="flex items-center">
                 <div className="min-w-0 flex-1">
-                    <CheckRow label={label} count={count} checked={all} testId="catalog-filter-option"
+                    <CheckRow label={label} icon={<FamilyShapeIcon family="Unique Shapes" size={20} strokeWidth={1.1} />} count={count} checked={all} testId="catalog-filter-option"
                         onChange={() => onChange(all
                             ? selected.filter((family) => !names.includes(family))
                             : [...selected.filter((family) => !names.includes(family)), ...available.map(({ family }) => family)])} />
@@ -154,7 +159,7 @@ function FamilyGroupRow({ label, count, members, selected, labelFor, onChange }:
             {open && (
                 <div className="ml-[7px] border-l border-[#e5dccd] pl-4">
                     {members.map(({ family, count: n }) => (
-                        <CheckRow key={family} label={labelFor(family)} count={n} checked={selected.includes(family)}
+                        <CheckRow key={family} label={labelFor(family)} icon={<FamilyShapeIcon family={family} size={20} strokeWidth={1.1} />} count={n} checked={selected.includes(family)}
                             onChange={() => onChange(toggle([...selected], family))} testId="catalog-filter-option" />
                     ))}
                 </div>
@@ -295,7 +300,7 @@ export default function CatalogFilterSidebar({ facets, filters, onFilterChange, 
                                     selected={filters.families} labelFor={(name) => localizeFamilyName(locale, name)}
                                     onChange={(next) => onFilterChange({ families: next })} />
                             ) : (
-                                <CheckRow key={family} label={localizeFamilyName(locale, family)} count={count}
+                                <CheckRow key={family} label={localizeFamilyName(locale, family)} icon={<FamilyShapeIcon family={family} size={20} strokeWidth={1.1} />} count={count}
                                     checked={filters.families.includes(family)}
                                     onChange={() => onFilterChange({ families: toggle(filters.families, family) })}
                                     testId="catalog-filter-option" />
@@ -400,7 +405,7 @@ export default function CatalogFilterSidebar({ facets, filters, onFilterChange, 
                             {...more}
                             isSelected={({ collection }) => filters.shopCollection === collection.key}
                             render={({ collection, count }) => (
-                                <CheckRow key={collection.key} label={localizeCollectionName(locale, collection.key, collection.title)} count={count}
+                                <CheckRow key={collection.key} label={localizeCollectionName(locale, collection.key, collection.title)} icon={<CollectionIcon collection={collection.key} size={20} strokeWidth={1.1} />} count={count}
                                     checked={filters.shopCollection === collection.key}
                                     onChange={() => onFilterChange({ shopCollection: filters.shopCollection === collection.key ? null : collection.key })}
                                     testId="catalog-filter-option" />

@@ -33,7 +33,9 @@
     "mobileNav": "Mobile navigation",
     "closures": "Closures",
     "home": "Best Bottles home",
-    "backToBottles": "Back to bottles"
+    "backToBottles": "Back to bottles",
+    "back": "Back",
+    "guides": "Fitment Guides"
   },
   "tabs": {
     "home": "Home",
