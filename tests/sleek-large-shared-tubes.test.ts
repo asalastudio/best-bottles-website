@@ -14,10 +14,13 @@ describe("Sleek 18-415 shared tubes", () => {
             expect(kit.parts.find(p => p.slot === "body")?.image.url).toBe(original.parts.find(p => p.slot === "body")?.image.url);
             const body = kit.parts.find(p => p.slot === "body")!;
             const lotion = kit.parts.some(p => p.slot === "pump");
+            const regeneratedSpray = /^GBSlk(?:50|100)(?:Spry|AnSp)/.test(sku);
+            const expectedTube = regeneratedSpray ? "/sleek-18-415-spray-regenerated.webp"
+                : lotion ? "/lotion" : "/finemist-tube-90380032f33f.png";
             for (const view of ["sidecar", "capon", "exploded"] as const) {
                 const tubes = stageLayout(kit, view, { websiteSku: sku })!.parts.filter(p => p.slot === "diptube");
                 expect(tubes, sku + " " + view).toHaveLength(1);
-                expect(tubes[0].url).toContain(lotion ? "/lotion" : "/finemist-tube-90380032f33f.png");
+                expect(tubes[0].url, sku + " " + view).toContain(expectedTube);
                 const source = kit.parts.find(p => p.slot === "diptube" && (!p.views || p.views.includes(view)))!;
                 expect(source.bounds.bottom).toBeLessThan(body.bounds.bottom);
                 expect(source.bounds.top).toBeLessThan(source.bounds.bottom);

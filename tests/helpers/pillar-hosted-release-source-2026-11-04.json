@@ -1,0 +1,1708 @@
+{
+ "version": "f3f66c0fdda7",
+ "rows": {
+  "GBPillar9SpryBlkMatt": {
+   "sku": "GBPillar9SpryBlkMatt",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 546.4732006125574,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 372.079,
+      "right": 627.922,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
+      "key": "",
+      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
+      "bytes": 83949,
+      "width": 310,
+      "height": 715
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 367.757,
+      "y": 443,
+      "width": 267.944,
+      "height": 618
+     },
+     "componentId": null
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 416.256,
+      "right": 581.693,
+      "top": 229.194,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-sprayer.809c14cf93e1.svg",
+      "sha256": "809c14cf93e13d2e688686923403eb94cbef134fbe8bb9f75fc3119b629cea3f",
+      "bytes": 299364,
+      "width": 524,
+      "height": 1048,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 410.289,
+      "y": 222.232,
+      "width": 173.725,
+      "height": 347.449
+     },
+     "componentId": "CMP-CAP-BLK-13-415-01"
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 5,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 412.417,
+      "right": 583.652,
+      "top": 226.044,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkMatt-overcap.cd9e1c80f58d.svg",
+      "sha256": "cd9e1c80f58d9824457beb349d53c5619c99557d1e5e8267e6fe5a9966ab72fd",
+      "bytes": 64030,
+      "width": 217,
+      "height": 394,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 406.483,
+      "y": 219.262,
+      "width": 183.95,
+      "height": 333.993
+     },
+     "componentId": "CMP-CAP-BLK-13-415-01"
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-BLK-13-415-01",
+     "views": [
+      "sidecar",
+      "capon"
+     ],
+     "opacity": 0.62
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-BLK-13-415-01",
+     "views": [
+      "exploded"
+     ]
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "CMP-CAP-BLK-13-415-01"
+    ],
+    "seatSignature": "1e7f1cd102f996",
+    "seatDropMm": 0.76
+   },
+   "reviewMaster": "pillar-masters-2026-11-04"
+  },
+  "GBPillar9SpryBlkShn": {
+   "sku": "GBPillar9SpryBlkShn",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 546.4732006125574,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 372.079,
+      "right": 627.922,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
+      "key": "",
+      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
+      "bytes": 83949,
+      "width": 310,
+      "height": 715
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 367.757,
+      "y": 443,
+      "width": 267.944,
+      "height": 618
+     },
+     "componentId": null
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 416.576,
+      "right": 581.373,
+      "top": 234.927,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-sprayer.d600b45fd94f.svg",
+      "sha256": "d600b45fd94f7eb3913038186f9badecd68edd88635b8e277893db8ddefd6489",
+      "bytes": 394555,
+      "width": 584,
+      "height": 1085,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 410.659,
+      "y": 230.785,
+      "width": 172.785,
+      "height": 321.014
+     },
+     "componentId": "CMP-CAP-BLK-13-415-02"
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 5,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 413.988,
+      "right": 582.081,
+      "top": 218.952,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBlkSh-overcap.dd88361f3fed.svg",
+      "sha256": "dd88361f3fed6b9283d0b6edab71697dc032c201a532c82af37bdf604bc1f64d",
+      "bytes": 56369,
+      "width": 235,
+      "height": 394,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 408.789,
+      "y": 212.887,
+      "width": 203.618,
+      "height": 341.385
+     },
+     "componentId": "CMP-CAP-BLK-13-415-02"
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-BLK-13-415-02",
+     "views": [
+      "sidecar",
+      "capon"
+     ],
+     "opacity": 0.62
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-BLK-13-415-02",
+     "views": [
+      "exploded"
+     ]
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "CMP-CAP-BLK-13-415-02"
+    ],
+    "seatSignature": "1e7f1cd102f996",
+    "seatDropMm": 0.76
+   },
+   "reviewMaster": "pillar-masters-2026-11-04"
+  },
+  "GBPillar9SpryBluMatt": {
+   "sku": "GBPillar9SpryBluMatt",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 546.4732006125574,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 372.079,
+      "right": 627.922,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
+      "key": "",
+      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
+      "bytes": 83949,
+      "width": 310,
+      "height": 715
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 367.757,
+      "y": 443,
+      "width": 267.944,
+      "height": 618
+     },
+     "componentId": null
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 419.527,
+      "right": 578.422,
+      "top": 245.818,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-sprayer.c6e4df7cab34.svg",
+      "sha256": "c6e4df7cab3493aa23ee4fede95a6df04f9b37a745bbe0a96acdf960d73373d0",
+      "bytes": 838113,
+      "width": 528,
+      "height": 993,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 416.723,
+      "y": 242.08,
+      "width": 164.503,
+      "height": 309.378
+     },
+     "componentId": "CMP-CAP-13-415"
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 5,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 416.998,
+      "right": 579.071,
+      "top": 229.01,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryBluMatt-overcap.5abe54c88dca.svg",
+      "sha256": "5abe54c88dca9f65382f09aa82d00201d7e931cf94e30d51f0a44b1bbdac77f0",
+      "bytes": 139248,
+      "width": 210,
+      "height": 394,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 411.985,
+      "y": 223.998,
+      "width": 175.44,
+      "height": 329.159
+     },
+     "componentId": "CMP-CAP-13-415"
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-13-415",
+     "views": [
+      "sidecar",
+      "capon"
+     ],
+     "opacity": 0.62
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-13-415",
+     "views": [
+      "exploded"
+     ]
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "CMP-CAP-13-415"
+    ],
+    "seatSignature": "1e7f1cd102f996",
+    "seatDropMm": 0.76
+   },
+   "reviewMaster": "pillar-masters-2026-11-04"
+  },
+  "GBPillar9SpryGlMatt": {
+   "sku": "GBPillar9SpryGlMatt",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 546.4732006125574,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 372.079,
+      "right": 627.922,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
+      "key": "",
+      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
+      "bytes": 83949,
+      "width": 310,
+      "height": 715
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 367.757,
+      "y": 443,
+      "width": 267.944,
+      "height": 618
+     },
+     "componentId": null
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 418.593,
+      "right": 579.356,
+      "top": 242.385,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-sprayer.e853d044d5b8.svg",
+      "sha256": "e853d044d5b8f34ddffc698dc234cc8b8d291e7c62fe5393fd1247531d78c481",
+      "bytes": 949858,
+      "width": 525,
+      "height": 976,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 415.739,
+      "y": 239.849,
+      "width": 166.471,
+      "height": 309.478
+     },
+     "componentId": "CMP-CAP-SGLD-13-415-02"
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 5,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 416.045,
+      "right": 580.024,
+      "top": 234.995,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlMatt-overcap.f3ef10365bdc.svg",
+      "sha256": "f3ef10365bdc41ae107624567637e458c85a8233f23b14b5438e6985ef0b5226",
+      "bytes": 142776,
+      "width": 214,
+      "height": 396,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 410.277,
+      "y": 229.227,
+      "width": 176.339,
+      "height": 326.31
+     },
+     "componentId": "CMP-CAP-SGLD-13-415-02"
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-SGLD-13-415-02",
+     "views": [
+      "sidecar",
+      "capon"
+     ],
+     "opacity": 0.62
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-SGLD-13-415-02",
+     "views": [
+      "exploded"
+     ]
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "CMP-CAP-SGLD-13-415-02"
+    ],
+    "seatSignature": "1e7f1cd102f996",
+    "seatDropMm": 0.76
+   },
+   "reviewMaster": "pillar-masters-2026-11-04"
+  },
+  "GBPillar9SpryGlShn": {
+   "sku": "GBPillar9SpryGlShn",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 546.4732006125574,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 372.079,
+      "right": 627.922,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
+      "key": "",
+      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
+      "bytes": 83949,
+      "width": 310,
+      "height": 715
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 367.757,
+      "y": 443,
+      "width": 267.944,
+      "height": 618
+     },
+     "componentId": null
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 418.124,
+      "right": 579.825,
+      "top": 239.758,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-sprayer.a31e7cdc0a03.svg",
+      "sha256": "a31e7cdc0a03a59ddc56445c9d49c4a2f6472a55b62aa2514afe529576df8fbc",
+      "bytes": 1312217,
+      "width": 570,
+      "height": 1060,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 410.54,
+      "y": 233.084,
+      "width": 172.925,
+      "height": 321.58
+     },
+     "componentId": "CMP-CAP-SGLD-13-415-03"
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 5,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 415.567,
+      "right": 580.502,
+      "top": 224.217,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SpryGlSh-overcap.2d8f48c7c9b5.svg",
+      "sha256": "2d8f48c7c9b5ce613dd0b8adcfba34cc2193e7c26ab889b65b62a7ffc6df3d33",
+      "bytes": 144369,
+      "width": 210,
+      "height": 397,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 409.647,
+      "y": 217.45,
+      "width": 177.622,
+      "height": 335.789
+     },
+     "componentId": "CMP-CAP-SGLD-13-415-03"
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-SGLD-13-415-03",
+     "views": [
+      "sidecar",
+      "capon"
+     ],
+     "opacity": 0.62
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-SGLD-13-415-03",
+     "views": [
+      "exploded"
+     ]
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "CMP-CAP-SGLD-13-415-03"
+    ],
+    "seatSignature": "1e7f1cd102f996",
+    "seatDropMm": 0.76
+   },
+   "reviewMaster": "pillar-masters-2026-11-04"
+  },
+  "GBPillar9SprySlMatt": {
+   "sku": "GBPillar9SprySlMatt",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 546.4732006125574,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 372.079,
+      "right": 627.922,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
+      "key": "",
+      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
+      "bytes": 83949,
+      "width": 310,
+      "height": 715
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 367.757,
+      "y": 443,
+      "width": 267.944,
+      "height": 618
+     },
+     "componentId": null
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 414.385,
+      "right": 583.564,
+      "top": 237.563,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-sprayer.40b457cd8831.svg",
+      "sha256": "40b457cd883102380e20b27f714510a0426e836aea42ac8679a2939c5d5c26fd",
+      "bytes": 358123,
+      "width": 562,
+      "height": 1028,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 409.685,
+      "y": 230.044,
+      "width": 176.072,
+      "height": 322.068
+     },
+     "componentId": "CMP-CAP-SLV-13-415-02"
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 5,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 411.753,
+      "right": 584.316,
+      "top": 223.025,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlMatt-overcap.48fe1f6f78e9.svg",
+      "sha256": "48fe1f6f78e9a0903b5a4584438a5a15f9111f0e3596c1928bd1100f6c438ffc",
+      "bytes": 55886,
+      "width": 217,
+      "height": 397,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 403.081,
+      "y": 210.885,
+      "width": 188.172,
+      "height": 344.26
+     },
+     "componentId": "CMP-CAP-SLV-13-415-02"
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-SLV-13-415-02",
+     "views": [
+      "sidecar",
+      "capon"
+     ],
+     "opacity": 0.62
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-SLV-13-415-02",
+     "views": [
+      "exploded"
+     ]
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "CMP-CAP-SLV-13-415-02"
+    ],
+    "seatSignature": "1e7f1cd102f996",
+    "seatDropMm": 0.76
+   },
+   "reviewMaster": "pillar-masters-2026-11-04"
+  },
+  "GBPillar9SprySlShn": {
+   "sku": "GBPillar9SprySlShn",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 546.4732006125574,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 372.079,
+      "right": 627.922,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
+      "key": "",
+      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
+      "bytes": 83949,
+      "width": 310,
+      "height": 715
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 367.757,
+      "y": 443,
+      "width": 267.944,
+      "height": 618
+     },
+     "componentId": null
+    },
+    {
+     "slot": "sprayer",
+     "variantKey": null,
+     "zOrder": 3,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 418.124,
+      "right": 579.825,
+      "top": 239.758,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-sprayer.3fff04080b71.svg",
+      "sha256": "3fff04080b71bbf67f65773fdd81e63dd9e905d87e47e45a64bf86d2d13426e7",
+      "bytes": 829486,
+      "width": 570,
+      "height": 1060,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 410.54,
+      "y": 233.084,
+      "width": 172.925,
+      "height": 321.58
+     },
+     "componentId": "CMP-CAP-SLV-13-415-03"
+    },
+    {
+     "slot": "overcap",
+     "variantKey": null,
+     "zOrder": 5,
+     "explodeIndex": 2,
+     "bounds": {
+      "left": 415.567,
+      "right": 580.502,
+      "top": 218.341,
+      "bottom": 546.473
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/cylinder5-finemist-2026-11-01/GBCyl5SprySlSh-overcap.0b1dc7e7b639.svg",
+      "sha256": "0b1dc7e7b639019ff6cc047feda07782eeb2413916860b44a3cf1388a89d0866",
+      "bytes": 64742,
+      "width": 206,
+      "height": 393,
+      "key": ""
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 410.359,
+      "y": 213.132,
+      "width": 178.824,
+      "height": 341.154
+     },
+     "componentId": "CMP-CAP-SLV-13-415-03"
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-SLV-13-415-03",
+     "views": [
+      "sidecar",
+      "capon"
+     ],
+     "opacity": 0.62
+    },
+    {
+     "slot": "diptube",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "box": {
+      "x": 474.407,
+      "y": 525.473,
+      "width": 51.187,
+      "height": 463.723
+     },
+     "bounds": {
+      "left": 474.407,
+      "top": 525.473,
+      "right": 525.594,
+      "bottom": 989.196
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/remaining-13-415-2026-11-01/mechanism-1630.696.41d05f7a339a.svg",
+      "key": "",
+      "sha256": "41d05f7a339adc11f8caa6c72307cb686d9582b458254d5e2d58c1bc8f1bea53",
+      "bytes": 1146317,
+      "width": 180,
+      "height": 1630.6956862433128
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "CMP-CAP-SLV-13-415-03",
+     "views": [
+      "exploded"
+     ]
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "CMP-CAP-SLV-13-415-03"
+    ],
+    "seatSignature": "1e7f1cd102f996",
+    "seatDropMm": 0.76
+   },
+   "reviewMaster": "pillar-masters-2026-11-04"
+  }
+ },
+ "defaultPdpSkus": [
+  "GBPillar9SpryBlkMatt"
+ ],
+ "measured": {
+  "scale": 0.864,
+  "diameterMm": 24.366,
+  "shoulderY": 554.499,
+  "baseFloorY": 994.446
+ }
+}

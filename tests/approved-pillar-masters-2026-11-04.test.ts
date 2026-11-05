@@ -14,7 +14,8 @@ import { GET } from '@/app/api/bottle-masters/approved/route';
 
 const directory = 'docs/reviews/hosted-pillar-masters-2026-11-04/';
 const read = (file: string) => JSON.parse(readFileSync(file, 'utf8'));
-const review = read('public/local-kits/pillar-masters-2026-11-04/kits.json');
+// Freeze the source recipe used to publish this release so localhost edits can be reviewed independently.
+const review = read('tests/helpers/pillar-hosted-release-source-2026-11-04.json');
 const pillarSkus = ['GBPillar9SpryBlkMatt', 'GBPillar9SpryBlkShn', 'GBPillar9SpryBluMatt', 'GBPillar9SpryGlMatt', 'GBPillar9SpryGlShn', 'GBPillar9SprySlMatt', 'GBPillar9SprySlShn'];
 const source = review.rows as Record<string, BuilderKit>;
 const hosted = manifest.rows as unknown as Record<string, BuilderKit>;
