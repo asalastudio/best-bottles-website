@@ -138,6 +138,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         cap: searchParams.get("cap"),
         sku: searchParams.get("sku"),
     }));
+    const [blackDropperPreview, setBlackDropperPreview] = useState(false);
+    const [frostedPreview, setFrostedPreview] = useState(false);
     const [view, setView] = useState<StageView>("sidecar");
     const [qty, setQty] = useState<number>(() => Math.max(1, Math.min(99_999, Number.parseInt(searchParams.get("qty") ?? "1", 10) || 1)));
     const [addedQty, setAddedQty] = useState<number | null>(null);
@@ -162,7 +164,37 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     // Product copy v2 (scripts/pdp-descriptions/product_copy.py) names the product when it covers this SKU.
     const copy = useMemo(() => (selected?.websiteSku ? descriptions[selected.websiteSku]?.copy ?? null : null), [descriptions, selected?.websiteSku]);
     const title = useMemo(() => copy?.title ?? pageTitle(group, fitment), [copy, group, fitment]);
-    const kit = singleTola ? null : kitFor(kitsBySku, selected);
+    const clearKit = singleTola ? null : kitFor(kitsBySku, selected);
+    const hasFrostedPreview = slug === "cylinder-28ml-clear-16mm-rollon"
+        && clearKit?.parts.some((part) => part.slot === "body"
+            && part.image.url === "/reviews/cylinder28-sunburst-2026-11-04/clear-candidate.png");
+    const frostedKit: KitLike | null = hasFrostedPreview && clearKit ? {
+        ...clearKit,
+        parts: clearKit.parts.map((part) => part.slot === "body" ? {
+            ...part,
+            // Same canvas and visible bounds, using the registered frosted review image box.
+            box: { x: 194.1256, y: 211.3608, width: 611.1520, height: 886.5801 },
+            image: { ...part.image, url: "/reviews/cylinder28-sunburst-2026-11-04/frosted-candidate.png" },
+        } : part),
+    } : null;
+    const showingFrosted = frostedPreview && frostedKit !== null;
+    const goldDropperKit = process.env.NODE_ENV === "development" && slug === "cylinder-25ml-clear-18-415-dropper"
+        ? kitsBySku.GBCyl25DrpGl : null;
+    const blackDropperKit: KitLike | null = goldDropperKit ? {
+        ...goldDropperKit,
+        parts: goldDropperKit.parts.map(part => {
+            if (part.slot !== "fitment") return part;
+            const { left, right, top, bottom } = part.bounds;
+            const sx = (right - left) / 926;
+            const sy = (bottom - top) / 1530;
+            return { ...part,
+                image: { url: "/images/cylinder-sprays/dropper25-shiny-black-preview.webp", width: 993, height: 1584 },
+                box: { x: left - 31 * sx, y: top - 34 * sy, width: 993 * sx, height: 1584 * sy },
+            };
+        }),
+    } : null;
+    const showingBlackDropper = blackDropperPreview && blackDropperKit !== null;
+    const kit = showingBlackDropper ? blackDropperKit : showingFrosted ? frostedKit : clearKit;
     const glassBodyKit = useCallback((glassSlug: string): KitLike | null => {
         if (glassSlug === slug) return kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku }) ?? variants.map((variant) => kitFor(kitsBySku, variant)).find(Boolean) ?? null;
         const sibling = siblings.find((candidate) => candidate.slug === glassSlug);
@@ -263,6 +295,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     useEffect(() => () => { if (addedTimer.current != null) window.clearTimeout(addedTimer.current); }, []);
 
     const onCapPick = useCallback((id: string) => {
+        setBlackDropperPreview(id === "shiny-black-preview");
+        if (id === "shiny-black-preview") return;
         setPicks((current) => ({ ...current, cap: id }));
         const option = caps.find((cap) => cap.id === id);
         analytics.pdpPick({ group: slug, type: "cap", value: option?.name ?? id, sku: option?.variants[0]?.websiteSku ?? null });
@@ -302,7 +336,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         graceSku: selected.graceSku, shopifyVariantId: selected.shopifyVariantId ?? null,
         shopifySellable: selected.shopifySellable ?? undefined, stockStatus: selected.stockStatus,
     }) : false;
-    const addState: AddState = !selected || selected.webPrice1pc == null || selected.webPrice1pc <= 0
+    const addState: AddState = (showingFrosted || showingBlackDropper) ? "unavailable" : !selected || selected.webPrice1pc == null || selected.webPrice1pc <= 0
         ? "unpriced"
         : isSoldOutStockStatus(selected.stockStatus) || !status.inStock
             ? "sold-out"
@@ -365,12 +399,12 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
 
     // ── copy ──────────────────────────────────────────────────────────────
     const glassName = rectangleGlass ?? activeGlass?.shortLabel ?? glassShortLabel(group.color);
-    const capName = activeCap?.name ?? null;
+    const capName = showingBlackDropper ? "Shiny Black preview" : activeCap?.name ?? null;
     const description = selected?.websiteSku ? descriptions[selected.websiteSku] ?? null : null;
     // The headline names the SKU in the buy box: a new cap, roller or finish changes it with the pick.
     const option = optionLabel(rollerOption, fitment, capName);
     const capacityLabel = `${group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity ?? ""} ${group.family ?? ""}`.trim();
-    const bodyKit = kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku });
+    const bodyKit = clearKit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku });
     const hasMeasuredFiveBody = bodyKit?.parts.some(part => part.slot === "body"
         && part.image.url.includes("/local-kits/cylinder5-profiles-2026-10-31/glass-5-")
         && /-measured-v\d+\.png$/.test(part.image.url));
@@ -428,7 +462,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
 
                 <div className={styles.grid}>
                     <PdpStage
-                        pickLine={pickLine(glassName, rollerOption, rollerOption ? null : fitment, rectangleGlass ? null : capName)}
+                        pickLine={pickLine(showingFrosted ? "Frosted preview" : glassName, rollerOption, rollerOption ? null : fitment, rectangleGlass ? null : capName)}
                         finishKind={rectangleGlass ? "glass" : "cap"}
                         view={shownView}
                         availableViews={views}
@@ -440,22 +474,29 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
                         fallbackAlt={copy?.altText ?? variantTitle(title, option)}
                         callouts={measuredCallouts}
-                        caps={caps.map((cap) => ({
+                        caps={[...caps.map((cap) => ({
                             id: cap.id, name: cap.name, swatchName: cap.swatchName,
                             kit: kitFor(kitsBySku, cap.variants[0]),
                             unavailable: cap.variants.every((variant) => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false),
-                        }))}
-                        activeCapId={activeCap?.id ?? null}
+                        })), ...(blackDropperKit ? [{
+                            id: "shiny-black-preview", name: "Shiny Black preview", swatchName: "Shiny Black", kit: blackDropperKit, unavailable: false,
+                        }] : [])]}
+                        activeCapId={showingBlackDropper ? "shiny-black-preview" : activeCap?.id ?? null}
                         onCapPick={onCapPick}
-                        glasses={(rectangleGlass || singleTola ? [] : glasses).map((glass) => ({
-                            slug: glass.slug, label: glass.label, active: glass.active, kit: glassBodyKit(glass.slug),
+                        glasses={[...(rectangleGlass || singleTola ? [] : glasses).map((glass) => ({
+                            slug: glass.slug, label: glass.label, active: glass.active && !showingFrosted, kit: glass.active ? clearKit ?? glassBodyKit(glass.slug) : glassBodyKit(glass.slug),
                             unavailable: glass.active
                                 ? variants.every((variant) => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false)
                                 : siblings.find((sibling) => sibling.slug === glass.slug)?.inStock === false,
-                        }))}
-                        onGlassPick={onGlassPick}
+                        })), ...(frostedKit ? [{
+                            slug: "frosted-preview", label: "Frosted preview", active: showingFrosted, kit: frostedKit,
+                        }] : [])]}
+                        onGlassPick={(target) => {
+                            setFrostedPreview(target === "frosted-preview");
+                            if (target !== "frosted-preview") onGlassPick(target);
+                        }}
                         activeCapName={capName}
-                        activeGlassLabel={activeGlass?.label ?? glassLabel(group.color)}
+                        activeGlassLabel={showingFrosted ? "Frosted preview" : activeGlass?.label ?? glassLabel(group.color)}
                     />
 
                     <div className={styles.buy}>
@@ -475,6 +516,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                             </span>
                         </div>
 
+                        {showingBlackDropper && <p>Shiny Black with white bulb is a draft finish. Select a listed finish to order.</p>}
+                        {showingFrosted && <p>Frosted glass is available to preview. Select Clear to order.</p>}
                         <PdpBuyBox
                             swatchStyle={swatchStyle}
                             selectionName={selectionName}
@@ -498,7 +541,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
 
                         <PdpProductInfo
                             itemType={description?.itemType ?? null}
-                            itemName={selected?.websiteSku ?? selected?.graceSku ?? null}
+                            itemName={showingBlackDropper ? "GBCyl25DrpShnBlk (draft SKU)" : selected?.websiteSku ?? selected?.graceSku ?? null}
                             description={description?.description ?? null}
                             bullets={copy?.bullets ?? null}
                             care={copy?.care || null}

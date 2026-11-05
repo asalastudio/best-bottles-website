@@ -20,7 +20,7 @@
    "glassSizing": {
     "heightPct": 37.87,
     "baselinePct": 91,
-    "landmarkY": 546.4732006125574,
+    "landmarkY": 574.1527663088357,
     "source": "docs/hero-families/batch6-2026-09-25/approval.json"
    },
    "parts": [
@@ -30,8 +30,8 @@
      "zOrder": 1,
      "explodeIndex": 0,
      "bounds": {
-      "left": 372.079,
-      "right": 627.922,
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
       "top": 443,
       "bottom": 1061
      },
@@ -44,21 +44,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
-      "key": "",
-      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
-      "bytes": 83949,
-      "width": 310,
-      "height": 715
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
      "box": {
-      "x": 367.757,
-      "y": 443,
-      "width": 267.944,
-      "height": 618
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
      },
      "componentId": null
     },
@@ -70,8 +70,8 @@
      "bounds": {
       "left": 416.256,
       "right": 581.693,
-      "top": 229.194,
-      "bottom": 546.473
+      "top": 256.8737663088357,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -94,7 +94,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 410.289,
-      "y": 222.232,
+      "y": 249.91176630883572,
       "width": 173.725,
       "height": 347.449
      },
@@ -108,8 +108,8 @@
      "bounds": {
       "left": 412.417,
       "right": 583.652,
-      "top": 226.044,
-      "bottom": 546.473
+      "top": 253.72376630883574,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -132,7 +132,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 406.483,
-      "y": 219.262,
+      "y": 246.94176630883572,
       "width": 183.95,
       "height": 333.993
      },
@@ -145,15 +145,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -188,15 +188,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -262,7 +262,7 @@
    "glassSizing": {
     "heightPct": 37.87,
     "baselinePct": 91,
-    "landmarkY": 546.4732006125574,
+    "landmarkY": 574.1527663088357,
     "source": "docs/hero-families/batch6-2026-09-25/approval.json"
    },
    "parts": [
@@ -272,8 +272,8 @@
      "zOrder": 1,
      "explodeIndex": 0,
      "bounds": {
-      "left": 372.079,
-      "right": 627.922,
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
       "top": 443,
       "bottom": 1061
      },
@@ -286,21 +286,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
-      "key": "",
-      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
-      "bytes": 83949,
-      "width": 310,
-      "height": 715
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
      "box": {
-      "x": 367.757,
-      "y": 443,
-      "width": 267.944,
-      "height": 618
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
      },
      "componentId": null
     },
@@ -312,8 +312,8 @@
      "bounds": {
       "left": 416.576,
       "right": 581.373,
-      "top": 234.927,
-      "bottom": 546.473
+      "top": 262.60676630883574,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -336,7 +336,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 410.659,
-      "y": 230.785,
+      "y": 258.4647663088357,
       "width": 172.785,
       "height": 321.014
      },
@@ -350,8 +350,8 @@
      "bounds": {
       "left": 413.988,
       "right": 582.081,
-      "top": 218.952,
-      "bottom": 546.473
+      "top": 246.63176630883572,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -374,7 +374,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 408.789,
-      "y": 212.887,
+      "y": 240.56676630883572,
       "width": 203.618,
       "height": 341.385
      },
@@ -387,15 +387,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -430,15 +430,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -504,7 +504,7 @@
    "glassSizing": {
     "heightPct": 37.87,
     "baselinePct": 91,
-    "landmarkY": 546.4732006125574,
+    "landmarkY": 574.1527663088357,
     "source": "docs/hero-families/batch6-2026-09-25/approval.json"
    },
    "parts": [
@@ -514,8 +514,8 @@
      "zOrder": 1,
      "explodeIndex": 0,
      "bounds": {
-      "left": 372.079,
-      "right": 627.922,
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
       "top": 443,
       "bottom": 1061
      },
@@ -528,21 +528,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
-      "key": "",
-      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
-      "bytes": 83949,
-      "width": 310,
-      "height": 715
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
      "box": {
-      "x": 367.757,
-      "y": 443,
-      "width": 267.944,
-      "height": 618
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
      },
      "componentId": null
     },
@@ -554,8 +554,8 @@
      "bounds": {
       "left": 419.527,
       "right": 578.422,
-      "top": 245.818,
-      "bottom": 546.473
+      "top": 273.4977663088357,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -578,7 +578,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 416.723,
-      "y": 242.08,
+      "y": 269.75976630883576,
       "width": 164.503,
       "height": 309.378
      },
@@ -592,8 +592,8 @@
      "bounds": {
       "left": 416.998,
       "right": 579.071,
-      "top": 229.01,
-      "bottom": 546.473
+      "top": 256.6897663088357,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -616,7 +616,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 411.985,
-      "y": 223.998,
+      "y": 251.67776630883571,
       "width": 175.44,
       "height": 329.159
      },
@@ -629,15 +629,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -672,15 +672,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -746,7 +746,7 @@
    "glassSizing": {
     "heightPct": 37.87,
     "baselinePct": 91,
-    "landmarkY": 546.4732006125574,
+    "landmarkY": 574.1527663088357,
     "source": "docs/hero-families/batch6-2026-09-25/approval.json"
    },
    "parts": [
@@ -756,8 +756,8 @@
      "zOrder": 1,
      "explodeIndex": 0,
      "bounds": {
-      "left": 372.079,
-      "right": 627.922,
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
       "top": 443,
       "bottom": 1061
      },
@@ -770,21 +770,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
-      "key": "",
-      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
-      "bytes": 83949,
-      "width": 310,
-      "height": 715
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
      "box": {
-      "x": 367.757,
-      "y": 443,
-      "width": 267.944,
-      "height": 618
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
      },
      "componentId": null
     },
@@ -796,8 +796,8 @@
      "bounds": {
       "left": 418.593,
       "right": 579.356,
-      "top": 242.385,
-      "bottom": 546.473
+      "top": 270.0647663088357,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -820,7 +820,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 415.739,
-      "y": 239.849,
+      "y": 267.5287663088357,
       "width": 166.471,
       "height": 309.478
      },
@@ -834,8 +834,8 @@
      "bounds": {
       "left": 416.045,
       "right": 580.024,
-      "top": 234.995,
-      "bottom": 546.473
+      "top": 262.67476630883573,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -858,7 +858,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 410.277,
-      "y": 229.227,
+      "y": 256.9067663088357,
       "width": 176.339,
       "height": 326.31
      },
@@ -871,15 +871,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -914,15 +914,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -988,7 +988,7 @@
    "glassSizing": {
     "heightPct": 37.87,
     "baselinePct": 91,
-    "landmarkY": 546.4732006125574,
+    "landmarkY": 574.1527663088357,
     "source": "docs/hero-families/batch6-2026-09-25/approval.json"
    },
    "parts": [
@@ -998,8 +998,8 @@
      "zOrder": 1,
      "explodeIndex": 0,
      "bounds": {
-      "left": 372.079,
-      "right": 627.922,
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
       "top": 443,
       "bottom": 1061
      },
@@ -1012,21 +1012,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
-      "key": "",
-      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
-      "bytes": 83949,
-      "width": 310,
-      "height": 715
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
      "box": {
-      "x": 367.757,
-      "y": 443,
-      "width": 267.944,
-      "height": 618
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
      },
      "componentId": null
     },
@@ -1038,8 +1038,8 @@
      "bounds": {
       "left": 418.124,
       "right": 579.825,
-      "top": 239.758,
-      "bottom": 546.473
+      "top": 267.43776630883576,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -1062,7 +1062,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 410.54,
-      "y": 233.084,
+      "y": 260.7637663088357,
       "width": 172.925,
       "height": 321.58
      },
@@ -1076,8 +1076,8 @@
      "bounds": {
       "left": 415.567,
       "right": 580.502,
-      "top": 224.217,
-      "bottom": 546.473
+      "top": 251.89676630883574,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -1100,7 +1100,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 409.647,
-      "y": 217.45,
+      "y": 245.1297663088357,
       "width": 177.622,
       "height": 335.789
      },
@@ -1113,15 +1113,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -1156,15 +1156,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -1230,7 +1230,7 @@
    "glassSizing": {
     "heightPct": 37.87,
     "baselinePct": 91,
-    "landmarkY": 546.4732006125574,
+    "landmarkY": 574.1527663088357,
     "source": "docs/hero-families/batch6-2026-09-25/approval.json"
    },
    "parts": [
@@ -1240,8 +1240,8 @@
      "zOrder": 1,
      "explodeIndex": 0,
      "bounds": {
-      "left": 372.079,
-      "right": 627.922,
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
       "top": 443,
       "bottom": 1061
      },
@@ -1254,21 +1254,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
-      "key": "",
-      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
-      "bytes": 83949,
-      "width": 310,
-      "height": 715
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
      "box": {
-      "x": 367.757,
-      "y": 443,
-      "width": 267.944,
-      "height": 618
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
      },
      "componentId": null
     },
@@ -1280,8 +1280,8 @@
      "bounds": {
       "left": 414.385,
       "right": 583.564,
-      "top": 237.563,
-      "bottom": 546.473
+      "top": 265.2427663088357,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -1304,7 +1304,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 409.685,
-      "y": 230.044,
+      "y": 257.7237663088357,
       "width": 176.072,
       "height": 322.068
      },
@@ -1318,8 +1318,8 @@
      "bounds": {
       "left": 411.753,
       "right": 584.316,
-      "top": 223.025,
-      "bottom": 546.473
+      "top": 250.70476630883573,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -1342,7 +1342,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 403.081,
-      "y": 210.885,
+      "y": 238.56476630883571,
       "width": 188.172,
       "height": 344.26
      },
@@ -1355,15 +1355,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -1398,15 +1398,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -1472,7 +1472,7 @@
    "glassSizing": {
     "heightPct": 37.87,
     "baselinePct": 91,
-    "landmarkY": 546.4732006125574,
+    "landmarkY": 574.1527663088357,
     "source": "docs/hero-families/batch6-2026-09-25/approval.json"
    },
    "parts": [
@@ -1482,8 +1482,8 @@
      "zOrder": 1,
      "explodeIndex": 0,
      "bounds": {
-      "left": 372.079,
-      "right": 627.922,
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
       "top": 443,
       "bottom": 1061
      },
@@ -1496,21 +1496,21 @@
       "dy": 0
      },
      "image": {
-      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-13-415-clear.70b618814847.png",
-      "key": "",
-      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
-      "bytes": 83949,
-      "width": 310,
-      "height": 715
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
      "box": {
-      "x": 367.757,
-      "y": 443,
-      "width": 267.944,
-      "height": 618
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
      },
      "componentId": null
     },
@@ -1522,8 +1522,8 @@
      "bounds": {
       "left": 418.124,
       "right": 579.825,
-      "top": 239.758,
-      "bottom": 546.473
+      "top": 267.43776630883576,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -1546,7 +1546,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 410.54,
-      "y": 233.084,
+      "y": 260.7637663088357,
       "width": 172.925,
       "height": 321.58
      },
@@ -1560,8 +1560,8 @@
      "bounds": {
       "left": 415.567,
       "right": 580.502,
-      "top": 218.341,
-      "bottom": 546.473
+      "top": 246.02076630883573,
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -1584,7 +1584,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 410.359,
-      "y": 213.132,
+      "y": 240.81176630883573,
       "width": 178.824,
       "height": 341.154
      },
@@ -1597,15 +1597,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,
@@ -1640,15 +1640,15 @@
      "explodeIndex": 1,
      "box": {
       "x": 474.407,
-      "y": 525.473,
+      "y": 553.1527663088357,
       "width": 51.187,
-      "height": 463.723
+      "height": 410.8860445912469
      },
      "bounds": {
       "left": 474.407,
-      "top": 525.473,
+      "top": 553.1527663088357,
       "right": 525.594,
-      "bottom": 989.196
+      "bottom": 964.0388109000826
      },
      "assembled": {
       "x": 0,

@@ -1,3 +1,4 @@
+import { pillarReviewSku, PILLAR_MASTER_VERSION } from "./pillar-master";
 import { elegant30ReviewSku, ELEGANT30_MASTER_REVIEW_VERSION } from "./elegant30-master";
 import { elegant15ReviewSku, ELEGANT15_MASTER_REVIEW_VERSION } from "./elegant15-master";
 import { elegant60100ReviewSku, ELEGANT60_100_MASTER_REVIEW_VERSION } from "./elegant60-100-master";
@@ -11,10 +12,26 @@ import { rectangleApplicatorReviewSku, RECTANGLE_APPLICATOR_REVIEW_VERSION } fro
 import { cylinder5MasterSku, CYLINDER5_MASTER_VERSION } from "./cylinder5-master";
 import { cylinder9MasterSku, CYLINDER9_MASTER_VERSION } from "./cylinder9-master";
 import { approvedMasterSku, APPROVED_KIT_VERSION, CYLINDER9_COLOR_VERSION, updatedCylinderKitVersion } from "@/lib/paper-doll/approved-kit-index";
+function tallSleekReviewSku(sku?: string | null): string | null {
+    return process.env.NODE_ENV === "development" && sku?.startsWith("GBTallRect10") ? sku : null;
+}
+
+function footedRectangleSprayReviewSku(sku?: string | null): string | null {
+    return process.env.NODE_ENV === "development" && sku?.startsWith("GBRect10Spry") ? sku : null;
+}
+
+function uniqueShapeReviewSku(sku?: string | null): string | null {
+    return process.env.NODE_ENV === "development" && sku && /^GB(?:Bell10|Royal13|Sqr15|Flair15)/.test(sku) ? sku : null;
+}
+
 export function cylinderMasterSku(sku: string | null | undefined): string | null {
-    return approvedMasterSku(sku) ?? (process.env.NODE_ENV === "development" ? cylinder5MasterSku(sku) ?? cylinder9MasterSku(sku) ?? rectangleApplicatorReviewSku(sku) ?? elegant15ReviewSku(sku) ?? elegant30ReviewSku(sku) ?? elegant60100ReviewSku(sku) ?? circleReviewSku(sku) ?? bostonReviewSku(sku) ?? roundSleekReviewSku(sku) ?? divaReviewSku(sku) ?? vialReviewSku(sku) : null);
+    return uniqueShapeReviewSku(sku) ?? footedRectangleSprayReviewSku(sku) ?? tallSleekReviewSku(sku) ?? pillarReviewSku(sku) ?? approvedMasterSku(sku) ?? (process.env.NODE_ENV === "development" ? cylinder5MasterSku(sku) ?? cylinder9MasterSku(sku) ?? rectangleApplicatorReviewSku(sku) ?? elegant15ReviewSku(sku) ?? elegant30ReviewSku(sku) ?? elegant60100ReviewSku(sku) ?? circleReviewSku(sku) ?? bostonReviewSku(sku) ?? roundSleekReviewSku(sku) ?? divaReviewSku(sku) ?? vialReviewSku(sku) : null);
 }
 export function cylinderMasterSource(sku: string) {
+    if (uniqueShapeReviewSku(sku)) return { family: "unique-shapes", version: "unique-shapes-shared-13-415-v1" };
+    if (footedRectangleSprayReviewSku(sku)) return { family: "footed-rectangle", version: "footed-rectangle-measured-v1" };
+    if (tallSleekReviewSku(sku)) return { family: "tall-sleek", version: "tall-sleek-shared-body-v1" };
+    if (pillarReviewSku(sku)) return { family: "pillar", version: PILLAR_MASTER_VERSION };
     if (process.env.NODE_ENV === "development" && elegant30ReviewSku(sku)) return { family: "elegant30", version: ELEGANT30_MASTER_REVIEW_VERSION };
     if (process.env.NODE_ENV === "development" && elegant15ReviewSku(sku)) return { family: "elegant15", version: ELEGANT15_MASTER_REVIEW_VERSION };
     if (process.env.NODE_ENV === "development" && elegant60100ReviewSku(sku)) return { family: "elegant60-100", version: ELEGANT60_100_MASTER_REVIEW_VERSION };
