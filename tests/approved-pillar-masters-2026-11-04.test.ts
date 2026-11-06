@@ -82,7 +82,6 @@ describe('Pillar 9 ml sprayer masters published (2026-11-04)', () => {
             const response = await GET(new Request(`https://preview.vercel.app/api/bottle-masters/approved?sku=${sku}&v=${index.version}`));
             expect(response.status, sku).toBe(200);
             expect((await response.json()).kit).toEqual(hosted[sku]);
-            expect(cylinderMasterSource(sku)).toEqual({ family: 'approved', version: index.version });
         }
     });
 });
@@ -101,4 +100,36 @@ it('serves the shared Pillar pour body with ten distinct caps through the hosted
     }));
     expect(new Set(kits.map(kit => kit.parts.find(part => part.slot === 'body')?.image.url)).size).toBe(1);
     expect(new Set(kits.map(kit => kit.parts.find(part => part.slot === 'cap')?.componentId)).size).toBe(10);
+});
+
+it('serves the current Pillar and clear Tulip art for exact catalog SKUs', async () => {
+    const rollCaps = ['BlkDot', 'BlkSh', 'CuMatt', 'GlMatt', 'GlSh', 'PinkDot', 'SlDot', 'SlMatt', 'SlSh'];
+    const metalSkus = rollCaps.map(cap => `GBPillar9MtlRoll${cap === 'BlkDot' ? 'Blkdot' : cap}`);
+    const plasticSkus = rollCaps.map(cap => `GBPillar9Roll${cap}`);
+    const tulipSkus = Object.keys(hosted).filter(sku => sku.startsWith('GBTulip6'));
+    expect(tulipSkus).toHaveLength(34);
+    for (const sku of [...pillarSkus, ...metalSkus, ...plasticSkus, ...tulipSkus]) {
+        const pillar = sku.startsWith('GBPillar');
+        const version = pillar ? 'pillar-shared-glass-v1' : 'tulip6-clear-glass-v1';
+        expect(cylinderMasterSource(sku), sku).toEqual({ family: 'approved', version });
+        const response = await GET(new Request(`https://preview.vercel.app/api/bottle-masters/approved?sku=${sku}&v=${version}`));
+        expect(response.status, sku).toBe(200);
+        const { kit, displayDerivatives } = await response.json() as { kit: BuilderKit; displayDerivatives: Record<string, { urls: Record<string, string> }> };
+        expect(kit.sku).toBe(sku);
+        expect(JSON.stringify(kit), sku).not.toMatch(/"url":"\/(?:local-kits|reviews)\//);
+        const body = kit.parts.find(part => part.slot === 'body')!;
+        expect(body.image.url, sku).toBe(pillar
+            ? '/images/approved-masters/body-pillar-9ml-clear-glass.33ffa1b36577.webp'
+            : '/images/approved-masters/tulip6-clear-master.18117b2e238d.webp');
+        for (const asset of Object.values(displayDerivatives[body.image.url].urls)) {
+            expect(readFileSync('public' + asset).length, asset).toBeGreaterThan(0);
+        }
+        if (metalSkus.includes(sku) || plasticSkus.includes(sku)) {
+            expect(kit.parts.find(part => part.slot === 'roller')?.image.url, sku).toMatch(
+                metalSkus.includes(sku) ? /\/roller-metal\.2c4bc8ffee8b\.png$/ : /\/roller-plastic\.4b356a2a9537\.png$/);
+        }
+        for (const view of ['sidecar', 'capon', 'exploded'] as const) {
+            expect(stageLayout(kit, view, { websiteSku: sku }), `${sku} ${view}`).toBeTruthy();
+        }
+    }
 });

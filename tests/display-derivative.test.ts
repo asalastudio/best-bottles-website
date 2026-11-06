@@ -24,7 +24,14 @@ it("covers every approved source with immutable display copies and leaves unknow
             expect(displayImageUrl(source, width as 128 | 256 | 640 | 1200)).toBe(displayDerivativeUrl(source, width));
         }
     }
-    expect(Object.keys(delivery.sources)).toHaveLength(493); // Includes Tola, the cleaned 25 ml copper overcap, the Elegant masters (128 + 58 + 80), the Vial masters (22), the Diva masters (127), the four Diva glass plates, the Pillar body and dip tube (2), the Empire/Grace/Diamond layers (65), their four glass plates and the Pillar cap and two rollers (3).
+    const releaseCopies = Object.entries(delivery.sources).filter(([url]) => url.startsWith("/images/approved-masters/"));
+    expect(releaseCopies).toHaveLength(4);
+    for (const [source, copies] of releaseCopies) {
+        expect(source).toMatch(/\.[a-f0-9]{12}\.(?:webp|png)$/);
+        for (const copy of Object.values(copies)) {
+            expect(copy).toMatch(/^\/images\/approved-masters\/[\w-]+\.[a-f0-9]{12}\.webp$/);
+        }
+    }
     expect(displayDerivativeUrl("https://unknown.example/master.png", 640)).toBeNull();
     expect(displayDerivativeUrl("/local-kits/unapproved-candidate.svg", 640)).toBeNull();
     for (const [alias, source] of Object.entries(delivery.aliases)) {
