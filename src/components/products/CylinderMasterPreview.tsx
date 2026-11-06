@@ -79,7 +79,12 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
     const { canvas } = layout;
     const viewport = catalogTasselViewport(sku, layout);
     const smallSprayer = ["GBSpry3mlClBlk", "GBSpry3mlClWht"].includes(sku);
-    const catalogScale = rectangleApplicatorGlass(sku) ? 1.25 : smallSprayer ? 0.94 : 1;
+    const footedRectangleRollOn = /^GBRect10(?:Mtl)?Roll/.test(sku);
+    let catalogScale = 1;
+    if (rectangleApplicatorGlass(sku)) catalogScale = 1.25 * 1.15;
+    if (smallSprayer) catalogScale = 0.94;
+    // Match the 6 mL Tulip shoulder height (32.97%) from the Rectangle's 35.07% target.
+    if (footedRectangleRollOn) catalogScale = 32.97 / 35.07;
     return <span ref={target} className="absolute inset-0">{photo}<svg className="absolute inset-0 h-full w-full" viewBox={`${viewport.x} ${viewport.y} ${viewport.width} ${viewport.height}`}
         style={catalogScale !== 1 ? { transform: `scale(${catalogScale})`, transformOrigin: "50% 91%" } : undefined}
         role="img" aria-label={title} data-bb-master-version={cylinderMasterSource(sku)?.version} data-bb-master-sku={sku}>

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
     MagnifyingGlass, User, ShoppingBag, CaretDown, List, X,
-    Flask, Diamond, ArrowRight, ArrowLeft, SprayBottle,
+    Flask, Diamond, ArrowRight, ArrowLeft, SprayBottle, Wrench, BookOpen, Ruler,
 } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import dynamic from "next/dynamic";
@@ -20,7 +20,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import LocaleLink from "./LocaleLink";
 import { useMegaMenuPanels } from "./SanityMegaMenuProvider";
 import { urlFor } from "@/sanity/lib/image";
-import { MEGA_MENU_PANELS, type MegaMenuId, type MegaMenuPanelContent } from "@/lib/megaMenu";
+import { MEGA_MENU_PANELS, type MegaMenuId, type MegaMenuLink, type MegaMenuPanelContent } from "@/lib/megaMenu";
 import { localizeHref } from "@/i18n/paths";
 import { useAppLocale, useCopy } from "@/i18n/useCopy";
 import { useGrace } from "@/components/useGrace";
@@ -723,6 +723,29 @@ type SanityFeatured = {
     href?: string;
 };
 
+function closureMenuIcon(path: string) {
+    return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d={path} />
+        </svg>
+    );
+}
+
+const megaMenuIcons: Record<NonNullable<MegaMenuLink["icon"]>, React.ReactNode> = {
+    sprayer: closureMenuIcon("M5 20h12v-8H5z M8 12V6h6v6 M14 7h2 M19 5l2-1 M19 8h3 M19 11l2 1"),
+    pump: closureMenuIcon("M5 20h12v-6H5z M9 14V8 M13 14V8 M6 8V4h13l2 4H6"),
+    dropper: closureMenuIcon("M8 10V6a4 4 0 0 1 8 0v4 M6 10h12v4H6z M10 14v5l2 3 2-3v-5"),
+    "roll-on": closureMenuIcon("M6.5 10V9a5.5 5.5 0 0 1 11 0v1 M4 10h16v4H4z M7 14v6h10v-6"),
+    reducer: closureMenuIcon("M3 7h18v4H3z M6 11l3 8h6l3-8 M10 4h4"),
+    cap: closureMenuIcon("M4 18V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10z M8 10v4 M12 10v4 M16 10v4"),
+    stopper: closureMenuIcon("M12 2l6 4v4l-6 3-6-3V6z M9 12v4h6v-4 M12 16v6"),
+    builder: <Wrench size={20} />,
+    guide: <BookOpen size={20} />,
+    neck: <Ruler size={20} />,
+    grace: <GraceMark size={20} />,
+};
+
 function MegaMenuPanel({
     panel,
     sanityFeatured,
@@ -757,7 +780,8 @@ function MegaMenuPanel({
                                                 onClick={onClose}
                                                 className="group flex items-center justify-between py-1.5 px-2 -mx-2 rounded-md hover:bg-linen transition-colors duration-150"
                                             >
-                                                <span className="text-[13px] text-obsidian normal-case font-normal group-hover:text-muted-gold transition-colors">
+                                                <span className="flex items-center gap-2.5 text-[13px] text-obsidian normal-case font-normal group-hover:text-muted-gold transition-colors">
+                                                    {item.icon && <span aria-hidden="true" className="shrink-0">{megaMenuIcons[item.icon]}</span>}
                                                     {item.label}
                                                 </span>
                                                 {item.badge && (
@@ -819,6 +843,7 @@ function MegaMenuPanel({
                             onClick={onClose}
                             className="text-[11px] uppercase tracking-wider text-slate hover:text-muted-gold transition-colors font-semibold normal-case flex items-center gap-1"
                         >
+                            {fl.icon && <span aria-hidden="true" className="shrink-0">{megaMenuIcons[fl.icon]}</span>}
                             {fl.label}
                             <ArrowRight size={12} />
                         </LocaleLink>

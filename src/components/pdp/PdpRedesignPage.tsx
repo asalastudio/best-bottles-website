@@ -30,6 +30,7 @@ import {
     type GracePdpPlateCommand,
 } from "@/lib/grace/pdpPlateSwap";
 import { isTolaApplicator } from "@/lib/products/tola-applicator";
+import { getProductHero } from "@/lib/products/catalog-heroes";
 import { rectangleApplicatorGlass } from "@/lib/products/rectangle-applicator";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
@@ -165,6 +166,14 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     }));
     const rectangleGlass = rectangleApplicatorGlass(selected?.websiteSku);
     const singleTola = isTolaApplicator(selected?.websiteSku);
+    const teardropGlassPicker = /^teardrop-9ml-.*-glassapplicator$/i.test(slug);
+    const teardropGlasses = teardropGlassPicker ? glasses.map(glass => ({
+        ...glass,
+        imageUrl: getProductHero(glass.primaryWebsiteSku ?? (glass.active ? selected?.websiteSku : null))?.url,
+        unavailable: glass.active
+            ? variants.every(variant => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false)
+            : siblings.find(sibling => sibling.slug === glass.slug)?.inStock === false,
+    })) : [];
     const fitment = fitmentLabel(selected);
     // Product copy v2 (scripts/pdp-descriptions/product_copy.py) names the product when it covers this SKU.
     const copy = useMemo(() => (selected?.websiteSku ? descriptions[selected.websiteSku]?.copy ?? null : null), [descriptions, selected?.websiteSku]);
@@ -318,9 +327,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         const glass = glasses.find((option) => option.slug === targetSlug);
         analytics.pdpPick({ group: slug, type: "glass", value: glass?.label ?? targetSlug, sku: glass?.primaryWebsiteSku ?? null });
         if (targetSlug === slug) return;
-        const query = [pickQuery(picks, rollers), searchParams.get("assetPreview") === "gpt13" ? "assetPreview=gpt13" : ""].filter(Boolean).join("&");
+        const query = [teardropGlassPicker ? "" : pickQuery(picks, rollers), searchParams.get("assetPreview") === "gpt13" ? "assetPreview=gpt13" : ""].filter(Boolean).join("&");
         router.push(`/products/${targetSlug}${query ? `?${query}` : ""}`, { scroll: false });
-    }, [glasses, picks, rollers, router, slug, searchParams]);
+    }, [glasses, picks, rollers, router, slug, searchParams, teardropGlassPicker]);
 
     useEffect(() => {
         for (const glass of glasses) if (!glass.active) router.prefetch(`/products/${glass.slug}`);
@@ -468,7 +477,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                 <div className={styles.grid}>
                     <PdpStage
                         pickLine={pickLine(showingFrosted ? "Frosted preview" : glassName, rollerOption, rollerOption ? null : fitment, rectangleGlass ? null : capName)}
-                        finishKind={rectangleGlass ? "glass" : "cap"}
+                        finishKind={rectangleGlass || teardropGlassPicker ? "glass" : "cap"}
                         view={shownView}
                         availableViews={views}
                         onViewChange={onView}
@@ -479,16 +488,19 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
                         fallbackAlt={copy?.altText ?? variantTitle(title, option)}
                         callouts={measuredCallouts}
-                        caps={[...caps.map((cap) => ({
+                        caps={teardropGlassPicker ? teardropGlasses.map(glass => ({
+                            id: glass.slug, name: glass.label, swatchName: glass.label, kit: null,
+                            imageUrl: glass.imageUrl, unavailable: glass.unavailable,
+                        })) : [...caps.map((cap) => ({
                             id: cap.id, name: cap.name, swatchName: cap.swatchName,
                             kit: kitFor(kitsBySku, cap.variants[0]),
                             unavailable: cap.variants.every((variant) => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false),
                         })), ...(blackDropperKit ? [{
                             id: "shiny-black-preview", name: "Shiny Black preview", swatchName: "Shiny Black", kit: blackDropperKit, unavailable: false,
                         }] : [])]}
-                        activeCapId={showingBlackDropper ? "shiny-black-preview" : activeCap?.id ?? null}
-                        onCapPick={onCapPick}
-                        glasses={[...(rectangleGlass || singleTola ? [] : glasses).map((glass) => ({
+                        activeCapId={teardropGlassPicker ? slug : showingBlackDropper ? "shiny-black-preview" : activeCap?.id ?? null}
+                        onCapPick={teardropGlassPicker ? onGlassPick : onCapPick}
+                        glasses={teardropGlassPicker ? teardropGlasses.map(glass => ({ ...glass, kit: null })) : [...(rectangleGlass || singleTola ? [] : glasses).map((glass) => ({
                             slug: glass.slug, label: glass.label, active: glass.active && !showingFrosted, kit: glass.active ? clearKit ?? glassBodyKit(glass.slug) : glassBodyKit(glass.slug),
                             unavailable: glass.active
                                 ? variants.every((variant) => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false)
@@ -556,7 +568,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     </div>
                 </div>
 
-                {!rectangleGlass && !singleTola && <PdpBuildStrip
+                {!rectangleGlass && !singleTola && !["Teardrop", "Apothecary"].includes(group.family) && <PdpBuildStrip
                     productPageOnly={["cylinder-3.3ml-clear-12mm-finemist", "cylinder-4ml-clear-12mm-finemist"].includes(slug)}
                     capacityLabel={capacityLabel}
                     glassLabel={glassLabel(group.color)}

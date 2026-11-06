@@ -219,18 +219,18 @@ export function withCylinderProductGlass(kit: KitLike): KitLike {
     const master = cylinderGlassMasters[id];
     const sizing = master.glassSizing;
     const reference = correctedSprays[source.sku] as BuilderKit;
-    const widthRatio = (body.bounds.right - body.bounds.left) / (master.body.bounds.right - master.body.bounds.left);
+    const bodyScaleY = (body.bounds.bottom - body.bounds.top) / (source.heel - source.rim);
     const glassSizing = sizing?.landmarkY === undefined ? kit.glassSizing : {
         ...sizing,
         heightPct: sizing.heightPct * (kit.canvas.width / kit.canvas.height) / (reference.canvas.width / reference.canvas.height),
-        landmarkY: body.bounds.bottom - (master.body.bounds.bottom - sizing.landmarkY) * widthRatio,
+        landmarkY: body.bounds.top + (source.shoulder - source.rim) * bodyScaleY,
     };
     return { ...kit, glassSizing, parts: kit.parts.map(part => {
         if (part !== body) return part;
         const { left, right, top, bottom } = part.bounds;
         // Keep the reducer's existing rim and baseline registration so its hardware stays seated.
         const sx = (right - left) / source.wallWidth;
-        const sy = (bottom - top) / (source.heel - source.rim);
+        const sy = bodyScaleY;
         return { ...part, image: source.image, image2x: null,
             box: { x: left - source.left * sx, y: top - source.rim * sy,
                 width: source.image.width * sx, height: source.image.height * sy } };

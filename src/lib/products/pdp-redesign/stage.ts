@@ -338,6 +338,20 @@ export function catalogTasselViewport(sku: string, layout: Pick<StageLayout, "ca
     };
 }
 
+// The tassel extends below its collar. Measure the collar at the neck axis
+// in each source cutout instead of using the bottom of the tassel artwork.
+const cylinderTasselCollarFeet: Readonly<Record<string, number>> = {
+    fbee1a783639: 347,
+    "712d98bbe7e9": 407,
+    "47a9ab1ddb17": 370,
+    e4e5d2ed1ee0: 366,
+    "4c9d5e394659": 366,
+    ddcb9cf94339: 372,
+    ed23b1e76217: 347,
+    "42f2c2b395ec": 360,
+    "97417da1f16f": 371,
+};
+
 export function stageLayout(
     kit: KitLike | null | undefined,
     requested: StageView,
@@ -404,6 +418,40 @@ export function stageLayout(
             if (part.slot === "sprayer" || part.slot === "collar" || (view === "capon" && part.slot === "overcap")) {
                 const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
                 offsets.set(part, { ...offset, dy: offset.dy - 14 });
+            }
+        }
+    }
+
+    const shoulder = kit.glassSizing?.landmarkY;
+    if (view !== "exploded" && shoulder !== undefined && kit.register?.glass === "Clear"
+        && /^cylinder-(25|50|100)ml-18-415$/.test(kit.register.bodyId)) {
+        // How far the head (sprayer, pump or dropper fitment) moved to reach the shoulder. Its collar,
+        // dip tube or pipette is one mechanism with it and must move the same distance, as in EXPLODED.
+        let mechanismLift = 0;
+        for (const part of sorted) {
+            const seatsOnShoulder = part.slot === "sprayer" || part.slot === "pump" || part.slot === "fitment"
+                || (view === "capon" && isClosureSlot(part.slot));
+            if (!seatsOnShoulder) continue;
+            const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+            let seat = part.bounds.bottom;
+            if (part.slot === "sprayer" && /AnSpTsl/i.test(kit.sku)) {
+                const hash = part.image.url.split(".").at(-2);
+                const collarFoot = hash ? cylinderTasselCollarFeet[hash] : undefined;
+                if (collarFoot === undefined || !part.box) continue;
+                seat = part.box.y + part.box.height * collarFoot / part.image.height;
+            }
+            if (part.slot === "overcap" && /ClOvrCap$/i.test(kit.sku)) {
+                // This short cover seats on the actuator, above the pump collar.
+                seat = sorted.find(candidate => candidate.slot === "pump")?.bounds.bottom ?? seat;
+            }
+            offsets.set(part, { ...offset, dy: shoulder - seat });
+            if (part.slot === "sprayer" || part.slot === "pump" || part.slot === "fitment") mechanismLift = shoulder - seat - offset.dy;
+        }
+        if (mechanismLift !== 0) {
+            for (const part of sorted) {
+                if (part.slot !== "collar" && part.slot !== "diptube" && part.slot !== "pipette") continue;
+                const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+                offsets.set(part, { ...offset, dy: offset.dy + mechanismLift });
             }
         }
     }

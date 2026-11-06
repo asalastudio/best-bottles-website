@@ -5,9 +5,18 @@ const batch=JSON.parse(readFileSync('public/local-kits/remaining-13-415-2026-11-
 const rows=batch.rows as Record<string,KitLike>;
 const protectedSkus=new Set(JSON.parse(readFileSync('docs/reviews/remaining-13-415-2026-11-01/protected-skus.json','utf8')));
 const ledger=JSON.parse(readFileSync('docs/reviews/remaining-13-415-2026-11-01/registration.json','utf8'));
+const registered = new Map<string, { sku: string; visibleAssemblyAxisX: number }>(
+  ledger.configurations.filter((entry: { status?: string }) => entry.status !== 'held-source-recovery').map((entry: { sku: string; visibleAssemblyAxisX: number }) => [entry.sku, entry]),
+);
+const bellBodyId = 'bell-10ml-13-415';
 describe('remaining 13-415 body and component registrations',()=>{
  it('keeps completed work out of the new batch and retains seven source recovery holds',()=>{
-  expect(Object.keys(rows)).toHaveLength(450);expect(ledger.configurations.filter((c:{status?:string})=>c.status==='held-source-recovery')).toHaveLength(7);
+  expect(registered.size).toBe(450);
+  expect([...registered.keys()].filter(sku => !rows[sku])).toEqual([]);
+  const additions = Object.entries(rows).filter(([sku]) => !registered.has(sku));
+  expect(additions).toHaveLength(32);
+  for (const [sku, kit] of additions) expect(kit.register?.bodyId, sku).toBe(bellBodyId);
+  expect(ledger.configurations.filter((c:{status?:string})=>c.status==='held-source-recovery')).toHaveLength(7);
   for(const sku of Object.keys(rows))expect(protectedSkus.has(sku)).toBe(false);
  });
  it('shares one body and sizing registration per body and glass color',()=>{
@@ -27,7 +36,12 @@ describe('remaining 13-415 body and component registrations',()=>{
    expect(rollers).toHaveLength(1);const r=rollers[0],s=r.box!.width/r.image.width;
    expect(r.box!.height/r.image.height).toBeCloseTo(s,8);
    expect(r.box!.y+760*s).toBeCloseTo(k.anchors.seatY+8*k.anchors.pxPerMm!/10.5,8);
-   expect((r.bounds.left+r.bounds.right)/2).toBeCloseTo(ledger.configurations.find((c:{sku:string})=>c.sku===k.sku).visibleAssemblyAxisX,8);
+   const bellReference = r.image.url === rows.GBBell10MtlRollBlkDot.parts.find(p => p.slot === 'roller')?.image.url
+     ? 'GBBell10MtlRollBlkDot'
+     : 'GBBell10RollBlkDot';
+   const registration = registered.get(k.sku) ?? (k.register?.bodyId === bellBodyId ? registered.get(bellReference) : undefined);
+   expect(registration, k.sku).toBeDefined();
+   expect((r.bounds.left+r.bounds.right)/2).toBeCloseTo(registration!.visibleAssemblyAxisX,8);
    expect(r.views).toBeUndefined();expect(r.zOrder).toBeLessThan(k.parts.find(p=>p.slot==='body')!.zOrder);
   }
  });
@@ -37,7 +51,7 @@ describe('remaining 13-415 body and component registrations',()=>{
    for(const v of ['sidecar','capon','exploded'])expect(k.parts.filter(p=>p.slot==='diptube'&&(!p.views||p.views.includes(v as 'sidecar')))).toHaveLength(1);
   }
  });
- it('keeps approved sizing, body position and component visibility stable in all 1350 layouts',()=>{
+ it('keeps approved sizing, body position and component visibility stable in all three views',()=>{
   for(const k of Object.values(rows)){
    const context={family:k.register!.bodyId.split('-')[0],websiteSku:k.sku,applicator:k.parts.some(p=>p.slot==='roller')?'Metal Roller Ball':k.parts.some(p=>p.slot==='sprayer')?'Fine Mist Sprayer':null};
    const layouts=(['sidecar','capon','exploded'] as const).map(v=>stageLayout(k,v,context)!);

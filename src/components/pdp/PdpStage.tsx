@@ -46,6 +46,7 @@ export type CapRailItem = {
     name: string;
     swatchName: string;
     kit: KitLike | null;
+    imageUrl?: string;
     unavailable: boolean;
 };
 
@@ -54,6 +55,7 @@ export type GlassLineupItem = {
     label: string;
     active: boolean;
     kit: KitLike | null;
+    imageUrl?: string;
     /** Nothing of this glass is in stock or sellable online. */
     unavailable?: boolean;
 };
@@ -241,7 +243,11 @@ export default function PdpStage({
                             data-unavailable={cap.unavailable ? "true" : undefined}
                             onClick={() => onCapPick(cap.id)}
                         >
-                            {finishKind !== "glass" && cap.kit?.capCloseUp
+                            {cap.imageUrl
+                                // eslint-disable-next-line @next/next/no-img-element
+                                ? <img src={registerImageSrc(cap.imageUrl, 128)} alt="" width={capThumbWidth} height={capThumbHeight}
+                                    style={{ objectFit: "contain", width: capThumbWidth, height: capThumbHeight }} draggable={false} />
+                                : finishKind !== "glass" && cap.kit?.capCloseUp
                                 // eslint-disable-next-line @next/next/no-img-element
                                 ? <img src={registerImageSrc(cap.kit.capCloseUp.url, 128)} alt="" width={capThumbWidth} height={capThumbHeight}
                                     style={{ objectFit: "contain", width: capThumbWidth, height: capThumbHeight }} draggable={false} />
@@ -459,7 +465,11 @@ export default function PdpStage({
                                 data-unavailable={glass.unavailable ? "true" : undefined}
                                 title={glass.unavailable ? `${glass.label}: out of stock` : undefined}
                             >
-                                {body && glass.kit
+                                {glass.imageUrl
+                                    // eslint-disable-next-line @next/next/no-img-element
+                                    ? <img src={registerImageSrc(glass.imageUrl, 128)} alt="" height={glassThumbHeight}
+                                        style={{ objectFit: "contain", height: glassThumbHeight }} draggable={false} />
+                                    : body && glass.kit
                                     ? <PdpKitPartImage part={body} canvas={glass.kit.canvas} height={glassThumbHeight} />
                                     : <span className={styles.glassTile} style={swatch ? { backgroundImage: `url(${swatch})`, backgroundSize: "cover" } : getMaterialSwatchStyle(glass.label, {})} aria-hidden />}
                                 <span className={styles.glassName}>{glass.label}</span>
