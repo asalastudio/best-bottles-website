@@ -204,6 +204,31 @@ describe("redesigned product page", () => {
         expect(text('[data-testid="pdp-item-name"]')).toBe("GBCylBlu9RollBlkDot");
     });
 
+    it("keeps the selected Tulip roller on the bottle in Sidecar when swapping materials", async () => {
+        const slug = "tulip-6ml-clear-13-415-rollon";
+        const variants = [VARIANTS[0], VARIANTS[2]].map((item, i) => ({
+            ...item, websiteSku: i === 0 ? "GBTulip6MtlRollBlkDot" : "GBTulip6RollBlkDot",
+        }));
+        const { default: PdpRedesignPage } = await import("@/components/pdp/PdpRedesignPage");
+        root = createRoot(container);
+        await act(async () => root.render(createElement(PdpRedesignPage, {
+            ...payload, slug, variants, siblings: [],
+            group: { ...payload.group, slug, primaryWebsiteSku: variants[0].websiteSku },
+            kitsBySku: Object.fromEntries(variants.map(({ websiteSku }) => [websiteSku, kit(websiteSku)])),
+        })));
+        const stage = '[data-testid="pdp-stage"]';
+        const verifyRoller = (sku: string) => {
+            expect(container.querySelector(stage)?.getAttribute("data-view")).toBe("sidecar");
+            expect(container.querySelector(`${stage} img[data-slot="roller"]`)?.getAttribute("src")).toContain(`${sku}.roller.webp`);
+            expect(container.querySelector(`${stage} img[data-slot="cap"]`)?.getAttribute("src")).toContain(`${sku}.cap.webp`);
+        };
+        verifyRoller("GBTulip6MtlRollBlkDot");
+        await click('[data-testid="pdp-roller-toggle"] [data-roller="plastic"]');
+        verifyRoller("GBTulip6RollBlkDot");
+        await click('[data-testid="pdp-roller-toggle"] [data-roller="metal"]');
+        verifyRoller("GBTulip6MtlRollBlkDot");
+    });
+
     it("appends cart lines that the In this order panel lists with the minimum meter", async () => {
         await mount();
         await click('[data-testid="pdp-add"]');
