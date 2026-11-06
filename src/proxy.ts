@@ -6,8 +6,39 @@ import { hasLocalePrefix, localizeHref } from "@/i18n/paths";
 import { localeAfterProxyPass, resolveLocale } from "@/i18n/resolveLocale";
 import { productSlugExists } from "@/lib/crawl/catalog-product-slugs";
 import { NOT_FOUND_REWRITE_PATH, crawlRouteStatus } from "@/lib/crawl/route-status";
+import { LEGACY_REDIRECTS, resolveLegacyRedirect } from "@/lib/seo/legacyRedirects";
 
 const isPortalRoute = createRouteMatcher(["/portal(.*)", "/api/portal(.*)"]);
+
+/** Attribution parameters worth carrying across a legacy redirect. */
+const CAMPAIGN_PARAMS = new Set([
+    "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+    "gclid", "gbraid", "wbraid", "fbclid", "msclkid", "ttclid",
+    "mc_cid", "mc_eid", "ref",
+]);
+
+/**
+ * Where a legacy bestbottles.com URL goes, or null when it is not one.
+ *
+ * An unmapped `/product/<slug>` falls back to the catalogue, unless the slug is
+ * a product on this site: next.config used to send `/product/:slug` to
+ * `/products/:slug`, and links written that way to a real product keep working.
+ */
+async function legacyDestination(req: NextRequest): Promise<string | null> {
+    const { pathname, searchParams } = req.nextUrl;
+    const destination = resolveLegacyRedirect(pathname, searchParams);
+    if (destination !== "/catalog") return destination;
+
+    const singular = /^\/+product\/([^/]+)\/?$/i.exec(pathname);
+    if (!singular || LEGACY_REDIRECTS.has(pathname.toLowerCase())) return destination;
+    let slug: string;
+    try {
+        slug = decodeURIComponent(singular[1]);
+    } catch {
+        return destination;
+    }
+    return (await productSlugExists(slug)) ? `/products/${encodeURIComponent(slug)}` : destination;
+}
 
 const clerk = clerkMiddleware(async (auth, req) => {
     if (!CLERK_ENABLED) {
@@ -50,6 +81,22 @@ function setRequestHeader(res: NextResponse, key: string, value: string) {
 }
 
 export default async function proxy(req: NextRequest, event: NextFetchEvent) {
+    // Legacy URLs first, before locale and auth work. They carry the old site's
+    // ranking history and inbound links, and the request is leaving at once.
+    const legacy = await legacyDestination(req);
+    if (legacy) {
+        const destination = new URL(legacy, req.nextUrl.origin);
+        // Carry campaign parameters, and only those: a legacy link in a live ad
+        // still has its utm_* attached. Legacy navigation parameters such as
+        // `?subcat=65` already chose this destination and mean nothing here.
+        for (const [key, value] of req.nextUrl.searchParams) {
+            if (!CAMPAIGN_PARAMS.has(key.toLowerCase())) continue;
+            if (!destination.searchParams.has(key)) destination.searchParams.set(key, value);
+        }
+        // 301: a permanent move search engines fold into the new URL.
+        return NextResponse.redirect(destination, 301);
+    }
+
     const pathname = req.nextUrl.pathname;
     const incomingLocale = req.headers.get(LOCALE_HEADER);
     const incomingPath = req.headers.get(PATHNAME_HEADER);
@@ -114,7 +161,9 @@ export const config = {
     matcher: [
         // Skip Next.js internals and static files
         // monitoring-tunnel is the Sentry browser tunnel (next.config.ts) — no auth, no Clerk.
-        "/((?!_next|monitoring-tunnel|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
+        // .html is not excluded: the legacy site served pages at .html, and they
+        // must reach the legacy redirect map. Nothing this app serves ends in .html.
+        "/((?!_next|monitoring-tunnel|[^?]*\\.(?:css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
         // Always run for API routes
         "/(api|trpc)(.*)",
     ],
