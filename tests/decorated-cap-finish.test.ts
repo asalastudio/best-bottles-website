@@ -14,7 +14,7 @@ describe("dotted cap identity", () => {
         expect(decoratedCapFinish(variant)).toBe(`${color} with Dots`);
         expect(getCustomerFacingProductName({
             group: { family: "Cylinder", capacityMl: 9, color: "Clear", category: "Glass Bottle" }, variant,
-        }).displayName).toBe(`9 ml Clear Cylinder Roll-On Bottle - ${color} with Dots Cap`);
+        }).displayName).toBe(`9 ml Clear ${websiteSku.startsWith("GBPillar9") ? "Pillar" : "Cylinder"} Roll-On Bottle - ${color} with Dots Cap`);
     });
 
     it("distinguishes solid Black and Shiny Black from Black with Dots", () => {
