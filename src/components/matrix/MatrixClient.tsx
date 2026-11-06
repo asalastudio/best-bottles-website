@@ -15,6 +15,7 @@ import { useBuilderBodyConfigurations } from "@/components/bottle-builder/useBui
 import { prefetchBody } from "@/components/bottle-builder/builder-requests";
 import { useTileIntent } from "@/components/bottle-builder/useTileIntent";
 import type { BuilderFamily } from "@/lib/bottle-builder/entry";
+import { registerDisplayDerivatives, type DisplayDerivativeMap } from "@/lib/products/display-derivative";
 import FamilyLoadingStatus from "@/components/bottle-builder/FamilyLoadingStatus";
 import bodyHeightMedia from "@/lib/bottle-builder/body-heights.generated.json";
 import BuilderImage from "@/components/bottle-builder/BuilderImage";
@@ -79,8 +80,10 @@ function chooserScale(body: BuilderBody, all: BuilderBody[] = [body]) {
     return 1;
 }
 
-export default function MatrixClient({ families: initialFamilies, familyList, openFamily, bodies: initialBodies, preferMobile = false, initialSelection, initialStep = 0, entryUnavailable = false }: {
+export default function MatrixClient({ families: initialFamilies, familyList, openFamily, bodies: initialBodies, displayDerivatives, preferMobile = false, initialSelection, initialStep = 0, entryUnavailable = false }: {
     families: BuilderFamily[];
+    /** Delivery copies for the first-paint bodies (resolved on the server). */
+    displayDerivatives?: DisplayDerivativeMap;
     /** Every eligible family, streamed into the page's own response. */
     familyList?: Promise<BuilderFamily[] | null>;
     openFamily: string;
@@ -90,6 +93,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     initialStep?: number;
     entryUnavailable?: boolean;
 }) {
+    registerDisplayDerivatives(displayDerivatives);
     const { formatPrice } = useRegion();
     const money = (value: number | null) => (value == null ? "—" : formatPrice(value));
     const { families, status: familyStatus, retry: retryFamilies } = useBuilderFamilies(initialFamilies, familyList);

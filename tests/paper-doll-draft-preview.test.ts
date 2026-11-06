@@ -110,7 +110,7 @@ describe("Paper Doll draft preview contract", () => {
         // Only the explicit local review may overlay candidates. Ordinary
         // product requests retain the Convex plate index; a variant-card family
         // (Atomizer) swaps in only its RELEASED catalog hero, never a draft.
-        expect(productPageSource).toContain("platesBySku={localAssetPreview ? pilot.plates : withReleasedHeroStages(group, data?.variants ?? [], platesBySku)}");
+        expect(productPageSource).toContain("platesBySku: localAssetPreview ? pilot.plates : withReleasedHeroStages(group, data?.variants ?? [], platesBySku),");
         expect(productPageSource).not.toContain("isPaperDollDraftPreviewAllowed");
         expect(productPageSource).not.toContain("paperDollPreview");
     });

@@ -1,6 +1,7 @@
 import cylinder5Masters from "@/lib/products/cylinder5-master-index.json";
 import { CYLINDER9_MASTER_VERSION } from "@/lib/products/cylinder9-master";
 import type { BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/model";
+import { registerDisplayDerivatives, type DisplayDerivativeMap } from "@/lib/products/display-derivative";
 
 /** One request per bottle per page view, shared by the tile prefetch and the
  * hooks that apply the result, so a pick made after a hover never asks twice.
@@ -13,7 +14,10 @@ function load<T>(url: string, read: (data: unknown) => T | null): Promise<T> {
     if (!request) {
         request = fetch(url, { headers: { Accept: "application/json" } }).then(async response => {
             if (!response.ok) throw Error(`Builder request failed: ${response.status}`);
-            const value = read(await response.json());
+            const data = await response.json();
+            // Delivery copies for the images in this response, resolved on the server.
+            registerDisplayDerivatives((data as { displayDerivatives?: DisplayDerivativeMap } | null)?.displayDerivatives);
+            const value = read(data);
             if (value === null) throw Error("Invalid builder response");
             return value;
         });
