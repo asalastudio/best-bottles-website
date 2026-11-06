@@ -67,14 +67,18 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
     const kit = current?.kit;
     const layout = kit ? stageLayout(kit, "sidecar", { websiteSku: sku }) : null;
     if (kit && !layout) return fallback;
-    // Until the master kit arrives (a client fetch after hydration), show the
-    // card's own photo so the server HTML paints an image instead of an empty box.
-    if (!layout) return <span ref={target} className="absolute inset-0" aria-busy="true" data-bb-master-placeholder="photo">{fallback}</span>;
+    // Until the master kit arrives (a client fetch after hydration), the card's own photo is
+    // what the server HTML paints. It stays mounted, hidden, once the composite draws over it:
+    // unmounting it removed the page's first painted image from the DOM, which left Lighthouse
+    // unable to attribute the catalog's LCP and made its simulated LCP wait for every script.
+    const photo = <span className="absolute inset-0" style={layout ? { visibility: "hidden" } : undefined} aria-hidden={layout ? true : undefined}
+        data-bb-master-placeholder={layout ? "photo-hidden" : "photo"}>{fallback}</span>;
+    if (!layout) return <span ref={target} className="absolute inset-0" aria-busy="true">{photo}</span>;
     const { canvas } = layout;
     const viewport = catalogTasselViewport(sku, layout);
     const smallSprayer = ["GBSpry3mlClBlk", "GBSpry3mlClWht"].includes(sku);
     const catalogScale = rectangleApplicatorGlass(sku) ? 1.25 : smallSprayer ? 0.94 : 1;
-    return <span ref={target} className="absolute inset-0"><svg className="absolute inset-0 h-full w-full" viewBox={`${viewport.x} ${viewport.y} ${viewport.width} ${viewport.height}`}
+    return <span ref={target} className="absolute inset-0">{photo}<svg className="absolute inset-0 h-full w-full" viewBox={`${viewport.x} ${viewport.y} ${viewport.width} ${viewport.height}`}
         style={catalogScale !== 1 ? { transform: `scale(${catalogScale})`, transformOrigin: "50% 91%" } : undefined}
         role="img" aria-label={title} data-bb-master-version={cylinderMasterSource(sku)?.version} data-bb-master-sku={sku}>
         {layout.parts.map((part, i) => {
