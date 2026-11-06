@@ -1,4 +1,4 @@
-import { tolaAssembly } from "../tola-applicator";
+import { isTolaApplicator, TOLA6_ASSEMBLED_IMAGE } from "../tola-applicator";
 import { getProductHero, getReleasedCatalogHero } from "@/lib/products/catalog-heroes";
 import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import bodyMedia from "@/lib/bottle-builder/bodies.generated.json";
@@ -31,8 +31,7 @@ export function pdpFallbackMedia(input: {
 }): { images: string[]; bodyImageUrl: string | null } {
     const { variant } = input;
     if (!variant) return { images: [], bodyImageUrl: null };
-    const tola = tolaAssembly(variant.websiteSku);
-    if (tola) return { images: [tola.url], bodyImageUrl: null };
+    if (isTolaApplicator(variant.websiteSku)) return { images: [TOLA6_ASSEMBLED_IMAGE], bodyImageUrl: null };
     const images = [
         getReleasedCatalogHero(input.groupSlug, variant.websiteSku)?.url,
         input.plateImageUrl,

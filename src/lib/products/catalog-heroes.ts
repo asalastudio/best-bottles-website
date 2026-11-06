@@ -1,4 +1,4 @@
-import { isTolaApplicator, tolaAssemblyLayout, tolaAssembly } from "./tola-applicator";
+import { isTolaApplicator, tolaAssemblyLayout, TOLA6_ASSEMBLED_IMAGE } from "./tola-applicator";
 import heroRows from "./catalog-heroes.json";
 import pilotRows from "./catalog-hero-pilot.json";
 import crePilotRows from "./catalog-hero-cre-pilot.json";
@@ -96,10 +96,9 @@ function isPilotHero(hero?: CatalogHero | null): boolean {
 /** The complete Tola photograph must also be the default image for downstream thumbnails. */
 function fixedAssemblyHero(hero: CatalogHero | null | undefined): CatalogHero | null {
     if (!hero || !isTolaApplicator(hero.websiteSku)) return hero ?? null;
-    const assembly = tolaAssembly(hero.websiteSku)!;
-    const { frame, parts } = tolaAssemblyLayout(hero.websiteSku), box = parts[0].box!;
-    return { ...hero, url: assembly.url, width: 1000, height: 1100,
-        alt: `${assembly.ml} ml Clear Tola Applicator Bottle with ${assembly.finish.toLowerCase()} cap and ${assembly.bead} bead`,
+    const { frame, parts } = tolaAssemblyLayout(), box = parts[0].box!;
+    return { ...hero, url: TOLA6_ASSEMBLED_IMAGE, width: 1000, height: 1100,
+        alt: "6 ml Clear Tola Applicator Bottle with plastic applicator and gold cap with red bead",
         presentation: "Complete Tola assembly", framing: { scale: box.widthPct / 100 * frame.scale,
             translateXPercent: frame.x + box.leftPct * frame.scale, translateYPercent: frame.y + box.topPct * frame.scale } };
 }

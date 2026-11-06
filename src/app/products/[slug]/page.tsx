@@ -1,4 +1,3 @@
-import { isTolaApplicator } from "@/lib/products/tola-applicator";
 import { readKitPilot } from "../../../../scripts/asset-ledger/kit-pilot.mjs";
 import { approvedComponentKits, withCylinderProductGlass } from "@/lib/paper-doll/approved-component-kits";
 import { withStorefrontFamily, sourceFamilyForProduct } from "@/lib/products/storefront-family";
@@ -159,7 +158,7 @@ function redesignApplies(slug: string, data: ProductGroupPayload): boolean {
     if (process.env.NEXT_PUBLIC_PDP_REDESIGN === "off") return false;
     if (data.variants.length === 0) return false;
     if (isVariantCardFamily(data.group.family)) return false;
-    return parseProductSlug(slug) !== null || data.variants.every(variant => isTolaApplicator(variant.websiteSku));
+    return parseProductSlug(slug) !== null;
 }
 
 /** The fitment groups a cap-only glass is also sold as, in the strip's order (spray, then roller). */

@@ -1,5 +1,5 @@
 {
-  "version": "3652067fcfc4",
+  "version": "a32f0bd37923",
   "rows": {
     "GBTulipAmb5BlkSht": {
       "sku": "GBTulipAmb5BlkSht",
@@ -19096,7 +19096,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -19144,10 +19144,10 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 417.281918438274,
-            "right": 582.718081561726,
-            "top": 314.72062503177636,
-            "bottom": 632
+            "left": 420.90147830358654,
+            "right": 586.3376414270385,
+            "top": 363.56881657533205,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -19169,8 +19169,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.3142812915362,
-            "y": 307.7583816939157,
+            "x": 414.93384115684876,
+            "y": 356.60657323747137,
             "width": 173.72454804947668,
             "height": 347.44909609895336
           },
@@ -19182,10 +19182,10 @@
           "zOrder": 5,
           "explodeIndex": 2,
           "bounds": {
-            "left": 414.3826273233053,
-            "right": 585.6173726766947,
-            "top": 311.5706250317764,
-            "bottom": 632
+            "left": 417.06217744689604,
+            "right": 588.2969228002854,
+            "top": 360.4188165753321,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -19207,8 +19207,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 408.44875000907894,
-            "y": 304.7890509583748,
+            "x": 411.12830013266966,
+            "y": 353.6372425019305,
             "width": 183.95019674101727,
             "height": 333.99252311502676
           },
@@ -19220,15 +19220,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -19263,15 +19263,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -19337,7 +19337,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -19385,10 +19385,10 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 420.55236895597267,
-            "right": 579.4476310440274,
-            "top": 331.3452393824064,
-            "bottom": 632
+            "left": 424.65924388703996,
+            "right": 583.5545059750947,
+            "top": 380.1934309259621,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -19410,8 +19410,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 417.74833491912466,
-            "y": 327.6065273332757,
+            "x": 421.85520985019195,
+            "y": 376.4547188768314,
             "width": 164.5033301617507,
             "height": 309.37842206556525
           },
@@ -19423,10 +19423,10 @@
           "zOrder": 5,
           "explodeIndex": 2,
           "bounds": {
-            "left": 418.9634163350921,
-            "right": 581.0365836649079,
-            "top": 314.53709492097937,
-            "bottom": 632
+            "left": 422.91451159744565,
+            "right": 584.9876789272614,
+            "top": 363.38528646453506,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -19448,8 +19448,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 413.9508441496339,
-            "y": 309.52452273552115,
+            "x": 417.9019394119874,
+            "y": 358.37271427907683,
             "width": 175.4400264910377,
             "height": 329.1589068450898
           },
@@ -19461,15 +19461,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -19504,15 +19504,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -19578,7 +19578,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -19626,10 +19626,10 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 419.14953197726743,
-            "right": 580.8504680227326,
-            "top": 323.8817702574125,
-            "bottom": 632
+            "left": 422.6421179691707,
+            "right": 584.3430540146359,
+            "top": 372.72996180096817,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -19651,8 +19651,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 415.4814578136652,
-            "y": 320.5193689407771,
+            "x": 418.9740438055685,
+            "y": 369.3675604843328,
             "width": 169.64843006660323,
             "height": 315.1487052228251
           },
@@ -19664,10 +19664,10 @@
           "zOrder": 5,
           "explodeIndex": 2,
           "bounds": {
-            "left": 417.5325226168128,
-            "right": 582.4674773831872,
-            "top": 317.95718208624675,
-            "bottom": 632
+            "left": 421.48361787916633,
+            "right": 586.4185726455407,
+            "top": 366.80537362980243,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -19689,8 +19689,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 410.03547921834127,
-            "y": 311.2931435098276,
+            "x": 413.9865744806948,
+            "y": 360.1413350533833,
             "width": 178.2630319192127,
             "height": 329.0369047106964
           },
@@ -19702,15 +19702,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -19745,15 +19745,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -19819,7 +19819,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -19867,10 +19867,10 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 419.61806850618456,
-            "right": 580.3819314938154,
-            "top": 327.91214081826837,
-            "bottom": 632
+            "left": 423.25207528138304,
+            "right": 584.0159382690139,
+            "top": 376.76033236182406,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -19892,8 +19892,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 416.76427212178874,
-            "y": 325.37543292102765,
+            "x": 420.3982788969872,
+            "y": 374.22362446458334,
             "width": 166.47145575642244,
             "height": 309.47836346336817
           },
@@ -19905,10 +19905,10 @@
           "zOrder": 5,
           "explodeIndex": 2,
           "bounds": {
-            "left": 418.01042987630825,
-            "right": 581.9895701236917,
-            "top": 320.5220351079852,
-            "bottom": 632
+            "left": 421.13750935852414,
+            "right": 585.1166496059076,
+            "top": 369.37022665154086,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -19930,8 +19930,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 412.24231941534504,
-            "y": 314.75392464702196,
+            "x": 415.3693988975609,
+            "y": 363.60211619057765,
             "width": 176.33937694944754,
             "height": 326.3102489344917
           },
@@ -19943,15 +19943,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -19986,15 +19986,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -20060,7 +20060,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -20108,10 +20108,10 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 415.4100991768558,
-            "right": 584.5899008231443,
-            "top": 323.09021403103645,
-            "bottom": 632
+            "left": 419.5178424036966,
+            "right": 588.697644049985,
+            "top": 371.93840557459214,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -20133,8 +20133,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 410.7106602422367,
-            "y": 315.57111173564584,
+            "x": 414.8184034690775,
+            "y": 364.41930327920153,
             "width": 176.07231208372977,
             "height": 322.06821498589716
           },
@@ -20146,10 +20146,10 @@
           "zOrder": 5,
           "explodeIndex": 2,
           "bounds": {
-            "left": 413.7183011603929,
-            "right": 586.2816988396071,
-            "top": 308.5520234454931,
-            "bottom": 632
+            "left": 416.36866729451117,
+            "right": 588.9320649737253,
+            "top": 357.4002149890488,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -20171,8 +20171,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 405.04677363882433,
-            "y": 296.4118849152971,
+            "x": 407.6971397729426,
+            "y": 345.2600764588528,
             "width": 188.17214721803754,
             "height": 344.2596426062714
           },
@@ -20184,15 +20184,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -20227,15 +20227,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -20301,7 +20301,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -20349,10 +20349,10 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 417.60146281102146,
-            "right": 582.3985371889785,
-            "top": 320.45364574508295,
-            "bottom": 632
+            "left": 421.4046253315636,
+            "right": 586.2016997095207,
+            "top": 369.30183728863864,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -20374,8 +20374,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.6841531385634,
-            "y": 316.3115289743623,
+            "x": 415.4873156591055,
+            "y": 365.159720517918,
             "width": 172.78544243577542,
             "height": 321.01404973084993
           },
@@ -20387,10 +20387,10 @@
           "zOrder": 5,
           "explodeIndex": 2,
           "bounds": {
-            "left": 415.95349206724194,
-            "right": 584.0465079327581,
-            "top": 304.4785567156438,
-            "bottom": 632
+            "left": 420.3378167519293,
+            "right": 588.4308326174455,
+            "top": 353.32674825919946,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -20412,8 +20412,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 410.7547389992362,
-            "y": 298.4133448029705,
+            "x": 415.1390636839236,
+            "y": 347.2615363465262,
             "width": 203.61782849688814,
             "height": 341.38478479903796
           },
@@ -20425,15 +20425,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -20468,15 +20468,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -20542,7 +20542,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -20590,10 +20590,10 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 419.1498334919124,
-            "right": 580.8501665080876,
-            "top": 325.28510941960036,
-            "bottom": 632
+            "left": 423.252617622011,
+            "right": 584.9529506381862,
+            "top": 374.13330096315605,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -20615,8 +20615,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.5653901046622,
-            "y": 318.61079923882016,
+            "x": 415.6681742347608,
+            "y": 367.45899078237585,
             "width": 172.9253092293054,
             "height": 321.5803996194101
           },
@@ -20628,10 +20628,10 @@
           "zOrder": 5,
           "explodeIndex": 2,
           "bounds": {
-            "left": 417.5328301617507,
-            "right": 582.4671698382492,
-            "top": 309.7436747859182,
-            "bottom": 632
+            "left": 421.9068339873773,
+            "right": 586.8411736638758,
+            "top": 358.5918663294739,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -20653,8 +20653,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.6121102759277,
-            "y": 302.977137773549,
+            "x": 415.9861141015543,
+            "y": 351.82532931710466,
             "width": 177.62159657469078,
             "height": 335.7893992388202
           },
@@ -20666,15 +20666,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -20709,15 +20709,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -20783,7 +20783,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -20831,10 +20831,10 @@
           "zOrder": 3,
           "explodeIndex": 1,
           "bounds": {
-            "left": 419.1498334919124,
-            "right": 580.8501665080876,
-            "top": 325.28510941960036,
-            "bottom": 632
+            "left": 423.252617622011,
+            "right": 584.9529506381862,
+            "top": 374.13330096315605,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -20856,8 +20856,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 411.5653901046622,
-            "y": 318.61079923882016,
+            "x": 415.6681742347608,
+            "y": 367.45899078237585,
             "width": 172.9253092293054,
             "height": 321.5803996194101
           },
@@ -20869,10 +20869,10 @@
           "zOrder": 5,
           "explodeIndex": 2,
           "bounds": {
-            "left": 417.5328301617508,
-            "right": 582.4671698382492,
-            "top": 303.867471590966,
-            "bottom": 632
+            "left": 421.91796316009504,
+            "right": 586.8523028365935,
+            "top": 352.71566313452166,
+            "bottom": 680.8481915435557
           },
           "assembled": {
             "x": 0,
@@ -20894,8 +20894,8 @@
           "mask": null,
           "derivation": "psd-layer",
           "box": {
-            "x": 412.3243773298613,
-            "y": 298.65901875907656,
+            "x": 416.70951032820557,
+            "y": 347.50721030263225,
             "width": 178.82354722820375,
             "height": 341.15366048875757
           },
@@ -20907,15 +20907,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -20950,15 +20950,15 @@
           "zOrder": 2,
           "explodeIndex": 1,
           "box": {
-            "x": 473.34615384615387,
-            "y": 611,
+            "x": 478.48186449312277,
+            "y": 659.8481915435557,
             "width": 53.30769230769231,
-            "height": 363.75
+            "height": 314.9018084564443
           },
           "bounds": {
-            "left": 473.34615384615387,
-            "top": 611,
-            "right": 526.6538461538462,
+            "left": 478.48186449312277,
+            "top": 659.8481915435557,
+            "right": 531.789556800815,
             "bottom": 974.75
           },
           "assembled": {
@@ -21024,7 +21024,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -21182,7 +21182,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -21340,7 +21340,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -21498,7 +21498,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -21656,7 +21656,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -21814,7 +21814,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -21972,7 +21972,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -22130,7 +22130,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -22288,7 +22288,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -22446,7 +22446,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -22604,7 +22604,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -22762,7 +22762,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -22920,7 +22920,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -23078,7 +23078,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -23236,7 +23236,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -23394,7 +23394,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -23552,7 +23552,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -23710,7 +23710,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -23868,7 +23868,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -23987,7 +23987,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -24106,7 +24106,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -24225,7 +24225,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -24344,7 +24344,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -24463,7 +24463,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -24582,7 +24582,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -24701,7 +24701,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -24820,7 +24820,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [
@@ -24939,7 +24939,7 @@
       "glassSizing": {
         "heightPct": 35.07,
         "baselinePct": 91,
-        "landmarkY": 632,
+        "landmarkY": 680.8481915435557,
         "source": "docs/hero-families/batch3-2026-09-25/approval.json"
       },
       "parts": [

@@ -359,7 +359,7 @@ export function stageLayout(
     /** The kit's `glassFrame` on its page, so every SKU of the glass shares this frame. */
     options: Partial<GlassFrame> = {},
 ): StageLayout | null {
-    if (isTolaApplicator(context.websiteSku)) return tolaAssemblyLayout(context.websiteSku ?? undefined);
+    if (isTolaApplicator(context.websiteSku)) return tolaAssemblyLayout();
     if (!kit?.parts?.length) return null;
     const canvas = kit.canvas ?? PDP_PLATE_CANVAS;
     const view = effectiveView(requested, kit, context);
@@ -425,6 +425,9 @@ export function stageLayout(
     const shoulder = kit.glassSizing?.landmarkY;
     if (view !== "exploded" && shoulder !== undefined && kit.register?.glass === "Clear"
         && /^cylinder-(25|50|100)ml-18-415$/.test(kit.register.bodyId)) {
+        // How far the head (sprayer, pump or dropper fitment) moved to reach the shoulder. Its collar,
+        // dip tube or pipette is one mechanism with it and must move the same distance, as in EXPLODED.
+        let mechanismLift = 0;
         for (const part of sorted) {
             const seatsOnShoulder = part.slot === "sprayer" || part.slot === "pump" || part.slot === "fitment"
                 || (view === "capon" && isClosureSlot(part.slot));
@@ -442,6 +445,14 @@ export function stageLayout(
                 seat = sorted.find(candidate => candidate.slot === "pump")?.bounds.bottom ?? seat;
             }
             offsets.set(part, { ...offset, dy: shoulder - seat });
+            if (part.slot === "sprayer" || part.slot === "pump" || part.slot === "fitment") mechanismLift = shoulder - seat - offset.dy;
+        }
+        if (mechanismLift !== 0) {
+            for (const part of sorted) {
+                if (part.slot !== "collar" && part.slot !== "diptube" && part.slot !== "pipette") continue;
+                const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+                offsets.set(part, { ...offset, dy: offset.dy + mechanismLift });
+            }
         }
     }
 
