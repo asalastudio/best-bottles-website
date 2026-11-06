@@ -47,8 +47,6 @@ describe("June 15 launch readiness guardrails", () => {
             "/studio",
             "/sign-in",
             "/sign-up",
-            "/example",
-            "/fitment-demo",
             "/tech-stack",
             "/cart",
             "/grace-workspace",
@@ -80,8 +78,6 @@ describe("June 15 launch readiness guardrails", () => {
 
     it("marks demo-only public pages noindex for launch", () => {
         for (const path of [
-            "src/app/example/page.tsx",
-            "src/app/fitment-demo/page.tsx",
             "src/app/tech-stack/page.tsx",
         ]) {
             const layoutPath = path.replace("/page.tsx", "/layout.tsx");

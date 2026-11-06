@@ -7,6 +7,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const projectRoot = process.cwd();
+const browserSourceMapsForAnalysis = process.env.BB_BROWSER_SOURCE_MAPS === "1";
 
 // ── Validate required environment variables at build time ────────────────
 const requiredEnvVars = [
@@ -46,6 +47,9 @@ const nextConfig: NextConfig = {
                 ? "cylinder-2026-09-22" : ""),
     },
     reactStrictMode: false,
+    // Browser source maps for local bundle attribution only (BB_BROWSER_SOURCE_MAPS=1 npm run build):
+    // the audit scripts read them to attribute first-load JavaScript to modules. Never set on Vercel.
+    productionBrowserSourceMaps: browserSourceMapsForAnalysis,
     // Required by the /ingest PostHog proxy below — without it Next 308s
     // PostHog's trailing-slash paths and the requests fail.
     skipTrailingSlashRedirect: true,
@@ -244,7 +248,9 @@ export default withSentryConfig(withNextIntl(nextConfig), {
     widenClientFileUpload: sentrySourceMapsEnabled,
     sourcemaps: {
         disable: !sentrySourceMapsEnabled,
-        deleteSourcemapsAfterUpload: true,
+        // An analysis build keeps its maps on disk; the Sentry wrapper otherwise deletes them
+        // even when no upload runs.
+        deleteSourcemapsAfterUpload: !browserSourceMapsForAnalysis,
     },
     // Route browser events through our own origin so ad blockers cannot hide
     // storefront errors from us. Excluded from the Clerk proxy in src/proxy.ts.

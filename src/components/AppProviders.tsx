@@ -10,7 +10,7 @@ import {
     type MegaMenuPanelsData,
 } from "@/components/SanityMegaMenuProvider";
 import GraceProvider from "@/components/grace/GraceProvider";
-import GraceChatDrawer from "@/components/grace/GraceChatDrawer";
+import GraceChatDrawerHost from "@/components/grace/GraceChatDrawerHost";
 import GraceLayoutShell from "@/components/grace/GraceLayoutShell";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import { CLERK_ENABLED } from "@/lib/clerk";
@@ -53,7 +53,7 @@ function ProviderContent({
                                 {children}
                             </SanityMegaMenuProvider>
                         </GraceLayoutShell>
-                        <GraceChatDrawer />
+                        <GraceChatDrawerHost />
                         {/* No floating Grace bubble (2026-11-04): Grace opens from the header, the phone menu and the product buy box. */}
                     </GraceProvider>
                 </Suspense>

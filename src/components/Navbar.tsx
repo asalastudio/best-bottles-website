@@ -9,7 +9,10 @@ import {
     Flask, Diamond, ArrowRight, ArrowLeft, SprayBottle,
 } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
-import CartDrawer from "./CartDrawer";
+import dynamic from "next/dynamic";
+// The cart drawer renders nothing until opened; loading it after idle (or on the first open) keeps it,
+// and framer-motion on pages that do not otherwise use it, out of the first-load JavaScript.
+const CartDrawer = dynamic(() => import("./CartDrawer"), { ssr: false });
 import AnnouncementMarquee from "./AnnouncementMarquee";
 import BrandWordmark from "./BrandWordmark";
 import RegionSelector from "./RegionSelector";
@@ -136,6 +139,17 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
         }
     };
     const [cartOpen, setCartOpen] = useState(false);
+    // The drawer's code arrives after the page is idle; opening earlier mounts it at once.
+    const [cartDrawerIdle, setCartDrawerIdle] = useState(false);
+    useEffect(() => {
+        if (typeof requestIdleCallback === "function") {
+            const id = requestIdleCallback(() => setCartDrawerIdle(true), { timeout: 4000 });
+            return () => cancelIdleCallback(id);
+        }
+        const id = window.setTimeout(() => setCartDrawerIdle(true), 1500);
+        return () => window.clearTimeout(id);
+    }, []);
+    const cartDrawerWanted = cartDrawerIdle || cartOpen;
     const [mounted, setMounted] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [isDictating, setIsDictating] = useState(false);
@@ -612,7 +626,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                 </div>
             </header>
 
-            <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} />
+            {cartDrawerWanted && <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} />}
 
             {/* Overlay */}
             {activeMega && (
