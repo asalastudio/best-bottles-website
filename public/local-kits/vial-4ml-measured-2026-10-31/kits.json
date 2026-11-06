@@ -35,21 +35,21 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png",
-            "key": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png",
-            "sha256": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f",
-            "bytes": 487683,
-            "width": 1195,
-            "height": 1316
+            "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-clear-studio.b11f29a0e107.webp",
+            "key": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-clear-studio.b11f29a0e107.webp",
+            "sha256": "b11f29a0e107e054126825f4f10f327ec5f9dbff8e9d53f72ff2db14b7f7ae25",
+            "bytes": 76946,
+            "width": 369,
+            "height": 1100
           },
           "image2x": null,
           "mask": null,
           "derivation": "image-generation-review",
           "box": {
-            "x": 4.213936352664632,
-            "y": 24,
-            "width": 997.4147240043194,
-            "height": 1052.8
+            "x": 311.3868646574321,
+            "y": -13.154831199068681,
+            "width": 376.7073899826803,
+            "height": 1135.2153667054715
           }
         },
         {
@@ -134,21 +134,21 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png",
-            "key": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f.body.png",
-            "sha256": "a55255e3f5d2a2af4e815e22d8411585d71ae77049128894f4f7abe5852bad7f",
-            "bytes": 487683,
-            "width": 1195,
-            "height": 1316
+            "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-clear-studio.b11f29a0e107.webp",
+            "key": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-clear-studio.b11f29a0e107.webp",
+            "sha256": "b11f29a0e107e054126825f4f10f327ec5f9dbff8e9d53f72ff2db14b7f7ae25",
+            "bytes": 76946,
+            "width": 369,
+            "height": 1100
           },
           "image2x": null,
           "mask": null,
           "derivation": "image-generation-review",
           "box": {
-            "x": 4.213936352664632,
-            "y": 24,
-            "width": 997.4147240043194,
-            "height": 1052.8
+            "x": 311.3868646574321,
+            "y": -13.154831199068681,
+            "width": 376.7073899826803,
+            "height": 1135.2153667054715
           }
         },
         {
@@ -233,21 +233,21 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png",
-            "key": "b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png",
-            "sha256": "b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68",
-            "bytes": 563295,
-            "width": 1195,
-            "height": 1316
+            "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-amber-studio.90e35d9fedca.webp",
+            "key": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-amber-studio.90e35d9fedca.webp",
+            "sha256": "90e35d9fedca3843e45941b07792d8fecf7c79d59e7e249ffafec1c615e61413",
+            "bytes": 36484,
+            "width": 550,
+            "height": 1100
           },
           "image2x": null,
           "mask": null,
           "derivation": "image-generation-review",
           "box": {
-            "x": 6.35850746381459,
-            "y": 27.522123893805315,
-            "width": 988.9381116190136,
-            "height": 1048.141592920354
+            "x": 192.25752485401273,
+            "y": -85.06645817044566,
+            "width": 615.4849502919745,
+            "height": 1248.3189992181392
           }
         },
         {
@@ -332,21 +332,21 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png",
-            "key": "b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68.body.png",
-            "sha256": "b6fb22f41d648191f9ac48fcbfea7605b2b2eef6797404d4a8dfddfa35263f68",
-            "bytes": 563295,
-            "width": 1195,
-            "height": 1316
+            "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-amber-studio.90e35d9fedca.webp",
+            "key": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-amber-studio.90e35d9fedca.webp",
+            "sha256": "90e35d9fedca3843e45941b07792d8fecf7c79d59e7e249ffafec1c615e61413",
+            "bytes": 36484,
+            "width": 550,
+            "height": 1100
           },
           "image2x": null,
           "mask": null,
           "derivation": "image-generation-review",
           "box": {
-            "x": 6.35850746381459,
-            "y": 27.522123893805315,
-            "width": 988.9381116190136,
-            "height": 1048.141592920354
+            "x": 192.25752485401273,
+            "y": -85.06645817044566,
+            "width": 615.4849502919745,
+            "height": 1248.3189992181392
           }
         },
         {
@@ -431,21 +431,21 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png",
-            "key": "d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png",
-            "sha256": "d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7",
-            "bytes": 551946,
-            "width": 1195,
-            "height": 1316
+            "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-cobalt-studio.179f58fce3bf.webp",
+            "key": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-cobalt-studio.179f58fce3bf.webp",
+            "sha256": "179f58fce3bf3062e268bf4a14df8549ce0a9223543162a37eb262c8e69f7fd2",
+            "bytes": 44842,
+            "width": 550,
+            "height": 1100
           },
           "image2x": null,
           "mask": null,
           "derivation": "image-generation-review",
           "box": {
-            "x": 10.928702394572326,
-            "y": 26.660761736049608,
-            "width": 980.6043634873927,
-            "height": 1049.069973427812
+            "x": 239.3167363451496,
+            "y": 12.41610738255035,
+            "width": 521.3665273097008,
+            "height": 1071.5436241610737
           }
         },
         {
@@ -530,21 +530,21 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png",
-            "key": "d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7.body.png",
-            "sha256": "d1edb445aa2ba6d398f9c534ee9874db5994f282a29ef899db874ceffcf958d7",
-            "bytes": 551946,
-            "width": 1195,
-            "height": 1316
+            "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-cobalt-studio.179f58fce3bf.webp",
+            "key": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-cobalt-studio.179f58fce3bf.webp",
+            "sha256": "179f58fce3bf3062e268bf4a14df8549ce0a9223543162a37eb262c8e69f7fd2",
+            "bytes": 44842,
+            "width": 550,
+            "height": 1100
           },
           "image2x": null,
           "mask": null,
           "derivation": "image-generation-review",
           "box": {
-            "x": 10.928702394572326,
-            "y": 26.660761736049608,
-            "width": 980.6043634873927,
-            "height": 1049.069973427812
+            "x": 239.3167363451496,
+            "y": 12.41610738255035,
+            "width": 521.3665273097008,
+            "height": 1071.5436241610737
           }
         },
         {
@@ -629,21 +629,21 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png",
-            "key": "309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png",
-            "sha256": "309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8",
-            "bytes": 570051,
-            "width": 1195,
-            "height": 1316
+            "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-green-studio.351ec04daf39.webp",
+            "key": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-green-studio.351ec04daf39.webp",
+            "sha256": "351ec04daf3988e6da3452ca5b18e33a4468aa2f5a39f86ae7ebe9e7103ac914",
+            "bytes": 44866,
+            "width": 550,
+            "height": 1100
           },
           "image2x": null,
           "mask": null,
           "derivation": "image-generation-review",
           "box": {
-            "x": 8.990813242797174,
-            "y": 25.863596102745802,
-            "width": 986.1445011342141,
-            "height": 1049.069973427812
+            "x": 223.75355642545702,
+            "y": -34.21052631578948,
+            "width": 552.492887149086,
+            "height": 1167.1052631578948
           }
         },
         {
@@ -728,21 +728,21 @@
             "dy": 0
           },
           "image": {
-            "url": "/local-kits/vial-4ml-measured-2026-10-31/parts/309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png",
-            "key": "309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8.body.png",
-            "sha256": "309f0b6b9c56c627e55a3ef2f8504a06832a4103ff9dcc63a65ecdfcd33acfd8",
-            "bytes": 570051,
-            "width": 1195,
-            "height": 1316
+            "url": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-green-studio.351ec04daf39.webp",
+            "key": "/local-kits/vial-masters-2026-11-03/parts/vial-4ml-green-studio.351ec04daf39.webp",
+            "sha256": "351ec04daf3988e6da3452ca5b18e33a4468aa2f5a39f86ae7ebe9e7103ac914",
+            "bytes": 44866,
+            "width": 550,
+            "height": 1100
           },
           "image2x": null,
           "mask": null,
           "derivation": "image-generation-review",
           "box": {
-            "x": 8.990813242797174,
-            "y": 25.863596102745802,
-            "width": 986.1445011342141,
-            "height": 1049.069973427812
+            "x": 223.75355642545702,
+            "y": -34.21052631578948,
+            "width": 552.492887149086,
+            "height": 1167.1052631578948
           }
         },
         {

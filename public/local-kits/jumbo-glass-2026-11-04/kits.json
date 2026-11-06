@@ -1,0 +1,1110 @@
+{
+  "rows": {
+    "GBMtlRoll28Wht": {
+      "sku": "GBMtlRoll28Wht",
+      "familyId": "review:cylinder-28ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 9.876543209876543
+      },
+      "register": {
+        "bodyId": "cylinder-28ml-16mm",
+        "plateKey": "cylinder-28ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 9.876543209876543
+      },
+      "glassSizing": {
+        "heightPct": 50.5,
+        "baselinePct": 91,
+        "landmarkY": 388.4596182085169,
+        "source": "Measured body frame with generated glass and visible shoulder registration"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/reviews/cylinder28-sunburst-2026-11-04/clear-candidate.png",
+            "key": "",
+            "width": 1024,
+            "height": 1536,
+            "bytes": 1348880,
+            "sha256": "41b656b096f0d05ef1c75120bbfc20e55726ba2f3bc0ebde2c465e2bee5fa15d"
+          },
+          "box": {
+            "x": 197.3735640402308,
+            "y": 199.91336270190897,
+            "width": 605.2528719195384,
+            "height": 902.2026431718061
+          },
+          "bounds": {
+            "left": 346.9135802469136,
+            "top": 261,
+            "right": 653.0864197530864,
+            "bottom": 1061
+          },
+          "image2x": null,
+          "mask": null
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-metal",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp",
+            "key": "",
+            "sha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008",
+            "bytes": 581082,
+            "width": 1344,
+            "height": 880
+          },
+          "box": {
+            "x": 382.255033557047,
+            "y": 102.87145995726368,
+            "width": 230.01342281879195,
+            "height": 163.12854004273632
+          },
+          "bounds": {
+            "left": 398,
+            "top": 105.83743341258617,
+            "right": 602,
+            "bottom": 266.0
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-white",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-white.b941c5342eae.webp",
+            "key": "",
+            "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908",
+            "bytes": 655994,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 342.9933333978692,
+            "y": 35.7435927124713,
+            "width": 314.2878203836359,
+            "height": 377.1453844603631
+          },
+          "bounds": {
+            "left": 362.7564103128227,
+            "top": 56.87910552429659,
+            "right": 637.2435896871773,
+            "bottom": 388.4596182085169
+          }
+        }
+      ],
+      "reviewMaster": "jumbo-glass-2026-11-04"
+    },
+    "GBCyl1ozRollWht": {
+      "sku": "GBCyl1ozRollWht",
+      "familyId": "review:cylinder-28ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 9.876543209876543
+      },
+      "register": {
+        "bodyId": "cylinder-28ml-16mm",
+        "plateKey": "cylinder-28ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 9.876543209876543
+      },
+      "glassSizing": {
+        "heightPct": 50.5,
+        "baselinePct": 91,
+        "landmarkY": 388.4596182085169,
+        "source": "Measured body frame with generated glass and visible shoulder registration"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/reviews/cylinder28-sunburst-2026-11-04/clear-candidate.png",
+            "key": "",
+            "width": 1024,
+            "height": 1536,
+            "bytes": 1348880,
+            "sha256": "41b656b096f0d05ef1c75120bbfc20e55726ba2f3bc0ebde2c465e2bee5fa15d"
+          },
+          "box": {
+            "x": 197.3735640402308,
+            "y": 199.91336270190897,
+            "width": 605.2528719195384,
+            "height": 902.2026431718061
+          },
+          "bounds": {
+            "left": 346.9135802469136,
+            "top": 261,
+            "right": 653.0864197530864,
+            "bottom": 1061
+          },
+          "image2x": null,
+          "mask": null
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-plastic",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp",
+            "key": "",
+            "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+            "bytes": 22232,
+            "width": 357,
+            "height": 244
+          },
+          "box": {
+            "x": 367.8791946308725,
+            "y": 85.07561922532881,
+            "width": 244.38926174496646,
+            "height": 180.9243807746712
+          },
+          "bounds": {
+            "left": 398,
+            "top": 92.490552863635,
+            "right": 602,
+            "bottom": 266.0
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-white",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-white.b941c5342eae.webp",
+            "key": "",
+            "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908",
+            "bytes": 655994,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 342.9933333978692,
+            "y": 35.7435927124713,
+            "width": 314.2878203836359,
+            "height": 377.1453844603631
+          },
+          "bounds": {
+            "left": 362.7564103128227,
+            "top": 56.87910552429659,
+            "right": 637.2435896871773,
+            "bottom": 388.4596182085169
+          }
+        }
+      ],
+      "reviewMaster": "jumbo-glass-2026-11-04"
+    },
+    "GBRoll28Blk": {
+      "sku": "GBRoll28Blk",
+      "familyId": "review:cylinder-28ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 9.876543209876543
+      },
+      "register": {
+        "bodyId": "cylinder-28ml-16mm",
+        "plateKey": "cylinder-28ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 9.876543209876543
+      },
+      "glassSizing": {
+        "heightPct": 50.5,
+        "baselinePct": 91,
+        "landmarkY": 388.4596182085169,
+        "source": "Measured body frame with generated glass and visible shoulder registration"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/reviews/cylinder28-sunburst-2026-11-04/clear-candidate.png",
+            "key": "",
+            "width": 1024,
+            "height": 1536,
+            "bytes": 1348880,
+            "sha256": "41b656b096f0d05ef1c75120bbfc20e55726ba2f3bc0ebde2c465e2bee5fa15d"
+          },
+          "box": {
+            "x": 197.3735640402308,
+            "y": 199.91336270190897,
+            "width": 605.2528719195384,
+            "height": 902.2026431718061
+          },
+          "bounds": {
+            "left": 346.9135802469136,
+            "top": 261,
+            "right": 653.0864197530864,
+            "bottom": 1061
+          },
+          "image2x": null,
+          "mask": null
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-plastic",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp",
+            "key": "",
+            "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+            "bytes": 22232,
+            "width": 357,
+            "height": 244
+          },
+          "box": {
+            "x": 367.8791946308725,
+            "y": 85.07561922532881,
+            "width": 244.38926174496646,
+            "height": 180.9243807746712
+          },
+          "bounds": {
+            "left": 398,
+            "top": 92.490552863635,
+            "right": 602,
+            "bottom": 266.0
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-black",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-black.b69eeeb45b69.webp",
+            "key": "",
+            "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7",
+            "bytes": 768394,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 342.9933333978692,
+            "y": 35.7435927124713,
+            "width": 314.2878203836359,
+            "height": 377.1453844603631
+          },
+          "bounds": {
+            "left": 362.4819231334484,
+            "top": 56.87910552429659,
+            "right": 637.5180768665516,
+            "bottom": 388.4596182085169
+          }
+        }
+      ],
+      "reviewMaster": "jumbo-glass-2026-11-04"
+    },
+    "GBMtlRoll28Blk": {
+      "sku": "GBMtlRoll28Blk",
+      "familyId": "review:cylinder-28ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 9.876543209876543
+      },
+      "register": {
+        "bodyId": "cylinder-28ml-16mm",
+        "plateKey": "cylinder-28ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 9.876543209876543
+      },
+      "glassSizing": {
+        "heightPct": 50.5,
+        "baselinePct": 91,
+        "landmarkY": 388.4596182085169,
+        "source": "Measured body frame with generated glass and visible shoulder registration"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/reviews/cylinder28-sunburst-2026-11-04/clear-candidate.png",
+            "key": "",
+            "width": 1024,
+            "height": 1536,
+            "bytes": 1348880,
+            "sha256": "41b656b096f0d05ef1c75120bbfc20e55726ba2f3bc0ebde2c465e2bee5fa15d"
+          },
+          "box": {
+            "x": 197.3735640402308,
+            "y": 199.91336270190897,
+            "width": 605.2528719195384,
+            "height": 902.2026431718061
+          },
+          "bounds": {
+            "left": 346.9135802469136,
+            "top": 261,
+            "right": 653.0864197530864,
+            "bottom": 1061
+          },
+          "image2x": null,
+          "mask": null
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-metal",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp",
+            "key": "",
+            "sha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008",
+            "bytes": 581082,
+            "width": 1344,
+            "height": 880
+          },
+          "box": {
+            "x": 382.255033557047,
+            "y": 102.87145995726368,
+            "width": 230.01342281879195,
+            "height": 163.12854004273632
+          },
+          "bounds": {
+            "left": 398,
+            "top": 105.83743341258617,
+            "right": 602,
+            "bottom": 266.0
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-black",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-black.b69eeeb45b69.webp",
+            "key": "",
+            "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7",
+            "bytes": 768394,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 342.9933333978692,
+            "y": 35.7435927124713,
+            "width": 314.2878203836359,
+            "height": 377.1453844603631
+          },
+          "bounds": {
+            "left": 362.4819231334484,
+            "top": 56.87910552429659,
+            "right": 637.5180768665516,
+            "bottom": 388.4596182085169
+          }
+        }
+      ],
+      "reviewMaster": "jumbo-glass-2026-11-04"
+    },
+    "GBCyl50MtlRollWht": {
+      "sku": "GBCyl50MtlRollWht",
+      "familyId": "review:cylinder-50ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.16326530612245
+      },
+      "register": {
+        "bodyId": "cylinder-50ml-16mm",
+        "plateKey": "cylinder-50ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 8.16326530612245
+      },
+      "glassSizing": {
+        "heightPct": 53,
+        "baselinePct": 91,
+        "landmarkY": 383.0618556701031,
+        "source": "Measured body frame with generated glass and visible shoulder registration"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/reviews/cylinder50-native-2026-11-04/clear-candidate.png",
+            "key": "",
+            "width": 747,
+            "height": 2104,
+            "bytes": 1603425,
+            "sha256": "354065317b307a9cab7e6089bd38d4a4f24a161e2efc874060c7b7151e328f66"
+          },
+          "box": {
+            "x": 324.0835369917796,
+            "y": 213.98969072164948,
+            "width": 350.89345224870664,
+            "height": 867.6288659793814
+          },
+          "bounds": {
+            "left": 348.9795918367347,
+            "top": 261,
+            "right": 651.0204081632653,
+            "bottom": 1061
+          },
+          "image2x": null,
+          "mask": null
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-metal",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp",
+            "key": "",
+            "sha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008",
+            "bytes": 581082,
+            "width": 1344,
+            "height": 880
+          },
+          "box": {
+            "x": 377.1402937918221,
+            "y": 105.89468047886118,
+            "width": 240.00500747644057,
+            "height": 157.14613584766943
+          },
+          "bounds": {
+            "left": 393.56920799407845,
+            "top": 108.7518829488188,
+            "right": 606.4307920059216,
+            "bottom": 263.0408163265306
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-white",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-white.b941c5342eae.webp",
+            "key": "",
+            "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908",
+            "bytes": 655994,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 365.2119961173841,
+            "y": 80.26013366107964,
+            "width": 269.81165112866296,
+            "height": 323.7739813543956
+          },
+          "bounds": {
+            "left": 382.17831828442667,
+            "top": 98.40467264527793,
+            "right": 617.8216817155734,
+            "bottom": 383.0618556701031
+          }
+        }
+      ],
+      "reviewMaster": "jumbo-glass-2026-11-04"
+    },
+    "GBCyl50RollWht": {
+      "sku": "GBCyl50RollWht",
+      "familyId": "review:cylinder-50ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.16326530612245
+      },
+      "register": {
+        "bodyId": "cylinder-50ml-16mm",
+        "plateKey": "cylinder-50ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 8.16326530612245
+      },
+      "glassSizing": {
+        "heightPct": 53,
+        "baselinePct": 91,
+        "landmarkY": 383.0618556701031,
+        "source": "Measured body frame with generated glass and visible shoulder registration"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/reviews/cylinder50-native-2026-11-04/clear-candidate.png",
+            "key": "",
+            "width": 747,
+            "height": 2104,
+            "bytes": 1603425,
+            "sha256": "354065317b307a9cab7e6089bd38d4a4f24a161e2efc874060c7b7151e328f66"
+          },
+          "box": {
+            "x": 324.0835369917796,
+            "y": 213.98969072164948,
+            "width": 350.89345224870664,
+            "height": 867.6288659793814
+          },
+          "bounds": {
+            "left": 348.9795918367347,
+            "top": 261,
+            "right": 651.0204081632653,
+            "bottom": 1061
+          },
+          "image2x": null,
+          "mask": null
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-plastic",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp",
+            "key": "",
+            "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+            "bytes": 22232,
+            "width": 357,
+            "height": 244
+          },
+          "box": {
+            "x": 362.1399808245445,
+            "y": 88.75146565911544,
+            "width": 255.0053204437181,
+            "height": 174.28935066741516
+          },
+          "bounds": {
+            "left": 393.5692079940784,
+            "top": 95.89447183400951,
+            "right": 606.4307920059215,
+            "bottom": 263.0408163265306
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-white",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-white.b941c5342eae.webp",
+            "key": "",
+            "sha256": "b941c5342eae6ec2ba447dcbaddcb9709ac13b7da32c220a8643f21c635d0908",
+            "bytes": 655994,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 365.2119961173841,
+            "y": 80.26013366107964,
+            "width": 269.81165112866296,
+            "height": 323.7739813543956
+          },
+          "bounds": {
+            "left": 382.17831828442667,
+            "top": 98.40467264527793,
+            "right": 617.8216817155734,
+            "bottom": 383.0618556701031
+          }
+        }
+      ],
+      "reviewMaster": "jumbo-glass-2026-11-04"
+    },
+    "GBCyl50RollBlk": {
+      "sku": "GBCyl50RollBlk",
+      "familyId": "review:cylinder-50ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.16326530612245
+      },
+      "register": {
+        "bodyId": "cylinder-50ml-16mm",
+        "plateKey": "cylinder-50ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 8.16326530612245
+      },
+      "glassSizing": {
+        "heightPct": 53,
+        "baselinePct": 91,
+        "landmarkY": 383.0618556701031,
+        "source": "Measured body frame with generated glass and visible shoulder registration"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/reviews/cylinder50-native-2026-11-04/clear-candidate.png",
+            "key": "",
+            "width": 747,
+            "height": 2104,
+            "bytes": 1603425,
+            "sha256": "354065317b307a9cab7e6089bd38d4a4f24a161e2efc874060c7b7151e328f66"
+          },
+          "box": {
+            "x": 324.0835369917796,
+            "y": 213.98969072164948,
+            "width": 350.89345224870664,
+            "height": 867.6288659793814
+          },
+          "bounds": {
+            "left": 348.9795918367347,
+            "top": 261,
+            "right": 651.0204081632653,
+            "bottom": 1061
+          },
+          "image2x": null,
+          "mask": null
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-plastic",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-plastic-native-psd.e3c978ea447c.webp",
+            "key": "",
+            "sha256": "e3c978ea447c2cb6f614b268b35c91378d028a24efc55d2481518e88fd028729",
+            "bytes": 22232,
+            "width": 357,
+            "height": 244
+          },
+          "box": {
+            "x": 362.1399808245445,
+            "y": 88.75146565911544,
+            "width": 255.0053204437181,
+            "height": 174.28935066741516
+          },
+          "bounds": {
+            "left": 393.5692079940784,
+            "top": 95.89447183400951,
+            "right": 606.4307920059215,
+            "bottom": 263.0408163265306
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-black",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-black.b69eeeb45b69.webp",
+            "key": "",
+            "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7",
+            "bytes": 768394,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 365.2119961173841,
+            "y": 80.26013366107964,
+            "width": 269.81165112866296,
+            "height": 323.7739813543956
+          },
+          "bounds": {
+            "left": 381.9426749209955,
+            "top": 98.40467264527793,
+            "right": 618.0573250790045,
+            "bottom": 383.0618556701031
+          }
+        }
+      ],
+      "reviewMaster": "jumbo-glass-2026-11-04"
+    },
+    "GBCyl50MtlRollBlk": {
+      "sku": "GBCyl50MtlRollBlk",
+      "familyId": "review:cylinder-50ml-16mm|Clear",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 261,
+        "baselineY": 1061,
+        "pxPerMm": 8.16326530612245
+      },
+      "register": {
+        "bodyId": "cylinder-50ml-16mm",
+        "plateKey": "cylinder-50ml-16mm|Clear",
+        "glass": "Clear",
+        "pxPerMm": 8.16326530612245
+      },
+      "glassSizing": {
+        "heightPct": 53,
+        "baselinePct": 91,
+        "landmarkY": 383.0618556701031,
+        "source": "Measured body frame with generated glass and visible shoulder registration"
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "componentId": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/reviews/cylinder50-native-2026-11-04/clear-candidate.png",
+            "key": "",
+            "width": 747,
+            "height": 2104,
+            "bytes": 1603425,
+            "sha256": "354065317b307a9cab7e6089bd38d4a4f24a161e2efc874060c7b7151e328f66"
+          },
+          "box": {
+            "x": 324.0835369917796,
+            "y": 213.98969072164948,
+            "width": 350.89345224870664,
+            "height": 867.6288659793814
+          },
+          "bounds": {
+            "left": 348.9795918367347,
+            "top": 261,
+            "right": 651.0204081632653,
+            "bottom": 1061
+          },
+          "image2x": null,
+          "mask": null
+        },
+        {
+          "slot": "roller",
+          "variantKey": null,
+          "componentId": "review:roller-16mm-metal",
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/roller16-metal-psd-geometry-studio.f5a0b3cae3e4.webp",
+            "key": "",
+            "sha256": "f5a0b3cae3e41d274f8434b50b9dad09a11211e0618f035dfcb054a8ad0bb008",
+            "bytes": 581082,
+            "width": 1344,
+            "height": 880
+          },
+          "box": {
+            "x": 377.1402937918221,
+            "y": 105.89468047886118,
+            "width": 240.00500747644057,
+            "height": 157.14613584766943
+          },
+          "bounds": {
+            "left": 393.56920799407845,
+            "top": 108.7518829488188,
+            "right": 606.4307920059216,
+            "bottom": 263.0408163265306
+          }
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "componentId": "review:cap-16mm-black",
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/local-kits/cylinder-family-completion-2026-11-02/cap16-black.b69eeeb45b69.webp",
+            "key": "",
+            "sha256": "b69eeeb45b692196c94fef5945033f115ef2a924928c4d40603eaa5b9bcbfea7",
+            "bytes": 768394,
+            "width": 1145,
+            "height": 1374
+          },
+          "box": {
+            "x": 365.2119961173841,
+            "y": 80.26013366107964,
+            "width": 269.81165112866296,
+            "height": 323.7739813543956
+          },
+          "bounds": {
+            "left": 381.9426749209955,
+            "top": 98.40467264527793,
+            "right": 618.0573250790045,
+            "bottom": 383.0618556701031
+          }
+        }
+      ],
+      "reviewMaster": "jumbo-glass-2026-11-04"
+    }
+  },
+  "defaultPdpSkus": [
+    "GBMtlRoll28Wht",
+    "GBCyl1ozRollWht",
+    "GBRoll28Blk",
+    "GBMtlRoll28Blk",
+    "GBCyl50MtlRollWht",
+    "GBCyl50RollWht",
+    "GBCyl50RollBlk",
+    "GBCyl50MtlRollBlk"
+  ]
+}

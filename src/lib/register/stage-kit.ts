@@ -230,6 +230,26 @@ export function kitFromRegister(
             ...(layer?.usage === "seated" ? { views: ["sidecar", "capon"] as StageViewName[] } : layer?.usage === "exploded" ? { views: ["exploded"] as StageViewName[] } : {}),
         };
     });
+    if (assembly.plateKey === "boston-round-30ml-20-400|Clear") {
+        parts = parts.map(part => {
+            if (part.slot !== "pipette" || part.componentId !== "CMP-DRP-BKGD-20400-76") return part;
+            const collar = parts.find(candidate => candidate.slot === "fitment" && candidate.componentId === part.componentId);
+            if (!collar) return part;
+            const top = collar.bounds.bottom - 2;
+            const bottom = part.bounds.bottom;
+            if (bottom <= top) return part;
+            const width = 48;
+            const x = (collar.bounds.left + collar.bounds.right - width) / 2;
+            return {
+                ...part,
+                image: { ...part.image, url: "/images/register/tubes/boston-30ml-glass-pipette-regenerated.webp", width: 87, height: 2119 },
+                box: { x, y: top, width, height: bottom - top },
+                bounds: { left: x, top, right: x + width, bottom },
+                opacity: part.views?.includes("exploded") ? 1 : 0.66,
+                blendMode: "multiply" as const,
+            };
+        });
+    }
     const photoBody = ELEGANT_PHOTO_BODIES[assembly.plateKey];
     const bodyPart = photoBody && parts.find((part) => part.slot === "body");
     if (bodyPart && photoBody) {

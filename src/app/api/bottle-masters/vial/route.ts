@@ -18,7 +18,11 @@ export async function GET(request: Request) {
     try {
         const review = JSON.parse(readFileSync("public/local-kits/vial-masters-2026-11-03/kits.json", "utf8")) as
             { version: string; rows: Record<string, BuilderKit> };
-        const kit = review.version === VIAL_MASTER_REVIEW_VERSION ? review.rows[sku] : null;
+        if (review.version !== VIAL_MASTER_REVIEW_VERSION) return NextResponse.json({ error: "Not found" }, { status: 404 });
+        const capped = /^GBV(?:Amb|Blu|Gr)?1Drm(?:Black|Wht)CapSht$/.test(sku);
+        const kit = capped
+            ? (JSON.parse(readFileSync("public/local-kits/vial-4ml-measured-2026-10-31/kits.json", "utf8")) as { rows: Record<string, BuilderKit> }).rows[sku]
+            : review.rows[sku];
         if (!kit || kit.sku !== sku) return NextResponse.json({ error: "Not found" }, { status: 404 });
         return NextResponse.json({ kit, version: review.version }, { headers: { "Cache-Control": "private, no-store" } });
     } catch {

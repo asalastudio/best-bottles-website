@@ -1,5 +1,5 @@
 {
- "version": "99d50e4b6fa0",
+ "version": "8f3982db65f6",
  "rows": {
   "GBPillar9BlkShSht": {
    "sku": "GBPillar9BlkShSht",
@@ -20,7 +20,7 @@
    "glassSizing": {
     "heightPct": 37.87,
     "baselinePct": 91,
-    "landmarkY": 546.4732006125574,
+    "landmarkY": 574.1527663088357,
     "source": "docs/hero-families/batch6-2026-09-25/approval.json"
    },
    "parts": [
@@ -30,8 +30,8 @@
      "zOrder": 1,
      "explodeIndex": 0,
      "bounds": {
-      "left": 372.079,
-      "right": 627.922,
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
       "top": 443,
       "bottom": 1061
      },
@@ -44,21 +44,21 @@
       "dy": 0
      },
      "image": {
-      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-04/70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7.png",
-      "key": "reviewed-master-media/2026-11-04/70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7.png",
-      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
-      "bytes": 83949,
-      "width": 310,
-      "height": 715
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
      "box": {
-      "x": 367.757,
-      "y": 443,
-      "width": 267.944,
-      "height": 618
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
      },
      "componentId": null
     },
@@ -69,9 +69,9 @@
      "explodeIndex": 1,
      "bounds": {
       "left": 415.62,
-      "top": 381.98,
+      "top": 393.21276630883574,
       "right": 584.39,
-      "bottom": 562.92
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -94,7 +94,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 415.62,
-      "y": 381.98,
+      "y": 393.21276630883574,
       "width": 168.77,
       "height": 180.94
      },
@@ -140,7 +140,7 @@
    "glassSizing": {
     "heightPct": 37.87,
     "baselinePct": 91,
-    "landmarkY": 546.4732006125574,
+    "landmarkY": 574.1527663088357,
     "source": "docs/hero-families/batch6-2026-09-25/approval.json"
    },
    "parts": [
@@ -148,12 +148,18 @@
      "slot": "roller",
      "variantKey": null,
      "zOrder": 0,
-     "explodeIndex": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
      "bounds": {
-      "left": 437.4,
-      "top": 340.22,
-      "right": 564.47,
-      "bottom": 451.41
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
      },
      "assembled": {
       "x": 0,
@@ -161,26 +167,65 @@
      },
      "exploded": {
       "dx": 0,
-      "dy": -32.41
+      "dy": 0
      },
      "image": {
-      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-PlsticRollon/roller-25a3b7198c2449e8200d03f748fbf04a25c44265cfd3be02030a8b4e595d3e7a.png",
-      "key": "",
-      "sha256": "",
-      "bytes": 0,
-      "width": 136,
-      "height": 119
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
      "box": {
-      "x": 437.4,
-      "y": 340.22,
-      "width": 127.07,
-      "height": 111.19
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
      },
-     "componentId": "LIB-13-415-PlsticRollon"
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "exploded"
+     ]
     },
     {
      "slot": "body",
@@ -188,8 +233,8 @@
      "zOrder": 1,
      "explodeIndex": 0,
      "bounds": {
-      "left": 372.079,
-      "right": 627.922,
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
       "top": 443,
       "bottom": 1061
      },
@@ -202,21 +247,21 @@
       "dy": 0
      },
      "image": {
-      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-04/70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7.png",
-      "key": "reviewed-master-media/2026-11-04/70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7.png",
-      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
-      "bytes": 83949,
-      "width": 310,
-      "height": 715
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
      "box": {
-      "x": 367.757,
-      "y": 443,
-      "width": 267.944,
-      "height": 618
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
      },
      "componentId": null
     },
@@ -227,9 +272,9 @@
      "explodeIndex": 1,
      "bounds": {
       "left": 404.94,
-      "top": 297.1,
+      "top": 312.5127663088357,
       "right": 594.19,
-      "bottom": 558.74
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -252,7 +297,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 404.94,
-      "y": 297.1,
+      "y": 312.5127663088357,
       "width": 189.25,
       "height": 261.64
      },
@@ -299,7 +344,7 @@
    "glassSizing": {
     "heightPct": 37.87,
     "baselinePct": 91,
-    "landmarkY": 546.4732006125574,
+    "landmarkY": 574.1527663088357,
     "source": "docs/hero-families/batch6-2026-09-25/approval.json"
    },
    "parts": [
@@ -307,12 +352,18 @@
      "slot": "roller",
      "variantKey": null,
      "zOrder": 0,
-     "explodeIndex": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
      "bounds": {
-      "left": 433.66,
-      "top": 337.42,
-      "right": 568.2,
-      "bottom": 451.41
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
      },
      "assembled": {
       "x": 0,
@@ -320,26 +371,65 @@
      },
      "exploded": {
       "dx": 0,
-      "dy": -32.41
+      "dy": 0
      },
      "image": {
-      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/LIB-13-415-MtlRollon/roller-53cf968898a4e0df3ef88e45ed8557bc355e7fd0d82a8ab903b6fc6c185c13e0.png",
-      "key": "",
-      "sha256": "",
-      "bytes": 0,
-      "width": 144,
-      "height": 122
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
      "box": {
-      "x": 433.66,
-      "y": 337.42,
-      "width": 134.54,
-      "height": 113.99
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
      },
-     "componentId": "LIB-13-415-MtlRollon"
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "exploded"
+     ]
     },
     {
      "slot": "body",
@@ -347,8 +437,8 @@
      "zOrder": 1,
      "explodeIndex": 0,
      "bounds": {
-      "left": 372.079,
-      "right": 627.922,
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
       "top": 443,
       "bottom": 1061
      },
@@ -361,21 +451,21 @@
       "dy": 0
      },
      "image": {
-      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-04/70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7.png",
-      "key": "reviewed-master-media/2026-11-04/70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7.png",
-      "sha256": "70b618814847ee8c979818723f96313a6dd0b6e2650a1dfabcaa07d318b52bf7",
-      "bytes": 83949,
-      "width": 310,
-      "height": 715
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
      },
      "image2x": null,
      "mask": null,
      "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
      "box": {
-      "x": 367.757,
-      "y": 443,
-      "width": 267.944,
-      "height": 618
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
      },
      "componentId": null
     },
@@ -386,9 +476,9 @@
      "explodeIndex": 1,
      "bounds": {
       "left": 404.94,
-      "top": 297.1,
+      "top": 312.5127663088357,
       "right": 594.19,
-      "bottom": 558.74
+      "bottom": 574.1527663088357
      },
      "assembled": {
       "x": 0,
@@ -411,7 +501,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 404.94,
-      "y": 297.1,
+      "y": 312.5127663088357,
       "width": 189.25,
       "height": 261.64
      },
@@ -438,11 +528,3291 @@
     "seatDropMm": 0.67
    },
    "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9MtlRollBlkSh": {
+   "sku": "GBPillar9MtlRollBlkSh",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -277.73
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SBLK-13415/cap-a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-SBLK-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-MtlRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9RollBlkSh": {
+   "sku": "GBPillar9RollBlkSh",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -274.93
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SBLK-13415/cap-a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-SBLK-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-PlsticRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9MtlRollCuMatt": {
+   "sku": "GBPillar9MtlRollCuMatt",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -277.73
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MCPR-13415/cap-9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-MCPR-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-MtlRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9RollCuMatt": {
+   "sku": "GBPillar9RollCuMatt",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -274.93
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MCPR-13415/cap-9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-MCPR-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-PlsticRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9MtlRollGlMatt": {
+   "sku": "GBPillar9MtlRollGlMatt",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -277.73
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MGLD-13415/cap-40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-MGLD-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-MtlRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9RollGlMatt": {
+   "sku": "GBPillar9RollGlMatt",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -274.93
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MGLD-13415/cap-40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-MGLD-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-PlsticRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9MtlRollGlSh": {
+   "sku": "GBPillar9MtlRollGlSh",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -277.73
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SGLD-13415/cap-0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-SGLD-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-MtlRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9RollGlSh": {
+   "sku": "GBPillar9RollGlSh",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -274.93
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SGLD-13415/cap-0f2e011c6b7ab32f46f7309e0cb4857441603219f9dc35935de04f9ebdde1545.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-SGLD-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-PlsticRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9MtlRollPinkDot": {
+   "sku": "GBPillar9MtlRollPinkDot",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -277.73
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-PNK-13415-DOT/cap-f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-PNK-13415-DOT"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-MtlRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9RollPinkDot": {
+   "sku": "GBPillar9RollPinkDot",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -274.93
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-PNK-13415-DOT/cap-f263dadacb6769adff754964cb575628ae1bd438f0bd51588d2399b0a13027a1.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-PNK-13415-DOT"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-PlsticRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9MtlRollSlDot": {
+   "sku": "GBPillar9MtlRollSlDot",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -277.73
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SLV-13415-DOT/cap-e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-SLV-13415-DOT"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-MtlRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9RollSlDot": {
+   "sku": "GBPillar9RollSlDot",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -274.93
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SLV-13415-DOT/cap-e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-SLV-13415-DOT"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-PlsticRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9MtlRollSlMatt": {
+   "sku": "GBPillar9MtlRollSlMatt",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -277.73
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MSLV-13415/cap-023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-MSLV-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-MtlRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9RollSlMatt": {
+   "sku": "GBPillar9RollSlMatt",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -274.93
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MSLV-13415/cap-023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-MSLV-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-PlsticRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9MtlRollSlSh": {
+   "sku": "GBPillar9MtlRollSlSh",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-metal.2c4bc8ffee8b.png",
+      "key": "roller-metal.2c4bc8ffee8b.png",
+      "sha256": "2c4bc8ffee8bee449c1186beef43ca93e674204c389026d6d4003778902e7b37",
+      "bytes": 77046,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-MtlRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -277.73
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SSLV-13415/cap-be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-SSLV-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-MtlRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
+  },
+  "GBPillar9RollSlSh": {
+   "sku": "GBPillar9RollSlSh",
+   "familyId": "register:pillar-9ml-13-415|Clear",
+   "plateSha256": "",
+   "canvas": {
+    "width": 1000,
+    "height": 1100
+   },
+   "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 443,
+    "baselineY": 1061,
+    "pxPerMm": 10.5
+   },
+   "completeness": "full",
+   "glassSizing": {
+    "heightPct": 37.87,
+    "baselinePct": 91,
+    "landmarkY": 574.1527663088357,
+    "source": "docs/hero-families/batch6-2026-09-25/approval.json"
+   },
+   "parts": [
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 0,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "sidecar",
+      "capon"
+     ]
+    },
+    {
+     "slot": "roller",
+     "variantKey": null,
+     "zOrder": 4,
+     "explodeIndex": 1,
+     "box": {
+      "x": 435.8012,
+      "y": 340.6567543296814,
+      "width": 128.3976,
+      "height": 190.918
+     },
+     "bounds": {
+      "left": 435.8012,
+      "top": 340.6567543296814,
+      "right": 564.1988,
+      "bottom": 531.5747543296814
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/gpt-13-415-2026-10-31/roller-plastic.4b356a2a9537.png",
+      "key": "roller-plastic.4b356a2a9537.png",
+      "sha256": "4b356a2a9537b671ae1f03d415bf5e152f39c60cb296d97c4695075a4995b08c",
+      "bytes": 72485,
+      "width": 306,
+      "height": 455
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "componentId": "LIB-13-415-PlsticRollon",
+     "views": [
+      "exploded"
+     ]
+    },
+    {
+     "slot": "body",
+     "variantKey": null,
+     "zOrder": 1,
+     "explodeIndex": 0,
+     "bounds": {
+      "left": 379.5639966969446,
+      "right": 620.4360033030553,
+      "top": 443,
+      "bottom": 1061
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": 0
+     },
+     "image": {
+      "url": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "key": "/local-kits/pillar-masters-2026-11-04/body-pillar-9ml-owner-reference.721d787ae12e.webp",
+      "sha256": "721d787ae12e7e63e325ce1ba4f4cc5698c3950de863bc4814cfbc65c82133e0",
+      "bytes": 90032,
+      "width": 1254,
+      "height": 1254
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer:27. GBPillar9RollBlk.psd/Layer 8 (card removed)",
+     "box": {
+      "x": 180.02807597027248,
+      "y": 429.22130470685386,
+      "width": 639.943848059455,
+      "height": 639.943848059455
+     },
+     "componentId": null
+    },
+    {
+     "slot": "cap",
+     "variantKey": null,
+     "zOrder": 2,
+     "explodeIndex": 1,
+     "bounds": {
+      "left": 404.94,
+      "top": 312.5127663088357,
+      "right": 594.19,
+      "bottom": 574.1527663088357
+     },
+     "assembled": {
+      "x": 0,
+      "y": 0
+     },
+     "exploded": {
+      "dx": 0,
+      "dy": -274.93
+     },
+     "image": {
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SSLV-13415/cap-be765db5b8f521550a58d443dd3de3c1293f51dfba196e295cee1792208157c3.png",
+      "key": "",
+      "sha256": "",
+      "bytes": 0,
+      "width": 422,
+      "height": 631
+     },
+     "image2x": null,
+     "mask": null,
+     "derivation": "psd-layer",
+     "box": {
+      "x": 404.94,
+      "y": 312.5127663088357,
+      "width": 189.25,
+      "height": 261.64
+     },
+     "componentId": "CMP-ROC-SSLV-13415"
+    }
+   ],
+   "three": null,
+   "conflicts": [],
+   "register": {
+    "bodyId": "pillar-9ml-13-415",
+    "plateKey": "pillar-9ml-13-415|Clear",
+    "glass": "Clear",
+    "datum": {
+     "axisX": 500,
+     "seatY": 443,
+     "baselineY": 1061
+    },
+    "pxPerMm": 10.5,
+    "componentIds": [
+     "LIB-13-415-PlsticRollon",
+     "CMP-ROC-BLK-13415-DOT"
+    ],
+    "seatSignature": "ac42eaa1105db2",
+    "seatDropMm": 0.67
+   },
+   "reviewMaster": "pillar-caps-2026-11-04"
   }
  },
  "defaultPdpSkus": [
   "GBPillar9BlkShSht",
   "GBPillar9RollBlkDot",
-  "GBPillar9MtlRollBlkdot"
+  "GBPillar9MtlRollBlkdot",
+  "GBPillar9MtlRollBlkSh",
+  "GBPillar9RollBlkSh",
+  "GBPillar9MtlRollCuMatt",
+  "GBPillar9RollCuMatt",
+  "GBPillar9MtlRollGlMatt",
+  "GBPillar9RollGlMatt",
+  "GBPillar9MtlRollGlSh",
+  "GBPillar9RollGlSh",
+  "GBPillar9MtlRollPinkDot",
+  "GBPillar9RollPinkDot",
+  "GBPillar9MtlRollSlDot",
+  "GBPillar9RollSlDot",
+  "GBPillar9MtlRollSlMatt",
+  "GBPillar9RollSlMatt",
+  "GBPillar9MtlRollSlSh",
+  "GBPillar9RollSlSh"
  ]
 }

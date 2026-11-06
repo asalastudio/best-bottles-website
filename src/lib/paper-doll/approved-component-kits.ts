@@ -1,4 +1,6 @@
 import "server-only";
+import pillarCaps from "../../../public/local-kits/pillar-caps-2026-11-04/kits.json";
+import { isPillarRollOnSku, PILLAR_POUR_CAP_SUFFIXES } from "../products/pillar-master";
 import manifest from "./approved-kits.generated.json";
 import sprays from "./cylinder-spray-kits.generated.json";
 import jumbo from "./cylinder-jumbo-overcap.generated.json";
@@ -9,6 +11,7 @@ import cylinder25Droppers from "./cylinder25-dropper.generated.json";
 import cylinder25Reducers from "./cylinder25-reducers.generated.json";
 import { CYLINDER25_COPPER_OVERCAP } from "../register/cylinder25-copper-overcap";
 import { withSelected25LotionTube } from "../register/cylinder-lotion-tube";
+import type { KitLike } from "@/lib/products/pdp-redesign/stage";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
 
 /** Exact owner-approved recipes, independent of the localhost candidate loader. */
@@ -144,6 +147,7 @@ const correctedSleek = Object.fromEntries(Object.entries(sleekTubes.rows).map(([
     const body = kit.parts.find(part => part.slot === "body");
     const landmarks = sleekLandmarks[kit.register?.bodyId ?? ""];
     if (!body?.box || !landmarks) return [sku, kit];
+    if (kit.parts.some(part => part.image.url.endsWith("/sleek-18-415-spray-regenerated.webp"))) return [sku, kit];
     const top = body.box.y + body.box.height * landmarks.shoulder / body.image.height;
     const bottom = body.box.y + body.box.height * landmarks.floor / body.image.height;
     const lotion = kit.parts.some(part => part.slot === "pump");
@@ -177,10 +181,10 @@ const correctedCylinder25Droppers = Object.fromEntries(Object.entries(cylinder25
         if (part.slot === "body") return { ...body, zOrder: 0 };
         if (part.slot === "fitment") return { ...part, zOrder: 2 };
         if (part.slot !== "pipette") return part;
-        return { ...part, zOrder: 1, explodeIndex: fitment.explodeIndex, exploded: fitment.exploded,
+        return { ...part, zOrder: -1, explodeIndex: fitment.explodeIndex, exploded: fitment.exploded,
             image: { url, key: url, sha256: "9a069232e1ad2a806d3d8a8b5d47ddb7c9eb5598479d826c0bcac742f9dc8102", bytes: 0, width: 1024, height: 1536 }, image2x: null,
             box: { x, y, width: 1024 * scale, height: 1536 * scale },
-            bounds: { left: x + 438 * scale, right: x + 586 * scale, top, bottom }, opacity: 0.55, blendMode: "multiply" as const };
+            bounds: { left: x + 438 * scale, right: x + 586 * scale, top, bottom }, opacity: 0.42, blendMode: "multiply" as const };
     }) }];
 }));
 // The owner measured the bare 28 ml and 50 ml bottles at 81.73 and 97.77 mm.
@@ -190,18 +194,125 @@ const correctedJumbo28 = Object.fromEntries(Object.entries(existingRows)
     .map(([sku, kit]) => [sku, { ...kit, glassSizing: { ...kit.glassSizing!, heightPct: 44.06975268656447,
         source: "Measured 81.73 mm bare height relative to the 97.77 mm 50 ml bottle" } }]));
 const proposedRows = { ...correctedJumbo28, ...correctedSprays, ...correctedJumbo, ...correctedLotions, ...cylinderNineColorRows, ...correctedNineLotionRows, ...correctedSleek, ...correctedCylinder25Droppers, ...cylinder25Reducers.rows } as unknown as Record<string, BuilderKit>;
-const cylinder25Master = (correctedSprays as Record<string, BuilderKit>).GBcyl25SpryMtGl;
-const cylinder25Body = cylinder25Master.parts.find(part => part.slot === "body")!;
-// All clear 25 ml Cylinder fitments share the spray's registered body and
-// framing, including reducer and dropper variants in catalog and builder.
-const revisedRows = Object.fromEntries(Object.entries(proposedRows).map(([sku, kit]) => [
-    sku,
-    kit.register?.bodyId === "cylinder-25ml-18-415" && kit.register.glass === "Clear"
-        ? { ...kit, glassSizing: cylinder25Master.glassSizing,
-            parts: kit.parts.map(part => part.slot === "body" ? { ...cylinder25Body, zOrder: part.zOrder } : part) }
-        : kit,
-])) as Record<string, BuilderKit>;
-const rows = { ...manifest.rows, ...revisedRows } as unknown as Record<string, BuilderKit>;
+const cylinderGlassSources = {
+    "cylinder-25ml-18-415": {
+        sku: "GBcyl25SpryMtGl", left: 81, wallWidth: 650, rim: 62, shoulder: 382, heel: 1872,
+        image: { url: "/images/cylinder-sprays/body-25ml-clear-refraction.f496010b9f55.webp", key: "/images/cylinder-sprays/body-25ml-clear-refraction.f496010b9f55.webp", sha256: "f496010b9f55730fb597642049c3e5f84d045b949e9b65a4eddd771ddc82ad29", bytes: 256816, width: 813, height: 1935 },
+    },
+    "cylinder-50ml-18-415": {
+        sku: "GBCyl50SpryMtGl", left: 83, wallWidth: 557, rim: 123, shoulder: 383, heel: 2121,
+        image: { url: "/images/cylinder-sprays/body-50ml-clear-refraction.de57293fe027.webp", key: "/images/cylinder-sprays/body-50ml-clear-refraction.de57293fe027.webp", sha256: "de57293fe0274db2fcf9a64f7396fe4d337792b49a6d38111525226f58e02afd", bytes: 299054, width: 724, height: 2171 },
+    },
+    "cylinder-100ml-18-415": {
+        sku: "GBCyl100SpryMtGl", left: 132, wallWidth: 461, rim: 97, shoulder: 308, heel: 2104,
+        image: { url: "/images/cylinder-sprays/body-100ml-clear-refraction.9b35f4c3d557.webp", key: "/images/cylinder-sprays/body-100ml-clear-refraction.9b35f4c3d557.webp", sha256: "9b35f4c3d5571c5d204415dd5fc00b9b9fc5302369e3973d4b6e9593e970d1be", bytes: 223872, width: 724, height: 2171 },
+    },
+};
+type CylinderGlassId = keyof typeof cylinderGlassSources;
+
+export function withCylinderProductGlass(kit: KitLike): KitLike {
+    const id = kit.register?.bodyId as CylinderGlassId | undefined;
+    if (!id || kit.register?.glass !== "Clear" || !Object.hasOwn(cylinderGlassSources, id)) return kit;
+    const source = cylinderGlassSources[id];
+    const body = kit.parts.find(part => part.slot === "body");
+    if (!body || body.image.url === source.image.url) return kit;
+    const master = cylinderGlassMasters[id];
+    const sizing = master.glassSizing;
+    const reference = correctedSprays[source.sku] as BuilderKit;
+    const widthRatio = (body.bounds.right - body.bounds.left) / (master.body.bounds.right - master.body.bounds.left);
+    const glassSizing = sizing?.landmarkY === undefined ? kit.glassSizing : {
+        ...sizing,
+        heightPct: sizing.heightPct * (kit.canvas.width / kit.canvas.height) / (reference.canvas.width / reference.canvas.height),
+        landmarkY: body.bounds.bottom - (master.body.bounds.bottom - sizing.landmarkY) * widthRatio,
+    };
+    return { ...kit, glassSizing, parts: kit.parts.map(part => {
+        if (part !== body) return part;
+        const { left, right, top, bottom } = part.bounds;
+        // Keep the reducer's existing rim and baseline registration so its hardware stays seated.
+        const sx = (right - left) / source.wallWidth;
+        const sy = (bottom - top) / (source.heel - source.rim);
+        return { ...part, image: source.image, image2x: null,
+            box: { x: left - source.left * sx, y: top - source.rim * sy,
+                width: source.image.width * sx, height: source.image.height * sy } };
+    }) };
+}
+
+const cylinderGlassMasters = Object.fromEntries(Object.entries(cylinderGlassSources).map(([id, source]) => {
+    const reference = (correctedSprays as Record<string, BuilderKit>)[source.sku];
+    const body = reference.parts.find(part => part.slot === "body")!;
+    const shoulder = reference.glassSizing?.landmarkY;
+    if (shoulder === undefined) throw new Error(`Missing Cylinder shoulder anchor for ${source.sku}`);
+    const sx = (body.bounds.right - body.bounds.left) / source.wallWidth;
+    const sy = (body.bounds.bottom - shoulder) / (source.heel - source.shoulder);
+    return [id, {
+        glassSizing: reference.glassSizing,
+        body: { ...body, image: source.image, image2x: null,
+            bounds: { ...body.bounds, top: shoulder - (source.shoulder - source.rim) * sy },
+            box: { x: body.bounds.left - source.left * sx, y: shoulder - source.shoulder * sy,
+                width: source.image.width * sx, height: source.image.height * sy } },
+    }];
+}));
+
+// Share the registered body and framing across the compatible fitments.
+const revisedRows = Object.fromEntries(Object.entries(proposedRows).map(([sku, kit]) => {
+    const id = kit.register?.bodyId as CylinderGlassId | undefined;
+    const master = id && Object.hasOwn(cylinderGlassMasters, id) ? cylinderGlassMasters[id] : null;
+    if (!master || kit.register?.glass !== "Clear") return [sku, kit];
+    return [sku, { ...kit, glassSizing: master.glassSizing, parts: kit.parts.map(part => {
+        if (part.slot === "body") return { ...master.body, zOrder: part.zOrder };
+        if (sku === cylinderGlassSources[id!].sku && part.box && (part.slot === "sprayer" || part.slot === "overcap")
+            && master.glassSizing?.landmarkY !== undefined) {
+            // Leave the thin glass shoulder highlight visible beneath the gold collar.
+            const dy = Math.min(0, master.glassSizing.landmarkY - 4 - part.bounds.bottom);
+            return { ...part, box: { ...part.box, y: part.box.y + dy },
+                bounds: { ...part.bounds, top: part.bounds.top + dy, bottom: part.bounds.bottom + dy } };
+        }
+        if (id !== "cylinder-25ml-18-415" || part.slot !== "diptube" || !part.box) return part;
+        const bottom = part.bounds.bottom - 8;
+        const seated = !part.views?.includes("exploded");
+        // Paint the seated tube through the Sunburst glass alpha so its
+        // highlights and the interior floor retain their depth.
+        const optics = seated ? { zOrder: master.body.zOrder - 1, opacity: 0.42 } : {};
+        const bounds = { ...part.bounds, bottom };
+        if (part.trimBottomPct !== undefined) {
+            return { ...part, ...optics, bounds,
+                trimBottomPct: Math.min(100, part.trimBottomPct + 800 / part.box.height) };
+        }
+        const scale = (bottom - part.bounds.top) / (part.bounds.bottom - part.bounds.top);
+        return { ...part, ...optics, bounds, box: { ...part.box,
+            y: part.bounds.top + (part.box.y - part.bounds.top) * scale,
+            height: part.box.height * scale } };
+
+    }) }];
+})) as Record<string, BuilderKit>;
+const pillarRollOnRows = Object.fromEntries(Object.entries(pillarCaps.rows).filter(([sku]) => isPillarRollOnSku(sku)));
+const pillarPourBase = pillarCaps.rows.GBPillar9BlkShSht as unknown as BuilderKit;
+const cylinderPourSeat = existingRows.GBCyl5BlkShSht.parts.find(part => part.slot === "cap")!.bounds.bottom;
+const pillarPourRows = Object.fromEntries(PILLAR_POUR_CAP_SUFFIXES.map(suffix => {
+    const sku = `GBPillar9${suffix}`;
+    if (suffix === "BlkShSht") return [sku, pillarPourBase];
+    const donor = existingRows[`GBCyl5${suffix}`];
+    const cap = donor.parts.find(part => part.slot === "cap")!;
+    const pillarCap = pillarPourBase.parts.find(part => part.slot === "cap")!;
+    const scale = pillarPourBase.anchors.pxPerMm! / donor.anchors.pxPerMm!;
+    const box = cap.box!;
+    const x = (value: number) => pillarPourBase.anchors.axisX + (value - donor.anchors.axisX) * scale;
+    // Preserve the donor's measured cap length and its seating relative to the glass shoulder.
+    const y = (value: number) => pillarCap.bounds.bottom + (value - cylinderPourSeat) * scale;
+    const fittedCap = {
+        ...cap,
+        bounds: { left: x(cap.bounds.left), right: x(cap.bounds.right), top: y(cap.bounds.top), bottom: y(cap.bounds.bottom) },
+        box: { x: x(box.x), y: y(box.y), width: box.width * scale, height: box.height * scale },
+        exploded: { dx: 0, dy: pillarPourBase.anchors.seatY - y(cap.bounds.bottom) - 16 },
+    };
+    return [sku, {
+        ...pillarPourBase,
+        sku,
+        parts: pillarPourBase.parts.map(part => part.slot === "cap" ? fittedCap : part),
+        register: { ...pillarPourBase.register!, componentIds: [cap.componentId!] },
+    }];
+}));
+const rows = { ...manifest.rows, ...revisedRows, ...pillarRollOnRows, ...pillarPourRows } as unknown as Record<string, BuilderKit>;
 export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {

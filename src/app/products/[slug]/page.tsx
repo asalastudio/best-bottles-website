@@ -1,5 +1,5 @@
 import { readKitPilot } from "../../../../scripts/asset-ledger/kit-pilot.mjs";
-import { approvedComponentKits } from "@/lib/paper-doll/approved-component-kits";
+import { approvedComponentKits, withCylinderProductGlass } from "@/lib/paper-doll/approved-component-kits";
 import { withStorefrontFamily, sourceFamilyForProduct } from "@/lib/products/storefront-family";
 import { localPdpComponentKits } from "@/lib/paper-doll/local-component-kits";
 import { hasCatalogSourceHold } from "@/lib/products/catalog-listing-visibility";
@@ -92,7 +92,7 @@ function getPrimaryVariant(data: ProductGroupPayload | null): ProductVariant | n
 
 async function getSiblingGroups(data: ProductGroupPayload | null, activeSlug: string): Promise<SiblingGroup[]> {
     const group = data?.group;
-    if (!group) return [];
+    if (!group || activeSlug.startsWith("pillar-9ml-")) return [];
     return await getConvexClient().query(api.products.getSiblingGroups, {
         family: sourceFamilyForProduct(activeSlug, group.family),
         capacityMl: group.capacityMl ?? 0,
@@ -165,12 +165,9 @@ function redesignApplies(slug: string, data: ProductGroupPayload): boolean {
 const STRIP_FITMENT_CLOSURES = ["finemist", "rollon"] as const;
 /** Fitment groups the strip finds under another slug (Jordan, 4 Nov 2026: the Pillar "is missing all the fitments"):
  * - the Pillar sprayers kept "17-415" in their slug when the neck was corrected to 13-415
- *   (scripts/catalog-corrections/2026-09-25-pillar-spray-neck.mjs), so `${slug}-finemist` missed them;
- * - the Pillar rollers live in the cap page's own group (no "-rollon" page); the lookup still filters by the
- *   requested closure, so only the roller SKUs come back. */
+ *   (scripts/catalog-corrections/2026-09-25-pillar-spray-neck.mjs), so `${slug}-finemist` missed them. */
 const STRIP_FITMENT_SLUG_ALIASES: Readonly<Record<string, string>> = {
     "pillar-9ml-clear-13-415-finemist": "pillar-9ml-clear-17-415-finemist",
-    "pillar-9ml-clear-13-415-rollon": "pillar-9ml-clear-13-415",
 };
 const stripFitmentSlug = (slug: string) => STRIP_FITMENT_SLUG_ALIASES[slug] ?? slug;
 
@@ -260,6 +257,10 @@ async function loadRedesignPayload(
         if (!localKit || localKit.sku !== pair.websiteSku) continue;
         kitsBySku[pair.websiteSku!] = localKit;
         if (pair.graceSku) kitsBySku[pair.graceSku] = localKit;
+    }
+
+    for (const [sku, kit] of Object.entries(kitsBySku)) {
+        if (kit) kitsBySku[sku] = withCylinderProductGlass(kit);
     }
 
     // A cap-only group has no fitment of its own: the Build Your Bottle strip's fitment tile shows this

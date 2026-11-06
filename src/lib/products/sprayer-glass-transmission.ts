@@ -11,6 +11,10 @@ const CHAMBERS: Record<string, { source: string; bottom: number }> = {
 // Both fitment families keep their own chamber shape and one shared shaft
 // width. The exposed plastic is never attenuated in EXPLODED.
 const CYLINDER_CHAMBERS: Record<string, Array<{ source: string; bottom: number }>> = {
+    "cylinder-25ml-18-415": [
+        { source: "lotion-tube-d100d687646a.png", bottom: 390 },
+        { source: "finemist-tube-90380032f33f.png", bottom: 465 },
+    ],
     "cylinder-50ml-18-415": [
         { source: "lotion-tube.cad1b0cae24a.webp", bottom: 278 },
         { source: "spray-tube.1d7b75dddaa9.webp", bottom: 376 },
@@ -30,7 +34,7 @@ export function sprayerPlugMask(kit: GlassKit, part: InternalPart, view: string 
     // Remove the generated pipette's surrounding studio glow. The shaft
     // remains translucent and follows the same mask in every stage view.
     if (part.slot === "pipette" && part.image.url.endsWith("/cylinder25-glass-pipette-v1.png")) {
-        return "linear-gradient(to right, transparent 0%, transparent 42.5%, black 43%, black 57%, transparent 57.5%, transparent 100%)";
+        return "linear-gradient(to right, transparent 0%, transparent 38%, black 44%, black 56%, transparent 62%, transparent 100%)";
     }
     const bodyId = kit.register?.bodyId ?? "";
     const chamber = CHAMBERS[bodyId] ?? CYLINDER_CHAMBERS[bodyId]?.find(entry => part.image.url.endsWith("/" + entry.source));
