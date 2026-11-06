@@ -6,10 +6,10 @@ import { useRegion } from "@/components/RegionProvider";
 
 import { getShopCollection } from "@/lib/shopCollections";
 
-import { useState, useEffect, useMemo, useCallback, useRef } from "react";
+import { createContext, useContext, useState, useEffect, useMemo, useCallback, useRef } from "react";
 import Image from "next/image";
 import LocaleLink from "@/components/LocaleLink";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import {
     MagnifyingGlass as Search, X, Package, CaretDown as ChevronDown, CaretUp as ChevronUp,
     SlidersHorizontal, ArrowsDownUp as ArrowUpDown, SquaresFour as LayoutGrid, List, Plus, Minus, ShoppingCart, ChatCircle as MessageCircle, Sparkles,
@@ -411,6 +411,14 @@ function lineItemProductHref({
     return `/products/${slug}${qs ? `?${qs}` : ""}`;
 }
 
+/** True once a result set arrived after hydration (a filter change, load more). Server-rendered
+ * rows paint at full opacity so the first paint, and the LCP image, never wait for JavaScript;
+ * later sets keep the fade-in as an enhancement. */
+const ResultEntranceContext = createContext(false);
+
+/** The canonical URL form of a catalog state: what the server rendered, and what a fetch answers. */
+const catalogStateKey = (f: CatalogFilters, s: SortValue, v: ViewMode) => filtersToParams(f, s, v).toString();
+
 function LineItemRow({
     group,
     sku,
@@ -430,6 +438,7 @@ function LineItemRow({
     primaryGraceSku?: string | null;
     primaryWebsiteSku?: string | null;
 }) {
+    const entrance = useContext(ResultEntranceContext);
     const { formatPrice: money } = useRegion();
     const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     const [quantity, setQuantity] = useState(1);
@@ -446,7 +455,7 @@ function LineItemRow({
 
     return (
         <motion.tr
-            initial={{ opacity: 0 }}
+            initial={entrance ? { opacity: 0 } : false}
             animate={{ opacity: 1 }}
             transition={{ delay: Math.min(index * 0.02, 0.3) }}
             className="border-b border-champagne/30 hover:bg-travertine/50 transition-colors group"
@@ -596,6 +605,7 @@ function LineItemMobileCard({
     primaryGraceSku?: string | null;
     primaryWebsiteSku?: string | null;
 }) {
+    const entrance = useContext(ResultEntranceContext);
     const { formatPrice: money } = useRegion();
     const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     const [expanded, setExpanded] = useState(false);
@@ -618,7 +628,7 @@ function LineItemMobileCard({
 
     return (
         <motion.div
-            initial={{ opacity: 0 }}
+            initial={entrance ? { opacity: 0 } : false}
             animate={{ opacity: 1 }}
             transition={{ delay: Math.min(index * 0.02, 0.3) }}
             className="bg-white border border-champagne/40 overflow-hidden"
@@ -954,6 +964,14 @@ export default function CatalogClient({
     const [isLoadingMore, setIsLoadingMore] = useState(false);
     const [queryError, setQueryError] = useState<string | null>(null);
     const [retryNonce, setRetryNonce] = useState(0);
+    // The URL as the browser sees it now: filter changes commit with history.pushState (no
+    // server round trip), and back/forward or Grace moves it; Next keeps this in step.
+    const liveSearchParams = useSearchParams();
+    // The state the displayed result answers. The sync effect below records the server-rendered
+    // state on mount (effects run in order), so the search effect has nothing to fetch until the
+    // wanted state differs. (A plain initial value: the React Compiler lint rejects a call here.)
+    const resultKeyRef = useRef("");
+    const retryRef = useRef(0);
     const catalogGenerationRef = useRef(0);
     const loadMoreLockRef = useRef(false);
     const loadMoreAbortRef = useRef<AbortController | null>(null);
@@ -973,8 +991,25 @@ export default function CatalogClient({
         setViewMode(urlState.view);
         setSearchInput(urlState.filters.search);
         setActiveResult(initialResult);
+        resultKeyRef.current = catalogStateKey(urlState.filters, urlState.sort, urlState.view);
         setIsLoadingMore(false);
     }, [initialSearchParams, initialResult]);
+
+    // Back/forward and other client-side URL moves: when the URL itself changes, adopt its state;
+    // the search effect below fetches it when the displayed result is for a different state.
+    // (State changes that have not reached the URL yet must not be undone here.)
+    const lastLiveSearchRef = useRef(liveSearchParams.toString());
+    useEffect(() => {
+        const live = liveSearchParams.toString();
+        if (live === lastLiveSearchRef.current) return;
+        lastLiveSearchRef.current = live;
+        const urlState = paramsToFilters(new URLSearchParams(live));
+        if (catalogStateKey(urlState.filters, urlState.sort, urlState.view) === catalogStateKey(filters, sortBy, viewMode)) return;
+        setFilters(urlState.filters); // eslint-disable-line react-hooks/set-state-in-effect
+        setSortBy(urlState.sort);
+        setViewMode(urlState.view);
+        setSearchInput(urlState.filters.search);
+    }, [liveSearchParams, filters, sortBy, viewMode]);
 
     // Sync URL when filters/sort/view change
     const pushToUrl = useCallback(
@@ -983,9 +1018,11 @@ export default function CatalogClient({
             if (filtersAreEmpty(f)) params.set("scope", "all");
             const qs = params.toString();
             const path = localizeHref(locale, stripLocalePrefix(pathname));
-            router.push(`${path}${qs ? `?${qs}` : ""}`, { scroll: false });
+            // A history entry without a server round trip: the search effect fetches the results,
+            // so a filter change costs one request instead of a navigation plus a POST.
+            window.history.pushState(null, "", `${path}${qs ? `?${qs}` : ""}`);
         },
-        [router, pathname, locale],
+        [pathname, locale],
     );
 
     // Lock body scroll for mobile filter
@@ -1246,6 +1283,11 @@ export default function CatalogClient({
     }, [interpretedFrom, viewMode, router, locale, pathname]);
 
     useEffect(() => {
+        const wanted = catalogStateKey(filters, sortBy, viewMode);
+        // The server rendered this exact state (first paint, or a navigation that carried a new
+        // initialResult): nothing to fetch. A retry always fetches.
+        if (wanted === resultKeyRef.current && retryNonce === retryRef.current) return;
+        retryRef.current = retryNonce;
         const controller = new AbortController();
         const generation = ++catalogGenerationRef.current;
         loadMoreAbortRef.current?.abort();
@@ -1267,6 +1309,7 @@ export default function CatalogClient({
         }), controller.signal)
             .then((result) => {
                 if (generation !== catalogGenerationRef.current) return;
+                resultKeyRef.current = wanted;
                 setActiveResult(result as CatalogSearchResult);
             })
             .catch((error) => {
@@ -1469,6 +1512,7 @@ export default function CatalogClient({
     );
 
     return (
+        <ResultEntranceContext.Provider value={rawResult !== initialResult}>
         <main className="min-h-screen bg-[#faf9f7] pt-[82px] font-sans text-[#1c1c1e] lg:pt-[120px]">
             <Navbar variant="catalog" initialSearchValue={filters.search || undefined} hideSearch />
             <div className="lg:hidden">
@@ -1920,5 +1964,6 @@ export default function CatalogClient({
 
             <BackToTop />
         </main>
+        </ResultEntranceContext.Provider>
     );
 }
