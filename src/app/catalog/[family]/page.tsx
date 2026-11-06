@@ -12,7 +12,7 @@ import FamilyPageClient from "./FamilyPageClient";
 import { getLocale } from "next-intl/server";
 import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
 import { localizeFamilyName } from "@/i18n/catalogCopy";
-import { buildHreflangAlternates } from "@/i18n/metadata";
+import { pageAlternates } from "@/i18n/metadata";
 import { localizeHref } from "@/i18n/paths";
 
 export const dynamic = "force-dynamic";
@@ -53,7 +53,7 @@ export async function generateMetadata({
         description: locale === "es"
             ? `Encuentra frascos ${familyLabel} al por mayor por aplicación y capacidad, luego abre la ficha exacta para especificaciones y pedidos.`
             : `Find wholesale ${family} bottles by application and capacity, then open an exact product page for specifications and ordering.`,
-        alternates: buildHreflangAlternates(path),
+        alternates: pageAlternates(path),
     };
 }
 

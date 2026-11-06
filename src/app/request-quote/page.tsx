@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import FormPage from "@/components/FormPage";
-import { SITE_URL } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 
 const FIELDS = [
     { name: "name", label: "Full Name", type: "text" as const, required: true, placeholder: "Jane Smith" },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: { absolute: "Request a Quote | Best Bottles Wholesale Glass Packaging" },
     description:
         "Request volume pricing for wholesale glass bottles, jars, closures, applicators, and custom packaging from Best Bottles.",
-    alternates: { canonical: `${SITE_URL}/request-quote` },
+    alternates: pageAlternates("/request-quote"),
 };
 
 export default function RequestQuotePage() {

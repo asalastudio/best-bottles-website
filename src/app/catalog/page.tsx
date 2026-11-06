@@ -7,7 +7,7 @@ import { catalogBrowseRedirect, paramsToFilters } from "@/lib/catalogFilters";
 import { searchCatalogServer } from "@/lib/catalogServer";
 import { catalogInterpretationMode } from "@/lib/catalog/searchInterpretationServer";
 import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
-import { buildHreflangAlternates } from "@/i18n/metadata";
+import { pageAlternates } from "@/i18n/metadata";
 import { localizeHref } from "@/i18n/paths";
 import enMessages from "../../../messages/en.json";
 import esMessages from "../../../messages/es.json";
@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
         title: { absolute: copy.seoTitle },
         description: copy.description,
-        alternates: buildHreflangAlternates(path),
+        alternates: pageAlternates(path),
     };
 }
 

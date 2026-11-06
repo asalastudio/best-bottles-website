@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FAQ_POLICY_ENTRIES, FAQ_POLICY_SOURCE } from "@/lib/faqPolicy";
-import { SITE_URL } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 
 export const metadata: Metadata = {
     title: { absolute: "Shipping & Returns | Best Bottles" },
     description: "Shipping timelines, carriers, and the return policy for Best Bottles wholesale glass packaging.",
-    alternates: { canonical: `${SITE_URL}/shipping-returns` },
+    alternates: pageAlternates("/shipping-returns"),
 };
 
 const SHIPPING_POLICY_IDS = new Set([

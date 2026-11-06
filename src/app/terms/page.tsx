@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { SITE_URL } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 
 export const metadata: Metadata = {
     title: { absolute: "Terms of Service | Best Bottles" },
     description: "The terms that govern your use of the Best Bottles website and purchases.",
-    alternates: { canonical: `${SITE_URL}/terms` },
+    alternates: pageAlternates("/terms"),
 };
 
 const UPDATED = "July 2026";

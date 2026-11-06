@@ -10,14 +10,26 @@ import ApplicationFinderClient from "./ApplicationFinderClient";
 import { getLocale } from "next-intl/server";
 import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
 import { localizeHref } from "@/i18n/paths";
+import { pageAlternates } from "@/i18n/metadata";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-export const metadata: Metadata = {
-    title: { absolute: "Find Bottles by Application | Best Bottles" },
-    description: "Find wholesale bottles by dispensing application, capacity, and fitment.",
-};
+/**
+ * The finder is a guided way into one filtered catalog view, the one
+ * applicationLandingRedirect names for the bare route. That catalog view is
+ * the canonical page; the finder points at it rather than at itself.
+ */
+export async function generateMetadata({ params }: { params: Promise<{ application: string }> }): Promise<Metadata> {
+    const { application } = await params;
+    const pathname = `/catalog/application/${application}`;
+    const canonicalPath = applicationLandingRedirect(pathname, new URLSearchParams()) ?? pathname;
+    return {
+        title: { absolute: "Find Bottles by Application | Best Bottles" },
+        description: "Find wholesale bottles by dispensing application, capacity, and fitment.",
+        alternates: pageAlternates(pathname, canonicalPath),
+    };
+}
 
 function toURLSearchParams(input: Record<string, string | string[] | undefined>): URLSearchParams {
     const params = new URLSearchParams();

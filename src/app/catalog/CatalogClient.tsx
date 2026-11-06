@@ -549,7 +549,7 @@ function LineItemRow({
                             type="number"
                             value={quantity}
                             onChange={(e) => setQuantity(Math.max(1, Math.min(9999, parseInt(e.target.value) || 1)))}
-                            className="w-10 text-center text-xs font-medium text-obsidian bg-transparent border-0 focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                            className="w-10 text-center text-xs font-medium text-obsidian bg-transparent border-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                             min={1}
                             max={9999}
                         />
@@ -739,7 +739,7 @@ function LineItemMobileCard({
                                         type="number"
                                         value={quantity}
                                         onChange={(e) => setQuantity(Math.max(1, Math.min(9999, parseInt(e.target.value) || 1)))}
-                                        className="w-10 text-center text-xs font-medium text-obsidian bg-transparent border-0 focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                        className="w-10 text-center text-xs font-medium text-obsidian bg-transparent border-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                         min={1}
                                         max={9999}
                                     />
@@ -1524,7 +1524,7 @@ export default function CatalogClient({
                                     if (e.key === "Enter") submittedSearchRef.current = e.currentTarget.value.trim();
                                 }}
                                 placeholder={t("searchPlaceholder")}
-                                className="w-full bg-transparent text-base text-[#1c1c1e] placeholder:text-[#8a93a0] focus:outline-none lg:text-[13px] [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
+                                className="w-full bg-transparent text-base text-[#1c1c1e] placeholder:text-[#8a93a0] lg:text-[13px] [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
                                 aria-label={t("searchProducts")}
                                 data-testid="catalog-search-input"
                             />

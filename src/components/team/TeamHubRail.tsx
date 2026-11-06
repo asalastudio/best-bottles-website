@@ -66,7 +66,7 @@ export default function TeamHubRail({
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Find a tool"
                     aria-label="Find a tool"
-                    className="h-8 w-full rounded-md px-2.5 font-sans text-[13px] outline-none"
+                    className="h-8 w-full rounded-md px-2.5 font-sans text-[13px]"
                     style={{
                         border: "1px solid var(--color-rule)",
                         background: "var(--color-surface)",

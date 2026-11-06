@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import FormPage from "@/components/FormPage";
 import { FAQ_POLICY_ENTRIES } from "@/lib/faqPolicy";
-import { SITE_URL } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 
 const FIELDS = [
     { name: "name", label: "Full Name", type: "text" as const, required: true, placeholder: "Jane Smith" },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: { absolute: "Request Samples | Best Bottles Glass Packaging" },
     description:
         "Request curated glass bottle and packaging samples from Best Bottles before placing a wholesale order.",
-    alternates: { canonical: `${SITE_URL}/request-sample` },
+    alternates: pageAlternates("/request-sample"),
 };
 
 export default function RequestSamplePage() {

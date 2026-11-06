@@ -9,7 +9,7 @@ import { HOMEPAGE_QUERY, type HomepageData } from '@/sanity/lib/queries';
 import { sanityFetch } from '@/sanity/lib/live';
 import { isSanityConfigured } from '@/sanity/lib/client';
 import { defaultLocale, isLocale, type AppLocale } from '@/i18n/config';
-import { buildHreflangAlternates } from '@/i18n/metadata';
+import { pageAlternates } from '@/i18n/metadata';
 import enMessages from '../../../messages/en.json';
 import esMessages from '../../../messages/es.json';
 
@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
         title: { absolute: copy.collectionsSeoTitle },
         description: copy.collectionsSeoDescription,
-        alternates: buildHreflangAlternates(path),
+        alternates: pageAlternates(path),
     };
 }
 

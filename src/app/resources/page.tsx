@@ -4,12 +4,12 @@ import { BookOpen, Wrench, ChatCircle, FileText, BookMarked } from "@/components
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FAQ_POLICY_ENTRIES, FAQ_POLICY_SOURCE } from "@/lib/faqPolicy";
-import { SITE_URL } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 
 export const metadata: Metadata = {
     title: { absolute: "Resources — Guides, FAQs & Compatibility Tools | Best Bottles" },
     description: "Everything you need to choose the right bottles, closures, and packaging for your brand. Compatibility guides, FAQs, and expert insights.",
-    alternates: { canonical: `${SITE_URL}/resources` },
+    alternates: pageAlternates("/resources"),
 };
 
 const RESOURCES = [

@@ -810,7 +810,7 @@ export default function ConfiguratorPdp({
                    const next = Number(event.target.value);
                    onQtyChange?.(Number.isFinite(next) ? Math.max(1, Math.floor(next)) : 1);
                  }}
-                 className="w-12 min-w-0 bg-transparent text-center text-md font-semibold text-obsidian tabular-nums outline-none" />
+                 className="w-12 min-w-0 bg-transparent text-center text-md font-semibold text-obsidian tabular-nums" />
           <button type="button" aria-label="Increase quantity"
                   onClick={() => onQtyChange?.(qty + 1)}
                   className="px-3.5 py-2.5 text-obsidian hover:text-muted-gold

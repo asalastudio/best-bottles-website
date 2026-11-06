@@ -154,6 +154,33 @@ export function buildProductJsonLd(p: ProductJsonLdInput) {
   };
 }
 
+export interface BlogPostingJsonLdInput {
+  headline: string;
+  description?: string;
+  url: string;
+  image?: string;
+  datePublished?: string;
+  dateModified?: string;
+}
+
+/** Journal posts are written by the Best Bottles team, so the organisation is the author. */
+export function buildBlogPostingJsonLd(p: BlogPostingJsonLdInput) {
+  const organization = { "@type": "Organization", name: SITE_NAME, url: SITE_URL };
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: p.headline,
+    ...(p.description && { description: p.description }),
+    ...(p.image && { image: p.image }),
+    ...(p.datePublished && { datePublished: p.datePublished }),
+    ...(p.dateModified && { dateModified: p.dateModified }),
+    url: p.url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": p.url },
+    author: organization,
+    publisher: { ...organization, logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` } },
+  };
+}
+
 export function buildCollectionPageJsonLd(input: {
   name: string;
   description: string;
