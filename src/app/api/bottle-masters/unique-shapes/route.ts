@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 import { readLocalComponentKits } from "@/lib/paper-doll/local-component-kits";
 import { cylinderMasterSource } from "@/lib/products/cylinder-master";
 
@@ -15,5 +16,5 @@ export async function GET(request: Request) {
     if (!kit || !["bell-10ml-13-415", "royal-13ml-13-415", "square-15ml-13-415", "flair-15ml-13-415"].includes(kit.register?.bodyId ?? "")) {
         return NextResponse.json({ error: "Not found" }, { status: 404 });
     }
-    return NextResponse.json({ kit, version: source.version }, { headers: { "Cache-Control": "private, no-store" } });
+    return NextResponse.json({ kit, displayDerivatives: collectDisplayDerivatives(kit), version: source.version }, { headers: { "Cache-Control": "private, no-store" } });
 }

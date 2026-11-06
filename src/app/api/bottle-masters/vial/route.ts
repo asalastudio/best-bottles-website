@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 import { readFileSync } from "node:fs";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
 import { vialReviewSku, VIAL_MASTER_REVIEW_VERSION } from "@/lib/products/vial-master";
@@ -24,7 +25,7 @@ export async function GET(request: Request) {
             ? (JSON.parse(readFileSync("public/local-kits/vial-4ml-measured-2026-10-31/kits.json", "utf8")) as { rows: Record<string, BuilderKit> }).rows[sku]
             : review.rows[sku];
         if (!kit || kit.sku !== sku) return NextResponse.json({ error: "Not found" }, { status: 404 });
-        return NextResponse.json({ kit, version: review.version }, { headers: { "Cache-Control": "private, no-store" } });
+        return NextResponse.json({ kit, displayDerivatives: collectDisplayDerivatives(kit), version: review.version }, { headers: { "Cache-Control": "private, no-store" } });
     } catch {
         return NextResponse.json({ error: "Master unavailable" }, { status: 503 });
     }

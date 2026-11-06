@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { NextResponse } from "next/server";
+import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
 import { pillarReviewSku, PILLAR_MASTER_VERSION } from "@/lib/products/pillar-master";
 
@@ -17,7 +18,7 @@ export async function GET(request: Request) {
             { rows: Record<string, BuilderKit> };
         const kit = rows[sku];
         if (!kit) return NextResponse.json({ error: "Not found" }, { status: 404 });
-        return NextResponse.json({ kit, version: PILLAR_MASTER_VERSION }, { headers: { "Cache-Control": "private, no-store" } });
+        return NextResponse.json({ kit, displayDerivatives: collectDisplayDerivatives(kit), version: PILLAR_MASTER_VERSION }, { headers: { "Cache-Control": "private, no-store" } });
     } catch {
         return NextResponse.json({ error: "Master unavailable" }, { status: 503 });
     }

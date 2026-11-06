@@ -1,8 +1,11 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { CYLINDER25_COPPER_OVERCAP, withCylinder25CopperOvercap } from "@/lib/register/cylinder25-copper-overcap";
 import { stageLayout, type KitLike } from "@/lib/products/pdp-redesign/stage";
 import originals from "../docs/reviews/cylinder25-material-cleanup-2026-11-02/before-copper-kits.json";
 import { displayDerivativeUrl } from "@/lib/products/display-derivative";
+// The manifest is read on the server; importing the server module registers every source for this test.
+import "@/lib/products/display-derivative.server";
+vi.mock("server-only", () => ({}));
 
 describe("25 ml copper overcap cleanup", () => {
     for (const sku of ["LBCyl25LtnCu", "GBcyl25SpryCu"] as const) {

@@ -1,6 +1,7 @@
 import { ConvexHttpClient } from "convex/browser";
 import { loadRegisterKits } from "@/lib/register/load";
 import { NextResponse } from "next/server";
+import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 import { approvedComponentKit, originalApprovedComponentKit, withCylinderProductGlass, APPROVED_KIT_VERSION } from "@/lib/paper-doll/approved-component-kits";
 import { CYLINDER9_COLOR_VERSION, cylinderLargeReducerGraceSku, updatedCylinderKitVersion } from "@/lib/paper-doll/approved-kit-index";
 
@@ -19,7 +20,7 @@ export async function GET(request: Request) {
         if (registered?.sku === sku) kit = withCylinderProductGlass(registered);
     }
     if (!kit) return NextResponse.json({ error: "Not found" }, { status: 404 });
-    return NextResponse.json({ kit, version: colorVersion ? CYLINDER9_COLOR_VERSION : version && version === updatedVersion ? updatedVersion : APPROVED_KIT_VERSION }, {
+    return NextResponse.json({ kit, displayDerivatives: collectDisplayDerivatives(kit), version: colorVersion ? CYLINDER9_COLOR_VERSION : version && version === updatedVersion ? updatedVersion : APPROVED_KIT_VERSION }, {
         headers: { "Cache-Control": version ? "public, max-age=31536000, immutable" : "public, max-age=0, s-maxage=300" },
     });
 }
