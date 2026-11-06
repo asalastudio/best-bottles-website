@@ -31,6 +31,15 @@ function canonicalizeProposal(proposal: GraceRefinementProposal): GraceRefinemen
     if (Array.isArray(proposal.applicators)) {
         out.applicators = normalizeApplicatorBuckets(proposal.applicators.map((value) => String(value)));
     }
+    // Grace can describe the delivery system as a category even though live
+    // roll-on groups are stored under Glass Bottle (or Plastic Bottle). Map
+    // only a new, unambiguous proposal to the canonical applicator facet;
+    // applyGraceRefinementRequest still preserves the shopper's active category.
+    if (out.category === "Roll-On Bottle"
+        && (!out.applicators?.length || (out.applicators.length === 1 && out.applicators[0] === "rollon"))) {
+        out.category = null;
+        out.applicators = ["rollon"];
+    }
     if (Array.isArray(proposal.rollerMaterials)) {
         out.rollerMaterials = proposal.rollerMaterials.filter((value): value is "metal" | "plastic" => value === "metal" || value === "plastic");
     }
@@ -167,6 +176,26 @@ export function applyGraceRefinementRequest(
     if (typeof effectiveProposal.search === "string") filters.search = effectiveProposal.search.trim();
 
     return { filters, sort: current.sort, view: current.view };
+}
+
+/** A later display call must not replace a catalogue view just verified for this turn. */
+export function preserveVerifiedGraceCatalogView(customerRequest: string, verifiedRequest: string | undefined): boolean {
+    return customerRequest === verifiedRequest
+        && /\b(?:open|show|browse|view)\b[\s\S]{0,80}\bcatalog(?:ue)?\b/i.test(customerRequest);
+}
+
+/** An explicitly unrelated lookup may leave the visible catalogue unchanged. */
+export function graceCatalogLookupRefineState(
+    current: GraceRefineState,
+    proposal: GraceRefinementProposal,
+    searchTerm: string,
+    customerRequest: string,
+): GraceRefineState {
+    // Inspect the original customer turn: the model normally removes this
+    // qualifier when it rewrites the request into a short searchTerm.
+    const independent = /^\s*(?:independent|unrelated|separate)\s+(?:(?:product|stock|catalog(?:ue)?)\s+)?question\b/i.test(customerRequest);
+    const base = independent ? { ...current, filters: cloneFilters(EMPTY_FILTERS) } : current;
+    return applyGraceRefinementRequest(base, proposal, searchTerm);
 }
 
 export function formatGraceRefineState(state: GraceRefineState): string {

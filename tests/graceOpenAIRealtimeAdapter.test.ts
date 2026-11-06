@@ -12,6 +12,7 @@ import {
 import { GRACE_VOICE_AUDIO_CONSTRAINTS, GRACE_VOICE_ECHO_TAIL_MS } from "../src/lib/grace/voiceEchoGuard";
 import { GRACE_OPENAI_TOOL_SPECS } from "../src/lib/grace/openaiToolSpecs";
 import { GRACE_REALTIME_MODEL, GRACE_REALTIME_VOICE } from "../src/lib/grace/openaiRealtimeConfig";
+import { GraceCatalogTurn, STALE_CATALOG_ACTION } from "../src/lib/grace/catalogTurn";
 
 class FakeSession implements GraceRealtimeSessionLike {
     handlers = new Map<string, Array<(...args: unknown[]) => void>>();
@@ -210,12 +211,13 @@ describe("Grace OpenAI Realtime adapter", () => {
         const session = new FakeSession();
         const onModeChange = vi.fn();
         const onMessage = vi.fn();
+        const onUserSpeechStarted = vi.fn();
         const adapter = createGraceOpenAIRealtimeAdapter({
             baseInstructions: "Truth first.",
             toolImplementations: Object.fromEntries(
                 GRACE_OPENAI_TOOL_SPECS.map(({ name }) => [name, vi.fn()]),
             ),
-            callbacks: { onModeChange, onMessage },
+            callbacks: { onModeChange, onMessage, onUserSpeechStarted },
             dependencies: {
                 createAgent: (config) => config,
                 createSession: () => session,
@@ -242,6 +244,7 @@ describe("Grace OpenAI Realtime adapter", () => {
             type: "input_audio_buffer.speech_started",
         });
         expect(session.interrupt).toHaveBeenCalledTimes(1);
+        expect(onUserSpeechStarted).not.toHaveBeenCalled();
         session.emit("transport_event", {
             type: "response.created",
         });
@@ -255,18 +258,74 @@ describe("Grace OpenAI Realtime adapter", () => {
 
         await vi.advanceTimersByTimeAsync(GRACE_VOICE_ECHO_TAIL_MS);
         expect(session.mute).toHaveBeenCalledWith(false);
+        session.emit("transport_event", { type: "input_audio_buffer.speech_started", item_id: "real-audio" });
+        expect(onUserSpeechStarted).toHaveBeenCalledOnce();
+        expect(onUserSpeechStarted).toHaveBeenCalledWith("real-audio");
 
         session.emit("transport_event", {
             type: "conversation.item.input_audio_transcription.completed",
             transcript: "Take us to the 28 ml bottle",
+            item_id: "real-audio",
         });
         expect(onMessage).toHaveBeenCalledWith({
             role: "user",
             text: "Take us to the 28 ml bottle",
+            voiceItemId: "real-audio",
         });
 
         adapter.disconnect();
         vi.useRealTimers();
+    });
+
+    it("runs current voice tools before transcription without reviving old work or resetting the turn", async () => {
+        const session = new FakeSession();
+        const turns = new GraceCatalogTurn();
+        const createAgent = vi.fn((config: GraceRealtimeAgentConfig) => config);
+        const applied = vi.fn();
+        let finish!: () => void;
+        const pending = new Promise<void>(resolve => { finish = resolve; });
+        const searchCatalog = vi.fn(async () => {
+            const ticket = turns.capture();
+            if (!turns.isCurrent(ticket)) return STALE_CATALOG_ACTION;
+            await pending;
+            return turns.applyDisplay(ticket, applied) ? "current result" : STALE_CATALOG_ACTION;
+        });
+        const adapter = createGraceOpenAIRealtimeAdapter({
+            baseInstructions: "Truth first.",
+            toolImplementations: {
+                ...Object.fromEntries(GRACE_OPENAI_TOOL_SPECS.map(({ name }) => [name, vi.fn()])),
+                searchCatalog,
+            },
+            callbacks: {
+                onUserSpeechStarted: id => turns.beginVoice(id),
+                onMessage: ({ role, text, voiceItemId }) => {
+                    if (role === "user") turns.completeVoiceTranscript(voiceItemId, text);
+                },
+            },
+            dependencies: { createAgent, createSession: () => session },
+        });
+        await adapter.connect({ clientSecret: "ek_test", mode: "voice" });
+        const search = createAgent.mock.calls.flatMap(([config]) => config.tools).find(t => t.name === "searchCatalog")!;
+        const invoke = () => search.invoke({} as never, JSON.stringify({ searchTerm: "Elegant", categoryLimit: null, familyLimit: null, applicatorFilter: null }));
+
+        session.emit("transport_event", { type: "input_audio_buffer.speech_started", item_id: "old-audio" });
+        const old = invoke();
+        await vi.waitFor(() => expect(searchCatalog).toHaveBeenCalledTimes(1));
+        session.emit("transport_event", { type: "input_audio_buffer.speech_started", item_id: "new-audio" });
+        session.emit("transport_event", { type: "response.created", response: { id: "new-response" } });
+        const current = invoke(); // no transcript yet: must be an active generation
+        await vi.waitFor(() => expect(searchCatalog).toHaveBeenCalledTimes(2));
+        const ticket = turns.capture();
+        session.emit("audio_start"); // transcript may arrive while its answer is speaking
+        session.emit("transport_event", { type: "conversation.item.input_audio_transcription.completed", item_id: "new-audio", transcript: "Show Elegant" });
+        session.emit("transport_event", { type: "conversation.item.input_audio_transcription.completed", item_id: "old-audio", transcript: "Old request" });
+        expect(turns.isCurrent(ticket)).toBe(true);
+        expect(turns.capture().request).toBe("Show Elegant");
+        finish();
+        expect(await old).toBe(STALE_CATALOG_ACTION);
+        expect(await current).toBe("current result");
+        expect(applied).toHaveBeenCalledOnce();
+        adapter.disconnect();
     });
 
     it("executes the matching deterministic client implementation", async () => {
