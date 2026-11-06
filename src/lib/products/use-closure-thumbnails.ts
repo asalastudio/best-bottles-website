@@ -23,7 +23,7 @@ export function closureBaseFromSlug(slug: string): ClosureBase {
     const fam = familyForSlugOrDerived(slug);
     const token = slug.split("-").pop() ?? "";
     return fam?.closureFromSlug[token]
-        ?? (/roll-?on/.test(slug) ? "roller" : fam?.derived ? "none" : "sprayer");
+        ?? (/roll-?on/.test(slug) ? "roller" : !fam || fam.derived ? "none" : "sprayer");
 }
 
 export function useClosureThumbnails(activeBase: ClosureBase, neckSize: string | null | undefined): Map<string, string> {
