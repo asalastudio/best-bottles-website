@@ -1,6 +1,6 @@
 import "server-only";
 import pillarCaps from "../../../public/local-kits/pillar-caps-2026-11-04/kits.json";
-import { isPillarRollOnSku } from "../products/pillar-master";
+import { isPillarRollOnSku, PILLAR_POUR_CAP_SUFFIXES } from "../products/pillar-master";
 import manifest from "./approved-kits.generated.json";
 import sprays from "./cylinder-spray-kits.generated.json";
 import jumbo from "./cylinder-jumbo-overcap.generated.json";
@@ -286,7 +286,33 @@ const revisedRows = Object.fromEntries(Object.entries(proposedRows).map(([sku, k
     }) }];
 })) as Record<string, BuilderKit>;
 const pillarRollOnRows = Object.fromEntries(Object.entries(pillarCaps.rows).filter(([sku]) => isPillarRollOnSku(sku)));
-const rows = { ...manifest.rows, ...revisedRows, ...pillarRollOnRows } as unknown as Record<string, BuilderKit>;
+const pillarPourBase = pillarCaps.rows.GBPillar9BlkShSht as unknown as BuilderKit;
+const cylinderPourSeat = existingRows.GBCyl5BlkShSht.parts.find(part => part.slot === "cap")!.bounds.bottom;
+const pillarPourRows = Object.fromEntries(PILLAR_POUR_CAP_SUFFIXES.map(suffix => {
+    const sku = `GBPillar9${suffix}`;
+    if (suffix === "BlkShSht") return [sku, pillarPourBase];
+    const donor = existingRows[`GBCyl5${suffix}`];
+    const cap = donor.parts.find(part => part.slot === "cap")!;
+    const pillarCap = pillarPourBase.parts.find(part => part.slot === "cap")!;
+    const scale = pillarPourBase.anchors.pxPerMm! / donor.anchors.pxPerMm!;
+    const box = cap.box!;
+    const x = (value: number) => pillarPourBase.anchors.axisX + (value - donor.anchors.axisX) * scale;
+    // Preserve the donor's measured cap length and its seating relative to the glass shoulder.
+    const y = (value: number) => pillarCap.bounds.bottom + (value - cylinderPourSeat) * scale;
+    const fittedCap = {
+        ...cap,
+        bounds: { left: x(cap.bounds.left), right: x(cap.bounds.right), top: y(cap.bounds.top), bottom: y(cap.bounds.bottom) },
+        box: { x: x(box.x), y: y(box.y), width: box.width * scale, height: box.height * scale },
+        exploded: { dx: 0, dy: pillarPourBase.anchors.seatY - y(cap.bounds.bottom) - 16 },
+    };
+    return [sku, {
+        ...pillarPourBase,
+        sku,
+        parts: pillarPourBase.parts.map(part => part.slot === "cap" ? fittedCap : part),
+        register: { ...pillarPourBase.register!, componentIds: [cap.componentId!] },
+    }];
+}));
+const rows = { ...manifest.rows, ...revisedRows, ...pillarRollOnRows, ...pillarPourRows } as unknown as Record<string, BuilderKit>;
 export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {

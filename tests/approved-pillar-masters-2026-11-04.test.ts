@@ -86,3 +86,19 @@ describe('Pillar 9 ml sprayer masters published (2026-11-04)', () => {
         }
     });
 });
+
+it('serves the shared Pillar pour body with ten distinct caps through the hosted master route', async () => {
+    const suffixes = ['BlkShSht', 'BlkSht', 'WhtSht', 'CuSht', 'GlMattSht', 'SlMattSht', 'Gl', 'GlSht', 'Sl', 'SlSht'];
+    const kits = await Promise.all(suffixes.map(async suffix => {
+        const sku = `GBPillar9${suffix}`;
+        const master = cylinderMasterSource(sku);
+        expect(master?.family, sku).toBe('approved');
+        const response = await GET(new Request(`https://example.com/api/bottle-masters/approved?sku=${sku}&v=${master?.version}`));
+        expect(response.status, sku).toBe(200);
+        const { kit } = await response.json() as { kit: BuilderKit };
+        expect(kit.sku).toBe(sku);
+        return kit;
+    }));
+    expect(new Set(kits.map(kit => kit.parts.find(part => part.slot === 'body')?.image.url)).size).toBe(1);
+    expect(new Set(kits.map(kit => kit.parts.find(part => part.slot === 'cap')?.componentId)).size).toBe(10);
+});
