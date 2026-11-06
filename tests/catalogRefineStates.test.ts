@@ -85,7 +85,9 @@ describe("catalog Refine states", () => {
     });
 
     it("keeps master history commits and emits canonical Cylinder finder URLs", () => {
-        expect(master).toContain('router.push(`${path}${qs ? `?${qs}` : ""}`');
+        // A filter change commits a history entry without a server render; the search effect fetches it.
+        expect(master).toContain('window.history.pushState(null, "", `${path}${qs ? `?${qs}` : ""}`)');
+        expect(master).toContain("resultKeyRef.current = catalogStateKey(urlState.filters, urlState.sort, urlState.view)");
         expect(familyFinderHref("Cylinder", {
             application: "rollon",
             capacities: ["9 ml"],
