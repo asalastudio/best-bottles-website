@@ -17,6 +17,17 @@ describe("customer-facing product names", () => {
         expect(getCustomerFacingProductName({ group: { ...group, neckThreadSize: "17-415", slug: "cylinder-9ml-clear-17-415-rollon" }, variant: { websiteSku: "GBCyl9MtlRollMattGl", applicator: "Metal Roller Ball", capStyle: "Tall" } }).displayName).not.toContain("Tall Cylinder");
         expect(getCustomerFacingProductName({ group: { ...group, slug: "cylinder-9ml-clear-13-415", displayName: "9 ml Clear Cylinder Bottle with Cap" }, fallbackName: "9 ml Clear Cylinder Bottle with Cap" }).displayName).toBe("9 ml Clear Tall Cylinder Bottle with Cap");
     });
+    it("names Pillar pour, roller, and spray separately from the tall Cylinder", () => {
+        const group = { family: "Cylinder", capacityMl: 9, color: "Clear", neckThreadSize: "13-415" };
+        for (const [slug, sku, applicator] of [
+            ["pillar-9ml-clear-13-415", "GBPillar9BlkShSht", "Cap"],
+            ["pillar-9ml-clear-13-415-rollon", "GBPillar9MtlRollBlkdot", "Metal Roller Ball"],
+            ["pillar-9ml-clear-13-415-finemist", "GBPillar9SpryBlkMatt", "Fine Mist Sprayer"],
+        ]) {
+            expect(getCustomerFacingProductName({ group: { ...group, slug }, variant: { websiteSku: sku, applicator } }).displayName).toContain("9 ml Clear Pillar");
+            expect(getCustomerFacingProductName({ group: { ...group, slug }, variant: { websiteSku: sku, applicator } }).displayName).not.toContain("Tall Cylinder");
+        }
+    });
     it("names Diva perfume spray finishes from variant evidence", () => {
         expect(
             getCustomerFacingProductName({

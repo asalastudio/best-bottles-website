@@ -162,7 +162,12 @@ function isTallSleek(group?: CustomerFacingNameGroupInput | null, variant?: Cust
         || /^GBTallRect10/i.test(variant?.websiteSku ?? "");
 }
 
+function isPillar(group?: CustomerFacingNameGroupInput | null, variant?: CustomerFacingNameVariantInput | null): boolean {
+    return /^pillar-9ml-clear-/.test(group?.slug ?? "") || /^GBPillar9/i.test(variant?.websiteSku ?? "");
+}
+
 function cleanFamily(group?: CustomerFacingNameGroupInput | null, variant?: CustomerFacingNameVariantInput | null): string | null {
+    if (isPillar(group, variant)) return "Pillar";
     if (isTallSleek(group, variant)) return "Sleek";
     if (/^tulip-(?:5|6)ml-/.test(group?.slug ?? "") || /^GBTulip(?:Amb5|6)/.test(variant?.websiteSku ?? "")) return "Tulip";
     const family = clean(variant?.family) ?? clean(group?.family);
@@ -322,7 +327,8 @@ function composeBaseName(group?: CustomerFacingNameGroupInput | null, variant?: 
 
 function buildFallback(args: CustomerFacingNameArgs): CustomerFacingProductName {
     let fallback = clean(args.fallbackName) ?? clean(args.variant?.itemName) ?? clean(args.group?.displayName) ?? "Best Bottles Product";
-    if (isTallNineMlCylinder(args.group, args.variant) && !/\btall cylinder\b/i.test(fallback)) {
+    if (isPillar(args.group, args.variant)) fallback = fallback.replace(/\b(?:Tall Cylinder|Cylinder)\b/i, "Pillar");
+    if (!isPillar(args.group, args.variant) && isTallNineMlCylinder(args.group, args.variant) && !/\btall cylinder\b/i.test(fallback)) {
         fallback = fallback.replace(/\bCylinder\b/i, "Tall Cylinder");
     }
     if (isTallSleek(args.group, args.variant)) {
