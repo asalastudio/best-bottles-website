@@ -4,6 +4,8 @@ import { createRoot } from "react-dom/client";
 import { afterEach, expect, it, vi } from "vitest";
 import CylinderMasterPreview from "@/components/products/CylinderMasterPreview";
 import manifest from "@/lib/paper-doll/approved-kits.generated.json";
+vi.mock("server-only", () => ({}));
+import { approvedComponentKit } from "@/lib/paper-doll/approved-component-kits";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
 const rows = manifest.rows as unknown as Record<string, BuilderKit>;
 const container = document.createElement("div");
@@ -27,4 +29,17 @@ it.each(["GBTulip6SpryGlMatt", "GBTulip6SpryBlkSh", "GBTulipAmb5SpryGlMatt"])("s
     expect(tube.getAttribute("opacity")).toBe(String(original.opacity));
     expect((tube as SVGElement).style.mixBlendMode).toBe(original.blendMode ?? "");
     expect(container.querySelectorAll('[data-bb-master-part="diptube"]')).toHaveLength(1);
+});
+
+
+it("fills the registered Tulip body box in the catalog so its rim matches the roller", async () => {
+    const sku = "GBTulip6MtlRollBlkDot";
+    const kit = approvedComponentKit(sku);
+    vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
+    vi.stubGlobal("fetch", vi.fn(async () => ({ ok: true, json: async () => ({ kit, version: "tulip6-clear-glass-v1" }) })));
+    root = createRoot(container);
+    await act(async () => { root.render(<CylinderMasterPreview sku={sku} title="Tulip" fallback={<span>legacy</span>} />); });
+    const body = container.querySelector('[data-bb-master-part="body"]')!;
+    expect(body.getAttribute("href")).toContain("tulip6-clear-master.");
+    expect(body.getAttribute("preserveAspectRatio")).toBe("none");
 });

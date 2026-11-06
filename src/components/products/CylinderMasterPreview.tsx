@@ -97,7 +97,8 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
             const deliveryWidth = pixels <= 128 ? 128 : pixels <= 256 ? 256 : pixels <= 640 ? 640 : 1200;
             const clipId = `${clipPrefix}-master-${i}`;
             const visibleHeight = height * (1 - (part.clipBottomPct ?? 0) / 100);
-            // These vial bodies are registered to a narrower box while retaining their height.
+            // Calibrated bodies must fill their registration box like the PDP layers do.
+            const registeredTulip = part.slot === "body" && part.url.includes("/tulip6-clear-master.");
             const registeredVial = /vial-2ml-(?:amber|clear)-eye-level\./.test(part.url);
             return <g key={part.key}>
                 {part.clipBottomPct !== undefined && <defs>
@@ -105,7 +106,7 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
                 </defs>}
                 <image href={registerImageSrc(part.url, deliveryWidth)} data-bb-master-source={part.url} x={x} y={y}
                     width={width} height={height} opacity={part.opacity ?? 1} style={{ mixBlendMode: part.blendMode, ...plugMaskStyle(part.maskImage) }}
-                    preserveAspectRatio={registeredVial || part.url.includes("ml-clear-refraction.") || /\/(?:lotion9-mechanism-e912bf1bf96d|lotion50-571a47a5cc8b|lotion100-b1a4e22a8bfc)\.png/.test(part.url) ? "none" : undefined}
+                    preserveAspectRatio={registeredTulip || registeredVial || part.url.includes("ml-clear-refraction.") || /\/(?:lotion9-mechanism-e912bf1bf96d|lotion50-571a47a5cc8b|lotion100-b1a4e22a8bfc)\.png/.test(part.url) ? "none" : undefined}
                     clipPath={part.clipBottomPct !== undefined ? `url(#${clipId})` : undefined} data-bb-master-part={part.slot} />
             </g>;
         })}
