@@ -1,4 +1,4 @@
-import { isPillarPourSku } from "../products/pillar-master";
+import { isPillarPourSku, isPillarRollOnSku } from "../products/pillar-master";
 import index from "./approved-kit-index.json";
 import sprays from "./cylinder-spray-index.json";
 import jumbo from "./cylinder-jumbo-overcap-index.json";
@@ -40,13 +40,15 @@ export function cylinderLargeReducerGraceSku(sku: string): string | null {
 export function updatedCylinderKitVersion(sku: string | null | undefined): string | null {
     if (!sku) return null;
     if (isPillarPourSku(sku)) return "pillar-pour-v1";
+    if (isPillarRollOnSku(sku)) return "pillar-rollon-8f3982db65f6";
     if (jumbo28MeasuredSkus.has(sku)) return `${index.version}-jumbo28-measured-v1`;
     if (body25Skus.has(sku)) return body25.version + "-clear-refraction-v3";
     if (cylinderLargeReducerGraceSku(sku)) return "cylinder-large-reducer-refraction-v3";
     if (/^(?:GB|LB)Cyl(?:50|100)(?:Spry|AnSp|Ltn)/i.test(sku)
         && (spraySkus.has(sku) || lotionSkus.has(sku))) return "cylinder-large-clear-refraction-v3";
     if (reducer25Skus.has(sku)) return reducers25.version;
-    if (sleekSkus.has(sku)) return sleekTubes.version;
+    if (sleekSkus.has(sku)) return /^GBSlk(?:50|100)(?:Spry|AnSp)/.test(sku)
+        ? sleekTubes.version + "-regenerated-spray-v1" : sleekTubes.version;
     if (dropperSkus.has(sku)) return dropper.version;
     if (nineLotionSkus.has(sku)) return `${index.version}-lotion9-physical-reference-v1`;
     if (lotionSkus.has(sku)) return `${lotions.version}-separate-psd-v4`;
@@ -55,5 +57,5 @@ export function updatedCylinderKitVersion(sku: string | null | undefined): strin
     return null;
 }
 export function approvedMasterSku(sku: string | null | undefined): string | null {
-    return sku && (skus.has(sku) || isPillarPourSku(sku) || cylinderLargeReducerGraceSku(sku)) ? sku : null;
+    return sku && (skus.has(sku) || isPillarPourSku(sku) || isPillarRollOnSku(sku) || cylinderLargeReducerGraceSku(sku)) ? sku : null;
 }

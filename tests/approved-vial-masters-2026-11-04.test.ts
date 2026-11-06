@@ -6,16 +6,16 @@ import manifest from '@/lib/paper-doll/approved-kits.generated.json';
 import index from '@/lib/paper-doll/approved-kit-index.json';
 import { cylinderMasterSource } from '@/lib/products/cylinder-master';
 import { stageLayout } from '@/lib/products/pdp-redesign/stage';
-import vialSkus from '@/lib/products/vial-master-skus.json';
 import { beforeVialRelease, vialReleaseNewSkus, vialReleaseReplacedSkus } from './helpers/vial-release-2026-11-04';
 vi.mock('server-only', () => ({}));
 import { GET } from '@/app/api/bottle-masters/approved/route';
 
 const directory = 'docs/reviews/hosted-vial-masters-2026-11-04/';
 const read = (file: string) => JSON.parse(readFileSync(file, 'utf8'));
-const source = read('public/local-kits/vial-masters-2026-11-03/kits.json').rows as Record<string, BuilderKit>;
+const source = read('tests/helpers/vial-hosted-release-source-2026-11-04.json').rows as Record<string, BuilderKit>;
 const hosted = manifest.rows as unknown as Record<string, BuilderKit>;
 const plan = read(directory + 'upload-plan.json');
+const vialSkus = [...vialReleaseNewSkus, ...vialReleaseReplacedSkus];
 const receipt = read(directory + 'asset-receipt.json') as Record<string, { key: string; sha256: string; bytes: number; url: string; verified: boolean }>;
 const canonical = (value: unknown): unknown => Array.isArray(value) ? value.map(canonical) : value && typeof value === 'object'
     ? Object.fromEntries(Object.keys(value).sort().map(key => [key, canonical((value as Record<string, unknown>)[key])])) : value;

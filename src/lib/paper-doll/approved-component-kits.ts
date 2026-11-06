@@ -1,6 +1,6 @@
 import "server-only";
 import pillarCaps from "../../../public/local-kits/pillar-caps-2026-11-04/kits.json";
-import { PILLAR_POUR_CAP_SUFFIXES } from "../products/pillar-master";
+import { isPillarRollOnSku, PILLAR_POUR_CAP_SUFFIXES } from "../products/pillar-master";
 import manifest from "./approved-kits.generated.json";
 import sprays from "./cylinder-spray-kits.generated.json";
 import jumbo from "./cylinder-jumbo-overcap.generated.json";
@@ -147,6 +147,7 @@ const correctedSleek = Object.fromEntries(Object.entries(sleekTubes.rows).map(([
     const body = kit.parts.find(part => part.slot === "body");
     const landmarks = sleekLandmarks[kit.register?.bodyId ?? ""];
     if (!body?.box || !landmarks) return [sku, kit];
+    if (kit.parts.some(part => part.image.url.endsWith("/sleek-18-415-spray-regenerated.webp"))) return [sku, kit];
     const top = body.box.y + body.box.height * landmarks.shoulder / body.image.height;
     const bottom = body.box.y + body.box.height * landmarks.floor / body.image.height;
     const lotion = kit.parts.some(part => part.slot === "pump");
@@ -284,6 +285,7 @@ const revisedRows = Object.fromEntries(Object.entries(proposedRows).map(([sku, k
 
     }) }];
 })) as Record<string, BuilderKit>;
+const pillarRollOnRows = Object.fromEntries(Object.entries(pillarCaps.rows).filter(([sku]) => isPillarRollOnSku(sku)));
 const pillarPourBase = pillarCaps.rows.GBPillar9BlkShSht as unknown as BuilderKit;
 const cylinderPourSeat = existingRows.GBCyl5BlkShSht.parts.find(part => part.slot === "cap")!.bounds.bottom;
 const pillarPourRows = Object.fromEntries(PILLAR_POUR_CAP_SUFFIXES.map(suffix => {
@@ -310,7 +312,7 @@ const pillarPourRows = Object.fromEntries(PILLAR_POUR_CAP_SUFFIXES.map(suffix =>
         register: { ...pillarPourBase.register!, componentIds: [cap.componentId!] },
     }];
 }));
-const rows = { ...manifest.rows, ...revisedRows, ...pillarPourRows } as unknown as Record<string, BuilderKit>;
+const rows = { ...manifest.rows, ...revisedRows, ...pillarRollOnRows, ...pillarPourRows } as unknown as Record<string, BuilderKit>;
 export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {

@@ -15,6 +15,8 @@
 import { useEffect, useId, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
 import Image from "next/image";
 import styles from "./pdp.module.css";
+import GraceMark from "@/components/icons/GraceMark";
+import { useGrace } from "@/components/useGrace";
 import { formatVolumeQtyRange, type DisplayVolumeTier } from "@/lib/volumePricing";
 import { CATALOG_QUANTITY_MAX, parseCatalogQuantity } from "@/lib/products/catalog-card-purchase";
 import type { RollerOption } from "@/lib/products/pdp-redesign/model";
@@ -45,6 +47,7 @@ export default function PdpBuyBox({
     swatchStyle, selectionName, rollers, activeRoller, rollerImages, onRoller,
     tiers, qty, onQty, unitPrice, lineTotal, addState, onAdd, addedQty, caseQuantity, formatPrice,
 }: PdpBuyBoxProps) {
+    const { openPanel } = useGrace();
     const baseId = useId();
     const menuId = `${baseId}-packs`;
     const [menuOpen, setMenuOpen] = useState(false);
@@ -227,6 +230,13 @@ export default function PdpBuyBox({
                     <span className={styles.buyFootNoteMobile}>12+ rates confirmed on a quote</span>
                 </span>
             </div>
+
+            {/* Grace's place on product pages (2026-11-04): a quiet line under the buy box, clear of the swatches,
+                in place of the floating bubble. */}
+            <button type="button" className={styles.askGrace} onClick={() => openPanel({ source: "pdp" })} data-testid="pdp-ask-grace">
+                <GraceMark size={16} />
+                <span>Questions about fit or finish? <span className={styles.askGraceLink}>Ask Grace</span></span>
+            </button>
         </div>
     );
 }
