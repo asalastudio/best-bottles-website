@@ -1,4 +1,4 @@
-import { isTolaApplicator, TOLA6_ASSEMBLED_IMAGE } from "@/lib/products/tola-applicator";
+import { tolaAssembly } from "@/lib/products/tola-applicator";
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import sharp from 'sharp';
@@ -100,8 +100,9 @@ describe('Grace, Royal, Flair, and Decorative catalog hero release', () => {
     vi.stubEnv('NEXT_PUBLIC_CATALOG_HERO_PILOT', 'families-2026-09-22');
     for (const row of rows) {
       const current = getProductHero(row.websiteSku)!;
-      if (isTolaApplicator(row.websiteSku)) {
-        expect(current).toMatchObject({ websiteSku: row.websiteSku, groupSlug: row.groupSlug, url: TOLA6_ASSEMBLED_IMAGE });
+      const tola = tolaAssembly(row.websiteSku);
+      if (tola) {
+        expect(current).toMatchObject({ websiteSku: row.websiteSku, groupSlug: row.groupSlug, url: tola.url });
       } else expect(current).toEqual(row);
       expect(getCatalogHero(row.groupSlug, [{ websiteSku: row.websiteSku }])).toEqual(current);
       expect(getCatalogHero(row.groupSlug, [{ websiteSku: 'other-sku' }])).toBeNull();

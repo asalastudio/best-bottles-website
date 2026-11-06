@@ -6,7 +6,7 @@
  * Included / Fits / Glass / Good to know bullets, one Care note, the item-type line, the meta description and
  * the image alt text for every product that passes the checks. Products it does not cover keep today's copy.
  */
-import { tolaApplicatorSku } from "../tola-applicator";
+import { tolaApplicatorSku, tolaAssembly } from "../tola-applicator";
 import { rectangleApplicatorGlass, rectangleApplicatorSku } from "../rectangle-applicator";
 import siteCopy from "../../../../data/descriptions/pdp/product-copy.site.json";
 
@@ -42,6 +42,24 @@ function reviewedSmallSprayerCopy(sku: string, copy: ProductCopy): ProductCopy {
     };
 }
 
+function reviewedProductCopy(sku: string, copy: ProductCopy): ProductCopy {
+    if (!/^GBTallRect10/i.test(sku)) return reviewedSmallSprayerCopy(sku, copy);
+    const rename = (text: string) => text.replace(/\b(?:tall )?rectangl(?:e|ular)\b/gi, "Sleek");
+    const sentences = copy.sentences.map(rename);
+    if (sentences[0] && !/\bSleek\b/.test(sentences[0])) {
+        sentences[0] = sentences[0].replace(/^A (?=(?:fine-mist spray|roll-on|pour) bottle)/, "A clear Sleek ");
+    }
+    return {
+        ...copy,
+        title: rename(copy.title),
+        variantTitle: rename(copy.variantTitle),
+        sentences,
+        bullets: copy.bullets.map(([label, text]) => [label, rename(text)]),
+        metaDescription: rename(copy.metaDescription),
+        altText: rename(copy.altText),
+    };
+}
+
 export function productCopyFor(variant: { websiteSku?: string | null; graceSku?: string | null }): ProductCopy | null {
     // Owner correction, 2026-11-02: the short 13-425 amber vial has black and
     // white caps and carries the requested 0.08 oz size wording. Scope by exact
@@ -58,14 +76,16 @@ export function productCopyFor(variant: { websiteSku?: string | null; graceSku?:
             care: "", itemType: "Vial · 13-425 neck", metaDescription: sentences.join(" "),
             altText: `2 ml amber glass vial with short ${shortAmber.toLowerCase()} screw cap` };
     }
-    if (tolaApplicatorSku(variant)) {
-        const title = "6 ml Clear Tola Applicator Bottle", option = "Gold Cap";
+    const tola = tolaAssembly(tolaApplicatorSku(variant));
+    if (tola) {
+        const title = `${tola.ml} ml Clear Tola Applicator Bottle`, option = `${tola.finish} Cap`;
+        const cap = `shiny ${tola.finish.toLowerCase()} cap with a ${tola.bead} bead`;
         const sentences = ["A clear octagonal Tola bottle for perfume oil and attar.",
-            "Supplied as one bottle with a plastic applicator and a shiny gold cap with a red bead."];
+            `Supplied as one bottle with a plastic applicator and a ${cap}.`];
         return { title, option, variantTitle: title + " - " + option, sentences,
-            bullets: [["Included", "Plastic applicator and shiny gold cap with red bead."], ["Glass", "Clear octagonal glass."]],
+            bullets: [["Included", `Plastic applicator and ${cap}.`], ["Glass", "Clear octagonal glass."]],
             care: "", itemType: "Tola applicator bottle", metaDescription: sentences.join(" "),
-            altText: title + ", with plastic applicator and shiny gold cap with red bead" };
+            altText: `${title} with plastic applicator and ${cap}` };
     }
     const rectangleGlass = rectangleApplicatorGlass(rectangleApplicatorSku(variant));
     if (rectangleGlass) {
@@ -80,10 +100,10 @@ export function productCopyFor(variant: { websiteSku?: string | null; graceSku?:
             metaDescription: sentences.join(" "), altText: title + ", " + rectangleGlass.toLowerCase() + " glass with matching faceted stopper" };
     }
     const website = variant.websiteSku?.trim();
-    if (website && COPY.bySku[website]) return reviewedSmallSprayerCopy(website, COPY.bySku[website]);
+    if (website && COPY.bySku[website]) return reviewedProductCopy(website, COPY.bySku[website]);
     const grace = variant.graceSku?.trim();
     const mapped = grace ? COPY.graceToWebsite[grace] : undefined;
-    return mapped && COPY.bySku[mapped] ? reviewedSmallSprayerCopy(mapped, COPY.bySku[mapped]) : null;
+    return mapped && COPY.bySku[mapped] ? reviewedProductCopy(mapped, COPY.bySku[mapped]) : null;
 }
 
 export function productCopyCount(): number {

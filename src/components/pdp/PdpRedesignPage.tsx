@@ -30,6 +30,7 @@ import {
     type GracePdpPlateCommand,
 } from "@/lib/grace/pdpPlateSwap";
 import { isTolaApplicator } from "@/lib/products/tola-applicator";
+import { getProductHero } from "@/lib/products/catalog-heroes";
 import { rectangleApplicatorGlass } from "@/lib/products/rectangle-applicator";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
@@ -138,6 +139,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         cap: searchParams.get("cap"),
         sku: searchParams.get("sku"),
     }));
+    const [blackDropperPreview, setBlackDropperPreview] = useState(false);
     const [frostedPreview, setFrostedPreview] = useState(false);
     const [view, setView] = useState<StageView>("sidecar");
     const [qty, setQty] = useState<number>(() => Math.max(1, Math.min(99_999, Number.parseInt(searchParams.get("qty") ?? "1", 10) || 1)));
@@ -159,6 +161,14 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     }));
     const rectangleGlass = rectangleApplicatorGlass(selected?.websiteSku);
     const singleTola = isTolaApplicator(selected?.websiteSku);
+    const teardropGlassPicker = /^teardrop-9ml-.*-glassapplicator$/i.test(slug);
+    const teardropGlasses = teardropGlassPicker ? glasses.map(glass => ({
+        ...glass,
+        imageUrl: getProductHero(glass.primaryWebsiteSku ?? (glass.active ? selected?.websiteSku : null))?.url,
+        unavailable: glass.active
+            ? variants.every(variant => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false)
+            : siblings.find(sibling => sibling.slug === glass.slug)?.inStock === false,
+    })) : [];
     const fitment = fitmentLabel(selected);
     // Product copy v2 (scripts/pdp-descriptions/product_copy.py) names the product when it covers this SKU.
     const copy = useMemo(() => (selected?.websiteSku ? descriptions[selected.websiteSku]?.copy ?? null : null), [descriptions, selected?.websiteSku]);
@@ -177,7 +187,23 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         } : part),
     } : null;
     const showingFrosted = frostedPreview && frostedKit !== null;
-    const kit = showingFrosted ? frostedKit : clearKit;
+    const goldDropperKit = process.env.NODE_ENV === "development" && slug === "cylinder-25ml-clear-18-415-dropper"
+        ? kitsBySku.GBCyl25DrpGl : null;
+    const blackDropperKit: KitLike | null = goldDropperKit ? {
+        ...goldDropperKit,
+        parts: goldDropperKit.parts.map(part => {
+            if (part.slot !== "fitment") return part;
+            const { left, right, top, bottom } = part.bounds;
+            const sx = (right - left) / 926;
+            const sy = (bottom - top) / 1530;
+            return { ...part,
+                image: { url: "/images/cylinder-sprays/dropper25-shiny-black-preview.webp", width: 993, height: 1584 },
+                box: { x: left - 31 * sx, y: top - 34 * sy, width: 993 * sx, height: 1584 * sy },
+            };
+        }),
+    } : null;
+    const showingBlackDropper = blackDropperPreview && blackDropperKit !== null;
+    const kit = showingBlackDropper ? blackDropperKit : showingFrosted ? frostedKit : clearKit;
     const glassBodyKit = useCallback((glassSlug: string): KitLike | null => {
         if (glassSlug === slug) return kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku }) ?? variants.map((variant) => kitFor(kitsBySku, variant)).find(Boolean) ?? null;
         const sibling = siblings.find((candidate) => candidate.slug === glassSlug);
@@ -278,6 +304,8 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     useEffect(() => () => { if (addedTimer.current != null) window.clearTimeout(addedTimer.current); }, []);
 
     const onCapPick = useCallback((id: string) => {
+        setBlackDropperPreview(id === "shiny-black-preview");
+        if (id === "shiny-black-preview") return;
         setPicks((current) => ({ ...current, cap: id }));
         const option = caps.find((cap) => cap.id === id);
         analytics.pdpPick({ group: slug, type: "cap", value: option?.name ?? id, sku: option?.variants[0]?.websiteSku ?? null });
@@ -294,9 +322,9 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         const glass = glasses.find((option) => option.slug === targetSlug);
         analytics.pdpPick({ group: slug, type: "glass", value: glass?.label ?? targetSlug, sku: glass?.primaryWebsiteSku ?? null });
         if (targetSlug === slug) return;
-        const query = [pickQuery(picks, rollers), searchParams.get("assetPreview") === "gpt13" ? "assetPreview=gpt13" : ""].filter(Boolean).join("&");
+        const query = [teardropGlassPicker ? "" : pickQuery(picks, rollers), searchParams.get("assetPreview") === "gpt13" ? "assetPreview=gpt13" : ""].filter(Boolean).join("&");
         router.push(`/products/${targetSlug}${query ? `?${query}` : ""}`, { scroll: false });
-    }, [glasses, picks, rollers, router, slug, searchParams]);
+    }, [glasses, picks, rollers, router, slug, searchParams, teardropGlassPicker]);
 
     useEffect(() => {
         for (const glass of glasses) if (!glass.active) router.prefetch(`/products/${glass.slug}`);
@@ -317,7 +345,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         graceSku: selected.graceSku, shopifyVariantId: selected.shopifyVariantId ?? null,
         shopifySellable: selected.shopifySellable ?? undefined, stockStatus: selected.stockStatus,
     }) : false;
-    const addState: AddState = showingFrosted ? "unavailable" : !selected || selected.webPrice1pc == null || selected.webPrice1pc <= 0
+    const addState: AddState = (showingFrosted || showingBlackDropper) ? "unavailable" : !selected || selected.webPrice1pc == null || selected.webPrice1pc <= 0
         ? "unpriced"
         : isSoldOutStockStatus(selected.stockStatus) || !status.inStock
             ? "sold-out"
@@ -380,7 +408,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
 
     // ── copy ──────────────────────────────────────────────────────────────
     const glassName = rectangleGlass ?? activeGlass?.shortLabel ?? glassShortLabel(group.color);
-    const capName = activeCap?.name ?? null;
+    const capName = showingBlackDropper ? "Shiny Black preview" : activeCap?.name ?? null;
     const description = selected?.websiteSku ? descriptions[selected.websiteSku] ?? null : null;
     // The headline names the SKU in the buy box: a new cap, roller or finish changes it with the pick.
     const option = optionLabel(rollerOption, fitment, capName);
@@ -444,7 +472,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                 <div className={styles.grid}>
                     <PdpStage
                         pickLine={pickLine(showingFrosted ? "Frosted preview" : glassName, rollerOption, rollerOption ? null : fitment, rectangleGlass ? null : capName)}
-                        finishKind={rectangleGlass ? "glass" : "cap"}
+                        finishKind={rectangleGlass || teardropGlassPicker ? "glass" : "cap"}
                         view={shownView}
                         availableViews={views}
                         onViewChange={onView}
@@ -455,14 +483,19 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         fallbackBodyImageUrl={fallbackMedia.bodyImageUrl}
                         fallbackAlt={copy?.altText ?? variantTitle(title, option)}
                         callouts={measuredCallouts}
-                        caps={caps.map((cap) => ({
+                        caps={teardropGlassPicker ? teardropGlasses.map(glass => ({
+                            id: glass.slug, name: glass.label, swatchName: glass.label, kit: null,
+                            imageUrl: glass.imageUrl, unavailable: glass.unavailable,
+                        })) : [...caps.map((cap) => ({
                             id: cap.id, name: cap.name, swatchName: cap.swatchName,
                             kit: kitFor(kitsBySku, cap.variants[0]),
                             unavailable: cap.variants.every((variant) => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false),
-                        }))}
-                        activeCapId={activeCap?.id ?? null}
-                        onCapPick={onCapPick}
-                        glasses={[...(rectangleGlass || singleTola ? [] : glasses).map((glass) => ({
+                        })), ...(blackDropperKit ? [{
+                            id: "shiny-black-preview", name: "Shiny Black preview", swatchName: "Shiny Black", kit: blackDropperKit, unavailable: false,
+                        }] : [])]}
+                        activeCapId={teardropGlassPicker ? slug : showingBlackDropper ? "shiny-black-preview" : activeCap?.id ?? null}
+                        onCapPick={teardropGlassPicker ? onGlassPick : onCapPick}
+                        glasses={teardropGlassPicker ? teardropGlasses.map(glass => ({ ...glass, kit: null })) : [...(rectangleGlass || singleTola ? [] : glasses).map((glass) => ({
                             slug: glass.slug, label: glass.label, active: glass.active && !showingFrosted, kit: glass.active ? clearKit ?? glassBodyKit(glass.slug) : glassBodyKit(glass.slug),
                             unavailable: glass.active
                                 ? variants.every((variant) => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false)
@@ -495,6 +528,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                             </span>
                         </div>
 
+                        {showingBlackDropper && <p>Shiny Black with white bulb is a draft finish. Select a listed finish to order.</p>}
                         {showingFrosted && <p>Frosted glass is available to preview. Select Clear to order.</p>}
                         <PdpBuyBox
                             swatchStyle={swatchStyle}
@@ -519,7 +553,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
 
                         <PdpProductInfo
                             itemType={description?.itemType ?? null}
-                            itemName={selected?.websiteSku ?? selected?.graceSku ?? null}
+                            itemName={showingBlackDropper ? "GBCyl25DrpShnBlk (draft SKU)" : selected?.websiteSku ?? selected?.graceSku ?? null}
                             description={description?.description ?? null}
                             bullets={copy?.bullets ?? null}
                             care={copy?.care || null}
@@ -529,7 +563,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     </div>
                 </div>
 
-                {!rectangleGlass && !singleTola && <PdpBuildStrip
+                {!rectangleGlass && !singleTola && !["Teardrop", "Apothecary"].includes(group.family) && <PdpBuildStrip
                     productPageOnly={["cylinder-3.3ml-clear-12mm-finemist", "cylinder-4ml-clear-12mm-finemist"].includes(slug)}
                     capacityLabel={capacityLabel}
                     glassLabel={glassLabel(group.color)}

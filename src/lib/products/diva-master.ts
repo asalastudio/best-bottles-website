@@ -8,7 +8,7 @@ import skus from "./diva-master-skus.json";
 // droppers, bulb and tassel kits fitted to the stage, bulb cap close-ups (seat-and-tubes.py), and the ten 46 ml ring
 // bulb sprayers from their PSDs (diva-ring-kits.py); the spray and lotion kits on Diva's own short-collar PSD heads and overcaps (diva-psd-heads.py); no glass pipette inside the
 // dropper glass.
-export const DIVA_MASTER_REVIEW_VERSION = "32a89f9270c0";
+export const DIVA_MASTER_REVIEW_VERSION = "6bfad681b5a7";
 const exactSkus = new Map(skus.map(sku => [sku.toLowerCase(), sku]));
 export function divaReviewSku(sku: string | null | undefined): string | null {
     return sku ? exactSkus.get(sku.trim().toLowerCase()) ?? null : null;

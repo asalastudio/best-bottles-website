@@ -46,6 +46,7 @@ export type CapRailItem = {
     name: string;
     swatchName: string;
     kit: KitLike | null;
+    imageUrl?: string;
     unavailable: boolean;
 };
 
@@ -54,6 +55,7 @@ export type GlassLineupItem = {
     label: string;
     active: boolean;
     kit: KitLike | null;
+    imageUrl?: string;
     /** Nothing of this glass is in stock or sellable online. */
     unavailable?: boolean;
 };
@@ -110,6 +112,7 @@ export default function PdpStage({
     caps, activeCapId, onCapPick, glasses, onGlassPick, activeCapName, activeGlassLabel,
 }: PdpStageProps) {
     const singleTola = isTolaApplicator(context.websiteSku);
+    const showRail = !singleTola || caps.length > 1;
     const swatchesOnly = requiresAssembledClosure(context.applicator, context.websiteSku)
         && availableViews.length === 1 && !singleTola && finishKind !== "glass";
     const layout = useMemo(() => stageLayout(kit, view, context, glassFrame ?? {}), [kit, view, context, glassFrame]);
@@ -196,7 +199,7 @@ export default function PdpStage({
 
     return (
         <section id="product-canvas" className={styles.canvas} aria-label="Product canvas" data-testid="pdp-canvas"
-            style={singleTola ? { width: "100%", minWidth: 0, gridTemplateColumns: "minmax(0, 1fr)", gridTemplateAreas: '"head" "stage" "lineup"' } : finishKind === "glass" ? { width: "100%", minWidth: 0 } : undefined}>
+            style={!showRail ? { width: "100%", minWidth: 0, gridTemplateColumns: "minmax(0, 1fr)", gridTemplateAreas: '"head" "stage" "lineup"' } : finishKind === "glass" ? { width: "100%", minWidth: 0 } : undefined}>
             <div className={styles.canvasHead}>
                 <span className={styles.pickLine} data-testid="pdp-pick-line">{pickLine}</span>
                 {!swatchesOnly && <div className={styles.viewSwitch} role="group" aria-label="View">
@@ -220,7 +223,7 @@ export default function PdpStage({
                 </div>}
             </div>
 
-            {!singleTola && <div className={styles.rail} role="group" aria-label={finishKind === "glass" ? "Glass colors" : "Caps"} data-testid="pdp-cap-rail">
+            {showRail && <div className={styles.rail} role="group" aria-label={finishKind === "glass" ? "Glass colors" : "Caps"} data-testid="pdp-cap-rail">
                 <span className={styles.railLabel}>
                     <span className={styles.railLabelDesktop}>{finishKind === "glass" ? "GLASS" : "CAPS"} {caps.length}</span>
                     {activeCapName ? <span className={styles.railLabelMobile}>{finishKind === "glass" ? "GLASS" : "CAP"} · {activeCapName}</span> : null}
@@ -241,7 +244,11 @@ export default function PdpStage({
                             data-unavailable={cap.unavailable ? "true" : undefined}
                             onClick={() => onCapPick(cap.id)}
                         >
-                            {finishKind !== "glass" && cap.kit?.capCloseUp
+                            {cap.imageUrl
+                                // eslint-disable-next-line @next/next/no-img-element
+                                ? <img src={registerImageSrc(cap.imageUrl, 128)} alt="" width={capThumbWidth} height={capThumbHeight}
+                                    style={{ objectFit: "contain", width: capThumbWidth, height: capThumbHeight }} draggable={false} />
+                                : finishKind !== "glass" && cap.kit?.capCloseUp
                                 // eslint-disable-next-line @next/next/no-img-element
                                 ? <img src={registerImageSrc(cap.kit.capCloseUp.url, 128)} alt="" width={capThumbWidth} height={capThumbHeight}
                                     style={{ objectFit: "contain", width: capThumbWidth, height: capThumbHeight }} draggable={false} />
@@ -459,7 +466,11 @@ export default function PdpStage({
                                 data-unavailable={glass.unavailable ? "true" : undefined}
                                 title={glass.unavailable ? `${glass.label}: out of stock` : undefined}
                             >
-                                {body && glass.kit
+                                {glass.imageUrl
+                                    // eslint-disable-next-line @next/next/no-img-element
+                                    ? <img src={registerImageSrc(glass.imageUrl, 128)} alt="" height={glassThumbHeight}
+                                        style={{ objectFit: "contain", height: glassThumbHeight }} draggable={false} />
+                                    : body && glass.kit
                                     ? <PdpKitPartImage part={body} canvas={glass.kit.canvas} height={glassThumbHeight} />
                                     : <span className={styles.glassTile} style={swatch ? { backgroundImage: `url(${swatch})`, backgroundSize: "cover" } : getMaterialSwatchStyle(glass.label, {})} aria-hidden />}
                                 <span className={styles.glassName}>{glass.label}</span>

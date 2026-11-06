@@ -265,6 +265,8 @@ export default function ProductCardImagePreview({
         setSelection({ productHref, id: preview.id });
     };
 
+    const compactVial = auditMeta?.productGroupSlug === "vial-9ml-clear-18-400"
+        || auditMeta?.productGroupSlug === "vial-9ml-clear-18-400-glasswand";
     const photo = resolvedImageUrl ? (
         <Image
             key={resolvedImageUrl}
@@ -293,6 +295,8 @@ export default function ProductCardImagePreview({
         </div>
     );
 
+    const artwork = masterSku ? <CylinderMasterPreview sku={masterSku} title={productTitle} fallback={photo} /> : photo;
+
     return (
         <div
             onMouseLeave={() => { if (fixedHero) setSelection(null); }}
@@ -316,7 +320,11 @@ export default function ProductCardImagePreview({
                     className="absolute inset-0 z-10"
                     aria-label={`View ${productTitle}`}
                 />
-                {masterSku ? <CylinderMasterPreview sku={masterSku} title={productTitle} fallback={photo} /> : photo}
+                {compactVial ? (
+                    <div className="absolute inset-0" style={{ transform: "scale(0.9)", transformOrigin: "50% 91%" }}>
+                        {artwork}
+                    </div>
+                ) : artwork}
             </div>
             <ProductCardSwatchRow
                 previewableVariants={fixedHero ? [] : previewablePreviews}

@@ -1,3 +1,4 @@
+import { isPillarPourSku } from "../products/pillar-master";
 import index from "./approved-kit-index.json";
 import sprays from "./cylinder-spray-index.json";
 import jumbo from "./cylinder-jumbo-overcap-index.json";
@@ -25,10 +26,25 @@ const nineLotionSkus = new Set([
     "LBCylFrst9LtnBlk", "LBCylFrst9LtnGl", "LBCylFrst9LtnMtSl",
     "LBCylSwrl9LtnBlk", "LBCylSwrl9LtnGl", "LBCylSwrl9LtnMtSl",
 ]);
+const largeReducerFinishes: Record<string, string> = {
+    BlkLthr: "BKLT", BrwnLthr: "BRLT", IvyLthr: "IVLT", LBrwnLthr: "LBLT", PnkLthr: "PKLT",
+    MtSl: "MSLV", MtSlTall: "MSLV-T", ShnBlk: "SBLK", ShnBlkTall: "SBLK-T",
+    ShnGl: "SGLD", ShnSl: "SSLV", Wht: "WHT",
+};
+export function cylinderLargeReducerGraceSku(sku: string): string | null {
+    const match = /^GBCyl(50|100)Rdcr([A-Za-z]+)$/.exec(sku);
+    if (!match || !Object.hasOwn(largeReducerFinishes, match[2])) return null;
+    return `GB-CYL-CLR-${match[1]}ML-RDC-${largeReducerFinishes[match[2]]}`;
+}
+
 export function updatedCylinderKitVersion(sku: string | null | undefined): string | null {
     if (!sku) return null;
+    if (isPillarPourSku(sku)) return "pillar-pour-v1";
     if (jumbo28MeasuredSkus.has(sku)) return `${index.version}-jumbo28-measured-v1`;
-    if (body25Skus.has(sku)) return body25.version;
+    if (body25Skus.has(sku)) return body25.version + "-clear-refraction-v3";
+    if (cylinderLargeReducerGraceSku(sku)) return "cylinder-large-reducer-refraction-v3";
+    if (/^(?:GB|LB)Cyl(?:50|100)(?:Spry|AnSp|Ltn)/i.test(sku)
+        && (spraySkus.has(sku) || lotionSkus.has(sku))) return "cylinder-large-clear-refraction-v3";
     if (reducer25Skus.has(sku)) return reducers25.version;
     if (sleekSkus.has(sku)) return sleekTubes.version;
     if (dropperSkus.has(sku)) return dropper.version;
@@ -39,5 +55,5 @@ export function updatedCylinderKitVersion(sku: string | null | undefined): strin
     return null;
 }
 export function approvedMasterSku(sku: string | null | undefined): string | null {
-    return sku && skus.has(sku) ? sku : null;
+    return sku && (skus.has(sku) || isPillarPourSku(sku) || cylinderLargeReducerGraceSku(sku)) ? sku : null;
 }

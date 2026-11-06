@@ -157,7 +157,13 @@ function cleanColor(group?: CustomerFacingNameGroupInput | null, variant?: Custo
     return clean(variant?.color) ?? clean(group?.color);
 }
 
+function isTallSleek(group?: CustomerFacingNameGroupInput | null, variant?: CustomerFacingNameVariantInput | null): boolean {
+    return /^tall-rectangle-10ml-clear-13-415(?:-|$)/.test(group?.slug ?? "")
+        || /^GBTallRect10/i.test(variant?.websiteSku ?? "");
+}
+
 function cleanFamily(group?: CustomerFacingNameGroupInput | null, variant?: CustomerFacingNameVariantInput | null): string | null {
+    if (isTallSleek(group, variant)) return "Sleek";
     if (/^tulip-(?:5|6)ml-/.test(group?.slug ?? "") || /^GBTulip(?:Amb5|6)/.test(variant?.websiteSku ?? "")) return "Tulip";
     const family = clean(variant?.family) ?? clean(group?.family);
     return key(family) === "cylinder" && isTallNineMlCylinder(group, variant) ? "Tall Cylinder" : family;
@@ -318,6 +324,9 @@ function buildFallback(args: CustomerFacingNameArgs): CustomerFacingProductName 
     let fallback = clean(args.fallbackName) ?? clean(args.variant?.itemName) ?? clean(args.group?.displayName) ?? "Best Bottles Product";
     if (isTallNineMlCylinder(args.group, args.variant) && !/\btall cylinder\b/i.test(fallback)) {
         fallback = fallback.replace(/\bCylinder\b/i, "Tall Cylinder");
+    }
+    if (isTallSleek(args.group, args.variant)) {
+        fallback = fallback.replace(/\b(?:Tall )?Rectangle\b/i, "Sleek");
     }
     fallback = displayApplicatorName(fallback);
     return {

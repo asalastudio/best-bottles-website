@@ -12,6 +12,8 @@ export type MegaMenuLink = {
     label: string;
     href: string;
     badge?: string;
+    icon?: "sprayer" | "pump" | "dropper" | "roll-on" | "reducer" | "cap" | "stopper"
+        | "builder" | "guide" | "neck" | "grace";
 };
 
 export type MegaMenuColumn = {
@@ -81,31 +83,31 @@ export const MEGA_MENU_PANELS: Record<MegaMenuId, MegaMenuPanelContent> = {
             {
                 heading: "Closure type",
                 links: [
-                    { label: "Fine mist sprayers", href: componentCatalog({ componentType: "Sprayer" }) },
-                    { label: "Lotion pumps", href: componentCatalog({ componentType: "Lotion Pump" }) },
-                    { label: "Droppers", href: componentCatalog({ componentType: "Dropper" }) },
-                    { label: "Roll-on fitments", href: componentCatalog({ componentType: "Roll-On" }) },
-                    { label: "Reducers", href: componentCatalog({ componentType: "Reducer" }) },
-                    { label: "Caps & closures", href: componentCatalog({ componentType: "Cap" }) },
-                    { label: "Glass stoppers & rods", href: catalogHref({ applicators: ["glassstopper"] }) },
+                    { label: "Fine mist sprayers", icon: "sprayer", href: componentCatalog({ componentType: "Sprayer" }) },
+                    { label: "Lotion pumps", icon: "pump", href: componentCatalog({ componentType: "Lotion Pump" }) },
+                    { label: "Droppers", icon: "dropper", href: componentCatalog({ componentType: "Dropper" }) },
+                    { label: "Roll-on fitments", icon: "roll-on", href: componentCatalog({ componentType: "Roll-On" }) },
+                    { label: "Reducers", icon: "reducer", href: componentCatalog({ componentType: "Reducer" }) },
+                    { label: "Caps & closures", icon: "cap", href: componentCatalog({ componentType: "Cap" }) },
+                    { label: "Glass stoppers & rods", icon: "stopper", href: catalogHref({ applicators: ["glassstopper"] }) },
                 ],
             },
             {
                 heading: "Pair with a bottle",
                 links: [
-                    { label: "Build Your Bottle", href: "/matrix" },
-                    { label: "Roll-On bottles", href: applicationFinderHref("rollon") },
-                    { label: "Spray bottles", href: applicationFinderHref("spray") },
-                    { label: "Dropper bottles", href: applicationFinderHref("dropper") },
-                    { label: "Pump bottles", href: applicationFinderHref("lotionpump") },
+                    { label: "Build Your Bottle", icon: "builder", href: "/matrix" },
+                    { label: "Roll-On bottles", icon: "roll-on", href: applicationFinderHref("rollon") },
+                    { label: "Spray bottles", icon: "sprayer", href: applicationFinderHref("spray") },
+                    { label: "Dropper bottles", icon: "dropper", href: applicationFinderHref("dropper") },
+                    { label: "Pump bottles", icon: "pump", href: applicationFinderHref("lotionpump") },
                 ],
             },
             {
                 heading: "Fitment help",
                 links: [
-                    { label: "Fitment guide", href: "/resources" },
-                    { label: "Browse bottles by neck", href: glassBottleCatalog() },
-                    { label: "Talk with Grace", href: "/" },
+                    { label: "Fitment guide", icon: "guide", href: "/resources" },
+                    { label: "Browse bottles by neck", icon: "neck", href: glassBottleCatalog() },
+                    { label: "Talk with Grace", icon: "grace", href: "/" },
                 ],
             },
         ],
@@ -115,8 +117,8 @@ export const MEGA_MENU_PANELS: Record<MegaMenuId, MegaMenuPanelContent> = {
             href: "/matrix",
         },
         footerLinks: [
-            { label: "All closures & components", href: componentCatalog() },
-            { label: "Build Your Bottle", href: "/matrix" },
+            { label: "All closures & components", icon: "cap", href: componentCatalog() },
+            { label: "Build Your Bottle", icon: "builder", href: "/matrix" },
         ],
     },
     specialty: {

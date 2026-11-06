@@ -338,6 +338,20 @@ export function catalogTasselViewport(sku: string, layout: Pick<StageLayout, "ca
     };
 }
 
+// The tassel extends below its collar. Measure the collar at the neck axis
+// in each source cutout instead of using the bottom of the tassel artwork.
+const cylinderTasselCollarFeet: Readonly<Record<string, number>> = {
+    fbee1a783639: 347,
+    "712d98bbe7e9": 407,
+    "47a9ab1ddb17": 370,
+    e4e5d2ed1ee0: 366,
+    "4c9d5e394659": 366,
+    ddcb9cf94339: 372,
+    ed23b1e76217: 347,
+    "42f2c2b395ec": 360,
+    "97417da1f16f": 371,
+};
+
 export function stageLayout(
     kit: KitLike | null | undefined,
     requested: StageView,
@@ -345,7 +359,7 @@ export function stageLayout(
     /** The kit's `glassFrame` on its page, so every SKU of the glass shares this frame. */
     options: Partial<GlassFrame> = {},
 ): StageLayout | null {
-    if (isTolaApplicator(context.websiteSku)) return tolaAssemblyLayout();
+    if (isTolaApplicator(context.websiteSku)) return tolaAssemblyLayout(context.websiteSku ?? undefined);
     if (!kit?.parts?.length) return null;
     const canvas = kit.canvas ?? PDP_PLATE_CANVAS;
     const view = effectiveView(requested, kit, context);
@@ -405,6 +419,29 @@ export function stageLayout(
                 const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
                 offsets.set(part, { ...offset, dy: offset.dy - 14 });
             }
+        }
+    }
+
+    const shoulder = kit.glassSizing?.landmarkY;
+    if (view !== "exploded" && shoulder !== undefined && kit.register?.glass === "Clear"
+        && /^cylinder-(25|50|100)ml-18-415$/.test(kit.register.bodyId)) {
+        for (const part of sorted) {
+            const seatsOnShoulder = part.slot === "sprayer" || part.slot === "pump" || part.slot === "fitment"
+                || (view === "capon" && isClosureSlot(part.slot));
+            if (!seatsOnShoulder) continue;
+            const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+            let seat = part.bounds.bottom;
+            if (part.slot === "sprayer" && /AnSpTsl/i.test(kit.sku)) {
+                const hash = part.image.url.split(".").at(-2);
+                const collarFoot = hash ? cylinderTasselCollarFeet[hash] : undefined;
+                if (collarFoot === undefined || !part.box) continue;
+                seat = part.box.y + part.box.height * collarFoot / part.image.height;
+            }
+            if (part.slot === "overcap" && /ClOvrCap$/i.test(kit.sku)) {
+                // This short cover seats on the actuator, above the pump collar.
+                seat = sorted.find(candidate => candidate.slot === "pump")?.bounds.bottom ?? seat;
+            }
+            offsets.set(part, { ...offset, dy: shoulder - seat });
         }
     }
 
