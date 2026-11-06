@@ -1,9 +1,12 @@
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import manifest from '@/lib/paper-doll/approved-kits.generated.json';
 import index from '@/lib/paper-doll/approved-kit-index.json';
 import { displayDerivativeUrl } from '@/lib/products/display-derivative';
+// The manifest is read on the server; importing the server module registers every source for this test.
+import "@/lib/products/display-derivative.server";
+vi.mock("server-only", () => ({}));
 import { stageLayout, type KitLike } from '@/lib/products/pdp-redesign/stage';
 import { beforeVialRelease } from './helpers/vial-release-2026-11-04';
 

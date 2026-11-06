@@ -8,13 +8,13 @@ import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
 import { isSanityConfigured } from "@/sanity/lib/client";
 import { sanityFetch } from "@/sanity/lib/live";
 import { JOURNAL_POSTS_QUERY } from "@/sanity/lib/queries";
-import { SITE_URL } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 
 export const metadata: Metadata = {
     title: { absolute: "Journal — Packaging Insights & Brand Guides | Best Bottles" },
     description:
         "Expert guides on glass packaging, fragrance, and brand strategy. From bottle selection to scaling your label — insights from the Best Bottles team.",
-    alternates: { canonical: `${SITE_URL}/blog` },
+    alternates: pageAlternates("/blog"),
 };
 
 async function getPosts(): Promise<JournalPost[]> {

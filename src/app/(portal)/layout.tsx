@@ -9,6 +9,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
     title: { absolute: "Client Portal — Best Bottles" },
+    robots: { index: false, follow: false },
 };
 
 export default async function PortalLayout({ children }: { children: ReactNode }) {

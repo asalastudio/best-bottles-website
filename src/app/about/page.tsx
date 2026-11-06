@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Award, Globe, Shield, Users } from "@/components/icons";
 import Navbar from "@/components/Navbar";
-import { SITE_URL } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 
 export const metadata: Metadata = {
     title: { absolute: "About Best Bottles — 20+ Years of Packaging Excellence" },
     description: "Discover the story behind Best Bottles and Nemat International. Over 20 years of fragrance and packaging expertise, serving brands from startups to retail.",
-    alternates: { canonical: `${SITE_URL}/about` },
+    alternates: pageAlternates("/about"),
 };
 
 const VALUES = [

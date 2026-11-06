@@ -1,4 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
+// The route imports the server-only display manifest; vitest is neither a Server nor a Client Component runtime.
+vi.mock("server-only", () => ({}));
 import { GET } from "@/app/api/bottle-masters/rectangle9/route";
 
 afterEach(() => vi.unstubAllEnvs());

@@ -11,12 +11,14 @@ import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { sanityFetch } from "@/sanity/lib/live";
 import { urlFor } from "@/sanity/lib/image";
 import { JOURNAL_POST_QUERY, JOURNAL_SLUGS_QUERY } from "@/sanity/lib/queries";
-import { SITE_URL } from "@/lib/seo";
+import { SITE_URL, buildBlogPostingJsonLd } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 
 type ArticleImage = { asset?: { _ref: string }; _type?: string } | null | undefined;
 
 type JournalPost = {
     _id: string;
+    _updatedAt?: string;
     title: string;
     slug: string;
     category?: string;
@@ -68,7 +70,7 @@ export async function generateMetadata({
     return {
         title: { absolute: `${post.title} | Best Bottles Journal` },
         description: post.excerpt ?? `Read ${post.title} on the Best Bottles Journal.`,
-        alternates: { canonical: `${SITE_URL}/blog/${slug}` },
+        alternates: pageAlternates(`/blog/${slug}`),
         openGraph: {
             title: post.title,
             description: post.excerpt ?? "",
@@ -183,9 +185,21 @@ export default async function BlogArticlePage({
 
     const imgSrc = post.image ? urlFor(post.image) : null;
     const categoryLabel = post.category ? (CATEGORY_LABELS[post.category] ?? post.category) : null;
+    const blogPostingJsonLd = buildBlogPostingJsonLd({
+        headline: post.title,
+        description: post.excerpt,
+        url: `${SITE_URL}/blog/${slug}`,
+        image: imgSrc || undefined,
+        datePublished: post.publishedAt,
+        dateModified: post._updatedAt,
+    });
 
     return (
         <div className="min-h-screen bg-bone">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+            />
             <Navbar />
 
             {/* Hero */}

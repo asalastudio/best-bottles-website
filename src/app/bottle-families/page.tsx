@@ -11,7 +11,7 @@ import { familyFinderHref } from '@/lib/products/focused-shopping';
 import { PRODUCT_TYPE_FAMILIES } from '@/lib/catalogFilters';
 import { localizeFamilyName } from '@/i18n/catalogCopy';
 import { defaultLocale, isLocale, type AppLocale } from '@/i18n/config';
-import { buildHreflangAlternates } from '@/i18n/metadata';
+import { pageAlternates } from '@/i18n/metadata';
 import enMessages from '../../../messages/en.json';
 import esMessages from '../../../messages/es.json';
 
@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
         title: { absolute: copy.seoTitle },
         description: copy.seoDescription,
-        alternates: buildHreflangAlternates(path),
+        alternates: pageAlternates(path),
     };
 }
 

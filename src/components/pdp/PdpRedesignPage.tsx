@@ -78,6 +78,7 @@ import { drawingBodyId, drawingFor, drawingStyleFromQuery } from "@/lib/products
 import { technicalDrawingFor } from "@/lib/products/pdp-redesign/tech-drawing";
 import { labelFitFor } from "@/lib/products/pdp-redesign/label-fit";
 import { registerImageSrc } from "@/lib/products/register-image";
+import { registerDisplayDerivatives, type DisplayDerivativeMap } from "@/lib/products/display-derivative";
 
 export type PdpRedesignPayload = {
     slug: string;
@@ -95,6 +96,8 @@ export type PdpRedesignPayload = {
     descriptions: Record<string, ItemDescription>;
     collection: { band: CollectionBand; description: string } | null;
     familyHref: string;
+    /** Delivery copies for every image this payload names (resolved on the server, see display-derivative.server.ts). */
+    displayDerivatives?: DisplayDerivativeMap;
 };
 
 const ADDED_FLASH_MS = 1800;
@@ -125,7 +128,9 @@ function renameTab(text: string): void {
     document.title = text;
 }
 
-export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref }: PdpRedesignPayload) {
+export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref, displayDerivatives }: PdpRedesignPayload) {
+    // Before any child resolves an image: the server rendered with the full manifest, the client must agree.
+    registerDisplayDerivatives(displayDerivatives);
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();

@@ -309,3 +309,12 @@ data/descriptions/pdp/catalog-facts.json
 /public/reviews/cylinder9-psd-fitments-2026-11-01/
 
 /public/reviews/cylinder9-color-set-2026-11-01/
+
+# Office / LibreOffice lock files and Python bytecode (2026-11-05 cleanup)
+~$*
+.~lock.*#
+__pycache__/
+*.pyc
+
+# Local product-knowledge exports (99 MB, no references); already excluded from deploys
+outputs/

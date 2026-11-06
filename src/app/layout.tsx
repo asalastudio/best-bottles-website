@@ -17,8 +17,8 @@ import {
   buildOrganizationJsonLd,
   buildWebSiteJsonLd,
 } from "@/lib/seo";
-import { defaultLocale, isEnglishOnlyPath, isLocale, LOCALE_HEADER, PATHNAME_HEADER, type AppLocale } from "@/i18n/config";
-import { localizedAbsoluteUrl, localeOpenGraph } from "@/i18n/metadata";
+import { defaultLocale, isLocale, LOCALE_HEADER, PATHNAME_HEADER, type AppLocale } from "@/i18n/config";
+import { isTranslatedPath, localizedAbsoluteUrl, localeOpenGraph } from "@/i18n/metadata";
 import { stripLocalePrefix } from "@/i18n/paths";
 import esMessages from "../../messages/es.json";
 
@@ -82,15 +82,16 @@ export async function generateMetadata(): Promise<Metadata> {
         "msvalidate.01": "DD2ECFD7F20F418A4A67662DFC0D0B03",
       },
     },
-    alternates: isEnglishOnlyPath(stripped)
-      ? undefined
-      : {
+    // hreflang only where Spanish copy exists; see pageAlternates in src/i18n/metadata.ts.
+    alternates: isTranslatedPath(stripped)
+      ? {
           languages: {
             en: localizedAbsoluteUrl("en", stripped),
             es: localizedAbsoluteUrl("es", stripped),
             "x-default": localizedAbsoluteUrl("en", stripped),
           },
-        },
+        }
+      : undefined,
   };
 }
 
