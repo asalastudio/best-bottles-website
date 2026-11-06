@@ -1,5 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 const { loadKits, pilot } = vi.hoisted(() => ({ loadKits: vi.fn(), pilot: vi.fn() }));
+// The route imports the server-only display manifest; vitest is neither a Server nor a Client Component runtime.
+vi.mock("server-only", () => ({}));
 vi.mock("@/lib/bottle-builder/server", () => ({ loadBuilderBodyKits: loadKits, BUILDER_CDN_CACHE: "public, max-age=60" }));
 vi.mock("@/lib/paper-doll/local-component-kits", () => ({ localGpt13ComponentKits: pilot }));
 import { GET } from "@/app/api/bottle-builder/kits/route";

@@ -112,7 +112,6 @@ export default function PdpStage({
     caps, activeCapId, onCapPick, glasses, onGlassPick, activeCapName, activeGlassLabel,
 }: PdpStageProps) {
     const singleTola = isTolaApplicator(context.websiteSku);
-    const showRail = !singleTola || caps.length > 1;
     const swatchesOnly = requiresAssembledClosure(context.applicator, context.websiteSku)
         && availableViews.length === 1 && !singleTola && finishKind !== "glass";
     const layout = useMemo(() => stageLayout(kit, view, context, glassFrame ?? {}), [kit, view, context, glassFrame]);
@@ -199,7 +198,7 @@ export default function PdpStage({
 
     return (
         <section id="product-canvas" className={styles.canvas} aria-label="Product canvas" data-testid="pdp-canvas"
-            style={!showRail ? { width: "100%", minWidth: 0, gridTemplateColumns: "minmax(0, 1fr)", gridTemplateAreas: '"head" "stage" "lineup"' } : finishKind === "glass" ? { width: "100%", minWidth: 0 } : undefined}>
+            style={singleTola ? { width: "100%", minWidth: 0, gridTemplateColumns: "minmax(0, 1fr)", gridTemplateAreas: '"head" "stage" "lineup"' } : finishKind === "glass" ? { width: "100%", minWidth: 0 } : undefined}>
             <div className={styles.canvasHead}>
                 <span className={styles.pickLine} data-testid="pdp-pick-line">{pickLine}</span>
                 {!swatchesOnly && <div className={styles.viewSwitch} role="group" aria-label="View">
@@ -223,7 +222,7 @@ export default function PdpStage({
                 </div>}
             </div>
 
-            {showRail && <div className={styles.rail} role="group" aria-label={finishKind === "glass" ? "Glass colors" : "Caps"} data-testid="pdp-cap-rail">
+            {!singleTola && <div className={styles.rail} role="group" aria-label={finishKind === "glass" ? "Glass colors" : "Caps"} data-testid="pdp-cap-rail">
                 <span className={styles.railLabel}>
                     <span className={styles.railLabelDesktop}>{finishKind === "glass" ? "GLASS" : "CAPS"} {caps.length}</span>
                     {activeCapName ? <span className={styles.railLabelMobile}>{finishKind === "glass" ? "GLASS" : "CAP"} · {activeCapName}</span> : null}

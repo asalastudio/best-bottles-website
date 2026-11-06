@@ -64,3 +64,48 @@ public/local-kits/sleek8-glass-depth-2026-11-01/
 public/local-kits/vial3-swatches-builder-2026-11-02/
 public/local-kits/jumbo28-archive-geometry-2026-11-02/
 public/local-kits/cylinder-family-completion-2026-11-02/
+
+# ── 2026-11-05 cleanup audit (docs/audits/2026-11-05-cleanup-audit.md) ─────────
+# Each folder below has no runtime reference: no static import, no URL built from a
+# SKU or slug, no Convex/Shopify/Sanity image URL (3 Nov 2026 image evidence, 90k
+# rows), no publish-script output that the storefront reads. Tests and scripts that
+# read them run from the git clone, not from the deployment.
+
+# Review inputs for scripts/assemble-cylinder-hover.cjs and the non-bottle media review.
+public/preview/
+
+# Review artefacts with no src/convex/data/asset-ledger reference. The folders the
+# Team asset-ledger page links to (legacy-rebuild, legacy-hold-evidence, cylinder-final38,
+# four-family-plates, …) and public/reviews/cylinder28-sunburst-2026-11-04 (PdpRedesignPage)
+# stay deployed.
+public/reviews/builder-bodies-2026-09-14/
+public/reviews/kit-completion-2026-09-19/
+public/reviews/cylinder-remaining-closure-audit-2026-09-13/
+public/reviews/cylinder9-glass-material-2026-11-02/
+public/reviews/builder-review-2026-09-19/
+public/reviews/plate-completion-2026-09-18/
+public/reviews/jumbo-bottle-source-check-2026-11-02/
+public/reviews/cylinder50-native-2026-11-04/
+public/reviews/cylinder-family-completion-2026-11-02/
+public/reviews/cylinder25-material-cleanup-2026-11-02/
+public/reviews/jumbo50-body-reference-2026-11-02/
+public/reviews/jumbo28-archive-geometry-2026-11-02/
+public/reviews/jumbo-roller-psd-match-2026-11-02/
+public/reviews/jumbo-roller-material-2026-11-02/
+public/reviews/pillar-masters-2026-11-04/
+public/reviews/egd-masters-2026-11-04/
+public/reviews/cylinder-small-2026-09-22/
+
+# Superseded Empire hero sets. EmpireFitmentHero reads `/assets/hero/${NEXT_PUBLIC_HERO_SET ?? "v8"}/`;
+# the variable is not set on Vercel (checked 5 Nov 2026) and the v8 manifest only names v8 files.
+public/assets/hero/v4/
+public/assets/hero/v5/
+public/assets/hero/v6/
+public/assets/hero/v7/
+public/assets/hero/frames/
+
+# Card artwork candidates; the homepage reads the copies in public/assets/homepage.
+public/assets/cards/
+
+# Reference photographs mentioned only in comments (src/lib/materials/glassPresets.ts).
+public/references/

@@ -11,6 +11,8 @@ import { buildHomeBrowseData } from "@/lib/homepageBrowse";
 import { loadBuilderEntry } from "@/lib/bottle-builder/entry";
 import { isOptimizableImageUrl, displayImageUrl } from "@/lib/products/optimizable-image";
 import { displayDerivativeUrl } from "@/lib/products/display-derivative";
+// The manifest is read on the server; importing the server module registers every source for this test.
+import "@/lib/products/display-derivative.server";
 import { stageLayout } from "@/lib/products/pdp-redesign/stage";
 import manifest from "@/lib/paper-doll/approved-kits.generated.json";
 import index from "@/lib/paper-doll/approved-kit-index.json";

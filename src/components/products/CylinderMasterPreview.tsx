@@ -5,6 +5,7 @@ import type { BuilderKit } from "@/lib/bottle-builder/model";
 import { plugMaskStyle } from "@/lib/products/sprayer-glass-transmission";
 import { catalogTasselViewport, stageLayout } from "@/lib/products/pdp-redesign/stage";
 import { registerImageSrc } from "@/lib/products/register-image";
+import { registerDisplayDerivatives, type DisplayDerivativeMap } from "@/lib/products/display-derivative";
 import { rectangleApplicatorGlass } from "@/lib/products/rectangle-applicator";
 import { cylinderMasterSource } from "@/lib/products/cylinder-master";
 
@@ -17,7 +18,8 @@ function loadKit(sku: string): Promise<BuilderKit> {
     const request = fetch(`/api/bottle-masters/${source.family}?sku=${encodeURIComponent(sku)}&v=${source.version}`)
         .then(async response => {
             if (!response.ok) throw Error("Master unavailable");
-            const { kit } = await response.json() as { kit: BuilderKit };
+            const { kit, displayDerivatives } = await response.json() as { kit: BuilderKit; displayDerivatives?: DisplayDerivativeMap };
+            registerDisplayDerivatives(displayDerivatives);
             if (kit?.sku !== sku || !Array.isArray(kit.parts)) throw Error("Invalid master");
             return kit;
         });
@@ -67,9 +69,13 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
     const kit = current?.kit;
     const layout = kit ? stageLayout(kit, "sidecar", { websiteSku: sku }) : null;
     if (kit && !layout) return fallback;
-    // Until the master kit arrives (a client fetch after hydration), show the
-    // card's own photo so the server HTML paints an image instead of an empty box.
-    if (!layout) return <span ref={target} className="absolute inset-0" aria-busy="true" data-bb-master-placeholder="photo">{fallback}</span>;
+    // Until the master kit arrives (a client fetch after hydration), the card's own photo is
+    // what the server HTML paints. It stays mounted, hidden, once the composite draws over it:
+    // unmounting it removed the page's first painted image from the DOM, which left Lighthouse
+    // unable to attribute the catalog's LCP and made its simulated LCP wait for every script.
+    const photo = <span className="absolute inset-0" style={layout ? { visibility: "hidden" } : undefined} aria-hidden={layout ? true : undefined}
+        data-bb-master-placeholder={layout ? "photo-hidden" : "photo"}>{fallback}</span>;
+    if (!layout) return <span ref={target} className="absolute inset-0" aria-busy="true">{photo}</span>;
     const { canvas } = layout;
     const viewport = catalogTasselViewport(sku, layout);
     const smallSprayer = ["GBSpry3mlClBlk", "GBSpry3mlClWht"].includes(sku);
@@ -79,7 +85,7 @@ export default function CylinderMasterPreview({ sku, title, fallback }: {
     if (smallSprayer) catalogScale = 0.94;
     // Match the 6 mL Tulip shoulder height (32.97%) from the Rectangle's 35.07% target.
     if (footedRectangleRollOn) catalogScale = 32.97 / 35.07;
-    return <span ref={target} className="absolute inset-0"><svg className="absolute inset-0 h-full w-full" viewBox={`${viewport.x} ${viewport.y} ${viewport.width} ${viewport.height}`}
+    return <span ref={target} className="absolute inset-0">{photo}<svg className="absolute inset-0 h-full w-full" viewBox={`${viewport.x} ${viewport.y} ${viewport.width} ${viewport.height}`}
         style={catalogScale !== 1 ? { transform: `scale(${catalogScale})`, transformOrigin: "50% 91%" } : undefined}
         role="img" aria-label={title} data-bb-master-version={cylinderMasterSource(sku)?.version} data-bb-master-sku={sku}>
         {layout.parts.map((part, i) => {

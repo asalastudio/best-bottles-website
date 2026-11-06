@@ -1,5 +1,5 @@
 {
- "version": "6bfad681b5a7",
+ "version": "32a89f9270c0",
  "rows": {
   "LBDiva100LtnClOvrCap": {
    "sku": "LBDiva100LtnClOvrCap",
@@ -103,10 +103,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 420.759,
-      "right": 579.241,
-      "top": 127.694,
-      "bottom": 402.98
+      "left": 428.365,
+      "top": 144.86,
+      "right": 570.71,
+      "bottom": 392.116
      },
      "assembled": {
       "x": 0,
@@ -128,16 +128,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 420.759,
-      "y": 127.694,
-      "width": 158.482,
-      "height": 275.286
+      "x": 428.365,
+      "y": 144.86,
+      "width": 142.345,
+      "height": 247.256
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "source": "27. LBDiva100LtnClOvrCap.psd (head)",
-     "seatBottomY": 399.511,
+     "seatBottomY": 389,
      "seatDy": -70.848,
-     "collarWidth": 149.191
+     "collarWidth": 134
     },
     {
      "slot": "overcap",
@@ -145,10 +145,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 422.817,
-      "right": 577.183,
-      "top": 224.944,
-      "bottom": 402.98
+      "left": 430.213,
+      "top": 232.208,
+      "right": 568.861,
+      "bottom": 392.116
      },
      "assembled": {
       "x": 0,
@@ -170,10 +170,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 422.817,
-      "y": 224.944,
-      "width": 154.366,
-      "height": 178.036
+      "x": 430.213,
+      "y": 232.208,
+      "width": 138.648,
+      "height": 159.908
      },
      "componentId": "CMP-LPM-MSLV-18-415-02",
      "source": "27. LBDiva100LtnClOvrCap.psd (cover)",
@@ -1137,7 +1137,7 @@
       "left": 403.557,
       "top": 86.13,
       "right": 590.118,
-      "bottom": 427
+      "bottom": 427.0
      },
      "assembled": {
       "x": 0,
@@ -1179,7 +1179,7 @@
       "left": 390.909,
       "top": 52.613,
       "right": 602.767,
-      "bottom": 427
+      "bottom": 427.0
      },
      "assembled": {
       "x": 0,
@@ -2624,9 +2624,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 406.175,
-      "right": 593.825,
+      "left": 417.64,
       "top": 184.86,
+      "right": 605.29,
       "bottom": 392.89
      },
      "assembled": {
@@ -2649,7 +2649,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 406.175,
+      "x": 417.64,
       "y": 184.86,
       "width": 187.65,
       "height": 208.03
@@ -3044,9 +3044,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 389.53,
-      "right": 610.47,
+      "left": 399.16,
       "top": 157.86,
+      "right": 620.1,
       "bottom": 395.35
      },
      "assembled": {
@@ -3069,7 +3069,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 389.53,
+      "x": 399.16,
       "y": 157.86,
       "width": 220.94,
       "height": 237.49
@@ -3255,9 +3255,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 391.665,
-      "right": 608.335,
+      "left": 400.54,
       "top": 161.86,
+      "right": 617.21,
       "bottom": 394.76
      },
      "assembled": {
@@ -3280,7 +3280,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 391.665,
+      "x": 400.54,
       "y": 161.86,
       "width": 216.67,
       "height": 232.9
@@ -3468,7 +3468,7 @@
       "left": 417.22,
       "top": 233.86,
       "right": 584.21,
-      "bottom": 403
+      "bottom": 403.0
      },
      "assembled": {
       "x": 0,
@@ -5100,7 +5100,7 @@
       "left": 389.849,
       "top": 69.12,
       "right": 608.965,
-      "bottom": 427
+      "bottom": 427.0
      },
      "assembled": {
       "x": 0,
@@ -5141,7 +5141,7 @@
      "explodeIndex": 1,
      "bounds": {
       "left": 389.849,
-      "top": 427,
+      "top": 427.0,
       "right": 608.965,
       "bottom": 949.439
      },
@@ -5166,7 +5166,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 389.849,
-      "y": 427,
+      "y": 427.0,
       "width": 219.116,
       "height": 522.439
      },
@@ -5522,7 +5522,7 @@
       "left": 391.183,
       "top": 70.417,
       "right": 610.003,
-      "bottom": 428
+      "bottom": 428.0
      },
      "assembled": {
       "x": 0,
@@ -5563,7 +5563,7 @@
      "explodeIndex": 1,
      "bounds": {
       "left": 391.183,
-      "top": 428,
+      "top": 428.0,
       "right": 610.003,
       "bottom": 950.736
      },
@@ -5588,7 +5588,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 391.183,
-      "y": 428,
+      "y": 428.0,
       "width": 218.82,
       "height": 522.736
      },
@@ -5731,10 +5731,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 423.074,
-      "right": 576.926,
-      "top": 113.287,
-      "bottom": 402.98
+      "left": 432.987,
+      "top": 133.86,
+      "right": 571.173,
+      "bottom": 394.056
      },
      "assembled": {
       "x": 0,
@@ -5756,16 +5756,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 423.074,
-      "y": 113.287,
-      "width": 153.852,
-      "height": 289.693
+      "x": 432.987,
+      "y": 133.86,
+      "width": 138.186,
+      "height": 260.196
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
      "source": "54. GBDiva100SpryCu.psd (head)",
-     "seatBottomY": 397.351,
+     "seatBottomY": 389,
      "seatDy": -73.067,
-     "collarWidth": 146.964
+     "collarWidth": 132
     },
     {
      "slot": "overcap",
@@ -5773,10 +5773,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 402.235,
-      "right": 597.765,
-      "top": 91.161,
-      "bottom": 402.98
+      "left": 414.269,
+      "top": 113.987,
+      "right": 589.89,
+      "bottom": 394.056
      },
      "assembled": {
       "x": 0,
@@ -5798,10 +5798,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 402.235,
-      "y": 91.161,
-      "width": 195.53,
-      "height": 311.819
+      "x": 414.269,
+      "y": 113.987,
+      "width": 175.621,
+      "height": 280.069
      },
      "componentId": "CMP-SPR-MTCP-18-415-03",
      "source": "54. GBDiva100SpryCu.psd (cover)",
@@ -5987,9 +5987,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 350.4,
-      "right": 649.6,
+      "left": 360.85,
       "top": 139.22,
+      "right": 660.05,
       "bottom": 459.33
      },
      "assembled": {
@@ -6012,7 +6012,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 350.4,
+      "x": 360.85,
       "y": 139.22,
       "width": 299.2,
       "height": 320.11
@@ -6191,9 +6191,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 364.115,
-      "right": 635.885,
+      "left": 373.61,
       "top": 144.13,
+      "right": 645.38,
       "bottom": 434.89
      },
      "assembled": {
@@ -6216,7 +6216,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 364.115,
+      "x": 373.61,
       "y": 144.13,
       "width": 271.77,
       "height": 290.76
@@ -6401,9 +6401,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 364.115,
-      "right": 635.885,
+      "left": 373.61,
       "top": 143.16,
+      "right": 645.38,
       "bottom": 433.92
      },
      "assembled": {
@@ -6426,7 +6426,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 364.115,
+      "x": 373.61,
       "y": 143.16,
       "width": 271.77,
       "height": 290.76
@@ -7682,9 +7682,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 371.16,
-      "right": 628.84,
+      "left": 386.9,
       "top": 167.22,
+      "right": 644.58,
       "bottom": 452.88
      },
      "assembled": {
@@ -7707,7 +7707,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 371.16,
+      "x": 386.9,
       "y": 167.22,
       "width": 257.68,
       "height": 285.66
@@ -8102,9 +8102,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 348.305,
-      "right": 651.695,
+      "left": 361.54,
       "top": 131.22,
+      "right": 664.93,
       "bottom": 457.33
      },
      "assembled": {
@@ -8127,7 +8127,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 348.305,
+      "x": 361.54,
       "y": 131.22,
       "width": 303.39,
       "height": 326.11
@@ -8312,9 +8312,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 351.24,
-      "right": 648.76,
+      "left": 363.43,
       "top": 136.22,
+      "right": 660.95,
       "bottom": 456.02
      },
      "assembled": {
@@ -8337,7 +8337,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 351.24,
+      "x": 363.43,
       "y": 136.22,
       "width": 297.52,
       "height": 319.8
@@ -8682,10 +8682,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 419.987,
-      "right": 580.013,
-      "top": 124.606,
-      "bottom": 402.98
+      "left": 429.289,
+      "top": 143.86,
+      "right": 573.021,
+      "bottom": 393.889
      },
      "assembled": {
       "x": 0,
@@ -8707,16 +8707,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 419.987,
-      "y": 124.606,
-      "width": 160.026,
-      "height": 278.374
+      "x": 429.289,
+      "y": 143.86,
+      "width": 143.732,
+      "height": 250.029
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
      "source": "13. GBDiva100SpryMtGl.psd (head)",
-     "seatBottomY": 397.537,
+     "seatBottomY": 389,
      "seatDy": -74.159,
-     "collarWidth": 149.191
+     "collarWidth": 134
     },
     {
      "slot": "overcap",
@@ -8724,10 +8724,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 414.841,
-      "right": 585.159,
-      "top": 110.714,
-      "bottom": 402.98
+      "left": 424.667,
+      "top": 131.382,
+      "right": 577.642,
+      "bottom": 393.889
      },
      "assembled": {
       "x": 0,
@@ -8749,10 +8749,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 414.841,
-      "y": 110.714,
-      "width": 170.317,
-      "height": 292.266
+      "x": 424.667,
+      "y": 131.382,
+      "width": 152.975,
+      "height": 262.507
      },
      "componentId": "CMP-SPR-MTGD-18-415-05",
      "source": "13. GBDiva100SpryMtGl.psd (cover)",
@@ -8932,9 +8932,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 391.055,
-      "right": 608.945,
+      "left": 398.67,
       "top": 162.86,
+      "right": 616.56,
       "bottom": 395.98
      },
      "assembled": {
@@ -8957,7 +8957,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 391.055,
+      "x": 398.67,
       "y": 162.86,
       "width": 217.89,
       "height": 233.12
@@ -9308,10 +9308,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 420.501,
-      "right": 579.499,
-      "top": 124.092,
-      "bottom": 402.98
+      "left": 426.516,
+      "top": 142.86,
+      "right": 569.324,
+      "bottom": 393.351
      },
      "assembled": {
       "x": 0,
@@ -9333,16 +9333,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 420.501,
-      "y": 124.092,
-      "width": 158.998,
-      "height": 278.888
+      "x": 426.516,
+      "y": 142.86,
+      "width": 142.808,
+      "height": 250.491
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
      "source": "15. GBDiva100SpryShnGl.psd (head)",
-     "seatBottomY": 398.136,
+     "seatBottomY": 389,
      "seatDy": -71.924,
-     "collarWidth": 150.304
+     "collarWidth": 135
     },
     {
      "slot": "overcap",
@@ -9350,10 +9350,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 414.841,
-      "right": 585.159,
-      "top": 112.771,
-      "bottom": 402.98
+      "left": 421.432,
+      "top": 132.692,
+      "right": 574.407,
+      "bottom": 393.351
      },
      "assembled": {
       "x": 0,
@@ -9375,10 +9375,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 414.841,
-      "y": 112.771,
-      "width": 170.317,
-      "height": 290.209
+      "x": 421.432,
+      "y": 132.692,
+      "width": 152.975,
+      "height": 260.659
      },
      "componentId": "CMP-SPR-SHGD-18-415-05",
      "source": "15. GBDiva100SpryShnGl.psd (cover)",
@@ -9724,10 +9724,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 421.273,
-      "right": 578.727,
-      "top": 122.548,
-      "bottom": 402.98
+      "left": 428.365,
+      "top": 142.86,
+      "right": 569.786,
+      "bottom": 394.738
      },
      "assembled": {
       "x": 0,
@@ -9749,16 +9749,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 421.273,
-      "y": 122.548,
-      "width": 157.453,
-      "height": 280.432
+      "x": 428.365,
+      "y": 142.86,
+      "width": 141.421,
+      "height": 251.878
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
      "source": "19. GBDiva100SpryShnBlk.psd (head)",
-     "seatBottomY": 396.592,
+     "seatBottomY": 389,
      "seatDy": -70.537,
-     "collarWidth": 152.531
+     "collarWidth": 137
     },
     {
      "slot": "overcap",
@@ -9766,10 +9766,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 414.069,
-      "right": 585.931,
-      "top": 107.626,
-      "bottom": 402.98
+      "left": 421.895,
+      "top": 129.458,
+      "right": 576.257,
+      "bottom": 394.738
      },
      "assembled": {
       "x": 0,
@@ -9791,10 +9791,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 414.069,
-      "y": 107.626,
-      "width": 171.861,
-      "height": 295.354
+      "x": 421.895,
+      "y": 129.458,
+      "width": 154.362,
+      "height": 265.28
      },
      "componentId": "CMP-SPR-SHBK-18-415-06",
      "source": "19. GBDiva100SpryShnBlk.psd (cover)",
@@ -10140,10 +10140,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 424.618,
-      "right": 575.382,
-      "top": 131.295,
-      "bottom": 402.98
+      "left": 430.214,
+      "top": 146.86,
+      "right": 565.627,
+      "bottom": 390.881
      },
      "assembled": {
       "x": 0,
@@ -10165,16 +10165,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 424.618,
-      "y": 131.295,
-      "width": 150.764,
-      "height": 271.685
+      "x": 430.214,
+      "y": 146.86,
+      "width": 135.413,
+      "height": 244.021
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
      "source": "23. GBDiva100SpryMtSl.psd (head)",
-     "seatBottomY": 400.886,
+     "seatBottomY": 389,
      "seatDy": -72.083,
-     "collarWidth": 148.078
+     "collarWidth": 133
     },
     {
      "slot": "overcap",
@@ -10182,10 +10182,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 412.011,
-      "right": 587.989,
-      "top": 95.791,
-      "bottom": 402.98
+      "left": 418.891,
+      "top": 114.971,
+      "right": 576.95,
+      "bottom": 390.881
      },
      "assembled": {
       "x": 0,
@@ -10207,10 +10207,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 412.011,
-      "y": 95.791,
-      "width": 175.977,
-      "height": 307.189
+      "x": 418.891,
+      "y": 114.971,
+      "width": 158.059,
+      "height": 275.91
      },
      "componentId": "CMP-SPR-MTSL-18-415-06",
      "source": "23. GBDiva100SpryMtSl.psd (cover)",
@@ -10556,10 +10556,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 424.104,
-      "right": 575.896,
-      "top": 127.179,
-      "bottom": 402.98
+      "left": 431.138,
+      "top": 141.86,
+      "right": 567.475,
+      "bottom": 389.578
      },
      "assembled": {
       "x": 0,
@@ -10581,16 +10581,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 424.104,
-      "y": 127.179,
-      "width": 151.793,
-      "height": 275.801
+      "x": 431.138,
+      "y": 141.86,
+      "width": 136.337,
+      "height": 247.718
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
      "source": "29. GBDiva100SpryShnSl.psd (head)",
-     "seatBottomY": 402.336,
+     "seatBottomY": 389,
      "seatDy": -74.773,
-     "collarWidth": 145.851
+     "collarWidth": 131
     },
     {
      "slot": "overcap",
@@ -10598,10 +10598,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 413.298,
-      "right": 586.702,
-      "top": 98.879,
-      "bottom": 402.98
+      "left": 421.432,
+      "top": 116.441,
+      "right": 577.18,
+      "bottom": 389.578
      },
      "assembled": {
       "x": 0,
@@ -10623,10 +10623,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 413.298,
-      "y": 98.879,
-      "width": 173.404,
-      "height": 304.101
+      "x": 421.432,
+      "y": 116.441,
+      "width": 155.748,
+      "height": 273.137
      },
      "componentId": "CMP-SPR-SHSL-18-415-06",
      "source": "29. GBDiva100SpryShnSl.psd (cover)",
@@ -12804,9 +12804,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 382.97,
-      "right": 617.03,
+      "left": 397.27,
       "top": 173.13,
+      "right": 631.33,
       "bottom": 432.6
      },
      "assembled": {
@@ -12829,7 +12829,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 382.97,
+      "x": 397.27,
       "y": 173.13,
       "width": 234.06,
       "height": 259.47
@@ -13224,9 +13224,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 362.21,
-      "right": 637.79,
+      "left": 374.23,
       "top": 138.13,
+      "right": 649.81,
       "bottom": 434.35
      },
      "assembled": {
@@ -13249,7 +13249,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 362.21,
+      "x": 374.23,
       "y": 138.13,
       "width": 275.58,
       "height": 296.22
@@ -13434,9 +13434,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 364.875,
-      "right": 635.125,
+      "left": 375.95,
       "top": 144.13,
+      "right": 646.2,
       "bottom": 434.62
      },
      "assembled": {
@@ -13459,7 +13459,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 364.875,
+      "x": 375.95,
       "y": 144.13,
       "width": 270.25,
       "height": 290.49
@@ -15647,9 +15647,9 @@
      "zOrder": 1.95,
      "explodeIndex": 1,
      "bounds": {
-      "left": 439,
+      "left": 439.0,
       "top": 384.66,
-      "right": 561,
+      "right": 561.0,
       "bottom": 887.66
      },
      "assembled": {
@@ -15672,7 +15672,7 @@
      "mask": null,
      "derivation": "sunburst-diva-tube:lotion",
      "box": {
-      "x": 439,
+      "x": 439.0,
       "y": 384.66,
       "width": 122,
       "height": 503
@@ -15938,9 +15938,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 382.97,
-      "right": 617.03,
+      "left": 397.27,
       "top": 171.16,
+      "right": 631.33,
       "bottom": 430.63
      },
      "assembled": {
@@ -15963,7 +15963,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 382.97,
+      "x": 397.27,
       "y": 171.16,
       "width": 234.06,
       "height": 259.47
@@ -16107,7 +16107,7 @@
       "left": 406.087,
       "top": 86.13,
       "right": 592.648,
-      "bottom": 427
+      "bottom": 427.0
      },
      "assembled": {
       "x": 0,
@@ -16149,7 +16149,7 @@
       "left": 393.439,
       "top": 52.613,
       "right": 605.297,
-      "bottom": 427
+      "bottom": 427.0
      },
      "assembled": {
       "x": 0,
@@ -16770,9 +16770,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 362.21,
-      "right": 637.79,
+      "left": 374.23,
       "top": 136.16,
+      "right": 649.81,
       "bottom": 432.38
      },
      "assembled": {
@@ -16795,7 +16795,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 362.21,
+      "x": 374.23,
       "y": 136.16,
       "width": 275.58,
       "height": 296.22
@@ -17186,9 +17186,9 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 364.875,
-      "right": 635.125,
+      "left": 375.95,
       "top": 142.16,
+      "right": 646.2,
       "bottom": 432.65
      },
      "assembled": {
@@ -17211,7 +17211,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 364.875,
+      "x": 375.95,
       "y": 142.16,
       "width": 270.25,
       "height": 290.49
@@ -25288,7 +25288,7 @@
       "left": -490.03,
       "top": 79.13,
       "right": 596.43,
-      "bottom": 1239
+      "bottom": 1239.0
      },
      "assembled": {
       "x": 0,
@@ -29225,7 +29225,7 @@
       "left": 389.849,
       "top": 70.12,
       "right": 608.965,
-      "bottom": 428
+      "bottom": 428.0
      },
      "assembled": {
       "x": 0,
@@ -29266,7 +29266,7 @@
      "explodeIndex": 1,
      "bounds": {
       "left": 389.849,
-      "top": 428,
+      "top": 428.0,
       "right": 608.965,
       "bottom": 950.143
      },
@@ -29291,7 +29291,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 389.849,
-      "y": 428,
+      "y": 428.0,
       "width": 219.116,
       "height": 522.143
      },
@@ -29434,10 +29434,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 419.987,
-      "right": 580.013,
-      "top": 124.606,
-      "bottom": 402.98
+      "left": 427.441,
+      "top": 143.86,
+      "right": 571.173,
+      "bottom": 393.889
      },
      "assembled": {
       "x": 0,
@@ -29459,16 +29459,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 419.987,
-      "y": 124.606,
-      "width": 160.026,
-      "height": 278.374
+      "x": 427.441,
+      "y": 143.86,
+      "width": 143.732,
+      "height": 250.029
      },
      "componentId": "CMP-LPM-MGLD-18-415",
      "source": "14. LBDiva100LtnMtGl.psd (head)",
-     "seatBottomY": 397.537,
+     "seatBottomY": 389,
      "seatDy": -72.31,
-     "collarWidth": 148.078
+     "collarWidth": 133
     },
     {
      "slot": "overcap",
@@ -29476,10 +29476,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 414.841,
-      "right": 585.159,
-      "top": 110.714,
-      "bottom": 402.98
+      "left": 422.819,
+      "top": 131.382,
+      "right": 575.794,
+      "bottom": 393.889
      },
      "assembled": {
       "x": 0,
@@ -29501,10 +29501,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 414.841,
-      "y": 110.714,
-      "width": 170.317,
-      "height": 292.266
+      "x": 422.819,
+      "y": 131.382,
+      "width": 152.975,
+      "height": 262.507
      },
      "componentId": "CMP-LPM-MGLD-18-415",
      "source": "14. LBDiva100LtnMtGl.psd (cover)",
@@ -29640,10 +29640,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 420.501,
-      "right": 579.499,
-      "top": 124.092,
-      "bottom": 402.98
+      "left": 428.827,
+      "top": 142.86,
+      "right": 571.635,
+      "bottom": 393.351
      },
      "assembled": {
       "x": 0,
@@ -29665,16 +29665,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 420.501,
-      "y": 124.092,
-      "width": 158.998,
-      "height": 278.888
+      "x": 428.827,
+      "y": 142.86,
+      "width": 142.808,
+      "height": 250.491
      },
      "componentId": "CMP-LPM-SGLD-18-415",
      "source": "16. LBDiva100LtnShnGl.psd (head)",
-     "seatBottomY": 398.136,
+     "seatBottomY": 389,
      "seatDy": -74.697,
-     "collarWidth": 150.304
+     "collarWidth": 135
     },
     {
      "slot": "overcap",
@@ -29682,10 +29682,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 414.841,
-      "right": 585.159,
-      "top": 112.771,
-      "bottom": 402.98
+      "left": 423.743,
+      "top": 132.692,
+      "right": 576.718,
+      "bottom": 393.351
      },
      "assembled": {
       "x": 0,
@@ -29707,10 +29707,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 414.841,
-      "y": 112.771,
-      "width": 170.317,
-      "height": 290.209
+      "x": 423.743,
+      "y": 132.692,
+      "width": 152.975,
+      "height": 260.659
      },
      "componentId": "CMP-LPM-SGLD-18-415",
      "source": "16. LBDiva100LtnShnGl.psd (cover)",
@@ -29846,10 +29846,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 421.273,
-      "right": 578.727,
-      "top": 122.548,
-      "bottom": 402.98
+      "left": 428.365,
+      "top": 141.86,
+      "right": 569.786,
+      "bottom": 393.738
      },
      "assembled": {
       "x": 0,
@@ -29871,16 +29871,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 421.273,
-      "y": 122.548,
-      "width": 157.453,
-      "height": 280.432
+      "x": 428.365,
+      "y": 141.86,
+      "width": 141.421,
+      "height": 251.878
      },
      "componentId": "CMP-LPM-SBLK-18-415",
      "source": "20. LBDiva100LtnShnBlk.psd (head)",
-     "seatBottomY": 397.705,
+     "seatBottomY": 389,
      "seatDy": -74.31,
-     "collarWidth": 151.418
+     "collarWidth": 136
     },
     {
      "slot": "overcap",
@@ -29888,10 +29888,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 414.069,
-      "right": 585.931,
-      "top": 107.626,
-      "bottom": 402.98
+      "left": 421.895,
+      "top": 128.458,
+      "right": 576.257,
+      "bottom": 393.738
      },
      "assembled": {
       "x": 0,
@@ -29913,10 +29913,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 414.069,
-      "y": 107.626,
-      "width": 171.861,
-      "height": 295.354
+      "x": 421.895,
+      "y": 128.458,
+      "width": 154.362,
+      "height": 265.28
      },
      "componentId": "CMP-LPM-SBLK-18-415",
      "source": "20. LBDiva100LtnShnBlk.psd (cover)",
@@ -30052,10 +30052,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 424.618,
-      "right": 575.382,
-      "top": 131.295,
-      "bottom": 402.98
+      "left": 430.214,
+      "top": 146.86,
+      "right": 565.627,
+      "bottom": 390.881
      },
      "assembled": {
       "x": 0,
@@ -30077,16 +30077,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 424.618,
-      "y": 131.295,
-      "width": 150.764,
-      "height": 271.685
+      "x": 430.214,
+      "y": 146.86,
+      "width": 135.413,
+      "height": 244.021
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
      "source": "25. LBDiva100LtnMtSl.psd (head)",
-     "seatBottomY": 400.886,
+     "seatBottomY": 389,
      "seatDy": -72.083,
-     "collarWidth": 148.078
+     "collarWidth": 133
     },
     {
      "slot": "overcap",
@@ -30094,10 +30094,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 412.011,
-      "right": 587.989,
-      "top": 95.791,
-      "bottom": 402.98
+      "left": 418.891,
+      "top": 114.971,
+      "right": 576.95,
+      "bottom": 390.881
      },
      "assembled": {
       "x": 0,
@@ -30119,10 +30119,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 412.011,
-      "y": 95.791,
-      "width": 175.977,
-      "height": 307.189
+      "x": 418.891,
+      "y": 114.971,
+      "width": 158.059,
+      "height": 275.91
      },
      "componentId": "CMP-LPM-MSLV-18-415-01",
      "source": "25. LBDiva100LtnMtSl.psd (cover)",
@@ -30258,10 +30258,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 424.104,
-      "right": 575.896,
-      "top": 127.179,
-      "bottom": 402.98
+      "left": 432.525,
+      "top": 141.86,
+      "right": 568.862,
+      "bottom": 389.578
      },
      "assembled": {
       "x": 0,
@@ -30283,16 +30283,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 424.104,
-      "y": 127.179,
-      "width": 151.793,
-      "height": 275.801
+      "x": 432.525,
+      "y": 141.86,
+      "width": 136.337,
+      "height": 247.718
      },
      "componentId": "CMP-LPM-SSLV-18-415",
      "source": "31. LBDiva100LtnShnSl.psd (head)",
-     "seatBottomY": 402.336,
+     "seatBottomY": 389,
      "seatDy": -72.462,
-     "collarWidth": 145.851
+     "collarWidth": 131
     },
     {
      "slot": "overcap",
@@ -30300,10 +30300,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 413.298,
-      "right": 586.702,
-      "top": 98.879,
-      "bottom": 402.98
+      "left": 422.819,
+      "top": 116.441,
+      "right": 578.567,
+      "bottom": 389.578
      },
      "assembled": {
       "x": 0,
@@ -30325,10 +30325,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 413.298,
-      "y": 98.879,
-      "width": 173.404,
-      "height": 304.101
+      "x": 422.819,
+      "y": 116.441,
+      "width": 155.748,
+      "height": 273.137
      },
      "componentId": "CMP-LPM-SSLV-18-415",
      "source": "31. LBDiva100LtnShnSl.psd (cover)",
@@ -30464,10 +30464,10 @@
      "zOrder": 2,
      "explodeIndex": 1,
      "bounds": {
-      "left": 421.016,
-      "right": 578.984,
-      "top": 108.655,
-      "bottom": 402.98
+      "left": 431.138,
+      "top": 127.86,
+      "right": 573.021,
+      "bottom": 392.216
      },
      "assembled": {
       "x": 0,
@@ -30489,16 +30489,16 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 421.016,
-      "y": 108.655,
-      "width": 157.968,
-      "height": 294.325
+      "x": 431.138,
+      "y": 127.86,
+      "width": 141.883,
+      "height": 264.356
      },
      "componentId": "CMP-LPM-CPR-18-415",
      "source": "56. LBDiva100LtnCu.psd (head)",
-     "seatBottomY": 399.399,
+     "seatBottomY": 389,
      "seatDy": -72.135,
-     "collarWidth": 143.624
+     "collarWidth": 129
     },
     {
      "slot": "overcap",
@@ -30506,10 +30506,10 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 402.749,
-      "right": 597.251,
-      "top": 93.218,
-      "bottom": 402.98
+      "left": 414.731,
+      "top": 113.995,
+      "right": 589.428,
+      "bottom": 392.216
      },
      "assembled": {
       "x": 0,
@@ -30531,10 +30531,10 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 402.749,
-      "y": 93.218,
-      "width": 194.502,
-      "height": 309.762
+      "x": 414.731,
+      "y": 113.995,
+      "width": 174.697,
+      "height": 278.221
      },
      "componentId": "CMP-LPM-CPR-18-415",
      "source": "56. LBDiva100LtnCu.psd (cover)",
@@ -31126,7 +31126,7 @@
      "zOrder": 3,
      "explodeIndex": 2,
      "bounds": {
-      "left": 401,
+      "left": 401.0,
       "top": 214.609,
       "right": 585.473,
       "bottom": 427.368
@@ -31151,7 +31151,7 @@
      "mask": null,
      "derivation": "psd-layer",
      "box": {
-      "x": 401,
+      "x": 401.0,
       "y": 214.609,
       "width": 184.473,
       "height": 212.759
@@ -32328,7 +32328,7 @@
       "left": 391.183,
       "top": 69.417,
       "right": 610.003,
-      "bottom": 427
+      "bottom": 427.0
      },
      "assembled": {
       "x": 0,
@@ -32369,7 +32369,7 @@
      "explodeIndex": 1,
      "bounds": {
       "left": 391.183,
-      "top": 427,
+      "top": 427.0,
       "right": 610.003,
       "bottom": 949.736
      },
@@ -32394,7 +32394,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 391.183,
-      "y": 427,
+      "y": 427.0,
       "width": 218.82,
       "height": 522.736
      },
@@ -32544,7 +32544,7 @@
       "left": 389.849,
       "top": 68.12,
       "right": 608.965,
-      "bottom": 426
+      "bottom": 426.0
      },
      "assembled": {
       "x": 0,
@@ -32585,7 +32585,7 @@
      "explodeIndex": 1,
      "bounds": {
       "left": 389.849,
-      "top": 426,
+      "top": 426.0,
       "right": 608.965,
       "bottom": 948.143
      },
@@ -32610,7 +32610,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 389.849,
-      "y": 426,
+      "y": 426.0,
       "width": 219.116,
       "height": 522.143
      },
@@ -32760,7 +32760,7 @@
       "left": 389.849,
       "top": 67.12,
       "right": 608.965,
-      "bottom": 425
+      "bottom": 425.0
      },
      "assembled": {
       "x": 0,
@@ -32801,7 +32801,7 @@
      "explodeIndex": 1,
      "bounds": {
       "left": 389.849,
-      "top": 425,
+      "top": 425.0,
       "right": 608.965,
       "bottom": 947.439
      },
@@ -32826,7 +32826,7 @@
      "derivation": "psd-layer",
      "box": {
       "x": 389.849,
-      "y": 425,
+      "y": 425.0,
       "width": 219.116,
       "height": 522.439
      },

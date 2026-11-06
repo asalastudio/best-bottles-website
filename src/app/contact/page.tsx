@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import FormPage from "@/components/FormPage";
-import { SITE_URL } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 
 const FIELDS = [
     { name: "name", label: "Full Name", type: "text" as const, required: true, placeholder: "Jane Smith" },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: { absolute: "Contact Best Bottles — Wholesale Packaging Support" },
     description:
         "Contact the Best Bottles team for product questions, compatibility help, quotes, samples, and wholesale glass packaging support.",
-    alternates: { canonical: `${SITE_URL}/contact` },
+    alternates: pageAlternates("/contact"),
 };
 
 export default function ContactPage() {

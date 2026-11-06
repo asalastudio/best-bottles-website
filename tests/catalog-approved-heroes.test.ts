@@ -1,4 +1,4 @@
-import { tolaAssembly } from "@/lib/products/tola-applicator";
+import { isTolaApplicator, TOLA6_ASSEMBLED_IMAGE } from "@/lib/products/tola-applicator";
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -94,7 +94,7 @@ describe('approved catalog hero release',()=>{
   const {data,info}=await sharp(b).removeAlpha().raw().toBuffer({resolveWithObject:true});
   expect([info.width,info.height]).toEqual([1560,1716]);
   for(const [x,y] of [[0,0],[1559,0],[0,1715],[1559,1715]]) expectBone([...data.subarray((y*info.width+x)*3,(y*info.width+x)*3+3)]);
-  expect(getCatalogHero(h.groupSlug,[{websiteSku:h.websiteSku}])?.url).toBe(tolaAssembly(h.websiteSku)?.url ?? h.url);
+  expect(getCatalogHero(h.groupSlug,[{websiteSku:h.websiteSku}])?.url).toBe(isTolaApplicator(h.websiteSku) ? TOLA6_ASSEMBLED_IMAGE : h.url);
   expect(getCatalogHero(h.groupSlug,[{websiteSku:'unapproved-other-finish'}])).toBeNull();
   expect(getCatalogHeroProductHref(h,'/products/example?applicator=spray')).toContain(`sku=${h.websiteSku}`);
  });

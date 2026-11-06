@@ -1,7 +1,11 @@
-import { expect, it } from "vitest";
+import { expect, it, vi } from "vitest";
+vi.mock("server-only", () => ({}));
 import approved from "@/lib/paper-doll/approved-kits.generated.json";
 import delivery from "@/lib/products/display-images.generated.json";
+import reviewDelivery from "@/lib/products/review-display-images.generated.json";
 import { displayDerivativeSrcSet, displayDerivativeUrl, registeredImageSizes } from "@/lib/products/display-derivative";
+// The manifest is read on the server; importing the server module registers every source for this test.
+import { ALL_DISPLAY_DERIVATIVES, collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { registerImageSrc, registerImageSrcSet, markRegisterOptimizerUnavailable } from "@/lib/products/register-image";
 import { pdpHeroImageUrls } from "@/lib/products/pdp-image-preloads";
@@ -59,4 +63,19 @@ it("preloads the exact selected assembly URLs without fetching every finish or c
     const frostedLayout = stageLayout(frosted, "sidecar", { websiteSku: frosted.sku })!;
     expect(frostedLayout.backdrop).toBeTruthy();
     expect(pdpHeroImageUrls(frosted, frosted.sku)).toContain(frostedLayout.backdrop!.url);
+});
+
+it("keeps the manifest out of client code: a page receives only the entries its payload names", () => {
+    const [first, second, third] = Object.keys(delivery.sources);
+    const alias = Object.keys(delivery.aliases)[0];
+    const payload = { kitsBySku: { A: { parts: [{ image: { url: first } }, { image: { url: alias } }] } }, siblings: [{ thumb: second }], noise: ["https://unknown.example/x.png", 42, null, { deep: { deeper: [first] } }] };
+    const subset = collectDisplayDerivatives(payload);
+    expect(Object.keys(subset).sort()).toEqual([first, second, alias].sort());
+    expect(subset[alias]).toBe(ALL_DISPLAY_DERIVATIVES[delivery.aliases[alias as keyof typeof delivery.aliases]]);
+    expect(subset[first].urls["640"]).toBe(displayDerivativeUrl(first, 640));
+    expect(subset).not.toHaveProperty(third);
+    expect(Object.keys(ALL_DISPLAY_DERIVATIVES)).toHaveLength(new Set([...Object.keys(delivery.sources), ...Object.keys(delivery.aliases), ...Object.keys(reviewDelivery.sources)]).size);
+    // A cycle in the walked value must not hang the collector.
+    const cyclic: Record<string, unknown> = { url: first }; cyclic.self = cyclic;
+    expect(Object.keys(collectDisplayDerivatives(cyclic))).toEqual([first]);
 });

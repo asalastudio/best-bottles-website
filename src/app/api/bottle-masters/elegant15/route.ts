@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 import { readFileSync } from "node:fs";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
 import { elegant15ReviewSku, ELEGANT15_MASTER_REVIEW_VERSION } from "@/lib/products/elegant15-master";
@@ -25,7 +26,7 @@ export async function GET(request: Request) {
         if (!kit || kit.sku !== sku || kit.register?.bodyId !== "elegant-15ml-13-415") {
             return NextResponse.json({ error: "Not found" }, { status: 404 });
         }
-        return NextResponse.json({ kit, version: review.version }, { headers: { "Cache-Control": "private, no-store" } });
+        return NextResponse.json({ kit, displayDerivatives: collectDisplayDerivatives(kit), version: review.version }, { headers: { "Cache-Control": "private, no-store" } });
     } catch {
         return NextResponse.json({ error: "Master unavailable" }, { status: 503 });
     }

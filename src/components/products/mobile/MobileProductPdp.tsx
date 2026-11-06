@@ -610,7 +610,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                                        const next = Number(event.target.value);
                                        onQtyChange(Number.isFinite(next) ? Math.max(1, Math.floor(next)) : 1);
                                    }}
-                                   className="w-14 min-w-0 bg-transparent text-center text-md font-semibold tabular-nums text-obsidian outline-none" />
+                                   className="w-14 min-w-0 bg-transparent text-center text-md font-semibold tabular-nums text-obsidian" />
                             <button type="button" aria-label="Increase quantity" onClick={() => onQtyChange(qty + 1)}
                                     className="min-h-11 min-w-11 px-3 text-obsidian transition-colors hover:text-muted-gold">+</button>
                         </div>

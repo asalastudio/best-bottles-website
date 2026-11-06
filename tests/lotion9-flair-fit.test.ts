@@ -26,7 +26,8 @@ describe('lotion internals, Flair shoulders and tall Cylinder ribbed caps',()=>{
  });
  it('lowers only four tall Cylinder ribbed caps and preserves all other 13-415 configurations',()=>{
   const changed=new Set(registration.changes.filter((c:{kind:string})=>c.kind!=='lotion-tube').map((c:{sku:string})=>c.sku));
-  for(const [sku,k]of Object.entries(other)){if(!changed.has(sku))expect(k).toEqual(oldOther[sku]);}
+  // Configurations the batch did not have before are additions of one new body, never a rewrite of an existing one.
+  for(const [sku,k]of Object.entries(other)){if(!oldOther[sku])expect(k.register?.bodyId,sku).toBe('bell-10ml-13-415');else if(!changed.has(sku))expect(k).toEqual(oldOther[sku]);}
   const ribbed=registration.changes.filter((c:{kind:string})=>c.kind==='tall9-ribbed');expect(ribbed).toHaveLength(4);
   for(const c of ribbed){const k=other[c.sku],p=k.parts.find(p=>p.slot==='cap')!;expect(p.image).toEqual(oldOther[c.sku].parts.find(p=>p.slot==='cap')!.image);expect(p.bounds.bottom).toBe(337);expect(p.box!.width).toBe(oldOther[c.sku].parts.find(p=>p.slot==='cap')!.box!.width);}
  });

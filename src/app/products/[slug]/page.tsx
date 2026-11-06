@@ -1,4 +1,3 @@
-import { isTolaApplicator } from "@/lib/products/tola-applicator";
 import { readKitPilot } from "../../../../scripts/asset-ledger/kit-pilot.mjs";
 import { approvedComponentKits, withCylinderProductGlass } from "@/lib/paper-doll/approved-component-kits";
 import { withStorefrontFamily, sourceFamilyForProduct } from "@/lib/products/storefront-family";
@@ -19,6 +18,7 @@ import { sanityFetch } from "@/sanity/lib/live";
 import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
 import Footer from "@/components/Footer";
 import { SITE_NAME, SITE_URL, buildBreadcrumbJsonLd, buildProductJsonLd } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
@@ -50,6 +50,7 @@ import { isSoldOutStockStatus } from "@/lib/checkout";
 import { cache } from "react";
 import { preconnect, preload } from "react-dom";
 import { pdpHeroImagePreloads } from "@/lib/products/pdp-image-preloads";
+import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -159,7 +160,7 @@ function redesignApplies(slug: string, data: ProductGroupPayload): boolean {
     if (process.env.NEXT_PUBLIC_PDP_REDESIGN === "off") return false;
     if (data.variants.length === 0) return false;
     if (isVariantCardFamily(data.group.family)) return false;
-    return parseProductSlug(slug) !== null || data.variants.every(variant => isTolaApplicator(variant.websiteSku));
+    return parseProductSlug(slug) !== null;
 }
 
 /** The fitment groups a cap-only glass is also sold as, in the strip's order (spray, then roller). */
@@ -382,7 +383,7 @@ export async function generateMetadata({
         title: { absolute: `${customerName} | ${SITE_NAME}` },
         description,
         ...productPageRobots(data),
-        alternates: { canonical: `${SITE_URL}/products/${activeSlug}` },
+        alternates: pageAlternates(`/products/${activeSlug}`),
         openGraph: {
             title: `${customerName} | ${SITE_NAME}`,
             description,
@@ -478,7 +479,7 @@ export default async function ProductPage({
             sku: variant.graceSku ?? variant.websiteSku,
             image: isPreferredProductImageUrl(variant.imageUrl)
                 ? variant.imageUrl ?? undefined
-                : undefined,
+                : group.heroImageUrl ?? undefined,
             url: `${SITE_URL}/products/${activeSlug}`,
             family: group.family,
             priceLow: variant.webPrice12pc ?? variant.webPrice10pc ?? variant.webPrice1pc,
@@ -513,12 +514,25 @@ export default async function ProductPage({
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
                     />
                 )}
-                <PdpRedesignPage {...payload} />
+                <PdpRedesignPage {...payload} displayDerivatives={collectDisplayDerivatives(payload)} />
                 <Footer />
             </>
         );
     }
 
+    const classicProps = {
+        slug: activeSlug,
+        initialData: data,
+        initialPdpBlocks: pdpBlocks,
+        initialRelations: relations,
+        initialCompatibility: compatibility,
+        siblingGroups,
+        platesBySku: localAssetPreview ? pilot.plates : withReleasedHeroStages(group, data?.variants ?? [], platesBySku),
+        localKits: pilot.kits,
+        localComponentKits,
+        localAssetPreview,
+        localAssetVersion: completion ? `${completion.token}:${completion.revision}` : '',
+    };
     return (
         <>
             {productJsonLd && (
@@ -534,17 +548,8 @@ export default async function ProductPage({
                 />
             )}
             <ProductDetailClient
-                slug={activeSlug}
-                initialData={data}
-                initialPdpBlocks={pdpBlocks}
-                initialRelations={relations}
-                initialCompatibility={compatibility}
-                siblingGroups={siblingGroups}
-                platesBySku={localAssetPreview ? pilot.plates : withReleasedHeroStages(group, data?.variants ?? [], platesBySku)}
-                localKits={pilot.kits}
-                localComponentKits={localComponentKits}
-                localAssetPreview={localAssetPreview}
-                localAssetVersion={completion ? `${completion.token}:${completion.revision}` : ''}
+                {...classicProps}
+                displayDerivatives={collectDisplayDerivatives(classicProps)}
             />
             <SanityLiveVisualEditing />
             <Footer />

@@ -11,7 +11,7 @@ export function pdpHeroImageUrls(kit: KitLike | null, websiteSku: string | null 
 }
 
 export function pdpHeroImagePreloads(kit: KitLike | null, websiteSku: string | null | undefined) {
-    const layout = isTolaApplicator(websiteSku) ? tolaAssemblyLayout(websiteSku ?? undefined)
+    const layout = isTolaApplicator(websiteSku) ? tolaAssemblyLayout()
         : kit ? stageLayout(kit, "sidecar", { websiteSku: websiteSku ?? undefined }) : null;
     const seen = new Set<string>();
     const backdrop = layout?.backdrop?.url;

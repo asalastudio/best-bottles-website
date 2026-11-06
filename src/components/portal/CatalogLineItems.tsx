@@ -82,7 +82,7 @@ function QuantityStepper({
                 inputMode="numeric"
                 disabled={disabled}
                 onChange={(e) => onChange(clamp(Number(e.target.value)))}
-                className="w-12 h-8 text-center font-sans text-[13px] tabular-nums bg-transparent border-0 outline-none text-[color:var(--color-text-primary)] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="w-12 h-8 text-center font-sans text-[13px] tabular-nums bg-transparent border-0 text-[color:var(--color-text-primary)] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
             <button
                 type="button"
@@ -215,7 +215,7 @@ export default function CatalogLineItems({
                     onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); runSearch(term); } }}
                     placeholder="Search the catalogue — SKU, capacity, colour, family"
                     aria-label="Search the catalogue"
-                    className="h-11 flex-1 rounded-md border px-3 font-sans text-[16px] outline-none sm:h-9 sm:text-[13px]"
+                    className="h-11 flex-1 rounded-md border px-3 font-sans text-[16px] sm:h-9 sm:text-[13px]"
                     style={{
                         borderColor: "var(--color-rule)",
                         background: "var(--color-surface)",

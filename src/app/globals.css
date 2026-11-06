@@ -227,6 +227,17 @@ img.app-wordmark {
   }
 }
 
+/* Keyboard focus is visible everywhere, in the brand's darker gold (--color-gold-dim, 4.3:1 on bone).
+   Only :focus-visible, so a mouse click on a button draws nothing; a text field shows it on any focus,
+   as every accessible form does. A component that draws its own ring keeps it: utilities such as
+   focus-visible:outline-none or focus-visible:ring-* sit in a later layer and win. */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-gold-dim);
+    outline-offset: 2px;
+  }
+}
+
 /* Interior page titles on phones. The wordmark lockup is 19px tall; a 32px
    Montserrat display H1 reads as a second logo. 28px / 0.05em sits a hair
    above the mark (~21px cap) without competing with it. Desktop headings

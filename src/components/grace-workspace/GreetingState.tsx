@@ -126,7 +126,7 @@ export default function GreetingState({
                         placeholder="Tell me what you're packaging — or pick a thread to pull"
                         rows={1}
                         autoFocus
-                        className="w-full resize-none border-none bg-transparent text-[14.5px] text-obsidian outline-none placeholder:text-slate/70"
+                        className="w-full resize-none border-none bg-transparent text-[14.5px] text-obsidian placeholder:text-slate/70"
                         style={{ minHeight: 26, fontFamily: "var(--font-sans)" }}
                     />
                     <div

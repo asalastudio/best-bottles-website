@@ -236,11 +236,15 @@ export default function CatalogCardPurchase({
             : added != null
                 ? "Added ✓"
                 : `Add to cart · ${formatPrice(subtotal)}`;
+    // The accessible name starts with the visible text ("Add to cart · $12.00"), as a label must,
+    // then says how many of what: a screen reader hears the same words a sighted user reads.
     const addAriaLabel = soldOut
         ? `Out of stock: ${title}`
         : orderBlocked
             ? `${title} unavailable for checkout`
-            : `Add ${qty ?? ""} ${title} to cart, ${formatPrice(subtotal)}`.replace(/\s+/g, " ");
+            : qty != null
+                ? `${addLabel}: ${qty} × ${title}`
+                : `${addLabel}: ${title}`;
 
     return (
         <div

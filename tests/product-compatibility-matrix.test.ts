@@ -351,7 +351,7 @@ describe("Build Your Bottle route contract", () => {
 
     it("preserves the public route and breadcrumb under the builder name", () => {
         expect(page).toContain('title: { absolute: "Build Your Bottle | Best Bottles" }');
-        expect(page).toContain('alternates: { canonical: `${SITE_URL}/matrix` }');
+        expect(page).toContain('alternates: pageAlternates("/matrix")');
         expect(page).toContain('{ name: "Build Your Bottle", url: `${SITE_URL}/matrix` }');
         expect(page).toContain("preferMobile");
         expect(page).not.toContain("rel=\"preload\"");

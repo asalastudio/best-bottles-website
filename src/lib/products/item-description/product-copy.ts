@@ -6,7 +6,7 @@
  * Included / Fits / Glass / Good to know bullets, one Care note, the item-type line, the meta description and
  * the image alt text for every product that passes the checks. Products it does not cover keep today's copy.
  */
-import { tolaApplicatorSku, tolaAssembly } from "../tola-applicator";
+import { tolaApplicatorSku } from "../tola-applicator";
 import { rectangleApplicatorGlass, rectangleApplicatorSku } from "../rectangle-applicator";
 import siteCopy from "../../../../data/descriptions/pdp/product-copy.site.json";
 
@@ -76,16 +76,14 @@ export function productCopyFor(variant: { websiteSku?: string | null; graceSku?:
             care: "", itemType: "Vial · 13-425 neck", metaDescription: sentences.join(" "),
             altText: `2 ml amber glass vial with short ${shortAmber.toLowerCase()} screw cap` };
     }
-    const tola = tolaAssembly(tolaApplicatorSku(variant));
-    if (tola) {
-        const title = `${tola.ml} ml Clear Tola Applicator Bottle`, option = `${tola.finish} Cap`;
-        const cap = `shiny ${tola.finish.toLowerCase()} cap with a ${tola.bead} bead`;
+    if (tolaApplicatorSku(variant)) {
+        const title = "6 ml Clear Tola Applicator Bottle", option = "Gold Cap";
         const sentences = ["A clear octagonal Tola bottle for perfume oil and attar.",
-            `Supplied as one bottle with a plastic applicator and a ${cap}.`];
+            "Supplied as one bottle with a plastic applicator and a shiny gold cap with a red bead."];
         return { title, option, variantTitle: title + " - " + option, sentences,
-            bullets: [["Included", `Plastic applicator and ${cap}.`], ["Glass", "Clear octagonal glass."]],
+            bullets: [["Included", "Plastic applicator and shiny gold cap with red bead."], ["Glass", "Clear octagonal glass."]],
             care: "", itemType: "Tola applicator bottle", metaDescription: sentences.join(" "),
-            altText: `${title} with plastic applicator and ${cap}` };
+            altText: title + ", with plastic applicator and shiny gold cap with red bead" };
     }
     const rectangleGlass = rectangleApplicatorGlass(rectangleApplicatorSku(variant));
     if (rectangleGlass) {
