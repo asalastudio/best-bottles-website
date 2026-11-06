@@ -5,6 +5,7 @@ import { afterEach, expect, it, vi } from "vitest";
 import CylinderMasterPreview from "@/components/products/CylinderMasterPreview";
 import manifest from "@/lib/paper-doll/approved-kits.generated.json";
 vi.mock("server-only", () => ({}));
+import { stageLayout } from "@/lib/products/pdp-redesign/stage";
 import { approvedComponentKit } from "@/lib/paper-doll/approved-component-kits";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
 const rows = manifest.rows as unknown as Record<string, BuilderKit>;
@@ -32,9 +33,8 @@ it.each(["GBTulip6SpryGlMatt", "GBTulip6SpryBlkSh", "GBTulipAmb5SpryGlMatt"])("s
 });
 
 
-it("fills the registered Tulip body box in the catalog so its rim matches the roller", async () => {
-    const sku = "GBTulip6MtlRollBlkDot";
-    const kit = approvedComponentKit(sku);
+it.each(["GBTulip6MtlRollBlkDot", "GBTulip6RollBlkDot"])("matches the %s grid roller to the PDP Sidecar placement", async sku => {
+    const kit = approvedComponentKit(sku)!;
     vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
     vi.stubGlobal("fetch", vi.fn(async () => ({ ok: true, json: async () => ({ kit, version: "tulip6-clear-glass-v1" }) })));
     root = createRoot(container);
@@ -42,4 +42,12 @@ it("fills the registered Tulip body box in the catalog so its rim matches the ro
     const body = container.querySelector('[data-bb-master-part="body"]')!;
     expect(body.getAttribute("href")).toContain("tulip6-clear-master.");
     expect(body.getAttribute("preserveAspectRatio")).toBe("none");
+    const roller = container.querySelector('[data-bb-master-part="roller"]')!;
+    const stage = stageLayout(kit, "sidecar", { websiteSku: sku })!;
+    const seated = stage.parts.find(part => part.slot === "roller")!;
+    expect(roller.getAttribute("preserveAspectRatio")).toBe("none");
+    expect(Number(roller.getAttribute("x")) + Number(roller.getAttribute("width")) / 2).toBeCloseTo(kit.anchors.neckAxisX ?? kit.anchors.axisX, 0);
+    expect(Number(roller.getAttribute("y"))).toBeCloseTo((seated.box!.topPct + seated.dyPct) / 100 * stage.canvas.height);
+    expect(Number(roller.getAttribute("height"))).toBeLessThan(kit.parts.find(part => part.slot === "roller")!.box!.height);
+    expect(stageLayout(kit, "exploded", { websiteSku: sku })!.parts.find(part => part.slot === "roller")?.stretchToBox).toBeUndefined();
 });
