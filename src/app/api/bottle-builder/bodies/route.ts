@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { BUILDER_CDN_CACHE, loadBuilderFamilyOrUncached } from "@/lib/bottle-builder/server";
+import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 import { builderCollectionBodies, BUILDER_COLLECTION_FITMENTS } from "@/lib/bottle-builder/collection-context";
 
 /** The chosen bottle's full configurations (kit-less, as the family cache holds
@@ -18,7 +19,8 @@ export async function GET(request: Request) {
         if (!body) return NextResponse.json({ error: "This bottle is no longer available." }, { status: 404 });
         const [scoped] = builderCollectionBodies([body], shop && BUILDER_COLLECTION_FITMENTS[shop] ? shop : undefined);
         // An uncached (degraded) build answers this visitor only; the CDN never keeps it.
-        return NextResponse.json({ configurations: scoped?.configurations ?? [] }, {
+        const configurations = scoped?.configurations ?? [];
+        return NextResponse.json({ configurations, displayDerivatives: collectDisplayDerivatives(configurations) }, {
             headers: { "Cache-Control": cached ? BUILDER_CDN_CACHE : "no-store" },
         });
     } catch (error) {

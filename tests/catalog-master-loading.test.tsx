@@ -4,6 +4,10 @@ import { createRoot } from "react-dom/client";
 import { expect, it, vi } from "vitest";
 import CylinderMasterPreview from "@/components/products/CylinderMasterPreview";
 import approved from "@/lib/paper-doll/approved-kits.generated.json";
+// The master route answers with the kit and its delivery copies; this mock returns the kit alone, so register the
+// server-side manifest the way the route would have.
+import "@/lib/products/display-derivative.server";
+vi.mock("server-only", () => ({}));
 
 it("defers offscreen recipe and image requests, then loads the same registered master near the viewport", async () => {
     let enter: IntersectionObserverCallback;

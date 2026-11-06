@@ -1,5 +1,6 @@
 "use client";
 
+import { registerDisplayDerivatives, type DisplayDerivativeMap } from "@/lib/products/display-derivative";
 import { useRegion } from "@/components/RegionProvider";
 
 import { decodeImage } from "@/lib/paper-doll/decode-image";
@@ -1101,6 +1102,7 @@ export default function ProductDetailClient({
     localComponentKits = {},
     localAssetPreview = false,
     localAssetVersion = '',
+    displayDerivatives,
     slug,
     initialData,
     initialPdpBlocks = [],
@@ -1120,7 +1122,10 @@ export default function ProductDetailClient({
     localComponentKits?: Record<string, BuilderKit>;
     localAssetPreview?: boolean;
     localAssetVersion?: string;
+    /** Delivery copies for every image in these props (resolved on the server, see display-derivative.server.ts). */
+    displayDerivatives?: DisplayDerivativeMap;
 }) {
+    registerDisplayDerivatives(displayDerivatives);
     const localComponentPreview = Object.keys(localComponentKits).length > 0;
     const { formatPrice: money } = useRegion();
     const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
