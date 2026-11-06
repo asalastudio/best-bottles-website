@@ -10,6 +10,7 @@ import BuilderLoading from "@/components/bottle-builder/BuilderLoading";
 import { builderProductEntry, loadBuilderEntry } from "@/lib/bottle-builder/entry";
 import MatrixClient from "@/components/matrix/MatrixClient";
 import { loadBuilderFamilies, loadBuilderFamilyOrUncached } from "@/lib/bottle-builder/server";
+import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 import { preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/lib/seo";
 
@@ -54,6 +55,6 @@ async function Builder({ familyParam, collection, sku }: { familyParam?: string;
     // configurations load from /api/bottle-builder/bodies; Cylinder's HTML drops from 789 KB.
     const start = builderProductEntry(builderCollectionBodies(entry.bodies, collection), sku);
     return <>
-        <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}:${sku ?? ""}`} {...entry} familyList={familyList} bodies={start.bodies} initialSelection={start.selection} initialStep={start.step} entryUnavailable={start.unavailable} preferMobile={preferMobile} />
+        <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}:${sku ?? ""}`} {...entry} familyList={familyList} bodies={start.bodies} displayDerivatives={collectDisplayDerivatives(start.bodies)} initialSelection={start.selection} initialStep={start.step} entryUnavailable={start.unavailable} preferMobile={preferMobile} />
     </>;
 }

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { localGpt13ComponentKits } from "@/lib/paper-doll/local-component-kits";
 import { BUILDER_CDN_CACHE, loadBuilderBodyKits } from "@/lib/bottle-builder/server";
+import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 
 export async function GET(request: Request) {
     const url = new URL(request.url);
@@ -18,7 +19,7 @@ export async function GET(request: Request) {
             if (reviewed && reviewed.sku === sku) kits[id] = { ...reviewed,
                 parts: reviewed.parts.filter(part => !part.views || part.views.includes("capon")) };
         }
-        return NextResponse.json({ kits }, {
+        return NextResponse.json({ kits, displayDerivatives: collectDisplayDerivatives(kits) }, {
             headers: { "Cache-Control": Object.keys(pilot).length ? "no-store" : BUILDER_CDN_CACHE },
         });
     } catch (error) {

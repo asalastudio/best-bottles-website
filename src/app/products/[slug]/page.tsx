@@ -49,6 +49,7 @@ import { isSoldOutStockStatus } from "@/lib/checkout";
 import { cache } from "react";
 import { preconnect, preload } from "react-dom";
 import { pdpHeroImagePreloads } from "@/lib/products/pdp-image-preloads";
+import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -512,12 +513,25 @@ export default async function ProductPage({
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
                     />
                 )}
-                <PdpRedesignPage {...payload} />
+                <PdpRedesignPage {...payload} displayDerivatives={collectDisplayDerivatives(payload)} />
                 <Footer />
             </>
         );
     }
 
+    const classicProps = {
+        slug: activeSlug,
+        initialData: data,
+        initialPdpBlocks: pdpBlocks,
+        initialRelations: relations,
+        initialCompatibility: compatibility,
+        siblingGroups,
+        platesBySku: localAssetPreview ? pilot.plates : withReleasedHeroStages(group, data?.variants ?? [], platesBySku),
+        localKits: pilot.kits,
+        localComponentKits,
+        localAssetPreview,
+        localAssetVersion: completion ? `${completion.token}:${completion.revision}` : '',
+    };
     return (
         <>
             {productJsonLd && (
@@ -533,17 +547,8 @@ export default async function ProductPage({
                 />
             )}
             <ProductDetailClient
-                slug={activeSlug}
-                initialData={data}
-                initialPdpBlocks={pdpBlocks}
-                initialRelations={relations}
-                initialCompatibility={compatibility}
-                siblingGroups={siblingGroups}
-                platesBySku={localAssetPreview ? pilot.plates : withReleasedHeroStages(group, data?.variants ?? [], platesBySku)}
-                localKits={pilot.kits}
-                localComponentKits={localComponentKits}
-                localAssetPreview={localAssetPreview}
-                localAssetVersion={completion ? `${completion.token}:${completion.revision}` : ''}
+                {...classicProps}
+                displayDerivatives={collectDisplayDerivatives(classicProps)}
             />
             <SanityLiveVisualEditing />
             <Footer />

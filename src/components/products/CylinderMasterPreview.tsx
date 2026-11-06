@@ -5,6 +5,7 @@ import type { BuilderKit } from "@/lib/bottle-builder/model";
 import { plugMaskStyle } from "@/lib/products/sprayer-glass-transmission";
 import { catalogTasselViewport, stageLayout } from "@/lib/products/pdp-redesign/stage";
 import { registerImageSrc } from "@/lib/products/register-image";
+import { registerDisplayDerivatives, type DisplayDerivativeMap } from "@/lib/products/display-derivative";
 import { rectangleApplicatorGlass } from "@/lib/products/rectangle-applicator";
 import { cylinderMasterSource } from "@/lib/products/cylinder-master";
 
@@ -17,7 +18,8 @@ function loadKit(sku: string): Promise<BuilderKit> {
     const request = fetch(`/api/bottle-masters/${source.family}?sku=${encodeURIComponent(sku)}&v=${source.version}`)
         .then(async response => {
             if (!response.ok) throw Error("Master unavailable");
-            const { kit } = await response.json() as { kit: BuilderKit };
+            const { kit, displayDerivatives } = await response.json() as { kit: BuilderKit; displayDerivatives?: DisplayDerivativeMap };
+            registerDisplayDerivatives(displayDerivatives);
             if (kit?.sku !== sku || !Array.isArray(kit.parts)) throw Error("Invalid master");
             return kit;
         });
