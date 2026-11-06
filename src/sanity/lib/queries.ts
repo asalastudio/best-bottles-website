@@ -107,6 +107,7 @@ export const JOURNAL_POSTS_QUERY = `
 export const JOURNAL_POST_QUERY = `
   *[_type == "journal" && slug.current == $slug][0] {
     _id,
+    _updatedAt,
     title,
     "slug": slug.current,
     category,

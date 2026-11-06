@@ -18,6 +18,7 @@ import { sanityFetch } from "@/sanity/lib/live";
 import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
 import Footer from "@/components/Footer";
 import { SITE_NAME, SITE_URL, buildBreadcrumbJsonLd, buildProductJsonLd } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
@@ -382,7 +383,7 @@ export async function generateMetadata({
         title: { absolute: `${customerName} | ${SITE_NAME}` },
         description,
         ...productPageRobots(data),
-        alternates: { canonical: `${SITE_URL}/products/${activeSlug}` },
+        alternates: pageAlternates(`/products/${activeSlug}`),
         openGraph: {
             title: `${customerName} | ${SITE_NAME}`,
             description,
@@ -478,7 +479,7 @@ export default async function ProductPage({
             sku: variant.graceSku ?? variant.websiteSku,
             image: isPreferredProductImageUrl(variant.imageUrl)
                 ? variant.imageUrl ?? undefined
-                : undefined,
+                : group.heroImageUrl ?? undefined,
             url: `${SITE_URL}/products/${activeSlug}`,
             family: group.family,
             priceLow: variant.webPrice12pc ?? variant.webPrice10pc ?? variant.webPrice1pc,

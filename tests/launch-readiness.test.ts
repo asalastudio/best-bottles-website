@@ -58,15 +58,15 @@ describe("June 15 launch readiness guardrails", () => {
 
     it("adds route-specific canonical metadata to launch pages", () => {
         const expectations: Array<[string, string]> = [
-            ["src/app/catalog/page.tsx", "buildHreflangAlternates(path)"],
-            ["src/app/about/page.tsx", "`${SITE_URL}/about`"],
-            ["src/app/blog/page.tsx", "`${SITE_URL}/blog`"],
-            ["src/app/resources/page.tsx", "`${SITE_URL}/resources`"],
-            ["src/app/contact/page.tsx", "`${SITE_URL}/contact`"],
-            ["src/app/request-quote/page.tsx", "`${SITE_URL}/request-quote`"],
-            ["src/app/request-sample/page.tsx", "`${SITE_URL}/request-sample`"],
-            ["src/app/blog/[slug]/page.tsx", "`${SITE_URL}/blog/${slug}`"],
-            ["src/app/collections/boston-round-30ml/page.tsx", "`${SITE_URL}/catalog?families=Boston%20Round&search=30ml`"],
+            ["src/app/catalog/page.tsx", "pageAlternates(path)"],
+            ["src/app/about/page.tsx", 'pageAlternates("/about")'],
+            ["src/app/blog/page.tsx", 'pageAlternates("/blog")'],
+            ["src/app/resources/page.tsx", 'pageAlternates("/resources")'],
+            ["src/app/contact/page.tsx", 'pageAlternates("/contact")'],
+            ["src/app/request-quote/page.tsx", 'pageAlternates("/request-quote")'],
+            ["src/app/request-sample/page.tsx", 'pageAlternates("/request-sample")'],
+            ["src/app/blog/[slug]/page.tsx", "pageAlternates(`/blog/${slug}`)"],
+            ["src/app/collections/boston-round-30ml/page.tsx", 'pageAlternates("/collections/boston-round-30ml", "/catalog?families=Boston%20Round&search=30ml")'],
         ];
 
         for (const [path, canonical] of expectations) {

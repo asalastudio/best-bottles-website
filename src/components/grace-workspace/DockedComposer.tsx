@@ -112,7 +112,7 @@ export default function DockedComposer({
                     placeholder={placeholderText}
                     rows={1}
                     disabled={disabled}
-                    className="w-full min-w-0 flex-1 resize-none border-none bg-transparent text-[14px] text-obsidian outline-none placeholder:text-slate/70"
+                    className="w-full min-w-0 flex-1 resize-none border-none bg-transparent text-[14px] text-obsidian placeholder:text-slate/70"
                     style={{ minHeight: 22, fontFamily: "var(--font-sans)" }}
                 />
                 {voiceAvailable ? (

@@ -7,7 +7,7 @@ import HomePage from "@/components/HomePage";
 import { getHomepageBrowse } from "@/lib/homepageBrowse.server";
 import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
 import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
-import { buildHreflangAlternates } from "@/i18n/metadata";
+import { pageAlternates } from "@/i18n/metadata";
 
 // Self-referential canonical for the homepage. Kept here (not on the root
 // layout) so interior pages inherit no canonical — each public page sets its
@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
     const locale: AppLocale = isLocale(localeValue) ? localeValue : defaultLocale;
     const path = locale === "es" ? "/es" : "/";
     return {
-        alternates: buildHreflangAlternates(path),
+        alternates: pageAlternates(path),
     };
 }
 

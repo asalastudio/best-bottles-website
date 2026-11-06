@@ -13,13 +13,14 @@ import { loadBuilderFamilies, loadBuilderFamilyOrUncached } from "@/lib/bottle-b
 import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 import { preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 export const metadata: Metadata = {
     title: { absolute: "Build Your Bottle | Best Bottles" },
     description: "Start with a bottle, choose your glass color, and add a compatible fitment. Preview your bottle as you build and order your exact combination.",
-    alternates: { canonical: `${SITE_URL}/matrix` },
+    alternates: pageAlternates("/matrix"),
 };
 
 export default async function MatrixPage({ searchParams }: { searchParams: Promise<{ family?: string; shop?: string; sku?: string }> }) {

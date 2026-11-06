@@ -448,7 +448,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                                 value={searchValue}
                                 onChange={(e) => setSearchValue(e.target.value)}
                                 placeholder={searchPlaceholder}
-                                className="bg-transparent text-sm focus:outline-none flex-1 min-w-0 placeholder-slate/60 text-obsidian"
+                                className="bg-transparent text-sm flex-1 min-w-0 placeholder-slate/60 text-obsidian"
                                 aria-label={t("searchProducts")}
                                 data-testid="navbar-desktop-search-input"
                                 suppressHydrationWarning
@@ -587,7 +587,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                                 value={searchValue}
                                 onChange={(e) => setSearchValue(e.target.value)}
                                 placeholder={searchPlaceholder}
-                                className="bg-transparent text-sm focus:outline-none flex-1 min-w-0 placeholder-slate/60 text-obsidian"
+                                className="bg-transparent text-sm flex-1 min-w-0 placeholder-slate/60 text-obsidian"
                                 aria-label={t("searchProducts")}
                                 data-testid="navbar-mobile-search-input"
                                 suppressHydrationWarning

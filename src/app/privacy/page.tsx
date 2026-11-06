@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { SITE_URL } from "@/lib/seo";
+import { pageAlternates } from "@/i18n/metadata";
 
 export const metadata: Metadata = {
     title: { absolute: "Privacy Policy | Best Bottles" },
     description: "How Best Bottles and Nemat International collect, use, and protect your information.",
-    alternates: { canonical: `${SITE_URL}/privacy` },
+    alternates: pageAlternates("/privacy"),
 };
 
 const UPDATED = "July 2026";
