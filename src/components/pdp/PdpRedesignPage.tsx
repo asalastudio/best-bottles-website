@@ -318,7 +318,10 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
 
     const onRoller = useCallback((id: RollerId) => {
         setPicks((current) => ({ ...current, roller: id }));
-        if (views.includes("exploded")) setView("exploded");
+        // On the Clear Tulip, compare the rollers as seated while the cap stays beside the bottle.
+        if (views.includes("exploded")) {
+            setView(current => slug === "tulip-6ml-clear-13-415-rollon" && current === "sidecar" ? current : "exploded");
+        }
         const next = resolveVariant(variants, { roller: id, cap: picks.cap });
         analytics.pdpPick({ group: slug, type: "roller", value: id, sku: next?.websiteSku ?? null });
     }, [views, variants, picks.cap, slug]);

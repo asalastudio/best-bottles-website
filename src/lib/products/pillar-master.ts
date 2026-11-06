@@ -14,6 +14,10 @@ const PILLAR_MASTER_SKUS = new Set([
     "GBPillar9SprySlShn",
 ]);
 
+export function isPillarSprayerSku(sku: string): boolean {
+    return PILLAR_MASTER_SKUS.has(sku);
+}
+
 const PILLAR_ROLLON_FINISH = /^GBPillar9(?:Mtl)?Roll(?:BlkSh|CuMatt|GlMatt|GlSh|PinkDot|SlDot|SlMatt|SlSh)$/;
 
 export function isPillarRollOnSku(sku: string): boolean {

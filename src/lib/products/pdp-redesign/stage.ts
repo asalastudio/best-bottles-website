@@ -108,6 +108,8 @@ export type StagePart = {
     zIndex: number;
     /** The part's box in percent of the canvas; absent for a full-canvas layer. */
     box?: { leftPct: number; topPct: number; widthPct: number; heightPct: number };
+    /** The registered box includes a change in proportions, shared by SVG and HTML renderers. */
+    stretchToBox?: boolean;
     /** Percent of the part's own height hidden from the bottom: a behind-glass layer never shows below the plate's baseline. */
     clipBottomPct?: number;
 };
@@ -463,6 +465,15 @@ export function stageLayout(
         const occurrence = occurrences.get(owner) ?? 0;
         occurrences.set(owner, occurrence + 1);
         const offset = offsets.get(part) ?? { dx: 0, dy: 0 };
+        const tulip = kit.register?.bodyId === "tulip-6ml-13-415";
+        const seatedTulipRoller = tulip && part.slot === "roller" && view === "sidecar";
+        const stretchToBox = seatedTulipRoller || (tulip && part.slot === "body" && part.image.url.includes("/tulip6-clear-master"));
+        // A straight-on 12° backward tilt, foreshortened around the rim.
+        // This keeps the roller centered without relying on SVG's 3D transform origin.
+        const box = part.box && seatedTulipRoller
+            ? { ...part.box, y: kit.anchors.seatY + (part.box.y - kit.anchors.seatY) * Math.cos(Math.PI / 15),
+                height: part.box.height * Math.cos(Math.PI / 15) }
+            : part.box;
         let clipBottomPct: number | undefined = part.trimBottomPct === undefined ? undefined : Math.max(0, Math.min(100, part.trimBottomPct));
         if (part.box && BEHIND_GLASS_SLOTS.has(part.slot)) {
             const over = part.box.y + part.box.height + offset.dy - kit.anchors.baselineY;
@@ -480,12 +491,13 @@ export function stageLayout(
             opacity: part.opacity,
             blendMode: part.blendMode,
             maskImage: sprayerPlugMask(kit, part, view),
-            ...(part.box ? {
+            ...(stretchToBox ? { stretchToBox } : {}),
+            ...(box ? {
                 box: {
-                    leftPct: (part.box.x / canvas.width) * 100,
-                    topPct: (part.box.y / canvas.height) * 100,
-                    widthPct: (part.box.width / canvas.width) * 100,
-                    heightPct: (part.box.height / canvas.height) * 100,
+                    leftPct: (box.x / canvas.width) * 100,
+                    topPct: (box.y / canvas.height) * 100,
+                    widthPct: (box.width / canvas.width) * 100,
+                    heightPct: (box.height / canvas.height) * 100,
                 },
             } : {}),
             ...(clipBottomPct !== undefined ? { clipBottomPct } : {}),

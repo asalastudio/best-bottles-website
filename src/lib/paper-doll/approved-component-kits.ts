@@ -1,5 +1,7 @@
 import "server-only";
 import pillarCaps from "../../../public/local-kits/pillar-caps-2026-11-04/kits.json";
+import pillarSprayers from "../../../public/local-kits/pillar-masters-2026-11-04/kits.json";
+import { aliases } from "../products/display-images.generated.json";
 import { isPillarRollOnSku, PILLAR_POUR_CAP_SUFFIXES } from "../products/pillar-master";
 import manifest from "./approved-kits.generated.json";
 import sprays from "./cylinder-spray-kits.generated.json";
@@ -12,7 +14,7 @@ import cylinder25Reducers from "./cylinder25-reducers.generated.json";
 import { CYLINDER25_COPPER_OVERCAP } from "../register/cylinder25-copper-overcap";
 import { withSelected25LotionTube } from "../register/cylinder-lotion-tube";
 import type { KitLike } from "@/lib/products/pdp-redesign/stage";
-import type { BuilderKit } from "@/lib/bottle-builder/model";
+import type { BuilderKit, BuilderPart } from "@/lib/bottle-builder/model";
 
 /** Exact owner-approved recipes, independent of the localhost candidate loader. */
 const existingRows = manifest.rows as unknown as Record<string, BuilderKit>;
@@ -285,6 +287,27 @@ const revisedRows = Object.fromEntries(Object.entries(proposedRows).map(([sku, k
 
     }) }];
 })) as Record<string, BuilderKit>;
+const publishedImageAliases: Readonly<Record<string, string>> = aliases;
+type PillarKit = BuilderKit & { capCloseUp?: BuilderPart["image"] | null };
+function hostedPillarKit(kit: PillarKit): PillarKit {
+    const hostedImage = <T extends { url: string }>(image: T): T => {
+        if (!image.url.startsWith("/local-kits/")) return image;
+        const url = publishedImageAliases[image.url];
+        if (!url) throw new Error(`Missing approved Pillar image for ${kit.sku}: ${image.url}`);
+        return { ...image, url, ...("key" in image ? { key: url.startsWith("/") ? url : new URL(url).pathname.slice(1) } : {}) };
+    };
+    return {
+        ...kit,
+        parts: kit.parts.map(part => ({
+            ...part,
+            image: hostedImage(part.image),
+            image2x: part.image2x ? hostedImage(part.image2x) : part.image2x,
+            mask: part.mask ? hostedImage(part.mask) : part.mask,
+            ...(part.detached ? { detached: { ...part.detached, image: hostedImage(part.detached.image) } } : {}),
+        })),
+        capCloseUp: kit.capCloseUp ? hostedImage(kit.capCloseUp) : kit.capCloseUp,
+    };
+}
 const pillarRollOnRows = Object.fromEntries(Object.entries(pillarCaps.rows).filter(([sku]) => isPillarRollOnSku(sku)));
 const pillarPourBase = pillarCaps.rows.GBPillar9BlkShSht as unknown as BuilderKit;
 const cylinderPourSeat = existingRows.GBCyl5BlkShSht.parts.find(part => part.slot === "cap")!.bounds.bottom;
@@ -312,7 +335,32 @@ const pillarPourRows = Object.fromEntries(PILLAR_POUR_CAP_SUFFIXES.map(suffix =>
         register: { ...pillarPourBase.register!, componentIds: [cap.componentId!] },
     }];
 }));
-const rows = { ...manifest.rows, ...revisedRows, ...pillarRollOnRows, ...pillarPourRows } as unknown as Record<string, BuilderKit>;
+const pillarKits = { ...pillarSprayers.rows, ...pillarRollOnRows, ...pillarPourRows } as unknown as Record<string, BuilderKit>;
+const pillarRows = Object.fromEntries(Object.entries(pillarKits).map(([sku, kit]) => [sku, hostedPillarKit(kit)]));
+
+const tulipGlass = {
+    url: publishedImageAliases["/images/tulip6-clear-master.webp"],
+    sha256: "18117b2e238d5eb497fbc6ee1851aa6e1055e5851a7c4e12237b2ca5f868567b",
+    bytes: 878504, width: 1024, height: 1536,
+};
+const tulipRows = Object.fromEntries(Object.entries(existingRows).flatMap(([sku, kit]) => {
+    if (kit.register?.bodyId !== "tulip-6ml-13-415" || kit.register.glass !== "Clear") return [];
+    return [[sku, { ...kit, parts: kit.parts.map(part => {
+        if (part.slot === "roller" && part.box) {
+            // Keep the reviewed roller flange seated on the rim in the sidecar view.
+            return { ...part, box: { ...part.box, y: part.box.y + 5 },
+                bounds: { ...part.bounds, top: part.bounds.top + 5, bottom: part.bounds.bottom + 5 } };
+        }
+        if (part.slot !== "body") return part;
+        const { left, right, top, bottom } = part.bounds;
+        // Register the photographed glass by its visible bounds inside the image.
+        const sx = (right - left) / 720;
+        const sy = (bottom - top) / 1341;
+        return { ...part, image: { ...tulipGlass, key: tulipGlass.url }, image2x: null,
+            box: { x: left - 152 * sx, y: top - 103 * sy, width: tulipGlass.width * sx, height: tulipGlass.height * sy } };
+    }) }]];
+}));
+const rows: Record<string, BuilderKit> = { ...existingRows, ...revisedRows, ...pillarRows, ...tulipRows };
 export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {
