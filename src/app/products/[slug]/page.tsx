@@ -29,7 +29,7 @@ import { filterVariantsForGroupIntent } from "@/lib/products/group-variant-inten
 import type { PdpBlock } from "@/components/PdpBlocks";
 import { loadPlatesForVariants } from "@/lib/paper-doll/plates";
 import { atomizerVariantCardName, isVariantCardFamily, withReleasedHeroStages } from "@/lib/products/variant-cards";
-import { getReleasedCatalogHero } from "@/lib/products/catalog-heroes";
+import { collectCatalogHeroes, getReleasedCatalogHero } from "@/lib/products/catalog-heroes.server";
 import { headers } from "next/headers";
 import { readCompletion } from "../../../../scripts/asset-ledger/plate-completion.mjs";
 import { localBostonPreview, previewPlates } from "../../../../scripts/asset-ledger/product-preview.mjs";
@@ -514,7 +514,7 @@ export default async function ProductPage({
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
                     />
                 )}
-                <PdpRedesignPage {...payload} displayDerivatives={collectDisplayDerivatives(payload)} />
+                <PdpRedesignPage {...payload} displayDerivatives={collectDisplayDerivatives(payload)} catalogHeroes={collectCatalogHeroes(payload)} />
                 <Footer />
             </>
         );
@@ -550,6 +550,7 @@ export default async function ProductPage({
             <ProductDetailClient
                 {...classicProps}
                 displayDerivatives={collectDisplayDerivatives(classicProps)}
+                catalogHeroes={collectCatalogHeroes(classicProps)}
             />
             <SanityLiveVisualEditing />
             <Footer />

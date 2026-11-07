@@ -4,6 +4,8 @@ import { auth, currentUser } from "@clerk/nextjs/server";
 import TeamProductSheet from "@/components/team/TeamProductSheet";
 import { searchCatalogServer } from "@/lib/catalogServer";
 import { buildCatalogLineItems } from "@/lib/products/catalog-line-items";
+// Line items resolve heroes on the server: load the full hero tables for this process.
+import "@/lib/products/catalog-heroes.server";
 import { pricePushEnabled } from "@/lib/team/shopifyPricePush";
 import { getUserEmailAddresses, hasTeamHubAccess } from "@/lib/teamAccess";
 

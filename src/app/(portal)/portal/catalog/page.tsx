@@ -4,6 +4,8 @@ import { PageHeader } from "@/components/portal/ui";
 import CatalogLineItems from "@/components/portal/CatalogLineItems";
 import { searchCatalogServer } from "@/lib/catalogServer";
 import { buildCatalogLineItems } from "@/lib/products/catalog-line-items";
+// Line items resolve heroes on the server: load the full hero tables for this process.
+import "@/lib/products/catalog-heroes.server";
 import { addToOrderAction } from "../actions";
 
 // One Convex execution reads whole product documents per group, so a larger

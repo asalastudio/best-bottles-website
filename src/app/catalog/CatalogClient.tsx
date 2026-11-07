@@ -19,7 +19,7 @@ import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
-import { getCatalogHero, getCatalogHeroProductHref, resolveLiveCatalogCardHero, type CatalogHero } from "@/lib/products/catalog-heroes";
+import { getCatalogHero, getCatalogHeroProductHref, registerCatalogHeroes, resolveLiveCatalogCardHero, type CatalogHero, type CatalogHeroSubset } from "@/lib/products/catalog-heroes";
 import { resolveCatalogLineThumbnail } from "@/lib/products/catalog-line-items";
 import { isOneMlVialGroup, oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
 import { isOptimizableImageUrl } from "@/lib/products/optimizable-image";
@@ -140,6 +140,8 @@ export interface CatalogSearchResult {
     nextCursor: string | null;
     primarySkus: CatalogGroupPrimarySku[];
     variantPreviewRows: CatalogGroupVariantPreviewData[];
+    /** Hero rows for the SKUs this result lists (catalog-heroes.server.ts). */
+    catalogHeroes?: CatalogHeroSubset;
 }
 
 interface Facets {
@@ -958,6 +960,9 @@ export default function CatalogClient({
     const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
     const [searchInput, setSearchInput] = useState(initialState.filters.search);
     const [rawResult, setActiveResult] = useState<CatalogSearchResult>(initialResult);
+    // The server sends only the hero rows its result lists (catalog-heroes.server.ts).
+    registerCatalogHeroes(initialResult.catalogHeroes);
+    registerCatalogHeroes(rawResult.catalogHeroes);
     // Atomizer finishes read as separate products: one card per SKU (see variant-cards.ts).
     const activeResult = useMemo(() => expandVariantCards(rawResult), [rawResult]);
     const [isFetchingCatalog, setIsFetchingCatalog] = useState(false);

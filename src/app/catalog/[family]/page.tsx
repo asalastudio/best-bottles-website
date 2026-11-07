@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import Footer from "@/components/Footer";
-import { searchCatalogServer } from "@/lib/catalogServer";
+import { searchCatalogServer, withCatalogHeroes } from "@/lib/catalogServer";
+
+/** Results sent to the browser carry the hero rows for their SKUs (catalog-heroes.server.ts). */
+const searchWithHeroes = async (args: Parameters<typeof searchCatalogServer>[0]) => withCatalogHeroes(await searchCatalogServer(args));
 import { paramsToFilters } from "@/lib/catalogFilters";
 import { buildCatalogSearchArgs } from "@/lib/catalogSearchClient";
 import { familyCatalogSurface } from "@/lib/catalogSurface";
@@ -97,10 +100,10 @@ export default async function FamilyLandingPage({
         view: "visual",
         limit: 240,
     });
-    const baseCatalogPromise = searchCatalogServer(baseArgs);
+    const baseCatalogPromise = searchWithHeroes(baseArgs);
     const activeCatalogPromise = JSON.stringify(activeArgs) === JSON.stringify(baseArgs)
         ? baseCatalogPromise
-        : searchCatalogServer(activeArgs);
+        : searchWithHeroes(activeArgs);
     const [baseCatalog, initialResult, editorial] = await Promise.all([
         baseCatalogPromise,
         activeCatalogPromise,

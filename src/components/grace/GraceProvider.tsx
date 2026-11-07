@@ -10,8 +10,8 @@ import {
     useRef,
     useCallback,
     useEffect,
+    useLayoutEffect,
     useMemo,
-    type ReactNode,
 } from "react";
 import { analytics } from "@/lib/analytics";
 import {
@@ -23,7 +23,6 @@ import {
     normalizeGraceCatalogNavigationPath,
 } from "@/lib/graceShapeIntent";
 import {
-    GraceContext,
     type GraceContextValue,
     type GraceStatus,
     type GraceMessage,
@@ -97,6 +96,7 @@ import {
     formatGraceNowViewingLines,
     mergePdpContextChange,
     PDP_CONTEXT_CHANGE_EVENT,
+    readLatestPdpContextChange,
     pdpContextUrlsAlign,
     resolveGraceDirectHitHref,
     resolveVerifiedGracePdpHref,
@@ -570,11 +570,11 @@ async function callGraceServerTool<T>(
 // ─── Provider ────────────────────────────────────────────────────────────────
 
 function GraceProviderBase({
-    children,
     userId,
+    onValue,
 }: {
-    children: ReactNode;
     userId: string | null;
+    onValue: (value: GraceContextValue) => void;
 }) {
     const router = useRouter();
     const pathname = usePathname();
@@ -812,7 +812,12 @@ function GraceProviderBase({
     }, [pathname, searchParams]);
     const pageUrlRef = useRef(pageUrl);
     pageUrlRef.current = pageUrl;
-    const [pdpContextChange, setPdpContextChange] = useState<PdpContextChange | null>(null);
+    // The engine loads after the page is idle: start from the selection the PDP announced before
+    // then, in the first render, so a voice start replayed by the shell already carries it.
+    const [pdpContextChange, setPdpContextChange] = useState<PdpContextChange | null>(() => {
+        const announced = readLatestPdpContextChange();
+        return announced?.websiteSku && pdpContextUrlsAlign(pageUrl, announced.pageUrl) ? announced : null;
+    });
 
     useEffect(() => {
         const receive = (event: Event) => {
@@ -3255,28 +3260,31 @@ function GraceProviderBase({
         voiceFailed, graceQuery, pageContext, browsingHistory, stopSpeaking, ownerKey,
     ]);
 
-    return (
-        <GraceContext.Provider value={contextValue}>
-            {children}
-        </GraceContext.Provider>
-    );
+    // The shell (GraceProviderShell) owns GraceContext and the page tree. This
+    // engine loads after the page is idle, or when Grace is first used, and
+    // publishes its value to the shell before the browser paints.
+    useLayoutEffect(() => {
+        onValue(contextValue);
+    }, [onValue, contextValue]);
+    return null;
 }
 
-function GraceProviderWithClerk({ children }: { children: ReactNode }) {
+function GraceProviderWithClerk({ onValue }: { onValue: (value: GraceContextValue) => void }) {
     const { userId } = useAuth();
-    return <GraceProviderBase userId={userId ?? null}>{children}</GraceProviderBase>;
+    return <GraceProviderBase userId={userId ?? null} onValue={onValue} />;
 }
 
+/** Grace's conversation engine. Rendered only by GraceProviderShell, which loads it on demand. */
 export default function GraceProvider({
-    children,
     withClerk = false,
+    onValue,
 }: {
-    children: ReactNode;
     withClerk?: boolean;
+    onValue: (value: GraceContextValue) => void;
 }) {
     if (withClerk) {
-        return <GraceProviderWithClerk>{children}</GraceProviderWithClerk>;
+        return <GraceProviderWithClerk onValue={onValue} />;
     }
 
-    return <GraceProviderBase userId={null}>{children}</GraceProviderBase>;
+    return <GraceProviderBase userId={null} onValue={onValue} />;
 }

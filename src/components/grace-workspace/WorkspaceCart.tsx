@@ -10,6 +10,7 @@ import { useCart, type CartItem } from "@/components/CartProvider";
 import { useRegion } from "@/components/RegionProvider";
 import { checkoutMinimum, isCheckoutReady, ORDER_MINIMUM } from "@/lib/checkout";
 import { getProductHero } from "@/lib/products/catalog-heroes";
+import { useCatalogHeroesForSkus } from "@/lib/products/useCatalogHeroes";
 import styles from "./WorkspaceCart.module.css";
 
 function needsReview(item: CartItem) {
@@ -25,6 +26,8 @@ function CartProduct({ item, busy, onRemove }: { item: CartItem; busy: boolean; 
     const exact = lookup?.product.graceSku === item.graceSku
         && (!item.websiteSku || lookup.product.websiteSku === item.websiteSku) ? lookup : null;
     const [failedImages, setFailedImages] = useState<string[]>([]);
+    // Cart lines reach the browser without a server payload: fetch this line's hero row on demand.
+    useCatalogHeroesForSkus([item.websiteSku || exact?.product.websiteSku]);
     const hero = getProductHero(item.websiteSku || exact?.product.websiteSku);
     const image = [exact?.product.imageUrl, hero?.url].find(url => url && !failedImages.includes(url));
     const href = exact?.slug

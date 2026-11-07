@@ -3,6 +3,7 @@ import { getShopCollection } from "./shopCollections";
 import type { ConvexHttpClient } from "convex/browser";
 import { createResilientConvexHttpClient } from "@/lib/convexServerClient";
 import { unstable_cache } from "next/cache";
+import { collectCatalogHeroes } from "@/lib/products/catalog-heroes.server";
 import { api } from "../../convex/_generated/api";
 import {
     buildCatalogSearchResult,
@@ -174,6 +175,16 @@ export function normalizeCatalogSearchArgs(args: CatalogSearchArgs): CatalogSear
         limit: Number.isFinite(args.limit) ? args.limit : 48,
         cursor: typeof args.cursor === "string" ? args.cursor : null,
     };
+}
+
+/**
+ * A result that is sent to the browser carries the catalog hero rows for the
+ * SKUs it lists, so the browser resolves each card's hero exactly as the server
+ * does without shipping the hero tables (catalog-heroes.server.ts). Server-only
+ * uses (Grace tools, the portal and team line items) read the full tables.
+ */
+export function withCatalogHeroes<T extends CatalogSearchResultShape>(result: T): T {
+    return { ...result, catalogHeroes: collectCatalogHeroes(result) };
 }
 
 export async function searchCatalogServer(args: CatalogSearchArgs): Promise<CatalogSearchResultShape> {

@@ -35,6 +35,7 @@ import LocaleLink from "@/components/LocaleLink";
 import { localizeFamilyName } from "@/i18n/catalogCopy";
 import { localizeHref } from "@/i18n/paths";
 import { useAppLocale, useCopy } from "@/i18n/useCopy";
+import { registerCatalogHeroes } from "@/lib/products/catalog-heroes";
 
 type Props = {
     family: string;
@@ -158,6 +159,9 @@ export default function FamilyPageClient({
     const [filters, setFilters] = useState(incomingState.filters);
     const [sort, setSort] = useState(incomingState.sort);
     const [activeResult, setActiveResult] = useState(initialResult);
+    // The server sends only the hero rows each result lists (catalog-heroes.server.ts).
+    registerCatalogHeroes(baseCatalog.catalogHeroes);
+    registerCatalogHeroes(initialResult.catalogHeroes);
     const [expandedFamily, setExpandedFamily] = useState<string | null>(family);
     const [isUpdating, setIsUpdating] = useState(false);
     const [requestError, setRequestError] = useState<string | null>(null);

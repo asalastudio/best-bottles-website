@@ -2,6 +2,7 @@ import type { CatalogFilters, SortValue, ViewMode } from "@/lib/catalogFilters";
 import type { CatalogSearchResultShape } from "@/lib/catalogSearchFallback";
 import type { CatalogSearchArgs } from "@/lib/catalogServer";
 import { applyCatalogSurface, type CatalogSurfaceManifest } from "@/lib/catalogSurface";
+import { registerCatalogHeroes } from "@/lib/products/catalog-heroes";
 
 export class CatalogSearchRequestError extends Error {
     readonly status: number;
@@ -47,5 +48,8 @@ export async function fetchCatalogSearch(
             response.status,
         );
     }
-    return response.json() as Promise<CatalogSearchResultShape>;
+    const result = await response.json() as CatalogSearchResultShape;
+    // Make the hero rows this result lists resolvable before any card reads them.
+    registerCatalogHeroes(result.catalogHeroes);
+    return result;
 }

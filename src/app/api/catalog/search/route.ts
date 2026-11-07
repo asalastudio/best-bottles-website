@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { searchCatalogServer, type CatalogSearchArgs } from "@/lib/catalogServer";
+import { searchCatalogServer, withCatalogHeroes, type CatalogSearchArgs } from "@/lib/catalogServer";
 import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 import { reportError } from "@/lib/observability/report";
 
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: "limit must be between 1 and 48" }, { status: 400 });
         }
         const result = await searchCatalogServer({ ...args, limit });
-        return NextResponse.json(result);
+        return NextResponse.json(withCatalogHeroes(result));
     } catch (error) {
         reportError(error, { area: "catalog-search" });
         const message = error instanceof Error ? error.message : "Catalog search failed";

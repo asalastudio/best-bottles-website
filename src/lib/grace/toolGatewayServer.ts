@@ -5,7 +5,7 @@ import { resolveSearchCatalogParameters } from "@/lib/graceToolParamUtils";
 import { enrichSearchCatalogWithJev } from "@/lib/grace/enrichSearchCatalogWithJev";
 import { applyRefineFacets, describeRefineFacets } from "@/lib/grace/refineFacetMatch";
 import { annotateGraceSearchRows, buildGraceSearchTiles, graceVerifiedProductHref, type GraceTileImageSources } from "@/lib/grace/searchTiles";
-import { getCatalogHero } from "@/lib/products/catalog-heroes";
+import { getCatalogHero } from "@/lib/products/catalog-heroes.server";
 import { hasCatalogSourceHold, isHiddenCatalogGroup } from "@/lib/products/catalog-listing-visibility";
 
 type GraceTileRow = { slug?: string | null; websiteSku?: string | null; graceSku?: string | null };

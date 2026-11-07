@@ -54,7 +54,7 @@ import cylinderCapThumbnails from "@/lib/products/cylinder-cap-thumbnails.genera
 import { bostonClosurePhoto } from "@/lib/products/boston-closure-photos";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { atomizerVariantCardName, isVariantCardFamily } from "@/lib/products/variant-cards";
-import { getReleasedCatalogHero } from "@/lib/products/catalog-heroes";
+import { getReleasedCatalogHero, registerCatalogHeroes, type CatalogHeroSubset } from "@/lib/products/catalog-heroes";
 import { oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
@@ -1103,6 +1103,7 @@ export default function ProductDetailClient({
     localAssetPreview = false,
     localAssetVersion = '',
     displayDerivatives,
+    catalogHeroes,
     slug,
     initialData,
     initialPdpBlocks = [],
@@ -1124,8 +1125,11 @@ export default function ProductDetailClient({
     localAssetVersion?: string;
     /** Delivery copies for every image in these props (resolved on the server, see display-derivative.server.ts). */
     displayDerivatives?: DisplayDerivativeMap;
+    /** Hero rows for the SKUs this page lists (catalog-heroes.server.ts). */
+    catalogHeroes?: CatalogHeroSubset;
 }) {
     registerDisplayDerivatives(displayDerivatives);
+    registerCatalogHeroes(catalogHeroes);
     const localComponentPreview = Object.keys(localComponentKits).length > 0;
     const { formatPrice: money } = useRegion();
     const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");

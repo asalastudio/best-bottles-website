@@ -9,7 +9,7 @@ import {
     SanityMegaMenuProvider,
     type MegaMenuPanelsData,
 } from "@/components/SanityMegaMenuProvider";
-import GraceProvider from "@/components/grace/GraceProvider";
+import GraceProvider from "@/components/grace/GraceProviderShell";
 import GraceChatDrawerHost from "@/components/grace/GraceChatDrawerHost";
 import GraceLayoutShell from "@/components/grace/GraceLayoutShell";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";

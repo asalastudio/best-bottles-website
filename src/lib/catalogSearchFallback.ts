@@ -1,3 +1,4 @@
+import type { CatalogHeroSubset } from "@/lib/products/catalog-heroes";
 import { withStorefrontFamily, storefrontFamily } from "./products/storefront-family";
 import { matchesShopCollection, SHOP_COLLECTIONS } from "./shopCollections";
 import {
@@ -129,6 +130,8 @@ export interface CatalogSearchResultShape {
     nextCursor: string | null;
     primarySkus: CatalogSearchPrimarySku[];
     variantPreviewRows: CatalogSearchVariantPreviewRow[];
+    /** Hero rows for the SKUs this result lists; registered by the browser (see catalog-heroes.ts). */
+    catalogHeroes?: CatalogHeroSubset;
 }
 
 function countBy<T>(items: T[], keyFn: (item: T) => string | null | undefined): Record<string, number> {
