@@ -2,7 +2,13 @@
 /* eslint-disable @next/next/no-img-element -- parts are layered at measured pixel offsets to assemble at true scale */
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { matchProduct, type ApplicatorKey, type BuilderBottle, type BuilderPart, type MediaImage, type NeckBuilder as NeckBuilderView } from "@/lib/help/fit-neck";
+import type { ApplicatorKey, BuilderBottle, BuilderPart, MediaImage, NeckBuilder as NeckBuilderView } from "@/lib/help/fit-neck";
+
+/** The product a chosen build matches, if we sell it as one item (mirrors matchProduct in fit-neck.ts). */
+function matchProduct(bottle: Pick<BuilderBottle, "products">, partIds: string[]): string | null {
+    const want = [...partIds].sort().join("|");
+    return bottle.products.find((product) => product.parts.join("|") === want)?.sku ?? null;
+}
 
 type Selection = { bottle: string | null; applicator: ApplicatorKey | null; sprayer: string | null; closure: string | null };
 type Layer = { image: MediaImage; z: number };

@@ -5,6 +5,8 @@
  * master images with true-scale geometry, scripts/help/build_fit_media.py).
  * A finish gets a builder only when every bottle and part on it has media.
  */
+import { existsSync, statSync } from "node:fs";
+import { join } from "node:path";
 import fitMedia from "./fit-media.generated.json";
 import { allBodies, bodyLabel, closureGroup, componentById, fitHref, itemCatalogHref, neckRuling, type FitBody } from "./fit";
 
@@ -56,6 +58,18 @@ export function finishName(name: string): string {
 
 export function neckBuilderNecks(): string[] {
     return Object.keys(MEDIA).sort();
+}
+
+/** Printable matrices for a neck finish (scripts/help/build_matrix_pdf.py), largest format last. */
+export function neckMatrixDownloads(neck: string): Array<{ label: string; href: string; sizeMb: number }> {
+    return [
+        { label: "US letter, landscape, 2 pages", file: `best-bottles-${neck}-neck-matrix-letter.pdf` },
+        { label: "Tabloid 11 × 17 in, landscape, 1 page", file: `best-bottles-${neck}-neck-matrix-tabloid.pdf` },
+    ].flatMap(({ label, file }) => {
+        const path = join(process.cwd(), "public", "downloads", "matrices", file);
+        if (!existsSync(path)) return [];
+        return [{ label, href: `/downloads/matrices/${file}`, sizeMb: Math.round(statSync(path).size / 1e5) / 10 }];
+    });
 }
 
 export function neckBuilderHref(neck: string): string {

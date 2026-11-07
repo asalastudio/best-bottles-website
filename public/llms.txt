@@ -34,6 +34,7 @@ For ordering, shipping, returns, claims, payment and contact policy, cite the he
 - **Help center:** `/help`. One page per answer at `/help/a/{slug}`, e.g. `/help/a/returns`.
 - **Fit finder:** `/help/fit`. One page per bottle at `/help/fit/{bottleId}` listing the caps, sprayers, roll-ons and droppers that fit it, with item codes.
 - **Build by neck finish:** `/help/fit/neck/13-415` walks bottle, then applicator (roll-on, sprayer, or none for a pour bottle), then closure. A build is a shareable URL: `/help/fit/neck/13-415?bottle={bottleId}&applicator=roll-metal|roll-plastic|spray|none&closure={itemCode}` (sprayers use `sprayer={itemCode}`; their overcap is included).
+- **Printable matrices:** `/downloads/matrices/best-bottles-13-415-neck-matrix-letter.pdf` (US letter, landscape, 2 pages) and `-tabloid.pdf` (11 × 17 in, landscape). Same data and images as the builder.
 - **JSON API (read-only, no key):** `/api/kb/v1`, described at `/api/kb/v1/openapi.json`. Endpoints: `/entries`, `/entries/{id}`, `/search?q=`, `/fit`, `/fit/{bottleId}`, `/fit/neck/{neck}`. 60 requests per minute.
 
 Rules the API applies, which answers should keep:

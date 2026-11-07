@@ -5,7 +5,7 @@ import HelpShell, { ContactStrip } from "@/components/help/HelpShell";
 import { FitLegend, FormulaNote } from "@/components/help/FitParts";
 import { bodiesByFamily, bodyById, bodyVariant, fitHref, formatMl, type FitBody } from "@/lib/help/fit";
 import { pageAlternates } from "@/i18n/metadata";
-import { neckBuilder, neckBuilderHref, neckBuilderNecks } from "@/lib/help/fit-neck";
+import { neckBuilder, neckBuilderHref, neckBuilderNecks, neckMatrixDownloads } from "@/lib/help/fit-neck";
 
 export const metadata: Metadata = {
     title: { absolute: "Fit Finder: Which Caps, Sprayers and Roll-Ons Fit My Bottle? | Best Bottles" },
@@ -51,6 +51,20 @@ export default async function FitFinderPage({ searchParams }: { searchParams: Pr
                     </Link>
                 );
             })}
+
+            {neckBuilderNecks().some((neck) => neckMatrixDownloads(neck).length > 0) && (
+                <section aria-labelledby="matrices" className="mt-6 border border-champagne bg-white p-5">
+                    <h2 id="matrices" className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate">Printable matrices</h2>
+                    <ul className="mt-3 space-y-2 text-sm">
+                        {neckBuilderNecks().map((neck) => neckMatrixDownloads(neck).length > 0 && (
+                            <li key={neck}><span className="font-semibold">{neck}:</span>{" "}
+                                {neckMatrixDownloads(neck).map((d, i) => <span key={d.href}>{i > 0 && " · "}<a href={d.href} download className="text-gold-dim underline underline-offset-4">{d.label}</a> <span className="text-slate">({d.sizeMb} MB)</span></span>)}
+                            </li>
+                        ))}
+                    </ul>
+                    <p className="mt-2 text-xs text-slate">Every bottle on a neck finish with the applicators and closures that fit it, with item codes. More neck finishes follow.</p>
+                </section>
+            )}
 
             <FitLegend className="mt-8" />
 

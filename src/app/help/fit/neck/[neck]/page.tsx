@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import HelpShell, { ContactStrip, JsonLd } from "@/components/help/HelpShell";
 import NeckBuilder from "@/components/help/NeckBuilder";
-import { neckBuilder, neckBuilderHref, neckBuilderNecks, type ApplicatorKey } from "@/lib/help/fit-neck";
+import { neckBuilder, neckBuilderHref, neckBuilderNecks, neckMatrixDownloads, type ApplicatorKey } from "@/lib/help/fit-neck";
 import { FIT_SNAPSHOT } from "@/lib/help/fit";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/lib/seo";
 import { pageAlternates } from "@/i18n/metadata";
@@ -61,6 +61,14 @@ export default async function NeckBuilderPage({ params, searchParams }: { params
                     <p className="text-xs text-slate"><b className="text-obsidian">{neck.split("-")[0]}</b> is the neck&apos;s outside diameter in mm. <b className="text-obsidian">{neck.split("-")[1]}</b> is the thread style. Parts fit when both numbers match.</p>
                 </div>
             </header>
+            {neckMatrixDownloads(neck).length > 0 && (
+                <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
+                    <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate">Printable {neck} matrix</span>
+                    {neckMatrixDownloads(neck).map((d) => (
+                        <a key={d.href} href={d.href} download className="text-gold-dim underline underline-offset-4">{d.label} (PDF, {d.sizeMb} MB)</a>
+                    ))}
+                </div>
+            )}
             <div className="mt-6">
                 <NeckBuilder view={view} initial={initial} />
             </div>

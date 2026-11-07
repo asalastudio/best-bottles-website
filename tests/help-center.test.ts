@@ -300,3 +300,20 @@ describe("neck-finish builder", () => {
         expect(helpSitemapPages().map((p) => p.path)).toContain("/help/fit/neck/13-415");
     });
 });
+
+describe("printable neck-finish matrices", () => {
+    it("ships landscape letter and tabloid PDFs for every neck with a builder", async () => {
+        const { readFileSync } = await import("node:fs");
+        const { neckBuilderNecks, neckMatrixDownloads } = await import("@/lib/help/fit-neck");
+        for (const neck of neckBuilderNecks()) {
+            const downloads = neckMatrixDownloads(neck);
+            expect(downloads.map((d) => d.href)).toEqual([`/downloads/matrices/best-bottles-${neck}-neck-matrix-letter.pdf`, `/downloads/matrices/best-bottles-${neck}-neck-matrix-tabloid.pdf`]);
+            const boxes = (href: string) => [...readFileSync(`public${href}`, "latin1").matchAll(/\/MediaBox\s*\[\s*0 0 ([\d.]+) ([\d.]+)\s*\]/g)].map((m) => [Number(m[1]), Number(m[2])]);
+            const letter = boxes(downloads[0].href);
+            expect(letter).toHaveLength(2);
+            for (const [w, h] of letter) expect([w, h]).toEqual([792, 612]);
+            expect(boxes(downloads[1].href)).toEqual([[1224, 792]]);
+            for (const d of downloads) expect(d.sizeMb).toBeLessThan(8);
+        }
+    });
+});

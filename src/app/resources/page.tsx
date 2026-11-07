@@ -23,9 +23,9 @@ const RESOURCES = [
     {
         icon: Wrench,
         title: "Compatibility Guides",
-        description: "Understand neck finishes, thread sizes, and which closures work with which bottles. Our fitment system makes it foolproof.",
-        cta: "Browse Catalog",
-        href: "/resources#neck-size-basics",
+        description: "Which caps, sprayers and roll-ons fit each bottle, a step-by-step builder, and printable neck-finish matrices with item codes.",
+        cta: "Open the fit finder",
+        href: "/help/fit",
     },
     {
         icon: BookOpen,
