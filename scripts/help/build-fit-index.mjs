@@ -67,6 +67,10 @@ const NOT_A_PART = new Set(["review", "cap-review"]);
 const corrections = JSON.parse(readFileSync(join(REGISTER, "component-corrections.json"), "utf8")).corrections;
 const duplicateSkus = new Set(Object.entries(corrections).filter(([, fix]) => fix.duplicateOf).map(([sku]) => sku));
 const isDuplicate = (c) => duplicateSkus.has(c.websiteSku);
+// Owner rulings: every current, sellable part on the neck fits every interchangeable bottle on it (13-415, Jordan
+// 2026-11-07). Those pairs are fits, kept apart under teamConfirmed so the basis stays visible.
+const neckRulings = Object.fromEntries(Object.entries(JSON.parse(readFileSync(join(REGISTER, "component-corrections.json"), "utf8")).neckRulings ?? {})
+    .filter(([neck]) => !neck.startsWith("_")));
 
 // The catalog's own name for a mould when it says more than the family does ("Tall cylinder design 9ml…" on a
 // Cylinder body, "Footed rectangular design 10ml…" on a Rectangle body). Read from the committed export snapshot.
@@ -114,11 +118,14 @@ for (const body of bodies) {
         }
     }
     const sameThread = [];
+    const teamConfirmed = [];
+    const ruled = sharedGlassNeck(body) && Boolean(neckRulings[body.neck]);
     if (sharedGlassNeck(body)) {
         for (const c of components) {
             if (c.neck !== body.neck || NOT_A_PART.has(c.type) || isDuplicate(c)) continue;
             if (c.status === "quarantine") { conflicting.set(c.componentId, c.typeEvidence ? `quarantined: ${c.typeEvidence}` : "quarantined in the register"); continue; }
-            if (c.status === "current" && c.sellable === "True" && !listed.has(c.componentId)) sameThread.push(c.componentId);
+            if (c.status !== "current" || c.sellable !== "True" || listed.has(c.componentId)) continue;
+            if (ruled) { listed.add(c.componentId); teamConfirmed.push(c.componentId); } else sameThread.push(c.componentId);
         }
     }
     for (const id of listed) conflicting.delete(id);
@@ -145,6 +152,8 @@ for (const body of bodies) {
         diameterMm: num(body.dimsDiameterMm || body.diameterMm || body.widthMm),
         listed: listedIds,
         sameThread: sameThread.sort(),
+        // Listed on the owner's ruling for this neck rather than by a catalog product (see neckRulings).
+        teamConfirmed: teamConfirmed.sort(),
         // Register reasons are staff working notes ("classify before composing"), so only the ids leave the register.
         conflicting: [...conflicting.keys()].sort(),
     });
@@ -174,6 +183,7 @@ const index = {
     note: "Listed fit = the catalog record lists the part and it resolves on the same neck. It is not a physical test. Formula and material suitability are not recorded here.",
     bodies: out.sort((a, b) => a.family.localeCompare(b.family) || (a.capacityMl ?? 0) - (b.capacityMl ?? 0) || a.id.localeCompare(b.id)),
     components: componentOut,
+    neckRulings: Object.fromEntries(Object.entries(neckRulings).map(([neck, r]) => [neck, { date: r.date, statement: r.statement }])),
 };
 
 const json = `${JSON.stringify(index, null, 1)}\n`;

@@ -73,9 +73,11 @@ describe("fit index", () => {
 
     it("lists the Bell 10 ml closures the catalog pairs with it, apart from same-thread parts", () => {
         const report = fitReport("bell-10ml-13-415")!;
-        expect(report.counts.listed).toBe(21);
-        // The six short caps with liner: same thread, but no product we sell pairs them with the Bell.
-        expect(report.counts["not-confirmed"]).toBe(6);
+        // 21 by catalog products, plus the six short caps with liner on Jordan's 13-415 ruling (2026-11-07).
+        expect(report.counts.listed).toBe(27);
+        expect(report.counts["not-confirmed"]).toBe(0);
+        expect(report.body.teamConfirmed).toHaveLength(6);
+        expect(report.listed.flatMap((g) => g.rows).filter((r) => r.basis === "team-confirmed")).toHaveLength(6);
         expect(report.body.listed).toContain("CMP-CAP-13-415"); // matte blue sprayer
         expect(report.body.sameThread.some((id) => report.body.listed.includes(id))).toBe(false);
         expect(report.formulaSuitability).toBe("unknown");
@@ -84,7 +86,7 @@ describe("fit index", () => {
 
     it("groups 13-415 closures the way the neck-thread matrix does", () => {
         const report = fitReport("bell-10ml-13-415")!;
-        const groups = Object.fromEntries([...report.listed, ...report.notConfirmed].map((g) => [g.label, g.rows.map((r) => r.itemCode)]));
+        const groups = Object.fromEntries(report.listed.map((g) => [g.label, g.rows.map((r) => r.itemCode)]));
         expect(groups["Roll-on caps"]).toHaveLength(9);
         expect(groups["Fine mist sprayers"]).toHaveLength(8);
         expect(groups["Short ribbed caps"]?.sort()).toEqual(["CP13-415BlkSht", "CP13-415WhtSht"]);

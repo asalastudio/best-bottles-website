@@ -20,6 +20,7 @@
    "diameterMm": 36,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -38,6 +39,7 @@
    "diameterMm": 50,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -56,6 +58,7 @@
    "diameterMm": 45,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -78,6 +81,7 @@
    "diameterMm": 50,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -96,6 +100,7 @@
    "diameterMm": 74,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -118,6 +123,7 @@
    "diameterMm": 30,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -142,6 +148,7 @@
    "diameterMm": 37,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -162,6 +169,7 @@
    "diameterMm": 27.4,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -184,6 +192,7 @@
    "diameterMm": 15,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -208,6 +217,7 @@
    "diameterMm": 18,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -233,6 +243,7 @@
    "diameterMm": 23,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -261,6 +272,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -268,6 +280,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -279,7 +296,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -323,6 +341,7 @@
    "sameThread": [
     "CMP-DRP-BLK-18400-90MM"
    ],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -371,6 +390,7 @@
     "CMP-DRP-WTGD-20400-90",
     "CMP-DRP-WTSL-20400-90"
    ],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -419,6 +439,7 @@
     "CMP-DRP-WTGD-20400-76",
     "CMP-DRP-WTSL-20400-76"
    ],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -446,6 +467,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -453,6 +475,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -464,7 +491,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -504,6 +532,7 @@
     "CMP-SPR-SSLV-15-415"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -578,6 +607,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -651,6 +681,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -669,6 +700,7 @@
    "diameterMm": 35,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -687,6 +719,7 @@
    "diameterMm": 31,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -707,6 +740,7 @@
    "diameterMm": 31,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -725,6 +759,7 @@
    "diameterMm": 48,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -743,6 +778,7 @@
    "diameterMm": 55,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -761,6 +797,7 @@
    "diameterMm": 52,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -779,6 +816,7 @@
    "diameterMm": 56,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -797,6 +835,7 @@
    "diameterMm": 59,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -815,6 +854,7 @@
    "diameterMm": 59,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -837,6 +877,7 @@
    "diameterMm": 14,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -859,6 +900,7 @@
    "diameterMm": 14,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -888,6 +930,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -895,6 +938,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -906,7 +954,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -944,6 +993,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -951,6 +1001,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -962,7 +1017,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -1021,6 +1077,7 @@
     "CMP-SPR-SSLV-17-415"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": [
     "CMP-DRP-AMB"
    ]
@@ -1096,6 +1153,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1119,6 +1177,7 @@
    "diameterMm": 31,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1185,6 +1244,7 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1208,6 +1268,7 @@
    "diameterMm": 37,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1280,6 +1341,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1352,6 +1414,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1372,6 +1435,7 @@
    "diameterMm": 41,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1392,6 +1456,7 @@
    "diameterMm": 51,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1412,6 +1477,7 @@
    "diameterMm": 62,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1432,6 +1498,7 @@
    "diameterMm": 18,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1452,6 +1519,7 @@
    "diameterMm": 32,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1472,6 +1540,7 @@
    "diameterMm": 26,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1492,6 +1561,7 @@
    "diameterMm": 22,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1512,6 +1582,7 @@
    "diameterMm": 28,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1533,6 +1604,7 @@
    "diameterMm": 42,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1555,6 +1627,7 @@
    "diameterMm": 63,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1577,6 +1650,7 @@
    "diameterMm": 92,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1649,6 +1723,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1720,6 +1795,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1794,6 +1870,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1866,6 +1943,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -1895,6 +1973,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -1902,6 +1981,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -1913,7 +1997,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -1954,6 +2039,7 @@
     "CMP-SPR-SSLV-15-415"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2028,6 +2114,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2101,6 +2188,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2174,6 +2262,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2246,6 +2335,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2274,6 +2364,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -2281,6 +2372,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -2292,7 +2388,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -2374,6 +2471,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2394,6 +2492,7 @@
    "diameterMm": 33,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2414,6 +2513,7 @@
    "diameterMm": 33,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2434,6 +2534,7 @@
    "diameterMm": 33,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2461,6 +2562,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -2468,6 +2570,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -2479,7 +2586,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -2507,6 +2615,7 @@
    "diameterMm": 23.7,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2525,6 +2634,7 @@
    "diameterMm": 28,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2547,6 +2657,7 @@
    "diameterMm": 24,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2575,6 +2686,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -2582,6 +2694,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -2593,7 +2710,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -2630,6 +2748,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -2637,6 +2756,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -2648,7 +2772,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -2731,6 +2856,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2805,6 +2931,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2833,6 +2960,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -2840,6 +2968,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -2851,7 +2984,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -2881,6 +3015,7 @@
    "diameterMm": 32,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -2908,6 +3043,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -2915,6 +3051,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -2926,7 +3067,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -2963,6 +3105,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -2970,6 +3113,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -2981,7 +3129,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -3063,6 +3212,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -3135,6 +3285,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -3207,6 +3358,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -3279,6 +3431,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -3351,6 +3504,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -3423,6 +3577,7 @@
     "CMP-SPR-WHT-18-415-02"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -3450,6 +3605,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -3457,6 +3613,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -3468,7 +3629,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -3502,6 +3664,7 @@
    "diameterMm": 20,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -3529,6 +3692,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -3536,6 +3700,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -3547,7 +3716,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -3584,6 +3754,7 @@
     "CMP-CAP-BLK-13-415-01",
     "CMP-CAP-BLK-13-415-02",
     "CMP-CAP-BLK-S-13-415",
+    "CMP-CAP-SBLK-13-415",
     "CMP-CAP-SGLD-13-415-01",
     "CMP-CAP-SGLD-13-415-02",
     "CMP-CAP-SGLD-13-415-03",
@@ -3591,6 +3762,11 @@
     "CMP-CAP-SLV-13-415-02",
     "CMP-CAP-SLV-13-415-03",
     "CMP-CAP-WHT-S-13-415",
+    "CMP-CLS-MTCP-S-13-415",
+    "CMP-CLS-MTGD-S-13-415",
+    "CMP-CLS-MTSL-S-13-415",
+    "CMP-CLS-SHGD-S-13-415",
+    "CMP-CLS-SHSL-S-13-415-02",
     "CMP-ROC-BLK-13415-DOT",
     "CMP-ROC-MCPR-13415",
     "CMP-ROC-MGLD-13415",
@@ -3602,7 +3778,8 @@
     "CMP-ROC-SSLV-13415",
     "CMP-SPR-MTCP-13-415-07"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "teamConfirmed": [
     "CMP-CAP-SBLK-13-415",
     "CMP-CLS-MTCP-S-13-415",
     "CMP-CLS-MTGD-S-13-415",
@@ -3633,6 +3810,7 @@
    "diameterMm": 8,
    "listed": [],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": [
     "CMP-PLUG-BLK-VIAL",
     "CMP-PLUG-WHT-VIAL"
@@ -3659,6 +3837,7 @@
     "CMP-CLS-BLK-13-425",
     "CMP-CLS-WHT-13-425"
    ],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -3686,6 +3865,7 @@
     "CMP-CAP-WHT-8-425"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -3710,6 +3890,7 @@
     "CMP-CLS-BLK-13-425",
     "CMP-CLS-WHT-13-425"
    ],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -3738,6 +3919,7 @@
     "CMP-CLS-BLK-13-425",
     "CMP-CLS-WHT-13-425"
    ],
+   "teamConfirmed": [],
    "conflicting": []
   },
   {
@@ -3769,6 +3951,7 @@
     "CMP-DRP-WTSL-18400-66"
    ],
    "sameThread": [],
+   "teamConfirmed": [],
    "conflicting": []
   }
  ],
@@ -5005,6 +5188,12 @@
    "color": "White",
    "applicator": null,
    "itemCode": "AnSpTsl18-415Wht"
+  }
+ },
+ "neckRulings": {
+  "13-415": {
+   "date": "2026-11-07",
+   "statement": "Every 13-415 bottle fits every available 13-415 fitment in the component list (roll-on caps, roller inserts, sprayers, short ribbed caps, short caps with liner, tall caps with liner)."
   }
  }
 }

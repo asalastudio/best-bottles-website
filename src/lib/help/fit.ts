@@ -18,7 +18,7 @@ export const FIT_STATUS_LABEL: Record<FitStatus, string> = {
 };
 
 export const FIT_STATUS_MEANING: Record<FitStatus, string> = {
-    listed: "Our catalog lists this part for this bottle, on the same neck finish. It is a catalog listing, not a physical test.",
+    listed: "This part fits this bottle: our catalog sells them together, or our team confirms every closure on this neck finish fits every bottle on it. It says nothing about your formula.",
     "not-confirmed": "Same neck finish, but no product we sell pairs them. A matching thread does not prove a fit: liners, roller seating and dip tubes differ.",
     conflicting: "Our records disagree about this part. Don't rely on it until our team resolves it.",
 };
@@ -41,6 +41,8 @@ export type FitBody = {
     diameterMm: number | null;
     listed: string[];
     sameThread: string[];
+    /** Fits by the owner's ruling for this neck rather than a catalog product (a subset of listed). */
+    teamConfirmed: string[];
     conflicting: string[];
 };
 
@@ -51,6 +53,7 @@ type FitIndex = {
     note: string;
     bodies: FitBody[];
     components: Record<string, FitComponent>;
+    neckRulings: Record<string, { date: string; statement: string }>;
 };
 
 const INDEX = fitIndex as FitIndex;
@@ -127,7 +130,7 @@ export function formatMl(ml: number): string {
     return `${Number.isInteger(ml) ? ml : ml.toFixed(1).replace(/\.0$/, "")} ml`;
 }
 
-export type FitRow = { componentId: string; status: FitStatus } & FitComponent;
+export type FitRow = { componentId: string; status: FitStatus; basis: "catalog" | "team-confirmed" | null } & FitComponent;
 export type FitGroup = { type: string; label: string; rows: FitRow[] };
 
 function groupRows(rows: FitRow[]): FitGroup[] {
@@ -144,11 +147,17 @@ function groupRows(rows: FitRow[]): FitGroup[] {
         .map(({ type, label, rows: items }) => ({ type, label, rows: items }));
 }
 
-function rowsFor(ids: string[], status: FitStatus): FitRow[] {
+function rowsFor(ids: string[], status: FitStatus, teamConfirmed: string[] = []): FitRow[] {
     return ids.flatMap((componentId) => {
         const component = componentById(componentId);
-        return component ? [{ componentId, status, ...component }] : [];
+        const basis = status !== "listed" ? null : teamConfirmed.includes(componentId) ? "team-confirmed" : "catalog";
+        return component ? [{ componentId, status, basis, ...component } as FitRow] : [];
     });
+}
+
+/** The owner's ruling for a neck finish, when every closure on it fits every bottle on it. */
+export function neckRuling(neck: string | null): { date: string; statement: string } | null {
+    return (neck && INDEX.neckRulings?.[neck]) || null;
 }
 
 export type FitReport = {
@@ -164,7 +173,7 @@ export type FitReport = {
 export function fitReport(bodyId: string): FitReport | null {
     const body = bodyById(bodyId);
     if (!body) return null;
-    const listed = rowsFor(body.listed, "listed");
+    const listed = rowsFor(body.listed, "listed", body.teamConfirmed);
     const notConfirmed = rowsFor(body.sameThread, "not-confirmed");
     const conflicting = rowsFor(body.conflicting, "conflicting");
     return {
