@@ -47,29 +47,21 @@ export default async function NeckBuilderPage({ params, searchParams }: { params
                 { name: "Fit finder", url: `${SITE_URL}/help/fit` },
                 { name: neck, url: `${SITE_URL}${neckBuilderHref(neck)}` },
             ])} />
-            <header className="grid gap-4 border-b border-[#1c1c1e] pb-5 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+            <header className="grid gap-3 border-b border-[#1c1c1e] pb-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
                 <div>
                     <h1 className="page-heading font-semibold uppercase leading-none tracking-[0.1em] text-[#1c1c1e] text-[22px] lg:text-[28px]">
                         Build a {neck} bottle
                     </h1>
-                    <p className="mt-3 max-w-xl text-[13px] text-slate">
+                    <p className="mt-2 max-w-xl text-[13px] text-slate">
                         {view.ruling ? `Every part on this page fits every bottle on this page. ` : ""}Choose a bottle, then an applicator, then the closure.
                     </p>
                 </div>
-                <div className="flex max-w-sm items-center gap-3 border border-[#d9cdb9] bg-warm-white px-4 py-3">
+                <div className="flex max-w-sm items-center gap-3 border border-[#d9cdb9] bg-warm-white px-3 py-2">
                     <span className="whitespace-nowrap text-xl font-semibold tracking-[0.04em] text-[#1c1c1e]">{neck.split("-")[0]}<span className="text-gold-dim">-</span>{neck.split("-")[1]}</span>
                     <p className="text-xs text-slate"><b className="text-obsidian">{neck.split("-")[0]}</b> is the neck&apos;s outside diameter in mm. <b className="text-obsidian">{neck.split("-")[1]}</b> is the thread style. Parts fit when both numbers match.</p>
                 </div>
             </header>
-            {neckMatrixDownloads(neck).length > 0 && (
-                <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
-                    <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate">Printable {neck} matrix</span>
-                    {neckMatrixDownloads(neck).map((d) => (
-                        <a key={d.href} href={d.href} download className="text-gold-dim underline underline-offset-4">{d.label} (PDF, {d.sizeMb} MB)</a>
-                    ))}
-                </div>
-            )}
-            <div className="mt-6">
+            <div className="mt-5">
                 <NeckBuilder view={view} initial={initial} />
             </div>
             <p className="mt-6 text-xs text-slate">
@@ -77,6 +69,12 @@ export default async function NeckBuilderPage({ params, searchParams }: { params
                 <Link href="/help/fit" className="underline underline-offset-4">Find fits by bottle</Link>
             </p>
             <p className="mt-2 text-xs text-slate">For agents: the same build as JSON at <code className="font-mono">/api/kb/v1/fit/neck/{neck}</code>.</p>
+            {neckMatrixDownloads(neck).length > 0 && (
+                <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px]">
+                    <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate">Printable {neck} matrix</span>
+                    {neckMatrixDownloads(neck).map((d) => <a key={d.href} href={d.href} download className="text-gold-dim underline underline-offset-4">{d.label} (PDF, {d.sizeMb} MB)</a>)}
+                </p>
+            )}
             <ContactStrip />
         </HelpShell>
     );

@@ -122,6 +122,15 @@ export default function NeckBuilder({ view, initial }: { view: NeckBuilderView; 
     if (sel.applicator !== "spray" && closure?.itemCode) shareParams.set("closure", closure.itemCode);
     const share = shareParams.toString();
 
+    // Arriving with a bottle chosen (from the fit finder or a shared link) opens at the next open step.
+    useEffect(() => {
+        if (!initial.bottle) return;
+        const next = !appDone ? "nb-applicator" : !closeDone ? "nb-closure" : "nb-result";
+        if (next === "nb-result" && !window.matchMedia("(max-width: 1023px)").matches) return;
+        requestAnimationFrame(() => document.getElementById(next)?.scrollIntoView({ block: "start" }));
+        // eslint-disable-next-line react-hooks/exhaustive-deps -- run once, for the arrival state
+    }, []);
+
     // Keep the address shareable: it names the exact build, for people and agents.
     useEffect(() => {
         if (first.current) { first.current = false; return; }

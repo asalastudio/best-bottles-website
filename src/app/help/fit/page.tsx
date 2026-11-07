@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import HelpShell, { ContactStrip } from "@/components/help/HelpShell";
-import { FitLegend, FormulaNote } from "@/components/help/FitParts";
+import { FormulaNote } from "@/components/help/FitParts";
 import { bodiesByFamily, bodyById, bodyVariant, fitHref, formatMl, type FitBody } from "@/lib/help/fit";
 import { pageAlternates } from "@/i18n/metadata";
 import { neckBuilder, neckBuilderHref, neckBuilderNecks, neckMatrixDownloads } from "@/lib/help/fit-neck";
@@ -34,51 +34,30 @@ export default async function FitFinderPage({ searchParams }: { searchParams: Pr
         .filter(({ bodies }) => bodies.every((body) => !body.interchangeable))
         .map(({ family }) => family);
 
+    // A bottle on a neck finish with a builder goes straight into it (step 2, the applicator);
+    // other bottles keep their fit page.
+    const built = new Set(neckBuilderNecks());
+    const bottleHref = (body: FitBody) => body.neck && built.has(body.neck) && neckBuilder(body.neck)
+        ? `${neckBuilderHref(body.neck)}?bottle=${encodeURIComponent(body.id)}`
+        : fitHref(body);
+    const downloads = neckBuilderNecks().flatMap((neck) => neckMatrixDownloads(neck).map((d) => ({ ...d, neck })));
+
     return (
         <HelpShell wide crumbs={[{ name: "Help", href: "/help" }, { name: "Fit finder" }]}>
-            <h1 className="font-serif text-4xl sm:text-5xl">Which closures fit my bottle?</h1>
-            <p className="mt-3 max-w-2xl text-slate">Pick your bottle and size. You&apos;ll see the closures our catalog lists for it, with item codes.</p>
+            <h1 className="page-heading font-semibold uppercase leading-none tracking-[0.1em] text-[#1c1c1e] text-[22px] lg:text-[28px]">Which closures fit my bottle?</h1>
+            <p className="mt-3 max-w-2xl text-[13px] text-slate">Pick your bottle. You&apos;ll choose the applicator, then the closure, with the item codes to order by.</p>
 
-            {neckBuilderNecks().map((neck) => {
-                const view = neckBuilder(neck);
-                return view && (
-                    <Link key={neck} href={neckBuilderHref(neck)} className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-champagne bg-white p-5 hover:border-gold-dim">
-                        <span>
-                            <span className="block font-semibold">Build a {neck} bottle</span>
-                            <span className="mt-1 block text-sm text-slate">Choose one of {view.bottles.length} bottles, then a roll-on, sprayer or pour, then the cap. Every {neck} part fits every {neck} bottle.</span>
-                        </span>
-                        <span className="text-sm font-semibold text-gold-dim">Start building →</span>
-                    </Link>
-                );
-            })}
-
-            {neckBuilderNecks().some((neck) => neckMatrixDownloads(neck).length > 0) && (
-                <section aria-labelledby="matrices" className="mt-6 border border-champagne bg-white p-5">
-                    <h2 id="matrices" className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate">Printable matrices</h2>
-                    <ul className="mt-3 space-y-2 text-sm">
-                        {neckBuilderNecks().map((neck) => neckMatrixDownloads(neck).length > 0 && (
-                            <li key={neck}><span className="font-semibold">{neck}:</span>{" "}
-                                {neckMatrixDownloads(neck).map((d, i) => <span key={d.href}>{i > 0 && " · "}<a href={d.href} download className="text-gold-dim underline underline-offset-4">{d.label}</a> <span className="text-slate">({d.sizeMb} MB)</span></span>)}
-                            </li>
-                        ))}
-                    </ul>
-                    <p className="mt-2 text-xs text-slate">Every bottle on a neck finish with the applicators and closures that fit it, with item codes. More neck finishes follow.</p>
-                </section>
-            )}
-
-            <FitLegend className="mt-8" />
-
-            <section aria-labelledby="bottles" className="mt-12">
-                <h2 id="bottles" className="font-serif text-2xl">Bottles</h2>
-                <dl className="mt-4 divide-y divide-champagne/70 border-y border-champagne/70">
+            <section aria-labelledby="bottles" className="mt-6">
+                <h2 id="bottles" className="sr-only">Bottles</h2>
+                <dl className="divide-y divide-[#d9cdb9] border-y border-[#d9cdb9]">
                     {fitted.map(({ family, bodies }) => (
-                        <div key={family} className="grid gap-2 py-4 sm:grid-cols-[200px_minmax(0,1fr)] sm:items-baseline">
-                            <dt className="font-medium">{family}</dt>
+                        <div key={family} className="grid gap-2 py-3 sm:grid-cols-[180px_minmax(0,1fr)] sm:items-center">
+                            <dt className="text-[11px] font-bold uppercase tracking-[0.16em] text-gold-dim">{family}</dt>
                             <dd>
                                 <ul className="flex flex-wrap gap-2">
                                     {bodies.map((body) => (
                                         <li key={body.id}>
-                                            <Link href={fitHref(body)} className="inline-flex min-h-10 items-center rounded-full border border-champagne bg-warm-white px-4 text-sm hover:border-gold-dim">
+                                            <Link href={bottleHref(body)} className="inline-flex min-h-10 items-center rounded-full border border-[#d9cdb9] bg-white px-4 text-[13px] text-[#1c1c1e] hover:border-[#1c1c1e]">
                                                 {sizeLabel(body)}
                                             </Link>
                                         </li>
@@ -89,13 +68,20 @@ export default async function FitFinderPage({ searchParams }: { searchParams: Pr
                     ))}
                 </dl>
                 {ownClosure.length > 0 && (
-                    <p className="mt-4 max-w-3xl text-sm text-slate">
-                        Sold with their own closure, so not listed here: {ownClosure.join(", ")}. Use the closure each is sold with.
+                    <p className="mt-3 max-w-3xl text-[12px] text-slate">
+                        Sold with their own closure, so not listed here: {ownClosure.join(", ")}.
                     </p>
                 )}
             </section>
 
-            <FormulaNote className="mt-12" />
+            {downloads.length > 0 && (
+                <p className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px]">
+                    <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate">Printable matrices</span>
+                    {downloads.map((d) => <a key={d.href} href={d.href} download className="text-gold-dim underline underline-offset-4">{d.neck}, {d.label.split(",")[0]} ({d.sizeMb} MB)</a>)}
+                </p>
+            )}
+
+            <FormulaNote className="mt-10" />
 
             <ContactStrip />
         </HelpShell>
