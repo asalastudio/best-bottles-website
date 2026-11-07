@@ -8,13 +8,21 @@
  * inside the production group it actually lives in; the exit code is 1 when any
  * expected SKU does not.
  *
- *   NEXT_PUBLIC_CATALOG_HERO_PILOT=families-2026-09-22 npx tsx scripts/check_catalog_hero_coverage.mts
- *   ... --url https://precise-raccoon-123.convex.cloud --json out.json --expect GBElg15MinarCu,LB3mlClear
+ *   NEXT_PUBLIC_CATALOG_HERO_PILOT=families-2026-09-22 npm run check:catalog-heroes
+ *   ... -- --url https://precise-raccoon-123.convex.cloud --json out.json --expect GBElg15MinarCu,LB3mlClear
+ *
+ * Run directly with `npx tsx --conditions=react-server scripts/check_catalog_hero_coverage.mts`: the
+ * hero tables load only through the server module, whose `server-only` guard needs that condition.
  */
 import { writeFileSync } from "node:fs";
 import { ConvexHttpClient } from "convex/browser";
 import { anyApi } from "convex/server";
-import { getCatalogHero, isCatalogHeroPilotEnabled } from "../src/lib/products/catalog-heroes";
+
+
+// The server module registers the full hero tables and re-exports the lookups. Its namespace is
+// imported dynamically so tsx loads one copy of the registry (a static named import of a re-export
+// gets a second, empty copy).
+const { getCatalogHero, isCatalogHeroPilotEnabled } = await import("../src/lib/products/catalog-heroes.server");
 
 const args = process.argv.slice(2);
 const get = (flag: string, fallback: string | null = null) => { const i = args.indexOf(flag); return i >= 0 ? args[i + 1] : fallback; };

@@ -812,7 +812,12 @@ function GraceProviderBase({
     }, [pathname, searchParams]);
     const pageUrlRef = useRef(pageUrl);
     pageUrlRef.current = pageUrl;
-    const [pdpContextChange, setPdpContextChange] = useState<PdpContextChange | null>(null);
+    // The engine loads after the page is idle: start from the selection the PDP announced before
+    // then, in the first render, so a voice start replayed by the shell already carries it.
+    const [pdpContextChange, setPdpContextChange] = useState<PdpContextChange | null>(() => {
+        const announced = readLatestPdpContextChange();
+        return announced?.websiteSku && pdpContextUrlsAlign(pageUrl, announced.pageUrl) ? announced : null;
+    });
 
     useEffect(() => {
         const receive = (event: Event) => {
@@ -820,9 +825,6 @@ function GraceProviderBase({
             if (!change?.websiteSku || !pdpContextUrlsAlign(pageUrlRef.current, change.pageUrl)) return;
             setPdpContextChange(change);
         };
-        // The engine loads after the page is idle: take the selection the PDP announced before then.
-        const announced = readLatestPdpContextChange();
-        if (announced?.websiteSku && pdpContextUrlsAlign(pageUrlRef.current, announced.pageUrl)) setPdpContextChange(announced);
         window.addEventListener(PDP_CONTEXT_CHANGE_EVENT, receive);
         return () => window.removeEventListener(PDP_CONTEXT_CHANGE_EVENT, receive);
     }, []);

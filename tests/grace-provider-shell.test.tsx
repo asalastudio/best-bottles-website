@@ -11,15 +11,23 @@ const state = vi.hoisted(() => ({
     engineMounts: 0,
     openPanel: vi.fn(),
     appendInlineMessage: vi.fn(),
+    failEngine: false,
 }));
 
 vi.mock("next/navigation", () => ({ usePathname: () => state.pathname }));
 vi.mock("@clerk/nextjs", () => ({ useAuth: () => ({ userId: null }) }));
-// next/dynamic: load the module after mount and render it once ready, as ssr:false does.
+vi.mock("@/lib/observability/report", () => ({ reportError: vi.fn() }));
+// next/dynamic: load the module after mount and render it once ready, as ssr:false does. A failed
+// import throws during render, as React.lazy does, so it reaches the nearest error boundary.
 vi.mock("next/dynamic", () => ({
     default: (loader: () => Promise<{ default: React.ComponentType<Record<string, unknown>> }>) => function Dynamic(props: Record<string, unknown>) {
         const [Loaded, setLoaded] = React.useState<React.ComponentType<Record<string, unknown>> | null>(null);
-        useEffect(() => { void loader().then((module) => setLoaded(() => module.default)); }, []);
+        const [failure, setFailure] = React.useState<unknown>(null);
+        useEffect(() => {
+            const load = state.failEngine ? Promise.reject(new Error("ChunkLoadError: Loading chunk 5811 failed.")) : loader();
+            void load.then((module) => setLoaded(() => module.default), (error) => setFailure(() => error));
+        }, []);
+        if (failure) throw failure;
         return Loaded ? <Loaded {...props} /> : null;
     },
 }));
@@ -70,6 +78,34 @@ describe("Grace provider shell", () => {
         seen = null;
         pageMounts = 0;
         state.pathname = "/catalog";
+        state.failEngine = false;
+        vi.restoreAllMocks();
+    });
+
+    it("keeps the page up and Grace closed when the engine fails to load", async () => {
+        vi.stubGlobal("requestIdleCallback", () => 1);
+        vi.stubGlobal("cancelIdleCallback", () => undefined);
+        // React logs errors caught by a boundary; this one is expected.
+        vi.spyOn(console, "error").mockImplementation(() => undefined);
+        const { reportError } = await import("@/lib/observability/report");
+        state.failEngine = true;
+        const { container, root } = await mount();
+        let opened: unknown = "pending";
+        await act(async () => {
+            void Promise.resolve(seen!.openPanel({ source: "header" } as never)).then((result) => { opened = result; });
+        });
+        await settle();
+        // The page is still rendered, Grace is still closed, and the queued call settled with nothing.
+        expect(container.textContent).toBe("page");
+        expect(pageMounts).toBe(1);
+        expect(seen?.panelMode).toBe("closed");
+        expect(opened).toBeUndefined();
+        expect(state.openPanel).not.toHaveBeenCalled();
+        expect(reportError).toHaveBeenCalledWith(expect.any(Error), { area: "grace-engine" });
+        // Later calls do nothing and do not throw.
+        await act(async () => { expect(seen!.openPanel()).toBeUndefined(); });
+        expect(state.engineMounts).toBe(0);
+        await act(async () => root.unmount());
     });
 
     it("serves closed Grace without loading the engine until the page is idle", async () => {
