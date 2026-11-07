@@ -10,6 +10,7 @@
 
 import { createContext, useContext } from "react";
 import type { GraceRefineState } from "@/lib/grace/refineState";
+import type { QuoteOnlyVolumeRate } from "@/lib/grace/onlinePricing";
 import type { GraceFinderContext, PdpContextChange } from "@/lib/grace/pageContextEvents";
 import type { GraceSurface } from "@/lib/grace/pushLayout";
 import type { GraceCompanionMode, GraceOpenPanelOptions } from "@/lib/grace/agenticHandoff";
@@ -42,6 +43,10 @@ export interface ProductCard {
     webPrice1pc?: number | null;
     webPrice10pc?: number | null;
     webPrice12pc?: number | null;
+    /** Per-piece price online checkout bills at every quantity (equals webPrice1pc). */
+    onlineUnitPrice?: number | null;
+    /** Volume rates confirmed on a quote only; online checkout never bills them. */
+    quoteOnlyVolumeRates?: QuoteOnlyVolumeRate[];
     shopifyVariantId?: string | null;
     checkoutEligible?: boolean;
     stockStatus?: string | null;
