@@ -3,6 +3,8 @@ import { collectDisplayDerivatives } from "@/lib/products/display-derivative.ser
 import { readFileSync } from "node:fs";
 import type { BuilderKit } from "@/lib/bottle-builder/model";
 import { divaReviewSku, DIVA_MASTER_REVIEW_VERSION } from "@/lib/products/diva-master";
+import { approvedComponentKit } from "@/lib/paper-doll/approved-component-kits";
+import divaSeating from "@/lib/paper-doll/diva-fitment-seating.json";
 
 /** Reviewed candidates use exact source assemblies and remain localhost-only. */
 export async function GET(request: Request) {
@@ -19,7 +21,10 @@ export async function GET(request: Request) {
     try {
         const review = JSON.parse(readFileSync("public/local-kits/diva-masters-2026-11-03/kits.json", "utf8")) as
             { version: string; rows: Record<string, BuilderKit> };
-        const kit = review.version === DIVA_MASTER_REVIEW_VERSION ? review.rows[sku] : null;
+        // The review file predates the 7 Nov seating: a seated pump or sprayer comes from the approved recipe, so a
+        // cap picked on localhost never swaps back to the small, perched fitment.
+        const seated = Object.hasOwn(divaSeating.rows, sku) ? approvedComponentKit(sku) : null;
+        const kit = seated ?? (review.version === DIVA_MASTER_REVIEW_VERSION ? review.rows[sku] : null);
         if (!kit || kit.sku !== sku) return NextResponse.json({ error: "Not found" }, { status: 404 });
         return NextResponse.json({ kit, displayDerivatives: collectDisplayDerivatives(kit), version: review.version }, { headers: { "Cache-Control": "private, no-store" } });
     } catch {
