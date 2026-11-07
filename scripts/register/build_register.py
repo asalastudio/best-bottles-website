@@ -583,6 +583,20 @@ def main() -> int:
                   "stockStatus": "In Stock", "imageUrl": "", "productUrl": "", "source": "reviewed identity (convex/component13_415Catalog.ts)", **fields}
         components.append(record)
         component_by_grace[cid] = record
+    # Reviewed corrections (data/register/component-corrections.json): rows the export misfiles, each with its evidence.
+    # type/capStyle replace the classification, status 'quarantine' keeps a row off every fit list, and duplicateOf is
+    # read by scripts/help/build-fit-index.mjs, which leaves the duplicate out of customer fit choices.
+    corrections = json.loads((REGISTER / "component-corrections.json").read_text())["corrections"]
+    for c in components:
+        fix = corrections.get(c["websiteSku"])
+        if not fix:
+            continue
+        for key in ("type", "capStyle", "status"):
+            if key in fix:
+                c[key] = fix[key]
+        note = f"duplicate of {fix['duplicateOf']}: " if fix.get("duplicateOf") else ""
+        c["typeEvidence"] = f"{note}{fix['evidence']} (component-corrections.json)"
+        c["confidence"] = "low" if c["status"] == "quarantine" else c["confidence"]
     # A component keeps its register id when the catalogue re-keys its graceSku: the approved layers in Convex
     # (registerComponents) hang on the id, so a new id would leave every SKU drawing that part without an image.
     # Same part = the same websiteSku and the same master PSD stem as a row of the register being replaced.

@@ -38,7 +38,7 @@ export default async function HelpSearchPage({ searchParams }: { searchParams: P
     const result = raw.trim() ? searchHelp(raw) : null;
     // One bottle and a fit question: show its listed parts here rather than one click away.
     const fitFor = result && result.bottles.length === 1 && result.bottles[0].interchangeable && (result.fitIntent || result.closure) ? fitReport(result.bottles[0].id) : null;
-    const fitGroups = fitFor && result?.closure ? fitFor.listed.filter((group) => result.closure!.partTypes.includes(group.type)) : fitFor?.listed ?? [];
+    const fitGroups = fitFor && result?.closure ? fitFor.listed.map((group) => ({ ...group, rows: group.rows.filter((row) => result.closure!.partTypes.includes(row.type)) })).filter((group) => group.rows.length > 0) : fitFor?.listed ?? [];
     const nothing = result && !result.size && result.answers.length === 0 && result.bottles.length === 0 && !result.gap;
 
     return (

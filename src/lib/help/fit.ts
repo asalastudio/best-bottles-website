@@ -23,10 +23,12 @@ export const FIT_STATUS_MEANING: Record<FitStatus, string> = {
     conflicting: "Our records disagree about this part. Don't rely on it until our team resolves it.",
 };
 
-export type FitComponent = { name: string; type: string; neck: string | null; color: string | null; applicator: string | null; itemCode: string | null };
+export type FitComponent = { name: string; type: string; style: string | null; neck: string | null; color: string | null; applicator: string | null; itemCode: string | null };
 export type FitBody = {
     id: string;
     family: string;
+    /** The catalog's name for the mould when it says more than the family (Tall Cylinder, Footed Rectangular). */
+    name: string | null;
     shape: string;
     capacityMl: number | null;
     neck: string | null;
@@ -81,6 +83,28 @@ export function componentById(id: string): FitComponent | null {
     return INDEX.components[id] ?? null;
 }
 
+/** The bottle's name without its size: the catalog's mould name, else the family. */
+export function bodyName(body: Pick<FitBody, "family"> & { name?: string | null }): string {
+    return body.name || body.family;
+}
+
+/** Closure groups in the order the neck-thread matrices draw them. Caps split by profile, as the matrices do. */
+const CLOSURE_GROUPS: Array<{ key: string; label: string; test: (c: Pick<FitComponent, "type" | "style">) => boolean }> = [
+    { key: "roll-on-cap", label: "Roll-on caps", test: (c) => c.type === "roll-on-cap" },
+    { key: "roller-insert", label: "Roller inserts", test: (c) => c.type === "roller-insert" },
+    { key: "fine-mist-sprayer", label: "Fine mist sprayers", test: (c) => c.type === "fine-mist-sprayer" },
+    { key: "short-ribbed-cap", label: "Short ribbed caps", test: (c) => c.type === "cap" && c.style === "Short ribbed" },
+    { key: "short-cap", label: "Short caps with liner", test: (c) => c.type === "cap" && c.style === "Short" },
+    { key: "tall-cap", label: "Tall caps with liner", test: (c) => c.type === "cap" && c.style === "Tall" },
+    { key: "liner-cap", label: "Caps with liner", test: (c) => c.type === "cap" && c.style === "Liner" },
+];
+
+export function closureGroup(component: Pick<FitComponent, "type" | "style">): { key: string; label: string; order: number } {
+    const at = CLOSURE_GROUPS.findIndex((group) => group.test(component));
+    if (at >= 0) return { key: CLOSURE_GROUPS[at].key, label: CLOSURE_GROUPS[at].label, order: at };
+    return { key: component.type, label: COMPONENT_TYPE_LABEL[component.type] ?? component.type, order: CLOSURE_GROUPS.length };
+}
+
 /** A variant the id names before the family ("footed-rectangle-…" → "Footed"), so same-size siblings stay distinct. */
 export function bodyVariant(body: Pick<FitBody, "family"> & { id?: string }): string {
     if (!body.id) return "";
@@ -90,12 +114,13 @@ export function bodyVariant(body: Pick<FitBody, "family"> & { id?: string }): st
     return body.id.slice(0, at - 1).split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
 
-export function bodyLabel(body: Pick<FitBody, "family" | "capacityMl" | "category"> & { id?: string }): string {
-    const variant = bodyVariant(body);
+export function bodyLabel(body: Pick<FitBody, "family" | "capacityMl" | "category"> & { id?: string; name?: string | null }): string {
+    // The catalog's mould name wins; the id prefix only separates same-size siblings the catalog does not name.
+    const base = body.name || `${bodyVariant(body) ? `${bodyVariant(body)} ` : ""}${body.family}`;
     const size = body.capacityMl != null ? ` ${formatMl(body.capacityMl)}` : "";
-    const kind = body.category && body.category !== "Glass Bottle" && !body.family.toLowerCase().includes(body.category.toLowerCase().split(" ")[0])
+    const kind = body.category && body.category !== "Glass Bottle" && !base.toLowerCase().includes(body.category.toLowerCase().split(" ")[0])
         ? ` ${body.category.toLowerCase()}` : "";
-    return `${variant ? `${variant} ` : ""}${body.family}${size}${kind}`;
+    return `${base}${size}${kind}`;
 }
 
 export function formatMl(ml: number): string {
@@ -106,11 +131,17 @@ export type FitRow = { componentId: string; status: FitStatus } & FitComponent;
 export type FitGroup = { type: string; label: string; rows: FitRow[] };
 
 function groupRows(rows: FitRow[]): FitGroup[] {
-    const groups = new Map<string, FitRow[]>();
-    for (const row of rows) groups.set(row.type, [...(groups.get(row.type) ?? []), row]);
+    const groups = new Map<string, { label: string; order: number; rows: FitRow[] }>();
+    for (const row of rows) {
+        const group = closureGroup(row);
+        const entry = groups.get(group.key) ?? { label: group.label, order: group.order, rows: [] };
+        entry.rows.push(row);
+        groups.set(group.key, entry);
+    }
     return [...groups.entries()]
-        .map(([type, items]) => ({ type, label: COMPONENT_TYPE_LABEL[type] ?? type, rows: items.sort((a, b) => a.name.localeCompare(b.name)) }))
-        .sort((a, b) => b.rows.length - a.rows.length || a.label.localeCompare(b.label));
+        .map(([type, group]) => ({ type, label: group.label, order: group.order, rows: group.rows.sort((a, b) => a.name.localeCompare(b.name)) }))
+        .sort((a, b) => a.order - b.order || b.rows.length - a.rows.length || a.label.localeCompare(b.label))
+        .map(({ type, label, rows: items }) => ({ type, label, rows: items }));
 }
 
 function rowsFor(ids: string[], status: FitStatus): FitRow[] {

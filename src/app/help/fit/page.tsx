@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 function sizeLabel(body: FitBody): string {
-    const variant = bodyVariant(body);
+    const variant = body.name ?? bodyVariant(body);
     const size = `${variant ? `${variant} ` : ""}${body.capacityMl != null ? formatMl(body.capacityMl) : body.shape}`;
     return body.neck ? `${size} · ${body.neck}` : size;
 }

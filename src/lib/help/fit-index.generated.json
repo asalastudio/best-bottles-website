@@ -7,6 +7,7 @@
   {
    "id": "aluminum-bottle-65ml-20-410",
    "family": "Aluminum Bottle",
+   "name": null,
    "shape": "",
    "capacityMl": 65,
    "neck": "20-410",
@@ -24,6 +25,7 @@
   {
    "id": "aluminum-bottle-100ml-20-410",
    "family": "Aluminum Bottle",
+   "name": null,
    "shape": "",
    "capacityMl": 100,
    "neck": "20-410",
@@ -41,6 +43,7 @@
   {
    "id": "aluminum-bottle-120ml-20-410",
    "family": "Aluminum Bottle",
+   "name": null,
    "shape": "",
    "capacityMl": 120,
    "neck": "20-410",
@@ -58,6 +61,7 @@
   {
    "id": "aluminum-bottle-250ml-20-410",
    "family": "Aluminum Bottle",
+   "name": null,
    "shape": "Standard",
    "capacityMl": 250,
    "neck": "20-410",
@@ -79,6 +83,7 @@
   {
    "id": "aluminum-bottle-500ml-20-410",
    "family": "Aluminum Bottle",
+   "name": null,
    "shape": "",
    "capacityMl": 500,
    "neck": "20-410",
@@ -96,6 +101,7 @@
   {
    "id": "apothecary-15ml-Ground",
    "family": "Apothecary",
+   "name": null,
    "shape": "",
    "capacityMl": 15,
    "neck": "Ground",
@@ -117,6 +123,7 @@
   {
    "id": "apothecary-30ml-Ground",
    "family": "Apothecary",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": "Ground",
@@ -140,6 +147,7 @@
   {
    "id": "pear-apothecary-118ml-Ground",
    "family": "Apothecary",
+   "name": null,
    "shape": "Pear",
    "capacityMl": 118,
    "neck": "Ground",
@@ -159,6 +167,7 @@
   {
    "id": "atomizer-5ml-10mm",
    "family": "Atomizer",
+   "name": "Slim Atomizer",
    "shape": "",
    "capacityMl": 5,
    "neck": "10mm",
@@ -180,6 +189,7 @@
   {
    "id": "atomizer-5ml-13-415",
    "family": "Atomizer",
+   "name": null,
    "shape": "",
    "capacityMl": 5,
    "neck": "13-415",
@@ -203,6 +213,7 @@
   {
    "id": "atomizer-10ml-17mm",
    "family": "Atomizer",
+   "name": null,
    "shape": "",
    "capacityMl": 10,
    "neck": "17mm",
@@ -227,6 +238,7 @@
   {
    "id": "bell-10ml-13-415",
    "family": "Bell",
+   "name": null,
    "shape": "Bell",
    "capacityMl": 10,
    "neck": "13-415",
@@ -273,17 +285,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "boston-round-15ml-18-400",
    "family": "Boston Round",
+   "name": null,
    "shape": "",
    "capacityMl": 15,
    "neck": "18-400",
@@ -317,6 +328,7 @@
   {
    "id": "boston-round-30ml-20-400",
    "family": "Boston Round",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": "20-400",
@@ -364,6 +376,7 @@
   {
    "id": "boston-round-60ml-20-400",
    "family": "Boston Round",
+   "name": null,
    "shape": "",
    "capacityMl": 60,
    "neck": "20-400",
@@ -411,6 +424,7 @@
   {
    "id": "circle-15ml-13-415",
    "family": "Circle",
+   "name": null,
    "shape": "",
    "capacityMl": 15,
    "neck": "13-415",
@@ -456,17 +470,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "circle-30ml-15-415",
    "family": "Circle",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": "15-415",
@@ -496,6 +509,7 @@
   {
    "id": "circle-50ml-18-415",
    "family": "Circle",
+   "name": null,
    "shape": "",
    "capacityMl": 50,
    "neck": "18-415",
@@ -563,15 +577,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "circle-100ml-18-415",
    "family": "Circle",
+   "name": null,
    "shape": "",
    "capacityMl": 100,
    "neck": "18-415",
@@ -638,15 +650,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "cream-jar-3ml-20mm",
    "family": "Cream Jar",
+   "name": null,
    "shape": "",
    "capacityMl": 3,
    "neck": "20mm",
@@ -664,6 +674,7 @@
   {
    "id": "cream-jar-5ml-27mm",
    "family": "Cream Jar",
+   "name": null,
    "shape": "",
    "capacityMl": 5,
    "neck": "27mm",
@@ -681,6 +692,7 @@
   {
    "id": "cream-jar-5ml-PRESS-FIT",
    "family": "Cream Jar",
+   "name": null,
    "shape": "Standard",
    "capacityMl": 5,
    "neck": "PRESS-FIT",
@@ -700,6 +712,7 @@
   {
    "id": "cream-jar-15ml-37mm",
    "family": "Cream Jar",
+   "name": null,
    "shape": "",
    "capacityMl": 15,
    "neck": "37mm",
@@ -717,6 +730,7 @@
   {
    "id": "cream-jar-20ml-40mm",
    "family": "Cream Jar",
+   "name": null,
    "shape": "",
    "capacityMl": 20,
    "neck": "40mm",
@@ -734,6 +748,7 @@
   {
    "id": "cream-jar-30ml-45mm",
    "family": "Cream Jar",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": "45mm",
@@ -751,6 +766,7 @@
   {
    "id": "cream-jar-40ml-48/400",
    "family": "Cream Jar",
+   "name": null,
    "shape": "",
    "capacityMl": 40,
    "neck": "48/400",
@@ -768,6 +784,7 @@
   {
    "id": "cream-jar-60ml-58mm",
    "family": "Cream Jar",
+   "name": null,
    "shape": "",
    "capacityMl": 60,
    "neck": "58mm",
@@ -785,6 +802,7 @@
   {
    "id": "cream-jar-63ml-58mm",
    "family": "Cream Jar",
+   "name": null,
    "shape": "",
    "capacityMl": 63,
    "neck": "58mm",
@@ -802,6 +820,7 @@
   {
    "id": "cylinder-3.3ml-12mm",
    "family": "Cylinder",
+   "name": null,
    "shape": "",
    "capacityMl": 3.3,
    "neck": "12mm",
@@ -823,6 +842,7 @@
   {
    "id": "cylinder-4ml-12mm",
    "family": "Cylinder",
+   "name": null,
    "shape": "",
    "capacityMl": 4,
    "neck": "12mm",
@@ -844,6 +864,7 @@
   {
    "id": "cylinder-5ml-13-415",
    "family": "Cylinder",
+   "name": null,
    "shape": "",
    "capacityMl": 5,
    "neck": "13-415",
@@ -891,17 +912,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "cylinder-9ml-13-415",
    "family": "Cylinder",
+   "name": "Tall Cylinder",
    "shape": "",
    "capacityMl": 9,
    "neck": "13-415",
@@ -948,17 +968,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "cylinder-9ml-17-415",
    "family": "Cylinder",
+   "name": null,
    "shape": "",
    "capacityMl": 9,
    "neck": "17-415",
@@ -1001,14 +1020,15 @@
     "CMP-SPR-SLV-17-415",
     "CMP-SPR-SSLV-17-415"
    ],
-   "sameThread": [
+   "sameThread": [],
+   "conflicting": [
     "CMP-DRP-AMB"
-   ],
-   "conflicting": []
+   ]
   },
   {
    "id": "cylinder-25ml-18-415",
    "family": "Cylinder",
+   "name": null,
    "shape": "",
    "capacityMl": 25,
    "neck": "18-415",
@@ -1075,15 +1095,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "cylinder-28ml-16mm",
    "family": "Cylinder",
+   "name": null,
    "shape": "",
    "capacityMl": 28,
    "neck": "16mm",
@@ -1106,6 +1124,7 @@
   {
    "id": "cylinder-30ml-18-415",
    "family": "Cylinder",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": "18-415",
@@ -1155,13 +1174,11 @@
     "CMP-SPR-MSLV-18-415-01",
     "CMP-SPR-MSLV-18-415-02",
     "CMP-SPR-MTCP-18-415-03",
-    "CMP-SPR-MTGD-18-415-01",
     "CMP-SPR-MTGD-18-415-05",
     "CMP-SPR-MTSL-18-415-06",
     "CMP-SPR-PNK-18-415",
     "CMP-SPR-RED-18-415-01",
     "CMP-SPR-RED-18-415-02",
-    "CMP-SPR-SHBK-18-415-01",
     "CMP-SPR-SHBK-18-415-06",
     "CMP-SPR-SHGD-18-415-05",
     "CMP-SPR-SHSL-18-415-06",
@@ -1173,6 +1190,7 @@
   {
    "id": "cylinder-50ml-16mm",
    "family": "Cylinder",
+   "name": null,
    "shape": "",
    "capacityMl": 50,
    "neck": "16mm",
@@ -1195,6 +1213,7 @@
   {
    "id": "cylinder-50ml-18-415",
    "family": "Cylinder",
+   "name": null,
    "shape": "",
    "capacityMl": 50,
    "neck": "18-415",
@@ -1260,15 +1279,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "cylinder-100ml-18-415",
    "family": "Cylinder",
+   "name": null,
    "shape": "",
    "capacityMl": 100,
    "neck": "18-415",
@@ -1334,15 +1351,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "cylinder-114ml-no-neck",
    "family": "Cylinder",
+   "name": null,
    "shape": "Cylinder",
    "capacityMl": 114,
    "neck": null,
@@ -1362,6 +1377,7 @@
   {
    "id": "cylinder-227ml-no-neck",
    "family": "Cylinder",
+   "name": null,
    "shape": "Cylinder",
    "capacityMl": 227,
    "neck": null,
@@ -1381,6 +1397,7 @@
   {
    "id": "cylinder-454ml-no-neck",
    "family": "Cylinder",
+   "name": null,
    "shape": "Cylinder",
    "capacityMl": 454,
    "neck": null,
@@ -1400,6 +1417,7 @@
   {
    "id": "tola-decorative-3ml-14.3mm",
    "family": "Decorative",
+   "name": null,
    "shape": "Tola",
    "capacityMl": 3,
    "neck": "14.3mm",
@@ -1419,6 +1437,7 @@
   {
    "id": "heart-decorative-4ml-8mm",
    "family": "Decorative",
+   "name": null,
    "shape": "Heart",
    "capacityMl": 4,
    "neck": "8mm",
@@ -1438,6 +1457,7 @@
   {
    "id": "marble-decorative-5ml-17.52mm",
    "family": "Decorative",
+   "name": null,
    "shape": "Marble",
    "capacityMl": 5,
    "neck": "17.52mm",
@@ -1457,6 +1477,7 @@
   {
    "id": "tola-decorative-6ml-14.3mm",
    "family": "Decorative",
+   "name": null,
    "shape": "Tola",
    "capacityMl": 6,
    "neck": "14.3mm",
@@ -1476,6 +1497,7 @@
   {
    "id": "marble-decorative-10ml-17.52mm",
    "family": "Decorative",
+   "name": null,
    "shape": "Marble",
    "capacityMl": 10,
    "neck": "17.52mm",
@@ -1495,6 +1517,7 @@
   {
    "id": "genie-decorative-32ml-Ground",
    "family": "Decorative",
+   "name": null,
    "shape": "Genie",
    "capacityMl": 32,
    "neck": "Ground",
@@ -1515,6 +1538,7 @@
   {
    "id": "eternal-flame-decorative-35ml-Ground",
    "family": "Decorative",
+   "name": null,
    "shape": "Eternal Flame",
    "capacityMl": 35,
    "neck": "Ground",
@@ -1536,6 +1560,7 @@
   {
    "id": "pear-decorative-355ml-Ground",
    "family": "Decorative",
+   "name": null,
    "shape": "Pear",
    "capacityMl": 355,
    "neck": "Ground",
@@ -1557,6 +1582,7 @@
   {
    "id": "diamond-60ml-18-415",
    "family": "Diamond",
+   "name": null,
    "shape": "",
    "capacityMl": 60,
    "neck": "18-415",
@@ -1622,15 +1648,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "diva-30ml-18-415",
    "family": "Diva",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": "18-415",
@@ -1695,15 +1719,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "diva-46ml-18-415",
    "family": "Diva",
+   "name": null,
    "shape": "",
    "capacityMl": 46,
    "neck": "18-415",
@@ -1771,15 +1793,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "diva-100ml-18-415",
    "family": "Diva",
+   "name": null,
    "shape": "",
    "capacityMl": 100,
    "neck": "18-415",
@@ -1845,15 +1865,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "elegant-15ml-13-415",
    "family": "Elegant",
+   "name": null,
    "shape": "",
    "capacityMl": 15,
    "neck": "13-415",
@@ -1901,17 +1919,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "elegant-30ml-15-415",
    "family": "Elegant",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": "15-415",
@@ -1942,6 +1959,7 @@
   {
    "id": "elegant-60ml-18-415",
    "family": "Elegant",
+   "name": null,
    "shape": "",
    "capacityMl": 60,
    "neck": "18-415",
@@ -2009,15 +2027,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "elegant-100ml-18-415",
    "family": "Elegant",
+   "name": null,
    "shape": "",
    "capacityMl": 100,
    "neck": "18-415",
@@ -2084,15 +2100,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "empire-50ml-18-415",
    "family": "Empire",
+   "name": null,
    "shape": "",
    "capacityMl": 50,
    "neck": "18-415",
@@ -2159,15 +2173,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "empire-100ml-18-415",
    "family": "Empire",
+   "name": null,
    "shape": "",
    "capacityMl": 100,
    "neck": "18-415",
@@ -2233,15 +2245,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "flair-15ml-13-415",
    "family": "Flair",
+   "name": null,
    "shape": "",
    "capacityMl": 15,
    "neck": "13-415",
@@ -2288,17 +2298,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "grace-55ml-18-415",
    "family": "Grace",
+   "name": null,
    "shape": "",
    "capacityMl": 55,
    "neck": "18-415",
@@ -2364,15 +2373,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "lotion-bottle-3ml-snap",
    "family": "Lotion Bottle",
+   "name": null,
    "shape": "",
    "capacityMl": 3,
    "neck": "snap",
@@ -2392,6 +2399,7 @@
   {
    "id": "lotion-bottle-30ml-18mm",
    "family": "Lotion Bottle",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": "18mm",
@@ -2411,6 +2419,7 @@
   {
    "id": "lotion-bottle-30ml-no-neck",
    "family": "Lotion Bottle",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": null,
@@ -2430,6 +2439,7 @@
   {
    "id": "pillar-9ml-13-415",
    "family": "Pillar",
+   "name": null,
    "shape": "Pillar",
    "capacityMl": 9,
    "neck": "13-415",
@@ -2440,7 +2450,9 @@
     "Clear"
    ],
    "fitmentTypes": [
-    "Fine Mist Sprayer"
+    "Fine Mist Sprayer",
+    "Metal Roller Ball",
+    "Plastic Roller Ball"
    ],
    "heightMm": 57,
    "diameterMm": 21,
@@ -2473,17 +2485,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "plastic-bottle-10ml-no-neck",
    "family": "Plastic Bottle",
+   "name": null,
    "shape": "",
    "capacityMl": 10,
    "neck": null,
@@ -2501,6 +2512,7 @@
   {
    "id": "plastic-bottle-30ml-13-415",
    "family": "Plastic Bottle",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": "13-415",
@@ -2518,6 +2530,7 @@
   {
    "id": "rectangle-9ml-Ground",
    "family": "Rectangle",
+   "name": null,
    "shape": "",
    "capacityMl": 9,
    "neck": "Ground",
@@ -2539,6 +2552,7 @@
   {
    "id": "footed-rectangle-10ml-13-415",
    "family": "Rectangle",
+   "name": "Footed Rectangular",
    "shape": "",
    "capacityMl": 10,
    "neck": "13-415",
@@ -2585,17 +2599,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "tall-rectangle-10ml-13-415",
    "family": "Rectangle",
+   "name": "Tall Rectangular",
    "shape": "",
    "capacityMl": 10,
    "neck": "13-415",
@@ -2641,17 +2654,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "round-78ml-18-415",
    "family": "Round",
+   "name": null,
    "shape": "",
    "capacityMl": 78,
    "neck": "18-415",
@@ -2718,15 +2730,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "round-128ml-18-415",
    "family": "Round",
+   "name": null,
    "shape": "",
    "capacityMl": 128,
    "neck": "18-415",
@@ -2794,15 +2804,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "royal-13ml-13-415",
    "family": "Royal",
+   "name": null,
    "shape": "",
    "capacityMl": 13,
    "neck": "13-415",
@@ -2849,17 +2857,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "royal-14ml-11mm",
    "family": "Royal",
+   "name": null,
    "shape": "",
    "capacityMl": 14,
    "neck": "11mm",
@@ -2879,6 +2886,7 @@
   {
    "id": "sleek-5ml-13-415",
    "family": "Sleek",
+   "name": null,
    "shape": "",
    "capacityMl": 5,
    "neck": "13-415",
@@ -2924,17 +2932,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "sleek-8ml-13-415",
    "family": "Sleek",
+   "name": null,
    "shape": "",
    "capacityMl": 8,
    "neck": "13-415",
@@ -2980,17 +2987,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "sleek-30ml-18-415",
    "family": "Sleek",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": "18-415",
@@ -3056,15 +3062,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "sleek-50ml-18-415",
    "family": "Sleek",
+   "name": null,
    "shape": "",
    "capacityMl": 50,
    "neck": "18-415",
@@ -3130,15 +3134,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "sleek-100ml-18-415",
    "family": "Sleek",
+   "name": null,
    "shape": "",
    "capacityMl": 100,
    "neck": "18-415",
@@ -3204,15 +3206,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "slim-30ml-18-415",
    "family": "Slim",
+   "name": null,
    "shape": "",
    "capacityMl": 30,
    "neck": "18-415",
@@ -3278,15 +3278,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "slim-50ml-18-415",
    "family": "Slim",
+   "name": null,
    "shape": "",
    "capacityMl": 50,
    "neck": "18-415",
@@ -3352,15 +3350,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "slim-100ml-18-415",
    "family": "Slim",
+   "name": null,
    "shape": "",
    "capacityMl": 100,
    "neck": "18-415",
@@ -3426,15 +3422,13 @@
     "CMP-SPR-WHT-18-415-01",
     "CMP-SPR-WHT-18-415-02"
    ],
-   "sameThread": [
-    "CMP-SPR-MTGD-18-415-01",
-    "CMP-SPR-SHBK-18-415-01"
-   ],
+   "sameThread": [],
    "conflicting": []
   },
   {
    "id": "square-15ml-13-415",
    "family": "Square",
+   "name": null,
    "shape": "",
    "capacityMl": 15,
    "neck": "13-415",
@@ -3480,17 +3474,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "teardrop-9ml-Ground",
    "family": "Teardrop",
+   "name": null,
    "shape": "",
    "capacityMl": 9,
    "neck": "Ground",
@@ -3514,6 +3507,7 @@
   {
    "id": "tulip-5ml-13-415",
    "family": "Tulip",
+   "name": null,
    "shape": "",
    "capacityMl": 5,
    "neck": "13-415",
@@ -3559,17 +3553,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "tulip-6ml-13-415",
    "family": "Tulip",
+   "name": null,
    "shape": "",
    "capacityMl": 6,
    "neck": "13-415",
@@ -3615,17 +3608,16 @@
     "CMP-CLS-MTGD-S-13-415",
     "CMP-CLS-MTSL-S-13-415",
     "CMP-CLS-SHGD-S-13-415",
-    "CMP-CLS-SHSL-S-13-415-02",
-    "CMP-SPR-MTCP-13-415-01",
-    "CMP-SPR-MTSL-13-415-01",
-    "CMP-SPR-RED-02",
-    "CMP-SPR-SHGD-13-415-01"
+    "CMP-CLS-SHSL-S-13-415-02"
    ],
-   "conflicting": []
+   "conflicting": [
+    "CMP-SPR-RED-02"
+   ]
   },
   {
    "id": "vial-1ml-Plug",
    "family": "Vial",
+   "name": null,
    "shape": "",
    "capacityMl": 1,
    "neck": "Plug",
@@ -3649,6 +3641,7 @@
   {
    "id": "vial-2ml-13-425",
    "family": "Vial",
+   "name": null,
    "shape": "Vial",
    "capacityMl": 2,
    "neck": "13-425",
@@ -3671,6 +3664,7 @@
   {
    "id": "vial-2ml-8-425",
    "family": "Vial",
+   "name": null,
    "shape": "",
    "capacityMl": 2,
    "neck": "8-425",
@@ -3697,6 +3691,7 @@
   {
    "id": "vial-3ml-13-425",
    "family": "Vial",
+   "name": null,
    "shape": "",
    "capacityMl": 3,
    "neck": "13-425",
@@ -3720,6 +3715,7 @@
   {
    "id": "vial-4ml-13-425",
    "family": "Vial",
+   "name": null,
    "shape": "",
    "capacityMl": 4,
    "neck": "13-425",
@@ -3747,6 +3743,7 @@
   {
    "id": "vial-9ml-18-400",
    "family": "Vial",
+   "name": null,
    "shape": "",
    "capacityMl": 9,
    "neck": "18-400",
@@ -3779,6 +3776,7 @@
   "CMP-APP-BLK-18-400": {
    "name": "Black cap with glass rod applicator, Threadsize 18-400",
    "type": "cap",
+   "style": "Applicator",
    "neck": "18-400",
    "color": "Black",
    "applicator": null,
@@ -3787,6 +3785,7 @@
   "CMP-CAP-13-415": {
    "name": "Matte blue Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "13-415",
    "color": "Blue",
    "applicator": null,
@@ -3795,6 +3794,7 @@
   "CMP-CAP-BLK-13-415-01": {
    "name": "Matte black Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "13-415",
    "color": "Black",
    "applicator": null,
@@ -3803,6 +3803,7 @@
   "CMP-CAP-BLK-13-415-02": {
    "name": "Shiny black Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "13-415",
    "color": "Black",
    "applicator": null,
@@ -3811,6 +3812,7 @@
   "CMP-CAP-BLK-18-400": {
    "name": "Black lid or closure for glass bottle, Thread size 18-400",
    "type": "cap",
+   "style": "Short",
    "neck": "18-400",
    "color": "Black",
    "applicator": null,
@@ -3819,6 +3821,7 @@
   "CMP-CAP-BLK-18415-LTR": {
    "name": "Black Faux Leather caps for glass bottles, Thread size 18-415",
    "type": "faux-leather-cap",
+   "style": "Faux Leather",
    "neck": "18-415",
    "color": "Black",
    "applicator": null,
@@ -3827,6 +3830,7 @@
   "CMP-CAP-BLK-20-400-1OZ": {
    "name": "Black lid or closure for glass bottle, Thread size 20-400",
    "type": "cap",
+   "style": "Short",
    "neck": "20-400",
    "color": "Black",
    "applicator": null,
@@ -3835,6 +3839,7 @@
   "CMP-CAP-BLK-20-400-2OZ": {
    "name": "Black lid or closure for glass bottle, Thread size 20-400",
    "type": "cap",
+   "style": "Short",
    "neck": "20-400",
    "color": "Black",
    "applicator": null,
@@ -3843,6 +3848,7 @@
   "CMP-CAP-BLK-8-425": {
    "name": "Black lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
+   "style": "Short",
    "neck": "8-425",
    "color": "Black",
    "applicator": null,
@@ -3851,6 +3857,7 @@
   "CMP-CAP-BLK-8425-T": {
    "name": "Tall black lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
+   "style": null,
    "neck": "8-425",
    "color": "Black",
    "applicator": null,
@@ -3858,7 +3865,8 @@
   },
   "CMP-CAP-BLK-S-13-415": {
    "name": "Black lid or closure for glass bottle, Thread size 13-415",
-   "type": "roll-on-cap",
+   "type": "cap",
+   "style": "Short ribbed",
    "neck": "13-415",
    "color": "Black",
    "applicator": null,
@@ -3867,6 +3875,7 @@
   "CMP-CAP-BRN-18415-LTR": {
    "name": "Brown Faux Leather caps for glass bottles, Thread size 18-415",
    "type": "faux-leather-cap",
+   "style": "Faux Leather",
    "neck": "18-415",
    "color": "Brown",
    "applicator": null,
@@ -3875,6 +3884,7 @@
   "CMP-CAP-IVY-18415-LTR": {
    "name": "Ivory Faux Leather caps for glass bottles, Thread size 18-415",
    "type": "faux-leather-cap",
+   "style": "Faux Leather",
    "neck": "18-415",
    "color": "Ivory",
    "applicator": null,
@@ -3883,6 +3893,7 @@
   "CMP-CAP-LBRN-18415-LTR": {
    "name": "Light Brown Faux Leather caps for glass bottles, Thread size 18-415",
    "type": "faux-leather-cap",
+   "style": "Faux Leather",
    "neck": "18-415",
    "color": "Brown",
    "applicator": null,
@@ -3891,6 +3902,7 @@
   "CMP-CAP-MSLV-18415-S": {
    "name": "Short Matt Silver caps for glass bottles, Thread size 18-415",
    "type": "cap",
+   "style": "Short",
    "neck": "18-415",
    "color": "Matte Silver",
    "applicator": null,
@@ -3899,6 +3911,7 @@
   "CMP-CAP-MSLV-18415-T": {
    "name": "Tall Matt Silver caps for glass bottles. Thread size 18-415",
    "type": "cap",
+   "style": null,
    "neck": "18-415",
    "color": "Matte Silver",
    "applicator": null,
@@ -3907,6 +3920,7 @@
   "CMP-CAP-PNK-18-415": {
    "name": "Pink Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
+   "style": null,
    "neck": "18-415",
    "color": "Pink",
    "applicator": null,
@@ -3915,6 +3929,7 @@
   "CMP-CAP-PNK-18415-LTR": {
    "name": "Pink Faux Leather caps for glass bottles, Thread size 18-415",
    "type": "faux-leather-cap",
+   "style": "Faux Leather",
    "neck": "18-415",
    "color": "Pink",
    "applicator": null,
@@ -3923,6 +3938,7 @@
   "CMP-CAP-SBLK-13-415": {
    "name": "Shiny Black short cap with liner, thread size 13-415",
    "type": "cap",
+   "style": "Short",
    "neck": "13-415",
    "color": "Shiny Black",
    "applicator": "Cap/Closure",
@@ -3931,6 +3947,7 @@
   "CMP-CAP-SBLK-18415-T": {
    "name": "Tall Black caps for glass bottles. Thread size 18-415",
    "type": "cap",
+   "style": null,
    "neck": "18-415",
    "color": "Shiny Black",
    "applicator": null,
@@ -3938,7 +3955,8 @@
   },
   "CMP-CAP-SGLD-13-415-01": {
    "name": "Shiny gold lid or closure for glass bottle, Thread size 13-415",
-   "type": "roll-on-cap",
+   "type": "cap",
+   "style": "Tall",
    "neck": "13-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -3947,6 +3965,7 @@
   "CMP-CAP-SGLD-13-415-02": {
    "name": "Matte gold Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "13-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -3955,6 +3974,7 @@
   "CMP-CAP-SGLD-13-415-03": {
    "name": "Shiny gold Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "13-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -3962,7 +3982,8 @@
   },
   "CMP-CAP-SGLD-15-415": {
    "name": "Shiny Gold color Cap or Closure for 15-415",
-   "type": "roll-on-cap",
+   "type": "cap",
+   "style": "Liner",
    "neck": "15-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -3971,6 +3992,7 @@
   "CMP-CAP-SGLD-18415-S": {
    "name": "Short Shiny Gold caps for glass bottles. Thread size 18-415",
    "type": "cap",
+   "style": "Short",
    "neck": "18-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -3979,6 +4001,7 @@
   "CMP-CAP-SGLD-8425-T": {
    "name": "Tall shiny gold lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
+   "style": null,
    "neck": "8-425",
    "color": "Gold",
    "applicator": null,
@@ -3986,7 +4009,8 @@
   },
   "CMP-CAP-SLV-13-415-01": {
    "name": "Shiny silver lid or closure for glass bottle, Thread size 13-415",
-   "type": "roll-on-cap",
+   "type": "cap",
+   "style": "Tall",
    "neck": "13-415",
    "color": "Silver",
    "applicator": null,
@@ -3995,6 +4019,7 @@
   "CMP-CAP-SLV-13-415-02": {
    "name": "Matte silver Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "13-415",
    "color": "Silver",
    "applicator": null,
@@ -4003,6 +4028,7 @@
   "CMP-CAP-SLV-13-415-03": {
    "name": "Shiny silver Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "13-415",
    "color": "Silver",
    "applicator": null,
@@ -4010,7 +4036,8 @@
   },
   "CMP-CAP-SSLV-15-415": {
    "name": "Shiny Silver color Cap or Closure for 15-415",
-   "type": "roll-on-cap",
+   "type": "cap",
+   "style": "Liner",
    "neck": "15-415",
    "color": "Shiny Silver",
    "applicator": null,
@@ -4019,6 +4046,7 @@
   "CMP-CAP-SSLV-18415-S": {
    "name": "Short Shiny Silver caps for glass bottles. Thread size 18-415",
    "type": "cap",
+   "style": "Short",
    "neck": "18-415",
    "color": "Shiny Silver",
    "applicator": null,
@@ -4027,6 +4055,7 @@
   "CMP-CAP-SSLV-8425-T": {
    "name": "Tall shiny silver lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
+   "style": null,
    "neck": "8-425",
    "color": "Silver",
    "applicator": null,
@@ -4035,6 +4064,7 @@
   "CMP-CAP-WHT-18415-T": {
    "name": "Tall White caps for glass bottles. Thread size 18-415",
    "type": "cap",
+   "style": null,
    "neck": "18-415",
    "color": "White",
    "applicator": null,
@@ -4043,6 +4073,7 @@
   "CMP-CAP-WHT-8-425": {
    "name": "White lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
+   "style": "Short",
    "neck": "8-425",
    "color": "White",
    "applicator": null,
@@ -4050,7 +4081,8 @@
   },
   "CMP-CAP-WHT-S-13-415": {
    "name": "White lid or closure for glass bottle, Thread size 13-415",
-   "type": "roll-on-cap",
+   "type": "cap",
+   "style": "Short ribbed",
    "neck": "13-415",
    "color": "White",
    "applicator": null,
@@ -4059,6 +4091,7 @@
   "CMP-CLS-BLK-13-425": {
    "name": "Cap/Closure Black Thread 13-425",
    "type": "cap",
+   "style": null,
    "neck": "13-425",
    "color": "Black",
    "applicator": "Cap/Closure",
@@ -4067,6 +4100,7 @@
   "CMP-CLS-MTCP-S-13-415": {
    "name": "Matte Copper short cap with liner, thread size 13-415",
    "type": "cap",
+   "style": "Short",
    "neck": "13-415",
    "color": "Matte Copper",
    "applicator": "Cap/Closure",
@@ -4075,6 +4109,7 @@
   "CMP-CLS-MTGD-S-13-415": {
    "name": "Matte Gold short cap with liner, thread size 13-415",
    "type": "cap",
+   "style": "Short",
    "neck": "13-415",
    "color": "Matte Gold",
    "applicator": "Cap/Closure",
@@ -4083,6 +4118,7 @@
   "CMP-CLS-MTSL-S-13-415": {
    "name": "Matte Silver short cap with liner, thread size 13-415",
    "type": "cap",
+   "style": "Short",
    "neck": "13-415",
    "color": "Matte Silver",
    "applicator": "Cap/Closure",
@@ -4091,6 +4127,7 @@
   "CMP-CLS-SHGD-S-13-415": {
    "name": "Shiny Gold short cap with liner, thread size 13-415",
    "type": "cap",
+   "style": "Short",
    "neck": "13-415",
    "color": "Shiny Gold",
    "applicator": "Cap/Closure",
@@ -4099,6 +4136,7 @@
   "CMP-CLS-SHSL-S-13-415-02": {
    "name": "Shiny Silver short cap with liner, thread size 13-415",
    "type": "cap",
+   "style": "Short",
    "neck": "13-415",
    "color": "Shiny Silver",
    "applicator": "Cap/Closure",
@@ -4107,6 +4145,7 @@
   "CMP-CLS-WHT-13-425": {
    "name": "Cap/Closure White Thread 13-425",
    "type": "cap",
+   "style": null,
    "neck": "13-425",
    "color": "White",
    "applicator": "Cap/Closure",
@@ -4115,6 +4154,7 @@
   "CMP-DRP-AMB": {
    "name": "Dropper Amber",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "17-415",
    "color": "Amber",
    "applicator": "Dropper",
@@ -4123,6 +4163,7 @@
   "CMP-DRP-BKGD-18400-66": {
    "name": "Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "18-400",
    "color": "Black",
    "applicator": null,
@@ -4131,6 +4172,7 @@
   "CMP-DRP-BKGD-20400-76": {
    "name": "Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "Black",
    "applicator": null,
@@ -4139,6 +4181,7 @@
   "CMP-DRP-BKGD-20400-90": {
    "name": "Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "Black",
    "applicator": null,
@@ -4147,6 +4190,7 @@
   "CMP-DRP-BKSL-18400-66": {
    "name": "Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "18-400",
    "color": "Black",
    "applicator": null,
@@ -4155,6 +4199,7 @@
   "CMP-DRP-BKSL-20400-76": {
    "name": "Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "Black",
    "applicator": null,
@@ -4163,6 +4208,7 @@
   "CMP-DRP-BKSL-20400-90": {
    "name": "Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "Black",
    "applicator": null,
@@ -4171,6 +4217,7 @@
   "CMP-DRP-BLK-18400-90MM": {
    "name": "Black rubber bulb dropper with black cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "18-400",
    "color": "Black",
    "applicator": null,
@@ -4179,6 +4226,7 @@
   "CMP-DRP-BLK-20400-76MM-01": {
    "name": "Black rubber bulb dropper with black cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "Black",
    "applicator": null,
@@ -4187,6 +4235,7 @@
   "CMP-DRP-BLK-20400-90": {
    "name": "Black rubber bulb dropper with black cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "Black",
    "applicator": null,
@@ -4195,6 +4244,7 @@
   "CMP-DRP-CPR-18415": {
    "name": "White rubber bulb dropper with shiny copper collar cap. Thread size 18-415",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "18-415",
    "color": "Copper",
    "applicator": null,
@@ -4203,6 +4253,7 @@
   "CMP-DRP-SGLD-18415": {
    "name": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "18-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -4211,6 +4262,7 @@
   "CMP-DRP-SSLV-18415": {
    "name": "White rubber bulb dropper with shiny silver collar cap. Thread size 18-415",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "18-415",
    "color": "Silver",
    "applicator": null,
@@ -4219,6 +4271,7 @@
   "CMP-DRP-WHT-18400-66": {
    "name": "White rubber bulb dropper with white cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "18-400",
    "color": "White",
    "applicator": null,
@@ -4227,6 +4280,7 @@
   "CMP-DRP-WHT-20400-76": {
    "name": "White rubber bulb dropper with white cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "White",
    "applicator": null,
@@ -4235,6 +4289,7 @@
   "CMP-DRP-WHT-20400-90": {
    "name": "White rubber bulb dropper with white cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "White",
    "applicator": null,
@@ -4243,6 +4298,7 @@
   "CMP-DRP-WTGD-18400-66": {
    "name": "White rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "18-400",
    "color": "White",
    "applicator": null,
@@ -4251,6 +4307,7 @@
   "CMP-DRP-WTGD-20400-76": {
    "name": "White rubber bulb dropper with shiny gold collar cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "White",
    "applicator": null,
@@ -4259,6 +4316,7 @@
   "CMP-DRP-WTGD-20400-90": {
    "name": "White rubber bulb dropper with shiny gold collar cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "White",
    "applicator": null,
@@ -4267,6 +4325,7 @@
   "CMP-DRP-WTSL-18400-66": {
    "name": "White rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "18-400",
    "color": "White",
    "applicator": null,
@@ -4275,6 +4334,7 @@
   "CMP-DRP-WTSL-20400-76": {
    "name": "White rubber bulb dropper with shiny silver collar cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "White",
    "applicator": null,
@@ -4283,6 +4343,7 @@
   "CMP-DRP-WTSL-20400-90": {
    "name": "White rubber bulb dropper with shiny silver collar cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
+   "style": "Dropper",
    "neck": "20-400",
    "color": "White",
    "applicator": null,
@@ -4291,6 +4352,7 @@
   "CMP-LPM-BLK-17-415": {
    "name": "Shiny black collar Lotion or treatment pump, Threadsize 17-415",
    "type": "lotion-pump",
+   "style": "Pump",
    "neck": "17-415",
    "color": "Black",
    "applicator": null,
@@ -4299,6 +4361,7 @@
   "CMP-LPM-CPR-18-415": {
    "name": "Matte Copper Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
+   "style": "Pump",
    "neck": "18-415",
    "color": "Copper",
    "applicator": null,
@@ -4307,6 +4370,7 @@
   "CMP-LPM-MGLD-18-415": {
    "name": "Matte Gold Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
+   "style": "Pump",
    "neck": "18-415",
    "color": "Matte Gold",
    "applicator": null,
@@ -4315,6 +4379,7 @@
   "CMP-LPM-MSLV-17-415": {
    "name": "Matte silver collar Lotion or treatment pump, Threadsize 17-415",
    "type": "lotion-pump",
+   "style": "Pump",
    "neck": "17-415",
    "color": "Matte Silver",
    "applicator": null,
@@ -4323,6 +4388,7 @@
   "CMP-LPM-MSLV-18-415-01": {
    "name": "Matte Silver Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
+   "style": "Pump",
    "neck": "18-415",
    "color": "Matte Silver",
    "applicator": null,
@@ -4331,6 +4397,7 @@
   "CMP-LPM-MSLV-18-415-02": {
    "name": "Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415",
    "type": "lotion-pump",
+   "style": "Pump",
    "neck": "18-415",
    "color": "Matte Silver",
    "applicator": null,
@@ -4339,6 +4406,7 @@
   "CMP-LPM-SBLK-18-415": {
    "name": "Shiny Black Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
+   "style": "Pump",
    "neck": "18-415",
    "color": "Shiny Black",
    "applicator": null,
@@ -4347,6 +4415,7 @@
   "CMP-LPM-SGLD-17-415": {
    "name": "Shiny gold collar Lotion or treatment pump, Threadsize 17-415",
    "type": "lotion-pump",
+   "style": "Pump",
    "neck": "17-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -4355,6 +4424,7 @@
   "CMP-LPM-SGLD-18-415": {
    "name": "Shiny Gold Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
+   "style": "Pump",
    "neck": "18-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -4363,6 +4433,7 @@
   "CMP-LPM-SSLV-18-415": {
    "name": "Shiny Silver Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
+   "style": "Pump",
    "neck": "18-415",
    "color": "Shiny Silver",
    "applicator": null,
@@ -4371,6 +4442,7 @@
   "CMP-PLUG-BLK-VIAL": {
    "name": "Black plug applicator for 1ml vial",
    "type": "plug-applicator",
+   "style": null,
    "neck": null,
    "color": "Black",
    "applicator": "Applicator Cap",
@@ -4379,6 +4451,7 @@
   "CMP-PLUG-WHT-VIAL": {
    "name": "White plug applicator for 1ml vial",
    "type": "plug-applicator",
+   "style": null,
    "neck": null,
    "color": "White",
    "applicator": "Applicator Cap",
@@ -4387,6 +4460,7 @@
   "CMP-ROC-BLK-13415-DOT": {
    "name": "Shiny black cap with dots or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "13-415",
    "color": "Black",
    "applicator": null,
@@ -4395,6 +4469,7 @@
   "CMP-ROC-BLK-17415-DOT": {
    "name": "Black with dots cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "17-415",
    "color": "Black",
    "applicator": null,
@@ -4403,6 +4478,7 @@
   "CMP-ROC-CPR-17415": {
    "name": "Copper cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "17-415",
    "color": "Copper",
    "applicator": null,
@@ -4411,6 +4487,7 @@
   "CMP-ROC-MBLK-20400-T": {
    "name": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "20-400",
    "color": "Black",
    "applicator": null,
@@ -4419,6 +4496,7 @@
   "CMP-ROC-MCPR-13415": {
    "name": "Matte Copper cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "13-415",
    "color": "Copper",
    "applicator": null,
@@ -4427,6 +4505,7 @@
   "CMP-ROC-MGLD-13415": {
    "name": "Matte Gold cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "13-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -4435,6 +4514,7 @@
   "CMP-ROC-MGLD-17415": {
    "name": "Matte gold cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "17-415",
    "color": "Matte Gold",
    "applicator": null,
@@ -4443,6 +4523,7 @@
   "CMP-ROC-MGLD-20400-T": {
    "name": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "20-400",
    "color": "Gold",
    "applicator": null,
@@ -4451,6 +4532,7 @@
   "CMP-ROC-MSLV-13415": {
    "name": "Matte silver cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "13-415",
    "color": "Silver",
    "applicator": null,
@@ -4459,6 +4541,7 @@
   "CMP-ROC-MSLV-17415": {
    "name": "Matte Silver cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "17-415",
    "color": "Matte Silver",
    "applicator": null,
@@ -4467,6 +4550,7 @@
   "CMP-ROC-MSLV-20400-T": {
    "name": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "20-400",
    "color": "Silver",
    "applicator": null,
@@ -4475,6 +4559,7 @@
   "CMP-ROC-PNK-13415-DOT": {
    "name": "Pink cap with dots or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "13-415",
    "color": "Pink",
    "applicator": null,
@@ -4483,6 +4568,7 @@
   "CMP-ROC-PNK-17415-DOT": {
    "name": "Pink with dots cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "17-415",
    "color": "Pink",
    "applicator": null,
@@ -4491,6 +4577,7 @@
   "CMP-ROC-SBLK-13415": {
    "name": "Shiny Black cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "13-415",
    "color": "Black",
    "applicator": null,
@@ -4499,6 +4586,7 @@
   "CMP-ROC-SBLK-17415": {
    "name": "Shiny black cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "17-415",
    "color": "Shiny Black",
    "applicator": null,
@@ -4507,6 +4595,7 @@
   "CMP-ROC-SBLK-20400-T": {
    "name": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "20-400",
    "color": "Black",
    "applicator": null,
@@ -4515,6 +4604,7 @@
   "CMP-ROC-SGLD-13415": {
    "name": "Shiny Gold cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "13-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -4523,6 +4613,7 @@
   "CMP-ROC-SGLD-17415": {
    "name": "Shiny gold cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "17-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -4531,6 +4622,7 @@
   "CMP-ROC-SGLD-20400-T": {
    "name": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "20-400",
    "color": "Gold",
    "applicator": null,
@@ -4539,6 +4631,7 @@
   "CMP-ROC-SLV-13415-DOT": {
    "name": "Silver cap with dots or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "13-415",
    "color": "Silver",
    "applicator": null,
@@ -4547,6 +4640,7 @@
   "CMP-ROC-SLV-17415-DOT": {
    "name": "Silver with dots cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "17-415",
    "color": "Silver",
    "applicator": null,
@@ -4555,6 +4649,7 @@
   "CMP-ROC-SSLV-13415": {
    "name": "Shiny Silver cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "13-415",
    "color": "Silver",
    "applicator": null,
@@ -4563,6 +4658,7 @@
   "CMP-ROC-SSLV-17415": {
    "name": "Shiny silver cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "17-415",
    "color": "Shiny Silver",
    "applicator": null,
@@ -4571,6 +4667,7 @@
   "CMP-ROC-SSLV-20400-T": {
    "name": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "20-400",
    "color": "Silver",
    "applicator": null,
@@ -4579,6 +4676,7 @@
   "CMP-ROC-WHT-17415": {
    "name": "White cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
+   "style": "Roll-On",
    "neck": "17-415",
    "color": "White",
    "applicator": null,
@@ -4587,6 +4685,7 @@
   "CMP-SPR-BKSL-18-415-02": {
    "name": "Black Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Black",
    "applicator": null,
@@ -4595,6 +4694,7 @@
   "CMP-SPR-BLK-15-415": {
    "name": "Shiny Black Fine Mist Sprayer, Thread size 15-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "15-415",
    "color": "Black",
    "applicator": null,
@@ -4603,6 +4703,7 @@
   "CMP-SPR-BLK-17-415-01": {
    "name": "Shiny black collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "17-415",
    "color": "Black",
    "applicator": null,
@@ -4611,6 +4712,7 @@
   "CMP-SPR-BLK-18-415-02": {
    "name": "Black Antique or Vintage style bulb sprayer with tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Black",
    "applicator": null,
@@ -4619,6 +4721,7 @@
   "CMP-SPR-CLR-17-415": {
    "name": "Shiny turquoise collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "17-415",
    "color": "Turquoise",
    "applicator": null,
@@ -4627,6 +4730,7 @@
   "CMP-SPR-GLD-15-415": {
    "name": "Matte Gold Fine Mist Sprayer, Thread size 15-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "15-415",
    "color": "Matte Gold",
    "applicator": null,
@@ -4635,6 +4739,7 @@
   "CMP-SPR-GLD-18-415-02": {
    "name": "Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -4643,6 +4748,7 @@
   "CMP-SPR-GLD-18415-TSL": {
    "name": "Gold Antique or Vintage style bulb sprayer with tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Gold",
    "applicator": null,
@@ -4651,6 +4757,7 @@
   "CMP-SPR-IVGD-18-415-01": {
    "name": "Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Ivory Gold",
    "applicator": null,
@@ -4659,6 +4766,7 @@
   "CMP-SPR-IVGD-18-415-02": {
    "name": "Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Ivory Gold",
    "applicator": null,
@@ -4667,6 +4775,7 @@
   "CMP-SPR-IVSL-18-415-01": {
    "name": "Ivory Silver Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Ivory Silver",
    "applicator": null,
@@ -4675,6 +4784,7 @@
   "CMP-SPR-IVSL-18-415-02": {
    "name": "Ivory Silver Antique or Vintage style bulb sprayer with silver fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Ivory Silver",
    "applicator": null,
@@ -4683,6 +4793,7 @@
   "CMP-SPR-LVN-18-415-01": {
    "name": "Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Lavender",
    "applicator": null,
@@ -4691,6 +4802,7 @@
   "CMP-SPR-LVN-18-415-02": {
    "name": "Lavender Antique or Vintage style bulb sprayer with silver fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Lavender",
    "applicator": null,
@@ -4699,6 +4811,7 @@
   "CMP-SPR-MSLV-18-415-01": {
    "name": "Matte Silver Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Matte Silver",
    "applicator": null,
@@ -4707,22 +4820,16 @@
   "CMP-SPR-MSLV-18-415-02": {
    "name": "Matte Silver Antique or Vintage style bulb sprayer with tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Matte Silver",
    "applicator": null,
    "itemCode": "AnSpTsl18-415MtS"
   },
-  "CMP-SPR-MTCP-13-415-01": {
-   "name": "Sprayer Matte Copper Thread 13-415",
-   "type": "fine-mist-sprayer",
-   "neck": "13-415",
-   "color": "Matte Copper",
-   "applicator": "Fine Mist Sprayer",
-   "itemCode": "13-415CAP4SpryCuMt"
-  },
   "CMP-SPR-MTCP-13-415-07": {
    "name": "Matte Copper Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "13-415",
    "color": "Copper",
    "applicator": null,
@@ -4731,38 +4838,25 @@
   "CMP-SPR-MTCP-18-415-03": {
    "name": "Mate Copper collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Copper",
    "applicator": null,
    "itemCode": "Spry18-415Cu"
   },
-  "CMP-SPR-MTGD-18-415-01": {
-   "name": "Sprayer Matte Gold Thread 18-415",
-   "type": "fine-mist-sprayer",
-   "neck": "18-415",
-   "color": "Matte Gold",
-   "applicator": "Fine Mist Sprayer",
-   "itemCode": "18-415CAP4SpryMtGl"
-  },
   "CMP-SPR-MTGD-18-415-05": {
    "name": "Matte Gold collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Matte Gold",
    "applicator": null,
    "itemCode": "Spry18-415MtGl"
   },
-  "CMP-SPR-MTSL-13-415-01": {
-   "name": "Sprayer Matte Silver Thread 13-415",
-   "type": "fine-mist-sprayer",
-   "neck": "13-415",
-   "color": "Matte Silver",
-   "applicator": "Fine Mist Sprayer",
-   "itemCode": "13-415CAP4SprySlMt"
-  },
   "CMP-SPR-MTSL-18-415-06": {
    "name": "Matte Silver collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Matte Silver",
    "applicator": null,
@@ -4771,6 +4865,7 @@
   "CMP-SPR-PNK-18-415": {
    "name": "Pink, Antique or Vintage style bulb sprayer with Gold fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Pink",
    "applicator": null,
@@ -4779,6 +4874,7 @@
   "CMP-SPR-RED-02": {
    "name": "Sprayer Red",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "13-415",
    "color": "Red",
    "applicator": "Fine Mist Sprayer",
@@ -4787,6 +4883,7 @@
   "CMP-SPR-RED-17-415": {
    "name": "Shiny red collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "17-415",
    "color": "Red",
    "applicator": null,
@@ -4795,6 +4892,7 @@
   "CMP-SPR-RED-18-415-01": {
    "name": "Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Red",
    "applicator": null,
@@ -4803,6 +4901,7 @@
   "CMP-SPR-RED-18-415-02": {
    "name": "Red, Antique or Vintage style bulb sprayer with Silver fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Red",
    "applicator": null,
@@ -4811,6 +4910,7 @@
   "CMP-SPR-SGLD-15-415": {
    "name": "Shiny Gold Fine Mist Sprayer, Thread size 15-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "15-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -4819,38 +4919,25 @@
   "CMP-SPR-SGLD-17-415": {
    "name": "Shiny gold collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "17-415",
    "color": "Shiny Gold",
    "applicator": null,
    "itemCode": "Spry17-415Gl"
   },
-  "CMP-SPR-SHBK-18-415-01": {
-   "name": "Sprayer Shiny Black Thread 18-415",
-   "type": "fine-mist-sprayer",
-   "neck": "18-415",
-   "color": "Shiny Black",
-   "applicator": "Fine Mist Sprayer",
-   "itemCode": "18-415CAP4SpryShnBlk"
-  },
   "CMP-SPR-SHBK-18-415-06": {
    "name": "Shiny Black collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Shiny Black",
    "applicator": null,
    "itemCode": "Spry18-415ShnBlk"
   },
-  "CMP-SPR-SHGD-13-415-01": {
-   "name": "Sprayer Shiny Gold Thread 13-415",
-   "type": "fine-mist-sprayer",
-   "neck": "13-415",
-   "color": "Shiny Gold",
-   "applicator": "Fine Mist Sprayer",
-   "itemCode": "13-415CAP4SpryGlSh"
-  },
   "CMP-SPR-SHGD-18-415-05": {
    "name": "Shiny Gold collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Shiny Gold",
    "applicator": null,
@@ -4859,6 +4946,7 @@
   "CMP-SPR-SHSL-18-415-06": {
    "name": "Shiny Silver collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "Shiny Silver",
    "applicator": null,
@@ -4867,6 +4955,7 @@
   "CMP-SPR-SLV-15-415": {
    "name": "Matte Silver Fine Mist Sprayer, Thread size 15-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "15-415",
    "color": "Matte Silver",
    "applicator": null,
@@ -4875,6 +4964,7 @@
   "CMP-SPR-SLV-17-415": {
    "name": "Matte silver collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "17-415",
    "color": "Matte Silver",
    "applicator": null,
@@ -4883,6 +4973,7 @@
   "CMP-SPR-SSLV-15-415": {
    "name": "Shiny Silver Fine Mist Sprayer, Thread size 15-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "15-415",
    "color": "Shiny Silver",
    "applicator": null,
@@ -4891,6 +4982,7 @@
   "CMP-SPR-SSLV-17-415": {
    "name": "Shiny silver collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
+   "style": "Spray",
    "neck": "17-415",
    "color": "Shiny Silver",
    "applicator": null,
@@ -4899,6 +4991,7 @@
   "CMP-SPR-WHT-18-415-01": {
    "name": "White Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "White",
    "applicator": null,
@@ -4907,6 +5000,7 @@
   "CMP-SPR-WHT-18-415-02": {
    "name": "White Antique or Vintage style bulb sprayer with silver fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
+   "style": "Spray",
    "neck": "18-415",
    "color": "White",
    "applicator": null,

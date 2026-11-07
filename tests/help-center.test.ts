@@ -4,7 +4,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { FAQ_POLICY_ENTRIES } from "@/lib/faqPolicy";
 import { KB_ENTRIES, publicEntries, sentences, toPublicEntry, type KbEntry } from "@/lib/help/kb";
-import { allBodies, bodiesListing, bodyById, bodyLabel, fitReport } from "@/lib/help/fit";
+import { allBodies, bodiesListing, bodyById, bodyLabel, componentById, fitReport } from "@/lib/help/fit";
 import { buildRobots } from "@/lib/crawl/robots";
 import fitIndex from "@/lib/help/fit-index.generated.json";
 import { shortPartName } from "@/components/help/FitParts";
@@ -74,11 +74,27 @@ describe("fit index", () => {
     it("lists the Bell 10 ml closures the catalog pairs with it, apart from same-thread parts", () => {
         const report = fitReport("bell-10ml-13-415")!;
         expect(report.counts.listed).toBe(21);
-        expect(report.counts["not-confirmed"]).toBe(10);
+        // The six short caps with liner: same thread, but no product we sell pairs them with the Bell.
+        expect(report.counts["not-confirmed"]).toBe(6);
         expect(report.body.listed).toContain("CMP-CAP-13-415"); // matte blue sprayer
         expect(report.body.sameThread.some((id) => report.body.listed.includes(id))).toBe(false);
         expect(report.formulaSuitability).toBe("unknown");
         expect(bodiesListing("CMP-CAP-13-415")).toHaveLength(15);
+    });
+
+    it("groups 13-415 closures the way the neck-thread matrix does", () => {
+        const report = fitReport("bell-10ml-13-415")!;
+        const groups = Object.fromEntries([...report.listed, ...report.notConfirmed].map((g) => [g.label, g.rows.map((r) => r.itemCode)]));
+        expect(groups["Roll-on caps"]).toHaveLength(9);
+        expect(groups["Fine mist sprayers"]).toHaveLength(8);
+        expect(groups["Short ribbed caps"]?.sort()).toEqual(["CP13-415BlkSht", "CP13-415WhtSht"]);
+        expect(groups["Tall caps with liner"]?.sort()).toEqual(["CP13-415Gl", "CP13-415Sl"]);
+        expect(groups["Short caps with liner"]).toHaveLength(6);
+    });
+
+    it("keeps reviewed duplicate listings out of every fit list", () => {
+        const codes = new Set(allBodies().flatMap((b) => [...b.listed, ...b.sameThread, ...b.conflicting]).map((id) => componentById(id)?.itemCode));
+        for (const dup of ["13-415CAP4SpryCuMt", "13-415CAP4SpryGlSh", "13-415CAP4SprySlMt", "18-415CAP4SpryMtGl", "18-415CAP4SpryShnBlk"]) expect(codes.has(dup)).toBe(false);
     });
 
     it("never offers same-thread parts for bottles that are their own compatibility class", () => {
@@ -100,8 +116,10 @@ describe("fit index", () => {
     });
 
     it("names same-size siblings apart and never repeats the category", () => {
-        expect(bodyLabel(bodyById("footed-rectangle-10ml-13-415")!)).toBe("Footed Rectangle 10 ml");
-        expect(bodyLabel(bodyById("tall-rectangle-10ml-13-415")!)).toBe("Tall Rectangle 10 ml");
+        expect(bodyLabel(bodyById("footed-rectangle-10ml-13-415")!)).toBe("Footed Rectangular 10 ml");
+        expect(bodyLabel(bodyById("tall-rectangle-10ml-13-415")!)).toBe("Tall Rectangular 10 ml");
+        expect(bodyLabel(bodyById("cylinder-9ml-13-415")!)).toBe("Tall Cylinder 9 ml");
+        expect(bodyLabel(bodyById("cylinder-5ml-13-415")!)).toBe("Cylinder 5 ml");
         expect(bodyLabel(bodyById("aluminum-bottle-65ml-20-410")!)).toBe("Aluminum Bottle 65 ml");
         expect(shortPartName("Matte blue Fine Mist Sprayer, Thread size 13-415")).toBe("Matte blue Fine Mist Sprayer");
         expect(shortPartName("Matte Gold cap or closure for rollon bottles, Threadsize 13-415")).toBe("Matte Gold cap or closure for rollon bottles");

@@ -99,6 +99,7 @@ export function buildKbOpenApi() {
                         componentId: { type: "string", description: "Stable register id" },
                         itemCode: { type: ["string", "null"], description: "The code customers order and search by" },
                         name: { type: "string" }, type: { type: "string" }, neck: { type: ["string", "null"] },
+                        group: { type: "string", description: "Closure group as the neck-thread matrices draw it, e.g. Short ribbed caps, Tall caps with liner" },
                         status: { type: "string", enum: ["listed", "not-confirmed", "conflicting"], description: "listed = the catalog pairs this part with the bottle; not-confirmed = same thread only, not a fit; conflicting = records disagree, do not recommend" },
                         statusLabel: { type: "string" },
                         catalogUrl: { type: ["string", "null"], description: "Catalog search for the item code: live price and stock" },

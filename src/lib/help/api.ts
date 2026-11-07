@@ -48,6 +48,7 @@ const flat = (groups: FitGroup[]) => groups.flatMap((g) => g.rows.map((row) => (
     itemCode: row.itemCode,
     name: row.name,
     type: row.type,
+    group: g.label,
     neck: row.neck,
     status: row.status,
     statusLabel: FIT_STATUS_LABEL[row.status],
