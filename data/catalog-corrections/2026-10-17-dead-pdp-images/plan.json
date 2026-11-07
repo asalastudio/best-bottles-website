@@ -1,0 +1,1847 @@
+{
+ "title": "Dead Shopify product images on 15 product pages (2026-10-17 browser sweep)",
+ "deployment": "precise-raccoon-123 (production)",
+ "capturedAt": "2026-10-17T21:55:45-07:00",
+ "capturedWith": "npx convex data products|productGroups|productPlates|productKits --prod --format jsonl (read-only); HEAD of every products.imageUrl; Shopify Admin GraphQL 2025-01 productVariant media (read-only); live page og:image + Product JSON-LD",
+ "field": "products.imageUrl (the old value is kept in products.legacyShopifyImageUrl, as convex/productPlates.ts promotePlateImagery does)",
+ "whereTheDeadUrlShows": "products.imageUrl of the page's primary variant feeds og:image, the Product JSON-LD image, the photo fallback and gallery (a /_next/image request that 404s). productGroups.heroImageUrl is empty on all 15 groups, and no product on these pages has imageUrlCapOff.",
+ "sourcePriority": [
+  "1. Shopify's current media for the variant: none exists for any of the 44 variants (variant image, variant media and product media all empty).",
+  "2. The SKU's own plate in productPlates: 43 of 44. Each is a distinct file built from that SKU's master PSD or its own old-site photo; none is shared or borrowed.",
+  "3. Legacy www.bestbottles.com photo: used only as an identity reference on the contact sheet; the product page filters these URLs out, so it is not written."
+ ],
+ "summary": {
+  "pages": 15,
+  "deadLinksOnThesePages": 44,
+  "writes": 43,
+  "held": 1,
+  "pagesWhoseDefaultImageIsFixed": 14
+ },
+ "entries": [
+  {
+   "websiteSku": "GB15ApthBlue",
+   "graceSku": "GB-APT-BLU-15ML-BLU-T",
+   "productId": "kd7ejxvhvqmdwx0kmb2jhd38fd81txtp",
+   "page": "apothecary-15ml-cobalt-blue-Ground-glassapplicator",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778823478110-79eb0dc4-9a89-4f42-b5ea-b38e93a9890a_5c3aa5e9-f1bb-4047-a88e-552f48d2b485.png?v=1781510296",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/apothecary-15ml-cobalt-blue-ground/GB15ApthBlue/0da595fba46cf1621b08820fbe2acf4a3396cd1f572e1381cd59afda5f97aadd.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778823478110-79eb0dc4-9a89-4f42-b5ea-b38e93a9890a_5c3aa5e9-f1bb-4047-a88e-552f48d2b485.png?v=1781510296"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn77za2vrma1pv8ak5n25pdtj98dmq4z",
+    "familyId": "apothecary-15ml-cobalt-blue-ground",
+    "plateSku": "GB15ApthBlue",
+    "sha256": "0da595fba46cf1621b08820fbe2acf4a3396cd1f572e1381cd59afda5f97aadd",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "10. Apothecary/1. Half Oz -15ml Apoth/1. GB15ApthBlue.psd",
+    "importedAt": 1788482994047
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GB15ApthBlue.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GB1ozApth",
+   "graceSku": "GB-APT-CLR-30ML-T",
+   "productId": "kd748hkcfd7w629dd80d388eb181tmfh",
+   "page": "apothecary-30ml-clear-Ground-glassapplicator",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778831590128-983ff7df-c56b-4b49-9d27-2169f93e6370_b67d66a5-9af6-49be-bb89-b701290526c5.png?v=1781510263",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/apothecary-30ml-clear-ground/GB1ozApth/2407f6acc431ecc3c4344421d6a32b7604b74079f0fde2531492b520bc9d9204.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778831590128-983ff7df-c56b-4b49-9d27-2169f93e6370_b67d66a5-9af6-49be-bb89-b701290526c5.png?v=1781510263"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn77rgqmh8tjrjepdj1b3q03mx8dm1qb",
+    "familyId": "apothecary-30ml-clear-ground",
+    "plateSku": "GB1ozApth",
+    "sha256": "2407f6acc431ecc3c4344421d6a32b7604b74079f0fde2531492b520bc9d9204",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "10. Apothecary/2. 1oz Apoth/2. GB1ozApth.psd",
+    "importedAt": 1788482995537
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GB1ozApth.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GB1ozApthGreen",
+   "graceSku": "GB-APT-GRN-30ML-GRN-T",
+   "productId": "kd74mx8kscz6pmt1f2qaarfyf981vn2r",
+   "page": "apothecary-30ml-green-Ground-glassapplicator",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1781509618024-5e91e03a-db51-46bd-baa5-d9365bd3a410.png?v=1781510243",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/apothecary-30ml-green-ground/GB1ozApthGreen/359d6be84b7e01a32049b582eaa5953e039559a1d336da37c9e7de883ec90485.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1781509618024-5e91e03a-db51-46bd-baa5-d9365bd3a410.png?v=1781510243"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7degqahy4p43txttqbdz7e018dmcg6",
+    "familyId": "apothecary-30ml-green-ground",
+    "plateSku": "GB1ozApthGreen",
+    "sha256": "359d6be84b7e01a32049b582eaa5953e039559a1d336da37c9e7de883ec90485",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "10. Apothecary/2. 1oz Apoth/3. GB1ozApthGreen.psd",
+    "importedAt": 1788483001596
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GB1ozApthGreen.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom10Blk",
+   "graceSku": "GB-CYL-BLK-10ML-ATM-BLK-01",
+   "productId": "kd7c4dq3zkd68tqwr8z2144pj981va9n",
+   "page": "atomizer-10ml",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLK-10ML-ATM-BLK-01.png?v=1781751462",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-10ml-black-17mm/GBAtom10Blk/a2d38a2811ed3a24f2e68084190371f0bb641eb4eaf86a31544d094d2e0238e5.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLK-10ML-ATM-BLK-01.png?v=1781751462"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn746g54789t2jvfvsfbrmcyz58ens22",
+    "familyId": "atomizer-10ml-black-17mm",
+    "plateSku": "GBAtom10Blk",
+    "sha256": "a2d38a2811ed3a24f2e68084190371f0bb641eb4eaf86a31544d094d2e0238e5",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/10ml Atomizers/1. GBAtom10Blk.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10Blk.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom10BlkDot",
+   "graceSku": "GB-CYL-BLK-10ML-ATM-BLK-02",
+   "productId": "kd719qhs601921e6m60yfraygd81vpkv",
+   "page": "atomizer-10ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLK-10ML-ATM-BLK-02.png?v=1781751463",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-10ml-black-17mm/GBAtom10BlkDot/6384ff494413042f478a0b006ea7b39cb1ad0314fc69f3990e7b9a7719a7b8c0.plate-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLK-10ML-ATM-BLK-02.png?v=1781751463"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7fyqhhb3p01r77qz8g9tvwh98emmtn",
+    "familyId": "atomizer-10ml-black-17mm",
+    "plateSku": "GBAtom10BlkDot",
+    "sha256": "6384ff494413042f478a0b006ea7b39cb1ad0314fc69f3990e7b9a7719a7b8c0",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10BlkDot.gif",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10BlkDot.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom10Blu",
+   "graceSku": "GB-CYL-BLU-10ML-ATM-BLU",
+   "productId": "kd73knwfpdsj634nbv9j15pawx81txxx",
+   "page": "atomizer-10ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLU-10ML-ATM-BLU.png?v=1781751463",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-10ml-cobalt-blue-17mm/GBAtom10Blu/16938d920fc1bd25fe4bf80c9429bcb4f35c16817b08fe0f5c3a3e59a6849686.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLU-10ML-ATM-BLU.png?v=1781751463"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7etn837abnm9cm8c5qqrfhrs8enfs3",
+    "familyId": "atomizer-10ml-cobalt-blue-17mm",
+    "plateSku": "GBAtom10Blu",
+    "sha256": "16938d920fc1bd25fe4bf80c9429bcb4f35c16817b08fe0f5c3a3e59a6849686",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/10ml Atomizers/3. GBAtom10Blu.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10Blu.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom10Gl",
+   "graceSku": "GB-CYL-CLR-10ML-ATM-GLD",
+   "productId": "kd7cymq3848d67vytfbxgmz59581t7jj",
+   "page": "atomizer-10ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589016760_2omgho_2540703d-b7ac-4555-8322-9cdeb9f5c669.png?v=1779603826",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-10ml-clear-17mm/GBAtom10Gl/aea1d85f4c0f21af867248813ef67a817c38c51308036bf5e7ec81460b79cb4d.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589016760_2omgho_2540703d-b7ac-4555-8322-9cdeb9f5c669.png?v=1779603826"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn76spe14fkame3s410d55c9qn8enb15",
+    "familyId": "atomizer-10ml-clear-17mm",
+    "plateSku": "GBAtom10Gl",
+    "sha256": "aea1d85f4c0f21af867248813ef67a817c38c51308036bf5e7ec81460b79cb4d",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/10ml Atomizers/2. GBAtom10Gl.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10Gl.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom10Gr",
+   "graceSku": "GB-CYL-GRN-10ML-ATM-GRN",
+   "productId": "kd77x7bqvw029q6de4rtt4404n81v65y",
+   "page": "atomizer-10ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-GRN-10ML-ATM-GRN.png?v=1781751463",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-10ml-green-17mm/GBAtom10Gr/a5dec6c35bf4f70c850a60678abcbcbd18901f38d96bf504f2995bd2a6fe2745.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-GRN-10ML-ATM-GRN.png?v=1781751463"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn77rdd8cqbh8h8aj86y6jpf4d8entty",
+    "familyId": "atomizer-10ml-green-17mm",
+    "plateSku": "GBAtom10Gr",
+    "sha256": "a5dec6c35bf4f70c850a60678abcbcbd18901f38d96bf504f2995bd2a6fe2745",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/10ml Atomizers/13. GBAtom10Gr.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10Gr.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom10Lv",
+   "graceSku": "GB-CYL-CLR-10ML-ATM-LVN",
+   "productId": "kd7c7dc5bvc0gpn0vnfamdjnfs81tycp",
+   "page": "atomizer-10ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589129599_bohdbe_7edb0229-897f-4754-965d-95011ef7259d.png?v=1779603817",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-10ml-clear-17mm/GBAtom10Lv/402b17bc2ca16cf68d12e4d2ead2712fc61d33fe611357cff1984864425d1485.plate-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589129599_bohdbe_7edb0229-897f-4754-965d-95011ef7259d.png?v=1779603817"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn72ezckvbg1pxvms9t4aqsctn8em3t8",
+    "familyId": "atomizer-10ml-clear-17mm",
+    "plateSku": "GBAtom10Lv",
+    "sha256": "402b17bc2ca16cf68d12e4d2ead2712fc61d33fe611357cff1984864425d1485",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10Lv.gif",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10Lv.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom10Pnk",
+   "graceSku": "GB-CYL-PNK-10ML-ATM-PNK",
+   "productId": "kd7a9jgz5k7xc0da15f4nc0wx181vh7d",
+   "page": "atomizer-10ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-PNK-10ML-ATM-PNK.png?v=1781751466",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-10ml-pink-17mm/GBAtom10Pnk/e5b7478bcd004d8e443e04e68f29cc911c8153ad4fb20852cd660d72354001d4.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-PNK-10ML-ATM-PNK.png?v=1781751466"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn76xgtswdf1vxn58q3tajeb6n8encjk",
+    "familyId": "atomizer-10ml-pink-17mm",
+    "plateSku": "GBAtom10Pnk",
+    "sha256": "e5b7478bcd004d8e443e04e68f29cc911c8153ad4fb20852cd660d72354001d4",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/10ml Atomizers/4. GBAtom10Pnk.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10Pnk.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom10Red",
+   "graceSku": "GB-CYL-CLR-10ML-ATM-RED",
+   "productId": "kd75tmvt8a4yzj02d4p39p0v9581t2aa",
+   "page": "atomizer-10ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589248294_19corl_ae87cc70-34ec-40df-a715-ff529df30ea3.png?v=1779603808",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-10ml-clear-17mm/GBAtom10Red/9a4b623fd5872c883c84086554009d902ec64847e5e89c9a62a6cd127b433044.plate-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589248294_19corl_ae87cc70-34ec-40df-a715-ff529df30ea3.png?v=1779603808"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7e83atacpe8ajrvw1m700sds8en4bd",
+    "familyId": "atomizer-10ml-clear-17mm",
+    "plateSku": "GBAtom10Red",
+    "sha256": "9a4b623fd5872c883c84086554009d902ec64847e5e89c9a62a6cd127b433044",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10Red.gif",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10Red.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom10Sl",
+   "graceSku": "GB-CYL-CLR-10ML-ATM-SLV-01",
+   "productId": "kd7e8wsfnkmghew5hntr48115981va54",
+   "page": "atomizer-10ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589298596_tx755g.png?v=1779602344",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-10ml-clear-17mm/GBAtom10Sl/a3f168f3c6ef855c101f822212de156e819ec3c7bc015ee7aa00f696de476bae.plate-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589298596_tx755g.png?v=1779602344"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn768ykseajd6x258w6bwvevhh8em4wq",
+    "familyId": "atomizer-10ml-clear-17mm",
+    "plateSku": "GBAtom10Sl",
+    "sha256": "a3f168f3c6ef855c101f822212de156e819ec3c7bc015ee7aa00f696de476bae",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10Sl.gif",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10Sl.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom10SlDot",
+   "graceSku": "GB-CYL-CLR-10ML-ATM-SLV-02",
+   "productId": "kd7673c2vtgarkfebqeeg51zt181tw8p",
+   "page": "atomizer-10ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-CLR-10ML-ATM-SLV-02.png?v=1781379516",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-10ml-clear-17mm/GBAtom10SlDot/f50355fcc0b2a5fcbb26f641f5ef5225e556281da22d15d3254526ec6b858f95.plate-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-CLR-10ML-ATM-SLV-02.png?v=1781379516"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7e89bwhb1yev4r452wgkh14h8ency9",
+    "familyId": "atomizer-10ml-clear-17mm",
+    "plateSku": "GBAtom10SlDot",
+    "sha256": "f50355fcc0b2a5fcbb26f641f5ef5225e556281da22d15d3254526ec6b858f95",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10SlDot.gif",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10SlDot.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom10SlStars",
+   "graceSku": "GB-CYL-CLR-10ML-ATM-SLV-03",
+   "productId": "kd7736bjv4xdg4k6ddm7h37z4s81tccd",
+   "page": "atomizer-10ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589412300_rgxgf0.png?v=1779602177",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-10ml-clear-17mm/GBAtom10SlStars/2f6a3545aba8bddb89f71b5637c4b0159f477737c2ea9fca70c8ce3006d51fd0.plate-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589412300_rgxgf0.png?v=1779602177"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7bnm4xsvmrr701wx1re6ab6d8em128",
+    "familyId": "atomizer-10ml-clear-17mm",
+    "plateSku": "GBAtom10SlStars",
+    "sha256": "2f6a3545aba8bddb89f71b5637c4b0159f477737c2ea9fca70c8ce3006d51fd0",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10SlStars.gif",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom10SlStars.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom5SlimBlk",
+   "graceSku": "GB-SLM-BLK-5ML-ATM-BLK-T",
+   "productId": "kd77xhxwvaaj6h076rxm8hhffh81vpmb",
+   "page": "atomizer-5ml",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-SLM-BLK-5ML-ATM-BLK-T.png?v=1781751557",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-5ml-black-10mm/GBAtom5SlimBlk/6c5fdd17a8ce8b1cf50506dface1676af4e1198e0c5cb4589b911b19e2e7730a.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-SLM-BLK-5ML-ATM-BLK-T.png?v=1781751557"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7ekjacprn4k8v5mzfctes9qn8ennxz",
+    "familyId": "atomizer-5ml-black-10mm",
+    "plateSku": "GBAtom5SlimBlk",
+    "sha256": "6c5fdd17a8ce8b1cf50506dface1676af4e1198e0c5cb4589b911b19e2e7730a",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/13-400 5ml Atomizers/1. GBAtom5SlimBlk.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5SlimBlk.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom5Blk",
+   "graceSku": "GB-CYL-BLK-5ML-ATM-BLK",
+   "productId": "kd7e49ntw6nw487m8fjmhez65d82fg67",
+   "page": "atomizer-5ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588720462_tigzk8.png?v=1779603616",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-5ml-black-10mm/GBAtom5Blk/7a6629f56c69c35a7fd2922f8c0b1fad9fc5a9a8721c9bca5b689ccb295c7488.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588720462_tigzk8.png?v=1779603616"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn79qk1smtrfg5xa5sc263xcb58en8ca",
+    "familyId": "atomizer-5ml-black-10mm",
+    "plateSku": "GBAtom5Blk",
+    "sha256": "7a6629f56c69c35a7fd2922f8c0b1fad9fc5a9a8721c9bca5b689ccb295c7488",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/13-400 5ml Atomizers/4. GBAtom5Blk.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5Blk.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom5BlkDot",
+   "graceSku": "GB-CYL-BLK-5ML-ATM-BLK-02",
+   "productId": "kd77k2rjnqf2mpq7xmhznen0qd82f2xt",
+   "page": "atomizer-5ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588607159_87kec4_d8a3be20-4f71-4c76-b8f5-4fd2a70ace40.png?v=1779602823",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-5ml-black-10mm/GBAtom5BlkDot/7a711a3a06d20f9f0654df7471c0d1172db2119cf169c88088b0e9aacc39df18.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588607159_87kec4_d8a3be20-4f71-4c76-b8f5-4fd2a70ace40.png?v=1779602823"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn783whz9x2bpnxjvgwkfr8fm98em75p",
+    "familyId": "atomizer-5ml-black-10mm",
+    "plateSku": "GBAtom5BlkDot",
+    "sha256": "7a711a3a06d20f9f0654df7471c0d1172db2119cf169c88088b0e9aacc39df18",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/13-400 5ml Atomizers/10. GBAtom5BlkDot.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": null,
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom5Blu",
+   "graceSku": "GB-CYL-BLU-5ML-ATM-BLU",
+   "productId": "kd700awfgqzkk2d4d18hv6swy581v62x",
+   "page": "atomizer-5ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588249064_536947.png?v=1779602843",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-5ml-cobalt-blue-10mm/GBAtom5Blu/e2789401591752bba4371f0e94bc0311cf91634675382eafdd0b8c3a5d25e482.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588249064_536947.png?v=1779602843"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7a1mw7dqvcs9tbwec9na48bx8enx00",
+    "familyId": "atomizer-5ml-cobalt-blue-10mm",
+    "plateSku": "GBAtom5Blu",
+    "sha256": "e2789401591752bba4371f0e94bc0311cf91634675382eafdd0b8c3a5d25e482",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/13-400 5ml Atomizers/6. GBAtom5Blu.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5Blu.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom5Gl",
+   "graceSku": "GB-CYL-CLR-5ML-ATM-GLD",
+   "productId": "kd712xtngpxgh2z8kxmpeertvh81v3jq",
+   "page": "atomizer-5ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588308205_am4qhq_318b69c0-8629-4244-add3-f3d9cae30241.png?v=1779602839",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-5ml-clear-13-415/GBAtom5Gl/e4e2d2a58b845eff1c9814f8048f39a73255b0def5f99e3a5494c9e758ef4cd6.plate-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588308205_am4qhq_318b69c0-8629-4244-add3-f3d9cae30241.png?v=1779602839"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn77zr071bqtjq6yetkpj889y58em606",
+    "familyId": "atomizer-5ml-clear-13-415",
+    "plateSku": "GBAtom5Gl",
+    "sha256": "e4e2d2a58b845eff1c9814f8048f39a73255b0def5f99e3a5494c9e758ef4cd6",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5Gl.gif",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5Gl.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom5PnkDot",
+   "graceSku": "GB-CYL-PNK-5ML-ATM-PNK-02",
+   "productId": "kd751ja1qr7zaad0xgnex8gjys82fwxs",
+   "page": "atomizer-5ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588669269_7lh598_41b371dd-aed4-4187-a16f-1db23fd71646.png?v=1779603521",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-5ml-pink-10mm/GBAtom5PnkDot/a85e4f12f56e52536e76ce3c89c8a0f3ec017a575532ca4fc27739f86f9ef493.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588669269_7lh598_41b371dd-aed4-4187-a16f-1db23fd71646.png?v=1779603521"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7ccgb0421963zgg6cw161ntd8emjjw",
+    "familyId": "atomizer-5ml-pink-10mm",
+    "plateSku": "GBAtom5PnkDot",
+    "sha256": "a85e4f12f56e52536e76ce3c89c8a0f3ec017a575532ca4fc27739f86f9ef493",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/13-400 5ml Atomizers/11. GBAtom5PnkDot.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": null,
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom5Red",
+   "graceSku": "GB-CYL-CLR-5ML-ATM-RED",
+   "productId": "kd7c3skrqw32cb3p2few0w901h81tkv2",
+   "page": "atomizer-5ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588359712_9qpo4g.png?v=1779602835",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-5ml-clear-13-415/GBAtom5Red/5cf41c19263b542170663d2efccceef2889b95f70ae24b07de9ad84337f26798.plate-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588359712_9qpo4g.png?v=1779602835"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn757hfazky3g6hmr0f3250e398em017",
+    "familyId": "atomizer-5ml-clear-13-415",
+    "plateSku": "GBAtom5Red",
+    "sha256": "5cf41c19263b542170663d2efccceef2889b95f70ae24b07de9ad84337f26798",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5Red.gif",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5Red.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom5Sl",
+   "graceSku": "GB-CYL-CLR-5ML-ATM-SLV-01",
+   "productId": "kd70yeyf8m28ptwpmzehvfhg6h81t1x9",
+   "page": "atomizer-5ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588408924_md7g5y.png?v=1779602831",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-5ml-clear-10mm/GBAtom5Sl/d0f0b547002723458f59fce5c08e9c161e30bd7f6ffc98f329abe2700a57a01c.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588408924_md7g5y.png?v=1779602831"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn77xkz55cqvty94d64m74q1an8em66z",
+    "familyId": "atomizer-5ml-clear-10mm",
+    "plateSku": "GBAtom5Sl",
+    "sha256": "d0f0b547002723458f59fce5c08e9c161e30bd7f6ffc98f329abe2700a57a01c",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/13-400 5ml Atomizers/9. GBAtom5Sl.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5Sl.gif",
+   "sharesOldUrlWith": [
+    "GBAtom5SlimSl"
+   ],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom5SlDot",
+   "graceSku": "GB-CYL-CLR-5ML-ATM-SLV-02",
+   "productId": "kd7c66wh64y0gtb1cnym4m67w181t7rq",
+   "page": "atomizer-5ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588488277_6y1fgj.png?v=1779602827",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-5ml-clear-13-415/GBAtom5SlDot/e2fc66693957ab5b3c33a3354b66cdc0e11c7dff7c38226f23a98d1d202b8ad7.plate-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588488277_6y1fgj.png?v=1779602827"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7fqknff02dxav9er3mcm3wys8en82e",
+    "familyId": "atomizer-5ml-clear-13-415",
+    "plateSku": "GBAtom5SlDot",
+    "sha256": "e2fc66693957ab5b3c33a3354b66cdc0e11c7dff7c38226f23a98d1d202b8ad7",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5SlDot.gif",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5SlDot.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom5SlStars",
+   "graceSku": "GB-CYL-CLR-5ML-ATM-SLV-03",
+   "productId": "kd7eavjewy567jk95c1nbt2kt181v34f",
+   "page": "atomizer-5ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588197499_i22fdn.png?v=1779602847",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-5ml-clear-10mm/GBAtom5SlStars/0f9371237b18a8f4831e422cedffaf5e0b4cc3810dcba59e0587d182c37fbee4.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588197499_i22fdn.png?v=1779602847"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn70tyve03wdatq9853jzahp0x8entas",
+    "familyId": "atomizer-5ml-clear-10mm",
+    "plateSku": "GBAtom5SlStars",
+    "sha256": "0f9371237b18a8f4831e422cedffaf5e0b4cc3810dcba59e0587d182c37fbee4",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/13-400 5ml Atomizers/13. GBAtom5SlStars.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5SlStars.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBAtom5SlimSl",
+   "graceSku": "GB-SLM-CLR-5ML-ATM-SLV-T",
+   "productId": "kd75qfesm1k5yxhb4vrkr93ksd81t0my",
+   "page": "atomizer-5ml",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588408924_md7g5y.png?v=1779602831",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/atomizer-5ml-clear-10mm/GBAtom5SlimSl/8135f82f638bdb532ef5dc9184283b6fcea6cb2348902ac498efac4a199be2e5.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588408924_md7g5y.png?v=1779602831"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn724yay2tbqrer4j5dsgk1m0x8en89b",
+    "familyId": "atomizer-5ml-clear-10mm",
+    "plateSku": "GBAtom5SlimSl",
+    "sha256": "8135f82f638bdb532ef5dc9184283b6fcea6cb2348902ac498efac4a199be2e5",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "8.   13-400 (5ml) (10ml) Atomizers/13-400 5ml Atomizers/2. GBAtom5SlimSl.psd",
+    "importedAt": 1789773967042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5SlimSl.gif",
+   "sharesOldUrlWith": [
+    "GBAtom5Sl"
+   ],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJClr15Pnk",
+   "graceSku": "CJ-JAR-CLR-15ML-PNK",
+   "productId": "kd7f78xjg6dac6mj2b6pnab0nh81t2ef",
+   "page": "cream-jar-15ml-mixed",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532230576_nhtqs1.png?v=1779532295",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Pnk/67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532230576_nhtqs1.png?v=1779532295"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7amv51qk31dt8s78nry8njy58dmbzh",
+    "familyId": "cream-jar-15ml-clear-37mm",
+    "plateSku": "CJClr15Pnk",
+    "sha256": "67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/15. Jar Clear, Pink cap 15ml/CJClr15Pnk.psd",
+    "importedAt": 1788482969793
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJClr15Pnk.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJClr15Wht",
+   "graceSku": "CJ-JAR-CLR-15ML-WHT",
+   "productId": "kd7e01tx7cvgv126btt3pq9bpx81tvzg",
+   "page": "cream-jar-15ml-mixed",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532280108_6v9b8i.png?v=1779532422",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Wht/a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532280108_6v9b8i.png?v=1779532422"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7fxb7c67y6x8gma3hjt5s4hx8dmdhg",
+    "familyId": "cream-jar-15ml-clear-37mm",
+    "plateSku": "CJClr15Wht",
+    "sha256": "a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/13. Jar Clear, White cap 15ml/CJClr15Wht.psd",
+    "importedAt": 1788482969793
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJClr15Wht.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJWhite20",
+   "graceSku": "CJ-JAR-20ML-WHT",
+   "productId": "kd727pkry1b5555wnav8ny5w6x81v23c",
+   "page": "cream-jar-20ml-mixed",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532329541_91d5uo.png?v=1779532418",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-20ml-white-40mm/CJWhite20/5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532329541_91d5uo.png?v=1779532418"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn795hff2gjrjkp5ej8mh0v4wh8dmp1x",
+    "familyId": "cream-jar-20ml-white-40mm",
+    "plateSku": "CJWhite20",
+    "sha256": "5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/16. Jar White, White cap 20ml/CJWhite20.psd",
+    "importedAt": 1788483012008
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJWhite20.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJAmb30BlkCap",
+   "graceSku": "CJ-JAR-AMB-30ML-BLK",
+   "productId": "kd76fg8j67j45c6p9w01pgmykn81tn58",
+   "page": "cream-jar-30ml-mixed",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532377433_68ke8f.png?v=1781252542",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-30ml-amber-45mm/CJAmb30BlkCap/3a959166bd706e1d849fdf4d49e63d8ca474af71c6835f064a2f75cb02c8a284.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532377433_68ke8f.png?v=1781252542"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn75tgpxtvvm8awpmktynhb6098epd5z",
+    "familyId": "cream-jar-30ml-amber-45mm",
+    "plateSku": "CJAmb30BlkCap",
+    "sha256": "3a959166bd706e1d849fdf4d49e63d8ca474af71c6835f064a2f75cb02c8a284",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "https://www.bestbottles.com/images/store/enlarged_pics/CJAmb30BlkCap.gif",
+    "importedAt": 1789800384242
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJAmb30BlkCap.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJAmb30SlCap",
+   "graceSku": "CJ-JAR-AMB-30ML-SLV",
+   "productId": "kd7cxbc7hrmtsh1dfqfsf1dn2x81vw1p",
+   "page": "cream-jar-30ml-mixed",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532435491_h1lsu1.png?v=1781252542",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-30ml-amber-45mm/CJAmb30SlCap/704b5eeedbe6a3aa6739aab974865d201af490e69bc6f23e527f88b9f7623245.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532435491_h1lsu1.png?v=1781252542"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7dcn80q2ept833t76v1ckg4n8dmahq",
+    "familyId": "cream-jar-30ml-amber-45mm",
+    "plateSku": "CJAmb30SlCap",
+    "sha256": "704b5eeedbe6a3aa6739aab974865d201af490e69bc6f23e527f88b9f7623245",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/3. Jar Amb, Sl Cap 30ml/CJAmb30SlCap.psd",
+    "importedAt": 1788483015042
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJAmb30SlCap.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJFrst30BlkCap",
+   "graceSku": "CJ-JAR-FRS-30ML-BLK",
+   "productId": "kd78rcbfwcmzfe4sp7nrwcx1p581v182",
+   "page": "cream-jar-30ml-mixed",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532490994_8yzkq9.png?v=1781252542",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-30ml-frosted-45mm/CJFrst30BlkCap/f2fdb520bd15cd05605a81478345c61134802285c84a59f25011cff3b28210b4.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532490994_8yzkq9.png?v=1781252542"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn71b7pbmws2pr06kjg6dye5p98dm7yb",
+    "familyId": "cream-jar-30ml-frosted-45mm",
+    "plateSku": "CJFrst30BlkCap",
+    "sha256": "f2fdb520bd15cd05605a81478345c61134802285c84a59f25011cff3b28210b4",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/10. Jar Frst, Blk Cap 30ml/CJFrst30BlkCap.psd",
+    "importedAt": 1788483020525
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJFrst30BlkCap.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJFrst30SlCap",
+   "graceSku": "CJ-JAR-FRS-30ML-SLV",
+   "productId": "kd75919ymjsn3m76cj46cda3wh81tyd6",
+   "page": "cream-jar-30ml-mixed",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532547111_gg145e.png?v=1781252543",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-30ml-frosted-45mm/CJFrst30SlCap/2bc8d7b0953eddd2d24b87f2e762e6c27ce83a25478a49ec8a63f56f5eedf8b3.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532547111_gg145e.png?v=1781252543"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn766ee1heyerg11yw7dpgbk498dnk26",
+    "familyId": "cream-jar-30ml-frosted-45mm",
+    "plateSku": "CJFrst30SlCap",
+    "sha256": "2bc8d7b0953eddd2d24b87f2e762e6c27ce83a25478a49ec8a63f56f5eedf8b3",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/4. Jar Frst, Sl Cap 30ml/CJFrst30SlCap.psd",
+    "importedAt": 1788483020525
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJFrst30SlCap.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJClr3",
+   "graceSku": "CJ-JAR-CLR-3ML",
+   "productId": "kd75yv4193z9h8p1mm3nmmrxrn81t7hf",
+   "page": "cream-jar-3ml-mixed",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532062203_xewaj8.png?v=1779532155",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-3ml-clear-20mm/CJClr3/cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532062203_xewaj8.png?v=1779532155"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn77z9vmh8d11dtezgezy084ws8dmyrx",
+    "familyId": "cream-jar-3ml-clear-20mm",
+    "plateSku": "CJClr3",
+    "sha256": "cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/14. Jar Clear, White cap 3ml/CJClr3.psd",
+    "importedAt": 1788483023084
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJClr3.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CreamJarAmb40Blkcap",
+   "graceSku": "CJ-JAR-AMB-40ML-01",
+   "productId": "kd74swg61b8yfqxzdmrq3gsr4n81ta9y",
+   "page": "cream-jar-40ml-mixed",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532598399_6jkgj4.png?v=1781252546",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-40ml-amber-48-400/CreamJarAmb40Blkcap/784fa89838b2d48d73da52e906c5159f3e2028e88b6c7d2c041d724c08b3c04a.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532598399_6jkgj4.png?v=1781252546"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7dch7faft9kspcx9y84chhcx8eq0v6",
+    "familyId": "cream-jar-40ml-amber-48-400",
+    "plateSku": "CreamJarAmb40Blkcap",
+    "sha256": "784fa89838b2d48d73da52e906c5159f3e2028e88b6c7d2c041d724c08b3c04a",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/5. Jar Amb, Blk Cap 40ml/CJAmb40BlkCap.psd",
+    "importedAt": 1789802026351
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJAmb40BlkCap.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJAmb40SlCap",
+   "graceSku": "CJ-JAR-AMB-40ML-02",
+   "productId": "kd7e78976n7tvq6tasjpqb82dx81tb2k",
+   "page": "cream-jar-40ml-mixed",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532598399_6jkgj4_215744db-5801-4d6e-a6ae-378be739afc4.png?v=1781252547",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-40ml-amber-48-400/CJAmb40SlCap/bd713b37839d4c4046ff5cd4f36a78acba3b6677556d3866020f2e9e35b3da28.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532598399_6jkgj4_215744db-5801-4d6e-a6ae-378be739afc4.png?v=1781252547"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn76c82nnp0vqk9xj4g2c82yjx8dnqz6",
+    "familyId": "cream-jar-40ml-amber-48-400",
+    "plateSku": "CJAmb40SlCap",
+    "sha256": "bd713b37839d4c4046ff5cd4f36a78acba3b6677556d3866020f2e9e35b3da28",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/7. Jar Amb, Sl Cap 40ml/CJAmb40SlCap.psd",
+    "importedAt": 1788483026034
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJAmb40SlCap.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJFrst40BlkCap",
+   "graceSku": "CJ-JAR-FRS-40ML-01",
+   "productId": "kd7203k163mjjb723kzxpjpnah81v7kq",
+   "page": "cream-jar-40ml-mixed",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532704539_3aeze8.png?v=1781252546",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-40ml-frosted-48-400/CJFrst40BlkCap/37101af9d09242577be6b04b1b8a9e0b2d0ff312f22eb93c2aa5c81dbc8c2a48.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532704539_3aeze8.png?v=1781252546"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn73gggwja1a0z36m848qwb4m58dmz1t",
+    "familyId": "cream-jar-40ml-frosted-48-400",
+    "plateSku": "CJFrst40BlkCap",
+    "sha256": "37101af9d09242577be6b04b1b8a9e0b2d0ff312f22eb93c2aa5c81dbc8c2a48",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/6. Jar Frst, Blk Cap 40ml/CJFrst40BlkCap.psd",
+    "importedAt": 1788483030911
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJFrst40BlkCap.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJFrst40SlCap",
+   "graceSku": "CJ-JAR-FRS-40ML-02",
+   "productId": "kd7a58epx8ssd967vtza2rr8fs81vcx4",
+   "page": "cream-jar-40ml-mixed",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532754221_iwicnw.png?v=1781252547",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-40ml-frosted-48-400/CJFrst40SlCap/31b0d4a63ab2bdd8b03a0429d5acb257480f36114720e780e2082bec59d296e0.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532754221_iwicnw.png?v=1781252547"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn79cb279k12pa6e8xd8e6rrhn8dmhd9",
+    "familyId": "cream-jar-40ml-frosted-48-400",
+    "plateSku": "CJFrst40SlCap",
+    "sha256": "31b0d4a63ab2bdd8b03a0429d5acb257480f36114720e780e2082bec59d296e0",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/2. Jar Frost, Sl Cap 40ml/CJFrst40SlCap.psd",
+    "importedAt": 1788483030911
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJFrst40SlCap.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJAmb5mlSlCap",
+   "graceSku": "CJ-JAR-AMB-5ML-SLV",
+   "productId": "kd72brxr1r62a9wjcwbjaa4g498aw75s",
+   "page": "cream-jar-5ml-amber",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532915220_ls9jno.png?v=1781252654",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-amber-27mm/CJAmb5mlSlCap/9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532915220_ls9jno.png?v=1781252654"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn792vq0vk9vb8e1sgdg4tg3k18dne4d",
+    "familyId": "cream-jar-5ml-amber-27mm",
+    "plateSku": "CJAmb5mlSlCap",
+    "sha256": "9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/12.  Jar Amb, Silver Cap 5ml/CJAmb5mlSlCap.psd",
+    "importedAt": 1788483036168
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJAmb5mlSlCap.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJAmb5mlBlkCap",
+   "graceSku": "CJ-JAR-AMB-5ML-BLK",
+   "productId": "kd7b7h6vxsns4xa4spfntq8nws81tvck",
+   "page": "cream-jar-5ml-mixed",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532116193_yarfn8.png?v=1779532138",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-amber-27mm/CJAmb5mlBlkCap/76482c15c4d850b424d78e8bb71f218e61e4da2ca69831445d45f5d67bc35abb.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532116193_yarfn8.png?v=1779532138"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7b6fmf48t95yk5c1vyxhbyvh8dnm3h",
+    "familyId": "cream-jar-5ml-amber-27mm",
+    "plateSku": "CJAmb5mlBlkCap",
+    "sha256": "76482c15c4d850b424d78e8bb71f218e61e4da2ca69831445d45f5d67bc35abb",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/11. Jar Amb, Blk Cap 5ml/CJAmb5mlBlkCap.psd",
+    "importedAt": 1788483036168
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJAmb5mlBlkCap.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJClr5mlClrCap",
+   "graceSku": "CJ-JAR-CLR-5ML-CLR",
+   "productId": "kd75p0we48frd3xh453qs78k5x81t37w",
+   "page": "cream-jar-5ml-mixed",
+   "pageDefault": false,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532182701_iqk7bq.png?v=1781252539",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-clear-27mm/CJClr5mlClrCap/7b042904666f895b38459b886b57180aa2f9e721be49c8b78a35f3907279cfd1.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532182701_iqk7bq.png?v=1781252539"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn74dkdsnwx232sptgchcx639n8dmgxq",
+    "familyId": "cream-jar-5ml-clear-27mm",
+    "plateSku": "CJClr5mlClrCap",
+    "sha256": "7b042904666f895b38459b886b57180aa2f9e721be49c8b78a35f3907279cfd1",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/17. Jar Clear, Clear Cap 5ml/CJClr5mlClrCap.psd",
+    "importedAt": 1788483038633
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJClr5mlClrCap.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CreamJarFrstdPlsBlkPls2oz",
+   "graceSku": "CJ-JAR-FRS-60ML",
+   "productId": "kd74zc3h51fdtkhj06cw2a753n81tbkc",
+   "page": "cream-jar-60ml-mixed",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532808027_fncjnu.png?v=1781252553",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-60ml-frosted-58mm/CreamJarFrstdPlsBlkPls2oz/e6380ea6fe5a48ad53c6c8fd45d4418505fc26bf6029118497d1f8170fae90f0.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532808027_fncjnu.png?v=1781252553"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn73cf4s1sd6cnpdkzqh8526vh8ep2gf",
+    "familyId": "cream-jar-60ml-frosted-58mm",
+    "plateSku": "CreamJarFrstdPlsBlkPls2oz",
+    "sha256": "e6380ea6fe5a48ad53c6c8fd45d4418505fc26bf6029118497d1f8170fae90f0",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/9. Cream Jar Frost Plastic 60ml black cap/CJFrstdPlsBlkPls2oz.psd",
+    "importedAt": 1789802026351
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJFrstdPlsBlkPls2oz.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "CJWhitePlsSlFr2oz",
+   "graceSku": "CJ-JAR-60ML-WHT",
+   "productId": "kd71b6ke6da42acye93agqm7z581tg7c",
+   "page": "cream-jar-63ml-mixed",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1779556161776-635357b3-bb21-43ad-bed2-6a57ffbc77ef.png?v=1781252562",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-63ml-white-58mm/CJWhitePlsSlFr2oz/372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1779556161776-635357b3-bb21-43ad-bed2-6a57ffbc77ef.png?v=1781252562"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn700zk245y45j2j5cwe0az5bn8dnbhq",
+    "familyId": "cream-jar-63ml-white-58mm",
+    "plateSku": "CJWhitePlsSlFr2oz",
+    "sha256": "372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "14. Cream Jars/Capped/20. Cream Jar White Plastic 60ml, silver cap/CJWhitePlsSlFr2oz..psd",
+    "importedAt": 1788483041254
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/CJWhitePlsSlFr2oz.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  },
+  {
+   "websiteSku": "GBEternalFlameClear",
+   "graceSku": "GB-ETF-CLR-35ML",
+   "productId": "kd70z483z3vgav283v27mgsm8d81vdwx",
+   "page": "eternal-flame-35ml-clear-Ground",
+   "pageDefault": true,
+   "expect": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778901292425-ceb7a92b-9ef8-43c5-ac4c-4227494cb356.png?v=1781252566",
+    "legacyShopifyImageUrl": null
+   },
+   "patch": {
+    "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-clear-ground/GBEternalFlameClear/dd45f1fe8f1f512822fb5f4ca6b51a8b05638288dee5b1624eb992d7f9942491.front-on-1000x1100.webp",
+    "legacyShopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778901292425-ceb7a92b-9ef8-43c5-ac4c-4227494cb356.png?v=1781252566"
+   },
+   "oldStatus": 404,
+   "source": {
+    "kind": "productPlates",
+    "plateId": "nn7ba1c1gk5evs08a677na3jyh8eqzt9",
+    "familyId": "decorative-35ml-clear-ground",
+    "plateSku": "GBEternalFlameClear",
+    "sha256": "dd45f1fe8f1f512822fb5f4ca6b51a8b05638288dee5b1624eb992d7f9942491",
+    "width": 1000,
+    "height": 1100,
+    "builtFrom": "17. Additional Bottles/GBEternalFlameClear..psd",
+    "importedAt": 1789800384242
+   },
+   "identityReference": "https://www.bestbottles.com/images/store/enlarged_pics/GBEternalFlameClear.gif",
+   "sharesOldUrlWith": [],
+   "reason": "Shopify deleted this file (HTTP 404) and holds no media for the variant; the SKU's own published plate (productPlates, the image the product-page stage already draws) replaces it. The dead URL is kept in legacyShopifyImageUrl."
+  }
+ ],
+ "held": [
+  {
+   "websiteSku": "CJBlu3",
+   "graceSku": "CJ-JAR-CBL-9ML",
+   "productId": "kd70jcpeh7knvamgjkpxjhsjh981vgr9",
+   "page": "cream-jar-3ml-mixed",
+   "pageDefault": true,
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532003923_vx5wfh.png?v=1779532077",
+   "imageUrlStatus": 404,
+   "sharesOldUrlWith": [],
+   "checked": {
+    "productPlates": "no row for this graceSku or websiteSku",
+    "productKits": "no row",
+    "shopify": "variant and product hold no media",
+    "legacy": "https://www.bestbottles.com/images/store/enlarged_pics/CJBlu3.gif"
+   },
+   "reason": "No plate, kit or Shopify media exists for this SKU. The only real photo is the old site's https://www.bestbottles.com/images/store/enlarged_pics/CJBlu3.gif, which the product page deliberately blocks (www.bestbottles.com/images/store URLs are filtered out) and which PR #370 does not mirror. Left unchanged; needs a plate published from the master PSD, or Jordan's call on the legacy photo."
+  }
+ ],
+ "pages": [
+  {
+   "slug": "apothecary-15ml-cobalt-blue-Ground-glassapplicator",
+   "url": "https://best-bottles-website.vercel.app/products/apothecary-15ml-cobalt-blue-Ground-glassapplicator",
+   "productGroupId": "kh791v0vn1xma45t7q5gvqck8n8dsacc",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "GB-APT-BLU-15ML-BLU-T",
+   "members": [
+    {
+     "websiteSku": "GB15ApthBlue",
+     "graceSku": "GB-APT-BLU-15ML-BLU-T",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778823478110-79eb0dc4-9a89-4f42-b5ea-b38e93a9890a_5c3aa5e9-f1bb-4047-a88e-552f48d2b485.png?v=1781510296",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 1 of 1 dead links on the page replaced"
+  },
+  {
+   "slug": "apothecary-30ml-clear-Ground-glassapplicator",
+   "url": "https://best-bottles-website.vercel.app/products/apothecary-30ml-clear-Ground-glassapplicator",
+   "productGroupId": "kh77v80e7qcnjkb65540ewcd1s8dsst3",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "GB-APT-CLR-30ML-T",
+   "members": [
+    {
+     "websiteSku": "GB1ozApth",
+     "graceSku": "GB-APT-CLR-30ML-T",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778831590128-983ff7df-c56b-4b49-9d27-2169f93e6370_b67d66a5-9af6-49be-bb89-b701290526c5.png?v=1781510263",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 1 of 1 dead links on the page replaced"
+  },
+  {
+   "slug": "apothecary-30ml-green-Ground-glassapplicator",
+   "url": "https://best-bottles-website.vercel.app/products/apothecary-30ml-green-Ground-glassapplicator",
+   "productGroupId": "kh7eefbvt8hqqbtnbqbwm8pyan8drz3f",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "GB-APT-GRN-30ML-GRN-T",
+   "members": [
+    {
+     "websiteSku": "GB1ozApthGreen",
+     "graceSku": "GB-APT-GRN-30ML-GRN-T",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1781509618024-5e91e03a-db51-46bd-baa5-d9365bd3a410.png?v=1781510243",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 1 of 1 dead links on the page replaced"
+  },
+  {
+   "slug": "atomizer-10ml",
+   "url": "https://best-bottles-website.vercel.app/products/atomizer-10ml",
+   "productGroupId": "kh7c1wd5817yx8dnyehb21q6p58dr8mh",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "GB-CYL-BLK-10ML-ATM-BLK-01",
+   "members": [
+    {
+     "websiteSku": "GBAtom10Blk",
+     "graceSku": "GB-CYL-BLK-10ML-ATM-BLK-01",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLK-10ML-ATM-BLK-01.png?v=1781751462",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom10BlkDot",
+     "graceSku": "GB-CYL-BLK-10ML-ATM-BLK-02",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLK-10ML-ATM-BLK-02.png?v=1781751463",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom10Blu",
+     "graceSku": "GB-CYL-BLU-10ML-ATM-BLU",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLU-10ML-ATM-BLU.png?v=1781751463",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom10Gl",
+     "graceSku": "GB-CYL-CLR-10ML-ATM-GLD",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589016760_2omgho_2540703d-b7ac-4555-8322-9cdeb9f5c669.png?v=1779603826",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom10Gr",
+     "graceSku": "GB-CYL-GRN-10ML-ATM-GRN",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-GRN-10ML-ATM-GRN.png?v=1781751463",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom10Lv",
+     "graceSku": "GB-CYL-CLR-10ML-ATM-LVN",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589129599_bohdbe_7edb0229-897f-4754-965d-95011ef7259d.png?v=1779603817",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom10Pnk",
+     "graceSku": "GB-CYL-PNK-10ML-ATM-PNK",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-PNK-10ML-ATM-PNK.png?v=1781751466",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom10Red",
+     "graceSku": "GB-CYL-CLR-10ML-ATM-RED",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589248294_19corl_ae87cc70-34ec-40df-a715-ff529df30ea3.png?v=1779603808",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom10Sl",
+     "graceSku": "GB-CYL-CLR-10ML-ATM-SLV-01",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589298596_tx755g.png?v=1779602344",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom10SlDot",
+     "graceSku": "GB-CYL-CLR-10ML-ATM-SLV-02",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-CLR-10ML-ATM-SLV-02.png?v=1781379516",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom10SlStars",
+     "graceSku": "GB-CYL-CLR-10ML-ATM-SLV-03",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589412300_rgxgf0.png?v=1779602177",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 11 of 11 dead links on the page replaced"
+  },
+  {
+   "slug": "atomizer-5ml",
+   "url": "https://best-bottles-website.vercel.app/products/atomizer-5ml",
+   "productGroupId": "kh77h3gzassgn9vq63ktgaps2n8dr0t1",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "GB-SLM-BLK-5ML-ATM-BLK-T",
+   "members": [
+    {
+     "websiteSku": "GBAtom5SlimBlk",
+     "graceSku": "GB-SLM-BLK-5ML-ATM-BLK-T",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-SLM-BLK-5ML-ATM-BLK-T.png?v=1781751557",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom5Blk",
+     "graceSku": "GB-CYL-BLK-5ML-ATM-BLK",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588720462_tigzk8.png?v=1779603616",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom5BlkDot",
+     "graceSku": "GB-CYL-BLK-5ML-ATM-BLK-02",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588607159_87kec4_d8a3be20-4f71-4c76-b8f5-4fd2a70ace40.png?v=1779602823",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom5Blu",
+     "graceSku": "GB-CYL-BLU-5ML-ATM-BLU",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588249064_536947.png?v=1779602843",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom5Gl",
+     "graceSku": "GB-CYL-CLR-5ML-ATM-GLD",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588308205_am4qhq_318b69c0-8629-4244-add3-f3d9cae30241.png?v=1779602839",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom5PnkDot",
+     "graceSku": "GB-CYL-PNK-5ML-ATM-PNK-02",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588669269_7lh598_41b371dd-aed4-4187-a16f-1db23fd71646.png?v=1779603521",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom5Red",
+     "graceSku": "GB-CYL-CLR-5ML-ATM-RED",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588359712_9qpo4g.png?v=1779602835",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom5Sl",
+     "graceSku": "GB-CYL-CLR-5ML-ATM-SLV-01",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588408924_md7g5y.png?v=1779602831",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom5SlDot",
+     "graceSku": "GB-CYL-CLR-5ML-ATM-SLV-02",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588488277_6y1fgj.png?v=1779602827",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom5SlStars",
+     "graceSku": "GB-CYL-CLR-5ML-ATM-SLV-03",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588197499_i22fdn.png?v=1779602847",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "GBAtom5SlimGl",
+     "graceSku": "GB-SLM-CLR-5ML-ATM-GLD-T",
+     "pageDefault": false,
+     "imageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBAtom5SlimGl.gif",
+     "imageUrlStatus": 200,
+     "action": "none (imageUrl is not a dead link)"
+    },
+    {
+     "websiteSku": "GBAtom5SlimSl",
+     "graceSku": "GB-SLM-CLR-5ML-ATM-SLV-T",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588408924_md7g5y.png?v=1779602831",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 11 of 11 dead links on the page replaced"
+  },
+  {
+   "slug": "cream-jar-15ml-mixed",
+   "url": "https://best-bottles-website.vercel.app/products/cream-jar-15ml-mixed",
+   "productGroupId": "kh78zhr6e170a9bt5q924v3wms8ds0ya",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "CJ-JAR-CLR-15ML-PNK",
+   "members": [
+    {
+     "websiteSku": "CJClr15Pnk",
+     "graceSku": "CJ-JAR-CLR-15ML-PNK",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532230576_nhtqs1.png?v=1779532295",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "CJClr15Wht",
+     "graceSku": "CJ-JAR-CLR-15ML-WHT",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532280108_6v9b8i.png?v=1779532422",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 2 of 2 dead links on the page replaced"
+  },
+  {
+   "slug": "cream-jar-20ml-mixed",
+   "url": "https://best-bottles-website.vercel.app/products/cream-jar-20ml-mixed",
+   "productGroupId": "kh72gkaaz5sg6b7gehd299q8hn8drvbp",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "CJ-JAR-20ML-WHT",
+   "members": [
+    {
+     "websiteSku": "CJWhite20",
+     "graceSku": "CJ-JAR-20ML-WHT",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532329541_91d5uo.png?v=1779532418",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 1 of 1 dead links on the page replaced"
+  },
+  {
+   "slug": "cream-jar-30ml-mixed",
+   "url": "https://best-bottles-website.vercel.app/products/cream-jar-30ml-mixed",
+   "productGroupId": "kh7ed0wk29vae67dxwd12dp3bd8dsd2w",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "CJ-JAR-AMB-30ML-BLK",
+   "members": [
+    {
+     "websiteSku": "CJAmb30BlkCap",
+     "graceSku": "CJ-JAR-AMB-30ML-BLK",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532377433_68ke8f.png?v=1781252542",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "CJAmb30SlCap",
+     "graceSku": "CJ-JAR-AMB-30ML-SLV",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532435491_h1lsu1.png?v=1781252542",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "CJFrst30BlkCap",
+     "graceSku": "CJ-JAR-FRS-30ML-BLK",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532490994_8yzkq9.png?v=1781252542",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "CJFrst30SlCap",
+     "graceSku": "CJ-JAR-FRS-30ML-SLV",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532547111_gg145e.png?v=1781252543",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 4 of 4 dead links on the page replaced"
+  },
+  {
+   "slug": "cream-jar-3ml-mixed",
+   "url": "https://best-bottles-website.vercel.app/products/cream-jar-3ml-mixed",
+   "productGroupId": "kh751kjmj3k78bp9yfqcsbj8qd8dshyp",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "CJ-JAR-CBL-9ML",
+   "members": [
+    {
+     "websiteSku": "CJBlu3",
+     "graceSku": "CJ-JAR-CBL-9ML",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532003923_vx5wfh.png?v=1779532077",
+     "imageUrlStatus": 404,
+     "action": "held: no trustworthy replacement"
+    },
+    {
+     "websiteSku": "CJClr3",
+     "graceSku": "CJ-JAR-CLR-3ML",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532062203_xewaj8.png?v=1779532155",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant NOT fixed (held); 1 of 2 dead links on the page replaced"
+  },
+  {
+   "slug": "cream-jar-40ml-mixed",
+   "url": "https://best-bottles-website.vercel.app/products/cream-jar-40ml-mixed",
+   "productGroupId": "kh794hpj9wmdt42xxvyc7wdpp58ds1h5",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "CJ-JAR-AMB-40ML-01",
+   "members": [
+    {
+     "websiteSku": "CreamJarAmb40Blkcap",
+     "graceSku": "CJ-JAR-AMB-40ML-01",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532598399_6jkgj4.png?v=1781252546",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "CJAmb40SlCap",
+     "graceSku": "CJ-JAR-AMB-40ML-02",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532598399_6jkgj4_215744db-5801-4d6e-a6ae-378be739afc4.png?v=1781252547",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "CJFrst40BlkCap",
+     "graceSku": "CJ-JAR-FRS-40ML-01",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532704539_3aeze8.png?v=1781252546",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "CJFrst40SlCap",
+     "graceSku": "CJ-JAR-FRS-40ML-02",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532754221_iwicnw.png?v=1781252547",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 4 of 4 dead links on the page replaced"
+  },
+  {
+   "slug": "cream-jar-5ml-amber",
+   "url": "https://best-bottles-website.vercel.app/products/cream-jar-5ml-amber",
+   "productGroupId": "kh7dpbgjc62g2v993e6jbvv4fd8drj94",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "CJ-JAR-AMB-5ML-SLV",
+   "members": [
+    {
+     "websiteSku": "CJAmb5mlSlCap",
+     "graceSku": "CJ-JAR-AMB-5ML-SLV",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532915220_ls9jno.png?v=1781252654",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 1 of 1 dead links on the page replaced"
+  },
+  {
+   "slug": "cream-jar-5ml-mixed",
+   "url": "https://best-bottles-website.vercel.app/products/cream-jar-5ml-mixed",
+   "productGroupId": "kh71n5c0zxfrxr2kx9axw30pd98dr3ej",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "CJ-JAR-AMB-5ML-BLK",
+   "members": [
+    {
+     "websiteSku": "CJAmb5mlBlkCap",
+     "graceSku": "CJ-JAR-AMB-5ML-BLK",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532116193_yarfn8.png?v=1779532138",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    },
+    {
+     "websiteSku": "CJClr5mlClrCap",
+     "graceSku": "CJ-JAR-CLR-5ML-CLR",
+     "pageDefault": false,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532182701_iqk7bq.png?v=1781252539",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 2 of 2 dead links on the page replaced"
+  },
+  {
+   "slug": "cream-jar-60ml-mixed",
+   "url": "https://best-bottles-website.vercel.app/products/cream-jar-60ml-mixed",
+   "productGroupId": "kh71g9n2d4v51cprds4thbp29h8ds2p2",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "CJ-JAR-FRS-60ML",
+   "members": [
+    {
+     "websiteSku": "CreamJarFrstdPlsBlkPls2oz",
+     "graceSku": "CJ-JAR-FRS-60ML",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532808027_fncjnu.png?v=1781252553",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 1 of 1 dead links on the page replaced"
+  },
+  {
+   "slug": "cream-jar-63ml-mixed",
+   "url": "https://best-bottles-website.vercel.app/products/cream-jar-63ml-mixed",
+   "productGroupId": "kh7dprdammq5gt7yx3dxv2h5658dr3f0",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "CJ-JAR-60ML-WHT",
+   "members": [
+    {
+     "websiteSku": "CJWhitePlsSlFr2oz",
+     "graceSku": "CJ-JAR-60ML-WHT",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1779556161776-635357b3-bb21-43ad-bed2-6a57ffbc77ef.png?v=1781252562",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 1 of 1 dead links on the page replaced"
+  },
+  {
+   "slug": "eternal-flame-35ml-clear-Ground",
+   "url": "https://best-bottles-website.vercel.app/products/eternal-flame-35ml-clear-Ground",
+   "productGroupId": "kh73xqn6h07kqpv3g04ek6svfh8dsayv",
+   "groupHeroImageUrl": null,
+   "pageDefaultGraceSku": "GB-ETF-CLR-35ML",
+   "members": [
+    {
+     "websiteSku": "GBEternalFlameClear",
+     "graceSku": "GB-ETF-CLR-35ML",
+     "pageDefault": true,
+     "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778901292425-ceb7a92b-9ef8-43c5-ac4c-4227494cb356.png?v=1781252566",
+     "imageUrlStatus": 404,
+     "action": "replace with plate"
+    }
+   ],
+   "afterPlan": "default variant fixed; 1 of 1 dead links on the page replaced"
+  }
+ ]
+}

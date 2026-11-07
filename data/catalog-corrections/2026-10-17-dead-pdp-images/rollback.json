@@ -1,0 +1,265 @@
+{
+ "deployment": "precise-raccoon-123 (production)",
+ "capturedAt": "2026-10-17T21:55:45-07:00",
+ "note": "Values these rows held before the plan. `--rollback` writes them back, but only on rows that still hold the plan's new values.",
+ "rows": [
+  {
+   "websiteSku": "GB15ApthBlue",
+   "productId": "kd7ejxvhvqmdwx0kmb2jhd38fd81txtp",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778823478110-79eb0dc4-9a89-4f42-b5ea-b38e93a9890a_5c3aa5e9-f1bb-4047-a88e-552f48d2b485.png?v=1781510296",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GB1ozApth",
+   "productId": "kd748hkcfd7w629dd80d388eb181tmfh",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778831590128-983ff7df-c56b-4b49-9d27-2169f93e6370_b67d66a5-9af6-49be-bb89-b701290526c5.png?v=1781510263",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GB1ozApthGreen",
+   "productId": "kd74mx8kscz6pmt1f2qaarfyf981vn2r",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1781509618024-5e91e03a-db51-46bd-baa5-d9365bd3a410.png?v=1781510243",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom10Blk",
+   "productId": "kd7c4dq3zkd68tqwr8z2144pj981va9n",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLK-10ML-ATM-BLK-01.png?v=1781751462",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom10BlkDot",
+   "productId": "kd719qhs601921e6m60yfraygd81vpkv",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLK-10ML-ATM-BLK-02.png?v=1781751463",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom10Blu",
+   "productId": "kd73knwfpdsj634nbv9j15pawx81txxx",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-BLU-10ML-ATM-BLU.png?v=1781751463",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom10Gl",
+   "productId": "kd7cymq3848d67vytfbxgmz59581t7jj",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589016760_2omgho_2540703d-b7ac-4555-8322-9cdeb9f5c669.png?v=1779603826",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom10Gr",
+   "productId": "kd77x7bqvw029q6de4rtt4404n81v65y",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-GRN-10ML-ATM-GRN.png?v=1781751463",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom10Lv",
+   "productId": "kd7c7dc5bvc0gpn0vnfamdjnfs81tycp",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589129599_bohdbe_7edb0229-897f-4754-965d-95011ef7259d.png?v=1779603817",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom10Pnk",
+   "productId": "kd7a9jgz5k7xc0da15f4nc0wx181vh7d",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-PNK-10ML-ATM-PNK.png?v=1781751466",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom10Red",
+   "productId": "kd75tmvt8a4yzj02d4p39p0v9581t2aa",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589248294_19corl_ae87cc70-34ec-40df-a715-ff529df30ea3.png?v=1779603808",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom10Sl",
+   "productId": "kd7e8wsfnkmghew5hntr48115981va54",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589298596_tx755g.png?v=1779602344",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom10SlDot",
+   "productId": "kd7673c2vtgarkfebqeeg51zt181tw8p",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-CYL-CLR-10ML-ATM-SLV-02.png?v=1781379516",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom10SlStars",
+   "productId": "kd7736bjv4xdg4k6ddm7h37z4s81tccd",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779589412300_rgxgf0.png?v=1779602177",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom5SlimBlk",
+   "productId": "kd77xhxwvaaj6h076rxm8hhffh81vpmb",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-SLM-BLK-5ML-ATM-BLK-T.png?v=1781751557",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom5Blk",
+   "productId": "kd7e49ntw6nw487m8fjmhez65d82fg67",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588720462_tigzk8.png?v=1779603616",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom5BlkDot",
+   "productId": "kd77k2rjnqf2mpq7xmhznen0qd82f2xt",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588607159_87kec4_d8a3be20-4f71-4c76-b8f5-4fd2a70ace40.png?v=1779602823",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom5Blu",
+   "productId": "kd700awfgqzkk2d4d18hv6swy581v62x",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588249064_536947.png?v=1779602843",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom5Gl",
+   "productId": "kd712xtngpxgh2z8kxmpeertvh81v3jq",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588308205_am4qhq_318b69c0-8629-4244-add3-f3d9cae30241.png?v=1779602839",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom5PnkDot",
+   "productId": "kd751ja1qr7zaad0xgnex8gjys82fwxs",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588669269_7lh598_41b371dd-aed4-4187-a16f-1db23fd71646.png?v=1779603521",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom5Red",
+   "productId": "kd7c3skrqw32cb3p2few0w901h81tkv2",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588359712_9qpo4g.png?v=1779602835",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom5Sl",
+   "productId": "kd70yeyf8m28ptwpmzehvfhg6h81t1x9",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588408924_md7g5y.png?v=1779602831",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom5SlDot",
+   "productId": "kd7c66wh64y0gtb1cnym4m67w181t7rq",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588488277_6y1fgj.png?v=1779602827",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom5SlStars",
+   "productId": "kd7eavjewy567jk95c1nbt2kt181v34f",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588197499_i22fdn.png?v=1779602847",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBAtom5SlimSl",
+   "productId": "kd75qfesm1k5yxhb4vrkr93ksd81t0my",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588408924_md7g5y.png?v=1779602831",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJClr15Pnk",
+   "productId": "kd7f78xjg6dac6mj2b6pnab0nh81t2ef",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532230576_nhtqs1.png?v=1779532295",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJClr15Wht",
+   "productId": "kd7e01tx7cvgv126btt3pq9bpx81tvzg",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532280108_6v9b8i.png?v=1779532422",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJWhite20",
+   "productId": "kd727pkry1b5555wnav8ny5w6x81v23c",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532329541_91d5uo.png?v=1779532418",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJAmb30BlkCap",
+   "productId": "kd76fg8j67j45c6p9w01pgmykn81tn58",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532377433_68ke8f.png?v=1781252542",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJAmb30SlCap",
+   "productId": "kd7cxbc7hrmtsh1dfqfsf1dn2x81vw1p",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532435491_h1lsu1.png?v=1781252542",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJFrst30BlkCap",
+   "productId": "kd78rcbfwcmzfe4sp7nrwcx1p581v182",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532490994_8yzkq9.png?v=1781252542",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJFrst30SlCap",
+   "productId": "kd75919ymjsn3m76cj46cda3wh81tyd6",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532547111_gg145e.png?v=1781252543",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJClr3",
+   "productId": "kd75yv4193z9h8p1mm3nmmrxrn81t7hf",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532062203_xewaj8.png?v=1779532155",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CreamJarAmb40Blkcap",
+   "productId": "kd74swg61b8yfqxzdmrq3gsr4n81ta9y",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532598399_6jkgj4.png?v=1781252546",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJAmb40SlCap",
+   "productId": "kd7e78976n7tvq6tasjpqb82dx81tb2k",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532598399_6jkgj4_215744db-5801-4d6e-a6ae-378be739afc4.png?v=1781252547",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJFrst40BlkCap",
+   "productId": "kd7203k163mjjb723kzxpjpnah81v7kq",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532704539_3aeze8.png?v=1781252546",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJFrst40SlCap",
+   "productId": "kd7a58epx8ssd967vtza2rr8fs81vcx4",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532754221_iwicnw.png?v=1781252547",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJAmb5mlSlCap",
+   "productId": "kd72brxr1r62a9wjcwbjaa4g498aw75s",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532915220_ls9jno.png?v=1781252654",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJAmb5mlBlkCap",
+   "productId": "kd7b7h6vxsns4xa4spfntq8nws81tvck",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532116193_yarfn8.png?v=1779532138",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJClr5mlClrCap",
+   "productId": "kd75p0we48frd3xh453qs78k5x81t37w",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532182701_iqk7bq.png?v=1781252539",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CreamJarFrstdPlsBlkPls2oz",
+   "productId": "kd74zc3h51fdtkhj06cw2a753n81tbkc",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532808027_fncjnu.png?v=1781252553",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "CJWhitePlsSlFr2oz",
+   "productId": "kd71b6ke6da42acye93agqm7z581tg7c",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1779556161776-635357b3-bb21-43ad-bed2-6a57ffbc77ef.png?v=1781252562",
+   "legacyShopifyImageUrl": null
+  },
+  {
+   "websiteSku": "GBEternalFlameClear",
+   "productId": "kd70z483z3vgav283v27mgsm8d81vdwx",
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778901292425-ceb7a92b-9ef8-43c5-ac4c-4227494cb356.png?v=1781252566",
+   "legacyShopifyImageUrl": null
+  }
+ ]
+}
