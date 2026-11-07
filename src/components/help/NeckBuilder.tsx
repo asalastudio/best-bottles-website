@@ -2,15 +2,25 @@
 /* eslint-disable @next/next/no-img-element -- parts are layered at measured pixel offsets to assemble at true scale */
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import type { ApplicatorKey, BuilderBottle, BuilderPart, MediaImage, NeckBuilder as NeckBuilderView } from "@/lib/help/fit-neck";
+import type { Applicator, ApplicatorKey, BuilderBottle, BuilderPart, MediaImage, NeckBuilder as NeckBuilderView } from "@/lib/help/fit-neck";
 
 /** The product a chosen build matches, if we sell it as one item (mirrors matchProduct in fit-neck.ts). */
 function matchProduct(bottle: Pick<BuilderBottle, "products">, partIds: string[]): string | null {
-    const want = [...partIds].sort().join("|");
-    return bottle.products.find((product) => product.parts.join("|") === want)?.sku ?? null;
+    // Reducer products list only their cap; the reducer is in the product code ("Rdcr"), not the parts.
+    const reducer = partIds.some((id) => id.endsWith("-Reducer"));
+    const want = partIds.filter((id) => !id.endsWith("-Reducer")).sort().join("|");
+    return bottle.products.find((product) => product.parts.join("|") === want && /Rdcr/i.test(product.sku) === reducer)?.sku ?? null;
 }
 
-type Selection = { bottle: string | null; applicator: ApplicatorKey | null; sprayer: string | null; closure: string | null };
+type Selection = { bottle: string | null; applicator: ApplicatorKey | null; finish: string | null; closure: string | null };
+
+/** Mirrors applicatorFits in fit-neck.ts (the component imports types only, to keep the fit index off the client). */
+function applicatorFits(bottle: Pick<BuilderBottle, "fits" | "fitments">, applicator: Applicator): boolean {
+    if (!applicator.available) return false;
+    if (applicator.finishes.length) return applicator.finishes.some((id) => bottle.fits.includes(id));
+    if (applicator.fitment) return bottle.fitments.includes(applicator.fitment);
+    return true;
+}
 type Layer = { image: MediaImage; z: number };
 type StepId = "nb-bottle" | "nb-applicator" | "nb-closure" | "nb-result";
 
@@ -89,7 +99,7 @@ function Tile({ pressed, disabled, onClick, title, image, meta, stage = "h-[200p
 function PartTile({ part, pressed, onClick }: { part: BuilderPart; pressed: boolean; onClick: () => void }) {
     return (
         <Tile pressed={pressed} onClick={onClick} title={part.finish} stage="h-[112px]" align="items-center"
-            image={<img src={part.image.src} alt="" className="max-h-[88px] max-w-[80px] object-contain" />}
+            image={<img src={part.swatch.src} alt="" className="max-h-[88px] max-w-[80px] object-contain" />}
             meta={part.itemCode ? <code className="font-mono text-[10.5px] break-all">{part.itemCode}</code> : null} />
     );
 }
@@ -97,29 +107,31 @@ function PartTile({ part, pressed, onClick }: { part: BuilderPart; pressed: bool
 const button = "inline-flex min-h-11 items-center justify-center px-4 text-[12px] font-medium uppercase tracking-[0.14em]";
 
 export default function NeckBuilder({ view, initial }: { view: NeckBuilderView; initial: Partial<Selection> }) {
-    const [sel, setSel] = useState<Selection>(() => sanitize(view, { bottle: null, applicator: null, sprayer: null, closure: null, ...initial }));
+    const [sel, setSel] = useState<Selection>(() => sanitize(view, { bottle: null, applicator: null, finish: null, closure: null, ...initial }));
     const [query, setQuery] = useState("");
     const first = useRef(true);
 
     const bottle = view.bottles.find((b) => b.id === sel.bottle) ?? null;
     const applicator = view.applicators.find((a) => a.key === sel.applicator) ?? null;
-    const sprayer = sel.sprayer ? view.parts[sel.sprayer] : null;
+    const finishPart = sel.finish ? view.parts[sel.finish] : null;
     const closure = sel.closure ? view.parts[sel.closure] : null;
     const fits = (b: BuilderBottle | null, id: string | null) => Boolean(b && id && b.fits.includes(id));
-    const appDone = Boolean(applicator) && (sel.applicator !== "spray" || Boolean(sprayer));
-    const closeDone = sel.applicator === "spray" ? Boolean(sprayer) : Boolean(closure);
+    const needsFinish = Boolean(applicator?.finishes.length);
+    const appDone = Boolean(applicator) && (!needsFinish || Boolean(finishPart));
+    const closureChosenFor = applicator && (applicator.closure === "roll-on-caps" || applicator.closure === "caps");
+    const closeDone = appDone && (closureChosenFor ? Boolean(closure) : true);
     const done = Boolean(bottle) && appDone && closeDone;
-    const roller = sel.applicator === "roll-plastic" ? view.rollers.plastic : sel.applicator === "roll-metal" ? view.rollers.metal : null;
+    const insert = applicator?.insert ?? null;
     const maxMm = useMemo(() => Math.max(...view.bottles.map((b) => b.image.height / b.image.pxPerMm)), [view.bottles]);
 
-    const chosenParts = [roller, sel.applicator === "spray" ? sel.sprayer : null, sel.applicator === "spray" ? null : sel.closure].filter((id): id is string => Boolean(id));
+    const chosenParts = [insert, sel.finish, closureChosenFor ? sel.closure : null].filter((id): id is string => Boolean(id));
     const sku = done && bottle ? matchProduct(bottle, chosenParts) : null;
     const builderHref = bottle ? `/matrix?family=${encodeURIComponent(bottle.family)}${sku ? `&sku=${encodeURIComponent(sku)}` : ""}` : "/matrix";
     const shareParams = new URLSearchParams();
     if (bottle) shareParams.set("bottle", bottle.id);
     if (sel.applicator) shareParams.set("applicator", sel.applicator);
-    if (sel.applicator === "spray" && sprayer?.itemCode) shareParams.set("sprayer", sprayer.itemCode);
-    if (sel.applicator !== "spray" && closure?.itemCode) shareParams.set("closure", closure.itemCode);
+    if (finishPart?.itemCode) shareParams.set("finish", finishPart.itemCode);
+    if (closureChosenFor && closure?.itemCode) shareParams.set("closure", closure.itemCode);
     const share = shareParams.toString();
 
     // Arriving with a bottle chosen (from the fit finder or a shared link) opens at the next open step.
@@ -142,27 +154,28 @@ export default function NeckBuilder({ view, initial }: { view: NeckBuilderView; 
         requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }));
     };
     const pickBottle = (id: string) => { setSel((s) => sanitize(view, { ...s, bottle: id })); advance("nb-applicator"); };
-    const pickApplicator = (key: ApplicatorKey) => {
-        setSel((s) => ({ ...s, applicator: key, sprayer: key === "spray" ? s.sprayer : null, closure: s.applicator === key ? s.closure : null }));
-        advance(key === "spray" ? "nb-applicator" : "nb-closure");
+    const pickApplicator = (a: Applicator) => {
+        setSel((s) => ({ ...s, applicator: a.key, finish: s.applicator === a.key ? s.finish : null, closure: s.applicator === a.key ? s.closure : null }));
+        advance(a.finishes.length ? "nb-applicator" : "nb-closure");
     };
-    const pickSprayer = (id: string) => { setSel((s) => ({ ...s, sprayer: id })); advance("nb-result"); };
+    const pickFinish = (id: string) => { setSel((s) => ({ ...s, finish: id })); advance(applicator && (applicator.closure === "caps" || applicator.closure === "roll-on-caps") ? "nb-closure" : "nb-result"); };
     const pickClosure = (id: string) => { setSel((s) => ({ ...s, closure: id })); advance("nb-result"); };
-    const reset = () => setSel({ bottle: null, applicator: null, sprayer: null, closure: null });
+    const reset = () => setSel({ bottle: null, applicator: null, finish: null, closure: null });
 
     const layers: Layer[] = [];
-    // The insert sits inside the neck: drawn behind the glass so the threads cover its plug and only the ball shows.
-    if (roller) layers.push({ image: view.parts[roller].image, z: 0 });
-    if (sel.applicator === "spray" && sprayer) {
-        layers.push({ image: sprayer.image, z: 2 });
-        if (sprayer.overcap) layers.push({ image: sprayer.overcap, z: 3 });
+    // An insert sits inside the neck: drawn behind the glass so the threads cover it and only the ball shows.
+    if (insert && view.parts[insert]) layers.push({ image: view.parts[insert].image, z: 0 });
+    if (finishPart) {
+        if (finishPart.behind) layers.push({ image: finishPart.behind, z: 0 });
+        layers.push({ image: finishPart.image, z: 2 });
+        if (applicator?.closure === "included" && finishPart.overcap) layers.push({ image: finishPart.overcap, z: 3 });
     }
-    if (sel.applicator !== "spray" && closure && fits(bottle, closure.id)) layers.push({ image: closure.image, z: 3 });
+    if (closureChosenFor && closure && fits(bottle, closure.id)) layers.push({ image: closure.image, z: 3 });
 
-    const applicatorPick = applicator ? (sel.applicator === "spray" && sprayer ? `${sprayer.finish} sprayer` : applicator.label) : null;
-    const closurePick = sel.applicator === "spray" && sprayer ? "Matching overcap" : closure ? closure.finish : null;
+    const applicatorPick = applicator ? (finishPart ? `${finishPart.finish} ${applicator.label.toLowerCase()}` : applicator.label) : null;
+    const closurePick = !appDone ? null : applicator?.closure === "included" ? "Matching overcap" : applicator?.closure === "complete" ? "Included" : closure ? closure.finish : null;
     const q = query.trim().toLowerCase();
-    const glassOf = (b: BuilderBottle) => (b.id.startsWith("tulip-5ml") ? "Amber" : "Clear");
+    const glassOf = (b: BuilderBottle) => b.glass;
 
     return (
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_340px]">
@@ -187,28 +200,29 @@ export default function NeckBuilder({ view, initial }: { view: NeckBuilderView; 
                 </Step>
 
                 <Step id="nb-applicator" n={2} title="Choose your applicator" pick={applicatorPick} disabled={!bottle}
-                    onClear={applicator ? () => setSel((s) => ({ ...s, applicator: null, sprayer: null, closure: null })) : undefined}
+                    onClear={applicator ? () => setSel((s) => ({ ...s, applicator: null, finish: null, closure: null })) : undefined}
                     hint="How the liquid comes out. Choose none for a pour bottle with just a cap.">
                     <TileGrid cols="grid-cols-2 sm:grid-cols-3">
                         {view.applicators.map((a) => {
-                            const ok = Boolean(bottle) && a.available && (a.key === "roll-plastic" ? bottle!.rollers.includes("plastic") : a.key === "roll-metal" ? bottle!.rollers.includes("metal") : true);
-                            const src = a.key === "roll-plastic" && view.rollers.plastic ? view.parts[view.rollers.plastic].image.src
-                                : a.key === "roll-metal" && view.rollers.metal ? view.parts[view.rollers.metal].image.src
-                                : a.key === "spray" && view.sprayers.length ? view.parts[view.sprayers.find((id) => view.parts[id].itemCode?.includes("BluMt")) ?? view.sprayers[0]].image.src : null;
-                            const image = src ? <img src={src} alt="" className="max-h-[118px] w-auto" />
+                            const ok = Boolean(bottle) && applicatorFits(bottle!, a);
+                            const sample = a.insert && view.parts[a.insert] ? view.parts[a.insert]
+                                : a.finishes.length ? view.parts[a.finishes.find((id) => view.parts[id].itemCode?.includes("BluMt")) ?? a.finishes[0]] : null;
+                            const image = sample ? <img src={sample.swatch.src} alt="" className="max-h-[118px] w-auto" />
                                 : a.key === "none" ? <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#8B6F42" strokeWidth="1.1" aria-hidden="true"><path d="M9 3h6M10 3v4l-3 4v9a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-9l-3-4V3" /></svg>
+                                : a.key === "reducer" && a.available ? <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#8B6F42" strokeWidth="1.1" aria-hidden="true"><path d="M7 8h10v3H7zM10 11v6h4v-6M11 17v3h2v-3" /></svg>
                                 : <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#c9bba0" strokeWidth="1.1" aria-hidden="true"><circle cx="12" cy="12" r="8" /><path d="M7 17 17 7" /></svg>;
+                            const count = a.finishes.length ? `${a.finishes.length} finishes. ` : "";
                             return (
-                                <Tile key={a.key} pressed={a.key === sel.applicator} disabled={!ok} onClick={() => pickApplicator(a.key)} title={a.label} stage="h-[150px]" align="items-center" image={image}
-                                    meta={a.available ? a.note : <span className="text-[#a9623f]">Not made for {view.neck}.{a.elsewhere.length ? ` See ${a.elsewhere.join(" and ")}.` : ""}</span>} />
+                                <Tile key={a.key} pressed={a.key === sel.applicator} disabled={!ok} onClick={() => pickApplicator(a)} title={a.label} stage="h-[150px]" align="items-center" image={image}
+                                    meta={a.available ? `${count}${a.note}` : <span className="text-[#a9623f]">Not made for {view.neck}.{a.elsewhere.length ? ` See ${a.elsewhere.join(" and ")}.` : ""}</span>} />
                             );
                         })}
                     </TileGrid>
-                    {sel.applicator === "spray" && bottle && (
+                    {needsFinish && bottle && applicator && (
                         <div className="mt-6">
-                            <h3 className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-slate">Sprayer finish</h3>
+                            <h3 className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-slate">{applicator.label} finish</h3>
                             <TileGrid cols="grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-                                {view.sprayers.filter((id) => fits(bottle, id)).map((id) => <PartTile key={id} part={view.parts[id]} pressed={id === sel.sprayer} onClick={() => pickSprayer(id)} />)}
+                                {applicator.finishes.filter((id) => fits(bottle, id)).map((id) => <PartTile key={id} part={view.parts[id]} pressed={id === sel.finish} onClick={() => pickFinish(id)} />)}
                             </TileGrid>
                         </div>
                     )}
@@ -219,14 +233,18 @@ export default function NeckBuilder({ view, initial }: { view: NeckBuilderView; 
                     hint="The cap that closes it, with the item code you order by.">
                     {!appDone ? (
                         <p className="border border-dashed p-5 text-center text-[13px] text-slate" style={{ borderColor: HAIRLINE }}>{bottle ? "Choose an applicator first." : "Choose a bottle first."}</p>
-                    ) : sel.applicator === "spray" && sprayer ? (
+                    ) : applicator?.closure === "included" || applicator?.closure === "complete" ? (
                         <div className="flex items-center gap-4 border p-3" style={{ borderColor: HAIRLINE, background: "#fdfbf8" }}>
-                            <span className="flex h-20 w-20 flex-none items-center justify-center" style={{ background: STAGE }}><img src={(sprayer.overcap ?? sprayer.image).src} alt="" className="max-h-16 w-auto" /></span>
-                            <p className="text-[13px]" style={{ color: INK }}><span className="block font-medium">Included: matching {sprayer.finish.toLowerCase()} overcap</span><span className="text-slate">The sprayer comes with its own overcap, so there is nothing more to choose.</span></p>
+                            {finishPart && <span className="flex h-20 w-20 flex-none items-center justify-center" style={{ background: STAGE }}><img src={(applicator.closure === "included" ? finishPart.overcap ?? finishPart.swatch : finishPart.swatch).src} alt="" className="max-h-16 w-auto" /></span>}
+                            <p className="text-[13px]" style={{ color: INK }}>
+                                {applicator.closure === "included"
+                                    ? <><span className="block font-medium">Included: matching {finishPart?.finish.toLowerCase()} overcap</span><span className="text-slate">The {applicator.label.toLowerCase()} comes with its own overcap, so there is nothing more to choose.</span></>
+                                    : <><span className="block font-medium">Nothing more to choose</span><span className="text-slate">The {applicator.label.toLowerCase()} closes the bottle itself.</span></>}
+                            </p>
                         </div>
                     ) : (
                         <div className="space-y-6">
-                            {(sel.applicator === "none" ? view.capGroups : [{ key: "roll-on-cap", label: "Roll-on caps", note: "Each fits over either roller ball.", partIds: view.rollOnCaps }]).map((group) => {
+                            {(applicator?.closure === "caps" ? view.capGroups : [{ key: "roll-on-cap", label: "Roll-on caps", note: "Each fits over either roller ball.", partIds: view.rollOnCaps }]).map((group) => {
                                 const ids = group.partIds.filter((id) => fits(bottle, id));
                                 if (!ids.length) return null;
                                 return (
@@ -256,25 +274,25 @@ export default function NeckBuilder({ view, initial }: { view: NeckBuilderView; 
                 </div>
                 <div className="flex flex-col gap-3 p-4">
                     <dl className="grid gap-2 text-[13px]">
-                        {[["Bottle", bottle?.label], ["Applicator", sel.applicator === "spray" && sprayer ? `${sprayer.finish} sprayer` : applicator?.label], ["Closure", sel.applicator === "spray" && sprayer ? "Matching overcap, included" : closure?.finish]].map(([k, v]) => (
+                        {[["Bottle", bottle?.label], ["Applicator", applicatorPick], ["Closure", applicator?.closure === "included" && appDone ? "Matching overcap, included" : applicator?.closure === "complete" && appDone ? "Part of the applicator" : closureChosenFor ? closure?.finish : null]].map(([k, v]) => (
                             <div key={k as string} className="grid grid-cols-[92px_minmax(0,1fr)] gap-2">
                                 <dt className="text-[11px] font-bold uppercase tracking-[0.14em] text-slate">{k}</dt>
                                 <dd style={{ color: v ? INK : undefined }} className={v ? "" : "text-slate"}>{v ?? "Not chosen"}</dd>
                             </div>
                         ))}
-                        {(sprayer?.itemCode || closure?.itemCode) && (
-                            <div className="grid grid-cols-[92px_minmax(0,1fr)] gap-2"><dt className="text-[11px] font-bold uppercase tracking-[0.14em] text-slate">Item code</dt><dd className="font-mono text-[12px]">{sel.applicator === "spray" ? sprayer?.itemCode : closure?.itemCode}</dd></div>
-                        )}
+                        {[finishPart, closureChosenFor ? closure : null].filter((p): p is BuilderPart => Boolean(p?.itemCode)).map((p) => (
+                            <div key={p.id} className="grid grid-cols-[92px_minmax(0,1fr)] gap-2"><dt className="text-[11px] font-bold uppercase tracking-[0.14em] text-slate">Item code</dt><dd className="font-mono text-[12px]">{p.itemCode}</dd></div>
+                        ))}
                     </dl>
                     <p className="border-t pt-3 text-[13px]" style={{ borderColor: HAIRLINE, color: done ? "#2f6b45" : undefined }}>
                         {done ? <><span className="font-medium">Fits.</span> {view.ruling ? `Every ${view.neck} part fits every ${view.neck} bottle.` : "We sell this bottle with this closure."}{sel.applicator === "none" ? " A pour bottle with a cap and no applicator." : ""} <span className="text-slate">{sku ? `Sold as ${sku}.` : "Not sold as one item yet; we can put it together for you."}</span></>
-                            : <span className="text-slate">{!bottle ? "Step 1: choose your bottle." : !appDone ? (sel.applicator === "spray" ? "Step 2: choose the sprayer finish." : "Step 2: choose your applicator.") : "Step 3: choose your closure."}</span>}
+                            : <span className="text-slate">{!bottle ? "Step 1: choose your bottle." : !appDone ? (needsFinish ? `Step 2: choose the ${applicator!.label.toLowerCase()} finish.` : "Step 2: choose your applicator.") : "Step 3: choose your closure."}</span>}
                     </p>
                     {done && <div className="flex flex-col gap-2">
                         {sku ? <Link href={builderHref} className={`${button} text-white`} style={{ background: INK }}>Build this bottle</Link>
                             : <Link href="/request-quote" className={`${button} text-white`} style={{ background: INK }}>Request this combination</Link>}
                         <div className="flex gap-2">
-                            {(sel.applicator === "spray" ? sprayer?.catalogUrl : closure?.catalogUrl) && <Link href={(sel.applicator === "spray" ? sprayer?.catalogUrl : closure?.catalogUrl) ?? "/catalog"} className={`${button} flex-1 border`} style={{ borderColor: HAIRLINE, color: INK }}>Price and stock</Link>}
+                            {(closure?.catalogUrl ?? finishPart?.catalogUrl) && <Link href={(closureChosenFor ? closure?.catalogUrl : finishPart?.catalogUrl) ?? "/catalog"} className={`${button} flex-1 border`} style={{ borderColor: HAIRLINE, color: INK }}>Price and stock</Link>}
                             <Link href="/request-sample" className={`${button} flex-1 border`} style={{ borderColor: HAIRLINE, color: INK }}>Samples</Link>
                         </div>
                     </div>}
@@ -299,10 +317,9 @@ export default function NeckBuilder({ view, initial }: { view: NeckBuilderView; 
 /** Drop choices that do not belong together (a link may name a closure from another group). */
 function sanitize(view: NeckBuilderView, s: Selection): Selection {
     const bottle = view.bottles.find((b) => b.id === s.bottle) ?? null;
-    const app = view.applicators.find((a) => a.key === s.applicator && a.available) ?? null;
-    const applicator = bottle && app ? app.key : null;
-    const sprayer = applicator === "spray" && s.sprayer && view.sprayers.includes(s.sprayer) && bottle!.fits.includes(s.sprayer) ? s.sprayer : null;
-    const allowed = applicator?.startsWith("roll") ? view.rollOnCaps : applicator === "none" ? view.capGroups.flatMap((g) => g.partIds) : [];
+    const app = bottle ? view.applicators.find((a) => a.key === s.applicator && applicatorFits(bottle, a)) ?? null : null;
+    const finish = app && s.finish && app.finishes.includes(s.finish) && bottle!.fits.includes(s.finish) ? s.finish : null;
+    const allowed = app?.closure === "roll-on-caps" ? view.rollOnCaps : app?.closure === "caps" ? view.capGroups.flatMap((g) => g.partIds) : [];
     const closure = s.closure && allowed.includes(s.closure) && bottle!.fits.includes(s.closure) ? s.closure : null;
-    return { bottle: bottle?.id ?? null, applicator, sprayer, closure };
+    return { bottle: bottle?.id ?? null, applicator: app?.key ?? null, finish, closure };
 }

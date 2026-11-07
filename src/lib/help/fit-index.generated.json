@@ -18793,18 +18793,19 @@
    "diameterMm": 20,
    "listed": [
     "CMP-APP-BLK-18-400",
-    "CMP-CAP-BLK-18-400",
+    "CMP-CAP-BLK-18-400"
+   ],
+   "sameThread": [],
+   "teamConfirmed": [],
+   "products": [],
+   "conflicting": [
     "CMP-DRP-BKGD-18400-66",
     "CMP-DRP-BKSL-18400-66",
     "CMP-DRP-BLK-18400-90MM",
     "CMP-DRP-WHT-18400-66",
     "CMP-DRP-WTGD-18400-66",
     "CMP-DRP-WTSL-18400-66"
-   ],
-   "sameThread": [],
-   "teamConfirmed": [],
-   "products": [],
-   "conflicting": []
+   ]
   }
  ],
  "components": {
@@ -18892,7 +18893,7 @@
   "CMP-CAP-BLK-8425-T": {
    "name": "Tall black lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
-   "style": null,
+   "style": "Tall",
    "neck": "8-425",
    "color": "Black",
    "applicator": null,
@@ -18946,7 +18947,7 @@
   "CMP-CAP-MSLV-18415-T": {
    "name": "Tall Matt Silver caps for glass bottles. Thread size 18-415",
    "type": "cap",
-   "style": null,
+   "style": "Tall",
    "neck": "18-415",
    "color": "Matte Silver",
    "applicator": null,
@@ -18982,7 +18983,7 @@
   "CMP-CAP-SBLK-18415-T": {
    "name": "Tall Black caps for glass bottles. Thread size 18-415",
    "type": "cap",
-   "style": null,
+   "style": "Tall",
    "neck": "18-415",
    "color": "Shiny Black",
    "applicator": null,
@@ -19036,7 +19037,7 @@
   "CMP-CAP-SGLD-8425-T": {
    "name": "Tall shiny gold lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
-   "style": null,
+   "style": "Tall",
    "neck": "8-425",
    "color": "Gold",
    "applicator": null,
@@ -19090,7 +19091,7 @@
   "CMP-CAP-SSLV-8425-T": {
    "name": "Tall shiny silver lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
-   "style": null,
+   "style": "Tall",
    "neck": "8-425",
    "color": "Silver",
    "applicator": null,
@@ -19099,7 +19100,7 @@
   "CMP-CAP-WHT-18415-T": {
    "name": "Tall White caps for glass bottles. Thread size 18-415",
    "type": "cap",
-   "style": null,
+   "style": "Tall",
    "neck": "18-415",
    "color": "White",
    "applicator": null,

@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ neck: str
     };
 }
 
-type Search = { bottle?: string; applicator?: string; sprayer?: string; closure?: string };
+type Search = { bottle?: string; applicator?: string; finish?: string; sprayer?: string; closure?: string };
 
 export default async function NeckBuilderPage({ params, searchParams }: { params: Promise<{ neck: string }>; searchParams: Promise<Search> }) {
     const { neck } = await params;
@@ -37,7 +37,8 @@ export default async function NeckBuilderPage({ params, searchParams }: { params
     const initial = {
         bottle: query.bottle ? (view.bottles.find((b) => b.id === query.bottle || b.id === `${query.bottle}-${neck}`)?.id ?? null) : null,
         applicator: (query.applicator as ApplicatorKey | undefined) ?? null,
-        sprayer: byCode(query.sprayer),
+        // `sprayer` is the parameter older shared links used for a sprayer finish.
+        finish: byCode(query.finish ?? query.sprayer),
         closure: byCode(query.closure),
     };
     return (

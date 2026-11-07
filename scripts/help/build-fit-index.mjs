@@ -69,6 +69,7 @@ const duplicateSkus = new Set(Object.entries(corrections).filter(([, fix]) => fi
 const isDuplicate = (c) => duplicateSkus.has(c.websiteSku);
 // Owner rulings: every current, sellable part on the neck fits every interchangeable bottle on it (13-415, Jordan
 // 2026-11-07). Those pairs are fits, kept apart under teamConfirmed so the basis stays visible.
+const pairExclusions = JSON.parse(readFileSync(join(REGISTER, "component-corrections.json"), "utf8")).pairExclusions?.pairs ?? [];
 const neckRulings = Object.fromEntries(Object.entries(JSON.parse(readFileSync(join(REGISTER, "component-corrections.json"), "utf8")).neckRulings ?? {})
     .filter(([neck]) => !neck.startsWith("_")));
 
@@ -126,6 +127,12 @@ for (const body of bodies) {
             if (c.status === "quarantine") { conflicting.set(c.componentId, c.typeEvidence ? `quarantined: ${c.typeEvidence}` : "quarantined in the register"); continue; }
             if (c.status !== "current" || c.sellable !== "True" || listed.has(c.componentId)) continue;
             if (ruled) { listed.add(c.componentId); teamConfirmed.push(c.componentId); } else sameThread.push(c.componentId);
+        }
+    }
+    // Reviewed pair exclusions (component-corrections.json): listed by the catalog, doubted by a review.
+    for (const pair of pairExclusions.filter((x) => x.bodyId === body.bodyId)) {
+        for (const id of [...listed]) {
+            if (pair.partTypes.includes(componentById.get(id)?.type)) { listed.delete(id); conflicting.set(id, pair.evidence); }
         }
     }
     for (const id of listed) conflicting.delete(id);

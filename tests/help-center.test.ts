@@ -91,8 +91,8 @@ describe("fit index", () => {
         expect(groups["Roll-on caps"]).toHaveLength(9);
         expect(groups["Fine mist sprayers"]).toHaveLength(8);
         expect(groups["Short ribbed caps"]?.sort()).toEqual(["CP13-415BlkSht", "CP13-415WhtSht"]);
-        expect(groups["Tall caps with liner"]?.sort()).toEqual(["CP13-415Gl", "CP13-415Sl"]);
-        expect(groups["Short caps with liner"]).toHaveLength(6);
+        expect(groups["Tall caps"]?.sort()).toEqual(["CP13-415Gl", "CP13-415Sl"]);
+        expect(groups["Short caps"]).toHaveLength(6);
     });
 
     it("keeps reviewed duplicate listings out of every fit list", () => {
@@ -260,13 +260,15 @@ describe("neck-finish builder", () => {
         const sizes = view.bottles.map((b) => b.capacityMl ?? 0);
         expect([...sizes].sort((a, b) => a - b)).toEqual(sizes);
         expect(view.rollOnCaps).toHaveLength(9);
-        expect(view.sprayers).toHaveLength(8);
-        for (const id of view.sprayers) expect(view.parts[id].overcap).not.toBeNull();
-        expect(view.capGroups.map((g) => [g.label, g.partIds.length])).toEqual([["Short ribbed caps", 2], ["Short caps with liner", 6], ["Tall caps with liner", 2]]);
+        const spray = view.applicators.find((a) => a.key === "spray")!;
+        expect(spray.finishes).toHaveLength(8);
+        expect(spray.closure).toBe("included");
+        for (const id of spray.finishes) expect(view.parts[id].overcap).not.toBeNull();
+        expect(view.capGroups.map((g) => [g.label, g.partIds.length])).toEqual([["Short ribbed caps", 2], ["Short caps", 6], ["Tall caps", 2]]);
         const available = Object.fromEntries(view.applicators.map((a) => [a.key, a.available]));
         expect(available).toMatchObject({ "roll-plastic": true, "roll-metal": true, spray: true, none: true, lotion: false, reducer: false });
         expect(view.applicators.find((a) => a.key === "lotion")!.elsewhere).toContain("18-415");
-        for (const bottle of view.bottles) expect(bottle.rollers).toEqual(["plastic", "metal"]);
+        for (const bottle of view.bottles) expect(bottle.fitments).toEqual(expect.arrayContaining(["Plastic Roller Ball", "Metal Roller Ball"]));
     });
 
     it("hands a build we sell as one product to Build Your Bottle by its SKU", async () => {
@@ -310,10 +312,44 @@ describe("printable neck-finish matrices", () => {
             expect(downloads.map((d) => d.href)).toEqual([`/downloads/matrices/best-bottles-${neck}-neck-matrix-letter.pdf`, `/downloads/matrices/best-bottles-${neck}-neck-matrix-tabloid.pdf`]);
             const boxes = (href: string) => [...readFileSync(`public${href}`, "latin1").matchAll(/\/MediaBox\s*\[\s*0 0 ([\d.]+) ([\d.]+)\s*\]/g)].map((m) => [Number(m[1]), Number(m[2])]);
             const letter = boxes(downloads[0].href);
-            expect(letter).toHaveLength(2);
+            expect(letter.length).toBeGreaterThanOrEqual(2);
             for (const [w, h] of letter) expect([w, h]).toEqual([792, 612]);
-            expect(boxes(downloads[1].href)).toEqual([[1224, 792]]);
+            const tabloid = boxes(downloads[1].href);
+            expect(tabloid.length).toBeGreaterThanOrEqual(1);
+            for (const [w, h] of tabloid) expect([w, h]).toEqual([1224, 792]);
             for (const d of downloads) expect(d.sizeMb).toBeLessThan(8);
         }
+    });
+});
+
+describe("neck builders beyond 13-415", () => {
+    it("builds 17-415, 18-415 and 20-400 from catalog listings, with no ruling", async () => {
+        const { neckBuilder, neckBuilderNecks } = await import("@/lib/help/fit-neck");
+        // 15-415, 18-400 and 8-425 have no closure art with scale yet, so they keep their bottle fit pages.
+        expect(neckBuilderNecks()).toEqual(["13-415", "17-415", "18-415", "20-400"]);
+        const v = neckBuilder("18-415")!;
+        expect(v.ruling).toBeNull();
+        expect(v.bottles.find((b) => b.id === "cylinder-30ml-18-415")).toBeUndefined(); // fixed spray products keep their own page
+        const keys = Object.fromEntries(v.applicators.map((a) => [a.key, a]));
+        expect(Object.keys(keys)).toEqual(["spray", "lotion", "dropper", "bulb", "tassel", "reducer", "none"]);
+        expect(keys.dropper.closure).toBe("complete");
+        expect(v.capGroups.map((g) => g.label)).toEqual(["Short caps", "Tall caps", "Faux leather caps"]);
+        // Droppers draw their stem inside the bottle.
+        for (const id of keys.dropper.finishes) expect(v.parts[id].behind).not.toBeNull();
+    });
+
+    it("matches reducer and pour builds to the right product", async () => {
+        const { neckBuilder, matchProduct } = await import("@/lib/help/fit-neck");
+        const circle = neckBuilder("18-415")!.bottles.find((b) => b.id === "circle-50ml-18-415")!;
+        expect(matchProduct(circle, ["LIB-18-415-Reducer", "CMP-CAP-BLK-18415-LTR"])).toBe("GBCrcl50RdcrBlkLthr");
+        const diva = neckBuilder("18-415")!.bottles.find((b) => b.id === "diva-46ml-18-415")!;
+        expect(matchProduct(diva, ["CMP-DRP-SGLD-18415"])).toBe("GBDiva46DrpGl");
+    });
+
+    it("never offers the doubted 9 ml vial droppers", async () => {
+        const { fitReport } = await import("@/lib/help/fit");
+        const report = fitReport("vial-9ml-18-400")!;
+        expect(report.listed.flatMap((g) => g.rows).some((r) => r.type === "dropper")).toBe(false);
+        expect(report.conflicting.flatMap((g) => g.rows).filter((r) => r.type === "dropper")).toHaveLength(6);
     });
 });

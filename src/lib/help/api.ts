@@ -97,15 +97,17 @@ export function apiNeck(neck: string) {
             products: bottle.products.map((product) => ({ sku: product.sku, parts: product.parts, builderUrl: abs(`/matrix?family=${encodeURIComponent(bottle.family)}&sku=${encodeURIComponent(product.sku)}`) })),
         })),
         applicators: view.applicators.map((a) => {
-            const closure = a.key === "spray" ? { included: "matching overcap", choices: [] }
-                : a.key.startsWith("roll") ? { included: null, choices: [{ group: "Roll-on caps", parts: parts(view.rollOnCaps) }] }
-                : a.key === "none" ? { included: null, choices: view.capGroups.map((g) => ({ group: g.label, parts: parts(g.partIds) })) }
-                : null;
+            const closure = a.closure === "included" ? { included: "matching overcap", choices: [] }
+                : a.closure === "complete" ? { included: "the applicator closes the bottle", choices: [] }
+                : a.closure === "roll-on-caps" ? { included: null, choices: [{ group: "Roll-on caps", parts: parts(view.rollOnCaps) }] }
+                : { included: null, choices: view.capGroups.map((g) => ({ group: g.label, parts: parts(g.partIds) })) };
             return {
                 key: a.key, label: a.label, available: a.available,
                 ...(a.available ? {} : { offeredOnNecks: a.elsewhere }),
-                insert: a.key === "roll-plastic" && view.rollers.plastic ? apiPart(view.parts[view.rollers.plastic]) : a.key === "roll-metal" && view.rollers.metal ? apiPart(view.parts[view.rollers.metal]) : null,
-                finishes: a.key === "spray" ? parts(view.sprayers) : [],
+                // Bottles that take an insert say so in their fitment types (Metal Roller Ball, Reducer).
+                requiresBottleFitment: a.fitment,
+                insert: a.insert ? (view.parts[a.insert] ? apiPart(view.parts[a.insert]) : { componentId: a.insert, itemCode: null, name: a.label, finish: a.label, catalogUrl: null }) : null,
+                finishes: parts(a.finishes),
                 closure: a.available ? closure : null,
             };
         }),

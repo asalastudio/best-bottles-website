@@ -99,8 +99,8 @@ const CLOSURE_GROUPS: Array<{ key: string; label: string; test: (c: Pick<FitComp
     { key: "roller-insert", label: "Roller inserts", test: (c) => c.type === "roller-insert" },
     { key: "fine-mist-sprayer", label: "Fine mist sprayers", test: (c) => c.type === "fine-mist-sprayer" },
     { key: "short-ribbed-cap", label: "Short ribbed caps", test: (c) => c.type === "cap" && c.style === "Short ribbed" },
-    { key: "short-cap", label: "Short caps with liner", test: (c) => c.type === "cap" && c.style === "Short" },
-    { key: "tall-cap", label: "Tall caps with liner", test: (c) => c.type === "cap" && c.style === "Tall" },
+    { key: "short-cap", label: "Short caps", test: (c) => c.type === "cap" && c.style === "Short" },
+    { key: "tall-cap", label: "Tall caps", test: (c) => c.type === "cap" && c.style === "Tall" },
     { key: "liner-cap", label: "Caps with liner", test: (c) => c.type === "cap" && c.style === "Liner" },
 ];
 

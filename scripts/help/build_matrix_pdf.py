@@ -41,9 +41,15 @@ GROUPS = [  # the order the builder and the September sheets use
     ("roll-on-cap", "Roll-on caps", lambda c: c["type"] == "roll-on-cap", "Fit over either roller insert"),
     ("roller-insert", "Roller inserts", lambda c: c["type"] == "roller-insert", "Sit inside the neck, under the roll-on cap"),
     ("fine-mist-sprayer", "Fine mist sprayers", lambda c: c["type"] == "fine-mist-sprayer", "Each comes with its matching overcap"),
+    ("lotion-pump", "Lotion pumps", lambda c: c["type"] == "lotion-pump", "Treatment pumps for lotions and serums"),
+    ("dropper", "Droppers", lambda c: c["type"] == "dropper", "Bulb droppers with collar cap"),
+    ("vintage-bulb-sprayer", "Vintage bulb sprayers", lambda c: c["type"] == "vintage-bulb-sprayer", "Antique-style bulb atomisers"),
+    ("tassel-bulb-sprayer", "Bulb sprayers with tassel", lambda c: c["type"] == "tassel-bulb-sprayer", "Bulb atomisers with tassel"),
     ("short-ribbed-cap", "Short ribbed caps", lambda c: c["type"] == "cap" and c.get("style") == "Short ribbed", "Pour bottles: black or white"),
-    ("short-cap", "Short caps with liner", lambda c: c["type"] == "cap" and c.get("style") == "Short", "Pour bottles: foam liner"),
-    ("tall-cap", "Tall caps with liner", lambda c: c["type"] == "cap" and c.get("style") == "Tall", "Pour bottles: 24 mm high"),
+    ("short-cap", "Short caps", lambda c: c["type"] == "cap" and c.get("style") == "Short", "Pour bottles, or over a reducer"),
+    ("tall-cap", "Tall caps", lambda c: c["type"] == "cap" and c.get("style") == "Tall", "Pour bottles, or over a reducer"),
+    ("liner-cap", "Caps with liner", lambda c: c["type"] == "cap" and c.get("style") == "Liner", "Pour bottles"),
+    ("faux-leather-cap", "Faux leather caps", lambda c: c["type"] == "faux-leather-cap", "Pour bottles, or over a reducer"),
 ]
 
 
@@ -63,11 +69,19 @@ def image(src: str) -> Image.Image:
 
 
 def finish(name: str) -> str:
-    text = re.sub(r",?\s*Thread\s*size.*$|,?\s*Threadsize.*$", "", name, flags=re.I)
-    for pattern, repl in ((r"Fine Mist Sprayer", ""), (r"cap with dots or closure for rollon bottles", "dotted"), (r"cap or closure for rollon bottles", ""),
-                          (r"lid or closure for glass bottle", ""), (r"short cap with liner", "")):
+    """Same rules as finishName in src/lib/help/fit-neck.ts, so the sheet and the builder name parts alike."""
+    text = re.sub(r",?\s*Thread\s*size.*$|,?\s*Threadsize.*$|\.\s*Thread.*$", "", name, flags=re.I)
+    def roll(m):
+        return " dotted" if re.search("dots", m.group(0), re.I) else ""
+    text = re.sub(r"Fine Mist Sprayer", "", text, flags=re.I)
+    text = re.sub(r"(?:with dots|with dots or)?\s*cap (?:with dots )?or closure for rollon bottles", roll, text, flags=re.I)
+    for pattern, repl in ((r"lid or closure for glass bottle", ""), (r"short cap with liner", ""), (r"caps? for glass bottles", ""),
+                          (r"collar (?:sprayer|Lotion or treatment pump)", "collar"), (r"Lotion or treatment pump", ""),
+                          (r"Antique or Vintage style bulb sprayer", "bulb"), (r"rubber bulb dropper with", "bulb,"), (r"\.\s*Glass stem length is (\d+)\s*mm.*$", r", \1 mm stem"), (r"\.\s*Glass stem.*$", "")):
         text = re.sub(pattern, repl, text, flags=re.I)
-    text = re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"\s+", " ", text)
+    text = re.sub(r"\s+([,.])", r"\1", text)
+    text = re.sub(r"[,.\s]+$", "", text).strip()
     return text[:1].upper() + text[1:]
 
 
@@ -86,8 +100,12 @@ def cached(src: str, max_px: int) -> Image.Image:
     return _IMAGES[key]
 
 
+GROUP_NOTES: dict = {}
+
+
 def gather(neck: str, fit: dict, media: dict):
-    bodies = sorted((b for b in fit["bodies"] if b["neck"] == neck and b["interchangeable"]),
+    GROUP_NOTES.clear()
+    bodies = sorted((b for b in fit["bodies"] if b["neck"] == neck and b["interchangeable"] and b["listed"] and b["id"] in media["bodies"]),
                     key=lambda b: (b["capacityMl"] or 0, b["heightMm"] or 0))
     comps = fit["components"]
     parts = {key: [] for key, *_ in GROUPS}
@@ -95,7 +113,10 @@ def gather(neck: str, fit: dict, media: dict):
         comp = comps[cid]
         group = next((key for key, _, test, _ in GROUPS if test(comp)), None)
         if group and cid in media["parts"]:
-            parts[group].append({"id": cid, "code": comp["itemCode"], "finish": finish(comp["name"]), "src": media["parts"][cid]["src"]})
+            m = media["parts"][cid]
+            parts[group].append({"id": cid, "code": comp["itemCode"], "finish": finish(comp["name"]), "src": (m.get("swatch") or m)["src"]})
+    if neck == "13-415":  # the caliper-confirmed liner (see fit-neck.ts)
+        GROUP_NOTES.update({"short-cap": "Pour bottles: foam liner", "tall-cap": "Pour bottles: foam liner, 24 mm high"})
     for cid, label in ((f"LIB-{neck}-PlsticRollon", "Plastic ball"), (f"LIB-{neck}-MtlRollon", "Metal ball")):
         if cid in media["parts"]:
             parts["roller-insert"].append({"id": cid, "code": None, "finish": label, "src": media["parts"][cid]["src"]})
@@ -170,54 +191,79 @@ class Sheet:
         text(M, M - 1, "Bottles at true relative height from our approved master images. One glass colour is shown per bottle; other colours share the same neck.", 6.2, MUTED, 400)
 
     def code_lines(self, code, max_w):
-        """Item codes never overlap: shrink to fit, and split after the prefix when even that is too small."""
+        """Item codes never overlap: shrink to fit, then wrap by character over up to three lines."""
         for size in (5.2, 4.8, 4.4):
             if self.width(code, size) <= max_w:
                 return [code], size
-        cut = re.search(r"\d", code)
-        cut = cut.start() if cut and cut.start() > 0 else len(code) // 2
-        head, tail = code[:cut], code[cut:]
-        size = 5.0
-        while size > 3.6 and max(self.width(head, size), self.width(tail, size)) > max_w:
-            size -= 0.2
-        return [head, tail], size
+        size = 4.6
+        lines, line = [], ""
+        for ch in code:
+            if line and self.width(line + ch, size) > max_w:
+                lines.append(line)
+                line = ""
+            line += ch
+        return (lines + [line])[:3], size
 
-    def closures(self, parts, top, bottom, rows):
-        """Rows of cards; rows lists (group key, width fraction) per row."""
+    def card_size(self, items, cell, max_cols):
+        cols = min(len(items), max_cols)
+        lines = -(-len(items) // max_cols)
+        return cols * cell + 22, 44 + lines * (cell + 34)
+
+    def closures(self, parts, top, bottom, cell=58, start=0):
+        """Group cards flowing left to right in rows; returns the index of the first group that did not fit."""
         c, text = self.c, self.text
         gap = 10
-        row_h = (top - bottom - gap * (len(rows) - 1)) / len(rows)
         meta = {key: (label, note) for key, label, _, note in GROUPS}
-        for row, row_spec in enumerate(rows):
-            y = top - (row + 1) * row_h - row * gap
+        keys = [key for key, *_ in GROUPS if parts.get(key)][start:]
+        avail = self.W - 2 * M
+        max_cols = int((avail - 22) // cell)
+        y = top
+        i = 0
+        while i < len(keys):
+            # Pack a row: as many cards as fit the width, then share the spare width between them.
+            row, used = [], 0
+            while i + len(row) < len(keys):
+                w, h = self.card_size(parts[keys[i + len(row)]], cell, max_cols)
+                if row and used + gap + w > avail:
+                    break
+                row.append((keys[i + len(row)], w, h))
+                used += (gap if len(row) > 1 else 0) + w
+            row_h = max(h for _, _, h in row)
+            if y - row_h < bottom:
+                return start + i
+            spare = (avail - used) / len(row)
             x = M
-            avail = self.W - 2 * M - gap * (len(row_spec) - 1)
-            for key, frac in row_spec:
-                card_w = avail * frac
+            for key, w, _ in row:
+                w += spare
                 items = parts[key]
                 label, note = meta[key]
+                note = GROUP_NOTES.get(key, note)
                 c.setFillColor(CARD)
                 c.setStrokeColor(HAIR)
                 c.setLineWidth(0.7)
-                c.rect(x, y, card_w, row_h, stroke=1, fill=1)
-                text(x + 11, y + row_h - 18, f"{label.upper()}  /  {len(items)}", 8.5, GOLD, 600, tracking=1.0)
-                text(x + 11, y + row_h - 30, note, 7, MUTED, 400)
-                cell = min((card_w - 22) / max(len(items), 1), 66)
-                x0 = x + 11 + ((card_w - 22) - cell * len(items)) / 2
-                img_h = row_h - 80
+                c.rect(x, y - row_h, w, row_h, stroke=1, fill=1)
+                text(x + 11, y - 18, f"{label.upper()}  /  {len(items)}", 8.5, GOLD, 600, tracking=1.0)
+                text(x + 11, y - 30, note, 7, MUTED, 400)
+                per_line = min(len(items), int((w - 22) // cell))
+                x0 = x + 11 + ((w - 22) - cell * per_line) / 2
                 for j, part in enumerate(items):
-                    cx = x0 + j * cell
+                    line, col = divmod(j, per_line)
+                    cx = x0 + col * cell
+                    cy = y - 44 - (line + 1) * (cell + 34) + 34
                     c.setFillColor(STAGE)
-                    c.rect(cx + 1.5, y + 40, cell - 3, img_h, stroke=0, fill=1)
-                    self.picture(part["src"], cx + 5, y + 44, cell - 10, img_h - 8, 260)
-                    name = self.wrap(part["finish"], 6, 500, cell - 4)[:2]
-                    for k, line in enumerate(name):
-                        text(cx + cell / 2, y + 31 - k * 7, line, 6, INK, 500, "center")
+                    c.rect(cx + 1.5, cy, cell - 3, cell, stroke=0, fill=1)
+                    self.picture(part["src"], cx + 5, cy + 4, cell - 10, cell - 8, 260)
+                    for k, name in enumerate(self.wrap(part["finish"], 6, 500, cell - 4)[:2]):
+                        text(cx + cell / 2, cy - 9 - k * 7, name, 6, INK, 500, "center")
                     if part["code"]:
                         lines, size = self.code_lines(part["code"], cell - 4)
-                        for k, line in enumerate(lines):
-                            text(cx + cell / 2, y + 15 - k * (size + 1.2), line, size, MUTED, 400, "center")
-                x += card_w + gap
+                        for k, code in enumerate(lines):
+                            text(cx + cell / 2, cy - 25 - k * (size + 1.2), code, size, MUTED, 400, "center")
+                x += w + gap
+            y -= row_h + gap
+            i += len(row)
+        self.last_y = y
+        return None
 
     def band(self, neck, y):
         c = self.c
@@ -278,40 +324,58 @@ def new_canvas(path: Path, size, neck: str):
 def build(neck: str, fit: dict, media: dict) -> list[Path]:
     bodies, parts = gather(neck, fit, media)
     OUT.mkdir(parents=True, exist_ok=True)
-    keys = [key for key, *_ in GROUPS]
-    tabloid_rows = [list(zip(keys[:3], (0.42, 0.16, 0.42))), list(zip(keys[3:], (1 / 3, 1 / 3, 1 / 3)))]
-    letter_rows = [[(keys[0], 0.7), (keys[1], 0.3)], [(keys[2], 1.0)], [(keys[3], 0.26), (keys[4], 0.5), (keys[5], 0.24)]]
+    rows = -(-len(bodies) // 15)  # bottles per row stay legible
 
-    # Tabloid, landscape: the whole matrix on one 17 x 11 in page.
-    tabloid = OUT / f"best-bottles-{neck}-neck-matrix-tabloid.pdf"
-    c = new_canvas(tabloid, (17 * 72, 11 * 72), neck)
-    s = Sheet(c, 17 * 72, 11 * 72)
-    s.page()
-    rule = s.header(neck, fit)
-    closures_bottom = rule - 12 - 330
-    s.closures(parts, rule - 12, closures_bottom, tabloid_rows)
-    s.band(neck, closures_bottom - 22)
-    s.bottles(bodies, media, closures_bottom - 42, M + 34)
-    s.footer(neck)
-    c.showPage()
-    c.save()
+    def sheet(path: Path, size, cell: int, bottle_rows_one_page: int, bottle_rows_alone: int) -> Path:
+        w, h = size
+        c = new_canvas(path, size, neck)
+        s = Sheet(c, w, h)
+        pages = []
+        # Try everything on one page: closures, then the finish band, then bottles.
+        s.page()
+        rule = s.header(neck, fit)
+        bottles_h = 200 * bottle_rows_one_page
+        # Smaller tiles before a second page: one sheet is the point of the tabloid.
+        left = 0
+        for size_try in (cell, cell - 6, cell - 10):
+            if bottle_rows_one_page > 3:
+                break
+            c = new_canvas(path, size, neck)
+            s = Sheet(c, w, h)
+            s.page()
+            rule = s.header(neck, fit)
+            left = s.closures(parts, rule - 12, M + 34 + bottles_h + 48, size_try)
+            if left is None:
+                break
+        if left is None:
+            s.band(neck, s.last_y - 12)
+            s.bottles(bodies, media, s.last_y - 32, M + 34, rows=bottle_rows_one_page)
+            s.footer(neck)
+            c.showPage()
+            c.save()
+            return path
+        # Otherwise closures over as many pages as they need, then the bottles on their own page.
+        c = new_canvas(path, size, neck)
+        s = Sheet(c, w, h)
+        start, n = 0, 1
+        while start is not None:
+            s.page()
+            rule = s.header(neck, fit, f"applicators and closures{'' if n == 1 else ' (continued)'}")
+            start = s.closures(parts, rule - 12, M + 34, cell, start)
+            s.footer(neck)
+            c.showPage()
+            n += 1
+        s.page()
+        rule = s.header(neck, fit, "bottles")
+        s.band(neck, rule - 26)
+        s.bottles(bodies, media, rule - 46, M + 34, rows=bottle_rows_alone)
+        s.footer(neck)
+        c.showPage()
+        c.save()
+        return path
 
-    # Letter, landscape: closures on page 1, bottles on page 2, same sizes so codes stay readable.
-    letter = OUT / f"best-bottles-{neck}-neck-matrix-letter.pdf"
-    c = new_canvas(letter, (11 * 72, 8.5 * 72), neck)
-    s = Sheet(c, 11 * 72, 8.5 * 72)
-    s.page()
-    rule = s.header(neck, fit, "1 of 2: applicators and closures")
-    s.closures(parts, rule - 12, M + 34, letter_rows)
-    s.footer(neck)
-    c.showPage()
-    s.page()
-    rule = s.header(neck, fit, "2 of 2: bottles")
-    s.band(neck, rule - 26)
-    s.bottles(bodies, media, rule - 46, M + 34, rows=2)
-    s.footer(neck)
-    c.showPage()
-    c.save()
+    tabloid = sheet(OUT / f"best-bottles-{neck}-neck-matrix-tabloid.pdf", (17 * 72, 11 * 72), 58, rows, max(rows, 1))
+    letter = sheet(OUT / f"best-bottles-{neck}-neck-matrix-letter.pdf", (11 * 72, 8.5 * 72), 54, 99, max(2 if len(bodies) > 8 else 1, -(-len(bodies) // 8)))
     return [tabloid, letter]
 
 
@@ -322,6 +386,8 @@ def main() -> int:
     for old in OUT.glob("*.pdf") if OUT.exists() else []:
         old.unlink()
     for neck, neck_media in media.items():
+        if not neck_media.get("parts"):
+            continue  # no closure art yet: no sheet
         for path in build(neck, fit, neck_media):
             print(f"{neck}: {path.relative_to(ROOT)} ({path.stat().st_size // 1024} KB)")
     return 0

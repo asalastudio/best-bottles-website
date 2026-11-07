@@ -59,6 +59,30 @@
     "18-415CAP4SpryShnBlk": {
       "duplicateOf": "Spry18-415ShnBlk",
       "evidence": "extra sprayer listing; not a distinct choice in the website accessory selector (18-415 remedy register, 23 Sep 2026)"
+    },
+    "CP18-415MtSlTall": {
+      "capStyle": "Tall",
+      "evidence": "18-415 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
+    },
+    "CP18-415ShnBlkTall": {
+      "capStyle": "Tall",
+      "evidence": "18-415 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
+    },
+    "CP18-415Wh": {
+      "capStyle": "Tall",
+      "evidence": "18-415 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
+    },
+    "CP8-425TallBlack": {
+      "capStyle": "Tall",
+      "evidence": "8-425 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
+    },
+    "CP8-425TallShnGl": {
+      "capStyle": "Tall",
+      "evidence": "8-425 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
+    },
+    "CP8-425TallShnSl": {
+      "capStyle": "Tall",
+      "evidence": "8-425 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
     }
   },
   "neckRulings": {
@@ -68,5 +92,17 @@
       "date": "2026-11-07",
       "statement": "Every 13-415 bottle fits every available 13-415 fitment in the component list (roll-on caps, roller inserts, sprayers, short ribbed caps, short caps with liner, tall caps with liner)."
     }
+  },
+  "pairExclusions": {
+    "_about": "Bottle and part pairs the catalog lists but a review found doubtful. scripts/help/build-fit-index.mjs moves them from listed to conflicting, so they are never offered as fits.",
+    "pairs": [
+      {
+        "bodyId": "vial-9ml-18-400",
+        "partTypes": [
+          "dropper"
+        ],
+        "evidence": "18-400 remedy register (23 Sep 2026): both 9 ml vial products list the six 15 ml droppers with 66 mm stems, but the legacy 9 ml vial is only 47-50 mm tall with cap; confirm internal depth before offering them"
+      }
+    ]
   }
 }

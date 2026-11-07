@@ -33,8 +33,8 @@ For ordering, shipping, returns, claims, payment and contact policy, cite the he
 
 - **Help center:** `/help`. One page per answer at `/help/a/{slug}`, e.g. `/help/a/returns`.
 - **Fit finder:** `/help/fit`. One page per bottle at `/help/fit/{bottleId}` listing the caps, sprayers, roll-ons and droppers that fit it, with item codes.
-- **Build by neck finish:** `/help/fit/neck/13-415` walks bottle, then applicator (roll-on, sprayer, or none for a pour bottle), then closure. A build is a shareable URL: `/help/fit/neck/13-415?bottle={bottleId}&applicator=roll-metal|roll-plastic|spray|none&closure={itemCode}` (sprayers use `sprayer={itemCode}`; their overcap is included).
-- **Printable matrices:** `/downloads/matrices/best-bottles-13-415-neck-matrix-letter.pdf` (US letter, landscape, 2 pages) and `-tabloid.pdf` (11 × 17 in, landscape). Same data and images as the builder.
+- **Build by neck finish:** `/help/fit/neck/{neck}` for 13-415, 17-415, 18-415 and 20-400 walks bottle, then applicator, then closure. A build is a shareable URL: `/help/fit/neck/{neck}?bottle={bottleId}&applicator={key}&finish={itemCode}&closure={itemCode}`. Applicator keys: `roll-plastic`, `roll-metal`, `spray` (overcap included), `lotion`, `dropper`, `bulb`, `tassel` (these close the bottle themselves), `reducer` and `none` (both take a cap). 13-415 fits are team-confirmed for every pair; the other necks list what the catalog sells together.
+- **Printable matrices:** `/downloads/matrices/best-bottles-{neck}-neck-matrix-letter.pdf` (US letter, landscape) and `-tabloid.pdf` (11 × 17 in, landscape) for the same four necks. Same data and images as the builder.
 - **JSON API (read-only, no key):** `/api/kb/v1`, described at `/api/kb/v1/openapi.json`. Endpoints: `/entries`, `/entries/{id}`, `/search?q=`, `/fit`, `/fit/{bottleId}`, `/fit/neck/{neck}`. 60 requests per minute.
 
 Rules the API applies, which answers should keep:
