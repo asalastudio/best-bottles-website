@@ -464,7 +464,7 @@ function LineItemRow({
             <td className="py-3 px-4">
                 <LocaleLink href={href} className="flex items-center gap-4">
                     <div
-                        className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative"
+                        className="w-14 h-14 shrink-0 bg-[#f5f3ef] flex items-center justify-center overflow-hidden relative"
                         data-bb-image-audit="catalog-line-item"
                         data-bb-family={group.family ?? undefined}
                         data-bb-product-group-slug={group.slug}
@@ -481,7 +481,7 @@ function LineItemRow({
                                 data-bb-product-group-slug={group.slug}
                                 data-bb-grace-sku={primaryGraceSku ?? undefined}
                                 data-bb-website-sku={primaryWebsiteSku ?? sku}
-                                className="object-contain p-1"
+                                className="object-contain"
                                 sizes="56px"
                                 unoptimized={!isOptimizableImageUrl(thumbnailUrl)}
                             />
@@ -636,7 +636,7 @@ function LineItemMobileCard({
             <div className="flex items-stretch gap-3 p-3">
                 <LocaleLink
                     href={href}
-                    className="relative block h-[112px] w-[112px] shrink-0 overflow-hidden bg-[#f0ebe3]"
+                    className="relative block h-[112px] w-[112px] shrink-0 overflow-hidden bg-[#f5f3ef]"
                     aria-label={`View ${customerDisplayName}`}
                     data-bb-image-audit="catalog-mobile-line-item"
                     data-bb-family={group.family ?? undefined}
