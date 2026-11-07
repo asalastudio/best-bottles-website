@@ -1,6 +1,7 @@
 import { mutation, query, type QueryCtx } from "./_generated/server";
 import { Infer, v } from "convex/values";
 import { verifyWriteToken } from "./writeToken";
+import { mapInBatches } from "./lib/batches";
 
 /**
  * Component kits — per-part alpha layers with anchors, registered pixel-for-
@@ -95,9 +96,11 @@ const kitPairV = v.object({
 const MAX_KITS_PER_LOOKUP = 50;
 
 async function publishedKitView(ctx: QueryCtx, args: KitSkuPair): Promise<KitView | null> {
-    const rows = [];
-    if (args.graceSku) rows.push(...await ctx.db.query("productKits").withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku)).collect());
-    if (args.websiteSku) rows.push(...await ctx.db.query("productKits").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku)).collect());
+    const [byGrace, byWebsite] = await Promise.all([
+        args.graceSku ? ctx.db.query("productKits").withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku)).collect() : [],
+        args.websiteSku ? ctx.db.query("productKits").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku)).collect() : [],
+    ]);
+    const rows = [...byGrace, ...byWebsite];
     const seen = new Set<string>();
     const unique = rows.filter((row) => { if (seen.has(row._id)) return false; seen.add(row._id); return true; });
     if (unique.length === 0) return null;
@@ -139,12 +142,15 @@ export const forSkus = query({
     returns: v.record(v.string(), v.union(kitViewV, v.null())),
     handler: async (ctx, args) => {
         const kits: Record<string, KitView | null> = {};
-        const wanted = args.pairs.slice(0, MAX_KITS_PER_LOOKUP);
-        for (const pair of wanted) {
+        // The first pair for each key, as before; their lookups run in parallel batches, applied in order.
+        const keyed = new Map<string, KitSkuPair>();
+        for (const pair of args.pairs.slice(0, MAX_KITS_PER_LOOKUP)) {
             const key = pair.websiteSku || pair.graceSku;
-            if (!key || key in kits) continue;
-            kits[key] = await publishedKitView(ctx, pair);
+            if (key && !keyed.has(key)) keyed.set(key, pair);
         }
+        const entries = [...keyed];
+        const views = await mapInBatches(entries, ([, pair]) => publishedKitView(ctx, pair));
+        entries.forEach(([key], index) => { kits[key] = views[index]; });
         return kits;
     },
 });

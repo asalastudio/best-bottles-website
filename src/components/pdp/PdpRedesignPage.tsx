@@ -22,7 +22,7 @@ import { useGrace } from "@/components/useGrace";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
 import { analytics } from "@/lib/analytics";
 import { checkoutMinimum, isCheckoutReady, isSoldOutStockStatus } from "@/lib/checkout";
-import { dispatchPdpContextChange } from "@/lib/grace/pageContextEvents";
+import { dispatchPdpContextChange, publishPdpGroup } from "@/lib/grace/pageContextEvents";
 import {
     GRACE_PDP_PLATE_EVENT,
     isGracePdpPlateCommand,
@@ -290,6 +290,11 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
             window.history.replaceState(null, "", target);
         }
     }, [picks, rollers, pathname]);
+
+    // Grace builds her product context from the group this page rendered (no second Convex read).
+    useEffect(() => {
+        publishPdpGroup({ slug, group, variants });
+    }, [slug, group, variants]);
 
     // Grace reads the page through this event; analytics counts one view per SKU.
     const lastViewedSku = useRef<string | null>(null);

@@ -95,6 +95,51 @@ export function formatGraceNowViewingLines(args: {
     return lines;
 }
 
+/**
+ * The product group a PDP rendered, as the server loaded it. Grace builds her product context from
+ * it instead of subscribing to `products.getProductGroup` for the same slug (a full read of the group
+ * and every variant, held open for the visit). Grace matches it to the page by slug.
+ */
+export type PdpGroupSnapshot = {
+    slug: string;
+    group: {
+        displayName: string;
+        family?: string | null;
+        capacity?: string | null;
+        color?: string | null;
+        neckThreadSize?: string | null;
+        primaryGraceSku?: string | null;
+        priceRangeMin?: number | null;
+        applicatorTypes?: readonly string[] | null;
+        category?: string | null;
+        variantCount?: number | null;
+    };
+    variants: ReadonlyArray<{
+        applicator?: string | null;
+        capHeight?: string | null;
+        capStyle?: string | null;
+        capColor?: string | null;
+    }>;
+};
+
+let latestPdpGroup: PdpGroupSnapshot | null = null;
+const pdpGroupListeners = new Set<() => void>();
+
+export function publishPdpGroup(snapshot: PdpGroupSnapshot): void {
+    if (latestPdpGroup === snapshot) return;
+    latestPdpGroup = snapshot;
+    for (const listener of pdpGroupListeners) listener();
+}
+
+export function readPdpGroup(): PdpGroupSnapshot | null {
+    return latestPdpGroup;
+}
+
+export function subscribePdpGroup(listener: () => void): () => void {
+    pdpGroupListeners.add(listener);
+    return () => { pdpGroupListeners.delete(listener); };
+}
+
 let latestPdpContextChange: PdpContextChange | null = null;
 
 /**

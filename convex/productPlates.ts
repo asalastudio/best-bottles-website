@@ -2,6 +2,7 @@ import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 import type { Doc } from "./_generated/dataModel";
 import { verifyWriteToken } from "./writeToken";
+import { mapInBatches } from "./lib/batches";
 
 /**
  * Paper-doll plates — the index over the storefront's product imagery.
@@ -94,9 +95,13 @@ export const forSkus = query({
         const plates: Record<string, PlateRef> = {};
         const conflicts: string[] = [];
         const wanted = Array.from(new Set(args.skus.map((s) => s.trim()).filter(Boolean))).slice(0, MAX_SKUS_PER_LOOKUP);
-        for (const sku of wanted) {
-            const byGrace = await ctx.db.query("productPlates").withIndex("by_graceSku", (q) => q.eq("graceSku", sku)).collect();
-            const byWebsite = await ctx.db.query("productPlates").withIndex("by_websiteSku", (q) => q.eq("websiteSku", sku)).collect();
+        // Both index reads for every SKU run in parallel batches; results are applied in request order.
+        const found = await mapInBatches(wanted, (sku) => Promise.all([
+            ctx.db.query("productPlates").withIndex("by_graceSku", (q) => q.eq("graceSku", sku)).collect(),
+            ctx.db.query("productPlates").withIndex("by_websiteSku", (q) => q.eq("websiteSku", sku)).collect(),
+        ]));
+        for (const [index, sku] of wanted.entries()) {
+            const [byGrace, byWebsite] = found[index];
             const seen = new Set<string>();
             const rows = [...byGrace, ...byWebsite].filter((row) => {
                 if (seen.has(row._id)) return false;

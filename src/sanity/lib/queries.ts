@@ -140,6 +140,7 @@ export const JOURNAL_SITEMAP_QUERY = `
   }
 `;
 
+import { unstable_cache } from "next/cache";
 import { client, isSanityConfigured } from "./client";
 import { authenticatedServerClient, previewServerClient } from "./serverClient";
 import {
@@ -295,11 +296,27 @@ export async function getHomepageData(): Promise<HomepageData | null> {
 }
 
 // Fetch only mega menu panels (for Navbar)
+/**
+ * The mega menu is editorial navigation (panel titles, links, images), fetched by the root layout on
+ * every request until 7 Nov 2026. It is now cached for 5 minutes across requests and instances; a
+ * published menu edit shows within that window. It holds no stock, price or visibility data. A failed
+ * fetch throws inside the cache, so a Sanity outage is never cached: the layout gets null and the next
+ * request tries again.
+ */
+export const MEGA_MENU_REVALIDATE_SECONDS = 300;
+const loadMegaMenuPanels = unstable_cache(
+    async () => {
+        const result = await client.fetch<{ megaMenuPanels?: HomepageData["megaMenuPanels"] } | null>(MEGA_MENU_QUERY);
+        return result?.megaMenuPanels ?? null;
+    },
+    ["sanity-mega-menu-panels-v1"],
+    { revalidate: MEGA_MENU_REVALIDATE_SECONDS, tags: ["sanity:mega-menu"] },
+);
+
 export async function getMegaMenuPanels(): Promise<HomepageData["megaMenuPanels"] | null> {
     if (!isSanityConfigured) return null;
     try {
-        const result = await client.fetch<{ megaMenuPanels?: HomepageData["megaMenuPanels"] } | null>(MEGA_MENU_QUERY);
-        return result?.megaMenuPanels ?? null;
+        return await loadMegaMenuPanels();
     } catch {
         return null;
     }

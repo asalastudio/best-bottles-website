@@ -57,6 +57,7 @@ import type * as imageReconciliation from "../imageReconciliation.js";
 import type * as importMissingLiveProducts from "../importMissingLiveProducts.js";
 import type * as knowledge from "../knowledge.js";
 import type * as knowledgeOperations from "../knowledgeOperations.js";
+import type * as lib_batches from "../lib/batches.js";
 import type * as lib_portalAccountFoundation from "../lib/portalAccountFoundation.js";
 import type * as lib_shopifyOrderTruth from "../lib/shopifyOrderTruth.js";
 import type * as materialRecipes from "../materialRecipes.js";
@@ -151,6 +152,7 @@ declare const fullApi: ApiFromModules<{
   importMissingLiveProducts: typeof importMissingLiveProducts;
   knowledge: typeof knowledge;
   knowledgeOperations: typeof knowledgeOperations;
+  "lib/batches": typeof lib_batches;
   "lib/portalAccountFoundation": typeof lib_portalAccountFoundation;
   "lib/shopifyOrderTruth": typeof lib_shopifyOrderTruth;
   materialRecipes: typeof materialRecipes;
