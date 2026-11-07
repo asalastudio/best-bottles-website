@@ -77,7 +77,7 @@ A: 24-410 is a GPI (Glass Packaging Institute) standard thread specification whe
 A: Amber glass provides the strongest UV protection (filtering most wavelengths below ~450 nm) and is the industry standard for light-sensitive formulations such as essential oils, tinctures, and serums. Cobalt blue glass provides moderate UV protection and is often selected for both UV blocking and aesthetic reasons. Clear flint and frosted glass provide no UV protection on their own.
 
 **Q: Where does Best Bottles ship from and where does it ship to?**
-A: Best Bottles ships from its Union City, California warehouse. The approved FAQ says worldwide shipping is available. Domestic processing takes 2–3 business days, then about 1–5 business days in transit (`/help/a/processing-and-delivery-times`).
+A: Best Bottles ships from its Union City, California warehouse. Worldwide shipping is available. Domestic processing takes 2–3 business days, then about 1–5 business days in transit (`/help/a/processing-and-delivery-times`).
 
 **Q: Does Best Bottles offer samples before placing a wholesale order?**
 A: Yes. Verified businesses can buy samples below the $50 minimum by emailing a list of item codes to sales@nematinternational.com; the team replies with an invoice (`/help/a/samples`). A sample request form is also at `/request-sample`.

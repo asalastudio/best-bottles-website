@@ -60,7 +60,7 @@ export default async function HelpSearchPage({ searchParams }: { searchParams: P
                         <section aria-labelledby="gap" className="mt-8 rounded-sm border border-[#E8D6B0] bg-[#FBF5E8] p-5">
                             <h2 id="gap" className="text-sm font-semibold normal-case tracking-normal text-[#6E4B0E]">No approved answer yet</h2>
                             <p className="mt-2 text-sm leading-relaxed text-[#5C4310]">
-                                Our approved FAQ does not cover {result.gap}, so we won&apos;t guess. Please ask our team, or send the question and we&apos;ll review it.
+                                We don&apos;t have an approved answer on {result.gap} yet, so we won&apos;t guess. Please ask our team, or send the question and we&apos;ll review it.
                             </p>
                             <Link href={`/help/ask?q=${encodeURIComponent(raw)}`} className="mt-3 inline-block text-sm text-[#6E4B0E] underline underline-offset-4">Send this question</Link>
                         </section>

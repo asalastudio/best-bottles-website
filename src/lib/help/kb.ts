@@ -82,9 +82,9 @@ const SLUG_BY_FAQ_ID: Record<string, string> = {
 
 /** Disagreements the approved FAQ itself contains. They stay visible until the owner resolves them. */
 const OPEN_QUESTIONS: Record<string, string[]> = {
-    "missing-items": ["The FAQ gives two windows for reporting a missing item: 48 hours here, and 7 business days in the general claims answer. Report missing items as soon as you can."],
-    "damaged-defective": ["The FAQ's missing-item answer gives 48 hours, while this claims answer gives 7 business days. Report missing items as soon as you can."],
-    "lead-times": ["The FAQ also says most orders are processed within 1–3 days. Contact the team to confirm timing for your order."],
+    "missing-items": ["There are two windows for reporting a missing item: 48 hours here, and 7 business days in the general claims answer. Report missing items as soon as you can."],
+    "damaged-defective": ["The missing-item answer gives 48 hours, while this claims answer gives 7 business days. Report missing items as soon as you can."],
+    "lead-times": ["The order-change answer says most orders are processed within 1–3 days. Contact the team to confirm timing for your order."],
     "order-changes": ["Processing times differ between this answer (1–3 days) and the shipping answer (2–3 business days)."],
 };
 
