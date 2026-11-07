@@ -464,7 +464,7 @@ function LineItemRow({
             <td className="py-3 px-4">
                 <LocaleLink href={href} className="flex items-center gap-4">
                     <div
-                        className="w-14 h-14 shrink-0 bg-[#f5f3ef] rounded flex items-center justify-center overflow-hidden relative"
+                        className="w-14 h-14 shrink-0 bg-[#f5f3ef] flex items-center justify-center overflow-hidden relative"
                         data-bb-image-audit="catalog-line-item"
                         data-bb-family={group.family ?? undefined}
                         data-bb-product-group-slug={group.slug}
