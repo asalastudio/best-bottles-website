@@ -5,7 +5,7 @@ import type { BuilderKit, CatalogRow } from "@/lib/bottle-builder/model";
 const state = vi.hoisted(() => ({ rows: [] as unknown[], kits: {} as Record<string, unknown>, truncated: false, missingPlates: [] as string[], register: null as unknown, registerDown: false, local: null as Record<string, BuilderKit> | null }));
 vi.mock("server-only", () => ({}));
 // Exercise the legacy/register fallback path independently of the approved release.
-vi.mock("@/lib/paper-doll/approved-component-kits", () => ({ approvedComponentKits: () => ({}), APPROVED_KIT_VERSION: "test" }));
+vi.mock("@/lib/paper-doll/approved-component-kits", () => ({ approvedComponentKits: () => ({}), APPROVED_KIT_VERSION: "test", DIVA100_SEATING_VERSION: "test-diva100" }));
 vi.mock("next/cache", () => ({ unstable_cache: (fn: unknown) => fn }));
 vi.mock("@/lib/paper-doll/local-component-kits", () => ({ readLocalComponentKits: () => state.local }));
 vi.mock("convex/browser", () => ({ ConvexHttpClient: class {

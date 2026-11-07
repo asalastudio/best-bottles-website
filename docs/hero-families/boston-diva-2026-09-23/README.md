@@ -11,3 +11,7 @@ All 50 images passed background sampling (95th-percentile maximum channel deviat
 This is a committed catalog candidate, not a production deployment. Elegant's 31-image release remains in PR #236; its two 30 mL matte-gold sprayers are still outstanding. Sleek is next, with 21 existing source images and approved 5/8/30/50/100 mL shoulder targets.
 
 Rollback: remove the Boston/Diva release import and spread from `catalog-heroes.ts`, leaving all prior families and original registries intact.
+
+## Revision, 7 November 2026: Diva 100 ml pump seated on the shoulder
+
+Jordan: the 100 mL lotion pump and spray pump were "too small" to sit on the Diva shoulder. In both Matte Gold renders the 18-415 collar was narrower than the clear neck ring under it, so ~45 px of glass showed between pump and shoulder. `scripts/hero-families/diva100-fitment-rescale-2026-11-07.py` erases the pump and loose cap with the bone sampled beside them, scales each uniformly by neck-ring width / collar width (1.198 lotion, 1.206 spray) and seats the collar foot on the shoulder ledge; the loose cap takes the same scale about its own foot. Glass, background, framing and every other pixel are unchanged. The new files are `LBDiva100LtnMtGl.0d74a8e47e6d.png` and `GBDiva100SpryMtGl.d2d5206782fd.png`; `approval.json` records each revision with the previous hash, and the 23 September lock is kept as `approval-history/approval-2026-09-23.json`. Per-image measurements are in `fitment-rescale-2026-11-07/`.

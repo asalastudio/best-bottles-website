@@ -8,6 +8,7 @@ import sprays from "./cylinder-spray-kits.generated.json";
 import jumbo from "./cylinder-jumbo-overcap.generated.json";
 import lotions from "./cylinder-lotion-kits.generated.json";
 import spraySeating from "./cylinder-spray-seating.json";
+import diva100Seating from "./diva100-fitment-seating.json";
 import sleekTubes from "./sleek-large-tubes.generated.json";
 import cylinder25Droppers from "./cylinder25-dropper.generated.json";
 import cylinder25Reducers from "./cylinder25-reducers.generated.json";
@@ -360,7 +361,33 @@ const tulipRows = Object.fromEntries(Object.entries(existingRows).flatMap(([sku,
             box: { x: left - 152 * sx, y: top - 103 * sy, width: tulipGlass.width * sx, height: tulipGlass.height * sy } };
     }) }]];
 }));
-const rows: Record<string, BuilderKit> = { ...existingRows, ...revisedRows, ...pillarRows, ...tulipRows };
+// Diva 100 ml lotion pumps and fine-mist sprayers sat ~11% small: the collar was narrower than the glass thread band,
+// so ridges showed either side and the pump looked perched on the neck (Jordan, 7 Nov 2026). Each SKU's own plate,
+// the real cap-on photograph on this same canvas, gives the cap width; scripts/register/diva100-fitment-seating.py
+// records plate cap / kit overcap. The fitment scales about its collar foot (already on the neck ring) and its collar
+// is centred on the neck. Body, glass and every other kit are untouched.
+const DIVA100_FITMENT_SLOTS = new Set(["pump", "sprayer", "overcap", "diptube"]);
+type Diva100Seat = { scale: number; collarCentreX: number; collarFootY: number; neckCentreX: number };
+export const DIVA100_SEATING_VERSION = diva100Seating.version;
+export function seatDiva100Fitment(kit: BuilderKit, seat: Diva100Seat): BuilderKit {
+    const { scale, collarCentreX, collarFootY, neckCentreX } = seat;
+    const tx = (x: number) => neckCentreX + (x - collarCentreX) * scale;
+    const ty = (y: number) => collarFootY + (y - collarFootY) * scale;
+    const box = (v: { x: number; y: number; width: number; height: number }) => ({ x: tx(v.x), y: ty(v.y), width: v.width * scale, height: v.height * scale });
+    const bounds = (v: { left: number; right: number; top: number; bottom: number }) => ({ left: tx(v.left), right: tx(v.right), top: ty(v.top), bottom: ty(v.bottom) });
+    return { ...kit, parts: kit.parts.map(part => {
+        if (!DIVA100_FITMENT_SLOTS.has(part.slot) || !part.box) return part;
+        return { ...part, box: box(part.box), bounds: bounds(part.bounds),
+            ...(part.detached ? { detached: { ...part.detached, box: box(part.detached.box), bounds: bounds(part.detached.bounds) } } : {}) };
+    }) };
+}
+function withDiva100Seating(source: Record<string, BuilderKit>): Record<string, BuilderKit> {
+    const seats = diva100Seating.rows as Record<string, Diva100Seat>;
+    return Object.fromEntries(Object.entries(source).map(([sku, kit]) => [sku,
+        Object.hasOwn(seats, sku) && kit.register?.bodyId === diva100Seating.bodyId ? seatDiva100Fitment(kit, seats[sku]) : kit]));
+}
+
+const rows: Record<string, BuilderKit> = withDiva100Seating({ ...existingRows, ...revisedRows, ...pillarRows, ...tulipRows });
 export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {

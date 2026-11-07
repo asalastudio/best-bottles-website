@@ -1,0 +1,18 @@
+{
+ "source": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva100LtnMtGl.4b6cda8805b2.png",
+ "output": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva100LtnMtGl.0d74a8e47e6d.png",
+ "scale": 1.1981,
+ "collarWidthPx": 308,
+ "neckRingWidthPx": 369,
+ "pump": {
+  "top": 237,
+  "collarFoot": 769,
+  "seatedOnShoulderY": 815,
+  "centreX": 917.5
+ },
+ "cap": {
+  "top": 1500,
+  "foot": 2061
+ },
+ "sha256": "0d74a8e47e6d0914ae6ba46567c2460d02ca4057df010cb4c5b5c54c244bc136"
+}

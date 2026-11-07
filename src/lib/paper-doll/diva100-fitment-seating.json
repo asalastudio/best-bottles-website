@@ -1,0 +1,124 @@
+{
+ "version": "diva100-fitment-seated-v1",
+ "bodyId": "diva-100ml-18-415",
+ "source": "scripts/register/diva100-fitment-seating.py: plate cap width / kit overcap width per SKU (Jordan, 2026-11-07)",
+ "rows": {
+  "GBDiva100SpryCu": {
+   "collarFootY": 389,
+   "collarCentreX": 499.84,
+   "neckCentreX": 499.75,
+   "kitOvercapPx": 149,
+   "plateCapPx": 167.0,
+   "clearOvercap": false,
+   "scale": 1.1208
+  },
+  "GBDiva100SpryMtGl": {
+   "collarFootY": 389,
+   "collarCentreX": 500.46,
+   "neckCentreX": 499.76,
+   "kitOvercapPx": 146.0,
+   "plateCapPx": 164.0,
+   "clearOvercap": false,
+   "scale": 1.1233
+  },
+  "GBDiva100SpryMtSl": {
+   "collarFootY": 389,
+   "collarCentreX": 496.99,
+   "neckCentreX": 499.76,
+   "kitOvercapPx": 151.0,
+   "plateCapPx": 169.0,
+   "clearOvercap": false,
+   "scale": 1.1192
+  },
+  "GBDiva100SpryShnBlk": {
+   "collarFootY": 389,
+   "collarCentreX": 498.76,
+   "neckCentreX": 499.76,
+   "kitOvercapPx": 148,
+   "plateCapPx": 165.0,
+   "clearOvercap": false,
+   "scale": 1.1149
+  },
+  "GBDiva100SpryShnGl": {
+   "collarFootY": 389,
+   "collarCentreX": 497.94,
+   "neckCentreX": 499.73,
+   "kitOvercapPx": 148,
+   "plateCapPx": 165.0,
+   "clearOvercap": false,
+   "scale": 1.1149
+  },
+  "GBDiva100SpryShnSl": {
+   "collarFootY": 389,
+   "collarCentreX": 498.57,
+   "neckCentreX": 499.73,
+   "kitOvercapPx": 148,
+   "plateCapPx": 166.0,
+   "clearOvercap": false,
+   "scale": 1.1216
+  },
+  "LBDiva100LtnClOvrCap": {
+   "collarFootY": 389,
+   "collarCentreX": 499.08,
+   "neckCentreX": 499.41,
+   "kitOvercapPx": 136.0,
+   "plateCapPx": 167.0,
+   "clearOvercap": true,
+   "scale": 1.12
+  },
+  "LBDiva100LtnCu": {
+   "collarFootY": 389,
+   "collarCentreX": 500.54,
+   "neckCentreX": 499.73,
+   "kitOvercapPx": 148,
+   "plateCapPx": 167.0,
+   "clearOvercap": false,
+   "scale": 1.1284
+  },
+  "LBDiva100LtnMtGl": {
+   "collarFootY": 389,
+   "collarCentreX": 498.91,
+   "neckCentreX": 499.76,
+   "kitOvercapPx": 146.0,
+   "plateCapPx": 164.0,
+   "clearOvercap": false,
+   "scale": 1.1233
+  },
+  "LBDiva100LtnMtSl": {
+   "collarFootY": 389,
+   "collarCentreX": 496.9,
+   "neckCentreX": 499.76,
+   "kitOvercapPx": 151.0,
+   "plateCapPx": 169.0,
+   "clearOvercap": false,
+   "scale": 1.1192
+  },
+  "LBDiva100LtnShnBlk": {
+   "collarFootY": 389,
+   "collarCentreX": 499.22,
+   "neckCentreX": 499.76,
+   "kitOvercapPx": 148,
+   "plateCapPx": 165.0,
+   "clearOvercap": false,
+   "scale": 1.1149
+  },
+  "LBDiva100LtnShnGl": {
+   "collarFootY": 389,
+   "collarCentreX": 499.94,
+   "neckCentreX": 499.73,
+   "kitOvercapPx": 148,
+   "plateCapPx": 165.0,
+   "clearOvercap": false,
+   "scale": 1.1149
+  },
+  "LBDiva100LtnShnSl": {
+   "collarFootY": 389,
+   "collarCentreX": 500.57,
+   "neckCentreX": 499.73,
+   "kitOvercapPx": 148,
+   "plateCapPx": 166.0,
+   "clearOvercap": false,
+   "scale": 1.1216
+  }
+ }
+}

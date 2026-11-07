@@ -2391,8 +2391,8 @@
       "material": "Clear",
       "groupSlug": "diva-100ml-clear-18-415-perfumespray",
       "shopifyVariantId": "gid://shopify/ProductVariant/53343649825060",
-      "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100SpryMtGl.89a35e039bed.png",
-      "sha256": "89a35e039bed984c152486cc98dcedd43d647085f7e9b703103fc081fd5e8fcd",
+      "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100SpryMtGl.d2d5206782fd.png",
+      "sha256": "d2d5206782fd772e18720d03a159ca84cd396f1cb89f8c04f370d74e6d16ed88",
       "canvas": [
         2080,
         2288
@@ -2432,6 +2432,16 @@
         "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
         "scaleReference": "ea11b3f60654787d115a4e49603decf1870b1b08785787b329878079e5e37669",
         "promptFile": "609874be7eaa51d00312c287a552dc69d5bf33eee0367d6ab7df12cc79b50723"
+      },
+      "revision": {
+        "date": "2026-11-07",
+        "reason": "Pump enlarged and seated on the Diva shoulder (Jordan: too small to sit on the shoulder)",
+        "previous": {
+          "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva100SpryMtGl.89a35e039bed.png",
+          "sha256": "89a35e039bed984c152486cc98dcedd43d647085f7e9b703103fc081fd5e8fcd"
+        },
+        "script": "scripts/hero-families/diva100-fitment-rescale-2026-11-07.py",
+        "report": "docs/hero-families/boston-diva-2026-09-23/fitment-rescale-2026-11-07/GBDiva100SpryMtGl.json"
       }
     },
     {
@@ -2441,8 +2451,8 @@
       "material": "Clear",
       "groupSlug": "diva-100ml-clear-18-415-lotionpump",
       "shopifyVariantId": "gid://shopify/ProductVariant/53343610470692",
-      "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva100LtnMtGl.4b6cda8805b2.png",
-      "sha256": "4b6cda8805b29d7363f4bef7d3d752bd356204735d377caceffcb13ac825029a",
+      "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva100LtnMtGl.0d74a8e47e6d.png",
+      "sha256": "0d74a8e47e6d0914ae6ba46567c2460d02ca4057df010cb4c5b5c54c244bc136",
       "canvas": [
         2080,
         2288
@@ -2482,6 +2492,16 @@
         "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
         "scaleReference": "ea11b3f60654787d115a4e49603decf1870b1b08785787b329878079e5e37669",
         "promptFile": "07bb6312f46ebc1929f8bf512dc9146840da50a4e11d3d3c60b41a4368f1c1eb"
+      },
+      "revision": {
+        "date": "2026-11-07",
+        "reason": "Pump enlarged and seated on the Diva shoulder (Jordan: too small to sit on the shoulder)",
+        "previous": {
+          "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva100LtnMtGl.4b6cda8805b2.png",
+          "sha256": "4b6cda8805b29d7363f4bef7d3d752bd356204735d377caceffcb13ac825029a"
+        },
+        "script": "scripts/hero-families/diva100-fitment-rescale-2026-11-07.py",
+        "report": "docs/hero-families/boston-diva-2026-09-23/fitment-rescale-2026-11-07/LBDiva100LtnMtGl.json"
       }
     }
   ]

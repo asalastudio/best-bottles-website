@@ -1,5 +1,5 @@
 import "server-only";
-import { approvedComponentKits, APPROVED_KIT_VERSION } from "../paper-doll/approved-component-kits";
+import { approvedComponentKits, APPROVED_KIT_VERSION, DIVA100_SEATING_VERSION } from "../paper-doll/approved-component-kits";
 import { storefrontFamily, sourceFamilies, withStorefrontFamily } from "../products/storefront-family";
 import { CYLINDER9_OVERCAP_MASTER } from "@/lib/register/detached-overcaps";
 import { CYLINDER25_COPPER_OVERCAP } from "@/lib/register/cylinder25-copper-overcap";
@@ -76,7 +76,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: true }));
-}, ["bottle-builder-family-chooser-v14-all-cylinder-masters", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v14-all-cylinder-masters", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION, DIVA100_SEATING_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** The cached family. When the cache has no entry to fall back on (a new key, an
  * eviction) and the register lookup fails, this one request builds the family
@@ -172,7 +172,7 @@ const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null
         kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
     }
     return kits;
-}, ["bottle-builder-body-kits-v10-vial3-source", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-body-kits-v10-vial3-source", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION, DIVA100_SEATING_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export async function loadBuilderBodyKits(family: string, bodyId: string) {
     if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};
