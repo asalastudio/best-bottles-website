@@ -7,6 +7,7 @@ import { FIT_SNAPSHOT, FIT_STATUS_MEANING, allBodies, bodyLabel, fitHref, fitRep
 import { catalogHref } from "@/lib/catalogFilters";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/lib/seo";
 import { pageAlternates } from "@/i18n/metadata";
+import { neckBuilder, neckBuilderHref } from "@/lib/help/fit-neck";
 
 export const dynamicParams = false;
 
@@ -65,6 +66,9 @@ export default async function FitBottlePage({ params }: { params: Promise<{ bott
                 <Link href={catalogHref({ families: [body.family], capacities: body.capacityMl != null ? [formatMl(body.capacityMl)] : [] })} className="text-gold-dim underline underline-offset-4">
                     This bottle&apos;s price and stock
                 </Link>
+                {body.neck && neckBuilder(body.neck) && (
+                    <Link href={`${neckBuilderHref(body.neck)}?bottle=${encodeURIComponent(body.id)}`} className="font-semibold text-gold-dim underline underline-offset-4">Build it: applicator, then closure</Link>
+                )}
                 <Link href="/help/fit" className="underline underline-offset-4">Choose another bottle</Link>
             </p>
 

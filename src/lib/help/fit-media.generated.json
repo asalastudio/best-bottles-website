@@ -1,0 +1,472 @@
+{
+ "_about": "Built by scripts/help/build_fit_media.py. Bottle and closure masters with true-scale geometry for the neck-finish builder.",
+ "necks": {
+  "13-415": {
+   "registerSnapshot": "register-13-415-2026-11-07.json",
+   "bodies": {
+    "bell-10ml-13-415": {
+     "src": "/images/help-fit/13-415/bell-10ml-13-415.bf638425229a.webp",
+     "width": 296,
+     "height": 640,
+     "pxPerMm": 11.1201,
+     "axisX": 145.24,
+     "seatY": 0.33,
+     "source": "/local-kits/remaining-13-415-2026-11-01/body-bell-10ml-13-415-clear.b78b9267b7cd.svg"
+    },
+    "circle-15ml-13-415": {
+     "src": "/images/help-fit/13-415/circle-15ml-13-415.e1c3394857f0.webp",
+     "width": 514,
+     "height": 640,
+     "pxPerMm": 9.8516,
+     "axisX": 258.42,
+     "seatY": 0.33,
+     "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/circle-15ml-13-415/clear/519a3c42f39317b66a25b5cda8e0d63e4dc4117a418bdabc459b2e76cb4e358e.png"
+    },
+    "cylinder-5ml-13-415": {
+     "src": "/images/help-fit/13-415/cylinder-5ml-13-415.7f87dc1a6f26.webp",
+     "width": 210,
+     "height": 640,
+     "pxPerMm": 11.7954,
+     "axisX": 104.96,
+     "seatY": 7.27,
+     "source": "/local-kits/gpt-13-415-2026-10-31/cylinder5-clear-candidate-v3.3d366e116958.png"
+    },
+    "cylinder-9ml-13-415": {
+     "src": "/images/help-fit/13-415/cylinder-9ml-13-415.2786ada5e2c0.webp",
+     "width": 111,
+     "height": 640,
+     "pxPerMm": 6.0236,
+     "axisX": 55.56,
+     "seatY": 2.26,
+     "source": "/local-kits/remaining-13-415-2026-11-01/body-cylinder-9ml-13-415-clear.254d72521e49.svg"
+    },
+    "elegant-15ml-13-415": {
+     "src": "/images/help-fit/13-415/elegant-15ml-13-415.40b0b7f9ead6.webp",
+     "width": 375,
+     "height": 640,
+     "pxPerMm": 9.9356,
+     "axisX": 183.18,
+     "seatY": -0.0,
+     "source": "/local-kits/remaining-13-415-2026-11-01/body-elegant-15ml-13-415-clear.24ffa06a2f7a.svg"
+    },
+    "flair-15ml-13-415": {
+     "src": "/images/help-fit/13-415/flair-15ml-13-415.a8f51ded913d.webp",
+     "width": 425,
+     "height": 640,
+     "pxPerMm": 10.6612,
+     "axisX": 213.66,
+     "seatY": -0.0,
+     "source": "/local-kits/remaining-13-415-2026-11-01/body-flair-15ml-13-415-clear.70e54611db30.svg"
+    },
+    "pillar-9ml-13-415": {
+     "src": "/images/help-fit/13-415/pillar-9ml-13-415.96c8d2a7196d.webp",
+     "width": 253,
+     "height": 640,
+     "pxPerMm": 10.8635,
+     "axisX": 126.3,
+     "seatY": 0.33,
+     "source": "/images/approved-masters/body-pillar-9ml-clear-glass.33ffa1b36577.webp"
+    },
+    "footed-rectangle-10ml-13-415": {
+     "src": "/images/help-fit/13-415/footed-rectangle-10ml-13-415.f51aba98d9d9.webp",
+     "width": 358,
+     "height": 640,
+     "pxPerMm": 12.13,
+     "axisX": 173.94,
+     "seatY": 0.0,
+     "source": "/local-kits/remaining-13-415-2026-11-01/body-footed-rectangle-10ml-13-415-clear.199d55eb53af.svg"
+    },
+    "tall-rectangle-10ml-13-415": {
+     "src": "/images/help-fit/13-415/tall-rectangle-10ml-13-415.34fe16467063.webp",
+     "width": 111,
+     "height": 640,
+     "pxPerMm": 6.264,
+     "axisX": 53.77,
+     "seatY": -0.0,
+     "source": "/local-kits/remaining-13-415-2026-11-01/body-tall-rectangle-10ml-13-415-clear.889ce59502d9.svg"
+    },
+    "royal-13ml-13-415": {
+     "src": "/images/help-fit/13-415/royal-13ml-13-415.87c509493fc6.webp",
+     "width": 456,
+     "height": 640,
+     "pxPerMm": 10.6829,
+     "axisX": 221.35,
+     "seatY": 0.33,
+     "source": "/local-kits/remaining-13-415-2026-11-01/body-royal-13ml-13-415-clear.2bd2a62cec3e.svg"
+    },
+    "sleek-5ml-13-415": {
+     "src": "/images/help-fit/13-415/sleek-5ml-13-415.8719fbd06dee.webp",
+     "width": 255,
+     "height": 640,
+     "pxPerMm": 13.7554,
+     "axisX": 122.99,
+     "seatY": 0.0,
+     "source": "/local-kits/remaining-13-415-2026-11-01/body-sleek-5ml-13-415-clear.87084cf3360e.svg"
+    },
+    "sleek-8ml-13-415": {
+     "src": "/images/help-fit/13-415/sleek-8ml-13-415.cd578ad6fed1.webp",
+     "width": 168,
+     "height": 640,
+     "pxPerMm": 9.4964,
+     "axisX": 81.39,
+     "seatY": -0.33,
+     "source": "/local-kits/sleek8-glass-depth-2026-11-01/body-sleek8-refined.80dd51d7543a.svg"
+    },
+    "square-15ml-13-415": {
+     "src": "/images/help-fit/13-415/square-15ml-13-415.ac999e6d9684.webp",
+     "width": 328,
+     "height": 640,
+     "pxPerMm": 11.7594,
+     "axisX": 157.71,
+     "seatY": 0.0,
+     "source": "/local-kits/remaining-13-415-2026-11-01/body-square-15ml-13-415-clear.ece6da9d62bf.svg"
+    },
+    "tulip-5ml-13-415": {
+     "src": "/images/help-fit/13-415/tulip-5ml-13-415.271cee8f6376.webp",
+     "width": 337,
+     "height": 640,
+     "pxPerMm": 13.5618,
+     "axisX": 165.76,
+     "seatY": 0.33,
+     "source": "/local-kits/gpt-13-415-2026-10-31/tulip-5ml-13-415-amber.1987a24ec5e9.png"
+    },
+    "tulip-6ml-13-415": {
+     "src": "/images/help-fit/13-415/tulip-6ml-13-415.ef8e50f90939.webp",
+     "width": 344,
+     "height": 640,
+     "pxPerMm": 13.5715,
+     "axisX": 172.0,
+     "seatY": 0.0,
+     "source": "/images/approved-masters/tulip6-clear-master.18117b2e238d.webp"
+    }
+   },
+   "parts": {
+    "CMP-CAP-BLK-13-415-01": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/sprayer-047ff59ae0b8650586ae5202b6ab89ee1326dda4bfba49401b084d568efea09d.png",
+     "width": 524,
+     "height": 1048,
+     "pxPerMm": 31.6683,
+     "axisX": 264.5,
+     "seatY": 610.2,
+     "source": "registerComponents (production)",
+     "overcap": {
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-01/overcap-b45348edce87e0f56e9fb934151ebc13cdaf4029209e7e3dbea54d2f27f4d1cc.png",
+      "width": 217,
+      "height": 394,
+      "pxPerMm": 11.233,
+      "axisX": 108,
+      "seatY": 242
+     }
+    },
+    "CMP-CAP-BLK-13-415-02": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/sprayer-026e2df20875765de11acd51576592a06063499fad8d8f85e879d1696ab30854.png",
+     "width": 584,
+     "height": 1085,
+     "pxPerMm": 35.4862,
+     "axisX": 297.5,
+     "seatY": 645.8,
+     "source": "registerComponents (production)",
+     "overcap": {
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-13-415-02/overcap-0d973b7809b6734336588f87e9718c6698f508987cdad579f4468bfd5776b85f.png",
+      "width": 235,
+      "height": 394,
+      "pxPerMm": 11.233,
+      "axisX": 102,
+      "seatY": 245
+     }
+    },
+    "CMP-CAP-13-415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/sprayer-9a41ce1ea4f7e686d39c11b0b76d6bb89cd33bec877e2d4ff5c0f6853328ab90.png",
+     "width": 528,
+     "height": 993,
+     "pxPerMm": 33.6991,
+     "axisX": 263,
+     "seatY": 573,
+     "source": "registerComponents (production)",
+     "overcap": {
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-13-415/overcap-d5794d78965a3aea6757349b0d8b412a636d1117fcf899c9d6d423d29d4f3702.png",
+      "width": 210,
+      "height": 394,
+      "pxPerMm": 11.233,
+      "axisX": 101.5,
+      "seatY": 246
+     }
+    },
+    "CMP-CAP-SGLD-13-415-02": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/sprayer-4ec12bcb5263cf5f6f09b512f084fb6b597be86ec6aaac2611000e6c7d3faa1e.png",
+     "width": 525,
+     "height": 976,
+     "pxPerMm": 33.1114,
+     "axisX": 260,
+     "seatY": 562.2,
+     "source": "registerComponents (production)",
+     "overcap": {
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-02/overcap-b4071730d45aad300557716fd43f4b9c6d1ce86233400e83e3a8e17dec50df33.png",
+      "width": 214,
+      "height": 396,
+      "pxPerMm": 11.233,
+      "axisX": 106,
+      "seatY": 242
+     }
+    },
+    "CMP-CAP-SGLD-13-415-03": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/sprayer-6d1e75eb88437a3ec4913e7fb138b44c625a9c3090c751961e5862c4822d80f7.png",
+     "width": 570,
+     "height": 1060,
+     "pxPerMm": 34.6082,
+     "axisX": 288.4,
+     "seatY": 613.5,
+     "source": "registerComponents (production)",
+     "overcap": {
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-03/overcap-77e9889f85b72cf928f2408e9317378bd7444f4e0578b581f91e4c37b3fb96a9.png",
+      "width": 210,
+      "height": 397,
+      "pxPerMm": 11.233,
+      "axisX": 104,
+      "seatY": 242
+     }
+    },
+    "CMP-CAP-SLV-13-415-02": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/sprayer-a20e02d4b923a879323b7f3406c9fdfff3cbc35b150ef43570352e336c1dc768.png",
+     "width": 562,
+     "height": 1028,
+     "pxPerMm": 33.513,
+     "axisX": 285,
+     "seatY": 596.8,
+     "source": "registerComponents (production)",
+     "overcap": {
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-02/overcap-1be2d9861e87c29a56140ae74184a378ba2c3fe06305ecf3d2f876b933e42f8f.png",
+      "width": 217,
+      "height": 397,
+      "pxPerMm": 11.233,
+      "axisX": 109,
+      "seatY": 245
+     }
+    },
+    "CMP-CAP-SLV-13-415-03": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/sprayer-68788a96740afa3619dd313fa6cd26738b1288fb61eaaba2bf43cd2f53259681.png",
+     "width": 570,
+     "height": 1060,
+     "pxPerMm": 34.6082,
+     "axisX": 288,
+     "seatY": 616.6,
+     "source": "registerComponents (production)",
+     "overcap": {
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-03/overcap-5d55997ab95a26957819244c7f5857179c7f04496a8b1f7cff60282b9b396115.png",
+      "width": 206,
+      "height": 393,
+      "pxPerMm": 11.233,
+      "axisX": 100.5,
+      "seatY": 241
+     }
+    },
+    "CMP-CAP-SBLK-13-415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SBLK-13-415/cap-672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+     "width": 402,
+     "height": 431,
+     "pxPerMm": 25,
+     "axisX": 201,
+     "seatY": 145.35,
+     "source": "registerComponents (production)"
+    },
+    "CMP-CAP-BLK-S-13-415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-BLK-S-13-415/cap-1623940351ba8de12c177d105a8f6321ec2bd2280551334e095d9c6475bcefa0.png",
+     "width": 624,
+     "height": 393,
+     "pxPerMm": 37.2019,
+     "axisX": 310,
+     "seatY": 54.4,
+     "source": "registerComponents (production)"
+    },
+    "CMP-CAP-SGLD-13-415-01": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SGLD-13-415-01/cap-6c93eef5b547acf513950ef80da416fd024d75dab75a771524d07c23caf9c1a6.png",
+     "width": 470,
+     "height": 692,
+     "pxPerMm": 26.0014,
+     "axisX": 234.5,
+     "seatY": 353.9,
+     "source": "registerComponents (production)"
+    },
+    "CMP-CAP-SLV-13-415-01": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-SLV-13-415-01/cap-5fd070a7a5870e657d256e8f240c020ef06187f40a8ff0ce8270a9e8b0bcd7e2.png",
+     "width": 470,
+     "height": 692,
+     "pxPerMm": 26.0014,
+     "axisX": 234.5,
+     "seatY": 353.9,
+     "source": "registerComponents (production)"
+    },
+    "CMP-CAP-WHT-S-13-415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CAP-WHT-S-13-415/cap-af95e942ccfb091386ad4d5b203ac87cd37316ada04ad873e74ada96736018c2.png",
+     "width": 627,
+     "height": 384,
+     "pxPerMm": 37.0811,
+     "axisX": 311.5,
+     "seatY": 19.2,
+     "source": "registerComponents (production)"
+    },
+    "CMP-ROC-BLK-13415-DOT": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-BLK-13415-DOT/cap-1600b3dbeb4e0f59186934bb7a5fde2388437fdf0c5b1e12daf5a5a64548f6ba.png",
+     "width": 217,
+     "height": 300,
+     "pxPerMm": 12.0344,
+     "axisX": 109,
+     "seatY": 138.1,
+     "source": "registerComponents (production)"
+    },
+    "CMP-ROC-SBLK-13415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SBLK-13415/cap-7228d1ea9305176686d176e127e03e21b7156167d8fdc268233e0ba054661a69.png",
+     "width": 220,
+     "height": 307,
+     "pxPerMm": 11.6342,
+     "axisX": 109,
+     "seatY": 151.9,
+     "source": "registerComponents (production)"
+    },
+    "CMP-ROC-MCPR-13415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MCPR-13415/cap-bb805dd4a697892dc283552e9d7b09c75af970f33af7d15bcaeb7ba84eb87911.png",
+     "width": 208,
+     "height": 309,
+     "pxPerMm": 11.233,
+     "axisX": 103.5,
+     "seatY": 159,
+     "source": "registerComponents (production)"
+    },
+    "CMP-ROC-MGLD-13415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MGLD-13415/cap-9b832eb09c64205073176388c4d434fa40587551d5aa4aa9e7f614a08761b2a1.png",
+     "width": 215,
+     "height": 307,
+     "pxPerMm": 11.4032,
+     "axisX": 108,
+     "seatY": 155.2,
+     "source": "registerComponents (production)"
+    },
+    "CMP-ROC-SGLD-13415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SGLD-13415/cap-32efebc48a1661a9be5081b4c6b6eea893cbfeb2b520f38f412e3ae6f9784902.png",
+     "width": 218,
+     "height": 315,
+     "pxPerMm": 11.5769,
+     "axisX": 108.5,
+     "seatY": 159.3,
+     "source": "registerComponents (production)"
+    },
+    "CMP-ROC-PNK-13415-DOT": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-PNK-13415-DOT/cap-1bbb0de407e4d8d1eb779bfabc4bf4f1c02546ac9a27d59ffa413d014e682bca.png",
+     "width": 215,
+     "height": 297,
+     "pxPerMm": 11.6384,
+     "axisX": 107.5,
+     "seatY": 134.5,
+     "source": "registerComponents (production)"
+    },
+    "CMP-ROC-SLV-13415-DOT": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SLV-13415-DOT/cap-1f928aee0555fa6fda688ec546e7c354868af4a1fde46c9dbc64d4c39e3af37b.png",
+     "width": 215,
+     "height": 300,
+     "pxPerMm": 11.8181,
+     "axisX": 108,
+     "seatY": 136.4,
+     "source": "registerComponents (production)"
+    },
+    "CMP-ROC-MSLV-13415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-MSLV-13415/cap-c535b2709d5e55c210eb51b9c0aa8b0a08ed45124355251229ad09eeb403dd82.png",
+     "width": 213,
+     "height": 302,
+     "pxPerMm": 11.4041,
+     "axisX": 107,
+     "seatY": 144.1,
+     "source": "registerComponents (production)"
+    },
+    "CMP-ROC-SSLV-13415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-ROC-SSLV-13415/cap-47af502b49bb741db747fd15afd403b51715ddc42a89da0a6d27dbf386fe1706.png",
+     "width": 215,
+     "height": 310,
+     "pxPerMm": 11.4032,
+     "axisX": 107,
+     "seatY": 159.3,
+     "source": "registerComponents (production)"
+    },
+    "CMP-SPR-MTCP-13-415-07": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/sprayer-4e2dddcfba58c150528344d18edbc96f1ba4cfa1ac25a40d8a525223c754fbcb.png",
+     "width": 555,
+     "height": 1031,
+     "pxPerMm": 34.3484,
+     "axisX": 276,
+     "seatY": 602.2,
+     "source": "registerComponents (production)",
+     "overcap": {
+      "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-SPR-MTCP-13-415-07/overcap-bb4cc14ddf3bbc4772ddc2639e77460aa9847e73661ca85cd95fd4813da1956d.png",
+      "width": 214,
+      "height": 395,
+      "pxPerMm": 11.233,
+      "axisX": 107.5,
+      "seatY": 240
+     }
+    },
+    "LIB-13-415-MtlRollon": {
+     "src": "/images/help-fit/13-415/lib-13-415-mtlrollon.782197f67cc5.webp",
+     "width": 157,
+     "height": 240,
+     "pxPerMm": 13.5686,
+     "axisX": 78.52,
+     "seatY": 135.31,
+     "source": "/images/approved-masters/roller-metal.2c4bc8ffee8b.png"
+    },
+    "LIB-13-415-PlsticRollon": {
+     "src": "/images/help-fit/13-415/lib-13-415-plsticrollon.f30aa1240f76.webp",
+     "width": 157,
+     "height": 240,
+     "pxPerMm": 14.9485,
+     "axisX": 78.52,
+     "seatY": 135.31,
+     "source": "/images/approved-masters/roller-plastic.4b356a2a9537.png"
+    },
+    "CMP-CLS-MTCP-S-13-415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-MTCP-S-13-415/cap-32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+     "width": 401,
+     "height": 431,
+     "pxPerMm": 25,
+     "axisX": 200,
+     "seatY": 145.35,
+     "source": "registerComponents (production)"
+    },
+    "CMP-CLS-MTGD-S-13-415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-MTGD-S-13-415/cap-fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+     "width": 401,
+     "height": 431,
+     "pxPerMm": 25,
+     "axisX": 200,
+     "seatY": 145.35,
+     "source": "registerComponents (production)"
+    },
+    "CMP-CLS-SHGD-S-13-415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-SHGD-S-13-415/cap-1336d3427f5b4014f74a933ee3a9302e9c14adff553e127df2ea2b7f809c2064.png",
+     "width": 402,
+     "height": 432,
+     "pxPerMm": 25,
+     "axisX": 201,
+     "seatY": 146.35,
+     "source": "registerComponents (production)"
+    },
+    "CMP-CLS-MTSL-S-13-415": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-MTSL-S-13-415/cap-c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+     "width": 401,
+     "height": 431,
+     "pxPerMm": 25,
+     "axisX": 200,
+     "seatY": 145.35,
+     "source": "registerComponents (production)"
+    },
+    "CMP-CLS-SHSL-S-13-415-02": {
+     "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/13-415/CMP-CLS-SHSL-S-13-415-02/cap-ad476da805a7e2287f6ba115876b26ca13c96f290cb2ae72b4c25e81fe7b700f.png",
+     "width": 402,
+     "height": 432,
+     "pxPerMm": 25,
+     "axisX": 201,
+     "seatY": 146.35,
+     "source": "registerComponents (production)"
+    }
+   }
+  }
+ }
+}

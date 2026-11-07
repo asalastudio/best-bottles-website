@@ -43,6 +43,8 @@ export type FitBody = {
     sameThread: string[];
     /** Fits by the owner's ruling for this neck rather than a catalog product (a subset of listed). */
     teamConfirmed: string[];
+    /** Sellable products on this body and the register parts each is built from. */
+    products?: Array<{ sku: string; glass: string; parts: string[] }>;
     conflicting: string[];
 };
 

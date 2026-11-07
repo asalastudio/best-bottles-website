@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { FAQ_POLICY_ENTRIES } from "@/lib/faqPolicy";
 import { KB_ENTRIES, publicEntries, sentences, toPublicEntry, type KbEntry } from "@/lib/help/kb";
+import { helpSitemapPages } from "@/lib/crawl/sitemap";
 import { allBodies, bodiesListing, bodyById, bodyLabel, componentById, fitReport } from "@/lib/help/fit";
 import { buildRobots } from "@/lib/crawl/robots";
 import fitIndex from "@/lib/help/fit-index.generated.json";
@@ -248,5 +249,54 @@ describe("help discovery", () => {
         expect(result.closure?.partTypes).toContain("fine-mist-sprayer");
         expect(result.bottles.map((b) => b.id)).toEqual(["bell-10ml-13-415"]);
         expect(apiSearch("sprayer for bell 10 ml").bottles[0].fitUrl).toMatch(/\/help\/fit\/bell-10ml-13-415$/);
+    });
+});
+
+describe("neck-finish builder", () => {
+    it("walks 13-415 as bottle, applicator, closure with every bottle sorted small to large", async () => {
+        const { neckBuilder } = await import("@/lib/help/fit-neck");
+        const view = neckBuilder("13-415")!;
+        expect(view.bottles).toHaveLength(15);
+        const sizes = view.bottles.map((b) => b.capacityMl ?? 0);
+        expect([...sizes].sort((a, b) => a - b)).toEqual(sizes);
+        expect(view.rollOnCaps).toHaveLength(9);
+        expect(view.sprayers).toHaveLength(8);
+        for (const id of view.sprayers) expect(view.parts[id].overcap).not.toBeNull();
+        expect(view.capGroups.map((g) => [g.label, g.partIds.length])).toEqual([["Short ribbed caps", 2], ["Short caps with liner", 6], ["Tall caps with liner", 2]]);
+        const available = Object.fromEntries(view.applicators.map((a) => [a.key, a.available]));
+        expect(available).toMatchObject({ "roll-plastic": true, "roll-metal": true, spray: true, none: true, lotion: false, reducer: false });
+        expect(view.applicators.find((a) => a.key === "lotion")!.elsewhere).toContain("18-415");
+        for (const bottle of view.bottles) expect(bottle.rollers).toEqual(["plastic", "metal"]);
+    });
+
+    it("hands a build we sell as one product to Build Your Bottle by its SKU", async () => {
+        const { neckBuilder, matchProduct } = await import("@/lib/help/fit-neck");
+        const view = neckBuilder("13-415")!;
+        const pillar = view.bottles.find((b) => b.id === "pillar-9ml-13-415")!;
+        expect(matchProduct(pillar, ["LIB-13-415-MtlRollon", "CMP-ROC-BLK-13415-DOT"])).toBe("GBPillar9MtlRollBlkdot");
+        expect(matchProduct(pillar, ["CMP-CLS-SHGD-S-13-415"])).toBeNull();
+    });
+
+    it("serves only images that exist and carry true-scale geometry", async () => {
+        const { existsSync } = await import("node:fs");
+        const { neckBuilder } = await import("@/lib/help/fit-neck");
+        const view = neckBuilder("13-415")!;
+        const images = [...view.bottles.map((b) => b.image), ...Object.values(view.parts).flatMap((p) => [p.image, ...(p.overcap ? [p.overcap] : [])])];
+        for (const image of images) {
+            expect(image.pxPerMm).toBeGreaterThan(0);
+            if (image.src.startsWith("/")) expect(existsSync(`public${image.src}`)).toBe(true);
+            else expect(image.src).toMatch(/^https:\/\/yzy7l20k4yt6znzz\.public\.blob\.vercel-storage\.com\//);
+        }
+        // Bottle masters measure close to their published glass heights.
+        for (const b of view.bottles) expect(Math.abs(b.image.height / b.image.pxPerMm - b.heightMm!)).toBeLessThan(6);
+    });
+
+    it("exposes the build to agents and crawlers", async () => {
+        const { apiNeck } = await import("@/lib/help/api");
+        const api = apiNeck("13-415")!;
+        expect(api.steps).toEqual(["bottle", "applicator", "closure"]);
+        expect(api.applicators.find((a) => a.key === "spray")!.closure).toEqual({ included: "matching overcap", choices: [] });
+        expect(apiNeck("99-999")).toBeNull();
+        expect(helpSitemapPages().map((p) => p.path)).toContain("/help/fit/neck/13-415");
     });
 });

@@ -5,6 +5,7 @@ import HelpShell, { ContactStrip } from "@/components/help/HelpShell";
 import { FitLegend, FormulaNote } from "@/components/help/FitParts";
 import { bodiesByFamily, bodyById, bodyVariant, fitHref, formatMl, type FitBody } from "@/lib/help/fit";
 import { pageAlternates } from "@/i18n/metadata";
+import { neckBuilder, neckBuilderHref, neckBuilderNecks } from "@/lib/help/fit-neck";
 
 export const metadata: Metadata = {
     title: { absolute: "Fit Finder: Which Caps, Sprayers and Roll-Ons Fit My Bottle? | Best Bottles" },
@@ -37,6 +38,19 @@ export default async function FitFinderPage({ searchParams }: { searchParams: Pr
         <HelpShell wide crumbs={[{ name: "Help", href: "/help" }, { name: "Fit finder" }]}>
             <h1 className="font-serif text-4xl sm:text-5xl">Which closures fit my bottle?</h1>
             <p className="mt-3 max-w-2xl text-slate">Pick your bottle and size. You&apos;ll see the closures our catalog lists for it, with item codes.</p>
+
+            {neckBuilderNecks().map((neck) => {
+                const view = neckBuilder(neck);
+                return view && (
+                    <Link key={neck} href={neckBuilderHref(neck)} className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-champagne bg-white p-5 hover:border-gold-dim">
+                        <span>
+                            <span className="block font-semibold">Build a {neck} bottle</span>
+                            <span className="mt-1 block text-sm text-slate">Choose one of {view.bottles.length} bottles, then a roll-on, sprayer or pour, then the cap. Every {neck} part fits every {neck} bottle.</span>
+                        </span>
+                        <span className="text-sm font-semibold text-gold-dim">Start building →</span>
+                    </Link>
+                );
+            })}
 
             <FitLegend className="mt-8" />
 

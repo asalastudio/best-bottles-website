@@ -51,6 +51,14 @@ export function buildKbOpenApi() {
                     responses: { 200: json({ type: "object", properties: { version: { type: "string" }, evidence: ref("Evidence"), bottles: { type: "array", items: ref("Bottle") } } }), 429: limited },
                 },
             },
+            "/fit/neck/{neck}": {
+                get: {
+                    operationId: "getNeckBuilder",
+                    summary: "One neck finish as a build: its bottles, then applicators, then closures, with item codes and the products that exist as one SKU",
+                    parameters: [{ name: "neck", in: "path", required: true, schema: { type: "string" }, example: "13-415" }],
+                    responses: { 200: json({ type: "object" }), 404: notFound, 429: limited },
+                },
+            },
             "/fit/{bottleId}": {
                 get: {
                     operationId: "getFit",

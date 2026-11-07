@@ -1,3 +1,4 @@
+import { neckBuilderHref, neckBuilderNecks } from "@/lib/help/fit-neck";
 import type { MetadataRoute } from "next";
 import { isMissingHeroSource, isVisibleCatalogGroup } from "@/lib/products/catalog-listing-visibility";
 import { isLegacyProductRouteAlias } from "@/lib/products/legacy-product-route-overrides";
@@ -52,6 +53,7 @@ export const NOT_IN_SITEMAP: Readonly<Record<string, string>> = {
     "/help/a/[slug]": "listed per published help answer (HELP_SITEMAP_PAGES)",
     "/help/topic/[topic]": "listed per help topic (HELP_SITEMAP_PAGES)",
     "/help/fit/[bottle]": "listed per bottle with shared closures (HELP_SITEMAP_PAGES)",
+    "/help/fit/neck/[neck]": "listed per neck finish with a builder (HELP_SITEMAP_PAGES)",
     "/help/search": "search results; noindex",
 };
 
@@ -61,6 +63,7 @@ export function helpSitemapPages(): Array<{ path: string; changeFrequency: Chang
         ...KB_TOPICS.filter((topic) => topic.id !== "products").map((topic) => ({ path: `/help/topic/${topic.id}`, changeFrequency: "monthly" as const, priority: 0.5 })),
         ...publicEntries().map((entry) => ({ path: entryHref(entry), changeFrequency: "monthly" as const, priority: 0.5 })),
         ...allBodies().filter((body) => body.interchangeable).map((body) => ({ path: fitHref(body), changeFrequency: "monthly" as const, priority: 0.4 })),
+        ...neckBuilderNecks().map((neck) => ({ path: neckBuilderHref(neck), changeFrequency: "monthly" as const, priority: 0.5 })),
     ];
 }
 

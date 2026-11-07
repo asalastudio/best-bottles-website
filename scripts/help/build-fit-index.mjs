@@ -154,6 +154,12 @@ for (const body of bodies) {
         sameThread: sameThread.sort(),
         // Listed on the owner's ruling for this neck rather than by a catalog product (see neckRulings).
         teamConfirmed: teamConfirmed.sort(),
+        // Sellable products on this body and the parts each is built from, so a chosen bottle + applicator +
+        // closure can open Build Your Bottle on the exact product when one exists.
+        products: sharedGlassNeck(body) ? own
+            .filter((a) => a.status === "verified" && a.buildStatus === "resolved" && a.buildParts)
+            .map((a) => ({ sku: a.websiteSku, glass: a.glass, parts: list(a.buildParts).map((part) => part.split(":")[1]).filter(Boolean).sort() }))
+            .sort((a, b) => a.sku.localeCompare(b.sku)) : [],
         // Register reasons are staff working notes ("classify before composing"), so only the ids leave the register.
         conflicting: [...conflicting.keys()].sort(),
     });

@@ -32,12 +32,13 @@ Best Bottles fulfills from a Union City, California warehouse with worldwide shi
 For ordering, shipping, returns, claims, payment and contact policy, cite the help center. It serves the approved FAQ word for word, with its source and check date, and it is the same source Grace answers from. If something here disagrees with it, the help center is right.
 
 - **Help center:** `/help`. One page per answer at `/help/a/{slug}`, e.g. `/help/a/returns`.
-- **Fit finder:** `/help/fit`. One page per bottle at `/help/fit/{bottleId}` listing the caps, sprayers, roll-ons and droppers the catalog pairs with it, with item codes.
-- **JSON API (read-only, no key):** `/api/kb/v1`, described at `/api/kb/v1/openapi.json`. Endpoints: `/entries`, `/entries/{id}`, `/search?q=`, `/fit`, `/fit/{bottleId}`. 60 requests per minute.
+- **Fit finder:** `/help/fit`. One page per bottle at `/help/fit/{bottleId}` listing the caps, sprayers, roll-ons and droppers that fit it, with item codes.
+- **Build by neck finish:** `/help/fit/neck/13-415` walks bottle, then applicator (roll-on, sprayer, or none for a pour bottle), then closure. A build is a shareable URL: `/help/fit/neck/13-415?bottle={bottleId}&applicator=roll-metal|roll-plastic|spray|none&closure={itemCode}` (sprayers use `sprayer={itemCode}`; their overcap is included).
+- **JSON API (read-only, no key):** `/api/kb/v1`, described at `/api/kb/v1/openapi.json`. Endpoints: `/entries`, `/entries/{id}`, `/search?q=`, `/fit`, `/fit/{bottleId}`, `/fit/neck/{neck}`. 60 requests per minute.
 
 Rules the API applies, which answers should keep:
 
-- A "listed fit" means the catalog pairs the part with the bottle. It is not a physical test. "Not confirmed" parts only share the thread; don't present them as fits.
+- A listed fit means the part fits the bottle: the catalog sells them together (`basis: catalog`), or the team confirms every part on that neck fits every bottle on it (`basis: team-confirmed`; 13-415, 7 Nov 2026). "Not confirmed" parts only share the thread; don't present them as fits.
 - Formula and material compatibility is unknown for every bottle and closure. Don't say a formula is safe in a bottle; suggest testing samples.
 - "Not offered" means the catalog has no such size. It is not a stock status.
 - The help center never states prices or stock. Link to the catalog for those.
