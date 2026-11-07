@@ -9,7 +9,7 @@ import thumbs from '@/lib/products/cylinder-cap-thumbnails.generated.json';
 import { cylinderMasterSource } from '@/lib/products/cylinder-master';
 import { stageLayout } from '@/lib/products/pdp-redesign/stage';
 import divaSkus from '@/lib/products/diva-master-skus.json';
-import diva100Seating from '@/lib/paper-doll/diva100-fitment-seating.json';
+import divaSeating from '@/lib/paper-doll/diva-fitment-seating.json';
 import { beforeDivaRelease, divaReleaseSkus } from './helpers/diva-release-2026-11-04';
 vi.mock('server-only', () => ({}));
 import { GET } from '@/app/api/bottle-masters/approved/route';
@@ -74,12 +74,12 @@ describe('Diva review masters published (2026-11-04)', () => {
             const response = await GET(new Request(`https://preview.vercel.app/api/bottle-masters/approved?sku=${sku}&v=${index.version}`));
             expect(response.status, sku).toBe(200);
             expect((await response.json()).kit).toEqual(hosted[sku]);
-            // The 13 Diva 100 lotion-pump and fine-mist kits were re-seated on 7 Nov 2026 and are requested under their
+            // The Diva lotion-pump and fine-mist kits re-seated or re-centred on 7 Nov 2026 and are requested under their
             // own version; the base version above still returns the 4 Nov recipe byte for byte.
-            const seated = Object.hasOwn(diva100Seating.rows, sku);
-            expect(cylinderMasterSource(sku)).toEqual({ family: 'approved', version: seated ? diva100Seating.version : index.version });
+            const seated = Object.hasOwn(divaSeating.rows, sku);
+            expect(cylinderMasterSource(sku)).toEqual({ family: 'approved', version: seated ? divaSeating.version : index.version });
             if (seated) {
-                const current = await GET(new Request(`https://preview.vercel.app/api/bottle-masters/approved?sku=${sku}&v=${diva100Seating.version}`));
+                const current = await GET(new Request(`https://preview.vercel.app/api/bottle-masters/approved?sku=${sku}&v=${divaSeating.version}`));
                 expect(current.status, sku).toBe(200);
                 expect((await current.json()).kit).not.toEqual(hosted[sku]);
             }

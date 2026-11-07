@@ -16,6 +16,7 @@ Glass, background, framing (canvas, baseline) and all other pixels are unchanged
 no recolouring.
 
   python3 scripts/hero-families/diva100-fitment-rescale-2026-11-07.py <in.png> <out.png> [--report report.json]
+      [--real-ring-ratio R]   30/46 ml: keep the collar on the ring at the real ring/cap proportion from the plates
 """
 import json
 import sys
@@ -72,64 +73,8 @@ def paste_scaled(rgb: np.ndarray, src: np.ndarray, src_alpha: np.ndarray, scale:
     region[:] = big[:, :, :3] * a + region * (1 - a)
 
 
-def main() -> None:
-    src_path, out_path = sys.argv[1], sys.argv[2]
-    report_path = sys.argv[sys.argv.index("--report") + 1] if "--report" in sys.argv else None
-    image = Image.open(src_path).convert("RGB")
-    rgb = np.asarray(image).astype(np.float32)
-    alpha = soft_alpha(rgb)
-    gold = gold_mask(rgb)
-    height, width = alpha.shape
-
-    # The bottle stands left of centre and the loose cap right of it; split at the emptiest column between them.
-    lo, hi = int(width * 0.55), int(width * 0.75)
-    bottle_right = lo + int(np.argmin((alpha[:, lo:hi] > 0.15).sum(axis=0)))
-
-    # 1. pump: gold rows in the upper bottle area
-    pump_gold = gold.copy()
-    pump_gold[:, bottle_right:] = False
-    pump_gold[int(height * 0.45):, :] = False
-    # The pump is a solid block of gold; the glass below only reflects scattered gold. Keep the first run of rows
-    # whose gold fills most of its own extent, so a reflection in the glass is never taken for the collar.
-    def solid(y):
-        ext = row_extent(pump_gold[y])
-        return bool(ext) and ext[1] - ext[0] > 40 and pump_gold[y, ext[0]:ext[1] + 1].mean() > 0.45
-    first = next(y for y in range(height) if solid(y))
-    y = first
-    # A shaded step between actuator and collar can leave a few rows thin (and the nozzle hole ~40 rows); reflections in the glass are sparse.
-    while y + 1 < height and any(solid(y + k) for k in range(1, 41) if y + k < height):
-        y += 1
-    pump_top, collar_foot = first, y
-    pump_gold[collar_foot + 1:, :] = False
-    rows = np.arange(pump_top, collar_foot + 1)
-    rows = np.array([r for r in rows if row_extent(pump_gold[r])])
-    collar_width = max(row_extent(pump_gold[r])[1] - row_extent(pump_gold[r])[0] for r in rows[-80:])
-    p_left = min(row_extent(pump_gold[y])[0] for y in rows) - 6
-    p_right = max(row_extent(pump_gold[y])[1] for y in rows) + 6
-    centre_x = (p_left + p_right) / 2
-
-    # Clear glass sits close to the bone, so a low alpha threshold finds the ring's true edge.
-    bottle = alpha > 0.15
-    bottle[:, bottle_right:] = False
-    shoulder = None
-    ring = []
-    for y in range(collar_foot + 1, collar_foot + 200):
-        ext = row_extent(bottle[y])
-        if not ext:
-            continue
-        w = ext[1] - ext[0]
-        if w > 1.3 * collar_width:
-            shoulder = y
-            break
-        ring.append(w)
-    if shoulder is None or len(ring) < 6:
-        raise SystemExit("could not find the neck ring and shoulder under the collar")
-    # The ring's steady band: drop the flare into the shoulder (last rows) and take the upper quartile.
-    ring_width = int(np.percentile(ring[:-3], 75))
-    if ring_width <= collar_width:
-        raise SystemExit(f"neck ring ({ring_width}px) is not wider than the collar ({collar_width}px): nothing to fix")
-    scale = ring_width / collar_width
-
+def finish(rgb, alpha, gold, pump_gold, bottle_right, pump_top, collar_foot, p_left, p_right, centre_x,
+           collar_width, ring_width, scale, shoulder, out_path, report_path, src_path, real_ring_ratio) -> None:
     # 2. cut the pump and the cap before erasing
     pump_src = rgb[pump_top - 4:collar_foot + 1, p_left:p_right + 1].copy()
     pump_alpha = alpha[pump_top - 4:collar_foot + 1, p_left:p_right + 1].copy()
@@ -152,7 +97,7 @@ def main() -> None:
     erase(rgb, alpha, pump_top - 4, collar_foot, p_left, p_right)
     erase(rgb, alpha, cap_top - 4, cap_foot, c_left, c_right)
 
-    # 3 + 4. scaled pump seated on the shoulder; scaled cap on its own foot
+    # 3 + 4. scaled pump seated (on the shoulder ledge, or on its own foot when it keeps the ring); scaled cap on its own foot
     paste_scaled(rgb, pump_src, pump_alpha, scale, pump_anchor, (centre_x, shoulder))
     paste_scaled(rgb, cap_src, cap_alpha, scale, cap_anchor, ((c_left + c_right) / 2, cap_foot))
 
@@ -161,12 +106,89 @@ def main() -> None:
         "source": src_path, "output": out_path, "scale": round(scale, 4),
         "collarWidthPx": collar_width, "neckRingWidthPx": ring_width,
         "pump": {"top": pump_top, "collarFoot": collar_foot, "seatedOnShoulderY": shoulder, "centreX": centre_x},
-        "cap": {"top": cap_top, "foot": cap_foot},
+        "cap": {"top": cap_top, "foot": cap_foot}, "realRingRatio": real_ring_ratio,
     }
     print(json.dumps(report))
     if report_path:
         with open(report_path, "w") as fh:
             json.dump(report, fh, indent=1)
+
+
+
+def main() -> None:
+    src_path, out_path = sys.argv[1], sys.argv[2]
+    report_path = sys.argv[sys.argv.index("--report") + 1] if "--report" in sys.argv else None
+    real_ring_ratio = float(sys.argv[sys.argv.index("--real-ring-ratio") + 1]) if "--real-ring-ratio" in sys.argv else None
+    image = Image.open(src_path).convert("RGB")
+    rgb = np.asarray(image).astype(np.float32)
+    alpha = soft_alpha(rgb)
+    gold = gold_mask(rgb)
+    height, width = alpha.shape
+
+    # The bottle stands left of centre and the loose cap right of it; split at the emptiest column between them.
+    lo, hi = int(width * 0.55), int(width * 0.75)
+    bottle_right = lo + int(np.argmin((alpha[:, lo:hi] > 0.15).sum(axis=0)))
+
+    # 1. pump: gold rows in the upper bottle area
+    pump_gold = gold.copy()
+    pump_gold[:, bottle_right:] = False
+    # The 30 ml pump stands lower in the frame than the 100 ml one; the bottle body below starts past 60%.
+    pump_gold[int(height * 0.6):, :] = False
+    # The pump is a solid block of gold; the glass below only reflects scattered gold. Keep the first run of rows
+    # whose gold fills most of its own extent, so a reflection in the glass is never taken for the collar.
+    def solid(y):
+        ext = row_extent(pump_gold[y])
+        return bool(ext) and ext[1] - ext[0] > 40 and pump_gold[y, ext[0]:ext[1] + 1].mean() > 0.45
+    first = next(y for y in range(height) if solid(y))
+    y = first
+    # A shaded step between actuator and collar can leave a few rows thin (and the nozzle hole ~40 rows); reflections in the glass are sparse.
+    while y + 1 < height and any(solid(y + k) for k in range(1, 41) if y + k < height):
+        y += 1
+    pump_top, collar_foot = first, y
+    pump_gold[collar_foot + 1:, :] = False
+    rows = np.arange(pump_top, collar_foot + 1)
+    rows = np.array([r for r in rows if row_extent(pump_gold[r])])
+    collar_width = max(row_extent(pump_gold[r])[1] - row_extent(pump_gold[r])[0] for r in rows[-80:])
+    p_left = min(row_extent(pump_gold[y])[0] for y in rows) - 6
+    p_right = max(row_extent(pump_gold[y])[1] for y in rows) + 6
+    centre_x = (p_left + p_right) / 2
+
+    # Clear glass sits close to the bone, so a low alpha threshold finds the ring's true edge.
+    bottle = alpha > 0.15
+    bottle[:, bottle_right:] = False
+    if real_ring_ratio:
+        # 30/46 ml: the real ring is wider than the cap (the plates show it), so the collar keeps its foot on the ring
+        # and takes the real proportion: collar = ring / (real ring / real cap). The ring is its steady band just
+        # under the collar.
+        ring = [w for y in range(collar_foot + 6, collar_foot + 50) if (ext := row_extent(bottle[y])) and (w := ext[1] - ext[0])]
+        ring_width = int(np.percentile(ring, 75))
+        scale = ring_width / real_ring_ratio / collar_width
+        shoulder = collar_foot
+        if not 1.0 < scale < 1.3:
+            raise SystemExit(f"scale {scale:.3f} outside 1.0-1.3: check the ring rows")
+        return finish(rgb, alpha, gold, pump_gold, bottle_right, pump_top, collar_foot, p_left, p_right, centre_x,
+                      collar_width, ring_width, scale, shoulder, out_path, report_path, src_path, real_ring_ratio)
+    shoulder = None
+    ring = []
+    for y in range(collar_foot + 1, collar_foot + 200):
+        ext = row_extent(bottle[y])
+        if not ext:
+            continue
+        w = ext[1] - ext[0]
+        if w > 1.3 * collar_width:
+            shoulder = y
+            break
+        ring.append(w)
+    if shoulder is None or len(ring) < 6:
+        raise SystemExit("could not find the neck ring and shoulder under the collar")
+    # The ring's steady band: drop the flare into the shoulder (last rows) and take the upper quartile.
+    ring_width = int(np.percentile(ring[:-3], 75))
+    if ring_width <= collar_width:
+        raise SystemExit(f"neck ring ({ring_width}px) is not wider than the collar ({collar_width}px): nothing to fix")
+    scale = ring_width / collar_width
+
+    return finish(rgb, alpha, gold, pump_gold, bottle_right, pump_top, collar_foot, p_left, p_right, centre_x,
+                  collar_width, ring_width, scale, shoulder, out_path, report_path, src_path, None)
 
 
 if __name__ == "__main__":

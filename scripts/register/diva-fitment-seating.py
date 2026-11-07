@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
-"""Seat the Diva 100 ml lotion-pump and fine-mist fitments on the shoulder (Jordan, 7 Nov 2026).
+"""Seat the Diva lotion-pump and fine-mist fitments on the shoulder (Jordan, 7 Nov 2026: 100 ml first, then 30 and 46 ml).
 
-On the product page and in the builder the 18-415 pump layers of the 4 Nov Diva masters were ~11% small: the collar
+On the product page and in the builder the 18-415 pump layers of the 4 Nov Diva masters were drawn small: the collar
 was narrower than the glass thread band, so thread ridges showed on both sides and the pump looked perched on the neck.
 
 Truth is each SKU's own plate: the register plate is the real cap-on photograph on the SAME 1000x1100 canvas and
-scale as the kit (the shoulders match at ~282-286 px). For every Diva 100 lotion-pump and sprayer SKU this measures
+scale as the kit (the shoulders match). For every Diva 30/46/100 lotion-pump and sprayer SKU this measures
   - the plate's cap width (median over its straight side), and
   - the kit overcap layer's width on the canvas,
 and records scale = plate cap / kit overcap. A clear overcap is too faint to measure, so it takes the median of the
-metal finishes. The fitment is scaled about its collar foot (which already rests on the neck ring) and its collar is
+metal finishes on its body and glass. A kit within 3% of its plate keeps its size;
+any collar 1 px or more off the neck centre is re-centred. The fitment is scaled about its collar foot (which already rests on the neck ring) and its collar is
 centred on the neck. approved-component-kits.ts applies the table to pump/sprayer, overcap and dip-tube boxes.
 
-  python3 scripts/register/diva100-fitment-seating.py [--convex https://precise-raccoon-123.convex.cloud]
-Reads published layers and plates over HTTPS; writes only src/lib/paper-doll/diva100-fitment-seating.json.
+  python3 scripts/register/diva-fitment-seating.py [--convex https://precise-raccoon-123.convex.cloud]
+Reads published layers and plates over HTTPS; writes only src/lib/paper-doll/diva-fitment-seating.json.
 """
 import io
 import json
@@ -27,8 +28,10 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
 KITS = ROOT / "src/lib/paper-doll/approved-kits.generated.json"
-OUT = ROOT / "src/lib/paper-doll/diva100-fitment-seating.json"
-BODY_ID = "diva-100ml-18-415"
+OUT = ROOT / "src/lib/paper-doll/diva-fitment-seating.json"
+BODY_IDS = ("diva-30ml-18-415", "diva-46ml-18-415", "diva-100ml-18-415")
+MIN_SCALE = 1.03   # a smaller size difference is measurement noise, so the kit keeps its size
+MIN_OFFSET = 1.0   # px: a collar this far off the neck centre is re-centred (Jordan: "all pumps need alignment")
 FITMENT = ("pump", "sprayer")
 CONVEX = sys.argv[sys.argv.index("--convex") + 1] if "--convex" in sys.argv else "https://precise-raccoon-123.convex.cloud"
 BLOB = "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/"
@@ -71,7 +74,7 @@ def plates_for(skus: list[str]) -> dict[str, str]:
 def main() -> None:
     rows = json.loads(KITS.read_text())["rows"]
     skus = sorted(sku for sku, kit in rows.items()
-                  if (kit.get("register") or {}).get("bodyId") == BODY_ID
+                  if (kit.get("register") or {}).get("bodyId") in BODY_IDS
                   and any(p["slot"] in FITMENT for p in kit["parts"]) and ("Ltn" in sku or "Spry" in sku))
     plates = plates_for(skus)
     measured: dict[str, dict] = {}
@@ -91,20 +94,27 @@ def main() -> None:
         overcap_w = statistics.median(width(overcap[y]) for y in range(int(ob["y"] + 40), int(ob["y"] + ob["height"] - 20)))
         plate = np.asarray(fetch(plates[sku]).convert("RGB")).astype(int) if sku in plates else None
         cap_w = statistics.median(width(np.abs(plate[y] - 255).max(axis=1) > 14) for y in range(150, 370)) if plate is not None else None
-        measured[sku] = {"collarFootY": foot, "collarCentreX": round(collar_centre, 2), "neckCentreX": round(neck_centre, 2),
+        measured[sku] = {"bodyId": rows[sku]["register"]["bodyId"], "glass": rows[sku]["register"]["glass"], "collarFootY": foot, "collarCentreX": round(collar_centre, 2), "neckCentreX": round(neck_centre, 2),
                          "kitOvercapPx": overcap_w, "plateCapPx": cap_w, "clearOvercap": "ClOvrCap" in sku}
-    metal = [m["plateCapPx"] / m["kitOvercapPx"] for m in measured.values() if not m["clearOvercap"] and m["plateCapPx"]]
-    median_scale = statistics.median(metal)
+    for body_glass in {(m["bodyId"], m["glass"]) for m in measured.values()}:
+        group = [m for m in measured.values() if (m["bodyId"], m["glass"]) == body_glass]
+        metal = [m["plateCapPx"] / m["kitOvercapPx"] for m in group if not m["clearOvercap"] and m["plateCapPx"]]
+        median_scale = statistics.median(metal)
+        for m in group:
+            m["scale"] = round(median_scale if m["clearOvercap"] or not m["plateCapPx"] else m["plateCapPx"] / m["kitOvercapPx"], 4)
     for m in measured.values():
-        m["scale"] = round(median_scale if m["clearOvercap"] or not m["plateCapPx"] else m["plateCapPx"] / m["kitOvercapPx"], 4)
+        if m["scale"] < MIN_SCALE:
+            m["scale"] = 1.0
+    measured = {sku: m for sku, m in measured.items()
+                if m["scale"] > 1.0 or abs(m["neckCentreX"] - m["collarCentreX"]) >= MIN_OFFSET}
     OUT.write_text(json.dumps({
-        "version": "diva100-fitment-seated-v1",
-        "bodyId": BODY_ID,
-        "source": "scripts/register/diva100-fitment-seating.py: plate cap width / kit overcap width per SKU (Jordan, 2026-11-07)",
+        "version": "diva-fitment-seated-v2",
+        "bodyIds": list(BODY_IDS),
+        "source": "scripts/register/diva-fitment-seating.py: plate cap width / kit overcap width per SKU (1.0 within 3%), collar centred on the neck (Jordan, 2026-11-07)",
         "rows": measured,
     }, indent=1) + "\n")
     for sku, m in measured.items():
-        print(f"{sku:22} scale {m['scale']:.4f}  centre {m['collarCentreX']} -> {m['neckCentreX']}  foot {m['collarFootY']}")
+        print(f"{sku:24} {m['bodyId']:18} {m['glass']:8} scale {m['scale']:.4f}  centre {m['collarCentreX']} -> {m['neckCentreX']}  foot {m['collarFootY']}")
 
 
 if __name__ == "__main__":

@@ -1539,8 +1539,8 @@
       "material": "Clear",
       "groupSlug": "diva-30ml-clear-18-415-perfumespray",
       "shopifyVariantId": "gid://shopify/ProductVariant/53343641501988",
-      "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva30SpryMtGl.77d1379385e4.png",
-      "sha256": "77d1379385e47b64c59b40bb4dbbc051dd6c6c9ad50fccaa0c6b037173fbd230",
+      "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva30SpryMtGl.d588b3c5539f.png",
+      "sha256": "d588b3c5539f0b76ac4865d2c5210eef7f9a0a21e74d87326de5ab0bddd3b069",
       "canvas": [
         2080,
         2288
@@ -1580,6 +1580,16 @@
         "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
         "scaleReference": "199e4456de451a28714243f56743012a4c481de614be15436f32afa6ee0cad0d",
         "promptFile": "933605a3a36b0e3e805be8daf62b9fbdd18491968c5c70051aca62b08201bf11"
+      },
+      "revision": {
+        "date": "2026-11-07",
+        "reason": "Pump enlarged to the real ring/cap proportion (1.18, measured on the cap-on plates) and kept on the ring (Jordan: seat the 30/46 ml pumps on the shoulder)",
+        "previous": {
+          "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva30SpryMtGl.77d1379385e4.png",
+          "sha256": "77d1379385e47b64c59b40bb4dbbc051dd6c6c9ad50fccaa0c6b037173fbd230"
+        },
+        "script": "scripts/hero-families/diva100-fitment-rescale-2026-11-07.py --real-ring-ratio 1.18",
+        "report": "docs/hero-families/boston-diva-2026-09-23/fitment-rescale-2026-11-07/GBDiva30SpryMtGl.json"
       }
     },
     {
@@ -1589,8 +1599,8 @@
       "material": "Clear",
       "groupSlug": "diva-30ml-clear-18-415-lotionpump",
       "shopifyVariantId": "gid://shopify/ProductVariant/53343676530980",
-      "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva30LtnMtGl.7e5ebd0bfc2d.png",
-      "sha256": "7e5ebd0bfc2d0dc753aaeb07243988d70b9c45d2ef89533419981384103f2cfc",
+      "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva30LtnMtGl.e5baa342ab54.png",
+      "sha256": "e5baa342ab543e1a56da785b12f774adb09f35bd86077e771af16d09e23c8bd5",
       "canvas": [
         2080,
         2288
@@ -1630,6 +1640,16 @@
         "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
         "scaleReference": "199e4456de451a28714243f56743012a4c481de614be15436f32afa6ee0cad0d",
         "promptFile": "5d13611716d8f77f68ea2fb0e49504fc24a372d4293c78074d6aacc971db047f"
+      },
+      "revision": {
+        "date": "2026-11-07",
+        "reason": "Pump enlarged to the real ring/cap proportion (1.18, measured on the cap-on plates) and kept on the ring (Jordan: seat the 30/46 ml pumps on the shoulder)",
+        "previous": {
+          "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva30LtnMtGl.7e5ebd0bfc2d.png",
+          "sha256": "7e5ebd0bfc2d0dc753aaeb07243988d70b9c45d2ef89533419981384103f2cfc"
+        },
+        "script": "scripts/hero-families/diva100-fitment-rescale-2026-11-07.py --real-ring-ratio 1.18",
+        "report": "docs/hero-families/boston-diva-2026-09-23/fitment-rescale-2026-11-07/LBDiva30LtnMtGl.json"
       }
     },
     {
@@ -1839,8 +1859,8 @@
       "material": "Clear",
       "groupSlug": "diva-46ml-clear-18-415-perfumespray",
       "shopifyVariantId": "gid://shopify/ProductVariant/53343620432164",
-      "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46SpryMtGl.3a43b073b7ef.png",
-      "sha256": "3a43b073b7efbacff1f8382f96f6b33a5082ec13e168c9d437e58a0915d8d79b",
+      "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46SpryMtGl.b90f43018e4e.png",
+      "sha256": "b90f43018e4e728b2690fc056985cb45510925b069116fbed5f8ac0d5febf755",
       "canvas": [
         2080,
         2288
@@ -1880,6 +1900,16 @@
         "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
         "scaleReference": "1f9a4f0b5ea8988084a31940f8e1562d72be2af13a524a62e5402f989d668c48",
         "promptFile": "2c810382d0fef30badf8d388f11026b481f2d2e8f93a3bfa715051b35e7da5a9"
+      },
+      "revision": {
+        "date": "2026-11-07",
+        "reason": "Pump enlarged to the real ring/cap proportion (1.31, measured on the cap-on plates) and kept on the ring (Jordan: seat the 30/46 ml pumps on the shoulder)",
+        "previous": {
+          "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46SpryMtGl.3a43b073b7ef.png",
+          "sha256": "3a43b073b7efbacff1f8382f96f6b33a5082ec13e168c9d437e58a0915d8d79b"
+        },
+        "script": "scripts/hero-families/diva100-fitment-rescale-2026-11-07.py --real-ring-ratio 1.31",
+        "report": "docs/hero-families/boston-diva-2026-09-23/fitment-rescale-2026-11-07/GBDiva46SpryMtGl.json"
       }
     },
     {
@@ -1889,8 +1919,8 @@
       "material": "Clear",
       "groupSlug": "diva-46ml-clear-18-415-lotionpump",
       "shopifyVariantId": "gid://shopify/ProductVariant/53343688491300",
-      "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva46LtnMtGl.61883994f283.png",
-      "sha256": "61883994f283e9e5cde66c460eb06f02f281a80355f34383cd60ad531970f220",
+      "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva46LtnMtGl.1486755572a2.png",
+      "sha256": "1486755572a2da60d65bdd58e2ea121d5394185164cb5b522b2df7b7c16cdf40",
       "canvas": [
         2080,
         2288
@@ -1930,6 +1960,16 @@
         "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
         "scaleReference": "1f9a4f0b5ea8988084a31940f8e1562d72be2af13a524a62e5402f989d668c48",
         "promptFile": "aa26cc32f2c8e5a867977cfb075e7f1883ddb4b05a5a02ad890cc10fce773ece"
+      },
+      "revision": {
+        "date": "2026-11-07",
+        "reason": "Pump enlarged to the real ring/cap proportion (1.31, measured on the cap-on plates) and kept on the ring (Jordan: seat the 30/46 ml pumps on the shoulder)",
+        "previous": {
+          "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDiva46LtnMtGl.61883994f283.png",
+          "sha256": "61883994f283e9e5cde66c460eb06f02f281a80355f34383cd60ad531970f220"
+        },
+        "script": "scripts/hero-families/diva100-fitment-rescale-2026-11-07.py --real-ring-ratio 1.31",
+        "report": "docs/hero-families/boston-diva-2026-09-23/fitment-rescale-2026-11-07/LBDiva46LtnMtGl.json"
       }
     },
     {
@@ -2140,8 +2180,8 @@
       "material": "Frosted",
       "groupSlug": "diva-46ml-frosted-18-415-perfumespray",
       "shopifyVariantId": "gid://shopify/ProductVariant/53343624331556",
-      "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46SpryMtGl.debe163571d8.png",
-      "sha256": "debe163571d81df7a0c71c271f0b73b4029ca95e7f65335f12cf040a14d170d9",
+      "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46SpryMtGl.8e2a5d3540c6.png",
+      "sha256": "8e2a5d3540c623ea4194ce4fc8de6c434d42ac834129adf439640104735af387",
       "canvas": [
         2080,
         2288
@@ -2181,6 +2221,16 @@
         "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
         "scaleReference": "1f9a4f0b5ea8988084a31940f8e1562d72be2af13a524a62e5402f989d668c48",
         "promptFile": "028b43b4d10a6ff4dd9b201f9cadfe2491fd7020e22f383efdfa987e944accd0"
+      },
+      "revision": {
+        "date": "2026-11-07",
+        "reason": "Pump enlarged to the real ring/cap proportion (1.29, measured on the cap-on plates) and kept on the ring (Jordan: seat the 30/46 ml pumps on the shoulder)",
+        "previous": {
+          "url": "/images/catalog/boston-diva-approved-2026-09-23/GBDivaFrst46SpryMtGl.debe163571d8.png",
+          "sha256": "debe163571d81df7a0c71c271f0b73b4029ca95e7f65335f12cf040a14d170d9"
+        },
+        "script": "scripts/hero-families/diva100-fitment-rescale-2026-11-07.py --real-ring-ratio 1.29",
+        "report": "docs/hero-families/boston-diva-2026-09-23/fitment-rescale-2026-11-07/GBDivaFrst46SpryMtGl.json"
       }
     },
     {
@@ -2190,8 +2240,8 @@
       "material": "Frosted",
       "groupSlug": "diva-46ml-frosted-18-415-lotionpump",
       "shopifyVariantId": "gid://shopify/ProductVariant/53343689408804",
-      "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDivaFrst46LtnMtGl.597e30c155c6.png",
-      "sha256": "597e30c155c6ffe99c9b8207c1d05354a6f418c9d8ba57b2388465ac6d9c87a3",
+      "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDivaFrst46LtnMtGl.20b81166c478.png",
+      "sha256": "20b81166c4784499040c9e2ad5d5ea63426e8f3af49b0b4b3a9a0affd2d00ee5",
       "canvas": [
         2080,
         2288
@@ -2231,6 +2281,16 @@
         "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
         "scaleReference": "1f9a4f0b5ea8988084a31940f8e1562d72be2af13a524a62e5402f989d668c48",
         "promptFile": "2620322626f5ee2fb787623669ed6be3b9925ca5772506d463e5367e0c8cc360"
+      },
+      "revision": {
+        "date": "2026-11-07",
+        "reason": "Pump enlarged to the real ring/cap proportion (1.29, measured on the cap-on plates) and kept on the ring (Jordan: seat the 30/46 ml pumps on the shoulder)",
+        "previous": {
+          "url": "/images/catalog/boston-diva-approved-2026-09-23/LBDivaFrst46LtnMtGl.597e30c155c6.png",
+          "sha256": "597e30c155c6ffe99c9b8207c1d05354a6f418c9d8ba57b2388465ac6d9c87a3"
+        },
+        "script": "scripts/hero-families/diva100-fitment-rescale-2026-11-07.py --real-ring-ratio 1.29",
+        "report": "docs/hero-families/boston-diva-2026-09-23/fitment-rescale-2026-11-07/LBDivaFrst46LtnMtGl.json"
       }
     },
     {
