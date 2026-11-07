@@ -136,6 +136,18 @@ def refine(plate, anchors, hero, s0, tx0, ty0, frosted=False, win=16):
     return {"scale": s, "tx": tx, "ty": ty, "score": round(score, 4), "feature": "silhouette" if frosted else "edges"}
 
 
+def warp_rgba(layer, fitres, shape):
+    """A transparent layer resampled onto the plate's pixel grid, premultiplied so its edges keep their colour."""
+    s, tx, ty = fitres["scale"], fitres["tx"], fitres["ty"]
+    yy, xx = np.mgrid[0:shape[0], 0:shape[1]].astype(float)
+    coords = [s * yy + ty, s * xx + tx]
+    a = ndimage.map_coordinates(layer[..., 3].astype(float), coords, order=1, mode="constant", cval=0)
+    pre = np.stack([ndimage.map_coordinates(layer[..., c] * layer[..., 3] / 255.0, coords, order=1, mode="constant", cval=0)
+                    for c in range(3)], -1)
+    rgb = np.where(a[..., None] > 0, pre * 255.0 / np.maximum(a, 1e-6)[..., None], 0)
+    return np.dstack([rgb, a]).clip(0, 255)
+
+
 def warp(hero, fitres, shape):
     """The hero resampled onto the plate's pixel grid."""
     s, tx, ty = fitres["scale"], fitres["tx"], fitres["ty"]

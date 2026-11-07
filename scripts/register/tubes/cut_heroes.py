@@ -7,8 +7,9 @@ we have ... and then apply this to the set if it fits and the measurement is con
 
 For each slot in data/register/tubes/hero-sources.json (a released hero, or for the two Empire lotion pumps the
 master library photograph): fit the hero onto the plate (hero_fit.py), resample it onto
-the plate's pixels, and cut the shaft and tube from under the collar to where the tube ends (tube_cut.py). Six at a
-time; fits are cached. Then scripts/register/tubes/finalize_tubes.py picks one layer per slot.
+the plate's pixels, and cut the shaft and tube from under the collar to where the tube ends (tube_cut.py). A master
+photograph that keeps the tube on its own layer gives that layer instead (tube_cut.cut_layer). Six at a time; fits are
+cached. Then scripts/register/tubes/finalize_tubes.py picks one layer per slot.
 
     python3 scripts/register/tubes/cut_heroes.py [slot,slot,...]
 
@@ -25,8 +26,8 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).parent))
-from hero_fit import fit, refine, warp  # noqa: E402
-from tube_cut import cut  # noqa: E402
+from hero_fit import fit, refine, warp, warp_rgba  # noqa: E402
+from tube_cut import cut, cut_layer  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "output" / "register-tubes"
@@ -58,6 +59,32 @@ def hero_rgb(source):
     return np.asarray(Image.open(ROOT / ("public" + source)).convert("RGB"))
 
 
+def tube_layer(source):
+    """A master photograph's own tube layer, as RGBA on the photograph's canvas, and its name; (None, None) when the
+    photograph has none: the one layer that is neither the glass (the largest) nor the closure (the one standing
+    highest), narrower than half the glass and standing on its axis."""
+    from psd_tools import PSDImage
+    root = Path(json.loads((ROOT / "data/paper-doll/component-library-inventory.json").read_text())["root"])
+    psd = PSDImage.open(root / source[4:])
+    layers = [l for l in psd if l.is_visible() and l.name != "Background" and l.kind == "pixel"]
+    if len(layers) < 3:
+        return None, None
+    glass = max(layers, key=lambda l: l.width * l.height)
+    closure = min(layers, key=lambda l: l.top)
+    axis = (glass.left + glass.right) / 2
+    tubes = [l for l in layers if l is not glass and l is not closure and l.width < 0.5 * glass.width
+             and abs((l.left + l.right) / 2 - axis) < 0.15 * glass.width]
+    if len(tubes) != 1:
+        return None, None
+    tube = tubes[0]
+    canvas = np.zeros((psd.height, psd.width, 4), float)
+    pixels = np.asarray(tube.topil().convert("RGBA")).astype(float)
+    x0, y0 = max(0, tube.left), max(0, tube.top)
+    sub = pixels[y0 - tube.top:, x0 - tube.left:][:psd.height - y0, :psd.width - x0]
+    canvas[y0:y0 + sub.shape[0], x0:x0 + sub.shape[1]] = sub
+    return canvas, tube.name
+
+
 def plate_rgb(p):
     im = Image.open(ROOT / "output/register-bodies" / p["file"]).convert("RGBA")
     return np.asarray(Image.alpha_composite(Image.new("RGBA", im.size, BONE), im).convert("RGB"))
@@ -78,11 +105,15 @@ def one(slot):
                 f = fit(plate, p["anchors"], hero, frosted=p["glass"] == "Frosted")
             cached.write_text(json.dumps(f))
         floor_y = int(p["anchors"]["baselineY"] - FLOOR[p["bodyId"]] * p["pxPerMm"])
-        layer, info = cut(plate, warp(hero, f, plate.shape), p["anchors"], p["pxPerMm"], floor_y)
+        own, own_name = tube_layer(SLOTS[slot]["hero"]) if SLOTS[slot]["hero"].startswith("psd:") else (None, None)
+        if own is not None:
+            layer, info = cut_layer(warp_rgba(own, f, plate.shape), p["anchors"], p["pxPerMm"], floor_y)
+        else:
+            layer, info = cut(plate, warp(hero, f, plate.shape), p["anchors"], p["pxPerMm"], floor_y)
         if layer is None:
             return slot, {"error": info, "fit": f}
         Image.fromarray(layer).save(OUT / f"{key}.tube.png")
-        return slot, {**info, "fit": f, "hero": SLOTS[slot]["hero"], "sku": SLOTS[slot]["sku"]}
+        return slot, {**info, "fit": f, "hero": SLOTS[slot]["hero"], "sku": SLOTS[slot]["sku"], **({"tubeLayer": own_name} if own_name else {})}
     except Exception as error:  # one bad slot must not stop the rest
         return slot, {"error": repr(error)[:200]}
 

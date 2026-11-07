@@ -14,10 +14,16 @@
  *   npx tsx scripts/register/seats/audit-seats.ts --write              # measure --raw and write src/lib/register/seat-drops.generated.json
  *   ... --deployment dev    --out <dir> (default output/seat-audit)
  *   ... --only-body <bodyId>   measure one body; with --write, replace only that body's entries in the table
+ *   ... --local-component <componentId>   measure a part that is cut but not pushed yet, so its seat ships with it
  *
  * --write lowers every closure whose gap exceeds 0.2 mm by that gap, but no further than keeps its top 0.5 mm above the glass
  * rim. Left where they are (Jordan 2026-09-30): Boston rounds (20-400), whose caps sit on the bead at the top of a long neck
  * as the real bottles do, and the short ribbed caps (13-415 black and white), too short to reach a long neck's shoulder.
+ *
+ * --local-component draws only the SKUs that build the part. Its local cut (data/register/components/<neck>-measurements.json)
+ * stands in, approved, at the blob URL push-components.ts will give it (keys are content-addressed, so the entry's signature
+ * is the one the pushed part draws with), and those SKUs take their parts from the local register, as push-register.ts writes
+ * them. With --write only the table's entries for closures that include the part are replaced.
  */
 import fs from "node:fs";
 import { resolve } from "node:path";
@@ -28,7 +34,7 @@ import { drawableRegisterKits } from "../../../src/lib/register/load";
 import type { RegisterKit, RegisterStagePayload } from "../../../src/lib/register/stage-kit";
 import { SEAT_FIXED_SLOTS } from "../../../src/lib/register/compose";
 import { setSeatDropsEnabled } from "../../../src/lib/register/seat-drops";
-import { readRegister } from "../registerRows";
+import { parseBuildParts, readRegister } from "../registerRows";
 
 const ROOT = resolve(__dirname, "..", "..", "..");
 const argv = process.argv.slice(2);
@@ -40,6 +46,16 @@ const onlyBody = arg("--only-body");
 if (argv.includes("--only-body") && (!onlyBody || onlyBody.startsWith("--"))) {
     // without a body id, --write would replace the whole table
     console.error("--only-body needs a body id, e.g. --only-body cylinder-9ml-17-415");
+    process.exit(1);
+}
+const localComponent = arg("--local-component");
+if (argv.includes("--local-component") && (!localComponent || localComponent.startsWith("--"))) {
+    console.error("--local-component needs a component id, e.g. --local-component LIB-18-415-WhtPumpClOvrCp");
+    process.exit(1);
+}
+if (localComponent && onlyBody) {
+    // they replace different sets of table entries
+    console.error("give --local-component or --only-body, not both");
     process.exit(1);
 }
 const outDir = resolve(ROOT, arg("--out") ?? "output/seat-audit");
@@ -59,8 +75,12 @@ const LEFT_ALONE = (bodyId: string, closure: string) => LEFT_ALONE_BODY(bodyId) 
 
 type Alpha = { w: number; h: number; a: Uint8Array };
 const bytes = new Map<string, Promise<Buffer>>();
+/** --local-component: each layer's blob URL-to-be and its cut on disk. */
+const localFiles = new Map<string, string>();
 function fetchBytes(url: string): Promise<Buffer> {
     if (!bytes.has(url)) bytes.set(url, (async () => {
+        const local = localFiles.get(url);
+        if (local) return fs.readFileSync(local);
         for (let attempt = 0; attempt < 4; attempt++) {
             try { const r = await fetch(url); if (r.ok) return Buffer.from(await r.arrayBuffer()); } catch { /* retry */ }
             await new Promise((done) => setTimeout(done, 500 * (attempt + 1)));
@@ -133,13 +153,67 @@ async function measure(kit: RegisterKit, platePxPerMm: number): Promise<SeatMeas
     return { gapMm: gaps.length ? Math.max(...gaps) : null, maxDropMm, skirtHalfMm: skirtHalf / pxmm, cx, skirtBottomY: base, canvasPxPerMm: pxmm };
 }
 
+type CutLayer = {
+    slot: string; file: string; width: number; height: number; sha256: string; pxPerMm: number; anchor: { x: number; y: number };
+    z: string; explodeIndex: number; usage?: "seated" | "exploded"; solidBottomY?: number; glass?: string;
+};
+
+/** A cut part's measurements entry and the neck whose measurements file holds it. */
+function localCut(componentId: string): { neck: string; type: string; layers: CutLayer[] } {
+    const dir = resolve(ROOT, "data", "register", "components");
+    for (const file of fs.readdirSync(dir).filter((name) => name.endsWith("-measurements.json"))) {
+        const m = JSON.parse(fs.readFileSync(resolve(dir, file), "utf8")) as { components: Array<{ componentId: string; type: string; layers: CutLayer[] }> };
+        const entry = m.components.find((c) => c.componentId === componentId);
+        if (entry) return { neck: file.replace(/-measurements\.json$/, ""), type: entry.type, layers: entry.layers };
+    }
+    throw new Error(`no data/register/components/*-measurements.json holds ${componentId}`);
+}
+
+/** --local-component: the part as push-components.ts will write it, and its SKUs as push-register.ts will. */
+function standInLocal(payload: RegisterStagePayload, componentId: string, rows: ReturnType<typeof readRegister>["assemblies"]) {
+    const cut = localCut(componentId);
+    const anyPlate = Object.values(payload.plates)[0];
+    if (!anyPlate) throw new Error("the deployment returned no plate to take the blob store's address from");
+    const origin = new URL(anyPlate.url).origin;
+    if (!cut.layers.length) throw new Error(`${componentId} has no cut layers`);
+    payload.components[componentId] = {
+        componentId, type: cut.type, approved: true,
+        layers: cut.layers.map((l) => {
+            const url = `${origin}/register/components/${cut.neck}/${componentId}/${l.slot}-${l.sha256}.png`;
+            localFiles.set(url, resolve(ROOT, "output", "register-components", cut.neck, l.file));
+            return {
+                slot: l.slot as RegisterStagePayload["components"][string]["layers"][number]["slot"], z: l.z as "front" | "behind-body",
+                explodeIndex: l.explodeIndex, url, width: l.width, height: l.height, pxPerMm: l.pxPerMm, anchor: l.anchor, approved: true,
+                ...(l.usage ? { usage: l.usage } : {}), ...(l.solidBottomY != null ? { solidBottomY: l.solidBottomY } : {}), ...(l.glass ? { glass: l.glass } : {}),
+            };
+        }),
+    };
+    for (const row of rows) {
+        const parts = parseBuildParts(row.buildParts, row.graceSku);
+        const plateKey = `${row.bodyId}|${row.glass}`;
+        const plate = payload.plates[plateKey];
+        const missing = parts.find((part) => !payload.components[part.componentId]);
+        const reason = !plate ? "no body plate for this glass on the deployment" : !plate.approved ? "body plate not approved"
+            : missing ? `${missing.componentId} is not on the deployment` : null;
+        payload.assemblies[row.graceSku] = {
+            graceSku: row.graceSku, websiteSku: row.websiteSku || null, bodyId: row.bodyId, plateKey, glass: row.glass, neck: row.neck,
+            parts, renderable: reason === null, reason,
+        };
+        if (reason) console.log(`${row.graceSku}: not drawn (${reason})`);
+    }
+}
+
 async function main() {
     setSeatDropsEnabled(!raw);
     fs.mkdirSync(outDir, { recursive: true });
     const register = readRegister(resolve(ROOT, "data", "register"));
-    const skus = register.assemblies
-        .filter((a) => a.buildStatus === "resolved" && !["quarantine", "retired"].includes(a.status) && (!onlyBody || a.bodyId === onlyBody))
-        .map((a) => a.graceSku);
+    const buildsLocal = (a: (typeof register.assemblies)[number]) =>
+        parseBuildParts(a.buildParts, a.graceSku).some((part) => part.componentId === localComponent);
+    const selected = register.assemblies
+        .filter((a) => a.buildStatus === "resolved" && !["quarantine", "retired"].includes(a.status) && (!onlyBody || a.bodyId === onlyBody)
+            && (!localComponent || buildsLocal(a)));
+    if (localComponent && !selected.length) throw new Error(`no resolved assembly in data/register builds ${localComponent}`);
+    const skus = selected.map((a) => a.graceSku);
     const bySku = new Map(register.assemblies.map((a) => [a.graceSku, a]));
     const client = new ConvexHttpClient(URLS[deployment]);
     const payload: RegisterStagePayload = { plates: {}, components: {}, bodies: {}, assemblies: {} };
@@ -148,6 +222,7 @@ async function main() {
         Object.assign(payload.plates, page.plates); Object.assign(payload.components, page.components);
         Object.assign(payload.bodies, page.bodies); Object.assign(payload.assemblies, page.assemblies);
     }
+    if (localComponent) standInLocal(payload, localComponent, selected);
     const kits = drawableRegisterKits(payload);
     const memo = new Map<string, SeatMeasure | null>();
     const rows: Array<Record<string, unknown>> = [];
@@ -163,7 +238,7 @@ async function main() {
         rows.push({ sku, websiteSku: row.websiteSku, bodyId: row.bodyId, plateKey: assembly.plateKey, fitment: row.fitmentType, capColor: row.capColor,
             signature, droppedMm: kit.register.seatDropMm ?? 0, closure: kit.register.componentIds.join("+"), ...(m ?? { gapMm: null }) });
     }
-    const name = `${raw ? "raw" : "seated"}${onlyBody ? `-${onlyBody}` : ""}`;
+    const name = `${raw ? "raw" : "seated"}${onlyBody ? `-${onlyBody}` : ""}${localComponent ? `-${localComponent}` : ""}`;
     fs.writeFileSync(resolve(outDir, `${deployment}-${name}.json`), JSON.stringify(rows, null, 1));
     const measured = rows.filter((r) => typeof r.gapMm === "number");
     const band = (g: number) => (g <= 0.2 ? "resting (<=0.2)" : g <= 0.6 ? "0.2-0.6" : g <= 1 ? "0.6-1.0" : g <= 2 ? "1-2" : ">2");
@@ -205,6 +280,13 @@ async function main() {
             all = Object.fromEntries(Object.entries({ ...kept, ...entries }).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)));
             const note = `; ${onlyBody} re-measured on ${deployment} ${new Date().toISOString().slice(0, 10)} (a Swirl closure takes its Clear twin's gap)`;
             rule = previous.rule.replace(new RegExp(`; ${onlyBody} re-measured on [^;]*`), "") + note;
+        } else if (localComponent) {
+            // keep every entry for other closures; this part's are replaced
+            const previous = JSON.parse(fs.readFileSync(file, "utf8")) as { rule: string; entries: Record<string, { closure: string }> };
+            const kept = Object.fromEntries(Object.entries(previous.entries).filter(([, e]) => !e.closure.split("+").includes(localComponent)));
+            all = Object.fromEntries(Object.entries({ ...kept, ...entries }).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)));
+            const note = `; ${localComponent} measured from its local cut on ${deployment} plates ${new Date().toISOString().slice(0, 10)}, before it was pushed`;
+            rule = previous.rule.replace(new RegExp(`; ${localComponent} measured from [^;]*`), "") + note;
         }
         fs.writeFileSync(file, JSON.stringify({ generatedAt: new Date().toISOString(), rule, entries: all }, null, 1) + "\n");
         console.log(`wrote ${Object.keys(entries).length} drops (${Object.values(entries).reduce((n, e) => n + e.skus, 0)} SKUs) to ${file}`);
