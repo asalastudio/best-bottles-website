@@ -14,6 +14,7 @@ import type * as backfillPhysicalSpecs from "../backfillPhysicalSpecs.js";
 import type * as backfillShopifyIds from "../backfillShopifyIds.js";
 import type * as backfillTrimColor from "../backfillTrimColor.js";
 import type * as backfillTrimColorFromDescription from "../backfillTrimColorFromDescription.js";
+import type * as bottleDisplayName from "../bottleDisplayName.js";
 import type * as catalogComponentEvidence from "../catalogComponentEvidence.js";
 import type * as catalogComponentProducts from "../catalogComponentProducts.js";
 import type * as catalogComponentSources from "../catalogComponentSources.js";
@@ -109,6 +110,7 @@ declare const fullApi: ApiFromModules<{
   backfillShopifyIds: typeof backfillShopifyIds;
   backfillTrimColor: typeof backfillTrimColor;
   backfillTrimColorFromDescription: typeof backfillTrimColorFromDescription;
+  bottleDisplayName: typeof bottleDisplayName;
   catalogComponentEvidence: typeof catalogComponentEvidence;
   catalogComponentProducts: typeof catalogComponentProducts;
   catalogComponentSources: typeof catalogComponentSources;
