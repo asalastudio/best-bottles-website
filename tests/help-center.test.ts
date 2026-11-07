@@ -1,0 +1,196 @@
+import { execFileSync } from "node:child_process";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import { describe, expect, it } from "vitest";
+import { FAQ_POLICY_ENTRIES } from "@/lib/faqPolicy";
+import { KB_ENTRIES, publicEntries, sentences, toPublicEntry, type KbEntry } from "@/lib/help/kb";
+import { allBodies, bodiesListing, bodyById, fitReport } from "@/lib/help/fit";
+import { capacityMatches, parseCapacityMl, searchHelp } from "@/lib/help/search";
+import { apiEntries, apiFit, apiSearch } from "@/lib/help/api";
+import { buildKbOpenApi } from "@/lib/help/openapi";
+import { validateHelpQuestion } from "@/lib/help/questions";
+import { buildPageSitemap } from "@/lib/crawl/sitemap";
+
+describe("help knowledge base", () => {
+    it("publishes every approved FAQ answer verbatim, with stable unique ids and slugs", () => {
+        expect(KB_ENTRIES).toHaveLength(FAQ_POLICY_ENTRIES.length);
+        for (const faq of FAQ_POLICY_ENTRIES) {
+            const entry = KB_ENTRIES.find((e) => e.id === `policy.${faq.id}`);
+            expect(entry?.body).toBe(faq.a);
+            expect(entry?.title).toBe(faq.q);
+        }
+        expect(new Set(KB_ENTRIES.map((e) => e.id)).size).toBe(KB_ENTRIES.length);
+        expect(new Set(KB_ENTRIES.map((e) => e.slug)).size).toBe(KB_ENTRIES.length);
+    });
+
+    it("quotes each short answer verbatim from whole sentences of the approved answer", () => {
+        for (const entry of KB_ENTRIES) {
+            expect(entry.shortAnswer.length).toBeGreaterThan(10);
+            const all = sentences(entry.body);
+            const parts = sentences(entry.shortAnswer);
+            for (const part of parts) expect(all, entry.id).toContain(part);
+        }
+        expect(KB_ENTRIES.find((e) => e.id === "policy.missing-items")?.shortAnswer).toMatch(/within 48 hours/);
+        expect(sentences("Email sales@nematinternational.com. Call us.")).toEqual(["Email sales@nematinternational.com.", "Call us."]);
+        expect(sentences("The minimum order is $50.00, excluding shipping. Next.")[0]).toBe("The minimum order is $50.00, excluding shipping.");
+    });
+
+    it("keeps drafts, reviews, retired and internal entries out of everything public", () => {
+        const base = KB_ENTRIES[0];
+        const hidden: KbEntry[] = [
+            { ...base, id: "x.draft", status: "draft" },
+            { ...base, id: "x.review", status: "review" },
+            { ...base, id: "x.approved", status: "approved" },
+            { ...base, id: "x.retired", status: "retired" },
+            { ...base, id: "x.internal", audience: "internal" },
+        ];
+        expect(publicEntries(hidden)).toEqual([]);
+        expect(publicEntries([...hidden, base]).map((e) => e.id)).toEqual([base.id]);
+    });
+
+    it("projects only whitelisted fields for pages and agents", () => {
+        const pub = toPublicEntry(KB_ENTRIES[0]);
+        expect(Object.keys(pub).sort()).toEqual([
+            "answer", "id", "openQuestions", "publishedOn", "related", "shortAnswer", "sources", "status", "title", "topic", "type", "updatedOn", "url", "version",
+        ]);
+        expect(pub.sources[0]).not.toHaveProperty("ref");
+    });
+
+    it("flags the FAQ's own disagreement on the missing-item window instead of resolving it", () => {
+        const missing = KB_ENTRIES.find((e) => e.id === "policy.missing-items")!;
+        expect(missing.body).toContain("48 hours");
+        expect(missing.openQuestions.join(" ")).toMatch(/48 hours.*7 business days/);
+    });
+});
+
+describe("fit index", () => {
+    it("is built from the committed register", () => {
+        expect(() => execFileSync(process.execPath, [join("scripts", "help", "build-fit-index.mjs"), "--check"], { stdio: "pipe" })).not.toThrow();
+    });
+
+    it("lists the Bell 10 ml closures the catalog pairs with it, apart from same-thread parts", () => {
+        const report = fitReport("bell-10ml-13-415")!;
+        expect(report.counts.listed).toBe(21);
+        expect(report.counts["not-confirmed"]).toBe(10);
+        expect(report.body.listed).toContain("CMP-CAP-13-415"); // matte blue sprayer
+        expect(report.body.sameThread.some((id) => report.body.listed.includes(id))).toBe(false);
+        expect(report.formulaSuitability).toBe("unknown");
+        expect(bodiesListing("CMP-CAP-13-415")).toHaveLength(15);
+    });
+
+    it("never offers same-thread parts for bottles that are their own compatibility class", () => {
+        const sets = allBodies().filter((b) => !b.interchangeable);
+        expect(sets.length).toBeGreaterThan(0);
+        for (const body of sets) expect(body.sameThread).toEqual([]);
+        for (const body of allBodies().filter((b) => b.compatibilityClass === "plastic-bottle")) expect(body.interchangeable).toBe(false);
+    });
+
+    it("keeps every part on the bottle's own neck", () => {
+        for (const body of allBodies().filter((b) => b.interchangeable)) {
+            const report = fitReport(body.id)!;
+            for (const group of [...report.listed, ...report.notConfirmed]) for (const row of group.rows) expect(row.neck).toBe(body.neck);
+        }
+    });
+});
+
+describe("help search", () => {
+    it("converts everyday units", () => {
+        expect(parseCapacityMl("7ml roller")).toBe(7);
+        expect(parseCapacityMl("1 oz")).toBeCloseTo(29.57, 1);
+        expect(parseCapacityMl("1/2 oz dropper")).toBeCloseTo(14.79, 1);
+        expect(parseCapacityMl("2 drams")).toBeCloseTo(7.39, 1);
+        expect(parseCapacityMl("ten millilitres")).toBeNull();
+        expect(capacityMatches(29.57, 30)).toBe(true);
+        expect(capacityMatches(7, 6)).toBe(false);
+    });
+
+    it("says a 7 ml roll-on is not offered and names the nearest sizes", () => {
+        const { size } = searchHelp("7 ml roll-on bottle");
+        expect(size?.notOffered).toBe(true);
+        expect(size?.offered).toEqual([]);
+        expect(size?.smaller?.ml).toBe(6);
+        expect(size?.smaller?.bodies.map((b) => b.family)).toContain("Tulip");
+        expect(size?.larger?.ml).toBe(8);
+        expect(size?.larger?.bodies.map((b) => b.family)).toContain("Sleek");
+    });
+
+    it("finds sizes asked for in ounces", () => {
+        const { size, catalogHref } = searchHelp("1 oz dropper");
+        expect(size?.notOffered).toBe(false);
+        expect(size?.offered.every((b) => b.capacityMl === 30)).toBe(true);
+        expect(catalogHref).toContain("capacities=30+ml");
+    });
+
+    it("matches policy questions written in everyday words", () => {
+        expect(searchHelp("can I get my money back").answers.map((a) => a.entry.id)).toContain("policy.returns");
+        expect(searchHelp("my box arrived broken").answers[0]?.entry.id).toBe("policy.damaged-defective");
+        expect(searchHelp("how long until it arrives").answers[0]?.entry.id).toBe("policy.lead-times");
+    });
+
+    it("reports topics the approved FAQ does not cover instead of answering them", () => {
+        expect(searchHelp("do you offer free shipping?").gap).toMatch(/free-shipping/);
+        expect(searchHelp("net 30 terms").gap).toMatch(/net terms/);
+        expect(searchHelp("what is the return policy").gap).toBeNull();
+    });
+
+    it("finds nothing rather than guessing", () => {
+        const result = searchHelp("zzqx flibber");
+        expect(result.answers).toEqual([]);
+        expect(result.size).toBeNull();
+        expect(result.bottles).toEqual([]);
+    });
+
+    it("does not read Grace the assistant as the Grace bottle", () => {
+        expect(searchHelp("grace what is the minimum").interpretation.join()).not.toMatch(/bottle/);
+    });
+});
+
+describe("help API", () => {
+    it("serves only published public entries", () => {
+        const { entries } = apiEntries();
+        expect(entries).toHaveLength(publicEntries().length);
+        expect(entries.every((e) => e.status === "published" && e.url.startsWith("http"))).toBe(true);
+        expect(apiEntries("returns").entries.every((e) => e.topic === "returns")).toBe(true);
+    });
+
+    it("never states price or stock, and keeps formula suitability unknown", () => {
+        const text = JSON.stringify([apiSearch("7 ml roll-on"), apiFit("bell-10ml-13-415")]);
+        expect(text).not.toMatch(/"(price|stockStatus|webPrice\w*)"/);
+        expect(apiFit("bell-10ml-13-415")?.formulaSuitability.status).toBe("unknown");
+        expect(apiFit("no-such-bottle")).toBeNull();
+    });
+
+    it("describes every route it serves", () => {
+        const spec = buildKbOpenApi();
+        for (const path of Object.keys(spec.paths)) {
+            const dir = path.replace(/\{(\w+)\}/g, "[$1]");
+            expect(existsSync(join("src", "app", "api", "kb", "v1", dir, "route.ts"))).toBe(true);
+        }
+        expect(bodyById("bell-10ml-13-415")).not.toBeNull();
+    });
+});
+
+describe("help questions", () => {
+    it("drops the email unless a reply was asked for, and requires consent when it was", () => {
+        const noReply = validateHelpQuestion({ question: "Do roll-ons leak?", wantsReply: false, email: "a@b.co", consent: true });
+        expect(noReply).toEqual({ ok: true, value: { question: "Do roll-ons leak?", wantsReply: false, consent: false } });
+        expect(validateHelpQuestion({ question: "Do roll-ons leak?", wantsReply: true, email: "a@b.co", consent: false }).ok).toBe(false);
+        expect(validateHelpQuestion({ question: "Do roll-ons leak?", wantsReply: true, email: "not-an-email", consent: true }).ok).toBe(false);
+        const reply = validateHelpQuestion({ question: "Do roll-ons leak?", wantsReply: true, email: " A@B.co ", consent: true });
+        expect(reply.ok && reply.value.email).toBe("a@b.co");
+    });
+
+    it("rejects empty and oversized questions", () => {
+        expect(validateHelpQuestion({ question: "  " }).ok).toBe(false);
+        expect(validateHelpQuestion({ question: "x".repeat(1001) }).ok).toBe(false);
+        expect(validateHelpQuestion(null).ok).toBe(false);
+    });
+});
+
+describe("help sitemap", () => {
+    it("lists the help home, fit finder and every published answer", () => {
+        const paths = buildPageSitemap("https://example.test", new Date()).map((p) => p.url.replace("https://example.test", ""));
+        expect(paths).toEqual(expect.arrayContaining(["/help", "/help/fit", "/help/a/returns", "/help/topic/shipping"]));
+        expect(paths).not.toContain("/help/search");
+    });
+});

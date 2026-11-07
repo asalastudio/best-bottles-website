@@ -759,6 +759,29 @@ export default defineSchema({
         .index("by_email", ["email"]),
 
     // -------------------------------------------------------------------------
+    // HELP CENTER — questions the help center could not answer. Staff review
+    // them; nothing here is ever published automatically. Email is stored only
+    // when the visitor asked for a reply AND ticked the consent box.
+    // -------------------------------------------------------------------------
+    helpQuestions: defineTable({
+        question: v.string(),
+        wantsReply: v.boolean(),
+        email: v.optional(v.string()),
+        consentText: v.optional(v.string()),
+        consentAt: v.optional(v.number()),
+        pagePath: v.optional(v.string()),
+        status: v.union(
+            v.literal("new"),
+            v.literal("reviewing"),
+            v.literal("answered"),
+            v.literal("dismissed"),
+        ),
+        submittedAt: v.number(),
+    })
+        .index("by_status", ["status", "submittedAt"])
+        .index("by_submittedAt", ["submittedAt"]),
+
+    // -------------------------------------------------------------------------
     // GRACE AI SHORTLISTS — saved product collections, shareable via opaque token
     // -------------------------------------------------------------------------
 
