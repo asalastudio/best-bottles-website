@@ -76,7 +76,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: true }));
-}, ["bottle-builder-family-chooser-v13-elegant-dropper-source", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v14-all-cylinder-masters", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** The cached family. When the cache has no entry to fall back on (a new key, an
  * eviction) and the register lookup fails, this one request builds the family
@@ -115,7 +115,7 @@ export const loadBuilderFamilies = unstable_cache(async () => {
         }
     }));
     return available.filter(family => family !== null);
-}, ["bottle-builder-families-bare-v11-elegant-dropper-source", APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-families-bare-v12-all-cylinder-masters", APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** `strictRegister`: a failed register lookup throws instead of drawing the
  * published kits. Every cached caller sets it, so a Convex hiccup leaves the

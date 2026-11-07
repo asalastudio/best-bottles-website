@@ -499,10 +499,12 @@ export function collectionDescription(band: CollectionBand, groups: readonly Col
     return `${band.subtitle} ${members.length} ${noun}${familyText ? ` across ${familyText}` : ""}${range}.`;
 }
 
-export function buildYourBottleHref(group: Pick<PdpGroup, "family">, collection: CollectionBand | null, sku?: string | null): string {
+/** The product page opens the whole family with this exact product chosen. It no longer passes its collection
+ * (`shop=roll-on-bottles`): that hid every bottle without the collection's fitment, so a 28 ml roll-on's
+ * "Start building" lost the 25, 50 and 100 ml Cylinders (Jordan, 2026-11-07). Collection pages still narrow. */
+export function buildYourBottleHref(group: Pick<PdpGroup, "family">, sku?: string | null): string {
     const params = new URLSearchParams();
     if (group.family) params.set("family", group.family);
-    if (collection) params.set("shop", collection.key);
     if (sku) params.set("sku", sku);
     params.set("from", "pdp");
     return `/matrix?${params.toString()}`;

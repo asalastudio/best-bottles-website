@@ -251,7 +251,9 @@ describe("redesigned product page", () => {
         expect(graceOpens).toEqual([{ source: "pdp" }]);
         const builderParams = new URL(container.querySelector('[data-testid="pdp-build-cta"]')!.getAttribute("href")!, "http://localhost").searchParams;
         expect(builderParams.get("family")).toBe("Cylinder");
-        expect(builderParams.get("shop")).toBe("roll-on-bottles");
+        // The page shows its collection, but the builder opens the whole family (2026-11-07):
+        // shop=roll-on-bottles hid every Cylinder without a roller, the 25/50/100 ml among them.
+        expect(builderParams.get("shop")).toBeNull();
         expect(builderParams.get("from")).toBe("pdp");
         expect(builderParams.get("sku")).toBeTruthy();
         expect(text('[data-testid="pdp-collection"] h2')).toBe("Roll-On Bottles");

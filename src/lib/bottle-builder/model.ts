@@ -227,11 +227,10 @@ export function assessBuilderConfiguration(row: CatalogRow, kit: BuilderKit | nu
  * loose component on top of an assembly that already includes that component.
  */
 export function isBuilderCandidate(row: CatalogRow): boolean {
-    // These complete assemblies remain catalog/PDP products. The chooser
-    // excludes the small sprays and 16 mm jumbo rollers (Jordan, 2026-09-22).
-    // Keep the separate standard 50 ml / 18-415 Cylinder available.
-    if (row.family === "Cylinder" && ((row.capacityMl === 3.3 || row.capacityMl === 4)
-        || ([28, 50].includes(row.capacityMl ?? 0) && row.neckThreadSize === "16mm"))) return false;
+    // Every Cylinder master bottle builds, the 3.3/4 ml sprays and the 16 mm
+    // jumbo rollers included (Jordan, 2026-11-07, reversing 2026-09-22): their
+    // approved master kits draw them, and a roll-on PDP's "Start building" must
+    // land on its own bottle instead of "not currently available in the builder".
     return (row.resolution !== "unknown" || Boolean(catalogIncludedAssembly(row)))
         && !/__RETIRED__/i.test(row.websiteSku ?? "")
         && Boolean(compatibleFinishComponent(row))
@@ -246,7 +245,9 @@ export function isBuilderCandidate(row: CatalogRow): boolean {
 /** A capSplit body may include its mechanism. Reuse a validated identical bare
  * bottle only for the body stage; retain the exact kit for fitment and completion. */
 export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null, preview?: BuilderConfiguration): BuilderConfiguration | null {
-    if (!isBuilderCandidate(row) || !kit || kit.conflicts.length
+    // The approved 28 ml jumbo kits are register-shaped and carry no `conflicts`;
+    // reading `.length` on it threw and took the whole Cylinder builder down.
+    if (!isBuilderCandidate(row) || !kit || kit.conflicts?.length
         || (kit.sku !== row.websiteSku && kit.sku !== row.graceSku)) return null;
     const app = catalogIncludedAssembly(row)?.fitment ?? row.applicator?.trim();
     const capOnly = app === "Cap/Closure" || ((!app || app === "N/A") && /\bcap\b/i.test(row.itemName ?? ""));
