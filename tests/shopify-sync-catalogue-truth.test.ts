@@ -124,6 +124,22 @@ describe("Shopify webhooks treat the catalogue as the source of truth", () => {
         expect(await t.run(ctx => ctx.db.get(groupId))).toMatchObject({ displayName: group.displayName, shopifyProductId: null });
     });
 
+    it("a Shopify delete unlinks only the group with that product id, found through the by_shopifyProductId index", async () => {
+        const t = convexTest(schema, modules);
+        const target = await t.run(ctx => ctx.db.insert("productGroups", { ...group, shopifyProductId: "gid://shopify/Product/77" } as never));
+        const other = await t.run(ctx => ctx.db.insert("productGroups", { ...group, slug: "other", shopifyProductId: "gid://shopify/Product/78" } as never));
+        const unlinked = await t.run(ctx => ctx.db.insert("productGroups", { ...group, slug: "never-linked" } as never));
+
+        expect(await t.mutation(syncProductDelete, { writeToken: "test-token", shopifyProductId: 99 })).toEqual({ deleted: false, reason: "group_not_found" });
+        expect(await t.mutation(syncProductDelete, { writeToken: "test-token", shopifyProductId: 77 })).toMatchObject({ unlinked: true, groupId: String(target), variantsUnlinked: 0 });
+
+        expect((await t.run(ctx => ctx.db.get(target)))?.shopifyProductId).toBeNull();
+        expect((await t.run(ctx => ctx.db.get(other)))?.shopifyProductId).toBe("gid://shopify/Product/78");
+        expect((await t.run(ctx => ctx.db.get(unlinked)))?.shopifyProductId).toBeUndefined();
+        // A second delete for the same product finds nothing: the group no longer carries the id.
+        expect(await t.mutation(syncProductDelete, { writeToken: "test-token", shopifyProductId: 77 })).toEqual({ deleted: false, reason: "group_not_found" });
+    });
+
     it("decides availability the way Shopify's availableForSale does", () => {
         expect(variantAvailability({ inventoryQuantity: 0, inventoryPolicy: "deny", inventoryManagement: null })).toBe(true);
         expect(variantAvailability({ inventoryQuantity: 0, inventoryPolicy: "continue", inventoryManagement: "shopify" })).toBe(true);

@@ -191,8 +191,10 @@ export const syncProductDelete = mutation({
         verifyWriteToken(args.writeToken);
 
         const shopifyGid = `gid://shopify/Product/${args.shopifyProductId}`;
-        const groups = await ctx.db.query("productGroups").collect();
-        const group = groups.find((g) => g.shopifyProductId === shopifyGid);
+        const group = await ctx.db
+            .query("productGroups")
+            .withIndex("by_shopifyProductId", (q) => q.eq("shopifyProductId", shopifyGid))
+            .first();
         if (!group) {
             return { deleted: false, reason: "group_not_found" };
         }

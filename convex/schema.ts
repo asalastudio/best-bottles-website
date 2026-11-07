@@ -103,6 +103,8 @@ export default defineSchema({
         .index("by_family", ["family"])
         .index("by_category", ["category"])
         .index("by_collection", ["bottleCollection"])
+        // shopifySync.syncProductDelete finds the group a Shopify product delete names.
+        .index("by_shopifyProductId", ["shopifyProductId"])
         .searchIndex("search_displayName", {
             searchField: "displayName",
             filterFields: ["category", "family"],
