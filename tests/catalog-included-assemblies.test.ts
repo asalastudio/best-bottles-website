@@ -22,9 +22,8 @@ describe("exact catalog assemblies without a separately sold loose component", (
             components: {}, shopifyVariantId: "assembly-variant", shopifySellable: true, stockStatus: "In Stock", webPrice1pc: 1 } as unknown as CatalogRow;
         expect(catalogIncludedAssembly(row)).toEqual(source);
         expect(compatibleFinishComponent(row)?.websiteSku).toBe(source.websiteSku);
-        const excludedFromChooser = source.family === "Cylinder" && ([3.3, 4].includes(source.capacityMl)
-            || ([28, 50].includes(source.capacityMl) && source.neckThreadSize === "16mm"));
-        expect(isBuilderCandidate(row)).toBe(!excludedFromChooser);
+        // Every included assembly builds, Cylinder's small sprays and 16 mm jumbo rollers too (2026-11-07).
+        expect(isBuilderCandidate(row)).toBe(true);
         for (const change of [{ graceSku: "different" }, { websiteSku: "another" }, { capacityMl: source.capacityMl === 60 ? 61 : 60 },
             { color: source.color === "Frosted" ? "Clear" : "Frosted" }, { neckThreadSize: source.neckThreadSize === "13-415" ? "17-415" : "13-415" },
             { category: "Component" }, { capColor: "not-the-selected-finish" }]) {

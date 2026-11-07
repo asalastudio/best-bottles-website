@@ -30,8 +30,13 @@ describe("approved 3.3/4 ml sprayer publication", () => {
             }
         }
     });
-    it("keeps small sprays excluded from the standalone builder", () => {
-        for (const capacityMl of [3.3, 4]) expect(isBuilderCandidate({ family: "Cylinder", capacityMl } as CatalogRow)).toBe(false);
+    it("lets the small sprays into the builder like every other Cylinder master (2026-11-07)", () => {
+        // A bare row still fails on its missing catalog fields, never on its size.
+        const row = { family: "Cylinder", graceSku: "GB-CYL-CLR-3ML", websiteSku: "GBSpry3mlClBlk", itemName: "3.3 ml spray", color: "Clear",
+            neckThreadSize: "12mm", category: "Glass Bottle", resolution: "unknown", components: {}, shopifyVariantId: "v", shopifySellable: true,
+            stockStatus: "In Stock", webPrice1pc: 1 } as unknown as CatalogRow;
+        for (const capacityMl of [3.3, 4]) expect(isBuilderCandidate({ ...row, capacityMl, websiteSku: capacityMl === 4 ? "GBSpry4mlClBlk" : "GBSpry3mlClBlk" }))
+            .toBe(isBuilderCandidate({ ...row, capacityMl: 5 }));
     });
     it("includes both finishes of both sizes in the hosted release", async () => {
         expect(Object.keys(source).sort()).toEqual(["GBSpry3mlClBlk", "GBSpry3mlClWht", "GBSpry4mlClBlk", "GBSpry4mlClWh"].sort());

@@ -29,4 +29,22 @@ describe('builder collection entry',()=>{
   expect(filtered[0].configurations).toEqual([roller]);expect(filtered[0].configurations[0]).toBe(roller);expect(bodies[0].configurations).toHaveLength(2);
   expect(builderCollectionBodies(bodies,'dropper-bottles')).toEqual([]);
  });
+ it('keeps the bare-glass chooser layer when the collection drops the configuration that carried it',async()=>{
+  // Cylinder's first clear configuration is a sprayer; only it carries the chooser layer.
+  // A roll-on PDP's "Start building" filtered it away and every tile read "Image unavailable".
+  const {builderCollectionBodies}=await import('../src/lib/bottle-builder/collection-context');
+  const {clearBodyPreview,previewParts}=await import('../src/lib/bottle-builder/model');
+  const layer={slot:'body',image:{url:'https://example.com/cyl9-body.webp',width:1000,height:1100}};
+  const chooserKit={sku:'spray',parts:[layer]};
+  const spray={id:'spray',color:'Clear',fitment:'Fine Mist Sprayer',bodyImage:null,kit:null,chooserKit};
+  const roller={id:'roll',color:'Clear',fitment:'Metal Roller',bodyImage:null,kit:null};
+  const frostedRoller={id:'frost-roll',color:'Frosted',fitment:'Metal Roller',bodyImage:{url:'https://example.com/frost.webp',width:400,height:520},kit:null};
+  const bodies=[{id:'body',configurations:[spray,roller,frostedRoller]}] as unknown as import('../src/lib/bottle-builder/model').BuilderBody[];
+  const [filtered]=builderCollectionBodies(bodies,'roll-on-bottles');
+  expect(filtered.configurations.map(c=>c.id)).toEqual(['roll','frost-roll']);
+  expect(filtered.configurations[0].chooserKit).toBe(chooserKit);
+  expect(filtered.configurations[1]).toBe(frostedRoller);
+  expect(previewParts(clearBodyPreview(filtered),'body').map(p=>p.image.url)).toEqual(['https://example.com/cyl9-body.webp']);
+  expect(roller).not.toHaveProperty('chooserKit');
+ });
 });
