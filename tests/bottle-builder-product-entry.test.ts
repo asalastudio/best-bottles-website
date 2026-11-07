@@ -29,10 +29,16 @@ describe("product to builder handoff", () => {
         expect(builderProductEntry(bodies, "removed-product")).toMatchObject({ step: 0, unavailable: true, selection: { bodyId: null } });
     });
     it("carries the current SKU and safely encodes query values", () => {
-        const href = buildYourBottleHref({ family: "Boston Round" }, null, "sku & gold");
+        const href = buildYourBottleHref({ family: "Boston Round" }, "sku & gold");
         const params = new URL(href, "http://localhost").searchParams;
         expect(params.get("family")).toBe("Boston Round");
         expect(params.get("sku")).toBe("sku & gold");
         expect(params.get("from")).toBe("pdp");
+    });
+    it("opens the whole family from a product page, never narrowed to its collection", () => {
+        // A roll-on PDP passed shop=roll-on-bottles, which hid the 25/50/100 ml Cylinders (no roller fitment).
+        const params = new URL(buildYourBottleHref({ family: "Cylinder" }, "GBMtlRoll28Blk"), "http://localhost").searchParams;
+        expect(params.get("shop")).toBeNull();
+        expect(params.get("sku")).toBe("GBMtlRoll28Blk");
     });
 });

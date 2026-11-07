@@ -588,7 +588,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                     groupKits={groupKits}
                     fitmentKits={fitmentKits}
                     capKits={capKits}
-                    href={buildYourBottleHref(group, collection?.band ?? null, selected?.websiteSku ?? selected?.graceSku) + (searchParams.get("assetPreview") === "gpt13" ? "&assetPreview=gpt13" : "")}
+                    href={buildYourBottleHref(group, selected?.websiteSku ?? selected?.graceSku) + (searchParams.get("assetPreview") === "gpt13" ? "&assetPreview=gpt13" : "")}
                 />}
 
                 <PdpTechSheet
