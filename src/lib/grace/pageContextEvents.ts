@@ -95,8 +95,19 @@ export function formatGraceNowViewingLines(args: {
     return lines;
 }
 
+let latestPdpContextChange: PdpContextChange | null = null;
+
+/**
+ * The last selection a PDP announced. Grace's engine loads after the page is
+ * idle, so it reads this at start for an announcement made before it listened.
+ */
+export function readLatestPdpContextChange(): PdpContextChange | null {
+    return latestPdpContextChange;
+}
+
 export function dispatchPdpContextChange(change: PdpContextChange): void {
     if (typeof window === "undefined") return;
+    latestPdpContextChange = change;
     window.dispatchEvent(new CustomEvent<PdpContextChange>(PDP_CONTEXT_CHANGE_EVENT, { detail: change }));
 }
 

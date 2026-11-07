@@ -368,7 +368,8 @@ export const GraceContext = createContext<GraceContextValue | null>(null);
 const NOOP = () => {};
 const NOOP_ASYNC = async () => {};
 
-const GRACE_NOOP: GraceContextValue = {
+/** Grace before its engine has loaded (and outside any provider): closed, idle, empty. */
+export const GRACE_NOOP: GraceContextValue = {
     panelMode: "closed",
     companionMode: "assist",
     surface: {

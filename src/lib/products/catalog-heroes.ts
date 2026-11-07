@@ -1,37 +1,80 @@
 import { isTolaApplicator, tolaAssemblyLayout, TOLA6_ASSEMBLED_IMAGE } from "./tola-applicator";
-import heroRows from "./catalog-heroes.json";
-import pilotRows from "./catalog-hero-pilot.json";
-import crePilotRows from "./catalog-hero-cre-pilot.json";
-import elegantReleaseRows from "./catalog-hero-elegant-release.json";
-import bostonDivaReleaseRows from "./catalog-hero-boston-diva-release.json";
-import sleekReleaseRows from "./catalog-hero-sleek-release.json";
-import apothecaryReleaseRows from "./catalog-hero-apothecary-release.json";
-import remaining42ReleaseRows from "./catalog-hero-remaining-42-release.json";
-import nextBatchReleaseRows from "./catalog-hero-next-batch-release.json";
-import batch3ReleaseRows from "./catalog-hero-batch3-release.json";
-import vialsReleaseRows from "./catalog-hero-vials-release.json";
-import batch6ReleaseRows from "./catalog-hero-batch6-release.json";
-// 2026-11-03 reshoots (heart flat lays, 3 ml tola and spray straight-on): first, so they win over earlier rows.
-import reshoot20261103Rows from "./catalog-hero-reshoot-2026-11-03.json";
-// 2026-11-04: the 2 ml amber 13-425 black-cap photo (a composite of two approved heroes): last, so the group's
-// default card keeps the white-cap hero and this one shows only when the black cap is picked.
-import vial2BlackCap20261104Rows from "./catalog-hero-vial2-black-cap-2026-11-04.json";
 
-export type CatalogHero = Omit<(typeof heroRows)[number], "shopifyVariantId"> & { shopifyVariantId: string | null };
-const completePilotRows = [...reshoot20261103Rows, ...pilotRows, ...crePilotRows, ...elegantReleaseRows, ...bostonDivaReleaseRows, ...sleekReleaseRows, ...apothecaryReleaseRows, ...remaining42ReleaseRows, ...nextBatchReleaseRows, ...batch3ReleaseRows, ...vialsReleaseRows, ...batch6ReleaseRows, ...vial2BlackCap20261104Rows];
+/**
+ * The approved catalog heroes (about 480 KB of JSON across the release files)
+ * used to be imported here, which put every row in the client JavaScript of the
+ * catalog, family, finder and PDP pages. The tables are now read only on the
+ * server (`catalog-heroes.server.ts`), which registers every row for its own
+ * process and hands each page or search response the rows for the SKUs it
+ * contains. Those arrive as a prop or inside an API response and are registered
+ * below before the components that need them render, so every lookup a page
+ * can make (always by an exact listed SKU) finds the same row it found before.
+ *
+ * Rows keep their position in the source tables: a group's recorded order and
+ * "first released row wins" decide which hero a card shows, so a subset must
+ * resolve exactly as the whole table did for the SKUs it holds.
+ */
+type HeroRow = (typeof import("./catalog-heroes.json"))[number];
+export type CatalogHero = Omit<HeroRow, "shopifyVariantId"> & { shopifyVariantId: string | null };
+
+/** Rows with their index in each source table. `pilot` is the cylinder pilot file; `complete` every released file in precedence order. */
+export type CatalogHeroSubset = {
+    original: [number, CatalogHero][];
+    pilot: [number, CatalogHero][];
+    complete: [number, CatalogHero][];
+};
+
+type Table = { byIndex: Map<number, CatalogHero>; rows: CatalogHero[]; dirty: boolean };
+const table = (): Table => ({ byIndex: new Map(), rows: [], dirty: false });
+const originalTable = table(), pilotTable = table(), completeTable = table();
+let bySku = new Map<string, CatalogHero>();
+let byGroup = new Map<string, CatalogHero[]>();
+
+function rows(t: Table): CatalogHero[] {
+    if (t.dirty) {
+        t.rows = [...t.byIndex].sort(([a], [b]) => a - b).map(([, hero]) => hero);
+        t.dirty = false;
+    }
+    return t.rows;
+}
+
+function addRows(t: Table, entries: readonly [number, CatalogHero][] | undefined): boolean {
+    let added = false;
+    for (const [index, hero] of entries ?? []) {
+        if (t.byIndex.has(index) || !hero?.websiteSku) continue;
+        t.byIndex.set(index, hero);
+        t.dirty = added = true;
+    }
+    return added;
+}
+
+/** Make a page's or a response's hero rows resolvable. Idempotent, safe to call during render. */
+export function registerCatalogHeroes(subset: CatalogHeroSubset | null | undefined): void {
+    if (!subset) return;
+    addRows(pilotTable, subset.pilot);
+    addRows(completeTable, subset.complete);
+    if (!addRows(originalTable, subset.original)) return;
+    const original = rows(originalTable);
+    // As before: a SKU recorded twice resolves to its later row; a group lists its rows in recorded order.
+    bySku = new Map(original.map(hero => [hero.websiteSku, hero]));
+    byGroup = new Map();
+    for (const hero of original) byGroup.set(hero.groupSlug, [...(byGroup.get(hero.groupSlug) ?? []), hero]);
+}
+
+/** Number of original-registry rows currently resolvable (tests and diagnostics). */
+export function registeredCatalogHeroCount(): number {
+    return originalTable.byIndex.size;
+}
+
 function activePilotRows(): CatalogHero[] {
     return process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT === "families-2026-09-22"
-        ? completePilotRows : pilotRows;
+        ? rows(completeTable) : rows(pilotTable);
 }
 
 /** Explicit build opt-in: staging candidates do not become a production release. */
 export function isCatalogHeroPilotEnabled(): boolean {
     return ["cylinder-2026-09-22", "families-2026-09-22"].includes(process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT ?? "");
 }
-
-const bySku = new Map(heroRows.map(hero => [hero.websiteSku, hero]));
-const byGroup = new Map<string, CatalogHero[]>();
-for (const hero of heroRows) byGroup.set(hero.groupSlug, [...(byGroup.get(hero.groupSlug) ?? []), hero]);
 
 // Production group slugs that differ from the slugs the approved heroes were
 // recorded under. Each production group lists every recorded group it holds.

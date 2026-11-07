@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import CatalogClient, { type CatalogSearchResult } from "./CatalogClient";
 import Footer from "@/components/Footer";
 import { catalogBrowseRedirect, paramsToFilters } from "@/lib/catalogFilters";
-import { searchCatalogServer } from "@/lib/catalogServer";
+import { searchCatalogServer, withCatalogHeroes } from "@/lib/catalogServer";
 import { catalogInterpretationMode } from "@/lib/catalog/searchInterpretationServer";
 import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
 import { pageAlternates } from "@/i18n/metadata";
@@ -56,13 +56,13 @@ export default async function CatalogPage({
     }
     const initialState = paramsToFilters(urlSearchParams);
 
-    const initialResult = await (searchCatalogServer({
+    const initialResult = withCatalogHeroes(await searchCatalogServer({
         filters: initialState.filters,
         sort: initialState.sort,
         view: initialState.view,
         limit: PAGE_SIZE,
         cursor: null,
-    }) as Promise<CatalogSearchResult>);
+    })) as CatalogSearchResult;
 
     return (
         <>

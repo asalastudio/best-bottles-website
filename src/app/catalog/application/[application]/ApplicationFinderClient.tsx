@@ -32,6 +32,7 @@ import {
     applicationGuidePath,
     parseBrowseContext,
 } from "@/lib/products/focused-shopping";
+import { registerCatalogHeroes } from "@/lib/products/catalog-heroes";
 
 type ApplicationFinderClientProps = {
     application: ApplicatorNavValue;
@@ -129,6 +130,9 @@ export default function ApplicationFinderClient({
     const [sort, setSort] = useState<SortValue>(() => urlBackedSort(application, search));
     const [facetSource, setFacetSource] = useState(unrefinedFacetSource);
     const [activeResult, setActiveResult] = useState(initialResult);
+    // The server sends only the hero rows each result lists (catalog-heroes.server.ts).
+    registerCatalogHeroes(unrefinedFacetSource.catalogHeroes);
+    registerCatalogHeroes(initialResult.catalogHeroes);
     const initialFamilies = useMemo(() => buildGuidedFinderFamilies(initialResult), [initialResult]);
     const [expandedFamily, setExpandedFamily] = useState<string | null>(initialFamilies[0]?.family ?? null);
     const [isUpdating, setIsUpdating] = useState(false);

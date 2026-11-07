@@ -1,5 +1,5 @@
 import type { CatalogVisibilitySnapshot } from "@/lib/catalogServer";
-import { getCatalogHero, resolveLiveCatalogCardHero } from "@/lib/products/catalog-heroes";
+import { getCatalogHero, resolveLiveCatalogCardHero } from "@/lib/products/catalog-heroes.server";
 import { isVisibleCatalogGroup } from "@/lib/products/catalog-listing-visibility";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { familyCardSources } from "@/lib/homepageFamilyArt";

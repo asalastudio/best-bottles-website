@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import Footer from "@/components/Footer";
 import { buildCatalogSearchArgs } from "@/lib/catalogSearchClient";
-import { searchCatalogServer } from "@/lib/catalogServer";
+import { searchCatalogServer, withCatalogHeroes } from "@/lib/catalogServer";
+
+/** Results sent to the browser carry the hero rows for their SKUs (catalog-heroes.server.ts). */
+const searchWithHeroes = async (args: Parameters<typeof searchCatalogServer>[0]) => withCatalogHeroes(await searchCatalogServer(args));
 import { applicationCatalogSurface } from "@/lib/catalogSurface";
 import { paramsToFilters } from "@/lib/catalogFilters";
 import { applicationLandingRedirect, parseBrowseContext } from "@/lib/products/focused-shopping";
@@ -79,10 +82,10 @@ export default async function ApplicationFinderPage({
         view: "visual",
         limit: 240,
     });
-    const unrefinedPromise = searchCatalogServer(unrefinedArgs);
+    const unrefinedPromise = searchWithHeroes(unrefinedArgs);
     const activePromise = JSON.stringify(activeArgs) === JSON.stringify(unrefinedArgs)
         ? unrefinedPromise
-        : searchCatalogServer(activeArgs);
+        : searchWithHeroes(activeArgs);
     const [unrefinedFacetSource, initialResult] = await Promise.all([unrefinedPromise, activePromise]);
     const search = urlSearchParams.toString();
 

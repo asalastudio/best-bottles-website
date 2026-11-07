@@ -30,7 +30,7 @@ import {
     type GracePdpPlateCommand,
 } from "@/lib/grace/pdpPlateSwap";
 import { isTolaApplicator } from "@/lib/products/tola-applicator";
-import { getProductHero } from "@/lib/products/catalog-heroes";
+import { getProductHero, registerCatalogHeroes, type CatalogHeroSubset } from "@/lib/products/catalog-heroes";
 import { rectangleApplicatorGlass } from "@/lib/products/rectangle-applicator";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import type { ItemDescription } from "@/lib/products/item-description/resolve";
@@ -98,6 +98,8 @@ export type PdpRedesignPayload = {
     familyHref: string;
     /** Delivery copies for every image this payload names (resolved on the server, see display-derivative.server.ts). */
     displayDerivatives?: DisplayDerivativeMap;
+    /** Hero rows for the SKUs this payload lists (catalog-heroes.server.ts). */
+    catalogHeroes?: CatalogHeroSubset;
 };
 
 const ADDED_FLASH_MS = 1800;
@@ -128,9 +130,10 @@ function renameTab(text: string): void {
     document.title = text;
 }
 
-export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref, displayDerivatives }: PdpRedesignPayload) {
+export default function PdpRedesignPage({ slug, group, variants, siblings, kitsBySku, fitmentKits = [], stageEnvelopes, platesBySku, descriptions, collection, familyHref, displayDerivatives, catalogHeroes }: PdpRedesignPayload) {
     // Before any child resolves an image: the server rendered with the full manifest, the client must agree.
     registerDisplayDerivatives(displayDerivatives);
+    registerCatalogHeroes(catalogHeroes);
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
