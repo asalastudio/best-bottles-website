@@ -37,7 +37,7 @@ export default async function FitFinderPage({ searchParams }: { searchParams: Pr
     // A bottle on a neck finish with a builder goes straight into it (step 2, the applicator);
     // other bottles keep their fit page.
     const built = new Set(neckBuilderNecks());
-    const bottleHref = (body: FitBody) => body.neck && built.has(body.neck) && neckBuilder(body.neck)
+    const bottleHref = (body: FitBody) => body.neck && built.has(body.neck) && neckBuilder(body.neck)?.bottles.some((b) => b.id === body.id)
         ? `${neckBuilderHref(body.neck)}?bottle=${encodeURIComponent(body.id)}`
         : fitHref(body);
     const downloads = neckBuilderNecks().flatMap((neck) => neckMatrixDownloads(neck).map((d) => ({ ...d, neck })));

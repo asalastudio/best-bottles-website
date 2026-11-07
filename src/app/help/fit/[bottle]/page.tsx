@@ -66,7 +66,7 @@ export default async function FitBottlePage({ params }: { params: Promise<{ bott
                 <Link href={catalogHref({ families: [body.family], capacities: body.capacityMl != null ? [formatMl(body.capacityMl)] : [] })} className="text-gold-dim underline underline-offset-4">
                     This bottle&apos;s price and stock
                 </Link>
-                {body.neck && neckBuilder(body.neck) && (
+                {body.neck && neckBuilder(body.neck)?.bottles.some((b) => b.id === body.id) && (
                     <Link href={`${neckBuilderHref(body.neck)}?bottle=${encodeURIComponent(body.id)}`} className="font-semibold text-gold-dim underline underline-offset-4">Build it: applicator, then closure</Link>
                 )}
                 <Link href="/help/fit" className="underline underline-offset-4">Choose another bottle</Link>
