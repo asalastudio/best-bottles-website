@@ -5,6 +5,7 @@ import { approvedComponentKits, revisedCylinderKit } from "./approved-component-
 import { withCylinder25LotionTube, withSelected25LotionTube } from "../register/cylinder-lotion-tube";
 import { withCylinder25CopperOvercap } from "../register/cylinder25-copper-overcap";
 import { ELEGANT_PHOTO_BODIES } from "../register/elegant-photo-bodies";
+import divaSeating from "./diva-fitment-seating.json";
 
 // Keep older local files and bookmarked pilots on the current shared recipes
 // for the Rectangle roll-ons and the corrected 9 ml / 13-415 pour-cap fit.
@@ -12,7 +13,9 @@ const currentSharedMasters = Object.fromEntries(Object.entries(approvedComponent
     (/^GBRect10(?:MtlRoll|Roll)/.test(sku) && kit.register?.bodyId === "footed-rectangle-10ml-13-415")
     || (kit.register?.bodyId === "cylinder-9ml-13-415" && kit.parts.some(part => part.slot === "cap")
         && !kit.parts.some(part => ["sprayer", "roller"].includes(part.slot)))
-    || (kit.register?.bodyId === "cylinder-9ml-17-415" && kit.parts.some(part => part.slot === "pump"))));
+    || (kit.register?.bodyId === "cylinder-9ml-17-415" && kit.parts.some(part => part.slot === "pump"))
+    // The Diva review files (diva-masters-2026-11-03) predate the 7 Nov seating; localhost must show the seated pumps.
+    || Object.hasOwn(divaSeating.rows, sku)));
 function withCurrentSharedMasters(rows: Record<string, BuilderKit>): Record<string, BuilderKit> {
     const current = { ...rows, ...Object.fromEntries(Object.entries(currentSharedMasters).filter(([sku]) => Object.hasOwn(rows, sku))) };
     return Object.fromEntries(Object.entries(current).map(([sku, kit]) => {
