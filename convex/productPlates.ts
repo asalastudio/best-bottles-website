@@ -290,6 +290,70 @@ export const addCapOffViews = mutation({
     },
 });
 
+/**
+ * Replace the cap-on plate of named rows, guarded. Each entry names the front the row must still hold
+ * (`expectFront`, sha256 and url); a row already holding the new front counts as done, so a re-run is a
+ * no-op and the same call with the two swapped is the rollback. `dryRun` defaults to TRUE.
+ *
+ * A write is all or nothing: if any row is missing, duplicated or holds a third value, nothing is written.
+ * The new front must be a 1000x1100 object on an allowed host whose key carries its sha256. Cap-off,
+ * thumbs, views and source lineage are left exactly as they were.
+ */
+export const replacePlateFronts = mutation({
+    args: {
+        writeToken: v.string(),
+        dryRun: v.optional(v.boolean()),
+        entries: v.array(v.object({
+            sku: v.string(),
+            expectFront: v.object({ sha256: v.string(), url: v.string() }),
+            front: plateAsset,
+        })),
+    },
+    returns: v.object({
+        dryRun: v.boolean(),
+        replaced: v.array(v.string()),
+        alreadyReplaced: v.array(v.string()),
+        refused: v.array(v.object({ sku: v.string(), reason: v.string(), now: v.union(v.string(), v.null()) })),
+    }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        if (args.entries.length === 0 || args.entries.length > 50) throw new Error("replacePlateFronts accepts 1-50 entries per call");
+        if (new Set(args.entries.map((entry) => entry.sku)).size !== args.entries.length) throw new Error("replacePlateFronts: a SKU is listed twice");
+        for (const { sku, front } of args.entries) {
+            if (front.width !== 1000 || front.height !== 1100) throw new Error(`replacePlateFronts: ${sku} front is ${front.width}x${front.height}, not 1000x1100`);
+            if (!hostAllowed(front.url) || !front.url.endsWith(`/${front.key}`) || !front.key.includes(front.sha256)) {
+                throw new Error(`replacePlateFronts: ${sku} front url/key/sha256 do not agree or the host is not allowed`);
+            }
+        }
+        const dryRun = args.dryRun !== false;
+        const pending: Array<{ id: Doc<"productPlates">["_id"]; revision: number; entry: (typeof args.entries)[number] }> = [];
+        const alreadyReplaced: string[] = [];
+        const refused: Array<{ sku: string; reason: string; now: string | null }> = [];
+        for (const entry of args.entries) {
+            const rows = await ctx.db.query("productPlates").withIndex("by_sku", (q) => q.eq("sku", entry.sku)).collect();
+            if (rows.length !== 1) {
+                refused.push({ sku: entry.sku, reason: rows.length ? "duplicate_index_rows" : "no_row", now: null });
+                continue;
+            }
+            const row = rows[0];
+            if (row.front.sha256 === entry.front.sha256 && row.front.url === entry.front.url) alreadyReplaced.push(entry.sku);
+            else if (row.front.sha256 !== entry.expectFront.sha256 || row.front.url !== entry.expectFront.url) {
+                refused.push({ sku: entry.sku, reason: "front_changed", now: row.front.url });
+            } else pending.push({ id: row._id, revision: row.revision, entry });
+        }
+        if (!dryRun && refused.length > 0) {
+            throw new Error(`replacePlateFronts refused, nothing written: ${refused.map((r) => `${r.sku} ${r.reason}`).join("; ")}`);
+        }
+        if (!dryRun) {
+            const now = Date.now();
+            for (const { id, revision, entry } of pending) {
+                await ctx.db.patch(id, { front: entry.front, revision: revision + 1, importedAt: now });
+            }
+        }
+        return { dryRun, replaced: pending.map((p) => p.entry.sku), alreadyReplaced, refused };
+    },
+});
+
 export const upsertFamilies = mutation({
     args: {
         writeToken: v.string(),
