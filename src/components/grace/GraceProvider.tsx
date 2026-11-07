@@ -12,6 +12,7 @@ import {
     useEffect,
     useLayoutEffect,
     useMemo,
+    useSyncExternalStore,
 } from "react";
 import { analytics } from "@/lib/analytics";
 import {
@@ -97,6 +98,8 @@ import {
     mergePdpContextChange,
     PDP_CONTEXT_CHANGE_EVENT,
     readLatestPdpContextChange,
+    readPdpGroup,
+    subscribePdpGroup,
     pdpContextUrlsAlign,
     resolveGraceDirectHitHref,
     resolveVerifiedGracePdpHref,
@@ -116,7 +119,7 @@ type GraceConversationController = {
 
 /** Distinct cap-related options across PDP variants so Grace does not assume a single cap type. */
 function summarizeCapsFromVariants(
-    variants: Array<{
+    variants: ReadonlyArray<{
         capHeight?: string | null;
         capStyle?: string | null;
         capColor?: string | null;
@@ -804,7 +807,12 @@ function GraceProviderBase({
     }, [pathname]);
 
     const productSlug = pageType === "pdp" ? (stripLocalePrefix(pathname).split("/products/")[1] ?? null) : null;
-    const productGroupResult = useQuery(api.products.getProductGroup, productSlug ? { slug: productSlug } : "skip");
+    // The PDP publishes the group it rendered; Grace reads that instead of subscribing to the same
+    // full group read. Only a product page that published nothing for this slug falls back to the query.
+    const publishedPdpGroup = useSyncExternalStore(subscribePdpGroup, readPdpGroup, () => null);
+    const pagePdpGroup = productSlug && publishedPdpGroup?.slug === productSlug ? publishedPdpGroup : null;
+    const queriedPdpGroup = useQuery(api.products.getProductGroup, productSlug && !pagePdpGroup ? { slug: productSlug } : "skip");
+    const productGroupResult = pagePdpGroup ?? queriedPdpGroup;
 
     const pageUrl = useMemo(() => {
         const q = searchParams.toString();
@@ -867,7 +875,7 @@ function GraceProviderBase({
                     webPrice1pc: g.priceRangeMin ?? null,
                     applicator: applicatorTypes[0] ?? fromVariants[0],
                     applicatorTypes: applicatorTypes.length > 0 ? applicatorTypes : undefined,
-                    category: g.category,
+                    category: g.category ?? undefined,
                     variantCount: g.variantCount ?? variants.length,
                     capsSummary: capsSummary || undefined,
                     slug: productSlug ?? undefined,

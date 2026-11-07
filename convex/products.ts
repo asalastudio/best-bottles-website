@@ -1088,10 +1088,11 @@ export const searchCatalog = query({
                 const sku = raw?.trim();
                 if (!sku) continue;
                 if (!plateThumbs.has(sku)) {
-                    const rows = [
-                        ...(await ctx.db.query("productPlates").withIndex("by_websiteSku", (q) => q.eq("websiteSku", sku)).collect()),
-                        ...(await ctx.db.query("productPlates").withIndex("by_graceSku", (q) => q.eq("graceSku", sku)).collect()),
-                    ];
+                    const [byWebsite, byGrace] = await Promise.all([
+                        ctx.db.query("productPlates").withIndex("by_websiteSku", (q) => q.eq("websiteSku", sku)).collect(),
+                        ctx.db.query("productPlates").withIndex("by_graceSku", (q) => q.eq("graceSku", sku)).collect(),
+                    ]);
+                    const rows = [...byWebsite, ...byGrace];
                     const newest = rows.sort((a, b) => b.importedAt - a.importedAt)[0];
                     plateThumbs.set(sku, newest?.thumb.url ?? null);
                 }

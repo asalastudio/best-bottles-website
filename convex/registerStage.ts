@@ -2,6 +2,7 @@ import { query } from "./_generated/server";
 import { type Infer, v } from "convex/values";
 import { registerSlotV } from "./registerValidators";
 import { layersForBody } from "./registerLayers";
+import { mapInBatches } from "./lib/batches";
 
 /**
  * Component register, Phase 5: what a stage needs to draw SKUs from the
@@ -96,12 +97,31 @@ export const forSkus = query({
         const assemblies: Record<string, Infer<typeof assemblyV> | null> = {};
         const missingComponents = new Set<string>();
 
-        for (const graceSku of [...new Set(args.graceSkus)].slice(0, MAX_SKUS_PER_LOOKUP)) {
-            const assembly = await ctx.db.query("registerAssemblies").withIndex("by_graceSku", (q) => q.eq("graceSku", graceSku)).first();
+        // Every read runs in parallel batches first: the assemblies, then each distinct plate, body
+        // and component they name. The loop below then fills the records in the same order as the
+        // one-read-at-a-time loop it replaced (7 Nov 2026), so the payload is unchanged.
+        const graceSkus = [...new Set(args.graceSkus)].slice(0, MAX_SKUS_PER_LOOKUP);
+        const assemblyRows = await mapInBatches(graceSkus, (graceSku) =>
+            ctx.db.query("registerAssemblies").withIndex("by_graceSku", (q) => q.eq("graceSku", graceSku)).first());
+        const found = assemblyRows.filter((row): row is NonNullable<typeof row> => row !== null);
+        const plateKeys = [...new Set(found.map((row) => row.plateKey))];
+        const bodyIds = [...new Set(found.map((row) => row.bodyId))];
+        const componentIds = [...new Set(found.flatMap((row) => row.build.parts.map((part) => part.componentId)))];
+        const [plateRows, bodyRows, componentRows] = await Promise.all([
+            mapInBatches(plateKeys, (plateKey) => ctx.db.query("registerBodyPlates").withIndex("by_plateKey", (q) => q.eq("plateKey", plateKey)).first()),
+            mapInBatches(bodyIds, (bodyId) => ctx.db.query("registerBodies").withIndex("by_bodyId", (q) => q.eq("bodyId", bodyId)).first()),
+            mapInBatches(componentIds, (componentId) => ctx.db.query("registerComponents").withIndex("by_componentId", (q) => q.eq("componentId", componentId)).first()),
+        ]);
+        const plateRowByKey = new Map(plateKeys.map((key, index) => [key, plateRows[index]]));
+        const bodyRowById = new Map(bodyIds.map((id, index) => [id, bodyRows[index]]));
+        const componentRowById = new Map(componentIds.map((id, index) => [id, componentRows[index]]));
+
+        for (const [index, graceSku] of graceSkus.entries()) {
+            const assembly = assemblyRows[index];
             if (!assembly) { assemblies[graceSku] = null; continue; }
 
             if (!(assembly.plateKey in plates)) {
-                const plate = await ctx.db.query("registerBodyPlates").withIndex("by_plateKey", (q) => q.eq("plateKey", assembly.plateKey)).first();
+                const plate = plateRowByKey.get(assembly.plateKey);
                 if (plate) {
                     plates[assembly.plateKey] = {
                         plateKey: plate.plateKey, bodyId: plate.bodyId, glass: plate.glass,
@@ -111,7 +131,7 @@ export const forSkus = query({
                 }
             }
             if (!(assembly.bodyId in bodies)) {
-                const body = await ctx.db.query("registerBodies").withIndex("by_bodyId", (q) => q.eq("bodyId", assembly.bodyId)).first();
+                const body = bodyRowById.get(assembly.bodyId);
                 if (body) {
                     bodies[assembly.bodyId] = {
                         bodyId: body.bodyId, family: body.family, capacityMl: body.capacityMl, neck: body.neck,
@@ -121,7 +141,7 @@ export const forSkus = query({
             }
             for (const part of assembly.build.parts) {
                 if (part.componentId in components || missingComponents.has(part.componentId)) continue;
-                const component = await ctx.db.query("registerComponents").withIndex("by_componentId", (q) => q.eq("componentId", part.componentId)).first();
+                const component = componentRowById.get(part.componentId);
                 if (!component) { missingComponents.add(part.componentId); continue; }
                 components[part.componentId] = {
                     componentId: component.componentId,

@@ -173,15 +173,64 @@ const STRIP_FITMENT_SLUG_ALIASES: Readonly<Record<string, string>> = {
 };
 const stripFitmentSlug = (slug: string) => STRIP_FITMENT_SLUG_ALIASES[slug] ?? slug;
 
+/**
+ * A variant as the browser receives it. `products.getProductGroup` returns whole product documents;
+ * their `components` arrays (the bundled sprayer, cap and dip-tube records) are 60 to 70 percent of a
+ * group's bytes and no browser code reads them. The server keeps the full rows for compatibility,
+ * descriptions and JSON-LD; only what is serialised into the page is trimmed. A projected Convex
+ * query would also trim the Convex read, but needs a function deploy, so it is left for the
+ * schema/index PR.
+ */
+function forBrowser<T extends object>(variants: readonly T[]): T[] {
+    return variants.map((variant) => {
+        if (!("components" in variant)) return variant;
+        const copy = { ...variant } as Record<string, unknown>;
+        delete copy.components;
+        return copy as T;
+    });
+}
+
+/**
+ * The redesigned PDP's payload. It starts as soon as the group is known: the collection band and the
+ * cap-only page's fitment groups depend only on this group, so they load while the page is still
+ * reading the sibling list and plates, and the published-kit chunks load in parallel. Until 7 Nov 2026
+ * each of these waited for the step before it.
+ */
 async function loadRedesignPayload(
     data: ProductGroupPayload,
     activeSlug: string,
-    siblingGroups: SiblingGroup[],
-    platesBySku: Record<string, { image: string; imageCapOff: string | null }>,
+    siblingGroupsLoad: Promise<SiblingGroup[]>,
+    platesLoad: Promise<Record<string, { image: string; imageCapOff: string | null }>>,
     localComponentKits: Record<string, KitLike> = {},
     localReview: { host: string | null; flag: unknown } = { host: null, flag: undefined },
 ): Promise<PdpRedesignPayload> {
     const convex = getConvexClient();
+    const band = collectionFor(data.group);
+    const collectionLoad: Promise<PdpRedesignPayload["collection"]> = band
+        ? convex.query(api.products.getShopCollectionGroups, {})
+            .then((groups) => ({ band, description: collectionDescription(band, groups) }))
+            .catch(() => ({ band, description: band.subtitle }))
+        : Promise.resolve(null);
+    // A cap-only group has no fitment of its own: the Build Your Bottle strip's fitment tile shows this
+    // glass's sprayer and both roller inserts, and its cap tile adds the roll-on caps that come with the
+    // rollers (Jordan 2026-09-28), from every SKU of those groups.
+    const fitmentGroupsLoad = parseProductSlug(activeSlug)?.closure === null
+        ? Promise.all(STRIP_FITMENT_CLOSURES.map(async (closure) => {
+            try {
+                const wanted = `${activeSlug}-${closure}`;
+                // The group's own slug first; the alias only while that group does not exist.
+                const payload = (await convex.query(api.products.getProductGroup, { slug: wanted }) as ProductGroupPayload | null)
+                    ?? (stripFitmentSlug(wanted) !== wanted
+                        ? await convex.query(api.products.getProductGroup, { slug: stripFitmentSlug(wanted) }) as ProductGroupPayload | null
+                        : null);
+                // The intent comes from the slug asked for (spray, roller), not from the group it resolved to.
+                return payload ? filterVariantsForGroupIntent(wanted, filterVariantsForProductGroup(payload.group, payload.variants)) : [];
+            } catch {
+                return [];
+            }
+        }))
+        : null;
+    const siblingGroups = await siblingGroupsLoad;
     const siblings: SiblingGlassGroup[] = await Promise.all(siblingGroups.map(async (sibling) => {
         try {
             const payload = await convex.query(api.products.getProductGroup, { slug: sibling.slug }) as ProductGroupPayload | null;
@@ -235,19 +284,36 @@ async function loadRedesignPayload(
     const stageEnvelopesLoad = Object.keys(registerKits).length || pairs.some(pair => reviewedKit(pair)?.register)
         ? loadGlassStageEnvelopes({ family: sourceFamilyForProduct(activeSlug, data.group.family), capacityMl: data.group.capacityMl ?? null })
         : Promise.resolve({});
-    for (let index = 0; index < pending.length; index += 50) {
+    // The cap-only page's fitment kits, resolved alongside the published kit chunks below.
+    const fitmentKitsLoad = fitmentGroupsLoad ? fitmentGroupsLoad.then(async (groups) => {
+        const found = groups.flat().filter((variant) => Boolean(variant.graceSku));
+        const unresolved = found.filter(variant => !reviewedKit(variant));
+        const kits = unresolved.length ? await loadRegisterKits(convex, unresolved.map((variant) => variant.graceSku)).catch(() => ({} as Record<string, KitLike>)) : {};
+        const resolved: KitLike[] = [];
+        for (const variant of found) {
+            const kit = (variant.websiteSku ? reviewKits[variant.websiteSku] : undefined) ?? kits[variant.graceSku] ?? (variant.websiteSku ? kits[variant.websiteSku] : undefined);
+            if (kit) resolved.push(kit as KitLike);
+        }
+        return resolved;
+    }) : Promise.resolve([] as KitLike[]);
+    // Published kits, 50 pairs per call, all calls at once; applied in chunk order as before.
+    const chunks = await Promise.all(Array.from({ length: Math.ceil(pending.length / 50) }, async (_, chunkIndex) => {
         try {
-            const chunk = await convex.query(api.productKits.forSkus, { pairs: pending.slice(index, index + 50) });
-            for (const [key, kit] of Object.entries(chunk)) {
-                kitsBySku[key] = kit as KitLike | null;
-                if (kit) {
-                    const owner = pending.find((pair) => pair.websiteSku === key || pair.graceSku === key);
-                    if (owner?.websiteSku) kitsBySku[owner.websiteSku] = kit as KitLike;
-                    if (owner?.graceSku) kitsBySku[owner.graceSku] = kit as KitLike;
-                }
-            }
+            return await convex.query(api.productKits.forSkus, { pairs: pending.slice(chunkIndex * 50, chunkIndex * 50 + 50) });
         } catch (error) {
             console.error("[pdp] kit lookup failed; rendering without layers", error);
+            return null;
+        }
+    }));
+    for (const chunk of chunks) {
+        if (!chunk) continue;
+        for (const [key, kit] of Object.entries(chunk)) {
+            kitsBySku[key] = kit as KitLike | null;
+            if (kit) {
+                const owner = pending.find((pair) => pair.websiteSku === key || pair.graceSku === key);
+                if (owner?.websiteSku) kitsBySku[owner.websiteSku] = kit as KitLike;
+                if (owner?.graceSku) kitsBySku[owner.graceSku] = kit as KitLike;
+            }
         }
     }
 
@@ -265,53 +331,16 @@ async function loadRedesignPayload(
         if (kit) kitsBySku[sku] = withCylinderProductGlass(kit);
     }
 
-    // A cap-only group has no fitment of its own: the Build Your Bottle strip's fitment tile shows this
-    // glass's sprayer and both roller inserts, and its cap tile adds the roll-on caps that come with the
-    // rollers (Jordan 2026-09-28), from every SKU of those groups.
-    const fitmentKits: KitLike[] = [];
-    if (parseProductSlug(activeSlug)?.closure === null) {
-        const groups = await Promise.all(STRIP_FITMENT_CLOSURES.map(async (closure) => {
-            try {
-                const wanted = `${activeSlug}-${closure}`;
-                // The group's own slug first; the alias only while that group does not exist.
-                const payload = (await convex.query(api.products.getProductGroup, { slug: wanted }) as ProductGroupPayload | null)
-                    ?? (stripFitmentSlug(wanted) !== wanted
-                        ? await convex.query(api.products.getProductGroup, { slug: stripFitmentSlug(wanted) }) as ProductGroupPayload | null
-                        : null);
-                // The intent comes from the slug asked for (spray, roller), not from the group it resolved to.
-                return payload ? filterVariantsForGroupIntent(wanted, filterVariantsForProductGroup(payload.group, payload.variants)) : [];
-            } catch {
-                return [];
-            }
-        }));
-        const found = groups.flat().filter((variant) => Boolean(variant.graceSku));
-        const unresolved = found.filter(variant => !reviewedKit(variant));
-        const kits = unresolved.length ? await loadRegisterKits(convex, unresolved.map((variant) => variant.graceSku)).catch(() => ({} as Record<string, KitLike>)) : {};
-        for (const variant of found) {
-            const kit = (variant.websiteSku ? reviewKits[variant.websiteSku] : undefined) ?? kits[variant.graceSku] ?? (variant.websiteSku ? kits[variant.websiteSku] : undefined);
-            if (kit) fitmentKits.push(kit as KitLike);
-        }
-    }
-
-    const band = collectionFor(data.group);
-    let collection: PdpRedesignPayload["collection"] = null;
-    if (band) {
-        try {
-            const groups = await convex.query(api.products.getShopCollectionGroups, {});
-            collection = { band, description: collectionDescription(band, groups) };
-        } catch {
-            collection = { band, description: band.subtitle };
-        }
-    }
+    const [fitmentKits, collection, platesBySku, stageEnvelopes] = await Promise.all([fitmentKitsLoad, collectionLoad, platesLoad, stageEnvelopesLoad]);
 
     return {
         slug: activeSlug,
         group: data.group,
-        variants: data.variants,
+        variants: forBrowser(data.variants),
         siblings,
         kitsBySku,
         fitmentKits,
-        stageEnvelopes: await stageEnvelopesLoad,
+        stageEnvelopes,
         platesBySku,
         descriptions: resolveItemDescriptions(data.variants),
         collection,
@@ -433,30 +462,38 @@ export default async function ProductPage({
         for (const { href, ...responsive } of pdpHeroImagePreloads(kit, sku)) preload(href, { as: "image", ...responsive });
     }
     const primaryVariant = getPrimaryVariant(data);
-    const [siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
-        getSiblingGroups(data, activeSlug),
-        // Only the classic page renders these editorial/discovery sections.
-        // Do not delay the redesigned hero on reads whose results it never uses.
-        redesigned ? Promise.resolve([] as PdpBlock[]) : getPdpBlocks(activeSlug, data?.group.family),
-        // The plates for THIS group's variants, from the Convex index -- never
-        // the whole catalogue, and never a throw: a missing plate costs the
-        // customer the plate, not the page.
-        loadPlatesForVariants(
-            getConvexClient(),
-            (data?.variants ?? []).flatMap((variant) => [variant.graceSku, variant.websiteSku]),
-            activeSlug,
-        ),
-        redesigned ? Promise.resolve(null) : getFocusedPdpRelations(activeSlug),
-        redesigned ? Promise.resolve(null) : getPrimaryCompatibility(data),
-    ]);
-    const group = data?.group;
-    const variant = primaryVariant;
     const requestHost = (await headers()).get('host');
     const approved = approvedComponentKits();
     const localComponentKits = { ...Object.fromEntries(data.variants.flatMap(variant => {
         const sku = variant.websiteSku;
         return sku && approved[sku] ? [[sku, approved[sku]]] : [];
     })), ...localPdpComponentKits(requestHost, resolvedSearchParams.assetPreview, data.variants) };
+    const siblingGroupsLoad = getSiblingGroups(data, activeSlug);
+    // The plates for THIS group's variants, from the Convex index -- never
+    // the whole catalogue, and never a throw: a missing plate costs the
+    // customer the plate, not the page.
+    const platesLoad = loadPlatesForVariants(
+        getConvexClient(),
+        (data?.variants ?? []).flatMap((variant) => [variant.graceSku, variant.websiteSku]),
+        activeSlug,
+    );
+    // The redesigned payload starts now, alongside the reads below, instead of after them.
+    const redesignLoad = redesigned
+        ? loadRedesignPayload(data, activeSlug, siblingGroupsLoad, platesLoad, localComponentKits, { host: requestHost, flag: resolvedSearchParams.assetPreview })
+        : null;
+    // Awaited below; this only keeps an early failure from being reported as unhandled meanwhile.
+    redesignLoad?.catch(() => undefined);
+    const [siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
+        siblingGroupsLoad,
+        // Only the classic page renders these editorial/discovery sections.
+        // Do not delay the redesigned hero on reads whose results it never uses.
+        redesigned ? Promise.resolve([] as PdpBlock[]) : getPdpBlocks(activeSlug, data?.group.family),
+        platesLoad,
+        redesigned ? Promise.resolve(null) : getFocusedPdpRelations(activeSlug),
+        redesigned ? Promise.resolve(null) : getPrimaryCompatibility(data),
+    ]);
+    const group = data?.group;
+    const variant = primaryVariant;
     const localAssetPreview = localBostonPreview(process.env.NODE_ENV, (await headers()).get('host'), resolvedSearchParams.assetPreview) && group?.family === 'Boston Round';
     const completion = localAssetPreview ? await readCompletion(process.cwd()) : null;
     const displayedPlates = localAssetPreview ? previewPlates(completion, group?._id, data?.variants ?? [], platesBySku) : platesBySku;
@@ -499,7 +536,7 @@ export default async function ProductPage({
         : null;
 
     if (redesigned) {
-        const payload = await loadRedesignPayload(data, activeSlug, siblingGroups, platesBySku, localComponentKits, { host: requestHost, flag: resolvedSearchParams.assetPreview });
+        const payload = await redesignLoad!;
         return (
             <>
                 {productJsonLd && (
@@ -522,7 +559,7 @@ export default async function ProductPage({
 
     const classicProps = {
         slug: activeSlug,
-        initialData: data,
+        initialData: { ...data, variants: forBrowser(data.variants) },
         initialPdpBlocks: pdpBlocks,
         initialRelations: relations,
         initialCompatibility: compatibility,

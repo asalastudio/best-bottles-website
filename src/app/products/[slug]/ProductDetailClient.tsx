@@ -79,7 +79,7 @@ import {
     type PdpAnalyticsDimension,
     type PendingPdpAnalyticsNavigation,
 } from "@/lib/products/pdp-analytics";
-import { dispatchPdpContextChange } from "@/lib/grace/pageContextEvents";
+import { dispatchPdpContextChange, publishPdpGroup } from "@/lib/grace/pageContextEvents";
 import {
     GRACE_PDP_PLATE_EVENT,
     isGracePdpPlateCommand,
@@ -1206,6 +1206,10 @@ export default function ProductDetailClient({
         const integrity = filterVariantsForProductGroup(data?.group, rawVariants).map(normalizeImportedCapColor);
         return filterVariantsForGroupIntent(activeSlug, integrity);
     }, [activeSlug, data?.group, data?.variants]);
+    // Grace builds her product context from the group this page rendered (no second Convex read).
+    useEffect(() => {
+        if (group) publishPdpGroup({ slug: activeSlug, group, variants });
+    }, [activeSlug, group, variants]);
     const isRollonGroup = /roll-?on/.test(activeSlug);
     const variantFromUrl = useMemo(
         () => selectedVariantParam
