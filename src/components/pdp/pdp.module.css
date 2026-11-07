@@ -518,10 +518,19 @@
     border-bottom: 1px dotted var(--pdp-ink);
 }
 
+/* A glass with no photograph yet: a round material dot, centred in a slot as tall as the bottle thumbnails so the
+   glass names stay on one line. (A 40×96 tile of the frosted texture read as a metal bar, 2026-11-07.) */
+.glassSwatchSlot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .glassTile {
-    width: 40px;
-    height: 96px;
-    border-radius: 2px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(23, 23, 23, .14);
 }
 
 /* ── buy column ─────────────────────────────────────────────────────────── */
@@ -1604,8 +1613,8 @@
     }
 
     .glassTile {
-        width: 28px;
-        height: 60px;
+        width: 24px;
+        height: 24px;
     }
 
     .buy {

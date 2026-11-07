@@ -119,6 +119,12 @@ const WEBSITE_SKU_FINISH_PATTERNS: Array<[RegExp, string]> = [
     [/Sl|Slv/i, "Silver"],
 ];
 
+/** "Lotion Bottle Bottle with Cap" → "Lotion Bottle with Cap". Nine stored group names (and their Shopify titles)
+ * carried the doubled word (2026-11-07); every name this module returns passes through here so one never renders. */
+export function collapseRepeatedWords(value: string): string {
+    return value.replace(/\b(\w+)(?:\s+\1\b)+/gi, "$1").replace(/\s+/g, " ").trim();
+}
+
 function clean(value: string | null | undefined): string | null {
     if (typeof value !== "string") return null;
     const trimmed = value.replace(/\s+/g, " ").trim();
@@ -334,7 +340,7 @@ function buildFallback(args: CustomerFacingNameArgs): CustomerFacingProductName 
     if (isTallSleek(args.group, args.variant)) {
         fallback = fallback.replace(/\b(?:Tall )?Rectangle\b/i, "Sleek");
     }
-    fallback = displayApplicatorName(fallback);
+    fallback = collapseRepeatedWords(displayApplicatorName(fallback));
     return {
         displayName: fallback,
         shortName: fallback,
@@ -358,7 +364,7 @@ function isComponent(args: CustomerFacingNameArgs): boolean {
 function componentName(args: CustomerFacingNameArgs): CustomerFacingProductName {
     const base = clean(args.group?.displayName) ?? clean(args.fallbackName) ?? clean(args.variant?.itemName) ?? "Best Bottles Component";
     const finish = resolveFinish(args.variant);
-    const displayName = displayApplicatorName(`${base}${finish && !key(base).includes(key(finish)) ? ` - ${finish}` : ""}`);
+    const displayName = collapseRepeatedWords(displayApplicatorName(`${base}${finish && !key(base).includes(key(finish)) ? ` - ${finish}` : ""}`));
     return {
         displayName,
         shortName: displayName,
@@ -392,7 +398,7 @@ export function getCustomerFacingProductName(args: CustomerFacingNameArgs): Cust
     const displayName = custom
         ? `${custom}${finish ? ` - ${finish}` : ""}`
         // "10 ml Atomizer" + "Atomizer Bottle" must not read "Atomizer Atomizer Bottle".
-        : displayApplicatorName(`${baseName} ${productType}${finish ? ` - ${finish}` : ""}`.replace(/\s+/g, " ").replace(/\b(\w+) \1\b/gi, "$1").trim());
+        : collapseRepeatedWords(displayApplicatorName(collapseRepeatedWords(`${baseName} ${productType}${finish ? ` - ${finish}` : ""}`)));
     const variantLabel = finish ?? (resolvedType ? productType : null);
     const confidence: CustomerFacingNameConfidence = custom || (args.variant && resolvedType) ? "high" : resolvedType ? "medium" : "fallback";
 

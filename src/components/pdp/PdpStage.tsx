@@ -471,7 +471,12 @@ export default function PdpStage({
                                         style={{ objectFit: "contain", height: glassThumbHeight }} draggable={false} />
                                     : body && glass.kit
                                     ? <PdpKitPartImage part={body} canvas={glass.kit.canvas} height={glassThumbHeight} />
-                                    : <span className={styles.glassTile} style={swatch ? { backgroundImage: `url(${swatch})`, backgroundSize: "cover" } : getMaterialSwatchStyle(glass.label, {})} aria-hidden />}
+                                    // No photograph and no kit (a glass whose bottle is not shot yet, e.g. Frosted 28 ml on
+                                    // 7 Nov 2026): a round material dot in a thumbnail-high slot. The bottle-shaped tile
+                                    // filled with the frosted texture read as a metal part, not as glass.
+                                    : <span className={styles.glassSwatchSlot} style={{ height: glassThumbHeight }} data-glass-fallback="swatch" aria-hidden>
+                                        <span className={styles.glassTile} style={swatch ? { backgroundImage: `url(${swatch})`, backgroundSize: "cover" } : getMaterialSwatchStyle(glass.label, {})} />
+                                    </span>}
                                 <span className={styles.glassName}>{glass.label}</span>
                             </button>
                         );
