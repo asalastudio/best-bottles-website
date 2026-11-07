@@ -4,7 +4,10 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { FAQ_POLICY_ENTRIES } from "@/lib/faqPolicy";
 import { KB_ENTRIES, publicEntries, sentences, toPublicEntry, type KbEntry } from "@/lib/help/kb";
-import { allBodies, bodiesListing, bodyById, fitReport } from "@/lib/help/fit";
+import { allBodies, bodiesListing, bodyById, bodyLabel, fitReport } from "@/lib/help/fit";
+import { buildRobots } from "@/lib/crawl/robots";
+import fitIndex from "@/lib/help/fit-index.generated.json";
+import { shortPartName } from "@/components/help/FitParts";
 import { capacityMatches, parseCapacityMl, searchHelp } from "@/lib/help/search";
 import { apiEntries, apiFit, apiSearch } from "@/lib/help/api";
 import { buildKbOpenApi } from "@/lib/help/openapi";
@@ -83,6 +86,25 @@ describe("fit index", () => {
         expect(sets.length).toBeGreaterThan(0);
         for (const body of sets) expect(body.sameThread).toEqual([]);
         for (const body of allBodies().filter((b) => b.compatibilityClass === "plastic-bottle")) expect(body.interchangeable).toBe(false);
+    });
+
+    it("gives customers real item codes, never register placeholders", () => {
+        const rows = fitReport("bell-10ml-13-415")!.listed.flatMap((group) => group.rows);
+        expect(rows.every((row) => row.itemCode && !row.itemCode.startsWith("REF-"))).toBe(true);
+        expect(rows.map((row) => row.itemCode)).toContain("CP13-415SpryBluMt");
+    });
+
+    it("keeps register staff notes out of the public index", () => {
+        const text = JSON.stringify(fitIndex);
+        expect(text).not.toMatch(/classify before|quarantin|statusReason|dimsSource/i);
+    });
+
+    it("names same-size siblings apart and never repeats the category", () => {
+        expect(bodyLabel(bodyById("footed-rectangle-10ml-13-415")!)).toBe("Footed Rectangle 10 ml");
+        expect(bodyLabel(bodyById("tall-rectangle-10ml-13-415")!)).toBe("Tall Rectangle 10 ml");
+        expect(bodyLabel(bodyById("aluminum-bottle-65ml-20-410")!)).toBe("Aluminum Bottle 65 ml");
+        expect(shortPartName("Matte blue Fine Mist Sprayer, Thread size 13-415")).toBe("Matte blue Fine Mist Sprayer");
+        expect(shortPartName("Matte Gold cap or closure for rollon bottles, Threadsize 13-415")).toBe("Matte Gold cap or closure for rollon bottles");
     });
 
     it("keeps every part on the bottle's own neck", () => {
@@ -187,10 +209,24 @@ describe("help questions", () => {
     });
 });
 
-describe("help sitemap", () => {
-    it("lists the help home, fit finder and every published answer", () => {
+describe("help discovery", () => {
+    it("lists the help home, fit finder, every published answer and each bottle's fit page", () => {
         const paths = buildPageSitemap("https://example.test", new Date()).map((p) => p.url.replace("https://example.test", ""));
-        expect(paths).toEqual(expect.arrayContaining(["/help", "/help/fit", "/help/a/returns", "/help/topic/shipping"]));
+        expect(paths).toEqual(expect.arrayContaining(["/help", "/help/fit", "/help/a/returns", "/help/topic/shipping", "/help/fit/bell-10ml-13-415"]));
         expect(paths).not.toContain("/help/search");
+        expect(paths).not.toContain("/help/fit/aluminum-bottle-65ml-20-410");
+    });
+
+    it("lets crawlers read the help API while the rest of /api stays closed", () => {
+        const rule = buildRobots("https://example.test").rules as { allow: string[]; disallow: string[] }[];
+        expect(rule[0].allow).toContain("/api/kb/");
+        expect(rule[0].disallow).toContain("/api/");
+    });
+
+    it("answers a closure question for one bottle with its matching parts", () => {
+        const result = searchHelp("sprayer for bell 10 ml");
+        expect(result.closure?.partTypes).toContain("fine-mist-sprayer");
+        expect(result.bottles.map((b) => b.id)).toEqual(["bell-10ml-13-415"]);
+        expect(apiSearch("sprayer for bell 10 ml").bottles[0].fitUrl).toMatch(/\/help\/fit\/bell-10ml-13-415$/);
     });
 });

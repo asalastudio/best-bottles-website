@@ -4,7 +4,7 @@
  * field is listed explicitly so nothing new leaks by default.
  */
 import { SITE_URL } from "@/lib/seo";
-import { FIT_SNAPSHOT, FIT_STATUS_LABEL, FIT_STATUS_MEANING, allBodies, bodyLabel, fitReport, type FitBody, type FitGroup } from "./fit";
+import { FIT_SNAPSHOT, FIT_STATUS_LABEL, FIT_STATUS_MEANING, allBodies, bodyLabel, fitHref, fitReport, itemCatalogHref, type FitBody, type FitGroup } from "./fit";
 import { KB_TOPICS, publicEntries, toPublicEntry, type KbTopicId } from "./kb";
 import { searchHelp } from "./search";
 
@@ -38,12 +38,21 @@ function apiBottle(body: FitBody) {
         glass: body.glass,
         heightMm: body.heightMm,
         diameterMm: body.diameterMm,
-        fitUrl: abs(`/help/fit?bottle=${encodeURIComponent(body.id)}`),
+        fitUrl: body.interchangeable ? abs(fitHref(body)) : null,
         apiUrl: abs(`/api/kb/v1/fit/${encodeURIComponent(body.id)}`),
     };
 }
 
-const flat = (groups: FitGroup[]) => groups.flatMap((g) => g.rows.map((row) => ({ componentId: row.componentId, name: row.name, type: row.type, status: row.status, statusLabel: FIT_STATUS_LABEL[row.status], ...(row.reason ? { reason: row.reason } : {}) })));
+const flat = (groups: FitGroup[]) => groups.flatMap((g) => g.rows.map((row) => ({
+    componentId: row.componentId,
+    itemCode: row.itemCode,
+    name: row.name,
+    type: row.type,
+    neck: row.neck,
+    status: row.status,
+    statusLabel: FIT_STATUS_LABEL[row.status],
+    catalogUrl: row.itemCode ? abs(itemCatalogHref(row.itemCode)) : null,
+})));
 
 export function apiFitSource() {
     return { source: "Best Bottles component register", snapshotDate: FIT_SNAPSHOT.date, note: FIT_SNAPSHOT.note, statuses: Object.fromEntries((Object.keys(FIT_STATUS_LABEL) as Array<keyof typeof FIT_STATUS_LABEL>).map((s) => [s, { label: FIT_STATUS_LABEL[s], meaning: FIT_STATUS_MEANING[s] }])) };
@@ -82,6 +91,7 @@ export function apiSearch(q: string) {
             nearestLarger: result.size.larger && { ml: result.size.larger.ml, bottles: result.size.larger.bodies.map(apiBottle) },
             note: "Not offered means no such size exists in the catalog. It is not a stock status.",
         },
+        closure: result.closure?.label ?? null,
         bottles: result.bottles.map(apiBottle),
         answers: result.answers.map(({ entry }) => apiEntry(entry)),
         catalogUrl: result.catalogHref ? abs(result.catalogHref) : null,

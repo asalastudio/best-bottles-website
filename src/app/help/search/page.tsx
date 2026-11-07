@@ -4,7 +4,8 @@ import HelpShell, { ContactStrip } from "@/components/help/HelpShell";
 import HelpAskBox from "@/components/help/HelpAskBox";
 import HelpGraceButton from "@/components/help/HelpGraceButton";
 import { entryHref } from "@/lib/help/kb";
-import { bodyLabel, formatMl, type FitBody } from "@/lib/help/fit";
+import { bodyLabel, fitHref, fitReport, formatMl, type FitBody } from "@/lib/help/fit";
+import { FitGroups } from "@/components/help/FitParts";
 import { searchHelp } from "@/lib/help/search";
 import { catalogHref } from "@/lib/catalogFilters";
 
@@ -25,7 +26,7 @@ function SizeCard({ body, note }: { body: FitBody; note?: string }) {
             <span className="text-sm text-slate">{body.neck ? `Neck ${body.neck}` : "No thread finish"}{body.glass.length ? ` · ${body.glass.join(", ")} glass` : ""}</span>
             <span className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
                 <Link href={bottleCatalogHref(body)} className="text-gold-dim underline underline-offset-4">See price and stock</Link>
-                {body.interchangeable && <Link href={`/help/fit?bottle=${encodeURIComponent(body.id)}`} className="underline underline-offset-4">Closures listed for it</Link>}
+                {body.interchangeable && <Link href={fitHref(body)} className="underline underline-offset-4">What fits it</Link>}
             </span>
         </li>
     );
@@ -35,6 +36,9 @@ export default async function HelpSearchPage({ searchParams }: { searchParams: P
     const params = await searchParams;
     const raw = (Array.isArray(params.q) ? params.q[0] : params.q) ?? "";
     const result = raw.trim() ? searchHelp(raw) : null;
+    // One bottle and a fit question: show its listed parts here rather than one click away.
+    const fitFor = result && result.bottles.length === 1 && result.bottles[0].interchangeable && (result.fitIntent || result.closure) ? fitReport(result.bottles[0].id) : null;
+    const fitGroups = fitFor && result?.closure ? fitFor.listed.filter((group) => result.closure!.partTypes.includes(group.type)) : fitFor?.listed ?? [];
     const nothing = result && !result.size && result.answers.length === 0 && result.bottles.length === 0 && !result.gap;
 
     return (
@@ -86,6 +90,18 @@ export default async function HelpSearchPage({ searchParams }: { searchParams: P
                             <ul className="mt-4 grid gap-4 sm:grid-cols-2">
                                 {result.bottles.map((body) => <SizeCard key={body.id} body={body} />)}
                             </ul>
+                        </section>
+                    )}
+
+                    {fitFor && (
+                        <section aria-labelledby="parts" className="mt-10">
+                            <h2 id="parts" className="font-serif text-2xl">
+                                {result.closure ? `Listed ${result.closure.label}s` : "Listed fits"} for the {bodyLabel(fitFor.body)}
+                            </h2>
+                            {fitGroups.length > 0
+                                ? <FitGroups groups={fitGroups} status="listed" />
+                                : <p className="mt-2 text-sm">Our catalog lists no {result.closure?.label ?? "closure"} for this bottle.</p>}
+                            <Link href={fitHref(fitFor.body)} className="mt-4 inline-block text-sm underline underline-offset-4">Everything that fits it, and what isn&apos;t confirmed</Link>
                         </section>
                     )}
 

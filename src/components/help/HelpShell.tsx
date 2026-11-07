@@ -36,10 +36,6 @@ export default function HelpShell({ crumbs, children, wide = false }: { crumbs?:
     );
 }
 
-export function Eyebrow({ children }: { children: ReactNode }) {
-    return <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gold-dim">{children}</p>;
-}
-
 export function JsonLd({ data }: { data: unknown }) {
     return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }} />;
 }
@@ -50,7 +46,7 @@ export function ContactStrip() {
         <section aria-labelledby="help-contact" className="mt-16 grid gap-6 rounded-sm border border-champagne/70 bg-warm-white p-6 sm:grid-cols-[1fr_auto] sm:items-center sm:p-8">
             <div>
                 <h2 id="help-contact" className="font-serif text-2xl">Talk to our team</h2>
-                <p className="mt-1 text-sm text-slate">Monday–Friday, 9:30am–5:30pm PST, as published in our FAQ.</p>
+                <p className="mt-1 text-sm text-slate">Monday–Friday, 9:30am–5:30pm PST.</p>
             </div>
             <div className="flex flex-col gap-1 text-sm sm:text-right">
                 <a href="mailto:sales@nematinternational.com" className="underline underline-offset-4 hover:text-gold-dim">sales@nematinternational.com</a>

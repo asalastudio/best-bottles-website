@@ -23,7 +23,7 @@ export const FIT_STATUS_MEANING: Record<FitStatus, string> = {
     conflicting: "Our records disagree about this part. Don't rely on it until our team resolves it.",
 };
 
-export type FitComponent = { name: string; type: string; neck: string | null; color: string | null; applicator: string | null };
+export type FitComponent = { name: string; type: string; neck: string | null; color: string | null; applicator: string | null; itemCode: string | null };
 export type FitBody = {
     id: string;
     family: string;
@@ -37,10 +37,9 @@ export type FitBody = {
     fitmentTypes: string[];
     heightMm: number | null;
     diameterMm: number | null;
-    dimsSource: string | null;
     listed: string[];
     sameThread: string[];
-    conflicting: Array<{ componentId: string; reason: string }>;
+    conflicting: string[];
 };
 
 type FitIndex = {
@@ -82,17 +81,28 @@ export function componentById(id: string): FitComponent | null {
     return INDEX.components[id] ?? null;
 }
 
-export function bodyLabel(body: Pick<FitBody, "family" | "capacityMl" | "category">): string {
+/** A variant the id names before the family ("footed-rectangle-…" → "Footed"), so same-size siblings stay distinct. */
+export function bodyVariant(body: Pick<FitBody, "family"> & { id?: string }): string {
+    if (!body.id) return "";
+    const slug = body.family.toLowerCase().replace(/\s+/g, "-");
+    const at = body.id.toLowerCase().indexOf(`${slug}-`);
+    if (at <= 0) return "";
+    return body.id.slice(0, at - 1).split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+}
+
+export function bodyLabel(body: Pick<FitBody, "family" | "capacityMl" | "category"> & { id?: string }): string {
+    const variant = bodyVariant(body);
     const size = body.capacityMl != null ? ` ${formatMl(body.capacityMl)}` : "";
-    const kind = body.category && body.category !== "Glass Bottle" ? ` ${body.category.toLowerCase()}` : "";
-    return `${body.family}${size}${kind}`;
+    const kind = body.category && body.category !== "Glass Bottle" && !body.family.toLowerCase().includes(body.category.toLowerCase().split(" ")[0])
+        ? ` ${body.category.toLowerCase()}` : "";
+    return `${variant ? `${variant} ` : ""}${body.family}${size}${kind}`;
 }
 
 export function formatMl(ml: number): string {
     return `${Number.isInteger(ml) ? ml : ml.toFixed(1).replace(/\.0$/, "")} ml`;
 }
 
-export type FitRow = { componentId: string; status: FitStatus; reason?: string } & FitComponent;
+export type FitRow = { componentId: string; status: FitStatus } & FitComponent;
 export type FitGroup = { type: string; label: string; rows: FitRow[] };
 
 function groupRows(rows: FitRow[]): FitGroup[] {
@@ -103,10 +113,10 @@ function groupRows(rows: FitRow[]): FitGroup[] {
         .sort((a, b) => b.rows.length - a.rows.length || a.label.localeCompare(b.label));
 }
 
-function rowsFor(ids: string[], status: FitStatus, reasons?: Map<string, string>): FitRow[] {
+function rowsFor(ids: string[], status: FitStatus): FitRow[] {
     return ids.flatMap((componentId) => {
         const component = componentById(componentId);
-        return component ? [{ componentId, status, reason: reasons?.get(componentId), ...component }] : [];
+        return component ? [{ componentId, status, ...component }] : [];
     });
 }
 
@@ -123,10 +133,9 @@ export type FitReport = {
 export function fitReport(bodyId: string): FitReport | null {
     const body = bodyById(bodyId);
     if (!body) return null;
-    const reasons = new Map(body.conflicting.map((c) => [c.componentId, c.reason]));
     const listed = rowsFor(body.listed, "listed");
     const notConfirmed = rowsFor(body.sameThread, "not-confirmed");
-    const conflicting = rowsFor(body.conflicting.map((c) => c.componentId), "conflicting", reasons);
+    const conflicting = rowsFor(body.conflicting, "conflicting");
     return {
         body,
         listed: groupRows(listed),
@@ -140,6 +149,16 @@ export function fitReport(bodyId: string): FitReport | null {
 /** Bottles that list a component, for "which bottles does this sprayer fit?". */
 export function bodiesListing(componentId: string): FitBody[] {
     return INDEX.bodies.filter((body) => body.listed.includes(componentId));
+}
+
+/** The finder page for one bottle. */
+export function fitHref(body: Pick<FitBody, "id">): string {
+    return `/help/fit/${encodeURIComponent(body.id)}`;
+}
+
+/** Catalog search for a part's item code: price, stock and the product page. */
+export function itemCatalogHref(itemCode: string): string {
+    return `/catalog?search=${encodeURIComponent(itemCode)}`;
 }
 
 /** Bottle choices for the finder, grouped by family. */

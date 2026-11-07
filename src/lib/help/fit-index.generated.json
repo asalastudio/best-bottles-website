@@ -17,7 +17,6 @@
    "fitmentTypes": [],
    "heightMm": 94,
    "diameterMm": 36,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -35,7 +34,6 @@
    "fitmentTypes": [],
    "heightMm": 127.8,
    "diameterMm": 50,
-   "dimsSource": "convex export (no live data)",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -53,7 +51,6 @@
    "fitmentTypes": [],
    "heightMm": 114,
    "diameterMm": 45,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -75,7 +72,6 @@
    ],
    "heightMm": 155,
    "diameterMm": 50,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -93,7 +89,6 @@
    "fitmentTypes": [],
    "heightMm": 178,
    "diameterMm": 74,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -115,7 +110,6 @@
    ],
    "heightMm": 58,
    "diameterMm": 30,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -139,7 +133,6 @@
    ],
    "heightMm": 58,
    "diameterMm": 37,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -159,7 +152,6 @@
    "fitmentTypes": [],
    "heightMm": 52.2,
    "diameterMm": 27.4,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -181,7 +173,6 @@
    ],
    "heightMm": 92,
    "diameterMm": 15,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -205,7 +196,6 @@
    ],
    "heightMm": 76,
    "diameterMm": 18,
-   "dimsSource": "convex export (no live data)",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -230,7 +220,6 @@
    ],
    "heightMm": 82,
    "diameterMm": 23,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -255,7 +244,6 @@
    ],
    "heightMm": 55,
    "diameterMm": 27,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -312,7 +300,6 @@
    ],
    "heightMm": 68,
    "diameterMm": 25,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-APP-BLK-18-400",
     "CMP-CAP-BLK-18-400",
@@ -348,7 +335,6 @@
    ],
    "heightMm": 78,
    "diameterMm": 33,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-20-400-1OZ",
     "CMP-DRP-BKGD-20400-76",
@@ -396,7 +382,6 @@
    ],
    "heightMm": 94,
    "diameterMm": 39,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-20-400-2OZ",
     "CMP-DRP-BKGD-20400-90",
@@ -442,7 +427,6 @@
    ],
    "heightMm": 60,
    "diameterMm": 50,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -497,7 +481,6 @@
    ],
    "heightMm": 74,
    "diameterMm": 60,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-SGLD-15-415",
     "CMP-CAP-SSLV-15-415",
@@ -533,7 +516,6 @@
    ],
    "heightMm": 87,
    "diameterMm": 72,
-   "dimsSource": "live bestbottles.com GBCrcl50AnSpBlk",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -609,7 +591,6 @@
    ],
    "heightMm": 105,
    "diameterMm": 89,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -676,7 +657,6 @@
    "fitmentTypes": [],
    "heightMm": 18,
    "diameterMm": 35,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -694,7 +674,6 @@
    "fitmentTypes": [],
    "heightMm": 16,
    "diameterMm": 31,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -714,7 +693,6 @@
    "fitmentTypes": [],
    "heightMm": 24,
    "diameterMm": 31,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -732,7 +710,6 @@
    "fitmentTypes": [],
    "heightMm": 31,
    "diameterMm": 48,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -750,7 +727,6 @@
    "fitmentTypes": [],
    "heightMm": 33.9,
    "diameterMm": 55,
-   "dimsSource": "convex export (no live data)",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -768,7 +744,6 @@
    "fitmentTypes": [],
    "heightMm": 35,
    "diameterMm": 52,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -786,7 +761,6 @@
    "fitmentTypes": [],
    "heightMm": 42,
    "diameterMm": 56,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -804,7 +778,6 @@
    "fitmentTypes": [],
    "heightMm": 51,
    "diameterMm": 59,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -822,7 +795,6 @@
    "fitmentTypes": [],
    "heightMm": 51,
    "diameterMm": 59,
-   "dimsSource": "convex export (no live data)",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -844,7 +816,6 @@
    ],
    "heightMm": 37,
    "diameterMm": 14,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -866,7 +837,6 @@
    ],
    "heightMm": 49,
    "diameterMm": 14,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -892,7 +862,6 @@
    ],
    "heightMm": 53,
    "diameterMm": 17,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -950,7 +919,6 @@
    ],
    "heightMm": 106,
    "diameterMm": 18,
-   "dimsSource": null,
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -1012,7 +980,6 @@
    ],
    "heightMm": 70,
    "diameterMm": 20,
-   "dimsSource": "live bestbottles.com GBCyl9RollMattSl",
    "listed": [
     "CMP-LPM-BLK-17-415",
     "CMP-LPM-MSLV-17-415",
@@ -1061,7 +1028,6 @@
    ],
    "heightMm": 83,
    "diameterMm": 32,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -1133,7 +1099,6 @@
    ],
    "heightMm": 81,
    "diameterMm": 31,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1153,7 +1118,6 @@
    "fitmentTypes": [],
    "heightMm": 50.8,
    "diameterMm": 42,
-   "dimsSource": "convex export (no live data)",
    "listed": [],
    "sameThread": [
     "CMP-CAP-BLK-18415-LTR",
@@ -1224,7 +1188,6 @@
    ],
    "heightMm": 98,
    "diameterMm": 37,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1250,7 +1213,6 @@
    ],
    "heightMm": 117,
    "diameterMm": 32,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -1325,7 +1287,6 @@
    ],
    "heightMm": 154,
    "diameterMm": 35,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -1394,7 +1355,6 @@
    "fitmentTypes": [],
    "heightMm": 116,
    "diameterMm": 41,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1414,7 +1374,6 @@
    "fitmentTypes": [],
    "heightMm": 156,
    "diameterMm": 51,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1434,7 +1393,6 @@
    "fitmentTypes": [],
    "heightMm": 195,
    "diameterMm": 62,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1454,7 +1412,6 @@
    "fitmentTypes": [],
    "heightMm": 42,
    "diameterMm": 18,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1474,7 +1431,6 @@
    "fitmentTypes": [],
    "heightMm": 46,
    "diameterMm": 32,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1494,7 +1450,6 @@
    "fitmentTypes": [],
    "heightMm": 66,
    "diameterMm": 26,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1514,7 +1469,6 @@
    "fitmentTypes": [],
    "heightMm": 48,
    "diameterMm": 22,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1534,7 +1488,6 @@
    "fitmentTypes": [],
    "heightMm": 80,
    "diameterMm": 28,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1555,7 +1508,6 @@
    "fitmentTypes": [],
    "heightMm": 77,
    "diameterMm": 42,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1577,7 +1529,6 @@
    "fitmentTypes": [],
    "heightMm": 44,
    "diameterMm": 63,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1599,7 +1550,6 @@
    ],
    "heightMm": 52.2,
    "diameterMm": 92,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -1625,7 +1575,6 @@
    ],
    "heightMm": 88,
    "diameterMm": 41,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -1699,7 +1648,6 @@
    ],
    "heightMm": 81,
    "diameterMm": 43,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -1776,7 +1724,6 @@
    ],
    "heightMm": 89,
    "diameterMm": 49,
-   "dimsSource": "live bestbottles.com GBDivaFrst46AnSpBlk",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -1851,7 +1798,6 @@
    ],
    "heightMm": 113,
    "diameterMm": 64,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -1926,7 +1872,6 @@
    ],
    "heightMm": 61,
    "diameterMm": 36,
-   "dimsSource": "live bestbottles.com GBElg15BlkSht",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -1982,7 +1927,6 @@
    ],
    "heightMm": 75,
    "diameterMm": 44,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-SGLD-15-415",
     "CMP-CAP-SSLV-15-415",
@@ -2018,7 +1962,6 @@
    ],
    "heightMm": 86,
    "diameterMm": 54,
-   "dimsSource": "live bestbottles.com GBElg60AnSpBlk",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -2094,7 +2037,6 @@
    ],
    "heightMm": 109,
    "diameterMm": 61,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -2170,7 +2112,6 @@
    ],
    "heightMm": 88,
    "diameterMm": 37,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -2245,7 +2186,6 @@
    ],
    "heightMm": 107,
    "diameterMm": 46,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -2319,7 +2259,6 @@
    ],
    "heightMm": 56,
    "diameterMm": 41,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -2378,7 +2317,6 @@
    ],
    "heightMm": 113,
    "diameterMm": 52,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -2447,7 +2385,6 @@
    "fitmentTypes": [],
    "heightMm": 118,
    "diameterMm": 33,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -2467,7 +2404,6 @@
    "fitmentTypes": [],
    "heightMm": 118,
    "diameterMm": 33,
-   "dimsSource": "convex export (no live data)",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -2487,7 +2423,6 @@
    "fitmentTypes": [],
    "heightMm": 118,
    "diameterMm": 33,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -2509,7 +2444,6 @@
    ],
    "heightMm": 57,
    "diameterMm": 21,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -2560,7 +2494,6 @@
    "fitmentTypes": [],
    "heightMm": 93.8,
    "diameterMm": 23.7,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -2578,7 +2511,6 @@
    "fitmentTypes": [],
    "heightMm": 68,
    "diameterMm": 28,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -2600,7 +2532,6 @@
    ],
    "heightMm": 47,
    "diameterMm": 24,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -2625,7 +2556,6 @@
    ],
    "heightMm": 50,
    "diameterMm": 29,
-   "dimsSource": "convex export (width 29 x depth 19 on 30 of 38 rows)",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -2682,7 +2612,6 @@
    ],
    "heightMm": 101,
    "diameterMm": 17,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -2742,7 +2671,6 @@
    ],
    "heightMm": 73,
    "diameterMm": 59,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -2819,7 +2747,6 @@
    ],
    "heightMm": 83,
    "diameterMm": 69,
-   "dimsSource": "live bestbottles.com GBRnd128AnSpBlk",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -2893,7 +2820,6 @@
    ],
    "heightMm": 56,
    "diameterMm": 40,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -2946,7 +2872,6 @@
    "fitmentTypes": [],
    "heightMm": 64,
    "diameterMm": 32,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -2970,7 +2895,6 @@
    ],
    "heightMm": 45,
    "diameterMm": 17,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -3027,7 +2951,6 @@
    ],
    "heightMm": 66,
    "diameterMm": 17,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -3086,7 +3009,6 @@
    ],
    "heightMm": 98,
    "diameterMm": 28,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -3161,7 +3083,6 @@
    ],
    "heightMm": 139,
    "diameterMm": 28,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -3236,7 +3157,6 @@
    ],
    "heightMm": 149,
    "diameterMm": 36,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -3311,7 +3231,6 @@
    ],
    "heightMm": 87,
    "diameterMm": 30,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -3386,7 +3305,6 @@
    ],
    "heightMm": 121,
    "diameterMm": 31,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -3461,7 +3379,6 @@
    ],
    "heightMm": 154,
    "diameterMm": 37,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-18415-LTR",
     "CMP-CAP-BRN-18415-LTR",
@@ -3534,7 +3451,6 @@
    ],
    "heightMm": 52,
    "diameterMm": 26,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -3591,7 +3507,6 @@
    ],
    "heightMm": 43,
    "diameterMm": 20,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": []
@@ -3615,7 +3530,6 @@
    ],
    "heightMm": 45,
    "diameterMm": 23,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -3672,7 +3586,6 @@
    ],
    "heightMm": 45,
    "diameterMm": 23,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-13-415",
     "CMP-CAP-BLK-13-415-01",
@@ -3726,18 +3639,11 @@
    "fitmentTypes": [],
    "heightMm": 35,
    "diameterMm": 8,
-   "dimsSource": null,
    "listed": [],
    "sameThread": [],
    "conflicting": [
-    {
-     "componentId": "CMP-PLUG-BLK-VIAL",
-     "reason": "non-thread neck 'Plug' — classify before composing"
-    },
-    {
-     "componentId": "CMP-PLUG-WHT-VIAL",
-     "reason": "non-thread neck 'Plug' — classify before composing"
-    }
+    "CMP-PLUG-BLK-VIAL",
+    "CMP-PLUG-WHT-VIAL"
    ]
   },
   {
@@ -3755,7 +3661,6 @@
    "fitmentTypes": [],
    "heightMm": 22,
    "diameterMm": 16,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [
     "CMP-CLS-BLK-13-425",
@@ -3779,7 +3684,6 @@
    "fitmentTypes": [],
    "heightMm": 35,
    "diameterMm": 12,
-   "dimsSource": "live bestbottles.com",
    "listed": [
     "CMP-CAP-BLK-8-425",
     "CMP-CAP-BLK-8425-T",
@@ -3806,7 +3710,6 @@
    "fitmentTypes": [],
    "heightMm": 29,
    "diameterMm": 14,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [
     "CMP-CLS-BLK-13-425",
@@ -3834,7 +3737,6 @@
    ],
    "heightMm": 45,
    "diameterMm": 15,
-   "dimsSource": "live bestbottles.com",
    "listed": [],
    "sameThread": [
     "CMP-CLS-BLK-13-425",
@@ -3859,7 +3761,6 @@
    ],
    "heightMm": 79.4,
    "diameterMm": 20,
-   "dimsSource": "convex export (no live data)",
    "listed": [
     "CMP-APP-BLK-18-400",
     "CMP-CAP-BLK-18-400",
@@ -3880,994 +3781,1136 @@
    "type": "cap",
    "neck": "18-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "18-400CpAppBlk"
   },
   "CMP-CAP-13-415": {
    "name": "Matte blue Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Blue",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415SpryBluMt"
   },
   "CMP-CAP-BLK-13-415-01": {
    "name": "Matte black Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415SpryBlkMt"
   },
   "CMP-CAP-BLK-13-415-02": {
    "name": "Shiny black Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415SpryBlkSh"
   },
   "CMP-CAP-BLK-18-400": {
    "name": "Black lid or closure for glass bottle, Thread size 18-400",
    "type": "cap",
    "neck": "18-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "18-400CpShortBlk"
   },
   "CMP-CAP-BLK-18415-LTR": {
    "name": "Black Faux Leather caps for glass bottles, Thread size 18-415",
    "type": "faux-leather-cap",
    "neck": "18-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415BlkLthr"
   },
   "CMP-CAP-BLK-20-400-1OZ": {
    "name": "Black lid or closure for glass bottle, Thread size 20-400",
    "type": "cap",
    "neck": "20-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "20-400cp1ozShortBlk"
   },
   "CMP-CAP-BLK-20-400-2OZ": {
    "name": "Black lid or closure for glass bottle, Thread size 20-400",
    "type": "cap",
    "neck": "20-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "20-400Cp2ozShortBlk"
   },
   "CMP-CAP-BLK-8-425": {
    "name": "Black lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
    "neck": "8-425",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "8-425CpShortBlack"
   },
   "CMP-CAP-BLK-8425-T": {
    "name": "Tall black lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
    "neck": "8-425",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP8-425TallBlack"
   },
   "CMP-CAP-BLK-S-13-415": {
    "name": "Black lid or closure for glass bottle, Thread size 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415BlkSht"
   },
   "CMP-CAP-BRN-18415-LTR": {
    "name": "Brown Faux Leather caps for glass bottles, Thread size 18-415",
    "type": "faux-leather-cap",
    "neck": "18-415",
    "color": "Brown",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415BrwnLthr"
   },
   "CMP-CAP-IVY-18415-LTR": {
    "name": "Ivory Faux Leather caps for glass bottles, Thread size 18-415",
    "type": "faux-leather-cap",
    "neck": "18-415",
    "color": "Ivory",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415LIvyLthr"
   },
   "CMP-CAP-LBRN-18415-LTR": {
    "name": "Light Brown Faux Leather caps for glass bottles, Thread size 18-415",
    "type": "faux-leather-cap",
    "neck": "18-415",
    "color": "Brown",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415LBrwnLthr"
   },
   "CMP-CAP-MSLV-18415-S": {
    "name": "Short Matt Silver caps for glass bottles, Thread size 18-415",
    "type": "cap",
    "neck": "18-415",
    "color": "Matte Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415MtSl"
   },
   "CMP-CAP-MSLV-18415-T": {
    "name": "Tall Matt Silver caps for glass bottles. Thread size 18-415",
    "type": "cap",
    "neck": "18-415",
    "color": "Matte Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415MtSlTall"
   },
   "CMP-CAP-PNK-18-415": {
    "name": "Pink Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
    "neck": "18-415",
    "color": "Pink",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415AnSpPnk"
   },
   "CMP-CAP-PNK-18415-LTR": {
    "name": "Pink Faux Leather caps for glass bottles, Thread size 18-415",
    "type": "faux-leather-cap",
    "neck": "18-415",
    "color": "Pink",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415LPnkLthr"
   },
   "CMP-CAP-SBLK-13-415": {
    "name": "Shiny Black short cap with liner, thread size 13-415",
    "type": "cap",
    "neck": "13-415",
    "color": "Shiny Black",
-   "applicator": "Cap/Closure"
+   "applicator": "Cap/Closure",
+   "itemCode": "CP13-415BlkShShtMtl"
   },
   "CMP-CAP-SBLK-18415-T": {
    "name": "Tall Black caps for glass bottles. Thread size 18-415",
    "type": "cap",
    "neck": "18-415",
    "color": "Shiny Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415ShnBlkTall"
   },
   "CMP-CAP-SGLD-13-415-01": {
    "name": "Shiny gold lid or closure for glass bottle, Thread size 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415Gl"
   },
   "CMP-CAP-SGLD-13-415-02": {
    "name": "Matte gold Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415SpryGlMt"
   },
   "CMP-CAP-SGLD-13-415-03": {
    "name": "Shiny gold Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415SpryGlSh"
   },
   "CMP-CAP-SGLD-15-415": {
    "name": "Shiny Gold color Cap or Closure for 15-415",
    "type": "roll-on-cap",
    "neck": "15-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP15-415ShnGl"
   },
   "CMP-CAP-SGLD-18415-S": {
    "name": "Short Shiny Gold caps for glass bottles. Thread size 18-415",
    "type": "cap",
    "neck": "18-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415ShnGl"
   },
   "CMP-CAP-SGLD-8425-T": {
    "name": "Tall shiny gold lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
    "neck": "8-425",
    "color": "Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP8-425TallShnGl"
   },
   "CMP-CAP-SLV-13-415-01": {
    "name": "Shiny silver lid or closure for glass bottle, Thread size 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415Sl"
   },
   "CMP-CAP-SLV-13-415-02": {
    "name": "Matte silver Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415SprySlMt"
   },
   "CMP-CAP-SLV-13-415-03": {
    "name": "Shiny silver Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415SprySlSh"
   },
   "CMP-CAP-SSLV-15-415": {
    "name": "Shiny Silver color Cap or Closure for 15-415",
    "type": "roll-on-cap",
    "neck": "15-415",
    "color": "Shiny Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP15-415ShnSl"
   },
   "CMP-CAP-SSLV-18415-S": {
    "name": "Short Shiny Silver caps for glass bottles. Thread size 18-415",
    "type": "cap",
    "neck": "18-415",
    "color": "Shiny Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415ShnSl"
   },
   "CMP-CAP-SSLV-8425-T": {
    "name": "Tall shiny silver lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
    "neck": "8-425",
    "color": "Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP8-425TallShnSl"
   },
   "CMP-CAP-WHT-18415-T": {
    "name": "Tall White caps for glass bottles. Thread size 18-415",
    "type": "cap",
    "neck": "18-415",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415Wh"
   },
   "CMP-CAP-WHT-8-425": {
    "name": "White lid or closure for glass bottle, Thread size 8-425",
    "type": "cap",
    "neck": "8-425",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "8-425CpShortWhite"
   },
   "CMP-CAP-WHT-S-13-415": {
    "name": "White lid or closure for glass bottle, Thread size 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415WhtSht"
   },
   "CMP-CLS-BLK-13-425": {
    "name": "Cap/Closure Black Thread 13-425",
    "type": "cap",
    "neck": "13-425",
    "color": "Black",
-   "applicator": "Cap/Closure"
+   "applicator": "Cap/Closure",
+   "itemCode": "CP13-425Blk"
   },
   "CMP-CLS-MTCP-S-13-415": {
    "name": "Matte Copper short cap with liner, thread size 13-415",
    "type": "cap",
    "neck": "13-415",
    "color": "Matte Copper",
-   "applicator": "Cap/Closure"
+   "applicator": "Cap/Closure",
+   "itemCode": "CP13-415CuSht"
   },
   "CMP-CLS-MTGD-S-13-415": {
    "name": "Matte Gold short cap with liner, thread size 13-415",
    "type": "cap",
    "neck": "13-415",
    "color": "Matte Gold",
-   "applicator": "Cap/Closure"
+   "applicator": "Cap/Closure",
+   "itemCode": "CP13-415GlMattSht"
   },
   "CMP-CLS-MTSL-S-13-415": {
    "name": "Matte Silver short cap with liner, thread size 13-415",
    "type": "cap",
    "neck": "13-415",
    "color": "Matte Silver",
-   "applicator": "Cap/Closure"
+   "applicator": "Cap/Closure",
+   "itemCode": "CP13-415SlMattSht"
   },
   "CMP-CLS-SHGD-S-13-415": {
    "name": "Shiny Gold short cap with liner, thread size 13-415",
    "type": "cap",
    "neck": "13-415",
    "color": "Shiny Gold",
-   "applicator": "Cap/Closure"
+   "applicator": "Cap/Closure",
+   "itemCode": "CP13-415GlSht"
   },
   "CMP-CLS-SHSL-S-13-415-02": {
    "name": "Shiny Silver short cap with liner, thread size 13-415",
    "type": "cap",
    "neck": "13-415",
    "color": "Shiny Silver",
-   "applicator": "Cap/Closure"
+   "applicator": "Cap/Closure",
+   "itemCode": "CP13-415SlSht"
   },
   "CMP-CLS-WHT-13-425": {
    "name": "Cap/Closure White Thread 13-425",
    "type": "cap",
    "neck": "13-425",
    "color": "White",
-   "applicator": "Cap/Closure"
+   "applicator": "Cap/Closure",
+   "itemCode": "CP13-425Wht"
   },
   "CMP-DRP-AMB": {
    "name": "Dropper Amber",
    "type": "dropper",
    "neck": "17-415",
    "color": "Amber",
-   "applicator": "Dropper"
+   "applicator": "Dropper",
+   "itemCode": "Droppers1ozElg"
   },
   "CMP-DRP-BKGD-18400-66": {
    "name": "Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
    "neck": "18-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp18-40015mlShnGlTrimBlkBulb"
   },
   "CMP-DRP-BKGD-20400-76": {
    "name": "Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4001ozShnGlTrimBlkBulb"
   },
   "CMP-DRP-BKGD-20400-90": {
    "name": "Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4002ozShnGlTrimBlkBulb"
   },
   "CMP-DRP-BKSL-18400-66": {
    "name": "Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
    "neck": "18-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp18-40015mlShnSlTrimBlkBulb"
   },
   "CMP-DRP-BKSL-20400-76": {
    "name": "Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4001ozShnSlTrimBlkBulb"
   },
   "CMP-DRP-BKSL-20400-90": {
    "name": "Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4002ozShnSlTrimBlkBulb"
   },
   "CMP-DRP-BLK-18400-90MM": {
    "name": "Black rubber bulb dropper with black cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
    "neck": "18-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp18-40015mlBlckBulb"
   },
   "CMP-DRP-BLK-20400-76MM-01": {
    "name": "Black rubber bulb dropper with black cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4001ozBlckBulb"
   },
   "CMP-DRP-BLK-20400-90": {
    "name": "Black rubber bulb dropper with black cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4002ozBlckBulb"
   },
   "CMP-DRP-CPR-18415": {
    "name": "White rubber bulb dropper with shiny copper collar cap. Thread size 18-415",
    "type": "dropper",
    "neck": "18-415",
    "color": "Copper",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp18-415Cu"
   },
   "CMP-DRP-SGLD-18415": {
    "name": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
    "type": "dropper",
    "neck": "18-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp18-415Gl"
   },
   "CMP-DRP-SSLV-18415": {
    "name": "White rubber bulb dropper with shiny silver collar cap. Thread size 18-415",
    "type": "dropper",
    "neck": "18-415",
    "color": "Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp18-415Sl"
   },
   "CMP-DRP-WHT-18400-66": {
    "name": "White rubber bulb dropper with white cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
    "neck": "18-400",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp18-40015mlWhiteBulb"
   },
   "CMP-DRP-WHT-20400-76": {
    "name": "White rubber bulb dropper with white cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4001ozWhiteBulb"
   },
   "CMP-DRP-WHT-20400-90": {
    "name": "White rubber bulb dropper with white cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4002ozWhiteBulb"
   },
   "CMP-DRP-WTGD-18400-66": {
    "name": "White rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
    "neck": "18-400",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp18-40015mlShnGlTrimWhiteBulb"
   },
   "CMP-DRP-WTGD-20400-76": {
    "name": "White rubber bulb dropper with shiny gold collar cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4001ozlShnGlTrimWhiteBulb"
   },
   "CMP-DRP-WTGD-20400-90": {
    "name": "White rubber bulb dropper with shiny gold collar cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4002ozlShnGlTrimWhiteBulb"
   },
   "CMP-DRP-WTSL-18400-66": {
    "name": "White rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400",
    "type": "dropper",
    "neck": "18-400",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp18-40015mlShnSlTrimWhiteBulb"
   },
   "CMP-DRP-WTSL-20400-76": {
    "name": "White rubber bulb dropper with shiny silver collar cap. Glass stem length is 76 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4001ozlShnSlTrimWhiteBulb"
   },
   "CMP-DRP-WTSL-20400-90": {
    "name": "White rubber bulb dropper with shiny silver collar cap. Glass stem length is 90 mm, Thread size 20-400",
    "type": "dropper",
    "neck": "20-400",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Drp20-4002ozlShnSlTrimWhiteBulb"
   },
   "CMP-LPM-BLK-17-415": {
    "name": "Shiny black collar Lotion or treatment pump, Threadsize 17-415",
    "type": "lotion-pump",
    "neck": "17-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Ltn17-415Blk"
   },
   "CMP-LPM-CPR-18-415": {
    "name": "Matte Copper Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
    "neck": "18-415",
    "color": "Copper",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Ltn18-415Cu"
   },
   "CMP-LPM-MGLD-18-415": {
    "name": "Matte Gold Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
    "neck": "18-415",
    "color": "Matte Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Ltn18-415MtGl"
   },
   "CMP-LPM-MSLV-17-415": {
    "name": "Matte silver collar Lotion or treatment pump, Threadsize 17-415",
    "type": "lotion-pump",
    "neck": "17-415",
    "color": "Matte Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Ltn17-415MattSl"
   },
   "CMP-LPM-MSLV-18-415-01": {
    "name": "Matte Silver Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
    "neck": "18-415",
    "color": "Matte Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Ltn18-415MtSl"
   },
   "CMP-LPM-MSLV-18-415-02": {
    "name": "Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415",
    "type": "lotion-pump",
    "neck": "18-415",
    "color": "Matte Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Ltn18-415MtSlCl"
   },
   "CMP-LPM-SBLK-18-415": {
    "name": "Shiny Black Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
    "neck": "18-415",
    "color": "Shiny Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Ltn18-415ShnBlk"
   },
   "CMP-LPM-SGLD-17-415": {
    "name": "Shiny gold collar Lotion or treatment pump, Threadsize 17-415",
    "type": "lotion-pump",
    "neck": "17-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Ltn17-415Gl"
   },
   "CMP-LPM-SGLD-18-415": {
    "name": "Shiny Gold Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
    "neck": "18-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Ltn18-415ShnGl"
   },
   "CMP-LPM-SSLV-18-415": {
    "name": "Shiny Silver Lotion or treatment pump, Threadsize 18-415",
    "type": "lotion-pump",
    "neck": "18-415",
    "color": "Shiny Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Ltn18-415ShnSl"
   },
   "CMP-PLUG-BLK-VIAL": {
    "name": "Black plug applicator for 1ml vial",
    "type": "plug-applicator",
    "neck": null,
    "color": "Black",
-   "applicator": "Applicator Cap"
+   "applicator": "Applicator Cap",
+   "itemCode": null
   },
   "CMP-PLUG-WHT-VIAL": {
    "name": "White plug applicator for 1ml vial",
    "type": "plug-applicator",
    "neck": null,
    "color": "White",
-   "applicator": "Applicator Cap"
+   "applicator": "Applicator Cap",
+   "itemCode": null
   },
   "CMP-ROC-BLK-13415-DOT": {
    "name": "Shiny black cap with dots or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll13-415BlackDot"
   },
   "CMP-ROC-BLK-17415-DOT": {
    "name": "Black with dots cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
    "neck": "17-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CpRoll17-415BlkDot"
   },
   "CMP-ROC-CPR-17415": {
    "name": "Copper cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
    "neck": "17-415",
    "color": "Copper",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CpRoll17-415Cu"
   },
   "CMP-ROC-MBLK-20400-T": {
    "name": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
    "neck": "20-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll20-400TallMattBlk"
   },
   "CMP-ROC-MCPR-13415": {
    "name": "Matte Copper cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Copper",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll13-415Cu"
   },
   "CMP-ROC-MGLD-13415": {
    "name": "Matte Gold cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll13-415GlMt"
   },
   "CMP-ROC-MGLD-17415": {
    "name": "Matte gold cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
    "neck": "17-415",
    "color": "Matte Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CpRoll17-415MattGl"
   },
   "CMP-ROC-MGLD-20400-T": {
    "name": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
    "neck": "20-400",
    "color": "Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll20-400TallMattGl"
   },
   "CMP-ROC-MSLV-13415": {
    "name": "Matte silver cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll13-415SlMt"
   },
   "CMP-ROC-MSLV-17415": {
    "name": "Matte Silver cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
    "neck": "17-415",
    "color": "Matte Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CpRoll17-415MattSl"
   },
   "CMP-ROC-MSLV-20400-T": {
    "name": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
    "neck": "20-400",
    "color": "Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll20-400TallMattSl"
   },
   "CMP-ROC-PNK-13415-DOT": {
    "name": "Pink cap with dots or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Pink",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll13-415PinkDot"
   },
   "CMP-ROC-PNK-17415-DOT": {
    "name": "Pink with dots cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
    "neck": "17-415",
    "color": "Pink",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CpRoll17-415PnkDot"
   },
   "CMP-ROC-SBLK-13415": {
    "name": "Shiny Black cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll13-415BlkSh"
   },
   "CMP-ROC-SBLK-17415": {
    "name": "Shiny black cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
    "neck": "17-415",
    "color": "Shiny Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CpRoll17-415ShnBlk"
   },
   "CMP-ROC-SBLK-20400-T": {
    "name": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
    "neck": "20-400",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll20-400TallShnBlk"
   },
   "CMP-ROC-SGLD-13415": {
    "name": "Shiny Gold cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll13-415GlSh"
   },
   "CMP-ROC-SGLD-17415": {
    "name": "Shiny gold cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
    "neck": "17-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CpRoll17-415ShnGl"
   },
   "CMP-ROC-SGLD-20400-T": {
    "name": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
    "neck": "20-400",
    "color": "Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll20-400TallShnGl"
   },
   "CMP-ROC-SLV-13415-DOT": {
    "name": "Silver cap with dots or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll13-415SlDot"
   },
   "CMP-ROC-SLV-17415-DOT": {
    "name": "Silver with dots cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
    "neck": "17-415",
    "color": "Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CpRoll17-415SlDot"
   },
   "CMP-ROC-SSLV-13415": {
    "name": "Shiny Silver cap or closure for rollon bottles, Threadsize 13-415",
    "type": "roll-on-cap",
    "neck": "13-415",
    "color": "Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll13-415SlSh"
   },
   "CMP-ROC-SSLV-17415": {
    "name": "Shiny silver cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
    "neck": "17-415",
    "color": "Shiny Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CpRoll17-415ShnSl"
   },
   "CMP-ROC-SSLV-20400-T": {
    "name": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
    "type": "roll-on-cap",
    "neck": "20-400",
    "color": "Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CPRoll20-400TallShnSl"
   },
   "CMP-ROC-WHT-17415": {
    "name": "White cap or closure for rollon bottles, Threadsize 17-415",
    "type": "roll-on-cap",
    "neck": "17-415",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CpRoll17-415White"
   },
   "CMP-SPR-BKSL-18-415-02": {
    "name": "Black Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
    "neck": "18-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSp18-415Blk"
   },
   "CMP-SPR-BLK-15-415": {
    "name": "Shiny Black Fine Mist Sprayer, Thread size 15-415",
    "type": "fine-mist-sprayer",
    "neck": "15-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry15-415Blk"
   },
   "CMP-SPR-BLK-17-415-01": {
    "name": "Shiny black collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
    "neck": "17-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry17-415Blk"
   },
   "CMP-SPR-BLK-18-415-02": {
    "name": "Black Antique or Vintage style bulb sprayer with tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
    "neck": "18-415",
    "color": "Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSpTsl18-415Blk"
   },
   "CMP-SPR-CLR-17-415": {
    "name": "Shiny turquoise collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
    "neck": "17-415",
    "color": "Turquoise",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry17-415Tur"
   },
   "CMP-SPR-GLD-15-415": {
    "name": "Matte Gold Fine Mist Sprayer, Thread size 15-415",
    "type": "fine-mist-sprayer",
    "neck": "15-415",
    "color": "Matte Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry15-415MattGl"
   },
   "CMP-SPR-GLD-18-415-02": {
    "name": "Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
    "neck": "18-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSp18-415Gl"
   },
   "CMP-SPR-GLD-18415-TSL": {
    "name": "Gold Antique or Vintage style bulb sprayer with tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
    "neck": "18-415",
    "color": "Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP18-415AnSpTslGl"
   },
   "CMP-SPR-IVGD-18-415-01": {
    "name": "Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
    "neck": "18-415",
    "color": "Ivory Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSp18-415IvyGl"
   },
   "CMP-SPR-IVGD-18-415-02": {
    "name": "Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
    "neck": "18-415",
    "color": "Ivory Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSpTsl18-415IvyGl"
   },
   "CMP-SPR-IVSL-18-415-01": {
    "name": "Ivory Silver Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
    "neck": "18-415",
    "color": "Ivory Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSp18-415IvySl"
   },
   "CMP-SPR-IVSL-18-415-02": {
    "name": "Ivory Silver Antique or Vintage style bulb sprayer with silver fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
    "neck": "18-415",
    "color": "Ivory Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSpTsl18-415IvySl"
   },
   "CMP-SPR-LVN-18-415-01": {
    "name": "Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
    "neck": "18-415",
    "color": "Lavender",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSp18-415Lvn"
   },
   "CMP-SPR-LVN-18-415-02": {
    "name": "Lavender Antique or Vintage style bulb sprayer with silver fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
    "neck": "18-415",
    "color": "Lavender",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSpTsl18-415Lvn"
   },
   "CMP-SPR-MSLV-18-415-01": {
    "name": "Matte Silver Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
    "neck": "18-415",
    "color": "Matte Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSp18-415MtSl"
   },
   "CMP-SPR-MSLV-18-415-02": {
    "name": "Matte Silver Antique or Vintage style bulb sprayer with tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
    "neck": "18-415",
    "color": "Matte Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSpTsl18-415MtS"
   },
   "CMP-SPR-MTCP-13-415-01": {
    "name": "Sprayer Matte Copper Thread 13-415",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Matte Copper",
-   "applicator": "Fine Mist Sprayer"
+   "applicator": "Fine Mist Sprayer",
+   "itemCode": "13-415CAP4SpryCuMt"
   },
   "CMP-SPR-MTCP-13-415-07": {
    "name": "Matte Copper Fine Mist Sprayer, Thread size 13-415",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Copper",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "CP13-415SpryCuMt"
   },
   "CMP-SPR-MTCP-18-415-03": {
    "name": "Mate Copper collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
    "neck": "18-415",
    "color": "Copper",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry18-415Cu"
   },
   "CMP-SPR-MTGD-18-415-01": {
    "name": "Sprayer Matte Gold Thread 18-415",
    "type": "fine-mist-sprayer",
    "neck": "18-415",
    "color": "Matte Gold",
-   "applicator": "Fine Mist Sprayer"
+   "applicator": "Fine Mist Sprayer",
+   "itemCode": "18-415CAP4SpryMtGl"
   },
   "CMP-SPR-MTGD-18-415-05": {
    "name": "Matte Gold collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
    "neck": "18-415",
    "color": "Matte Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry18-415MtGl"
   },
   "CMP-SPR-MTSL-13-415-01": {
    "name": "Sprayer Matte Silver Thread 13-415",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Matte Silver",
-   "applicator": "Fine Mist Sprayer"
+   "applicator": "Fine Mist Sprayer",
+   "itemCode": "13-415CAP4SprySlMt"
   },
   "CMP-SPR-MTSL-18-415-06": {
    "name": "Matte Silver collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
    "neck": "18-415",
    "color": "Matte Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry18-415MtSl"
   },
   "CMP-SPR-PNK-18-415": {
    "name": "Pink, Antique or Vintage style bulb sprayer with Gold fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
    "neck": "18-415",
    "color": "Pink",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSpTsl18-415Pnk"
   },
   "CMP-SPR-RED-02": {
    "name": "Sprayer Red",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Red",
-   "applicator": "Fine Mist Sprayer"
+   "applicator": "Fine Mist Sprayer",
+   "itemCode": "GBATom5RedBurg"
   },
   "CMP-SPR-RED-17-415": {
    "name": "Shiny red collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
    "neck": "17-415",
    "color": "Red",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry17-415Red"
   },
   "CMP-SPR-RED-18-415-01": {
    "name": "Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
    "neck": "18-415",
    "color": "Red",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSp18-415Red"
   },
   "CMP-SPR-RED-18-415-02": {
    "name": "Red, Antique or Vintage style bulb sprayer with Silver fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
    "neck": "18-415",
    "color": "Red",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSpTsl18-415Red"
   },
   "CMP-SPR-SGLD-15-415": {
    "name": "Shiny Gold Fine Mist Sprayer, Thread size 15-415",
    "type": "fine-mist-sprayer",
    "neck": "15-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry15-415ShnGl"
   },
   "CMP-SPR-SGLD-17-415": {
    "name": "Shiny gold collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
    "neck": "17-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry17-415Gl"
   },
   "CMP-SPR-SHBK-18-415-01": {
    "name": "Sprayer Shiny Black Thread 18-415",
    "type": "fine-mist-sprayer",
    "neck": "18-415",
    "color": "Shiny Black",
-   "applicator": "Fine Mist Sprayer"
+   "applicator": "Fine Mist Sprayer",
+   "itemCode": "18-415CAP4SpryShnBlk"
   },
   "CMP-SPR-SHBK-18-415-06": {
    "name": "Shiny Black collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
    "neck": "18-415",
    "color": "Shiny Black",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry18-415ShnBlk"
   },
   "CMP-SPR-SHGD-13-415-01": {
    "name": "Sprayer Shiny Gold Thread 13-415",
    "type": "fine-mist-sprayer",
    "neck": "13-415",
    "color": "Shiny Gold",
-   "applicator": "Fine Mist Sprayer"
+   "applicator": "Fine Mist Sprayer",
+   "itemCode": "13-415CAP4SpryGlSh"
   },
   "CMP-SPR-SHGD-18-415-05": {
    "name": "Shiny Gold collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
    "neck": "18-415",
    "color": "Shiny Gold",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry18-415ShnGl"
   },
   "CMP-SPR-SHSL-18-415-06": {
    "name": "Shiny Silver collar sprayer, Thread size 18-415",
    "type": "fine-mist-sprayer",
    "neck": "18-415",
    "color": "Shiny Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry18-415ShnSl"
   },
   "CMP-SPR-SLV-15-415": {
    "name": "Matte Silver Fine Mist Sprayer, Thread size 15-415",
    "type": "fine-mist-sprayer",
    "neck": "15-415",
    "color": "Matte Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry15-415MattSl"
   },
   "CMP-SPR-SLV-17-415": {
    "name": "Matte silver collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
    "neck": "17-415",
    "color": "Matte Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry17-415MattSl"
   },
   "CMP-SPR-SSLV-15-415": {
    "name": "Shiny Silver Fine Mist Sprayer, Thread size 15-415",
    "type": "fine-mist-sprayer",
    "neck": "15-415",
    "color": "Shiny Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry15-415ShnSl"
   },
   "CMP-SPR-SSLV-17-415": {
    "name": "Shiny silver collar sprayer, Thread size 17-415",
    "type": "fine-mist-sprayer",
    "neck": "17-415",
    "color": "Shiny Silver",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "Spry17-415ShnSl"
   },
   "CMP-SPR-WHT-18-415-01": {
    "name": "White Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415",
    "type": "vintage-bulb-sprayer",
    "neck": "18-415",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSp18-415Wht"
   },
   "CMP-SPR-WHT-18-415-02": {
    "name": "White Antique or Vintage style bulb sprayer with silver fittings and tassel. Thread Size 18-415",
    "type": "tassel-bulb-sprayer",
    "neck": "18-415",
    "color": "White",
-   "applicator": null
+   "applicator": null,
+   "itemCode": "AnSpTsl18-415Wht"
   }
  }
 }

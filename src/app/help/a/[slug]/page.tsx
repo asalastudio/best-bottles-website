@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
         title: { absolute: `${entry.title} | Help Center | Best Bottles` },
         description: entry.shortAnswer,
-        alternates: pageAlternates(entryHref(entry)),
+        alternates: pageAlternates(entryHref(entry), undefined, { json: `/api/kb/v1/entries/${encodeURIComponent(entry.id)}` }),
     };
 }
 
@@ -35,9 +35,21 @@ export default async function HelpEntryPage({ params }: { params: Promise<{ slug
     const topic = topicById(entry.topic);
     const related = entry.related.map((id) => publicEntryById(id)).filter((item) => item !== null);
     const topicHref = `/help/topic/${entry.topic}`;
+    const hasDetails = entry.shortAnswer.trim() !== entry.body.trim();
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [{
+            "@type": "Question",
+            name: entry.title,
+            acceptedAnswer: { "@type": "Answer", text: entry.body, url: `${SITE_URL}${entryHref(entry)}` },
+        }],
+        dateModified: entry.updatedOn,
+    };
 
     return (
         <HelpShell crumbs={[{ name: "Help", href: "/help" }, ...(topic ? [{ name: topic.title, href: topicHref }] : []), { name: entry.title }]}>
+            <JsonLd data={faqJsonLd} />
             <JsonLd data={buildBreadcrumbJsonLd([
                 { name: "Help", url: `${SITE_URL}/help` },
                 ...(topic ? [{ name: topic.title, url: `${SITE_URL}${topicHref}` }] : []),
@@ -47,27 +59,17 @@ export default async function HelpEntryPage({ params }: { params: Promise<{ slug
                 <article>
                     <h1 className="font-serif text-4xl leading-tight sm:text-5xl">{entry.title}</h1>
 
-                    <section aria-label="Short answer" className="mt-8 border-l-2 border-muted-gold bg-warm-white px-5 py-4">
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gold-dim">Short answer</p>
-                        <p className="mt-2 text-lg leading-relaxed">{entry.shortAnswer}</p>
-                    </section>
+                    <p className="mt-8 border-l-2 border-muted-gold bg-warm-white px-5 py-4 text-lg leading-relaxed">{entry.shortAnswer}</p>
 
-                    <section aria-labelledby="details" className="mt-10">
-                        <h2 id="details" className="font-serif text-2xl">The full answer</h2>
-                        <p className="mt-3 text-base leading-relaxed text-obsidian/90">{entry.body}</p>
-                    </section>
-
-                    {entry.openQuestions.length > 0 && (
-                        <section aria-labelledby="clarifying" className="mt-8 rounded-sm border border-[#E8D6B0] bg-[#FBF5E8] p-5">
-                            <h2 id="clarifying" className="text-sm font-semibold normal-case tracking-normal text-[#6E4B0E]">Being clarified</h2>
-                            {entry.openQuestions.map((question) => (
-                                <p key={question} className="mt-2 text-sm leading-relaxed text-[#5C4310]">{question}</p>
-                            ))}
+                    {hasDetails && (
+                        <section aria-labelledby="details" className="mt-10">
+                            <h2 id="details" className="font-serif text-2xl">Details</h2>
+                            <p className="mt-3 text-base leading-relaxed text-obsidian/90">{entry.body}</p>
                         </section>
                     )}
 
                     <div className="mt-10 flex flex-wrap gap-3">
-                        <HelpGraceButton question={entry.title} />
+                        <HelpGraceButton />
                         <Link href={`/help/ask?q=${encodeURIComponent(entry.title)}`} className="inline-flex h-11 items-center rounded-md border border-champagne px-5 text-sm hover:border-gold-dim">
                             This didn&apos;t answer my question
                         </Link>
@@ -94,26 +96,10 @@ export default async function HelpEntryPage({ params }: { params: Promise<{ slug
                     <dl className="mt-3 space-y-3">
                         {entry.sources.map((source) => (
                             <div key={source.ref}>
-                                <dt className="sr-only">Document</dt>
-                                <dd>
-                                    {source.url ? <a href={source.url} className="underline underline-offset-4 hover:text-gold-dim" rel="nofollow">{source.label}</a> : source.label}
-                                </dd>
-                                <dt className="sr-only">Checked</dt>
+                                <dt>{source.url ? <a href={source.url} className="underline underline-offset-4 hover:text-gold-dim" rel="nofollow">{source.label}</a> : source.label}</dt>
                                 <dd className="text-slate">Checked {formatDate(source.checkedOn)}</dd>
                             </div>
                         ))}
-                        <div>
-                            <dt className="text-xs text-slate">Answer ID</dt>
-                            <dd className="font-mono text-xs">{entry.id} · v{entry.version}</dd>
-                        </div>
-                        <div>
-                            <dt className="text-xs text-slate">Status</dt>
-                            <dd>Approved policy, published {formatDate(entry.publishedOn)}</dd>
-                        </div>
-                        <div>
-                            <dt className="text-xs text-slate">Owner</dt>
-                            <dd>{entry.owner ?? "Not yet assigned"}</dd>
-                        </div>
                     </dl>
                 </aside>
             </div>

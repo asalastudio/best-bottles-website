@@ -3,6 +3,7 @@ import { isMissingHeroSource, isVisibleCatalogGroup } from "@/lib/products/catal
 import { isLegacyProductRouteAlias } from "@/lib/products/legacy-product-route-overrides";
 import { isPrivatePath } from "./robots";
 import { KB_TOPICS, entryHref, publicEntries } from "@/lib/help/kb";
+import { allBodies, fitHref } from "@/lib/help/fit";
 
 type ChangeFrequency = NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
 
@@ -50,14 +51,16 @@ export const NOT_IN_SITEMAP: Readonly<Record<string, string>> = {
     "/blog/[slug]": "listed per post in /server-sitemap.xml",
     "/help/a/[slug]": "listed per published help answer (HELP_SITEMAP_PAGES)",
     "/help/topic/[topic]": "listed per help topic (HELP_SITEMAP_PAGES)",
+    "/help/fit/[bottle]": "listed per bottle with shared closures (HELP_SITEMAP_PAGES)",
     "/help/search": "search results; noindex",
 };
 
-/** Help topics and published public answers: fixed URLs that come from the knowledge base. */
+/** Help topics, published public answers and bottle fit pages: fixed URLs that come from the knowledge base. */
 export function helpSitemapPages(): Array<{ path: string; changeFrequency: ChangeFrequency; priority: number }> {
     return [
         ...KB_TOPICS.filter((topic) => topic.id !== "products").map((topic) => ({ path: `/help/topic/${topic.id}`, changeFrequency: "monthly" as const, priority: 0.5 })),
         ...publicEntries().map((entry) => ({ path: entryHref(entry), changeFrequency: "monthly" as const, priority: 0.5 })),
+        ...allBodies().filter((body) => body.interchangeable).map((body) => ({ path: fitHref(body), changeFrequency: "monthly" as const, priority: 0.4 })),
     ];
 }
 

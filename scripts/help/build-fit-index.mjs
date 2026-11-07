@@ -103,10 +103,10 @@ for (const body of bodies) {
         fitmentTypes: list(body.fitmentTypes).filter((t) => t !== "N/A"),
         heightMm: num(body.dimsHeightBareMm || body.heightWithoutCapMm),
         diameterMm: num(body.dimsDiameterMm || body.diameterMm || body.widthMm),
-        dimsSource: body.dimsSource || null,
         listed: listedIds,
         sameThread: sameThread.sort(),
-        conflicting: [...conflicting.entries()].map(([componentId, reason]) => ({ componentId, reason })).sort((a, b) => a.componentId.localeCompare(b.componentId)),
+        // Register reasons are staff working notes ("classify before composing"), so only the ids leave the register.
+        conflicting: [...conflicting.keys()].sort(),
     });
 }
 
@@ -119,6 +119,8 @@ for (const id of [...used].sort()) {
         neck: c.neck || null,
         color: c.capColor || c.color || c.finish || null,
         applicator: c.applicator || null,
+        // The code customers order and search by. REF- codes are register placeholders, not real item codes.
+        itemCode: c.websiteSku && !c.websiteSku.startsWith("REF-") ? c.websiteSku : null,
     };
 }
 

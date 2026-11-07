@@ -6,10 +6,10 @@ import { useGrace } from "@/components/useGrace";
 import { MAX_QUERY_LENGTH } from "@/lib/help/constants";
 
 const SUGGESTIONS: Array<{ label: string; href: string }> = [
-    { label: "Which top fits my bottle?", href: "/help/fit" },
-    { label: "How long does shipping take?", href: "/help/search?q=how+long+does+shipping+take" },
-    { label: "Return policy", href: "/help/a/returns" },
-    { label: "Order minimum", href: "/help/a/minimum-order" },
+    { label: "Which cap fits my bottle?", href: "/help/fit" },
+    { label: "Samples below the minimum", href: "/help/a/samples" },
+    { label: "Damaged or missing items", href: "/help/a/damaged-or-defective" },
+    { label: "Shipping to Canada", href: "/help/a/shipping-to-canada" },
 ];
 
 /**
@@ -29,13 +29,7 @@ export default function HelpAskBox({ defaultQuery = "", compact = false }: { def
     }
 
     return (
-        <section aria-labelledby={compact ? undefined : "ask-grace-heading"} className={compact ? "" : "rounded-sm border border-champagne/70 bg-warm-white px-5 py-7 sm:px-10 sm:py-9"}>
-            {!compact && (
-                <div className="mb-5 text-center">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gold-dim">Ask Grace or search</p>
-                    <h2 id="ask-grace-heading" className="mt-2 text-base normal-case tracking-normal text-obsidian">Tell us what you need. Everyday words are fine.</h2>
-                </div>
-            )}
+        <section aria-label="Search the help center or ask Grace" className={compact ? "" : "rounded-sm border border-champagne/70 bg-warm-white px-5 py-6 sm:px-8 sm:py-8"}>
             <form action="/help/search" method="get" role="search" className="flex flex-col gap-3 sm:flex-row">
                 <label htmlFor={compact ? "help-q-compact" : "help-q"} className="sr-only">Your question</label>
                 <input
@@ -45,7 +39,7 @@ export default function HelpAskBox({ defaultQuery = "", compact = false }: { def
                     value={query}
                     onChange={(event) => setQuery(event.target.value)}
                     maxLength={MAX_QUERY_LENGTH}
-                    placeholder="e.g. 7 ml roll-on, return policy, which sprayer fits"
+                    placeholder="e.g. 7 ml roll-on, returns, sprayer for Bell"
                     autoComplete="off"
                     className="h-12 w-full min-w-0 shrink-0 rounded-md border border-champagne bg-white px-4 sm:w-auto sm:flex-1 text-base text-obsidian placeholder:text-slate/70 focus:border-gold-dim focus:outline-none focus:ring-2 focus:ring-muted-gold/30"
                 />
@@ -59,8 +53,7 @@ export default function HelpAskBox({ defaultQuery = "", compact = false }: { def
                 </div>
             </form>
             {!compact && (
-                <>
-                    <ul className="mt-5 flex flex-wrap justify-center gap-2" aria-label="Common questions">
+                    <ul className="mt-5 flex flex-wrap gap-2" aria-label="Common questions">
                         {SUGGESTIONS.map((suggestion) => (
                             <li key={suggestion.href}>
                                 <Link href={suggestion.href} className="inline-flex min-h-10 items-center rounded-full border border-champagne px-4 text-sm text-obsidian transition-colors hover:border-gold-dim hover:bg-linen">
@@ -69,8 +62,6 @@ export default function HelpAskBox({ defaultQuery = "", compact = false }: { def
                             </li>
                         ))}
                     </ul>
-                    <p className="mt-5 text-center text-xs text-slate">Answers come from our approved FAQ and catalog records, with their source shown.</p>
-                </>
             )}
         </section>
     );

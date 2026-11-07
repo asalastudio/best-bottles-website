@@ -36,13 +36,14 @@ const SYNONYMS: Array<[RegExp, string]> = [
     [/\b(wire|ach|credit card|paypal|amex)\b/g, " pay "],
 ];
 
-const CLOSURES: Array<{ pattern: RegExp; label: string; fitment: string[]; bucket: ApplicatorBucket }> = [
-    { pattern: /\b(roll[\s-]?ons?|roller ?balls?|rollers?)\b/, label: "roll-on", fitment: ["Metal Roller Ball", "Plastic Roller Ball"], bucket: "rollon" },
-    { pattern: /\b(fine mist|mist|spray(er|s)?( tops?)?|atomi[sz]ers?|spritz)\b/, label: "sprayer", fitment: ["Fine Mist Sprayer", "Perfume Spray Pump", "Atomizer"], bucket: "finemist" },
-    { pattern: /\b(droppers?|pipettes?)\b/, label: "dropper", fitment: ["Dropper"], bucket: "dropper" },
-    { pattern: /\b(lotion pumps?|pumps?)\b/, label: "lotion pump", fitment: ["Lotion Pump"], bucket: "lotionpump" },
-    { pattern: /\b(bulb sprayers?|vintage|tassel)\b/, label: "bulb sprayer", fitment: ["Vintage Bulb Sprayer", "Vintage Bulb Sprayer with Tassel"], bucket: "vintagestyle" },
-    { pattern: /\b(reducers?|orifice)\b/, label: "reducer", fitment: ["Reducer"], bucket: "reducer" },
+/** partTypes are the fit index component types each word means, for showing the matching parts. */
+const CLOSURES: Array<{ pattern: RegExp; label: string; fitment: string[]; bucket: ApplicatorBucket; partTypes: string[] }> = [
+    { pattern: /\b(roll[\s-]?ons?|roller ?balls?|rollers?)\b/, label: "roll-on", fitment: ["Metal Roller Ball", "Plastic Roller Ball"], bucket: "rollon", partTypes: ["roll-on-cap", "roller-insert"] },
+    { pattern: /\b(fine mist|mist|spray(er|s)?( tops?)?|atomi[sz]ers?|spritz)\b/, label: "sprayer", fitment: ["Fine Mist Sprayer", "Perfume Spray Pump", "Atomizer"], bucket: "finemist", partTypes: ["fine-mist-sprayer"] },
+    { pattern: /\b(droppers?|pipettes?)\b/, label: "dropper", fitment: ["Dropper"], bucket: "dropper", partTypes: ["dropper"] },
+    { pattern: /\b(lotion pumps?|pumps?)\b/, label: "lotion pump", fitment: ["Lotion Pump"], bucket: "lotionpump", partTypes: ["lotion-pump"] },
+    { pattern: /\b(bulb sprayers?|vintage|tassel)\b/, label: "bulb sprayer", fitment: ["Vintage Bulb Sprayer", "Vintage Bulb Sprayer with Tassel"], bucket: "vintagestyle", partTypes: ["vintage-bulb-sprayer", "tassel-bulb-sprayer"] },
+    { pattern: /\b(reducers?|orifice)\b/, label: "reducer", fitment: ["Reducer"], bucket: "reducer", partTypes: ["reducer"] },
 ];
 
 const FIT_WORDS = /\b(fits?|fitting|compatible|compatibility|work with|go with|goes with|match(es)?|thread|neck|closure for|cap for|top for)\b/;
@@ -101,6 +102,8 @@ export type HelpSearchResult = {
     size: SizeAnswer | null;
     bottles: FitBody[];
     fitIntent: boolean;
+    /** The closure asked about: its label and the part types it covers. null when none was named. */
+    closure: { label: string; partTypes: string[] } | null;
     gap: string | null;
     catalogHref: string | null;
 };
@@ -212,7 +215,7 @@ export function searchHelp(raw: string): HelpSearchResult {
         })
         : null;
 
-    return { query: original, interpretation, answers, size, bottles: bottles.slice(0, 8), fitIntent, gap, catalogHref: catalog };
+    return { query: original, interpretation, answers, size, bottles: bottles.slice(0, 8), fitIntent, closure: closure && { label: closure.label, partTypes: closure.partTypes }, gap, catalogHref: catalog };
 }
 
 export function sizeAlternativeLabel(body: FitBody): string {

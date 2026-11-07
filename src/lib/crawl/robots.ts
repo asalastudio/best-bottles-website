@@ -29,6 +29,12 @@ export const PRIVATE_PATH_PREFIXES = [
 ] as const;
 
 /**
+ * Public, read-only APIs inside the private `/api/` section. robots.txt applies
+ * the longest matching rule, so `Allow: /api/kb/` wins over `Disallow: /api/`.
+ */
+export const PUBLIC_API_PREFIXES = ["/api/kb/"] as const;
+
+/**
  * AI crawlers we name explicitly so it is clear they are welcome on the public
  * pages. They share the `*` group, so the private paths stay closed to them
  * too: a group of its own containing only `Allow: /` would override every
@@ -45,6 +51,7 @@ export const SITEMAP_PATHS = ["/sitemap.xml", "/server-sitemap.xml"] as const;
  * tests/crawl-robots-sitemap.test.ts checks no sitemap page falls under one.)
  */
 export function isPrivatePath(pathname: string): boolean {
+    if (PUBLIC_API_PREFIXES.some((prefix) => pathname.startsWith(prefix))) return false;
     return PRIVATE_PATH_PREFIXES.some((prefix) => (prefix.endsWith("/")
         ? pathname.startsWith(prefix)
         : pathname === prefix || pathname.startsWith(`${prefix}/`)));
@@ -61,7 +68,7 @@ export function buildRobots(siteUrl: string): MetadataRoute.Robots {
         rules: [
             {
                 userAgent: ["*", ...NAMED_CRAWLERS],
-                allow: "/",
+                allow: ["/", ...PUBLIC_API_PREFIXES],
                 disallow: [...PRIVATE_PATH_PREFIXES],
             },
         ],

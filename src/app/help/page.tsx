@@ -19,14 +19,15 @@ const ESSENTIALS: Array<{ entryId: string; figure: string; label: string }> = [
     { entryId: "policy.same-day", figure: "11:00am PST", label: "Same-day shipping cutoff, by phone, $15 fee" },
 ];
 
-const POPULAR = ["policy.lead-times", "policy.returns", "policy.samples", "policy.missing-items", "policy.international-shipping", "policy.shipping-options"];
+/** Asked often and not already one of the essentials above. */
+const POPULAR = ["policy.samples", "policy.missing-items", "policy.damaged-defective", "policy.shipping-options", "policy.international-shipping", "policy.payments"];
 
 export default function HelpHomePage() {
     return (
         <HelpShell>
             <header className="text-center">
                 <h1 className="font-serif text-4xl leading-tight sm:text-5xl">How can we help?</h1>
-                <p className="mt-3 text-base text-slate">Answers for your bottle, your closure and your order. No account needed.</p>
+                <p className="mt-3 text-base text-slate">Orders, shipping, returns, and which closures fit your bottle.</p>
             </header>
 
             <div className="mt-10">
@@ -53,7 +54,7 @@ export default function HelpHomePage() {
 
             <section aria-labelledby="topics" className="mt-16">
                 <div className="flex items-end justify-between gap-4">
-                    <h2 id="topics" className="font-serif text-3xl">Or find it yourself</h2>
+                    <h2 id="topics" className="font-serif text-3xl">Browse by topic</h2>
                 </div>
                 <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {KB_TOPICS.map((topic) => {
@@ -76,10 +77,9 @@ export default function HelpHomePage() {
 
             <section aria-labelledby="finder-teaser" className="mt-16 grid gap-6 rounded-sm bg-obsidian p-6 text-warm-white sm:grid-cols-[1fr_auto] sm:items-center sm:p-10">
                 <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-gold">Fit finder</p>
-                    <h2 id="finder-teaser" className="mt-2 font-serif text-3xl">Which cap, sprayer or roll-on goes with my bottle?</h2>
+                    <h2 id="finder-teaser" className="font-serif text-3xl">Which cap, sprayer or roll-on fits my bottle?</h2>
                     <p className="mt-2 max-w-xl text-sm leading-relaxed text-warm-white/75">
-                        Pick a bottle to see the closures our catalog lists for it, the same-thread parts that are not confirmed, and anything our records disagree on.
+                        Pick your bottle to see the closures our catalog lists for it, with item codes.
                     </p>
                 </div>
                 <Link href="/help/fit" className="inline-flex h-12 items-center justify-center rounded-md bg-muted-gold px-6 text-sm font-semibold text-obsidian transition-colors hover:bg-champagne">
