@@ -9,6 +9,7 @@ import thumbs from '@/lib/products/cylinder-cap-thumbnails.generated.json';
 import { cylinderMasterSource } from '@/lib/products/cylinder-master';
 import { stageLayout } from '@/lib/products/pdp-redesign/stage';
 import divaSkus from '@/lib/products/diva-master-skus.json';
+import { DIVA_KIT_VERSION, isCorrectedDivaKit } from '@/lib/paper-doll/diva-kit-corrections';
 import { beforeDivaRelease, divaReleaseSkus } from './helpers/diva-release-2026-11-04';
 vi.mock('server-only', () => ({}));
 import { GET } from '@/app/api/bottle-masters/approved/route';
@@ -73,7 +74,15 @@ describe('Diva review masters published (2026-11-04)', () => {
             const response = await GET(new Request(`https://preview.vercel.app/api/bottle-masters/approved?sku=${sku}&v=${index.version}`));
             expect(response.status, sku).toBe(200);
             expect((await response.json()).kit).toEqual(hosted[sku]);
-            expect(cylinderMasterSource(sku)).toEqual({ family: 'approved', version: index.version });
+            // The Diva kits corrected on 7 Nov 2026 (seated or centred pumps, restored overcap tops) and are requested under their
+            // own version; the base version above still returns the 4 Nov recipe byte for byte.
+            const seated = isCorrectedDivaKit(sku);
+            expect(cylinderMasterSource(sku)).toEqual({ family: 'approved', version: seated ? DIVA_KIT_VERSION : index.version });
+            if (seated) {
+                const current = await GET(new Request(`https://preview.vercel.app/api/bottle-masters/approved?sku=${sku}&v=${DIVA_KIT_VERSION}`));
+                expect(current.status, sku).toBe(200);
+                expect((await current.json()).kit).not.toEqual(hosted[sku]);
+            }
         }
     });
 });

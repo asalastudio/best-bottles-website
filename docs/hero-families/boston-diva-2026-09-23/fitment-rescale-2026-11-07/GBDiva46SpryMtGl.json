@@ -1,0 +1,19 @@
+{
+ "source": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46SpryMtGl.3a43b073b7ef.png",
+ "output": "/images/catalog/boston-diva-approved-2026-09-23/GBDiva46SpryMtGl.b90f43018e4e.png",
+ "scale": 1.1118,
+ "collarWidthPx": 322,
+ "neckRingWidthPx": 469,
+ "pump": {
+  "top": 429,
+  "collarFoot": 1006,
+  "seatedOnShoulderY": 1006,
+  "centreX": 914.0
+ },
+ "cap": {
+  "top": 1477,
+  "foot": 2079
+ },
+ "realRingRatio": 1.31,
+ "sha256": "b90f43018e4e728b2690fc056985cb45510925b069116fbed5f8ac0d5febf755"
+}
