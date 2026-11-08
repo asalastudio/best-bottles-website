@@ -1,0 +1,870 @@
+{
+ "version": "diva-overcap-tops-v1",
+ "source": "scripts/register/diva-overcap-tops.py",
+ "rows": {
+  "GBDiva100SpryCu": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/9f1d8ec81e813eb5.f1170b8068ad.webp",
+    "key": "/images/diva-overcaps-2026-11-07/9f1d8ec81e813eb5.f1170b8068ad.webp",
+    "sha256": "f1170b8068adf96dcbf2c948e98d45026082a4df9b85e95bbc532ec2bf6152f6",
+    "bytes": 61692,
+    "width": 339,
+    "height": 608
+   },
+   "box": {
+    "x": 424.911,
+    "y": 109.305,
+    "width": 156.19,
+    "height": 280.129
+   },
+   "plate": "GBDiva100SpryCu",
+   "restoredTopPx": 2.38
+  },
+  "GBDiva100SpryMtGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/03e407f892c1bc98.39e3629ced98.webp",
+    "key": "/images/diva-overcaps-2026-11-07/03e407f892c1bc98.39e3629ced98.webp",
+    "sha256": "39e3629ced98cfe60857584816be042a9c8d7286460669cb2ac5d690dc71e1cc",
+    "bytes": 42944,
+    "width": 335,
+    "height": 580
+   },
+   "box": {
+    "x": 425.142,
+    "y": 124.366,
+    "width": 154.338,
+    "height": 267.213
+   },
+   "plate": "GBDiva100SpryMtGl",
+   "restoredTopPx": 4.71
+  },
+  "GBDiva100SpryMtSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/4f37938f51fc8d26.563625fd8970.webp",
+    "key": "/images/diva-overcaps-2026-11-07/4f37938f51fc8d26.563625fd8970.webp",
+    "sha256": "563625fd89706b4c3b69a9ec1a1e149ea2d80aeff9768a7077998bdabc7783e0",
+    "bytes": 15424,
+    "width": 342,
+    "height": 596
+   },
+   "box": {
+    "x": 421.212,
+    "y": 112.576,
+    "width": 157.577,
+    "height": 274.608
+   },
+   "plate": "GBDiva100SpryMtSl",
+   "restoredTopPx": 0.09
+  },
+  "GBDiva100SpryShnBlk": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/d4ba4f25bbfcc709.450a834c0ff8.webp",
+    "key": "/images/diva-overcaps-2026-11-07/d4ba4f25bbfcc709.450a834c0ff8.webp",
+    "sha256": "450a834c0ff8cecc70512f388293acc13e80d67b07a8fa9ba74b644518850e36",
+    "bytes": 25806,
+    "width": 336,
+    "height": 586
+   },
+   "box": {
+    "x": 422.357,
+    "y": 122.987,
+    "width": 155.286,
+    "height": 270.827
+   },
+   "plate": "GBDiva100SpryShnBlk",
+   "restoredTopPx": 4.16
+  },
+  "GBDiva100SpryShnGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/f4bed8473446d626.b05cf2f1fb9c.webp",
+    "key": "/images/diva-overcaps-2026-11-07/f4bed8473446d626.b05cf2f1fb9c.webp",
+    "sha256": "b05cf2f1fb9c95b47d535b09029822c00203520290e797b67dd6fbb130a5ab03",
+    "bytes": 69664,
+    "width": 334,
+    "height": 569
+   },
+   "box": {
+    "x": 420.98,
+    "y": 129.812,
+    "width": 153.882,
+    "height": 262.152
+   },
+   "plate": "GBDiva100SpryShnGl",
+   "restoredTopPx": 0.58
+  },
+  "GBDiva100SpryShnSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/88a82986fe45ebb1.627ff319e5fe.webp",
+    "key": "/images/diva-overcaps-2026-11-07/88a82986fe45ebb1.627ff319e5fe.webp",
+    "sha256": "627ff319e5feda6bf3e87fb9fd5f484c94636756b11c8e01a165810af547ae17",
+    "bytes": 28106,
+    "width": 331,
+    "height": 584
+   },
+   "box": {
+    "x": 423.75,
+    "y": 115.896,
+    "width": 152.498,
+    "height": 269.061
+   },
+   "plate": "GBDiva100SpryShnSl",
+   "restoredTopPx": -1.76
+  },
+  "GBDiva30SpryCu": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/cda6c725aaefdfee.38a44fc1fec2.webp",
+    "key": "/images/diva-overcaps-2026-11-07/cda6c725aaefdfee.38a44fc1fec2.webp",
+    "sha256": "38a44fc1fec27351df9eb4261e6081c39e91d1828358ce106fd511559a3eeba2",
+    "bytes": 72774,
+    "width": 331,
+    "height": 572
+   },
+   "box": {
+    "x": 390.144,
+    "y": 56.593,
+    "width": 226.586,
+    "height": 391.563
+   },
+   "plate": "GBDiva30SpryCu",
+   "restoredTopPx": 1.53
+  },
+  "GBDiva30SpryMtGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/fcc0a002625ccbf0.d7a13bd14f75.webp",
+    "key": "/images/diva-overcaps-2026-11-07/fcc0a002625ccbf0.d7a13bd14f75.webp",
+    "sha256": "d7a13bd14f75633a72e854e58596f113f7f28e6582b5198ba0ca05d84c5a8388",
+    "bytes": 48928,
+    "width": 329,
+    "height": 575
+   },
+   "box": {
+    "x": 388.421,
+    "y": 58.298,
+    "width": 225.217,
+    "height": 393.617
+   },
+   "plate": "GBDiva30SpryMtGl",
+   "restoredTopPx": 7.02
+  },
+  "GBDiva30SpryMtSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/104119cf1f893afb.319b1c294389.webp",
+    "key": "/images/diva-overcaps-2026-11-07/104119cf1f893afb.319b1c294389.webp",
+    "sha256": "319b1c2943895351bc2fabfa43ea2e7e1092b3558b45aa8c588c5f3c15a80858",
+    "bytes": 14652,
+    "width": 327,
+    "height": 581
+   },
+   "box": {
+    "x": 390.129,
+    "y": 47.018,
+    "width": 224.549,
+    "height": 398.97
+   },
+   "plate": "GBDiva30SpryMtSl",
+   "restoredTopPx": 2.06
+  },
+  "GBDiva30SpryShnBlk": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/e56d34b89add4a30.6657a9993113.webp",
+    "key": "/images/diva-overcaps-2026-11-07/e56d34b89add4a30.6657a9993113.webp",
+    "sha256": "6657a99931139674441f85495c016a1018e8d7bc82edef544d97aaabc0b6d2bf",
+    "bytes": 28856,
+    "width": 331,
+    "height": 579
+   },
+   "box": {
+    "x": 386.705,
+    "y": 58.734,
+    "width": 226.59,
+    "height": 396.362
+   },
+   "plate": "GBDiva30SpryShnBlk",
+   "restoredTopPx": 6.33
+  },
+  "GBDiva30SpryShnGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/d03ab40dd670bb34.f52c6b6877cc.webp",
+    "key": "/images/diva-overcaps-2026-11-07/d03ab40dd670bb34.f52c6b6877cc.webp",
+    "sha256": "f52c6b6877cccce27010d6b6c0ae1183f6fbfee79f363b3b02ce41af3e6e238c",
+    "bytes": 79054,
+    "width": 333,
+    "height": 571
+   },
+   "box": {
+    "x": 386.023,
+    "y": 62.151,
+    "width": 227.959,
+    "height": 390.885
+   },
+   "plate": "GBDiva30SpryShnGl",
+   "restoredTopPx": 2.91
+  },
+  "GBDiva30SpryShnSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/14941a72e2a89dba.63052254a6ba.webp",
+    "key": "/images/diva-overcaps-2026-11-07/14941a72e2a89dba.63052254a6ba.webp",
+    "sha256": "63052254a6bafbd6c7384118cbeab64020dfd6c1b634c8349811f838fc6107ae",
+    "bytes": 31256,
+    "width": 336,
+    "height": 588
+   },
+   "box": {
+    "x": 387.047,
+    "y": 43.25,
+    "width": 230.026,
+    "height": 402.545
+   },
+   "plate": "GBDiva30SpryShnSl",
+   "restoredTopPx": 0.84
+  },
+  "GBDiva46SpryCu": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/160fec53798ff1db.5d785071c936.webp",
+    "key": "/images/diva-overcaps-2026-11-07/160fec53798ff1db.5d785071c936.webp",
+    "sha256": "5d785071c9365bd2881e646a90717b62ceffa8f4c50ef319fb284c9eb838050c",
+    "bytes": 68340,
+    "width": 335,
+    "height": 580
+   },
+   "box": {
+    "x": 392.186,
+    "y": 61.183,
+    "width": 211.206,
+    "height": 365.67
+   },
+   "plate": "GBDiva46SpryCu",
+   "restoredTopPx": 1.41
+  },
+  "GBDiva46SpryMtGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/593f32ac5ac31255.d639b1db01b8.webp",
+    "key": "/images/diva-overcaps-2026-11-07/593f32ac5ac31255.d639b1db01b8.webp",
+    "sha256": "d639b1db01b876c910ba69a7eafa8024020e8d5a2e7e4f17b7b7fa8b5ec3675d",
+    "bytes": 46896,
+    "width": 348,
+    "height": 576
+   },
+   "box": {
+    "x": 396.296,
+    "y": 64.34,
+    "width": 219.391,
+    "height": 363.13
+   },
+   "plate": "GBDiva46SpryMtGl",
+   "restoredTopPx": 4.56
+  },
+  "GBDiva46SpryMtSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/9ca81ea218ebcd84.4964326ef80f.webp",
+    "key": "/images/diva-overcaps-2026-11-07/9ca81ea218ebcd84.4964326ef80f.webp",
+    "sha256": "4964326ef80fb4e71b4a109fd2f324f22a06f887d6c69ded8422a2daeefaf19a",
+    "bytes": 17362,
+    "width": 341,
+    "height": 603
+   },
+   "box": {
+    "x": 395.667,
+    "y": 44.537,
+    "width": 214.995,
+    "height": 380.182
+   },
+   "plate": "GBDiva46SpryMtSl",
+   "restoredTopPx": 1.38
+  },
+  "GBDiva46SpryShnBlk": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/87ccd1b1f8762920.55a8b7b9a1d1.webp",
+    "key": "/images/diva-overcaps-2026-11-07/87ccd1b1f8762920.55a8b7b9a1d1.webp",
+    "sha256": "55a8b7b9a1d1216b91ca9bb2277dcdcee4180706ef89faa897c63dafd1a37010",
+    "bytes": 28834,
+    "width": 334,
+    "height": 589
+   },
+   "box": {
+    "x": 394.719,
+    "y": 60.565,
+    "width": 210.569,
+    "height": 371.332
+   },
+   "plate": "GBDiva46SpryShnBlk",
+   "restoredTopPx": 7.07
+  },
+  "GBDiva46SpryShnGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/38ab29dfb3fac141.ff7213929b76.webp",
+    "key": "/images/diva-overcaps-2026-11-07/38ab29dfb3fac141.ff7213929b76.webp",
+    "sha256": "ff7213929b76117815621c6418ef24ba534fc42d15a33aa369ae9f04f72ff1f8",
+    "bytes": 76212,
+    "width": 335,
+    "height": 570
+   },
+   "box": {
+    "x": 395.02,
+    "y": 70.687,
+    "width": 211.858,
+    "height": 360.474
+   },
+   "plate": "GBDiva46SpryShnGl",
+   "restoredTopPx": 3.16
+  },
+  "GBDiva46SpryShnSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/09c61994e61e1cdd.38baeb91489e.webp",
+    "key": "/images/diva-overcaps-2026-11-07/09c61994e61e1cdd.38baeb91489e.webp",
+    "sha256": "38baeb91489e6167f5f0c6519dcf7de5d7c1e1b3f333301a46a864af0780edff",
+    "bytes": 31580,
+    "width": 350,
+    "height": 585
+   },
+   "box": {
+    "x": 392.818,
+    "y": 51.867,
+    "width": 220.655,
+    "height": 368.808
+   },
+   "plate": "GBDiva46SpryShnSl",
+   "restoredTopPx": -1.78
+  },
+  "GBDivaFrst46SpryCu": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/160fec53798ff1db.5d785071c936.webp",
+    "key": "/images/diva-overcaps-2026-11-07/160fec53798ff1db.5d785071c936.webp",
+    "sha256": "5d785071c9365bd2881e646a90717b62ceffa8f4c50ef319fb284c9eb838050c",
+    "bytes": 68340,
+    "width": 335,
+    "height": 580
+   },
+   "box": {
+    "x": 396.092,
+    "y": 68.655,
+    "width": 205.361,
+    "height": 355.551
+   },
+   "plate": "GBDiva46SpryCu",
+   "restoredTopPx": 1.37
+  },
+  "GBDivaFrst46SpryMtGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/593f32ac5ac31255.d639b1db01b8.webp",
+    "key": "/images/diva-overcaps-2026-11-07/593f32ac5ac31255.d639b1db01b8.webp",
+    "sha256": "d639b1db01b876c910ba69a7eafa8024020e8d5a2e7e4f17b7b7fa8b5ec3675d",
+    "bytes": 46896,
+    "width": 348,
+    "height": 576
+   },
+   "box": {
+    "x": 396.399,
+    "y": 73.055,
+    "width": 213.321,
+    "height": 353.083
+   },
+   "plate": "GBDiva46SpryMtGl",
+   "restoredTopPx": 4.44
+  },
+  "GBDivaFrst46SpryMtSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/3f9bcd6d8ddb6ccf.b4f8e9fef42b.webp",
+    "key": "/images/diva-overcaps-2026-11-07/3f9bcd6d8ddb6ccf.b4f8e9fef42b.webp",
+    "sha256": "b4f8e9fef42b5a88709e12fd321f230beeb0cb6ac0a6e9ee28757ba9b071b1b4",
+    "bytes": 15692,
+    "width": 341,
+    "height": 603
+   },
+   "box": {
+    "x": 395.786,
+    "y": 53.637,
+    "width": 209.046,
+    "height": 369.662
+   },
+   "plate": "GBDivaFrst46SpryMtSl",
+   "restoredTopPx": 0.11
+  },
+  "GBDivaFrst46SpryShnBlk": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/87ccd1b1f8762920.55a8b7b9a1d1.webp",
+    "key": "/images/diva-overcaps-2026-11-07/87ccd1b1f8762920.55a8b7b9a1d1.webp",
+    "sha256": "55a8b7b9a1d1216b91ca9bb2277dcdcee4180706ef89faa897c63dafd1a37010",
+    "bytes": 28834,
+    "width": 334,
+    "height": 589
+   },
+   "box": {
+    "x": 394.865,
+    "y": 68.383,
+    "width": 204.743,
+    "height": 361.059
+   },
+   "plate": "GBDiva46SpryShnBlk",
+   "restoredTopPx": 6.88
+  },
+  "GBDivaFrst46SpryShnGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/38ab29dfb3fac141.ff7213929b76.webp",
+    "key": "/images/diva-overcaps-2026-11-07/38ab29dfb3fac141.ff7213929b76.webp",
+    "sha256": "ff7213929b76117815621c6418ef24ba534fc42d15a33aa369ae9f04f72ff1f8",
+    "bytes": 76212,
+    "width": 335,
+    "height": 570
+   },
+   "box": {
+    "x": 395.158,
+    "y": 79.172,
+    "width": 205.996,
+    "height": 350.5
+   },
+   "plate": "GBDiva46SpryShnGl",
+   "restoredTopPx": 3.08
+  },
+  "GBDivaFrst46SpryShnSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/09c61994e61e1cdd.38baeb91489e.webp",
+    "key": "/images/diva-overcaps-2026-11-07/09c61994e61e1cdd.38baeb91489e.webp",
+    "sha256": "38baeb91489e6167f5f0c6519dcf7de5d7c1e1b3f333301a46a864af0780edff",
+    "bytes": 31580,
+    "width": 350,
+    "height": 585
+   },
+   "box": {
+    "x": 394.862,
+    "y": 60.846,
+    "width": 214.548,
+    "height": 358.602
+   },
+   "plate": "GBDiva46SpryShnSl",
+   "restoredTopPx": -1.73
+  },
+  "LBDiva100LtnCu": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/8b094c94fb633b93.f1a56dd43a27.webp",
+    "key": "/images/diva-overcaps-2026-11-07/8b094c94fb633b93.f1a56dd43a27.webp",
+    "sha256": "f1a56dd43a27bf96eed095423239860b3a9e74632c2222b5e0d91c6fa8971fad",
+    "bytes": 61158,
+    "width": 337,
+    "height": 604
+   },
+   "box": {
+    "x": 425.836,
+    "y": 110.237,
+    "width": 155.266,
+    "height": 278.281
+   },
+   "plate": "LBDiva100LtnCu",
+   "restoredTopPx": 1.45
+  },
+  "LBDiva100LtnMtGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/03e407f892c1bc98.39e3629ced98.webp",
+    "key": "/images/diva-overcaps-2026-11-07/03e407f892c1bc98.39e3629ced98.webp",
+    "sha256": "39e3629ced98cfe60857584816be042a9c8d7286460669cb2ac5d690dc71e1cc",
+    "bytes": 42944,
+    "width": 335,
+    "height": 580
+   },
+   "box": {
+    "x": 423.294,
+    "y": 124.366,
+    "width": 154.338,
+    "height": 267.213
+   },
+   "plate": "GBDiva100SpryMtGl",
+   "restoredTopPx": 4.71
+  },
+  "LBDiva100LtnMtSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/4f37938f51fc8d26.563625fd8970.webp",
+    "key": "/images/diva-overcaps-2026-11-07/4f37938f51fc8d26.563625fd8970.webp",
+    "sha256": "563625fd89706b4c3b69a9ec1a1e149ea2d80aeff9768a7077998bdabc7783e0",
+    "bytes": 15424,
+    "width": 342,
+    "height": 596
+   },
+   "box": {
+    "x": 421.212,
+    "y": 112.576,
+    "width": 157.577,
+    "height": 274.608
+   },
+   "plate": "GBDiva100SpryMtSl",
+   "restoredTopPx": 0.09
+  },
+  "LBDiva100LtnShnBlk": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/d4ba4f25bbfcc709.450a834c0ff8.webp",
+    "key": "/images/diva-overcaps-2026-11-07/d4ba4f25bbfcc709.450a834c0ff8.webp",
+    "sha256": "450a834c0ff8cecc70512f388293acc13e80d67b07a8fa9ba74b644518850e36",
+    "bytes": 25806,
+    "width": 336,
+    "height": 586
+   },
+   "box": {
+    "x": 422.357,
+    "y": 121.987,
+    "width": 155.286,
+    "height": 270.827
+   },
+   "plate": "GBDiva100SpryShnBlk",
+   "restoredTopPx": 4.16
+  },
+  "LBDiva100LtnShnGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/f4bed8473446d626.b05cf2f1fb9c.webp",
+    "key": "/images/diva-overcaps-2026-11-07/f4bed8473446d626.b05cf2f1fb9c.webp",
+    "sha256": "b05cf2f1fb9c95b47d535b09029822c00203520290e797b67dd6fbb130a5ab03",
+    "bytes": 69664,
+    "width": 334,
+    "height": 569
+   },
+   "box": {
+    "x": 423.291,
+    "y": 129.812,
+    "width": 153.882,
+    "height": 262.152
+   },
+   "plate": "GBDiva100SpryShnGl",
+   "restoredTopPx": 0.58
+  },
+  "LBDiva100LtnShnSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/88a82986fe45ebb1.627ff319e5fe.webp",
+    "key": "/images/diva-overcaps-2026-11-07/88a82986fe45ebb1.627ff319e5fe.webp",
+    "sha256": "627ff319e5feda6bf3e87fb9fd5f484c94636756b11c8e01a165810af547ae17",
+    "bytes": 28106,
+    "width": 331,
+    "height": 584
+   },
+   "box": {
+    "x": 425.137,
+    "y": 115.896,
+    "width": 152.498,
+    "height": 269.061
+   },
+   "plate": "GBDiva100SpryShnSl",
+   "restoredTopPx": -1.76
+  },
+  "LBDiva30LtnCu": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/042a8f6d7def72ad.38a44fc1fec2.webp",
+    "key": "/images/diva-overcaps-2026-11-07/042a8f6d7def72ad.38a44fc1fec2.webp",
+    "sha256": "38a44fc1fec27351df9eb4261e6081c39e91d1828358ce106fd511559a3eeba2",
+    "bytes": 72774,
+    "width": 331,
+    "height": 572
+   },
+   "box": {
+    "x": 388.083,
+    "y": 56.279,
+    "width": 226.586,
+    "height": 391.563
+   },
+   "plate": "LBDiva30LtnCu",
+   "restoredTopPx": 2.21
+  },
+  "LBDiva30LtnMtGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/fcc0a002625ccbf0.d7a13bd14f75.webp",
+    "key": "/images/diva-overcaps-2026-11-07/fcc0a002625ccbf0.d7a13bd14f75.webp",
+    "sha256": "d7a13bd14f75633a72e854e58596f113f7f28e6582b5198ba0ca05d84c5a8388",
+    "bytes": 48928,
+    "width": 329,
+    "height": 575
+   },
+   "box": {
+    "x": 387.734,
+    "y": 58.298,
+    "width": 225.217,
+    "height": 393.617
+   },
+   "plate": "GBDiva30SpryMtGl",
+   "restoredTopPx": 7.02
+  },
+  "LBDiva30LtnMtSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/104119cf1f893afb.319b1c294389.webp",
+    "key": "/images/diva-overcaps-2026-11-07/104119cf1f893afb.319b1c294389.webp",
+    "sha256": "319b1c2943895351bc2fabfa43ea2e7e1092b3558b45aa8c588c5f3c15a80858",
+    "bytes": 14652,
+    "width": 327,
+    "height": 581
+   },
+   "box": {
+    "x": 390.129,
+    "y": 47.018,
+    "width": 224.549,
+    "height": 398.97
+   },
+   "plate": "GBDiva30SpryMtSl",
+   "restoredTopPx": 2.06
+  },
+  "LBDiva30LtnShnBlk": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/45cf1ef7e719548e.6657a9993113.webp",
+    "key": "/images/diva-overcaps-2026-11-07/45cf1ef7e719548e.6657a9993113.webp",
+    "sha256": "6657a99931139674441f85495c016a1018e8d7bc82edef544d97aaabc0b6d2bf",
+    "bytes": 28856,
+    "width": 331,
+    "height": 579
+   },
+   "box": {
+    "x": 381.898,
+    "y": 58.734,
+    "width": 226.59,
+    "height": 396.362
+   },
+   "plate": "LBDiva30LtnShnBlk",
+   "restoredTopPx": 5.64
+  },
+  "LBDiva30LtnShnGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/d03ab40dd670bb34.f52c6b6877cc.webp",
+    "key": "/images/diva-overcaps-2026-11-07/d03ab40dd670bb34.f52c6b6877cc.webp",
+    "sha256": "f52c6b6877cccce27010d6b6c0ae1183f6fbfee79f363b3b02ce41af3e6e238c",
+    "bytes": 79054,
+    "width": 333,
+    "height": 571
+   },
+   "box": {
+    "x": 387.396,
+    "y": 62.151,
+    "width": 227.959,
+    "height": 390.885
+   },
+   "plate": "GBDiva30SpryShnGl",
+   "restoredTopPx": 2.91
+  },
+  "LBDiva30LtnShnSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/14941a72e2a89dba.63052254a6ba.webp",
+    "key": "/images/diva-overcaps-2026-11-07/14941a72e2a89dba.63052254a6ba.webp",
+    "sha256": "63052254a6bafbd6c7384118cbeab64020dfd6c1b634c8349811f838fc6107ae",
+    "bytes": 31256,
+    "width": 336,
+    "height": 588
+   },
+   "box": {
+    "x": 387.734,
+    "y": 43.25,
+    "width": 230.026,
+    "height": 402.545
+   },
+   "plate": "GBDiva30SpryShnSl",
+   "restoredTopPx": 0.84
+  },
+  "LBDiva46LtnCu": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/755e794a3771268e.c0955e0be8e7.webp",
+    "key": "/images/diva-overcaps-2026-11-07/755e794a3771268e.c0955e0be8e7.webp",
+    "sha256": "c0955e0be8e7a3829e863403a2dd39d543ec2b93de9c395088a655585c72889d",
+    "bytes": 67616,
+    "width": 333,
+    "height": 576
+   },
+   "box": {
+    "x": 387.127,
+    "y": 61.669,
+    "width": 209.941,
+    "height": 363.141
+   },
+   "plate": "LBDiva46LtnCu",
+   "restoredTopPx": -1.75
+  },
+  "LBDiva46LtnMtGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/593f32ac5ac31255.d639b1db01b8.webp",
+    "key": "/images/diva-overcaps-2026-11-07/593f32ac5ac31255.d639b1db01b8.webp",
+    "sha256": "d639b1db01b876c910ba69a7eafa8024020e8d5a2e7e4f17b7b7fa8b5ec3675d",
+    "bytes": 46896,
+    "width": 348,
+    "height": 576
+   },
+   "box": {
+    "x": 394.398,
+    "y": 64.34,
+    "width": 219.391,
+    "height": 363.13
+   },
+   "plate": "GBDiva46SpryMtGl",
+   "restoredTopPx": 4.56
+  },
+  "LBDiva46LtnMtSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/9ca81ea218ebcd84.4964326ef80f.webp",
+    "key": "/images/diva-overcaps-2026-11-07/9ca81ea218ebcd84.4964326ef80f.webp",
+    "sha256": "4964326ef80fb4e71b4a109fd2f324f22a06f887d6c69ded8422a2daeefaf19a",
+    "bytes": 17362,
+    "width": 341,
+    "height": 603
+   },
+   "box": {
+    "x": 394.401,
+    "y": 44.493,
+    "width": 214.995,
+    "height": 380.182
+   },
+   "plate": "GBDiva46SpryMtSl",
+   "restoredTopPx": 1.38
+  },
+  "LBDiva46LtnShnBlk": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/87ccd1b1f8762920.55a8b7b9a1d1.webp",
+    "key": "/images/diva-overcaps-2026-11-07/87ccd1b1f8762920.55a8b7b9a1d1.webp",
+    "sha256": "55a8b7b9a1d1216b91ca9bb2277dcdcee4180706ef89faa897c63dafd1a37010",
+    "bytes": 28834,
+    "width": 334,
+    "height": 589
+   },
+   "box": {
+    "x": 394.087,
+    "y": 60.565,
+    "width": 210.569,
+    "height": 371.332
+   },
+   "plate": "GBDiva46SpryShnBlk",
+   "restoredTopPx": 7.07
+  },
+  "LBDiva46LtnShnGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/38ab29dfb3fac141.ff7213929b76.webp",
+    "key": "/images/diva-overcaps-2026-11-07/38ab29dfb3fac141.ff7213929b76.webp",
+    "sha256": "ff7213929b76117815621c6418ef24ba534fc42d15a33aa369ae9f04f72ff1f8",
+    "bytes": 76212,
+    "width": 335,
+    "height": 570
+   },
+   "box": {
+    "x": 393.755,
+    "y": 70.687,
+    "width": 211.858,
+    "height": 360.474
+   },
+   "plate": "GBDiva46SpryShnGl",
+   "restoredTopPx": 3.16
+  },
+  "LBDiva46LtnShnSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/09c61994e61e1cdd.38baeb91489e.webp",
+    "key": "/images/diva-overcaps-2026-11-07/09c61994e61e1cdd.38baeb91489e.webp",
+    "sha256": "38baeb91489e6167f5f0c6519dcf7de5d7c1e1b3f333301a46a864af0780edff",
+    "bytes": 31580,
+    "width": 350,
+    "height": 585
+   },
+   "box": {
+    "x": 395.348,
+    "y": 51.867,
+    "width": 220.655,
+    "height": 368.808
+   },
+   "plate": "GBDiva46SpryShnSl",
+   "restoredTopPx": -1.78
+  },
+  "LBDivaFrst46LtnCu": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/755e794a3771268e.c0955e0be8e7.webp",
+    "key": "/images/diva-overcaps-2026-11-07/755e794a3771268e.c0955e0be8e7.webp",
+    "sha256": "c0955e0be8e7a3829e863403a2dd39d543ec2b93de9c395088a655585c72889d",
+    "bytes": 67616,
+    "width": 333,
+    "height": 576
+   },
+   "box": {
+    "x": 393.631,
+    "y": 69.877,
+    "width": 204.132,
+    "height": 353.093
+   },
+   "plate": "LBDiva46LtnCu",
+   "restoredTopPx": -1.7
+  },
+  "LBDivaFrst46LtnMtGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/593f32ac5ac31255.d639b1db01b8.webp",
+    "key": "/images/diva-overcaps-2026-11-07/593f32ac5ac31255.d639b1db01b8.webp",
+    "sha256": "d639b1db01b876c910ba69a7eafa8024020e8d5a2e7e4f17b7b7fa8b5ec3675d",
+    "bytes": 46896,
+    "width": 348,
+    "height": 576
+   },
+   "box": {
+    "x": 400.704,
+    "y": 73.055,
+    "width": 213.321,
+    "height": 353.083
+   },
+   "plate": "GBDiva46SpryMtGl",
+   "restoredTopPx": 4.44
+  },
+  "LBDivaFrst46LtnMtSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/3f9bcd6d8ddb6ccf.b4f8e9fef42b.webp",
+    "key": "/images/diva-overcaps-2026-11-07/3f9bcd6d8ddb6ccf.b4f8e9fef42b.webp",
+    "sha256": "b4f8e9fef42b5a88709e12fd321f230beeb0cb6ac0a6e9ee28757ba9b071b1b4",
+    "bytes": 15692,
+    "width": 341,
+    "height": 603
+   },
+   "box": {
+    "x": 394.556,
+    "y": 52.836,
+    "width": 209.046,
+    "height": 369.662
+   },
+   "plate": "GBDivaFrst46SpryMtSl",
+   "restoredTopPx": 0.11
+  },
+  "LBDivaFrst46LtnShnBlk": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/87ccd1b1f8762920.55a8b7b9a1d1.webp",
+    "key": "/images/diva-overcaps-2026-11-07/87ccd1b1f8762920.55a8b7b9a1d1.webp",
+    "sha256": "55a8b7b9a1d1216b91ca9bb2277dcdcee4180706ef89faa897c63dafd1a37010",
+    "bytes": 28834,
+    "width": 334,
+    "height": 589
+   },
+   "box": {
+    "x": 394.25,
+    "y": 68.923,
+    "width": 204.743,
+    "height": 361.059
+   },
+   "plate": "GBDiva46SpryShnBlk",
+   "restoredTopPx": 6.88
+  },
+  "LBDivaFrst46LtnShnGl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/38ab29dfb3fac141.ff7213929b76.webp",
+    "key": "/images/diva-overcaps-2026-11-07/38ab29dfb3fac141.ff7213929b76.webp",
+    "sha256": "ff7213929b76117815621c6418ef24ba534fc42d15a33aa369ae9f04f72ff1f8",
+    "bytes": 76212,
+    "width": 335,
+    "height": 570
+   },
+   "box": {
+    "x": 393.928,
+    "y": 79.172,
+    "width": 205.996,
+    "height": 350.5
+   },
+   "plate": "GBDiva46SpryShnGl",
+   "restoredTopPx": 3.08
+  },
+  "LBDivaFrst46LtnShnSl": {
+   "image": {
+    "url": "/images/diva-overcaps-2026-11-07/09c61994e61e1cdd.38baeb91489e.webp",
+    "key": "/images/diva-overcaps-2026-11-07/09c61994e61e1cdd.38baeb91489e.webp",
+    "sha256": "38baeb91489e6167f5f0c6519dcf7de5d7c1e1b3f333301a46a864af0780edff",
+    "bytes": 31580,
+    "width": 350,
+    "height": 585
+   },
+   "box": {
+    "x": 395.477,
+    "y": 60.846,
+    "width": 214.548,
+    "height": 358.602
+   },
+   "plate": "GBDiva46SpryShnSl",
+   "restoredTopPx": -1.73
+  }
+ }
+}

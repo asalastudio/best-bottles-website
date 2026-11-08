@@ -9,6 +9,7 @@ import jumbo from "./cylinder-jumbo-overcap.generated.json";
 import lotions from "./cylinder-lotion-kits.generated.json";
 import spraySeating from "./cylinder-spray-seating.json";
 import divaSeating from "./diva-fitment-seating.json";
+import divaOvercapTops from "./diva-overcap-tops.json";
 import sleekTubes from "./sleek-large-tubes.generated.json";
 import cylinder25Droppers from "./cylinder25-dropper.generated.json";
 import cylinder25Reducers from "./cylinder25-reducers.generated.json";
@@ -370,7 +371,6 @@ const tulipRows = Object.fromEntries(Object.entries(existingRows).flatMap(([sku,
 // Body, glass and every other kit are untouched.
 const DIVA_FITMENT_SLOTS = new Set(["pump", "sprayer", "overcap", "diptube"]);
 type DivaSeat = { bodyId: string; scale: number; collarCentreX: number; collarFootY: number; neckCentreX: number };
-export const DIVA_SEATING_VERSION = divaSeating.version;
 export function seatDivaFitment(kit: BuilderKit, seat: DivaSeat): BuilderKit {
     const { scale, collarCentreX, collarFootY, neckCentreX } = seat;
     const tx = (x: number) => neckCentreX + (x - collarCentreX) * scale;
@@ -389,7 +389,23 @@ function withDivaSeating(source: Record<string, BuilderKit>): Record<string, Bui
         Object.hasOwn(seats, sku) && kit.register?.bodyId === seats[sku].bodyId ? seatDivaFitment(kit, seats[sku]) : kit]));
 }
 
-const rows: Record<string, BuilderKit> = withDivaSeating({ ...existingRows, ...revisedRows, ...pillarRows, ...tulipRows });
+// The Diva overcap cut-outs lost their rounded tops (first row already fully opaque; the cap ~5% short). Each is
+// rebuilt from its finish's cap-on plate (scripts/register/diva-overcap-tops.py): same width, centre and rim, with
+// the top restored. Applied before the seating, which then scales and centres it with its pump.
+function withDivaOvercapTops(source: Record<string, BuilderKit>): Record<string, BuilderKit> {
+    const tops = divaOvercapTops.rows as Record<string, { image: BuilderPart["image"]; box: { x: number; y: number; width: number; height: number } }>;
+    return Object.fromEntries(Object.entries(source).map(([sku, kit]) => {
+        const top = Object.hasOwn(tops, sku) && kit.register?.bodyId?.startsWith("diva-") ? tops[sku] : null;
+        if (!top) return [sku, kit];
+        const { box } = top;
+        return [sku, { ...kit, parts: kit.parts.map(part => part.slot !== "overcap" ? part : {
+            ...part, image: top.image, image2x: null, mask: null, box,
+            bounds: { left: box.x, top: box.y, right: box.x + box.width, bottom: box.y + box.height },
+        }) }];
+    }));
+}
+
+const rows: Record<string, BuilderKit> = withDivaSeating(withDivaOvercapTops({ ...existingRows, ...revisedRows, ...pillarRows, ...tulipRows }));
 export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {

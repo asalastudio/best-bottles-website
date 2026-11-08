@@ -7,7 +7,7 @@ import sleekTubes from "./sleek-large-tubes-index.json";
 import dropper from "./cylinder25-dropper-index.json";
 import reducers25 from "./cylinder25-reducers-index.json";
 import body25 from "./cylinder25-body-index.json";
-import divaSeating from "./diva-fitment-seating.json";
+import { DIVA_KIT_VERSION, isCorrectedDivaKit } from "./diva-kit-corrections";
 
 const lotionSkus = new Set<string>(lotions.skus);
 const skus = new Set<string>([...index.skus, ...sprays.skus, ...jumbo.skus, ...lotionSkus, ...sleekTubes.skus, ...dropper.skus, ...reducers25.skus]);
@@ -42,8 +42,8 @@ export function updatedCylinderKitVersion(sku: string | null | undefined): strin
     if (!sku) return null;
     if (isPillarPourSku(sku) || isPillarRollOnSku(sku) || isPillarSprayerSku(sku)) return "pillar-shared-glass-v1";
     if (sku.startsWith("GBTulip6") && skus.has(sku)) return "tulip6-clear-glass-v1";
-    // Diva fitments seated on the shoulder and centred (approved-component-kits.ts, 7 Nov 2026).
-    if (Object.hasOwn(divaSeating.rows, sku)) return divaSeating.version;
+    // Diva fitments seated and centred, overcap tops restored (approved-component-kits.ts, 7 Nov 2026).
+    if (isCorrectedDivaKit(sku)) return DIVA_KIT_VERSION;
     if (jumbo28MeasuredSkus.has(sku)) return `${index.version}-jumbo28-measured-v1`;
     if (body25Skus.has(sku)) return body25.version + "-clear-refraction-v3";
     if (cylinderLargeReducerGraceSku(sku)) return "cylinder-large-reducer-refraction-v3";
