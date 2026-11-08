@@ -1,0 +1,56 @@
+{
+ "_about": "Read-only snapshot of the production component register for 18-400 (generic component layers and bottle plates), taken 2026-11-07 with scripts/help/snapshot_register.py. Public Blob URLs and geometry only.",
+ "takenOn": "2026-11-07",
+ "neck": "18-400",
+ "components": {},
+ "plates": {
+  "boston-round-15ml-18-400|Amber": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/boston-round-15ml-18-400/amber/213acfa97636e35aefd02f6be31d9e7492938238794b88ac98d5bf1534897065.png",
+   "width": 992,
+   "height": 2192,
+   "pxPerMm": 27.9895,
+   "anchors": {
+    "axisX": 494,
+    "baselineY": 2097,
+    "seatY": 131,
+    "shoulderY": 720
+   }
+  },
+  "boston-round-15ml-18-400|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/boston-round-15ml-18-400/clear/5519efaae3d84cfe0fb2f370cc6baff3606f7bd1dda86c6cddbe419d194eba7f.png",
+   "width": 992,
+   "height": 2192,
+   "pxPerMm": 27.9752,
+   "anchors": {
+    "axisX": 493,
+    "baselineY": 2096,
+    "seatY": 131,
+    "shoulderY": 713
+   }
+  },
+  "boston-round-15ml-18-400|Cobalt Blue": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/boston-round-15ml-18-400/cobalt-blue/de927345e77767a032d7f643529c741160113aeedf785ee5513a81bb65acc4e5.png",
+   "width": 992,
+   "height": 2192,
+   "pxPerMm": 27.9752,
+   "anchors": {
+    "axisX": 491.5,
+    "baselineY": 2096,
+    "seatY": 131,
+    "shoulderY": 701
+   }
+  },
+  "vial-9ml-18-400|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/vial-9ml-18-400/clear/691f4b36f59b9454c6b3beac63821feed9f27c919fa8780f7b055f204740a33d.png",
+   "width": 1248,
+   "height": 2192,
+   "pxPerMm": 21.8862,
+   "anchors": {
+    "axisX": 626.2,
+    "baselineY": 2096,
+    "seatY": 322,
+    "shoulderY": 426
+   }
+  }
+ }
+}

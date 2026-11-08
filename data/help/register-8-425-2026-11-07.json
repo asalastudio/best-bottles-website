@@ -1,0 +1,32 @@
+{
+ "_about": "Read-only snapshot of the production component register for 8-425 (generic component layers and bottle plates), taken 2026-11-07 with scripts/help/snapshot_register.py. Public Blob URLs and geometry only.",
+ "takenOn": "2026-11-07",
+ "neck": "8-425",
+ "components": {},
+ "plates": {
+  "vial-2ml-8-425|Amber": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/vial-2ml-8-425/amber/499f10fc8860cb30a2f34f06906e7b2b608eba9e235af92de8140cbfb9e69e24.png",
+   "width": 912,
+   "height": 2192,
+   "pxPerMm": 53.1298,
+   "anchors": {
+    "axisX": 450,
+    "baselineY": 2095,
+    "seatY": 179,
+    "shoulderY": 564
+   }
+  },
+  "vial-2ml-8-425|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/vial-2ml-8-425/clear/541702c606dddb5efc5c61c6953d77d00718ca2f6924e6248025c54385111c6e.png",
+   "width": 912,
+   "height": 2192,
+   "pxPerMm": 53.1021,
+   "anchors": {
+    "axisX": 449,
+    "baselineY": 2094,
+    "seatY": 179,
+    "shoulderY": 565
+   }
+  }
+ }
+}

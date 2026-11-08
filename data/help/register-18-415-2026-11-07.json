@@ -1,0 +1,1547 @@
+{
+ "_about": "Read-only snapshot of the production component register for 18-415 (generic component layers and bottle plates), taken 2026-11-07 with scripts/help/snapshot_register.py. Public Blob URLs and geometry only.",
+ "takenOn": "2026-11-07",
+ "neck": "18-415",
+ "components": {
+  "CMP-CAP-BLK-18415-LTR": {
+   "websiteSku": "CP18-415BlkLthr",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 106.5,
+      "y": 112.8
+     },
+     "pxPerMm": 7.1992,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-BLK-18415-LTR/cap-8bd04d6c5a282ea76c16bc8ec98df1f148e7f8e2740688a3ed44788dc7a182e7.png",
+     "width": 229,
+     "height": 245
+    }
+   ]
+  },
+  "CMP-CAP-BRN-18415-LTR": {
+   "websiteSku": "CP18-415BrwnLthr",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 103.6,
+      "y": 114.3
+     },
+     "pxPerMm": 7.0378,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-BRN-18415-LTR/cap-1a315abd51583519d964763719e510489ad65d41157649bb17af66481e4b36a8.png",
+     "width": 227,
+     "height": 244
+    }
+   ]
+  },
+  "CMP-CAP-LBRN-18415-LTR": {
+   "websiteSku": "CP18-415LBrwnLthr",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 104.2,
+      "y": 111.9
+     },
+     "pxPerMm": 7.1766,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-LBRN-18415-LTR/cap-334320d38cfb4759b15438ed2edf9a9a51ee5b7401cbb4b85c9364fa67631a69.png",
+     "width": 227,
+     "height": 244
+    }
+   ]
+  },
+  "CMP-CAP-IVY-18415-LTR": {
+   "websiteSku": "CP18-415LIvyLthr",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 404,
+      "y": 383.2
+     },
+     "pxPerMm": 26.3501,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-IVY-18415-LTR/cap-a8408ded928b19b85ab86622c68710570e26019c8d700529725937486f320422.png",
+     "width": 793,
+     "height": 870
+    }
+   ]
+  },
+  "CMP-CAP-PNK-18415-LTR": {
+   "websiteSku": "CP18-415LPnkLthr",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 401,
+      "y": 392.6
+     },
+     "pxPerMm": 26.2098,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-PNK-18415-LTR/cap-05058e25010d340ada26a7b4710134d02e27087604191a7de3f60cf544ee5c97.png",
+     "width": 794,
+     "height": 875
+    }
+   ]
+  },
+  "CMP-CAP-MSLV-18415-S": {
+   "websiteSku": "CP18-415MtSl",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 117,
+      "y": 44.8
+     },
+     "pxPerMm": 9.6019,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-MSLV-18415-S/cap-ab1f6159d1e145299e2a6d78327fe5652877c76b4c9b3b643aa181c509a3c02d.png",
+     "width": 233,
+     "height": 226
+    }
+   ]
+  },
+  "CMP-CAP-MSLV-18415-T": {
+   "websiteSku": "CP18-415MtSlTall",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 103,
+      "y": 94.4
+     },
+     "pxPerMm": 8.0656,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-MSLV-18415-T/cap-25cdbc112e3e99fab06d1f3cee450933d40ef6841593c8b86ebbe6e72fb397f9.png",
+     "width": 204,
+     "height": 245
+    }
+   ]
+  },
+  "CMP-CAP-SBLK-18415-T": {
+   "websiteSku": "CP18-415ShnBlkTall",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 97,
+      "y": 94.5
+     },
+     "pxPerMm": 8.0673,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SBLK-18415-T/cap-216376a7f597fef31d124b470c9c1a99628f36fabed4e92f42c403e0e0ed4d5d.png",
+     "width": 221,
+     "height": 245
+    }
+   ]
+  },
+  "CMP-CAP-SGLD-18415-S": {
+   "websiteSku": "CP18-415ShnGl",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 110,
+      "y": 50.7
+     },
+     "pxPerMm": 9.014,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SGLD-18415-S/cap-3e51945791b1c5a47553daeea323ae74e11dae1673995e156062ad74f6192f53.png",
+     "width": 233,
+     "height": 221
+    }
+   ]
+  },
+  "CMP-CAP-SSLV-18415-S": {
+   "websiteSku": "CP18-415ShnSl",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 115.5,
+      "y": 46.7
+     },
+     "pxPerMm": 9.558,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-SSLV-18415-S/cap-47b100d5600877255dfa86c8ecc117f8ecc2e5cad8ae3165a52d64e6f475949c.png",
+     "width": 233,
+     "height": 236
+    }
+   ]
+  },
+  "CMP-CAP-WHT-18415-T": {
+   "websiteSku": "CP18-415Wh",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 104,
+      "y": 93.4
+     },
+     "pxPerMm": 8.1068,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-WHT-18415-T/cap-b2a62926377b89e2b34fea1be5ab2849186494e1210fde5bf8aa22ea2748dfa7.png",
+     "width": 203,
+     "height": 245
+    }
+   ]
+  },
+  "CMP-DRP-CPR-18415": {
+   "websiteSku": "Drp18-415Cu",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 175.8,
+      "y": 281
+     },
+     "pxPerMm": 13.0144,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-DRP-CPR-18415/fitment-5dca56f5370736a5b7d4a1476528a04535128eba1ee8fb0bad10b26198b12cde.png",
+     "width": 352,
+     "height": 558
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 170.8,
+      "y": -265
+     },
+     "pxPerMm": 13.0144,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-DRP-CPR-18415/pipette-05c061b9a41a08e14302e2cbe89aaae4be3599f876adbff0ccc94e05a6f47c15.png",
+     "width": 273,
+     "height": 807
+    }
+   ]
+  },
+  "CMP-DRP-SGLD-18415": {
+   "websiteSku": "Drp18-415Gl",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 173.5,
+      "y": 285
+     },
+     "pxPerMm": 13.0144,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-DRP-SGLD-18415/fitment-7a854df705e47536e446f617b23a3f10c88725950df84cda5fdb7c9884e3c3e5.png",
+     "width": 350,
+     "height": 558
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 169.5,
+      "y": -261
+     },
+     "pxPerMm": 13.0144,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-DRP-SGLD-18415/pipette-c107345f6b44c10ea2fea2aae48ddd89d534134ae7ae31b6d841b86596e29661.png",
+     "width": 340,
+     "height": 808
+    }
+   ]
+  },
+  "CMP-DRP-SSLV-18415": {
+   "websiteSku": "Drp18-415Sl",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 175,
+      "y": 281
+     },
+     "pxPerMm": 13.0144,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-DRP-SSLV-18415/fitment-9312783a4b7bd0c76213531b28f28830e2b6854edbdfb5ab1baf8f681ff85540.png",
+     "width": 351,
+     "height": 558
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 170,
+      "y": -265
+     },
+     "pxPerMm": 13.0144,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-DRP-SSLV-18415/pipette-a76f594f97ab646b404a6aa2914fbca51135c485a62bd7fe293418607e225c3f.png",
+     "width": 272,
+     "height": 807
+    }
+   ]
+  },
+  "CMP-LPM-CPR-18-415": {
+   "websiteSku": "Ltn18-415Cu",
+   "layers": [
+    {
+     "slot": "pump",
+     "z": "front",
+     "anchor": {
+      "x": 113,
+      "y": 236.2
+     },
+     "pxPerMm": 8.786,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/pump-972dc10f8063247841a24ba3970cf87593c738fb7dacd86ba6e2707d40d11106.png",
+     "width": 228,
+     "height": 400
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 207,
+      "y": 408
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-CPR-18-415/overcap-bfba49c70defb6ddc31527dd8e74970467b87043bd83986cf1a9cd9780fcb056.png",
+     "width": 419,
+     "height": 648
+    }
+   ]
+  },
+  "CMP-LPM-MGLD-18-415": {
+   "websiteSku": "Ltn18-415MtGl",
+   "layers": [
+    {
+     "slot": "pump",
+     "z": "front",
+     "anchor": {
+      "x": 118.2,
+      "y": 242.1
+     },
+     "pxPerMm": 8.8222,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/pump-39b24dee49ed593591bcc637bcd69b518e1f5d316ae537739782b91f956423bc.png",
+     "width": 236,
+     "height": 400
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 176.5,
+      "y": 356
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MGLD-18-415/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+     "width": 349,
+     "height": 602
+    }
+   ]
+  },
+  "CMP-LPM-MSLV-18-415-01": {
+   "websiteSku": "Ltn18-415MtSl",
+   "layers": [
+    {
+     "slot": "pump",
+     "z": "front",
+     "anchor": {
+      "x": 278.5,
+      "y": 570.7
+     },
+     "pxPerMm": 23.1664,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/pump-0cc427bbd8ed00ae446a8a4e5fec65e8a3f68476b7f4cf11c6398f51825987bb.png",
+     "width": 552,
+     "height": 995
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 175.5,
+      "y": 354
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-01/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+     "width": 345,
+     "height": 600
+    }
+   ]
+  },
+  "CMP-LPM-MSLV-18-415-02": {
+   "websiteSku": "Ltn18-415MtSlCl",
+   "layers": [
+    {
+     "slot": "pump",
+     "z": "front",
+     "anchor": {
+      "x": 283.5,
+      "y": 552.8
+     },
+     "pxPerMm": 23.0964,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/pump-c4e70e2d9fcd9d18fd74b384607f1faed235200eafc355f70caf5f83ba538bc9.png",
+     "width": 565,
+     "height": 981
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 163,
+      "y": 406
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-MSLV-18-415-02/overcap-c4d4b9daf52cfda14d1e92d111a8c19467beadf960e1cfb558f7ed466e7966a3.png",
+     "width": 322,
+     "height": 652
+    }
+   ]
+  },
+  "CMP-LPM-SBLK-18-415": {
+   "websiteSku": "Ltn18-415ShnBlk",
+   "layers": [
+    {
+     "slot": "pump",
+     "z": "front",
+     "anchor": {
+      "x": 119,
+      "y": 228.6
+     },
+     "pxPerMm": 9.1446,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/pump-7fd1cfbea3ed6283b4937b6c0f9d3416bc379da9fabc13b1bc4d460e74d71176.png",
+     "width": 233,
+     "height": 400
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 176,
+      "y": 352
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SBLK-18-415/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+     "width": 349,
+     "height": 596
+    }
+   ]
+  },
+  "CMP-LPM-SGLD-18-415": {
+   "websiteSku": "Ltn18-415ShnGl",
+   "layers": [
+    {
+     "slot": "pump",
+     "z": "front",
+     "anchor": {
+      "x": 122,
+      "y": 227.9
+     },
+     "pxPerMm": 9.4085,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/pump-07155152afd69e8ef46c789f986353c6a4246c8dd0d9b47d32454294c1f0159b.png",
+     "width": 239,
+     "height": 400
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 168.8,
+      "y": 357
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SGLD-18-415/overcap-de0582dafa63fd693f9e22125610b5f4a1f04826f3fa392a85afa7169befeced.png",
+     "width": 343,
+     "height": 594
+    }
+   ]
+  },
+  "CMP-LPM-SSLV-18-415": {
+   "websiteSku": "Ltn18-415ShnSl",
+   "layers": [
+    {
+     "slot": "pump",
+     "z": "front",
+     "anchor": {
+      "x": 115.5,
+      "y": 229.9
+     },
+     "pxPerMm": 9.2722,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/pump-5ab4afef966a38362aa7e46a12c8f076a476dc3c005f0425521645c0c8b662c4.png",
+     "width": 231,
+     "height": 400
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 175.5,
+      "y": 354
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-LPM-SSLV-18-415/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+     "width": 351,
+     "height": 599
+    }
+   ]
+  },
+  "CMP-SPR-BKSL-18-415-02": {
+   "websiteSku": "AnSp18-415Blk",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 789.5,
+      "y": 396
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-BKSL-18-415-02/sprayer-56014b6a9c88597dae905be7f316d6e959c759b6049fa902e038cf9ce2c4c82b.png",
+     "width": 931,
+     "height": 624
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 165.5,
+      "y": -216
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-BKSL-18-415-02/diptube-24a0336827af08588ef9607a78314cb32c7bca7420aa606553d39e63863c8244.png",
+     "width": 307,
+     "height": 1079
+    }
+   ]
+  },
+  "CMP-SPR-GLD-18-415-02": {
+   "websiteSku": "AnSp18-415Gl",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 764.5,
+      "y": 373
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-GLD-18-415-02/sprayer-848c7bd50bb6d1aeb8797964e7ee84f6c21cdc31e9d1e97f692bae55ce5ef6dd.png",
+     "width": 908,
+     "height": 601
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 166.5,
+      "y": -216
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-GLD-18-415-02/diptube-4b8638272643f3ee81c427594e4e9dd8f62368f72113eeb4d36fb30c293f1f70.png",
+     "width": 216,
+     "height": 1079
+    }
+   ]
+  },
+  "CMP-SPR-IVGD-18-415-01": {
+   "websiteSku": "AnSp18-415IvyGl",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 759.5,
+      "y": 374
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVGD-18-415-01/sprayer-5c10da82ef2bba1e99ea2bb55d7e39846e2da40a0d206c87fadb0cfd5fbc3119.png",
+     "width": 903,
+     "height": 601
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 163.5,
+      "y": -215
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVGD-18-415-01/diptube-f91aa69443e108538583daf79eb78fdc1acd9851a8ab35d90db324bdc0d65a8f.png",
+     "width": 250,
+     "height": 1080
+    }
+   ]
+  },
+  "CMP-SPR-IVSL-18-415-01": {
+   "websiteSku": "AnSp18-415IvySl",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 756.5,
+      "y": 365
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVSL-18-415-01/sprayer-52d56b0edf6a752c7686ab3caefd1a5aa3c1f60e5f39ce1197b090b127412ff0.png",
+     "width": 895,
+     "height": 594
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 160.5,
+      "y": -217
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVSL-18-415-01/diptube-96f18e9202029effdeed49f523d72d9ecf27eae6ccc7a3328f65af45e273ca45.png",
+     "width": 241,
+     "height": 1078
+    }
+   ]
+  },
+  "CMP-SPR-LVN-18-415-01": {
+   "websiteSku": "AnSp18-415Lvn",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 760.5,
+      "y": 382
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-LVN-18-415-01/sprayer-fb3882c11bede6f49e7741c52e8376b1aa7ecd94fa2f910e52eaa98ec005ece4.png",
+     "width": 909,
+     "height": 615
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 165.5,
+      "y": -221
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-LVN-18-415-01/diptube-1143c9c604151cceb939ac6486824ee4b4c787400c70f558236a252d3b6e3616.png",
+     "width": 218,
+     "height": 1074
+    }
+   ]
+  },
+  "CMP-SPR-MSLV-18-415-01": {
+   "websiteSku": "AnSp18-415MtSl",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 777.5,
+      "y": 374
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MSLV-18-415-01/sprayer-099f66c6982497245525b930a03661058e5ef5bcf77b10538a0e3270bc83f85b.png",
+     "width": 919,
+     "height": 607
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 162.5,
+      "y": -221
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MSLV-18-415-01/diptube-76e1f0ff98ef2fc42944d94f47be5053061daac866ee94c8d8d7413729e0d0ef.png",
+     "width": 245,
+     "height": 1074
+    }
+   ]
+  },
+  "CMP-SPR-RED-18-415-01": {
+   "websiteSku": "AnSp18-415Red",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 790.5,
+      "y": 402
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-RED-18-415-01/sprayer-de409ea9e8d475eb4fa76257d368108c228a606f892cfc5089d80386b9ce8dca.png",
+     "width": 937,
+     "height": 630
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 165.5,
+      "y": -216
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-RED-18-415-01/diptube-080fab704543ae3f1c2791e4cb635300821c7e62c5b58f524a24a693560f4f1e.png",
+     "width": 312,
+     "height": 1079
+    }
+   ]
+  },
+  "CMP-SPR-WHT-18-415-01": {
+   "websiteSku": "AnSp18-415Wht",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 791.5,
+      "y": 395
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-WHT-18-415-01/sprayer-dc778d02391bae45222b728542eec2cbaba5d42d7d96c0d8ec4e7fa2680c5d33.png",
+     "width": 935,
+     "height": 621
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 164.5,
+      "y": -214
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-WHT-18-415-01/diptube-347ab1692692da32b086c29d77a22dfecfa87ca9c975b10b8f3c7be98bcde119.png",
+     "width": 308,
+     "height": 1081
+    }
+   ]
+  },
+  "CMP-SPR-BLK-18-415-02": {
+   "websiteSku": "AnSpTsl18-415Blk",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-BLK-18-415-02/sprayer-8c0a1fc75690da707d6ca5a89cc820b9124ff5af2535eb1fa0e37b1811367505.png",
+     "width": 1628,
+     "height": 1800
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-BLK-18-415-02/diptube-1f27de662c8986fd569b0570444ac99d40bca5e408d110f520ed5fa3e7e90439.png",
+     "width": 310,
+     "height": 1100
+    }
+   ]
+  },
+  "CMP-SPR-IVGD-18-415-02": {
+   "websiteSku": "AnSpTsl18-415IvyGl",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVGD-18-415-02/sprayer-65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d.png",
+     "width": 1628,
+     "height": 1723
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVGD-18-415-02/diptube-766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e.png",
+     "width": 310,
+     "height": 1086
+    }
+   ]
+  },
+  "CMP-SPR-IVSL-18-415-02": {
+   "websiteSku": "AnSpTsl18-415IvySl",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVSL-18-415-02/sprayer-65295d990e4ec3833f3c24a9c153b765fcae099643486058ef07215b7f38df4d.png",
+     "width": 1628,
+     "height": 1723
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-IVSL-18-415-02/diptube-766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e.png",
+     "width": 310,
+     "height": 1086
+    }
+   ]
+  },
+  "CMP-SPR-LVN-18-415-02": {
+   "websiteSku": "AnSpTsl18-415Lvn",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 1446.5,
+      "y": 313
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-LVN-18-415-02/sprayer-f7d88c6ee47c769a088b231b5df53883c7ec262ec08badeed0633db1771c8b3b.png",
+     "width": 1595,
+     "height": 1739
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 169.5,
+      "y": -209
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-LVN-18-415-02/diptube-a2a023ea66d9ec4c9e95efadf3a1b0b4bcad90f9881292d8703136d0f7050c4a.png",
+     "width": 317,
+     "height": 1086
+    }
+   ]
+  },
+  "CMP-SPR-MSLV-18-415-02": {
+   "websiteSku": "AnSpTsl18-415MtS",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 1483.5,
+      "y": 322
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MSLV-18-415-02/sprayer-2db04d2b0302648aba85244fbe820d2751a97df88638c96dffbd8f2d1596d2b6.png",
+     "width": 1634,
+     "height": 1796
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 162.5,
+      "y": -215
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MSLV-18-415-02/diptube-e09966cc96a29b1a2bab068a7df2959dbc883c418828e3beeddfb10390b410e8.png",
+     "width": 313,
+     "height": 1094
+    }
+   ]
+  },
+  "CMP-SPR-PNK-18-415": {
+   "websiteSku": "AnSpTsl18-415Pnk",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-PNK-18-415/sprayer-3debade8363940ccb81dcbb816cd241ad794c42d76a450f95b15cdfebe36056c.png",
+     "width": 1628,
+     "height": 1738
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-PNK-18-415/diptube-766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e.png",
+     "width": 310,
+     "height": 1086
+    }
+   ]
+  },
+  "CMP-SPR-RED-18-415-02": {
+   "websiteSku": "AnSpTsl18-415Red",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-RED-18-415-02/sprayer-de03bde7cdcbb3b85f17572ad955744fb6a518ca3a26f782e005b5f97e77b302.png",
+     "width": 1628,
+     "height": 1706
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-RED-18-415-02/diptube-766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e.png",
+     "width": 310,
+     "height": 1086
+    }
+   ]
+  },
+  "CMP-SPR-WHT-18-415-02": {
+   "websiteSku": "AnSpTsl18-415Wht",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 1483.5,
+      "y": 308
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-WHT-18-415-02/sprayer-b56c72b9bf1522d31333604bdf49703812bff10f9a53b21453da8a8b41ff438d.png",
+     "width": 1628,
+     "height": 1737
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-WHT-18-415-02/diptube-766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e.png",
+     "width": 310,
+     "height": 1086
+    }
+   ]
+  },
+  "CMP-CAP-PNK-18-415": {
+   "websiteSku": "CP18-415AnSpPnk",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 747.5,
+      "y": 375
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-PNK-18-415/sprayer-fe2b9f4a6911dff87628135ed9ed2fc74e19e4b890bf10e6ddcd6c68a0627727.png",
+     "width": 895,
+     "height": 605
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 164.5,
+      "y": -218
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-PNK-18-415/diptube-297dcbe55e3980401c7cb675942793aca98762ccf4ae4d48d5f0b13fc2a29bb7.png",
+     "width": 289,
+     "height": 1077
+    }
+   ]
+  },
+  "CMP-SPR-GLD-18415-TSL": {
+   "websiteSku": "CP18-415AnSpTslGl",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 1471.5,
+      "y": 308
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-GLD-18415-TSL/sprayer-e55cea34d77f95d743ee6965f693cad020d6d1e5d4ef9e3d27866ba9b65901b9.png",
+     "width": 1616,
+     "height": 1731
+    },
+    {
+     "slot": "diptube",
+     "z": "behind-body",
+     "anchor": {
+      "x": 167.5,
+      "y": -209
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-GLD-18415-TSL/diptube-766f01599bebf01df69b029f83f23c48dc964863f76846aa3daae8f24d79af2e.png",
+     "width": 310,
+     "height": 1086
+    }
+   ]
+  },
+  "CMP-SPR-MTCP-18-415-03": {
+   "websiteSku": "Spry18-415Cu",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 113,
+      "y": 231.3
+     },
+     "pxPerMm": 9.0702,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/sprayer-8e85cdced140a6b48179b214a51d25072cbd5eadff41abb53fd9f25629e5453a.png",
+     "width": 229,
+     "height": 400
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 181,
+      "y": 408
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTCP-18-415-03/overcap-9c8127ece5a3a9b4f5a8509fb88c6784582d6228f3aa59f56ff6de3a830bbfb9.png",
+     "width": 392,
+     "height": 646
+    }
+   ]
+  },
+  "CMP-SPR-MTGD-18-415-05": {
+   "websiteSku": "Spry18-415MtGl",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 116.5,
+      "y": 234.8
+     },
+     "pxPerMm": 8.7991,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/sprayer-dfdfa43883fb9e44b9aaec29fce18f00af8d5e2ada225a772bc58ff529a7fbed.png",
+     "width": 232,
+     "height": 400
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 176.5,
+      "y": 356
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTGD-18-415-05/overcap-42c393e05f93a1719986f761ce8ec674be4f0e5f64f24b1d905263284bb9e529.png",
+     "width": 349,
+     "height": 602
+    }
+   ]
+  },
+  "CMP-SPR-MTSL-18-415-06": {
+   "websiteSku": "Spry18-415MtSl",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 114,
+      "y": 226
+     },
+     "pxPerMm": 9.1322,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/sprayer-5c50ea9efde8b3535c6330bf6b21429e2300857f9ba7d9c47677349dce048cef.png",
+     "width": 226,
+     "height": 397
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 175.5,
+      "y": 354
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-MTSL-18-415-06/overcap-e8216c72a9f26534d9194c3a8bd9a775873ac15dada2438ab825f1d2b287cb83.png",
+     "width": 345,
+     "height": 600
+    }
+   ]
+  },
+  "CMP-SPR-SHBK-18-415-06": {
+   "websiteSku": "Spry18-415ShnBlk",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 118.5,
+      "y": 229.4
+     },
+     "pxPerMm": 9.017,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/sprayer-9d494fd880618a93df237d4a4ce12c35c13cc5b98af531044a943793654e9994.png",
+     "width": 232,
+     "height": 400
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 176,
+      "y": 352
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHBK-18-415-06/overcap-8e8c692d1b64d8db01acca85e3f0e2fea3d91cd1c13b36dcf25b5a570466d822.png",
+     "width": 349,
+     "height": 596
+    }
+   ]
+  },
+  "CMP-SPR-SHGD-18-415-05": {
+   "websiteSku": "Spry18-415ShnGl",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 121.5,
+      "y": 228.6
+     },
+     "pxPerMm": 9.2797,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/sprayer-41f38526607d7ec57dcc6c175773a0ec77889e76f1bd23f478cc2292b6497846.png",
+     "width": 242,
+     "height": 400
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 169.8,
+      "y": 357
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHGD-18-415-05/overcap-177601ce48e6d817e1fbeebf18246c078cca84cedbce281747026dc3ef8abb38.png",
+     "width": 343,
+     "height": 594
+    }
+   ]
+  },
+  "CMP-SPR-SHSL-18-415-06": {
+   "websiteSku": "Spry18-415ShnSl",
+   "layers": [
+    {
+     "slot": "sprayer",
+     "z": "front",
+     "anchor": {
+      "x": 113,
+      "y": 231.3
+     },
+     "pxPerMm": 9.0296,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/sprayer-a26b031f10138c75eae2c73ead6908b1896facdfee8e4a690d34e2f0c2a49616.png",
+     "width": 226,
+     "height": 398
+    },
+    {
+     "slot": "overcap",
+     "z": "front",
+     "anchor": {
+      "x": 175.5,
+      "y": 354
+     },
+     "pxPerMm": 12.8025,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-SPR-SHSL-18-415-06/overcap-4a2a8f6e3cecb5cbb53523558a1bbb1eebf9c9f2d34ba04e7e2e0cc070e45ece.png",
+     "width": 351,
+     "height": 599
+    }
+   ]
+  },
+  "LIB-18-415-ShnBlkCap": {
+   "websiteSku": null,
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 122.5,
+      "y": 51.2
+     },
+     "pxPerMm": 9.4721,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/LIB-18-415-ShnBlkCap/cap-da8783aa11ef90ea2c0ae5dedb79ee25c192073123dad3722319690dda82f655.png",
+     "width": 245,
+     "height": 235
+    }
+   ]
+  }
+ },
+ "plates": {
+  "circle-50ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/circle-50ml-18-415/clear/a2de54f983754d3e1b42753abaaa2f235e36f5df9177de9b92053628066418f1.png",
+   "width": 1840,
+   "height": 2192,
+   "pxPerMm": 20.6381,
+   "anchors": {
+    "axisX": 921,
+    "baselineY": 2096,
+    "seatY": 155,
+    "shoulderY": 568
+   }
+  },
+  "circle-50ml-18-415|Frosted": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/circle-50ml-18-415/frosted/ba4fe0d7cc8ef5991d2c8d6f19e2aa7a7f35452c0b5928fc062dc92475fd44b0.png",
+   "width": 1840,
+   "height": 2192,
+   "pxPerMm": 20.6381,
+   "anchors": {
+    "axisX": 920.5,
+    "baselineY": 2096,
+    "seatY": 155,
+    "shoulderY": 568
+   }
+  },
+  "circle-100ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/circle-100ml-18-415/clear/f83325a54b2bc67de3dbca095c37ab67b15507cfc591ac476a86ca839c439159.png",
+   "width": 1904,
+   "height": 2192,
+   "pxPerMm": 17.3924,
+   "anchors": {
+    "axisX": 956.5,
+    "baselineY": 2097,
+    "seatY": 119,
+    "shoulderY": 467
+   }
+  },
+  "circle-100ml-18-415|Frosted": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/circle-100ml-18-415/frosted/38f4104e9424ac1d43381af229278f618783d7d416e2dba91cef407ce14494a6.png",
+   "width": 1904,
+   "height": 2192,
+   "pxPerMm": 17.3836,
+   "anchors": {
+    "axisX": 954,
+    "baselineY": 2096,
+    "seatY": 119,
+    "shoulderY": 467
+   }
+  },
+  "cylinder-25ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/cylinder-25ml-18-415/clear/ccc5caec433662fb9c3a404e0cde8bd3cd9ca55b2abe510451785a472cdbdc77.png",
+   "width": 1008,
+   "height": 2192,
+   "pxPerMm": 22.6918,
+   "anchors": {
+    "axisX": 498,
+    "baselineY": 2096,
+    "seatY": 147,
+    "shoulderY": 486
+   }
+  },
+  "cylinder-50ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/cylinder-50ml-18-415/clear/6da4f4e418e44d36adbfeeb11105e20f20408165f6ae7a83acf14d4f6ab84c2a.png",
+   "width": 768,
+   "height": 2192,
+   "pxPerMm": 16.0062,
+   "anchors": {
+    "axisX": 380.5,
+    "baselineY": 2096,
+    "seatY": 180,
+    "shoulderY": 415
+   }
+  },
+  "cylinder-100ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/cylinder-100ml-18-415/clear/5ad1aa3cecf3d484d2a07ed3ea34d2c1cffdeca83a815fe4d23562e82fcdfb25.png",
+   "width": 736,
+   "height": 2192,
+   "pxPerMm": 12.1162,
+   "anchors": {
+    "axisX": 364.5,
+    "baselineY": 2096,
+    "seatY": 212,
+    "shoulderY": 427
+   }
+  },
+  "diamond-60ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diamond-60ml-18-415/clear/9f5ed12391c2fda7eac78482fc42087aa00a02e31f8cf2a3ad59c58b43dfb514.png",
+   "width": 1136,
+   "height": 2192,
+   "pxPerMm": 20.6746,
+   "anchors": {
+    "axisX": 567,
+    "baselineY": 2043,
+    "seatY": 145,
+    "shoulderY": 467
+   }
+  },
+  "diva-30ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-30ml-18-415/clear/ec95082f9e15df3a1a2bbad11968b325dd210453df5e2c87db6ce439d3ba39d3.png",
+   "width": 1232,
+   "height": 2192,
+   "pxPerMm": 22.7981,
+   "anchors": {
+    "axisX": 616,
+    "baselineY": 2096,
+    "seatY": 157,
+    "shoulderY": 613
+   }
+  },
+  "diva-46ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/clear/e1f942bf4757cf6dae7d9e073b5ff9769d90db384a899ef6b4ab95d7773cd493.png",
+   "width": 1248,
+   "height": 2192,
+   "pxPerMm": 20.8364,
+   "anchors": {
+    "axisX": 622,
+    "baselineY": 2097,
+    "seatY": 146,
+    "shoulderY": 563
+   }
+  },
+  "diva-46ml-18-415|Frosted": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-46ml-18-415/frosted/e5432192d6476eee0221a9c693761dbea054276e7cc330e7d5653fa1c6d78205.png",
+   "width": 1248,
+   "height": 2192,
+   "pxPerMm": 20.8471,
+   "anchors": {
+    "axisX": 622,
+    "baselineY": 2098,
+    "seatY": 146,
+    "shoulderY": 563
+   }
+  },
+  "diva-100ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/diva-100ml-18-415/clear/18dde5696498da5c165ee2d64d8344e9757639eaa6770108891edb138861d552.png",
+   "width": 1296,
+   "height": 2192,
+   "pxPerMm": 16.6456,
+   "anchors": {
+    "axisX": 643,
+    "baselineY": 2095,
+    "seatY": 151,
+    "shoulderY": 446
+   }
+  },
+  "elegant-60ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/elegant-60ml-18-415/clear/db7c6308f3e9c9d6d73a6a1e34dccdafbd0b568f0bded6ed8463c37f81e76056.png",
+   "width": 1520,
+   "height": 2192,
+   "pxPerMm": 21.6401,
+   "anchors": {
+    "axisX": 752.5,
+    "baselineY": 2097,
+    "seatY": 124,
+    "shoulderY": 478
+   }
+  },
+  "elegant-60ml-18-415|Frosted": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/elegant-60ml-18-415/frosted/a01865c38a9f7fa31e819e4326b5f631ca2b1c8f816209eac50228017678bb48.png",
+   "width": 1520,
+   "height": 2192,
+   "pxPerMm": 21.6401,
+   "anchors": {
+    "axisX": 750.8,
+    "baselineY": 2097,
+    "seatY": 124,
+    "shoulderY": 475
+   }
+  },
+  "elegant-100ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/elegant-100ml-18-415/clear/affaf24806d70c3dec90a52f222a291c28246402fb7741456934770d8cb0c522.png",
+   "width": 1360,
+   "height": 2192,
+   "pxPerMm": 17.3289,
+   "anchors": {
+    "axisX": 670.5,
+    "baselineY": 2096,
+    "seatY": 107,
+    "shoulderY": 374
+   }
+  },
+  "elegant-100ml-18-415|Frosted": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/elegant-100ml-18-415/frosted/49593cd09a5972751a74a73435d18c05c0585c0300a2c79eb91990ee8e8d650e.png",
+   "width": 1360,
+   "height": 2192,
+   "pxPerMm": 17.3376,
+   "anchors": {
+    "axisX": 678.5,
+    "baselineY": 2097,
+    "seatY": 107,
+    "shoulderY": 372
+   }
+  },
+  "empire-50ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/empire-50ml-18-415/clear/d260dcd1fd95003ad6a9cb4398f5ef34f0b6ca2cdda79833daa9bb7b1f27d4aa.png",
+   "width": 1056,
+   "height": 2192,
+   "pxPerMm": 21.3272,
+   "anchors": {
+    "axisX": 519,
+    "baselineY": 2096,
+    "seatY": 147,
+    "shoulderY": 515
+   }
+  },
+  "empire-100ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/empire-100ml-18-415/clear/97ed31088574714b12da6de6653d7c1fcab8117a4b3c941722f4f4b39eabfa23.png",
+   "width": 1136,
+   "height": 2192,
+   "pxPerMm": 17.6494,
+   "anchors": {
+    "axisX": 565.5,
+    "baselineY": 2096,
+    "seatY": 133,
+    "shoulderY": 422
+   }
+  },
+  "grace-55ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/grace-55ml-18-415/clear/6d19501374251ffd86b2cc78fc2fffda91332d7e220c469f203af48e28b1b3dd.png",
+   "width": 1088,
+   "height": 2192,
+   "pxPerMm": 16.6615,
+   "anchors": {
+    "axisX": 542,
+    "baselineY": 2097,
+    "seatY": 134,
+    "shoulderY": 467
+   }
+  },
+  "round-78ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/clear/971509d06a659f91149e2e8168b99e588852fc4fc6669fa10207ace7cc05dffb.png",
+   "width": 1840,
+   "height": 2192,
+   "pxPerMm": 24.9215,
+   "anchors": {
+    "axisX": 914,
+    "baselineY": 2096,
+    "seatY": 133,
+    "shoulderY": 631
+   }
+  },
+  "round-78ml-18-415|Frosted": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-78ml-18-415/frosted/02cfd5949ba1347b9f942ad30f4be144ee3e31598703e4474236cece40816dde.png",
+   "width": 1840,
+   "height": 2192,
+   "pxPerMm": 24.9215,
+   "anchors": {
+    "axisX": 914.5,
+    "baselineY": 2096,
+    "seatY": 133,
+    "shoulderY": 631
+   }
+  },
+  "round-128ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-128ml-18-415/clear/5b74b6e01df47ff01e5f96e7ed4d2db2e78aeb789097245f07c39b227246fda8.png",
+   "width": 1968,
+   "height": 2192,
+   "pxPerMm": 21.9591,
+   "anchors": {
+    "axisX": 944,
+    "baselineY": 2090,
+    "seatY": 119,
+    "shoulderY": 558
+   }
+  },
+  "round-128ml-18-415|Frosted": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/round-128ml-18-415/frosted/7ebafe1ea75d46f27bbe74e2671ddb1db0732265c3ecf7f9c9fae6131e8a836c.png",
+   "width": 1968,
+   "height": 2192,
+   "pxPerMm": 21.9368,
+   "anchors": {
+    "axisX": 945,
+    "baselineY": 2088,
+    "seatY": 119,
+    "shoulderY": 558
+   }
+  },
+  "sleek-30ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/sleek-30ml-18-415/clear/3c09bbe9b33683ea503155de5c9b860b59aee72009a8ef8f56f8873482e0943f.png",
+   "width": 832,
+   "height": 2192,
+   "pxPerMm": 19.7231,
+   "anchors": {
+    "axisX": 413.5,
+    "baselineY": 2096,
+    "seatY": 116,
+    "shoulderY": 457
+   }
+  },
+  "sleek-50ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/sleek-50ml-18-415/clear/9b42d0f6ff218b4607550a681eec96b25ac8814669936d4af918007a2fb82eed.png",
+   "width": 736,
+   "height": 2192,
+   "pxPerMm": 14.0474,
+   "anchors": {
+    "axisX": 364.5,
+    "baselineY": 2097,
+    "seatY": 114,
+    "shoulderY": 347
+   }
+  },
+  "sleek-100ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/sleek-100ml-18-415/clear/e3cd12d0150005d236abf3cc80c217534d2f04f073bc7222c8d85ff485ee3a51.png",
+   "width": 816,
+   "height": 2192,
+   "pxPerMm": 13.0375,
+   "anchors": {
+    "axisX": 410,
+    "baselineY": 2096,
+    "seatY": 115,
+    "shoulderY": 310
+   }
+  },
+  "slim-30ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/slim-30ml-18-415/clear/e02414756bad03dabbdd37febdfcfb096d4f304184cd1dcf104813005e78ed79.png",
+   "width": 880,
+   "height": 2192,
+   "pxPerMm": 21.7379,
+   "anchors": {
+    "axisX": 432.8,
+    "baselineY": 2096,
+    "seatY": 147,
+    "shoulderY": 455
+   }
+  },
+  "slim-50ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/slim-50ml-18-415/clear/c89667b8d4c608f120e07996bedddc69220e1950ca3b5176991dbb026f81dd11.png",
+   "width": 736,
+   "height": 2192,
+   "pxPerMm": 16.0871,
+   "anchors": {
+    "axisX": 366.5,
+    "baselineY": 2096,
+    "seatY": 108,
+    "shoulderY": 390
+   }
+  },
+  "slim-100ml-18-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/slim-100ml-18-415/clear/dac9aaf9d8e082cea9fbecaee4d3f9009b9807db4fa16bae2b4f86f5c21771f2.png",
+   "width": 736,
+   "height": 2192,
+   "pxPerMm": 12.5459,
+   "anchors": {
+    "axisX": 367.5,
+    "baselineY": 2096,
+    "seatY": 126,
+    "shoulderY": 330
+   }
+  }
+ }
+}

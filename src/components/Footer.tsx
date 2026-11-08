@@ -30,6 +30,7 @@ const FOOTER_GROUPS = [
     {
         titleKey: "resources",
         links: [
+            ["helpCenter", "/help"],
             ["fitmentGuide", "/resources"],
             ["buildYourBottle", "/matrix"],
             ["packagingInsights", "/blog"],

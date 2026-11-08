@@ -51,6 +51,7 @@ import type * as graceSessions from "../graceSessions.js";
 import type * as graceShortlists from "../graceShortlists.js";
 import type * as graceToolDefs from "../graceToolDefs.js";
 import type * as graceUploads from "../graceUploads.js";
+import type * as helpQuestions from "../helpQuestions.js";
 import type * as http from "../http.js";
 import type * as imageCleanup from "../imageCleanup.js";
 import type * as imageReconciliation from "../imageReconciliation.js";
@@ -146,6 +147,7 @@ declare const fullApi: ApiFromModules<{
   graceShortlists: typeof graceShortlists;
   graceToolDefs: typeof graceToolDefs;
   graceUploads: typeof graceUploads;
+  helpQuestions: typeof helpQuestions;
   http: typeof http;
   imageCleanup: typeof imageCleanup;
   imageReconciliation: typeof imageReconciliation;

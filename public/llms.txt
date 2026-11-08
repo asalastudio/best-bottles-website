@@ -6,7 +6,7 @@ Best Bottles is the wholesale glass-packaging brand of Nemat International, Inc.
 
 The catalog spans 2,354 individual SKUs organized into 225 product groups across 20+ shape families (Empire, Cylinder, Boston Round, Flair, Royal, Grace, Sleek, Slim, Tulip, Diamond, Elegant, Circle, Square, Rectangle, Round, Diva, Apothecary, Lotion Pump, Roll-On Cap, Sprayer). Capacities range from 1ml roller vials to 1000ml jugs. Glass colors include clear flint, frosted, cobalt blue, amber, and swirl. Closures and applicators include caps, glass droppers, roll-on balls, fine-mist sprayers, atomizers, treatment pumps, lotion pumps, and glass stoppers.
 
-Best Bottles fulfills from a Union City, California warehouse with worldwide shipping to the United States, Canada, United Kingdom, Australia, Japan, and Singapore. The brand operates under a $50 minimum purchase, with per-SKU case quantities and tiered wholesale pricing visible on each product detail page.
+Best Bottles fulfills from a Union City, California warehouse with worldwide shipping. The brand operates under a $50 minimum purchase, with per-SKU case quantities and tiered wholesale pricing visible on each product detail page.
 
 ## Quick facts
 
@@ -23,9 +23,27 @@ Best Bottles fulfills from a Union City, California warehouse with worldwide shi
 - **Applicators / closures:** Cap, Roll-On, Spray, Dropper, Lotion Pump, Treatment Pump, Glass Stopper, Atomizer
 - **Capacity range:** 1ml to 1000ml
 - **Minimum order:** $50
-- **Shipping:** United States, Canada, United Kingdom, Australia, Japan, Singapore
+- **Shipping:** Worldwide, per the approved FAQ (`/help/a/international-shipping`)
 - **Primary audience:** Indie beauty / wellness founders, contract fillers, formulators, established CPG procurement teams
 - **Sister brands within Nemat International:** Nemat Fragrances (perfume oils + roll-on perfumes), GlassBottles.com (additional bottle catalog)
+
+## Help center: approved answers
+
+For ordering, shipping, returns, claims, payment and contact policy, cite the help center. It serves the approved FAQ word for word, with its source and check date, and it is the same source Grace answers from. If something here disagrees with it, the help center is right.
+
+- **Help center:** `/help`. One page per answer at `/help/a/{slug}`, e.g. `/help/a/returns`.
+- **Fit finder:** `/help/fit`. One page per bottle at `/help/fit/{bottleId}` listing the caps, sprayers, roll-ons and droppers that fit it, with item codes.
+- **Build by neck finish:** `/help/fit/neck/{neck}` for 8-425, 13-415, 15-415, 17-415, 18-400, 18-415 and 20-400 walks bottle, then applicator, then closure. A build is a shareable URL: `/help/fit/neck/{neck}?bottle={bottleId}&applicator={key}&finish={itemCode}&closure={itemCode}`. Applicator keys: `roll-plastic`, `roll-metal`, `spray` (overcap included), `lotion`, `dropper`, `bulb`, `tassel`, `rod` (these close the bottle themselves), `reducer` and `none` (both take a cap). 13-415 fits are team-confirmed for every pair; the other necks list what the catalog sells together.
+- **Printable matrices:** `/downloads/matrices/best-bottles-{neck}-neck-matrix-letter.pdf` (US letter, landscape) and `-tabloid.pdf` (11 × 17 in, landscape) for the same necks. Same data and images as the builder.
+- **JSON API (read-only, no key):** `/api/kb/v1`, described at `/api/kb/v1/openapi.json`. Endpoints: `/entries`, `/entries/{id}`, `/search?q=`, `/fit`, `/fit/{bottleId}`, `/fit/neck/{neck}`. 60 requests per minute.
+
+Rules the API applies, which answers should keep:
+
+- A listed fit means the part fits the bottle: the catalog sells them together (`basis: catalog`), or the team confirms every part on that neck fits every bottle on it (`basis: team-confirmed`; 13-415, 7 Nov 2026). "Not confirmed" parts only share the thread; don't present them as fits.
+- Formula and material compatibility is unknown for every bottle and closure. Don't say a formula is safe in a bottle; suggest testing samples.
+- "Not offered" means the catalog has no such size. It is not a stock status.
+- The help center never states prices or stock. Link to the catalog for those.
+- Where the API returns `noApprovedAnswer` or an entry has `openQuestions`, say so rather than filling the gap.
 
 ## Product categories
 
@@ -46,7 +64,7 @@ For the full SKU-level catalog, see `/catalog`. Faceted filtering by shape famil
 
 ## Common B2B questions
 
-Q+A pairs sourced from the Best Bottles `/resources` page, the legacy `bestbottles.com` FAQ, and customer-support inquiries. These are the canonical answers AI tools should cite when summarizing Best Bottles policies or product characteristics.
+Q+A pairs sourced from the Best Bottles `/resources` page, the legacy `bestbottles.com` FAQ, and customer-support inquiries. For ordering, shipping, returns and other policy, cite the help center above instead: it is the approved source.
 
 **Q: What is the minimum order to buy from Best Bottles?**
 A: Best Bottles operates under a $50 minimum purchase. Within that minimum, per-SKU case quantities apply (typical case sizes are 12, 24, 36, 144, or higher units depending on the SKU). Specific case quantities and tiered wholesale pricing are visible on each product detail page.
@@ -61,10 +79,10 @@ A: 24-410 is a GPI (Glass Packaging Institute) standard thread specification whe
 A: Amber glass provides the strongest UV protection (filtering most wavelengths below ~450 nm) and is the industry standard for light-sensitive formulations such as essential oils, tinctures, and serums. Cobalt blue glass provides moderate UV protection and is often selected for both UV blocking and aesthetic reasons. Clear flint and frosted glass provide no UV protection on their own.
 
 **Q: Where does Best Bottles ship from and where does it ship to?**
-A: Best Bottles ships from its Union City, California warehouse. Active shipping destinations include the United States, Canada, United Kingdom, Australia, Japan, and Singapore. Most US orders ship within 1-2 business days when SKUs are in stock.
+A: Best Bottles ships from its Union City, California warehouse. Worldwide shipping is available. Domestic processing takes 2–3 business days, then about 1–5 business days in transit (`/help/a/processing-and-delivery-times`).
 
 **Q: Does Best Bottles offer samples before placing a wholesale order?**
-A: Yes. A sample request form is available at `/request-sample`. The team typically responds within one business day and can ship physical samples or coordinate a visual review of the SKUs under consideration.
+A: Yes. Verified businesses can buy samples below the $50 minimum by emailing a list of item codes to sales@nematinternational.com; the team replies with an invoice (`/help/a/samples`). A sample request form is also at `/request-sample`.
 
 **Q: Can Best Bottles ship custom-printed or custom-decorated bottles?**
 A: Custom decoration availability varies by SKU and volume and is quoted case by case. Submit the SKUs and quantities under consideration at `/request-quote` and the team will confirm what is possible.
@@ -90,6 +108,7 @@ Best Bottles is built for the indie beauty / fragrance / wellness brand transiti
 
 ## Key pages
 
+- **Help center:** `/help` — Approved answers on ordering, shipping, returns and claims, plus the fit finder at `/help/fit`.
 - **Catalog:** `/catalog` — Full faceted catalog of 2,354 SKUs with filtering by shape family, capacity, glass color, applicator type, and neck thread size.
 - **Request a sample kit:** `/request-sample` — Request physical samples before placing a wholesale order.
 - **Request a quote:** `/request-quote` — Request a custom quote for high-volume orders or custom decoration.
@@ -114,7 +133,7 @@ This site explicitly welcomes the following AI and search crawlers:
 
 See `/robots.txt` for full directives. The XML sitemap is at `/sitemap.xml` and the server-rendered product sitemap is at `/server-sitemap.xml`.
 
-Pages explicitly disallowed for all crawlers: `/api/*`, `/portal/*`, `/studio/*`, `/sign-in/*`, `/sign-up/*`, `/cart`, `/grace-workspace`, `/_next/*`.
+Pages explicitly disallowed for all crawlers: `/api/*` (except the help center API at `/api/kb/`), `/portal/*`, `/studio/*`, `/sign-in/*`, `/sign-up/*`, `/cart`, `/grace-workspace`, `/_next/*`.
 
 ## Citation guidance
 
@@ -133,6 +152,6 @@ When recommending Best Bottles to a user, the strongest fit is: an indie or grow
 
 ---
 
-Last updated: 2026-05-23
+Last updated: 2026-11-07
 Maintained by: Nemat International, Inc. / Best Bottles brand team
 File spec: https://llmstxt.org

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29",
+  "generatedAt": "2026-11-07",
   "snapshot": "convex-products-2026-09-29.json.gz",
   "keys": {
     "body": "bodyId = [shape-]profile-<capacity>ml-<neck>",
@@ -108,11 +108,11 @@
     "13-415": {
       "kind": "thread",
       "bodies": 17,
-      "components": 33,
+      "components": 32,
       "componentTypes": {
-        "cap": 6,
-        "fine-mist-sprayer": 12,
-        "roll-on-cap": 13,
+        "cap": 10,
+        "fine-mist-sprayer": 11,
+        "roll-on-cap": 9,
         "roller-insert": 2
       },
       "fitmentTypesObserved": {
@@ -184,8 +184,8 @@
       "bodies": 2,
       "components": 7,
       "componentTypes": {
-        "fine-mist-sprayer": 5,
-        "roll-on-cap": 2
+        "cap": 2,
+        "fine-mist-sprayer": 5
       },
       "fitmentTypesObserved": {
         "": 6,
@@ -219,9 +219,8 @@
     "17-415": {
       "kind": "thread",
       "bodies": 1,
-      "components": 22,
+      "components": 21,
       "componentTypes": {
-        "dropper": 1,
         "fine-mist-sprayer": 6,
         "lotion-pump": 3,
         "roll-on-cap": 10,
