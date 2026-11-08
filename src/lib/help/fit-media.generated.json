@@ -491,16 +491,112 @@
      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/elegant-30ml-15-415/clear/34ed787f9abe3299c904de2ad642f342787a85e2c821a0b3be698ce70f93a9ea.png"
     }
    },
-   "parts": {},
-   "missingParts": [
-    "CMP-CAP-SGLD-15-415",
-    "CMP-CAP-SSLV-15-415",
-    "CMP-SPR-BLK-15-415",
-    "CMP-SPR-GLD-15-415",
-    "CMP-SPR-SGLD-15-415",
-    "CMP-SPR-SLV-15-415",
-    "CMP-SPR-SSLV-15-415"
-   ]
+   "parts": {
+    "CMP-CAP-SGLD-15-415": {
+     "src": "/images/help-fit/15-415/cmp-cap-sgld-15-415.169b125e1908.webp",
+     "width": 148,
+     "height": 240,
+     "pxPerMm": 8.0018,
+     "axisX": 80.95,
+     "seatY": 111.35,
+     "source": "product kit GBCrcl30GlCap"
+    },
+    "CMP-CAP-SSLV-15-415": {
+     "src": "/images/help-fit/15-415/cmp-cap-sslv-15-415.393fdf7c600a.webp",
+     "width": 145,
+     "height": 240,
+     "pxPerMm": 8.0653,
+     "axisX": 78.41,
+     "seatY": 110.11,
+     "source": "product kit GBCrcl30SlCap"
+    },
+    "CMP-SPR-BLK-15-415": {
+     "src": "/images/help-fit/15-415/cmp-spr-blk-15-415.667d9039eb0d.webp",
+     "width": 120,
+     "height": 240,
+     "pxPerMm": 7.1231,
+     "axisX": 62.52,
+     "seatY": 125.58,
+     "source": "product kit GBCrcl30SpryBlk",
+     "overcap": {
+      "src": "/images/help-fit/15-415/cmp-spr-blk-15-415-overcap.e337aea403d6.webp",
+      "width": 119,
+      "height": 240,
+      "pxPerMm": 6.3647,
+      "axisX": 63.38,
+      "seatY": 137.76
+     }
+    },
+    "CMP-SPR-GLD-15-415": {
+     "src": "/images/help-fit/15-415/cmp-spr-gld-15-415.d79b9c1ca8e3.webp",
+     "width": 123,
+     "height": 240,
+     "pxPerMm": 6.9132,
+     "axisX": 63.95,
+     "seatY": 125.9,
+     "source": "product kit GBCrcl30SpryMattGl",
+     "overcap": {
+      "src": "/images/help-fit/15-415/cmp-spr-gld-15-415-overcap.2518a9fd0e4e.webp",
+      "width": 117,
+      "height": 240,
+      "pxPerMm": 6.4319,
+      "axisX": 63.04,
+      "seatY": 135.87
+     }
+    },
+    "CMP-SPR-SGLD-15-415": {
+     "src": "/images/help-fit/15-415/cmp-spr-sgld-15-415.f5d55a7fb392.webp",
+     "width": 120,
+     "height": 240,
+     "pxPerMm": 7.1734,
+     "axisX": 63.53,
+     "seatY": 123.35,
+     "source": "product kit GBCrcl30SpryShnGl",
+     "overcap": {
+      "src": "/images/help-fit/15-415/cmp-spr-sgld-15-415-overcap.dae553a16929.webp",
+      "width": 122,
+      "height": 240,
+      "pxPerMm": 6.4319,
+      "axisX": 65.57,
+      "seatY": 134.9
+     }
+    },
+    "CMP-SPR-SLV-15-415": {
+     "src": "/images/help-fit/15-415/cmp-spr-slv-15-415.536eceebc5e3.webp",
+     "width": 120,
+     "height": 240,
+     "pxPerMm": 7.1734,
+     "axisX": 62.4,
+     "seatY": 124.74,
+     "source": "product kit GBCrcl30SpryMattSl",
+     "overcap": {
+      "src": "/images/help-fit/15-415/cmp-spr-slv-15-415-overcap.9790cb159742.webp",
+      "width": 116,
+      "height": 240,
+      "pxPerMm": 6.4048,
+      "axisX": 63.78,
+      "seatY": 134.57
+     }
+    },
+    "CMP-SPR-SSLV-15-415": {
+     "src": "/images/help-fit/15-415/cmp-spr-sslv-15-415.6e5057826da8.webp",
+     "width": 119,
+     "height": 240,
+     "pxPerMm": 7.2936,
+     "axisX": 62.3,
+     "seatY": 123.01,
+     "source": "product kit GBCrcl30SpryShSl",
+     "overcap": {
+      "src": "/images/help-fit/15-415/cmp-spr-sslv-15-415-overcap.635f84fdc9ec.webp",
+      "width": 121,
+      "height": 240,
+      "pxPerMm": 6.4454,
+      "axisX": 62.16,
+      "seatY": 134.08
+     }
+    }
+   },
+   "missingParts": []
   },
   "17-415": {
    "registerSnapshot": "register-17-415-2026-11-07.json",
@@ -802,16 +898,152 @@
      "source": "/local-kits/vial-masters-2026-11-03/parts/vial-9ml-clear-glass.3032d5737e09.webp"
     }
    },
-   "parts": {},
-   "missingParts": [
-    "CMP-APP-BLK-18-400",
-    "CMP-CAP-BLK-18-400",
-    "CMP-DRP-BKGD-18400-66",
-    "CMP-DRP-BKSL-18400-66",
-    "CMP-DRP-WHT-18400-66",
-    "CMP-DRP-WTGD-18400-66",
-    "CMP-DRP-WTSL-18400-66"
-   ]
+   "parts": {
+    "CMP-APP-BLK-18-400": {
+     "src": "/images/help-fit/18-400/cmp-app-blk-18-400.6b6d7f0570fb.webp",
+     "width": 106,
+     "height": 240,
+     "pxPerMm": 3.0456,
+     "axisX": 53.52,
+     "seatY": 18.06,
+     "source": "product kit GB09BlackCapApp"
+    },
+    "CMP-CAP-BLK-18-400": {
+     "src": "/images/help-fit/18-400/cmp-cap-blk-18-400.6e9ae33a4441.webp",
+     "width": 412,
+     "height": 240,
+     "pxPerMm": 11.9443,
+     "axisX": 215.37,
+     "seatY": 63.91,
+     "source": "product kit GB09BlackCapSht"
+    },
+    "CMP-DRP-BKGD-18400-66": {
+     "src": "/images/help-fit/18-400/cmp-drp-bkgd-18400-66.fe67eb6d7e1b.webp",
+     "width": 168,
+     "height": 240,
+     "pxPerMm": 8.0747,
+     "axisX": 88.84,
+     "seatY": 155.8,
+     "source": "product kit GBBstnAmb15mlBlkDropperGlTrim",
+     "behind": {
+      "src": "/images/help-fit/18-400/cmp-drp-bkgd-18400-66-inside.102635faff4e.webp",
+      "width": 36,
+      "height": 480,
+      "pxPerMm": 9.2618,
+      "axisX": 16.28,
+      "seatY": -79.09
+     },
+     "swatch": {
+      "src": "/images/help-fit/18-400/cmp-drp-bkgd-18400-66-whole.4a57c8d62e1a.webp",
+      "width": 63,
+      "height": 240,
+      "pxPerMm": 3.0134,
+      "axisX": 33.15,
+      "seatY": 58.14
+     }
+    },
+    "CMP-DRP-BKSL-18400-66": {
+     "src": "/images/help-fit/18-400/cmp-drp-bksl-18400-66.e19507051ce7.webp",
+     "width": 177,
+     "height": 240,
+     "pxPerMm": 8.2108,
+     "axisX": 95.06,
+     "seatY": 157.75,
+     "source": "product kit GBBstnAmb15mlBlkDropperSlTrim",
+     "behind": {
+      "src": "/images/help-fit/18-400/cmp-drp-bksl-18400-66-inside.102635faff4e.webp",
+      "width": 36,
+      "height": 480,
+      "pxPerMm": 9.2618,
+      "axisX": 16.28,
+      "seatY": -79.09
+     },
+     "swatch": {
+      "src": "/images/help-fit/18-400/cmp-drp-bksl-18400-66-whole.00c4a5beed33.webp",
+      "width": 65,
+      "height": 240,
+      "pxPerMm": 3.0166,
+      "axisX": 34.92,
+      "seatY": 57.96
+     }
+    },
+    "CMP-DRP-WHT-18400-66": {
+     "src": "/images/help-fit/18-400/cmp-drp-wht-18400-66.a9216320cf86.webp",
+     "width": 177,
+     "height": 240,
+     "pxPerMm": 8.7883,
+     "axisX": 93.02,
+     "seatY": 160.95,
+     "source": "product kit GBBstnAmb15mlWhtDropper",
+     "behind": {
+      "src": "/images/help-fit/18-400/cmp-drp-wht-18400-66-inside.102635faff4e.webp",
+      "width": 36,
+      "height": 480,
+      "pxPerMm": 9.2618,
+      "axisX": 16.28,
+      "seatY": -79.09
+     },
+     "swatch": {
+      "src": "/images/help-fit/18-400/cmp-drp-wht-18400-66-whole.9910a396f689.webp",
+      "width": 61,
+      "height": 240,
+      "pxPerMm": 3.0498,
+      "axisX": 32.28,
+      "seatY": 55.86
+     }
+    },
+    "CMP-DRP-WTGD-18400-66": {
+     "src": "/images/help-fit/18-400/cmp-drp-wtgd-18400-66.eb69da344013.webp",
+     "width": 169,
+     "height": 240,
+     "pxPerMm": 8.1422,
+     "axisX": 89.58,
+     "seatY": 158.44,
+     "source": "product kit GBBstnAmb15mlWhtDropperGlTrim",
+     "behind": {
+      "src": "/images/help-fit/18-400/cmp-drp-wtgd-18400-66-inside.102635faff4e.webp",
+      "width": 36,
+      "height": 480,
+      "pxPerMm": 9.2618,
+      "axisX": 16.28,
+      "seatY": -79.09
+     },
+     "swatch": {
+      "src": "/images/help-fit/18-400/cmp-drp-wtgd-18400-66-whole.b59924a469cf.webp",
+      "width": 62,
+      "height": 240,
+      "pxPerMm": 3.0072,
+      "axisX": 33.09,
+      "seatY": 58.52
+     }
+    },
+    "CMP-DRP-WTSL-18400-66": {
+     "src": "/images/help-fit/18-400/cmp-drp-wtsl-18400-66.4a6450a9a2c3.webp",
+     "width": 174,
+     "height": 240,
+     "pxPerMm": 8.1422,
+     "axisX": 93.59,
+     "seatY": 154.43,
+     "source": "product kit GBBstnAmb15mlWhtDropperSlTrim",
+     "behind": {
+      "src": "/images/help-fit/18-400/cmp-drp-wtsl-18400-66-inside.102635faff4e.webp",
+      "width": 36,
+      "height": 480,
+      "pxPerMm": 9.2618,
+      "axisX": 16.28,
+      "seatY": -79.09
+     },
+     "swatch": {
+      "src": "/images/help-fit/18-400/cmp-drp-wtsl-18400-66-whole.28105d09f386.webp",
+      "width": 65,
+      "height": 240,
+      "pxPerMm": 3.0259,
+      "axisX": 34.78,
+      "seatY": 57.39
+     }
+    }
+   },
+   "missingParts": []
   },
   "18-415": {
    "registerSnapshot": "register-18-415-2026-11-07.json",
@@ -1991,13 +2223,30 @@
      "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/vial-2ml-8-425/clear/541702c606dddb5efc5c61c6953d77d00718ca2f6924e6248025c54385111c6e.png"
     }
    },
-   "parts": {},
+   "parts": {
+    "CMP-CAP-BLK-8-425": {
+     "src": "/images/help-fit/8-425/cmp-cap-blk-8-425.ade81dcfb103.webp",
+     "width": 323,
+     "height": 240,
+     "pxPerMm": 34.3786,
+     "axisX": 162.0,
+     "seatY": 259.66,
+     "source": "product kit GBVialClr2mlBlackCap"
+    },
+    "CMP-CAP-WHT-8-425": {
+     "src": "/images/help-fit/8-425/cmp-cap-wht-8-425.d38e9fc61e62.webp",
+     "width": 303,
+     "height": 240,
+     "pxPerMm": 32.2789,
+     "axisX": 151.85,
+     "seatY": 251.73,
+     "source": "product kit GBVialClr2mlWhtCap"
+    }
+   },
    "missingParts": [
-    "CMP-CAP-BLK-8-425",
     "CMP-CAP-BLK-8425-T",
     "CMP-CAP-SGLD-8425-T",
-    "CMP-CAP-SSLV-8425-T",
-    "CMP-CAP-WHT-8-425"
+    "CMP-CAP-SSLV-8425-T"
    ]
   }
  }

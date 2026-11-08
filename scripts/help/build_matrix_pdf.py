@@ -45,6 +45,7 @@ GROUPS = [  # the order the builder and the September sheets use
     ("dropper", "Droppers", lambda c: c["type"] == "dropper", "Bulb droppers with collar cap"),
     ("vintage-bulb-sprayer", "Vintage bulb sprayers", lambda c: c["type"] == "vintage-bulb-sprayer", "Antique-style bulb atomisers"),
     ("tassel-bulb-sprayer", "Bulb sprayers with tassel", lambda c: c["type"] == "tassel-bulb-sprayer", "Bulb atomisers with tassel"),
+    ("rod", "Glass rod applicators", lambda c: c["type"] == "cap" and c.get("style") == "Applicator", "Cap with a glass rod for dabbing"),
     ("short-ribbed-cap", "Short ribbed caps", lambda c: c["type"] == "cap" and c.get("style") == "Short ribbed", "Pour bottles: black or white"),
     ("short-cap", "Short caps", lambda c: c["type"] == "cap" and c.get("style") == "Short", "Pour bottles, or over a reducer"),
     ("tall-cap", "Tall caps", lambda c: c["type"] == "cap" and c.get("style") == "Tall", "Pour bottles, or over a reducer"),
@@ -75,7 +76,7 @@ def finish(name: str) -> str:
         return " dotted" if re.search("dots", m.group(0), re.I) else ""
     text = re.sub(r"Fine Mist Sprayer", "", text, flags=re.I)
     text = re.sub(r"(?:with dots|with dots or)?\s*cap (?:with dots )?or closure for rollon bottles", roll, text, flags=re.I)
-    for pattern, repl in ((r"lid or closure for glass bottle", ""), (r"short cap with liner", ""), (r"caps? for glass bottles", ""),
+    for pattern, repl in ((r"lid or closure for glass bottle", ""), (r"\s*colou?r\s+Cap or Closure for\b.*$", ""), (r"\s*Cap or Closure for\b.*$", ""), (r"short cap with liner", ""), (r"caps? for glass bottles", ""),
                           (r"collar (?:sprayer|Lotion or treatment pump)", "collar"), (r"Lotion or treatment pump", ""),
                           (r"Antique or Vintage style bulb sprayer", "bulb"), (r"rubber bulb dropper with", "bulb,"), (r"\.\s*Glass stem length is (\d+)\s*mm.*$", r", \1 mm stem"), (r"\.\s*Glass stem.*$", "")):
         text = re.sub(pattern, repl, text, flags=re.I)
@@ -280,7 +281,9 @@ class Sheet:
         """Bottles smallest to largest at one shared scale (true relative height), in one or more rows."""
         c, text = self.c, self.text
         per_row = -(-len(bodies) // rows)
-        cell = (self.W - 2 * M) / per_row
+        # A finish with one or two bottles keeps them at a sensible size, centred, instead of filling the page.
+        cell = min((self.W - 2 * M) / per_row, 170)
+        x_start = M + ((self.W - 2 * M) - cell * per_row) / 2
         label_h = 34
         row_gap = 14
         row_h = (top - bottom - row_gap * (rows - 1)) / rows
@@ -295,7 +298,7 @@ class Sheet:
             row_bodies = bodies[r * per_row:(r + 1) * per_row]
             row_bottom = top - (r + 1) * row_h - r * row_gap
             for i, b in enumerate(row_bodies):
-                x = M + i * cell
+                x = x_start + i * cell
                 c.setFillColor(STAGE)
                 c.setStrokeColor(HAIR)
                 c.setLineWidth(0.6)

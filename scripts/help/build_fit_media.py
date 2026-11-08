@@ -22,6 +22,7 @@ Writes:
 from __future__ import annotations
 
 import base64
+import csv
 import hashlib
 import io
 import json
@@ -157,6 +158,43 @@ def kit_part(kit: dict, part: dict, stem: str, neck: str, source: str) -> dict:
                 (anchors["seatY"] - box["y"]) * scale, stem, ROLLER_HEIGHT_PX, source, neck)
 
 
+def kit_ppm(kit: dict, body: dict) -> float:
+    """A kit's px per mm; kits that do not record it (Elegant 30) get it from the glass height in mm."""
+    if kit["anchors"].get("pxPerMm"):
+        return kit["anchors"]["pxPerMm"]
+    glass = next(p for p in kit["parts"] if p["slot"] == "body")["bounds"]
+    return (glass["bottom"] - glass["top"]) / body["heightMm"]
+
+
+def kit_closure(kit: dict, body: dict, stem: str, neck: str, source: str) -> dict | None:
+    """A closure cut from a product kit: its layers composed at the kit's neck seat (stem inside the glass)."""
+    ppm = kit_ppm(kit, body)
+    anchors = kit["anchors"]
+    axis = anchors.get("neckAxisX") or anchors["axisX"]
+    layers = []
+    for part in kit["parts"]:
+        if part["slot"] in ("body", "diptube"):
+            continue
+        box = part.get("box") or {"x": 0, "y": 0, "width": kit["canvas"]["width"], "height": kit["canvas"]["height"]}
+        scale = part["image"]["width"] / box["width"]
+        layers.append({"slot": part["slot"], "url": part["image"]["url"], "width": part["image"]["width"], "height": part["image"]["height"],
+                       "pxPerMm": ppm * scale, "anchor": {"x": (axis - box["x"]) * scale, "y": (anchors["seatY"] - box["y"]) * scale},
+                       "z": "behind-body" if part["slot"] == "pipette" else "front"})
+    overcap = [l for l in layers if l["slot"] == "overcap"]
+    behind = [l for l in layers if l["z"] == "behind-body"]
+    front = [l for l in layers if l["z"] != "behind-body" and l["slot"] != "overcap"]
+    if not front:
+        return None
+    entry = compose(front, stem, neck, ROLLER_HEIGHT_PX)
+    entry["source"] = source
+    if behind:
+        entry["behind"] = {k: v for k, v in compose(behind, stem + "-inside", neck, ROLLER_HEIGHT_PX * 2).items() if k != "source"}
+        entry["swatch"] = {k: v for k, v in compose(front + behind, stem + "-whole", neck, ROLLER_HEIGHT_PX).items() if k != "source"}
+    if overcap:
+        entry["overcap"] = {k: v for k, v in compose(overcap, stem + "-overcap", neck, ROLLER_HEIGHT_PX).items() if k != "source"}
+    return entry
+
+
 def build_neck(neck: str, fit: dict, rows: dict) -> dict | None:
     snapshots = sorted((ROOT / "data" / "help").glob(f"register-{neck}-*.json"))
     if not snapshots:
@@ -189,7 +227,7 @@ def build_neck(neck: str, fit: dict, rows: dict) -> dict | None:
             box = kit["_body"]["box"]
             scale = im.width / box["width"]
             anchors = kit["anchors"]
-            media_bodies[body["id"]] = pack(im, anchors["pxPerMm"] * scale, (anchors["axisX"] - box["x"]) * scale,
+            media_bodies[body["id"]] = pack(im, kit_ppm(kit, body) * scale, (anchors["axisX"] - box["x"]) * scale,
                                             (anchors["seatY"] - box["y"]) * scale, body["id"], BODY_HEIGHT_PX, url, neck)
         elif plate:
             im = load(plate["url"])
@@ -242,6 +280,24 @@ def build_neck(neck: str, fit: dict, rows: dict) -> dict | None:
             piece = next((p for slot in MAIN_SLOTS for p in kit["parts"] if p["slot"] == slot), None)
             if piece:
                 media_parts[parts[0]] = kit_part(kit, piece, parts[0].lower(), neck, f"served kit {product['sku']}")
+    # Necks whose register records no own parts: art from the product kits named in the reviewed match list
+    # (data/help/kit-part-map.json), preferring a clear-glass product.
+    kit_map = json.loads((ROOT / "data" / "help" / "kit-part-map.json").read_text())["matches"]
+    by_component: dict[str, list] = {}
+    for m in kit_map:
+        if m["componentId"] in wanted and m["componentId"] not in media_parts:
+            by_component.setdefault(m["componentId"], []).append(m)
+    assemblies = {a["websiteSku"]: a for a in csv.DictReader((ROOT / "data/register/assemblies.csv").open())}
+    for cid, matches in sorted(by_component.items()):
+        matches.sort(key=lambda m: (assemblies.get(m["product"], {}).get("glass") != "Clear", m["product"]))
+        for m in matches:
+            kit = rows.get(m["product"])
+            body = next((b for b in bodies if b["id"] == m["bodyId"]), None)
+            if kit and body:
+                entry = kit_closure(kit, body, cid.lower(), neck, f"product kit {m['product']}")
+                if entry:
+                    media_parts[cid] = entry
+                    break
     missing = sorted(wanted - set(media_parts))
     return {"registerSnapshot": snapshots[-1].name, "bodies": media_bodies, "parts": media_parts, "missingParts": missing}
 

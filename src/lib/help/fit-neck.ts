@@ -9,6 +9,7 @@
 import { existsSync, statSync } from "node:fs";
 import { join } from "node:path";
 import fitMedia from "./fit-media.generated.json";
+import kitPartMap from "../../../data/help/kit-part-map.json";
 import { allBodies, bodyLabel, componentById, fitHref, itemCatalogHref, neckRuling, type FitBody, type FitComponent } from "./fit";
 
 export type MediaImage = { src: string; width: number; height: number; pxPerMm: number; axisX: number; seatY: number };
@@ -31,7 +32,7 @@ export type BuilderBottle = {
     image: MediaImage; fitUrl: string; fits: string[]; fitments: string[];
     products: Array<{ sku: string; parts: string[] }>;
 };
-export type ApplicatorKey = "roll-plastic" | "roll-metal" | "spray" | "lotion" | "dropper" | "bulb" | "tassel" | "reducer" | "none";
+export type ApplicatorKey = "roll-plastic" | "roll-metal" | "spray" | "lotion" | "dropper" | "bulb" | "tassel" | "rod" | "reducer" | "none";
 /** What step 3 asks for once this applicator is chosen. */
 export type ClosureKind = "roll-on-caps" | "caps" | "included" | "complete";
 export type Applicator = {
@@ -66,7 +67,7 @@ const CAP_GROUPS: Array<{ key: string; label: string; test: (c: Pick<FitComponen
     { key: "faux-leather-cap", label: "Faux leather caps", test: (c) => c.type === "faux-leather-cap", note: () => "Leather-look wrap" },
 ];
 
-const APPLICATORS: Array<Omit<Applicator, "insert" | "finishes" | "available" | "elsewhere"> & { partType?: string; insertId?: (neck: string) => string }> = [
+const APPLICATORS: Array<Omit<Applicator, "insert" | "finishes" | "available" | "elsewhere"> & { partType?: string; partStyle?: string; insertId?: (neck: string) => string }> = [
     { key: "roll-plastic", label: "Roll-on, plastic ball", note: "Roller insert. You choose the roll-on cap next.", fitment: "Plastic Roller Ball", closure: "roll-on-caps", insertId: (neck) => `LIB-${neck}-PlsticRollon` },
     { key: "roll-metal", label: "Roll-on, metal ball", note: "Roller insert. You choose the roll-on cap next.", fitment: "Metal Roller Ball", closure: "roll-on-caps", insertId: (neck) => `LIB-${neck}-MtlRollon` },
     { key: "spray", label: "Fine mist sprayer", note: "Each finish comes with its matching overcap.", fitment: null, closure: "included", partType: "fine-mist-sprayer" },
@@ -74,6 +75,7 @@ const APPLICATORS: Array<Omit<Applicator, "insert" | "finishes" | "available" | 
     { key: "dropper", label: "Dropper", note: "Bulb dropper with collar cap.", fitment: null, closure: "complete", partType: "dropper" },
     { key: "bulb", label: "Vintage bulb sprayer", note: "Antique-style bulb atomiser.", fitment: null, closure: "complete", partType: "vintage-bulb-sprayer" },
     { key: "tassel", label: "Bulb sprayer with tassel", note: "Bulb atomiser with tassel.", fitment: null, closure: "complete", partType: "tassel-bulb-sprayer" },
+    { key: "rod", label: "Glass rod applicator", note: "A cap with a glass rod for dabbing.", fitment: null, closure: "complete", partType: "cap", partStyle: "Applicator" },
     { key: "reducer", label: "Reducer", note: "Orifice reducer under a cap. You choose the cap next.", fitment: "Reducer", closure: "caps", insertId: (neck) => `LIB-${neck}-Reducer` },
     { key: "none", label: "None: pour or cap only", note: "No applicator. You choose a cap next.", fitment: null, closure: "caps" },
 ];
@@ -87,6 +89,7 @@ export function finishName(name: string): string {
         .replace(/Fine Mist Sprayer/i, "")
         .replace(/(?:with dots|with dots or)?\s*cap (?:with dots )?or closure for rollon bottles/i, (m) => (/dots/i.test(m) ? " dotted" : ""))
         .replace(/lid or closure for glass bottle/i, "")
+        .replace(/\s*colou?r\s+Cap or Closure for\b.*$/i, "").replace(/\s*Cap or Closure for\b.*$/i, "")
         .replace(/short cap with liner/i, "")
         .replace(/caps? for glass bottles/i, "")
         .replace(/collar (?:sprayer|Lotion or treatment pump)/i, "collar")
@@ -170,7 +173,9 @@ function build(neck: string): NeckBuilder | null {
             catalogUrl: component?.itemCode ? itemCatalogHref(component.itemCode) : null,
         };
     }
-    const ofType = (type: string) => Object.values(parts).filter((part) => componentById(part.id)?.type === type).map((part) => part.id).sort((a, b) => parts[a].finish.localeCompare(parts[b].finish));
+    const ofType = (type: string, style?: string) => Object.values(parts)
+        .filter((part) => componentById(part.id)?.type === type && (!style || componentById(part.id)?.style === style))
+        .map((part) => part.id).sort((a, b) => parts[a].finish.localeCompare(parts[b].finish));
     const capGroups = CAP_GROUPS
         .map((g) => ({ key: g.key, label: g.label, note: g.note(neck), partIds: Object.values(parts).filter((p) => p.group === g.key).map((p) => p.id) }))
         .filter((g) => g.partIds.length > 0);
@@ -188,17 +193,17 @@ function build(neck: string): NeckBuilder | null {
         fitUrl: fitHref(body),
         fits: body.listed.filter((id) => parts[id]),
         fitments: body.fitmentTypes,
-        products: body.products ?? [],
+        products: productsFor(body),
     })).sort((a, b) => (a.capacityMl ?? 0) - (b.capacityMl ?? 0) || (a.heightMm ?? 0) - (b.heightMm ?? 0) || a.label.localeCompare(b.label));
 
     const applicators: Applicator[] = APPLICATORS.flatMap((def) => {
         const insert = def.insertId ? def.insertId(neck) : null;
-        const finishes = def.partType ? ofType(def.partType) : [];
+        const finishes = def.partType ? ofType(def.partType, def.partStyle) : [];
         const closureOk = def.closure === "roll-on-caps" ? rollOnCaps.length > 0 : def.closure === "caps" ? capGroups.length > 0 : true;
         const available = closureOk && (def.partType ? finishes.length > 0
             : def.key === "reducer" ? bottles.some((b) => b.fitments.includes("Reducer"))
             : insert ? Boolean(parts[insert]) && bottles.some((b) => def.fitment && b.fitments.includes(def.fitment)) : true);
-        const elsewhere = def.partType ? necksWith(def.partType).filter((n) => n !== neck) : def.key === "reducer" ? ["18-415"].filter((n) => n !== neck) : [];
+        const elsewhere = def.partType && !def.partStyle ? necksWith(def.partType).filter((n) => n !== neck) : def.key === "reducer" ? ["18-415"].filter((n) => n !== neck) : [];
         if (!available && !(ALWAYS_SHOWN.includes(def.key) && elsewhere.length)) return [];
         // The insert id is kept even without art (the reducer): products list it, so a build still matches its SKU.
         return [{ key: def.key, label: def.label, note: def.note, insert, fitment: def.fitment, finishes, closure: def.closure, available, elsewhere }];
@@ -206,6 +211,22 @@ function build(neck: string): NeckBuilder | null {
     // A finish gets a builder only when its closures have art: a builder with nothing to pick would only mislead.
     if (!applicators.some((a) => a.available) || Object.keys(parts).length === 0) return null;
     return { neck, ruling: neckRuling(neck), bottles, parts, rollOnCaps, capGroups, applicators };
+}
+
+type KitMatch = { product: string; bodyId: string; componentId: string };
+const KIT_MATCHES = (kitPartMap as { matches: KitMatch[] }).matches;
+
+/**
+ * Sellable products on a bottle and their parts. Where the register records no own parts (15-415, 18-400,
+ * 8-425), the reviewed product-to-closure matches stand in. The bottle's own glass colour comes first, so a
+ * build opens the clear product rather than the amber one.
+ */
+function productsFor(body: FitBody): Array<{ sku: string; parts: string[] }> {
+    const own = body.products ?? [];
+    const products = own.length ? own : KIT_MATCHES.filter((m) => m.bodyId === body.id).map((m) => ({ sku: m.product, glass: "", parts: [m.componentId] }));
+    const glass = body.glass.includes("Clear") ? "Clear" : body.glass[0];
+    const colourOf = (sku: string) => (/Amb/.test(sku) ? "Amber" : /Blu/.test(sku) ? "Cobalt Blue" : /Frst/.test(sku) ? "Frosted" : "Clear");
+    return [...products].sort((a, b) => Number(colourOf(a.sku) !== glass) - Number(colourOf(b.sku) !== glass)).map(({ sku, parts }) => ({ sku, parts }));
 }
 
 /** Can this bottle take this applicator? */

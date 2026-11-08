@@ -325,8 +325,8 @@ describe("printable neck-finish matrices", () => {
 describe("neck builders beyond 13-415", () => {
     it("builds 17-415, 18-415 and 20-400 from catalog listings, with no ruling", async () => {
         const { neckBuilder, neckBuilderNecks } = await import("@/lib/help/fit-neck");
-        // 15-415, 18-400 and 8-425 have no closure art with scale yet, so they keep their bottle fit pages.
-        expect(neckBuilderNecks()).toEqual(["13-415", "17-415", "18-415", "20-400"]);
+        // 13-425 has no listed fits, so its vials keep their bottle fit pages.
+        expect(neckBuilderNecks()).toEqual(["8-425", "13-415", "15-415", "17-415", "18-400", "18-415", "20-400"]);
         const v = neckBuilder("18-415")!;
         expect(v.ruling).toBeNull();
         expect(v.bottles.find((b) => b.id === "cylinder-30ml-18-415")).toBeUndefined(); // fixed spray products keep their own page
@@ -351,5 +351,26 @@ describe("neck builders beyond 13-415", () => {
         const report = fitReport("vial-9ml-18-400")!;
         expect(report.listed.flatMap((g) => g.rows).some((r) => r.type === "dropper")).toBe(false);
         expect(report.conflicting.flatMap((g) => g.rows).filter((r) => r.type === "dropper")).toHaveLength(6);
+    });
+});
+
+describe("necks built from matched product kits", () => {
+    it("matches every 15-415, 18-400 and 8-425 product to one closure", async () => {
+        const map = (await import("../data/help/kit-part-map.json")).default as { matches: Array<{ product: string; itemCode: string }>; unmatched: unknown[] };
+        expect(map.unmatched).toEqual([]);
+        const byProduct = Object.fromEntries(map.matches.map((m) => [m.product, m.itemCode]));
+        expect(byProduct).toMatchObject({
+            GBElg30SpryMattSl: "Spry15-415MattSl", GBElg30SpryBlk: "Spry15-415Blk", GBElg30GlCap: "CP15-415ShnGl",
+            GBBstnAmb15mlWhtDropperGlTrim: "Drp18-40015mlShnGlTrimWhiteBulb", GB09BlackCapApp: "18-400CpAppBlk",
+            GBVialClr2mlBlackCap: "8-425CpShortBlack",
+        });
+    });
+
+    it("offers the glass rod and droppers on 18-400 and opens the clear product", async () => {
+        const { neckBuilder, matchProduct } = await import("@/lib/help/fit-neck");
+        const v = neckBuilder("18-400")!;
+        expect(v.applicators.filter((a) => a.available).map((a) => a.key)).toEqual(["dropper", "rod", "none"]);
+        const elegant = neckBuilder("15-415")!.bottles.find((b) => b.id === "elegant-30ml-15-415")!;
+        expect(matchProduct(elegant, ["CMP-SPR-SLV-15-415"])).toBe("GBElg30SpryMattSl");
     });
 });
