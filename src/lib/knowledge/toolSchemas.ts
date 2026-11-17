@@ -209,7 +209,7 @@ export const GRACE_OPENAI_TOOL_SPECS = [
     spec("setCatalogRefinements", "Update the visible catalog while inheriting every active Refine constraint unless the customer's exact words explicitly broaden one dimension. When asked to clear previous filters or start over, call this tool with that exact customerRequest and only the newly requested constraints.", {
         customerRequest: string("The customer's exact current request; used to authorize any broadening."),
         search: nullableString("New search phrase, or null to preserve the active search."),
-        category: nullableCategory("Requested category — must be one of the listed exact values, or null. There is NO stock/availability filter: never claim results were limited to in-stock items."),
+        category: nullableCategory("Requested stored category — must be one of the listed exact values, or null. For roll-on requests, use applicators:['rollon'] and category:null unless the customer separately specifies a material category: roll-on glass groups are stored under Glass Bottle, so category Roll-On Bottle can exclude them. There is NO stock/availability filter: never claim results were limited to in-stock items."),
         collection: nullableString("Requested collection, or null."),
         applicators: nullableApplicatorArray("Requested canonical Refine applicator buckets, or null."),
         rollerMaterials: {
