@@ -1,0 +1,2095 @@
+{
+  "AnSp18-415Blk": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/583415fd6b79e2e9.png",
+        "left": 14.4,
+        "top": 6.0,
+        "width": 71.2,
+        "height": 84.0
+      }
+    ]
+  },
+  "AnSp18-415Gl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/d52b55926f913e61.png",
+        "left": 15.05,
+        "top": 6.0,
+        "width": 69.9,
+        "height": 84.0
+      }
+    ]
+  },
+  "CP13-415BlkShShtMtl": {
+    "mm": 16.0,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/672aa00a7c1ba25dbf6cdd576650804a2ebdc23db4a4eef2913b7f699f80fe84.png",
+        "left": 40.91,
+        "top": 70.19,
+        "width": 18.19,
+        "height": 17.81
+      }
+    ]
+  },
+  "CP13-415BlkSht": {
+    "mm": 27.17,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/df3b5176c9a9723d4c3d14bf3a5e25104096e10de55ca4e3cf9437bd6f434a67.png",
+        "left": 34.56,
+        "top": 69.41,
+        "width": 30.87,
+        "height": 18.59
+      }
+    ]
+  },
+  "CP13-415CuSht": {
+    "mm": 16.0,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/32b055ffaedcb06dbfa6c9178f683a4ee7c808364f00ebeabf864c4a94551772.png",
+        "left": 40.91,
+        "top": 70.19,
+        "width": 18.19,
+        "height": 17.81
+      }
+    ]
+  },
+  "CP13-415Gl": {
+    "mm": 16.88,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+        "left": 40.41,
+        "top": 61.96,
+        "width": 19.19,
+        "height": 26.04
+      }
+    ]
+  },
+  "CP13-415GlMattSht": {
+    "mm": 16.0,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/fda428af1afd9127102a07015ea044d04a063352c6560baa211be133942a8104.png",
+        "left": 40.91,
+        "top": 70.19,
+        "width": 18.19,
+        "height": 17.81
+      }
+    ]
+  },
+  "CP13-415GlSht": {
+    "mm": 16.02,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/f5240b98053b72e543fd4beec464fa0875ba829d2fd0cc59e4c15d3b31fa449e.png",
+        "left": 40.9,
+        "top": 70.19,
+        "width": 18.2,
+        "height": 17.81
+      }
+    ]
+  },
+  "CP13-415Sl": {
+    "mm": 16.88,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+        "left": 40.41,
+        "top": 61.96,
+        "width": 19.19,
+        "height": 26.04
+      }
+    ]
+  },
+  "CP13-415SlMattSht": {
+    "mm": 16.0,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c2a5e084f15a8ad7b0ce6d0393d2e71ac99201b9ab41f975feb137338c988f5a.png",
+        "left": 40.91,
+        "top": 70.19,
+        "width": 18.19,
+        "height": 17.81
+      }
+    ]
+  },
+  "CP13-415SlSht": {
+    "mm": 16.02,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e7fa6410ca1c5623a99bf6894085dd05c7afbcc96a1b99715674e8ed4890bf4a.png",
+        "left": 40.9,
+        "top": 70.19,
+        "width": 18.2,
+        "height": 17.81
+      }
+    ]
+  },
+  "CP13-415SpryCuMt": {
+    "mm": 16.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/3eba4619b46845e8.png",
+        "left": 27.13,
+        "top": 15.52,
+        "width": 45.74,
+        "height": 74.48
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/d92e12918fd8296c.png",
+          "left": 39.32,
+          "top": 10.25,
+          "width": 21.36,
+          "height": 79.75
+        }
+      ]
+    }
+  },
+  "CP13-415WhtSht": {
+    "mm": 27.17,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ef7fce8e5d2906a0d4ac8a7d2bb22fced6034e3261d43f313397fa4287389584.png",
+        "left": 34.56,
+        "top": 69.41,
+        "width": 30.87,
+        "height": 18.59
+      }
+    ]
+  },
+  "CP18-415AnSpPnk": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/22c427f7e40d85f0.png",
+        "left": 15.27,
+        "top": 6.0,
+        "width": 69.46,
+        "height": 84.0
+      }
+    ]
+  },
+  "CP18-415BlkLthr": {
+    "mm": 28.21,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/a52f7f973dfd70ff.png",
+        "left": 33.97,
+        "top": 54.26,
+        "width": 32.06,
+        "height": 33.74
+      }
+    ]
+  },
+  "CP18-415BrwnLthr": {
+    "mm": 28.29,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/8ce784e08659a1ab.png",
+        "left": 33.92,
+        "top": 53.65,
+        "width": 32.15,
+        "height": 34.35
+      }
+    ]
+  },
+  "CP18-415LBrwnLthr": {
+    "mm": 27.74,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/902b5d8704fedbdf.png",
+        "left": 34.24,
+        "top": 54.3,
+        "width": 31.52,
+        "height": 33.7
+      }
+    ]
+  },
+  "CP18-415LIvyLthr": {
+    "mm": 29.65,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-IVY-18415-LTR/cap-a8408ded928b19b85ab86622c68710570e26019c8d700529725937486f320422.png",
+        "left": 33.15,
+        "top": 55.13,
+        "width": 33.7,
+        "height": 32.87
+      }
+    ]
+  },
+  "CP18-415LPnkLthr": {
+    "mm": 29.86,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-PNK-18415-LTR/cap-05058e25010d340ada26a7b4710134d02e27087604191a7de3f60cf544ee5c97.png",
+        "left": 33.04,
+        "top": 54.84,
+        "width": 33.92,
+        "height": 33.16
+      }
+    ]
+  },
+  "CP18-415MtSl": {
+    "mm": 22.82,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-MSLV-18415-S/cap-ab1f6159d1e145299e2a6d78327fe5652877c76b4c9b3b643aa181c509a3c02d.png",
+        "left": 37.03,
+        "top": 65.4,
+        "width": 25.93,
+        "height": 22.6
+      }
+    ]
+  },
+  "CP18-415MtSlTall": {
+    "mm": 23.56,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/18-415/CMP-CAP-MSLV-18415-T/cap-25cdbc112e3e99fab06d1f3cee450933d40ef6841593c8b86ebbe6e72fb397f9.png",
+        "left": 36.61,
+        "top": 57.76,
+        "width": 26.78,
+        "height": 30.24
+      }
+    ]
+  },
+  "CP18-415ShnBlkTall": {
+    "mm": 22.82,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/989e7ea6bc1d45cc.png",
+        "left": 37.03,
+        "top": 57.12,
+        "width": 25.93,
+        "height": 30.88
+      }
+    ]
+  },
+  "CP18-415ShnGl": {
+    "mm": 23.19,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/16e229a3df99999a.png",
+        "left": 36.82,
+        "top": 64.15,
+        "width": 26.36,
+        "height": 23.85
+      }
+    ]
+  },
+  "CP18-415ShnSl": {
+    "mm": 22.6,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/98216d2ffed3dd2f.png",
+        "left": 37.16,
+        "top": 65.51,
+        "width": 25.69,
+        "height": 22.49
+      }
+    ]
+  },
+  "CP18-415Wh": {
+    "mm": 22.59,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/7fd7ec7062cb0363.png",
+        "left": 37.17,
+        "top": 58.29,
+        "width": 25.66,
+        "height": 29.71
+      }
+    ]
+  },
+  "CPRoll13-415BlackDot": {
+    "mm": 16.88,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/afd2b0f2cb3c2589d2c70b9a7ddbe4a332d96b79f58e9c43d5ba47a245dcd76e.png",
+        "left": 40.41,
+        "top": 61.96,
+        "width": 19.19,
+        "height": 26.04
+      }
+    ]
+  },
+  "CPRoll13-415BlkSh": {
+    "mm": 16.88,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/a284ff0061dd2825b239e9ab54c64549e14a83254dd28ead3a6842562e77c4b8.png",
+        "left": 40.41,
+        "top": 61.96,
+        "width": 19.19,
+        "height": 26.04
+      }
+    ]
+  },
+  "CPRoll13-415Cu": {
+    "mm": 16.88,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/9b809c36ba0aadbc40fad0e4774107fb7cbd1394d564636aff6dc3ec89519cd8.png",
+        "left": 40.41,
+        "top": 61.96,
+        "width": 19.19,
+        "height": 26.04
+      }
+    ]
+  },
+  "CPRoll13-415GlMt": {
+    "mm": 16.88,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/40270b2051e91356c24a423469d4bc56733b7c0b6f6481c5c04e7428060270cf.png",
+        "left": 40.41,
+        "top": 61.96,
+        "width": 19.19,
+        "height": 26.04
+      }
+    ]
+  },
+  "CPRoll13-415GlSh": {
+    "mm": 16.88,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/08341277ad298daedf8e3c8c2ff2469cfab617533df3355779835a02dd2d22ff.png",
+        "left": 40.41,
+        "top": 61.96,
+        "width": 19.19,
+        "height": 26.04
+      }
+    ]
+  },
+  "CPRoll13-415PinkDot": {
+    "mm": 16.88,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/bb3d17324a7a2a97.svg",
+        "left": 40.49,
+        "top": 63.4,
+        "width": 19.05,
+        "height": 24.6
+      },
+      {
+        "url": "/images/catalog/component-layers/0dc993f76b0e1550.png",
+        "left": 40.41,
+        "top": 61.54,
+        "width": 19.18,
+        "height": 26.04
+      }
+    ]
+  },
+  "CPRoll13-415SlDot": {
+    "mm": 16.88,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/e1f9bbd394c9039b84cd87e5f6d3b8f13d70be009c12520bf90e196ed70f4b86.png",
+        "left": 40.41,
+        "top": 61.96,
+        "width": 19.19,
+        "height": 26.04
+      }
+    ]
+  },
+  "CPRoll13-415SlMt": {
+    "mm": 16.88,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/023bc67c73ef9b901c4750fb23b4da2b5e302dabea4c6d37cb899615d8769153.png",
+        "left": 40.41,
+        "top": 61.96,
+        "width": 19.19,
+        "height": 26.04
+      }
+    ]
+  },
+  "CPRoll13-415SlSh": {
+    "mm": 16.88,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/31368590174d6e7ec2ad4bc5bd28a41928d91d78e873746d100a6e340900736a.png",
+        "left": 40.41,
+        "top": 61.96,
+        "width": 19.19,
+        "height": 26.04
+      }
+    ]
+  },
+  "CPRoll20-400TallMattBlk": {
+    "mm": 24.85,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-MBLK-20400-T/cap-59c27a9edea1d7284b1e1b485f30e719fb0313982203dd523a32f8fde66765df.png",
+        "left": 35.88,
+        "top": 46.81,
+        "width": 28.24,
+        "height": 41.19
+      }
+    ]
+  },
+  "CPRoll20-400TallMattGl": {
+    "mm": 25.7,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-MGLD-20400-T/cap-6a2d6d0a50e3608b6e94698f03cc753981073afdce0207ae69c31a72bd79a591.png",
+        "left": 35.39,
+        "top": 48.35,
+        "width": 29.21,
+        "height": 39.65
+      }
+    ]
+  },
+  "CPRoll20-400TallMattSl": {
+    "mm": 24.51,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-MSLV-20400-T/cap-2c113f753401da07dba95940d10f2096ae23de2a725a402a56265f1ffd252d8f.png",
+        "left": 36.08,
+        "top": 50.6,
+        "width": 27.85,
+        "height": 37.4
+      }
+    ]
+  },
+  "CPRoll20-400TallShnBlk": {
+    "mm": 24.93,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-SBLK-20400-T/cap-29eff31ea076e47407b931f3e7bf3e9b59c904ee08ea31ff719225fbbc2c5046.png",
+        "left": 35.84,
+        "top": 46.75,
+        "width": 28.33,
+        "height": 41.25
+      }
+    ]
+  },
+  "CPRoll20-400TallShnGl": {
+    "mm": 25.53,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/LIB-20-400-MtlRollon/roller-655ee3b81fb3254a98e868d6a62299eb34036994444c2b822c1bdea1bf8440c6.png",
+        "left": 40.27,
+        "top": 54.56,
+        "width": 20.04,
+        "height": 13.62
+      },
+      {
+        "url": "/images/catalog/component-layers/a4a52c8930b2da9f.png",
+        "left": 40.27,
+        "top": 54.47,
+        "width": 20.01,
+        "height": 26.66
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-SGLD-20400-T/cap-ab39a16dd6d379d79ad614b08970f4461218ca3782dee78c93668c5f6313727f.png",
+        "left": 35.49,
+        "top": 48.26,
+        "width": 29.01,
+        "height": 39.74
+      }
+    ]
+  },
+  "CPRoll20-400TallShnSl": {
+    "mm": 24.67,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-SSLV-20400-T/cap-a1e8c6e42f2d7d114ce464f52d040ffa61a7ace11f4bb24f0c5a42748afa79a4.png",
+        "left": 35.98,
+        "top": 50.38,
+        "width": 28.05,
+        "height": 37.62
+      }
+    ]
+  },
+  "CpRoll17-415BlkDot": {
+    "mm": 19.43,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/bf4b2de85072e12b230b98b102bfe932bdb7af6abb89f9b19abb07f8ff2b746f.svg",
+        "left": 38.96,
+        "top": 59.91,
+        "width": 22.08,
+        "height": 28.09
+      }
+    ]
+  },
+  "CpRoll17-415Cu": {
+    "mm": 19.43,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c02b89e5d86134d0e8d3d067f27f0e574482541443d61ca490c280d784030aff.svg",
+        "left": 38.96,
+        "top": 59.91,
+        "width": 22.08,
+        "height": 28.09
+      }
+    ]
+  },
+  "CpRoll17-415MattGl": {
+    "mm": 19.43,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/c78f2b41c8cfaba8dc69f806f0aa461b6c6a2269049ee85d0baf2386f6f8b860.svg",
+        "left": 38.96,
+        "top": 59.91,
+        "width": 22.08,
+        "height": 28.09
+      }
+    ]
+  },
+  "CpRoll17-415MattSl": {
+    "mm": 19.43,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/599ca6d02ec2bd564c42ddf572c20d19e1771bb7a44719001fa8cc8a4a0ec6f9.svg",
+        "left": 38.96,
+        "top": 59.91,
+        "width": 22.08,
+        "height": 28.09
+      }
+    ]
+  },
+  "CpRoll17-415PnkDot": {
+    "mm": 19.43,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/ca8c4d56f807909f7ab329a859f003a3deb88fe1a8297b0e559a33a3a2346c9d.svg",
+        "left": 38.96,
+        "top": 59.91,
+        "width": 22.08,
+        "height": 28.09
+      }
+    ]
+  },
+  "CpRoll17-415ShnBlk": {
+    "mm": 19.43,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/5d076755cf61cd9523a16f38c0814610907eb460d1b87a62380255ff65f99523.svg",
+        "left": 38.96,
+        "top": 59.91,
+        "width": 22.08,
+        "height": 28.09
+      }
+    ]
+  },
+  "CpRoll17-415ShnGl": {
+    "mm": 19.43,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/7ef02838716ec100af9cbe2229aa4e1c4c6f1ebfd242f2855a4d9df1ee39c68e.svg",
+        "left": 38.96,
+        "top": 59.91,
+        "width": 22.08,
+        "height": 28.09
+      }
+    ]
+  },
+  "CpRoll17-415ShnSl": {
+    "mm": 19.43,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/12802f8023bc646e45741cd1e3160411a439e74ccd8734c6e39ca6a3fffd1abc.svg",
+        "left": 38.96,
+        "top": 59.91,
+        "width": 22.08,
+        "height": 28.09
+      }
+    ]
+  },
+  "CpRoll17-415SlDot": {
+    "mm": 19.43,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/4897dd1c954a557f2607b6fe748ea228ea328fcd1ebdc30d3c6b372fd2e04ec9.svg",
+        "left": 38.96,
+        "top": 59.91,
+        "width": 22.08,
+        "height": 28.09
+      }
+    ]
+  },
+  "CpRoll17-415White": {
+    "mm": 19.43,
+    "layers": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-01/89d2da5d92b2b1b2e5f823785710109f4ebcf83cb8f36ebf0c9c87bca1546977.svg",
+        "left": 38.96,
+        "top": 59.91,
+        "width": 22.08,
+        "height": 28.09
+      }
+    ]
+  },
+  "Drp18-415Cu": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/f642f52bff4b0f7a.png",
+        "left": 38.68,
+        "top": 6.0,
+        "width": 22.64,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp18-415Gl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/18eb1be9b92a9240.png",
+        "left": 38.61,
+        "top": 6.0,
+        "width": 22.77,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp18-415Sl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/7f5da14e447623d1.png",
+        "left": 38.65,
+        "top": 6.0,
+        "width": 22.7,
+        "height": 84.0
+      }
+    ]
+  },
+  "Ltn17-415Blk": {
+    "mm": 20.2,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/b5ad9d2bcb501675.png",
+        "left": 25.2,
+        "top": 10.3,
+        "width": 49.6,
+        "height": 79.7
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/092da1aecc9b4429.png",
+          "left": 38.52,
+          "top": 6.22,
+          "width": 22.95,
+          "height": 83.78
+        }
+      ]
+    }
+  },
+  "Ltn17-415Gl": {
+    "mm": 20.2,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/355d0da42e677e7c.png",
+        "left": 25.17,
+        "top": 10.3,
+        "width": 49.66,
+        "height": 79.7
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/517de30ce03cb619.png",
+          "left": 38.52,
+          "top": 6.58,
+          "width": 22.95,
+          "height": 83.42
+        }
+      ]
+    }
+  },
+  "Ltn17-415MattSl": {
+    "mm": 20.2,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/a39167062d7b0851.png",
+        "left": 25.11,
+        "top": 9.78,
+        "width": 49.77,
+        "height": 80.22
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/ee1becfba5c5f2de.png",
+          "left": 38.47,
+          "top": 5.75,
+          "width": 23.07,
+          "height": 84.25
+        }
+      ]
+    }
+  },
+  "Ltn18-415MtSlCl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/bc2bc682c9eca9cb.png",
+        "left": 20.82,
+        "top": 8.85,
+        "width": 58.35,
+        "height": 81.15
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/86c24e2969b49482.png",
+          "left": 36.7,
+          "top": 19.91,
+          "width": 26.59,
+          "height": 70.09
+        }
+      ]
+    }
+  },
+  "Ltn18-415ShnBlk": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/193e1c2e2b7eb2aa.png",
+        "left": 20.82,
+        "top": 8.8,
+        "width": 58.35,
+        "height": 81.2
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/a922ce69971866bd.png",
+          "left": 36.7,
+          "top": 6.01,
+          "width": 26.59,
+          "height": 83.99
+        }
+      ]
+    }
+  },
+  "Ltn18-415ShnGl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/a587874d57051d13.png",
+        "left": 20.82,
+        "top": 7.87,
+        "width": 58.35,
+        "height": 82.13
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/b0135736a6e9d416.png",
+          "left": 36.7,
+          "top": 6.22,
+          "width": 26.59,
+          "height": 83.78
+        }
+      ]
+    }
+  },
+  "Ltn18-415ShnSl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/23686ba4e1c8188f.png",
+        "left": 20.82,
+        "top": 15.77,
+        "width": 58.35,
+        "height": 74.23
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/51ddd42bf0dbf9e0.png",
+          "left": 36.7,
+          "top": 1.47,
+          "width": 26.59,
+          "height": 88.53
+        }
+      ]
+    }
+  },
+  "Spry17-415Blk": {
+    "mm": 20.2,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/58cd49633618f6c7.png",
+        "left": 25.2,
+        "top": 10.51,
+        "width": 49.6,
+        "height": 79.49
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/03d35bdd62198c22.png",
+          "left": 38.52,
+          "top": 6.79,
+          "width": 22.95,
+          "height": 83.21
+        }
+      ]
+    }
+  },
+  "Spry17-415Gl": {
+    "mm": 20.2,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/9f4c8b3a42b0932b.png",
+        "left": 25.17,
+        "top": 10.3,
+        "width": 49.66,
+        "height": 79.7
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/3841e19abdce7f8c.png",
+          "left": 38.52,
+          "top": 6.58,
+          "width": 22.95,
+          "height": 83.42
+        }
+      ]
+    }
+  },
+  "Spry17-415MattSl": {
+    "mm": 20.2,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/4aa23ca080c1bbe6.png",
+        "left": 25.11,
+        "top": 9.78,
+        "width": 49.77,
+        "height": 80.22
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/db5642ac9848167b.png",
+          "left": 38.47,
+          "top": 5.75,
+          "width": 23.07,
+          "height": 84.25
+        }
+      ]
+    }
+  },
+  "Spry17-415Red": {
+    "mm": 20.2,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/1526fe965d903829.png",
+        "left": 25.03,
+        "top": 9.52,
+        "width": 49.94,
+        "height": 80.48
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/aaf7bc548647efa3.png",
+          "left": 38.64,
+          "top": 5.6,
+          "width": 22.73,
+          "height": 84.4
+        }
+      ]
+    }
+  },
+  "Spry17-415ShnSl": {
+    "mm": 20.2,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/82988da3d6f8516c.png",
+        "left": 25.17,
+        "top": 10.3,
+        "width": 49.66,
+        "height": 79.7
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/70861ab74e67d596.png",
+          "left": 38.52,
+          "top": 6.58,
+          "width": 22.95,
+          "height": 83.42
+        }
+      ]
+    }
+  },
+  "Spry17-415Tur": {
+    "mm": 20.2,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/f664e1d848a7335b.png",
+        "left": 25.62,
+        "top": 11.75,
+        "width": 48.75,
+        "height": 78.25
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/3ad53fab3378b418.png",
+          "left": 38.49,
+          "top": 8.03,
+          "width": 23.01,
+          "height": 81.97
+        }
+      ]
+    }
+  },
+  "Spry18-415Cu": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/035fcf8b581123ec.png",
+        "left": 20.98,
+        "top": 6.0,
+        "width": 58.04,
+        "height": 84.0
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/ecce5858cb964d01.png",
+          "left": 36.78,
+          "top": 8.77,
+          "width": 26.45,
+          "height": 81.23
+        }
+      ]
+    }
+  },
+  "Spry18-415MtGl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/5bc999ff18759917.png",
+        "left": 20.82,
+        "top": 8.54,
+        "width": 58.35,
+        "height": 81.46
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/b51593e6b2603fef.png",
+          "left": 36.7,
+          "top": 5.65,
+          "width": 26.59,
+          "height": 84.35
+        }
+      ]
+    }
+  },
+  "Spry18-415MtSl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/ec5752d73d043b9c.png",
+        "left": 20.82,
+        "top": 8.23,
+        "width": 58.35,
+        "height": 81.77
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/832d0a7aa982e4e2.png",
+          "left": 36.7,
+          "top": 3.79,
+          "width": 26.59,
+          "height": 86.21
+        }
+      ]
+    }
+  },
+  "Spry18-415ShnBlk": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/97998fa34c2d9b57.png",
+        "left": 20.82,
+        "top": 8.8,
+        "width": 58.35,
+        "height": 81.2
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/bd2911a33518701a.png",
+          "left": 36.7,
+          "top": 6.01,
+          "width": 26.59,
+          "height": 83.99
+        }
+      ]
+    }
+  },
+  "Spry18-415ShnGl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/57584bbf24440f3c.png",
+        "left": 20.82,
+        "top": 7.87,
+        "width": 58.35,
+        "height": 82.13
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/ec67247038e9ae9b.png",
+          "left": 36.7,
+          "top": 6.22,
+          "width": 26.59,
+          "height": 83.78
+        }
+      ]
+    }
+  },
+  "Spry18-415ShnSl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/60c4f57b074ec8ca.png",
+        "left": 20.82,
+        "top": 11.69,
+        "width": 58.35,
+        "height": 78.31
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/033d1cd0a02db9bb.png",
+          "left": 36.7,
+          "top": 4.1,
+          "width": 26.59,
+          "height": 85.9
+        }
+      ]
+    }
+  },
+  "CP15-415ShnGl": {
+    "mm": 18.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/125b25b4af2ff3ae.png",
+        "left": 39.49,
+        "top": 57.02,
+        "width": 21.02,
+        "height": 30.98
+      }
+    ]
+  },
+  "CP15-415ShnSl": {
+    "mm": 17.95,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/f4c59e18fd384b66.png",
+        "left": 39.8,
+        "top": 57.27,
+        "width": 20.41,
+        "height": 30.73
+      }
+    ]
+  },
+  "Ltn18-415MtSl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/b04925210007653f.png",
+        "left": 20.82,
+        "top": 8.23,
+        "width": 58.35,
+        "height": 81.77
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/87be184a0ed837e6.png",
+          "left": 36.7,
+          "top": 3.84,
+          "width": 26.59,
+          "height": 86.16
+        }
+      ]
+    }
+  },
+  "18-400CpShortBlk": {
+    "mm": 21.77,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/951cded7d0eaa070.png",
+        "left": 37.63,
+        "top": 76.24,
+        "width": 24.74,
+        "height": 11.76
+      }
+    ]
+  },
+  "8-425CpShortBlack": {
+    "mm": 16.95,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/cb0ed68fefe95ca2.png",
+        "left": 40.37,
+        "top": 75.0,
+        "width": 19.26,
+        "height": 13.0
+      }
+    ]
+  },
+  "Drp18-40015mlShnGlTrimBlkBulb": {
+    "mm": 20.9,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/8056be01a5cfe08f.png",
+        "left": 38.12,
+        "top": 8.74,
+        "width": 23.75,
+        "height": 81.26
+      }
+    ]
+  },
+  "Drp18-40015mlShnSlTrimBlkBulb": {
+    "mm": 20.9,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/457f9f0f1ac4d1f9.png",
+        "left": 38.12,
+        "top": 10.03,
+        "width": 23.75,
+        "height": 79.97
+      }
+    ]
+  },
+  "Drp18-40015mlWhiteBulb": {
+    "mm": 20.9,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/004997be5996a0c9.png",
+        "left": 38.42,
+        "top": 6.0,
+        "width": 23.17,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp18-40015mlShnGlTrimWhiteBulb": {
+    "mm": 20.9,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/87f1f9d10d690169.png",
+        "left": 38.12,
+        "top": 7.64,
+        "width": 23.75,
+        "height": 82.36
+      }
+    ]
+  },
+  "Drp18-40015mlShnSlTrimWhiteBulb": {
+    "mm": 20.9,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/ab4fe4f11a809842.png",
+        "left": 38.12,
+        "top": 12.29,
+        "width": 23.75,
+        "height": 77.71
+      }
+    ]
+  },
+  "AnSp18-415IvyGl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/67b4ae182377ba5c.png",
+        "left": 14.97,
+        "top": 6.0,
+        "width": 70.06,
+        "height": 84.0
+      }
+    ]
+  },
+  "AnSp18-415Red": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/13cad2dd17493dcf.png",
+        "left": 14.48,
+        "top": 6.0,
+        "width": 71.03,
+        "height": 84.0
+      }
+    ]
+  },
+  "8-425CpShortWhite": {
+    "mm": 16.98,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/f31d4c202726f204.png",
+        "left": 40.35,
+        "top": 74.14,
+        "width": 19.3,
+        "height": 13.86
+      }
+    ]
+  },
+  "CP13-415SpryBlkMt": {
+    "mm": 16.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/bd3f739f58d4456c.png",
+        "left": 27.13,
+        "top": 15.52,
+        "width": 45.74,
+        "height": 74.48
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/07ab5641ef510693.png",
+          "left": 39.32,
+          "top": 11.59,
+          "width": 21.36,
+          "height": 78.41
+        }
+      ]
+    }
+  },
+  "CP13-415SpryBlkSh": {
+    "mm": 16.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/20366b51e81716de.png",
+        "left": 27.13,
+        "top": 15.36,
+        "width": 45.74,
+        "height": 74.64
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/256617e2b81ef926.png",
+          "left": 39.32,
+          "top": 11.28,
+          "width": 21.36,
+          "height": 78.72
+        }
+      ]
+    }
+  },
+  "CP13-415SpryBluMt": {
+    "mm": 16.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/9c5fddfe75df247d.png",
+        "left": 27.13,
+        "top": 15.15,
+        "width": 45.74,
+        "height": 74.85
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/1cf194e525c73114.png",
+          "left": 39.32,
+          "top": 10.82,
+          "width": 21.36,
+          "height": 79.18
+        }
+      ]
+    }
+  },
+  "CP13-415SpryGlMt": {
+    "mm": 16.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/9cb1822be3711496.png",
+        "left": 27.13,
+        "top": 15.57,
+        "width": 45.74,
+        "height": 74.43
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/28c80e0dc32ea476.png",
+          "left": 39.32,
+          "top": 11.02,
+          "width": 21.36,
+          "height": 78.98
+        }
+      ]
+    }
+  },
+  "CP13-415SpryGlSh": {
+    "mm": 16.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/ac8e9b4b718c91d4.png",
+        "left": 27.13,
+        "top": 15.26,
+        "width": 45.74,
+        "height": 74.74
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/0191d3af46424852.png",
+          "left": 39.32,
+          "top": 10.66,
+          "width": 21.36,
+          "height": 79.34
+        }
+      ]
+    }
+  },
+  "CP13-415SprySlMt": {
+    "mm": 16.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/180a88e9a0960532.png",
+        "left": 27.13,
+        "top": 16.76,
+        "width": 45.74,
+        "height": 73.24
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/e28310120b5f9fd6.png",
+          "left": 39.32,
+          "top": 11.23,
+          "width": 21.36,
+          "height": 78.77
+        }
+      ]
+    }
+  },
+  "CP13-415SprySlSh": {
+    "mm": 16.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/cb8a9ab2a715e20e.png",
+        "left": 27.13,
+        "top": 15.83,
+        "width": 45.74,
+        "height": 74.17
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/8c797e7dfb800afe.png",
+          "left": 39.32,
+          "top": 10.76,
+          "width": 21.36,
+          "height": 79.24
+        }
+      ]
+    }
+  },
+  "13-415CAP4SpryCuMt": {
+    "mm": 16.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/3eba4619b46845e8.png",
+        "left": 27.13,
+        "top": 15.52,
+        "width": 45.74,
+        "height": 74.48
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/d92e12918fd8296c.png",
+          "left": 39.32,
+          "top": 10.25,
+          "width": 21.36,
+          "height": 79.75
+        }
+      ]
+    }
+  },
+  "Spry15-415Blk": {
+    "mm": 17.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/c2b0a3741a3a9d43.png",
+        "left": 26.02,
+        "top": 11.49,
+        "width": 47.95,
+        "height": 78.51
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/9893fc37120533e3.png",
+          "left": 38.95,
+          "top": 7.25,
+          "width": 22.1,
+          "height": 82.75
+        }
+      ]
+    }
+  },
+  "Spry15-415ShnGl": {
+    "mm": 17.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/1a40d30398fb0f5d.png",
+        "left": 26.02,
+        "top": 11.13,
+        "width": 47.95,
+        "height": 78.87
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/4b7e6862c59d6e75.png",
+          "left": 38.95,
+          "top": 8.34,
+          "width": 22.1,
+          "height": 81.66
+        }
+      ]
+    }
+  },
+  "Spry15-415ShnSl": {
+    "mm": 17.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/8e7de49fec7394f1.png",
+        "left": 26.02,
+        "top": 11.23,
+        "width": 47.95,
+        "height": 78.77
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/b3a18941b15efa7b.png",
+          "left": 38.95,
+          "top": 7.92,
+          "width": 22.1,
+          "height": 82.08
+        }
+      ]
+    }
+  },
+  "Spry15-415MattSl": {
+    "mm": 17.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/fb9008077c923164.png",
+        "left": 26.02,
+        "top": 11.49,
+        "width": 47.95,
+        "height": 78.51
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/43d9476d136421cf.png",
+          "left": 38.95,
+          "top": 6.74,
+          "width": 22.1,
+          "height": 83.26
+        }
+      ]
+    }
+  },
+  "Spry15-415MattGl": {
+    "mm": 17.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/b8cb0b60c481f3aa.png",
+        "left": 26.02,
+        "top": 12.26,
+        "width": 47.95,
+        "height": 77.74
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/e64f0ff5d67fbdb4.png",
+          "left": 38.95,
+          "top": 5.86,
+          "width": 22.1,
+          "height": 84.14
+        }
+      ]
+    }
+  },
+  "18-400CpAppBlk": {
+    "mm": 34.71,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/3e0319a8016f1a0e.webp",
+        "left": 30.28,
+        "top": 6.58,
+        "width": 39.44,
+        "height": 81.42
+      }
+    ]
+  },
+  "Ltn18-415Cu": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/c94b7a8795df3bac.png",
+        "left": 20.86,
+        "top": 6.0,
+        "width": 58.29,
+        "height": 84.0
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/926b961b25e9da5e.png",
+          "left": 36.72,
+          "top": 8.32,
+          "width": 26.56,
+          "height": 81.68
+        }
+      ]
+    }
+  },
+  "Ltn18-415MtGl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/f1d01f20ea54bbce.png",
+        "left": 20.82,
+        "top": 8.54,
+        "width": 58.35,
+        "height": 81.46
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/93275dd0dbe1b9ad.png",
+          "left": 36.7,
+          "top": 5.65,
+          "width": 26.59,
+          "height": 84.35
+        }
+      ]
+    }
+  },
+  "AnSp18-415IvySl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/2af061e9f4ccebb5.png",
+        "left": 14.51,
+        "top": 6.0,
+        "width": 70.97,
+        "height": 84.0
+      }
+    ]
+  },
+  "AnSp18-415MtSl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/9c3363238995eab2.png",
+        "left": 13.95,
+        "top": 6.0,
+        "width": 72.1,
+        "height": 84.0
+      }
+    ]
+  },
+  "AnSp18-415Wht": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/47b1b59ca7f8b5dd.png",
+        "left": 14.17,
+        "top": 6.0,
+        "width": 71.66,
+        "height": 84.0
+      }
+    ]
+  },
+  "REF-CMP-PLUG-BLK-VIAL": {
+    "mm": 9.86,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/847a65cc57432678.png",
+        "left": 44.4,
+        "top": 51.19,
+        "width": 11.2,
+        "height": 36.81
+      }
+    ]
+  },
+  "REF-CMP-PLUG-WHT-VIAL": {
+    "mm": 10.26,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/9bda7181adbc28e1.png",
+        "left": 44.17,
+        "top": 51.19,
+        "width": 11.66,
+        "height": 36.81
+      }
+    ]
+  },
+  "CP18-415AnSpTslGl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/ece2536b424c3c1f.png",
+        "left": 6.17,
+        "top": 6.0,
+        "width": 87.65,
+        "height": 84.0
+      }
+    ]
+  },
+  "AnSpTsl18-415Blk": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/a4ee97270998599c.png",
+        "left": 6.0,
+        "top": 8.41,
+        "width": 88.0,
+        "height": 81.59
+      }
+    ]
+  },
+  "AnSpTsl18-415IvyGl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/056093de542c792f.png",
+        "left": 6.06,
+        "top": 6.0,
+        "width": 87.88,
+        "height": 84.0
+      }
+    ]
+  },
+  "AnSpTsl18-415Lvn": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/c8e7e4853cdc472a.png",
+        "left": 6.02,
+        "top": 6.0,
+        "width": 87.97,
+        "height": 84.0
+      }
+    ]
+  },
+  "AnSpTsl18-415MtS": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/1f19b88745394b95.png",
+        "left": 6.0,
+        "top": 7.44,
+        "width": 88.0,
+        "height": 82.56
+      }
+    ]
+  },
+  "AnSpTsl18-415Pnk": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/a632aee1c05052a7.png",
+        "left": 6.09,
+        "top": 6.0,
+        "width": 87.82,
+        "height": 84.0
+      }
+    ]
+  },
+  "AnSpTsl18-415Red": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/a2ec54bb82a7dbe1.png",
+        "left": 6.0,
+        "top": 8.41,
+        "width": 88.0,
+        "height": 81.59
+      }
+    ]
+  },
+  "AnSpTsl18-415Wht": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/9e89903811bc094b.png",
+        "left": 6.0,
+        "top": 6.16,
+        "width": 88.0,
+        "height": 83.84
+      }
+    ]
+  },
+  "Drp18-40015mlBlckBulb": {
+    "mm": 20.9,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/c70dcffd4d989aba.png",
+        "left": 38.12,
+        "top": 9.82,
+        "width": 23.75,
+        "height": 80.18
+      }
+    ]
+  },
+  "Drp20-4001ozBlckBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/c70dcffd4d989aba.png",
+        "left": 37.56,
+        "top": 6.0,
+        "width": 24.88,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp20-4001ozShnGlTrimBlkBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/8056be01a5cfe08f.png",
+        "left": 37.72,
+        "top": 6.0,
+        "width": 24.55,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp20-4001ozShnSlTrimBlkBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/457f9f0f1ac4d1f9.png",
+        "left": 37.53,
+        "top": 6.0,
+        "width": 24.95,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp20-4001ozWhiteBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/004997be5996a0c9.png",
+        "left": 38.42,
+        "top": 6.0,
+        "width": 23.17,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp20-4001ozlShnGlTrimWhiteBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/87f1f9d10d690169.png",
+        "left": 37.89,
+        "top": 6.0,
+        "width": 24.22,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp20-4001ozlShnSlTrimWhiteBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/ab4fe4f11a809842.png",
+        "left": 37.16,
+        "top": 6.0,
+        "width": 25.67,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp20-4002ozBlckBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/c70dcffd4d989aba.png",
+        "left": 37.56,
+        "top": 6.0,
+        "width": 24.88,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp20-4002ozShnGlTrimBlkBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/8056be01a5cfe08f.png",
+        "left": 37.72,
+        "top": 6.0,
+        "width": 24.55,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp20-4002ozShnSlTrimBlkBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/457f9f0f1ac4d1f9.png",
+        "left": 37.53,
+        "top": 6.0,
+        "width": 24.95,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp20-4002ozWhiteBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/004997be5996a0c9.png",
+        "left": 38.42,
+        "top": 6.0,
+        "width": 23.17,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp20-4002ozlShnGlTrimWhiteBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/87f1f9d10d690169.png",
+        "left": 37.89,
+        "top": 6.0,
+        "width": 24.22,
+        "height": 84.0
+      }
+    ]
+  },
+  "Drp20-4002ozlShnSlTrimWhiteBulb": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/ab4fe4f11a809842.png",
+        "left": 37.16,
+        "top": 6.0,
+        "width": 25.67,
+        "height": 84.0
+      }
+    ]
+  },
+  "13-415CAP4SpryGlSh": {
+    "mm": 16.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/ac8e9b4b718c91d4.png",
+        "left": 27.13,
+        "top": 15.26,
+        "width": 45.74,
+        "height": 74.74
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/0191d3af46424852.png",
+          "left": 39.32,
+          "top": 10.66,
+          "width": 21.36,
+          "height": 79.34
+        }
+      ]
+    }
+  },
+  "13-415CAP4SprySlMt": {
+    "mm": 16.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/180a88e9a0960532.png",
+        "left": 27.13,
+        "top": 16.76,
+        "width": 45.74,
+        "height": 73.24
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/e28310120b5f9fd6.png",
+          "left": 39.32,
+          "top": 11.23,
+          "width": 21.36,
+          "height": 78.77
+        }
+      ]
+    }
+  },
+  "18-415CAP4SpryMtGl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/5bc999ff18759917.png",
+        "left": 20.82,
+        "top": 8.54,
+        "width": 58.35,
+        "height": 81.46
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/b51593e6b2603fef.png",
+          "left": 36.7,
+          "top": 5.65,
+          "width": 26.59,
+          "height": 84.35
+        }
+      ]
+    }
+  },
+  "18-415CAP4SpryShnBlk": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/97998fa34c2d9b57.png",
+        "left": 20.82,
+        "top": 8.8,
+        "width": 58.35,
+        "height": 81.2
+      }
+    ],
+    "capOn": {
+      "layers": [
+        {
+          "url": "/images/catalog/component-layers/bd2911a33518701a.png",
+          "left": 36.7,
+          "top": 6.01,
+          "width": 26.59,
+          "height": 83.99
+        }
+      ]
+    }
+  },
+  "20-400cp1ozShortBlk": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/f4df1bd4fb34257c.png",
+        "left": 36.93,
+        "top": 78.53,
+        "width": 26.14,
+        "height": 11.47
+      }
+    ]
+  },
+  "20-400Cp2ozShortBlk": {
+    "mm": 23.0,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/f4df1bd4fb34257c.png",
+        "left": 36.93,
+        "top": 78.53,
+        "width": 26.14,
+        "height": 11.47
+      }
+    ]
+  },
+  "AnSp18-415Lvn": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/7c435b0b684d940c.png",
+        "left": 15.41,
+        "top": 6.0,
+        "width": 69.18,
+        "height": 84.0
+      }
+    ]
+  },
+  "AnSp18-415Pnk": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/22c427f7e40d85f0.png",
+        "left": 15.27,
+        "top": 6.0,
+        "width": 69.46,
+        "height": 84.0
+      }
+    ]
+  },
+  "AnSpTsl18-415IvySl": {
+    "mm": 21.5,
+    "layers": [
+      {
+        "url": "/images/catalog/component-layers/cdb330b041fb690a.png",
+        "left": 6.0,
+        "top": 6.15,
+        "width": 88.0,
+        "height": 83.85
+      }
+    ]
+  }
+}
