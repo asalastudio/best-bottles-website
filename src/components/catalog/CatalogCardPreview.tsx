@@ -19,6 +19,8 @@ import type { ProductCardVariantPreview } from "@/lib/products/product-card-vari
 import { getReconciledLocalSkuImage, isReconciliationSku, isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
 import { isAssembledOneMlVialImage, isOneMlVialGroup, oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
 import { getBlueHalfDramVialImage, isBlueHalfDramVialImage } from "@/lib/products/pdp-sku-image-fallback";
+import { componentPortrait } from "@/lib/products/component-portrait";
+import ComponentPortraitFrame from "@/components/products/ComponentPortraitFrame";
 
 type Props = {
     title: string;
@@ -134,6 +136,24 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
             catalogHero={catalogHero ? { ...catalogHero, websiteSku: masterSku } : null}
             productHref={href} variantPreviews={[]} sizes={sizes} imageLoading={imageLoading}
             auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: masterSku }} />;
+    }
+
+    // A listed cap or accessory uses the layers already seated on bottles, at one shared scale.
+    // A picked finish only shows its own layers; it never borrows another finish.
+    const portraitSku = selected ? skuOf(selected) : catalogHero?.websiteSku ?? skuOf(variants[0]) ?? null;
+    const portrait = componentPortrait(portraitSku);
+    const portraitKey = portrait?.layers[0]?.url ?? "";
+    if (portrait && !failed.has(portraitKey)) {
+        const label = selected ? `${title}, ${selected.label}` : title;
+        return <LocaleLink href={href} aria-label={`View ${label}`}
+            className="group relative block aspect-[10/11] w-full overflow-hidden bg-[#f5f3ef]"
+            data-visual-mode="component-portrait" data-testid="catalog-card-component"
+            data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined}
+            data-bb-product-group-slug={slug} data-bb-website-sku={portraitSku ?? undefined}>
+            <ComponentPortraitFrame portrait={portrait} label={label} view="hover"
+                eager={imageLoading?.loading === "eager" || Boolean(imageLoading?.preload)}
+                onError={() => fail(portraitKey)} />
+        </LocaleLink>;
     }
 
     if (catalogHero && selected && capOnly && capOnlyUrl && !failed.has(capOnlyUrl)) {
