@@ -1,29 +1,34 @@
 "use client";
 
 /**
- * Cap choice on a catalog card (design 8a): one 22 px dot per cap finish,
- * each filled with a crop of the real cap photo, the selected cap's name
- * beside them. More than six finishes collapse to five dots and a "+N" pill
- * that expands the row in place ("−" folds it again).
+ * Cap choice on a catalog card: one swatch per cap finish, each the real cap,
+ * sprayer or pump shown whole and upright on the card's white (as the legacy
+ * site and the product page's cap rail do), with no circle around it. The
+ * picked one is underlined and named beside the row. A finish with no photo
+ * shows a small cap-shaped chip of its material colour. More than six
+ * finishes collapse to five swatches and a "+N" pill that expands the row in
+ * place ("−" folds it again).
  *
- * The dots are a radio group: picking one swaps the card's photo, price and
- * add-to-cart SKU. They never navigate.
+ * The swatches are a radio group: picking one swaps the card's photo, price
+ * and add-to-cart SKU. They never navigate.
  */
 
 import { useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
 import { useQuery } from "convex/react";
 import Image from "next/image";
 import { api } from "../../../convex/_generated/api";
-import { catalogCapPhoto, CATALOG_CAP_FAMILY, type CatalogCapKind } from "@/lib/products/catalog-cap-photos";
+import { catalogCapPhoto, catalogCapPhotoBounds, CATALOG_CAP_FAMILY, type CatalogCapKind } from "@/lib/products/catalog-cap-photos";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import type { ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
 import { oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
 
-/** At most this many slots; beyond it, five dots and a "+N" pill. */
+/** At most this many slots; beyond it, five swatches and a "+N" pill. */
 export const CAP_DOT_SLOTS = 6;
 
-const UNSELECTED_RING = "inset 0 0 0 1px rgba(0,0,0,.15)";
-const SELECTED_RING = "0 0 0 2px #fff, 0 0 0 3px #1c1c1e";
+/** Height of a cap swatch's picture, px. Caps of every kind share a baseline. */
+export const CAP_SWATCH_HEIGHT = 30;
+/** Widest a cap swatch's picture may draw, px, so a squat cap stays in proportion. */
+export const CAP_SWATCH_WIDTH = 24;
 
 /**
  * Cap photographs for a card's finishes, from the plate index of the cap's
@@ -49,7 +54,7 @@ export function useCatalogCapPhotos(input: {
     return (variant) => (capKind ? catalogCapPhoto(variant, rows, capKind) : undefined);
 }
 
-/** The dot's fill: the cap photo cropped to the circle, else the finish's material colour. */
+/** A swatch's fill when it is drawn as a colour chip: the finish's material colour. */
 export function capDotStyle(variant: ProductCardVariantPreview, photoUrl: string | undefined): CSSProperties {
     const style = getMaterialSwatchStyle(variant.capLabel ?? variant.label, {
         imageUrl: photoUrl ?? null,
@@ -60,7 +65,49 @@ export function capDotStyle(variant: ProductCardVariantPreview, photoUrl: string
 }
 
 /**
- * Which finishes get a dot while the row is folded: all of them up to six,
+ * How to draw a cap photo in a swatch. A photo whose part has been measured
+ * (a spray top on its bottle canvas, a cap with transparent margin) is cropped
+ * to the part, which is then fitted to the swatch box standing on its bottom
+ * edge: tall caps and sprayers reach the full height, short caps keep their
+ * squat shape. A photo never measured is drawn whole, scaled to fit.
+ */
+export function capSwatchFrame(url: string, height = CAP_SWATCH_HEIGHT, maxWidth = CAP_SWATCH_WIDTH) {
+    const bounds = catalogCapPhotoBounds(url);
+    if (!bounds) return { kind: "contain" as const, width: maxWidth, height };
+    const partWidth = bounds.right - bounds.left;
+    const partHeight = bounds.bottom - bounds.top;
+    const scale = Math.min(height / partHeight, maxWidth / partWidth);
+    return {
+        kind: "crop" as const,
+        width: Math.max(1, Math.round(partWidth * scale)),
+        height: Math.max(1, Math.round(partHeight * scale)),
+        image: {
+            width: Math.round(bounds.width * scale),
+            height: Math.round(bounds.height * scale),
+            left: -Math.round(bounds.left * scale),
+            top: -Math.round(bounds.top * scale),
+        },
+    };
+}
+
+function CapSwatchPicture({ url, onError }: { url: string; onError: () => void }) {
+    const frame = capSwatchFrame(url);
+    if (frame.kind === "crop") {
+        return (
+            <span className="relative block flex-none overflow-hidden" style={{ width: frame.width, height: frame.height }}>
+                <Image src={url} alt="" width={frame.image.width} height={frame.image.height} loading="lazy" onError={onError}
+                    className="absolute max-w-none" style={{ ...frame.image }} />
+            </span>
+        );
+    }
+    return (
+        <Image src={url} alt="" width={frame.width} height={frame.height} loading="lazy" onError={onError}
+            className="block flex-none object-contain object-bottom" style={{ width: frame.width, height: frame.height }} />
+    );
+}
+
+/**
+ * Which finishes get a swatch while the row is folded: all of them up to six,
  * otherwise the first five, with the selected finish kept visible in the
  * fifth slot when it sits further down the list.
  */
@@ -82,6 +129,7 @@ type Props = {
 
 export default function CatalogCapDots({ title, variants, selectedId, onSelect, photo }: Props) {
     const [expanded, setExpanded] = useState(false);
+    const [failed, setFailed] = useState<ReadonlySet<string>>(() => new Set());
     const dotRefs = useRef(new Map<string, HTMLButtonElement>());
     if (variants.length === 0) return null;
 
@@ -102,11 +150,12 @@ export default function CatalogCapDots({ title, variants, selectedId, onSelect, 
     };
 
     return (
-        <div className="flex min-h-6 flex-wrap items-center gap-[7px]" data-testid="catalog-card-caps">
+        <div className="flex min-h-[38px] flex-wrap items-center gap-x-[5px] gap-y-1" data-testid="catalog-card-caps">
             <div role="radiogroup" aria-label={`${variants.every((variant) => oneMlVialApplicator(variant.websiteSku)) ? "Applicator" : "Cap"} for ${title}`} onKeyDown={move} className="contents">
                 {shown.map((variant) => {
                     const active = variant.id === selected.id;
-                    const photoUrl = photo(variant);
+                    const candidate = photo(variant);
+                    const photoUrl = candidate && !failed.has(candidate) ? candidate : undefined;
                     return (
                         <button
                             key={variant.id}
@@ -122,12 +171,15 @@ export default function CatalogCapDots({ title, variants, selectedId, onSelect, 
                             tabIndex={active ? 0 : -1}
                             onClick={() => onSelect(variant)}
                             data-testid="catalog-card-cap-dot"
+                            data-swatch={photoUrl ? "photo" : "chip"}
                             data-sku={variant.websiteSku ?? variant.graceSku ?? undefined}
-                            className="h-[22px] w-[22px] flex-none rounded-full bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9a7a48]"
-                            style={{ ...capDotStyle(variant, undefined), boxShadow: active ? SELECTED_RING : UNSELECTED_RING }}
+                            className={`flex h-[38px] flex-none items-end justify-center border-b-2 px-[2px] pb-[3px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9a7a48] ${
+                                active ? "border-[#1c1c1e]" : "border-transparent hover:border-[#d9cdb9]"}`}
                         >
-                            {photoUrl && <Image src={photoUrl} alt="" width={22} height={22} loading="lazy"
-                                className="h-full w-full rounded-full object-cover" />}
+                            {photoUrl
+                                ? <CapSwatchPicture url={photoUrl} onError={() => setFailed((current) => new Set(current).add(photoUrl))} />
+                                : <span aria-hidden className="block h-[24px] w-[18px] flex-none rounded-t-[3px] rounded-b-[1px]"
+                                    style={{ ...capDotStyle(variant, undefined), boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15)" }} />}
                         </button>
                     );
                 })}
@@ -144,7 +196,8 @@ export default function CatalogCapDots({ title, variants, selectedId, onSelect, 
                     {expanded ? "−" : `+${hiddenCount}`}
                 </button>
             )}
-            <span className="ml-0.5 min-w-0 flex-1 truncate text-[12px] text-[#5d6b7e]" data-testid="catalog-card-cap-name">
+            {/* Too narrow for the name beside the caps, it wraps to its own line rather than truncating. */}
+            <span className="ml-0.5 min-w-[6rem] flex-1 truncate text-[12px] text-[#5d6b7e]" data-testid="catalog-card-cap-name">
                 {selected.label}
             </span>
         </div>
