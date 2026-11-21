@@ -45,3 +45,22 @@ describe("Build Your Bottle family screen", () => {
         expect(familyPreviewScale(group[0], group)).toBeLessThan(1);
     });
 });
+
+describe("Build Your Bottle finished views", () => {
+    it("offers the product page's views only for a layered kit, cap on first, with CAP OFF for the cap beside the glass", async () => {
+        const { builderViews, builderViewLabel } = await import("@/components/bottle-builder/BuilderViewStage");
+        const bare = { id: "x", family: "Cylinder", capacityMl: 9, color: "Clear", fitment: "Metal Roller", kit: null, product: { websiteSku: "x" } } as unknown as BuilderConfiguration;
+        expect(builderViews(bare)).toEqual([]);
+        expect(builderViews(null)).toEqual([]);
+        expect(builderViewLabel("capon")).toBe("CAP ON");
+        expect(builderViewLabel("sidecar")).toBe("CAP OFF");
+        expect(builderViewLabel("exploded")).toBe("EXPLODED");
+    });
+
+    it("Start over returns to the family screen", async () => {
+        const { readFileSync } = await import("node:fs");
+        const client = readFileSync("src/components/matrix/MatrixClient.tsx", "utf8");
+        expect(client).toMatch(/function startOver\(\) \{[\s\S]*?reset\(\);[\s\S]*?openFamilyScreen\(\);/);
+        expect(client).toContain("onClick={startOver}");
+    });
+});

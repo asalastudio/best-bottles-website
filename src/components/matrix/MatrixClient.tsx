@@ -19,6 +19,8 @@ import { registerDisplayDerivatives, type DisplayDerivativeMap } from "@/lib/pro
 import FamilyLoadingStatus from "@/components/bottle-builder/FamilyLoadingStatus";
 import FamilyChooser, { useFamilyPreviews, type FamilyPreviewPayload } from "@/components/bottle-builder/FamilyChooser";
 import FamilyShapeIcon from "@/components/icons/FamilyShapeIcon";
+import BuilderViewStage, { builderViewLabel, builderViews } from "@/components/bottle-builder/BuilderViewStage";
+import type { StageView } from "@/lib/products/pdp-redesign/stage";
 import bodyHeightMedia from "@/lib/bottle-builder/body-heights.generated.json";
 import BuilderImage from "@/components/bottle-builder/BuilderImage";
 import FitmentIllustration from "@/components/bottle-builder/FitmentIllustration";
@@ -135,6 +137,8 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     // (or its fitments when it comes in one glass), a glass opens its fitments, a fitment its finishes.
     // The finish stays put until the customer reviews. The target waits here while the bottle's options load.
     const [advanceTo, setAdvanceTo] = useState<number | null>(null);
+    // The finished bottle in the product page's views; cap on is how it ships.
+    const [finishedView, setFinishedView] = useState<StageView>("capon");
     const [adding, setAdding] = useState(false);
     const [lastAdded, setLastAdded] = useState<{ name: string; quantity: number; total?: number | null; lines?: string[] } | null>(null);
     const confirmation = useRef<HTMLDivElement>(null);
@@ -204,6 +208,9 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         && ((configuration.id in hasIncludedCovers) || (configuration.kit?.parts.some(p => p.slot === "overcap")
         && configuration.kit?.parts.some(p => !["body", "overcap", "diptube"].includes(p.slot)))));
     const previewStage = step <= 1 ? "body" : configuration ? "complete" : fitment ? "fitment" : "body";
+    // Once every part is chosen the bottle is complete: show it the way its product page does.
+    const finishedViews = step >= 3 && configuration ? builderViews(configuration) : [];
+    const activeFinishedView = finishedViews.includes(finishedView) ? finishedView : finishedViews[0];
     // the overcap is never dropped from the preview: worn when showCover, standing on the ground beside the bottle otherwise (BuilderImage)
     // A fitment with no layered kit yet (every 5 ml cobalt plastic roller, for one) has nothing to draw at
     // the fitment stage. Seat a sibling glass's mechanism on this glass's universal body; failing that,
@@ -269,6 +276,12 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         setSelection(emptySelection()); setShowCover(false); setLastAdded(null); setError(""); setSize(""); setNeck(""); setApplication(""); setPreviewExpanded(false); goTo(0);
     }
     const familyHref = (family: string) => `/matrix?family=${encodeURIComponent(family)}${searchParams.get("shop") ? `&shop=${encodeURIComponent(searchParams.get("shop")!)}` : ""}`;
+    /** Start over clears the build and returns to the family screen, the beginning of the builder. */
+    function startOver() {
+        if (adding) return;
+        reset();
+        openFamilyScreen();
+    }
     function openFamilyScreen() {
         if (adding) return;
         setFamilyScreen(true); setFamilyScreenReturned(true); setPreviewExpanded(false); setLastAdded(null); setError("");
@@ -369,7 +382,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         {!familyScreen && step === 0 && familyNotice}
         {!familyScreen && <div className={styles.workspace} id="builder-workspace">
             <section className={styles.options} aria-label="Bottle options">
-                <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 2} of 6</span><button type="button" className={styles.startOver} onClick={reset} disabled={adding}>Start over</button></div>
+                <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 2} of 6</span><button type="button" className={styles.startOver} onClick={startOver} disabled={adding}>Start over</button></div>
                     <h2 tabIndex={-1} ref={optionHeading}>{titles[step]}</h2><p>{subtitles[step]}</p>
                     {step === 0 && <button type="button" className={styles.familyCurrent} disabled={adding} onClick={openFamilyScreen} aria-label={`Bottle family: ${chosenFamily}. Change family`}>
                         <FamilyShapeIcon family={chosenFamily} size={20} strokeWidth={1.1} /><strong>{chosenFamily}</strong><span>Change family</span>
@@ -435,12 +448,19 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                 </div>
             </section>
             <section className={styles.preview} aria-label="Live bottle preview" data-preview-stage={previewStage} data-expanded={previewExpanded}>
-                <div className={styles.previewHeader}><span>YOUR BOTTLE, TAKING SHAPE</span><span className={styles.liveDot}>{preview ? "Your bottle preview" : "Live preview"}</span></div>
-                {preview && previewConfig ? <div id={previewId} className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}><BuilderImage config={previewConfig} parts={displayParts} stage={displayStage} showCover={showCover} bodyReference={bodyReference} frameConfigurations={body?.configurations}
+                <div className={styles.previewHeader}>{configuration && step >= 3
+                    ? <span key={configuration.id} className={styles.completeBadge} role="status"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" /><path d="M7.2 12.4l3.1 3.1 6.5-6.8" /></svg>Your bottle is complete</span>
+                    : <span>YOUR BOTTLE, TAKING SHAPE</span>}
+                    {finishedViews.length > 1 ? <div className={styles.viewSwitch} role="group" aria-label="View">{finishedViews.map(view =>
+                        <button key={view} type="button" aria-pressed={activeFinishedView === view} onClick={() => setFinishedView(view)} data-builder-view={view}>{builderViewLabel(view)}</button>)}</div>
+                    : <span className={styles.liveDot}>{preview ? "Your bottle preview" : "Live preview"}</span>}</div>
+                {configuration && activeFinishedView ? <div id={previewId} className={styles.previewImage}><BuilderViewStage configuration={configuration} view={activeFinishedView}
+                    label={`${configuration.capacityMl} ml ${configuration.color} ${configuration.family} with ${displayApplicatorName(configuration.fitment)}, ${configuration.closure}, ${builderViewLabel(activeFinishedView).toLowerCase()}`} /></div>
+                : preview && previewConfig ? <div id={previewId} className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}><BuilderImage config={previewConfig} parts={displayParts} stage={displayStage} showCover={showCover} bodyReference={bodyReference} frameConfigurations={body?.configurations}
                     label={body ? `${preview.capacityMl} ml ${preview.color} ${preview.family}${fitment ? ` with ${displayApplicatorName(fitment)}` : preview.kit ? " bottle body" : " bottle"}${closure ? `, ${closure}` : ""}` : "Bottle body preview — choose a bottle to begin"} /></div>
                     : <div className={styles.previewEmpty}><ShoppingBag size={32} weight="light" /><p>Your bottle starts here.</p></div>}
                 <div className={styles.previewCaption} aria-live="polite">{body ? <><h2>{body.capacityMl} ml {body.profileLabel}</h2><p>{color ?? "Choose your glass"}{fitment ? ` · ${displayApplicatorName(fitment)}` : ""}</p>{preview && !preview.kit && !borrowed && fitment && !configuration && <p>Your selected fitment is shown in the options. Choose your {finishLabel.toLowerCase()} to see the complete bottle.</p>}</> : <><h2>A bottle. Your possibilities.</h2><p>Choose a bottle to start building.</p></>}</div>
-                {hasIncludedCover && <div className={styles.coverControl}><span>Matching overcap included</span><button type="button" aria-pressed={showCover} onClick={() => setShowCover(value => !value)}>{showCover ? "Hide cap" : "Show cap"}</button></div>}
+                {hasIncludedCover && !activeFinishedView && <div className={styles.coverControl}><span>Matching overcap included</span><button type="button" aria-pressed={showCover} onClick={() => setShowCover(value => !value)}>{showCover ? "Hide cap" : "Show cap"}</button></div>}
                 {body && <button className={styles.previewToggle} aria-expanded={previewExpanded} aria-controls={previewId} onClick={() => setPreviewExpanded(value => !value)}>{previewExpanded ? "Minimize preview" : "View larger bottle"}</button>}
             </section>
             <aside className={styles.summary} aria-label="Your Build">

@@ -73,6 +73,19 @@
 .preview { position: sticky; top: calc(var(--site-header-h, 120px) + var(--steps-h, 71px) + 18px); border: 1px solid var(--line); border-radius: 6px; background: #f5f3ef; min-height: 570px; overflow: hidden; display: flex; flex-direction: column; isolation: isolate; }
 .previewHeader { display: flex; justify-content: space-between; align-items: center; padding: 23px 22px 0; gap: 12px; }
 .previewHeader > span:first-child { font-size: 8px; letter-spacing: .15em; color: #79746b; }
+/* The finished build: a gold check draws in once, no confetti (the brand is quiet). */
+.completeBadge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: .02em; color: #252523; animation: completeIn .45s ease-out both; }
+.completeBadge svg { width: 22px; height: 22px; fill: none; stroke: var(--gold); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.completeBadge svg circle { stroke-dasharray: 66; stroke-dashoffset: 66; animation: completeDraw .6s ease-out .05s forwards; }
+.completeBadge svg path { stroke-dasharray: 16; stroke-dashoffset: 16; animation: completeDraw .35s ease-out .5s forwards; }
+@keyframes completeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@keyframes completeDraw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .completeBadge, .completeBadge svg circle, .completeBadge svg path { animation: none; stroke-dashoffset: 0; } }
+.viewSwitch { display: flex; flex: none; border: 1px solid #c9c2b5; background: #fff; }
+.viewSwitch button { font-size: 10px; letter-spacing: .12em; padding: 5px 10px; min-height: 28px; white-space: nowrap; color: #252523; background: #fff; transition: background-color .2s, color .2s; }
+.viewSwitch button:not([aria-pressed="true"]):hover { background: #f5f3ef; }
+.viewSwitch button[aria-pressed="true"] { background: #252523; color: #fff; }
+.viewSwitch button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .liveDot { display: flex; align-items: center; gap: 5px; font-size: 9px; color: #69695f; white-space: nowrap; }
 .liveDot::before { content: ''; height: 4px; width: 4px; border-radius: 100%; background: #79836a; }
 .previewImage { width: 100%; height: 450px; padding: 8px 20px 0; }
