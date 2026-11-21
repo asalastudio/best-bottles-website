@@ -3,7 +3,9 @@ component,CMP-PLUG-BLK-VIAL,REF-CMP-PLUG-BLK-VIAL,,family=Plug/Applicator,convex
 component,CMP-PLUG-WHT-VIAL,REF-CMP-PLUG-WHT-VIAL,,family=Plug/Applicator,convex:products (prod) 2026-09-29,classify type / confirm neck before listing
 component,CMP-ROC-WHT-03,CPWhite1Oz,,family=Roll-On Cap,convex:products (prod) 2026-09-29,classify type / confirm neck before listing
 component,CMP-SPR-LVN-BULB,AntqSprBulbLavender,,family=Sprayer; SKU/name says bulb,convex:products (prod) 2026-09-29,classify type / confirm neck before listing
+component,CMP-SPR-RED-02,GBATom5RedBurg,13-415,"the SKU names a 5 ml atomizer product, not a standalone 13-415 sprayer; kept off the 13-415 list until its identity is checked (component-corrections.json)",convex:products (prod) 2026-09-29,classify type / confirm neck before listing
 component,CMP-CAP-BDOT-17-415,,17-415,family=Cap/Component (alias-looking record),convex:products (prod) 2026-09-29,classify type / confirm neck before listing
+component,CMP-DRP-AMB,Droppers1ozElg,17-415,"Convex says 17-415 but the live product page states neck 18-400; kept off the 17-415 list until the SKU lineage is checked (17-415 remedy register, 23 Sep 2026) (component-corrections.json)",convex:products (prod) 2026-09-29,classify type / confirm neck before listing
 component,BB-ALU250SPRYBL,Alu250SpryBl,20-410,family=Aluminum Bottle is not a component family,convex:products (prod) 2026-09-29,classify type / confirm neck before listing
 component,BB-CREAMJARAMB5MLSLCAP,CreamJarAmb5mlSlcap,37mm,family=Cream Jar is not a component family,convex:products (prod) 2026-09-29,classify type / confirm neck before listing
 component,CMP-CLS-BLK-06,CJ30BlkCap,PRESS-FIT,family=Cap/Closure,convex:products (prod) 2026-09-29,classify type / confirm neck before listing

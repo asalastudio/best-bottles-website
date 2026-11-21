@@ -1,0 +1,44 @@
+{
+ "_about": "Read-only snapshot of the production component register for 15-415 (generic component layers and bottle plates), taken 2026-11-07 with scripts/help/snapshot_register.py. Public Blob URLs and geometry only.",
+ "takenOn": "2026-11-07",
+ "neck": "15-415",
+ "components": {},
+ "plates": {
+  "circle-30ml-15-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/circle-30ml-15-415/clear/3920748ac3e06e1b11197a22dcf4f7ed032bb0a8613feb8c5bbda593a48ccc04.png",
+   "width": 1728,
+   "height": 2192,
+   "pxPerMm": 24.2405,
+   "anchors": {
+    "axisX": 864,
+    "baselineY": 2097,
+    "seatY": 161,
+    "shoulderY": 646
+   }
+  },
+  "elegant-30ml-15-415|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/elegant-30ml-15-415/clear/34ed787f9abe3299c904de2ad642f342787a85e2c821a0b3be698ce70f93a9ea.png",
+   "width": 1472,
+   "height": 2192,
+   "pxPerMm": 24.7637,
+   "anchors": {
+    "axisX": 729,
+    "baselineY": 2097,
+    "seatY": 136,
+    "shoulderY": 394
+   }
+  },
+  "elegant-30ml-15-415|Frosted": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/elegant-30ml-15-415/frosted/a0ddb492de22a5a72150831ea039d1dd99cb395b6af956a5a5ae2a0ced7156fe.png",
+   "width": 1472,
+   "height": 2192,
+   "pxPerMm": 24.7637,
+   "anchors": {
+    "axisX": 731,
+    "baselineY": 2097,
+    "seatY": 136,
+    "shoulderY": 393
+   }
+  }
+ }
+}

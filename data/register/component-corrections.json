@@ -1,0 +1,108 @@
+{
+  "_about": "Reviewed corrections to component rows the Convex export misfiles. scripts/register/build_register.py applies them after classifying the export, so a rebuild keeps them. Each row cites its evidence; the remedy registers are under source/neck-thread-2026-09-23/. Approved by Jordan on 2026-11-07 ('correct all data so all mockups match'). Production Convex is unchanged: these are register corrections only.",
+  "_fields": "type / capStyle replace the classified values; status 'quarantine' keeps a row out of every fit list; duplicateOf names the listing customers should see instead (the duplicate is left out of fit choices entirely).",
+  "corrections": {
+    "CP13-415BlkSht": {
+      "type": "cap",
+      "capStyle": "Short ribbed",
+      "evidence": "13-415 short ribbed cap, black; Convex files it as Roll-On Cap though its applicator is Cap/Closure (13-415 remedy register, 23 Sep 2026)"
+    },
+    "CP13-415WhtSht": {
+      "type": "cap",
+      "capStyle": "Short ribbed",
+      "evidence": "13-415 short ribbed cap, white; Convex files it as Roll-On Cap though its applicator is Cap/Closure (13-415 remedy register, 23 Sep 2026)"
+    },
+    "CP13-415Gl": {
+      "type": "cap",
+      "capStyle": "Tall",
+      "evidence": "13-415 gold tall liner cap, 24 mm high, not a roller cap (live component page; 13-415 remedy register, 23 Sep 2026)"
+    },
+    "CP13-415Sl": {
+      "type": "cap",
+      "capStyle": "Tall",
+      "evidence": "13-415 silver tall liner cap, 24 mm high, not a roller cap (live component page; 13-415 remedy register, 23 Sep 2026)"
+    },
+    "CP15-415ShnGl": {
+      "type": "cap",
+      "capStyle": "Liner",
+      "evidence": "15-415 liner cap; owner identifies it as a liner cap and the live page calls it a cap or closure with no roller (15-415 remedy register, 23 Sep 2026)"
+    },
+    "CP15-415ShnSl": {
+      "type": "cap",
+      "capStyle": "Liner",
+      "evidence": "15-415 liner cap; owner identifies it as a liner cap and the live page calls it a cap or closure with no roller (15-415 remedy register, 23 Sep 2026)"
+    },
+    "Droppers1ozElg": {
+      "status": "quarantine",
+      "evidence": "Convex says 17-415 but the live product page states neck 18-400; kept off the 17-415 list until the SKU lineage is checked (17-415 remedy register, 23 Sep 2026)"
+    },
+    "GBATom5RedBurg": {
+      "status": "quarantine",
+      "evidence": "the SKU names a 5 ml atomizer product, not a standalone 13-415 sprayer; kept off the 13-415 list until its identity is checked"
+    },
+    "13-415CAP4SpryCuMt": {
+      "duplicateOf": "CP13-415SpryCuMt",
+      "evidence": "extra sprayer listing with no matching choice in the website accessory selector (13-415 matrix, 23 Sep 2026)"
+    },
+    "13-415CAP4SpryGlSh": {
+      "duplicateOf": "CP13-415SpryGlSh",
+      "evidence": "extra sprayer listing with no matching choice in the website accessory selector (13-415 matrix, 23 Sep 2026)"
+    },
+    "13-415CAP4SprySlMt": {
+      "duplicateOf": "CP13-415SprySlMt",
+      "evidence": "extra sprayer listing with no matching choice in the website accessory selector (13-415 matrix, 23 Sep 2026)"
+    },
+    "18-415CAP4SpryMtGl": {
+      "duplicateOf": "Spry18-415MtGl",
+      "evidence": "extra sprayer listing; not a distinct choice in the website accessory selector (18-415 remedy register, 23 Sep 2026)"
+    },
+    "18-415CAP4SpryShnBlk": {
+      "duplicateOf": "Spry18-415ShnBlk",
+      "evidence": "extra sprayer listing; not a distinct choice in the website accessory selector (18-415 remedy register, 23 Sep 2026)"
+    },
+    "CP18-415MtSlTall": {
+      "capStyle": "Tall",
+      "evidence": "18-415 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
+    },
+    "CP18-415ShnBlkTall": {
+      "capStyle": "Tall",
+      "evidence": "18-415 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
+    },
+    "CP18-415Wh": {
+      "capStyle": "Tall",
+      "evidence": "18-415 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
+    },
+    "CP8-425TallBlack": {
+      "capStyle": "Tall",
+      "evidence": "8-425 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
+    },
+    "CP8-425TallShnGl": {
+      "capStyle": "Tall",
+      "evidence": "8-425 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
+    },
+    "CP8-425TallShnSl": {
+      "capStyle": "Tall",
+      "evidence": "8-425 cap whose own item name says \"Tall\"; the export leaves its cap style blank"
+    }
+  },
+  "neckRulings": {
+    "_about": "Owner rulings that every current, sellable closure on a neck finish fits every interchangeable bottle on it. scripts/help/build-fit-index.mjs lists those pairs as fits and records them under teamConfirmed, so the basis stays visible apart from catalog listings.",
+    "13-415": {
+      "by": "Jordan",
+      "date": "2026-11-07",
+      "statement": "Every 13-415 bottle fits every available 13-415 fitment in the component list (roll-on caps, roller inserts, sprayers, short ribbed caps, short caps with liner, tall caps with liner)."
+    }
+  },
+  "pairExclusions": {
+    "_about": "Bottle and part pairs the catalog lists but a review found doubtful. scripts/help/build-fit-index.mjs moves them from listed to conflicting, so they are never offered as fits.",
+    "pairs": [
+      {
+        "bodyId": "vial-9ml-18-400",
+        "partTypes": [
+          "dropper"
+        ],
+        "evidence": "18-400 remedy register (23 Sep 2026): both 9 ml vial products list the six 15 ml droppers with 66 mm stems, but the legacy 9 ml vial is only 47-50 mm tall with cap; confirm internal depth before offering them"
+      }
+    ]
+  }
+}

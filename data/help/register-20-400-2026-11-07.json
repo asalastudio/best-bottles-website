@@ -1,0 +1,702 @@
+{
+ "_about": "Read-only snapshot of the production component register for 20-400 (generic component layers and bottle plates), taken 2026-11-07 with scripts/help/snapshot_register.py. Public Blob URLs and geometry only.",
+ "takenOn": "2026-11-07",
+ "neck": "20-400",
+ "components": {
+  "CMP-CAP-BLK-20-400-2OZ": {
+   "websiteSku": "20-400Cp2ozShortBlk",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 149,
+      "y": 23.9
+     },
+     "pxPerMm": 11.7573,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-CAP-BLK-20-400-2OZ/cap-021ceabd0255303507a4fc4b7594aa0d2ffa7c0c1b79d8469b07b7cd03e97804.png",
+     "width": 299,
+     "height": 157
+    }
+   ]
+  },
+  "CMP-CAP-BLK-20-400-1OZ": {
+   "websiteSku": "20-400cp1ozShortBlk",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 149,
+      "y": 23.8
+     },
+     "pxPerMm": 11.5559,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-CAP-BLK-20-400-1OZ/cap-021ceabd0255303507a4fc4b7594aa0d2ffa7c0c1b79d8469b07b7cd03e97804.png",
+     "width": 299,
+     "height": 157
+    }
+   ]
+  },
+  "CMP-DRP-BLK-20400-76MM-01": {
+   "websiteSku": "Drp20-4001ozBlckBulb",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 161.5,
+      "y": 262
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BLK-20400-76MM-01/fitment-e636a33d7fa37d0530db4959d91432ab193b0d5601fe272fd082d97a745ae6ee.png",
+     "width": 328,
+     "height": 384
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 143.5,
+      "y": -112
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BLK-20400-76MM-01/pipette-87369e7f06247569b010f80a7e1e8cd0cb50f0f9ce01e32ddceaf7beccce7387.png",
+     "width": 273,
+     "height": 715
+    },
+    {
+     "slot": "pipette",
+     "z": "front",
+     "anchor": {
+      "x": 36.5,
+      "y": -110
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BLK-20400-76MM-01/pipette-ac3b990f3ae260cf02d91245aae706a09bf2cb344e776b7c59365c9ad624a85b.png",
+     "width": 91,
+     "height": 717
+    }
+   ]
+  },
+  "CMP-DRP-BKGD-20400-76": {
+   "websiteSku": "Drp20-4001ozShnGlTrimBlkBulb",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 154.5,
+      "y": 261
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BKGD-20400-76/fitment-e7605d712db1308eca5efde4b785ee63cb23d389cc84d4d0e728974bc3bbac83.png",
+     "width": 312,
+     "height": 382
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 150.5,
+      "y": -110
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BKGD-20400-76/pipette-861bf17c8f66f9efec51c830f525d323e67e50a7df98a4f7a7948d4843e30525.png",
+     "width": 303,
+     "height": 717
+    },
+    {
+     "slot": "pipette",
+     "z": "front",
+     "anchor": {
+      "x": 35.5,
+      "y": -109
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BKGD-20400-76/pipette-ef73dde8f0a62e6e742e943d9dd4a07bfd38891eec23ab45de0066de61ce3933.png",
+     "width": 91,
+     "height": 718
+    }
+   ]
+  },
+  "CMP-DRP-WHT-20400-76": {
+   "websiteSku": "Drp20-4001ozWhiteBulb",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 148.5,
+      "y": 274
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WHT-20400-76/fitment-24393f05ef2d53855da778d9355a8f36ab4fe255aed66a4aa778526b4a6b232d.png",
+     "width": 298,
+     "height": 396
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 146.5,
+      "y": -111
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WHT-20400-76/pipette-9629d664689fce406445db2ffe0cc78d26a2f8d09c46a8f74348bf8c8dd57e38.png",
+     "width": 295,
+     "height": 716
+    },
+    {
+     "slot": "pipette",
+     "z": "front",
+     "anchor": {
+      "x": 34.5,
+      "y": -110
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WHT-20400-76/pipette-242ec9813154c0c62c87bf3b42f7017f58a8331f09f16a37c76c1cd3b24df4f9.png",
+     "width": 91,
+     "height": 717
+    }
+   ]
+  },
+  "CMP-DRP-WTGD-20400-76": {
+   "websiteSku": "Drp20-4001ozlShnGlTrimWhiteBulb",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 148.5,
+      "y": 229
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTGD-20400-76/fitment-dfedeb227c034fe6a3a0db9c07f8bf2d2bd147cf198cbd07bff3f0f37d8861ce.png",
+     "width": 296,
+     "height": 352
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 144.5,
+      "y": -113
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTGD-20400-76/pipette-70dd63bd8dccbce9463729ed958df16de97706f892ecb6eacf0bdd94030c29ee.png",
+     "width": 288,
+     "height": 714
+    },
+    {
+     "slot": "pipette",
+     "z": "front",
+     "anchor": {
+      "x": 38.5,
+      "y": -111
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTGD-20400-76/pipette-fe455927dcb7782c70d0d92ff416abb36a0d2f3936e3641f7a1e171b90647866.png",
+     "width": 91,
+     "height": 716
+    }
+   ]
+  },
+  "CMP-DRP-WTSL-20400-76": {
+   "websiteSku": "Drp20-4001ozlShnSlTrimWhiteBulb",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 148.5,
+      "y": 232
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTSL-20400-76/fitment-9e26315952150d0b33f628eb2ff3fbdc54ad6b3b17f97b032d01294360e00a02.png",
+     "width": 301,
+     "height": 350
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 145.5,
+      "y": -107
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTSL-20400-76/pipette-9996932baf6fab476e44305bc8d3dfdfee73f330b558cfe632acb6643decb72c.png",
+     "width": 294,
+     "height": 720
+    },
+    {
+     "slot": "pipette",
+     "z": "front",
+     "anchor": {
+      "x": 35.5,
+      "y": -106
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTSL-20400-76/pipette-33d2568f77769ac03ced1220d46fd7abe03a5e42a0306bf49058241fa70694ad.png",
+     "width": 91,
+     "height": 721
+    }
+   ]
+  },
+  "CMP-DRP-BLK-20400-90": {
+   "websiteSku": "Drp20-4002ozBlckBulb",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 176,
+      "y": 269
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BLK-20400-90/fitment-87f311ae81a645ec627583f725d921861609960c3fc47af78212e5135f20bc6b.png",
+     "width": 341,
+     "height": 401
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 148,
+      "y": -155
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BLK-20400-90/pipette-c2f919bb2f271e34d839e782ca900fe48dbe7a1c15561e426b5919dad038fa10.png",
+     "width": 249,
+     "height": 862
+    },
+    {
+     "slot": "pipette",
+     "z": "front",
+     "anchor": {
+      "x": 56,
+      "y": -120
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BLK-20400-90/pipette-6f295f84a7a62ff6d216edc6634076eb5ad1fb5dc696f8f278714f378b5500c4.png",
+     "width": 109,
+     "height": 897
+    }
+   ]
+  },
+  "CMP-DRP-BKGD-20400-90": {
+   "websiteSku": "Drp20-4002ozShnGlTrimBlkBulb",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 160,
+      "y": 254
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BKGD-20400-90/fitment-09e33df6adfa30562042870b4d88935a82458bf0b0e8a264bfc2c910eb271d2e.png",
+     "width": 312,
+     "height": 382
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 148,
+      "y": -152
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BKGD-20400-90/pipette-2d383b9c6b2b140ff7bd8f85b4cab68a220fb99ef887f96094d04a0a4dc9e3d5.png",
+     "width": 251,
+     "height": 865
+    },
+    {
+     "slot": "pipette",
+     "z": "front",
+     "anchor": {
+      "x": 56,
+      "y": -116
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BKGD-20400-90/pipette-185ab8583bfe46e33adaf74d3e25778262f78d66b17f4e2dc018492f3b5b91eb.png",
+     "width": 109,
+     "height": 901
+    }
+   ]
+  },
+  "CMP-DRP-BKSL-20400-90": {
+   "websiteSku": "Drp20-4002ozShnSlTrimBlkBulb",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 163,
+      "y": 260
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BKSL-20400-90/fitment-84329a2d2770f2e906ab442b11c966f4d5ae98535fa28c7932255597af66aec9.png",
+     "width": 314,
+     "height": 386
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 148,
+      "y": -152
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BKSL-20400-90/pipette-2d383b9c6b2b140ff7bd8f85b4cab68a220fb99ef887f96094d04a0a4dc9e3d5.png",
+     "width": 251,
+     "height": 865
+    },
+    {
+     "slot": "pipette",
+     "z": "front",
+     "anchor": {
+      "x": 56,
+      "y": -114
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-BKSL-20400-90/pipette-f6c416546cf0c44a7e1fc89e77efbb960b72641062cffd28aa56ce56d36f297d.png",
+     "width": 109,
+     "height": 903
+    }
+   ]
+  },
+  "CMP-DRP-WHT-20400-90": {
+   "websiteSku": "Drp20-4002ozWhiteBulb",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 156,
+      "y": 270
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WHT-20400-90/fitment-21793c06baa2059bbfbf36e5b869a22b847e777428ec1d28b85171f2c47eb5f1.png",
+     "width": 298,
+     "height": 398
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 148,
+      "y": -155
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WHT-20400-90/pipette-c2f919bb2f271e34d839e782ca900fe48dbe7a1c15561e426b5919dad038fa10.png",
+     "width": 249,
+     "height": 862
+    },
+    {
+     "slot": "pipette",
+     "z": "front",
+     "anchor": {
+      "x": 56,
+      "y": -116
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WHT-20400-90/pipette-0c88ee20983a7a0ff2f0dfa9cc5c9a746a8c098e46996b61f8b6e3ddc3added8.png",
+     "width": 109,
+     "height": 901
+    }
+   ]
+  },
+  "CMP-DRP-WTGD-20400-90": {
+   "websiteSku": "Drp20-4002ozlShnGlTrimWhiteBulb",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 164,
+      "y": 271
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTGD-20400-90/fitment-d98b2ddbaaa92c570fe1c0496b023f1fdc3f7949e56990b64a809c2c65a7dac2.png",
+     "width": 314,
+     "height": 401
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 148,
+      "y": -152
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTGD-20400-90/pipette-2d383b9c6b2b140ff7bd8f85b4cab68a220fb99ef887f96094d04a0a4dc9e3d5.png",
+     "width": 251,
+     "height": 865
+    },
+    {
+     "slot": "pipette",
+     "z": "front",
+     "anchor": {
+      "x": 56,
+      "y": -118
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTGD-20400-90/pipette-d6ef310427447b44e886934f7381118e9eb460de476ef0b273d4c405a45ef029.png",
+     "width": 109,
+     "height": 899
+    }
+   ]
+  },
+  "CMP-DRP-WTSL-20400-90": {
+   "websiteSku": "Drp20-4002ozlShnSlTrimWhiteBulb",
+   "layers": [
+    {
+     "slot": "fitment",
+     "z": "front",
+     "anchor": {
+      "x": 171,
+      "y": 252
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTSL-20400-90/fitment-eaa4d095aeb763a973030d6054ea1d75f6b9656a12bdf62992939bef1bc35913.png",
+     "width": 325,
+     "height": 380
+    },
+    {
+     "slot": "pipette",
+     "z": "behind-body",
+     "anchor": {
+      "x": 149,
+      "y": -151
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTSL-20400-90/pipette-df14cd969b7aa4ffa2ac64149d5815522ea4abfd57617129d793c7a1ee45b2fc.png",
+     "width": 252,
+     "height": 866
+    },
+    {
+     "slot": "pipette",
+     "z": "front",
+     "anchor": {
+      "x": 56,
+      "y": -116
+     },
+     "pxPerMm": 11.8387,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-DRP-WTSL-20400-90/pipette-9be4f5f59981392d063f8ff942dbc1127700f594ef89f18eb996f3a3d7d66ae2.png",
+     "width": 109,
+     "height": 901
+    }
+   ]
+  },
+  "CMP-ROC-MBLK-20400-T": {
+   "websiteSku": "CPRoll20-400TallMattBlk",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 153.5,
+      "y": 226.8
+     },
+     "pxPerMm": 11.7162,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-MBLK-20400-T/cap-59c27a9edea1d7284b1e1b485f30e719fb0313982203dd523a32f8fde66765df.png",
+     "width": 306,
+     "height": 481
+    }
+   ]
+  },
+  "CMP-ROC-MGLD-20400-T": {
+   "websiteSku": "CPRoll20-400TallMattGl",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 158,
+      "y": 233
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-MGLD-20400-T/cap-6a2d6d0a50e3608b6e94698f03cc753981073afdce0207ae69c31a72bd79a591.png",
+     "width": 322,
+     "height": 472
+    }
+   ]
+  },
+  "CMP-ROC-MSLV-20400-T": {
+   "websiteSku": "CPRoll20-400TallMattSl",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 155,
+      "y": 207.3
+     },
+     "pxPerMm": 11.6347,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-MSLV-20400-T/cap-2c113f753401da07dba95940d10f2096ae23de2a725a402a56265f1ffd252d8f.png",
+     "width": 305,
+     "height": 444
+    }
+   ]
+  },
+  "CMP-ROC-SBLK-20400-T": {
+   "websiteSku": "CPRoll20-400TallShnBlk",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 150.5,
+      "y": 228
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-SBLK-20400-T/cap-29eff31ea076e47407b931f3e7bf3e9b59c904ee08ea31ff719225fbbc2c5046.png",
+     "width": 303,
+     "height": 481
+    }
+   ]
+  },
+  "CMP-ROC-SGLD-20400-T": {
+   "websiteSku": "CPRoll20-400TallShnGl",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 157,
+      "y": 232.5
+     },
+     "pxPerMm": 11.7547,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-SGLD-20400-T/cap-ab39a16dd6d379d79ad614b08970f4461218ca3782dee78c93668c5f6313727f.png",
+     "width": 316,
+     "height": 470
+    }
+   ]
+  },
+  "CMP-ROC-SSLV-20400-T": {
+   "websiteSku": "CPRoll20-400TallShnSl",
+   "layers": [
+    {
+     "slot": "cap",
+     "z": "front",
+     "anchor": {
+      "x": 156.5,
+      "y": 213
+     },
+     "pxPerMm": 11.6758,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/CMP-ROC-SSLV-20400-T/cap-a1e8c6e42f2d7d114ce464f52d040ffa61a7ace11f4bb24f0c5a42748afa79a4.png",
+     "width": 312,
+     "height": 449
+    }
+   ]
+  },
+  "LIB-20-400-MtlRollon": {
+   "websiteSku": null,
+   "layers": [
+    {
+     "slot": "roller",
+     "z": "behind-body",
+     "anchor": {
+      "x": 108,
+      "y": 157
+     },
+     "pxPerMm": 11.6882,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/LIB-20-400-MtlRollon/roller-655ee3b81fb3254a98e868d6a62299eb34036994444c2b822c1bdea1bf8440c6.png",
+     "width": 220,
+     "height": 166
+    }
+   ]
+  },
+  "LIB-20-400-PlsticRollon": {
+   "websiteSku": null,
+   "layers": [
+    {
+     "slot": "roller",
+     "z": "behind-body",
+     "anchor": {
+      "x": 110,
+      "y": 163
+     },
+     "pxPerMm": 11.6882,
+     "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/components/20-400/LIB-20-400-PlsticRollon/roller-4a7c27668a1c9cf706a3e72ff5a83f41d557554c44b25cfad8aa838e9981b0f1.png",
+     "width": 222,
+     "height": 172
+    }
+   ]
+  }
+ },
+ "plates": {
+  "boston-round-30ml-20-400|Amber": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/boston-round-30ml-20-400/amber/8f2827198a660d2da500b04853a9310c33227a5888016d6b0ec1604bd86232e7.png",
+   "width": 1072,
+   "height": 2192,
+   "pxPerMm": 24.2897,
+   "anchors": {
+    "axisX": 530.5,
+    "baselineY": 2096,
+    "seatY": 128,
+    "shoulderY": 693
+   }
+  },
+  "boston-round-30ml-20-400|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/boston-round-30ml-20-400/clear/d808172772697322ff5b8034c56ec82f9facf99a11b5b1604fc51e906cfa020a.png",
+   "width": 1072,
+   "height": 2192,
+   "pxPerMm": 24.2897,
+   "anchors": {
+    "axisX": 530.5,
+    "baselineY": 2096,
+    "seatY": 128,
+    "shoulderY": 692
+   }
+  },
+  "boston-round-30ml-20-400|Cobalt Blue": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/boston-round-30ml-20-400/cobalt-blue/45eef55f9c3d791a4e8a47b78c2ed2683b719430cc5e475dc794a15a304a106d.png",
+   "width": 1072,
+   "height": 2192,
+   "pxPerMm": 24.2897,
+   "anchors": {
+    "axisX": 528.5,
+    "baselineY": 2096,
+    "seatY": 128,
+    "shoulderY": 692
+   }
+  },
+  "boston-round-60ml-20-400|Amber": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/boston-round-60ml-20-400/amber/8eef8c733ee54fc9c84f6d77ad6937e2d08fbcca0c006f30565aecb883e5cb85.png",
+   "width": 928,
+   "height": 2192,
+   "pxPerMm": 17.7734,
+   "anchors": {
+    "axisX": 462.8,
+    "baselineY": 2098,
+    "seatY": 364,
+    "shoulderY": 839
+   }
+  },
+  "boston-round-60ml-20-400|Clear": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/boston-round-60ml-20-400/clear/f5843f966a54e2359dfff5e53b364a512d97b6951f6b895577d0959a725c55ee.png",
+   "width": 928,
+   "height": 2192,
+   "pxPerMm": 17.7631,
+   "anchors": {
+    "axisX": 463.5,
+    "baselineY": 2097,
+    "seatY": 364,
+    "shoulderY": 836
+   }
+  },
+  "boston-round-60ml-20-400|Cobalt Blue": {
+   "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/register/plates/boston-round-60ml-20-400/cobalt-blue/9586576cedc6a756a7abecadb7262fa4285731d7944ebd757136076861d244c3.png",
+   "width": 928,
+   "height": 2192,
+   "pxPerMm": 17.7631,
+   "anchors": {
+    "axisX": 464.5,
+    "baselineY": 2098,
+    "seatY": 365,
+    "shoulderY": 821
+   }
+  }
+ }
+}

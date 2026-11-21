@@ -54,10 +54,15 @@ export function buildHreflangAlternates(pathname: string): NonNullable<Metadata[
  * that only redirect or refine another page (the application finder, the
  * 30 ml Boston Round collection stub).
  */
-export function pageAlternates(pathname: string, canonicalPath?: string): NonNullable<Metadata["alternates"]> {
-    if (canonicalPath === undefined && isTranslatedPath(pathname)) return buildHreflangAlternates(pathname);
+/**
+ * `json` names a machine-readable copy of the page (an API URL), advertised as
+ * `<link rel="alternate" type="application/json">` so agents find the data.
+ */
+export function pageAlternates(pathname: string, canonicalPath?: string, options?: { json?: string }): NonNullable<Metadata["alternates"]> {
+    const types = options?.json ? { types: { "application/json": options.json } } : {};
+    if (canonicalPath === undefined && isTranslatedPath(pathname)) return { ...buildHreflangAlternates(pathname), ...types };
     const target = stripLocalePrefix(canonicalPath ?? pathname) || "/";
-    return { canonical: target === "/" ? SITE_URL : `${SITE_URL}${target}` };
+    return { canonical: target === "/" ? SITE_URL : `${SITE_URL}${target}`, ...types };
 }
 
 export function localeOpenGraph(locale: AppLocale, pathname: string) {
