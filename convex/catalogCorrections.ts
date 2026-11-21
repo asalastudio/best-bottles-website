@@ -48,6 +48,11 @@ const fieldsV = v.object({
     // The Team Hub editor writes descriptions but never names.
     itemName: v.optional(v.string()),
     itemDescription: v.optional(v.union(v.string(), v.null())),
+    // 2026-10-17: 43 rows on 15 product pages pointed imageUrl at Shopify files that Shopify has deleted (HTTP 404);
+    // each takes its own published plate, and the dead URL is kept in legacyShopifyImageUrl, as promotePlateImagery
+    // does (data/catalog-corrections/2026-10-17-dead-pdp-images/plan.json).
+    imageUrl: v.optional(v.union(v.string(), v.null())),
+    legacyShopifyImageUrl: v.optional(v.union(v.string(), v.null())),
 });
 type Fields = Infer<typeof fieldsV>;
 /** A corrected field's value as reported: text for most fields, a number for capacityMl. */
@@ -74,10 +79,15 @@ async function logChange(
     });
 }
 
+/**
+ * `allOrNothing`: when any entry is not found or has changed since, throw instead of writing the rest. A
+ * Convex mutation is one transaction, so the throw undoes every patch and log entry this call made.
+ */
 export const correctProductFields = mutation({
     args: {
         writeToken: v.string(),
         dryRun: v.optional(v.boolean()),
+        allOrNothing: v.optional(v.boolean()),
         reason: v.string(),
         entries: v.array(v.object({ websiteSku: v.string(), expect: fieldsV, patch: fieldsV })),
     },
@@ -118,6 +128,10 @@ export const correctProductFields = mutation({
                 }
             }
             if (!dryRun && Object.keys(write).length) await ctx.db.patch(row._id, write);
+        }
+        if (!dryRun && args.allOrNothing && (out.changedSince.length || out.notFound.length)) {
+            const stale = [...out.changedSince.map(c => `${c.websiteSku}.${c.field}`), ...out.notFound];
+            throw new Error(`nothing written: ${stale.length} entries no longer match (${stale.slice(0, 10).join(", ")})`);
         }
         return out;
     },
