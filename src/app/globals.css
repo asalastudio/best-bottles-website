@@ -875,6 +875,8 @@ img.app-wordmark {
   .builder-mobile-brand :focus-visible { outline: 3px solid #80602e; outline-offset: 2px; }
   main[data-builder-page] { padding-top: 0; }
   main[data-builder-page] [data-bottle-builder] { visibility: hidden; }
+  /* The family screen is one layout for every width; only the steps after it switch to the mobile builder. */
+  main[data-builder-page] [data-bottle-builder][data-family-screen] { visibility: visible; }
   body:has([data-mobile-builder]) { scroll-padding-bottom: 96px; }
 }
 
