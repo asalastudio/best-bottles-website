@@ -1,0 +1,163 @@
+{
+  "snapshot": {
+    "deployment": "precise-raccoon-123",
+    "table": "productPlates",
+    "exportedAt": 1792391857347
+  },
+  "rows": [
+    {
+      "sku": "GBHeartFrst4TslRed",
+      "plateId": "nn728cjcd8kb1sqfeyc6nyr5858eq9vg",
+      "front": {
+        "bytes": 46936,
+        "height": 1100,
+        "key": "plates/decorative-4ml-frosted-8mm/GBHeartFrst4TslRed/1a4f9c19bf8b516b14ca923fb8c075db7a646b3752a9c510ead421ee2401a4e8.front-on-1000x1100.webp",
+        "sha256": "1a4f9c19bf8b516b14ca923fb8c075db7a646b3752a9c510ead421ee2401a4e8",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-4ml-frosted-8mm/GBHeartFrst4TslRed/1a4f9c19bf8b516b14ca923fb8c075db7a646b3752a9c510ead421ee2401a4e8.front-on-1000x1100.webp",
+        "width": 1000
+      },
+      "revision": 1,
+      "importedAt": 1789800384242
+    },
+    {
+      "sku": "Alu100mlSprayBlack",
+      "plateId": "nn7fdtsb44yzhrvtvxnkpeg5ah8ep39m",
+      "front": {
+        "bytes": 18008,
+        "height": 1100,
+        "key": "plates/aluminum-bottle-100ml-clear-20-410/Alu100mlSprayBlack/5394907887f8ec54a305053d988f2b414c0bb3c93d7e70e65b6451fb4e21ca24.front-on-1000x1100.webp",
+        "sha256": "5394907887f8ec54a305053d988f2b414c0bb3c93d7e70e65b6451fb4e21ca24",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-100ml-clear-20-410/Alu100mlSprayBlack/5394907887f8ec54a305053d988f2b414c0bb3c93d7e70e65b6451fb4e21ca24.front-on-1000x1100.webp",
+        "width": 1000
+      },
+      "revision": 1,
+      "importedAt": 1789800384242
+    },
+    {
+      "sku": "Alu500",
+      "plateId": "nn78yfnhmg19zqf09th9n5hd2x8ep6j7",
+      "front": {
+        "bytes": 26018,
+        "height": 1100,
+        "key": "plates/aluminum-bottle-500ml-clear-20-410/Alu500/cd1d9d9a86a6aa5b52bb95ed49b3553c93c66bd1d50ea04fab8074f6e4b8c181.front-on-1000x1100.webp",
+        "sha256": "cd1d9d9a86a6aa5b52bb95ed49b3553c93c66bd1d50ea04fab8074f6e4b8c181",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-500ml-clear-20-410/Alu500/cd1d9d9a86a6aa5b52bb95ed49b3553c93c66bd1d50ea04fab8074f6e4b8c181.front-on-1000x1100.webp",
+        "width": 1000
+      },
+      "revision": 1,
+      "importedAt": 1789800384242
+    },
+    {
+      "sku": "GBMtlCylGl",
+      "plateId": "nn75981esketpf0y6hw9k28q5d8dm1bn",
+      "front": {
+        "bytes": 48466,
+        "height": 1100,
+        "key": "plates/royal-14ml-clear-11mm/GBMtlCylGl/9c778b130b212cf2e3fe2d818eea909506272028faf6d89a822450597cb0c263.front-on-1000x1100.webp",
+        "sha256": "9c778b130b212cf2e3fe2d818eea909506272028faf6d89a822450597cb0c263",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-14ml-clear-11mm/GBMtlCylGl/9c778b130b212cf2e3fe2d818eea909506272028faf6d89a822450597cb0c263.front-on-1000x1100.webp",
+        "width": 1000
+      },
+      "revision": 2,
+      "importedAt": 1788483075348
+    },
+    {
+      "sku": "GBBstnBlu15BlkDrpr",
+      "plateId": "nn70ggf5jdpsz5twh7te55ypmn8emsnv",
+      "front": {
+        "bytes": 238054,
+        "height": 1100,
+        "key": "plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkDrpr/97abc7b374f8d56dd11be846a7c482fa64a24d869219126ba082b61f8657a9e2.front-on-1000x1100.webp",
+        "sha256": "97abc7b374f8d56dd11be846a7c482fa64a24d869219126ba082b61f8657a9e2",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkDrpr/97abc7b374f8d56dd11be846a7c482fa64a24d869219126ba082b61f8657a9e2.front-on-1000x1100.webp",
+        "width": 1000
+      },
+      "revision": 1,
+      "importedAt": 1789773967622
+    },
+    {
+      "sku": "GBV1DrmBlackCapSht",
+      "plateId": "nn75zfff9v8b4mezfzfnp95yg98epqnt",
+      "front": {
+        "bytes": 11196,
+        "height": 1100,
+        "key": "plates/vial-4ml-clear-13-425/GBV1DrmBlackCapSht/3af2db78b0c406a05213fc89500cfebc6677cccb2d15f963f76cbd991093eb65.front-on-1000x1100.webp",
+        "sha256": "3af2db78b0c406a05213fc89500cfebc6677cccb2d15f963f76cbd991093eb65",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-clear-13-425/GBV1DrmBlackCapSht/3af2db78b0c406a05213fc89500cfebc6677cccb2d15f963f76cbd991093eb65.front-on-1000x1100.webp",
+        "width": 1000
+      },
+      "revision": 1,
+      "importedAt": 1789802026351
+    },
+    {
+      "sku": "GBElg30SpryBlk",
+      "plateId": "nn76ntqbhb3dh7d8re0r24zbjn8dma8d",
+      "front": {
+        "bytes": 12424,
+        "height": 1100,
+        "key": "plates/elegant-30ml-clear-15-415/GBElg30SpryBlk/70bb9a1ada575f26518ea21906e39f15c0a2b12fe115590ac0b32c3e1c69dc2e.front-on-1000x1100.webp",
+        "sha256": "70bb9a1ada575f26518ea21906e39f15c0a2b12fe115590ac0b32c3e1c69dc2e",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/elegant-30ml-clear-15-415/GBElg30SpryBlk/70bb9a1ada575f26518ea21906e39f15c0a2b12fe115590ac0b32c3e1c69dc2e.front-on-1000x1100.webp",
+        "width": 1000
+      },
+      "revision": 2,
+      "importedAt": 1788482959620
+    },
+    {
+      "sku": "GBElg30SpryShnSl",
+      "plateId": "nn7cb7qppndnm13j645fvh229h8eqyf2",
+      "front": {
+        "bytes": 12800,
+        "height": 1100,
+        "key": "plates/elegant-30ml-clear-15-415/GBElg30SpryShnSl/28d9d0704ed80fe101209d9000f179eec183c308cdfcb8350c0ce8a66d1bb308.front-on-1000x1100.webp",
+        "sha256": "28d9d0704ed80fe101209d9000f179eec183c308cdfcb8350c0ce8a66d1bb308",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/elegant-30ml-clear-15-415/GBElg30SpryShnSl/28d9d0704ed80fe101209d9000f179eec183c308cdfcb8350c0ce8a66d1bb308.front-on-1000x1100.webp",
+        "width": 1000
+      },
+      "revision": 1,
+      "importedAt": 1789802026351
+    },
+    {
+      "sku": "GBElg30SpryShGl",
+      "plateId": "nn78ezspzdyhnf3drc9p3mcshs8empx3",
+      "front": {
+        "bytes": 14236,
+        "height": 1100,
+        "key": "plates/elegant-30ml-clear-15-415/GBElg30SpryShGl/bcf2c8282a46b0d0bbcfb4dccfe16a54bc7aa60f971334dee5ef47121ddf4d68.front-on-1000x1100.webp",
+        "sha256": "bcf2c8282a46b0d0bbcfb4dccfe16a54bc7aa60f971334dee5ef47121ddf4d68",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/elegant-30ml-clear-15-415/GBElg30SpryShGl/bcf2c8282a46b0d0bbcfb4dccfe16a54bc7aa60f971334dee5ef47121ddf4d68.front-on-1000x1100.webp",
+        "width": 1000
+      },
+      "revision": 1,
+      "importedAt": 1789773970189
+    },
+    {
+      "sku": "GBCrcl30SpryMattSl",
+      "plateId": "nn7dbsepnpbzbna0ze3sr7z7m18dnhvz",
+      "front": {
+        "bytes": 12982,
+        "height": 1100,
+        "key": "plates/circle-30ml-clear-15-415/GBCrcl30SpryMattSl/0fcdbc4d49d45fb52920f6b7562a97183de2736ea1d17145f6a63c7ee9e7a24f.front-on-1000x1100.webp",
+        "sha256": "0fcdbc4d49d45fb52920f6b7562a97183de2736ea1d17145f6a63c7ee9e7a24f",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-30ml-clear-15-415/GBCrcl30SpryMattSl/0fcdbc4d49d45fb52920f6b7562a97183de2736ea1d17145f6a63c7ee9e7a24f.front-on-1000x1100.webp",
+        "width": 1000
+      },
+      "revision": 2,
+      "importedAt": 1788482865412
+    },
+    {
+      "sku": "GBCrcl30SpryShnGl",
+      "plateId": "nn7668e2bwx3zbr4qh0rxdhtxx8dmr05",
+      "front": {
+        "bytes": 15950,
+        "height": 1100,
+        "key": "plates/circle-30ml-clear-15-415/GBCrcl30SpryShnGl/bafa5c1ce88e2e8312d9b1d736abd2ade5da0b0f4f26c88f2fec8c27682222ba.front-on-1000x1100.webp",
+        "sha256": "bafa5c1ce88e2e8312d9b1d736abd2ade5da0b0f4f26c88f2fec8c27682222ba",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-30ml-clear-15-415/GBCrcl30SpryShnGl/bafa5c1ce88e2e8312d9b1d736abd2ade5da0b0f4f26c88f2fec8c27682222ba.front-on-1000x1100.webp",
+        "width": 1000
+      },
+      "revision": 2,
+      "importedAt": 1788482865412
+    }
+  ]
+}
