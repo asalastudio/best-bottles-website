@@ -2,6 +2,7 @@ import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import reviewedCapPhotos from "./cylinder-cap-thumbnails.generated.json";
 import localCloseUps from "./local-cap-close-ups.json";
 import sprayTops from "./tall-cylinder-spray-tops.json";
+import swatchBounds from "./cap-swatch-bounds.generated.json";
 import type { ProductCardVariantPreview } from "./product-card-variant-previews";
 
 export type CatalogCapPhoto = { websiteSku: string | null; thumb: string };
@@ -55,6 +56,22 @@ export function catalogCapPhotoFrame(url: string) {
         left: `${((1 - (right - left) * scale) / 2 - left * scale) * 100}%`,
         top: `${((1 - (bottom - y) * scale) / 2 - y * scale) * 100}%`,
     };
+}
+
+/**
+ * Where the part sits inside a cap photo, in pixels, so a swatch can show the
+ * part alone: a spray top's box on its full bottle canvas, or the opaque area
+ * of a reviewed close-up (measured by scripts/catalog/build-cap-swatch-bounds.mjs).
+ * Undefined for photos never measured, such as the live plate index's.
+ */
+export function catalogCapPhotoBounds(url: string) {
+    const spray = Object.values(sprayTops).find((photo) => photo.url === url);
+    if (spray) return { width: spray.width, height: spray.height, ...spray.bounds };
+    const name = url.split("?")[0].split("/").pop() ?? "";
+    const box = (swatchBounds as Record<string, number[]>)[name];
+    if (!box) return undefined;
+    const [width, height, left, top, right, bottom] = box;
+    return { width, height, left, top, right, bottom };
 }
 
 export function catalogCapKind(applicators: readonly string[], previews: readonly ProductCardVariantPreview[] = []): CatalogCapKind | null {
