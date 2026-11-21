@@ -1,0 +1,959 @@
+<title>Best Bottles Cutover Requests</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column on the bone ground; items are white work-order rows keyed by a request code.
+   Light only, by choice (Jordan, 9 Oct): the form keeps the site's bone and gold look for every viewer, whatever their theme. */
+:root {
+  color-scheme: light;
+  --bg: #F5F3EF;
+  --surface: #FFFFFF;
+  --sunken: #F4F2EF;
+  --ink: #1D1D1F;
+  --muted: #6A645D;
+  --rule: #DCD7D0;
+  --gold: #C5A065;
+  --gold-ink: #7A5F35;
+  --gold-wash: #F3EBDD;
+  --block: #9E3B26;
+  --block-wash: #F6E6E1;
+  --ok: #2F6E4B;
+  --ok-wash: #E3F0E8;
+  --font-body: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --radius: 10px;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 880px; margin: 0 auto; padding-inline: 20px; padding-block: 32px 96px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; }
+code, .mono { font-family: var(--font-mono); font-size: 0.86em; }
+code { background: var(--sunken); padding: 1px 5px; border-radius: 4px; word-break: break-word; }
+a { color: var(--gold-ink); }
+
+/* Masthead */
+.eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.mast { display: grid; gap: 10px; padding-block-end: 22px; border-bottom: 1px solid var(--rule); }
+.mast h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
+.mast .lede { color: var(--muted); max-width: 66ch; }
+
+.intro { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-block: 22px; }
+.intro > div { min-width: 0; }
+.intro h3 { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.intro ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+
+.found { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 18px 20px; display: grid; gap: 10px; }
+.found h2 { font-size: 16px; }
+.found ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.found .src { font-size: 12.5px; color: var(--muted); }
+
+/* Sticky control bar */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule); margin-inline: -20px; padding: 10px 20px; display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; justify-content: space-between; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+.chipbtn { font: inherit; font-size: 13px; font-weight: 500; border: 1px solid var(--rule); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+.chipbtn[aria-pressed="true"] { border-color: var(--gold); background: var(--gold-wash); color: var(--ink); }
+.chipbtn:focus-visible, .opt:focus-visible, .btn:focus-visible, textarea:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.barright { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.progress { display: grid; gap: 4px; min-width: 150px; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.meter { height: 5px; background: var(--rule); border-radius: 3px; overflow: hidden; }
+.meter > span { display: block; height: 100%; width: 0; background: var(--gold); transition: width 0.3s ease; }
+.btn { font: inherit; font-size: 13px; font-weight: 600; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); border-radius: 8px; padding: 7px 14px; cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
+
+.modeline { margin-top: 14px; font-size: 13px; color: var(--muted); border-left: 3px solid var(--rule); padding: 6px 12px; background: var(--surface); border-radius: 0 8px 8px 0; }
+.modeline.local { border-left-color: var(--block); }
+.modeline.shared { border-left-color: var(--ok); }
+
+/* Sections */
+section.sec { margin-top: 40px; display: grid; gap: 14px; }
+.sechead { display: grid; gap: 6px; }
+.sechead h2 { font-size: 22px; font-weight: 700; }
+.sechead .count { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.sechead p { color: var(--muted); max-width: 70ch; }
+.panel { background: var(--gold-wash); border: 1px solid var(--gold); border-radius: var(--radius); padding: 16px 18px; display: grid; gap: 8px; }
+.panel h3 { font-size: 15px; }
+.panel ol, .panel ul { margin: 0; padding-left: 20px; display: grid; gap: 5px; }
+.panel .fine { font-size: 13px; color: var(--muted); }
+
+/* Items */
+.item { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 16px 18px; display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 4px 14px; }
+.item.answered { border-color: color-mix(in srgb, var(--ok) 45%, var(--rule)); }
+.code { font-family: var(--font-mono); font-size: 13px; color: var(--muted); padding-top: 2px; }
+.item.answered .code { color: var(--ok); }
+.body { display: grid; gap: 9px; min-width: 0; }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.head h3 { font-size: 16px; font-weight: 600; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag { font-size: 11.5px; font-weight: 600; letter-spacing: 0.03em; border-radius: 999px; padding: 1px 8px; border: 1px solid var(--rule); color: var(--muted); white-space: nowrap; }
+.tag.launch { color: var(--block); background: var(--block-wash); border-color: transparent; }
+.q { max-width: 70ch; }
+.why { font-size: 13.5px; color: var(--muted); max-width: 70ch; }
+.why b { color: var(--ink); font-weight: 600; }
+.opts { display: flex; flex-wrap: wrap; gap: 6px; }
+.opt { font: inherit; font-size: 13.5px; text-align: left; border: 1px solid var(--rule); background: var(--sunken); color: var(--ink); border-radius: 8px; padding: 6px 11px; cursor: pointer; max-width: 100%; }
+.opt[aria-checked="true"] { background: var(--ok-wash); border-color: var(--ok); }
+.opt .rec { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gold-ink); margin-left: 6px; }
+.fields { display: grid; gap: 8px; }
+.fields label { display: grid; gap: 3px; font-size: 12.5px; color: var(--muted); font-weight: 500; }
+textarea, input[type="text"] { font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 7px 10px; width: 100%; }
+textarea { min-height: 38px; resize: vertical; }
+textarea.note { font-size: 13.5px; min-height: 34px; background: var(--sunken); }
+.status { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; min-height: 1em; }
+.status.ok { color: var(--ok); }
+.status.err { color: var(--block); }
+.empty { color: var(--muted); font-size: 14px; padding: 16px; border: 1px dashed var(--rule); border-radius: var(--radius); }
+
+.copybox { margin-top: 12px; display: grid; gap: 6px; }
+.copybox textarea { min-height: 180px; font-family: var(--font-mono); font-size: 12.5px; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); display: grid; gap: 6px; }
+
+@media (max-width: 560px) {
+  .item { grid-template-columns: minmax(0, 1fr); }
+  .code { padding-top: 0; }
+  .bar { position: static; }
+}
+@media (prefers-reduced-motion: reduce) { .meter > span { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <span class="eyebrow">Best Bottles · New website launch</span>
+    <h1>Cutover requests</h1>
+    <p class="lede">Everything we still need from the Best Bottles team to switch www.bestbottles.com to the new site, connect FedEx, and bring web orders into QuickBooks. Prepared by Jordan Richter on September 30, 2026, from a review of the new site's code and a read of the live Shopify store.</p>
+  </header>
+
+  <div class="intro">
+    <div>
+      <h3>How to use this page</h3>
+      <ul>
+        <li>Answer in place. Pick an option, or type in the box. Answers save as you go.</li>
+        <li>Each request names who is best placed to answer. Forward the link to Aamir, the shipping team or your accountant for their parts.</li>
+        <li>Rows marked <b>Needed for launch</b> hold up the switch. The rest can follow.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Please don't type secrets here</h3>
+      <ul>
+        <li>No passwords, API keys, card numbers or full account numbers.</li>
+        <li>Where we need access, add <code>jordan@asala.ai</code> as a user, or choose "screen-share" and we'll set it up together.</li>
+        <li>Customer and item exports go by a restricted file-share link, not an email attachment.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="found" id="found">
+    <h2>What we found in the Shopify store today</h2>
+    <ol>
+      <li>Any order of $50 or more can pick a <b>$0.00 "Economy" shipping rate</b>. $50 is also the site's order minimum, so today every order can ship free.</li>
+      <li>The store's shipping location has <b>no street address or ZIP code</b>, only "United States". FedEx can't price a parcel without the origin ZIP.</li>
+      <li><b>All 2,635 product variants weigh 0 lb.</b> We already hold unit and case weights for about 2,160 of them and can load them.</li>
+      <li>FedEx is connected only to a <b>test shipping profile</b> covering 50 variants, with only "FedEx Ground Economy" switched on. No other shipping app or rate service is installed.</li>
+      <li><b>No sales tax is collected</b> in any state, California included.</li>
+      <li>Shopify is set to ship to <b>27 countries</b> using Shopify's own USPS and DHL rates.</li>
+      <li><b>13 products</b> are still set to Draft and can't be bought. The store has taken one order in total, a test in May.</li>
+    </ol>
+    <p class="src">Read from the Bestbottles Shopify Plus store's settings on September 30, 2026. Nothing was changed.</p>
+  </div>
+
+  <div class="bar" id="bar">
+    <div class="filters" role="group" aria-label="Show requests for">
+      <button class="chipbtn" data-filter="all" aria-pressed="true">All</button>
+      <button class="chipbtn" data-filter="launch" aria-pressed="false">Needed for launch</button>
+      <button class="chipbtn" data-filter="abbas" aria-pressed="false">Abbas</button>
+      <button class="chipbtn" data-filter="aamir" aria-pressed="false">Aamir</button>
+      <button class="chipbtn" data-filter="ship" aria-pressed="false">Shipping team</button>
+      <button class="chipbtn" data-filter="acct" aria-pressed="false">Accountant</button>
+    </div>
+    <div class="barright">
+      <div class="progress"><span id="progressText">0 of 0 answered</span><div class="meter"><span id="meterFill"></span></div></div>
+      <button class="btn" id="copyBtn" type="button">Copy all answers</button>
+    </div>
+  </div>
+  <div class="modeline" id="modeline">Connecting…</div>
+  <div class="copybox" id="copybox" hidden>
+    <label for="copyText" class="status">Copy this text and paste it into an email to jordan@asala.ai.</label>
+    <textarea id="copyText" readonly></textarea>
+  </div>
+
+  <main id="sections"></main>
+  <p class="empty" id="emptyFilter" hidden>No requests match this filter.</p>
+
+  <footer>
+    <span>Questions about any request: Jordan Richter, <span class="mono">jordan@asala.ai</span></span>
+    <span>Request codes (for example <span class="mono">QB-5</span>) are stable, so you can refer to them in email.</span>
+  </footer>
+</div>
+
+<script>
+(() => {
+  "use strict";
+
+  const OWNERS = { abbas: "Abbas", aamir: "Aamir", ship: "Shipping team", acct: "Accountant" };
+
+  const SECTIONS = [
+    { id: "google", title: "Google accounts",
+      intro: "Access so the new site keeps your search and traffic history, and so customer sign-in with Google keeps working." },
+    { id: "domain", title: "Domain, DNS and email",
+      intro: "Switching bestbottles.com to the new site happens in your DNS. Your company email lives there too, so we plan this step carefully." },
+    { id: "pay", title: "Payments",
+      intro: "You told us cards are authorized at checkout and charged when the order ships. These settings make Shopify do exactly that." },
+    { id: "ship", title: "Shipping and FedEx",
+      intro: "What we need to show correct FedEx charges at checkout. The card can never be charged more than the hold taken at checkout, so the shipping line has to be right the first time.",
+      panel: "fedexPanel" },
+    { id: "qb", title: "QuickBooks and order import",
+      intro: "Bringing web orders into QuickBooks Desktop for both Best Bottles and Nemat International, and deciding whether Webgility stays. None of these stop the site going live: Shopify keeps every order, and the connector can import from launch day onward. We'd like orders flowing into QuickBooks within the first week.",
+      panel: "qbPanel" },
+    { id: "tax", title: "Sales tax",
+      intro: "Questions for you and your accountant. These decide what Shopify charges and what lands in QuickBooks." },
+    { id: "catalog", title: "Catalog and content" },
+    { id: "people", title: "Notifications and customer accounts",
+      intro: "Who hears about what once real orders start arriving." }
+  ];
+
+  const ITEMS = [
+    // Google
+    { id: "G-1", sec: "google", owners: ["aamir"], launch: true, type: "choice",
+      title: "Google Analytics access",
+      q: "Please add <code>jordan@asala.ai</code> to the current Best Bottles Google Analytics (GA4) property with the <b>Editor</b> role. No shared login needed.",
+      why: "The new site doesn't carry a Google Analytics tag yet. We'll install the same property's tag so your traffic history continues through the switch instead of starting again from zero.",
+      opts: ["Done", "Will do this week", "Not sure which account it is", "We don't use Google Analytics"],
+      note: "Property name, or the Measurement ID that starts with G-, if handy" },
+    { id: "G-2", sec: "google", owners: ["aamir"], launch: true, type: "choice",
+      title: "Google Search Console access",
+      q: "Please add <code>jordan@asala.ai</code> as an <b>Owner</b> (or Full user) on the bestbottles.com property in Google Search Console.",
+      why: "On launch day we submit the new sitemap, check that the old page addresses redirect to their new pages, and watch Google's error reports. The old site's verification code is already built into the new site.",
+      opts: ["Done", "Will do this week", "Need help finding it"] },
+    { id: "G-3", sec: "google", owners: ["aamir"], launch: false, type: "choice",
+      title: "Bing Webmaster Tools access",
+      q: "If the site is set up in Bing Webmaster Tools, please add <code>jordan@asala.ai</code> there as well.",
+      why: "The old site is verified with Bing, and that code is already in the new site. Bing also feeds Copilot and DuckDuckGo results.",
+      opts: ["Done", "Will do", "We don't use it", "Not sure"] },
+    { id: "G-4", sec: "google", owners: ["aamir", "abbas"], launch: true, type: "choice",
+      title: "Google Ads and Shopping",
+      q: "Do you run Google Ads, or list products in Google Shopping through Merchant Center?",
+      why: "Ads and product feeds that point at the old page addresses stop working on cutover day. If you use them, please add <code>jordan@asala.ai</code> so we can re-point them before the switch.",
+      opts: ["No", "Google Ads only", "Google Ads and a Shopping feed", "Not sure"] },
+    { id: "G-5", sec: "google", owners: ["abbas"], launch: true, type: "choice",
+      title: "“Sign in with Google” for customers",
+      q: "The customer portal offers “Sign in with Google”. On a live site, Google requires this to run under a Google account that Best Bottles owns. How would you like to handle it?",
+      why: "It works today on a shared test setup that Google does not accept on a live site, so it would stop working on launch day unless one of these is chosen.",
+      opts: ["Set it up together on a 15-minute call", "Jordan may create it under our Google account", "Remove it: email and password only"], rec: 0,
+      note: "Who manages the Google account or Google Workspace for bestbottles.com?" },
+
+    // Domain
+    { id: "D-1", sec: "domain", owners: ["abbas"], launch: true, type: "fields",
+      title: "Who controls the domain",
+      q: "Where is bestbottles.com registered, and where is its DNS managed? Who can log in?",
+      why: "Launch means pointing www.bestbottles.com at the new site. We also add a few records so customer sign-in emails and Shopify order emails send from bestbottles.com without landing in spam.",
+      fields: [
+        { k: "registrar", label: "Registrar and DNS host (for example GoDaddy, Network Solutions, Cloudflare)" },
+        { k: "who", label: "Who can log in (name and email)" },
+        { k: "access", label: "How should we make changes? (add jordan@asala.ai as a delegate user, or do it together on a call)" }
+      ] },
+    { id: "D-2", sec: "domain", owners: ["abbas"], launch: true, type: "choice",
+      title: "Copy of the current DNS records",
+      q: "Please send a copy of all current DNS records for bestbottles.com (an export, or screenshots of every record).",
+      why: "Your company email depends on the MX, SPF and DKIM records. We keep those exactly as they are, and having the full list before we change anything is how we avoid an email outage on launch day.",
+      opts: ["Sent", "Will send this week", "Need help exporting it"] },
+    { id: "D-3", sec: "domain", owners: ["abbas"], launch: true, type: "fields",
+      title: "Where the current site is hosted",
+      q: "Who hosts the current bestbottles.com website, and who is the contact there?",
+      why: "We take a full backup of the old site and keep a way back for the first week, in case anything needs to be rolled back.",
+      fields: [
+        { k: "host", label: "Hosting company" },
+        { k: "contact", label: "Contact name and email" }
+      ] },
+    { id: "D-4", sec: "domain", owners: ["abbas"], launch: true, type: "text",
+      title: "Launch date",
+      q: "Which day and time suit you for the switch, and which days should we avoid (month-end, large shipments, trade shows)?",
+      why: "We switch on a quiet weekday morning, Pacific time, and watch the site closely for the first 72 hours." },
+    { id: "D-5", sec: "domain", owners: ["abbas", "ship"], launch: true, type: "fields",
+      title: "Orders on the old site at switch-over",
+      q: "Card holds taken on the old site still need to be charged or released through the old payment system after the switch. Who finishes those orders, and when should the old payment account be closed?",
+      why: "The new site uses Shopify's checkout. The old site's payment provider keeps any holds it already took.",
+      fields: [
+        { k: "provider", label: "Old site's payment provider (for example Authorize.net, PayPal)" },
+        { k: "who", label: "Who finishes open old-site orders" },
+        { k: "close", label: "When to close the old payment account" }
+      ] },
+
+    // Payments
+    { id: "P-1", sec: "pay", owners: ["abbas"], launch: true, type: "choice",
+      title: "Is Shopify Payments switched on?",
+      q: "In Shopify admin, go to <b>Settings → Payments</b>. Is Shopify Payments active, with the bank account for payouts filled in?",
+      why: "How long a card hold lasts, the card fees, and how QuickBooks matches deposits all depend on the payment provider. Only the store owner can see this screen; our access can't.",
+      opts: ["Active, payouts bank account set", "Started but not finished", "We use a different provider", "Not sure"],
+      note: "If a different provider, which one?" },
+    { id: "P-2", sec: "pay", owners: ["abbas"], launch: true, type: "choice",
+      title: "When cards are charged",
+      q: "Shopify applies one charging method to the whole store. Which should we set?",
+      why: "Both match “authorize at checkout, charge at shipment”. Manual keeps a person in control while the team learns the flow, and we can switch later with one setting. On Shopify Plus with Shopify Payments, a hold can last up to 30 days for Visa, Mastercard and Amex.",
+      opts: ["Manual: the shipping team charges each order when it ships", "Automatic: Shopify charges for each shipment as it's marked shipped"], rec: 0 },
+    { id: "P-3", sec: "pay", owners: ["abbas"], launch: false, type: "choice",
+      title: "Orders that wait more than 7 days",
+      q: "Shopify adds a 1.75% fee to any charge taken more than 7 days after the hold. When an order waits longer than that for stock, what should the team do?",
+      why: "You told us partial orders are common, and the answer sets the steps in the shipping team's one-page guide.",
+      opts: ["Release the hold and send the customer a fresh payment link when stock arrives", "Charge late and accept the 1.75% fee", "Decide case by case"], rec: 0 },
+    { id: "P-4", sec: "pay", owners: ["abbas", "ship"], launch: true, type: "text",
+      title: "Shipping team Shopify logins",
+      q: "Names and email addresses of everyone in shipping who will charge, release or edit orders.",
+      why: "Each person gets their own Shopify staff login, limited to orders, so every charge shows who made it." },
+
+    // Shipping
+    { id: "S-1", sec: "ship", owners: ["abbas"], launch: true, type: "choice",
+      title: "How shipping is priced at checkout",
+      q: "What should customers pay for shipping?",
+      why: "Your answer decides what we set up in Shopify. Live rates need the FedEx connection (S-3), product weights (we have them) and your box sizes (S-7). Shopify can add a percentage and a flat amount on top of each FedEx rate.",
+      opts: ["Live FedEx rates from our account, plus a small handling buffer", "Live FedEx rates with no markup", "A flat table by order weight", "Quote shipping after the order is placed"], rec: 0,
+      note: "Handling buffer, if any: % and/or $ per order" },
+    { id: "S-2", sec: "ship", owners: ["abbas"], launch: true, type: "choice",
+      title: "Remove the $0 shipping rate",
+      q: "Shopify has an active <b>$0.00 “Economy”</b> rate for any order of $50 or more. Because $50 is the order minimum, every order can currently ship free. Remove it at launch?",
+      why: "You told us Best Bottles doesn't offer free shipping. Promotions such as free ground shipping above a set amount can come back later as discount codes.",
+      opts: ["Remove it", "Keep it: free shipping is intended"], rec: 0 },
+    { id: "S-3", sec: "ship", owners: ["abbas"], launch: true, type: "choice",
+      title: "Connect your FedEx account",
+      q: "Shopify connects straight to your FedEx account. On a short call we'll need: the <b>FedEx account number</b> that should bill web orders, the <b>billing address and primary address exactly as FedEx has them</b>, and either the <b>phone number on the account</b> or the <b>number, date and amount of a recent FedEx invoice</b> to confirm it. Please don't type the account number on this page.",
+      why: "This replaces the \u201CFedEx account information and API\u201D request. You don't need to create FedEx developer API keys; see the recommendation above. We'd only ask for those if we ever built a custom rate service.",
+      opts: ["Connect it together on a screen-share", "We'll share the details through a secure link", "We don't have a FedEx account for this"], rec: 0,
+      note: "Name on the FedEx account, and who signs in to fedex.com" },
+    { id: "S-4", sec: "ship", owners: ["abbas"], launch: true, type: "choice",
+      title: "Your FedEx discount",
+      q: "Do you have negotiated FedEx rates, and which price should customers see?",
+      why: "Checkout can show your discounted rate, your discounted rate with a markup, or FedEx's published list rate.",
+      opts: ["Our discounted rate", "Our discounted rate plus a markup", "FedEx list rate", "Not sure what we have"],
+      note: "Markup, if any (% or $)" },
+    { id: "S-5", sec: "ship", owners: ["abbas", "ship"], launch: true, type: "multi",
+      title: "FedEx services to offer",
+      q: "Tick every FedEx service customers may choose at checkout.",
+      why: "Only the services you tick appear at checkout. Most wholesale buyers pick Ground; a few pay for speed.",
+      opts: ["FedEx Ground (to businesses)", "FedEx Home Delivery (to residences)", "FedEx Express Saver (3 days)", "FedEx 2Day", "FedEx Standard Overnight", "FedEx Priority Overnight", "FedEx Ground Economy"],
+      note: "Do you deliver to homes as well as businesses? Alaska, Hawaii, PO boxes?" },
+    { id: "S-6", sec: "ship", owners: ["ship"], launch: true, type: "fields",
+      title: "Ship-from address and pickup",
+      q: "The warehouse the orders ship from.",
+      why: "Shopify's shipping location has no street address or ZIP today. FedEx prices every parcel from the origin ZIP, so live rates can't work until this is filled in.",
+      fields: [
+        { k: "address", label: "Street address, city, ZIP" },
+        { k: "hours", label: "Dock hours and daily FedEx pickup time" },
+        { k: "cutoff", label: "Order cut-off for same-day shipping, if any" }
+      ] },
+    { id: "S-7", sec: "ship", owners: ["ship"], launch: true, type: "fields",
+      title: "Boxes and packing",
+      q: "The boxes you ship in and how you pack.",
+      why: "FedEx charges by size as well as weight. We'll load your box sizes into Shopify alongside the product weights, so each quote matches what you'll pay FedEx.",
+      fields: [
+        { k: "boxes", label: "Box sizes you use (inches, L × W × H) and each empty box's weight" },
+        { k: "packing", label: "Packing material weight per box (dividers, fill)" },
+        { k: "units", label: "Do you ship loose units, full cases only, or both?" }
+      ] },
+    { id: "S-8", sec: "ship", owners: ["abbas", "ship"], launch: true, type: "fields",
+      title: "Large orders and freight",
+      q: "When does an order go by pallet (LTL freight) instead of parcel?",
+      why: "FedEx parcel services stop at 150 lb per package, and Shopify's built-in FedEx rates don't include freight. Above a set weight we show a freight quote instead of a wrong parcel price. FedEx Freight became a separate company in June 2026 with its own login, so please check whether your account still covers it.",
+      fields: [
+        { k: "threshold", label: "Order weight or quantity where freight starts" },
+        { k: "freight", label: "FedEx Freight or other LTL account (carrier name; no account numbers here)" },
+        { k: "handling", label: "Above the threshold: quote freight after the order, or ask the customer to call?" }
+      ] },
+    { id: "S-9", sec: "ship", owners: ["abbas"], launch: true, type: "choice",
+      title: "International shipping",
+      q: "Shopify currently ships to 27 countries using Shopify's own USPS and DHL rates. What do you want at launch?",
+      why: "With product weights at zero those international rates are wrong today, and customs forms need product values and descriptions.",
+      opts: ["United States only", "United States and Canada", "Keep all 27 countries", "Other (note below)"] },
+    { id: "S-10", sec: "ship", owners: ["ship"], launch: false, type: "choice",
+      title: "How labels are printed",
+      q: "How does the shipping team print FedEx labels today, and should that stay the same?",
+      why: "Printing labels from Shopify writes the tracking number onto the order, and the customer's portal shows it automatically. Printing elsewhere means typing tracking numbers into Shopify.",
+      opts: ["FedEx Ship Manager, and keep it", "ShipStation or another app, and keep it", "Switch to printing labels in Shopify", "Not sure yet"],
+      note: "What you use today, and the label printer (4×6 thermal or regular paper)" },
+    { id: "S-11", sec: "ship", owners: ["abbas", "ship"], launch: false, type: "fields",
+      title: "Glass protection defaults",
+      q: "Defaults for protecting glass in transit.",
+      why: "These change the FedEx price, so they need to be in the checkout quote rather than added after.",
+      fields: [
+        { k: "insurance", label: "Declared value or insurance: always, above a certain order value, or never?" },
+        { k: "signature", label: "Signature required: always, above a certain value, or never?" }
+      ] },
+    { id: "S-12", sec: "ship", owners: ["abbas"], launch: false, type: "choice",
+      title: "A shipping-rate app, if needed",
+      q: "If our pre-launch test shows Shopify's built-in FedEx rates under-quote multi-case orders, may we add a monthly shipping-rate app such as ShipperHQ?",
+      why: "The built-in rates are included with Plus. An app costs a monthly fee but packs orders into your real boxes and can quote freight live. We'll bring the test results and the price before anything is added.",
+      opts: ["Yes, if the test shows it's needed", "Show me the test results and price first", "No, stay with what's included"], rec: 1 },
+
+    // QuickBooks
+    { id: "QB-1", sec: "qb", owners: ["abbas"], launch: false, type: "choice",
+      title: "QuickBooks edition and year",
+      q: "In QuickBooks, press <b>F2</b> (or open <b>Help → About QuickBooks</b>). Which edition is it, and what year and release does the product line show?",
+      why: "Connectors support only the QuickBooks Desktop versions Intuit still supports, and some features are Enterprise-only. This one answer narrows the choice more than any other.",
+      opts: ["Pro", "Premier", "Enterprise", "QuickBooks Online", "Not sure"],
+      note: "Year and release, for example “2024 R12”. If Enterprise: Silver, Gold, Platinum or Diamond?" },
+    { id: "QB-2", sec: "qb", owners: ["abbas"], launch: false, type: "choice",
+      title: "Where QuickBooks runs",
+      q: "Where does the QuickBooks company file live, and how many people use it?",
+      why: "A Desktop connector runs on the computer that has QuickBooks, signed in as the QuickBooks admin. That computer has to be on, with the company file open, whenever orders sync.",
+      opts: ["One office PC", "An office server, several users", "A hosting service (for example Right Networks)", "Not sure"],
+      note: "Number of users, and whether that computer stays on overnight" },
+    { id: "QB-3", sec: "qb", owners: ["acct"], launch: false, type: "choice",
+      title: "How a web order should appear in QuickBooks",
+      q: "When a web order is charged, what should it become in QuickBooks?",
+      why: "Because the card is charged at shipment, an invoice created at that moment matches what actually shipped and what was actually charged. Partial shipments then post only the shipped lines plus shipping. Sales orders need Premier or Enterprise.",
+      opts: ["A sales order when placed, then an invoice for what ships", "An invoice when the card is charged", "A sales receipt", "One summary entry per payout", "Ask our accountant"], rec: 0,
+      note: "How web orders appear in QuickBooks today" },
+    { id: "QB-4", sec: "qb", owners: ["acct"], launch: false, type: "choice",
+      title: "Customers in QuickBooks",
+      q: "Should each web buyer post to their own QuickBooks customer, or to one shared web customer?",
+      why: "Wholesale buyers usually already exist in QuickBooks. Matching by email keeps their history, statements and tax-exempt status in one place.",
+      opts: ["Their own customer, matched by email", "One shared “Web Sales” customer"], rec: 0 },
+    { id: "QB-5", sec: "qb", owners: ["abbas"], launch: false, type: "choice",
+      title: "Item codes in QuickBooks",
+      q: "Which codes do your QuickBooks items use? In Shopify, 2,589 of 2,635 variants use the new code (for example <code>GB-CYL-CLR-25ML-SPR-SBLK</code>) and 45 still use an old website code (for example <code>GBCyl5WhtSht</code>).",
+      why: "A connector finds the QuickBooks item by its code. When codes differ, orders fail to import or land on the wrong item, a common source of connector trouble. We hold both the old and new code for every product, so we can build the match table once we see your item list. All the new codes fit QuickBooks' 31-character limit.",
+      opts: ["The new codes", "The old website codes", "QuickBooks has its own item names", "Not sure"] },
+    { id: "QB-6", sec: "qb", owners: ["abbas"], launch: false, type: "choice",
+      title: "Item list export",
+      q: "Please export the QuickBooks <b>Item List</b> to Excel: item name, SKU or part number, description, type, income account, price and quantity on hand.",
+      why: "This is how we build and test the match between Shopify's 2,635 variants and your QuickBooks items before any real order posts.",
+      opts: ["Sent by file-share link", "Will send this week", "Need help exporting it"] },
+    { id: "QB-7", sec: "qb", owners: ["abbas"], launch: false, type: "choice",
+      title: "Customer list export",
+      q: "Please export the QuickBooks <b>Customer List</b> to Excel with: customer name and QuickBooks ID, company, email, phone, billing and shipping addresses, customer type, tax code or exempt status, resale certificate number and expiry if recorded, price level, terms, and active or inactive. Duplicate emails are fine; we'll handle those.",
+      why: "It lets us match web buyers to existing QuickBooks customers (QB-4) and invite your current customers into the new portal. It holds customer contact details, so please share it by a restricted link rather than an email attachment.",
+      opts: ["Sent by file-share link", "Will send this week", "Need help exporting it"] },
+    { id: "QB-8", sec: "qb", owners: ["abbas"], launch: false, type: "choice",
+      title: "Who owns stock counts",
+      q: "Which system should hold the true stock count?",
+      why: "Shopify now tracks stock on 2,446 variants and blocks checkout when a count reaches zero, but nothing keeps those counts in step with your warehouse or QuickBooks.",
+      opts: ["QuickBooks, pushed to Shopify", "Shopify, pushed to QuickBooks", "Neither: we switch items out of stock by hand"] },
+    { id: "QB-9", sec: "qb", owners: ["acct"], launch: false, type: "text",
+      title: "Sales tax items in QuickBooks",
+      q: "How is sales tax set up in QuickBooks: one California item, separate items by county or district, or tax groups? How are resale-exempt customers marked?",
+      why: "The connector posts Shopify's tax on each order to the tax items you name, usually as one line per order. The county and district detail for your California return comes from Shopify's tax report, which breaks tax out by state, county and district." },
+    { id: "QB-10", sec: "qb", owners: ["acct"], launch: false, type: "fields",
+      title: "Accounts to post to",
+      q: "Which QuickBooks accounts should web orders use? Your accountant can fill this in.",
+      why: "These are the settings every connector asks for on day one. Getting them right is what makes Shopify payouts match your bank deposits.",
+      fields: [
+        { k: "income", label: "Product sales (income account)" },
+        { k: "shipping", label: "Shipping charged to customers" },
+        { k: "discounts", label: "Discounts" },
+        { k: "fees", label: "Card processing fees (expense)" },
+        { k: "clearing", label: "Clearing account for Shopify payouts (often Undeposited Funds or a “Shopify Clearing” account)" },
+        { k: "bank", label: "Bank account the payouts land in" }
+      ] },
+    { id: "QB-11", sec: "qb", owners: ["abbas"], launch: false, type: "multi",
+      title: "What goes wrong with Webgility",
+      q: "Which of these have you seen? Tick all that apply.",
+      why: "Most Webgility problems come from its setup rather than the product. The pattern tells us whether to reconfigure it or replace it.",
+      opts: ["Duplicate orders", "Missing orders", "Items not found or posted to the wrong item", "Sales tax wrong", "Deposits and card fees don't match the bank", "Sync stops or needs restarting", "Too slow", "Too expensive", "Other (note below)"],
+      note: "Standalone Webgility Desktop, or the version built into QuickBooks? Your plan, and an example order that went wrong. If possible, add jordan@asala.ai as a user in your Webgility account." },
+    { id: "QB-12", sec: "qb", owners: ["abbas"], launch: false, type: "choice",
+      title: "Which Transaction Pro you use",
+      q: "Which Transaction Pro product do you use, and what for?",
+      why: "The version installed on the QuickBooks computer (Transaction Pro Importer) has no user accounts to add me to, so access would be a screen-share instead. The online version does have users.",
+      opts: ["Transaction Pro Importer, installed on the QuickBooks computer", "Transaction Pro Online, in a browser", "Not sure"],
+      note: "What you import with it today (orders, invoices, customers, items?)" },
+    { id: "QB-13", sec: "qb", owners: ["abbas"], launch: false, type: "fields",
+      title: "The Nemat International website",
+      q: "You'd like the same import for the Nemat International site.",
+      why: "One connector licence often covers two stores posting into one QuickBooks company file, but only if both sites run on a platform it supports.",
+      fields: [
+        { k: "url", label: "Website address" },
+        { k: "platform", label: "What it runs on (Shopify, WooCommerce, other, not sure)" },
+        { k: "file", label: "Same QuickBooks company file as Best Bottles, or a separate one?" }
+      ] },
+    { id: "QB-14", sec: "qb", owners: ["abbas"], launch: false, type: "choice",
+      title: "Past orders in the customer portal",
+      q: "Should customers see their past orders from QuickBooks in their portal at launch?",
+      why: "The portal is built to show order history and reorder from it. Past orders need a one-time export of invoices by customer; new orders flow in from Shopify automatically.",
+      opts: ["Yes, the last 12 months", "Yes, the last 24 months", "No, start from launch day"] },
+    { id: "QB-15", sec: "qb", owners: ["abbas"], launch: false, type: "fields",
+      title: "Accountant or bookkeeper",
+      q: "Who keeps the books, and may we include them in the setup review?",
+      why: "We'll send them a one-page mapping (which Shopify field lands where in QuickBooks) to approve before anything posts.",
+      fields: [
+        { k: "name", label: "Name and firm" },
+        { k: "email", label: "Email" }
+      ] },
+
+    // Tax
+    { id: "T-1", sec: "tax", owners: ["acct", "abbas"], launch: true, type: "choice",
+      title: "Is $0 sales tax intended?",
+      q: "Shopify collects no sales tax on any order today, including orders shipped within California. Is that intended?",
+      why: "Shopify only charges tax in states where your registration is entered. Until then, resale-certificate exemptions have nothing to remove either.",
+      opts: ["No: charge California tax", "Yes: we don't collect tax online", "Ask our accountant"],
+      note: "States where Best Bottles is registered to collect sales tax. Please don't type the permit number here; we'll enter it with you." },
+    { id: "T-2", sec: "tax", owners: ["acct"], launch: false, type: "choice",
+      title: "What county is for",
+      q: "You asked for the county on every address. Is it for reporting, or to charge the right district rate?",
+      why: "If it's for charging, Shopify's tax engine works from the full address and should be switched on. Once it is, Shopify's tax report already breaks tax out by county and district, which may cover reporting without a separate field.",
+      opts: ["Reporting only", "Charging the correct rate", "Both"] },
+    { id: "T-3", sec: "tax", owners: ["abbas"], launch: false, type: "choice",
+      title: "Tax while a certificate is under review",
+      q: "A new buyer whose resale certificate is still being reviewed pays tax on their first order. Once approved, is that tax final or refunded?",
+      why: "It decides the wording on the certificate page and whether the team issues a partial refund after approval.",
+      opts: ["Final", "Refund it after approval"] },
+
+    // Catalog
+    { id: "C-1", sec: "catalog", owners: ["abbas"], launch: false, type: "text",
+      title: "Dropper bulb materials",
+      q: "Please send the material specifications for the dropper bulbs (for example natural rubber, nitrile, silicone), by colour or size where it differs.",
+      why: "So we can list them correctly on the product pages. Buyers with essential oils ask about this." },
+    { id: "C-2", sec: "catalog", owners: ["abbas"], launch: true, type: "choice",
+      title: "13 products still in Draft",
+      q: "13 products in Shopify are set to Draft, so they can't be bought. What should happen to them at launch?",
+      why: "We'll send the list. You can also switch items out of stock yourself later from the Team area of the new site.",
+      opts: ["Publish them", "Keep them hidden", "Show them as out of stock", "Send me the list first"] },
+    { id: "C-3", sec: "catalog", owners: ["abbas"], launch: false, type: "text",
+      title: "Out of stock or discontinued at launch",
+      q: "Is anything out of stock, discontinued or not to be sold online when the site goes live?",
+      why: "We'll mark those before launch so nobody orders something you can't ship." },
+    { id: "C-4", sec: "catalog", owners: ["abbas"], launch: false, type: "text",
+      title: "Spanish reviewer",
+      q: "Is there someone who can review the Spanish version of the site for trade vocabulary (bottles, closures, fitments)?",
+      why: "The translation is ready for review. A native speaker from your side catches terms a general translator gets wrong." },
+
+    // People
+    { id: "N-1", sec: "people", owners: ["abbas"], launch: true, type: "fields",
+      title: "Who receives which email",
+      q: "Email addresses for each kind of notification. One address can cover several.",
+      why: "Today, quote and contact requests from the site are saved but no one is emailed. Each of these needs a named inbox before launch.",
+      fields: [
+        { k: "orders", label: "New orders" },
+        { k: "certs", label: "Resale certificate submissions" },
+        { k: "holds", label: "Card holds about to expire" },
+        { k: "leads", label: "Quote, sample and contact requests" }
+      ] },
+    { id: "N-2", sec: "people", owners: ["abbas"], launch: true, type: "text",
+      title: "Sender address for customer emails",
+      q: "Which address should order confirmations and shipping emails come from, for example orders@bestbottles.com? Customer replies will go to it.",
+      why: "The address has to be on bestbottles.com and approved through your DNS (D-1), or these emails tend to land in spam." },
+    { id: "N-3", sec: "people", owners: ["abbas"], launch: true, type: "choice",
+      title: "How customers get portal accounts",
+      q: "Should customers be able to sign up for the portal on their own, or only by invitation?",
+      why: "Invitation works today: you approve each company and it arrives with its account and pricing attached. Open sign-up needs a review step so strangers don't land in an empty account.",
+      opts: ["By invitation: we approve each company", "Open sign-up, with our review"], rec: 0 }
+  ];
+
+  const PANELS = {
+    fedexPanel: `
+      <h3>Our recommendation for FedEx</h3>
+      <ol>
+        <li><b>Connect your FedEx account in Shopify's own carrier settings.</b> It's included with Shopify Plus, shows your negotiated FedEx rates at checkout, and can print FedEx labels from Shopify. You don't need FedEx developer API keys, and there's nothing extra for us to host.</li>
+        <li><b>Load real weights and box sizes.</b> We hold weights for about 2,160 products; you tell us the boxes (S-7).</li>
+        <li><b>Remove the $0 rate</b> (S-2). Shopify keeps showing a flat rate next to live FedEx rates whenever the order qualifies. Then move every product onto the FedEx setup and switch on only the services you tick (S-5).</li>
+        <li><b>Add a small handling buffer</b> (S-1). A FedEx bill can come in above the checkout quote, and the card can't be charged more than the hold.</li>
+        <li><b>Send large orders to a freight quote.</b> Shopify's built-in FedEx rates price each order as one package and don't include freight, so above your threshold (S-8) we hide parcel rates and the order gets a freight quote instead of a wrong price.</li>
+      </ol>
+      <p class="fine">Before launch we price about ten of your real past orders both ways. If multi-case orders come out below what FedEx actually charges, we add a shipping-rate app (ShipperHQ is the usual choice on Shopify Plus). It packs each order into your real boxes and can quote freight live, and it plugs into the same checkout with no change to the site.</p>`,
+    qbPanel: `
+      <h3>Our recommendation for QuickBooks</h3>
+      <ol>
+        <li><b>Keep QuickBooks Desktop for launch.</b> Changing accounting systems in the middle of a website launch adds risk with no launch benefit. Intuit stopped supporting Desktop 2023 after May 31, 2026, so the year matters (QB-1).</li>
+        <li><b>Post each order the way your shipping works:</b> a sales order when the order is placed (it reserves stock but doesn't touch the books), an invoice for only the lines that ship when they ship, a payment for each card charge, and one deposit per Shopify payout with card fees booked as an expense, so it matches the bank.</li>
+        <li><b>Match items by the new product code.</b> Every Shopify code fits QuickBooks' 31-character item-name limit (the longest is 29), so they can be used as they are.</li>
+        <li><b>Our pick is MyWorks Sync for QuickBooks Desktop.</b> It's the one connector we found that documents that whole flow, including invoicing only shipped lines and recording each card charge as its own payment. One install per store can feed the same company file, which covers Nemat International if that site runs on Shopify or WooCommerce.</li>
+        <li><b>We test before committing.</b> On a copy of your company file we run four orders through MyWorks and through your current Webgility, set up the same way: a partial shipment, a California delivery with district tax, a resale-exempt customer, and an order edited after it was placed. Your accountant reviews the results.</li>
+      </ol>
+      <p class="fine">Webgility stays if it passes the test and MyWorks doesn't, or if the Nemat site runs on a platform only Webgility supports. Sales orders need Premier or Enterprise; on Pro the invoice is simply created at shipment. The day the new site goes live, the old site's connection is switched off so no order posts twice. Transaction Pro stays useful for one-off corrections.</p>`
+  };
+
+  // ---------- state ----------
+  const answers = {};          // id -> { v, note, by, at }
+  const dirty = new Set();     // ids with local edits not yet saved
+  const saving = new Map();    // id -> Promise
+  const refs = {};             // id -> { el, status, apply() }
+  let mode = "loading";        // loading | shared | local
+  let db = null, user = null, uid = null;
+  let filter = "all";
+  const LS_KEY = "bb-cutover-requests-v1";
+
+  const itemById = Object.fromEntries(ITEMS.map(i => [i.id, i]));
+
+  function lsLoad() {
+    try { const raw = localStorage.getItem(LS_KEY); return raw ? JSON.parse(raw) : {}; } catch { return {}; }
+  }
+  function lsSave() {
+    try { localStorage.setItem(LS_KEY, JSON.stringify(answers)); } catch { /* storage unavailable */ }
+  }
+
+  function isAnswered(a) {
+    if (!a) return false;
+    const v = a.v;
+    if (Array.isArray(v)) return v.length > 0;
+    if (v && typeof v === "object") return Object.values(v).some(x => String(x || "").trim());
+    return !!String(v || "").trim();
+  }
+
+  // ---------- rendering ----------
+  const main = document.getElementById("sections");
+
+  function el(tag, cls, html) {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (html != null) n.innerHTML = html;
+    return n;
+  }
+
+  function buildItem(it) {
+    const card = el("article", "item");
+    card.id = it.id;
+    card.dataset.owners = it.owners.join(" ");
+    card.dataset.launch = it.launch ? "1" : "0";
+    card.appendChild(el("div", "code", it.id));
+    const body = el("div", "body");
+    card.appendChild(body);
+
+    const head = el("div", "head");
+    head.appendChild(el("h3", null, it.title));
+    const tags = el("div", "tags");
+    if (it.launch) tags.appendChild(el("span", "tag launch", "Needed for launch"));
+    it.owners.forEach(o => tags.appendChild(el("span", "tag", OWNERS[o])));
+    head.appendChild(tags);
+    body.appendChild(head);
+    body.appendChild(el("p", "q", it.q));
+    body.appendChild(el("p", "why", "<b>Why we ask:</b> " + it.why));
+
+    let apply = () => {};
+    if (it.type === "choice" || it.type === "multi") {
+      const group = el("div", "opts");
+      group.setAttribute("role", it.type === "choice" ? "radiogroup" : "group");
+      group.setAttribute("aria-label", it.title);
+      const buttons = it.opts.map((label, idx) => {
+        const b = el("button", "opt");
+        b.type = "button";
+        b.setAttribute("role", it.type === "choice" ? "radio" : "checkbox");
+        b.setAttribute("aria-checked", "false");
+        b.appendChild(document.createTextNode(label));
+        if (it.rec === idx) b.appendChild(el("span", "rec", "Recommended"));
+        b.addEventListener("click", () => {
+          const cur = answers[it.id] || { v: it.type === "multi" ? [] : "", note: "" };
+          let v;
+          if (it.type === "choice") v = cur.v === label ? "" : label;
+          else {
+            const set = new Set(Array.isArray(cur.v) ? cur.v : []);
+            set.has(label) ? set.delete(label) : set.add(label);
+            v = it.opts.filter(o => set.has(o));
+          }
+          commit(it.id, { v, note: cur.note || "" }, 0);
+        });
+        group.appendChild(b);
+        return { b, label };
+      });
+      body.appendChild(group);
+      apply = (a) => {
+        const v = a ? a.v : null;
+        buttons.forEach(({ b, label }) => {
+          const on = it.type === "choice" ? v === label : Array.isArray(v) && v.includes(label);
+          b.setAttribute("aria-checked", on ? "true" : "false");
+        });
+      };
+    } else if (it.type === "text") {
+      const ta = el("textarea");
+      ta.id = "f-" + it.id;
+      ta.rows = 2;
+      ta.setAttribute("aria-label", it.title);
+      ta.placeholder = "Type your answer";
+      ta.addEventListener("input", () => {
+        const cur = answers[it.id] || {};
+        commit(it.id, { v: ta.value, note: cur.note || "" }, 900);
+      });
+      body.appendChild(ta);
+      apply = (a) => { if (document.activeElement !== ta) ta.value = a && typeof a.v === "string" ? a.v : ""; };
+    } else if (it.type === "fields") {
+      const wrap = el("div", "fields");
+      const inputs = it.fields.map(f => {
+        const lab = el("label");
+        lab.appendChild(document.createTextNode(f.label));
+        const inp = el("input");
+        inp.type = "text";
+        inp.id = "f-" + it.id + "-" + f.k;
+        inp.addEventListener("input", () => {
+          const cur = answers[it.id] || {};
+          const v = Object.assign({}, (cur.v && typeof cur.v === "object" && !Array.isArray(cur.v)) ? cur.v : {});
+          v[f.k] = inp.value;
+          commit(it.id, { v, note: cur.note || "" }, 900);
+        });
+        lab.appendChild(inp);
+        wrap.appendChild(lab);
+        return { inp, k: f.k };
+      });
+      body.appendChild(wrap);
+      apply = (a) => {
+        const v = a && a.v && typeof a.v === "object" && !Array.isArray(a.v) ? a.v : {};
+        inputs.forEach(({ inp, k }) => { if (document.activeElement !== inp) inp.value = v[k] || ""; });
+      };
+    }
+
+    let noteTa = null;
+    if (it.type !== "text" && it.type !== "fields") {
+      noteTa = el("textarea", "note");
+      noteTa.id = "n-" + it.id;
+      noteTa.rows = 1;
+      noteTa.placeholder = it.note || "Add a note (optional)";
+      noteTa.setAttribute("aria-label", "Note for " + it.id);
+      noteTa.addEventListener("input", () => {
+        const cur = answers[it.id] || { v: it.type === "multi" ? [] : "" };
+        commit(it.id, { v: cur.v, note: noteTa.value }, 900);
+      });
+      body.appendChild(noteTa);
+    }
+
+    const status = el("div", "status");
+    status.setAttribute("aria-live", "polite");
+    body.appendChild(status);
+
+    refs[it.id] = {
+      card, status,
+      apply(a) {
+        apply(a);
+        if (noteTa && document.activeElement !== noteTa) noteTa.value = (a && a.note) || "";
+        card.classList.toggle("answered", isAnswered(a) || !!(a && String(a.note || "").trim()));
+      }
+    };
+    return card;
+  }
+
+  function render() {
+    SECTIONS.forEach(s => {
+      const sec = el("section", "sec");
+      sec.id = "sec-" + s.id;
+      const head = el("div", "sechead");
+      head.appendChild(el("h2", null, s.title));
+      const count = el("span", "count");
+      count.id = "count-" + s.id;
+      head.appendChild(count);
+      if (s.intro) head.appendChild(el("p", null, s.intro));
+      sec.appendChild(head);
+      if (s.panel) sec.appendChild(el("div", "panel", PANELS[s.panel]));
+      ITEMS.filter(i => i.sec === s.id).forEach(i => sec.appendChild(buildItem(i)));
+      main.appendChild(sec);
+    });
+  }
+
+  function whenText(ts) {
+    if (!ts) return "";
+    const d = new Date(ts);
+    const today = new Date();
+    const sameDay = d.toDateString() === today.toDateString();
+    const t = d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    return sameDay ? t : d.toLocaleDateString([], { month: "short", day: "numeric" }) + ", " + t;
+  }
+
+  async function refreshStatuses() {
+    let names = {};
+    if (user && mode === "shared") {
+      const ids = [...new Set(Object.values(answers).map(a => a && a.by).filter(Boolean))];
+      if (ids.length) { try { names = await user.profiles(ids); } catch { names = {}; } }
+    }
+    ITEMS.forEach(it => {
+      const a = answers[it.id];
+      const r = refs[it.id];
+      r.status.className = "status";
+      if (saving.has(it.id) || dirty.has(it.id)) { r.status.textContent = "Saving…"; return; }
+      if (!a || (!isAnswered(a) && !String(a.note || "").trim())) { r.status.textContent = ""; return; }
+      r.status.classList.add("ok");
+      if (mode === "shared") {
+        const who = a.by && names[a.by] ? (names[a.by].isMe ? "you" : (names[a.by].name || "someone")) : "";
+        r.status.textContent = "Saved" + (who ? " by " + who : "") + (a.at ? " · " + whenText(a.at) : "");
+      } else {
+        r.status.textContent = "Kept in this browser";
+      }
+    });
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const visible = ITEMS.filter(matches);
+    const done = visible.filter(i => isAnswered(answers[i.id])).length;
+    document.getElementById("progressText").textContent = `${done} of ${visible.length} answered`;
+    document.getElementById("meterFill").style.width = visible.length ? (100 * done / visible.length) + "%" : "0";
+    SECTIONS.forEach(s => {
+      const its = ITEMS.filter(i => i.sec === s.id && matches(i));
+      const d = its.filter(i => isAnswered(answers[i.id])).length;
+      const c = document.getElementById("count-" + s.id);
+      if (c) c.textContent = its.length ? `${d} of ${its.length} answered` : "";
+    });
+  }
+
+  function matches(it) {
+    if (filter === "all") return true;
+    if (filter === "launch") return it.launch;
+    return it.owners.includes(filter);
+  }
+
+  function applyFilter() {
+    let any = false;
+    ITEMS.forEach(it => { const show = matches(it); refs[it.id].card.hidden = !show; if (show) any = true; });
+    SECTIONS.forEach(s => {
+      const sec = document.getElementById("sec-" + s.id);
+      sec.hidden = !ITEMS.some(i => i.sec === s.id && matches(i));
+    });
+    document.getElementById("emptyFilter").hidden = any;
+    updateProgress();
+  }
+
+  // ---------- saving ----------
+  const timers = new Map();
+  function commit(id, a, delay) {
+    answers[id] = Object.assign({}, answers[id] || {}, a);
+    refs[id].apply(answers[id]);
+    dirty.add(id);
+    lsSave();
+    refreshStatuses();
+    clearTimeout(timers.get(id));
+    timers.set(id, setTimeout(() => flush(id), delay));
+  }
+
+  async function flush(id) {
+    if (mode !== "shared") { dirty.delete(id); refreshStatuses(); return; }
+    if (saving.has(id)) return; // the running save re-checks dirty when it finishes
+    dirty.delete(id);
+    const a = answers[id];
+    const body = { v: a.v == null ? "" : a.v, note: a.note || "", by: uid || null, at: Date.now() };
+    answers[id] = Object.assign({}, a, { by: body.by, at: body.at });
+    const p = db.collection("answers").doc(id).set(body);
+    saving.set(id, p);
+    try {
+      await p;
+    } catch (e) {
+      const code = e && e.code;
+      if (code === "unavailable") {
+        dirty.add(id);
+        saving.delete(id);
+        setTimeout(() => flush(id), 1500 + Math.random() * 1500);
+        return;
+      }
+      if (code === "invalid_argument" || code === "not_granted" || code === "revoked" || code === "capability_disabled" || code === "capability_removed") {
+        goLocal("Your answers can't be saved to the shared form from this link, so they're kept in this browser. Use “Copy all answers” and email them to jordan@asala.ai.");
+      } else {
+        refs[id].status.className = "status err";
+        refs[id].status.textContent = "Couldn't save. Your answer is kept in this browser; try again in a moment.";
+      }
+    }
+    saving.delete(id);
+    if (dirty.has(id)) flush(id);
+    refreshStatuses();
+  }
+
+  function setModeline(kind, text) {
+    const m = document.getElementById("modeline");
+    m.className = "modeline " + kind;
+    m.textContent = text;
+  }
+
+  function goLocal(msg) {
+    mode = "local";
+    setModeline("local", msg);
+    dirty.clear();
+    refreshStatuses();
+  }
+
+  // ---------- copy ----------
+  function answerText(it) {
+    const a = answers[it.id];
+    if (!a) return "";
+    const parts = [];
+    if (Array.isArray(a.v) && a.v.length) parts.push(a.v.join("; "));
+    else if (a.v && typeof a.v === "object" && !Array.isArray(a.v)) {
+      (it.fields || []).forEach(f => { const x = String(a.v[f.k] || "").trim(); if (x) parts.push(f.label + ": " + x); });
+    } else if (String(a.v || "").trim()) parts.push(String(a.v).trim());
+    if (String(a.note || "").trim()) parts.push("Note: " + String(a.note).trim());
+    return parts.join("\n    ");
+  }
+
+  function buildCopy() {
+    const lines = ["Best Bottles cutover requests: answers", ""];
+    SECTIONS.forEach(s => {
+      const its = ITEMS.filter(i => i.sec === s.id);
+      lines.push(s.title.toUpperCase());
+      its.forEach(it => {
+        const t = answerText(it);
+        lines.push(`${it.id} ${it.title}: ${t ? "\n    " + t : "(not answered yet)"}`);
+      });
+      lines.push("");
+    });
+    return lines.join("\n");
+  }
+
+  document.getElementById("copyBtn").addEventListener("click", () => {
+    const text = buildCopy();
+    const box = document.getElementById("copybox");
+    const ta = document.getElementById("copyText");
+    const btn = document.getElementById("copyBtn");
+    ta.value = text;
+    const showBox = () => { box.hidden = false; ta.focus(); ta.select(); };
+    try {
+      const p = navigator.clipboard && navigator.clipboard.writeText(text);
+      if (p && p.then) {
+        p.then(() => { btn.textContent = "Copied"; setTimeout(() => { btn.textContent = "Copy all answers"; }, 1800); })
+         .catch(showBox);
+      } else showBox();
+    } catch { showBox(); }
+  });
+
+  document.querySelectorAll(".chipbtn").forEach(b => b.addEventListener("click", () => {
+    filter = b.dataset.filter;
+    document.querySelectorAll(".chipbtn").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+    applyFilter();
+  }));
+
+  // ---------- boot ----------
+  render();
+  const saved = lsLoad();
+  Object.keys(saved).forEach(id => { if (itemById[id]) answers[id] = saved[id]; });
+  ITEMS.forEach(it => refs[it.id].apply(answers[it.id]));
+  applyFilter();
+  refreshStatuses();
+  setModeline("", "Connecting to the shared form…");
+
+  const hasClaude = typeof window.claude === "object" && window.claude && typeof window.claude.use === "function";
+  if (!hasClaude) {
+    goLocal("This copy isn't connected to the shared form, so answers are kept in this browser. Use “Copy all answers” and email them to jordan@asala.ai.");
+    return;
+  }
+
+  Promise.all([window.claude.use("db"), window.claude.use("user")]).then(async ([d, u]) => {
+    db = d; user = u;
+    if (!db) {
+      goLocal("Sign in to save answers to the shared form. Until then they're kept in this browser; use “Copy all answers” to email them to jordan@asala.ai.");
+      return;
+    }
+    if (user) {
+      try { uid = await user.id(); } catch { uid = null; }
+      let canWrite = null;
+      try { canWrite = await user.can("data.write"); } catch { canWrite = null; }
+      if (canWrite === false) {
+        goLocal("You can read this form but not save to it. Your answers are kept in this browser; use “Copy all answers” and email them to jordan@asala.ai, or ask Jordan for edit access.");
+        return;
+      }
+    }
+    mode = "shared";
+    setModeline("shared", "Connected. Answers save to the shared form as you go, and everyone with the link sees them.");
+    // Push anything typed before connecting (kept in this browser) that the shared form doesn't have yet.
+    const localOnly = Object.keys(answers);
+    db.collection("answers").onSnapshot((snap) => {
+      const seen = new Set();
+      snap.docs.forEach(doc => {
+        if (!itemById[doc.id]) return;
+        seen.add(doc.id);
+        if (dirty.has(doc.id) || saving.has(doc.id)) return;
+        const data = doc.data() || {};
+        answers[doc.id] = { v: data.v, note: data.note || "", by: data.by || null, at: data.at || null };
+        refs[doc.id].apply(answers[doc.id]);
+      });
+      if (localOnly.length) {
+        localOnly.splice(0).forEach(id => {
+          if (!seen.has(id) && (isAnswered(answers[id]) || String((answers[id] || {}).note || "").trim())) { dirty.add(id); flush(id); }
+        });
+      }
+      lsSave();
+      refreshStatuses();
+    }, (e) => {
+      goLocal("The shared form stopped responding. Your answers are kept in this browser; reload the page to reconnect, or use “Copy all answers”.");
+    });
+  }).catch(() => goLocal("Answers are kept in this browser. Use “Copy all answers” and email them to jordan@asala.ai."));
+})();
+</script>
