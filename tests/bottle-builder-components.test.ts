@@ -141,3 +141,18 @@ describe("source-backed exact component matches", () => {
         expect(unpublished.shopifySellable).toBe(false);
     });
 });
+
+describe("a shorthand cap finish settled by the catalogue name", () => {
+    const cap = (websiteSku: string) => ({ ...part, websiteSku, graceSku: websiteSku, shopifySellable: true });
+    const caps = { "Roll-On Cap": [cap("CPRoll20-400TallShnGl"), cap("CPRoll20-400TallMattGl"), cap("CPRoll20-400TallShnSl")] };
+    const amber: CatalogRow = { ...row, family: "Boston Round", capacityMl: 30, color: "Amber", neckThreadSize: "20-400", websiteSku: "GBBstnAmb1ozRollonGl",
+        applicator: "Plastic Roller Ball", capColor: "Gold", components: caps,
+        itemName: "Boston round design 30ml, 1oz Amber glass bottle with plastic roller ball plug and shiny gold cap. Price each" };
+    it("offers the amber Boston roll-on 'Gl' as the Shiny Gold cap its name states", () => {
+        expect(compatibleFinishComponent(amber)?.websiteSku).toBe("CPRoll20-400TallShnGl");
+    });
+    it("stays unresolved when the name does not say which gold, or names both", () => {
+        expect(compatibleFinishComponent({ ...amber, itemName: "Boston round 30ml amber roll-on with gold cap" })).toBeNull();
+        expect(compatibleFinishComponent({ ...amber, itemName: "Boston round 30ml with shiny gold or matte gold cap" })).toBeNull();
+    });
+});
