@@ -26,10 +26,18 @@ export function builderStageContext(configuration: BuilderConfiguration): StageC
     };
 }
 
+/** The kit as the product page draws it: every part, each tagged with the views it appears in. */
+function viewKit(configuration: BuilderConfiguration | null | undefined): KitLike | null {
+    const kit = configuration?.kit;
+    if (!kit) return null;
+    return (kit.viewParts ? { ...kit, parts: kit.viewParts } : kit) as unknown as KitLike;
+}
+
 /** The views this finished bottle can be shown in, in the product page's order: cap on first. */
 export function builderViews(configuration: BuilderConfiguration | null | undefined): StageView[] {
-    if (!configuration?.kit?.parts?.length) return [];
-    const views = availableViews(configuration.kit as unknown as KitLike, builderStageContext(configuration));
+    const kit = viewKit(configuration);
+    if (!configuration || !kit?.parts?.length) return [];
+    const views = availableViews(kit, builderStageContext(configuration));
     return (["capon", "sidecar", "exploded"] as StageView[]).filter(view => views.includes(view));
 }
 
@@ -39,7 +47,7 @@ export function builderViews(configuration: BuilderConfiguration | null | undefi
  * draws its layers inside the builder's preview, with the same image delivery the product page uses.
  */
 export default function BuilderViewStage({ configuration, view, label }: { configuration: BuilderConfiguration; view: StageView; label: string }) {
-    const kit = configuration.kit as unknown as KitLike | null;
+    const kit = useMemo(() => viewKit(configuration), [configuration]);
     const context = useMemo(() => builderStageContext(configuration), [configuration]);
     const layout = useMemo(() => stageLayout(kit, view, context), [kit, view, context]);
     const [rawUrls, setRawUrls] = useState<ReadonlySet<string>>(() => new Set());

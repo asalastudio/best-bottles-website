@@ -31,6 +31,12 @@ function localAssembledKit(kit: BuilderKit): BuilderKit {
     }) };
 }
 
+/** The builder draws assembled bottles; its finished-bottle views (CAP ON / CAP OFF / EXPLODED) need the
+ * parts assembly drops, such as the complete 20-400 roller insert drawn only in EXPLODED. */
+export function withViewParts(assembled: BuilderKit, full: BuilderKit): BuilderKit {
+    return full.parts.length === assembled.parts.length ? assembled : { ...assembled, viewParts: full.parts };
+}
+
 /** Apply current approved recipes and optional local candidates after the shared cache. */
 function withLocalReviewBodies(bodies: BuilderBody[]): BuilderBody[] {
     const local = localKits();
@@ -138,7 +144,8 @@ async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku
         const staged = local && ((row.websiteSku && local[row.websiteSku]) || (row.graceSku && local[row.graceSku]));
         // The builder draws assembled bottles only: a register insert's EXPLODED-only plug layer stays out.
         const fromRegister = (row.graceSku && registered[row.graceSku]) || (row.websiteSku && registered[row.websiteSku]) || null;
-        const kit = staged ? localAssembledKit(staged) : (fromRegister ? assembledKit(fromRegister) : null);
+        const kit = staged ? withViewParts(localAssembledKit(staged), staged)
+            : (fromRegister ? withViewParts(assembledKit(fromRegister) as BuilderKit, fromRegister as unknown as BuilderKit) : null);
         if (kit) {
             if (row.websiteSku) result.set(row.websiteSku, kit);
             if (row.graceSku) result.set(row.graceSku, kit);
@@ -186,7 +193,7 @@ export async function loadBuilderBodyKits(family: string, bodyId: string) {
     const result = { ...kits };
     for (const config of body.configurations) {
         const staged = local[config.id] ?? (config.product.graceSku ? local[config.product.graceSku] : undefined);
-        if (staged) result[config.id] = localAssembledKit(staged);
+        if (staged) result[config.id] = withViewParts(localAssembledKit(staged), staged);
     }
     return result;
 }
