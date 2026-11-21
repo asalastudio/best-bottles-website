@@ -788,6 +788,19 @@
     background: var(--pdp-tile);
 }
 
+/* Pack × quantity = the pieces the cart receives (the legacy site's "Total Quantity"). */
+.totalQty {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: var(--pdp-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.totalQty b {
+    color: var(--pdp-ink);
+    font-weight: 600;
+}
+
 .addButton {
     background: var(--pdp-ink);
     color: #fff;
