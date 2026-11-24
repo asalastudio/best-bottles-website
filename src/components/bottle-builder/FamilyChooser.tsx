@@ -11,18 +11,26 @@ import styles from "./FamilyChooser.module.css";
 
 export type FamilyPreviewPayload = { families: BuilderFamilyPreview[]; displayDerivatives: DisplayDerivativeMap } | null;
 
-/** The bottle groups stream into the page after the tiles have painted with their outline icons. */
-export function useFamilyPreviews(streamed?: Promise<FamilyPreviewPayload>) {
+/** The bottle groups stream into the page after the tiles have painted with their outline icons.
+ * A page that opened on a bottle streams none; it asks for them once, when the family screen is first shown. */
+export function useFamilyPreviews(streamed: Promise<FamilyPreviewPayload> | undefined, shown: boolean) {
     const [previews, setPreviews] = useState<Record<string, BuilderFamilyPreview>>({});
+    const asked = useRef(false);
     useEffect(() => {
-        let live = true;
-        streamed?.then(payload => {
-            if (!live || !payload) return;
+        if (!streamed && (!shown || asked.current)) return;
+        asked.current = true;
+        let live = true, settled = false;
+        const source = streamed ?? fetch("/api/bottle-builder/family-previews")
+            .then(response => response.ok ? response.json() as Promise<FamilyPreviewPayload> : null);
+        source.then(payload => {
+            settled = true;
+            if (!live || !payload?.families) return;
             registerDisplayDerivatives(payload.displayDerivatives);
             setPreviews(Object.fromEntries(payload.families.map(f => [f.family, f])));
-        }, () => {});
-        return () => { live = false; };
-    }, [streamed]);
+        }, () => { settled = true; });
+        // Closing the screen mid-request drops the answer; let the next opening ask again.
+        return () => { live = false; if (!settled) asked.current = false; };
+    }, [streamed, shown]);
     return previews;
 }
 

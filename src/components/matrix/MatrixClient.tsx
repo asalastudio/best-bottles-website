@@ -132,7 +132,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     // selection model keep their five stages, and the screen sits in front of them on both layouts.
     const [familyScreen, setFamilyScreen] = useState(chooseFamilyFirst);
     const [familyScreenReturned, setFamilyScreenReturned] = useState(false);
-    const familyPreviewMap = useFamilyPreviews(familyPreviews);
+    const familyPreviewMap = useFamilyPreviews(familyPreviews, familyScreen);
     // Desktop moves on by itself once a choice is made (Jordan, 20 Nov 2026): a bottle opens its glass
     // (or its fitments when it comes in one glass), a glass opens its fitments, a fitment its finishes.
     // The finish stays put until the customer reviews. The target waits here while the bottle's options load.

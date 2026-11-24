@@ -50,13 +50,15 @@ async function Builder({ familyParam, collection, sku }: { familyParam?: string;
     // A bare /matrix opens on the family screen; a family, product or collection link goes straight to its bottles.
     // The screen's bottle groups stream in the same way, behind the outline icons that paint first.
     const chooseFamilyFirst = !familyParam && !sku;
-    const familyPreviews = familyList
+    // Only that screen needs them. A family, product or collection link must not wait on (or, with a cold
+    // cache, rebuild) every family; if the customer opens the screen later, the client asks for the groups then.
+    const familyPreviews = chooseFamilyFirst ? familyList
         .then(async list => {
             if (!list?.length) return null;
             const families = await loadBuilderFamilyPreviews(list);
             return { families, displayDerivatives: collectDisplayDerivatives(families.flatMap(f => f.bodies)) };
         })
-        .catch(() => null);
+        .catch(() => null) : undefined;
     const preferMobile = preferMobileRequest(await headers());
     const entry = await loadBuilderEntry(familyParam, {
         family: async name => (await loadBuilderFamilyOrUncached(name)).bodies,
