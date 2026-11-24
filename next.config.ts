@@ -85,6 +85,12 @@ const nextConfig: NextConfig = {
         // Every catalog source is content-hashed or otherwise immutable, so an
         // optimized copy can be kept for 31 days instead of re-validated.
         minimumCacheTTL: 2678400,
+        // Local development only. Some networks (IPv6-only Wi-Fi and hotspots using NAT64) resolve
+        // public hosts such as the Blob store to 64:ff9b::/96, which Next 16 counts as a private
+        // address and refuses to fetch: every remote image then fails on localhost with
+        // 400 "url" parameter is not allowed. The hosts are still limited to remotePatterns below,
+        // and production and preview builds keep the check.
+        dangerouslyAllowLocalIP: process.env.NODE_ENV === "development",
         remotePatterns: [
             {
                 protocol: "https",
