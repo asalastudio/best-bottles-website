@@ -43,6 +43,23 @@ Rows: `audit/parts-placement.csv` (676 flags on 581 SKUs; severities are the scr
 - 316 antique bulb and tassel sprayers were skipped for centring: the hose and tassel hang to one side by design.
 - Closures on the Cylinder 9 ml 17-415 that looked like they float above the rim are bridged by a separate collar part.
 
+## Visual check on staging (2026-11-24, desktop 1440, product page only)
+
+Screenshots and the per-layer log are in `audit/screenshots/pdp/` (`<websiteSku>_<view>.png`, `log.json`). One SKU per finding; the builder and mobile were not checked.
+
+| # | Result | Evidence |
+|---|---|---|
+| 1 | **Confirmed.** Tassel sprayer's tube is drawn 16 × 15 px; the non-tassel twin on the same bottle is 16 × 291 px | `GBSlk50AnSpTslBlk_default.png` vs `GBSlk50AnSpLvn_default.png`, layer sizes in `log.json` |
+| 2 | **Confirmed.** Capped Diva 46 sprayer draws three layers, none a tube; the exploded view shows the tube | `GBDiva46SpryMtGl_capon.png`, `_exploded.png` |
+| 3 | **Confirmed.** Diva 46 dropper shows bulb and collar with an empty clear bottle | `GBDiva46DrpCu_capon.png` |
+| 4 | **Not visible.** Elegant 30 sprayer, tube and overcap look correctly placed; the bad anchors are latent data | `GBElg30SpryMattSl_capon.png`, `_sidecar.png` |
+| 5 | **Not visible.** Elegant 60 clear pipette looks right; frosted hides it | `GBElg60DrpSl_capon.png`, `GBElgFrst60DrpSl_capon.png` |
+| 6 | **Not visible.** Cylinder 25 dropper pipette meets the collar on screen | `GBCyl25DrpCu_default.png` |
+| 7 | **Not visible** on the one cap checked (Diva 46 brown leather reducer looks centred) | `GBDiva46RdcrBrwnLthr_capon.png` |
+| 8 | Not checked separately (overlaps #1) | |
+
+No console errors or failed image requests on any of the ten pages. Side note: `GBCyl25DrpCu` has its website SKU stored as its graceSku in production.
+
 ## Next step that needs access
 
 Screenshot one SKU per finding on the product page and in the builder (capped, cap-off and exploded) to confirm or dismiss each row. That needs the staging site and image hosts allowed for this session, or a run on your machine.

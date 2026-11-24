@@ -1,0 +1,1471 @@
+[
+ {
+  "sku": "GBSlk50AnSpTslBlk",
+  "url": "https://best-bottles-website.vercel.app/products/sleek-50ml-clear-18-415-antiquespray-tassel?sku=GBSlk50AnSpTslBlk",
+  "views": [
+   "default"
+  ],
+  "layers": {
+   "default": [
+    {
+     "src": "image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-",
+     "ok": true,
+     "natural": [
+      640,
+      1906
+     ],
+     "box": [
+      527,
+      291,
+      146,
+      434
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "image?url=%2Fimages%2Fregister%2Ftubes%2Fsleek-18-415-spray-",
+     "ok": true,
+     "natural": [
+      53,
+      1482
+     ],
+     "box": [
+      589,
+      637,
+      16,
+      15
+     ],
+     "z": "auto",
+     "opacity": "0.56",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "1200-96627731b8ebddb125b1e3f251dbb6167b097004ffc34b0f21d10ab",
+     "ok": true,
+     "natural": [
+      570,
+      631
+     ],
+     "box": [
+      276,
+      247,
+      354,
+      391
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ]
+  },
+  "errors": [],
+  "failed": [],
+  "pick": "CLEAR \u00b7 VINTAGE-STYLE BULB SPRAYER WITH TASSEL \u00b7 BLACK"
+ },
+ {
+  "sku": "GBSlk50AnSpLvn",
+  "url": "https://best-bottles-website.vercel.app/products/sleek-50ml-clear-18-415-antiquespray?sku=GBSlk50AnSpLvn",
+  "views": [
+   "default"
+  ],
+  "layers": {
+   "default": [
+    {
+     "src": "image?url=https%3A%2F%2Fyzy7l20k4yt6znzz.public.blob.vercel-",
+     "ok": true,
+     "natural": [
+      640,
+      1906
+     ],
+     "box": [
+      451,
+      291,
+      146,
+      434
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "image?url=%2Fimages%2Fregister%2Ftubes%2Fsleek-18-415-spray-",
+     "ok": true,
+     "natural": [
+      53,
+      1482
+     ],
+     "box": [
+      514,
+      361,
+      16,
+      291
+     ],
+     "z": "auto",
+     "opacity": "0.56",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-da91e80d5117a0c0fd981611540c3c36946da9c2c82a818f18d973cd",
+     "ok": true,
+     "natural": [
+      318,
+      215
+     ],
+     "box": [
+      358,
+      231,
+      198,
+      134
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ]
+  },
+  "errors": [],
+  "failed": [],
+  "pick": "CLEAR \u00b7 VINTAGE-STYLE BULB SPRAYER \u00b7 LAVENDER"
+ },
+ {
+  "sku": "GBDiva46SpryMtGl",
+  "url": "https://best-bottles-website.vercel.app/products/diva-46ml-clear-18-415-perfumespray?sku=GBDiva46SpryMtGl",
+  "views": [
+   "sidecar",
+   "capon",
+   "exploded"
+  ],
+  "layers": {
+   "sidecar": [
+    {
+     "src": "1200-0028ee3eb12e7d3ebb7c9c7b1eca7674665bfad67de28c74e532a7f",
+     "ok": true,
+     "natural": [
+      330,
+      581
+     ],
+     "box": [
+      355,
+      357,
+      205,
+      360
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-1f82d2338afdbc1d3ea9056e55b467b8906d3ded953654004a06f41e",
+     "ok": true,
+     "natural": [
+      126,
+      221
+     ],
+     "box": [
+      417,
+      312,
+      79,
+      137
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-0fdf3a42d2558194b6e63fb6ac9b652bd31c588959c9dab84a517074",
+     "ok": true,
+     "natural": [
+      135,
+      232
+     ],
+     "box": [
+      550,
+      557,
+      84,
+      144
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ],
+   "capon": [
+    {
+     "src": "1200-0028ee3eb12e7d3ebb7c9c7b1eca7674665bfad67de28c74e532a7f",
+     "ok": true,
+     "natural": [
+      330,
+      581
+     ],
+     "box": [
+      355,
+      357,
+      205,
+      360
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-1f82d2338afdbc1d3ea9056e55b467b8906d3ded953654004a06f41e",
+     "ok": true,
+     "natural": [
+      126,
+      221
+     ],
+     "box": [
+      417,
+      312,
+      79,
+      137
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-0fdf3a42d2558194b6e63fb6ac9b652bd31c588959c9dab84a517074",
+     "ok": true,
+     "natural": [
+      135,
+      232
+     ],
+     "box": [
+      415,
+      305,
+      84,
+      144
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ],
+   "exploded": [
+    {
+     "src": "1200-0028ee3eb12e7d3ebb7c9c7b1eca7674665bfad67de28c74e532a7f",
+     "ok": true,
+     "natural": [
+      330,
+      581
+     ],
+     "box": [
+      355,
+      357,
+      205,
+      360
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "128-af651739ceb4d0e8679411a38673bc9a6433d92690eaf64cf791f2f6",
+     "ok": true,
+     "natural": [
+      64,
+      326
+     ],
+     "box": [
+      580,
+      499,
+      40,
+      202
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-1f82d2338afdbc1d3ea9056e55b467b8906d3ded953654004a06f41e",
+     "ok": true,
+     "natural": [
+      126,
+      221
+     ],
+     "box": [
+      560,
+      381,
+      79,
+      137
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-0fdf3a42d2558194b6e63fb6ac9b652bd31c588959c9dab84a517074",
+     "ok": true,
+     "natural": [
+      135,
+      232
+     ],
+     "box": [
+      270,
+      557,
+      84,
+      144
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ]
+  },
+  "errors": [],
+  "failed": [],
+  "pick": "CLEAR \u00b7 PERFUME SPRAY \u00b7 MATTE GOLD"
+ },
+ {
+  "sku": "GBDiva46DrpCu",
+  "url": "https://best-bottles-website.vercel.app/products/diva-46ml-clear-18-415-dropper?sku=GBDiva46DrpCu",
+  "views": [
+   "capon",
+   "exploded"
+  ],
+  "layers": {
+   "capon": [
+    {
+     "src": "1200-0028ee3eb12e7d3ebb7c9c7b1eca7674665bfad67de28c74e532a7f",
+     "ok": true,
+     "natural": [
+      330,
+      581
+     ],
+     "box": [
+      355,
+      357,
+      205,
+      360
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-1c35a81d8590268eec4e27d3e2c60bcaff33bc443f27e6cda0084457",
+     "ok": true,
+     "natural": [
+      149,
+      236
+     ],
+     "box": [
+      411,
+      303,
+      93,
+      147
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ],
+   "exploded": [
+    {
+     "src": "1200-0028ee3eb12e7d3ebb7c9c7b1eca7674665bfad67de28c74e532a7f",
+     "ok": true,
+     "natural": [
+      330,
+      581
+     ],
+     "box": [
+      301,
+      357,
+      205,
+      360
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-aa93fc79aa22f1347fbc97c631c12d33bb9149fc0e426de7c8d6ff47",
+     "ok": true,
+     "natural": [
+      141,
+      337
+     ],
+     "box": [
+      507,
+      492,
+      88,
+      209
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-417ae18082e65da0ff4b647f15fc23f93649489c5e87a47134b7f4eb",
+     "ok": true,
+     "natural": [
+      141,
+      231
+     ],
+     "box": [
+      507,
+      349,
+      88,
+      143
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ]
+  },
+  "errors": [],
+  "failed": [],
+  "pick": "CLEAR \u00b7 DROPPER \u00b7 COPPER"
+ },
+ {
+  "sku": "GBElg30SpryMattSl",
+  "url": "https://best-bottles-website.vercel.app/products/elegant-30ml-clear-15-415-perfumespray?sku=GBElg30SpryMattSl",
+  "views": [
+   "sidecar",
+   "capon",
+   "exploded"
+  ],
+  "layers": {
+   "sidecar": [
+    {
+     "src": "1200-18b3de19ba8c8d587e1b91c36a5c25628eaf936e12931b0dc040fc6",
+     "ok": true,
+     "natural": [
+      324,
+      482
+     ],
+     "box": [
+      359,
+      415,
+      201,
+      299
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "128-e8d983c7822dbb80e978227cb03363e141fccd901cd06c5eae2b9934",
+     "ok": true,
+     "natural": [
+      36,
+      345
+     ],
+     "box": [
+      449,
+      469,
+      22,
+      214
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "1200-5e79d5a8ee8bf6389ebd1f16286592750e6229b3b5533e670e6d9bb",
+     "ok": true,
+     "natural": [
+      599,
+      659
+     ],
+     "box": [
+      271,
+      306,
+      371,
+      408
+     ],
+     "z": "3",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "1200-32d5eaf36f886b091ec4756a0447c1211a96c506a9d6561a86fdc38",
+     "ok": true,
+     "natural": [
+      599,
+      659
+     ],
+     "box": [
+      403,
+      535,
+      371,
+      408
+     ],
+     "z": "4",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ],
+   "capon": [
+    {
+     "src": "1200-18b3de19ba8c8d587e1b91c36a5c25628eaf936e12931b0dc040fc6",
+     "ok": true,
+     "natural": [
+      324,
+      482
+     ],
+     "box": [
+      359,
+      415,
+      201,
+      299
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "128-e8d983c7822dbb80e978227cb03363e141fccd901cd06c5eae2b9934",
+     "ok": true,
+     "natural": [
+      36,
+      345
+     ],
+     "box": [
+      449,
+      469,
+      22,
+      214
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "1200-5e79d5a8ee8bf6389ebd1f16286592750e6229b3b5533e670e6d9bb",
+     "ok": true,
+     "natural": [
+      599,
+      659
+     ],
+     "box": [
+      271,
+      306,
+      371,
+      408
+     ],
+     "z": "3",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "1200-32d5eaf36f886b091ec4756a0447c1211a96c506a9d6561a86fdc38",
+     "ok": true,
+     "natural": [
+      599,
+      659
+     ],
+     "box": [
+      271,
+      306,
+      371,
+      408
+     ],
+     "z": "4",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ],
+   "exploded": [
+    {
+     "src": "1200-18b3de19ba8c8d587e1b91c36a5c25628eaf936e12931b0dc040fc6",
+     "ok": true,
+     "natural": [
+      324,
+      482
+     ],
+     "box": [
+      359,
+      415,
+      201,
+      299
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "128-e8d983c7822dbb80e978227cb03363e141fccd901cd06c5eae2b9934",
+     "ok": true,
+     "natural": [
+      36,
+      345
+     ],
+     "box": [
+      586,
+      488,
+      22,
+      214
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "1200-5e79d5a8ee8bf6389ebd1f16286592750e6229b3b5533e670e6d9bb",
+     "ok": true,
+     "natural": [
+      599,
+      659
+     ],
+     "box": [
+      409,
+      325,
+      371,
+      408
+     ],
+     "z": "3",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "1200-32d5eaf36f886b091ec4756a0447c1211a96c506a9d6561a86fdc38",
+     "ok": true,
+     "natural": [
+      599,
+      659
+     ],
+     "box": [
+      271,
+      217,
+      371,
+      408
+     ],
+     "z": "4",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ]
+  },
+  "errors": [],
+  "failed": [],
+  "pick": "CLEAR \u00b7 PERFUME SPRAY \u00b7 MATTE SILVER"
+ },
+ {
+  "sku": "GBElg60DrpSl",
+  "url": "https://best-bottles-website.vercel.app/products/elegant-60ml-clear-18-415-dropper?sku=GBElg60DrpSl",
+  "views": [
+   "capon",
+   "exploded"
+  ],
+  "layers": {
+   "capon": [
+    {
+     "src": "1200-f23d76b49b66394b4dd3be1b1fdfa926329d150bd93996e185d3cb3",
+     "ok": true,
+     "natural": [
+      384,
+      555
+     ],
+     "box": [
+      337,
+      373,
+      238,
+      344
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-45287e320ffa1041bac41f8df73497502e93a2650f3c232ac6c8c931",
+     "ok": true,
+     "natural": [
+      114,
+      339
+     ],
+     "box": [
+      413,
+      446,
+      71,
+      224
+     ],
+     "z": "auto",
+     "opacity": "0.55",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-ae5554dc5f9f093b3449349f737d0e5c0ac977f7960057dd772dbbb6",
+     "ok": true,
+     "natural": [
+      147,
+      234
+     ],
+     "box": [
+      411,
+      305,
+      92,
+      145
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ],
+   "exploded": [
+    {
+     "src": "1200-f23d76b49b66394b4dd3be1b1fdfa926329d150bd93996e185d3cb3",
+     "ok": true,
+     "natural": [
+      384,
+      555
+     ],
+     "box": [
+      337,
+      373,
+      238,
+      344
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-8ac6c21ff6a86f3f3b26ffde6b6a406db2e604e960d6b023b09fd3a0",
+     "ok": true,
+     "natural": [
+      136,
+      326
+     ],
+     "box": [
+      578,
+      499,
+      85,
+      202
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-cd7f32f7cefc928604cc749f1da0ab7d1ee5a53f233a3a9f4d1a6ca9",
+     "ok": true,
+     "natural": [
+      136,
+      223
+     ],
+     "box": [
+      578,
+      361,
+      85,
+      138
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ]
+  },
+  "errors": [],
+  "failed": [],
+  "pick": "CLEAR \u00b7 DROPPER \u00b7 SILVER"
+ },
+ {
+  "sku": "GBElgFrst60DrpSl",
+  "url": "https://best-bottles-website.vercel.app/products/elegant-60ml-frosted-18-415-dropper?sku=GBElgFrst60DrpSl",
+  "views": [
+   "capon",
+   "exploded"
+  ],
+  "layers": {
+   "capon": [
+    {
+     "src": "256-45287e320ffa1041bac41f8df73497502e93a2650f3c232ac6c8c931",
+     "ok": true,
+     "natural": [
+      114,
+      339
+     ],
+     "box": [
+      413,
+      454,
+      71,
+      210
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "1200-f40477ab1c1f918565cba9d1fe5649c373062c5579ef9ff209ea9ef",
+     "ok": true,
+     "natural": [
+      384,
+      553
+     ],
+     "box": [
+      338,
+      373,
+      238,
+      343
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-ae5554dc5f9f093b3449349f737d0e5c0ac977f7960057dd772dbbb6",
+     "ok": true,
+     "natural": [
+      147,
+      234
+     ],
+     "box": [
+      411,
+      305,
+      91,
+      145
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ],
+   "exploded": [
+    {
+     "src": "1200-f40477ab1c1f918565cba9d1fe5649c373062c5579ef9ff209ea9ef",
+     "ok": true,
+     "natural": [
+      384,
+      553
+     ],
+     "box": [
+      338,
+      373,
+      238,
+      343
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-8ac6c21ff6a86f3f3b26ffde6b6a406db2e604e960d6b023b09fd3a0",
+     "ok": true,
+     "natural": [
+      136,
+      325
+     ],
+     "box": [
+      577,
+      500,
+      85,
+      202
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-cd7f32f7cefc928604cc749f1da0ab7d1ee5a53f233a3a9f4d1a6ca9",
+     "ok": true,
+     "natural": [
+      136,
+      222
+     ],
+     "box": [
+      577,
+      362,
+      85,
+      138
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ]
+  },
+  "errors": [],
+  "failed": [],
+  "pick": "FROSTED \u00b7 DROPPER \u00b7 SILVER"
+ },
+ {
+  "sku": "GBCyl25DrpCu",
+  "url": "https://best-bottles-website.vercel.app/products/cylinder-25ml-clear-18-415-dropper?sku=GBCyl25DrpCu",
+  "views": [
+   "default"
+  ],
+  "layers": {
+   "default": [
+    {
+     "src": "image?url=%2Fimages%2Fcylinder-sprays%2Fcylinder25-glass-pip",
+     "ok": true,
+     "natural": [
+      640,
+      960
+     ],
+     "box": [
+      373,
+      415,
+      168,
+      253
+     ],
+     "z": "auto",
+     "opacity": "0.42",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "image?url=%2Fimages%2Fcylinder-sprays%2Fbody-25ml-clear-refr",
+     "ok": true,
+     "natural": [
+      640,
+      1523
+     ],
+     "box": [
+      386,
+      370,
+      142,
+      326
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-1c35a81d8590268eec4e27d3e2c60bcaff33bc443f27e6cda0084457",
+     "ok": true,
+     "natural": [
+      154,
+      244
+     ],
+     "box": [
+      409,
+      283,
+      96,
+      152
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ]
+  },
+  "errors": [],
+  "failed": [],
+  "pick": "CLEAR \u00b7 DROPPER \u00b7 MATTE COPPER"
+ },
+ {
+  "sku": "GBDiva46RdcrBrwnLthr",
+  "url": "https://best-bottles-website.vercel.app/products/diva-46ml-clear-18-415-reducer?sku=GBDiva46RdcrBrwnLthr",
+  "views": [
+   "sidecar",
+   "capon",
+   "exploded"
+  ],
+  "layers": {
+   "sidecar": [
+    {
+     "src": "1200-0028ee3eb12e7d3ebb7c9c7b1eca7674665bfad67de28c74e532a7f",
+     "ok": true,
+     "natural": [
+      330,
+      581
+     ],
+     "box": [
+      355,
+      357,
+      205,
+      360
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-5c63fea840a2682283b67565e6534cc100f18b77bf25c95160383599",
+     "ok": true,
+     "natural": [
+      69,
+      20
+     ],
+     "box": [
+      435,
+      371,
+      43,
+      13
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-8c89c2e69b32e357491af3413b6f05a7d70dda4e9bd0160a1aae24f1",
+     "ok": true,
+     "natural": [
+      178,
+      191
+     ],
+     "box": [
+      550,
+      583,
+      110,
+      119
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ],
+   "capon": [
+    {
+     "src": "1200-0028ee3eb12e7d3ebb7c9c7b1eca7674665bfad67de28c74e532a7f",
+     "ok": true,
+     "natural": [
+      330,
+      581
+     ],
+     "box": [
+      355,
+      357,
+      205,
+      360
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-5c63fea840a2682283b67565e6534cc100f18b77bf25c95160383599",
+     "ok": true,
+     "natural": [
+      69,
+      20
+     ],
+     "box": [
+      435,
+      371,
+      43,
+      13
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-8c89c2e69b32e357491af3413b6f05a7d70dda4e9bd0160a1aae24f1",
+     "ok": true,
+     "natural": [
+      178,
+      191
+     ],
+     "box": [
+      407,
+      332,
+      110,
+      119
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ],
+   "exploded": [
+    {
+     "src": "1200-0028ee3eb12e7d3ebb7c9c7b1eca7674665bfad67de28c74e532a7f",
+     "ok": true,
+     "natural": [
+      330,
+      581
+     ],
+     "box": [
+      355,
+      357,
+      205,
+      360
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-e9b99c70a2384b7966bc646817c4b7d8f07f1632220693fb1c1db88f",
+     "ok": true,
+     "natural": [
+      69,
+      78
+     ],
+     "box": [
+      560,
+      653,
+      43,
+      49
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-8c89c2e69b32e357491af3413b6f05a7d70dda4e9bd0160a1aae24f1",
+     "ok": true,
+     "natural": [
+      178,
+      191
+     ],
+     "box": [
+      407,
+      221,
+      110,
+      119
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ]
+  },
+  "errors": [],
+  "failed": [],
+  "pick": "CLEAR \u00b7 REDUCER \u00b7 BROWN LEATHER"
+ },
+ {
+  "sku": "GBCyl9SpryBlk",
+  "url": "https://best-bottles-website.vercel.app/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryBlk",
+  "views": [
+   "sidecar",
+   "capon",
+   "exploded"
+  ],
+  "layers": {
+   "sidecar": [
+    {
+     "src": "128-069431dfd61b1fda1f333cf6671a22a3d9fb3d6de4e1db2ef7d59e56",
+     "ok": true,
+     "natural": [
+      42,
+      343
+     ],
+     "box": [
+      444,
+      466,
+      26,
+      213
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-de9aef2b8d0d2ec6b6842201e237376f6b33abc4e20c28e9dd875e68",
+     "ok": true,
+     "natural": [
+      179,
+      510
+     ],
+     "box": [
+      401,
+      400,
+      111,
+      316
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5",
+     "ok": true,
+     "natural": [
+      106,
+      129
+     ],
+     "box": [
+      425,
+      329,
+      66,
+      80
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-eb7d8ba45f56d03bc8a48ea57b5ef0a92eebc5aeac5076684588ea67",
+     "ok": true,
+     "natural": [
+      128,
+      109
+     ],
+     "box": [
+      418,
+      400,
+      80,
+      68
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-5502cdbabc390ef7b2de2f250b830c6b5e28ecf8804a088f6c05e48d",
+     "ok": true,
+     "natural": [
+      109,
+      145
+     ],
+     "box": [
+      504,
+      611,
+      67,
+      90
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ],
+   "capon": [
+    {
+     "src": "128-069431dfd61b1fda1f333cf6671a22a3d9fb3d6de4e1db2ef7d59e56",
+     "ok": true,
+     "natural": [
+      42,
+      343
+     ],
+     "box": [
+      444,
+      466,
+      26,
+      213
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-de9aef2b8d0d2ec6b6842201e237376f6b33abc4e20c28e9dd875e68",
+     "ok": true,
+     "natural": [
+      179,
+      510
+     ],
+     "box": [
+      401,
+      400,
+      111,
+      316
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5",
+     "ok": true,
+     "natural": [
+      106,
+      129
+     ],
+     "box": [
+      425,
+      329,
+      66,
+      80
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-eb7d8ba45f56d03bc8a48ea57b5ef0a92eebc5aeac5076684588ea67",
+     "ok": true,
+     "natural": [
+      128,
+      109
+     ],
+     "box": [
+      418,
+      400,
+      80,
+      68
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-5502cdbabc390ef7b2de2f250b830c6b5e28ecf8804a088f6c05e48d",
+     "ok": true,
+     "natural": [
+      109,
+      145
+     ],
+     "box": [
+      423,
+      315,
+      67,
+      90
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ],
+   "exploded": [
+    {
+     "src": "128-069431dfd61b1fda1f333cf6671a22a3d9fb3d6de4e1db2ef7d59e56",
+     "ok": true,
+     "natural": [
+      42,
+      343
+     ],
+     "box": [
+      542,
+      489,
+      26,
+      213
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-de9aef2b8d0d2ec6b6842201e237376f6b33abc4e20c28e9dd875e68",
+     "ok": true,
+     "natural": [
+      179,
+      510
+     ],
+     "box": [
+      401,
+      400,
+      111,
+      316
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5",
+     "ok": true,
+     "natural": [
+      106,
+      129
+     ],
+     "box": [
+      522,
+      357,
+      66,
+      80
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "640-eb7d8ba45f56d03bc8a48ea57b5ef0a92eebc5aeac5076684588ea67",
+     "ok": true,
+     "natural": [
+      128,
+      109
+     ],
+     "box": [
+      515,
+      428,
+      80,
+      68
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    },
+    {
+     "src": "256-5502cdbabc390ef7b2de2f250b830c6b5e28ecf8804a088f6c05e48d",
+     "ok": true,
+     "natural": [
+      109,
+      145
+     ],
+     "box": [
+      423,
+      221,
+      67,
+      90
+     ],
+     "z": "auto",
+     "opacity": "1",
+     "blend": "normal",
+     "alt": ""
+    }
+   ]
+  },
+  "errors": [],
+  "failed": [],
+  "pick": "CLEAR \u00b7 FINE MIST SPRAY \u00b7 BLACK"
+ }
+]
