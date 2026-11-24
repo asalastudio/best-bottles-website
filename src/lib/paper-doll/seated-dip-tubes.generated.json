@@ -1,0 +1,2248 @@
+{
+ "version": "382451516bf6c87a",
+ "source": "scripts/paperdoll/seated-dip-tubes.py",
+ "groups": {
+  "diamond-60ml-18-415-clear-bulb": {
+   "bodyId": "diamond-60ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-bulb-slivers.534a78461362.png",
+    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-bulb-slivers.534a78461362.png",
+    "sha256": "534a78461362f4a4de571efd3074f1524633e4c97976b73ad4688e1c8642134b",
+    "bytes": 60286,
+    "width": 122,
+    "height": 910
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-bulb.7f520a4679cb.png",
+    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-bulb.7f520a4679cb.png",
+    "sha256": "7f520a4679cb20593bb256687027198266a60345ecbc82bb987f90b522960e65",
+    "bytes": 44423,
+    "width": 122,
+    "height": 910
+   },
+   "box": {
+    "height": 581.32,
+    "width": 77.94,
+    "x": 461.03,
+    "y": 395.27
+   },
+   "floorY": 976.29,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diamond-60ml-18-415-clear-lotion": {
+   "bodyId": "diamond-60ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-lotion-slivers.c3357f932c76.png",
+    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-lotion-slivers.c3357f932c76.png",
+    "sha256": "c3357f932c7630c46204184f045149703bb1197bf3e697311f6bf31363b69ba2",
+    "bytes": 54086,
+    "width": 130,
+    "height": 910
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-lotion.338da578829c.png",
+    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-lotion.338da578829c.png",
+    "sha256": "338da578829ca166b1952eb838cfb76f18b94a0f9b18ab87d5be45ab9e7750ff",
+    "bytes": 42729,
+    "width": 130,
+    "height": 910
+   },
+   "box": {
+    "height": 581.32,
+    "width": 83.05,
+    "x": 458.8,
+    "y": 395.26
+   },
+   "floorY": 976.29,
+   "opaque": {
+    "left": 5,
+    "right": 127
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diamond-60ml-18-415-clear-spray": {
+   "bodyId": "diamond-60ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-spray-slivers.3277b15754cf.png",
+    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-spray-slivers.3277b15754cf.png",
+    "sha256": "3277b15754cf911a5a5606b47b1920ba8fa96f241311113bfa1425d5c8312937",
+    "bytes": 40784,
+    "width": 104,
+    "height": 910
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-spray.46f8f1f6bb92.png",
+    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-spray.46f8f1f6bb92.png",
+    "sha256": "46f8f1f6bb92f97cf52d2a2c83e9fafdec844d3bd2721a01d6992f003d204727",
+    "bytes": 26146,
+    "width": 104,
+    "height": 910
+   },
+   "box": {
+    "height": 581.32,
+    "width": 66.44,
+    "x": 466.78,
+    "y": 395.23
+   },
+   "floorY": 976.29,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-100ml-18-415-clear-bulb": {
+   "bodyId": "diva-100ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-bulb-slivers.22eba3df25ca.png",
+    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-bulb-slivers.22eba3df25ca.png",
+    "sha256": "22eba3df25cadd881d393031aab051d93305c70f9273f1a091fde9c86fb4ad0f",
+    "bytes": 66058,
+    "width": 124,
+    "height": 1011
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-bulb.065e3131f925.png",
+    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-bulb.065e3131f925.png",
+    "sha256": "065e3131f9257d9159f9bc7f14e3fbb88b6263d70780f543da23dbbb65abe3ec",
+    "bytes": 50456,
+    "width": 124,
+    "height": 1011
+   },
+   "box": {
+    "height": 507.92,
+    "width": 62.3,
+    "x": 468.85,
+    "y": 387.36
+   },
+   "floorY": 895.15,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-100ml-18-415-clear-lotion": {
+   "bodyId": "diva-100ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-lotion-slivers.d5de896db4e8.png",
+    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-lotion-slivers.d5de896db4e8.png",
+    "sha256": "d5de896db4e8a3ab5dbb61bf4fc8b9053be4d73da86f7ff84cfc67047032e096",
+    "bytes": 57544,
+    "width": 128,
+    "height": 1010
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-lotion.3bc23cdb3d83.png",
+    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-lotion.3bc23cdb3d83.png",
+    "sha256": "3bc23cdb3d839dfc1b582a5ad1ed62240a9b66439b5041e823cef779a2bf5a29",
+    "bytes": 46119,
+    "width": 128,
+    "height": 1010
+   },
+   "box": {
+    "height": 507.42,
+    "width": 64.31,
+    "x": 468.1,
+    "y": 387.65
+   },
+   "floorY": 895.15,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-100ml-18-415-clear-spray": {
+   "bodyId": "diva-100ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-spray-slivers.f46248a5757c.png",
+    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-spray-slivers.f46248a5757c.png",
+    "sha256": "f46248a5757cbefdff18f6eba8eb428ce7cbad79812c05316712b856e0f5d8a7",
+    "bytes": 42792,
+    "width": 104,
+    "height": 1010
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-spray.bd4148d2e9dc.png",
+    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-spray.bd4148d2e9dc.png",
+    "sha256": "bd4148d2e9dc2337472445d8c51e7b32089bafd8c804cd7721df169dc3d32b8d",
+    "bytes": 29501,
+    "width": 104,
+    "height": 1010
+   },
+   "box": {
+    "height": 507.42,
+    "width": 52.25,
+    "x": 473.88,
+    "y": 387.65
+   },
+   "floorY": 895.15,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-30ml-18-415-clear-bulb": {
+   "bodyId": "diva-30ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-bulb-slivers.1d99b855b7c4.png",
+    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-bulb-slivers.1d99b855b7c4.png",
+    "sha256": "1d99b855b7c405b83e445e87fbff72fe6396abd709ac59a24d2d29e134376a76",
+    "bytes": 38943,
+    "width": 122,
+    "height": 646
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-bulb.a4ee82a3213f.png",
+    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-bulb.a4ee82a3213f.png",
+    "sha256": "a4ee82a3213f4f47c111247ea228c865e252ed709e3dc7e272fb61a6681caa67",
+    "bytes": 30932,
+    "width": 122,
+    "height": 646
+   },
+   "box": {
+    "height": 445.84,
+    "width": 84.2,
+    "x": 457.9,
+    "y": 446.66
+   },
+   "floorY": 892.59,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-30ml-18-415-clear-lotion": {
+   "bodyId": "diva-30ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-lotion-slivers.6da4a667c822.png",
+    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-lotion-slivers.6da4a667c822.png",
+    "sha256": "6da4a667c822fe0dd06d55e5920ac54135bc17930781158d5a4dcc9f87919d71",
+    "bytes": 38484,
+    "width": 128,
+    "height": 646
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-lotion.b4264c41e0e8.png",
+    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-lotion.b4264c41e0e8.png",
+    "sha256": "b4264c41e0e83cdcc82d162148d1a94bfa7b9e97e11a61001bae9732527a0d06",
+    "bytes": 31733,
+    "width": 128,
+    "height": 646
+   },
+   "box": {
+    "height": 445.84,
+    "width": 88.34,
+    "x": 456.18,
+    "y": 446.92
+   },
+   "floorY": 892.59,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-30ml-18-415-clear-spray": {
+   "bodyId": "diva-30ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-spray-slivers.33d7fb8d7d8e.png",
+    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-spray-slivers.33d7fb8d7d8e.png",
+    "sha256": "33d7fb8d7d8eff080651d8723ae5edd90fc26adb58cd284baf3fa62d0ff4427c",
+    "bytes": 27950,
+    "width": 104,
+    "height": 646
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-spray.ecd3aa0f8f1c.png",
+    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-spray.ecd3aa0f8f1c.png",
+    "sha256": "ecd3aa0f8f1c8df83fece11ccbaae747d1bd1a28a9353708db4b7e50efab51a8",
+    "bytes": 19322,
+    "width": 104,
+    "height": 646
+   },
+   "box": {
+    "height": 445.84,
+    "width": 71.78,
+    "x": 464.11,
+    "y": 446.92
+   },
+   "floorY": 892.59,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-46ml-18-415-clear-bulb": {
+   "bodyId": "diva-46ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-bulb-slivers.a11f8562f5e7.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-bulb-slivers.a11f8562f5e7.png",
+    "sha256": "a11f8562f5e7cd65a6f4dd2979a7369cb4ca1d87af3402ff6096070ebc287214",
+    "bytes": 49776,
+    "width": 122,
+    "height": 754
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
+    "sha256": "1b7c54d685ae373861bafb1c8443c4c28faaaef240de3ebfc8bed18084054305",
+    "bytes": 36474,
+    "width": 122,
+    "height": 757
+   },
+   "box": {
+    "height": 472.27,
+    "width": 76.41,
+    "x": 461.79,
+    "y": 424.5
+   },
+   "floorY": 896.46,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-46ml-18-415-clear-lotion": {
+   "bodyId": "diva-46ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-lotion-slivers.d0241d14cdf8.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-lotion-slivers.d0241d14cdf8.png",
+    "sha256": "d0241d14cdf8800322806bbd4b17d30a9d1f93377c1217dabb2ab3773ecec41f",
+    "bytes": 45056,
+    "width": 128,
+    "height": 753
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
+    "sha256": "a3db7f625e5bdc12de0e53733b464c16662b09d4e6b3fd6321e42814d0d3eeab",
+    "bytes": 35397,
+    "width": 128,
+    "height": 756
+   },
+   "box": {
+    "height": 471.64,
+    "width": 80.17,
+    "x": 460.23,
+    "y": 424.71
+   },
+   "floorY": 896.46,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-46ml-18-415-clear-pipette": {
+   "bodyId": "diva-46ml-18-415",
+   "glass": "Clear",
+   "kind": "pipette",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-pipette-slivers.62922f5adb32.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-pipette-slivers.62922f5adb32.png",
+    "sha256": "62922f5adb32bd8fee962e189ddc0e4105eeb7f73bd7e161f81b32e57ac14314",
+    "bytes": 79264,
+    "width": 144,
+    "height": 665
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-pipette.5ab982e1e2b4.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-pipette.5ab982e1e2b4.png",
+    "sha256": "5ab982e1e2b4d2014ab1a26a7b15ccce2e084d5e54870051fc569c1ba096e93d",
+    "bytes": 59503,
+    "width": 144,
+    "height": 665
+   },
+   "box": {
+    "height": 423.1,
+    "width": 91.62,
+    "x": 454.51,
+    "y": 413.42
+   },
+   "floorY": 836.68,
+   "opaque": {
+    "left": 2,
+    "right": 140
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.4226
+  },
+  "diva-46ml-18-415-clear-spray": {
+   "bodyId": "diva-46ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-spray-slivers.2677f820bba3.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-spray-slivers.2677f820bba3.png",
+    "sha256": "2677f820bba36f041511750a9bfab586e5017d27ecbfff79054c663019f6b0d5",
+    "bytes": 33738,
+    "width": 104,
+    "height": 753
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
+    "sha256": "c167cea0c0b70214cf1a1ab60848b63ba0802d5326a922ebf16a47d63fc0ee81",
+    "bytes": 21991,
+    "width": 104,
+    "height": 756
+   },
+   "box": {
+    "height": 471.64,
+    "width": 65.14,
+    "x": 467.43,
+    "y": 424.73
+   },
+   "floorY": 896.46,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-46ml-18-415-frosted-bulb": {
+   "bodyId": "diva-46ml-18-415",
+   "glass": "Frosted",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
+    "sha256": "1b7c54d685ae373861bafb1c8443c4c28faaaef240de3ebfc8bed18084054305",
+    "bytes": 36474,
+    "width": 122,
+    "height": 757
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
+    "sha256": "1b7c54d685ae373861bafb1c8443c4c28faaaef240de3ebfc8bed18084054305",
+    "bytes": 36474,
+    "width": 122,
+    "height": 757
+   },
+   "box": {
+    "height": 474.14,
+    "width": 76.41,
+    "x": 461.79,
+    "y": 422.53
+   },
+   "floorY": 896.46,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-46ml-18-415-frosted-lotion": {
+   "bodyId": "diva-46ml-18-415",
+   "glass": "Frosted",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
+    "sha256": "a3db7f625e5bdc12de0e53733b464c16662b09d4e6b3fd6321e42814d0d3eeab",
+    "bytes": 35397,
+    "width": 128,
+    "height": 756
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
+    "sha256": "a3db7f625e5bdc12de0e53733b464c16662b09d4e6b3fd6321e42814d0d3eeab",
+    "bytes": 35397,
+    "width": 128,
+    "height": 756
+   },
+   "box": {
+    "height": 473.52,
+    "width": 80.17,
+    "x": 460.23,
+    "y": 422.81
+   },
+   "floorY": 896.46,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346
+  },
+  "diva-46ml-18-415-frosted-spray": {
+   "bodyId": "diva-46ml-18-415",
+   "glass": "Frosted",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
+    "sha256": "c167cea0c0b70214cf1a1ab60848b63ba0802d5326a922ebf16a47d63fc0ee81",
+    "bytes": 21991,
+    "width": 104,
+    "height": 756
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
+    "sha256": "c167cea0c0b70214cf1a1ab60848b63ba0802d5326a922ebf16a47d63fc0ee81",
+    "bytes": 21991,
+    "width": 104,
+    "height": 756
+   },
+   "box": {
+    "height": 473.52,
+    "width": 65.14,
+    "x": 467.43,
+    "y": 422.85
+   },
+   "floorY": 896.46,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346
+  },
+  "empire-100ml-18-415-clear-bulb": {
+   "bodyId": "empire-100ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-bulb.4b0eb8263f95.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-bulb.4b0eb8263f95.png",
+    "sha256": "4b0eb8263f95733891f70c0b11aad8df84372fcc87e341ee579ffbcb77fdd24c",
+    "bytes": 45911,
+    "width": 122,
+    "height": 935
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-bulb.4b0eb8263f95.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-bulb.4b0eb8263f95.png",
+    "sha256": "4b0eb8263f95733891f70c0b11aad8df84372fcc87e341ee579ffbcb77fdd24c",
+    "bytes": 45911,
+    "width": 122,
+    "height": 935
+   },
+   "box": {
+    "height": 493.06,
+    "width": 64.33,
+    "x": 467.83,
+    "y": 376.96
+   },
+   "floorY": 869.81,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "empire-100ml-18-415-clear-lotion": {
+   "bodyId": "empire-100ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-lotion.b16051043015.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-lotion.b16051043015.png",
+    "sha256": "b160510430150dc8505d5d5fc1a1d9f1391718c35dc6d174f258f450bad034ca",
+    "bytes": 43579,
+    "width": 128,
+    "height": 934
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-lotion.b16051043015.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-lotion.b16051043015.png",
+    "sha256": "b160510430150dc8505d5d5fc1a1d9f1391718c35dc6d174f258f450bad034ca",
+    "bytes": 43579,
+    "width": 128,
+    "height": 934
+   },
+   "box": {
+    "height": 492.53,
+    "width": 67.5,
+    "x": 466.51,
+    "y": 377.25
+   },
+   "floorY": 869.81,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "empire-100ml-18-415-clear-spray": {
+   "bodyId": "empire-100ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-spray.61b887bf3f98.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-spray.61b887bf3f98.png",
+    "sha256": "61b887bf3f988d859ebcf4bdad7a3fe0c7b620b1c376efab32ae93c00d838bd5",
+    "bytes": 26924,
+    "width": 104,
+    "height": 933
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-spray.61b887bf3f98.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-spray.61b887bf3f98.png",
+    "sha256": "61b887bf3f988d859ebcf4bdad7a3fe0c7b620b1c376efab32ae93c00d838bd5",
+    "bytes": 26924,
+    "width": 104,
+    "height": 933
+   },
+   "box": {
+    "height": 492,
+    "width": 54.84,
+    "x": 472.58,
+    "y": 377.78
+   },
+   "floorY": 869.81,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "empire-50ml-18-415-clear-bulb": {
+   "bodyId": "empire-50ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-bulb.2f1e866e7124.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-bulb.2f1e866e7124.png",
+    "sha256": "2f1e866e712412b91cb4a67bb73b8bf689ea0d83b43eb589f24cf951fb958402",
+    "bytes": 34755,
+    "width": 122,
+    "height": 722
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-bulb.2f1e866e7124.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-bulb.2f1e866e7124.png",
+    "sha256": "2f1e866e712412b91cb4a67bb73b8bf689ea0d83b43eb589f24cf951fb958402",
+    "bytes": 34755,
+    "width": 122,
+    "height": 722
+   },
+   "box": {
+    "height": 463.34,
+    "width": 78.29,
+    "x": 460.85,
+    "y": 411.95
+   },
+   "floorY": 875.25,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "empire-50ml-18-415-clear-lotion": {
+   "bodyId": "empire-50ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-lotion.3a411ddedc1f.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-lotion.3a411ddedc1f.png",
+    "sha256": "3a411ddedc1f44246e859a788f237503642f216407bd87cc6f2624ee6adc39d9",
+    "bytes": 34220,
+    "width": 128,
+    "height": 721
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-lotion.3a411ddedc1f.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-lotion.3a411ddedc1f.png",
+    "sha256": "3a411ddedc1f44246e859a788f237503642f216407bd87cc6f2624ee6adc39d9",
+    "bytes": 34220,
+    "width": 128,
+    "height": 721
+   },
+   "box": {
+    "height": 462.7,
+    "width": 82.14,
+    "x": 459.25,
+    "y": 412.45
+   },
+   "floorY": 875.25,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "empire-50ml-18-415-clear-pipette": {
+   "bodyId": "empire-50ml-18-415",
+   "glass": "Clear",
+   "kind": "pipette",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-pipette.7c4b33ff182d.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-pipette.7c4b33ff182d.png",
+    "sha256": "7c4b33ff182d7b8459328991827d47243bf36c5df67c75840de83ee7c92fc1d4",
+    "bytes": 57053,
+    "width": 144,
+    "height": 634
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-pipette.7c4b33ff182d.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-pipette.7c4b33ff182d.png",
+    "sha256": "7c4b33ff182d7b8459328991827d47243bf36c5df67c75840de83ee7c92fc1d4",
+    "bytes": 57053,
+    "width": 144,
+    "height": 634
+   },
+   "box": {
+    "height": 413.3,
+    "width": 93.87,
+    "x": 453.39,
+    "y": 400.58
+   },
+   "floorY": 814,
+   "opaque": {
+    "left": 2,
+    "right": 140
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.4226
+  },
+  "empire-50ml-18-415-clear-spray": {
+   "bodyId": "empire-50ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-spray.da315140dcc1.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-spray.da315140dcc1.png",
+    "sha256": "da315140dcc1dbab0c4006847beb65fffd3630e5a46bf9b78bf55b4823231107",
+    "bytes": 21253,
+    "width": 104,
+    "height": 722
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-spray.da315140dcc1.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-spray.da315140dcc1.png",
+    "sha256": "da315140dcc1dbab0c4006847beb65fffd3630e5a46bf9b78bf55b4823231107",
+    "bytes": 21253,
+    "width": 104,
+    "height": 722
+   },
+   "box": {
+    "height": 463.34,
+    "width": 66.74,
+    "x": 466.63,
+    "y": 412.14
+   },
+   "floorY": 875.25,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "grace-55ml-18-415-clear-bulb": {
+   "bodyId": "grace-55ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-bulb.65d09d85315f.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-bulb.65d09d85315f.png",
+    "sha256": "65d09d85315f906076eebaa23390cb2be441211f9878105218d7e9b7d487586f",
+    "bytes": 58228,
+    "width": 124,
+    "height": 1172
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-bulb.65d09d85315f.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-bulb.65d09d85315f.png",
+    "sha256": "65d09d85315f906076eebaa23390cb2be441211f9878105218d7e9b7d487586f",
+    "bytes": 58228,
+    "width": 124,
+    "height": 1172
+   },
+   "box": {
+    "height": 583.65,
+    "width": 61.75,
+    "x": 469.12,
+    "y": 384.78
+   },
+   "floorY": 968.21,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "grace-55ml-18-415-clear-lotion": {
+   "bodyId": "grace-55ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-lotion.6052f75fa6bf.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-lotion.6052f75fa6bf.png",
+    "sha256": "6052f75fa6bf6d422f437d868348a7e052fdd896fd3faabdf9ed479597b5bef1",
+    "bytes": 52081,
+    "width": 128,
+    "height": 1171
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-lotion.6052f75fa6bf.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-lotion.6052f75fa6bf.png",
+    "sha256": "6052f75fa6bf6d422f437d868348a7e052fdd896fd3faabdf9ed479597b5bef1",
+    "bytes": 52081,
+    "width": 128,
+    "height": 1171
+   },
+   "box": {
+    "height": 583.15,
+    "width": 63.74,
+    "x": 468.38,
+    "y": 385
+   },
+   "floorY": 968.21,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "grace-55ml-18-415-clear-spray": {
+   "bodyId": "grace-55ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-spray.197b668a54ae.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-spray.197b668a54ae.png",
+    "sha256": "197b668a54ae0bba304aa547d66a764f5e9790820cc3c269bd74d9d7ed02bb2b",
+    "bytes": 34747,
+    "width": 104,
+    "height": 1171
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-spray.197b668a54ae.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-spray.197b668a54ae.png",
+    "sha256": "197b668a54ae0bba304aa547d66a764f5e9790820cc3c269bd74d9d7ed02bb2b",
+    "bytes": 34747,
+    "width": 104,
+    "height": 1171
+   },
+   "box": {
+    "height": 583.15,
+    "width": 51.79,
+    "x": 474.1,
+    "y": 385.22
+   },
+   "floorY": 968.21,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "sleek-100ml-18-415-clear-bulb": {
+   "bodyId": "sleek-100ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-bulb.1a9bc2be9f91.png",
+    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-bulb.1a9bc2be9f91.png",
+    "sha256": "1a9bc2be9f910a73969d53cb679d4f30a2f92521ed208532f182dad4a49ac822",
+    "bytes": 75276,
+    "width": 124,
+    "height": 1532
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-bulb.1a9bc2be9f91.png",
+    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-bulb.1a9bc2be9f91.png",
+    "sha256": "1a9bc2be9f910a73969d53cb679d4f30a2f92521ed208532f182dad4a49ac822",
+    "bytes": 75276,
+    "width": 124,
+    "height": 1532
+   },
+   "box": {
+    "height": 592.14,
+    "width": 47.93,
+    "x": 476.04,
+    "y": 347.42
+   },
+   "floorY": 939.73,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "sleek-100ml-18-415-clear-spray": {
+   "bodyId": "sleek-100ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-spray.3ace517222e5.png",
+    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-spray.3ace517222e5.png",
+    "sha256": "3ace517222e5f277fe6abb88ffdf18f3108fc8180296ac42e2ea8cb6690e2c5e",
+    "bytes": 44275,
+    "width": 104,
+    "height": 1561
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-spray.3ace517222e5.png",
+    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-spray.3ace517222e5.png",
+    "sha256": "3ace517222e5f277fe6abb88ffdf18f3108fc8180296ac42e2ea8cb6690e2c5e",
+    "bytes": 44275,
+    "width": 104,
+    "height": 1561
+   },
+   "box": {
+    "height": 603.35,
+    "width": 40.2,
+    "x": 479.9,
+    "y": 336.56
+   },
+   "floorY": 939.73,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "sleek-50ml-18-415-clear-bulb": {
+   "bodyId": "sleek-50ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-bulb.1d069a608725.png",
+    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-bulb.1d069a608725.png",
+    "sha256": "1d069a6087252fd6783134fd07b0a88d00352338542b80ece7ad91a431fe3a6c",
+    "bytes": 70576,
+    "width": 124,
+    "height": 1426
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-bulb.1d069a608725.png",
+    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-bulb.1d069a608725.png",
+    "sha256": "1d069a6087252fd6783134fd07b0a88d00352338542b80ece7ad91a431fe3a6c",
+    "bytes": 70576,
+    "width": 124,
+    "height": 1426
+   },
+   "box": {
+    "height": 593.01,
+    "width": 51.57,
+    "x": 474.22,
+    "y": 354.17
+   },
+   "floorY": 947.33,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  },
+  "sleek-50ml-18-415-clear-spray": {
+   "bodyId": "sleek-50ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-spray.cf4609f01221.png",
+    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-spray.cf4609f01221.png",
+    "sha256": "cf4609f01221becc9276d97d25ba944f2b538ba80fd2a2843bfdb35944d5cb6a",
+    "bytes": 41065,
+    "width": 104,
+    "height": 1428
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-spray.cf4609f01221.png",
+    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-spray.cf4609f01221.png",
+    "sha256": "cf4609f01221becc9276d97d25ba944f2b538ba80fd2a2843bfdb35944d5cb6a",
+    "bytes": 41065,
+    "width": 104,
+    "height": 1428
+   },
+   "box": {
+    "height": 593.84,
+    "width": 43.25,
+    "x": 478.38,
+    "y": 353.59
+   },
+   "floorY": 947.33,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346
+  }
+ },
+ "skus": {
+  "GBDiva100AnSpBlk": {
+   "dy": 0.16,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpGl": {
+   "dy": 0.86,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpIvyGl": {
+   "dy": 0.86,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpIvySl": {
+   "dy": 0.11,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpLvn": {
+   "dy": 1.35,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpMtSl": {
+   "dy": 1.07,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpPnk": {
+   "dy": 0,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpRed": {
+   "dy": 0.37,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpTslBlk": {
+   "dy": 0.33,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpTslGl": {
+   "dy": 0.33,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpTslIvyGl": {
+   "dy": 0.33,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpTslIvySl": {
+   "dy": 0.33,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpTslLvn": {
+   "dy": 1.01,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpTslMtSl": {
+   "dy": 0.04,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpTslPnk": {
+   "dy": 0.34,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpTslRed": {
+   "dy": 0.33,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpTslWht": {
+   "dy": 0.33,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100AnSpWht": {
+   "dy": 0.56,
+   "group": "diva-100ml-18-415-clear-bulb"
+  },
+  "GBDiva100SpryCu": {
+   "dy": 0.36,
+   "group": "diva-100ml-18-415-clear-spray"
+  },
+  "GBDiva100SpryMtGl": {
+   "dy": 0.17,
+   "group": "diva-100ml-18-415-clear-spray"
+  },
+  "GBDiva100SpryMtSl": {
+   "dy": 1.46,
+   "group": "diva-100ml-18-415-clear-spray"
+  },
+  "GBDiva100SpryShnBlk": {
+   "dy": 0.6,
+   "group": "diva-100ml-18-415-clear-spray"
+  },
+  "GBDiva100SpryShnGl": {
+   "dy": 0.6,
+   "group": "diva-100ml-18-415-clear-spray"
+  },
+  "GBDiva100SpryShnSl": {
+   "dy": 0,
+   "group": "diva-100ml-18-415-clear-spray"
+  },
+  "GBDiva30AnSpBlk": {
+   "dy": 0.61,
+   "group": "diva-30ml-18-415-clear-bulb"
+  },
+  "GBDiva30AnSpGl": {
+   "dy": 0.71,
+   "group": "diva-30ml-18-415-clear-bulb"
+  },
+  "GBDiva30AnSpIvyGl": {
+   "dy": 0.71,
+   "group": "diva-30ml-18-415-clear-bulb"
+  },
+  "GBDiva30AnSpIvySl": {
+   "dy": 0.57,
+   "group": "diva-30ml-18-415-clear-bulb"
+  },
+  "GBDiva30AnSpLvn": {
+   "dy": 0,
+   "group": "diva-30ml-18-415-clear-bulb"
+  },
+  "GBDiva30AnSpMtSl": {
+   "dy": 1.12,
+   "group": "diva-30ml-18-415-clear-bulb"
+  },
+  "GBDiva30AnSpPnk": {
+   "dy": 0.65,
+   "group": "diva-30ml-18-415-clear-bulb"
+  },
+  "GBDiva30AnSpRed": {
+   "dy": 0.02,
+   "group": "diva-30ml-18-415-clear-bulb"
+  },
+  "GBDiva30AnSpWht": {
+   "dy": 0.41,
+   "group": "diva-30ml-18-415-clear-bulb"
+  },
+  "GBDiva30SpryCu": {
+   "dy": 1.3,
+   "group": "diva-30ml-18-415-clear-spray"
+  },
+  "GBDiva30SpryMtGl": {
+   "dy": 0.25,
+   "group": "diva-30ml-18-415-clear-spray"
+  },
+  "GBDiva30SpryMtSl": {
+   "dy": 1.88,
+   "group": "diva-30ml-18-415-clear-spray"
+  },
+  "GBDiva30SpryShnBlk": {
+   "dy": 0,
+   "group": "diva-30ml-18-415-clear-spray"
+  },
+  "GBDiva30SpryShnGl": {
+   "dy": 0.69,
+   "group": "diva-30ml-18-415-clear-spray"
+  },
+  "GBDiva30SpryShnSl": {
+   "dy": 1,
+   "group": "diva-30ml-18-415-clear-spray"
+  },
+  "GBDiva46AnSpBlk": {
+   "dy": 2.06,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpBlkRng": {
+   "dy": 2.06,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpGl": {
+   "dy": 0.71,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpIvyGl": {
+   "dy": 0.71,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpIvySl": {
+   "dy": 1.04,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpIvySlRng": {
+   "dy": 1.04,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpLvn": {
+   "dy": 1.06,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpLvnRng": {
+   "dy": 1.06,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpMtSl": {
+   "dy": 0.72,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpPnk": {
+   "dy": 1.38,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpRed": {
+   "dy": 2.07,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpRedRng": {
+   "dy": 2.07,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslBlk": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslBlkRng": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslGl": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslIvyGl": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslIvySl": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslIvySlRng": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslLvn": {
+   "dy": 0,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslLvnRng": {
+   "dy": 0,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslMtSl": {
+   "dy": 1.01,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslPnk": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslRed": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslRedRng": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslWht": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpTslWhtRng": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpWht": {
+   "dy": 2.06,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46AnSpWhtRng": {
+   "dy": 2.06,
+   "group": "diva-46ml-18-415-clear-bulb"
+  },
+  "GBDiva46DrpCu": {
+   "dy": 1,
+   "group": "diva-46ml-18-415-clear-pipette"
+  },
+  "GBDiva46DrpGl": {
+   "dy": 1,
+   "group": "diva-46ml-18-415-clear-pipette"
+  },
+  "GBDiva46DrpSl": {
+   "dy": 0,
+   "group": "diva-46ml-18-415-clear-pipette"
+  },
+  "GBDiva46SpryCu": {
+   "dy": 0.75,
+   "group": "diva-46ml-18-415-clear-spray"
+  },
+  "GBDiva46SpryMtGl": {
+   "dy": 0.1,
+   "group": "diva-46ml-18-415-clear-spray"
+  },
+  "GBDiva46SpryMtSl": {
+   "dy": 1.78,
+   "group": "diva-46ml-18-415-clear-spray"
+  },
+  "GBDiva46SpryShnBlk": {
+   "dy": 0.74,
+   "group": "diva-46ml-18-415-clear-spray"
+  },
+  "GBDiva46SpryShnGl": {
+   "dy": 0,
+   "group": "diva-46ml-18-415-clear-spray"
+  },
+  "GBDiva46SpryShnSl": {
+   "dy": 0.27,
+   "group": "diva-46ml-18-415-clear-spray"
+  },
+  "GBDivaFrst46AnSpBlk": {
+   "dy": 2.06,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpGl": {
+   "dy": 0.71,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpIvyGl": {
+   "dy": 0.71,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpIvySl": {
+   "dy": 2.04,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpLvn": {
+   "dy": 1.06,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpMtSl": {
+   "dy": 0.72,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpPnk": {
+   "dy": 1.38,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpRed": {
+   "dy": 2.07,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpTslBlk": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpTslGl": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpTslIvyGl": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpTslIvySl": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpTslLvn": {
+   "dy": 0,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpTslMtSl": {
+   "dy": 1.01,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpTslPnk": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpTslRed": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpTslWht": {
+   "dy": 1.66,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46AnSpWht": {
+   "dy": 2.06,
+   "group": "diva-46ml-18-415-frosted-bulb"
+  },
+  "GBDivaFrst46SpryCu": {
+   "dy": 0,
+   "group": "diva-46ml-18-415-frosted-spray"
+  },
+  "GBDivaFrst46SpryMtGl": {
+   "dy": 0.77,
+   "group": "diva-46ml-18-415-frosted-spray"
+  },
+  "GBDivaFrst46SpryMtSl": {
+   "dy": 1.64,
+   "group": "diva-46ml-18-415-frosted-spray"
+  },
+  "GBDivaFrst46SpryShnBlk": {
+   "dy": 0.32,
+   "group": "diva-46ml-18-415-frosted-spray"
+  },
+  "GBDivaFrst46SpryShnGl": {
+   "dy": 0.57,
+   "group": "diva-46ml-18-415-frosted-spray"
+  },
+  "GBDivaFrst46SpryShnSl": {
+   "dy": 0.82,
+   "group": "diva-46ml-18-415-frosted-spray"
+  },
+  "GBDmnd2ozAnSpBlk": {
+   "dy": 1.26,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpGl": {
+   "dy": 0.6,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpIvyGl": {
+   "dy": 0.6,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpIvySl": {
+   "dy": 1.84,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpLvn": {
+   "dy": 0.13,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpMtSl": {
+   "dy": 0.69,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpPnk": {
+   "dy": 1.32,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpRed": {
+   "dy": 1.34,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpTslBlk": {
+   "dy": 1.6,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpTslGl": {
+   "dy": 1.6,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpTslIvyGl": {
+   "dy": 1.6,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpTslIvySl": {
+   "dy": 1.6,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpTslLvn": {
+   "dy": 0,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpTslMtSl": {
+   "dy": 1.21,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpTslPnk": {
+   "dy": 1.6,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpTslRed": {
+   "dy": 1.6,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpTslWht": {
+   "dy": 1.6,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozAnSpWht": {
+   "dy": 1.22,
+   "group": "diamond-60ml-18-415-clear-bulb"
+  },
+  "GBDmnd2ozSpryCu": {
+   "dy": 0,
+   "group": "diamond-60ml-18-415-clear-spray"
+  },
+  "GBDmnd2ozSpryMtGl": {
+   "dy": 0.51,
+   "group": "diamond-60ml-18-415-clear-spray"
+  },
+  "GBDmnd2ozSpryMtSl": {
+   "dy": 1.62,
+   "group": "diamond-60ml-18-415-clear-spray"
+  },
+  "GBDmnd2ozSpryShnBlk": {
+   "dy": 0.66,
+   "group": "diamond-60ml-18-415-clear-spray"
+  },
+  "GBDmnd2ozSpryShnGl": {
+   "dy": 1.55,
+   "group": "diamond-60ml-18-415-clear-spray"
+  },
+  "GBDmnd2ozSpryShnSl": {
+   "dy": 2.03,
+   "group": "diamond-60ml-18-415-clear-spray"
+  },
+  "GBEmp100AnSpBlk": {
+   "dy": 0.05,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpGl": {
+   "dy": 1.13,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpIvyGl": {
+   "dy": 0.13,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpIvySl": {
+   "dy": 0.2,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpLvn": {
+   "dy": 0,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpMtSl": {
+   "dy": 0.5,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpPnk": {
+   "dy": 0.38,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpRed": {
+   "dy": 0.42,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpTslBlk": {
+   "dy": 0.68,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpTslGl": {
+   "dy": 0.68,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpTslIvyGl": {
+   "dy": 0.68,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpTslIvySl": {
+   "dy": 0.68,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpTslLvn": {
+   "dy": 0.49,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpTslMtSl": {
+   "dy": 0.92,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpTslPnk": {
+   "dy": 0.68,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpTslRed": {
+   "dy": 0.68,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpTslWht": {
+   "dy": 0.68,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100AnSpWht": {
+   "dy": 0.37,
+   "group": "empire-100ml-18-415-clear-bulb"
+  },
+  "GBEmp100SpryCu": {
+   "dy": 0.7,
+   "group": "empire-100ml-18-415-clear-spray"
+  },
+  "GBEmp100SpryMtGl": {
+   "dy": 0,
+   "group": "empire-100ml-18-415-clear-spray"
+  },
+  "GBEmp100SpryMtSl": {
+   "dy": 0.87,
+   "group": "empire-100ml-18-415-clear-spray"
+  },
+  "GBEmp100SpryShnBlk": {
+   "dy": 0.13,
+   "group": "empire-100ml-18-415-clear-spray"
+  },
+  "GBEmp100SpryShnGl": {
+   "dy": 0.6,
+   "group": "empire-100ml-18-415-clear-spray"
+  },
+  "GBEmp100SpryShnSl": {
+   "dy": 0.13,
+   "group": "empire-100ml-18-415-clear-spray"
+  },
+  "GBEmp50AnSpBlk": {
+   "dy": 0.28,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpGl": {
+   "dy": 0.55,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpIvyGl": {
+   "dy": 0.55,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpIvySl": {
+   "dy": 0.77,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpLvn": {
+   "dy": 0.13,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpMtSl": {
+   "dy": 0.66,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpPnk": {
+   "dy": 0.29,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpRed": {
+   "dy": 0.38,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpTslBlk": {
+   "dy": 0.33,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpTslGl": {
+   "dy": 0.33,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpTslIvyGl": {
+   "dy": 0.33,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpTslIvySl": {
+   "dy": 0.33,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpTslLvn": {
+   "dy": 0.74,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpTslMtSl": {
+   "dy": 0,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpTslPnk": {
+   "dy": 0.32,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpTslRed": {
+   "dy": 0.32,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpTslWht": {
+   "dy": 0.33,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50AnSpWht": {
+   "dy": 0.23,
+   "group": "empire-50ml-18-415-clear-bulb"
+  },
+  "GBEmp50DrpCu": {
+   "dy": 0,
+   "group": "empire-50ml-18-415-clear-pipette"
+  },
+  "GBEmp50DrpGl": {
+   "dy": 0,
+   "group": "empire-50ml-18-415-clear-pipette"
+  },
+  "GBEmp50DrpSl": {
+   "dy": 0,
+   "group": "empire-50ml-18-415-clear-pipette"
+  },
+  "GBEmp50SpryCu": {
+   "dy": 0,
+   "group": "empire-50ml-18-415-clear-spray"
+  },
+  "GBEmp50SpryMtGl": {
+   "dy": 0.43,
+   "group": "empire-50ml-18-415-clear-spray"
+  },
+  "GBEmp50SpryMtSl": {
+   "dy": 2.12,
+   "group": "empire-50ml-18-415-clear-spray"
+  },
+  "GBEmp50SpryShnBlk": {
+   "dy": 1.06,
+   "group": "empire-50ml-18-415-clear-spray"
+  },
+  "GBEmp50SpryShnGl": {
+   "dy": 0.32,
+   "group": "empire-50ml-18-415-clear-spray"
+  },
+  "GBEmp50SpryShnSl": {
+   "dy": 0.58,
+   "group": "empire-50ml-18-415-clear-spray"
+  },
+  "GBGrce55AnSpBlk": {
+   "dy": 0.39,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpGl": {
+   "dy": 0.19,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpIvyGl": {
+   "dy": 0.19,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpIvySl": {
+   "dy": 0.48,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpLvn": {
+   "dy": 0.62,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpMtSl": {
+   "dy": 0.37,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpPnk": {
+   "dy": 0.31,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpRed": {
+   "dy": 0.57,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpTslBlk": {
+   "dy": 0,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpTslGl": {
+   "dy": 1,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpTslIvyGl": {
+   "dy": 0,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpTslIvySl": {
+   "dy": 0,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpTslLvn": {
+   "dy": 0.65,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpTslMtSl": {
+   "dy": 0.61,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpTslPnk": {
+   "dy": 0,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpTslRed": {
+   "dy": 0,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpTslWht": {
+   "dy": 1,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55AnSpWht": {
+   "dy": 0.8,
+   "group": "grace-55ml-18-415-clear-bulb"
+  },
+  "GBGrce55SpryCu": {
+   "dy": 0.27,
+   "group": "grace-55ml-18-415-clear-spray"
+  },
+  "GBGrce55SpryMtGl": {
+   "dy": 0.83,
+   "group": "grace-55ml-18-415-clear-spray"
+  },
+  "GBGrce55SpryMtSl": {
+   "dy": 1.05,
+   "group": "grace-55ml-18-415-clear-spray"
+  },
+  "GBGrce55SpryShnBlk": {
+   "dy": 0,
+   "group": "grace-55ml-18-415-clear-spray"
+  },
+  "GBGrce55SpryShnGl": {
+   "dy": 1,
+   "group": "grace-55ml-18-415-clear-spray"
+  },
+  "GBGrce55SpryShnSl": {
+   "dy": 0.5,
+   "group": "grace-55ml-18-415-clear-spray"
+  },
+  "GBSlk100AnSpBlk": {
+   "dy": 2.88,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpGl": {
+   "dy": 2.87,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpIvyGl": {
+   "dy": 2.46,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpIvySl": {
+   "dy": 3.28,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpLvn": {
+   "dy": 4.93,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpMtSl": {
+   "dy": 4.93,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpPnk": {
+   "dy": 3.7,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpRed": {
+   "dy": 2.88,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpTslBlk": {
+   "dy": 0,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpTslGl": {
+   "dy": 0,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpTslIvyGl": {
+   "dy": 0,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpTslIvySl": {
+   "dy": 0,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpTslLvn": {
+   "dy": 0,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpTslMtSl": {
+   "dy": 2.47,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpTslPnk": {
+   "dy": 0,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpTslRed": {
+   "dy": 0,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpTslWht": {
+   "dy": 0,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100AnSpWht": {
+   "dy": 2.06,
+   "group": "sleek-100ml-18-415-clear-bulb"
+  },
+  "GBSlk100SpryCu": {
+   "dy": 1.95,
+   "group": "sleek-100ml-18-415-clear-spray"
+  },
+  "GBSlk100SpryMtGl": {
+   "dy": 0,
+   "group": "sleek-100ml-18-415-clear-spray"
+  },
+  "GBSlk100SpryMtSl": {
+   "dy": 3.49,
+   "group": "sleek-100ml-18-415-clear-spray"
+  },
+  "GBSlk100SpryShnBlk": {
+   "dy": 3.65,
+   "group": "sleek-100ml-18-415-clear-spray"
+  },
+  "GBSlk100SpryShnGl": {
+   "dy": 3.96,
+   "group": "sleek-100ml-18-415-clear-spray"
+  },
+  "GBSlk100SpryShnSl": {
+   "dy": 2.72,
+   "group": "sleek-100ml-18-415-clear-spray"
+  },
+  "GBSlk50AnSpBlk": {
+   "dy": 3.11,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpGl": {
+   "dy": 3.11,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpIvyGl": {
+   "dy": 2.67,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpIvySl": {
+   "dy": 3.55,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpLvn": {
+   "dy": 5.31,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpMtSl": {
+   "dy": 5.32,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpPnk": {
+   "dy": 3.99,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpRed": {
+   "dy": 3.1,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpTslBlk": {
+   "dy": 0,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpTslGl": {
+   "dy": 0,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpTslIvyGl": {
+   "dy": 0,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpTslIvySl": {
+   "dy": 0,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpTslLvn": {
+   "dy": 0,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpTslMtSl": {
+   "dy": 2.65,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpTslPnk": {
+   "dy": 0,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpTslRed": {
+   "dy": 0,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpTslWht": {
+   "dy": 0,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50AnSpWht": {
+   "dy": 2.22,
+   "group": "sleek-50ml-18-415-clear-bulb"
+  },
+  "GBSlk50SpryCu": {
+   "dy": 0.06,
+   "group": "sleek-50ml-18-415-clear-spray"
+  },
+  "GBSlk50SpryMtGl": {
+   "dy": 0,
+   "group": "sleek-50ml-18-415-clear-spray"
+  },
+  "GBSlk50SpryMtSl": {
+   "dy": 1.66,
+   "group": "sleek-50ml-18-415-clear-spray"
+  },
+  "GBSlk50SpryShnBlk": {
+   "dy": 0.82,
+   "group": "sleek-50ml-18-415-clear-spray"
+  },
+  "GBSlk50SpryShnGl": {
+   "dy": 1.14,
+   "group": "sleek-50ml-18-415-clear-spray"
+  },
+  "GBSlk50SpryShnSl": {
+   "dy": 0.88,
+   "group": "sleek-50ml-18-415-clear-spray"
+  },
+  "LBDiva100LtnClOvrCap": {
+   "dy": 0.77,
+   "group": "diva-100ml-18-415-clear-lotion"
+  },
+  "LBDiva100LtnCu": {
+   "dy": 0.38,
+   "group": "diva-100ml-18-415-clear-lotion"
+  },
+  "LBDiva100LtnMtGl": {
+   "dy": 0.17,
+   "group": "diva-100ml-18-415-clear-lotion"
+  },
+  "LBDiva100LtnMtSl": {
+   "dy": 1.46,
+   "group": "diva-100ml-18-415-clear-lotion"
+  },
+  "LBDiva100LtnShnBlk": {
+   "dy": 0,
+   "group": "diva-100ml-18-415-clear-lotion"
+  },
+  "LBDiva100LtnShnGl": {
+   "dy": 0.6,
+   "group": "diva-100ml-18-415-clear-lotion"
+  },
+  "LBDiva100LtnShnSl": {
+   "dy": 0,
+   "group": "diva-100ml-18-415-clear-lotion"
+  },
+  "LBDiva30LtnClOvrCap": {
+   "dy": 1.06,
+   "group": "diva-30ml-18-415-clear-lotion"
+  },
+  "LBDiva30LtnCu": {
+   "dy": 0.3,
+   "group": "diva-30ml-18-415-clear-lotion"
+  },
+  "LBDiva30LtnMtGl": {
+   "dy": 0.25,
+   "group": "diva-30ml-18-415-clear-lotion"
+  },
+  "LBDiva30LtnMtSl": {
+   "dy": 1.88,
+   "group": "diva-30ml-18-415-clear-lotion"
+  },
+  "LBDiva30LtnShnBlk": {
+   "dy": 0,
+   "group": "diva-30ml-18-415-clear-lotion"
+  },
+  "LBDiva30LtnShnGl": {
+   "dy": 0.69,
+   "group": "diva-30ml-18-415-clear-lotion"
+  },
+  "LBDiva30LtnShnSl": {
+   "dy": 1,
+   "group": "diva-30ml-18-415-clear-lotion"
+  },
+  "LBDiva46LtnClOvrCap": {
+   "dy": 0.13,
+   "group": "diva-46ml-18-415-clear-lotion"
+  },
+  "LBDiva46LtnCu": {
+   "dy": 0,
+   "group": "diva-46ml-18-415-clear-lotion"
+  },
+  "LBDiva46LtnMtGl": {
+   "dy": 0.13,
+   "group": "diva-46ml-18-415-clear-lotion"
+  },
+  "LBDiva46LtnMtSl": {
+   "dy": 1.13,
+   "group": "diva-46ml-18-415-clear-lotion"
+  },
+  "LBDiva46LtnShnBlk": {
+   "dy": 0.76,
+   "group": "diva-46ml-18-415-clear-lotion"
+  },
+  "LBDiva46LtnShnGl": {
+   "dy": 0.03,
+   "group": "diva-46ml-18-415-clear-lotion"
+  },
+  "LBDiva46LtnShnSl": {
+   "dy": 0.29,
+   "group": "diva-46ml-18-415-clear-lotion"
+  },
+  "LBDivaFrst46LtnClOvrCap": {
+   "dy": 0.75,
+   "group": "diva-46ml-18-415-frosted-lotion"
+  },
+  "LBDivaFrst46LtnCu": {
+   "dy": 0,
+   "group": "diva-46ml-18-415-frosted-lotion"
+  },
+  "LBDivaFrst46LtnMtGl": {
+   "dy": 0.71,
+   "group": "diva-46ml-18-415-frosted-lotion"
+  },
+  "LBDivaFrst46LtnMtSl": {
+   "dy": 0.76,
+   "group": "diva-46ml-18-415-frosted-lotion"
+  },
+  "LBDivaFrst46LtnShnBlk": {
+   "dy": 0.86,
+   "group": "diva-46ml-18-415-frosted-lotion"
+  },
+  "LBDivaFrst46LtnShnGl": {
+   "dy": 0.55,
+   "group": "diva-46ml-18-415-frosted-lotion"
+  },
+  "LBDivaFrst46LtnShnSl": {
+   "dy": 0.78,
+   "group": "diva-46ml-18-415-frosted-lotion"
+  },
+  "LBDmnd2ozLtnClOvrCap": {
+   "dy": 0.63,
+   "group": "diamond-60ml-18-415-clear-lotion"
+  },
+  "LBDmnd2ozLtnCu": {
+   "dy": 0.79,
+   "group": "diamond-60ml-18-415-clear-lotion"
+  },
+  "LBDmnd2ozLtnMtGl": {
+   "dy": 0.48,
+   "group": "diamond-60ml-18-415-clear-lotion"
+  },
+  "LBDmnd2ozLtnMtSl": {
+   "dy": 1.59,
+   "group": "diamond-60ml-18-415-clear-lotion"
+  },
+  "LBDmnd2ozLtnShnBlk": {
+   "dy": 0,
+   "group": "diamond-60ml-18-415-clear-lotion"
+  },
+  "LBDmnd2ozLtnShnGl": {
+   "dy": 0.89,
+   "group": "diamond-60ml-18-415-clear-lotion"
+  },
+  "LBDmnd2ozLtnShnSl": {
+   "dy": 2,
+   "group": "diamond-60ml-18-415-clear-lotion"
+  },
+  "LBEmp100LtnClOvrCap": {
+   "dy": 0,
+   "group": "empire-100ml-18-415-clear-lotion"
+  },
+  "LBEmp100LtnCu": {
+   "dy": 1.15,
+   "group": "empire-100ml-18-415-clear-lotion"
+  },
+  "LBEmp100LtnMtGl": {
+   "dy": 0.53,
+   "group": "empire-100ml-18-415-clear-lotion"
+  },
+  "LBEmp100LtnMtSl": {
+   "dy": 1.4,
+   "group": "empire-100ml-18-415-clear-lotion"
+  },
+  "LBEmp100LtnShnBlk": {
+   "dy": 0.66,
+   "group": "empire-100ml-18-415-clear-lotion"
+  },
+  "LBEmp100LtnShnGl": {
+   "dy": 1.13,
+   "group": "empire-100ml-18-415-clear-lotion"
+  },
+  "LBEmp100LtnShnSl": {
+   "dy": 0.66,
+   "group": "empire-100ml-18-415-clear-lotion"
+  },
+  "LBEmp100WhtClOvrCp": {
+   "dy": 0.38,
+   "group": "empire-100ml-18-415-clear-lotion"
+  },
+  "LBEmp50LtnClOvrCap": {
+   "dy": 0.12,
+   "group": "empire-50ml-18-415-clear-lotion"
+  },
+  "LBEmp50LtnCu": {
+   "dy": 0,
+   "group": "empire-50ml-18-415-clear-lotion"
+  },
+  "LBEmp50LtnMtGl": {
+   "dy": 0.12,
+   "group": "empire-50ml-18-415-clear-lotion"
+  },
+  "LBEmp50LtnMtSl": {
+   "dy": 1.81,
+   "group": "empire-50ml-18-415-clear-lotion"
+  },
+  "LBEmp50LtnShnBlk": {
+   "dy": 0.75,
+   "group": "empire-50ml-18-415-clear-lotion"
+  },
+  "LBEmp50LtnShnGl": {
+   "dy": 0.01,
+   "group": "empire-50ml-18-415-clear-lotion"
+  },
+  "LBEmp50LtnShnSl": {
+   "dy": 0.27,
+   "group": "empire-50ml-18-415-clear-lotion"
+  },
+  "LBEmp50WhtClOvrCp": {
+   "dy": 1.45,
+   "group": "empire-50ml-18-415-clear-lotion"
+  },
+  "LBGrce55LtnClOvrCap": {
+   "dy": 2.23,
+   "group": "grace-55ml-18-415-clear-lotion"
+  },
+  "LBGrce55LtnCu": {
+   "dy": 0,
+   "group": "grace-55ml-18-415-clear-lotion"
+  },
+  "LBGrce55LtnMtGl": {
+   "dy": 1.25,
+   "group": "grace-55ml-18-415-clear-lotion"
+  },
+  "LBGrce55LtnMtSl": {
+   "dy": 1.74,
+   "group": "grace-55ml-18-415-clear-lotion"
+  },
+  "LBGrce55LtnShnBlk": {
+   "dy": 0.22,
+   "group": "grace-55ml-18-415-clear-lotion"
+  },
+  "LBGrce55LtnShnGl": {
+   "dy": 1.22,
+   "group": "grace-55ml-18-415-clear-lotion"
+  },
+  "LBGrce55LtnShnSl": {
+   "dy": 0.17,
+   "group": "grace-55ml-18-415-clear-lotion"
+  }
+ }
+}
