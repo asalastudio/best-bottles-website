@@ -30,6 +30,9 @@ function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart, stage:
     // The shaft and tube cut from a catalogue hero (src/lib/register/dip-tubes.ts) are the hero's own pixels, white shaft
     // included; multiplying would erase the shaft into the glass.
     if (part.slot === "diptube" && part.image.url.startsWith("/images/register/tubes/")) return false;
+    // The photographed PSD tubes and pipettes (seated-dip-tubes.py) are milky plastic and glass drawn as in the PSD;
+    // multiplying their white body would erase it, leaving only the outline.
+    if (part.image.url.startsWith("/images/approved-masters/dip-tube-")) return false;
     return config.color === "Clear" && (part.slot === "diptube"
         || (part.slot === "body" && (stage === "body" || config.fitment !== "Dropper" || splitDropper)));
 }
