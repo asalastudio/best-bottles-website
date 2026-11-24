@@ -14,6 +14,9 @@ const tops = overcapTops.rows as Record<string, { image: { url: string; width: n
 /** The overcap box the seating starts from: the restored-top box where there is one. */
 const startBox = (sku: string, slot: string, box: Box) => slot === "overcap" && tops[sku] ? tops[sku].box : box;
 const FITMENT = new Set(["pump", "sprayer", "overcap", "diptube"]);
+/** Dip tubes and pipettes are refitted after the seating, from the seated heads (seated-dip-tubes.py, 24 Nov 2026,
+ * tests/seated-dip-tubes-2026-11-24.test.ts); these checks cover everything else. */
+const withoutTubes = <K extends { parts: Array<{ slot: string }> }>(kit: K): K => ({ ...kit, parts: kit.parts.filter(part => part.slot !== "diptube" && part.slot !== "pipette") });
 
 describe("Diva fitments seated on the shoulder and centred on the neck (2026-11-07)", () => {
     it("resizes the 100 ml and 46 ml frosted fitments and only centres the 30 ml and 46 ml clear ones", () => {
@@ -38,8 +41,8 @@ describe("Diva fitments seated on the shoulder and centred on the neck (2026-11-
 
     it("scales each fitment about its collar foot, centres the collar on the neck and leaves the glass alone", () => {
         for (const [sku, seat] of Object.entries(seats)) {
-            const before = originalApprovedComponentKit(sku)!;
-            const after = approvedComponentKit(sku)!;
+            const before = withoutTubes(originalApprovedComponentKit(sku)!);
+            const after = withoutTubes(approvedComponentKit(sku)!);
             expect(after.register?.bodyId).toBe(seat.bodyId);
             expect(after.parts).toHaveLength(before.parts.length);
             for (const [index, part] of after.parts.entries()) {
@@ -65,7 +68,7 @@ describe("Diva fitments seated on the shoulder and centred on the neck (2026-11-
         expect(untouched.length).toBeGreaterThan(0);
         for (const sku of [...untouched, "GBDiva100AnSpGl", "GBDiva100RdcrShnGl"]) {
             expect(Object.hasOwn(seats, sku)).toBe(false);
-            expect(approvedComponentKit(sku), sku).toEqual(originalApprovedComponentKit(sku));
+            expect(withoutTubes(approvedComponentKit(sku)!), sku).toEqual(withoutTubes(originalApprovedComponentKit(sku)!));
         }
     });
 

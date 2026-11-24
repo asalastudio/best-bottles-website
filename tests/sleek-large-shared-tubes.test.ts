@@ -15,7 +15,8 @@ describe("Sleek 18-415 shared tubes", () => {
             const body = kit.parts.find(p => p.slot === "body")!;
             const lotion = kit.parts.some(p => p.slot === "pump");
             const regeneratedSpray = /^GBSlk(?:50|100)(?:Spry|AnSp)/.test(sku);
-            const expectedTube = regeneratedSpray ? "/sleek-18-415-spray-regenerated.webp"
+            // Sprayers draw the photographed PSD tube fitted to the glass (seated-dip-tubes.py, 24 Nov 2026).
+            const expectedTube = regeneratedSpray ? "/images/approved-masters/dip-tube-sleek-"
                 : lotion ? "/lotion" : "/finemist-tube-90380032f33f.png";
             for (const view of ["sidecar", "capon", "exploded"] as const) {
                 const tubes = stageLayout(kit, view, { websiteSku: sku })!.parts.filter(p => p.slot === "diptube");
