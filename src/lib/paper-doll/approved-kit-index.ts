@@ -17,6 +17,8 @@ const reducer25Skus = new Set<string>(reducers25.skus);
 const body25Skus = new Set<string>(body25.skus);
 const jumbo28MeasuredSkus = new Set(["GBMtlRoll28Wht", "GBCyl1ozRollWht", "GBRoll28Blk", "GBMtlRoll28Blk"]);
 export const APPROVED_KIT_VERSION = index.version;
+/** 28 ml Cylinder roll-ons on the reviewed Sunburst glass (approved-component-kits.ts, 24 Nov 2026). */
+export const CYLINDER28_KIT_VERSION = "jumbo28-sunburst-glass-v2-20261124";
 export const CYLINDER9_COLOR_VERSION = index.version + "-cylinder9-colors-v2-20261102";
 const spraySkus = new Set<string>(sprays.skus);
 const jumboSkus = new Set<string>(jumbo.skus);
@@ -44,7 +46,7 @@ export function updatedCylinderKitVersion(sku: string | null | undefined): strin
     if (sku.startsWith("GBTulip6") && skus.has(sku)) return "tulip6-clear-glass-v1";
     // Diva fitments seated and centred, overcap tops restored (approved-component-kits.ts, 7 Nov 2026).
     if (isCorrectedDivaKit(sku)) return DIVA_KIT_VERSION;
-    if (jumbo28MeasuredSkus.has(sku)) return `${index.version}-jumbo28-measured-v1`;
+    if (jumbo28MeasuredSkus.has(sku)) return `${index.version}-${CYLINDER28_KIT_VERSION}`;
     if (body25Skus.has(sku)) return body25.version + "-clear-refraction-v3";
     if (cylinderLargeReducerGraceSku(sku)) return "cylinder-large-reducer-refraction-v3";
     if (/^(?:GB|LB)Cyl(?:50|100)(?:Spry|AnSp|Ltn)/i.test(sku)

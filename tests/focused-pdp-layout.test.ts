@@ -49,7 +49,10 @@ describe("focused PDP layout", () => {
         const html = renderShell();
 
         expect(html).toContain('[data-grace-layout="push"] .focused-pdp-grid{grid-template-columns:minmax(0, 0.72fr) minmax(280px, 1.28fr)');
-        expect(html).toContain('[data-grace-layout="push"] .focused-pdp-stage-plate{max-height:min(52vh,520px)}');
+        // The plate is capped at 52vh / 520 px, and its width follows the same cap so it stays 10:11
+        // (aspect-ratio alone yields to max-height and the plate would stretch wide).
+        expect(html).toContain('[data-grace-layout="push"] .focused-pdp-stage-plate{max-height:min(52vh,520px);width:min(100%, calc(min(52vh, 520px) * 10 / 11))}');
+        expect(html).toContain(".focused-pdp-stage-plate{aspect-ratio:10 / 11;max-height:min(72vh,720px);width:min(100%, calc(min(72vh, 720px) * 10 / 11))");
         expect(html).not.toContain("focused-pdp-purchase{display:none");
     });
 

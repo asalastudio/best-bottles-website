@@ -36,6 +36,8 @@ import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
 import PdpPhotoCanvas from "./PdpPhotoCanvas";
+import ComponentPortraitFrame from "./ComponentPortraitFrame";
+import { componentPortrait } from "@/lib/products/component-portrait";
 import { explodedKitFrame, orderExplodedOvercap, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
 import { capacityMlFromSlug, parseProductSlug } from "@/lib/products/group-variant-intent";
 import { pdpStageFrame, pdpStageTransformCss } from "@/lib/products/pdp-stage-frame";
@@ -472,6 +474,8 @@ export default function ConfiguratorPdp({
   const has3d = hasApproved3d && Boolean(fam) && !fam?.photoOnly;
   const dimensions = { heightWithCap, heightWithoutCap, diameter };
   const showDimensions = requestedStageMode === "dimensions" && hasRealPdpDimensions(dimensions);
+  const componentPhoto = componentPortrait(websiteSku);
+  const portraitHasCap = Boolean(componentPhoto?.capOn?.layers.length) && !showDimensions;
   const showPlate = !(show3d && has3d) && Boolean(plate);
   const showPhoto = !showPlate && !(show3d && has3d) && Boolean(photoFallback);
   const showLive3d = !showPlate && !showPhoto && has3d;
@@ -487,6 +491,11 @@ export default function ConfiguratorPdp({
               {diameter?.trim() ? <DimensionRow label="Diameter" value={diameter} /> : null}
             </dl>
           </div>
+        </div>
+      ) : componentPhoto ? (
+        <div className="relative h-full w-full bg-[#f5f3ef]" data-visual-mode="component-portrait" data-bb-website-sku={websiteSku ?? undefined}>
+          <ComponentPortraitFrame portrait={componentPhoto} label={groupTitle} eager
+            view={withCap ? "capOn" : "capOff"} />
         </div>
       ) : showPlate ? (
         <div className={`relative h-full w-full ${boneStage ? "bg-bone" : "bg-white"}`} data-paper-doll={showKitLayers ? "kit" : heroStage ? "hero" : "plate"}>
@@ -570,11 +579,11 @@ export default function ConfiguratorPdp({
             </span>
           </span>
         ) : <span />}
-        {canCap && (
+        {(canCap || portraitHasCap) && (
           <button type="button" onClick={() => setWithCap((v) => !v)}
                   aria-pressed={withCap} aria-label="Cap on or off"
-                  disabled={!capToggleLive}
-                  title={capToggleLive ? undefined : "Cap-off photograph not published for this colourway yet"}
+                  disabled={!capToggleLive && !portraitHasCap}
+                  title={capToggleLive || portraitHasCap ? undefined : "Cap-off photograph not published for this colourway yet"}
                   className="pointer-events-auto flex items-center gap-2.5 disabled:cursor-not-allowed disabled:opacity-40">
             <span className="text-2xs font-semibold uppercase tracking-label text-obsidian whitespace-nowrap">
               {withCap ? "Cap on" : "Cap off"}
