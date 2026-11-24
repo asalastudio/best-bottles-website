@@ -25,7 +25,8 @@ it("covers every approved source with immutable display copies and leaves unknow
         }
     }
     const releaseCopies = Object.entries(delivery.sources).filter(([url]) => url.startsWith("/images/approved-masters/"));
-    expect(releaseCopies).toHaveLength(6);   // + the Boston Round 20-400 metal and plastic roller inserts (2026-11-20)
+    expect(releaseCopies).toHaveLength(46);   // + the Boston Round 20-400 metal and plastic roller inserts (2026-11-20)
+    // + the 40 photographed PSD dip tubes and pipettes (seated-dip-tubes.py, 2026-11-24)
     for (const [source, copies] of releaseCopies) {
         expect(source).toMatch(/\.[a-f0-9]{12}\.(?:webp|png)$/);
         for (const copy of Object.values(copies)) {
