@@ -2,6 +2,7 @@ import "server-only";
 import pillarCaps from "../../../public/local-kits/pillar-caps-2026-11-04/kits.json";
 import pillarSprayers from "../../../public/local-kits/pillar-masters-2026-11-04/kits.json";
 import bostonMasters from "../../../public/local-kits/boston-masters-2026-11-03/kits.json";
+import jumboGlass from "../../../public/local-kits/jumbo-glass-2026-11-04/kits.json";
 import { aliases } from "../products/display-images.generated.json";
 import { isPillarRollOnSku, PILLAR_POUR_CAP_SUFFIXES } from "../products/pillar-master";
 import manifest from "./approved-kits.generated.json";
@@ -14,9 +15,11 @@ import divaOvercapTops from "./diva-overcap-tops.json";
 import sleekTubes from "./sleek-large-tubes.generated.json";
 import cylinder25Droppers from "./cylinder25-dropper.generated.json";
 import cylinder25Reducers from "./cylinder25-reducers.generated.json";
+import seatedDipTubes from "./seated-dip-tubes.generated.json";
 import { CYLINDER25_COPPER_OVERCAP } from "../register/cylinder25-copper-overcap";
 import { withSelected25LotionTube } from "../register/cylinder-lotion-tube";
 import type { KitLike } from "@/lib/products/pdp-redesign/stage";
+import { CYLINDER28_CLEAR_TWIN, frostedFromClearKit } from "@/lib/products/pdp-redesign/cylinder28-frosted";
 import type { BuilderKit, BuilderPart } from "@/lib/bottle-builder/model";
 
 /** Exact owner-approved recipes, independent of the localhost candidate loader. */
@@ -363,6 +366,14 @@ const tulipRows = Object.fromEntries(Object.entries(existingRows).flatMap(([sku,
             box: { x: left - 152 * sx, y: top - 103 * sy, width: tulipGlass.width * sx, height: tulipGlass.height * sy } };
     }) }]];
 }));
+// The five clear Elegant 30 ml sprayer recipes recorded their seat at the foot of their dip tube (y ~1012), not where
+// the sprayer seats on the shoulder as every other Elegant 30 ml recipe does (frosted sprayers and the caps): the neck
+// callout pointed at the base of the bottle and the parts audit read the sprayer as floating (24 Nov 2026).
+const elegant30SeatRows = Object.fromEntries(Object.entries(existingRows).flatMap(([sku, kit]) => {
+    const sprayer = kit.familyId === "elegant-30ml-clear-15-415" ? kit.parts.find(part => part.slot === "sprayer") : undefined;
+    if (!sprayer || kit.anchors.seatY <= sprayer.bounds.bottom + 2) return [];
+    return [[sku, { ...kit, anchors: { ...kit.anchors, seatY: sprayer.bounds.bottom } }]];
+}));
 /**
  * Boston Round 20-400 roll-ons (30 and 60 ml, every glass and roller): the 3 Nov review kits, live from 20 Nov 2026
  * (Jordan: "use the new roll-on plugs"). CAP ON and CAP OFF are the register's seated roller, body and cap exactly as
@@ -382,6 +393,51 @@ function hostedBostonKit(kit: BuilderKit): BuilderKit {
 }
 const bostonRollOnRows = Object.fromEntries(Object.entries(bostonMasters.rows as unknown as Record<string, BuilderKit>)
     .filter(([sku]) => isBostonRollOnSku(sku)).map(([sku, kit]) => [sku, hostedBostonKit(kit)]));
+/**
+ * Cylinder 28 ml 16 mm roll-ons (Clear and Frosted, metal and plastic roller, black and white cap): the 4 Nov
+ * Sunburst glass review kits (jumbo-glass-2026-11-04), live from 24 Nov 2026. Clear draws the reviewed clear body;
+ * Frosted wears its clear twin's roller and cap with the reviewed frosted body (cylinder28-frosted.ts). Rollers and
+ * caps are the same images as before, re-seated: the cap sits on the new body's shoulder, the roller on the rim.
+ * The bodies are served from /images/approved-masters (publish-jumbo28-glass.mjs); the rollers and caps were
+ * already hosted. The owner-measured size stays: 81.73 mm bare height against the 97.77 mm 50 ml bottle.
+ * Clear SKUs were already approved masters (catalog cards follow); Frosted SKUs are product page and builder
+ * recipes only, not approved masters (approvedMasterSku), so their catalog cards are unchanged.
+ */
+export const isCylinder28RollOnSku = (sku: string) => /^(?:GBMtlRoll28(?:Blk|Wht)|GBRoll28Blk|GBCyl1ozRollWht|GBCylFrst28(?:Mtl)?Roll(?:Blk|Wht))$/.test(sku);
+function hostedReviewKit(kit: BuilderKit, label: string): BuilderKit {
+    const hosted = <T extends { url: string }>(image: T): T => {
+        if (!image.url.startsWith("/local-kits/") && !image.url.startsWith("/reviews/")) return image;
+        const url = publishedImageAliases[image.url];
+        if (!url) throw new Error(`Missing approved ${label} image for ${kit.sku}: ${image.url}`);
+        return { ...image, url, ...("key" in image ? { key: url.startsWith("/") ? url : new URL(url).pathname.slice(1) } : {}) };
+    };
+    return { ...kit, parts: kit.parts.map(part => ({
+        ...part,
+        image: hosted(part.image),
+        image2x: part.image2x ? hosted(part.image2x) : part.image2x,
+        mask: part.mask ? hosted(part.mask) : part.mask,
+        ...(part.detached ? { detached: { ...part.detached, image: hosted(part.detached.image) } } : {}),
+    })) };
+}
+const jumbo28Review = Object.fromEntries(Object.entries(jumboGlass.rows as unknown as Record<string, BuilderKit>)
+    .filter(([sku, kit]) => kit.sku === sku && kit.register?.bodyId === "cylinder-28ml-16mm"));
+const cylinder28Rows = Object.fromEntries([
+    ...Object.entries(jumbo28Review),
+    ...Object.entries(CYLINDER28_CLEAR_TWIN).flatMap(([sku, twin]) => {
+        const frosted = frostedFromClearKit(jumbo28Review[twin.websiteSku], sku);
+        return frosted ? [[sku, frosted] as const] : [];
+    }),
+].map(([sku, kit]) => {
+    // Keep the owner-measured scale: the same glass height on stage, measured from the new shoulder landmark.
+    const measured = correctedJumbo28[(CYLINDER28_CLEAR_TWIN[sku]?.websiteSku ?? sku)]?.glassSizing;
+    const body = kit.parts.find(part => part.slot === "body")!;
+    const glassSizing = measured?.landmarkY === undefined || kit.glassSizing?.landmarkY === undefined ? kit.glassSizing : {
+        ...kit.glassSizing,
+        heightPct: measured.heightPct * (body.bounds.bottom - kit.glassSizing.landmarkY) / (body.bounds.bottom - measured.landmarkY),
+        source: measured.source,
+    };
+    return [sku, hostedReviewKit({ ...kit, glassSizing }, "28 ml Cylinder roll-on")];
+})) as Record<string, BuilderKit>;
 // Diva lotion pumps and fine-mist sprayers were drawn small or off-centre: at 100 ml the collar was ~11% narrower than
 // the glass thread band, so ridges showed either side and the pump looked perched; the 46 ml frosted fitments were
 // 3-5% small; and many 30/46 ml collars sat 2-7 px off the neck (Jordan, 7 Nov 2026: "all pumps need alignment").
@@ -425,12 +481,57 @@ function withDivaOvercapTops(source: Record<string, BuilderKit>): Record<string,
     }));
 }
 
-// The Diva corrections touch only Diva kits; the Boston roll-on recipes are added after them, unchanged.
-const rows: Record<string, BuilderKit> = { ...withDivaSeating(withDivaOvercapTops({ ...existingRows, ...revisedRows, ...pillarRows, ...tulipRows })), ...bostonRollOnRows };
+/**
+ * Real dip tubes and pipettes inside the capped glass (24 Nov 2026 parts audit). Diva 30/46/100, Empire 50/100,
+ * Diamond 60 and Grace 55 drew their tube only in EXPLODED, their Diva 46 and Empire 50 droppers had no pipette
+ * capped, and the Sleek 50/100 sprayers drew a tube stretched 1.5x (a stub under the tassel sprayers, whose bounds
+ * include the tassel). scripts/paperdoll/seated-dip-tubes.py fits one photographed PSD tube per glass and fitment by
+ * measurement: the sprayer, pump or dropper's stem exit on the neck axis, the glass's inner floor, the kit's px/mm.
+ * Clear glass shows the tube as photographed, frosted at 30 %, fluted Diva and Diamond in slivers between the
+ * flute ridges; EXPLODED lifts the same tube, whole, with its head. A dropper keeps its EXPLODED complete dropper.
+ */
+type SeatedTubeImage = BuilderPart["image"];
+type SeatedTubeGroup = { bodyId: string; glass: string; kind: "spray" | "lotion" | "bulb" | "pipette"; seated: SeatedTubeImage; exploded: SeatedTubeImage;
+    box: { x: number; y: number; width: number; height: number }; floorY: number; opaque: { left: number; right: number }; opacity: number };
+const seatedTubeGroups = seatedDipTubes.groups as Record<string, SeatedTubeGroup>;
+const seatedTubeSkus = seatedDipTubes.skus as Record<string, { group: string; dy: number }>;
+const HOLDER_SLOT = { spray: "sprayer", bulb: "sprayer", lotion: "pump", pipette: "fitment" } as const;
+export function withSeatedDipTube(sku: string, kit: BuilderKit): BuilderKit {
+    const entry = Object.hasOwn(seatedTubeSkus, sku) ? seatedTubeSkus[sku] : null;
+    const group = entry ? seatedTubeGroups[entry.group] : null;
+    if (!entry || !group || kit.register?.bodyId !== group.bodyId || kit.register.glass !== group.glass) return kit;
+    const seatedPart = (part: BuilderPart) => !part.views || part.views.includes("capon");
+    const holder = kit.parts.find(part => part.slot === HOLDER_SLOT[group.kind] && seatedPart(part));
+    const body = kit.parts.find(part => part.slot === "body");
+    if (!holder || !body) return kit;
+    const slot = group.kind === "pipette" ? "pipette" as const : "diptube" as const;
+    const box = { ...group.box, y: group.box.y + entry.dy };
+    const scale = box.width / group.seated.width;
+    const bottom = box.y + box.height;
+    const tube = (image: SeatedTubeImage, views: NonNullable<BuilderPart["views"]>, opacity?: number): BuilderPart => ({
+        slot, variantKey: null, zOrder: (body.zOrder + holder.zOrder) / 2, explodeIndex: holder.explodeIndex,
+        bounds: { left: box.x + group.opaque.left * scale, right: box.x + group.opaque.right * scale, top: box.y, bottom: Math.min(bottom, group.floorY) },
+        assembled: { x: 0, y: 0 }, exploded: holder.exploded, image, image2x: null, mask: null, derivation: "psd-layer",
+        box, componentId: holder.componentId ?? null, views,
+        ...(bottom > group.floorY ? { trimBottomPct: (bottom - group.floorY) / box.height * 100 } : {}),
+        ...(opacity !== undefined && opacity < 1 ? { opacity } : {}),
+    });
+    const seated = tube(group.seated, ["sidecar", "capon"], group.opacity);
+    // A tube replaces every earlier tube of the kit; a pipette joins the dropper's EXPLODED complete dropper.
+    const kept = slot === "diptube" ? kit.parts.filter(part => part.slot !== "diptube") : kit.parts;
+    return { ...kit, parts: [...kept, seated, ...(slot === "diptube" ? [tube(group.exploded, ["exploded"])] : [])] };
+}
+function withSeatedDipTubes(source: Record<string, BuilderKit>): Record<string, BuilderKit> {
+    return Object.fromEntries(Object.entries(source).map(([sku, kit]) => [sku, withSeatedDipTube(sku, kit)]));
+}
+
+// The Diva corrections touch only Diva kits; the Boston and 28 ml Cylinder roll-on recipes are added after them, unchanged.
+// The seated tubes were measured on these corrected kits, so they are fitted last (no roll-on has a tube entry).
+const rows: Record<string, BuilderKit> = withSeatedDipTubes({ ...withDivaSeating(withDivaOvercapTops({ ...existingRows, ...elegant30SeatRows, ...revisedRows, ...pillarRows, ...tulipRows })), ...bostonRollOnRows, ...cylinder28Rows });
 export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {
-    return Object.hasOwn(revisedRows, sku) ? revisedRows[sku] : undefined;
+    return Object.hasOwn(revisedRows, sku) ? withSeatedDipTube(sku, revisedRows[sku]) : undefined;
 }
 export function originalApprovedComponentKit(sku: string | null): BuilderKit | null {
     return sku && Object.hasOwn(existingRows, sku) ? existingRows[sku] : null;

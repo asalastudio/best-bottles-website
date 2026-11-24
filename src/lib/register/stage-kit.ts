@@ -444,5 +444,10 @@ export function assembledKit<T extends { parts: Array<{ slot: KitSlot; component
 export function partBoxTransform(part: { box?: PartBox | null; image: { width: number; height: number } }): string | null {
     if (!part.box) return null;
     const scale = part.image.width > 0 ? part.box.width / part.image.width : 1;
+    // The product page draws every boxed part into its box. A box with other proportions than its image
+    // (a tube stretched to its glass) must stretch here too, or it runs past its box: the Sleek 50 ml tube
+    // drew through the foot of the bottle in Build Your Bottle (24 Nov 2026 parts audit).
+    const scaleY = part.image.height > 0 ? part.box.height / part.image.height : scale;
+    if (Math.abs(scaleY - scale) > scale * 0.005) return `translate(${part.box.x} ${part.box.y}) scale(${scale} ${scaleY})`;
     return `translate(${part.box.x} ${part.box.y}) scale(${scale})`;
 }

@@ -148,7 +148,6 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         sku: searchParams.get("sku"),
     }));
     const [blackDropperPreview, setBlackDropperPreview] = useState(false);
-    const [frostedPreview, setFrostedPreview] = useState(false);
     const [view, setView] = useState<StageView>("sidecar");
     const [qty, setQty] = useState<number>(() => Math.max(1, Math.min(99_999, Number.parseInt(searchParams.get("qty") ?? "1", 10) || 1)));
     const [addedQty, setAddedQty] = useState<number | null>(null);
@@ -182,19 +181,6 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const copy = useMemo(() => (selected?.websiteSku ? descriptions[selected.websiteSku]?.copy ?? null : null), [descriptions, selected?.websiteSku]);
     const title = useMemo(() => copy?.title ?? pageTitle(group, fitment), [copy, group, fitment]);
     const clearKit = singleTola ? null : kitFor(kitsBySku, selected);
-    const hasFrostedPreview = slug === "cylinder-28ml-clear-16mm-rollon"
-        && clearKit?.parts.some((part) => part.slot === "body"
-            && part.image.url === "/reviews/cylinder28-sunburst-2026-11-04/clear-candidate.png");
-    const frostedKit: KitLike | null = hasFrostedPreview && clearKit ? {
-        ...clearKit,
-        parts: clearKit.parts.map((part) => part.slot === "body" ? {
-            ...part,
-            // Same canvas and visible bounds, using the registered frosted review image box.
-            box: { x: 194.1256, y: 211.3608, width: 611.1520, height: 886.5801 },
-            image: { ...part.image, url: "/reviews/cylinder28-sunburst-2026-11-04/frosted-candidate.png" },
-        } : part),
-    } : null;
-    const showingFrosted = frostedPreview && frostedKit !== null;
     const goldDropperKit = process.env.NODE_ENV === "development" && slug === "cylinder-25ml-clear-18-415-dropper"
         ? kitsBySku.GBCyl25DrpGl : null;
     const blackDropperKit: KitLike | null = goldDropperKit ? {
@@ -211,7 +197,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         }),
     } : null;
     const showingBlackDropper = blackDropperPreview && blackDropperKit !== null;
-    const kit = showingBlackDropper ? blackDropperKit : showingFrosted ? frostedKit : clearKit;
+    const kit = showingBlackDropper ? blackDropperKit : clearKit;
     const glassBodyKit = useCallback((glassSlug: string): KitLike | null => {
         if (glassSlug === slug) return kit ?? kitFor(kitsBySku, { websiteSku: group.primaryWebsiteSku, graceSku: group.primaryGraceSku }) ?? variants.map((variant) => kitFor(kitsBySku, variant)).find(Boolean) ?? null;
         const sibling = siblings.find((candidate) => candidate.slug === glassSlug);
@@ -366,7 +352,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
         graceSku: selected.graceSku, shopifyVariantId: selected.shopifyVariantId ?? null,
         shopifySellable: selected.shopifySellable ?? undefined, stockStatus: selected.stockStatus,
     }) : false;
-    const addState: AddState = (showingFrosted || showingBlackDropper) ? "unavailable" : !selected || selected.webPrice1pc == null || selected.webPrice1pc <= 0
+    const addState: AddState = showingBlackDropper ? "unavailable" : !selected || selected.webPrice1pc == null || selected.webPrice1pc <= 0
         ? "unpriced"
         : isSoldOutStockStatus(selected.stockStatus) || !status.inStock
             ? "sold-out"
@@ -495,7 +481,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
 
                 <div className={styles.grid}>
                     <PdpStage
-                        pickLine={pickLine(showingFrosted ? "Frosted preview" : glassName, rollerOption, rollerOption ? null : fitment, rectangleGlass ? null : capName)}
+                        pickLine={pickLine(glassName, rollerOption, rollerOption ? null : fitment, rectangleGlass ? null : capName)}
                         finishKind={rectangleGlass || teardropGlassPicker ? "glass" : "cap"}
                         view={shownView}
                         availableViews={views}
@@ -520,19 +506,14 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         activeCapId={teardropGlassPicker ? slug : showingBlackDropper ? "shiny-black-preview" : activeCap?.id ?? null}
                         onCapPick={teardropGlassPicker ? onGlassPick : onCapPick}
                         glasses={teardropGlassPicker ? teardropGlasses.map(glass => ({ ...glass, kit: null })) : [...(rectangleGlass || singleTola ? [] : glasses).map((glass) => ({
-                            slug: glass.slug, label: glass.label, active: glass.active && !showingFrosted, kit: glass.active ? clearKit ?? glassBodyKit(glass.slug) : glassBodyKit(glass.slug),
+                            slug: glass.slug, label: glass.label, active: glass.active, kit: glass.active ? clearKit ?? glassBodyKit(glass.slug) : glassBodyKit(glass.slug),
                             unavailable: glass.active
                                 ? variants.every((variant) => isSoldOutStockStatus(variant.stockStatus) || variant.shopifySellable === false)
                                 : siblings.find((sibling) => sibling.slug === glass.slug)?.inStock === false,
-                        })), ...(frostedKit ? [{
-                            slug: "frosted-preview", label: "Frosted preview", active: showingFrosted, kit: frostedKit,
-                        }] : [])]}
-                        onGlassPick={(target) => {
-                            setFrostedPreview(target === "frosted-preview");
-                            if (target !== "frosted-preview") onGlassPick(target);
-                        }}
+                        }))]}
+                        onGlassPick={onGlassPick}
                         activeCapName={capName}
-                        activeGlassLabel={showingFrosted ? "Frosted preview" : activeGlass?.label ?? glassLabel(group.color)}
+                        activeGlassLabel={activeGlass?.label ?? glassLabel(group.color)}
                     />
 
                     <div className={styles.buy}>
@@ -553,7 +534,6 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
                         </div>
 
                         {showingBlackDropper && <p>Shiny Black with white bulb is a draft finish. Select a listed finish to order.</p>}
-                        {showingFrosted && <p>Frosted glass is available to preview. Select Clear to order.</p>}
                         <PdpBuyBox
                             swatchStyle={swatchStyle}
                             selectionName={selectionName}

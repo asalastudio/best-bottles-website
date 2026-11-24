@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { catalogCapKind, catalogCapPhoto } from "../src/lib/products/catalog-cap-photos";
+import { catalogCapKind, catalogCapPhoto, catalogCapPlatePhoto } from "../src/lib/products/catalog-cap-photos";
 import { getCatalogCardVariantPreviews, productCardVariantHref } from "../src/lib/products/product-card-variant-previews";
 
 const options = { productTitle: "9 ml Clear Cylinder Roll-On", groupColor: "Clear", productHref: "/products/cylinder?applicator=rollon&from=%2Fcatalog" };
@@ -124,8 +124,10 @@ describe("catalog top previews", () => {
         expect(caps.map(cap => cap.label)).toEqual(["Short Ribbed Black", "Short Ribbed White"]);
     });
     it("uses the catalog finish for legacy SKUs without a recognized finish token", () => {
-        expect(catalogCapPhoto({ id: "red", label: "Red", capLabel: "Red", websiteSku: "GBCylAmb9SpryRd" }, [
-            { websiteSku: "Spry17-415Red", thumb: "red-sprayer" },
-        ], "sprayer")).toBe("red-sprayer");
+        const red = { id: "red", label: "Red", capLabel: "Red", websiteSku: "GBCylAmb9SpryRd" };
+        const rows = [{ websiteSku: "Spry17-415Red", thumb: "red-sprayer" }];
+        expect(catalogCapPlatePhoto(red, rows, "sprayer")).toBe("red-sprayer");
+        // the card itself shows the sprayer's exposed head from the PSD, ahead of the index
+        expect(catalogCapPhoto(red, rows, "sprayer")).toMatch(/^\/images\/cap-swatches\/Spry17-415Red\.[0-9a-f]{12}\.webp$/);
     });
 });

@@ -17,7 +17,7 @@ it("covers every approved source with immutable display copies and leaves unknow
     const rows = approved.rows as unknown as Record<string, { parts: Part[] }>;
     const urls = new Set(Object.values(rows).flatMap(kit => kit.parts.flatMap(part =>
         [part.image.url, part.detached?.image.url].filter((url): url is string => Boolean(url)))));
-    expect(urls.size).toBe(451);   // 126 + the Elegant masters' layers (2026-11-03) + the Vial, Diva, Pillar, Empire/Grace/Diamond and Pillar cap/roller masters' (2026-11-04)
+    expect(urls.size).toBe(447);   // 451 less the four tilted reducer images no recipe uses since the levelling (24 Nov 2026): 126 + the Elegant masters' layers (2026-11-03) + the Vial, Diva, Pillar, Empire/Grace/Diamond and Pillar cap/roller masters' (2026-11-04)
     for (const source of urls) {
         for (const width of [128, 256, 640, 1200]) {
             expect(displayDerivativeUrl(source, width)).toMatch(/^https:\/\/yzy7l20k4yt6znzz\.public\.blob\.vercel-storage\.com\/product-display\/v1\/[a-f0-9]{64}\/(128|256|640|1200)-[a-f0-9]{64}\.webp$/);
@@ -25,7 +25,9 @@ it("covers every approved source with immutable display copies and leaves unknow
         }
     }
     const releaseCopies = Object.entries(delivery.sources).filter(([url]) => url.startsWith("/images/approved-masters/"));
-    expect(releaseCopies).toHaveLength(6);   // + the Boston Round 20-400 metal and plastic roller inserts (2026-11-20)
+    expect(releaseCopies).toHaveLength(48);   // + the Boston Round 20-400 metal and plastic roller inserts (2026-11-20)
+    // + the 40 photographed PSD dip tubes and pipettes (seated-dip-tubes.py, 2026-11-24)
+    // + the 28 ml Cylinder clear and frosted glass (publish-jumbo28-glass.mjs, 2026-11-24)
     for (const [source, copies] of releaseCopies) {
         expect(source).toMatch(/\.[a-f0-9]{12}\.(?:webp|png)$/);
         for (const copy of Object.values(copies)) {

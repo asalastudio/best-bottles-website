@@ -38,6 +38,7 @@ import {
     type FocusedPdpRelations,
 } from "@/lib/products/pdp-relations";
 import PdpRedesignPage, { type PdpRedesignPayload } from "@/components/pdp/PdpRedesignPage";
+import { CYLINDER28_CLEAR_TWIN, frostedFromClearKit } from "@/lib/products/pdp-redesign/cylinder28-frosted";
 import { RECTANGLE_APPLICATOR_SLUG } from "@/lib/products/rectangle-applicator";
 import { parseProductSlug } from "@/lib/products/group-variant-intent";
 import { resolveItemDescriptions } from "@/lib/products/item-description/resolve";
@@ -259,6 +260,11 @@ async function loadRedesignPayload(
         ...data.variants.map((variant) => ({ websiteSku: variant.websiteSku ?? null, graceSku: variant.graceSku ?? null })),
         ...siblings.flatMap((sibling) => sibling.bodyCandidates ?? [{ websiteSku: sibling.primaryWebsiteSku ?? null, graceSku: sibling.primaryGraceSku ?? null }]),
     ].filter((pair) => pair.websiteSku || pair.graceSku);
+    const frostedSkus = pairs.flatMap((pair) => pair.websiteSku && CYLINDER28_CLEAR_TWIN[pair.websiteSku] ? [pair.websiteSku] : []);
+    for (const sku of frostedSkus) {
+        const twin = CYLINDER28_CLEAR_TWIN[sku];
+        if (!pairs.some((pair) => pair.websiteSku === twin.websiteSku)) pairs.push(twin);
+    }
     // The component register first: one body plate per glass and the component
     // library's layers, every SKU of a body on one fixed datum, so swapping a cap
     // or the glass never moves the bottle. Only the SKUs it cannot draw read
@@ -325,6 +331,11 @@ async function loadRedesignPayload(
         if (!localKit || localKit.sku !== pair.websiteSku) continue;
         kitsBySku[pair.websiteSku!] = localKit;
         if (pair.graceSku) kitsBySku[pair.graceSku] = localKit;
+    }
+    // The 28 ml frosted roll-on has no drawn body of its own; it wears its clear twin's kit.
+    for (const sku of frostedSkus) {
+        const frosted = frostedFromClearKit(kitsBySku[CYLINDER28_CLEAR_TWIN[sku].websiteSku], sku);
+        if (frosted && !kitsBySku[sku]) kitsBySku[sku] = frosted;
     }
 
     for (const [sku, kit] of Object.entries(kitsBySku)) {

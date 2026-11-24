@@ -13,6 +13,7 @@ import BuilderImage from "./BuilderImage";
 import BuilderFinishImage from "./BuilderFinishImage";
 import FitmentIllustration from "./FitmentIllustration";
 import styles from "./MobileBuilder.module.css";
+import FamilyShapeIcon from "@/components/icons/FamilyShapeIcon";
 import { useTileIntent } from "./useTileIntent";
 
 const stages = ["Bottle", "Glass", "Fitment", "Finish"];
@@ -33,6 +34,8 @@ type Props = {
     selection: BuilderSelection; current: ReturnType<typeof deriveBuilder>; order: ReturnType<typeof builderOrder>;
     stage: number; onStage: (stage: number) => void; onUpdate: (patch: Partial<BuilderSelection>) => void;
     onReset: () => void; onFamily: (family: string) => void; onAdd: () => Promise<void>;
+    /** Opens the family screen instead of switching family from a list. */
+    onChangeFamily?: () => void;
     size: string; neck: string; application: string;
     onFilter: (filter: "size" | "neck" | "application", value: string) => void;
     pending: boolean; adding: boolean; hydrated: boolean; error: string;
@@ -233,7 +236,9 @@ export default function MobileBuilder(p: Props) {
         {stage < 4 && <h1 ref={heading} tabIndex={-1} className={styles.title}>{titles[stage]}</h1>}
         {stage === 0 && <>
             {p.familyNotice}
-            <div className={styles.filters}><label><span className={styles.srOnly}>Bottle family</span><select aria-label="Bottle family" value={p.family} disabled={busy} onChange={e => p.onFamily(e.target.value)}>{p.families.map(f => <option key={f.family}>{f.family}</option>)}</select></label>
+            <div className={styles.filters}>{p.onChangeFamily
+                ? <button type="button" className={styles.familyButton} disabled={busy} onClick={p.onChangeFamily} aria-label={`Bottle family: ${p.family}. Change family`}><FamilyShapeIcon family={p.family} size={18} strokeWidth={1.1} /><strong>{p.family}</strong><span>Change</span></button>
+                : <label><span className={styles.srOnly}>Bottle family</span><select aria-label="Bottle family" value={p.family} disabled={busy} onChange={e => p.onFamily(e.target.value)}>{p.families.map(f => <option key={f.family}>{f.family}</option>)}</select></label>}
                 <button ref={filterTrigger} className={styles.filterButton} aria-haspopup="dialog" aria-expanded={filterOpen} onClick={() => { setFilterOpen(true); filters.current?.showModal(); }}><SlidersHorizontal size={18} /> Filter{activeFilters && <span aria-label="active">●</span>}</button>
             </div><p className={styles.count}>{visible.length} bottle {visible.length === 1 ? "option" : "options"}</p>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>Bottle</legend><div className={styles.bottleGrid}>
@@ -254,7 +259,7 @@ export default function MobileBuilder(p: Props) {
                     <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div><strong>{displayApplicatorName(f)}</strong>{fitmentChoiceHints[f] && <span>{fitmentChoiceHints[f]}</span>}
                 </Choice>; })}</div>}
                 {stage === 3 && <div className={styles.finishGrid}>{p.current.fitted.map(c => <Choice key={c.id} name={`${id}-finish`} value={c.closure} selected={closure === c.closure} label={c.closure} onSelect={() => choose({ closure: c.closure })}>
-                    <div className={styles.finishThumb}><BuilderFinishImage config={c} /></div><strong>{shortFinishLabel(c.closure)}</strong>
+                    <div className={styles.finishThumb}><BuilderFinishImage config={c} peers={p.current.fitted} /></div><strong>{shortFinishLabel(c.closure)}</strong>
                 </Choice>)}{unavailable.map(c => <Choice key={c.id} name={`${id}-finish`} value={c.id} selected={false} label={`${c.closure} — Out of stock`} onSelect={() => {}} disabled>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <div className={styles.finishThumb}><img src={displayImageUrl(c.imageUrl, 640)} alt={c.closure} loading="lazy" onError={e => { e.currentTarget.hidden = true; }} /></div><strong>{shortFinishLabel(c.closure)}</strong><span>Out of stock</span>

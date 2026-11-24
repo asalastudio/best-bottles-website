@@ -9,6 +9,9 @@ const HIDDEN_CATALOG_GROUPS = new Set([
     // LBMetalSilver1oz: a silver metal-shell bottle the legacy site lists as no
     // longer available (Jordan, 2026-09-25: take it off the new catalog).
     "lotion-bottle-30ml-clear-18mm",
+    // AntqSprBulbLavender: a stray copy of the lavender bulb sprayer, which is
+    // already a colourway of vintage-bulb-sprayer-18-415 (Jordan, 2026-11-17).
+    "vintage-bulb-sprayer",
 ]);
 
 // Groups that stay listed only while they still hold variants. The webhook-made

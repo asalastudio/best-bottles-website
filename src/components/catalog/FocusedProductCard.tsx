@@ -129,7 +129,7 @@ export default function FocusedProductCard({ product, finderUrl, onOpen, imageLo
             <div className="flex flex-col gap-2.5 border-t border-champagne/55 px-4 pb-4 pt-3">
             {showCapDots && (
                 <CatalogCapDots title={productTitle} variants={capVariants} selectedId={pickedCap?.id ?? defaultCap?.id ?? null}
-                    onSelect={(variant) => setPickedCapId(variant.id)} photo={capPhoto} />
+                    onSelect={(variant) => setPickedCapId(variant.id)} photo={capPhoto} background="var(--color-warm-white)" />
             )}
             <CatalogCardPurchase
                 productId={product.groupId}
