@@ -63,9 +63,11 @@ describe("resolveCatalogCardPurchaseVariant", () => {
         expect(resolveCatalogCardPurchaseVariant(undefined, { productTitle: title })).toBeNull();
     });
 
-    it("carries the ladder as minQty/unitPrice pairs and labels the option only when there is a choice", () => {
+    it("carries the ladder with its published pack totals and labels the option only when there is a choice", () => {
         const multi = resolveCatalogCardPurchaseVariant([black, gold], { productTitle: title })!;
-        expect(multi.priceTiers).toEqual(ladder);
+        // The "Set of" menu prices each pack from its published total (Jordan, 2026-11-20).
+        expect(multi.priceTiers).toEqual(black.priceTiers);
+        expect(catalogCardTiers(multi).map((tier) => tier.packPrice)).toEqual(black.priceTiers!.map((tier) => tier.totalPrice));
         expect(multi.optionLabel).toBe("Black Roll-On");
         const single = resolveCatalogCardPurchaseVariant([black], { productTitle: title })!;
         expect(single.optionLabel).toBeNull();

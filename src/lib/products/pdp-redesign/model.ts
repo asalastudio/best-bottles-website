@@ -354,7 +354,7 @@ export function tiersFor(variant: ProductVariant | null | undefined): DisplayVol
         webPrice1pc: variant.webPrice1pc,
         webPrice10pc: variant.webPrice10pc,
         webPrice12pc: variant.webPrice12pc,
-        priceTiers: variant.priceTiers?.map((tier) => ({ minQty: tier.minQty, unitPrice: tier.unitPrice })) ?? null,
+        priceTiers: variant.priceTiers?.map((tier) => ({ minQty: tier.minQty, unitPrice: tier.unitPrice, totalPrice: tier.totalPrice })) ?? null,
     });
 }
 

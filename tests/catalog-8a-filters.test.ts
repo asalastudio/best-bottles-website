@@ -167,9 +167,10 @@ describe("product card helpers", () => {
         expect(options.gold.webPrice1pc).toBe(1.1);
     });
 
-    it("labels the Pack of button with the break's first piece count", () => {
+    it("labels the Set of button with the pack's piece count", () => {
         expect(catalogPackLabel(null)).toBe("1");
-        expect(catalogPackLabel({ minQty: 144, maxQty: 863, unitPrice: 0.6, savePct: 10, saveEach: 0.1, appliesAtCheckout: false })).toBe("144");
-        expect(catalogPackLabel({ minQty: 4320, maxQty: null, unitPrice: 0.5, savePct: 20, saveEach: 0.2, appliesAtCheckout: false })).toBe("4,320+");
+        expect(catalogPackLabel({ minQty: 144, maxQty: 863, unitPrice: 0.6, packPrice: 86.4, savePct: 10, saveEach: 0.1, appliesAtCheckout: false })).toBe("144");
+        // A pack is an exact size (legacy "Set of 4320"), not an open-ended break.
+        expect(catalogPackLabel({ minQty: 4320, maxQty: null, unitPrice: 0.5, packPrice: 2160, savePct: 20, saveEach: 0.2, appliesAtCheckout: false })).toBe("4,320");
     });
 });

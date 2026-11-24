@@ -85,7 +85,7 @@ export function resolveCatalogCardPurchaseVariant(
         webPrice1pc: source.webPrice1pc ?? null,
         webPrice10pc: source.webPrice10pc ?? null,
         webPrice12pc: source.webPrice12pc ?? null,
-        priceTiers: source.priceTiers?.map((tier) => ({ minQty: tier.minQty, unitPrice: tier.unitPrice })) ?? null,
+        priceTiers: source.priceTiers?.map((tier) => ({ minQty: tier.minQty, unitPrice: tier.unitPrice, totalPrice: tier.totalPrice })) ?? null,
         shopifyVariantId: source.shopifyVariantId ?? null,
         shopifySellable: source.shopifySellable ?? null,
     };
