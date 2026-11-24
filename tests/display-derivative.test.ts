@@ -25,7 +25,7 @@ it("covers every approved source with immutable display copies and leaves unknow
         }
     }
     const releaseCopies = Object.entries(delivery.sources).filter(([url]) => url.startsWith("/images/approved-masters/"));
-    expect(releaseCopies).toHaveLength(4);
+    expect(releaseCopies).toHaveLength(6);   // + the Boston Round 20-400 metal and plastic roller inserts (2026-11-20)
     for (const [source, copies] of releaseCopies) {
         expect(source).toMatch(/\.[a-f0-9]{12}\.(?:webp|png)$/);
         for (const copy of Object.values(copies)) {

@@ -7,7 +7,7 @@ import { useEffect, useId, useMemo, useRef, useState, useTransition, useSyncExte
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useRouter, useSearchParams } from "next/navigation";
-import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, SlidersHorizontal, ShoppingBag } from "@/components/icons";
+import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, ShoppingBag } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
 import { useBuilderKits } from "@/components/bottle-builder/useBuilderKits";
@@ -17,6 +17,10 @@ import { useTileIntent } from "@/components/bottle-builder/useTileIntent";
 import type { BuilderFamily } from "@/lib/bottle-builder/entry";
 import { registerDisplayDerivatives, type DisplayDerivativeMap } from "@/lib/products/display-derivative";
 import FamilyLoadingStatus from "@/components/bottle-builder/FamilyLoadingStatus";
+import FamilyChooser, { useFamilyPreviews, type FamilyPreviewPayload } from "@/components/bottle-builder/FamilyChooser";
+import FamilyShapeIcon from "@/components/icons/FamilyShapeIcon";
+import BuilderViewStage, { builderViewLabel, builderViews } from "@/components/bottle-builder/BuilderViewStage";
+import type { StageView } from "@/lib/products/pdp-redesign/stage";
 import bodyHeightMedia from "@/lib/bottle-builder/body-heights.generated.json";
 import BuilderImage from "@/components/bottle-builder/BuilderImage";
 import FitmentIllustration from "@/components/bottle-builder/FitmentIllustration";
@@ -80,7 +84,7 @@ function chooserScale(body: BuilderBody, all: BuilderBody[] = [body]) {
     return 1;
 }
 
-export default function MatrixClient({ families: initialFamilies, familyList, openFamily, bodies: initialBodies, displayDerivatives, preferMobile = false, initialSelection, initialStep = 0, entryUnavailable = false }: {
+export default function MatrixClient({ families: initialFamilies, familyList, openFamily, bodies: initialBodies, displayDerivatives, preferMobile = false, initialSelection, initialStep = 0, entryUnavailable = false, chooseFamilyFirst = false, familyPreviews }: {
     families: BuilderFamily[];
     /** Delivery copies for the first-paint bodies (resolved on the server). */
     displayDerivatives?: DisplayDerivativeMap;
@@ -92,6 +96,10 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     initialSelection?: BuilderSelection;
     initialStep?: number;
     entryUnavailable?: boolean;
+    /** A bare /matrix: open on the family screen instead of the default family's bottles. */
+    chooseFamilyFirst?: boolean;
+    /** Each family's bottle group for the family screen, streamed into the page's own response. */
+    familyPreviews?: Promise<FamilyPreviewPayload>;
 }) {
     registerDisplayDerivatives(displayDerivatives);
     const { formatPrice } = useRegion();
@@ -116,11 +124,21 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     const [size, setSize] = useState("");
     const [neck, setNeck] = useState("");
     const [application, setApplication] = useState("");
-    const [moreFilters, setMoreFilters] = useState(false);
     const [pending, startTransition] = useTransition();
     // The family select is controlled by the server-rendered family; while the
     // next family loads it must show the family the customer just chose.
     const [chosenFamily, setChosenFamily] = useState(openFamily);
+    // The family screen comes before Bottle. It is not one of the shared step indices: MobileBuilder and the
+    // selection model keep their five stages, and the screen sits in front of them on both layouts.
+    const [familyScreen, setFamilyScreen] = useState(chooseFamilyFirst);
+    const [familyScreenReturned, setFamilyScreenReturned] = useState(false);
+    const familyPreviewMap = useFamilyPreviews(familyPreviews, familyScreen);
+    // Desktop moves on by itself once a choice is made (Jordan, 20 Nov 2026): a bottle opens its glass
+    // (or its fitments when it comes in one glass), a glass opens its fitments, a fitment its finishes.
+    // The finish stays put until the customer reviews. The target waits here while the bottle's options load.
+    const [advanceTo, setAdvanceTo] = useState<number | null>(null);
+    // The finished bottle in the product page's views; cap on is how it ships.
+    const [finishedView, setFinishedView] = useState<StageView>("capon");
     const [adding, setAdding] = useState(false);
     const [lastAdded, setLastAdded] = useState<{ name: string; quantity: number; total?: number | null; lines?: string[] } | null>(null);
     const confirmation = useRef<HTMLDivElement>(null);
@@ -177,10 +195,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     const minimumNote = order.total == null ? `${money(ORDER_MINIMUM)} minimum per cart at checkout.`
         : cartCents + buildCents >= minimumCents ? `This build${cartCents ? " and your cart" : ""} meet${cartCents ? "" : "s"} the ${money(ORDER_MINIMUM)} order minimum.`
         : `${money((minimumCents - cartCents - buildCents) / 100)} more reaches the ${money(ORDER_MINIMUM)} order minimum${cartCents ? ` (cart ${money(cartProgress.subtotal)} + this build ${money(order.total)})` : ""}.`;
-    const sizes = [...new Set(bodies.map(b => b.capacityMl))].sort((a, b) => a - b);
-    const necks = [...new Set(bodies.map(b => b.neck))].sort();
     const bodyFitments = (b: BuilderBody) => b.fitments ?? b.configurations.map(c => c.fitment);
-    const applications = [...new Set(bodies.flatMap(bodyFitments))].sort();
     const visibleBodies = useMemo(() => bodies.filter(b => (!size || b.capacityMl === Number(size))
         && (!neck || b.neck === neck) && (!application || bodyFitments(b).includes(application))), [bodies, size, neck, application]);
     const preview = configuration ?? current.fitted[0] ?? current.colored[0] ?? body?.configurations[0];
@@ -193,6 +208,9 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         && ((configuration.id in hasIncludedCovers) || (configuration.kit?.parts.some(p => p.slot === "overcap")
         && configuration.kit?.parts.some(p => !["body", "overcap", "diptube"].includes(p.slot)))));
     const previewStage = step <= 1 ? "body" : configuration ? "complete" : fitment ? "fitment" : "body";
+    // Once every part is chosen the bottle is complete: show it the way its product page does.
+    const finishedViews = step >= 3 && configuration ? builderViews(configuration) : [];
+    const activeFinishedView = finishedViews.includes(finishedView) ? finishedView : finishedViews[0];
     // the overcap is never dropped from the preview: worn when showCover, standing on the ground beside the bottle otherwise (BuilderImage)
     // A fitment with no layered kit yet (every 5 ml cobalt plastic roller, for one) has nothing to draw at
     // the fitment stage. Seat a sibling glass's mechanism on this glass's universal body; failing that,
@@ -210,6 +228,16 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     const fitmentReady = step === 0 && canContinue && !pending;
     // Glass needs only the colours first paint already carries; Fitment needs the full body.
     const awaitingBody = chooser.loading && (step === 1 || (step === 0 && skipGlass));
+    // Glass needs only the colours first paint carries; anything past it waits for the chosen bottle's options.
+    const advanceReady = advanceTo != null && !pending && (!chooser.loading || (advanceTo === 1 && !skipGlass))
+        && (advanceTo !== 1 || Boolean(body)) && (advanceTo !== 2 || Boolean(color)) && (advanceTo !== 3 || Boolean(fitment));
+    useEffect(() => {
+        if (!advanceReady || advanceTo == null || isMobile) return;
+        setAdvanceTo(null);
+        goTo(advanceTo);
+        // goTo is recreated every render; the advance runs once per choice.
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [advanceReady, advanceTo, isMobile]);
     const bodyNotice = chooser.failed ? <div className={styles.familyPending} role="status">We couldn’t load this bottle’s options. <button type="button" className={styles.textButton} onClick={chooser.retry}>Try again</button></div> : null;
     const catalogHref = `/catalog?families=${encodeURIComponent(openFamily)}`;
     const choosingFinish = step === 3;
@@ -245,12 +273,32 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         setLastAdded(null); setError("");
     }
     function reset() {
-        setSelection(emptySelection()); setShowCover(false); setLastAdded(null); setError(""); setSize(""); setNeck(""); setApplication(""); setMoreFilters(false); setPreviewExpanded(false); goTo(0);
+        setSelection(emptySelection()); setShowCover(false); setLastAdded(null); setError(""); setSize(""); setNeck(""); setApplication(""); setPreviewExpanded(false); goTo(0);
+    }
+    const familyHref = (family: string) => `/matrix?family=${encodeURIComponent(family)}${searchParams.get("shop") ? `&shop=${encodeURIComponent(searchParams.get("shop")!)}` : ""}`;
+    /** Start over clears the build and returns to the family screen, the beginning of the builder. */
+    function startOver() {
+        if (adding) return;
+        reset();
+        openFamilyScreen();
+    }
+    function openFamilyScreen() {
+        if (adding) return;
+        setFamilyScreen(true); setFamilyScreenReturned(true); setPreviewExpanded(false); setLastAdded(null); setError("");
+        requestAnimationFrame(() => builderRoot.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" }));
+    }
+    function chooseFamily(family: string) {
+        if (adding) return;
+        if (family === openFamily) { setChosenFamily(family); setFamilyScreen(false); goTo(0); return; }
+        setChosenFamily(family);
+        reset();
+        startTransition(() => router.push(familyHref(family)));
     }
     function chooseBottle(selected: BuilderBody) {
         const next = selectBuilderBody(bodies, selection, selected.id);
         setShowCover(false);
         setSelection(next); setLastAdded(null); setError("");
+        setAdvanceTo(1);
     }
     async function addToCart() {
         if (!configuration || !order.canAdd || adding || !isCartHydrated) return;
@@ -274,7 +322,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
             // Desktop recycles into a fresh chooser. Mobile keeps this build
             // on screen so the confirmation is not mistaken for a reset.
             if (!isMobile) {
-                setSelection(emptySelection()); setShowCover(false); setSize(""); setNeck(""); setApplication(""); setMoreFilters(false); setStep(0);
+                setSelection(emptySelection()); setShowCover(false); setSize(""); setNeck(""); setApplication(""); setStep(0);
             }
             requestAnimationFrame(() => {
                 confirmation.current?.focus({ preventScroll: true });
@@ -296,14 +344,14 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
             {adding ? "Checking your bottle…" : "Add to Cart"} {!adding && <ShoppingBag size={17} />}
         </button>;
 
-    if (isMobile) return <MobileBuilder familyNotice={familyNotice} families={families} family={openFamily} bodies={bodies}
+    if (isMobile && !familyScreen) return <MobileBuilder onChangeFamily={openFamilyScreen} familyNotice={familyNotice} families={families} family={openFamily} bodies={bodies}
         selection={selection} current={current} order={order} stage={step} onStage={next => { setStep(next); setError(""); }} priceRange={priceRange}
-        onUpdate={patch => { update(patch); if (patch.bodyId || patch.color || patch.fitment) setShowCover(false); }} onReset={reset} onFamily={family => { reset(); startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}${searchParams.get("shop") ? `&shop=${encodeURIComponent(searchParams.get("shop")!)}` : ""}`)); }} onAdd={addToCart}
+        onUpdate={patch => { update(patch); if (patch.bodyId || patch.color || patch.fitment) setShowCover(false); }} onReset={reset} onFamily={family => { reset(); startTransition(() => router.push(familyHref(family))); }} onAdd={addToCart}
         size={size} neck={neck} application={application} onFilter={(filter, value) => { if (filter === "size") setSize(value); else if (filter === "neck") setNeck(value); else setApplication(value); }}
         pending={pending || awaitingBody} bodyNotice={bodyNotice} adding={adding} hydrated={isCartHydrated} error={error} lastAdded={lastAdded} cartProgress={cartProgress}
         hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={b => chooserScale(b, bodies)} onBodyIntent={prefetchBottle} />;
 
-    return <div ref={builderRoot} className={styles.builder} data-bottle-builder data-current-step={step} data-has-bottle={Boolean(body)} aria-busy={pending || adding}>
+    return <div ref={builderRoot} className={styles.builder} data-bottle-builder data-current-step={familyScreen ? "family" : step} data-has-bottle={Boolean(body)} data-family-screen={familyScreen || undefined} aria-busy={pending || adding}>
         <header className={styles.header}>
             <div><div className={styles.headerLinks}><Link className={styles.backLink} href={catalogHref}><ArrowLeft size={13} /> Back to bottles</Link><Link className={styles.mobileCartLink} href="/cart">View cart{isCartHydrated && items.length > 0 ? ` (${items.reduce((sum, item) => sum + item.quantity, 0)})` : ""}</Link></div>
                 <h1>Build Your Bottle</h1><p>Choose your bottle and glass, then how it dispenses or closes and the finish you like.</p></div>
@@ -311,10 +359,14 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         {/* Sticky on desktop: the nodes light up and the connectors fill as each step completes, in view at every step. */}
         <div ref={stepsBar} className={styles.stepsBar}>
             <nav aria-label="Bottle building progress" className={styles.steps}>
-                {steps.map((label, index) => <button key={label} aria-current={step === index ? "step" : undefined}
-                    disabled={adding || pending || (index === 1 && (!body || skipGlass)) || (index === 2 && !color) || (index === 3 && !fitment) || (index === 4 && !configuration)}
-                    onClick={() => goTo(index)} className={step === index ? styles.activeStep : completed[index] ? styles.completeStep : ""}>
-                    <span>{completed[index] ? <Check size={15} weight="bold" /> : index + 1}</span><b>{label}</b>
+                <button aria-current={familyScreen ? "step" : undefined} disabled={adding || pending} onClick={openFamilyScreen}
+                    className={familyScreen ? styles.activeStep : styles.completeStep}>
+                    <span>{familyScreen ? 1 : <Check size={15} weight="bold" />}</span><b>Family</b>
+                </button>
+                {steps.map((label, index) => <button key={label} aria-current={!familyScreen && step === index ? "step" : undefined}
+                    disabled={adding || pending || familyScreen || (index === 1 && (!body || skipGlass)) || (index === 2 && !color) || (index === 3 && !fitment) || (index === 4 && !configuration)}
+                    onClick={() => goTo(index)} className={!familyScreen && step === index ? styles.activeStep : completed[index] ? styles.completeStep : ""}>
+                    <span>{completed[index] ? <Check size={15} weight="bold" /> : index + 2}</span><b>{label}</b>
                 </button>)}
             </nav>
         </div>
@@ -325,27 +377,16 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                 <Link href="/cart" className={styles.secondary}>View Cart <ArrowRight size={16} /></Link>
 </div>
         </div>}
-        {step === 0 && familyNotice}
-        {step === 0 && <div className={styles.filters}>
-            <label>Bottle family<select aria-label="Bottle family" value={chosenFamily} disabled={adding} onChange={e => {
-                const family = e.target.value;
-                setChosenFamily(family);
-                reset();
-                startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}${searchParams.get("shop") ? `&shop=${encodeURIComponent(searchParams.get("shop")!)}` : ""}`));
-            }}>{families.map(f => <option key={f.family}>{f.family}</option>)}</select></label>
-            {pending && chosenFamily !== openFamily && <p role="status" className={styles.familyPending}>Loading {chosenFamily} bottles…</p>}
-            <label>Size<select aria-label="Size" value={size} disabled={adding || pending} onChange={e => { setSize(e.target.value); goTo(0); }}>
-                <option value="">All sizes</option>{sizes.map(size => <option value={size} key={size}>{size} ml</option>)}</select></label>
-            <button className={styles.filterToggle} aria-expanded={moreFilters} onClick={() => setMoreFilters(!moreFilters)}><SlidersHorizontal size={17} /> More filters{neck || application ? " •" : ""}</button>
-            {moreFilters && <><label>Neck size<select aria-label="Neck size" value={neck} onChange={e => { setNeck(e.target.value); goTo(0); }}><option value="">All neck sizes</option>{necks.map(n => <option key={n}>{n}</option>)}</select></label>
-                <label>Application<select aria-label="Application" value={application} onChange={e => { setApplication(e.target.value); goTo(0); }}><option value="">All fitments</option>{applications.map(a => <option key={a} value={a}>{displayApplicatorName(a)}</option>)}</select></label></>}
-            {(size || neck || application) && <button className={styles.textButton} onClick={() => { setSize(""); setNeck(""); setApplication(""); }}>Clear filters</button>}
-            <span className={styles.filterNote}><ShieldCheck size={18} /> Compatible choices, at every step.</span>
-        </div>}
-        <div className={styles.workspace} id="builder-workspace">
+        {familyScreen && <>{familyNotice}<FamilyChooser families={families} previews={familyPreviewMap} current={familyScreenReturned ? openFamily : undefined}
+            pendingFamily={pending && chosenFamily !== openFamily ? chosenFamily : null} onChoose={chooseFamily} stepLabel="Step 1 of 6" focusOnMount={familyScreenReturned} disabled={adding} /></>}
+        {!familyScreen && step === 0 && familyNotice}
+        {!familyScreen && <div className={styles.workspace} id="builder-workspace">
             <section className={styles.options} aria-label="Bottle options">
-                <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 1} of 5</span><button type="button" className={styles.startOver} onClick={reset} disabled={adding}>Start over</button></div>
-                    <h2 tabIndex={-1} ref={optionHeading}>{titles[step]}</h2><p>{subtitles[step]}</p></div>
+                <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 2} of 6</span><button type="button" className={styles.startOver} onClick={startOver} disabled={adding}>Start over</button></div>
+                    <h2 tabIndex={-1} ref={optionHeading}>{titles[step]}</h2><p>{subtitles[step]}</p>
+                    {step === 0 && <button type="button" className={styles.familyCurrent} disabled={adding} onClick={openFamilyScreen} aria-label={`Bottle family: ${chosenFamily}. Change family`}>
+                        <FamilyShapeIcon family={chosenFamily} size={20} strokeWidth={1.1} /><strong>{chosenFamily}</strong><span>Change family</span>
+                    </button>}</div>
                 {bodyNotice}
                 <fieldset ref={optionsScroller} aria-label={titles[step]} disabled={adding || pending} className={styles.optionFieldset}>
                 {step === 0 && <div className={styles.bottleGrid}>
@@ -359,7 +400,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                 {step === 1 && body && <>
                     <div className={styles.compatibilityContext}><ShieldCheck size={18} /><span><strong>{body.capacityMl} ml {body.profileLabel}</strong><span>Neck: {body.neck} · Every glass below is this bottle</span></span></div>
                     <div className={styles.colorGrid}>
-                        {current.colors.map(c => { const example = body.configurations.find(config => config.color === c)!; return <Option key={c} label={c} selected={color === c} onClick={() => update({ color: c, fitment: null, closure: null })}>
+                        {current.colors.map(c => { const example = body.configurations.find(config => config.color === c)!; return <Option key={c} label={c} selected={color === c} onClick={() => { update({ color: c, fitment: null, closure: null }); setAdvanceTo(2); }}>
                             <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
                         </Option>; })}
                     </div>
@@ -370,7 +411,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                         const availableCount = current.colored.filter(c => c.fitment === f).length;
                         const unavailableCount = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === f).length ?? 0;
                         const count = availableCount + unavailableCount;
-                        return <Option key={f} label={displayApplicatorName(f)} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); }}>
+                        return <Option key={f} label={displayApplicatorName(f)} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); setAdvanceTo(3); }}>
                             <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div>
                             <strong>{displayApplicatorName(f)}</strong><small>{count} {/(Roller|Cap)/.test(f) ? (count === 1 ? "cap option" : "cap options") : (count === 1 ? "finish" : "finishes")}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>
                         </Option>;
@@ -407,12 +448,19 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                 </div>
             </section>
             <section className={styles.preview} aria-label="Live bottle preview" data-preview-stage={previewStage} data-expanded={previewExpanded}>
-                <div className={styles.previewHeader}><span>YOUR BOTTLE, TAKING SHAPE</span><span className={styles.liveDot}>{preview ? "Your bottle preview" : "Live preview"}</span></div>
-                {preview && previewConfig ? <div id={previewId} className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}><BuilderImage config={previewConfig} parts={displayParts} stage={displayStage} showCover={showCover} bodyReference={bodyReference} frameConfigurations={body?.configurations}
+                <div className={styles.previewHeader}>{configuration && step >= 3
+                    ? <span key={configuration.id} className={styles.completeBadge} role="status"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" /><path d="M7.2 12.4l3.1 3.1 6.5-6.8" /></svg>Your bottle is complete</span>
+                    : <span>YOUR BOTTLE, TAKING SHAPE</span>}
+                    {finishedViews.length > 1 ? <div className={styles.viewSwitch} role="group" aria-label="View">{finishedViews.map(view =>
+                        <button key={view} type="button" aria-pressed={activeFinishedView === view} onClick={() => setFinishedView(view)} data-builder-view={view}>{builderViewLabel(view)}</button>)}</div>
+                    : <span className={styles.liveDot}>{preview ? "Your bottle preview" : "Live preview"}</span>}</div>
+                {configuration && activeFinishedView ? <div id={previewId} className={styles.previewImage}><BuilderViewStage configuration={configuration} view={activeFinishedView}
+                    label={`${configuration.capacityMl} ml ${configuration.color} ${configuration.family} with ${displayApplicatorName(configuration.fitment)}, ${configuration.closure}, ${builderViewLabel(activeFinishedView).toLowerCase()}`} /></div>
+                : preview && previewConfig ? <div id={previewId} className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}><BuilderImage config={previewConfig} parts={displayParts} stage={displayStage} showCover={showCover} bodyReference={bodyReference} frameConfigurations={body?.configurations}
                     label={body ? `${preview.capacityMl} ml ${preview.color} ${preview.family}${fitment ? ` with ${displayApplicatorName(fitment)}` : preview.kit ? " bottle body" : " bottle"}${closure ? `, ${closure}` : ""}` : "Bottle body preview — choose a bottle to begin"} /></div>
                     : <div className={styles.previewEmpty}><ShoppingBag size={32} weight="light" /><p>Your bottle starts here.</p></div>}
                 <div className={styles.previewCaption} aria-live="polite">{body ? <><h2>{body.capacityMl} ml {body.profileLabel}</h2><p>{color ?? "Choose your glass"}{fitment ? ` · ${displayApplicatorName(fitment)}` : ""}</p>{preview && !preview.kit && !borrowed && fitment && !configuration && <p>Your selected fitment is shown in the options. Choose your {finishLabel.toLowerCase()} to see the complete bottle.</p>}</> : <><h2>A bottle. Your possibilities.</h2><p>Choose a bottle to start building.</p></>}</div>
-                {hasIncludedCover && <div className={styles.coverControl}><span>Matching overcap included</span><button type="button" aria-pressed={showCover} onClick={() => setShowCover(value => !value)}>{showCover ? "Hide cap" : "Show cap"}</button></div>}
+                {hasIncludedCover && !activeFinishedView && <div className={styles.coverControl}><span>Matching overcap included</span><button type="button" aria-pressed={showCover} onClick={() => setShowCover(value => !value)}>{showCover ? "Hide cap" : "Show cap"}</button></div>}
                 {body && <button className={styles.previewToggle} aria-expanded={previewExpanded} aria-controls={previewId} onClick={() => setPreviewExpanded(value => !value)}>{previewExpanded ? "Minimize preview" : "View larger bottle"}</button>}
             </section>
             <aside className={styles.summary} aria-label="Your Build">
@@ -451,8 +499,8 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                     <p className={styles.assurance}><ShieldCheck size={20} /><span>Made to work together.<small>Only compatible combinations are shown.</small></span></p>
                 </div>
             </aside>
-        </div>
-        {!lastAdded && <div className={styles.mobileAction}><div><span>{`Step ${step + 1} of 5`}</span><strong>{configuration ? money(order.total) : choosingFinish ? finishLabel : steps[step]}</strong></div>{action}</div>}
+        </div>}
+        {!familyScreen && !lastAdded && <div className={styles.mobileAction}><div><span>{`Step ${step + 2} of 6`}</span><strong>{configuration ? money(order.total) : choosingFinish ? finishLabel : steps[step]}</strong></div>{action}</div>}
         <p className={styles.bottomNote}>Same bottles. More possibilities.</p>
     </div>;
 }

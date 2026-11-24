@@ -1,6 +1,7 @@
 import "server-only";
 import pillarCaps from "../../../public/local-kits/pillar-caps-2026-11-04/kits.json";
 import pillarSprayers from "../../../public/local-kits/pillar-masters-2026-11-04/kits.json";
+import bostonMasters from "../../../public/local-kits/boston-masters-2026-11-03/kits.json";
 import { aliases } from "../products/display-images.generated.json";
 import { isPillarRollOnSku, PILLAR_POUR_CAP_SUFFIXES } from "../products/pillar-master";
 import manifest from "./approved-kits.generated.json";
@@ -362,6 +363,25 @@ const tulipRows = Object.fromEntries(Object.entries(existingRows).flatMap(([sku,
             box: { x: left - 152 * sx, y: top - 103 * sy, width: tulipGlass.width * sx, height: tulipGlass.height * sy } };
     }) }]];
 }));
+/**
+ * Boston Round 20-400 roll-ons (30 and 60 ml, every glass and roller): the 3 Nov review kits, live from 20 Nov 2026
+ * (Jordan: "use the new roll-on plugs"). CAP ON and CAP OFF are the register's seated roller, body and cap exactly as
+ * the register draws them today; EXPLODED adds the complete roller insert on its flange (generate-boston-rollers.py).
+ * The inserts are served from /images/approved-masters (publish-boston-roller-inserts.mjs). Catalog cards are
+ * unchanged: these SKUs are not approved masters (approvedMasterSku), only approved recipes for the product page.
+ */
+export const isBostonRollOnSku = (sku: string) => /^GBBstn(?:Amb|Blu)?[12]oz(?:Mtl)?Roll(?:on)?[A-Za-z]+$/.test(sku);
+function hostedBostonKit(kit: BuilderKit): BuilderKit {
+    const hosted = <T extends { url: string }>(image: T): T => {
+        if (!image.url.startsWith("/local-kits/")) return image;
+        const url = publishedImageAliases[image.url];
+        if (!url) throw new Error(`Missing approved Boston roller image for ${kit.sku}: ${image.url}`);
+        return { ...image, url, ...("key" in image ? { key: url.startsWith("/") ? url : new URL(url).pathname.slice(1) } : {}) };
+    };
+    return { ...kit, parts: kit.parts.map(part => ({ ...part, image: hosted(part.image) })) };
+}
+const bostonRollOnRows = Object.fromEntries(Object.entries(bostonMasters.rows as unknown as Record<string, BuilderKit>)
+    .filter(([sku]) => isBostonRollOnSku(sku)).map(([sku, kit]) => [sku, hostedBostonKit(kit)]));
 // Diva lotion pumps and fine-mist sprayers were drawn small or off-centre: at 100 ml the collar was ~11% narrower than
 // the glass thread band, so ridges showed either side and the pump looked perched; the 46 ml frosted fitments were
 // 3-5% small; and many 30/46 ml collars sat 2-7 px off the neck (Jordan, 7 Nov 2026: "all pumps need alignment").
@@ -405,7 +425,8 @@ function withDivaOvercapTops(source: Record<string, BuilderKit>): Record<string,
     }));
 }
 
-const rows: Record<string, BuilderKit> = withDivaSeating(withDivaOvercapTops({ ...existingRows, ...revisedRows, ...pillarRows, ...tulipRows }));
+// The Diva corrections touch only Diva kits; the Boston roll-on recipes are added after them, unchanged.
+const rows: Record<string, BuilderKit> = { ...withDivaSeating(withDivaOvercapTops({ ...existingRows, ...revisedRows, ...pillarRows, ...tulipRows })), ...bostonRollOnRows };
 export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {
