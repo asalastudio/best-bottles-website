@@ -37,7 +37,7 @@ import type { ItemDescription } from "@/lib/products/item-description/resolve";
 import { getMaterialSwatchBackground, getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { pdpFallbackMedia } from "@/lib/products/pdp-redesign/fallback-media";
 import { SITE_NAME } from "@/lib/seo";
-import { formatVolumeQtyRange, resolveQuotedUnitPrice } from "@/lib/volumePricing";
+import { formatVolumeQtyRange, packSelectionFromQuantity, resolveQuotedUnitPrice } from "@/lib/volumePricing";
 import {
     buildYourBottleHref,
     callouts as buildCallouts,
@@ -356,6 +356,11 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const tiers = useMemo(() => tiersFor(selected), [selected]);
     const unitPrice = unitPriceAt(selected, qty);
     const lineTotal = unitPrice != null ? unitPrice * qty : null;
+    // The mobile sticky bar prices whole sets as the buy box does: 1 × Set of 144 is the set's published total,
+    // and a count that is no whole set (a case of 845) is that many sets of 1.
+    const stickyPack = packSelectionFromQuantity(tiers, qty);
+    const stickyPackTier = unitPrice != null ? tiers[stickyPack.packIndex] ?? null : null;
+    const stickyTotal = stickyPackTier ? stickyPackTier.packPrice * stickyPack.packs : lineTotal;
     const status = statusLine(selected);
     const checkoutReady = selected ? isCheckoutReady({
         graceSku: selected.graceSku, shopifyVariantId: selected.shopifyVariantId ?? null,
@@ -460,7 +465,10 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
     const swatchStyle = materialSwatch(kit, activeCap?.swatchName ?? capName);
     const selectionName = rectangleGlass ? rectangleGlass + " glass · Glass stopper"
         : glassLabel(group.color) + " glass" + (capName ? " · " + capName + " cap" : fitment ? " · " + fitment : "");
-    const stickyLine = `${qty.toLocaleString("en-US")} × ${unitPrice != null ? formatPrice(unitPrice) : "—"} · ${lineLabel(glassName, rollerOption, rollerOption ? null : fitment, capName)}`;
+    const stickyQty = stickyPackTier && stickyPackTier.minQty > 1
+        ? `${stickyPack.packs.toLocaleString("en-US")} × Set of ${stickyPackTier.minQty.toLocaleString("en-US")}`
+        : `${qty.toLocaleString("en-US")} × ${(stickyPackTier?.unitPrice ?? unitPrice) != null ? formatPrice(stickyPackTier?.unitPrice ?? unitPrice!) : "—"}`;
+    const stickyLine = `${stickyQty} · ${lineLabel(glassName, rollerOption, rollerOption ? null : fitment, capName)}`;
 
     // The server titles the tab for the SKU it rendered; a pick after that renames the tab with the headline.
     const firstSku = useRef(selected?.websiteSku ?? null);
@@ -605,7 +613,7 @@ export default function PdpRedesignPage({ slug, group, variants, siblings, kitsB
 
                 <PdpStickyBar
                     line={stickyLine}
-                    total={lineTotal != null ? formatPrice(lineTotal) : "—"}
+                    total={stickyTotal != null ? formatPrice(stickyTotal) : "—"}
                     disabled={addState !== "add"}
                     label={addedQty != null ? "Added" : "Add to cart"}
                     onAdd={onAdd}
