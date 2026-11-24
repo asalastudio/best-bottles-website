@@ -2,6 +2,7 @@ import { action, query, internalMutation, internalQuery } from "./_generated/ser
 import { v } from "convex/values";
 import { api, internal } from "./_generated/api";
 import type { Doc, Id } from "./_generated/dataModel";
+import { bottleFormatAfterFamily } from "./bottleDisplayName";
 
 // Minimal types for paginated product reads
 interface RawProduct {
@@ -328,7 +329,7 @@ function buildDisplayName(
         const format = applicatorBucket
             ? (APPLICATOR_BUCKET_TITLE[applicatorBucket] ?? "Bottle")
             : "Bottle with Cap";
-        const formatSafe = fam.toLowerCase().includes("bottle") && format === "Bottle" ? "" : format;
+        const formatSafe = bottleFormatAfterFamily(fam, format);
         const parts = [cap, col, subLabel, fam, formatSafe].filter(Boolean);
         if (parts.length > 0) return parts.join(" ");
     }
