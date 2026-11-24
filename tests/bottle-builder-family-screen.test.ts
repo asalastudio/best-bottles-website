@@ -64,3 +64,11 @@ describe("Build Your Bottle finished views", () => {
         expect(client).toContain("onClick={startOver}");
     });
 });
+
+describe("which /matrix links open on the family screen", () => {
+    it("only a bare /matrix: a family, product or collection link goes straight to its bottles", async () => {
+        const { readFileSync } = await import("node:fs");
+        const page = readFileSync("src/app/matrix/page.tsx", "utf8");
+        expect(page).toContain("const chooseFamilyFirst = !familyParam && !sku && !collection;");
+    });
+});
