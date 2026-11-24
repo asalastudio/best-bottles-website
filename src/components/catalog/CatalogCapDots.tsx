@@ -20,7 +20,7 @@ import { useCallback, useEffect, useRef, useState, type CSSProperties, type Keyb
 import { useQuery } from "convex/react";
 import Image from "next/image";
 import { api } from "../../../convex/_generated/api";
-import { catalogCapExactPhoto, catalogCapPhoto, catalogCapPhotoBounds, catalogCapPsdPhoto, CATALOG_CAP_FAMILY, type CatalogCapKind } from "@/lib/products/catalog-cap-photos";
+import { catalogCapExactPhoto, catalogCapHeadPhoto, catalogCapPhoto, catalogCapPhotoBounds, catalogCapPhotoWithoutKind, CATALOG_CAP_FAMILY, type CatalogCapKind } from "@/lib/products/catalog-cap-photos";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import type { ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
 import { oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
@@ -44,9 +44,9 @@ export function useCatalogCapPhotos(input: {
 }): (variant: ProductCardVariantPreview) => string | undefined {
     const { capKind, neck, variants } = input;
     const canHaveCaps = Boolean(capKind && neck && variants.length > 0);
-    // Exact reviewed photos take precedence over the live index. If every
-    // finish already has one, the index cannot change what the card displays.
-    const needsIndex = canHaveCaps && variants.some(variant => catalogCapExactPhoto(variant, capKind!) === null);
+    // Exact reviewed photos and a sprayer's or pump's exposed-head photo take precedence over the live
+    // index. If every finish already has one, the index cannot change what the card displays.
+    const needsIndex = canHaveCaps && variants.some(variant => catalogCapExactPhoto(variant, capKind!) === null && !catalogCapHeadPhoto(variant, capKind!));
     const capPlates = useQuery(api.productPlates.byFamily, needsIndex
         ? { familyId: `${CATALOG_CAP_FAMILY[capKind!]}-${neck}`, limit: 200 } : "skip");
     const fallbackCaps = useQuery(api.productPlates.byFamily,
@@ -55,8 +55,8 @@ export function useCatalogCapPhotos(input: {
     const rows = [...(capPlates?.page ?? []), ...(fallbackCaps?.page ?? [])];
     const platesLoaded = !needsIndex || (capPlates !== undefined
         && (capPlates.page.length > 0 || !(capKind === "plain" || capKind === "pump") || fallbackCaps !== undefined));
-    // A card whose closure has no plate family (reducer caps) can still have its PSD component photo.
-    return (variant) => (capKind ? catalogCapPhoto(variant, rows, capKind, undefined, { platesLoaded }) : catalogCapPsdPhoto(variant.websiteSku)?.url);
+    // A card whose closure has no plate family (reducer caps) still shows its reviewed or component photo.
+    return (variant) => (capKind ? catalogCapPhoto(variant, rows, capKind, undefined, { platesLoaded }) : catalogCapPhotoWithoutKind(variant));
 }
 
 /** A swatch's fill when it is drawn as a colour chip: the finish's material colour. */

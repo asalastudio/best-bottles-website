@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
-import { CATALOG_CAP_FAMILY, catalogCapExactPhoto, catalogCapKind, catalogCapPhoto, catalogCapPhotoBounds, catalogCapPhotoFrame, catalogCapPsdPhoto } from "@/lib/products/catalog-cap-photos";
+import { CATALOG_CAP_FAMILY, catalogCapExactPhoto, catalogCapKind, catalogCapPhoto, catalogCapPhotoBounds, catalogCapPhotoFrame, catalogCapPhotoWithoutKind } from "@/lib/products/catalog-cap-photos";
 import { isClosurePart, type BuilderConfiguration } from "@/lib/bottle-builder/model";
 import BuilderImage from "./BuilderImage";
 import { builderPreviewLayout } from "@/lib/bottle-builder/preview-layout";
@@ -89,7 +89,7 @@ export default function BuilderFinishImage({ config, peers }: { config: BuilderC
     const rows = [...(photos?.page ?? []), ...(plainCaps?.page ?? [])];
     const platesLoaded = !needsComponentPhoto || (photos !== undefined && (kind !== "plain" || plainCaps !== undefined));
     const url = exact
-        ?? (kind ? catalogCapPhoto(preview, rows, kind, failed, { platesLoaded }) : catalogCapPsdPhoto(config.id)?.url)
+        ?? (kind ? catalogCapPhoto(preview, rows, kind, failed, { platesLoaded }) : catalogCapPhotoWithoutKind(preview, failed))
         ?? (config.finishComponent.imageUrl && !failed.has(config.finishComponent.imageUrl) ? config.finishComponent.imageUrl : undefined);
 
     if (parts.length) return <BuilderImage config={config} parts={parts} label={config.closure} thumbnail frameBounds={frameBounds} />;

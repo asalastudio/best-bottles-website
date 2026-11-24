@@ -1,11 +1,19 @@
 /**
  * Which closure component a finished catalog option uses, read from the option's SKU: the finish token
  * after the closure marker (Rdcr, Drpr, Spry, Roll, CapSht...), on the option's neck. Used by
- * map-cap-swatch-photos.mts to file each option under the component SKU its PSD photo is keyed by.
+ * map-cap-swatch-photos.mts to file each option under the component SKU its photo is keyed by.
  * Conservative on purpose: a SKU that does not match a rule exactly gets no photo rather than a guess.
  */
 /** Closure finish token in a finished product's SKU -> the component SKU its photo is filed under. */
-export function componentForOption(sku: string, neck: string | null): string | undefined {
+export function componentForOption(sku: string, neck: string | null, applicator: string | null = null): string | undefined {
+    const component = componentFromSku(sku, neck);
+    // A plain cap is only the closure of a bottle sold with a cap: an atomizer or roller whose SKU happens
+    // to end in a cap's finish token (GBAtom5Gl) is not one.
+    if (component && /^CP1[35]-415(?!Spry)/.test(component) && applicator && !/^(?:cap|n\/a$)/i.test(applicator)) return undefined;
+    return component;
+}
+
+function componentFromSku(sku: string, neck: string | null): string | undefined {
     let m: RegExpMatchArray | null;
     const pick = (table: Record<string, string>, token: string | undefined) => (token ? table[token] : undefined);
     switch (neck) {
@@ -37,14 +45,18 @@ export function componentForOption(sku: string, neck: string | null): string | u
         case "13-415":
             if (/Spry/.test(sku)) {
                 return pick({ SlMatt: "SlMt", SlMt: "SlMt", GlSh: "GlSh", SlSh: "SlSh", BlkMatt: "BlkMt", BlkSh: "BlkSh",
-                    BluMatt: "BluMt", CuMatt: "CuMt", GlMatt: "GlMt" }, sku.match(/Spry(\w+)$/)?.[1])?.replace(/^/, "CP13-415Spry");
+                    BluMatt: "BluMt", CuMatt: "CuMt", GlMatt: "GlMt", BlkShn: "BlkSh", GlShn: "GlSh", SlShn: "SlSh" },
+                    sku.match(/Spry(\w+)$/)?.[1])?.replace(/^/, "CP13-415Spry");
             }
             if (/Roll/.test(sku)) {
                 return pick({ PinkDot: "PinkDot", PinkDo: "PinkDot", BlkDot: "BlackDot", SlDot: "SlDot", SlMatt: "SlMt", GlMatt: "GlMt",
-                    GlSh: "GlSh", SlSh: "SlSh", CuMatt: "Cu", BlkSh: "BlkSh" }, sku.match(/Roll(?:on)?(\w+)$/)?.[1])?.replace(/^/, "CPRoll13-415");
+                    GlSh: "GlSh", SlSh: "SlSh", CuMatt: "Cu", BlkSh: "BlkSh", Blkdot: "BlackDot" }, sku.match(/Roll(?:on)?(\w+)$/)?.[1])?.replace(/^/, "CPRoll13-415");
             }
-            if (/BlkSht$/.test(sku) && !/(?:BlkSh|Matt)Sht$/.test(sku)) return "CP13-415BlkSht";
-            if (/WhtSht$/.test(sku)) return "CP13-415WhtSht";
+            // the short metallic caps: no PSD in the library; filed under the reviewed photo of the same cap
+            // (cap-swatch-shared-reviewed.json)
+            if ((m = sku.match(/\d(CuSht|GlMattSht|SlMattSht|BlkShSht|GlSht|SlSht)$/))) return `CP13-415${m[1]}`;
+            if (/\dBlkSht$/.test(sku)) return "CP13-415BlkSht";
+            if (/\dWhtSht$/.test(sku)) return "CP13-415WhtSht";
             if (/\d(?:Gl)$/.test(sku)) return "CP13-415Gl";
             if (/\d(?:Sl)$/.test(sku)) return "CP13-415Sl";
             return undefined;
@@ -60,7 +72,7 @@ export function componentForOption(sku: string, neck: string | null): string | u
             if (/\dSl(?:Cap)?$/.test(sku)) return "CP15-415ShnSl";
             return undefined;
         case "17-415":
-            return pick({ Rd: "Red", Red: "Red", Tur: "Tur", Blk: "Blk", Gl: "Gl", ShnSl: "ShnSl", MattSl: "MattSl" },
+            return pick({ Rd: "Red", Red: "Red", Tur: "Tur", Blk: "Blk", Gl: "Gl", ShnSl: "ShnSl", ShSl: "ShnSl", MattSl: "MattSl" },
                 sku.match(/Spry(\w+)$/)?.[1])?.replace(/^/, "Spry17-415");
         case "8-425":
             if ((m = sku.match(/Amb2(Black|Wht)Cap$/))) return m[1] === "Black" ? "8-425CpShortBlack" : "8-425CpShortWhite";

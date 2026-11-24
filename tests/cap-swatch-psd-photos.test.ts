@@ -5,7 +5,9 @@ import sharp from "sharp";
 import { describe, expect, it } from "vitest";
 import photos from "@/lib/products/cap-swatch-photos.generated.json";
 import options from "@/lib/products/cap-swatch-photo-options.generated.json";
-import { catalogCapPhoto, catalogCapPhotoBounds, catalogCapPsdPhoto } from "@/lib/products/catalog-cap-photos";
+import { catalogCapComponentPhoto, catalogCapHeadPhoto, catalogCapPhoto, catalogCapPhotoBounds, catalogCapPhotoWithoutKind } from "@/lib/products/catalog-cap-photos";
+import reviewed from "@/lib/products/cylinder-cap-thumbnails.generated.json";
+import sharedReviewed from "@/lib/products/cap-swatch-shared-reviewed.json";
 import { capSwatchFrame, CAP_SWATCH_HEIGHT, CAP_SWATCH_WIDTH } from "@/components/catalog/CatalogCapDots";
 import { closurePartFrame } from "@/components/bottle-builder/BuilderFinishImage";
 import { componentForOption } from "../scripts/catalog/cap-swatch-components";
@@ -64,24 +66,41 @@ describe("mapping catalog options to PSD component photos", () => {
         expect(componentForOption("GB1mlAmbVBlk", "Plug")).toBe("ROD1mlBlk");
     });
 
-    it("leaves a finish the library has no PSD for unmapped instead of guessing", () => {
-        // the short metallic 13-415 caps: no PSD in the master library
-        for (const sku of ["GBElg15CuSht", "GBElg15GlMattSht", "GBElg15BlkShSht", "GBCrcl15GlSht", "GBSleek5SlSht"]) {
-            expect(componentForOption(sku, "13-415"), sku).toBeUndefined();
+    it("files the short metallic 13-415 caps, which have no PSD, under the reviewed photo of the same cap", () => {
+        expect(componentForOption("GBElg15CuSht", "13-415")).toBe("CP13-415CuSht");
+        expect(componentForOption("GBCrcl15GlMattSht", "13-415")).toBe("CP13-415GlMattSht");
+        expect(componentForOption("GBSleek5BlkShSht", "13-415")).toBe("CP13-415BlkShSht");
+        expect(componentForOption("GBTulip6BlkSht", "13-415")).toBe("CP13-415BlkSht");
+        for (const [component, sameCap] of Object.entries(sharedReviewed)) {
+            expect(component in photoMap, component).toBe(false);
+            expect((reviewed as Record<string, string>)[sameCap], sameCap).toMatch(/reviewed-cap-thumbs/);
         }
-        // a SKU read on the wrong neck gets nothing
+        const copper = catalogCapComponentPhoto("GBCrcl15CuSht")!;
+        expect(copper).toEqual({ component: "CP13-415CuSht", url: (reviewed as Record<string, string>).GBCyl5CuSht, cutOut: false });
+        // already measured with the other reviewed thumbnails, so it draws cropped to the cap
+        expect(capSwatchFrame(copper.url).kind).toBe("crop");
+    });
+
+    it("gives no photo rather than a guess", () => {
+        // a SKU read on the wrong neck
         expect(componentForOption("GBCrcl50RdcrBlkLthr", "13-415")).toBeUndefined();
+        // an atomizer whose SKU ends like a tall gold cap is not a bottle with a cap
+        expect(componentForOption("GBAtom5Gl", "13-415", "Atomizer")).toBeUndefined();
+        expect(componentForOption("GBCrcl15Gl", "13-415", null)).toBe("CP13-415Gl");
+        // glass stoppers: nothing in the library
+        expect(componentForOption("GBSQSTBlue", "Ground")).toBeUndefined();
+        expect(optionMap.GBAtom5Gl).toBeUndefined();
     });
 
     it("maps only onto photos that exist, and fills the options the 20 Nov audit found bare", () => {
-        for (const [sku, component] of Object.entries(optionMap)) expect(photoMap[component], `${sku} -> ${component}`).toBeDefined();
+        for (const [sku, component] of Object.entries(optionMap)) expect(catalogCapComponentPhoto(sku)?.component, `${sku} -> ${component}`).toBe(component);
         const audit = readFileSync("docs/CAP_SWATCH_COVERAGE_2026-11-20.md", "utf8").split("## Options with no swatch photo")[1];
         const gapSkus = [...audit.matchAll(/SKUs: (.+)$/gm)].flatMap((m) => m[1].split(",").map((s) => s.trim()));
         expect(gapSkus).toHaveLength(519);
-        const filled = gapSkus.filter((sku) => optionMap[sku]);
-        expect(filled.length).toBeGreaterThanOrEqual(437);
-        // every reducer cap, every Boston Round dropper and every vial cap/dropper the audit listed
-        for (const sku of ["GBCrcl100RdcrShnGl", "GBDivaFrst46RdcrPnkLthr", "GBBstn2ozWhtDrprShnGlTrim", "GBBstnBlu15BlkDrpr", "GBVGr1DrmWhtCapSht", "GBVBlu1DrmBlkDropper"]) {
+        const bare = gapSkus.filter((sku) => !optionMap[sku]);
+        // what is left: glass stoppers and crystal caps
+        expect(bare).toHaveLength(12);
+        for (const sku of ["GBCrcl100RdcrShnGl", "GBDivaFrst46RdcrPnkLthr", "GBBstn2ozWhtDrprShnGlTrim", "GBBstnBlu15BlkDrpr", "GBVGr1DrmWhtCapSht", "GBVBlu1DrmBlkDropper", "GBRoyal13GlSht"]) {
             expect(optionMap[sku], sku).toBeDefined();
         }
     });
@@ -89,20 +108,46 @@ describe("mapping catalog options to PSD component photos", () => {
 
 describe("choosing a cap photo", () => {
     const reducer = { id: "r", label: "Black Leather", websiteSku: "GBCrcl50RdcrBlkLthr" };
+    const shortCopper = { id: "c", label: "Short Matte Copper", websiteSku: "GBCrcl15CuSht" };
+    const mattGoldSpray = { id: "s", label: "Screw Cap Matte Gold", websiteSku: "GBCrcl15SpryGlMatt" };
     const pump = { id: "p", label: "Pump Clear Overcap", websiteSku: "LBElg100LtnClOvrCap" };
 
-    it("uses the PSD part only when the plate index has no photo, and only once the plates have answered", () => {
-        const psd = catalogCapPsdPhoto(pump.websiteSku)!;
-        expect(psd.url).toMatch(/^\/images\/cap-swatches\/Ltn18-415MtSlCl\.[0-9a-f]{12}\.webp$/);
-        expect(catalogCapPhoto(pump, [], "pump", undefined, { platesLoaded: false })).toBeUndefined();
-        expect(catalogCapPhoto(pump, [], "pump")).toBe(psd.url);
-        const plate = { websiteSku: "Ltn18-415ClOvrCap", thumb: "https://blob.example/plate.webp" };
-        expect(catalogCapPhoto(pump, [plate], "pump")).toBe(plate.thumb);
-        expect(catalogCapPhoto(pump, [], "pump", new Set([psd.url]))).toBeUndefined();
+    it("shows a sprayer's or pump's exposed head, never the index's photo (which can be the overcap)", () => {
+        // the three 13-415 sprayer plates that are overcaps, and every other 13-415 finish
+        for (const [sku, component] of [["GBCrcl15SpryGlMatt", "CP13-415SpryGlMt"], ["GBCrcl15SpryBluMatt", "CP13-415SpryBluMt"], ["GBCrcl15SpryBlkSh", "CP13-415SpryBlkSh"],
+            ["GBElg15SpryBlkMatt", "CP13-415SpryBlkMt"], ["GBElg15SpryCuMatt", "CP13-415SpryCuMt"], ["GBCyl5SprySlMatt", "CP13-415SprySlMt"], ["GBCyl5SpryGlSh", "CP13-415SpryGlSh"], ["GBCyl5SprySlSh", "CP13-415SprySlSh"]]) {
+            const overcapPlate = { websiteSku: component, thumb: `https://blob.example/${component}.webp` };
+            const url = catalogCapPhoto({ id: sku, label: "", websiteSku: sku }, [overcapPlate], "sprayer");
+            expect(url, sku).toMatch(new RegExp(`^/images/cap-swatches/${component}\\.[0-9a-f]{12}\\.webp$`));
+        }
+        // shown at once: it does not wait for the plate index
+        expect(catalogCapPhoto(mattGoldSpray, [], "sprayer", undefined, { platesLoaded: false })).toBe(catalogCapHeadPhoto(mattGoldSpray, "sprayer"));
+        expect(catalogCapPhoto(pump, [], "pump", undefined, { platesLoaded: false })).toMatch(/Ltn18-415MtSlCl\.[0-9a-f]{12}\.webp$/);
+        // a cap is not a mechanism: no head photo
+        expect(catalogCapHeadPhoto(shortCopper, "plain")).toBeUndefined();
+    });
+
+    it("fills other closures only where the plate index has no photo, and only once the plates have answered", () => {
+        const fill = catalogCapComponentPhoto(shortCopper.websiteSku)!.url;
+        expect(catalogCapPhoto(shortCopper, [], "plain", undefined, { platesLoaded: false })).toBeUndefined();
+        expect(catalogCapPhoto(shortCopper, [], "plain")).toBe(fill);
+        const plate = { websiteSku: "CP13-415CuSht", thumb: "https://blob.example/plate.webp" };
+        expect(catalogCapPhoto(shortCopper, [plate], "plain")).toBe(plate.thumb);
+        expect(catalogCapPhoto(shortCopper, [], "plain", new Set([fill]))).toBeUndefined();
+    });
+
+    it("shows a reviewed or component photo on a card whose closure has no kind (reducers, Pillar caps)", () => {
+        // the Cylinder reducers have reviewed photos of their own, which a kind-less card used to skip
+        const cylinderReducer = { id: "x", label: "Black Leather", websiteSku: "GBCyl100RdcrBlkLthr" };
+        expect(catalogCapPhotoWithoutKind(cylinderReducer)).toBe((reviewed as Record<string, string>).GBCyl100RdcrBlkLthr);
+        expect(catalogCapPhotoWithoutKind(reducer)).toMatch(/^\/images\/cap-swatches\/CP18-415BlkLthr\./);
+        expect(catalogCapPhotoWithoutKind({ id: "p", label: "Short Matte Copper", websiteSku: "GBPillar9CuSht" })).toBe((reviewed as Record<string, string>).GBCyl5CuSht);
+        expect(catalogCapPhotoWithoutKind({ id: "s", label: "Stopper", websiteSku: "GBSQSTBlue" })).toBeUndefined();
+        expect(catalogCapPhotoWithoutKind(cylinderReducer, new Set([(reviewed as Record<string, string>).GBCyl100RdcrBlkLthr]))).toBeUndefined();
     });
 
     it("draws a PSD part at full swatch size, already cropped, in the catalog and in the builder", () => {
-        const url = catalogCapPsdPhoto(reducer.websiteSku)!.url;
+        const url = catalogCapComponentPhoto(reducer.websiteSku)!.url;
         const bounds = catalogCapPhotoBounds(url)!;
         expect([bounds.left, bounds.top, bounds.right, bounds.bottom]).toEqual([0, 0, bounds.width, bounds.height]);
         const frame = capSwatchFrame(url);
