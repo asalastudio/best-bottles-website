@@ -1,0 +1,677 @@
+sku,body,glass,slot,componentId,issue_type,severity,value,notes
+GB09BlackCapSht,vial-9ml-18-400,Clear,cap,PSD-VIAL9-CAP-BLK,closure_off_axis,Major,-8.01,closure centre vs neck axis (px)
+GB1mlAmbVBlk,vial-1ml-Plug,Amber,cap,PSD-VIAL1-PLUG-BLK,closure_off_axis,Major,-28.18,closure centre vs neck axis (px)
+GB1mlAmbVialWht,vial-1ml-Plug,Amber,cap,PSD-VIAL1-PLUG-WHT,closure_off_axis,Major,-29.09,closure centre vs neck axis (px)
+GB1mlVBlk,vial-1ml-Plug,Clear,cap,PSD-VIAL1-PLUG-BLK,closure_off_axis,Major,-28.18,closure centre vs neck axis (px)
+GB1mlVWht,vial-1ml-Plug,Clear,cap,PSD-VIAL1-PLUG-WHT,closure_off_axis,Major,-29.09,closure centre vs neck axis (px)
+GB3TPlGl,tola-decorative-3ml-14.3mm,Clear,cap,PSD-TOLA-CAP-GL,closure_off_axis,Major,-21.15,closure centre vs neck axis (px)
+GBCyl25AnSpBlk,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl25AnSpGl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl25AnSpTslIvySl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl25AnSpTslMtSl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl25AnSpTslRed,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl25AnSpTslWht,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl25DrpCu,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl25DrpGl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl25DrpSl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl25RdcrIvyLthr,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl25RdcrShnGl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl25RdcrShnGl,cylinder-25ml-18-415,Clear,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,6.72,closure centre vs neck axis (px)
+GBCyl50AnSpBlk,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpGl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpIvyGl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpIvySl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpLvn,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpMtSl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpPnk,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpRed,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpTslBlk,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpTslGl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpTslIvyGl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpTslIvySl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpTslLvn,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpTslMtSl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpTslPnk,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpTslRed,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpTslWht,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50AnSpWht,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50SpryCu,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50SpryMtGl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50SpryMtSl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50SpryShnBlk,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50SpryShnGl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCyl50SpryShnSl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBCylAmb9SpryBlk,cylinder-9ml-17-415,Amber,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Amber glass
+GBCylAmb9SpryGl,cylinder-9ml-17-415,Amber,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Amber glass
+GBCylAmb9SpryMattSl,cylinder-9ml-17-415,Amber,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Amber glass
+GBCylAmb9SpryRd,cylinder-9ml-17-415,Amber,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Amber glass
+GBCylAmb9SpryShSl,cylinder-9ml-17-415,Amber,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Amber glass
+GBCylAmb9SpryTur,cylinder-9ml-17-415,Amber,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Amber glass
+GBCylBlu5SpryBlkSh,cylinder-5ml-13-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu5SpryBluMatt,cylinder-5ml-13-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu5SpryCuMatt,cylinder-5ml-13-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu5SpryGlMatt,cylinder-5ml-13-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu5SpryGlSh,cylinder-5ml-13-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu5SprySlMatt,cylinder-5ml-13-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu5SprySlSh,cylinder-5ml-13-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu9SpryBlk,cylinder-9ml-17-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu9SpryGl,cylinder-9ml-17-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu9SpryMattSl,cylinder-9ml-17-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu9SpryRd,cylinder-9ml-17-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu9SpryShSl,cylinder-9ml-17-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylBlu9SpryTur,cylinder-9ml-17-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+GBCylSwrl9SpryBlk,cylinder-9ml-17-415,Swirl,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Swirl glass
+GBCylSwrl9SpryGl,cylinder-9ml-17-415,Swirl,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Swirl glass
+GBCylSwrl9SpryMattSl,cylinder-9ml-17-415,Swirl,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Swirl glass
+GBCylSwrl9SpryRd,cylinder-9ml-17-415,Swirl,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Swirl glass
+GBCylSwrl9SpryShSl,cylinder-9ml-17-415,Swirl,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Swirl glass
+GBCylSwrl9SpryTur,cylinder-9ml-17-415,Swirl,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Swirl glass
+GBDiva100AnSpBlk,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpGl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpIvyGl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpIvySl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpLvn,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpMtSl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpPnk,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpRed,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpTslBlk,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpTslGl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpTslIvyGl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpTslIvySl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpTslLvn,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpTslMtSl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpTslPnk,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpTslRed,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpTslWht,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100AnSpWht,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100RdcrBlkLthr,diva-100ml-18-415,Clear,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Minor,7.62,closure centre vs neck axis (px)
+GBDiva100RdcrBrwnLthr,diva-100ml-18-415,Clear,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,9.63,closure centre vs neck axis (px)
+GBDiva100RdcrLBrwnLthr,diva-100ml-18-415,Clear,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,8.88,closure centre vs neck axis (px)
+GBDiva100RdcrShnBlkTall,diva-100ml-18-415,Clear,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,11.46,closure centre vs neck axis (px)
+GBDiva100RdcrShnGl,diva-100ml-18-415,Clear,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,4.94,closure centre vs neck axis (px)
+GBDiva100SpryCu,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100SpryMtGl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100SpryMtSl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100SpryShnBlk,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100SpryShnGl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva100SpryShnSl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30AnSpBlk,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30AnSpGl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30AnSpIvyGl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30AnSpIvySl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30AnSpLvn,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30AnSpMtSl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30AnSpPnk,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30AnSpRed,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30AnSpWht,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30RdcrBlkLthr,diva-30ml-18-415,Clear,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Major,10.45,closure centre vs neck axis (px)
+GBDiva30RdcrBrwnLthr,diva-30ml-18-415,Clear,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,13.24,closure centre vs neck axis (px)
+GBDiva30RdcrLBrwnLthr,diva-30ml-18-415,Clear,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,12.19,closure centre vs neck axis (px)
+GBDiva30RdcrShnBlkTall,diva-30ml-18-415,Clear,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,15.74,closure centre vs neck axis (px)
+GBDiva30RdcrShnGl,diva-30ml-18-415,Clear,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,6.78,closure centre vs neck axis (px)
+GBDiva30SpryCu,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30SpryMtGl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30SpryMtSl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30SpryShnBlk,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30SpryShnGl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva30SpryShnSl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpBlk,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpBlkRng,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpGl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpIvyGl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpIvySl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpIvySlRng,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpLvn,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpLvnRng,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpMtSl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpPnk,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpRed,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpRedRng,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslBlk,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslBlkRng,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslGl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslIvyGl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslIvySl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslIvySlRng,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslLvn,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslLvnRng,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslMtSl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslPnk,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslRed,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslRedRng,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslWht,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpTslWhtRng,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpWht,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46AnSpWhtRng,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46DrpCu,diva-46ml-18-415,Clear,,,no_pipette_assembled,Major,,dropper drawn without a pipette inside the glass; Clear glass
+GBDiva46DrpGl,diva-46ml-18-415,Clear,,,no_pipette_assembled,Major,,dropper drawn without a pipette inside the glass; Clear glass
+GBDiva46DrpSl,diva-46ml-18-415,Clear,,,no_pipette_assembled,Major,,dropper drawn without a pipette inside the glass; Clear glass
+GBDiva46RdcrBlkLthr,diva-46ml-18-415,Clear,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Major,9.5,closure centre vs neck axis (px)
+GBDiva46RdcrBrwnLthr,diva-46ml-18-415,Clear,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,12.02,closure centre vs neck axis (px)
+GBDiva46RdcrLBrwnLthr,diva-46ml-18-415,Clear,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,11.08,closure centre vs neck axis (px)
+GBDiva46RdcrShnBlkTall,diva-46ml-18-415,Clear,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,14.3,closure centre vs neck axis (px)
+GBDiva46RdcrShnGl,diva-46ml-18-415,Clear,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,6.17,closure centre vs neck axis (px)
+GBDiva46SpryCu,diva-46ml-18-415,Clear,sprayer,CMP-SPR-MTCP-18-415-03,closure_off_axis,Minor,-4.43,closure centre vs neck axis (px)
+GBDiva46SpryCu,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46SpryMtGl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46SpryMtSl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46SpryShnBlk,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46SpryShnGl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDiva46SpryShnSl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDivaFrst46RdcrBlkLthr,diva-46ml-18-415,Frosted,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Major,9.5,closure centre vs neck axis (px)
+GBDivaFrst46RdcrBrwnLthr,diva-46ml-18-415,Frosted,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,12.02,closure centre vs neck axis (px)
+GBDivaFrst46RdcrLBrwnLthr,diva-46ml-18-415,Frosted,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,11.08,closure centre vs neck axis (px)
+GBDivaFrst46RdcrShnBlkTall,diva-46ml-18-415,Frosted,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,14.3,closure centre vs neck axis (px)
+GBDivaFrst46RdcrShnGl,diva-46ml-18-415,Frosted,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,6.17,closure centre vs neck axis (px)
+GBDmnd2ozAnSpBlk,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpGl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpIvyGl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpIvySl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpLvn,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpMtSl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpPnk,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpRed,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpTslBlk,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpTslGl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpTslIvyGl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpTslIvySl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpTslLvn,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpTslMtSl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpTslPnk,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpTslRed,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpTslWht,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozAnSpWht,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozRdcrBlkLthr,diamond-60ml-18-415,Clear,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Major,9.68,closure centre vs neck axis (px)
+GBDmnd2ozRdcrBrwnLthr,diamond-60ml-18-415,Clear,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,12.25,closure centre vs neck axis (px)
+GBDmnd2ozRdcrLBrwnLthr,diamond-60ml-18-415,Clear,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,11.29,closure centre vs neck axis (px)
+GBDmnd2ozRdcrShnBlkTall,diamond-60ml-18-415,Clear,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,14.58,closure centre vs neck axis (px)
+GBDmnd2ozRdcrShnGl,diamond-60ml-18-415,Clear,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,6.28,closure centre vs neck axis (px)
+GBDmnd2ozSpryCu,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozSpryMtGl,diamond-60ml-18-415,Clear,sprayer,CMP-SPR-MTGD-18-415-05,closure_off_axis,Minor,-5.04,closure centre vs neck axis (px)
+GBDmnd2ozSpryMtGl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozSpryMtSl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozSpryShnBlk,diamond-60ml-18-415,Clear,sprayer,CMP-SPR-SHBK-18-415-06,closure_off_axis,Minor,-4.1,closure centre vs neck axis (px)
+GBDmnd2ozSpryShnBlk,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozSpryShnGl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBDmnd2ozSpryShnSl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBElg100RdcrBlkLthr,elegant-100ml-18-415,Clear,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Minor,7.75,closure centre vs neck axis (px)
+GBElg100RdcrBrwnLthr,elegant-100ml-18-415,Clear,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,9.81,closure centre vs neck axis (px)
+GBElg100RdcrLBrwnLthr,elegant-100ml-18-415,Clear,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,9.03,closure centre vs neck axis (px)
+GBElg100RdcrShnBlkTall,elegant-100ml-18-415,Clear,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,11.67,closure centre vs neck axis (px)
+GBElg100RdcrShnGl,elegant-100ml-18-415,Clear,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,5.02,closure centre vs neck axis (px)
+GBElg100SpryCu,elegant-100ml-18-415,Clear,diptube,CMP-SPR-MTCP-18-415-03,diptube_off_axis,Minor,3.51,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElg100SpryMtGl,elegant-100ml-18-415,Clear,diptube,CMP-SPR-MTGD-18-415-05,diptube_off_axis,Minor,3.51,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElg100SpryMtSl,elegant-100ml-18-415,Clear,diptube,CMP-SPR-MTSL-18-415-06,diptube_off_axis,Minor,3.51,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElg100SpryShnBlk,elegant-100ml-18-415,Clear,diptube,CMP-SPR-SHBK-18-415-06,diptube_off_axis,Minor,3.51,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElg100SpryShnGl,elegant-100ml-18-415,Clear,diptube,CMP-SPR-SHGD-18-415-05,diptube_off_axis,Minor,3.51,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElg100SpryShnSl,elegant-100ml-18-415,Clear,diptube,CMP-SPR-SHSL-18-415-06,diptube_off_axis,Minor,3.51,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElg30GlCap,elegant-30ml-clear-15-415,Clear,body,,body_off_baseline,Major,5,body foot vs recorded baseline (px)
+GBElg30GlCap,elegant-30ml-clear-15-415,Clear,,,seat_anchor_wrong,Major,109.08,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElg30GlCap,elegant-30ml-clear-15-415,Clear,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElg30SlCap,elegant-30ml-clear-15-415,Clear,body,,body_off_baseline,Major,4,body foot vs recorded baseline (px)
+GBElg30SlCap,elegant-30ml-clear-15-415,Clear,,,seat_anchor_wrong,Major,109.08,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElg30SlCap,elegant-30ml-clear-15-415,Clear,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElg30SpryBlk,elegant-30ml-clear-15-415,Clear,body,,body_off_baseline,Major,2.5,body foot vs recorded baseline (px)
+GBElg30SpryBlk,elegant-30ml-clear-15-415,Clear,,,seat_anchor_wrong,Major,670.24,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElg30SpryBlk,elegant-30ml-clear-15-415,Clear,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElg30SpryBlk,elegant-30ml-clear-15-415,Clear,,,closure_floating,Blocker,567.89,lowest closure edge is above the rim (px gap)
+GBElg30SpryBlk,elegant-30ml-clear-15-415,Clear,diptube,,diptube_opaque_over_glass,Major,1,in front of the glass with no opacity or blend: reads as outside the bottle
+GBElg30SpryMattGl,elegant-30ml-clear-15-415,Clear,,,seat_anchor_wrong,Major,668.57,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElg30SpryMattGl,elegant-30ml-clear-15-415,Clear,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElg30SpryMattGl,elegant-30ml-clear-15-415,Clear,,,closure_floating,Blocker,565.52,lowest closure edge is above the rim (px gap)
+GBElg30SpryMattGl,elegant-30ml-clear-15-415,Clear,diptube,,diptube_opaque_over_glass,Major,1,in front of the glass with no opacity or blend: reads as outside the bottle
+GBElg30SpryMattSl,elegant-30ml-clear-15-415,Clear,body,,body_off_baseline,Major,3,body foot vs recorded baseline (px)
+GBElg30SpryMattSl,elegant-30ml-clear-15-415,Clear,,,seat_anchor_wrong,Major,668.57,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElg30SpryMattSl,elegant-30ml-clear-15-415,Clear,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElg30SpryMattSl,elegant-30ml-clear-15-415,Clear,,,closure_floating,Blocker,567.52,lowest closure edge is above the rim (px gap)
+GBElg30SpryMattSl,elegant-30ml-clear-15-415,Clear,diptube,,diptube_opaque_over_glass,Major,1,in front of the glass with no opacity or blend: reads as outside the bottle
+GBElg30SpryMattSl,elegant-30ml-clear-15-415,Clear,sprayer,,closure_off_axis,Minor,4.5,closure centre vs neck axis (px)
+GBElg30SpryShGl,elegant-30ml-clear-15-415,Clear,body,,body_off_baseline,Major,2.5,body foot vs recorded baseline (px)
+GBElg30SpryShGl,elegant-30ml-clear-15-415,Clear,,,seat_anchor_wrong,Major,670.24,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElg30SpryShGl,elegant-30ml-clear-15-415,Clear,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElg30SpryShGl,elegant-30ml-clear-15-415,Clear,,,closure_floating,Blocker,568.89,lowest closure edge is above the rim (px gap)
+GBElg30SpryShGl,elegant-30ml-clear-15-415,Clear,diptube,,diptube_opaque_over_glass,Major,1,in front of the glass with no opacity or blend: reads as outside the bottle
+GBElg30SpryShnSl,elegant-30ml-clear-15-415,Clear,body,,body_off_baseline,Major,2.5,body foot vs recorded baseline (px)
+GBElg30SpryShnSl,elegant-30ml-clear-15-415,Clear,,,seat_anchor_wrong,Major,670.24,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElg30SpryShnSl,elegant-30ml-clear-15-415,Clear,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElg30SpryShnSl,elegant-30ml-clear-15-415,Clear,,,closure_floating,Blocker,570.89,lowest closure edge is above the rim (px gap)
+GBElg30SpryShnSl,elegant-30ml-clear-15-415,Clear,diptube,,diptube_opaque_over_glass,Major,1,in front of the glass with no opacity or blend: reads as outside the bottle
+GBElg60DrpCu,elegant-60ml-18-415,Clear,pipette,CMP-DRP-CPR-18415,image_distorted,Major,0.94,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBElg60DrpGl,elegant-60ml-18-415,Clear,pipette,CMP-DRP-SGLD-18415,image_distorted,Major,0.94,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBElg60DrpSl,elegant-60ml-18-415,Clear,pipette,CMP-DRP-SSLV-18415,image_distorted,Major,0.94,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBElg60RdcrBlkLthr,elegant-60ml-18-415,Clear,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Major,9.75,closure centre vs neck axis (px)
+GBElg60RdcrBrwnLthr,elegant-60ml-18-415,Clear,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,12.34,closure centre vs neck axis (px)
+GBElg60RdcrLBrwnLthr,elegant-60ml-18-415,Clear,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,11.37,closure centre vs neck axis (px)
+GBElg60RdcrShnBlkTall,elegant-60ml-18-415,Clear,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,14.68,closure centre vs neck axis (px)
+GBElg60RdcrShnGl,elegant-60ml-18-415,Clear,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,6.33,closure centre vs neck axis (px)
+GBElg60SpryCu,elegant-60ml-18-415,Clear,diptube,CMP-SPR-MTCP-18-415-03,diptube_off_axis,Minor,4.08,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElg60SpryMtGl,elegant-60ml-18-415,Clear,diptube,CMP-SPR-MTGD-18-415-05,diptube_off_axis,Minor,4.08,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElg60SpryMtSl,elegant-60ml-18-415,Clear,diptube,CMP-SPR-MTSL-18-415-06,diptube_off_axis,Minor,4.08,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElg60SpryShnBlk,elegant-60ml-18-415,Clear,diptube,CMP-SPR-SHBK-18-415-06,diptube_off_axis,Minor,4.08,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElg60SpryShnGl,elegant-60ml-18-415,Clear,diptube,CMP-SPR-SHGD-18-415-05,diptube_off_axis,Minor,4.08,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElg60SpryShnSl,elegant-60ml-18-415,Clear,diptube,CMP-SPR-SHSL-18-415-06,diptube_off_axis,Minor,4.08,"centre vs neck axis (mm); may be a curved tip, needs a look"
+GBElgFrst100RdcrBlkLthr,elegant-100ml-18-415,Frosted,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Minor,7.75,closure centre vs neck axis (px)
+GBElgFrst100RdcrBrwnLthr,elegant-100ml-18-415,Frosted,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,9.81,closure centre vs neck axis (px)
+GBElgFrst100RdcrLBrwnLthr,elegant-100ml-18-415,Frosted,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,9.03,closure centre vs neck axis (px)
+GBElgFrst100RdcrShnBlkTall,elegant-100ml-18-415,Frosted,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,11.67,closure centre vs neck axis (px)
+GBElgFrst100RdcrShnGl,elegant-100ml-18-415,Frosted,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,5.02,closure centre vs neck axis (px)
+GBElgFrst30GlCap,elegant-30ml-frosted-15-415,Frosted,,,seat_anchor_wrong,Major,108.19,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElgFrst30GlCap,elegant-30ml-frosted-15-415,Frosted,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElgFrst30SlCap,elegant-30ml-frosted-15-415,Frosted,,,seat_anchor_wrong,Major,109.8,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElgFrst30SlCap,elegant-30ml-frosted-15-415,Frosted,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElgFrst30SpryBlk,elegant-30ml-frosted-15-415,Frosted,body,,body_off_baseline,Major,2.1,body foot vs recorded baseline (px)
+GBElgFrst30SpryBlk,elegant-30ml-frosted-15-415,Frosted,,,seat_anchor_wrong,Major,96.54,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElgFrst30SpryBlk,elegant-30ml-frosted-15-415,Frosted,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElgFrst30SpryMattGl,elegant-30ml-frosted-15-415,Frosted,body,,body_off_baseline,Major,2.1,body foot vs recorded baseline (px)
+GBElgFrst30SpryMattGl,elegant-30ml-frosted-15-415,Frosted,,,seat_anchor_wrong,Major,104.54,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElgFrst30SpryMattGl,elegant-30ml-frosted-15-415,Frosted,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElgFrst30SpryMattSl,elegant-30ml-frosted-15-415,Frosted,body,,body_off_baseline,Major,2.1,body foot vs recorded baseline (px)
+GBElgFrst30SpryMattSl,elegant-30ml-frosted-15-415,Frosted,,,seat_anchor_wrong,Major,96.94,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElgFrst30SpryMattSl,elegant-30ml-frosted-15-415,Frosted,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElgFrst30SpryShSl,elegant-30ml-frosted-15-415,Frosted,body,,body_off_baseline,Major,2.1,body foot vs recorded baseline (px)
+GBElgFrst30SpryShSl,elegant-30ml-frosted-15-415,Frosted,,,seat_anchor_wrong,Major,95.94,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElgFrst30SpryShSl,elegant-30ml-frosted-15-415,Frosted,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElgFrst30SpryShSl,elegant-30ml-frosted-15-415,Frosted,sprayer,,closure_off_axis,Minor,5.5,closure centre vs neck axis (px)
+GBElgFrst30SpryShnGl,elegant-30ml-frosted-15-415,Frosted,body,,body_off_baseline,Major,2.1,body foot vs recorded baseline (px)
+GBElgFrst30SpryShnGl,elegant-30ml-frosted-15-415,Frosted,,,seat_anchor_wrong,Major,98.94,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBElgFrst30SpryShnGl,elegant-30ml-frosted-15-415,Frosted,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBElgFrst60DrpCu,elegant-60ml-18-415,Frosted,pipette,CMP-DRP-CPR-18415,pipette_gap_under_closure,Minor,10.28,gap between closure and top of tube (px)
+GBElgFrst60DrpGl,elegant-60ml-18-415,Frosted,pipette,CMP-DRP-SGLD-18415,pipette_gap_under_closure,Minor,7.58,gap between closure and top of tube (px)
+GBElgFrst60DrpSl,elegant-60ml-18-415,Frosted,pipette,CMP-DRP-SSLV-18415,pipette_gap_under_closure,Minor,10.28,gap between closure and top of tube (px)
+GBElgFrst60RdcrBlkLthr,elegant-60ml-18-415,Frosted,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Major,9.75,closure centre vs neck axis (px)
+GBElgFrst60RdcrBrwnLthr,elegant-60ml-18-415,Frosted,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,12.34,closure centre vs neck axis (px)
+GBElgFrst60RdcrLBrwnLthr,elegant-60ml-18-415,Frosted,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,11.37,closure centre vs neck axis (px)
+GBElgFrst60RdcrShnBlkTall,elegant-60ml-18-415,Frosted,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,14.68,closure centre vs neck axis (px)
+GBElgFrst60RdcrShnGl,elegant-60ml-18-415,Frosted,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,6.33,closure centre vs neck axis (px)
+GBEmp100AnSpBlk,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpGl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpIvyGl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpIvySl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpLvn,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpMtSl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpPnk,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpRed,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpTslBlk,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpTslGl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpTslIvyGl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpTslIvySl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpTslLvn,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpTslMtSl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpTslPnk,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpTslRed,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpTslWht,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100AnSpWht,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100RdcrBlkLthr,empire-100ml-18-415,Clear,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Minor,7.99,closure centre vs neck axis (px)
+GBEmp100RdcrBrwnLthr,empire-100ml-18-415,Clear,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,10.12,closure centre vs neck axis (px)
+GBEmp100RdcrLBrwnLthr,empire-100ml-18-415,Clear,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,9.32,closure centre vs neck axis (px)
+GBEmp100RdcrShnBlkTall,empire-100ml-18-415,Clear,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,12.03,closure centre vs neck axis (px)
+GBEmp100RdcrShnGl,empire-100ml-18-415,Clear,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,5.19,closure centre vs neck axis (px)
+GBEmp100SpryCu,empire-100ml-18-415,Clear,sprayer,CMP-SPR-MTCP-18-415-03,closure_off_axis,Major,-12.77,closure centre vs neck axis (px)
+GBEmp100SpryCu,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100SpryMtGl,empire-100ml-18-415,Clear,sprayer,CMP-SPR-MTGD-18-415-05,closure_off_axis,Major,-14.89,closure centre vs neck axis (px)
+GBEmp100SpryMtGl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100SpryMtSl,empire-100ml-18-415,Clear,sprayer,CMP-SPR-MTSL-18-415-06,closure_off_axis,Major,-15.43,closure centre vs neck axis (px)
+GBEmp100SpryMtSl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100SpryShnBlk,empire-100ml-18-415,Clear,sprayer,CMP-SPR-SHBK-18-415-06,closure_off_axis,Major,-14.63,closure centre vs neck axis (px)
+GBEmp100SpryShnBlk,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100SpryShnGl,empire-100ml-18-415,Clear,sprayer,CMP-SPR-SHGD-18-415-05,closure_off_axis,Major,-14.89,closure centre vs neck axis (px)
+GBEmp100SpryShnGl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp100SpryShnSl,empire-100ml-18-415,Clear,sprayer,CMP-SPR-SHSL-18-415-06,closure_off_axis,Major,-21.28,closure centre vs neck axis (px)
+GBEmp100SpryShnSl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpBlk,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpGl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpIvyGl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpIvySl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpLvn,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpMtSl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpPnk,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpRed,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpTslBlk,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpTslGl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpTslIvyGl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpTslIvySl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpTslLvn,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpTslMtSl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpTslPnk,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpTslRed,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpTslWht,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50AnSpWht,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50DrpCu,empire-50ml-18-415,Clear,,,no_pipette_assembled,Major,,dropper drawn without a pipette inside the glass; Clear glass
+GBEmp50DrpGl,empire-50ml-18-415,Clear,,,no_pipette_assembled,Major,,dropper drawn without a pipette inside the glass; Clear glass
+GBEmp50DrpSl,empire-50ml-18-415,Clear,,,no_pipette_assembled,Major,,dropper drawn without a pipette inside the glass; Clear glass
+GBEmp50RdcrBlkLthr,empire-50ml-18-415,Clear,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Major,9.73,closure centre vs neck axis (px)
+GBEmp50RdcrBrwnLthr,empire-50ml-18-415,Clear,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,12.32,closure centre vs neck axis (px)
+GBEmp50RdcrLBrwnLthr,empire-50ml-18-415,Clear,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,11.35,closure centre vs neck axis (px)
+GBEmp50RdcrShnBlkTall,empire-50ml-18-415,Clear,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,14.64,closure centre vs neck axis (px)
+GBEmp50RdcrShnGl,empire-50ml-18-415,Clear,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,6.31,closure centre vs neck axis (px)
+GBEmp50SpryCu,empire-50ml-18-415,Clear,sprayer,CMP-SPR-MTCP-18-415-03,closure_off_axis,Minor,-6.62,closure centre vs neck axis (px)
+GBEmp50SpryCu,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50SpryMtGl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50SpryMtSl,empire-50ml-18-415,Clear,sprayer,CMP-SPR-MTSL-18-415-06,closure_off_axis,Minor,-5.68,closure centre vs neck axis (px)
+GBEmp50SpryMtSl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50SpryShnBlk,empire-50ml-18-415,Clear,sprayer,CMP-SPR-SHBK-18-415-06,closure_off_axis,Minor,-4.73,closure centre vs neck axis (px)
+GBEmp50SpryShnBlk,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50SpryShnGl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBEmp50SpryShnSl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpBlk,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpGl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpIvyGl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpIvySl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpLvn,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpMtSl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpPnk,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpRed,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpTslBlk,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpTslGl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpTslIvyGl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpTslIvySl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpTslLvn,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpTslMtSl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpTslPnk,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpTslRed,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpTslWht,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55AnSpWht,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55RdcrBlkLthr,grace-55ml-18-415,Clear,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Minor,7.54,closure centre vs neck axis (px)
+GBGrce55RdcrBrwnLthr,grace-55ml-18-415,Clear,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,9.54,closure centre vs neck axis (px)
+GBGrce55RdcrLBrwnLthr,grace-55ml-18-415,Clear,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,8.8,closure centre vs neck axis (px)
+GBGrce55RdcrShnBlkTall,grace-55ml-18-415,Clear,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,11.37,closure centre vs neck axis (px)
+GBGrce55RdcrShnGl,grace-55ml-18-415,Clear,cap,CMP-CAP-SGLD-18415-S,closure_off_axis,Minor,4.9,closure centre vs neck axis (px)
+GBGrce55SpryCu,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55SpryMtGl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55SpryMtSl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55SpryShnBlk,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55SpryShnGl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBGrce55SpryShnSl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+GBPillar9BlkShSht,pillar-9ml-13-415,Clear,cap,CMP-CAP-SBLK-13-415,closure_behind_body,Major,1,body zOrder 1
+GBPillar9MtlRollBlkSh,pillar-9ml-13-415,Clear,cap,CMP-ROC-SBLK-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9MtlRollCuMatt,pillar-9ml-13-415,Clear,cap,CMP-ROC-MCPR-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9MtlRollGlMatt,pillar-9ml-13-415,Clear,cap,CMP-ROC-MGLD-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9MtlRollGlSh,pillar-9ml-13-415,Clear,cap,CMP-ROC-SGLD-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9MtlRollPinkDot,pillar-9ml-13-415,Clear,cap,CMP-ROC-PNK-13415-DOT,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9MtlRollSlDot,pillar-9ml-13-415,Clear,cap,CMP-ROC-SLV-13415-DOT,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9MtlRollSlMatt,pillar-9ml-13-415,Clear,cap,CMP-ROC-MSLV-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9MtlRollSlSh,pillar-9ml-13-415,Clear,cap,CMP-ROC-SSLV-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9RollBlkSh,pillar-9ml-13-415,Clear,cap,CMP-ROC-SBLK-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9RollCuMatt,pillar-9ml-13-415,Clear,cap,CMP-ROC-MCPR-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9RollGlMatt,pillar-9ml-13-415,Clear,cap,CMP-ROC-MGLD-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9RollGlSh,pillar-9ml-13-415,Clear,cap,CMP-ROC-SGLD-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9RollPinkDot,pillar-9ml-13-415,Clear,cap,CMP-ROC-PNK-13415-DOT,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9RollSlDot,pillar-9ml-13-415,Clear,cap,CMP-ROC-SLV-13415-DOT,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9RollSlMatt,pillar-9ml-13-415,Clear,cap,CMP-ROC-MSLV-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9RollSlSh,pillar-9ml-13-415,Clear,cap,CMP-ROC-SSLV-13415,image_distorted,Minor,1.08,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9SpryBlkMatt,pillar-9ml-13-415,Clear,diptube,CMP-CAP-BLK-13-415-01,image_distorted,Major,1.13,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9SpryBlkShn,pillar-9ml-13-415,Clear,diptube,CMP-CAP-BLK-13-415-02,image_distorted,Major,1.13,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9SpryBluMatt,pillar-9ml-13-415,Clear,diptube,CMP-CAP-13-415,image_distorted,Major,1.13,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9SpryGlMatt,pillar-9ml-13-415,Clear,diptube,CMP-CAP-SGLD-13-415-02,image_distorted,Major,1.13,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9SpryGlShn,pillar-9ml-13-415,Clear,diptube,CMP-CAP-SGLD-13-415-03,image_distorted,Major,1.13,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9SprySlMatt,pillar-9ml-13-415,Clear,diptube,CMP-CAP-SLV-13-415-02,image_distorted,Major,1.13,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBPillar9SprySlShn,pillar-9ml-13-415,Clear,diptube,CMP-CAP-SLV-13-415-03,image_distorted,Major,1.13,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBRect10MtlRollBlkDot,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-BLK-13415-DOT,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10MtlRollBlkSh,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-SBLK-13415,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10MtlRollCuMatt,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-MCPR-13415,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10MtlRollGlMatt,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-MGLD-13415,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10MtlRollPinkDot,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-PNK-13415-DOT,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10MtlRollSlDot,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-SLV-13415-DOT,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10MtlRollSlMatt,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-MSLV-13415,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10RollBlkDot,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-BLK-13415-DOT,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10RollBlkSh,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-SBLK-13415,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10RollCuMatt,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-MCPR-13415,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10RollGlMatt,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-MGLD-13415,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10RollPinkDot,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-PNK-13415-DOT,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10RollSlDot,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-SLV-13415-DOT,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBRect10RollSlMatt,footed-rectangle-10ml-13-415,Clear,cap,CMP-ROC-MSLV-13415,closure_off_axis,Minor,4.16,closure centre vs neck axis (px)
+GBSlk100AnSpBlk,sleek-100ml-18-415,Clear,diptube,CMP-SPR-BKSL-18-415-02,image_distorted,Major,1.53,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpGl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-GLD-18-415-02,image_distorted,Major,1.54,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpIvyGl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-IVGD-18-415-01,image_distorted,Major,1.54,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpIvySl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-IVSL-18-415-01,image_distorted,Major,1.53,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpLvn,sleek-100ml-18-415,Clear,diptube,CMP-SPR-LVN-18-415-01,image_distorted,Major,1.53,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpMtSl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-MSLV-18-415-01,image_distorted,Major,1.53,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpPnk,sleek-100ml-18-415,Clear,diptube,CMP-CAP-PNK-18-415,image_distorted,Major,1.53,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpRed,sleek-100ml-18-415,Clear,diptube,CMP-SPR-RED-18-415-01,image_distorted,Major,1.53,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpTslBlk,sleek-100ml-18-415,Clear,diptube,CMP-SPR-BLK-18-415-02,image_distorted,Major,11.73,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpTslBlk,sleek-100ml-18-415,Clear,diptube,CMP-SPR-BLK-18-415-02,diptube_stub,Blocker,14.93,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk100AnSpTslGl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-GLD-18415-TSL,image_distorted,Major,8.62,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpTslGl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-GLD-18415-TSL,diptube_stub,Blocker,20.32,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk100AnSpTslIvyGl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-IVGD-18-415-02,image_distorted,Major,8.36,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpTslIvyGl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-IVGD-18-415-02,diptube_stub,Blocker,20.94,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk100AnSpTslIvySl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-IVSL-18-415-02,image_distorted,Major,8.36,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpTslIvySl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-IVSL-18-415-02,diptube_stub,Blocker,20.94,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk100AnSpTslLvn,sleek-100ml-18-415,Clear,diptube,CMP-SPR-LVN-18-415-02,image_distorted,Major,8.72,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpTslLvn,sleek-100ml-18-415,Clear,diptube,CMP-SPR-LVN-18-415-02,diptube_stub,Blocker,20.07,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk100AnSpTslMtSl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-MSLV-18-415-02,image_distorted,Major,10.33,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpTslMtSl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-MSLV-18-415-02,diptube_stub,Blocker,16.95,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk100AnSpTslPnk,sleek-100ml-18-415,Clear,diptube,CMP-SPR-PNK-18-415,image_distorted,Major,8.86,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpTslPnk,sleek-100ml-18-415,Clear,diptube,CMP-SPR-PNK-18-415,diptube_stub,Blocker,19.77,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk100AnSpTslRed,sleek-100ml-18-415,Clear,diptube,CMP-SPR-RED-18-415-02,image_distorted,Major,7.86,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpTslRed,sleek-100ml-18-415,Clear,diptube,CMP-SPR-RED-18-415-02,diptube_stub,Blocker,22.27,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk100AnSpTslWht,sleek-100ml-18-415,Clear,diptube,CMP-SPR-WHT-18-415-02,image_distorted,Major,8.82,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100AnSpTslWht,sleek-100ml-18-415,Clear,diptube,CMP-SPR-WHT-18-415-02,diptube_stub,Blocker,19.85,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk100AnSpWht,sleek-100ml-18-415,Clear,diptube,CMP-SPR-WHT-18-415-01,image_distorted,Major,1.53,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100SpryCu,sleek-100ml-18-415,Clear,diptube,CMP-SPR-MTCP-18-415-03,image_distorted,Major,1.54,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100SpryMtGl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-MTGD-18-415-05,image_distorted,Major,1.54,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100SpryMtSl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-MTSL-18-415-06,image_distorted,Major,1.54,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100SpryShnBlk,sleek-100ml-18-415,Clear,diptube,CMP-SPR-SHBK-18-415-06,image_distorted,Major,1.53,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100SpryShnGl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-SHGD-18-415-05,image_distorted,Major,1.54,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk100SpryShnSl,sleek-100ml-18-415,Clear,diptube,CMP-SPR-SHSL-18-415-06,image_distorted,Major,1.54,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpBlk,sleek-50ml-18-415,Clear,diptube,CMP-SPR-BKSL-18-415-02,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpGl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-GLD-18-415-02,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpIvyGl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-IVGD-18-415-01,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpIvySl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-IVSL-18-415-01,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpLvn,sleek-50ml-18-415,Clear,diptube,CMP-SPR-LVN-18-415-01,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpMtSl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-MSLV-18-415-01,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpPnk,sleek-50ml-18-415,Clear,diptube,CMP-CAP-PNK-18-415,image_distorted,Major,1.55,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpRed,sleek-50ml-18-415,Clear,diptube,CMP-SPR-RED-18-415-01,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpTslBlk,sleek-50ml-18-415,Clear,diptube,CMP-SPR-BLK-18-415-02,image_distorted,Major,30.26,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpTslBlk,sleek-50ml-18-415,Clear,diptube,CMP-SPR-BLK-18-415-02,diptube_stub,Blocker,5.38,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk50AnSpTslGl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-GLD-18415-TSL,image_distorted,Major,15.12,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpTslGl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-GLD-18415-TSL,diptube_stub,Blocker,10.77,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk50AnSpTslIvyGl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-IVGD-18-415-02,image_distorted,Major,14.29,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpTslIvyGl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-IVGD-18-415-02,diptube_stub,Blocker,11.39,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk50AnSpTslIvySl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-IVSL-18-415-02,image_distorted,Major,14.29,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpTslIvySl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-IVSL-18-415-02,diptube_stub,Blocker,11.39,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk50AnSpTslLvn,sleek-50ml-18-415,Clear,diptube,CMP-SPR-LVN-18-415-02,image_distorted,Major,15.51,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpTslLvn,sleek-50ml-18-415,Clear,diptube,CMP-SPR-LVN-18-415-02,diptube_stub,Blocker,10.49,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk50AnSpTslMtSl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-MSLV-18-415-02,image_distorted,Major,22.36,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpTslMtSl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-MSLV-18-415-02,diptube_stub,Blocker,7.28,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk50AnSpTslPnk,sleek-50ml-18-415,Clear,diptube,CMP-SPR-PNK-18-415,image_distorted,Major,15.93,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpTslPnk,sleek-50ml-18-415,Clear,diptube,CMP-SPR-PNK-18-415,diptube_stub,Blocker,10.22,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk50AnSpTslRed,sleek-50ml-18-415,Clear,diptube,CMP-SPR-RED-18-415-02,image_distorted,Major,12.8,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpTslRed,sleek-50ml-18-415,Clear,diptube,CMP-SPR-RED-18-415-02,diptube_stub,Blocker,12.72,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk50AnSpTslWht,sleek-50ml-18-415,Clear,diptube,CMP-SPR-WHT-18-415-02,image_distorted,Major,15.81,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50AnSpTslWht,sleek-50ml-18-415,Clear,diptube,CMP-SPR-WHT-18-415-02,diptube_stub,Blocker,10.3,tube is shorter than a quarter of the glass height (length in mm)
+GBSlk50AnSpWht,sleek-50ml-18-415,Clear,diptube,CMP-SPR-WHT-18-415-01,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50SpryCu,sleek-50ml-18-415,Clear,diptube,CMP-SPR-MTCP-18-415-03,image_distorted,Major,1.57,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50SpryMtGl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-MTGD-18-415-05,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50SpryMtSl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-MTSL-18-415-06,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50SpryShnBlk,sleek-50ml-18-415,Clear,diptube,CMP-SPR-SHBK-18-415-06,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50SpryShnGl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-SHGD-18-415-05,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSlk50SpryShnSl,sleek-50ml-18-415,Clear,diptube,CMP-SPR-SHSL-18-415-06,image_distorted,Major,1.56,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBSpry3mlClBlk,cylinder-3.3ml-clear-12mm,Clear,,,seat_anchor_wrong,Major,62.8,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBSpry3mlClWht,cylinder-3.3ml-clear-12mm,Clear,,,seat_anchor_wrong,Major,62.8,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBSpry4mlClBlk,cylinder-4ml-clear-12mm,Clear,,,seat_anchor_wrong,Major,62.8,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBSpry4mlClWh,cylinder-4ml-clear-12mm,Clear,,,seat_anchor_wrong,Major,62.8,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBTulip6BlkSht,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6CuSht,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6Gl,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6GlMattSht,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6GlSht,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6MtlRollBlkDot,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6MtlRollBlkSh,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6MtlRollCuMatt,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6MtlRollGlMatt,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6MtlRollGlSh,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6MtlRollPinkDot,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6MtlRollSlDot,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6MtlRollSlMatt,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6MtlRollSlSh,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6RollBlkDot,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6RollBlkSh,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6RollCuMatt,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6RollGlMatt,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6RollGlSh,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6RollPinkDot,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6RollSlDot,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6RollSlMatt,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6RollSlSh,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6Sl,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6SlMattSht,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6SlSht,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6SpryBlkSh,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6SpryBluMatt,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6SpryCuMatt,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6SpryGlMatt,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6SpryGlSh,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6SprySlMatt,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6SprySlSh,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBTulip6WhtSht,tulip-6ml-13-415,Clear,body,,image_distorted,Minor,0.91,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBV1DrmBlkDropper,vial-4ml-13-425,Clear,pipette,PSD-VIAL4-DROPPER,pipette_opaque_over_glass,Major,1,in front of the glass with no opacity or blend: reads as outside the bottle
+GBVAmb2BlackCap,vial-2ml-amber-8-425,?,,,seat_anchor_wrong,Major,151.71,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBVAmb2WhtCap,vial-2ml-amber-8-425,?,,,seat_anchor_wrong,Major,151.71,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBVBlu1o9BlackCapSht,vial-3ml-blue-13-425,?,,,seat_anchor_wrong,Major,192.5,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBVBlu1o9BlackCapSht,vial-3ml-blue-13-425,?,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBVGreen2o4BlackCapSht,vial-3ml-green-13-425,?,,,seat_anchor_wrong,Major,192.5,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBVGreen2o4BlackCapSht,vial-3ml-green-13-425,?,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBVGreen2o4WhtCapSht,vial-3ml-green-13-425,?,,,seat_anchor_wrong,Major,192.5,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBVGreen2o4WhtCapSht,vial-3ml-green-13-425,?,,,no_px_per_mm,Minor,,no scale recorded; mm checks skipped
+GBVialClr2mlBlackCap,vial-2ml-clear-8-425,Clear,,,seat_anchor_wrong,Major,151.71,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBVialClr2mlWhtCap,vial-2ml-clear-8-425,Clear,,,seat_anchor_wrong,Major,151.71,recorded seat vs top of glass (px); neck callout and builder re-seating read this anchor
+GBcyl25AnSpIvyGl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25AnSpIvySl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25AnSpLvn,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25AnSpMtSl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25AnSpPnk,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25AnSpRed,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25AnSpTslBlk,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25AnSpTslGl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25AnSpTslIvyGl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25AnSpTslLvn,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25AnSpTslPnk,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25AnSpWht,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25RdcrBlkLthr,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25RdcrBlkLthr,cylinder-25ml-18-415,Clear,cap,CMP-CAP-BLK-18415-LTR,closure_off_axis,Major,10.35,closure centre vs neck axis (px)
+GBcyl25RdcrBrwnLthr,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25RdcrBrwnLthr,cylinder-25ml-18-415,Clear,cap,CMP-CAP-BRN-18415-LTR,closure_off_axis,Major,13.1,closure centre vs neck axis (px)
+GBcyl25RdcrLBrwnLthr,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25RdcrLBrwnLthr,cylinder-25ml-18-415,Clear,cap,CMP-CAP-LBRN-18415-LTR,closure_off_axis,Major,12.07,closure centre vs neck axis (px)
+GBcyl25RdcrMtSl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25RdcrMtSlTall,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25RdcrPnkLthr,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25RdcrShnBlk,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25RdcrShnBlkTall,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25RdcrShnBlkTall,cylinder-25ml-18-415,Clear,cap,CMP-CAP-SBLK-18415-T,closure_off_axis,Major,15.59,closure centre vs neck axis (px)
+GBcyl25RdcrShnSl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25RdcrWht,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25SpryCu,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25SpryMtGl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25SpryShnBlk,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25SpryShnGl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+GBcyl25SpryShnSl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl25LtnCu,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl25LtnMtGl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl25LtnMtSl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl25LtnShnBlk,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl25LtnShnGl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl25LtnShnSl,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl50LtnClOvrCap,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl50LtnCu,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl50LtnMtGl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl50LtnMtSl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl50LtnShnBlk,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl50LtnShnGl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl50LtnShnSl,cylinder-50ml-18-415,Clear,body,,image_distorted,Minor,0.95,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl9LtnBlk,cylinder-9ml-17-415,Clear,diptube,CMP-LPM-BLK-17-415,image_distorted,Major,0.73,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl9LtnGl,cylinder-9ml-17-415,Clear,diptube,CMP-LPM-SGLD-17-415,image_distorted,Major,0.73,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCyl9LtnMtSl,cylinder-9ml-17-415,Clear,diptube,CMP-LPM-MSLV-17-415,image_distorted,Major,0.73,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBCylAmb9LtnBlk,cylinder-9ml-17-415,Amber,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Amber glass
+LBCylAmb9LtnGl,cylinder-9ml-17-415,Amber,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Amber glass
+LBCylAmb9LtnMtSl,cylinder-9ml-17-415,Amber,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Amber glass
+LBCylBlu9LtnBlk,cylinder-9ml-17-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+LBCylBlu9LtnGl,cylinder-9ml-17-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+LBCylBlu9LtnMattSl,cylinder-9ml-17-415,Cobalt Blue,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Cobalt Blue glass
+LBCylSwrl9LtnBlk,cylinder-9ml-17-415,Swirl,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Swirl glass
+LBCylSwrl9LtnGl,cylinder-9ml-17-415,Swirl,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Swirl glass
+LBCylSwrl9LtnMtSl,cylinder-9ml-17-415,Swirl,,,no_diptube_assembled,Minor,,tube exists but only in the exploded view; Swirl glass
+LBDiva100LtnClOvrCap,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva100LtnCu,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva100LtnMtGl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva100LtnMtSl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva100LtnShnBlk,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva100LtnShnGl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva100LtnShnSl,diva-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva30LtnClOvrCap,diva-30ml-18-415,Clear,pump,CMP-LPM-MSLV-18-415-02,closure_off_axis,Minor,-4.46,closure centre vs neck axis (px)
+LBDiva30LtnClOvrCap,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva30LtnCu,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva30LtnMtGl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva30LtnMtSl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva30LtnShnBlk,diva-30ml-18-415,Clear,pump,CMP-LPM-SBLK-18-415,closure_off_axis,Minor,-5.84,closure centre vs neck axis (px)
+LBDiva30LtnShnBlk,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva30LtnShnGl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva30LtnShnSl,diva-30ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva46LtnClOvrCap,diva-46ml-18-415,Clear,pump,CMP-LPM-MSLV-18-415-02,closure_off_axis,Minor,-6.01,closure centre vs neck axis (px)
+LBDiva46LtnClOvrCap,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva46LtnCu,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva46LtnMtGl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva46LtnMtSl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva46LtnShnBlk,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva46LtnShnGl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDiva46LtnShnSl,diva-46ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDivaFrst46LtnClOvrCap,diva-46ml-18-415,Frosted,pump,CMP-LPM-MSLV-18-415-02,closure_off_axis,Minor,-6.76,closure centre vs neck axis (px)
+LBDivaFrst46LtnShnBlk,diva-46ml-18-415,Frosted,pump,CMP-LPM-SBLK-18-415,closure_off_axis,Minor,-4.3,closure centre vs neck axis (px)
+LBDmnd2ozLtnClOvrCap,diamond-60ml-18-415,Clear,pump,CMP-LPM-MSLV-18-415-02,closure_off_axis,Minor,-6.3,closure centre vs neck axis (px)
+LBDmnd2ozLtnClOvrCap,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDmnd2ozLtnCu,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDmnd2ozLtnMtGl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDmnd2ozLtnMtSl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDmnd2ozLtnShnBlk,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDmnd2ozLtnShnGl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBDmnd2ozLtnShnSl,diamond-60ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBElg60WhtClOvrCp,elegant-60ml-18-415,Clear,pump,,closure_off_axis,Major,-17.72,closure centre vs neck axis (px)
+LBElgFrst60WhtClOvrCp,elegant-60ml-18-415,Frosted,pump,,closure_off_axis,Major,-17.72,closure centre vs neck axis (px)
+LBEmp100LtnClOvrCap,empire-100ml-18-415,Clear,pump,CMP-LPM-MSLV-18-415-02,closure_off_axis,Major,-13.56,closure centre vs neck axis (px)
+LBEmp100LtnClOvrCap,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp100LtnCu,empire-100ml-18-415,Clear,pump,CMP-LPM-CPR-18-415,closure_off_axis,Major,-14.89,closure centre vs neck axis (px)
+LBEmp100LtnCu,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp100LtnMtGl,empire-100ml-18-415,Clear,pump,CMP-LPM-MGLD-18-415,closure_off_axis,Major,-12.77,closure centre vs neck axis (px)
+LBEmp100LtnMtGl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp100LtnMtSl,empire-100ml-18-415,Clear,pump,CMP-LPM-MSLV-18-415-01,closure_off_axis,Major,-17.55,closure centre vs neck axis (px)
+LBEmp100LtnMtSl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp100LtnShnBlk,empire-100ml-18-415,Clear,pump,CMP-LPM-SBLK-18-415,closure_off_axis,Major,-11.97,closure centre vs neck axis (px)
+LBEmp100LtnShnBlk,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp100LtnShnGl,empire-100ml-18-415,Clear,pump,CMP-LPM-SGLD-18-415,closure_off_axis,Major,-10.64,closure centre vs neck axis (px)
+LBEmp100LtnShnGl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp100LtnShnSl,empire-100ml-18-415,Clear,pump,CMP-LPM-SSLV-18-415,closure_off_axis,Major,-13.83,closure centre vs neck axis (px)
+LBEmp100LtnShnSl,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp100WhtClOvrCp,empire-100ml-18-415,Clear,pump,CMP-LPM-MSLV-18-415-02,closure_off_axis,Major,-12.5,closure centre vs neck axis (px)
+LBEmp100WhtClOvrCp,empire-100ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp50LtnClOvrCap,empire-50ml-18-415,Clear,pump,CMP-LPM-MSLV-18-415-02,closure_off_axis,Major,-10.41,closure centre vs neck axis (px)
+LBEmp50LtnClOvrCap,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp50LtnCu,empire-50ml-18-415,Clear,pump,CMP-LPM-CPR-18-415,closure_off_axis,Major,-10.73,closure centre vs neck axis (px)
+LBEmp50LtnCu,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp50LtnMtGl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp50LtnMtSl,empire-50ml-18-415,Clear,pump,CMP-LPM-MSLV-18-415-01,closure_off_axis,Minor,-6.31,closure centre vs neck axis (px)
+LBEmp50LtnMtSl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp50LtnShnBlk,empire-50ml-18-415,Clear,pump,CMP-LPM-SBLK-18-415,closure_off_axis,Major,-11.04,closure centre vs neck axis (px)
+LBEmp50LtnShnBlk,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp50LtnShnGl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp50LtnShnSl,empire-50ml-18-415,Clear,pump,CMP-LPM-SSLV-18-415,closure_off_axis,Minor,-5.68,closure centre vs neck axis (px)
+LBEmp50LtnShnSl,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBEmp50WhtClOvrCp,empire-50ml-18-415,Clear,pump,CMP-LPM-MSLV-18-415-02,closure_off_axis,Minor,-5.36,closure centre vs neck axis (px)
+LBEmp50WhtClOvrCp,empire-50ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBGrce55LtnClOvrCap,grace-55ml-18-415,Clear,pump,CMP-LPM-MSLV-18-415-02,closure_off_axis,Minor,-5.2,closure centre vs neck axis (px)
+LBGrce55LtnClOvrCap,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBGrce55LtnCu,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBGrce55LtnMtGl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBGrce55LtnMtSl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBGrce55LtnShnBlk,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBGrce55LtnShnGl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBGrce55LtnShnSl,grace-55ml-18-415,Clear,,,no_diptube_assembled,Major,,tube exists but only in the exploded view; Clear glass
+LBSlk30LtnMtGl,sleek-30ml-18-415,Clear,diptube,CMP-LPM-MGLD-18-415,diptube_gap_under_closure,Blocker,4.08,gap between closure and top of tube (px)
+LBSlk50LtnClOvrCap,sleek-50ml-18-415,Clear,diptube,CMP-LPM-MSLV-18-415-02,image_distorted,Major,0.93,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBSlk50LtnCu,sleek-50ml-18-415,Clear,diptube,CMP-LPM-CPR-18-415,image_distorted,Major,0.93,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBSlk50LtnMtGl,sleek-50ml-18-415,Clear,diptube,CMP-LPM-MGLD-18-415,image_distorted,Major,0.93,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBSlk50LtnMtGl,sleek-50ml-18-415,Clear,diptube,CMP-LPM-MGLD-18-415,diptube_gap_under_closure,Blocker,1.39,gap between closure and top of tube (px)
+LBSlk50LtnMtSl,sleek-50ml-18-415,Clear,diptube,CMP-LPM-MSLV-18-415-01,image_distorted,Major,0.93,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBSlk50LtnShnBlk,sleek-50ml-18-415,Clear,diptube,CMP-LPM-SBLK-18-415,image_distorted,Major,0.93,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBSlk50LtnShnGl,sleek-50ml-18-415,Clear,diptube,CMP-LPM-SGLD-18-415,image_distorted,Major,0.93,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBSlk50LtnShnSl,sleek-50ml-18-415,Clear,diptube,CMP-LPM-SSLV-18-415,image_distorted,Major,0.93,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
+LBcyl25LtnClOvrCap,cylinder-25ml-18-415,Clear,body,,image_distorted,Minor,1.03,drawn aspect / source aspect (1 = undistorted; >1 = widened or shortened)
