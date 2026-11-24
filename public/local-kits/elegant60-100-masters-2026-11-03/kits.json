@@ -1,5 +1,5 @@
 {
- "version": "ce5bd9ab53a0",
+ "version": "0730ccd72ebe",
  "rows": {
   "GBElg60AnSpLvn": {
    "sku": "GBElg60AnSpLvn",
@@ -10108,25 +10108,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -10140,35 +10140,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -10182,10 +10183,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -10314,25 +10316,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -10346,35 +10348,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -10388,10 +10391,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -10520,25 +10524,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -10552,35 +10556,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -10594,10 +10599,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -10726,25 +10732,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -10758,35 +10764,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -10800,10 +10807,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -10932,25 +10940,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -10964,35 +10972,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -11006,10 +11015,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -11138,25 +11148,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -11170,35 +11180,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -11212,10 +11223,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -11344,25 +11356,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -11376,35 +11388,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -11418,10 +11431,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -11550,25 +11564,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -11582,35 +11596,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -11624,10 +11639,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -11756,25 +11772,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -11788,35 +11804,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -11830,10 +11847,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -11962,25 +11980,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -11994,35 +12012,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -12036,10 +12055,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -12168,25 +12188,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -12200,35 +12220,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -12242,10 +12263,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -12374,25 +12396,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -12406,35 +12428,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -12448,10 +12471,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -12580,25 +12604,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -12612,35 +12636,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -12654,10 +12679,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -12786,25 +12812,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -12818,35 +12844,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -12860,10 +12887,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -12992,25 +13020,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -13024,35 +13052,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -13066,10 +13095,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -13198,25 +13228,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -13230,35 +13260,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -13272,10 +13303,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -13404,25 +13436,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -13436,35 +13468,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -13478,10 +13511,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -13610,25 +13644,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -13642,35 +13676,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -13684,10 +13719,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -13816,25 +13852,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -13848,35 +13884,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -13890,10 +13927,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -14022,25 +14060,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -14054,35 +14092,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -14096,10 +14135,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -14228,25 +14268,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -14260,35 +14300,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -14302,10 +14343,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -14434,25 +14476,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -14466,35 +14508,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -14508,10 +14551,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -14640,25 +14684,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -14672,35 +14716,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -14714,10 +14759,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -14846,25 +14892,25 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -14878,35 +14924,36 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -14920,10 +14967,11 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -20734,10 +20782,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -20766,7 +20814,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -20777,10 +20825,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -20809,7 +20857,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -20942,10 +20990,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -20974,7 +21022,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -20985,10 +21033,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -21017,7 +21065,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -21150,10 +21198,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -21182,7 +21230,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -21193,10 +21241,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -21225,7 +21273,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -21358,10 +21406,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -21390,7 +21438,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -21401,10 +21449,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -21433,7 +21481,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -21566,10 +21614,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -21598,7 +21646,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -21609,10 +21657,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -21641,7 +21689,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -21774,10 +21822,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -21806,7 +21854,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -21817,10 +21865,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -21849,7 +21897,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -21982,10 +22030,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -22014,7 +22062,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -22025,10 +22073,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -22057,7 +22105,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -22190,10 +22238,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -22222,7 +22270,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -22233,10 +22281,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -22265,7 +22313,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -22398,10 +22446,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -22430,7 +22478,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -22441,10 +22489,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -22473,7 +22521,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -22606,10 +22654,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -22638,7 +22686,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -22649,10 +22697,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -22681,7 +22729,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -22814,10 +22862,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -22846,7 +22894,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -22857,10 +22905,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -22889,7 +22937,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -23022,10 +23070,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -23054,7 +23102,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -23065,10 +23113,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -23097,7 +23145,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -23230,10 +23278,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -23262,7 +23310,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -23273,10 +23321,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -23305,7 +23353,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -23438,10 +23486,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -23470,7 +23518,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -23481,10 +23529,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -23513,7 +23561,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -23646,10 +23694,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -23678,7 +23726,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -23689,10 +23737,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -23721,7 +23769,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -23854,10 +23902,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -23886,7 +23934,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -23897,10 +23945,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -23929,7 +23977,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -24062,10 +24110,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -24094,7 +24142,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -24105,10 +24153,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -24137,7 +24185,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -24270,10 +24318,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -24302,7 +24350,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -24313,10 +24361,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -24345,7 +24393,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -24478,10 +24526,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -24510,7 +24558,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -24521,10 +24569,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -24553,7 +24601,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -24686,10 +24734,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -24718,7 +24766,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -24729,10 +24777,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -24761,7 +24809,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -24894,10 +24942,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -24926,7 +24974,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -24937,10 +24985,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -24969,7 +25017,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -25102,10 +25150,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -25134,7 +25182,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -25145,10 +25193,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -25177,7 +25225,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -25310,10 +25358,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -25342,7 +25390,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -25353,10 +25401,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -25385,7 +25433,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
@@ -25518,10 +25566,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-seated.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-seated-flat.c3ff73208e1b.png",
       "key": "",
-      "sha256": "9a7c899be4dff12716d0597af4609b88143b4c5fb5e22ca1c1eb1354c1cc6e8d",
-      "bytes": 18427,
+      "sha256": "c3ff73208e1bc15d1cac5a9875e6df912b6a3607da5a60df4c87c1ff793f0c70",
+      "bytes": 11963,
       "width": 316,
       "height": 93
      },
@@ -25550,7 +25598,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "sidecar",
       "capon"
@@ -25561,10 +25609,10 @@
      "slot": "reducer",
      "variantKey": null,
      "image": {
-      "url": "/local-kits/elegant60-reducer-2026-10-31/reducer-18415-full.png",
+      "url": "/local-kits/egd-masters-2026-11-04/reducer/reducer-18415-full-flat.5801c2af9038.png",
       "key": "",
-      "sha256": "df76f6c3620dba019b9414e9dc9fab1a5de80ff49aa4ea4407ba9ea643e0a715",
-      "bytes": 51329,
+      "sha256": "5801c2af903832760a8078229d9eaa59743856344cdd6242de59d40a0ef6bd6a",
+      "bytes": 30351,
       "width": 316,
       "height": 357
      },
@@ -25593,7 +25641,7 @@
       "dx": 0,
       "dy": 0
      },
-     "derivation": "psd-layer",
+     "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
      ],
