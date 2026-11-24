@@ -8,6 +8,8 @@ import sprays from "./cylinder-spray-kits.generated.json";
 import jumbo from "./cylinder-jumbo-overcap.generated.json";
 import lotions from "./cylinder-lotion-kits.generated.json";
 import spraySeating from "./cylinder-spray-seating.json";
+import divaSeating from "./diva-fitment-seating.json";
+import divaOvercapTops from "./diva-overcap-tops.json";
 import sleekTubes from "./sleek-large-tubes.generated.json";
 import cylinder25Droppers from "./cylinder25-dropper.generated.json";
 import cylinder25Reducers from "./cylinder25-reducers.generated.json";
@@ -360,7 +362,50 @@ const tulipRows = Object.fromEntries(Object.entries(existingRows).flatMap(([sku,
             box: { x: left - 152 * sx, y: top - 103 * sy, width: tulipGlass.width * sx, height: tulipGlass.height * sy } };
     }) }]];
 }));
-const rows: Record<string, BuilderKit> = { ...existingRows, ...revisedRows, ...pillarRows, ...tulipRows };
+// Diva lotion pumps and fine-mist sprayers were drawn small or off-centre: at 100 ml the collar was ~11% narrower than
+// the glass thread band, so ridges showed either side and the pump looked perched; the 46 ml frosted fitments were
+// 3-5% small; and many 30/46 ml collars sat 2-7 px off the neck (Jordan, 7 Nov 2026: "all pumps need alignment").
+// Each SKU's own plate, the real cap-on photograph on this same canvas, gives the cap width;
+// scripts/register/diva-fitment-seating.py records plate cap / kit overcap (1.0 when within 3%) and the neck centre.
+// The fitment scales about its collar foot (already on the neck ring) and its collar is centred on the neck.
+// Body, glass and every other kit are untouched.
+const DIVA_FITMENT_SLOTS = new Set(["pump", "sprayer", "overcap", "diptube"]);
+type DivaSeat = { bodyId: string; scale: number; collarCentreX: number; collarFootY: number; neckCentreX: number };
+export function seatDivaFitment(kit: BuilderKit, seat: DivaSeat): BuilderKit {
+    const { scale, collarCentreX, collarFootY, neckCentreX } = seat;
+    const tx = (x: number) => neckCentreX + (x - collarCentreX) * scale;
+    const ty = (y: number) => collarFootY + (y - collarFootY) * scale;
+    const box = (v: { x: number; y: number; width: number; height: number }) => ({ x: tx(v.x), y: ty(v.y), width: v.width * scale, height: v.height * scale });
+    const bounds = (v: { left: number; right: number; top: number; bottom: number }) => ({ left: tx(v.left), right: tx(v.right), top: ty(v.top), bottom: ty(v.bottom) });
+    return { ...kit, parts: kit.parts.map(part => {
+        if (!DIVA_FITMENT_SLOTS.has(part.slot) || !part.box) return part;
+        return { ...part, box: box(part.box), bounds: bounds(part.bounds),
+            ...(part.detached ? { detached: { ...part.detached, box: box(part.detached.box), bounds: bounds(part.detached.bounds) } } : {}) };
+    }) };
+}
+function withDivaSeating(source: Record<string, BuilderKit>): Record<string, BuilderKit> {
+    const seats = divaSeating.rows as Record<string, DivaSeat>;
+    return Object.fromEntries(Object.entries(source).map(([sku, kit]) => [sku,
+        Object.hasOwn(seats, sku) && kit.register?.bodyId === seats[sku].bodyId ? seatDivaFitment(kit, seats[sku]) : kit]));
+}
+
+// The Diva overcap cut-outs lost their rounded tops (first row already fully opaque; the cap ~5% short). Each is
+// rebuilt from its finish's cap-on plate (scripts/register/diva-overcap-tops.py): same width, centre and rim, with
+// the top restored. Applied before the seating, which then scales and centres it with its pump.
+function withDivaOvercapTops(source: Record<string, BuilderKit>): Record<string, BuilderKit> {
+    const tops = divaOvercapTops.rows as Record<string, { image: BuilderPart["image"]; box: { x: number; y: number; width: number; height: number } }>;
+    return Object.fromEntries(Object.entries(source).map(([sku, kit]) => {
+        const top = Object.hasOwn(tops, sku) && kit.register?.bodyId?.startsWith("diva-") ? tops[sku] : null;
+        if (!top) return [sku, kit];
+        const { box } = top;
+        return [sku, { ...kit, parts: kit.parts.map(part => part.slot !== "overcap" ? part : {
+            ...part, image: top.image, image2x: null, mask: null, box,
+            bounds: { left: box.x, top: box.y, right: box.x + box.width, bottom: box.y + box.height },
+        }) }];
+    }));
+}
+
+const rows: Record<string, BuilderKit> = withDivaSeating(withDivaOvercapTops({ ...existingRows, ...revisedRows, ...pillarRows, ...tulipRows }));
 export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {
