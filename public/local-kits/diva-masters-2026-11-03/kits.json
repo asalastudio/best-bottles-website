@@ -1,5 +1,5 @@
 {
- "version": "be05e6f40b4c",
+ "version": "3a8e0edf4370",
  "rows": {
   "LBDiva100LtnClOvrCap": {
    "sku": "LBDiva100LtnClOvrCap",
@@ -2338,15 +2338,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -2364,7 +2364,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -2381,15 +2382,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -2406,7 +2407,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",
@@ -2548,15 +2550,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -2574,7 +2576,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -2591,15 +2594,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -2616,7 +2619,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",
@@ -2758,15 +2762,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -2784,7 +2788,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -2801,15 +2806,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -2826,7 +2831,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",
@@ -2968,15 +2974,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -2994,7 +3000,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -3011,15 +3018,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -3036,7 +3043,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",
@@ -3179,15 +3187,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -3205,7 +3213,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -3222,15 +3231,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -3247,7 +3256,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",
@@ -3389,15 +3399,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -3415,7 +3425,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -3432,15 +3443,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -3457,7 +3468,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",
@@ -3599,15 +3611,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -3625,7 +3637,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -3642,15 +3655,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -3667,7 +3680,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",
@@ -3809,15 +3823,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -3835,7 +3849,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -3852,15 +3867,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -3877,7 +3892,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",
@@ -4019,15 +4035,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -4045,7 +4061,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -4062,15 +4079,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -4087,7 +4104,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",
@@ -4229,15 +4247,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -4255,7 +4273,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -4272,15 +4291,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -4297,7 +4316,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",
@@ -4439,15 +4459,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -4465,7 +4485,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -4482,15 +4503,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -4507,7 +4528,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",
@@ -8856,15 +8878,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 25.482
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 266.467
+      "bottom": 250.867
      },
      "zOrder": 1,
      "explodeIndex": 1,
@@ -8882,7 +8904,8 @@
       "sidecar",
       "capon"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -8899,15 +8922,15 @@
      "mask": null,
      "box": {
       "x": 456.708,
-      "y": 240.985,
+      "y": 225.385,
       "width": 86.584,
       "height": 97.818
      },
      "bounds": {
       "left": 456.708,
-      "top": 240.985,
+      "top": 225.385,
       "right": 543.292,
-      "bottom": 338.803
+      "bottom": 323.203
      },
      "zOrder": 2,
      "explodeIndex": 1,
@@ -8924,7 +8947,8 @@
      "views": [
       "exploded"
      ],
-     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)"
+     "source": "GBElg60RdcrPnkLthr reducer, scaled 0.7811 (18-415, 8.77 -> 6.85 px/mm)",
+     "placement": "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"
     },
     {
      "slot": "cap",

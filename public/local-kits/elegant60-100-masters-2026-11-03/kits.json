@@ -1,5 +1,5 @@
 {
- "version": "ca0e44ecfa70",
+ "version": "0730ccd72ebe",
  "rows": {
   "GBElg60AnSpLvn": {
    "sku": "GBElg60AnSpLvn",
@@ -10118,15 +10118,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -10144,7 +10144,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -10160,15 +10161,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -10185,7 +10186,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -10324,15 +10326,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -10350,7 +10352,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -10366,15 +10369,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -10391,7 +10394,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -10530,15 +10534,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -10556,7 +10560,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -10572,15 +10577,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -10597,7 +10602,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -10736,15 +10742,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -10762,7 +10768,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -10778,15 +10785,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -10803,7 +10810,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -10942,15 +10950,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -10968,7 +10976,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -10984,15 +10993,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -11009,7 +11018,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -11148,15 +11158,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -11174,7 +11184,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -11190,15 +11201,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -11215,7 +11226,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -11354,15 +11366,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -11380,7 +11392,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -11396,15 +11409,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -11421,7 +11434,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -11560,15 +11574,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -11586,7 +11600,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -11602,15 +11617,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -11627,7 +11642,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -11766,15 +11782,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -11792,7 +11808,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -11808,15 +11825,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -11833,7 +11850,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -11972,15 +11990,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -11998,7 +12016,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -12014,15 +12033,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -12039,7 +12058,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -12178,15 +12198,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -12204,7 +12224,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -12220,15 +12241,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -12245,7 +12266,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -12384,15 +12406,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -12410,7 +12432,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -12426,15 +12449,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.514,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.723,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 547.157,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -12451,7 +12474,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.06 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -12590,15 +12614,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -12616,7 +12640,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -12632,15 +12657,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -12657,7 +12682,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -12796,15 +12822,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -12822,7 +12848,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -12838,15 +12865,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -12863,7 +12890,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -13002,15 +13030,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -13028,7 +13056,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -13044,15 +13073,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -13069,7 +13098,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -13208,15 +13238,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -13234,7 +13264,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -13250,15 +13281,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -13275,7 +13306,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -13414,15 +13446,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -13440,7 +13472,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -13456,15 +13489,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -13481,7 +13514,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -13620,15 +13654,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -13646,7 +13680,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -13662,15 +13697,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -13687,7 +13722,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -13826,15 +13862,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -13852,7 +13888,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -13868,15 +13905,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -13893,7 +13930,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -14032,15 +14070,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -14058,7 +14096,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -14074,15 +14113,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -14099,7 +14138,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -14238,15 +14278,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -14264,7 +14304,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -14280,15 +14321,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -14305,7 +14346,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -14444,15 +14486,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -14470,7 +14512,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -14486,15 +14529,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -14511,7 +14554,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -14650,15 +14694,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -14676,7 +14720,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -14692,15 +14737,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -14717,7 +14762,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,
@@ -14856,15 +14902,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 32.6244
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 264.1410496494293
      },
      "zOrder": 1,
@@ -14882,7 +14928,8 @@
      "views": [
       "sidecar",
       "capon"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     },
     {
      "slot": "reducer",
@@ -14898,15 +14945,15 @@
      "image2x": null,
      "mask": null,
      "box": {
-      "x": 444.5736,
+      "x": 440.114,
       "y": 235.37544964942933,
       "width": 110.8528,
       "height": 125.2356
      },
      "bounds": {
-      "left": 448.7832,
+      "left": 444.323,
       "top": 239.23424964942933,
-      "right": 551.2168,
+      "right": 546.757,
       "bottom": 356.4014496494293
      },
      "zOrder": 1,
@@ -14923,7 +14970,8 @@
      "derivation": "psd-layer:levelled (flat-reducer.py)",
      "views": [
       "exploded"
-     ]
+     ],
+     "placement": "centred on the neck: 4.46 px left (24 Nov 2026)"
     }
    ],
    "three": null,

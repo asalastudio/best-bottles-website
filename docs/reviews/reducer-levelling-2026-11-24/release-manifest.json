@@ -1,104 +1,5 @@
 {
  "priorVersion": "3e9ecd514c5ad0b4",
- "version": "e59d91fcbbaa0520",
- "levelledSkus": [
-  "GBDiva100RdcrBlkLthr",
-  "GBDiva100RdcrBrwnLthr",
-  "GBDiva100RdcrIvyLthr",
-  "GBDiva100RdcrLBrwnLthr",
-  "GBDiva100RdcrMtSl",
-  "GBDiva100RdcrMtSlTall",
-  "GBDiva100RdcrPnkLthr",
-  "GBDiva100RdcrShnBlk",
-  "GBDiva100RdcrShnBlkTall",
-  "GBDiva100RdcrShnGl",
-  "GBDiva100RdcrShnSl",
-  "GBDiva100RdcrWht",
-  "GBDiva30RdcrBlkLthr",
-  "GBDiva30RdcrBrwnLthr",
-  "GBDiva30RdcrIvyLthr",
-  "GBDiva30RdcrLBrwnLthr",
-  "GBDiva30RdcrMtSl",
-  "GBDiva30RdcrMtSlTall",
-  "GBDiva30RdcrPnkLthr",
-  "GBDiva30RdcrShnBlk",
-  "GBDiva30RdcrShnBlkTall",
-  "GBDiva30RdcrShnGl",
-  "GBDiva30RdcrShnSl",
-  "GBDiva30RdcrWht",
-  "GBDiva46RdcrBlkLthr",
-  "GBDiva46RdcrBrwnLthr",
-  "GBDiva46RdcrIvyLthr",
-  "GBDiva46RdcrLBrwnLthr",
-  "GBDiva46RdcrMtSl",
-  "GBDiva46RdcrMtSlTall",
-  "GBDiva46RdcrPnkLthr",
-  "GBDiva46RdcrShnBlk",
-  "GBDiva46RdcrShnBlkTall",
-  "GBDiva46RdcrShnGl",
-  "GBDiva46RdcrShnSl",
-  "GBDiva46RdcrWht",
-  "GBDivaFrst46RdcrBlkLthr",
-  "GBDivaFrst46RdcrBrwnLthr",
-  "GBDivaFrst46RdcrIvyLthr",
-  "GBDivaFrst46RdcrLBrwnLthr",
-  "GBDivaFrst46RdcrMtSl",
-  "GBDivaFrst46RdcrMtSlTall",
-  "GBDivaFrst46RdcrPnkLthr",
-  "GBDivaFrst46RdcrShnBlk",
-  "GBDivaFrst46RdcrShnBlkTall",
-  "GBDivaFrst46RdcrShnGl",
-  "GBDivaFrst46RdcrShnSl",
-  "GBDivaFrst46RdcrWht",
-  "GBElg100RdcrBlkLthr",
-  "GBElg100RdcrBrwnLthr",
-  "GBElg100RdcrIvyLthr",
-  "GBElg100RdcrLBrwnLthr",
-  "GBElg100RdcrMtSl",
-  "GBElg100RdcrMtSlTall",
-  "GBElg100RdcrPnkLthr",
-  "GBElg100RdcrShnBlk",
-  "GBElg100RdcrShnBlkTall",
-  "GBElg100RdcrShnGl",
-  "GBElg100RdcrShnSl",
-  "GBElg100RdcrWht",
-  "GBElg60RdcrBlkLthr",
-  "GBElg60RdcrBrwnLthr",
-  "GBElg60RdcrIvyLthr",
-  "GBElg60RdcrLBrwnLthr",
-  "GBElg60RdcrMtSl",
-  "GBElg60RdcrMtSlTall",
-  "GBElg60RdcrPnkLthr",
-  "GBElg60RdcrShnBlk",
-  "GBElg60RdcrShnBlkTall",
-  "GBElg60RdcrShnGl",
-  "GBElg60RdcrShnSl",
-  "GBElg60RdcrWht",
-  "GBElgFrst100RdcrBlkLthr",
-  "GBElgFrst100RdcrBrwnLthr",
-  "GBElgFrst100RdcrIvyLthr",
-  "GBElgFrst100RdcrLBrwnLthr",
-  "GBElgFrst100RdcrMtSl",
-  "GBElgFrst100RdcrMtSlTall",
-  "GBElgFrst100RdcrPnkLthr",
-  "GBElgFrst100RdcrShnBlk",
-  "GBElgFrst100RdcrShnBlkTall",
-  "GBElgFrst100RdcrShnGl",
-  "GBElgFrst100RdcrShnSl",
-  "GBElgFrst100RdcrWht",
-  "GBElgFrst60RdcrBlkLthr",
-  "GBElgFrst60RdcrBrwnLthr",
-  "GBElgFrst60RdcrIvyLthr",
-  "GBElgFrst60RdcrLBrwnLthr",
-  "GBElgFrst60RdcrMtSl",
-  "GBElgFrst60RdcrMtSlTall",
-  "GBElgFrst60RdcrPnkLthr",
-  "GBElgFrst60RdcrShnBlk",
-  "GBElgFrst60RdcrShnBlkTall",
-  "GBElgFrst60RdcrShnGl",
-  "GBElgFrst60RdcrShnSl",
-  "GBElgFrst60RdcrWht"
- ],
  "replacedParts": {
   "GBDiva100RdcrBlkLthr": [
    {
@@ -111,7 +12,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -123,7 +36,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva100RdcrBrwnLthr": [
@@ -137,7 +62,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -149,7 +86,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva100RdcrIvyLthr": [
@@ -163,7 +112,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -175,7 +136,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva100RdcrLBrwnLthr": [
@@ -189,7 +162,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -201,7 +186,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva100RdcrMtSl": [
@@ -215,7 +212,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -227,7 +236,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva100RdcrMtSlTall": [
@@ -241,7 +262,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -253,7 +286,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva100RdcrPnkLthr": [
@@ -267,7 +312,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -279,7 +336,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva100RdcrShnBlk": [
@@ -293,7 +362,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -305,7 +386,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva100RdcrShnBlkTall": [
@@ -319,7 +412,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -331,7 +436,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva100RdcrShnGl": [
@@ -345,7 +462,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -357,7 +486,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva100RdcrShnSl": [
@@ -371,7 +512,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -383,7 +536,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva100RdcrWht": [
@@ -397,7 +562,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 25.482
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 266.467
+    }
    },
    {
     "part": 2,
@@ -409,7 +586,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 456.708,
+     "y": 240.985,
+     "width": 86.584,
+     "height": 97.818
+    },
+    "bounds": {
+     "left": 456.708,
+     "top": 240.985,
+     "right": 543.292,
+     "bottom": 338.803
+    }
    }
   ],
   "GBDiva30RdcrBlkLthr": [
@@ -1671,7 +1860,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1683,7 +1884,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElg60RdcrBrwnLthr": [
@@ -1697,7 +1910,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1709,7 +1934,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElg60RdcrIvyLthr": [
@@ -1723,7 +1960,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1735,7 +1984,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElg60RdcrLBrwnLthr": [
@@ -1749,7 +2010,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1761,7 +2034,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElg60RdcrMtSl": [
@@ -1775,7 +2060,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1787,7 +2084,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElg60RdcrMtSlTall": [
@@ -1801,7 +2110,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1813,7 +2134,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElg60RdcrPnkLthr": [
@@ -1827,7 +2160,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1839,7 +2184,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElg60RdcrShnBlk": [
@@ -1853,7 +2210,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1865,7 +2234,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElg60RdcrShnBlkTall": [
@@ -1879,7 +2260,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1891,7 +2284,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElg60RdcrShnGl": [
@@ -1905,7 +2310,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1917,7 +2334,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElg60RdcrShnSl": [
@@ -1931,7 +2360,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1943,7 +2384,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElg60RdcrWht": [
@@ -1957,7 +2410,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -1969,7 +2434,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst100RdcrBlkLthr": [
@@ -2295,7 +2772,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2307,7 +2796,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst60RdcrBrwnLthr": [
@@ -2321,7 +2822,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2333,7 +2846,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst60RdcrIvyLthr": [
@@ -2347,7 +2872,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2359,7 +2896,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst60RdcrLBrwnLthr": [
@@ -2373,7 +2922,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2385,7 +2946,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst60RdcrMtSl": [
@@ -2399,7 +2972,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2411,7 +2996,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst60RdcrMtSlTall": [
@@ -2425,7 +3022,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2437,7 +3046,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst60RdcrPnkLthr": [
@@ -2451,7 +3072,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2463,7 +3096,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst60RdcrShnBlk": [
@@ -2477,7 +3122,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2489,7 +3146,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst60RdcrShnBlkTall": [
@@ -2503,7 +3172,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2515,7 +3196,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst60RdcrShnGl": [
@@ -2529,7 +3222,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2541,7 +3246,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst60RdcrShnSl": [
@@ -2555,7 +3272,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2567,7 +3296,19 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ],
   "GBElgFrst60RdcrWht": [
@@ -2581,7 +3322,19 @@
      "width": 316,
      "height": 93
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 32.6244
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 264.1410496494293
+    }
    },
    {
     "part": 3,
@@ -2593,8 +3346,157 @@
      "width": 316,
      "height": 357
     },
-    "derivation": "psd-layer"
+    "derivation": "psd-layer",
+    "box": {
+     "x": 444.5736,
+     "y": 235.37544964942933,
+     "width": 110.8528,
+     "height": 125.2356
+    },
+    "bounds": {
+     "left": 448.7832,
+     "top": 239.23424964942933,
+     "right": 551.2168,
+     "bottom": 356.4014496494293
+    }
    }
   ]
- }
+ },
+ "version": "9a6e0eafec564b77",
+ "levelledSkus": [
+  "GBDiva100RdcrBlkLthr",
+  "GBDiva100RdcrBrwnLthr",
+  "GBDiva100RdcrIvyLthr",
+  "GBDiva100RdcrLBrwnLthr",
+  "GBDiva100RdcrMtSl",
+  "GBDiva100RdcrMtSlTall",
+  "GBDiva100RdcrPnkLthr",
+  "GBDiva100RdcrShnBlk",
+  "GBDiva100RdcrShnBlkTall",
+  "GBDiva100RdcrShnGl",
+  "GBDiva100RdcrShnSl",
+  "GBDiva100RdcrWht",
+  "GBDiva30RdcrBlkLthr",
+  "GBDiva30RdcrBrwnLthr",
+  "GBDiva30RdcrIvyLthr",
+  "GBDiva30RdcrLBrwnLthr",
+  "GBDiva30RdcrMtSl",
+  "GBDiva30RdcrMtSlTall",
+  "GBDiva30RdcrPnkLthr",
+  "GBDiva30RdcrShnBlk",
+  "GBDiva30RdcrShnBlkTall",
+  "GBDiva30RdcrShnGl",
+  "GBDiva30RdcrShnSl",
+  "GBDiva30RdcrWht",
+  "GBDiva46RdcrBlkLthr",
+  "GBDiva46RdcrBrwnLthr",
+  "GBDiva46RdcrIvyLthr",
+  "GBDiva46RdcrLBrwnLthr",
+  "GBDiva46RdcrMtSl",
+  "GBDiva46RdcrMtSlTall",
+  "GBDiva46RdcrPnkLthr",
+  "GBDiva46RdcrShnBlk",
+  "GBDiva46RdcrShnBlkTall",
+  "GBDiva46RdcrShnGl",
+  "GBDiva46RdcrShnSl",
+  "GBDiva46RdcrWht",
+  "GBDivaFrst46RdcrBlkLthr",
+  "GBDivaFrst46RdcrBrwnLthr",
+  "GBDivaFrst46RdcrIvyLthr",
+  "GBDivaFrst46RdcrLBrwnLthr",
+  "GBDivaFrst46RdcrMtSl",
+  "GBDivaFrst46RdcrMtSlTall",
+  "GBDivaFrst46RdcrPnkLthr",
+  "GBDivaFrst46RdcrShnBlk",
+  "GBDivaFrst46RdcrShnBlkTall",
+  "GBDivaFrst46RdcrShnGl",
+  "GBDivaFrst46RdcrShnSl",
+  "GBDivaFrst46RdcrWht",
+  "GBElg100RdcrBlkLthr",
+  "GBElg100RdcrBrwnLthr",
+  "GBElg100RdcrIvyLthr",
+  "GBElg100RdcrLBrwnLthr",
+  "GBElg100RdcrMtSl",
+  "GBElg100RdcrMtSlTall",
+  "GBElg100RdcrPnkLthr",
+  "GBElg100RdcrShnBlk",
+  "GBElg100RdcrShnBlkTall",
+  "GBElg100RdcrShnGl",
+  "GBElg100RdcrShnSl",
+  "GBElg100RdcrWht",
+  "GBElg60RdcrBlkLthr",
+  "GBElg60RdcrBrwnLthr",
+  "GBElg60RdcrIvyLthr",
+  "GBElg60RdcrLBrwnLthr",
+  "GBElg60RdcrMtSl",
+  "GBElg60RdcrMtSlTall",
+  "GBElg60RdcrPnkLthr",
+  "GBElg60RdcrShnBlk",
+  "GBElg60RdcrShnBlkTall",
+  "GBElg60RdcrShnGl",
+  "GBElg60RdcrShnSl",
+  "GBElg60RdcrWht",
+  "GBElgFrst100RdcrBlkLthr",
+  "GBElgFrst100RdcrBrwnLthr",
+  "GBElgFrst100RdcrIvyLthr",
+  "GBElgFrst100RdcrLBrwnLthr",
+  "GBElgFrst100RdcrMtSl",
+  "GBElgFrst100RdcrMtSlTall",
+  "GBElgFrst100RdcrPnkLthr",
+  "GBElgFrst100RdcrShnBlk",
+  "GBElgFrst100RdcrShnBlkTall",
+  "GBElgFrst100RdcrShnGl",
+  "GBElgFrst100RdcrShnSl",
+  "GBElgFrst100RdcrWht",
+  "GBElgFrst60RdcrBlkLthr",
+  "GBElgFrst60RdcrBrwnLthr",
+  "GBElgFrst60RdcrIvyLthr",
+  "GBElgFrst60RdcrLBrwnLthr",
+  "GBElgFrst60RdcrMtSl",
+  "GBElgFrst60RdcrMtSlTall",
+  "GBElgFrst60RdcrPnkLthr",
+  "GBElgFrst60RdcrShnBlk",
+  "GBElgFrst60RdcrShnBlkTall",
+  "GBElgFrst60RdcrShnGl",
+  "GBElgFrst60RdcrShnSl",
+  "GBElgFrst60RdcrWht"
+ ],
+ "reseatedSkus": [
+  "GBDiva100RdcrBlkLthr",
+  "GBDiva100RdcrBrwnLthr",
+  "GBDiva100RdcrIvyLthr",
+  "GBDiva100RdcrLBrwnLthr",
+  "GBDiva100RdcrMtSl",
+  "GBDiva100RdcrMtSlTall",
+  "GBDiva100RdcrPnkLthr",
+  "GBDiva100RdcrShnBlk",
+  "GBDiva100RdcrShnBlkTall",
+  "GBDiva100RdcrShnGl",
+  "GBDiva100RdcrShnSl",
+  "GBDiva100RdcrWht",
+  "GBElg60RdcrBlkLthr",
+  "GBElg60RdcrBrwnLthr",
+  "GBElg60RdcrIvyLthr",
+  "GBElg60RdcrLBrwnLthr",
+  "GBElg60RdcrMtSl",
+  "GBElg60RdcrMtSlTall",
+  "GBElg60RdcrPnkLthr",
+  "GBElg60RdcrShnBlk",
+  "GBElg60RdcrShnBlkTall",
+  "GBElg60RdcrShnGl",
+  "GBElg60RdcrShnSl",
+  "GBElg60RdcrWht",
+  "GBElgFrst60RdcrBlkLthr",
+  "GBElgFrst60RdcrBrwnLthr",
+  "GBElgFrst60RdcrIvyLthr",
+  "GBElgFrst60RdcrLBrwnLthr",
+  "GBElgFrst60RdcrMtSl",
+  "GBElgFrst60RdcrMtSlTall",
+  "GBElgFrst60RdcrPnkLthr",
+  "GBElgFrst60RdcrShnBlk",
+  "GBElgFrst60RdcrShnBlkTall",
+  "GBElgFrst60RdcrShnGl",
+  "GBElgFrst60RdcrShnSl",
+  "GBElgFrst60RdcrWht"
+ ]
 }

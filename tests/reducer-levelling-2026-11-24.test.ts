@@ -49,7 +49,7 @@ describe('reducer insert levelled on every reducer bottle (2026-11-24)', () => {
         }
     });
 
-    it('changes only the insert: same recipes, same size and box, and undoing it gives back the approved version exactly', () => {
+    it('changes only the insert, and undoing it gives back the approved version exactly', () => {
         expect(reducerLevelling.levelledSkus).toHaveLength(96);
         expect(reducerLevelling.levelledSkus.every(sku => /^GB(?:Elg|ElgFrst|Diva|DivaFrst)\d+Rdcr/.test(sku))).toBe(true);
         expect(manifest.version).toBe(reducerLevelling.version);
@@ -64,13 +64,37 @@ describe('reducer insert levelled on every reducer bottle (2026-11-24)', () => {
                 const was = image as Part['image'];
                 expect(TILTED, sku).toContain(was.sha256);
                 expect([now.image.width, now.image.height], sku).toEqual([was.width, was.height]);
-                expect(now.box, sku).toEqual(before[sku].parts[part].box);
+                if (!reducerLevelling.reseatedSkus.includes(sku)) expect(now.box, sku).toEqual(before[sku].parts[part].box);
             }
         }
     });
 
-    it('levels the localhost review kits too, each served at the version its route expects', () => {
-        let bottles = 0;
+    it('re-seats the insert only where it sat off the glass: Elegant 60 ml to the neck centre, Diva 100 ml onto the rim', () => {
+        type Box = { x: number; y: number; width: number; height: number };
+        const before = beforeReducerLevelling(hosted);
+        expect(reducerLevelling.reseatedSkus).toHaveLength(36);
+        const moves = new Map<string, Set<string>>();
+        for (const sku of reducerLevelling.reseatedSkus) {
+            const body = sku.replace(/Rdcr.*/, '');
+            hosted[sku].parts.forEach((part, at) => {
+                if (part.slot !== 'reducer') return;
+                const now = part.box as Box, was = before[sku].parts[at].box as Box;
+                expect([now.width, now.height], sku).toEqual([was.width, was.height]);   // moved, never resized
+                moves.set(body, (moves.get(body) ?? new Set()).add(`${(now.x - was.x).toFixed(2)},${(now.y - was.y).toFixed(2)}`));
+                expect((part as unknown as { placement: string }).placement, sku).toMatch(/24 Nov 2026/);
+            });
+        }
+        expect(Object.fromEntries([...moves].map(([body, set]) => [body, [...set]]))).toEqual({
+            GBDiva100: ['0.00,-15.60'], GBElg60: ['-4.06,0.00'], GBElgFrst60: ['-4.46,0.00'],
+        });
+        // every other reducer bottle keeps its box and carries no placement note
+        for (const { sku, part } of reducers(hosted)) {
+            if (!reducerLevelling.reseatedSkus.includes(sku)) expect('placement' in part, sku).toBe(false);
+        }
+    });
+
+    it('levels and re-seats the localhost review kits too, each served at the version its route expects', () => {
+        let bottles = 0, reseated = 0;
         for (const [file, version] of localKits) {
             const kits = read(file) as { version: string; rows: Record<string, Kit> };
             expect(kits.version, file).toBe(version);
@@ -81,8 +105,11 @@ describe('reducer insert levelled on every reducer bottle (2026-11-24)', () => {
                 expect(TILTED, sku).not.toContain(part.image.sha256);
                 expect(part.image.url, sku).toMatch(/^\/local-kits\/egd-masters-2026-11-04\/reducer\/reducer-18415-(?:seated|full)-flat\.[0-9a-f]{12}\.png$/);
                 expect(sha('public' + part.image.url), sku).toBe(part.image.sha256);
+                expect('placement' in part, sku).toBe(/^GB(?:Elg60|ElgFrst60|Diva100)Rdcr/.test(sku));
+                if ('placement' in part) reseated += 0.5;
             }
         }
         expect(bottles).toBe(227);   // Circle 47, Diva 48, Elegant 60/100 48, Round and Sleek 84
+        expect(reseated).toBe(36);   // Elegant 60 ml clear and frosted, Diva 100 ml: 12 finishes each
     });
 });

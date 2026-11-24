@@ -26,7 +26,7 @@ import skus from "./elegant60-100-master-skus.json";
 // to the plates; frosted: the approved photo bodies), the reducer kits' r5 bodies replaced and their
 // caps seated on the shoulder (scripts/elegant-masters/build-60-100-kits.mts); one Cylinder dip tube
 // per size under each fitment's own pump body, frosted in EXPLODED only (universal-dip-tube-60-100.py).
-export const ELEGANT60_100_MASTER_REVIEW_VERSION = "ca0e44ecfa70";
+export const ELEGANT60_100_MASTER_REVIEW_VERSION = "0730ccd72ebe";
 const exactSkus = new Map(skus.map(sku => [sku.toLowerCase(), sku]));
 export function elegant60100ReviewSku(sku: string | null | undefined): string | null {
     return sku ? exactSkus.get(sku.trim().toLowerCase()) ?? null : null;

@@ -6,8 +6,9 @@ level. On 4 Nov scripts/empire-grace-diamond/flat-reducer.py made a levelled cop
 straight line) and put it into the Empire, Grace and Diamond kits only. Elegant 60/100 and Diva (live), and Circle,
 Round and Sleek (localhost review kits) still used the original.
 
-This points every remaining reducer part at the levelled copy. Same image size and the same box on each bottle:
-only the pixels change. Nothing is uploaded: the levelled images were published with the Empire/Grace/Diamond
+This points every remaining reducer part at the levelled copy: same image size, only the pixels change. It also
+re-seats the insert on the three bodies where it sat off the glass (RESEAT below); every other box is untouched.
+Nothing is uploaded: the levelled images were published with the Empire/Grace/Diamond
 masters (docs/reviews/hosted-egd-masters-2026-11-04/asset-receipt.json), so the live kit file reuses those URLs.
 
 Rewrites, keeping each file's formatting:
@@ -50,17 +51,51 @@ def levelled_image(sha, hosted):
     return {"url": url, "key": key, "sha256": new, "bytes": len(data), "width": SIZES[sha][0], "height": SIZES[sha][1]}
 
 
+# Where the insert sat off the glass. Measured on each body image against the neck's own outline (24 Nov 2026):
+# every other reducer bottle has the insert within 0.2 mm of the neck's centre, its flange 0.36 mm into the rim.
+#   Elegant 60 ml: the neck is drawn left of the canvas axis, so the insert sat 0.46 mm (clear) and 0.51 mm
+#                  (frosted) right of the neck's centre.
+#   Diva 100 ml:   the insert sat 2.64 mm below the top of the rim, sunk inside the glass.
+# (pattern, dx, dy) in canvas px, applied to both views of the insert.
+RESEAT = [
+    (r"^GBElg60Rdcr", -4.06, 0.0, "centred on the neck: 4.06 px left (24 Nov 2026)"),
+    (r"^GBElgFrst60Rdcr", -4.46, 0.0, "centred on the neck: 4.46 px left (24 Nov 2026)"),
+    (r"^GBDiva100Rdcr", 0.0, -15.6, "seated on the rim like the other Diva necks: 15.6 px up (24 Nov 2026)"),
+]
+
+
+def shifted(box, keys):
+    """The box moved; a coordinate that does not move keeps its exact value."""
+    out = dict(box)
+    for key, d in keys:
+        if d:
+            out[key] = round(out[key] + d, 3)
+    return out
+
+
 def level(rows, hosted):
-    """Swap every tilted reducer part for its levelled copy. Returns {sku: [what each changed part held before]}."""
+    """Swap every tilted reducer part for its levelled copy, and re-seat the inserts listed in RESEAT.
+    Returns {sku: [what each changed part held before]}."""
     changed = {}
     for sku, kit in rows.items():
+        move = next(((dx, dy, note) for pattern, dx, dy, note in RESEAT if re.match(pattern, sku)), None)
         for index, part in enumerate(kit["parts"]):
-            sha = part.get("slot") == "reducer" and part["image"].get("sha256")
-            if sha not in LEVELLED:
+            if part.get("slot") != "reducer":
                 continue
-            assert (part["image"]["width"], part["image"]["height"]) == SIZES[sha], sku
-            changed.setdefault(sku, []).append({"part": index, "image": part["image"], "derivation": part.get("derivation")})
-            part["image"] = levelled_image(sha, hosted); part["derivation"] = DERIVATION
+            before = {"part": index}
+            sha = part["image"].get("sha256")
+            if sha in LEVELLED:
+                assert (part["image"]["width"], part["image"]["height"]) == SIZES[sha], sku
+                before.update(image=part["image"], derivation=part.get("derivation"))
+                part["image"] = levelled_image(sha, hosted); part["derivation"] = DERIVATION
+            if move and "placement" not in part:
+                dx, dy, note = move
+                before.update(box=part["box"], bounds=part["bounds"])
+                part["box"] = shifted(part["box"], [("x", dx), ("y", dy)])
+                part["bounds"] = shifted(part["bounds"], [("left", dx), ("right", dx), ("top", dy), ("bottom", dy)])
+                part["placement"] = note
+            if len(before) > 1:
+                changed.setdefault(sku, []).append(before)
     return changed
 
 
@@ -86,7 +121,7 @@ def main():
         assert n == 1, f"{constant} not found in {module}"
         open(module, "w").write(pinned)
         families = sorted({re.sub(r"\d.*", "", sku) for sku in changed})
-        print(f"{path}: {len(changed)} reducer bottles levelled {families}; version {version}")
+        print(f"{path}: {len(changed)} reducer bottles changed {families}; version {version}")
 
     def update(manifest):
         prior = manifest["version"]
@@ -98,15 +133,23 @@ def main():
         # What the live recipes held before, so earlier releases' tests can still check their own baselines
         # (tests/helpers/reducer-levelling-2026-11-24.ts) and the change can be reversed exactly.
         os.makedirs(os.path.dirname(RECORD), exist_ok=True)
-        open(RECORD, "w").write(json.dumps({"priorVersion": prior, "version": version, "levelledSkus": sorted(changed),
-                                            "replacedParts": dict(sorted(changed.items()))}, indent=1) + "\n")
+        record = json.load(open(RECORD)) if os.path.exists(RECORD) else {"priorVersion": prior, "replacedParts": {}}
+        for sku, parts in changed.items():   # a later run adds to what an earlier one recorded; first values win
+            held = {entry["part"]: entry for entry in record["replacedParts"].get(sku, [])}
+            for entry in parts:
+                held[entry["part"]] = {**entry, **held.get(entry["part"], {})}
+            record["replacedParts"][sku] = [held[part] for part in sorted(held)]
+        record.update(version=version, levelledSkus=sorted(record["replacedParts"]),
+                      reseatedSkus=sorted(sku for sku, parts in record["replacedParts"].items() if any("box" in entry for entry in parts)))
+        record["replacedParts"] = dict(sorted(record["replacedParts"].items()))
+        open(RECORD, "w").write(json.dumps(record, indent=1) + "\n")
 
     def reindex(index):
         assert index["skus"] == skus, "the index lists different SKUs from the kit file"
         index["version"] = version
     rewrite(INDEX, lambda d: json.dumps(d, **COMPACT) + "\n", reindex)
     families = sorted({re.sub(r"\d.*", "", sku) for sku in changed})
-    print(f"{APPROVED}: {len(changed)} live reducer bottles levelled {families}; version {version}")
+    print(f"{APPROVED}: {len(changed)} live reducer bottles changed {families}; version {version}")
 
 
 if __name__ == "__main__":

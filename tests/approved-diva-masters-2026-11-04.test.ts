@@ -34,7 +34,7 @@ const urlsOnly = (value: unknown, host: (url: string) => string): unknown => Arr
 
 describe('Diva review masters published (2026-11-04)', () => {
     it('publishes exactly the 179 reviewed Diva SKUs, the kits Jordan approved on localhost, replacing nothing', () => {
-        expect(review.version).toBe('be05e6f40b4c');   // 32a89f9270c0 as published; its reducers levelled since (24 Nov 2026)
+        expect(review.version).toBe('3a8e0edf4370');   // 32a89f9270c0 as published; its reducers levelled and the 100 ml insert re-seated since (24 Nov 2026)
         expect([...divaSkus].sort()).toEqual(Object.keys(source).sort());
         expect([...divaReleaseSkus].sort()).toEqual([...divaSkus].sort());
         expect(plan.replacedRecipes).toEqual([]);
