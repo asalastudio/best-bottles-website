@@ -173,7 +173,7 @@ export default function CatalogCapDots({ title, variants, selectedId, onSelect, 
                             data-testid="catalog-card-cap-dot"
                             data-swatch={photoUrl ? "photo" : "chip"}
                             data-sku={variant.websiteSku ?? variant.graceSku ?? undefined}
-                            className={`flex h-[38px] flex-none items-end justify-center border-b-2 px-[2px] pb-[3px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9a7a48] ${
+                            className={`flex h-[38px] min-w-[24px] flex-none items-end justify-center border-b-2 px-[2px] pb-[3px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9a7a48] ${
                                 active ? "border-[#1c1c1e]" : "border-transparent hover:border-[#d9cdb9]"}`}
                         >
                             {photoUrl

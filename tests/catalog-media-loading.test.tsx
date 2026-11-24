@@ -30,6 +30,13 @@ describe('catalog media loading', () => {
         renderToStaticMarkup(<CatalogCardPreview {...props} catalogHero={null} />);
         expect(query.mock.calls.at(-1)?.[1]).toEqual({ skus: [black.websiteSku] });
     });
+    it('keeps every cap a tappable width, however narrow its photo crops', () => {
+        const html = renderToStaticMarkup(<CatalogCapDots title="Cylinder" variants={[black,copper]} selectedId={black.id} onSelect={() => {}} photo={v => `/caps/${v.id}.webp`} />);
+        const buttons = html.match(/<button[^>]*role="radio"[^>]*>/g) ?? [];
+        expect(buttons).toHaveLength(2);
+        for (const button of buttons) expect(button).toContain('min-w-[24px]');
+    });
+
     it('loads cap photos as small lazy images, not eager CSS backgrounds', () => {
         const html = renderToStaticMarkup(<CatalogCapDots title="Cylinder" variants={[black,copper]} selectedId={black.id} onSelect={() => {}} photo={v => `/caps/${v.id}.webp`} />);
         expect(html.match(/loading="lazy"/g)).toHaveLength(2);
