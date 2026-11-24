@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { beforeReducerLevelling } from './reducer-levelling-2026-11-24';
 
 /** The Pillar cap and roller release (scripts/paperdoll/publish-pillar-caps.mjs, 4 Nov 2026): 3 new recipes, none
  * replaced. Earlier release tests check their baselines against the approved recipes as they stood before it. */
@@ -6,5 +7,6 @@ const release = JSON.parse(readFileSync('docs/reviews/hosted-pillar-caps-2026-11
     { publishedSkus: string[]; replacedSkus: string[] };
 export const pillarCapsReleaseSkus = release.publishedSkus;
 export function beforePillarCapsRelease<T>(rows: Record<string, T>): Record<string, T> {
-    return Object.fromEntries(Object.entries(rows).filter(([sku]) => !pillarCapsReleaseSkus.includes(sku)));
+    // Also before the reducer levelling (24 Nov 2026), which changed two parts of 96 earlier recipes.
+    return Object.fromEntries(Object.entries(beforeReducerLevelling(rows)).filter(([sku]) => !pillarCapsReleaseSkus.includes(sku)));
 }
