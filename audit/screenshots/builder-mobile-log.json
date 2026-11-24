@@ -1,0 +1,3952 @@
+[
+ {
+  "kind": "builder-desktop",
+  "sku": "GBSlk50AnSpTslBlk",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Sleek&sku=GBSlk50AnSpTslBlk",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/AnSpTsl18-415Gl.gif"
+  ],
+  "text": "",
+  "heading": "Build Your Bottle / Choose your sprayer finish / 50 ml Sleek / Your Build",
+  "layers": [
+   {
+    "tag": "img",
+    "src": "256-2322a8a6ec708322db5b2556264009726b007cae6683a628e8fb68abc8da863c.w",
+    "box": [
+     100,
+     642,
+     52,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-10349516722996f7c3f10af42f45234515a0d67bad12c446d5d0b25030b36cee.w",
+    "box": [
+     233,
+     642,
+     54,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-f4157716b5d927c9ce9c414e73e87fe03b80b2394c7ff6a2bf6c4156021e9c9e.w",
+    "box": [
+     367,
+     642,
+     54,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-f4157716b5d927c9ce9c414e73e87fe03b80b2394c7ff6a2bf6c4156021e9c9e.w",
+    "box": [
+     502,
+     642,
+     54,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-55f5eace1785498c44d430b99abe0508fc660aab1660655114fdde22ea46624d.w",
+    "box": [
+     99,
+     790,
+     53,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-1bb1c0af9017abf9e868f6374c89a2d498fa69d122f81ff29346f4a9b9d9b9a4.w",
+    "box": [
+     234,
+     790,
+     52,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-00d3203adc2a90da31a5695c63d45600dd0d1174440ff3e693ca02626679bdaa.w",
+    "box": [
+     367,
+     790,
+     54,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-37d1ab9c0d15322858f0f2f279c53d3f2faf5eaf3082bd51334e4ab1037669e8.w",
+    "box": [
+     501,
+     790,
+     55,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-302040453244a849d91a74f2fdee10f1f1ef7ee0f4d360c7b508fbb25676772f.w",
+    "box": [
+     99,
+     938,
+     54,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "image",
+    "src": "9b42d0f6ff218b4607550a681eec96b25ac8814669936d4af918007a2fb82eed.png&w",
+    "box": [
+     854,
+     587,
+     105,
+     314
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "sleek-18-415-spray-regenerated.webp&w=640&q=75",
+    "box": [
+     899,
+     836,
+     12,
+     327
+    ],
+    "opacity": "0.56",
+    "blend": "multiply",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-3c31a180da693d6f92f40d52d2c6200926f63dd41fd592e8b6ea109e039f7cfd.w",
+    "box": [
+     673,
+     554,
+     256,
+     283
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   }
+  ]
+ },
+ {
+  "kind": "builder-mobile",
+  "sku": "GBSlk50AnSpTslBlk",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Sleek&sku=GBSlk50AnSpTslBlk",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/AnSpTsl18-415Gl.gif"
+  ],
+  "text": "",
+  "heading": "50 ml Sleek · Clear / Choose your finish / Filters / SHOP",
+  "layers": [
+   {
+    "tag": "image",
+    "src": "9b42d0f6ff218b4607550a681eec96b25ac8814669936d4af918007a2fb82eed.png&w",
+    "box": [
+     194,
+     192,
+     34,
+     101
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-3c31a180da693d6f92f40d52d2c6200926f63dd41fd592e8b6ea109e039f7cfd.w",
+    "box": [
+     136,
+     182,
+     82,
+     91
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "img",
+    "src": "256-2322a8a6ec708322db5b2556264009726b007cae6683a628e8fb68abc8da863c.w",
+    "box": [
+     48,
+     368,
+     50,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-10349516722996f7c3f10af42f45234515a0d67bad12c446d5d0b25030b36cee.w",
+    "box": [
+     169,
+     368,
+     52,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-f4157716b5d927c9ce9c414e73e87fe03b80b2394c7ff6a2bf6c4156021e9c9e.w",
+    "box": [
+     291,
+     368,
+     53,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-f4157716b5d927c9ce9c414e73e87fe03b80b2394c7ff6a2bf6c4156021e9c9e.w",
+    "box": [
+     47,
+     513,
+     53,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-55f5eace1785498c44d430b99abe0508fc660aab1660655114fdde22ea46624d.w",
+    "box": [
+     169,
+     513,
+     51,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-1bb1c0af9017abf9e868f6374c89a2d498fa69d122f81ff29346f4a9b9d9b9a4.w",
+    "box": [
+     292,
+     513,
+     51,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-00d3203adc2a90da31a5695c63d45600dd0d1174440ff3e693ca02626679bdaa.w",
+    "box": [
+     47,
+     675,
+     52,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-37d1ab9c0d15322858f0f2f279c53d3f2faf5eaf3082bd51334e4ab1037669e8.w",
+    "box": [
+     168,
+     675,
+     53,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-302040453244a849d91a74f2fdee10f1f1ef7ee0f4d360c7b508fbb25676772f.w",
+    "box": [
+     291,
+     675,
+     52,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   }
+  ]
+ },
+ {
+  "kind": "pdp-mobile",
+  "sku": "GBSlk50AnSpTslBlk",
+  "url": "https://best-bottles-website.vercel.app/products/sleek-50ml-clear-18-415-antiquespray-tassel?sku=GBSlk50AnSpTslBlk",
+  "errors": [],
+  "failed": [],
+  "views": {
+   "default": [
+    {
+     "tag": "img",
+     "src": "9b42d0f6ff218b4607550a681eec96b25ac8814669936d4af918007a2fb82eed.png&w",
+     "box": [
+      246,
+      233,
+      108,
+      322
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "sleek-18-415-spray-regenerated.webp&w=640&q=75",
+     "box": [
+      293,
+      489,
+      12,
+      11
+     ],
+     "opacity": "0.56",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "1200-96627731b8ebddb125b1e3f251dbb6167b097004ffc34b0f21d10ab0d4ccf0dc.",
+     "box": [
+      61,
+      200,
+      262,
+      290
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ]
+  }
+ },
+ {
+  "kind": "builder-desktop",
+  "sku": "GBSlk50AnSpLvn",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Sleek&sku=GBSlk50AnSpLvn",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/AnSp18-415Blk.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/AnSp18-415Gl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/AnSp18-415Pnk.gif"
+  ],
+  "text": "",
+  "heading": "Build Your Bottle / Choose your sprayer finish / 50 ml Sleek / Your Build",
+  "layers": [
+   {
+    "tag": "img",
+    "src": "256-f74c0a5e82a46a9cf82311645df79bfe660c6bd2356fa042dda85c91cde49f1c.w",
+    "box": [
+     97,
+     633,
+     57,
+     38
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-af68dbfa70ec2be3008b0b67e06faa6983f6f58bb86f004c328492c3437b46e3.w",
+    "box": [
+     231,
+     633,
+     57,
+     38
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-2880ce91a19ce0868b2586ac952113c42f610680640326db2a4d4648f9a1efa3.w",
+    "box": [
+     366,
+     633,
+     57,
+     38
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-17f276aade339e5004846ed13f2c07995c8322397e99f907c0401474b328ddc4.w",
+    "box": [
+     500,
+     633,
+     57,
+     38
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-149dabd1bd714eb5bbf57b289ba86b4b627934809f85a6667ec1a201d3029ddb.w",
+    "box": [
+     97,
+     780,
+     57,
+     39
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-13cc1899d412483841ac2a7886355206be40d08c134986e3ee9a7eb5755a6be4.w",
+    "box": [
+     231,
+     781,
+     57,
+     38
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-1ad32a9948779a94cbd7daa73a51afadbed96129de14ae660f02ca83b1cbdbd5.w",
+    "box": [
+     366,
+     780,
+     57,
+     39
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-9a3cf02e78e969b3fed2a4a6f330267c62884863f803044d3fbc3a8dda8bdeb2.w",
+    "box": [
+     500,
+     780,
+     57,
+     39
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-692588c06ca6ab7f0b0182322789696c796a925d607ccbe73dfe6054eba8a28a.w",
+    "box": [
+     97,
+     928,
+     57,
+     38
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "image",
+    "src": "9b42d0f6ff218b4607550a681eec96b25ac8814669936d4af918007a2fb82eed.png&w",
+    "box": [
+     854,
+     587,
+     105,
+     314
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "sleek-18-415-spray-regenerated.webp&w=640&q=75",
+    "box": [
+     899,
+     637,
+     12,
+     327
+    ],
+    "opacity": "0.56",
+    "blend": "multiply",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-da91e80d5117a0c0fd981611540c3c36946da9c2c82a818f18d973cd2d684f9d.w",
+    "box": [
+     787,
+     543,
+     143,
+     97
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   }
+  ]
+ },
+ {
+  "kind": "builder-mobile",
+  "sku": "GBSlk50AnSpLvn",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Sleek&sku=GBSlk50AnSpLvn",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/AnSp18-415Blk.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/AnSp18-415Gl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/AnSp18-415Pnk.gif"
+  ],
+  "text": "",
+  "heading": "50 ml Sleek · Clear / Choose your finish / Filters / SHOP",
+  "layers": [
+   {
+    "tag": "image",
+    "src": "9b42d0f6ff218b4607550a681eec96b25ac8814669936d4af918007a2fb82eed.png&w",
+    "box": [
+     194,
+     179,
+     34,
+     101
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-da91e80d5117a0c0fd981611540c3c36946da9c2c82a818f18d973cd2d684f9d.w",
+    "box": [
+     172,
+     165,
+     46,
+     31
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "img",
+    "src": "256-f74c0a5e82a46a9cf82311645df79bfe660c6bd2356fa042dda85c91cde49f1c.w",
+    "box": [
+     45,
+     364,
+     56,
+     37
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-af68dbfa70ec2be3008b0b67e06faa6983f6f58bb86f004c328492c3437b46e3.w",
+    "box": [
+     167,
+     364,
+     56,
+     37
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-2880ce91a19ce0868b2586ac952113c42f610680640326db2a4d4648f9a1efa3.w",
+    "box": [
+     289,
+     364,
+     56,
+     37
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-17f276aade339e5004846ed13f2c07995c8322397e99f907c0401474b328ddc4.w",
+    "box": [
+     45,
+     509,
+     56,
+     37
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-149dabd1bd714eb5bbf57b289ba86b4b627934809f85a6667ec1a201d3029ddb.w",
+    "box": [
+     167,
+     508,
+     56,
+     38
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-13cc1899d412483841ac2a7886355206be40d08c134986e3ee9a7eb5755a6be4.w",
+    "box": [
+     289,
+     509,
+     56,
+     37
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-1ad32a9948779a94cbd7daa73a51afadbed96129de14ae660f02ca83b1cbdbd5.w",
+    "box": [
+     45,
+     671,
+     56,
+     38
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-9a3cf02e78e969b3fed2a4a6f330267c62884863f803044d3fbc3a8dda8bdeb2.w",
+    "box": [
+     167,
+     671,
+     56,
+     37
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-692588c06ca6ab7f0b0182322789696c796a925d607ccbe73dfe6054eba8a28a.w",
+    "box": [
+     289,
+     671,
+     56,
+     37
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   }
+  ]
+ },
+ {
+  "kind": "pdp-mobile",
+  "sku": "GBSlk50AnSpLvn",
+  "url": "https://best-bottles-website.vercel.app/products/sleek-50ml-clear-18-415-antiquespray?sku=GBSlk50AnSpLvn",
+  "errors": [],
+  "failed": [],
+  "views": {
+   "default": [
+    {
+     "tag": "img",
+     "src": "9b42d0f6ff218b4607550a681eec96b25ac8814669936d4af918007a2fb82eed.png&w",
+     "box": [
+      191,
+      233,
+      108,
+      322
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "sleek-18-415-spray-regenerated.webp&w=640&q=75",
+     "box": [
+      237,
+      284,
+      12,
+      216
+     ],
+     "opacity": "0.56",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "640-da91e80d5117a0c0fd981611540c3c36946da9c2c82a818f18d973cd2d684f9d.w",
+     "box": [
+      122,
+      188,
+      146,
+      99
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ]
+  }
+ },
+ {
+  "kind": "builder-desktop",
+  "sku": "GBDiva46SpryMtGl",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Diva&sku=GBDiva46SpryMtGl",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry18-415MtGl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry18-415Cu.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry18-415MtSl.gif"
+  ],
+  "text": "",
+  "heading": "Build Your Bottle / Choose your sprayer finish / 46 ml Diva / Your Build",
+  "layers": [
+   {
+    "tag": "img",
+    "src": "256-e48ecfe3acb96b5c5166eddc04c4187a5506289c1ec85d8cafae116d3564c416.w",
+    "box": [
+     110,
+     623,
+     30,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-1f82d2338afdbc1d3ea9056e55b467b8906d3ded953654004a06f41eb50c8011.w",
+    "box": [
+     243,
+     623,
+     33,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-793ceac118a5c460c0ac9b2174d3ca5cc5ea1566799e786b60fd3edd96f0259e.w",
+    "box": [
+     378,
+     623,
+     32,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-783de43b3c2c77dfc85758cc95e3c8bb1601698bae2a5414499934e1ffefed30.w",
+    "box": [
+     513,
+     623,
+     32,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-70c5dfca7ce3a758e1304b06f5a614a2a03e995234e314b709df0481ca3d700b.w",
+    "box": [
+     110,
+     771,
+     32,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-bafa731874dbd7c65d9a0bcac6a3e9af628f5e8b7b156976e4bd32e095aac598.w",
+    "box": [
+     244,
+     771,
+     31,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-728e9cfaf4ebf5a37bb4254faf9a63e04c615bd79f82f64b3a1e416846b6db0d.w",
+    "box": [
+     90,
+     918,
+     26,
+     44
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "image",
+    "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+    "box": [
+     772,
+     569,
+     171,
+     301
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-c50a9b4dd13658c32b0331b22a4bcacf7d970771dc3f14741d5e87209f90294a.w",
+    "box": [
+     824,
+     532,
+     66,
+     114
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-0fdf3a42d2558194b6e63fb6ac9b652bd31c588959c9dab84a51707455c48ad4.w",
+    "box": [
+     938,
+     737,
+     70,
+     120
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   }
+  ]
+ },
+ {
+  "kind": "builder-mobile",
+  "sku": "GBDiva46SpryMtGl",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Diva&sku=GBDiva46SpryMtGl",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry18-415MtSl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry18-415Cu.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry18-415ShnBlk.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry18-415MtGl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry18-415ShnSl.gif"
+  ],
+  "text": "",
+  "heading": "46 ml Diva · Clear / Choose your finish / Filters / SHOP",
+  "layers": [
+   {
+    "tag": "image",
+    "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+    "box": [
+     169,
+     183,
+     53,
+     93
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-c50a9b4dd13658c32b0331b22a4bcacf7d970771dc3f14741d5e87209f90294a.w",
+    "box": [
+     185,
+     171,
+     20,
+     35
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-0fdf3a42d2558194b6e63fb6ac9b652bd31c588959c9dab84a51707455c48ad4.w",
+    "box": [
+     220,
+     235,
+     22,
+     37
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "img",
+    "src": "256-e48ecfe3acb96b5c5166eddc04c4187a5506289c1ec85d8cafae116d3564c416.w",
+    "box": [
+     58,
+     398,
+     30,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-1f82d2338afdbc1d3ea9056e55b467b8906d3ded953654004a06f41eb50c8011.w",
+    "box": [
+     179,
+     398,
+     32,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-793ceac118a5c460c0ac9b2174d3ca5cc5ea1566799e786b60fd3edd96f0259e.w",
+    "box": [
+     302,
+     398,
+     31,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-783de43b3c2c77dfc85758cc95e3c8bb1601698bae2a5414499934e1ffefed30.w",
+    "box": [
+     58,
+     526,
+     31,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-70c5dfca7ce3a758e1304b06f5a614a2a03e995234e314b709df0481ca3d700b.w",
+    "box": [
+     179,
+     526,
+     31,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-bafa731874dbd7c65d9a0bcac6a3e9af628f5e8b7b156976e4bd32e095aac598.w",
+    "box": [
+     302,
+     526,
+     31,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   }
+  ]
+ },
+ {
+  "kind": "pdp-mobile",
+  "sku": "GBDiva46SpryMtGl",
+  "url": "https://best-bottles-website.vercel.app/products/diva-46ml-clear-18-415-perfumespray?sku=GBDiva46SpryMtGl",
+  "errors": [],
+  "failed": [],
+  "views": {
+   "sidecar": [
+    {
+     "tag": "img",
+     "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+     "box": [
+      119,
+      287,
+      152,
+      267
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-1f82d2338afdbc1d3ea9056e55b467b8906d3ded953654004a06f41eb50c8011.w",
+     "box": [
+      166,
+      254,
+      58,
+      101
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-728e9cfaf4ebf5a37bb4254faf9a63e04c615bd79f82f64b3a1e416846b6db0d.w",
+     "box": [
+      264,
+      436,
+      62,
+      107
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ],
+   "capon": [
+    {
+     "tag": "img",
+     "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+     "box": [
+      119,
+      287,
+      152,
+      267
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-1f82d2338afdbc1d3ea9056e55b467b8906d3ded953654004a06f41eb50c8011.w",
+     "box": [
+      166,
+      254,
+      58,
+      101
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-728e9cfaf4ebf5a37bb4254faf9a63e04c615bd79f82f64b3a1e416846b6db0d.w",
+     "box": [
+      164,
+      249,
+      62,
+      107
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ],
+   "exploded": [
+    {
+     "tag": "img",
+     "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+     "box": [
+      119,
+      287,
+      152,
+      267
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "128-af651739ceb4d0e8679411a38673bc9a6433d92690eaf64cf791f2f678db3419.w",
+     "box": [
+      286,
+      393,
+      30,
+      150
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-1f82d2338afdbc1d3ea9056e55b467b8906d3ded953654004a06f41eb50c8011.w",
+     "box": [
+      272,
+      305,
+      58,
+      101
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-728e9cfaf4ebf5a37bb4254faf9a63e04c615bd79f82f64b3a1e416846b6db0d.w",
+     "box": [
+      56,
+      436,
+      62,
+      107
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ]
+  }
+ },
+ {
+  "kind": "builder-desktop",
+  "sku": "GBDiva46DrpCu",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Diva&sku=GBDiva46DrpCu",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Drp18-415Cu.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Drp18-415Sl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Drp18-415Gl.gif"
+  ],
+  "text": "",
+  "heading": "Build Your Bottle / Choose your component finish / 46 ml Diva / Your Build",
+  "layers": [
+   {
+    "tag": "img",
+    "src": "3bd4595e6802e294010e72779b1418cd2cd3008e1d86b24b77e3f72e7161b0fc.front",
+    "box": [
+     79,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "ce44c49f908613a006bd4d96eda0dd525af9b923847fa4974971c5aa3b11c6ed.front",
+    "box": [
+     213,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "5d1cafdc9de9c0910c0dba8ded710ea82147edc555c3bea81aee852d7fa0c09c.front",
+    "box": [
+     348,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "image",
+    "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+    "box": [
+     772,
+     595,
+     171,
+     301
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-1c35a81d8590268eec4e27d3e2c60bcaff33bc443f27e6cda0084457ec693e23.w",
+    "box": [
+     819,
+     550,
+     77,
+     123
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   }
+  ]
+ },
+ {
+  "kind": "builder-mobile",
+  "sku": "GBDiva46DrpCu",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Diva&sku=GBDiva46DrpCu",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Drp18-415Cu.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Drp18-415Gl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Drp18-415Sl.gif"
+  ],
+  "text": "",
+  "heading": "46 ml Diva · Clear / Choose your finish / Filters / SHOP",
+  "layers": [
+   {
+    "tag": "image",
+    "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+    "box": [
+     169,
+     183,
+     53,
+     93
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-1c35a81d8590268eec4e27d3e2c60bcaff33bc443f27e6cda0084457ec693e23.w",
+    "box": [
+     183,
+     169,
+     24,
+     38
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "img",
+    "src": "3bd4595e6802e294010e72779b1418cd2cd3008e1d86b24b77e3f72e7161b0fc.front",
+    "box": [
+     27,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "ce44c49f908613a006bd4d96eda0dd525af9b923847fa4974971c5aa3b11c6ed.front",
+    "box": [
+     149,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "5d1cafdc9de9c0910c0dba8ded710ea82147edc555c3bea81aee852d7fa0c09c.front",
+    "box": [
+     271,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   }
+  ]
+ },
+ {
+  "kind": "pdp-mobile",
+  "sku": "GBDiva46DrpCu",
+  "url": "https://best-bottles-website.vercel.app/products/diva-46ml-clear-18-415-dropper?sku=GBDiva46DrpCu",
+  "errors": [],
+  "failed": [],
+  "views": {
+   "capon": [
+    {
+     "tag": "img",
+     "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+     "box": [
+      119,
+      287,
+      152,
+      267
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-1f17378e674661e7b79d2207bde4bb1f9f1d173bc3c1905949674eee3a4cb919.w",
+     "box": [
+      161,
+      247,
+      69,
+      109
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ],
+   "exploded": [
+    {
+     "tag": "img",
+     "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+     "box": [
+      80,
+      287,
+      152,
+      267
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-9396969674d6a051fed743c81a56a4bb6c06ba77918d7d7f8c4d344cd1f40650.w",
+     "box": [
+      232,
+      388,
+      65,
+      155
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-c155386459fc7cadc51945503cd5fa57dd2b1bae203f7303dcc828b68c08164d.w",
+     "box": [
+      232,
+      281,
+      65,
+      106
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ]
+  }
+ },
+ {
+  "kind": "builder-desktop",
+  "sku": "GBElg30SpryMattSl",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Elegant&sku=GBElg30SpryMattSl",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry15-415MattGl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry15-415Blk.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry15-415MattSl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry15-415ShnGl.gif"
+  ],
+  "text": "",
+  "heading": "Build Your Bottle / Choose your sprayer finish / 30 ml Elegant / Your Build",
+  "layers": [
+   {
+    "tag": "img",
+    "src": "256-c0e8de3e39ca5f3924cf2e22a33db5234b831c850c838cf9342eea6c35485549.w",
+    "box": [
+     46,
+     610,
+     159,
+     175
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-b8f6dd158a4e08437cc2bd72c9874e92d5da9ac536acf7ee635991eca9c76a93.w",
+    "box": [
+     184,
+     613,
+     152,
+     167
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-a305df859840de1109128b6c866d548f9802c596387149493845115b5a57404b.w",
+    "box": [
+     314,
+     610,
+     159,
+     175
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-c632dab2a8c5cb436cbaf1ed426081b0b68a6cd85103dab54a9a2303c4e12765.w",
+    "box": [
+     448,
+     610,
+     160,
+     176
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-52ad93e962b5ad6d9e6ccd6fe62e2496c58b216fde60a004bf1690aec4f183b8.w",
+    "box": [
+     44,
+     756,
+     163,
+     179
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-9ac60b2299b492ee5fcb4e0744f555b8617316599cda01af618bf2b6435795ac.w",
+    "box": [
+     48,
+     914,
+     109,
+     120
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "image",
+    "src": "640-cf544b481277ed877a9d154223b5a17596d6d32ccc8926b0439210d87ef85af8.w",
+    "box": [
+     773,
+     617,
+     168,
+     250
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-8df1ccde4ea1f8ca8bfe09da5d8f6b8ba80c71a1489373105f32f244bc23f175.w",
+    "box": [
+     849,
+     662,
+     19,
+     179
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-bb139bbd9ec528aaf3611489befaa4636ecd8ebf1dc124301629c13de4763fb5.w",
+    "box": [
+     700,
+     526,
+     311,
+     342
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-cc2500ea5682a49765543d93d20ed7f3857e9fed3526b1e5b24be282c0702fa7.w",
+    "box": [
+     814,
+     716,
+     311,
+     342
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   }
+  ]
+ },
+ {
+  "kind": "builder-mobile",
+  "sku": "GBElg30SpryMattSl",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Elegant&sku=GBElg30SpryMattSl",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry15-415Blk.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry15-415MattSl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry15-415ShnSl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry15-415ShnGl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry15-415MattGl.gif"
+  ],
+  "text": "",
+  "heading": "30 ml Elegant · Clear / Choose your finish / Filters / SHOP",
+  "layers": [
+   {
+    "tag": "image",
+    "src": "640-cf544b481277ed877a9d154223b5a17596d6d32ccc8926b0439210d87ef85af8.w",
+    "box": [
+     169,
+     198,
+     52,
+     78
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-bb139bbd9ec528aaf3611489befaa4636ecd8ebf1dc124301629c13de4763fb5.w",
+    "box": [
+     146,
+     170,
+     97,
+     106
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-cc2500ea5682a49765543d93d20ed7f3857e9fed3526b1e5b24be282c0702fa7.w",
+    "box": [
+     181,
+     229,
+     97,
+     106
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "img",
+    "src": "256-c0e8de3e39ca5f3924cf2e22a33db5234b831c850c838cf9342eea6c35485549.w",
+    "box": [
+     -4,
+     385,
+     155,
+     170
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-b8f6dd158a4e08437cc2bd72c9874e92d5da9ac536acf7ee635991eca9c76a93.w",
+    "box": [
+     121,
+     388,
+     147,
+     162
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-a305df859840de1109128b6c866d548f9802c596387149493845115b5a57404b.w",
+    "box": [
+     239,
+     385,
+     155,
+     170
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-c632dab2a8c5cb436cbaf1ed426081b0b68a6cd85103dab54a9a2303c4e12765.w",
+    "box": [
+     -5,
+     513,
+     155,
+     171
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-52ad93e962b5ad6d9e6ccd6fe62e2496c58b216fde60a004bf1690aec4f183b8.w",
+    "box": [
+     115,
+     512,
+     158,
+     174
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   }
+  ]
+ },
+ {
+  "kind": "pdp-mobile",
+  "sku": "GBElg30SpryMattSl",
+  "url": "https://best-bottles-website.vercel.app/products/elegant-30ml-clear-15-415-perfumespray?sku=GBElg30SpryMattSl",
+  "errors": [],
+  "failed": [],
+  "views": {
+   "sidecar": [
+    {
+     "tag": "img",
+     "src": "640-cf544b481277ed877a9d154223b5a17596d6d32ccc8926b0439210d87ef85af8.w",
+     "box": [
+      122,
+      331,
+      149,
+      222
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "128-e8d983c7822dbb80e978227cb03363e141fccd901cd06c5eae2b9934ece51c13.w",
+     "box": [
+      189,
+      370,
+      17,
+      158
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "1200-5e79d5a8ee8bf6389ebd1f16286592750e6229b3b5533e670e6d9bbe484b2ba0.",
+     "box": [
+      57,
+      250,
+      275,
+      303
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "1200-32d5eaf36f886b091ec4756a0447c1211a96c506a9d6561a86fdc3820c8c1b46.",
+     "box": [
+      155,
+      419,
+      275,
+      303
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ],
+   "capon": [
+    {
+     "tag": "img",
+     "src": "640-cf544b481277ed877a9d154223b5a17596d6d32ccc8926b0439210d87ef85af8.w",
+     "box": [
+      122,
+      331,
+      149,
+      222
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "128-e8d983c7822dbb80e978227cb03363e141fccd901cd06c5eae2b9934ece51c13.w",
+     "box": [
+      189,
+      370,
+      17,
+      158
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "1200-5e79d5a8ee8bf6389ebd1f16286592750e6229b3b5533e670e6d9bbe484b2ba0.",
+     "box": [
+      57,
+      250,
+      275,
+      303
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "1200-32d5eaf36f886b091ec4756a0447c1211a96c506a9d6561a86fdc3820c8c1b46.",
+     "box": [
+      57,
+      250,
+      275,
+      303
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ],
+   "exploded": [
+    {
+     "tag": "img",
+     "src": "640-cf544b481277ed877a9d154223b5a17596d6d32ccc8926b0439210d87ef85af8.w",
+     "box": [
+      122,
+      331,
+      149,
+      222
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "128-e8d983c7822dbb80e978227cb03363e141fccd901cd06c5eae2b9934ece51c13.w",
+     "box": [
+      291,
+      384,
+      17,
+      158
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "1200-5e79d5a8ee8bf6389ebd1f16286592750e6229b3b5533e670e6d9bbe484b2ba0.",
+     "box": [
+      159,
+      264,
+      275,
+      303
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "1200-32d5eaf36f886b091ec4756a0447c1211a96c506a9d6561a86fdc3820c8c1b46.",
+     "box": [
+      57,
+      184,
+      275,
+      303
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ]
+  }
+ },
+ {
+  "kind": "builder-desktop",
+  "sku": "GBElg60DrpSl",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Elegant&sku=GBElg60DrpSl",
+  "errors": [],
+  "failed": [],
+  "text": "",
+  "heading": "Build Your Bottle / Choose your component finish / 60 ml Elegant / Your Build",
+  "layers": [
+   {
+    "tag": "img",
+    "src": "3bd4595e6802e294010e72779b1418cd2cd3008e1d86b24b77e3f72e7161b0fc.front",
+    "box": [
+     79,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "ce44c49f908613a006bd4d96eda0dd525af9b923847fa4974971c5aa3b11c6ed.front",
+    "box": [
+     213,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "5d1cafdc9de9c0910c0dba8ded710ea82147edc555c3bea81aee852d7fa0c09c.front",
+    "box": [
+     348,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "image",
+    "src": "640-48c4cbaab938b832ffa5fbae74c06d8e511aea4737eee3675b5e2ddb0aede394.w",
+    "box": [
+     757,
+     608,
+     199,
+     287
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-82e771ed4c27fbd11db6101e830dcbe33e338e760de605e7755a752f20c1d2ee.w",
+    "box": [
+     820,
+     669,
+     59,
+     176
+    ],
+    "opacity": "0.55",
+    "blend": "multiply",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-ae5554dc5f9f093b3449349f737d0e5c0ac977f7960057dd772dbbb6d5f21394.w",
+    "box": [
+     819,
+     551,
+     76,
+     121
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   }
+  ]
+ },
+ {
+  "kind": "builder-mobile",
+  "sku": "GBElg60DrpSl",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Elegant&sku=GBElg60DrpSl",
+  "errors": [],
+  "failed": [],
+  "text": "",
+  "heading": "60 ml Elegant · Clear / Choose your finish / Filters / SHOP",
+  "layers": [
+   {
+    "tag": "image",
+    "src": "640-48c4cbaab938b832ffa5fbae74c06d8e511aea4737eee3675b5e2ddb0aede394.w",
+    "box": [
+     164,
+     187,
+     62,
+     89
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-82e771ed4c27fbd11db6101e830dcbe33e338e760de605e7755a752f20c1d2ee.w",
+    "box": [
+     184,
+     206,
+     18,
+     55
+    ],
+    "opacity": "0.55",
+    "blend": "multiply",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-ae5554dc5f9f093b3449349f737d0e5c0ac977f7960057dd772dbbb6d5f21394.w",
+    "box": [
+     183,
+     170,
+     24,
+     38
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "img",
+    "src": "3bd4595e6802e294010e72779b1418cd2cd3008e1d86b24b77e3f72e7161b0fc.front",
+    "box": [
+     27,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "ce44c49f908613a006bd4d96eda0dd525af9b923847fa4974971c5aa3b11c6ed.front",
+    "box": [
+     149,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "5d1cafdc9de9c0910c0dba8ded710ea82147edc555c3bea81aee852d7fa0c09c.front",
+    "box": [
+     271,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   }
+  ]
+ },
+ {
+  "kind": "pdp-mobile",
+  "sku": "GBElg60DrpSl",
+  "url": "https://best-bottles-website.vercel.app/products/elegant-60ml-clear-18-415-dropper?sku=GBElg60DrpSl",
+  "errors": [],
+  "failed": [],
+  "views": {
+   "capon": [
+    {
+     "tag": "img",
+     "src": "640-48c4cbaab938b832ffa5fbae74c06d8e511aea4737eee3675b5e2ddb0aede394.w",
+     "box": [
+      106,
+      299,
+      177,
+      255
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-45287e320ffa1041bac41f8df73497502e93a2650f3c232ac6c8c931e5a04e58.w",
+     "box": [
+      162,
+      353,
+      53,
+      166
+     ],
+     "opacity": "0.55",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-bfa47e4c8192f49d2e92854733e1175598627401adb4966d9a470964737db78a.w",
+     "box": [
+      161,
+      249,
+      68,
+      108
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ],
+   "exploded": [
+    {
+     "tag": "img",
+     "src": "640-48c4cbaab938b832ffa5fbae74c06d8e511aea4737eee3675b5e2ddb0aede394.w",
+     "box": [
+      106,
+      299,
+      177,
+      255
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-0a97ffb05d120369b718dd8930aca5c2c06d2c5a2ebb507e837c01e78e527db8.w",
+     "box": [
+      285,
+      393,
+      63,
+      150
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-fe25fe99eed99c16f3d79704d167bc06f61494dfc5cc2073af0674099f4474b3.w",
+     "box": [
+      285,
+      290,
+      63,
+      102
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ]
+  }
+ },
+ {
+  "kind": "builder-desktop",
+  "sku": "GBElgFrst60DrpSl",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Elegant&sku=GBElgFrst60DrpSl",
+  "errors": [],
+  "failed": [],
+  "text": "",
+  "heading": "Build Your Bottle / Choose your component finish / 60 ml Elegant / Your Build",
+  "layers": [
+   {
+    "tag": "img",
+    "src": "3bd4595e6802e294010e72779b1418cd2cd3008e1d86b24b77e3f72e7161b0fc.front",
+    "box": [
+     79,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "ce44c49f908613a006bd4d96eda0dd525af9b923847fa4974971c5aa3b11c6ed.front",
+    "box": [
+     213,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "5d1cafdc9de9c0910c0dba8ded710ea82147edc555c3bea81aee852d7fa0c09c.front",
+    "box": [
+     348,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "image",
+    "src": "640-82e771ed4c27fbd11db6101e830dcbe33e338e760de605e7755a752f20c1d2ee.w",
+    "box": [
+     820,
+     676,
+     59,
+     175
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-52b8e08f752ef0ce17299891c1545043c810c9694413c1613dd791e9a60524b3.w",
+    "box": [
+     758,
+     609,
+     199,
+     287
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-ae5554dc5f9f093b3449349f737d0e5c0ac977f7960057dd772dbbb6d5f21394.w",
+    "box": [
+     819,
+     552,
+     76,
+     121
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   }
+  ]
+ },
+ {
+  "kind": "builder-mobile",
+  "sku": "GBElgFrst60DrpSl",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Elegant&sku=GBElgFrst60DrpSl",
+  "errors": [],
+  "failed": [],
+  "text": "",
+  "heading": "60 ml Elegant · Frosted / Choose your finish / Filters / SHOP",
+  "layers": [
+   {
+    "tag": "image",
+    "src": "640-82e771ed4c27fbd11db6101e830dcbe33e338e760de605e7755a752f20c1d2ee.w",
+    "box": [
+     184,
+     208,
+     18,
+     54
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-52b8e08f752ef0ce17299891c1545043c810c9694413c1613dd791e9a60524b3.w",
+    "box": [
+     164,
+     187,
+     62,
+     89
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-ae5554dc5f9f093b3449349f737d0e5c0ac977f7960057dd772dbbb6d5f21394.w",
+    "box": [
+     183,
+     170,
+     24,
+     38
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "img",
+    "src": "3bd4595e6802e294010e72779b1418cd2cd3008e1d86b24b77e3f72e7161b0fc.front",
+    "box": [
+     27,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "ce44c49f908613a006bd4d96eda0dd525af9b923847fa4974971c5aa3b11c6ed.front",
+    "box": [
+     149,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "5d1cafdc9de9c0910c0dba8ded710ea82147edc555c3bea81aee852d7fa0c09c.front",
+    "box": [
+     271,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   }
+  ]
+ },
+ {
+  "kind": "pdp-mobile",
+  "sku": "GBElgFrst60DrpSl",
+  "url": "https://best-bottles-website.vercel.app/products/elegant-60ml-frosted-18-415-dropper?sku=GBElgFrst60DrpSl",
+  "errors": [],
+  "failed": [],
+  "views": {
+   "capon": [
+    {
+     "tag": "img",
+     "src": "256-45287e320ffa1041bac41f8df73497502e93a2650f3c232ac6c8c931e5a04e58.w",
+     "box": [
+      162,
+      359,
+      52,
+      156
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "640-52b8e08f752ef0ce17299891c1545043c810c9694413c1613dd791e9a60524b3.w",
+     "box": [
+      107,
+      299,
+      176,
+      254
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-bfa47e4c8192f49d2e92854733e1175598627401adb4966d9a470964737db78a.w",
+     "box": [
+      161,
+      249,
+      68,
+      108
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ],
+   "exploded": [
+    {
+     "tag": "img",
+     "src": "640-52b8e08f752ef0ce17299891c1545043c810c9694413c1613dd791e9a60524b3.w",
+     "box": [
+      107,
+      299,
+      176,
+      254
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-0a97ffb05d120369b718dd8930aca5c2c06d2c5a2ebb507e837c01e78e527db8.w",
+     "box": [
+      284,
+      393,
+      63,
+      149
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-fe25fe99eed99c16f3d79704d167bc06f61494dfc5cc2073af0674099f4474b3.w",
+     "box": [
+      284,
+      291,
+      63,
+      102
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ]
+  }
+ },
+ {
+  "kind": "builder-desktop",
+  "sku": "GBCyl25DrpCu",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Cylinder&sku=GBCyl25DrpCu",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Drp18-415Cu.gif"
+  ],
+  "text": "",
+  "heading": "Build Your Bottle / Choose your component finish / 25 ml Cylinder / Your Build",
+  "layers": [
+   {
+    "tag": "img",
+    "src": "3bd4595e6802e294010e72779b1418cd2cd3008e1d86b24b77e3f72e7161b0fc.front",
+    "box": [
+     79,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "ce44c49f908613a006bd4d96eda0dd525af9b923847fa4974971c5aa3b11c6ed.front",
+    "box": [
+     213,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "5d1cafdc9de9c0910c0dba8ded710ea82147edc555c3bea81aee852d7fa0c09c.front",
+    "box": [
+     348,
+     617,
+     93,
+     70
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "image",
+    "src": "cylinder25-glass-pipette-v1.png&w=640&q=75",
+    "box": [
+     787,
+     659,
+     141,
+     211
+    ],
+    "opacity": "0.42",
+    "blend": "multiply",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "body-25ml-clear-refraction.f496010b9f55.webp&w=640&q=75",
+    "box": [
+     798,
+     619,
+     118,
+     281
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-1c35a81d8590268eec4e27d3e2c60bcaff33bc443f27e6cda0084457ec693e23.w",
+    "box": [
+     817,
+     549,
+     80,
+     127
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   }
+  ]
+ },
+ {
+  "kind": "builder-mobile",
+  "sku": "GBCyl25DrpCu",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Cylinder&sku=GBCyl25DrpCu",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Drp18-415Cu.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Drp18-415Gl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Drp18-415Sl.gif"
+  ],
+  "text": "",
+  "heading": "25 ml Cylinder · Clear / Choose your finish / Filters / SHOP",
+  "layers": [
+   {
+    "tag": "image",
+    "src": "cylinder25-glass-pipette-v1.png&w=640&q=75",
+    "box": [
+     173,
+     203,
+     44,
+     66
+    ],
+    "opacity": "0.42",
+    "blend": "multiply",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "body-25ml-clear-refraction.f496010b9f55.webp&w=640&q=75",
+    "box": [
+     177,
+     191,
+     37,
+     87
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-1c35a81d8590268eec4e27d3e2c60bcaff33bc443f27e6cda0084457ec693e23.w",
+    "box": [
+     183,
+     169,
+     25,
+     39
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "img",
+    "src": "3bd4595e6802e294010e72779b1418cd2cd3008e1d86b24b77e3f72e7161b0fc.front",
+    "box": [
+     27,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "ce44c49f908613a006bd4d96eda0dd525af9b923847fa4974971c5aa3b11c6ed.front",
+    "box": [
+     149,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "5d1cafdc9de9c0910c0dba8ded710ea82147edc555c3bea81aee852d7fa0c09c.front",
+    "box": [
+     271,
+     348,
+     92,
+     68
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   }
+  ]
+ },
+ {
+  "kind": "pdp-mobile",
+  "sku": "GBCyl25DrpCu",
+  "url": "https://best-bottles-website.vercel.app/products/cylinder-25ml-clear-18-415-dropper?sku=GBCyl25DrpCu",
+  "errors": [],
+  "failed": [],
+  "views": {
+   "default": [
+    {
+     "tag": "img",
+     "src": "cylinder25-glass-pipette-v1.png&w=640&q=75",
+     "box": [
+      133,
+      325,
+      125,
+      187
+     ],
+     "opacity": "0.42",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "body-25ml-clear-refraction.f496010b9f55.webp&w=640&q=75",
+     "box": [
+      143,
+      292,
+      105,
+      242
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-1f17378e674661e7b79d2207bde4bb1f9f1d173bc3c1905949674eee3a4cb919.w",
+     "box": [
+      160,
+      227,
+      71,
+      112
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ]
+  }
+ },
+ {
+  "kind": "builder-desktop",
+  "sku": "GBDiva46RdcrBrwnLthr",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Diva&sku=GBDiva46RdcrBrwnLthr",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415BlkLthr.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415BrwnLthr.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415MtSlTall.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415ShnGl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415Wh.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415ShnSl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415ShnBlkTall.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415LIvyLthr.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415LBrwnLthr.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415LPnkLthr.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415MtSl.gif"
+  ],
+  "text": "",
+  "heading": "Build Your Bottle / Choose your cap finish / 46 ml Diva / Your Build",
+  "layers": [
+   {
+    "tag": "img",
+    "src": "256-c4c9346bdb922a763ec5b5e36f79a76098d3f1d64e0f92272aae908bf10128d4.w",
+    "box": [
+     99,
+     623,
+     54,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-8c89c2e69b32e357491af3413b6f05a7d70dda4e9bd0160a1aae24f1a6c71f67.w",
+    "box": [
+     233,
+     623,
+     53,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-13c9ced21cc366ed3c4733888dcb19da9fd58c9f56d8cfcab080fe2cba492337.w",
+    "box": [
+     368,
+     623,
+     52,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-0275f2c18f64a988f574353744d36c0f3a39d10f61dee24c995520730994627f.w",
+    "box": [
+     502,
+     623,
+     53,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-5ba30de5bbb65717770b3a7dfc4e638dd1aee34c8cba92f6fd14edfc796bb0a8.w",
+    "box": [
+     100,
+     771,
+     52,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-bd8ed1c921c1000c1ca790f29c6e5abb8c8771bb65ebb15db970bbab2773237d.w",
+    "box": [
+     231,
+     772,
+     57,
+     55
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-ac378b39044042094898f9e69f9ce56272d7cefd9567acdb84b80f3dab9bac66.w",
+    "box": [
+     366,
+     772,
+     57,
+     56
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-75940d06575c3b7e056ac717e611ba2f42816c4a2cc671f25cbbfe80af7ec63c.w",
+    "box": [
+     500,
+     772,
+     57,
+     54
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-dbe8acfbcfa37deb48b2643ccf30f330ed4743d9909996de7f810449623b18b4.w",
+    "box": [
+     97,
+     919,
+     57,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-3ad6246f228c1dc0f00c0aadb18855eb48b03a3ba89209c98f95fe56fd5def37.w",
+    "box": [
+     236,
+     919,
+     48,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-a4f14c65bfd93bb3f46626cf50d4c439d7e9c63ebd331bf29a8a0eb277086777.w",
+    "box": [
+     368,
+     919,
+     52,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-756071808fadff482f804dfd3bb46c941611815d366c594a35fa9fcae82da877.w",
+    "box": [
+     505,
+     919,
+     48,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "image",
+    "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+    "box": [
+     772,
+     595,
+     171,
+     301
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-110753dd74f0bdaa196539225cc9faca722d8de1cd763df493e641e5a12f5c4f.w",
+    "box": [
+     839,
+     607,
+     36,
+     11
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-8c89c2e69b32e357491af3413b6f05a7d70dda4e9bd0160a1aae24f1a6c71f67.w",
+    "box": [
+     815,
+     574,
+     92,
+     99
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   }
+  ]
+ },
+ {
+  "kind": "builder-mobile",
+  "sku": "GBDiva46RdcrBrwnLthr",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Diva&sku=GBDiva46RdcrBrwnLthr",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415BlkLthr.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415ShnGl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415BrwnLthr.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415LIvyLthr.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415LBrwnLthr.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415ShnSl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415LPnkLthr.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415MtSl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415MtSlTall.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415ShnBlkTall.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/CP18-415Wh.gif"
+  ],
+  "text": "",
+  "heading": "46 ml Diva · Clear / Choose your finish / Filters / SHOP",
+  "layers": [
+   {
+    "tag": "image",
+    "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+    "box": [
+     169,
+     183,
+     53,
+     93
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-8c89c2e69b32e357491af3413b6f05a7d70dda4e9bd0160a1aae24f1a6c71f67.w",
+    "box": [
+     182,
+     177,
+     29,
+     31
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "img",
+    "src": "256-c4c9346bdb922a763ec5b5e36f79a76098d3f1d64e0f92272aae908bf10128d4.w",
+    "box": [
+     47,
+     354,
+     52,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-8c89c2e69b32e357491af3413b6f05a7d70dda4e9bd0160a1aae24f1a6c71f67.w",
+    "box": [
+     169,
+     354,
+     52,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-13c9ced21cc366ed3c4733888dcb19da9fd58c9f56d8cfcab080fe2cba492337.w",
+    "box": [
+     292,
+     354,
+     51,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-0275f2c18f64a988f574353744d36c0f3a39d10f61dee24c995520730994627f.w",
+    "box": [
+     47,
+     499,
+     52,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-5ba30de5bbb65717770b3a7dfc4e638dd1aee34c8cba92f6fd14edfc796bb0a8.w",
+    "box": [
+     170,
+     499,
+     51,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-bd8ed1c921c1000c1ca790f29c6e5abb8c8771bb65ebb15db970bbab2773237d.w",
+    "box": [
+     289,
+     501,
+     56,
+     53
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-ac378b39044042094898f9e69f9ce56272d7cefd9567acdb84b80f3dab9bac66.w",
+    "box": [
+     45,
+     645,
+     56,
+     54
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-75940d06575c3b7e056ac717e611ba2f42816c4a2cc671f25cbbfe80af7ec63c.w",
+    "box": [
+     167,
+     646,
+     56,
+     53
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-dbe8acfbcfa37deb48b2643ccf30f330ed4743d9909996de7f810449623b18b4.w",
+    "box": [
+     289,
+     644,
+     55,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-3ad6246f228c1dc0f00c0aadb18855eb48b03a3ba89209c98f95fe56fd5def37.w",
+    "box": [
+     50,
+     789,
+     46,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-a4f14c65bfd93bb3f46626cf50d4c439d7e9c63ebd331bf29a8a0eb277086777.w",
+    "box": [
+     170,
+     789,
+     50,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   },
+   {
+    "tag": "img",
+    "src": "256-756071808fadff482f804dfd3bb46c941611815d366c594a35fa9fcae82da877.w",
+    "box": [
+     294,
+     789,
+     46,
+     56
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": true
+   }
+  ]
+ },
+ {
+  "kind": "pdp-mobile",
+  "sku": "GBDiva46RdcrBrwnLthr",
+  "url": "https://best-bottles-website.vercel.app/products/diva-46ml-clear-18-415-reducer?sku=GBDiva46RdcrBrwnLthr",
+  "errors": [],
+  "failed": [],
+  "views": {
+   "sidecar": [
+    {
+     "tag": "img",
+     "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+     "box": [
+      119,
+      281,
+      152,
+      267
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "128-4969b414fe712437ad177f7ac6f44b815e3fe89aa45d1fdfb4e095a2f9f302f3.w",
+     "box": [
+      179,
+      292,
+      32,
+      9
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-8c89c2e69b32e357491af3413b6f05a7d70dda4e9bd0160a1aae24f1a6c71f67.w",
+     "box": [
+      264,
+      449,
+      82,
+      88
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ],
+   "capon": [
+    {
+     "tag": "img",
+     "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+     "box": [
+      119,
+      281,
+      152,
+      267
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "128-4969b414fe712437ad177f7ac6f44b815e3fe89aa45d1fdfb4e095a2f9f302f3.w",
+     "box": [
+      179,
+      292,
+      32,
+      9
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-8c89c2e69b32e357491af3413b6f05a7d70dda4e9bd0160a1aae24f1a6c71f67.w",
+     "box": [
+      158,
+      263,
+      82,
+      88
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ],
+   "exploded": [
+    {
+     "tag": "img",
+     "src": "640-eb92ecd9e914967fb4bf3f7e2fde5f9bb3119c7c64770bde0b1e424bf7aa7c75.w",
+     "box": [
+      119,
+      281,
+      152,
+      267
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "128-820d393b08ab19fe6037b3c8d36ee987de48340176e7d28f8f43ecf04aef6159.w",
+     "box": [
+      272,
+      500,
+      32,
+      36
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-8c89c2e69b32e357491af3413b6f05a7d70dda4e9bd0160a1aae24f1a6c71f67.w",
+     "box": [
+      158,
+      180,
+      82,
+      88
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ]
+  }
+ },
+ {
+  "kind": "builder-desktop",
+  "sku": "GBCyl9SpryBlk",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Cylinder&sku=GBCyl9SpryBlk",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry17-415Blk.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry17-415Gl.gif"
+  ],
+  "text": "",
+  "heading": "Build Your Bottle / Choose your sprayer finish / 9 ml Cylinder / Your Build",
+  "layers": [
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     112,
+     623,
+     27,
+     33
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-bd89e28c2b542934408b58204e411637a9b4692ba482f34b8c539d7a31c0d906.w",
+    "box": [
+     109,
+     653,
+     33,
+     28
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     246,
+     623,
+     27,
+     33
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-a5d9558a3a87ccd6206f14dfdb261da2694116bd15e191a23b00fcd786de7664.w",
+    "box": [
+     244,
+     653,
+     33,
+     28
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     381,
+     623,
+     27,
+     33
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-8b1161cd66ae5907f5c648b41140c6c841e019856f870a4d0e6cccce005b7d06.w",
+    "box": [
+     378,
+     653,
+     33,
+     28
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     515,
+     623,
+     27,
+     33
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-d477d3de2dea7fe6865f27f48b79de053f59926bd3942cc23b887209da30718d.w",
+    "box": [
+     512,
+     653,
+     33,
+     28
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     112,
+     771,
+     27,
+     33
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-7669fb864edec391378f755f15e9cb940a156f9f29d37a35150ea3428c89d391.w",
+    "box": [
+     109,
+     800,
+     33,
+     28
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     246,
+     771,
+     27,
+     33
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-98d42029e405b3fa0fac1c2099589db829eccf1e6c81f0879a7d7470767905f6.w",
+    "box": [
+     244,
+     800,
+     33,
+     28
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "img",
+    "src": "256-5502cdbabc390ef7b2de2f250b830c6b5e28ecf8804a088f6c05e48d790bcd47.w",
+    "box": [
+     86,
+     918,
+     33,
+     44
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": true
+   },
+   {
+    "tag": "image",
+    "src": "256-f00a791cb97193de63772a926784ee40cceec5cd824991c913b7a3540f76841c.w",
+    "box": [
+     847,
+     660,
+     22,
+     178
+    ],
+    "opacity": "1",
+    "blend": "multiply",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-de9aef2b8d0d2ec6b6842201e237376f6b33abc4e20c28e9dd875e682bd41efb.w",
+    "box": [
+     810,
+     605,
+     93,
+     264
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-8437edc66dfef6a52c74ceccbed2dc00417eebcbdd0598ab6501771aae013c4d.w",
+    "box": [
+     830,
+     550,
+     55,
+     67
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-eb7d8ba45f56d03bc8a48ea57b5ef0a92eebc5aeac5076684588ea67e24cf82b.w",
+    "box": [
+     824,
+     610,
+     67,
+     57
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-8f25b6dba36ceb325d808e6cc043412a478f7128c9d6a5125b5de1da927467f9.w",
+    "box": [
+     895,
+     782,
+     56,
+     75
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   }
+  ]
+ },
+ {
+  "kind": "builder-mobile",
+  "sku": "GBCyl9SpryBlk",
+  "url": "https://best-bottles-website.vercel.app/matrix?family=Cylinder&sku=GBCyl9SpryBlk",
+  "errors": [
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)",
+   "Failed to load resource: the server responded with a status of 415 (Unsupported Media Type)"
+  ],
+  "failed": [
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry17-415Blk.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry17-415Gl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry17-415MattSl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry17-415Red.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry17-415Tur.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry17-415ShnSl.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry17-415Blk.gif",
+   "415 https://www.bestbottles.com/images/store/enlarged_pics/Spry17-415Gl.gif"
+  ],
+  "text": "",
+  "heading": "9 ml Cylinder · Clear / Choose your finish / Filters / SHOP",
+  "layers": [
+   {
+    "tag": "image",
+    "src": "640-de9aef2b8d0d2ec6b6842201e237376f6b33abc4e20c28e9dd875e682bd41efb.w",
+    "box": [
+     180,
+     194,
+     29,
+     82
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-8437edc66dfef6a52c74ceccbed2dc00417eebcbdd0598ab6501771aae013c4d.w",
+    "box": [
+     187,
+     177,
+     17,
+     21
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-eb7d8ba45f56d03bc8a48ea57b5ef0a92eebc5aeac5076684588ea67e24cf82b.w",
+    "box": [
+     185,
+     196,
+     21,
+     18
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "640-8f25b6dba36ceb325d808e6cc043412a478f7128c9d6a5125b5de1da927467f9.w",
+    "box": [
+     207,
+     249,
+     17,
+     23
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     60,
+     398,
+     26,
+     32
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-bd89e28c2b542934408b58204e411637a9b4692ba482f34b8c539d7a31c0d906.w",
+    "box": [
+     57,
+     427,
+     32,
+     27
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     182,
+     398,
+     26,
+     32
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-a5d9558a3a87ccd6206f14dfdb261da2694116bd15e191a23b00fcd786de7664.w",
+    "box": [
+     179,
+     427,
+     32,
+     27
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     304,
+     398,
+     26,
+     32
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-8b1161cd66ae5907f5c648b41140c6c841e019856f870a4d0e6cccce005b7d06.w",
+    "box": [
+     301,
+     427,
+     32,
+     27
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     60,
+     526,
+     26,
+     32
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-d477d3de2dea7fe6865f27f48b79de053f59926bd3942cc23b887209da30718d.w",
+    "box": [
+     57,
+     554,
+     32,
+     27
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     182,
+     526,
+     26,
+     32
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-7669fb864edec391378f755f15e9cb940a156f9f29d37a35150ea3428c89d391.w",
+    "box": [
+     179,
+     554,
+     32,
+     27
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+    "box": [
+     304,
+     526,
+     26,
+     32
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   },
+   {
+    "tag": "image",
+    "src": "256-98d42029e405b3fa0fac1c2099589db829eccf1e6c81f0879a7d7470767905f6.w",
+    "box": [
+     301,
+     554,
+     32,
+     27
+    ],
+    "opacity": "1",
+    "blend": "normal",
+    "ok": null
+   }
+  ]
+ },
+ {
+  "kind": "pdp-mobile",
+  "sku": "GBCyl9SpryBlk",
+  "url": "https://best-bottles-website.vercel.app/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryBlk",
+  "errors": [],
+  "failed": [],
+  "views": {
+   "sidecar": [
+    {
+     "tag": "img",
+     "src": "128-069431dfd61b1fda1f333cf6671a22a3d9fb3d6de4e1db2ef7d59e5622eabdfd.w",
+     "box": [
+      186,
+      368,
+      19,
+      158
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "640-de9aef2b8d0d2ec6b6842201e237376f6b33abc4e20c28e9dd875e682bd41efb.w",
+     "box": [
+      153,
+      319,
+      82,
+      234
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+     "box": [
+      171,
+      267,
+      49,
+      59
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-bd89e28c2b542934408b58204e411637a9b4692ba482f34b8c539d7a31c0d906.w",
+     "box": [
+      166,
+      319,
+      59,
+      50
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-5502cdbabc390ef7b2de2f250b830c6b5e28ecf8804a088f6c05e48d790bcd47.w",
+     "box": [
+      230,
+      476,
+      50,
+      67
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ],
+   "capon": [
+    {
+     "tag": "img",
+     "src": "128-069431dfd61b1fda1f333cf6671a22a3d9fb3d6de4e1db2ef7d59e5622eabdfd.w",
+     "box": [
+      186,
+      368,
+      19,
+      158
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "640-de9aef2b8d0d2ec6b6842201e237376f6b33abc4e20c28e9dd875e682bd41efb.w",
+     "box": [
+      153,
+      319,
+      82,
+      234
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+     "box": [
+      171,
+      267,
+      49,
+      59
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-bd89e28c2b542934408b58204e411637a9b4692ba482f34b8c539d7a31c0d906.w",
+     "box": [
+      166,
+      319,
+      59,
+      50
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-5502cdbabc390ef7b2de2f250b830c6b5e28ecf8804a088f6c05e48d790bcd47.w",
+     "box": [
+      170,
+      256,
+      50,
+      67
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ],
+   "exploded": [
+    {
+     "tag": "img",
+     "src": "128-069431dfd61b1fda1f333cf6671a22a3d9fb3d6de4e1db2ef7d59e5622eabdfd.w",
+     "box": [
+      258,
+      385,
+      19,
+      158
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "640-de9aef2b8d0d2ec6b6842201e237376f6b33abc4e20c28e9dd875e682bd41efb.w",
+     "box": [
+      153,
+      319,
+      82,
+      234
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-b7e8a2373c9fd0e7594b0463777e0c4f8b620e25c9035637ca4214b5a051d0f1.w",
+     "box": [
+      243,
+      287,
+      49,
+      59
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-bd89e28c2b542934408b58204e411637a9b4692ba482f34b8c539d7a31c0d906.w",
+     "box": [
+      238,
+      340,
+      59,
+      50
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    },
+    {
+     "tag": "img",
+     "src": "256-5502cdbabc390ef7b2de2f250b830c6b5e28ecf8804a088f6c05e48d790bcd47.w",
+     "box": [
+      170,
+      186,
+      50,
+      67
+     ],
+     "opacity": "1",
+     "blend": "normal",
+     "ok": true
+    }
+   ]
+  }
+ }
+]

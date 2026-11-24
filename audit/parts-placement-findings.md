@@ -60,6 +60,23 @@ Screenshots and the per-layer log are in `audit/screenshots/pdp/` (`<websiteSku>
 
 No console errors or failed image requests on any of the ten pages. Side note: `GBCyl25DrpCu` has its website SKU stored as its graceSku in production.
 
+## Builder and mobile check on staging (2026-11-24)
+
+Same ten SKUs, opened by deep link (`/matrix?family=<Family>&sku=<websiteSku>`) at desktop 1440 and iPhone 13 (390), plus the product page at 390. Screenshots: `audit/screenshots/builder/<websiteSku>_<1440|390>.png`, `audit/screenshots/pdp-mobile/`; layer log `audit/screenshots/builder-mobile-log.json`. Only the deep-linked state was checked: no part switching, add-to-cart or reload tests.
+
+| # | Result | Evidence |
+|---|---|---|
+| 9 (new) | **Builder: dip tube pokes out through the bottom of the bottle** on Sleek 50 ml, with both the bulb sprayer and the tassel sprayer, desktop and mobile. The product page does not do this. Likely code: the builder re-seats the tube (`preview-registration.ts`) without clipping it to the glass, where the product page clips behind-glass parts at the foot (`stage.ts:231,478`) | `builder-sheet-sleek50-tubes.png`, `builder/GBSlk50AnSpLvn_*.png`, `builder/GBSlk50AnSpTslBlk_*.png` |
+| 1 | Builder, tassel sprayer: the tube starts near the base instead of at the collar, then exits the bottom (same stub as the product page, plus #9) | `builder/GBSlk50AnSpTslBlk_1440.png` |
+| 2 | **Same in the builder and on mobile.** Diva 46 sprayer: no tube | `builder/GBDiva46SpryMtGl_*.png`, `pdp-mobile/GBDiva46SpryMtGl_390_capon.png` |
+| 3 | **Same in the builder and on mobile.** Diva 46 dropper: no pipette | `builder/GBDiva46DrpCu_*.png`, `pdp-mobile/GBDiva46DrpCu_390_capon.png` |
+| 4–7 | Nothing wrong seen in the builder or on mobile for Elegant 30, Elegant 60 droppers, Cylinder 25 dropper, Diva 46 leather cap, or the Cylinder 9 control | `builder/`, `pdp-mobile/` |
+
+Other observations:
+- The builder requests legacy `bestbottles.com/images/store/enlarged_pics/*.gif` component images that returned HTTP 415 in this session (1–11 per page). The finish thumbnails still rendered. Not yet known whether real browsers get the same response.
+- Mobile product pages: no console errors or failed requests.
+- Sleek 100 ml was not opened in the builder; it shares the Sleek 50 tube data, so #9 probably applies.
+
 ## Next step that needs access
 
 Screenshot one SKU per finding on the product page and in the builder (capped, cap-off and exploded) to confirm or dismiss each row. That needs the staging site and image hosts allowed for this session, or a run on your machine.
