@@ -1,5 +1,6 @@
 import "server-only";
 import { approvedComponentKits, APPROVED_KIT_VERSION } from "../paper-doll/approved-component-kits";
+import { DIVA_KIT_VERSION } from "../paper-doll/diva-kit-corrections";
 import { storefrontFamily, sourceFamilies, withStorefrontFamily } from "../products/storefront-family";
 import { CYLINDER9_OVERCAP_MASTER } from "@/lib/register/detached-overcaps";
 import { CYLINDER25_COPPER_OVERCAP } from "@/lib/register/cylinder25-copper-overcap";
@@ -11,6 +12,8 @@ import { catalogIncludedAssembly } from "../../../convex/catalogIncludedAssembli
 import { builderBodyIdentity, chooserGroupKey, chooserSourceRows, resolveBuilderConfigurations, reviewedCylinderFiveMlRow, type BuilderKit, type BuilderBody, groupBuilderBodies, isBuilderCandidate, type CatalogRow } from "./model";
 import { resolveListedComponents, unavailableVintageFinishes, type ActiveComponent } from "./components";
 import { bareChooserKit, slimBuilderBodies } from "./payload";
+import type { BuilderFamily } from "./entry";
+import { familyOptionCount, familyScreenOrder, pickFamilyPreviewBodies, type BuilderFamilyPreview } from "./family-previews";
 import { readLocalComponentKits } from "../paper-doll/local-component-kits";
 import { loadRegisterKits } from "@/lib/register/load";
 import { assembledKit, type RegisterKit } from "@/lib/register/stage-kit";
@@ -27,6 +30,12 @@ function localAssembledKit(kit: BuilderKit): BuilderKit {
         const views = (part as typeof part & { views?: string[] }).views;
         return !views || views.includes("capon");
     }) };
+}
+
+/** The builder draws assembled bottles; its finished-bottle views (CAP ON / CAP OFF / EXPLODED) need the
+ * parts assembly drops, such as the complete 20-400 roller insert drawn only in EXPLODED. */
+export function withViewParts(assembled: BuilderKit, full: BuilderKit): BuilderKit {
+    return full.parts.length === assembled.parts.length ? assembled : { ...assembled, viewParts: full.parts };
 }
 
 /** Apply current approved recipes and optional local candidates after the shared cache. */
@@ -76,7 +85,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: true }));
-}, ["bottle-builder-family-chooser-v14-all-cylinder-masters", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v14-all-cylinder-masters", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION, DIVA_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** The cached family. When the cache has no entry to fall back on (a new key, an
  * eviction) and the register lookup fails, this one request builds the family
@@ -136,7 +145,8 @@ async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku
         const staged = local && ((row.websiteSku && local[row.websiteSku]) || (row.graceSku && local[row.graceSku]));
         // The builder draws assembled bottles only: a register insert's EXPLODED-only plug layer stays out.
         const fromRegister = (row.graceSku && registered[row.graceSku]) || (row.websiteSku && registered[row.websiteSku]) || null;
-        const kit = staged ? localAssembledKit(staged) : (fromRegister ? assembledKit(fromRegister) : null);
+        const kit = staged ? withViewParts(localAssembledKit(staged), staged)
+            : (fromRegister ? withViewParts(assembledKit(fromRegister) as BuilderKit, fromRegister as unknown as BuilderKit) : null);
         if (kit) {
             if (row.websiteSku) result.set(row.websiteSku, kit);
             if (row.graceSku) result.set(row.graceSku, kit);
@@ -172,7 +182,7 @@ const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null
         kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
     }
     return kits;
-}, ["bottle-builder-body-kits-v10-vial3-source", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-body-kits-v10-vial3-source", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION, DIVA_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export async function loadBuilderBodyKits(family: string, bodyId: string) {
     if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};
@@ -184,7 +194,7 @@ export async function loadBuilderBodyKits(family: string, bodyId: string) {
     const result = { ...kits };
     for (const config of body.configurations) {
         const staged = local[config.id] ?? (config.product.graceSku ? local[config.product.graceSku] : undefined);
-        if (staged) result[config.id] = localAssembledKit(staged);
+        if (staged) result[config.id] = withViewParts(localAssembledKit(staged), staged);
     }
     return result;
 }
@@ -297,4 +307,30 @@ export async function freshConfiguration(family: string, sku: string) {
     // Uncached purchase check: a register hiccup must not block add-to-cart.
     const bodies = await loadBuilderBodies(sameBody, { strictRegister: false });
     return bodies.flatMap(body => body.configurations).find(config => config.id === sku) ?? null;
+}
+
+/** The family screen's groups: a few real bodies per family, read from the same
+ * cached family the chooser uses (the warm route keeps every family cached). A
+ * family that fails to load keeps its tile and shows its outline icon instead. */
+export async function loadBuilderFamilyPreviews(families: BuilderFamily[]): Promise<BuilderFamilyPreview[]> {
+    const ordered = familyScreenOrder(families);
+    const out = new Array<BuilderFamilyPreview>(ordered.length);
+    let cursor = 0;
+    await Promise.all(Array.from({ length: Math.min(4, ordered.length) }, async () => {
+        while (cursor < ordered.length) {
+            const index = cursor++;
+            const family = ordered[index];
+            let bodies: BuilderFamilyPreview["bodies"] = [];
+            let options = 0;
+            try {
+                const all = withLocalReviewBodies(await loadBuilderFamily(family.family));
+                bodies = pickFamilyPreviewBodies(all);
+                options = familyOptionCount(all);
+            } catch (error) {
+                console.error("[builder] family preview unavailable", family.family, error instanceof Error ? error.message : error);
+            }
+            out[index] = { ...family, bodies, options };
+        }
+    }));
+    return out;
 }

@@ -26,7 +26,10 @@ type PublishedKit = NonNullable<FunctionReturnType<typeof api.productKits.forSku
 /** A published kit layer (a full-canvas image), or a register part standing in its own box on the canvas (src/lib/register/stage-kit.ts). */
 export type BuilderPart = PublishedKit["parts"][number] & { opacity?: number; blendMode?: "multiply"; trimBottomPct?: number; views?: Array<"sidecar" | "capon" | "exploded">; box?: PartBox | null; componentId?: string | null; detached?: DetachedLook | null };
 /** A published per-SKU kit, or one composed from the component register (`register` set): one plate per glass, shared component layers, one datum per body. */
-export type BuilderKit = Omit<PublishedKit, "parts"> & { parts: BuilderPart[]; register?: RegisterKitMeta | null; glassSizing?: PdpGlassSizing };
+export type BuilderKit = Omit<PublishedKit, "parts"> & { parts: BuilderPart[]; register?: RegisterKitMeta | null; glassSizing?: PdpGlassSizing;
+    /** Every part with its views, as the product page draws them, when the assembled `parts` dropped some
+     * (an EXPLODED-only complete roller insert). Only the finished-bottle views read it. */
+    viewParts?: BuilderPart[] };
 export type BuilderConfiguration = {
     id: string;
     bodyId: string;
@@ -166,6 +169,16 @@ export function compatibleFinishComponent(row: CatalogRow) {
     const words = (value: string) => value.toLowerCase().split(/[^a-z]+/).filter(Boolean);
     const refines = Boolean(stated && finish && stated !== finish && words(finish).every(word => words(stated).includes(word)));
     if (!exact && !matches.length && refines) matches = eligible.filter(part => finishOf(part) === stated);
+    // A bare shorthand finish ("Gl" = "Gold") that several caps share ("Shiny Gold", "Matte Gold"): the row's own
+    // catalogue name settles it ("…with plastic roller ball plug and shiny gold cap"). Only a finish the name states
+    // in full and that adds to the shorthand; never one that contradicts it (amber Boston roll-ons, 2026-11-20).
+    if (!exact && !matches.length && finish) {
+        const named = (row.itemName ?? "").toLowerCase();
+        const candidates = [...new Set(eligible.map(finishOf).filter((label): label is string => typeof label === "string"
+            && label !== finish && words(finish).every(word => words(label).includes(word))
+            && new RegExp(`\\b${label.toLowerCase().replace(/[^a-z]+/g, "\\s+")}\\b`).test(named)))];
+        if (candidates.length === 1) matches = eligible.filter(part => finishOf(part) === candidates[0]);
+    }
     // Droppers carry no finish token: pair the bulb colour, trim and size named in both SKUs
     // (GBBstn2ozBlkDrprShnGlTrim ↔ Drp20-4002ozShnGlTrimBlkBulb).
     if (!exact && !matches.length && kind === "Dropper") {
@@ -325,6 +338,13 @@ export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | n
     const finishComponent = compatibleFinishComponent(row)!;
     let closure = included?.finish ?? name.variantLabel ?? row.capColor?.trim() ?? "Standard finish";
     if (row.reviewedComponentCorrections?.some(c => c.reviewCaseId === row.websiteSku)) closure = getFinishFromWebsiteSku(finishComponent.websiteSku)?.label ?? finishComponent.name;
+    // When the cap was matched by refining a shorthand finish (the SKU's "Gl" = "Gold", settled as Shiny Gold by
+    // the row's name), say the cap's own finish: "Tall Shiny Gold Cap", never a vaguer "Tall Gold Cap".
+    const rowFinish = getFinishFromWebsiteSku(row.websiteSku)?.label;
+    const capFinish = getFinishFromWebsiteSku(finishComponent.websiteSku)?.label;
+    const finishWords = (value: string) => value.toLowerCase().split(/[^a-z]+/).filter(Boolean);
+    if (rowFinish && capFinish && rowFinish !== capFinish && finishWords(rowFinish).every(word => finishWords(capFinish).includes(word))
+        && closure.includes(rowFinish) && !closure.includes(capFinish)) closure = closure.replace(rowFinish, capFinish);
     // Tall or short is the listed cap's own name ("Tall Matt Silver caps" vs
     // "Short Matt Silver caps"); the row's capStyle says Tall on both Diva 46 reducers.
     const capName = finishComponent.name;

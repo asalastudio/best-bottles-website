@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import BuilderLoading from "@/components/bottle-builder/BuilderLoading";
 import { builderProductEntry, loadBuilderEntry } from "@/lib/bottle-builder/entry";
 import MatrixClient from "@/components/matrix/MatrixClient";
-import { loadBuilderFamilies, loadBuilderFamilyOrUncached } from "@/lib/bottle-builder/server";
+import { loadBuilderFamilies, loadBuilderFamilyOrUncached, loadBuilderFamilyPreviews } from "@/lib/bottle-builder/server";
 import { collectDisplayDerivatives } from "@/lib/products/display-derivative.server";
 import { preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/lib/seo";
@@ -47,6 +47,18 @@ async function Builder({ familyParam, collection, sku }: { familyParam?: string;
     // CDN every time). Started before anything is awaited and never awaited here:
     // the chooser paints without it, and a failure falls back to that fetch.
     const familyList = loadBuilderFamilies().catch(() => null);
+    // A bare /matrix opens on the family screen; a family, product or collection link goes straight to its bottles.
+    // The screen's bottle groups stream in the same way, behind the outline icons that paint first.
+    const chooseFamilyFirst = !familyParam && !sku && !collection;
+    // Only that screen needs them. A family, product or collection link must not wait on (or, with a cold
+    // cache, rebuild) every family; if the customer opens the screen later, the client asks for the groups then.
+    const familyPreviews = chooseFamilyFirst ? familyList
+        .then(async list => {
+            if (!list?.length) return null;
+            const families = await loadBuilderFamilyPreviews(list);
+            return { families, displayDerivatives: collectDisplayDerivatives(families.flatMap(f => f.bodies)) };
+        })
+        .catch(() => null) : undefined;
     const preferMobile = preferMobileRequest(await headers());
     const entry = await loadBuilderEntry(familyParam, {
         family: async name => (await loadBuilderFamilyOrUncached(name)).bodies,
@@ -56,6 +68,6 @@ async function Builder({ familyParam, collection, sku }: { familyParam?: string;
     // configurations load from /api/bottle-builder/bodies; Cylinder's HTML drops from 789 KB.
     const start = builderProductEntry(builderCollectionBodies(entry.bodies, collection), sku);
     return <>
-        <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}:${sku ?? ""}`} {...entry} familyList={familyList} bodies={start.bodies} displayDerivatives={collectDisplayDerivatives(start.bodies)} initialSelection={start.selection} initialStep={start.step} entryUnavailable={start.unavailable} preferMobile={preferMobile} />
+        <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}:${sku ?? ""}`} {...entry} familyList={familyList} bodies={start.bodies} displayDerivatives={collectDisplayDerivatives(start.bodies)} chooseFamilyFirst={chooseFamilyFirst} familyPreviews={familyPreviews} initialSelection={start.selection} initialStep={start.step} entryUnavailable={start.unavailable} preferMobile={preferMobile} />
     </>;
 }

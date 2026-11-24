@@ -67,12 +67,12 @@ beforeAll(() => analytics.init("phc_test"));
 beforeEach(() => { track.mockClear(); addItems.mockClear(); });
 afterEach(() => { act(() => root?.unmount()); el?.remove(); });
 
-describe("Pack of menu on the catalog card (design 8a)", () => {
-    it("shows the live 1-piece rate and opens the breaks in a menu below the button, never a modal", () => {
+describe("Set of menu on the catalog card (design 8a)", () => {
+    it("shows the live 1-piece rate and opens the packs in a menu below the button, never a modal", () => {
         card();
-        expect($("catalog-card-price").textContent).toBe("$0.92/pc · 1–11 pcs");
+        expect($("catalog-card-price").textContent).toBe("$0.92each");
         const toggle = $("catalog-card-pack-toggle");
-        expect(toggle.textContent).toBe("Pack of 1▾");
+        expect(toggle.textContent).toBe("Set of 1▾");
         expect(toggle.getAttribute("aria-haspopup")).toBe("listbox");
         expect(toggle.getAttribute("aria-expanded")).toBe("false");
         expect(menu()).toBeNull();
@@ -80,41 +80,36 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         // No quote footnote: the ladder's rates are the prices (Jordan, 2026-09-25).
         expect(el.querySelector('[data-testid="catalog-card-tier-footnote"]')).toBeNull();
         expect($("catalog-card-add").textContent).toBe("Add to cart · $0.92");
+        expect($("catalog-card-total-qty").textContent).toBe("Total quantity: 1 pc");
 
         click(toggle);
         expect(toggle.getAttribute("aria-expanded")).toBe("true");
         expect(menu()?.getAttribute("role")).toBe("listbox");
         expect(toggle.getAttribute("aria-controls")).toBe(menu()?.id);
         const rows = $$("catalog-card-tier-row");
-        // Every break shows its range and its rate, nothing else — no "Quote" mark on any of them.
-        expect(rows.map((row) => row.textContent)).toEqual(["1–11$0.92", "12–47$0.76", "48–143$0.64", "144–499$0.56", "500+$0.53"]);
+        // The legacy site's menu (Jordan, 2026-11-20): each pack's pieces, its price and its rate per piece.
+        const lines = ["Set of 1 – $0.92 each", "Set of 12 – $9.12 ($0.76 each)", "Set of 48 – $30.72 ($0.64 each)", "Set of 144 – $80.64 ($0.56 each)", "Set of 500 – $265.00 ($0.53 each)"];
+        expect(rows.map((row) => row.textContent)).toEqual(lines);
+        expect(rows.map((row) => row.getAttribute("aria-label"))).toEqual(lines);
         expect(el.textContent).not.toMatch(/quote/i);
-        expect(rows.map((row) => row.getAttribute("aria-label"))).toEqual([
-            "1–11 units at $0.92 each",
-            "12–47 units at $0.76 each, save 17%",
-            "48–143 units at $0.64 each, save 30%",
-            "144–499 units at $0.56 each, save 39%",
-            "500+ units at $0.53 each, save 42%",
-        ]);
         expect(rows.map((row) => row.getAttribute("aria-selected"))).toEqual(["true", "false", "false", "false", "false"]);
         expect(document.activeElement).toBe(rows[0]);
         expect(events()).toEqual(["tier_pricing_opened"]);
         expect(track.mock.calls[0][1]).toEqual({ ...base, quantity: 1, tier: "1–11" });
     });
 
-    it("picking a break sets the quantity, and the headline and button follow that break's rate", () => {
+    it("picking a pack starts at one set of it: Set of 144 × 1 is 144 pieces at the pack's price", () => {
         card();
         click($("catalog-card-pack-toggle"));
         click($$("catalog-card-tier-row")[3]);
         expect(menu()).toBeNull();
         expect(document.activeElement).toBe($("catalog-card-pack-toggle"));
-        expect(($("catalog-card-qty") as HTMLInputElement).value).toBe("144");
-        expect($("catalog-card-pack-toggle").textContent).toBe("Pack of 144▾");
-        // Price consistency: the break's rate is the price; headline × quantity = button.
-        expect($("catalog-card-price").textContent).toBe("$0.56/pc · 144–499 pcs");
+        expect(($("catalog-card-qty") as HTMLInputElement).value).toBe("1");
+        expect($("catalog-card-pack-toggle").textContent).toBe("Set of 144▾");
+        expect($("catalog-card-price").textContent).toBe("$0.56each · set of 144");
+        expect($("catalog-card-total-qty").textContent).toBe("Total quantity: 144 pcs");
         expect($("catalog-card-add").textContent).toBe("Add to cart · $80.64");
         expect($("catalog-card-add").dataset.quote).toBeUndefined();
-        expect(el.querySelector('[data-testid="catalog-card-tier-footnote"]')).toBeNull();
         expect(el.querySelector('[data-testid="catalog-card-request-quote"]')).toBeNull();
         expect(el.textContent).not.toMatch(/quote/i);
         expect(events()).toEqual(["tier_pricing_opened", "tier_selected", "tier_pricing_closed"]);
@@ -134,7 +129,7 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         expect(($("catalog-card-qty") as HTMLInputElement).value).toBe("1");
     });
 
-    it("moves the break as the stepper or a typed quantity changes, and validates whole numbers from 1", () => {
+    it("the quantity counts packs: the stepper and a typed number change the packs, never the pack size", () => {
         card();
         const qty = $("catalog-card-qty") as HTMLInputElement;
         const [minus, plus] = [...el.querySelectorAll<HTMLButtonElement>('button[aria-label$="crease quantity"]')];
@@ -145,7 +140,6 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         click(minus);
         expect(qty.value).toBe("2");
         expect($("catalog-card-add").textContent).toBe("Add to cart · $1.84");
-        expect($("catalog-card-add").dataset.quote).toBeUndefined();
 
         type(qty, "0");
         expect($("catalog-card-qty-error").textContent).toBe("Enter a quantity of 1 or more.");
@@ -154,32 +148,38 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         expect(($("catalog-card-add") as HTMLButtonElement).disabled).toBe(true);
         type(qty, "12.5");
         expect($("catalog-card-qty-error").textContent).toBe("Use whole numbers only.");
-        type(qty, "600");
-        expect(el.querySelector('[data-testid="catalog-card-qty-error"]')).toBeNull();
-        expect($("catalog-card-pack-toggle").textContent).toBe("Pack of 500+▾");
-        expect($("catalog-card-price").textContent).toBe("$0.53/pc · 500+ pcs");
-        expect($("catalog-card-add").textContent).toBe("Add to cart · $318.00");
-        act(() => { qty.dispatchEvent(new FocusEvent("focusout", { bubbles: true })); });
-        expect(track.mock.calls.at(-1)).toEqual(["quantity_changed", { ...base, quantity: 600, tier: "500+", source: "input" }]);
+
+        // 3 packs of 12 = 36 pieces, priced as three packs.
+        click($("catalog-card-pack-toggle"));
+        click($$("catalog-card-tier-row")[1]);
+        click(plus); click(plus);
+        expect(qty.value).toBe("3");
+        expect($("catalog-card-pack-toggle").textContent).toBe("Set of 12▾");
+        expect($("catalog-card-total-qty").textContent).toBe("Total quantity: 36 pcs");
+        expect($("catalog-card-add").textContent).toBe("Add to cart · $27.36");
+        expect(track.mock.calls.at(-1)).toEqual(["quantity_changed", { ...base, quantity: 36, tier: "12–47", source: "stepper" }]);
         expect(el.querySelector('label[for="' + qty.id + '"]')?.textContent).toBe("Quantity");
         expect(($("catalog-card-add") as HTMLButtonElement).disabled).toBe(false);
     });
 
-    it("adds the exact assembly and quantity from the card without navigating", () => {
+    it("adds pack × quantity pieces of the exact assembly without navigating", () => {
         card();
-        type($("catalog-card-qty") as HTMLInputElement, "200");
+        click($("catalog-card-pack-toggle"));
+        click($$("catalog-card-tier-row")[3]);
+        type($("catalog-card-qty") as HTMLInputElement, "2");
         // Nothing in the purchase block is a link; Add to cart never navigates.
         expect(el.querySelectorAll("a[href]")).toHaveLength(0);
+        track.mockClear();
         click($("catalog-card-add"));
         expect(addItems).toHaveBeenCalledTimes(1);
         expect(addItems.mock.calls[0][0]).toEqual([expect.objectContaining({
-            graceSku: "CYL5-ROLL-BLK", websiteSku: "GBCyl5RollBlk", quantity: 200, unitPrice: 0.92,
+            graceSku: "CYL5-ROLL-BLK", websiteSku: "GBCyl5RollBlk", quantity: 288, unitPrice: 0.92,
             priceTiers: ladder, productGroupSlug: "cylinder-5ml-clear-roll-on", capColor: "Black",
         })]);
         expect(events()).toEqual(["quick_add_clicked", "Cart Item Added", "quick_add_success"]);
-        expect(track.mock.calls[2][1]).toEqual({ ...base, quantity: 200, tier: "144–499" });
+        expect(track.mock.calls[2][1]).toEqual({ ...base, quantity: 288, tier: "144–499" });
         expect($("catalog-card-add").textContent).toBe("Added ✓");
-        expect($("catalog-card-added").textContent).toContain("Added 200 to your cart.");
+        expect($("catalog-card-added").textContent).toContain("Added 288 to your cart.");
     });
 
     it("still adds to the cart and reports success when telemetry throws", () => {
@@ -198,9 +198,9 @@ describe("Pack of menu on the catalog card (design 8a)", () => {
         expect($("catalog-card-added").textContent).toContain("Added 12 to your cart.");
     });
 
-    it("keeps the card usable without a ladder and shows no Pack of menu", () => {
+    it("keeps the card usable without a ladder and shows no Set of menu", () => {
         card({ priceTiers: null, webPrice10pc: null, webPrice12pc: null, webPrice1pc: 0.95 });
-        expect($("catalog-card-price").textContent).toBe("$0.95/pc");
+        expect($("catalog-card-price").textContent).toBe("$0.95each");
         expect(el.querySelector('[data-testid="catalog-card-pack-toggle"]')).toBeNull();
         expect(el.querySelector('[data-testid="catalog-card-tier-footnote"]')).toBeNull();
         type($("catalog-card-qty") as HTMLInputElement, "10");

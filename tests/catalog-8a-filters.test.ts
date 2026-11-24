@@ -17,7 +17,9 @@ import {
 import { buildCatalogSearchResult, type CatalogSearchGroup } from "@/lib/catalogSearchFallback";
 import { isVisibleCatalogGroup } from "@/lib/products/catalog-listing-visibility";
 import { catalogCardPurchaseOptions } from "@/lib/products/catalog-card-purchase";
-import { CAP_DOT_SLOTS, capDotStyle, visibleCapDots } from "@/components/catalog/CatalogCapDots";
+import { CAP_SWATCH_HEIGHT, CAP_SWATCH_WIDTH, capDotStyle, capStripEdges, capStripScrollTo, capSwatchFrame } from "@/components/catalog/CatalogCapDots";
+import sprayTops from "@/lib/products/tall-cylinder-spray-tops.json";
+import reviewedCapPhotos from "@/lib/products/cylinder-cap-thumbnails.generated.json";
 import { catalogPackLabel } from "@/components/catalog/CatalogCardPurchase";
 
 const group = (id: string, extra: Partial<CatalogSearchGroup> = {}): CatalogSearchGroup => ({
@@ -137,14 +139,46 @@ describe("product card helpers", () => {
         expect(catalogFitmentLabel(null)).toBeNull();
     });
 
-    it("shows at most six cap slots, keeping the picked cap visible", () => {
-        const caps = Array.from({ length: 9 }, (_, index) => ({ id: `cap-${index}` }));
-        expect(visibleCapDots(caps.slice(0, CAP_DOT_SLOTS), null)).toHaveLength(6);
-        expect(visibleCapDots(caps, null).map((cap) => cap.id)).toEqual(["cap-0", "cap-1", "cap-2", "cap-3", "cap-4"]);
-        expect(visibleCapDots(caps, "cap-7").map((cap) => cap.id)).toEqual(["cap-0", "cap-1", "cap-2", "cap-3", "cap-7"]);
+    it("shows a strip arrow only toward caps hidden on that side", () => {
+        expect(capStripEdges(0, 200, 200)).toEqual({ back: false, forward: false });
+        expect(capStripEdges(0, 200, 480)).toEqual({ back: false, forward: true });
+        expect(capStripEdges(140, 200, 480)).toEqual({ back: true, forward: true });
+        expect(capStripEdges(280, 200, 480)).toEqual({ back: true, forward: false });
+        // sub-pixel rounding at either end does not leave a stray arrow
+        expect(capStripEdges(0.6, 200, 480.4)).toEqual({ back: false, forward: true });
+        expect(capStripEdges(279.6, 200, 480)).toEqual({ back: true, forward: false });
     });
 
-    it("fills a dot with the cap photo, else the finish's material colour", () => {
+    it("scrolls the strip just far enough to show the picked cap", () => {
+        expect(capStripScrollTo(0, 200, 40, 28)).toBe(0);
+        expect(capStripScrollTo(0, 200, 300, 28)).toBe(128);
+        expect(capStripScrollTo(250, 200, 120, 28)).toBe(120);
+    });
+
+    it("crops a spray top to the sprayer itself, standing at full swatch height", () => {
+        const top = Object.values(sprayTops)[0];
+        const frame = capSwatchFrame(top.url);
+        expect(frame.kind).toBe("crop");
+        expect(frame.height).toBe(CAP_SWATCH_HEIGHT);
+        expect(frame.width).toBeLessThanOrEqual(CAP_SWATCH_WIDTH);
+        if (frame.kind !== "crop") return;
+        const scale = CAP_SWATCH_HEIGHT / (top.bounds.bottom - top.bounds.top);
+        expect(frame.image.top).toBe(-Math.round(top.bounds.top * scale));
+        expect(frame.image.left).toBe(-Math.round(top.bounds.left * scale));
+    });
+
+    it("trims every reviewed cap photo to the cap, inside the swatch box", () => {
+        for (const url of Object.values(reviewedCapPhotos)) {
+            const frame = capSwatchFrame(url);
+            expect(frame.kind, url).toBe("crop");
+            expect(frame.width).toBeLessThanOrEqual(CAP_SWATCH_WIDTH);
+            expect(frame.height).toBeLessThanOrEqual(CAP_SWATCH_HEIGHT);
+            expect(Math.max(frame.width / CAP_SWATCH_WIDTH, frame.height / CAP_SWATCH_HEIGHT)).toBeGreaterThan(0.95);
+        }
+        expect(capSwatchFrame("https://example.com/unmeasured.webp")).toEqual({ kind: "contain", width: CAP_SWATCH_WIDTH, height: CAP_SWATCH_HEIGHT });
+    });
+
+    it("fills a colour chip with the finish's material colour", () => {
         expect(capDotStyle({ id: "a", label: "Shiny Gold" }, "/cap.webp")).toMatchObject({ backgroundImage: "url(/cap.webp)", backgroundSize: "cover" });
         expect(capDotStyle({ id: "b", label: "Matte Black" }, undefined).background).toContain("linear-gradient");
         expect(capDotStyle({ id: "c", label: "Unlisted finish", swatchColor: "#123456" }, undefined)).toEqual({ background: "#123456" });
@@ -167,9 +201,10 @@ describe("product card helpers", () => {
         expect(options.gold.webPrice1pc).toBe(1.1);
     });
 
-    it("labels the Pack of button with the break's first piece count", () => {
+    it("labels the Set of button with the pack's piece count", () => {
         expect(catalogPackLabel(null)).toBe("1");
-        expect(catalogPackLabel({ minQty: 144, maxQty: 863, unitPrice: 0.6, savePct: 10, saveEach: 0.1, appliesAtCheckout: false })).toBe("144");
-        expect(catalogPackLabel({ minQty: 4320, maxQty: null, unitPrice: 0.5, savePct: 20, saveEach: 0.2, appliesAtCheckout: false })).toBe("4,320+");
+        expect(catalogPackLabel({ minQty: 144, maxQty: 863, unitPrice: 0.6, packPrice: 86.4, savePct: 10, saveEach: 0.1, appliesAtCheckout: false })).toBe("144");
+        // A pack is an exact size (legacy "Set of 4320"), not an open-ended break.
+        expect(catalogPackLabel({ minQty: 4320, maxQty: null, unitPrice: 0.5, packPrice: 2160, savePct: 20, saveEach: 0.2, appliesAtCheckout: false })).toBe("4,320");
     });
 });

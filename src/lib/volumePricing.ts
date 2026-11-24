@@ -33,12 +33,16 @@ export interface TierPrices {
 export type PublishedTier = {
     minQty: number;
     unitPrice: number;
+    /** The set's published total ("Set of 144 – $77.76"), when the ladder carries one; more exact than minQty × a rounded unit price. */
+    totalPrice?: number;
 };
 
 export type DisplayVolumeTier = {
     minQty: number;
     maxQty: number | null;
     unitPrice: number;
+    /** What one set of `minQty` pieces costs, as the "Set of" menu shows it. */
+    packPrice: number;
     savePct: number;
     saveEach: number;
     appliesAtCheckout: boolean;
@@ -81,11 +85,37 @@ export function buildDisplayVolumeTiers(prices: TierPrices & {
             minQty: tier.minQty,
             maxQty: next ? next.minQty - 1 : null,
             unitPrice: tier.unitPrice,
+            packPrice: tier.totalPrice != null && Number.isFinite(tier.totalPrice) && tier.totalPrice > 0
+                ? tier.totalPrice
+                : Math.round(tier.minQty * tier.unitPrice * 100) / 100,
             savePct: list > 0 && tier.minQty > 1 ? Math.max(0, Math.round((saveEach / list) * 100)) : 0,
             saveEach,
             appliesAtCheckout: VOLUME_TIERS_HONORED_AT_CHECKOUT || tier.minQty === 1,
         };
     });
+}
+
+/**
+ * One "Set of" menu line, the legacy site's pack menu worded as sets (Jordan, 20 Nov 2026):
+ * "Set of 1 – $0.60 each", "Set of 12 – $6.84 ($0.57 each)".
+ */
+export function packOptionLabel(tier: Pick<DisplayVolumeTier, "minQty" | "unitPrice" | "packPrice">, formatPrice: (usd: number) => string): string {
+    const set = `Set of ${tier.minQty.toLocaleString("en-US")}`;
+    return tier.minQty === 1
+        ? `${set} – ${formatPrice(tier.unitPrice)} each`
+        : `${set} – ${formatPrice(tier.packPrice)} (${formatPrice(tier.unitPrice)} each)`;
+}
+
+/**
+ * The quantity a buyer chose, read back as packs: a total that is whole packs of
+ * a published size (144 = 1 × 144) opens on that pack; anything else is single pieces.
+ */
+export function packSelectionFromQuantity(tiers: Pick<DisplayVolumeTier, "minQty">[], quantity: number): { packIndex: number; packs: number } {
+    for (let index = tiers.length - 1; index > 0; index--) {
+        const size = tiers[index].minQty;
+        if (size > 1 && quantity >= size && quantity % size === 0) return { packIndex: index, packs: quantity / size };
+    }
+    return { packIndex: 0, packs: Math.max(1, quantity) };
 }
 
 export function formatVolumeQtyRange(minQty: number, maxQty: number | null): string {
