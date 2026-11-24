@@ -30,13 +30,34 @@ describe('catalog media loading', () => {
         renderToStaticMarkup(<CatalogCardPreview {...props} catalogHero={null} />);
         expect(query.mock.calls.at(-1)?.[1]).toEqual({ skus: [black.websiteSku] });
     });
+    it('keeps every cap a tappable width, however narrow its photo crops', () => {
+        const html = renderToStaticMarkup(<CatalogCapDots title="Cylinder" variants={[black,copper]} selectedId={black.id} onSelect={() => {}} photo={v => `/caps/${v.id}.webp`} />);
+        const buttons = html.match(/<button[^>]*role="radio"[^>]*>/g) ?? [];
+        expect(buttons).toHaveLength(2);
+        for (const button of buttons) expect(button).toContain('min-w-[24px]');
+    });
+
     it('loads cap photos as small lazy images, not eager CSS backgrounds', () => {
         const html = renderToStaticMarkup(<CatalogCapDots title="Cylinder" variants={[black,copper]} selectedId={black.id} onSelect={() => {}} photo={v => `/caps/${v.id}.webp`} />);
         expect(html.match(/loading="lazy"/g)).toHaveLength(2);
-        expect(html).toContain('width="22"');
-        expect(html).toContain('height="22"');
+        expect(html).toContain('width="24"');
+        expect(html).toContain('height="30"');
         expect(html).not.toContain('background-image:url');
         expect(html).toContain('aria-label="Matte Copper"');
+    });
+    it('shows each cap whole and unframed, underlining the picked one', () => {
+        const html = renderToStaticMarkup(<CatalogCapDots title="Cylinder" variants={[black,copper]} selectedId={black.id} onSelect={() => {}} photo={v => `/caps/${v.id}.webp`} />);
+        expect(html).not.toContain('rounded-full object-cover');
+        expect(html).not.toContain('box-shadow:0 0 0 2px');
+        expect(html).toContain('object-contain');
+        expect(html.match(/data-swatch="photo"/g)).toHaveLength(2);
+        expect(html).toMatch(/aria-checked="true"[^>]*border-\[#1c1c1e\]/);
+    });
+    it('draws a cap-shaped colour chip, not a circle, for a finish with no photo', () => {
+        const html = renderToStaticMarkup(<CatalogCapDots title="Cylinder" variants={[black,copper]} selectedId={black.id} onSelect={() => {}} photo={() => undefined} />);
+        expect(html.match(/data-swatch="chip"/g)).toHaveLength(2);
+        expect(html).toContain('rounded-t-[3px]');
+        expect(html).not.toContain('<img');
     });
 });
 

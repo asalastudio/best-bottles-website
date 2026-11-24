@@ -17,7 +17,9 @@ import {
 import { buildCatalogSearchResult, type CatalogSearchGroup } from "@/lib/catalogSearchFallback";
 import { isVisibleCatalogGroup } from "@/lib/products/catalog-listing-visibility";
 import { catalogCardPurchaseOptions } from "@/lib/products/catalog-card-purchase";
-import { CAP_DOT_SLOTS, capDotStyle, visibleCapDots } from "@/components/catalog/CatalogCapDots";
+import { CAP_DOT_SLOTS, CAP_SWATCH_HEIGHT, CAP_SWATCH_WIDTH, capDotStyle, capSwatchFrame, visibleCapDots } from "@/components/catalog/CatalogCapDots";
+import sprayTops from "@/lib/products/tall-cylinder-spray-tops.json";
+import reviewedCapPhotos from "@/lib/products/cylinder-cap-thumbnails.generated.json";
 import { catalogPackLabel } from "@/components/catalog/CatalogCardPurchase";
 
 const group = (id: string, extra: Partial<CatalogSearchGroup> = {}): CatalogSearchGroup => ({
@@ -144,7 +146,30 @@ describe("product card helpers", () => {
         expect(visibleCapDots(caps, "cap-7").map((cap) => cap.id)).toEqual(["cap-0", "cap-1", "cap-2", "cap-3", "cap-7"]);
     });
 
-    it("fills a dot with the cap photo, else the finish's material colour", () => {
+    it("crops a spray top to the sprayer itself, standing at full swatch height", () => {
+        const top = Object.values(sprayTops)[0];
+        const frame = capSwatchFrame(top.url);
+        expect(frame.kind).toBe("crop");
+        expect(frame.height).toBe(CAP_SWATCH_HEIGHT);
+        expect(frame.width).toBeLessThanOrEqual(CAP_SWATCH_WIDTH);
+        if (frame.kind !== "crop") return;
+        const scale = CAP_SWATCH_HEIGHT / (top.bounds.bottom - top.bounds.top);
+        expect(frame.image.top).toBe(-Math.round(top.bounds.top * scale));
+        expect(frame.image.left).toBe(-Math.round(top.bounds.left * scale));
+    });
+
+    it("trims every reviewed cap photo to the cap, inside the swatch box", () => {
+        for (const url of Object.values(reviewedCapPhotos)) {
+            const frame = capSwatchFrame(url);
+            expect(frame.kind, url).toBe("crop");
+            expect(frame.width).toBeLessThanOrEqual(CAP_SWATCH_WIDTH);
+            expect(frame.height).toBeLessThanOrEqual(CAP_SWATCH_HEIGHT);
+            expect(Math.max(frame.width / CAP_SWATCH_WIDTH, frame.height / CAP_SWATCH_HEIGHT)).toBeGreaterThan(0.95);
+        }
+        expect(capSwatchFrame("https://example.com/unmeasured.webp")).toEqual({ kind: "contain", width: CAP_SWATCH_WIDTH, height: CAP_SWATCH_HEIGHT });
+    });
+
+    it("fills a colour chip with the finish's material colour", () => {
         expect(capDotStyle({ id: "a", label: "Shiny Gold" }, "/cap.webp")).toMatchObject({ backgroundImage: "url(/cap.webp)", backgroundSize: "cover" });
         expect(capDotStyle({ id: "b", label: "Matte Black" }, undefined).background).toContain("linear-gradient");
         expect(capDotStyle({ id: "c", label: "Unlisted finish", swatchColor: "#123456" }, undefined)).toEqual({ background: "#123456" });
