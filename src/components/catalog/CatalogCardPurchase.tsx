@@ -2,20 +2,21 @@
 
 /**
  * Grid-card purchase block (master catalog design 8a): the live unit price,
- * a "Pack of" menu that picks a quantity break, a quantity stepper, and one
+ * a "Set of" menu, a quantity stepper, the total quantity, and one
  * full-width "Add to cart · subtotal" button. Sits OUTSIDE the card's
  * product links so quantity, tier and cart clicks never navigate.
  *
- * The menu is the only tier UI: no modal and no accordion. Picking a break
- * sets the quantity to its first piece count; typing or stepping a quantity
- * moves the break. The menu is absolutely positioned, so neither the card nor
- * the grid may clip overflow.
+ * The legacy site's format, worded as sets (Jordan, 20 Nov 2026): "Set of" picks
+ * a published set ("Set of 144 – $77.76 ($0.54 each)"), the quantity counts
+ * sets, and the total quantity is set × quantity — 1 × Set of 144 is 144 pieces. The cart
+ * receives that total. The menu is absolutely positioned, so neither the card
+ * nor the grid may clip overflow.
  *
  * Pricing comes from the assembly's published ladder through
  * `catalog-card-purchase.ts` → `volumePricing.ts`; nothing here restates a
  * price. Every break's rate is shown as the price (Jordan, 2026-09-25: no
  * "Quote" marks on the card): the headline follows the active break and the
- * button total is that rate × quantity. Whether checkout bills the break is
+ * button total is the pack's price × packs. Whether checkout bills the break is
  * `NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT`'s concern, not the card's.
  */
 
@@ -31,13 +32,12 @@ import {
     catalogTierLabel,
     catalogVariantOrderBlocked,
     catalogVariantSoldOut,
-    describeCatalogTier,
     isCatalogVariantPurchasable,
     parseCatalogQuantity,
     type CatalogCartContext,
     type CatalogPurchaseVariant,
 } from "@/lib/products/catalog-card-purchase";
-import { formatVolumeQtyRange, type DisplayVolumeTier } from "@/lib/volumePricing";
+import { packOptionLabel, type DisplayVolumeTier } from "@/lib/volumePricing";
 import { useRegion } from "@/components/RegionProvider";
 
 /** Telemetry is best-effort: a tracking failure must never block or misreport a cart update. */
@@ -64,10 +64,9 @@ export type CatalogCardPurchaseProps = {
     context: Omit<CatalogCartContext, "title" | "productGroupSlug">;
 };
 
-/** "1", "12", "500+": the break's first piece count, open-ended on the last break. */
+/** "1", "12", "4,320": the pack's piece count. */
 export function catalogPackLabel(tier: DisplayVolumeTier | null | undefined): string {
-    if (!tier) return "1";
-    return `${tier.minQty.toLocaleString("en-US")}${tier.maxQty == null ? "+" : ""}`;
+    return (tier?.minQty ?? 1).toLocaleString("en-US");
 }
 
 export default function CatalogCardPurchase({
@@ -84,7 +83,9 @@ export default function CatalogCardPurchase({
     const menuId = `${baseId}-packs`;
     const qtyId = `${baseId}-qty`;
 
+    // The quantity counts packs of the chosen size.
     const [qtyText, setQtyText] = useState("1");
+    const [packIndex, setPackIndex] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
     const [added, setAdded] = useState<number | null>(null);
     const committedQty = useRef(1);
@@ -101,9 +102,12 @@ export default function CatalogCardPurchase({
     const soldOut = Boolean(variant && catalogVariantSoldOut(variant));
     const orderBlocked = Boolean(variant && catalogVariantOrderBlocked(variant));
     const canAdd = isCatalogVariantPurchasable(variant);
-    const { qty, error } = parseCatalogQuantity(qtyText);
-    const activeTier = activeCatalogTier(tiers, qty);
-    const activeIndex = activeTier ? tiers.indexOf(activeTier) : -1;
+    const { qty: packs, error } = parseCatalogQuantity(qtyText);
+    // A cap swap can bring a shorter ladder: keep the pack only while it exists.
+    const activeIndex = tiers.length ? Math.min(packIndex, tiers.length - 1) : -1;
+    const activeTier = activeIndex >= 0 ? tiers[activeIndex] : null;
+    const packSize = activeTier?.minQty ?? 1;
+    const qty = packs == null ? null : packs * packSize;
     const sku = variant?.websiteSku ?? variant?.graceSku ?? null;
     const eventBase = { productId, sku, quantity: qty ?? 0, tier: catalogTierLabel(activeTier) };
 
@@ -142,18 +146,22 @@ export default function CatalogCardPurchase({
         if (returnFocus) triggerRef.current?.focus({ preventScroll: true });
     };
 
-    const commitQuantity = (next: number, source: "stepper" | "input" | "tier") => {
-        const clamped = Math.min(Math.max(1, Math.round(next)), CATALOG_QUANTITY_MAX);
+    /** Packs, clamped so the total stays within what the cart accepts. */
+    const commitQuantity = (next: number, source: "stepper" | "input" | "tier", size = packSize) => {
+        const clamped = Math.min(Math.max(1, Math.round(next)), Math.max(1, Math.floor(CATALOG_QUANTITY_MAX / size)));
         setQtyText(String(clamped));
-        if (clamped === committedQty.current) return;
-        committedQty.current = clamped;
-        const tier = catalogTierLabel(activeCatalogTier(tiers, clamped));
-        if (source === "tier") track(() => analytics.catalogTierSelected({ productId, sku, quantity: clamped, tier }));
-        else track(() => analytics.catalogQuantityChanged({ productId, sku, quantity: clamped, tier, source }));
+        const total = clamped * size;
+        if (total === committedQty.current) return;
+        committedQty.current = total;
+        const tier = catalogTierLabel(tiers.find(t => t.minQty === size) ?? activeCatalogTier(tiers, total));
+        if (source === "tier") track(() => analytics.catalogTierSelected({ productId, sku, quantity: total, tier }));
+        else track(() => analytics.catalogQuantityChanged({ productId, sku, quantity: total, tier, source }));
     };
 
+    /** Choosing a set size starts at one set of it: Set of 12 × 1 is 12 pieces. */
     const pickTier = (tier: DisplayVolumeTier) => {
-        commitQuantity(tier.minQty, "tier");
+        setPackIndex(tiers.indexOf(tier));
+        commitQuantity(1, "tier", tier.minQty);
         closeMenu(true);
     };
 
@@ -225,9 +233,10 @@ export default function CatalogCardPurchase({
         );
     }
 
-    // The active break's rate is the price: headline × quantity = button total.
+    // The pack's rate is the price: pack price × packs = button total.
     const activeUnitPrice = activeTier?.unitPrice ?? variant.webPrice1pc;
-    const subtotal = (qty ?? 0) * activeUnitPrice;
+    const packPrice = activeTier?.packPrice ?? variant.webPrice1pc;
+    const subtotal = (packs ?? 0) * packPrice;
 
     const addLabel = soldOut
         ? "Out of stock"
@@ -255,7 +264,7 @@ export default function CatalogCardPurchase({
             <p className="flex items-baseline gap-1.5 tabular-nums" aria-live="polite" data-testid="catalog-card-price">
                 <span className="text-[18px] font-semibold leading-tight text-[#1c1c1e]">{formatPrice(activeUnitPrice)}</span>
                 <span className="whitespace-nowrap text-[12px] text-[#5d6b7e]" data-testid="catalog-card-active-tier">
-                    /pc{activeTier && <> · {formatVolumeQtyRange(activeTier.minQty, activeTier.maxQty)} pcs</>}
+                    each{packSize > 1 && <> · set of {packSize.toLocaleString("en-US")}</>}
                 </span>
             </p>
 
@@ -288,17 +297,17 @@ export default function CatalogCardPurchase({
                             }}
                             className={`flex h-9 w-full items-center justify-between gap-2 border border-[#d9cdb9] bg-white px-2.5 text-[13px] text-[#1c1c1e] hover:border-[#1c1c1e] disabled:cursor-not-allowed disabled:opacity-50 ${FOCUS_RING}`}
                         >
-                            <span className="truncate">Pack of <b className="font-semibold tabular-nums">{catalogPackLabel(activeTier)}</b></span>
+                            <span className="truncate">Set of <b className="font-semibold tabular-nums">{catalogPackLabel(activeTier)}</b></span>
                             <span aria-hidden className="text-[11px] text-[#5d6b7e]">{menuOpen ? "▴" : "▾"}</span>
                         </button>
                         {menuOpen && (
                             <div
                                 id={menuId}
                                 role="listbox"
-                                aria-label={`Quantity breaks for ${title}`}
+                                aria-label={`Set sizes for ${title}`}
                                 onKeyDown={onMenuKeyDown}
                                 data-testid="catalog-card-pack-menu"
-                                className="absolute left-0 top-full z-30 w-[200px] border border-[#1c1c1e] bg-white shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+                                className="absolute left-0 top-full z-30 w-max min-w-full border border-[#1c1c1e] bg-white shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
                             >
                                 {tiers.map((tier, index) => {
                                     const active = index === activeIndex;
@@ -309,15 +318,14 @@ export default function CatalogCardPurchase({
                                             type="button"
                                             role="option"
                                             aria-selected={active}
-                                            aria-label={describeCatalogTier(tier, formatPrice)}
+                                            aria-label={packOptionLabel(tier, formatPrice)}
                                             onClick={() => pickTier(tier)}
                                             data-testid="catalog-card-tier-row"
                                             data-tier-min={tier.minQty}
                                             data-tier-active={active ? "true" : "false"}
                                             className={`flex w-full items-center justify-between gap-3 px-3 py-[9px] text-left text-[13px] tabular-nums focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#9a7a48] ${active ? "bg-[#1c1c1e] text-white" : "text-[#1c1c1e] hover:bg-[#f1ebe0]"}`}
                                         >
-                                            <span className="whitespace-nowrap">{formatVolumeQtyRange(tier.minQty, tier.maxQty)}</span>
-                                            <b className="whitespace-nowrap font-semibold">{formatPrice(tier.unitPrice)}</b>
+                                            <span className="whitespace-nowrap">{packOptionLabel(tier, formatPrice)}</span>
                                         </button>
                                     );
                                 })}
@@ -330,8 +338,8 @@ export default function CatalogCardPurchase({
                     <button
                         type="button"
                         className={STEP_BUTTON}
-                        onClick={() => commitQuantity((qty ?? 1) - 1, "stepper")}
-                        disabled={orderBlocked || (qty != null && qty <= 1)}
+                        onClick={() => commitQuantity((packs ?? 1) - 1, "stepper")}
+                        disabled={orderBlocked || (packs != null && packs <= 1)}
                         aria-label="Decrease quantity"
                     >
                         −
@@ -348,11 +356,11 @@ export default function CatalogCardPurchase({
                         disabled={orderBlocked}
                         onChange={(event) => setQtyText(event.target.value)}
                         onFocus={(event) => event.currentTarget.select()}
-                        onBlur={() => { if (qty != null) commitQuantity(qty, "input"); }}
+                        onBlur={() => { if (packs != null) commitQuantity(packs, "input"); }}
                         onKeyDown={(event) => {
                             if (event.key !== "Enter") return;
                             event.preventDefault();
-                            if (qty != null) commitQuantity(qty, "input");
+                            if (packs != null) commitQuantity(packs, "input");
                         }}
                         aria-invalid={error ? true : undefined}
                         aria-describedby={error ? `${baseId}-error` : undefined}
@@ -361,7 +369,7 @@ export default function CatalogCardPurchase({
                     <button
                         type="button"
                         className={STEP_BUTTON}
-                        onClick={() => commitQuantity((qty ?? 0) + 1, "stepper")}
+                        onClick={() => commitQuantity((packs ?? 0) + 1, "stepper")}
                         disabled={orderBlocked}
                         aria-label="Increase quantity"
                     >
@@ -370,6 +378,11 @@ export default function CatalogCardPurchase({
                 </div>
             </div>
 
+            {qty != null && (
+                <p className="-mt-1 text-[11px] tabular-nums text-[#5d6b7e]" aria-live="polite" data-testid="catalog-card-total-qty">
+                    Total quantity: <b className="font-semibold text-[#1c1c1e]">{qty.toLocaleString("en-US")}</b> {qty === 1 ? "pc" : "pcs"}
+                </p>
+            )}
             {error && (
                 <p id={`${baseId}-error`} role="alert" className="-mt-1 text-[11px] font-medium text-red-700" data-testid="catalog-card-qty-error">
                     {error}
