@@ -14,6 +14,8 @@ import { plugMaskStyle, sprayerPlugMask } from "@/lib/products/sprayer-glass-tra
 import { BEHIND_GLASS_SLOTS } from "@/lib/products/pdp-redesign/stage";
 import { displayDerivativeUrl } from "@/lib/products/display-derivative";
 
+type PreviewBounds = { left: number; right: number; top: number; bottom: number };
+
 /** Clear glass and the clear dip tube take the stage colour. A published dropper
  * part also contains its metal collar; multiplying a clear dropper assembly
  * exposes the bottle's neck threads through opaque metal. Measured sources split
@@ -34,7 +36,7 @@ function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart, stage:
 
 /** These are the existing alpha layers on their registered canvas, never
  * independently resized parts. Only the viewport changes for thumbnails. */
-export default function BuilderImage({ config, parts, label, thumbnail = false, expanded = false, scale = 1, stage = "body", showCover = false, bodyReference, frameConfigurations, placeholder = false, priority = false }: {
+export default function BuilderImage({ config, parts, label, thumbnail = false, expanded = false, scale = 1, stage = "body", showCover = false, bodyReference, frameConfigurations, frameBounds, placeholder = false, priority = false }: {
     config: BuilderConfiguration;
     parts: BuilderPart[];
     label: string;
@@ -44,6 +46,9 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     showCover?: boolean;
     bodyReference?: BuilderConfiguration;
     frameConfigurations?: readonly BuilderConfiguration[];
+    /** Thumbnail only: frame on these layer bounds (every option in a grid) instead of this tile's own, so
+     * all the grid's parts share one scale and baseline on their registered canvas. */
+    frameBounds?: readonly PreviewBounds[];
     /** Relative chooser size; preserves all layer registration and the baseline. */
     scale?: number;
     /** Slate sits behind the layer until it paints — chooser tiles. */
@@ -119,7 +124,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     if (!parts.length || failed) return <span role="img" aria-label={label}>Image unavailable</span>;
     const { x, y, width, height } = !thumbnail && layout && (layout.glassSizing || frameConfigurations?.length)
         ? builderBodyFrame(config, frameConfigurations ?? [], bodyReference, layout, { expanded })
-        : previewFrame(layout?.anchors ?? kit.anchors, layers.map(layer => layer.bounds), { scale, thumbnail, expanded });
+        : previewFrame(layout?.anchors ?? kit.anchors, thumbnail && frameBounds?.length ? [...frameBounds] : layers.map(layer => layer.bounds), { scale, thumbnail, expanded });
     // A single registered body layer is the chooser tile. <img> fetches in
     // parallel with preload/priority; SVG <image href> waits on hydrate and
     // does not honor loading or fetchPriority — Cylinder tiles sat blank.

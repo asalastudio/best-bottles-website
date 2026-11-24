@@ -3,6 +3,8 @@ import reviewedCapPhotos from "./cylinder-cap-thumbnails.generated.json";
 import localCloseUps from "./local-cap-close-ups.json";
 import sprayTops from "./tall-cylinder-spray-tops.json";
 import swatchBounds from "./cap-swatch-bounds.generated.json";
+import psdPhotos from "./cap-swatch-photos.generated.json";
+import psdOptions from "./cap-swatch-photo-options.generated.json";
 import type { ProductCardVariantPreview } from "./product-card-variant-previews";
 
 export type CatalogCapPhoto = { websiteSku: string | null; thumb: string };
@@ -25,7 +27,29 @@ export function catalogCapPhoto(
     rows: CatalogCapPhoto[],
     kind: CatalogCapKind,
     failed: ReadonlySet<string> = new Set(),
+    { platesLoaded = true }: { platesLoaded?: boolean } = {},
 ): string | undefined {
+    const exact = catalogCapExactPhoto(preview, kind, failed);
+    if (exact !== null) return exact;
+    const plate = catalogCapPlatePhoto(preview, rows, kind, failed);
+    if (plate) return plate;
+    // The PSD cut-out only fills a finish the plate index has no photo for, so it is held back
+    // until the plates have answered: a card never swaps one photo of a cap for another.
+    if (!platesLoaded) return undefined;
+    const psd = catalogCapPsdPhoto(preview.websiteSku);
+    return psd && !failed.has(psd.url) ? psd.url : undefined;
+}
+
+/**
+ * A photo chosen for this exact SKU, ahead of any index: a Tall Cylinder spray top, a localhost close-up
+ * under review, or a reviewed cap thumbnail. Null when there is none, so the indexes decide; undefined
+ * when the SKU's spray top failed to load (that family never falls back to the mixed index).
+ */
+export function catalogCapExactPhoto(
+    preview: ProductCardVariantPreview,
+    kind: CatalogCapKind,
+    failed: ReadonlySet<string> = new Set(),
+): string | undefined | null {
     const top = kind === "sprayer" && preview.websiteSku
         ? (sprayTops as Record<string, (typeof sprayTops)[keyof typeof sprayTops]>)[preview.websiteSku] : undefined;
     // This family has a complete spray-top set. Never fall back to the mixed
@@ -37,12 +61,35 @@ export function catalogCapPhoto(
     if (local && !failed.has(local)) return local;
     const exact = preview.websiteSku ? (reviewedCapPhotos as Record<string, string>)[preview.websiteSku] : undefined;
     if (exact && !failed.has(exact)) return exact;
+    return null;
+}
+
+/** The finish's photograph in the live plate index of the cap's neck family, joined on finish. */
+export function catalogCapPlatePhoto(
+    preview: ProductCardVariantPreview,
+    rows: CatalogCapPhoto[],
+    kind: CatalogCapKind,
+    failed: ReadonlySet<string> = new Set(),
+): string | undefined {
     const finish = getFinishFromWebsiteSku(preview.websiteSku)?.label ?? preview.capLabel ?? preview.label;
     if (!finish) return undefined;
     return rows.find((row) => row.websiteSku
         && !failed.has(row.thumb)
         && TOP_SKU[kind].test(row.websiteSku)
         && getFinishFromWebsiteSku(row.websiteSku)?.label === finish)?.thumb;
+}
+
+export type CatalogCapPsdPhoto = { component: string; url: string; width: number; height: number; source: string };
+
+/**
+ * The component photograph cut from the PSD master library for an option that has no reviewed or
+ * plate photo (scripts/catalog/build-cap-swatch-photos.py cuts them; map-cap-swatch-photos.mts maps
+ * each catalog option to its component SKU). Served from the repo, trimmed to the part.
+ */
+export function catalogCapPsdPhoto(websiteSku: string | null | undefined): CatalogCapPsdPhoto | undefined {
+    const component = websiteSku ? (psdOptions as Record<string, string>)[websiteSku] : undefined;
+    const photo = component ? (psdPhotos as Record<string, Omit<CatalogCapPsdPhoto, "component">>)[component] : undefined;
+    return photo && component ? { component, ...photo } : undefined;
 }
 
 /** Frame the existing transparent kit layer without altering its pixels. */
@@ -67,6 +114,9 @@ export function catalogCapPhotoFrame(url: string) {
 export function catalogCapPhotoBounds(url: string) {
     const spray = Object.values(sprayTops).find((photo) => photo.url === url);
     if (spray) return { width: spray.width, height: spray.height, ...spray.bounds };
+    // A PSD cut-out is trimmed to the part already: its bounds are the whole image.
+    const psd = Object.values(psdPhotos as Record<string, { url: string; width: number; height: number }>).find((photo) => photo.url === url);
+    if (psd) return { width: psd.width, height: psd.height, left: 0, top: 0, right: psd.width, bottom: psd.height };
     const name = url.split("?")[0].split("/").pop() ?? "";
     const box = (swatchBounds as Record<string, number[]>)[name];
     if (!box) return undefined;

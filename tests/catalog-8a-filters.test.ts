@@ -17,7 +17,7 @@ import {
 import { buildCatalogSearchResult, type CatalogSearchGroup } from "@/lib/catalogSearchFallback";
 import { isVisibleCatalogGroup } from "@/lib/products/catalog-listing-visibility";
 import { catalogCardPurchaseOptions } from "@/lib/products/catalog-card-purchase";
-import { CAP_DOT_SLOTS, CAP_SWATCH_HEIGHT, CAP_SWATCH_WIDTH, capDotStyle, capSwatchFrame, visibleCapDots } from "@/components/catalog/CatalogCapDots";
+import { CAP_SWATCH_HEIGHT, CAP_SWATCH_WIDTH, capDotStyle, capStripEdges, capStripScrollTo, capSwatchFrame } from "@/components/catalog/CatalogCapDots";
 import sprayTops from "@/lib/products/tall-cylinder-spray-tops.json";
 import reviewedCapPhotos from "@/lib/products/cylinder-cap-thumbnails.generated.json";
 import { catalogPackLabel } from "@/components/catalog/CatalogCardPurchase";
@@ -139,11 +139,20 @@ describe("product card helpers", () => {
         expect(catalogFitmentLabel(null)).toBeNull();
     });
 
-    it("shows at most six cap slots, keeping the picked cap visible", () => {
-        const caps = Array.from({ length: 9 }, (_, index) => ({ id: `cap-${index}` }));
-        expect(visibleCapDots(caps.slice(0, CAP_DOT_SLOTS), null)).toHaveLength(6);
-        expect(visibleCapDots(caps, null).map((cap) => cap.id)).toEqual(["cap-0", "cap-1", "cap-2", "cap-3", "cap-4"]);
-        expect(visibleCapDots(caps, "cap-7").map((cap) => cap.id)).toEqual(["cap-0", "cap-1", "cap-2", "cap-3", "cap-7"]);
+    it("shows a strip arrow only toward caps hidden on that side", () => {
+        expect(capStripEdges(0, 200, 200)).toEqual({ back: false, forward: false });
+        expect(capStripEdges(0, 200, 480)).toEqual({ back: false, forward: true });
+        expect(capStripEdges(140, 200, 480)).toEqual({ back: true, forward: true });
+        expect(capStripEdges(280, 200, 480)).toEqual({ back: true, forward: false });
+        // sub-pixel rounding at either end does not leave a stray arrow
+        expect(capStripEdges(0.6, 200, 480.4)).toEqual({ back: false, forward: true });
+        expect(capStripEdges(279.6, 200, 480)).toEqual({ back: true, forward: false });
+    });
+
+    it("scrolls the strip just far enough to show the picked cap", () => {
+        expect(capStripScrollTo(0, 200, 40, 28)).toBe(0);
+        expect(capStripScrollTo(0, 200, 300, 28)).toBe(128);
+        expect(capStripScrollTo(250, 200, 120, 28)).toBe(120);
     });
 
     it("crops a spray top to the sprayer itself, standing at full swatch height", () => {

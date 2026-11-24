@@ -381,7 +381,7 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                             <p>{current.closures.length === 1 ? `This ${finishLabel.toLowerCase()} is included with your bottle.` : `${configuration ? "Change" : "Select"} your ${finishLabel.toLowerCase()}${configuration ? " to customize this bottle." : " to see the complete bottle."}`}</p>
                             {capLinerNote(body?.neck, fitment) && <p className={styles.linerNote}>{capLinerNote(body?.neck, fitment)}</p>}
                         <div className={styles.closureGrid}>{current.fitted.map(c => <Option key={c.id} label={c.closure} selected={closure === c.closure} onClick={() => { update({ closure: c.closure }); setShowCover(false); }}>
-                                <div className={styles.closureThumb}><BuilderFinishImage config={c} /></div><strong>{c.closure}</strong>
+                                <div className={styles.closureThumb}><BuilderFinishImage config={c} peers={current.fitted} /></div><strong>{c.closure}</strong>
                             </Option>)}{unavailableFinishes.map(option => <button type="button" disabled key={option.id} className={`${styles.option} ${styles.unavailableOption}`} aria-label={`${option.closure} — Out of stock`}>
                                 <div className={styles.closureThumb}>
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
