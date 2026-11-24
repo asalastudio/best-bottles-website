@@ -3,6 +3,8 @@ import { displayApplicatorName } from "@/lib/catalogFilters";
 
 // Pencil treatment referenced to original component PSDs, with user-confirmed
 // smooth insertion plugs. Exact product photos remain in appearance and preview.
+// The tiles load WebP display copies of the PNG masters (scripts/bottle-builder/optimise-fitment-drawings.mjs):
+// the masters are 3 MB together, which made this step the slowest in the builder to finish drawing.
 const cells: Record<string, number> = {
     "Fine Mist Sprayer": 0, "Perfume Sprayer": 0,
     "Metal Roller": 1, "Plastic Roller": 2, "Screw Cap": 3, "Tear-off Cap": 3,
@@ -15,12 +17,12 @@ export default function FitmentIllustration({ fitment, neck }: { fitment: string
     // perfume sprayer has two — a narrow actuator on one collar — so it has its own drawing
     // (2026-09-20), pencil after the library photograph; see data/paper-doll/fitment-illustration-sources.json.
     // eslint-disable-next-line @next/next/no-img-element
-    if (fitment === "Perfume Sprayer" && neck === "18-415") return <img src="/images/bottle-builder/fitment-pencil-perfume-sprayer-18-415.png" alt="Perfume Sprayer mechanism illustration"
+    if (fitment === "Perfume Sprayer" && neck === "18-415") return <img src="/images/bottle-builder/fitment-pencil-perfume-sprayer-18-415.webp" alt="Perfume Sprayer mechanism illustration"
         loading="lazy" style={{ width: 96, maxWidth: "100%", height: 118, maxHeight: "100%", objectFit: "contain", objectPosition: "center bottom", mixBlendMode: "multiply" }} />;
     // The orifice reducer is drawn on its own sheet (2026-09-14): pencil after the
     // reducer photograph, proportions locked to it; see data/paper-doll/fitment-illustration-sources.json.
     // eslint-disable-next-line @next/next/no-img-element
-    if (fitment === "Reducer") return <img src="/images/bottle-builder/fitment-pencil-reducer.png" alt="Reducer mechanism illustration"
+    if (fitment === "Reducer") return <img src="/images/bottle-builder/fitment-pencil-reducer.webp" alt="Reducer mechanism illustration"
         loading="lazy" style={{ width: 84, maxWidth: "100%", height: 100, maxHeight: "100%", objectFit: "contain", mixBlendMode: "multiply" }} />;
     if (cell == null) return <span className={styles.mechanismFallback} aria-hidden="true">{displayApplicatorName(fitment)}</span>;
     const frames = ["65 40 260 430", "510 95 195 220", "895 95 195 220", "1180 45 320 425",
@@ -30,6 +32,6 @@ export default function FitmentIllustration({ fitment, neck }: { fitment: string
     return <svg role="img" aria-label={`${displayApplicatorName(fitment)} mechanism illustration`} viewBox={frames[cell]}
         preserveAspectRatio="xMidYMax meet"
         style={{ width: widths[cell], maxWidth: "100%", height: heights[cell], maxHeight: "100%", mixBlendMode: "multiply" }}>
-        <image href="/images/bottle-builder/fitment-pencil-approved.png" width="1536" height="1024" />
+        <image href="/images/bottle-builder/fitment-pencil-approved.webp" width="1536" height="1024" />
     </svg>;
 }
