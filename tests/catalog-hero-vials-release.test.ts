@@ -6,6 +6,10 @@ import rows from '../src/lib/products/catalog-hero-vials-release.json';
 import batch3 from '../src/lib/products/catalog-hero-batch3-release.json';
 import approval from '../docs/hero-families/vials-2026-09-25/approval.json';
 import { getCatalogHero, getProductHero } from '../src/lib/products/catalog-heroes';
+import smallGlass from '../src/lib/paper-doll/small-glass-bodies.generated.json';
+
+// 24 Nov 2026: heroes whose glass was re-shot keep their approved photo as `from` (scripts/diva-vial/small-glass-bodies.py).
+const swaps = smallGlass.heroes as Record<string, { from: string; url: string; sha256: string }>;
 
 afterEach(() => vi.unstubAllEnvs());
 
@@ -31,9 +35,13 @@ describe('Vial family catalog hero release', () => {
       const evidence = approval.rows.find(row => row.sku === hero.websiteSku)!;
       expect(evidence.status).toBe('approved');
       expect(evidence.production.slug).toBe(hero.groupSlug);
-      expect(hero.url).toBe(`/images/catalog/vials-approved-2026-09-25/${hero.websiteSku}.${evidence.sha256.slice(0, 12)}.webp`);
+      const approved = `/images/catalog/vials-approved-2026-09-25/${hero.websiteSku}.${evidence.sha256.slice(0, 12)}.webp`;
+      const swap = swaps[hero.websiteSku];
+      expect(createHash('sha256').update(readFileSync(`public${approved}`)).digest('hex')).toBe(evidence.sha256);
+      if (swap) expect(swap.from).toBe(approved);
+      expect(hero.url).toBe(swap ? swap.url : approved);
       const bytes = readFileSync(`public${hero.url}`);
-      expect(createHash('sha256').update(bytes).digest('hex')).toBe(evidence.sha256);
+      expect(createHash('sha256').update(bytes).digest('hex')).toBe(swap ? swap.sha256 : evidence.sha256);
       const meta = await sharp(bytes).metadata();
       expect([meta.format, meta.width, meta.height]).toEqual(['webp', 1560, 1716]);
       expect([hero.width, hero.height]).toEqual([1560, 1716]);

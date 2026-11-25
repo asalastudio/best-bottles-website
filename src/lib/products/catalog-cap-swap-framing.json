@@ -4446,5 +4446,13 @@
     "y": 0.49176,
     "match": 0.923,
     "shadow": "/images/catalog/cap-swap-shadows/GBVialClr2mlWhtCap.560e8bd9f2.webp"
+  },
+  "/images/catalog/vial2-amber-13-425-glass-2026-11-24/GBVialAmb1o5WhtCapSht.c0e9a041e290.webp": {
+    "plate": "capOff",
+    "scale": 0.38052,
+    "x": 0.31115,
+    "y": 0.58016,
+    "match": 0.833,
+    "shadow": "/images/catalog/cap-swap-shadows/GBVialAmb1o5WhtCapSht.449a34190f.webp"
   }
 }

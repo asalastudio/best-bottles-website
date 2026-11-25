@@ -3,6 +3,7 @@ import { normalizeImportedCapColor } from "./cap-finish-evidence";
 import { decoratedCapFinish } from "./decorated-cap-finish";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import { displayApplicatorName } from "@/lib/catalogFilters";
+import { inferGroupApplicatorTypes, inferVariantApplicator } from "./applicator-inference";
 
 export type CustomerFacingNameConfidence = "high" | "medium" | "fallback";
 
@@ -187,13 +188,15 @@ function isTallNineMlCylinder(group?: CustomerFacingNameGroupInput | null, varia
 }
 
 function productEvidence(variant?: CustomerFacingNameVariantInput | null, group?: CustomerFacingNameGroupInput | null): string {
+    // A null stored applicator is filled from code evidence (see applicator-inference.ts), so the 30 ml Cylinder
+    // sprays read "Perfume Spray Bottle" and not the "Bottle with Cap" the empty field produced.
     return [
-        variant?.applicator,
+        inferVariantApplicator(variant),
         variant?.componentGroup,
         variant?.itemName,
         variant?.graceSku,
         variant?.websiteSku,
-        ...(group?.applicatorTypes ?? []),
+        ...inferGroupApplicatorTypes(group),
         group?.displayName,
         group?.category,
     ].filter(Boolean).join(" ").toLowerCase();

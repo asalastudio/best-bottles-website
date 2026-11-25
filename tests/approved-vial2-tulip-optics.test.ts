@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import manifest from '@/lib/paper-doll/approved-kits.generated.json';
 import index from '@/lib/paper-doll/approved-kit-index.json';
+import { updatedCylinderKitVersion } from '@/lib/paper-doll/approved-kit-index';
 import { stageLayout, type KitLike } from '@/lib/products/pdp-redesign/stage';
 import { cylinderMasterSku, cylinderMasterSource } from '@/lib/products/cylinder-master';
 vi.mock('server-only', () => ({}));
@@ -62,7 +63,8 @@ describe('approved straight-on 2 ml vial body pair', () => {
         vi.stubEnv('NODE_ENV', 'production'); vi.stubEnv('VERCEL', '1');
         for (const sku of vialSkus) {
             expect(cylinderMasterSku(sku)).toBe(sku);
-            expect(cylinderMasterSource(sku)).toEqual({ family: 'approved', version: index.version });
+            // The small-glass bodies (2026-11-24) give these recipes their own version; the old one still answers with this kit.
+            expect(cylinderMasterSource(sku)).toEqual({ family: 'approved', version: updatedCylinderKitVersion(sku) ?? index.version });
             const response = await GET(new Request('https://preview.vercel.app/api/bottle-masters/approved?sku=' + sku + '&v=' + index.version));
             expect(response.status).toBe(200); expect((await response.json()).kit).toEqual(rows[sku]);
         }
