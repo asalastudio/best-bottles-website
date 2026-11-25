@@ -37,6 +37,9 @@ SOURCES = {
     "spray": dict(psd=GRACE + "11. GBGrce55SpryMtGl.psd", tube="Layer 16", body="Layer 17", holder="Layer 13", bodyMm=52.0),
     "lotion": dict(psd=GRACE + "12. LBGrce55LtnMtGl.psd", tube="Layer 14", body="Layer 16", holder="Layer 13", bodyMm=52.0),
     "bulb": dict(psd=GRACE + "39. GBGrce55AnSpBlk.psd", tube="Layer 4 copy", body="Layer 39", holder=None, bodyMm=52.0),
+    # 13-415 fine-mist sprayers (register kits): the small 13-415 tube, connector and shaft, from the capped Elegant 15 ml PSD.
+    "spray13": dict(psd=PSD_ROOT.replace("2.  18-415 Bottles ", "5.  13-415 Bottles") + "/8. Elegant 15ml Clear/2. Elegant 15ml (Capped) PSD/6. GBElg15SpryGlSh.psd",
+                    tube="Layer 21", body="Layer 20", holder="Layer 22", bodyMm=36.0),
     "pipette": dict(psd=PSD_ROOT + "/17. Elegant 60ml/1. Elegant 60ml PSD/51. GBElg60DrpSl.psd", tube="Layer 25", body="Layer 23", holder="Layer 21", bodyMm=59.75),
 }
 # Inner floor of each glass on the shared stage (canvas y; the foot stands at 1061). Read off the plates:
@@ -51,6 +54,14 @@ FLOORS = {
     "sleek-50ml-18-415": 953, "sleek-100ml-18-415": 945,
 }
 # Sleek's lotion pumps keep their measured Cylinder lotion tube; only its sprayers' stretched tube is replaced.
+# --register: the bodies that have no approved kit and draw Convex register kits (src/lib/register/dip-tubes.ts), measured on
+# their register plates (canvas y). Circle/Round: where the bowl meets the thick foot; Slim and the rectangles: the inner U.
+REGISTER_FLOORS = {
+    "circle-50ml-18-415": 993, "circle-100ml-18-415": 977, "round-78ml-18-415": 1005, "round-128ml-18-415": 997,
+    "slim-30ml-18-415": 946, "slim-50ml-18-415": 976, "slim-100ml-18-415": 960,
+    "elegant-15ml-13-415": 1018, "circle-15ml-13-415": 962, "flair-15ml-13-415": 1007, "footed-rectangle-10ml-13-415": 1014,
+    "tall-rectangle-10ml-13-415": 998, "royal-13ml-13-415": 980, "square-15ml-13-415": 1017, "bell-10ml-13-415": 1003,
+}
 KINDS = {"sleek-50ml-18-415": {"spray", "bulb"}, "sleek-100ml-18-415": {"spray", "bulb"}}
 FLUTED = {"diva-30ml-18-415", "diva-46ml-18-415", "diva-100ml-18-415", "diamond-60ml-18-415"}
 TIP_CLEARANCE_MM = 1.0      # a dip tube stands on the floor; leave the cut end 1 mm clear of the inner glass
@@ -183,7 +194,7 @@ def kind_of(sku, kit):
 
 
 def holder_of(kit, kind):
-    slot = {"lotion": "pump", "spray": "sprayer", "bulb": "sprayer", "pipette": "fitment"}[kind]
+    slot = {"lotion": "pump", "spray": "sprayer", "spray13": "sprayer", "bulb": "sprayer", "pipette": "fitment"}[kind]
     return next(p for p in kit["parts"] if p["slot"] == slot and (not p.get("views") or "capon" in p["views"]))
 
 
@@ -211,16 +222,23 @@ def sliver_mask(plate_rgba, plate_box, out_box, shape):
 
 def main():
     kits_path, work = sys.argv[1], sys.argv[2]
+    register = "--register" in sys.argv[3:]
+    floors = REGISTER_FLOORS if register else FLOORS
+    prefix = "register-" if register else ""
     os.makedirs(work, exist_ok=True)
     kits = json.load(open(kits_path))["rows"]
     sources = {kind: extract(kind) for kind in SOURCES}
     groups = {}
     for sku, kit in sorted(kits.items()):
         m = re.match(r"register:([a-z0-9-]+)\|(Clear|Frosted)$", kit["familyId"])
-        if not m or m.group(1) not in FLOORS or kit.get("sku") != sku:
+        if not m or m.group(1) not in floors or kit.get("sku") != sku:
             continue
         body_id, glass = m.groups()
         kind = kind_of(sku, kit)
+        if kind == "spray" and body_id.endswith("-13-415"):
+            kind = "spray13"
+        if register and kind == "pipette":
+            continue   # register droppers keep their own pipettes (not part of the 24 Nov register-tube audit)
         if not kind or kind not in KINDS.get(body_id, {kind}) or (kind == "pipette" and glass != "Clear"):
             continue   # frosted droppers keep the pipette hidden in the glass (Jordan, Elegant 60 frosted)
         holder = holder_of(kit, kind)
@@ -234,7 +252,7 @@ def main():
         src = sources[kind]
         ratio = src["pxPerMm"] / mm          # source px per canvas px: the tube is never resampled
         exits = sorted(e for _, _, e in members)
-        floor = FLOORS[body_id] - (PIPETTE_CLEARANCE_MM if kind == "pipette" else TIP_CLEARANCE_MM) * mm
+        floor = floors[body_id] - (PIPETTE_CLEARANCE_MM if kind == "pipette" else TIP_CLEARANCE_MM) * mm
         # One image per glass and fitment, long enough for the highest seated stem of its finishes.
         # Tuck the tube 2 px into the closure (drawn over it), never leaving glass between them with the cap off;
         # the pipette keeps its deeper seat from the dropper PSD.
@@ -248,11 +266,13 @@ def main():
         img = img[:, max(0, lo): lo + 2 * half]
         axis = src["axis"] - max(0, lo)
         cols = np.where(img[..., 3].max(0) > 8)[0]
-        name = f"{body_id}-{glass.lower()}-{kind}"
+        name = f"{prefix}{body_id}-{glass.lower()}-{kind}"
         plain = Image.fromarray(img, "RGBA")
         box = {"x": axis_x - axis / ratio, "y": top, "width": img.shape[1] / ratio, "height": img.shape[0] / ratio}
         opaque = {"left": int(cols[0]), "right": int(cols[-1] + 1)}
-        plain_name = f"{body_id}-{kind}"
+        # One image per glass: clear and frosted groups of a body fit different stems and floors (sharing one name
+        # let the second overwrite the first, stretching the other glass's tube).
+        plain_name = f"{prefix}{body_id}-{glass.lower()}-{kind}"
         plan["images"][plain_name] = plain
         seated_name = plain_name
         if body_id in FLUTED and glass == "Clear":
@@ -265,6 +285,16 @@ def main():
         plan["groups"][name] = {"bodyId": body_id, "glass": glass, "kind": kind, "seated": seated_name, "exploded": plain_name,
                                 "box": {k: round(v, 2) for k, v in box.items()}, "floorY": round(floor, 2), "opaque": opaque,
                                 "opacity": OPACITY[glass], "sourcePxPerMm": round(src["pxPerMm"], 4), "stemExits": [round(exits[0], 1), round(exits[-1], 1)]}
+        if register:
+            # heroTube() looks a tube up by plate and fitment family, and places it on the frame from this datum.
+            plan["groups"][name].update({
+                "plateKey": kit["register"]["plateKey"],
+                "families": {"bulb": ["bulb", "tassel"], "spray13": ["spray"]}.get(kind, [kind]),
+                "datum": {"axisX": axis_x, "seatY": kit["anchors"]["seatY"], "pxPerMm": mm},
+                # For the checks: the glass's rectangle and inner floor on the same datum.
+                "glassBounds": {k: round(v, 2) for k, v in next(p for p in kit["parts"] if p["slot"] == "body")["bounds"].items()},
+                "innerFloorY": floors[body_id],
+            })
         for sku, _, exit_y in members:
             plan["skus"][sku] = {"group": name, "dy": round(exit_y - exits[0], 2)}
     for name, image in plan["images"].items():

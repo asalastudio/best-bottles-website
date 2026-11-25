@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { composeFrostedElegantGold } from "@/lib/register/load";
 import type { RegisterStagePayload } from "@/lib/register/stage-kit";
-import heroTubes from "@/lib/register/hero-tubes.json";
+import psdTubes from "@/lib/register/psd-tubes.generated.json";
 
 const bodyId = "elegant-15ml-13-415";
 const frostedSku = "GB-ELG-FRS-15ML-SPR";
@@ -36,10 +36,10 @@ describe("frosted Elegant matte-gold register recovery", () => {
         expect(kit?.sku).toBe("GBElgFrst15SpryGlMatt");
         expect(kit?.parts.map((part) => [part.slot, part.image.url])).toEqual([
             ["body", "https://example.test/frosted.png"],
-            // The shaft and tube from the glass's hero cut (dip-tubes.ts, Jordan 2026-09-30): frosted in the glass,
-            // the clear bottle's clear tube when EXPLODED lifts it out.
-            ["diptube", heroTubes.tubes["elegant-15ml-13-415|Frosted|spray"].seated!.url],
-            ["diptube", heroTubes.tubes["elegant-15ml-13-415|Frosted|spray"].exploded!.url],
+            // The fitted 13-415 PSD tube (dip-tubes.ts, 24 Nov 2026 P1): at 0.3 in the frosted glass, the same tube
+            // at full strength when EXPLODED lifts it out.
+            ["diptube", psdTubes.tubes["elegant-15ml-13-415|Frosted|spray"].seated.url],
+            ["diptube", psdTubes.tubes["elegant-15ml-13-415|Frosted|spray"].exploded.url],
             ["sprayer", "https://example.test/matte-gold.png"],
         ]);
     });
