@@ -13,11 +13,30 @@
  */
 import type { Frame, PlateGeometry } from "./compose";
 import heroTubes from "./hero-tubes.json";
+import psdTubes from "./psd-tubes.generated.json";
 
 type TubeLayer = { url: string; width: number; height: number; x: number; y: number };
 /** seated: the tube in the glass; exploded: the tube lifted out with its actuator, when it looks different there. */
 type TubeEntry = { seated: TubeLayer | null; exploded: TubeLayer | null };
 const TUBES = (heroTubes as unknown as { tubes: Record<string, TubeEntry> }).tubes;
+
+/**
+ * Photographed PSD tubes fitted by measurement (scripts/paperdoll/seated-dip-tubes.py --register, 24 Nov 2026 dip-tube
+ * audit P1). They replace the hero cuts above for the bodies with no approved kit (Circle, Round, Slim, and the 13-415
+ * Elegant 15, Circle 15, Flair, Royal, Square, Bell and rectangles): one real tube per glass and fitment, its top tucked
+ * into the measured stem exit, its foot 1 mm above the inner floor, at the plate's px/mm, on the neck axis. Clear glass
+ * shows it at 0.9, frosted at 0.3 with no blur; EXPLODED lifts the same tube, whole, with its sprayer or pump.
+ */
+type PsdTube = {
+    seated: { url: string; width: number; height: number };
+    exploded: { url: string; width: number; height: number };
+    box: { x: number; y: number; width: number; height: number };
+    floorY: number;
+    opaque: { left: number; right: number };
+    opacity: number;
+    datum: { axisX: number; seatY: number; pxPerMm: number };
+};
+const PSD_TUBES = (psdTubes as unknown as { tubes: Record<string, PsdTube> }).tubes;
 
 /** The fitment family a component's type hangs its tube by (the register's component types). */
 const FAMILY: Readonly<Record<string, string>> = {
@@ -32,6 +51,10 @@ export type HeroTubeLayer = {
     width: number;
     height: number;
     box: { x: number; y: number; width: number; height: number };
+    /** The tube's own pixels across the box (a PSD tube's box keeps transparent margin for its bend). */
+    bounds?: { left: number; right: number; top: number; bottom: number };
+    /** Glass treatment for a PSD tube seated in the glass: 0.9 clear, 0.3 frosted. */
+    opacity?: number;
 };
 export type HeroTube = {
     /** In the glass (SIDECAR, CAP ON); null when the glass hides it (the amber Tulip 5 mL). */
@@ -52,6 +75,8 @@ export function heroTube(
     for (const part of assembly.parts) {
         if (part.role !== "sprayer" && part.role !== "pump") continue;
         const family = FAMILY[components[part.componentId]?.type ?? ""];
+        const psd = family ? PSD_TUBES[`${assembly.plateKey}|${family}`] : undefined;
+        if (psd) return { ...psdTube(psd, frame), componentId: part.componentId };
         const tube = family ? TUBES[`${assembly.plateKey}|${family}`] : undefined;
         if (!tube) continue;
         // Each layer was cut on the plate's own pixels: it draws at the plate's scale, from the plate's top-left.
@@ -71,4 +96,20 @@ export function heroTube(
         return { seated: place(tube.seated), exploded: place(tube.exploded), componentId: part.componentId };
     }
     return null;
+}
+
+/** A fitted PSD tube on this frame: measured on the stage datum, carried to the frame's axis, seat and px/mm. */
+function psdTube(tube: PsdTube, frame: Frame): Omit<HeroTube, "componentId"> {
+    const scale = frame.pxPerMm / tube.datum.pxPerMm;
+    const round = (value: number) => Math.round(value * 100) / 100;
+    const x = (value: number) => round(frame.axisX + (value - tube.datum.axisX) * scale);
+    const y = (value: number) => round(frame.seatY + (value - tube.datum.seatY) * scale);
+    const box = { x: x(tube.box.x), y: y(tube.box.y), width: round(tube.box.width * scale), height: round(tube.box.height * scale) };
+    const px = box.width / tube.seated.width;
+    const bounds = { left: round(box.x + tube.opaque.left * px), right: round(box.x + tube.opaque.right * px),
+        top: box.y, bottom: Math.min(round(box.y + box.height), y(tube.floorY)) };
+    return {
+        seated: { ...tube.seated, box, bounds, ...(tube.opacity < 1 ? { opacity: tube.opacity } : {}) },
+        exploded: { ...tube.exploded, box, bounds },
+    };
 }

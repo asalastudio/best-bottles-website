@@ -8,13 +8,18 @@ import sharp from 'sharp';
 // publish-boston-roller-inserts.mjs served the Boston rollers: an immutable copy under /images/approved-masters plus
 // lossless WebP display copies (128/256/640/1200, pixel-checked), and writes the placements the kits read
 // (src/lib/paper-doll/seated-dip-tubes.generated.json). Repository files only; no Blob or database writes.
-//   node scripts/paperdoll/publish-seated-dip-tubes.mjs <work-dir> [--apply]
+// With --register (a plan from seated-dip-tubes.py --register) it writes the register tubes heroTube() draws instead,
+// keyed by plate and fitment family (src/lib/register/psd-tubes.generated.json); each set replaces only its own files.
+//   node scripts/paperdoll/publish-seated-dip-tubes.mjs <work-dir> [--register] [--apply]
 const work = process.argv[2];
 if (!work) throw new Error('usage: publish-seated-dip-tubes.mjs <work-dir> [--apply]');
 const apply = process.argv.includes('--apply');
 const plan = JSON.parse(fs.readFileSync(path.join(work, 'plan.json'), 'utf8'));
 const displayFile = 'src/lib/products/display-images.generated.json';
-const outFile = 'src/lib/paper-doll/seated-dip-tubes.generated.json';
+const register = process.argv.includes('--register');
+const outFile = register ? 'src/lib/register/psd-tubes.generated.json' : 'src/lib/paper-doll/seated-dip-tubes.generated.json';
+// Approved-kit tubes are dip-tube-<body>..., register tubes dip-tube-register-<body>...: a rebuild of one keeps the other.
+const ownFile = file => file.startsWith('dip-tube-') && file.startsWith('dip-tube-register-') === register;
 const display = JSON.parse(fs.readFileSync(displayFile, 'utf8'));
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const widths = [128, 256, 640, 1200];
@@ -49,16 +54,20 @@ const groups = Object.fromEntries(Object.entries(plan.groups).map(([name, group]
     bodyId: group.bodyId, glass: group.glass, kind: group.kind,
     seated: images[group.seated], exploded: images[group.exploded],
     box: group.box, floorY: group.floorY, opaque: group.opaque, opacity: group.opacity, sourcePxPerMm: group.sourcePxPerMm,
+    ...(register ? { plateKey: group.plateKey, families: group.families, datum: group.datum, glassBounds: group.glassBounds, innerFloorY: group.innerFloorY, stemExits: group.stemExits } : {}),
 }]));
-const body = { groups, skus: plan.skus };
+// The register set is looked up by `${plateKey}|${family}` (bulb and tassel share the bulb tube).
+const body = register
+    ? { tubes: Object.fromEntries(Object.values(groups).flatMap(group => group.families.map(family => [`${group.plateKey}|${family}`, group]))) }
+    : { groups, skus: plan.skus };
 const generated = { version: hash(Buffer.from(JSON.stringify(body))).slice(0, 16), source: 'scripts/paperdoll/seated-dip-tubes.py', ...body };
-console.log(JSON.stringify({ version: generated.version, groups: Object.keys(groups).length, skus: Object.keys(plan.skus).length,
+console.log(JSON.stringify({ version: generated.version, groups: Object.keys(groups).length, skus: Object.keys(plan.skus).length, keys: Object.keys(body.tubes ?? body.groups).length,
     files: writes.length, kB: Math.round(writes.reduce((n, [, d]) => n + d.length, 0) / 1e3) }));
 if (!apply) process.exit(0);
 // A rebuild replaces the whole set: earlier copies and their display entries are dropped first.
-for (const file of fs.readdirSync('public/images/approved-masters')) if (file.startsWith('dip-tube-')) fs.rmSync(`public/images/approved-masters/${file}`);
-for (const key of Object.keys(display.sources)) if (key.startsWith('/images/approved-masters/dip-tube-')) delete display.sources[key];
-for (const key of Object.keys(display.pixelWidths)) if (key.startsWith('/images/approved-masters/dip-tube-')) delete display.pixelWidths[key];
+for (const file of fs.readdirSync('public/images/approved-masters')) if (ownFile(file)) fs.rmSync(`public/images/approved-masters/${file}`);
+for (const key of Object.keys(display.sources)) if (ownFile(key.replace('/images/approved-masters/', ''))) delete display.sources[key];
+for (const key of Object.keys(display.pixelWidths)) if (ownFile(key.replace('/images/approved-masters/', ''))) delete display.pixelWidths[key];
 for (const [p, data] of writes) fs.writeFileSync(p, data);
 for (const [master, { copies, pixelWidths }] of Object.entries(copiesFor)) {
     display.sources[master] = copies;
