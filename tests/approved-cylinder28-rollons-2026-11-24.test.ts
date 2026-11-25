@@ -1,6 +1,9 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { approvedComponentKit, approvedComponentKits, isCylinder28RollOnSku } from "@/lib/paper-doll/approved-component-kits";
-import { approvedMasterSku, updatedCylinderKitVersion } from "@/lib/paper-doll/approved-kit-index";
+import { approvedMasterSku, APPROVED_KIT_VERSION, CYLINDER28_KIT_VERSION, updatedCylinderKitVersion } from "@/lib/paper-doll/approved-kit-index";
+import { cylinderMasterSku, cylinderMasterSource } from "@/lib/products/cylinder-master";
+vi.mock("server-only", () => ({}));
+import { GET } from "@/app/api/bottle-masters/approved/route";
 import { CYLINDER28_CLEAR_TWIN } from "@/lib/products/pdp-redesign/cylinder28-frosted";
 import { availableViews, stageLayout } from "@/lib/products/pdp-redesign/stage";
 import display from "@/lib/products/display-images.generated.json";
@@ -67,7 +70,7 @@ describe("28 ml Cylinder roll-ons use the reviewed Sunburst glass on hosted buil
         }
     });
 
-    it("renders every view and keeps catalog cards to the clear approved masters", () => {
+    it("renders every view on Clear and Frosted", () => {
         for (const sku of [...clear, ...frosted]) {
             const kit = approvedComponentKit(sku)!;
             const context = { family: "Cylinder", capacityMl: 28, color: kit.register!.glass, applicator: "Roller Ball", websiteSku: sku };
@@ -75,10 +78,31 @@ describe("28 ml Cylinder roll-ons use the reviewed Sunburst glass on hosted buil
             expect(views).toEqual(expect.arrayContaining(["sidecar", "capon", "exploded"]));
             for (const view of views) expect(stageLayout(kit, view, context)?.parts.length).toBeGreaterThan(0);
         }
-        for (const sku of clear) {
+    });
+
+    it("makes Clear and Frosted approved masters on the same 28 ml kit version, so both catalog cards draw them", () => {
+        const version = `${APPROVED_KIT_VERSION}-${CYLINDER28_KIT_VERSION}`;
+        for (const sku of [...clear, ...frosted]) {
             expect(approvedMasterSku(sku)).toBe(sku);
-            expect(updatedCylinderKitVersion(sku)).toMatch(/jumbo28-sunburst-glass-v2/);
+            expect(cylinderMasterSku(sku)).toBe(sku);
+            expect(updatedCylinderKitVersion(sku)).toBe(version);
+            expect(cylinderMasterSource(sku)).toEqual({ family: "approved", version });
         }
-        for (const sku of frosted) expect(approvedMasterSku(sku)).toBeNull();
+    });
+
+    it("serves each Frosted SKU's own frosted recipe, hosted, under the 28 ml version", async () => {
+        for (const sku of frosted) {
+            const { family, version } = cylinderMasterSource(sku)!;
+            const response = await GET(new Request(`https://example.com/api/bottle-masters/${family}?sku=${sku}&v=${version}`));
+            expect(response.status).toBe(200);
+            const payload = await response.json();
+            expect(payload.version).toBe(version);
+            expect(payload.kit).toEqual(JSON.parse(JSON.stringify(approvedComponentKit(sku))));
+            const parts = payload.kit.parts as { slot: string; image: { url: string } }[];
+            expect(parts.find(part => part.slot === "body")!.image.url).toMatch(/cylinder28-glass-frosted\.829743ec8dcd\.png$/);
+            for (const part of parts) expect(part.image.url).not.toMatch(/^\/(?:local-kits|reviews)\//);
+            const invalid = await GET(new Request(`https://example.com/api/bottle-masters/approved?sku=${sku}&v=wrong`));
+            expect(invalid.status).toBe(404);
+        }
     });
 });
