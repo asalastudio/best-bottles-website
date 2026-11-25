@@ -1,0 +1,271 @@
+{
+ "version": "100141b8df4e",
+ "bodies": {
+  "vial1-amber": {
+   "source": "generated",
+   "generator": "Asala Brand Hub generate_media, gpt-image-2.6-sunburst edit",
+   "hubAssetId": "6f40c063-b5a0-4dda-af17-8ec2a82d8df7",
+   "geometryFrom": "approved kit GB1mlAmbVBlk (PSD 12. Vials/1. 1ml Amber PSD Capped)",
+   "image": {
+    "url": "/images/approved-masters/glass-vial1-amber.7bdc6c81e32e.png",
+    "sha256": "7bdc6c81e32ec40134380505f1809565cb51426b180fca2ae2fa08c63fb34f54",
+    "bytes": 337672,
+    "width": 275,
+    "height": 1300
+   },
+   "pxPerSourcePx": 2.9545
+  },
+  "vial1-clear": {
+   "source": "generated",
+   "generator": "Asala Brand Hub generate_media, gpt-image-2.6-sunburst edit",
+   "hubAssetId": "44265412-f123-4d01-beec-aaf8e74774a4",
+   "geometryFrom": "approved kit GB1mlVBlk (the amber outline redrawn clear, 3 Nov)",
+   "image": {
+    "url": "/images/approved-masters/glass-vial1-clear.930b4242c60a.png",
+    "sha256": "930b4242c60aa5819ddc809de343bc7cf061472af61dd12eda2caf171b3febc0",
+    "bytes": 316553,
+    "width": 275,
+    "height": 1300
+   },
+   "pxPerSourcePx": 2.9545
+  },
+  "vial2-amber-8425": {
+   "source": "generated",
+   "generator": "Asala Brand Hub generate_media, gpt-image-2.6-sunburst edit",
+   "hubAssetId": "ddc18333-e27a-4e17-8c9b-166314fecec0",
+   "geometryFrom": "approved kit GBVAmb2WhtCap (slimmed 3 Nov)",
+   "image": {
+    "url": "/images/approved-masters/glass-vial2-amber-8425.98eff32f0ab7.png",
+    "sha256": "98eff32f0ab720835b4303bd7ab31ac12f49125534705646d03e8d1b87dafc32",
+    "bytes": 467805,
+    "width": 362,
+    "height": 1281
+   },
+   "pxPerSourcePx": 0.8862
+  },
+  "vial2-clear-8425": {
+   "source": "generated",
+   "generator": "Asala Brand Hub generate_media, gpt-image-2.6-sunburst edit",
+   "hubAssetId": "0dd41da3-f155-4a51-97a7-e74b93ff4fff",
+   "geometryFrom": "approved kit GBVialClr2mlWhtCap (slimmed 4 Nov)",
+   "image": {
+    "url": "/images/approved-masters/glass-vial2-clear-8425.07ff273f3e78.png",
+    "sha256": "07ff273f3e78633e0984ea6b7b239034b70466cea0371f5f34a3682a6afaac8b",
+    "bytes": 386074,
+    "width": 330,
+    "height": 1159
+   },
+   "pxPerSourcePx": 0.803
+  },
+  "vial2-amber-13425": {
+   "source": "generated",
+   "generator": "Asala Brand Hub generate_media, gpt-image-2.6-sunburst edit",
+   "hubAssetId": "1dd1d613-ac95-4be0-bc0b-a7f38c74fc32",
+   "geometryFrom": "PSD 5.  13-415 Bottles/22. GB 1o5 Amber/2.  Amber 1o5  Uncapped/2. GBVialAmb1o5WhtCapSht.psd (Layer 6 + Layer 7)",
+   "image": null,
+   "pxPerSourcePx": 3.9791
+  },
+  "vial3-green": {
+   "source": "generated",
+   "generator": "Asala Brand Hub generate_media, gpt-image-2.6-sunburst edit",
+   "hubAssetId": "e3d85e37-24d6-44b5-be73-2c6ed89642d9",
+   "geometryFrom": "approved kit GBVGreen2o4BlackCapSht",
+   "image": {
+    "url": "/images/approved-masters/glass-vial3-green.79ec546ae1c7.png",
+    "sha256": "79ec546ae1c7b5e8859bdc5db7dba4066ff9ed2f104dd0ecd9c6db6951be3b80",
+    "bytes": 777584,
+    "width": 603,
+    "height": 1300
+   },
+   "pxPerSourcePx": 2.4528
+  },
+  "vial3-blue": {
+   "source": "generated",
+   "generator": "Asala Brand Hub generate_media, gpt-image-2.6-sunburst edit",
+   "hubAssetId": "e3fde895-d18b-4c87-814c-0b63d8a6b8cb",
+   "geometryFrom": "approved kit GBVBlu1o9BlackCapSht",
+   "image": {
+    "url": "/images/approved-masters/glass-vial3-blue.8100bfe5ef71.png",
+    "sha256": "8100bfe5ef7129b47750eb67db01d6e17ecffa35ea2c9efd70d996a84fdc90f7",
+    "bytes": 768277,
+    "width": 633,
+    "height": 1300
+   },
+   "pxPerSourcePx": 2.4436
+  },
+  "tola3": {
+   "source": "generated",
+   "generator": "Asala Brand Hub generate_media, gpt-image-2.6-sunburst edit",
+   "hubAssetId": "8516cbd2-7a61-4f6d-90d6-9ba67dd8aa9f",
+   "geometryFrom": "approved kit GB3TPlGl (PSD 16. 14.3mm/Uncapped, glass with applicator stem)",
+   "image": {
+    "url": "/images/approved-masters/glass-tola3.ddc8f1f05eb8.png",
+    "sha256": "ddc8f1f05eb889a5b8a837967cbfe261f6fb203fe9b407aa57d89384311ef00d",
+    "bytes": 704547,
+    "width": 469,
+    "height": 1289
+   },
+   "pxPerSourcePx": 1.8182
+  },
+  "lotion3": {
+   "source": "generated",
+   "generator": "Asala Brand Hub generate_media, gpt-image-2.6-sunburst edit",
+   "hubAssetId": "e3e6f188-61a5-467e-aaf8-60fb5d0dd1e3",
+   "geometryFrom": "approved kit LB3mlClear (PSD 18. .../LB3mlClear.psd, bottle with sprayer)",
+   "image": {
+    "url": "/images/approved-masters/glass-lotion3.818bf7d83ffc.png",
+    "sha256": "818bf7d83ffc75e50f2641de269aec476ad1681dd2018748544bb99d339560b4",
+    "bytes": 399414,
+    "width": 1361,
+    "height": 1497
+   },
+   "pxPerSourcePx": 1.3613
+  }
+ },
+ "kits": {
+  "GB1mlAmbVBlk": {
+   "body": "vial1-amber",
+   "box": {
+    "x": 415.455,
+    "y": 261.0,
+    "width": 169.091,
+    "height": 800.0
+   }
+  },
+  "GB1mlAmbVialWht": {
+   "body": "vial1-amber",
+   "box": {
+    "x": 415.455,
+    "y": 261.0,
+    "width": 169.091,
+    "height": 800.0
+   }
+  },
+  "GB1mlVBlk": {
+   "body": "vial1-clear",
+   "box": {
+    "x": 415.455,
+    "y": 261.0,
+    "width": 169.091,
+    "height": 800.0
+   }
+  },
+  "GB1mlVWht": {
+   "body": "vial1-clear",
+   "box": {
+    "x": 415.455,
+    "y": 261.0,
+    "width": 169.091,
+    "height": 800.0
+   }
+  },
+  "GB3TPlGl": {
+   "body": "tola3",
+   "box": {
+    "x": 347.283,
+    "y": 228.107,
+    "width": 303.084,
+    "height": 832.893
+   }
+  },
+  "GBVAmb2BlackCap": {
+   "body": "vial2-amber-8425",
+   "box": {
+    "x": 372.718,
+    "y": 100.0,
+    "width": 254.564,
+    "height": 900.0
+   }
+  },
+  "GBVAmb2WhtCap": {
+   "body": "vial2-amber-8425",
+   "box": {
+    "x": 372.718,
+    "y": 100.0,
+    "width": 254.564,
+    "height": 900.0
+   }
+  },
+  "GBVBlu1o9BlackCapSht": {
+   "body": "vial3-blue",
+   "box": {
+    "x": 329.605,
+    "y": 300.0,
+    "width": 340.789,
+    "height": 700.0
+   }
+  },
+  "GBVGreen2o4BlackCapSht": {
+   "body": "vial3-green",
+   "box": {
+    "x": 337.547,
+    "y": 300.0,
+    "width": 324.906,
+    "height": 700.0
+   }
+  },
+  "GBVGreen2o4WhtCapSht": {
+   "body": "vial3-green",
+   "box": {
+    "x": 337.547,
+    "y": 300.0,
+    "width": 324.906,
+    "height": 700.0
+   }
+  },
+  "GBVialClr2mlBlackCap": {
+   "body": "vial2-clear-8425",
+   "box": {
+    "x": 371.652,
+    "y": 98.751,
+    "width": 256.697,
+    "height": 901.874
+   }
+  },
+  "GBVialClr2mlWhtCap": {
+   "body": "vial2-clear-8425",
+   "box": {
+    "x": 371.652,
+    "y": 98.751,
+    "width": 256.697,
+    "height": 901.874
+   }
+  },
+  "LB3mlClear": {
+   "body": "lotion3",
+   "box": null
+  }
+ },
+ "heroes": {
+  "GBVialAmb1o5WhtCapSht": {
+   "from": "/images/catalog/vials-approved-2026-09-25/GBVialAmb1o5WhtCapSht.d0c06b55854f.webp",
+   "url": "/images/catalog/vial2-amber-13-425-glass-2026-11-24/GBVialAmb1o5WhtCapSht.c0e9a041e290.webp",
+   "sha256": "c0e9a041e29076d35cac46dfdc6126360986b89b479f8e7d229f0502d1eaf806",
+   "bytes": 1790626,
+   "width": 1560,
+   "height": 1716,
+   "oldGlass": [
+    513,
+    1129,
+    757,
+    1557
+   ],
+   "widthRatio": 1.0369
+  },
+  "GBVAmb1o5BlackCapSht": {
+   "from": "/images/catalog/vial2-black-cap-2026-11-04/GBVAmb1o5BlackCapSht.4fe4654a25ca.webp",
+   "url": "/images/catalog/vial2-amber-13-425-glass-2026-11-24/GBVAmb1o5BlackCapSht.fab3523b6647.webp",
+   "sha256": "fab3523b6647665a9203ca815d343711b13119fc0c4252926b811522d547587a",
+   "bytes": 1802920,
+   "width": 1560,
+   "height": 1716,
+   "oldGlass": [
+    513,
+    1129,
+    757,
+    1557
+   ],
+   "widthRatio": 1.0369
+  }
+ }
+}
