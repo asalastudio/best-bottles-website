@@ -4,6 +4,7 @@ import { closurePart, fitmentPart, partCrop, stageLayout } from "@/lib/products/
 import { layerCropStyleForPart, layerTransform } from "@/lib/bottle-builder/preview-frame";
 import { ELEGANT_PHOTO_BODIES } from "@/lib/register/elegant-photo-bodies";
 import heroTubes from "@/lib/register/hero-tubes.json";
+import psdTubes from "@/lib/register/psd-tubes.generated.json";
 
 /**
  * The 9 mL Cylinder pilot as the register holds it on dev (Phase 3 measurements):
@@ -517,6 +518,7 @@ describe("body-scoped layers", () => {
 describe("the shaft and dip tube cut from each glass's catalogue hero (Jordan 2026-09-30)", () => {
     type Layer = { url: string; width: number; height: number; x: number; y: number };
     const TUBES = heroTubes.tubes as unknown as Record<string, { seated: Layer | null; exploded: Layer | null }>;
+    const PSD_TUBES = psdTubes.tubes as unknown as Record<string, { seated: { url: string }; exploded: { url: string } }>;
     const EMPIRE = {
         plateKey: "empire-100ml-18-415|Clear", bodyId: "empire-100ml-18-415", glass: "Clear",
         url: "https://blob/register/plates/empire-100.png", width: 1136, height: 2192, pxPerMm: 17.6494,
@@ -577,7 +579,8 @@ describe("the shaft and dip tube cut from each glass's catalogue hero (Jordan 20
     it("gives each fitment family its own cut, frosted glass its own layer, and a cap none", () => {
         expect(tubes("TASSEL")[0].image.url).toBe(TUBES["empire-100ml-18-415|Clear|tassel"].seated!.url);
         expect(tubes("PERFUME")[0].image.url).toBe(TUBES["empire-100ml-18-415|Clear|spray"].seated!.url);
-        expect(tubes("FROSTED")[0].image.url).toBe(TUBES["circle-50ml-18-415|Frosted|spray"].seated!.url);
+        // Circle 50 draws its fitted PSD tube (psd-tubes.generated.json, 24 Nov 2026 P1) in place of the hero cut.
+        expect(tubes("FROSTED")[0].image.url).toBe(PSD_TUBES["circle-50ml-18-415|Frosted|spray"].seated.url);
         expect(tubes("REDUCER")).toEqual([]);
     });
 
@@ -602,9 +605,10 @@ describe("the shaft and dip tube cut from each glass's catalogue hero (Jordan 20
 
     it("out of frosted glass draws the clear bottle's clear tube; a glass that hides its tube shows it only when lifted out", () => {
         const frosted = kitFromRegister("FROSTED", payload)!.parts.filter((part) => part.slot === "diptube");
-        expect(frosted.map((part) => [part.image.url, part.views])).toEqual([
-            [TUBES["circle-50ml-18-415|Frosted|spray"].seated!.url, ["sidecar", "capon"]],
-            [TUBES["circle-50ml-18-415|Frosted|spray"].exploded!.url, ["exploded"]],
+        // Frosted glass shows the fitted PSD tube at 0.3; EXPLODED lifts the same tube at full strength.
+        expect(frosted.map((part) => [part.image.url, part.views, part.opacity])).toEqual([
+            [PSD_TUBES["circle-50ml-18-415|Frosted|spray"].seated.url, ["sidecar", "capon"], 0.3],
+            [PSD_TUBES["circle-50ml-18-415|Frosted|spray"].exploded.url, ["exploded"], undefined],
         ]);
         expect(frosted[1].exploded.dy).toBeLessThan(0);
         const amber = kitFromRegister("AMBER", payload)!;
