@@ -25,7 +25,8 @@ it("covers every approved source with immutable display copies and leaves unknow
         }
     }
     const releaseCopies = Object.entries(delivery.sources).filter(([url]) => url.startsWith("/images/approved-masters/"));
-    expect(releaseCopies).toHaveLength(48);   // + the Boston Round 20-400 metal and plastic roller inserts (2026-11-20)
+    expect(releaseCopies).toHaveLength(56);   // + the Boston Round 20-400 metal and plastic roller inserts (2026-11-20)
+    // + the 8 small-glass bodies: vials, tola and 3 ml spray (publish-small-glass-bodies.mjs, 2026-11-24)
     // + the 40 photographed PSD dip tubes and pipettes (seated-dip-tubes.py, 2026-11-24)
     // + the 28 ml Cylinder clear and frosted glass (publish-jumbo28-glass.mjs, 2026-11-24)
     for (const [source, copies] of releaseCopies) {

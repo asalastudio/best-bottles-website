@@ -8,6 +8,7 @@ import dropper from "./cylinder25-dropper-index.json";
 import reducers25 from "./cylinder25-reducers-index.json";
 import body25 from "./cylinder25-body-index.json";
 import { DIVA_KIT_VERSION, isCorrectedDivaKit } from "./diva-kit-corrections";
+import smallGlass from "./small-glass-bodies.generated.json";
 
 const lotionSkus = new Set<string>(lotions.skus);
 const skus = new Set<string>([...index.skus, ...sprays.skus, ...jumbo.skus, ...lotionSkus, ...sleekTubes.skus, ...dropper.skus, ...reducers25.skus]);
@@ -22,6 +23,9 @@ export const APPROVED_KIT_VERSION = index.version;
 /** 28 ml Cylinder roll-ons on the reviewed Sunburst glass (approved-component-kits.ts, 24 Nov 2026). */
 export const CYLINDER28_KIT_VERSION = "jumbo28-sunburst-glass-v2-20261124";
 export const CYLINDER9_COLOR_VERSION = index.version + "-cylinder9-colors-v2-20261102";
+/** Vials, tola and 3 ml spray bottle on the sharper small-glass bodies (approved-component-kits.ts, 24 Nov 2026). */
+export const SMALL_GLASS_KIT_VERSION = `small-glass-${smallGlass.version}`;
+const smallGlassSkus = new Set(Object.keys(smallGlass.kits));
 const spraySkus = new Set<string>(sprays.skus);
 const jumboSkus = new Set<string>(jumbo.skus);
 const nineLotionSkus = new Set([
@@ -49,6 +53,7 @@ export function updatedCylinderKitVersion(sku: string | null | undefined): strin
     // Diva fitments seated and centred, overcap tops restored (approved-component-kits.ts, 7 Nov 2026).
     if (isCorrectedDivaKit(sku)) return DIVA_KIT_VERSION;
     if (jumbo28MeasuredSkus.has(sku) || frosted28Skus.has(sku)) return `${index.version}-${CYLINDER28_KIT_VERSION}`;
+    if (smallGlassSkus.has(sku)) return `${index.version}-${SMALL_GLASS_KIT_VERSION}`;
     if (body25Skus.has(sku)) return body25.version + "-clear-refraction-v3";
     if (cylinderLargeReducerGraceSku(sku)) return "cylinder-large-reducer-refraction-v3";
     if (/^(?:GB|LB)Cyl(?:50|100)(?:Spry|AnSp|Ltn)/i.test(sku)
