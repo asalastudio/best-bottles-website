@@ -400,8 +400,9 @@ const bostonRollOnRows = Object.fromEntries(Object.entries(bostonMasters.rows as
  * caps are the same images as before, re-seated: the cap sits on the new body's shoulder, the roller on the rim.
  * The bodies are served from /images/approved-masters (publish-jumbo28-glass.mjs); the rollers and caps were
  * already hosted. The owner-measured size stays: 81.73 mm bare height against the 97.77 mm 50 ml bottle.
- * Clear SKUs were already approved masters (catalog cards follow); Frosted SKUs are product page and builder
- * recipes only, not approved masters (approvedMasterSku), so their catalog cards are unchanged.
+ * Clear SKUs were already approved masters (catalog cards follow). Frosted SKUs are approved masters too, from
+ * 24 Nov 2026 (approvedMasterSku, same CYLINDER28_KIT_VERSION as Clear), so their catalog card draws this frosted
+ * recipe instead of "Product image coming soon".
  */
 export const isCylinder28RollOnSku = (sku: string) => /^(?:GBMtlRoll28(?:Blk|Wht)|GBRoll28Blk|GBCyl1ozRollWht|GBCylFrst28(?:Mtl)?Roll(?:Blk|Wht))$/.test(sku);
 function hostedReviewKit(kit: BuilderKit, label: string): BuilderKit {
