@@ -1,5 +1,5 @@
 {
- "version": "382451516bf6c87a",
+ "version": "1cc528058fd69649",
  "source": "scripts/paperdoll/seated-dip-tubes.py",
  "groups": {
   "diamond-60ml-18-415-clear-bulb": {
@@ -15,8 +15,8 @@
     "height": 910
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-bulb.7f520a4679cb.png",
-    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-bulb.7f520a4679cb.png",
+    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-bulb.7f520a4679cb.png",
+    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-bulb.7f520a4679cb.png",
     "sha256": "7f520a4679cb20593bb256687027198266a60345ecbc82bb987f90b522960e65",
     "bytes": 44423,
     "width": 122,
@@ -49,8 +49,8 @@
     "height": 910
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-lotion.338da578829c.png",
-    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-lotion.338da578829c.png",
+    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-lotion.338da578829c.png",
+    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-lotion.338da578829c.png",
     "sha256": "338da578829ca166b1952eb838cfb76f18b94a0f9b18ab87d5be45ab9e7750ff",
     "bytes": 42729,
     "width": 130,
@@ -83,8 +83,8 @@
     "height": 910
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-spray.46f8f1f6bb92.png",
-    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-spray.46f8f1f6bb92.png",
+    "url": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-spray.46f8f1f6bb92.png",
+    "key": "/images/approved-masters/dip-tube-diamond-60ml-18-415-clear-spray.46f8f1f6bb92.png",
     "sha256": "46f8f1f6bb92f97cf52d2a2c83e9fafdec844d3bd2721a01d6992f003d204727",
     "bytes": 26146,
     "width": 104,
@@ -117,8 +117,8 @@
     "height": 1011
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-bulb.065e3131f925.png",
-    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-bulb.065e3131f925.png",
+    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-bulb.065e3131f925.png",
+    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-bulb.065e3131f925.png",
     "sha256": "065e3131f9257d9159f9bc7f14e3fbb88b6263d70780f543da23dbbb65abe3ec",
     "bytes": 50456,
     "width": 124,
@@ -151,8 +151,8 @@
     "height": 1010
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-lotion.3bc23cdb3d83.png",
-    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-lotion.3bc23cdb3d83.png",
+    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-lotion.3bc23cdb3d83.png",
+    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-lotion.3bc23cdb3d83.png",
     "sha256": "3bc23cdb3d839dfc1b582a5ad1ed62240a9b66439b5041e823cef779a2bf5a29",
     "bytes": 46119,
     "width": 128,
@@ -185,8 +185,8 @@
     "height": 1010
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-spray.bd4148d2e9dc.png",
-    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-spray.bd4148d2e9dc.png",
+    "url": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-spray.bd4148d2e9dc.png",
+    "key": "/images/approved-masters/dip-tube-diva-100ml-18-415-clear-spray.bd4148d2e9dc.png",
     "sha256": "bd4148d2e9dc2337472445d8c51e7b32089bafd8c804cd7721df169dc3d32b8d",
     "bytes": 29501,
     "width": 104,
@@ -219,8 +219,8 @@
     "height": 646
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-bulb.a4ee82a3213f.png",
-    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-bulb.a4ee82a3213f.png",
+    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-bulb.a4ee82a3213f.png",
+    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-bulb.a4ee82a3213f.png",
     "sha256": "a4ee82a3213f4f47c111247ea228c865e252ed709e3dc7e272fb61a6681caa67",
     "bytes": 30932,
     "width": 122,
@@ -253,8 +253,8 @@
     "height": 646
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-lotion.b4264c41e0e8.png",
-    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-lotion.b4264c41e0e8.png",
+    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-lotion.b4264c41e0e8.png",
+    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-lotion.b4264c41e0e8.png",
     "sha256": "b4264c41e0e83cdcc82d162148d1a94bfa7b9e97e11a61001bae9732527a0d06",
     "bytes": 31733,
     "width": 128,
@@ -287,8 +287,8 @@
     "height": 646
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-spray.ecd3aa0f8f1c.png",
-    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-spray.ecd3aa0f8f1c.png",
+    "url": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-spray.ecd3aa0f8f1c.png",
+    "key": "/images/approved-masters/dip-tube-diva-30ml-18-415-clear-spray.ecd3aa0f8f1c.png",
     "sha256": "ecd3aa0f8f1c8df83fece11ccbaae747d1bd1a28a9353708db4b7e50efab51a8",
     "bytes": 19322,
     "width": 104,
@@ -321,12 +321,12 @@
     "height": 754
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
-    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
-    "sha256": "1b7c54d685ae373861bafb1c8443c4c28faaaef240de3ebfc8bed18084054305",
-    "bytes": 36474,
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-bulb.5171da7b9040.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-bulb.5171da7b9040.png",
+    "sha256": "5171da7b904055f945b896c5c92cc679a1ab0239d1dfecfc718a5728f3ffea46",
+    "bytes": 36313,
     "width": 122,
-    "height": 757
+    "height": 754
    },
    "box": {
     "height": 472.27,
@@ -355,12 +355,12 @@
     "height": 753
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
-    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
-    "sha256": "a3db7f625e5bdc12de0e53733b464c16662b09d4e6b3fd6321e42814d0d3eeab",
-    "bytes": 35397,
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-lotion.d805de1786a0.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-lotion.d805de1786a0.png",
+    "sha256": "d805de1786a0baeebe43a00e4815678486a7a491a3ff576a3f2aaccb022cf840",
+    "bytes": 35328,
     "width": 128,
-    "height": 756
+    "height": 753
    },
    "box": {
     "height": 471.64,
@@ -389,8 +389,8 @@
     "height": 665
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-pipette.5ab982e1e2b4.png",
-    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-pipette.5ab982e1e2b4.png",
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-pipette.5ab982e1e2b4.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-pipette.5ab982e1e2b4.png",
     "sha256": "5ab982e1e2b4d2014ab1a26a7b15ccce2e084d5e54870051fc569c1ba096e93d",
     "bytes": 59503,
     "width": 144,
@@ -423,12 +423,12 @@
     "height": 753
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
-    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
-    "sha256": "c167cea0c0b70214cf1a1ab60848b63ba0802d5326a922ebf16a47d63fc0ee81",
-    "bytes": 21991,
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-spray.cb9eb0ede0e3.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-clear-spray.cb9eb0ede0e3.png",
+    "sha256": "cb9eb0ede0e3e71ed946dcc118dc371217ddfb97c1e0a309bb9f11c01ddf9c88",
+    "bytes": 21949,
     "width": 104,
-    "height": 756
+    "height": 753
    },
    "box": {
     "height": 471.64,
@@ -449,16 +449,16 @@
    "glass": "Frosted",
    "kind": "bulb",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
-    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-bulb.1b7c54d685ae.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-bulb.1b7c54d685ae.png",
     "sha256": "1b7c54d685ae373861bafb1c8443c4c28faaaef240de3ebfc8bed18084054305",
     "bytes": 36474,
     "width": 122,
     "height": 757
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
-    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-bulb.1b7c54d685ae.png",
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-bulb.1b7c54d685ae.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-bulb.1b7c54d685ae.png",
     "sha256": "1b7c54d685ae373861bafb1c8443c4c28faaaef240de3ebfc8bed18084054305",
     "bytes": 36474,
     "width": 122,
@@ -483,16 +483,16 @@
    "glass": "Frosted",
    "kind": "lotion",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
-    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-lotion.a3db7f625e5b.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-lotion.a3db7f625e5b.png",
     "sha256": "a3db7f625e5bdc12de0e53733b464c16662b09d4e6b3fd6321e42814d0d3eeab",
     "bytes": 35397,
     "width": 128,
     "height": 756
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
-    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-lotion.a3db7f625e5b.png",
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-lotion.a3db7f625e5b.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-lotion.a3db7f625e5b.png",
     "sha256": "a3db7f625e5bdc12de0e53733b464c16662b09d4e6b3fd6321e42814d0d3eeab",
     "bytes": 35397,
     "width": 128,
@@ -517,16 +517,16 @@
    "glass": "Frosted",
    "kind": "spray",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
-    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-spray.c167cea0c0b7.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-spray.c167cea0c0b7.png",
     "sha256": "c167cea0c0b70214cf1a1ab60848b63ba0802d5326a922ebf16a47d63fc0ee81",
     "bytes": 21991,
     "width": 104,
     "height": 756
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
-    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-spray.c167cea0c0b7.png",
+    "url": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-spray.c167cea0c0b7.png",
+    "key": "/images/approved-masters/dip-tube-diva-46ml-18-415-frosted-spray.c167cea0c0b7.png",
     "sha256": "c167cea0c0b70214cf1a1ab60848b63ba0802d5326a922ebf16a47d63fc0ee81",
     "bytes": 21991,
     "width": 104,
@@ -551,16 +551,16 @@
    "glass": "Clear",
    "kind": "bulb",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-bulb.4b0eb8263f95.png",
-    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-bulb.4b0eb8263f95.png",
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-bulb.4b0eb8263f95.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-bulb.4b0eb8263f95.png",
     "sha256": "4b0eb8263f95733891f70c0b11aad8df84372fcc87e341ee579ffbcb77fdd24c",
     "bytes": 45911,
     "width": 122,
     "height": 935
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-bulb.4b0eb8263f95.png",
-    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-bulb.4b0eb8263f95.png",
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-bulb.4b0eb8263f95.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-bulb.4b0eb8263f95.png",
     "sha256": "4b0eb8263f95733891f70c0b11aad8df84372fcc87e341ee579ffbcb77fdd24c",
     "bytes": 45911,
     "width": 122,
@@ -585,16 +585,16 @@
    "glass": "Clear",
    "kind": "lotion",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-lotion.b16051043015.png",
-    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-lotion.b16051043015.png",
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-lotion.b16051043015.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-lotion.b16051043015.png",
     "sha256": "b160510430150dc8505d5d5fc1a1d9f1391718c35dc6d174f258f450bad034ca",
     "bytes": 43579,
     "width": 128,
     "height": 934
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-lotion.b16051043015.png",
-    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-lotion.b16051043015.png",
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-lotion.b16051043015.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-lotion.b16051043015.png",
     "sha256": "b160510430150dc8505d5d5fc1a1d9f1391718c35dc6d174f258f450bad034ca",
     "bytes": 43579,
     "width": 128,
@@ -619,16 +619,16 @@
    "glass": "Clear",
    "kind": "spray",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-spray.61b887bf3f98.png",
-    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-spray.61b887bf3f98.png",
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-spray.61b887bf3f98.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-spray.61b887bf3f98.png",
     "sha256": "61b887bf3f988d859ebcf4bdad7a3fe0c7b620b1c376efab32ae93c00d838bd5",
     "bytes": 26924,
     "width": 104,
     "height": 933
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-spray.61b887bf3f98.png",
-    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-spray.61b887bf3f98.png",
+    "url": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-spray.61b887bf3f98.png",
+    "key": "/images/approved-masters/dip-tube-empire-100ml-18-415-clear-spray.61b887bf3f98.png",
     "sha256": "61b887bf3f988d859ebcf4bdad7a3fe0c7b620b1c376efab32ae93c00d838bd5",
     "bytes": 26924,
     "width": 104,
@@ -653,16 +653,16 @@
    "glass": "Clear",
    "kind": "bulb",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-bulb.2f1e866e7124.png",
-    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-bulb.2f1e866e7124.png",
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-bulb.2f1e866e7124.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-bulb.2f1e866e7124.png",
     "sha256": "2f1e866e712412b91cb4a67bb73b8bf689ea0d83b43eb589f24cf951fb958402",
     "bytes": 34755,
     "width": 122,
     "height": 722
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-bulb.2f1e866e7124.png",
-    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-bulb.2f1e866e7124.png",
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-bulb.2f1e866e7124.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-bulb.2f1e866e7124.png",
     "sha256": "2f1e866e712412b91cb4a67bb73b8bf689ea0d83b43eb589f24cf951fb958402",
     "bytes": 34755,
     "width": 122,
@@ -687,16 +687,16 @@
    "glass": "Clear",
    "kind": "lotion",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-lotion.3a411ddedc1f.png",
-    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-lotion.3a411ddedc1f.png",
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-lotion.3a411ddedc1f.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-lotion.3a411ddedc1f.png",
     "sha256": "3a411ddedc1f44246e859a788f237503642f216407bd87cc6f2624ee6adc39d9",
     "bytes": 34220,
     "width": 128,
     "height": 721
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-lotion.3a411ddedc1f.png",
-    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-lotion.3a411ddedc1f.png",
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-lotion.3a411ddedc1f.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-lotion.3a411ddedc1f.png",
     "sha256": "3a411ddedc1f44246e859a788f237503642f216407bd87cc6f2624ee6adc39d9",
     "bytes": 34220,
     "width": 128,
@@ -721,16 +721,16 @@
    "glass": "Clear",
    "kind": "pipette",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-pipette.7c4b33ff182d.png",
-    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-pipette.7c4b33ff182d.png",
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-pipette.7c4b33ff182d.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-pipette.7c4b33ff182d.png",
     "sha256": "7c4b33ff182d7b8459328991827d47243bf36c5df67c75840de83ee7c92fc1d4",
     "bytes": 57053,
     "width": 144,
     "height": 634
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-pipette.7c4b33ff182d.png",
-    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-pipette.7c4b33ff182d.png",
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-pipette.7c4b33ff182d.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-pipette.7c4b33ff182d.png",
     "sha256": "7c4b33ff182d7b8459328991827d47243bf36c5df67c75840de83ee7c92fc1d4",
     "bytes": 57053,
     "width": 144,
@@ -755,16 +755,16 @@
    "glass": "Clear",
    "kind": "spray",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-spray.da315140dcc1.png",
-    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-spray.da315140dcc1.png",
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-spray.da315140dcc1.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-spray.da315140dcc1.png",
     "sha256": "da315140dcc1dbab0c4006847beb65fffd3630e5a46bf9b78bf55b4823231107",
     "bytes": 21253,
     "width": 104,
     "height": 722
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-spray.da315140dcc1.png",
-    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-spray.da315140dcc1.png",
+    "url": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-spray.da315140dcc1.png",
+    "key": "/images/approved-masters/dip-tube-empire-50ml-18-415-clear-spray.da315140dcc1.png",
     "sha256": "da315140dcc1dbab0c4006847beb65fffd3630e5a46bf9b78bf55b4823231107",
     "bytes": 21253,
     "width": 104,
@@ -789,16 +789,16 @@
    "glass": "Clear",
    "kind": "bulb",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-bulb.65d09d85315f.png",
-    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-bulb.65d09d85315f.png",
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-bulb.65d09d85315f.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-bulb.65d09d85315f.png",
     "sha256": "65d09d85315f906076eebaa23390cb2be441211f9878105218d7e9b7d487586f",
     "bytes": 58228,
     "width": 124,
     "height": 1172
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-bulb.65d09d85315f.png",
-    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-bulb.65d09d85315f.png",
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-bulb.65d09d85315f.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-bulb.65d09d85315f.png",
     "sha256": "65d09d85315f906076eebaa23390cb2be441211f9878105218d7e9b7d487586f",
     "bytes": 58228,
     "width": 124,
@@ -823,16 +823,16 @@
    "glass": "Clear",
    "kind": "lotion",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-lotion.6052f75fa6bf.png",
-    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-lotion.6052f75fa6bf.png",
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-lotion.6052f75fa6bf.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-lotion.6052f75fa6bf.png",
     "sha256": "6052f75fa6bf6d422f437d868348a7e052fdd896fd3faabdf9ed479597b5bef1",
     "bytes": 52081,
     "width": 128,
     "height": 1171
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-lotion.6052f75fa6bf.png",
-    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-lotion.6052f75fa6bf.png",
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-lotion.6052f75fa6bf.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-lotion.6052f75fa6bf.png",
     "sha256": "6052f75fa6bf6d422f437d868348a7e052fdd896fd3faabdf9ed479597b5bef1",
     "bytes": 52081,
     "width": 128,
@@ -857,16 +857,16 @@
    "glass": "Clear",
    "kind": "spray",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-spray.197b668a54ae.png",
-    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-spray.197b668a54ae.png",
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-spray.197b668a54ae.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-spray.197b668a54ae.png",
     "sha256": "197b668a54ae0bba304aa547d66a764f5e9790820cc3c269bd74d9d7ed02bb2b",
     "bytes": 34747,
     "width": 104,
     "height": 1171
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-spray.197b668a54ae.png",
-    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-spray.197b668a54ae.png",
+    "url": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-spray.197b668a54ae.png",
+    "key": "/images/approved-masters/dip-tube-grace-55ml-18-415-clear-spray.197b668a54ae.png",
     "sha256": "197b668a54ae0bba304aa547d66a764f5e9790820cc3c269bd74d9d7ed02bb2b",
     "bytes": 34747,
     "width": 104,
@@ -891,16 +891,16 @@
    "glass": "Clear",
    "kind": "bulb",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-bulb.1a9bc2be9f91.png",
-    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-bulb.1a9bc2be9f91.png",
+    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-clear-bulb.1a9bc2be9f91.png",
+    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-clear-bulb.1a9bc2be9f91.png",
     "sha256": "1a9bc2be9f910a73969d53cb679d4f30a2f92521ed208532f182dad4a49ac822",
     "bytes": 75276,
     "width": 124,
     "height": 1532
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-bulb.1a9bc2be9f91.png",
-    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-bulb.1a9bc2be9f91.png",
+    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-clear-bulb.1a9bc2be9f91.png",
+    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-clear-bulb.1a9bc2be9f91.png",
     "sha256": "1a9bc2be9f910a73969d53cb679d4f30a2f92521ed208532f182dad4a49ac822",
     "bytes": 75276,
     "width": 124,
@@ -925,16 +925,16 @@
    "glass": "Clear",
    "kind": "spray",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-spray.3ace517222e5.png",
-    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-spray.3ace517222e5.png",
+    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-clear-spray.3ace517222e5.png",
+    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-clear-spray.3ace517222e5.png",
     "sha256": "3ace517222e5f277fe6abb88ffdf18f3108fc8180296ac42e2ea8cb6690e2c5e",
     "bytes": 44275,
     "width": 104,
     "height": 1561
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-spray.3ace517222e5.png",
-    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-spray.3ace517222e5.png",
+    "url": "/images/approved-masters/dip-tube-sleek-100ml-18-415-clear-spray.3ace517222e5.png",
+    "key": "/images/approved-masters/dip-tube-sleek-100ml-18-415-clear-spray.3ace517222e5.png",
     "sha256": "3ace517222e5f277fe6abb88ffdf18f3108fc8180296ac42e2ea8cb6690e2c5e",
     "bytes": 44275,
     "width": 104,
@@ -959,16 +959,16 @@
    "glass": "Clear",
    "kind": "bulb",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-bulb.1d069a608725.png",
-    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-bulb.1d069a608725.png",
+    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-clear-bulb.1d069a608725.png",
+    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-clear-bulb.1d069a608725.png",
     "sha256": "1d069a6087252fd6783134fd07b0a88d00352338542b80ece7ad91a431fe3a6c",
     "bytes": 70576,
     "width": 124,
     "height": 1426
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-bulb.1d069a608725.png",
-    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-bulb.1d069a608725.png",
+    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-clear-bulb.1d069a608725.png",
+    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-clear-bulb.1d069a608725.png",
     "sha256": "1d069a6087252fd6783134fd07b0a88d00352338542b80ece7ad91a431fe3a6c",
     "bytes": 70576,
     "width": 124,
@@ -993,16 +993,16 @@
    "glass": "Clear",
    "kind": "spray",
    "seated": {
-    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-spray.cf4609f01221.png",
-    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-spray.cf4609f01221.png",
+    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-clear-spray.cf4609f01221.png",
+    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-clear-spray.cf4609f01221.png",
     "sha256": "cf4609f01221becc9276d97d25ba944f2b538ba80fd2a2843bfdb35944d5cb6a",
     "bytes": 41065,
     "width": 104,
     "height": 1428
    },
    "exploded": {
-    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-spray.cf4609f01221.png",
-    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-spray.cf4609f01221.png",
+    "url": "/images/approved-masters/dip-tube-sleek-50ml-18-415-clear-spray.cf4609f01221.png",
+    "key": "/images/approved-masters/dip-tube-sleek-50ml-18-415-clear-spray.cf4609f01221.png",
     "sha256": "cf4609f01221becc9276d97d25ba944f2b538ba80fd2a2843bfdb35944d5cb6a",
     "bytes": 41065,
     "width": 104,

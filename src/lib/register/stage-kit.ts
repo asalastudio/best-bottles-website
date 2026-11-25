@@ -314,7 +314,8 @@ export function kitFromRegister(
         const explodeIndex = holder.length ? Math.min(...holder.map((part) => part.explodeIndex)) : 0;
         const tubePart = (layer: HeroTubeLayer, views?: StageViewName[]): RegisterKitPart => ({
             slot: "diptube", variantKey: null, zOrder: 0, explodeIndex,
-            bounds: { left: layer.box.x, top: layer.box.y, right: round(layer.box.x + layer.box.width), bottom: round(layer.box.y + layer.box.height) },
+            bounds: layer.bounds ?? { left: layer.box.x, top: layer.box.y, right: round(layer.box.x + layer.box.width), bottom: round(layer.box.y + layer.box.height) },
+            ...(layer.opacity !== undefined ? { opacity: layer.opacity } : {}),
             assembled: { x: 0, y: 0 }, exploded: { dx: 0, dy: 0 },
             image: { url: layer.url, key: "", sha256: "", bytes: 0, width: layer.width, height: layer.height },
             image2x: null, mask: null, derivation: "psd-layer", box: layer.box, componentId: tube.componentId,
