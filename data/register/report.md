@@ -1,13 +1,13 @@
-# Component register — Phase 1 reconciliation (2026-09-29)
+# Component register — Phase 1 reconciliation (2026-11-07)
 
 Source: Convex prod export (2485 rows, collected 2026-09-29T09:07:45Z), PSD library inventory (393 PSDs), body-dims (146 keys), 23 Sep review files (49 items). Read-only.
 
 ## Totals
 
 - Bodies: **93 current** (0 retired-only) across 32 neck groups
-- Components: **151 current**, 0 retired, 15 quarantined; **129 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
+- Components: **149 current**, 0 retired, 17 quarantined; **129 current components have a library PSD** (16 via alias-map, 34 case-insensitive)
 - Assemblies: **2107 verified**, **109 candidate**, **55 quarantine**, **2 retired**, **2 exception**
-- Quarantine rows: 120 (see quarantine.csv)
+- Quarantine rows: 122 (see quarantine.csv)
 - Register ids kept across catalogue re-keys: **24** (the layers stay attached; see below)
 
 ## Rulings applied
@@ -25,12 +25,12 @@ Source: Convex prod export (2485 rows, collected 2026-09-29T09:07:45Z), PSD libr
 | 10mm | 1 | 1 | 0 | 0 | 0 | 3 | 0 | 0 |
 | 11mm | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
 | 12mm | 2 | 1 | 0 | 0 | 4 | 0 | 0 | 0 |
-| 13-415 | 17 | 5 | 33 | 586 | 13 | 0 | 0 | 2 |
+| 13-415 | 17 | 5 | 32 | 586 | 13 | 0 | 0 | 2 |
 | 13-425 | 3 | 4 | 2 | 0 | 16 | 0 | 0 | 0 |
 | 14.3mm | 2 | 1 | 1 | 0 | 2 | 0 | 0 | 0 |
 | 15-415 | 2 | 2 | 7 | 21 | 0 | 0 | 0 | 0 |
 | 16mm | 2 | 1 | 0 | 0 | 8 | 0 | 0 | 0 |
-| 17-415 | 1 | 5 | 22 | 145 | 0 | 0 | 0 | 0 |
+| 17-415 | 1 | 5 | 21 | 145 | 0 | 0 | 0 | 0 |
 | 17.52mm | 2 | 1 | 0 | 0 | 0 | 2 | 0 | 0 |
 | 17mm | 1 | 4 | 0 | 0 | 11 | 0 | 0 | 0 |
 | 18-400 | 2 | 3 | 8 | 17 | 1 | 0 | 0 | 0 |
@@ -107,11 +107,11 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 
 | neck | cap | cap-review | dropper | faux-leather-cap | fine-mist-sprayer | lotion-pump | plug-applicator | reducer | review | roll-on-cap | roller-insert | tassel-bulb-sprayer | vintage-bulb-sprayer |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 13-415 | 6 |  |  |  | 12 |  |  |  |  | 13 | 2 |  |  |
+| 13-415 | 10 |  |  |  | 11 |  |  |  |  | 9 | 2 |  |  |
 | 13-425 | 2 |  |  |  |  |  |  |  |  |  |  |  |  |
 | 14.3mm |  |  |  |  |  |  | 1 |  |  |  |  |  |  |
-| 15-415 |  |  |  |  | 5 |  |  |  |  | 2 |  |  |  |
-| 17-415 |  |  | 1 |  | 6 | 3 |  |  |  | 10 | 2 |  |  |
+| 15-415 | 2 |  |  |  | 5 |  |  |  |  |  |  |  |  |
+| 17-415 |  |  |  |  | 6 | 3 |  |  |  | 10 | 2 |  |  |
 | 18-400 | 2 |  | 6 |  |  |  |  |  |  |  |  |  |  |
 | 18-415 | 7 |  | 3 | 5 | 8 | 7 |  | 1 |  |  |  | 9 | 9 |
 | 20-400 | 2 |  | 12 |  |  |  |  |  |  | 6 | 2 |  |  |
@@ -119,12 +119,12 @@ The matrices counted **Glass Bottle** records only; the register also carries at
 | 24-400 | 1 |  |  |  |  |  |  |  |  |  |  |  |  |
 | 8-425 | 5 |  |  |  |  |  |  |  |  |  |  |  |  |
 
-## Library gaps — 22 current components with no PSD in 20. Caps / 21. Tassels
+## Library gaps — 20 current components with no PSD in 20. Caps / 21. Tassels
 
-- **13-415** (10): CP13-415BlkShShtMtl [cap], CP13-415CuSht [cap], CP13-415GlMattSht [cap], CP13-415GlSht [cap], CP13-415SlMattSht [cap], CP13-415SlSht [cap], 13-415CAP4SpryCuMt [fine-mist-sprayer], 13-415CAP4SpryGlSh [fine-mist-sprayer], 13-415CAP4SprySlMt [fine-mist-sprayer], GBATom5RedBurg [fine-mist-sprayer]
+- **13-415** (9): CP13-415BlkShShtMtl [cap], CP13-415CuSht [cap], CP13-415GlMattSht [cap], CP13-415GlSht [cap], CP13-415SlMattSht [cap], CP13-415SlSht [cap], 13-415CAP4SpryCuMt [fine-mist-sprayer], 13-415CAP4SpryGlSh [fine-mist-sprayer], 13-415CAP4SprySlMt [fine-mist-sprayer]
 - **13-425** (2): CP13-425Blk [cap], CP13-425Wht [cap]
 - **14.3mm** (1): LIB-14.3mm-Plug [plug-applicator]
-- **17-415** (3): Droppers1ozElg [dropper], LIB-17-415-MtlRollon [roller-insert], LIB-17-415-PlsticRollon [roller-insert]
+- **17-415** (2): LIB-17-415-MtlRollon [roller-insert], LIB-17-415-PlsticRollon [roller-insert]
 - **18-415** (2): 18-415CAP4SpryMtGl [fine-mist-sprayer], 18-415CAP4SpryShnBlk [fine-mist-sprayer]
 - **20-400** (2): LIB-20-400-MtlRollon [roller-insert], LIB-20-400-PlsticRollon [roller-insert]
 - **22-400** (1): CapBlackPoly22mm-400 [cap]
@@ -232,12 +232,12 @@ Unresolved, by reason (Convex corrections):
 | 18-415 | 47 | Circle, Cylinder |
 | 20-410 | 1 | Aluminum Bottle |
 
-## Quarantine — 120 rows
+## Quarantine — 122 rows
 
 | kind | count |
 |---|---|
 | assembly | 55 |
-| component | 15 |
+| component | 17 |
 | review-2026-09-23 | 49 |
 | row | 1 |
 

@@ -1,7 +1,10 @@
+import { neckBuilderHref, neckBuilderNecks } from "@/lib/help/fit-neck";
 import type { MetadataRoute } from "next";
 import { isMissingHeroSource, isVisibleCatalogGroup } from "@/lib/products/catalog-listing-visibility";
 import { isLegacyProductRouteAlias } from "@/lib/products/legacy-product-route-overrides";
 import { isPrivatePath } from "./robots";
+import { KB_TOPICS, entryHref, publicEntries } from "@/lib/help/kb";
+import { allBodies, fitHref } from "@/lib/help/fit";
 
 type ChangeFrequency = NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
 
@@ -27,6 +30,10 @@ export const SITEMAP_PAGES: ReadonlyArray<{ path: string; changeFrequency: Chang
     { path: "/request-quote", changeFrequency: "monthly", priority: 0.5 },
     { path: "/request-sample", changeFrequency: "monthly", priority: 0.5 },
     { path: "/shipping-returns", changeFrequency: "yearly", priority: 0.3 },
+    // Help center. Its topics and answers are in HELP_SITEMAP_PAGES.
+    { path: "/help", changeFrequency: "weekly", priority: 0.6 },
+    { path: "/help/fit", changeFrequency: "monthly", priority: 0.6 },
+    { path: "/help/ask", changeFrequency: "yearly", priority: 0.3 },
     { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
     { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
 ];
@@ -43,11 +50,26 @@ export const NOT_IN_SITEMAP: Readonly<Record<string, string>> = {
     "/catalog/application/[application]": "redirects to /catalog?applicators=… unless ?guide=1",
     "/products/[slug]": "listed per product in /server-sitemap.xml",
     "/blog/[slug]": "listed per post in /server-sitemap.xml",
+    "/help/a/[slug]": "listed per published help answer (HELP_SITEMAP_PAGES)",
+    "/help/topic/[topic]": "listed per help topic (HELP_SITEMAP_PAGES)",
+    "/help/fit/[bottle]": "listed per bottle with shared closures (HELP_SITEMAP_PAGES)",
+    "/help/fit/neck/[neck]": "listed per neck finish with a builder (HELP_SITEMAP_PAGES)",
+    "/help/search": "search results; noindex",
 };
+
+/** Help topics, published public answers and bottle fit pages: fixed URLs that come from the knowledge base. */
+export function helpSitemapPages(): Array<{ path: string; changeFrequency: ChangeFrequency; priority: number }> {
+    return [
+        ...KB_TOPICS.filter((topic) => topic.id !== "products").map((topic) => ({ path: `/help/topic/${topic.id}`, changeFrequency: "monthly" as const, priority: 0.5 })),
+        ...publicEntries().map((entry) => ({ path: entryHref(entry), changeFrequency: "monthly" as const, priority: 0.5 })),
+        ...allBodies().filter((body) => body.interchangeable).map((body) => ({ path: fitHref(body), changeFrequency: "monthly" as const, priority: 0.4 })),
+        ...neckBuilderNecks().map((neck) => ({ path: neckBuilderHref(neck), changeFrequency: "monthly" as const, priority: 0.5 })),
+    ];
+}
 
 export function buildPageSitemap(siteUrl: string, lastModified: Date): MetadataRoute.Sitemap {
     const origin = siteUrl.replace(/\/+$/, "");
-    return SITEMAP_PAGES
+    return [...SITEMAP_PAGES, ...helpSitemapPages()]
         .filter((page) => !isPrivatePath(page.path))
         .map((page) => ({
             url: page.path === "/" ? origin : `${origin}${page.path}`,

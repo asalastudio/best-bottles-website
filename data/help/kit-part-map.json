@@ -1,0 +1,343 @@
+{
+ "_about": "Proposed product-to-closure matches for necks whose register has no own-part rules (scripts/help/map_kit_parts.py). Used only to pick each closure's master art from a product kit; fit comes from the fit index. Status stays 'proposed' until Jordan reviews the sheet.",
+ "status": "proposed",
+ "matches": [
+  {
+   "product": "GBCrcl30SpryBlk",
+   "bodyId": "circle-30ml-15-415",
+   "componentId": "CMP-SPR-BLK-15-415",
+   "itemCode": "Spry15-415Blk",
+   "itemName": "Shiny Black Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryBlk' agrees with the item code on kind sprayer, colour black"
+  },
+  {
+   "product": "GBCrcl30GlCap",
+   "bodyId": "circle-30ml-15-415",
+   "componentId": "CMP-CAP-SGLD-15-415",
+   "itemCode": "CP15-415ShnGl",
+   "itemName": "Shiny Gold color Cap or Closure for 15-415",
+   "basis": "product code 'GlCap' agrees with the item code on kind cap, colour gold"
+  },
+  {
+   "product": "GBCrcl30SlCap",
+   "bodyId": "circle-30ml-15-415",
+   "componentId": "CMP-CAP-SSLV-15-415",
+   "itemCode": "CP15-415ShnSl",
+   "itemName": "Shiny Silver color Cap or Closure for 15-415",
+   "basis": "product code 'SlCap' agrees with the item code on kind cap, colour silver"
+  },
+  {
+   "product": "GBCrcl30SpryMattGl",
+   "bodyId": "circle-30ml-15-415",
+   "componentId": "CMP-SPR-GLD-15-415",
+   "itemCode": "Spry15-415MattGl",
+   "itemName": "Matte Gold Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryMattGl' agrees with the item code on kind sprayer, colour gold, finish matte"
+  },
+  {
+   "product": "GBCrcl30SpryMattSl",
+   "bodyId": "circle-30ml-15-415",
+   "componentId": "CMP-SPR-SLV-15-415",
+   "itemCode": "Spry15-415MattSl",
+   "itemName": "Matte Silver Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryMattSl' agrees with the item code on kind sprayer, colour silver, finish matte"
+  },
+  {
+   "product": "GBCrcl30SpryShnGl",
+   "bodyId": "circle-30ml-15-415",
+   "componentId": "CMP-SPR-SGLD-15-415",
+   "itemCode": "Spry15-415ShnGl",
+   "itemName": "Shiny Gold Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryShnGl' agrees with the item code on kind sprayer, colour gold, finish shiny"
+  },
+  {
+   "product": "GBCrcl30SpryShSl",
+   "bodyId": "circle-30ml-15-415",
+   "componentId": "CMP-SPR-SSLV-15-415",
+   "itemCode": "Spry15-415ShnSl",
+   "itemName": "Shiny Silver Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryShSl' agrees with the item code on kind sprayer, colour silver, finish shiny"
+  },
+  {
+   "product": "GBElg30SpryBlk",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-SPR-BLK-15-415",
+   "itemCode": "Spry15-415Blk",
+   "itemName": "Shiny Black Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryBlk' agrees with the item code on kind sprayer, colour black"
+  },
+  {
+   "product": "GBElg30GlCap",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-CAP-SGLD-15-415",
+   "itemCode": "CP15-415ShnGl",
+   "itemName": "Shiny Gold color Cap or Closure for 15-415",
+   "basis": "product code 'GlCap' agrees with the item code on kind cap, colour gold"
+  },
+  {
+   "product": "GBElg30SlCap",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-CAP-SSLV-15-415",
+   "itemCode": "CP15-415ShnSl",
+   "itemName": "Shiny Silver color Cap or Closure for 15-415",
+   "basis": "product code 'SlCap' agrees with the item code on kind cap, colour silver"
+  },
+  {
+   "product": "GBElg30SpryMattGl",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-SPR-GLD-15-415",
+   "itemCode": "Spry15-415MattGl",
+   "itemName": "Matte Gold Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryMattGl' agrees with the item code on kind sprayer, colour gold, finish matte"
+  },
+  {
+   "product": "GBElg30SpryMattSl",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-SPR-SLV-15-415",
+   "itemCode": "Spry15-415MattSl",
+   "itemName": "Matte Silver Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryMattSl' agrees with the item code on kind sprayer, colour silver, finish matte"
+  },
+  {
+   "product": "GBElg30SpryShGl",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-SPR-SGLD-15-415",
+   "itemCode": "Spry15-415ShnGl",
+   "itemName": "Shiny Gold Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryShGl' agrees with the item code on kind sprayer, colour gold, finish shiny"
+  },
+  {
+   "product": "GBElg30SpryShnSl",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-SPR-SSLV-15-415",
+   "itemCode": "Spry15-415ShnSl",
+   "itemName": "Shiny Silver Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryShnSl' agrees with the item code on kind sprayer, colour silver, finish shiny"
+  },
+  {
+   "product": "GBElgFrst30GlCap",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-CAP-SGLD-15-415",
+   "itemCode": "CP15-415ShnGl",
+   "itemName": "Shiny Gold color Cap or Closure for 15-415",
+   "basis": "product code 'GlCap' agrees with the item code on kind cap, colour gold"
+  },
+  {
+   "product": "GBElgFrst30SlCap",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-CAP-SSLV-15-415",
+   "itemCode": "CP15-415ShnSl",
+   "itemName": "Shiny Silver color Cap or Closure for 15-415",
+   "basis": "product code 'SlCap' agrees with the item code on kind cap, colour silver"
+  },
+  {
+   "product": "GBElgFrst30SpryBlk",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-SPR-BLK-15-415",
+   "itemCode": "Spry15-415Blk",
+   "itemName": "Shiny Black Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryBlk' agrees with the item code on kind sprayer, colour black"
+  },
+  {
+   "product": "GBElgFrst30SpryMattGl",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-SPR-GLD-15-415",
+   "itemCode": "Spry15-415MattGl",
+   "itemName": "Matte Gold Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryMattGl' agrees with the item code on kind sprayer, colour gold, finish matte"
+  },
+  {
+   "product": "GBElgFrst30SpryMattSl",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-SPR-SLV-15-415",
+   "itemCode": "Spry15-415MattSl",
+   "itemName": "Matte Silver Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryMattSl' agrees with the item code on kind sprayer, colour silver, finish matte"
+  },
+  {
+   "product": "GBElgFrst30SpryShnGl",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-SPR-SGLD-15-415",
+   "itemCode": "Spry15-415ShnGl",
+   "itemName": "Shiny Gold Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryShnGl' agrees with the item code on kind sprayer, colour gold, finish shiny"
+  },
+  {
+   "product": "GBElgFrst30SpryShSl",
+   "bodyId": "elegant-30ml-15-415",
+   "componentId": "CMP-SPR-SSLV-15-415",
+   "itemCode": "Spry15-415ShnSl",
+   "itemName": "Shiny Silver Fine Mist Sprayer, Thread size 15-415",
+   "basis": "product code 'SpryShSl' agrees with the item code on kind sprayer, colour silver, finish shiny"
+  },
+  {
+   "product": "GBBstnAmb15mlBlkCapSht",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-CAP-BLK-18-400",
+   "itemCode": "18-400CpShortBlk",
+   "itemName": "Black lid or closure for glass bottle, Thread size 18-400",
+   "basis": "product code 'BlkCapSht' agrees with the item code on kind cap, colour black, style short"
+  },
+  {
+   "product": "GBBstnAmb15mlBlkDropper",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-BLK-18400-90MM",
+   "itemCode": "Drp18-40015mlBlckBulb",
+   "itemName": "Black rubber bulb dropper with black cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'BlkDropper' agrees with the item code on kind dropper, trim none, bulb black"
+  },
+  {
+   "product": "GBBstnAmb15mlBlkDropperGlTrim",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-BKGD-18400-66",
+   "itemCode": "Drp18-40015mlShnGlTrimBlkBulb",
+   "itemName": "Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'BlkDropperGlTrim' agrees with the item code on kind dropper, trim gold, bulb black"
+  },
+  {
+   "product": "GBBstnAmb15mlBlkDropperSlTrim",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-BKSL-18400-66",
+   "itemCode": "Drp18-40015mlShnSlTrimBlkBulb",
+   "itemName": "Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'BlkDropperSlTrim' agrees with the item code on kind dropper, trim silver, bulb black"
+  },
+  {
+   "product": "GBBstnAmb15mlWhtDropper",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-WHT-18400-66",
+   "itemCode": "Drp18-40015mlWhiteBulb",
+   "itemName": "White rubber bulb dropper with white cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'WhtDropper' agrees with the item code on kind dropper, trim none, bulb white"
+  },
+  {
+   "product": "GBBstnAmb15mlWhtDropperGlTrim",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-WTGD-18400-66",
+   "itemCode": "Drp18-40015mlShnGlTrimWhiteBulb",
+   "itemName": "White rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'WhtDropperGlTrim' agrees with the item code on kind dropper, trim gold, bulb white"
+  },
+  {
+   "product": "GBBstnAmb15mlWhtDropperSlTrim",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-WTSL-18400-66",
+   "itemCode": "Drp18-40015mlShnSlTrimWhiteBulb",
+   "itemName": "White rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'WhtDropperSlTrim' agrees with the item code on kind dropper, trim silver, bulb white"
+  },
+  {
+   "product": "GBBstnBlu15BlkCapSht",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-CAP-BLK-18-400",
+   "itemCode": "18-400CpShortBlk",
+   "itemName": "Black lid or closure for glass bottle, Thread size 18-400",
+   "basis": "product code 'BlkCapSht' agrees with the item code on kind cap, colour black, style short"
+  },
+  {
+   "product": "GBBstnBlu15BlkDrpr",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-BLK-18400-90MM",
+   "itemCode": "Drp18-40015mlBlckBulb",
+   "itemName": "Black rubber bulb dropper with black cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'BlkDrpr' agrees with the item code on kind dropper, trim none, bulb black"
+  },
+  {
+   "product": "GBBstnBlu15BlkDrprGlTrim",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-BKGD-18400-66",
+   "itemCode": "Drp18-40015mlShnGlTrimBlkBulb",
+   "itemName": "Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'BlkDrprGlTrim' agrees with the item code on kind dropper, trim gold, bulb black"
+  },
+  {
+   "product": "GBBstnBlu15mlBlkDropperSlTrim",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-BKSL-18400-66",
+   "itemCode": "Drp18-40015mlShnSlTrimBlkBulb",
+   "itemName": "Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'BlkDropperSlTrim' agrees with the item code on kind dropper, trim silver, bulb black"
+  },
+  {
+   "product": "GBBstnBlu15WhtDrpr",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-WHT-18400-66",
+   "itemCode": "Drp18-40015mlWhiteBulb",
+   "itemName": "White rubber bulb dropper with white cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'WhtDrpr' agrees with the item code on kind dropper, trim none, bulb white"
+  },
+  {
+   "product": "GBBstnBlu15WhtDrprGlTrim",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-WTGD-18400-66",
+   "itemCode": "Drp18-40015mlShnGlTrimWhiteBulb",
+   "itemName": "White rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'WhtDrprGlTrim' agrees with the item code on kind dropper, trim gold, bulb white"
+  },
+  {
+   "product": "GBBstnBlu15WhtDrprSlTrim",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-DRP-WTSL-18400-66",
+   "itemCode": "Drp18-40015mlShnSlTrimWhiteBulb",
+   "itemName": "White rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400",
+   "basis": "product code 'WhtDrprSlTrim' agrees with the item code on kind dropper, trim silver, bulb white"
+  },
+  {
+   "product": "GBBstn15BlkCapSht",
+   "bodyId": "boston-round-15ml-18-400",
+   "componentId": "CMP-CAP-BLK-18-400",
+   "itemCode": "18-400CpShortBlk",
+   "itemName": "Black lid or closure for glass bottle, Thread size 18-400",
+   "basis": "product code 'BlkCapSht' agrees with the item code on kind cap, colour black, style short"
+  },
+  {
+   "product": "GB09BlackCapSht",
+   "bodyId": "vial-9ml-18-400",
+   "componentId": "CMP-CAP-BLK-18-400",
+   "itemCode": "18-400CpShortBlk",
+   "itemName": "Black lid or closure for glass bottle, Thread size 18-400",
+   "basis": "product code 'BlackCapSht' agrees with the item code on kind cap, colour black, style short"
+  },
+  {
+   "product": "GB09BlackCapApp",
+   "bodyId": "vial-9ml-18-400",
+   "componentId": "CMP-APP-BLK-18-400",
+   "itemCode": "18-400CpAppBlk",
+   "itemName": "Black cap with glass rod applicator, Threadsize 18-400",
+   "basis": "product code 'BlackCapApp' agrees with the item code on kind rod, colour black"
+  },
+  {
+   "product": "GBVialClr2mlBlackCap",
+   "bodyId": "vial-2ml-8-425",
+   "componentId": "CMP-CAP-BLK-8-425",
+   "itemCode": "8-425CpShortBlack",
+   "itemName": "Black lid or closure for glass bottle, Thread size 8-425",
+   "basis": "product code 'BlackCap' agrees with the item code on kind cap, colour black, style short"
+  },
+  {
+   "product": "GBVAmb2BlackCap",
+   "bodyId": "vial-2ml-8-425",
+   "componentId": "CMP-CAP-BLK-8-425",
+   "itemCode": "8-425CpShortBlack",
+   "itemName": "Black lid or closure for glass bottle, Thread size 8-425",
+   "basis": "product code 'BlackCap' agrees with the item code on kind cap, colour black, style short"
+  },
+  {
+   "product": "GBVAmb2WhtCap",
+   "bodyId": "vial-2ml-8-425",
+   "componentId": "CMP-CAP-WHT-8-425",
+   "itemCode": "8-425CpShortWhite",
+   "itemName": "White lid or closure for glass bottle, Thread size 8-425",
+   "basis": "product code 'WhtCap' agrees with the item code on kind cap, colour white, style short"
+  },
+  {
+   "product": "GBVialClr2mlWhtCap",
+   "bodyId": "vial-2ml-8-425",
+   "componentId": "CMP-CAP-WHT-8-425",
+   "itemCode": "8-425CpShortWhite",
+   "itemName": "White lid or closure for glass bottle, Thread size 8-425",
+   "basis": "product code 'WhtCap' agrees with the item code on kind cap, colour white, style short"
+  }
+ ],
+ "unmatched": []
+}
