@@ -3,14 +3,15 @@
 import { capLinerNote, fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitment-copy";
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Check, DotsThree, Minus, Plus, SlidersHorizontal, X, ArrowsOutSimple } from "@/components/icons";
+import { ArrowLeft, ArrowRight, Check, DotsThree, SlidersHorizontal, X, ArrowsOutSimple } from "@/components/icons";
 import { displayApplicatorName } from "@/lib/catalogFilters";
-import { bareGlassPreview, borrowedFitmentPreview, builderOrder, clearBodyPreview, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderConfiguration, type BuilderSelection } from "@/lib/bottle-builder/model";
+import { bareGlassPreview, borrowedFitmentPreview, builderOrder, clearBodyPreview, deriveBuilder, previewParts, type BuilderBody, type BuilderConfiguration, type BuilderSelection } from "@/lib/bottle-builder/model";
 import { CHOOSER_PRIORITY_TILES } from "@/lib/bottle-builder/mobile-request";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { checkoutMinimum } from "@/lib/checkout";
 import BuilderImage from "./BuilderImage";
 import BuilderFinishImage from "./BuilderFinishImage";
+import BuilderSetQuantity from "./BuilderSetQuantity";
 import FitmentIllustration from "./FitmentIllustration";
 import styles from "./MobileBuilder.module.css";
 import FamilyShapeIcon from "@/components/icons/FamilyShapeIcon";
@@ -47,6 +48,8 @@ type Props = {
     onBodyIntent?: (bodyId: string) => void;
     /** Cart-consistent unit price range for the configurations a choice can still become; omitted = no prices on tiles. */
     priceRange?: (configs: BuilderConfiguration[]) => { min: number; max: number } | null;
+    /** What the cart charges for one set of that many pieces of the finished bottle, for the "Set of" menu. */
+    setPrice?: (pieces: number) => { unitPrice: number | null; total: number | null } | null;
 };
 
 /** Mobile presentation only. Exact configuration, pricing and submission stay in MatrixClient. */
@@ -282,12 +285,9 @@ export default function MobileBuilder(p: Props) {
         </>}
         {stage === 3 && configuration && <section className={styles.order} aria-label="Quantity and price">
             <p className={styles.included}>{fitmentContents(fitment)}</p>
-            <div className={styles.quantityRow}><label htmlFor={`${id}-quantity`}>Quantity</label><div className={styles.quantity}>
-                <button aria-label="Decrease quantity" disabled={busy || p.selection.quantity <= 1} onClick={() => p.onUpdate({ quantity: Math.max(1, p.selection.quantity - 1) })}><Minus size={18} /></button>
-                <input id={`${id}-quantity`} type="number" inputMode="numeric" min="1" max={MAX_QUANTITY} step="1" value={Number.isNaN(p.selection.quantity) ? "" : p.selection.quantity} disabled={busy} aria-invalid={!p.order.validQuantity} aria-describedby={`${id}-reason`} onChange={e => p.onUpdate({ quantity: e.target.value === "" ? NaN : Number(e.target.value) })} />
-                <button aria-label="Increase quantity" disabled={busy || p.selection.quantity >= MAX_QUANTITY} onClick={() => p.onUpdate({ quantity: Math.min(MAX_QUANTITY, (Number.isFinite(p.selection.quantity) ? p.selection.quantity : 0) + 1) })}><Plus size={18} /></button>
-            </div></div>
-            {configuration?.caseQuantity && <p className={styles.case}>Case pack: {configuration.caseQuantity.toLocaleString()} units <button disabled={busy} onClick={() => p.onUpdate({ quantity: configuration.caseQuantity! })}>Use case quantity</button></p>}
+            <p className={styles.included} data-builder-sku>{configuration.product.itemName && <><strong>{configuration.product.itemName}</strong><br /></>}SKU {configuration.id}</p>
+            <BuilderSetQuantity id={`${id}-quantity`} quantity={p.selection.quantity} caseQuantity={configuration.caseQuantity} disabled={busy}
+                invalid={!p.order.validQuantity} describedBy={`${id}-reason`} priceFor={p.setPrice} onQuantity={quantity => p.onUpdate({ quantity })} />
             <dl className={styles.totals}><div><dt>Unit price</dt><dd>{money(p.order.unitPrice)} each</dd></div><div><dt>Total · {p.order.validQuantity ? p.selection.quantity : "—"} bottles</dt><dd>{money(p.order.total)}</dd></div></dl>
             <p className={styles.included}>A $50 minimum applies to your entire cart at checkout.</p>
         </section>}

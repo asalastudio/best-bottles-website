@@ -2,16 +2,17 @@
 
 import { useRegion } from "@/components/RegionProvider";
 
-import { capLinerNote, fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitment-copy";
+import { capLinerNote, fitmentChoiceHints } from "@/lib/bottle-builder/fitment-copy";
 import { useEffect, useId, useMemo, useRef, useState, useTransition, useSyncExternalStore, type ReactNode } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useRouter, useSearchParams } from "next/navigation";
-import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, ShoppingBag } from "@/components/icons";
+import { ArrowLeft, ArrowRight, Check, CheckCircle, ShieldCheck, ShoppingBag } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
 import { useBuilderKits } from "@/components/bottle-builder/useBuilderKits";
 import { topCloseUp } from "@/lib/bottle-builder/top-close-up";
+import BuilderSetQuantity from "@/components/bottle-builder/BuilderSetQuantity";
 import { useBuilderBodyConfigurations } from "@/components/bottle-builder/useBuilderBodyConfigurations";
 import { prefetchBody } from "@/components/bottle-builder/builder-requests";
 import { useTileIntent } from "@/components/bottle-builder/useTileIntent";
@@ -31,7 +32,7 @@ import { analytics } from "@/lib/analytics";
 import { displayApplicatorName } from "@/lib/catalogFilters";
 import {
     borrowedFitmentPreview, builderOrder, builderPriceRange, deriveBuilder, emptySelection, previewParts, reconcileSelection, selectBuilderBody,
-    MAX_QUANTITY, ORDER_MINIMUM, type BuilderBody, type BuilderConfiguration, type BuilderSelection, bareGlassPreview, clearBodyPreview,
+    ORDER_MINIMUM, type BuilderBody, type BuilderConfiguration, type BuilderSelection, bareGlassPreview, clearBodyPreview,
 } from "@/lib/bottle-builder/model";
 import hasIncludedCovers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import { CHOOSER_PRIORITY_TILES } from "@/lib/bottle-builder/mobile-request";
@@ -143,6 +144,9 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     // (or its fitments when it comes in one glass), a glass opens its fitments, a fitment its finishes.
     // The finish stays put until the customer reviews. The target waits here while the bottle's options load.
     const [advanceTo, setAdvanceTo] = useState<number | null>(null);
+    // Add to Cart is never below the fold on a finished bottle (Jordan, 25 Nov 2026): see the bar under the workspace.
+    const addAnchor = useRef<HTMLDivElement>(null);
+    const [addOffScreen, setAddOffScreen] = useState(false);
     // The finished bottle in the product page's views; cap on is how it ships.
     const [finishedView, setFinishedView] = useState<StageView>("capon");
     const [adding, setAdding] = useState(false);
@@ -247,6 +251,14 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         // goTo is recreated every render; the advance runs once per choice.
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [advanceReady, advanceTo, isMobile]);
+    const complete = Boolean(configuration) && !familyScreen && !isMobile;
+    useEffect(() => {
+        const anchor = addAnchor.current;
+        if (!complete || !anchor || typeof IntersectionObserver === "undefined") return;
+        const observer = new IntersectionObserver(([entry]) => setAddOffScreen(!entry.isIntersecting), { threshold: .95 });
+        observer.observe(anchor);
+        return () => observer.disconnect();
+    }, [complete]);
     const bodyNotice = chooser.failed ? <div className={styles.familyPending} role="status">We couldn’t load this bottle’s options. <button type="button" className={styles.textButton} onClick={chooser.retry}>Try again</button></div> : null;
     const catalogHref = `/catalog?families=${encodeURIComponent(openFamily)}`;
     const unavailableFinishes = body?.unavailableFinishes?.filter(option => option.color === color && option.fitment === fitment) ?? [];
@@ -339,7 +351,8 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         onUpdate={patch => { update(patch); if (patch.bodyId || patch.color || patch.fitment) setShowCover(false); }} onReset={reset} onFamily={family => { reset(); startTransition(() => router.push(familyHref(family))); }} onAdd={addToCart}
         size={size} neck={neck} application={application} onFilter={(filter, value) => { if (filter === "size") setSize(value); else if (filter === "neck") setNeck(value); else setApplication(value); }}
         pending={pending || awaitingBody} bodyNotice={bodyNotice} adding={adding} hydrated={isCartHydrated} error={error} lastAdded={lastAdded} cartProgress={cartProgress}
-        hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={b => chooserScale(b, bodies)} onBodyIntent={prefetchBottle} />;
+        hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={b => chooserScale(b, bodies)} onBodyIntent={prefetchBottle}
+        setPrice={pieces => current.configuration ? builderOrder(current.configuration, pieces, items) : null} />;
 
     // The step list (24 Nov 2026): one question open at a time, in order. A finished step folds into a line with its
     // answer, a thumbnail and "Change", so the list is also the summary. Choosing an option is the only way forward;
@@ -368,7 +381,11 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         : !color ? `Showing ${(preview?.color ?? "clear").toLowerCase()} glass until you pick one.`
         : !fitment ? "No top yet. Choose how it dispenses or closes."
         : !configuration ? `Choose a ${colorLabel.toLowerCase()} to finish.`
-        : `SKU ${configuration.id}`;
+        : "";
+    // What the cart charges for one set of that many pieces, for the "Set of" menu.
+    const setPrice = (pieces: number) => configuration ? builderOrder(configuration, pieces, items) : null;
+    const topName = fitment ? displayApplicatorName(fitment).toLowerCase() : "";
+    const includes = !fitment ? "" : `${fitment === "Screw Cap" ? "Bottle and screw cap" : /Roller|Reducer/.test(fitment) ? `Bottle, ${topName} and cap` : `Bottle and ${topName}`}${hasIncludedCover ? ", with its overcap" : ""}`;
     const topConfig = (f: string) => current.colored.find(c => c.fitment === f && c.kit) ?? null;
 
     return <div ref={builderRoot} className={styles.builder} data-bottle-builder data-current-step={familyScreen ? "family" : step} data-has-bottle={Boolean(body)} data-family-screen={familyScreen || undefined} aria-busy={pending || adding}>
@@ -404,9 +421,39 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                 : ghost ? <div id={previewId} className={`${styles.previewImage} ${styles.previewGhost}`}><BuilderImage config={clearBodyPreview(ghost)} parts={previewParts(clearBodyPreview(ghost), "body")} stage="body"
                     label={`${ghost.capacityMl} ml ${ghost.family} bottle, shown until you pick a size`} /></div>
                     : <div className={styles.previewEmpty}><ShoppingBag size={32} weight="light" /><p>Your bottle starts here.</p></div>}
-                <div className={styles.previewCaption} aria-live="polite"><span className={styles.eyebrow}>Your bottle</span><h2>{built}</h2><p>{previewNote}</p>
+                <div className={styles.previewCaption} aria-live="polite"><span className={styles.eyebrow}>Your bottle</span><h2>{built}</h2>{previewNote && <p>{previewNote}</p>}
                     {body && preview && !preview.kit && !borrowed && fitment && !configuration && <p>Your selected top is shown in the options. Choose your {colorLabel.toLowerCase()} to see the complete bottle.</p>}</div>
                 {hasIncludedCover && !activeFinishedView && <div className={styles.coverControl}><span>Matching overcap included</span><button type="button" aria-pressed={showCover} onClick={() => setShowCover(value => !value)}>{showCover ? "Hide cap" : "Show cap"}</button></div>}
+                {/* What was built, how many, what it costs, and the button: under the bottle it describes (Jordan, 25 Nov 2026). */}
+                <div className={styles.orderPanel} role="region" aria-label="Your order" data-builder-order={configuration ? "ready" : "waiting"}>
+                    {configuration ? <>
+                    <h2 ref={reviewHeading} tabIndex={-1} className={styles.orderTitle}>Ready to order</h2>
+                    <div className={styles.orderGrid}>
+                        <dl className={styles.orderFacts}>
+                            <div><dt>Product</dt><dd>{configuration.product.itemName}</dd></div>
+                            <div><dt>SKU</dt><dd data-builder-sku>{configuration.id}</dd></div>
+                            <div><dt>Neck</dt><dd>{configuration.neck}</dd></div>
+                            <div><dt>Includes</dt><dd>{includes}</dd></div>
+                            {configuration.caseQuantity && <div><dt>Case</dt><dd>{configuration.caseQuantity.toLocaleString("en-US")} per case</dd></div>}
+                        </dl>
+                        <div className={styles.orderBuy}>
+                            <BuilderSetQuantity id="builder-quantity" quantity={selection.quantity} caseQuantity={configuration.caseQuantity} disabled={adding || !body}
+                                invalid={!order.validQuantity} describedBy="builder-minimum" priceFor={setPrice} onQuantity={quantity => update({ quantity })} />
+                            <div className={styles.orderTotal}><span>{order.unitPrice == null ? "" : `${money(order.unitPrice)} each`}</span><strong>{money(order.total)}</strong></div>
+                            {error && <p className={styles.error} role="alert">{error}</p>}
+                            <div ref={addAnchor} data-builder-add>{addButton}</div>
+                        </div>
+                    </div>
+                    <div id="builder-minimum" className={styles.minimum} aria-live="polite">
+                        {!order.validQuantity ? "Enter a whole-number quantity of at least 1." : minimumNote}
+                        {order.validQuantity && <div className={styles.meter} aria-hidden="true"><i style={{ width: `${minimumPct}%` }} /></div>}
+                    </div>
+                    </> : <div className={styles.orderWaiting} aria-live="polite">
+                        <span>{body ? leftLine : "The price appears here once the bottle is complete."}</span>
+                        <strong>{body ? possibleFrom ?? "Priced when complete" : ""}</strong>
+                        <small>{money(ORDER_MINIMUM)} minimum per cart at checkout.</small>
+                    </div>}
+                </div>
             </section>
             <div className={styles.stepList} data-builder-steps>
                 <div className={styles.stepListHeader}><span className={styles.eyebrow}>Five choices, in order</span><button type="button" className={styles.startOver} onClick={startOver} disabled={adding}>Start over</button></div>
@@ -469,32 +516,13 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                         <div><strong>Included overcap</strong><p>Comes with this {fitment?.includes("Pump") ? "pump" : "sprayer"} and cannot be selected separately.</p></div><CheckCircle size={20} />
                     </div>}
                 </StepRow>
-                <section className={styles.orderPanel} aria-label="Your order" data-builder-order={configuration ? "ready" : "waiting"}>
-                    <h2 ref={reviewHeading} tabIndex={-1}>{configuration ? "Ready to order" : leftLine}</h2>
-                    {configuration ? <>
-                    <p className={styles.orderFits}><ShieldCheck size={18} /><span>Everything fits. {fitmentContents(fitment)}{hasIncludedCover ? " Matching protective overcap included." : ""}</span></p>
-                    <div className={styles.quantityRow}><label htmlFor="builder-quantity">Quantity</label><div className={styles.quantity}>
-                        <button aria-label="Decrease quantity" disabled={adding || !body || selection.quantity <= 1} onClick={() => update({ quantity: Math.max(1, selection.quantity - 1) })}><Minus size={14} /></button>
-                        <input id="builder-quantity" type="number" inputMode="numeric" min="1" max={MAX_QUANTITY} step="1" value={Number.isNaN(selection.quantity) ? "" : selection.quantity}
-                            disabled={adding || !body} aria-invalid={!order.validQuantity} aria-describedby="builder-minimum" onChange={e => update({ quantity: e.target.value === "" ? NaN : Number(e.target.value) })} />
-                        <button aria-label="Increase quantity" disabled={adding || !body || selection.quantity >= MAX_QUANTITY} onClick={() => update({ quantity: Math.min(MAX_QUANTITY, (Number.isFinite(selection.quantity) ? selection.quantity : 0) + 1) })}><Plus size={14} /></button>
-                    </div></div>
-                    {configuration.caseQuantity && <p className={styles.case}>Case pack: {configuration.caseQuantity.toLocaleString("en-US")} units <button disabled={adding} onClick={() => update({ quantity: configuration.caseQuantity! })}>Use case quantity</button></p>}
-                    <div id="builder-minimum" className={styles.minimum} aria-live="polite">
-                        {!order.validQuantity ? "Enter a whole-number quantity of at least 1." : minimumNote}
-                        {order.validQuantity && <div className={styles.meter} aria-hidden="true"><i style={{ width: `${minimumPct}%` }} /></div>}
-                    </div>
-                    <dl className={styles.totals}><div><dt>Unit price</dt><dd>{money(order.unitPrice)}</dd></div><div><dt>Total{order.validQuantity ? ` (${selection.quantity} units)` : ""}</dt><dd>{money(order.total)}</dd></div></dl>
-                    {error && <p className={styles.error} role="alert">{error}</p>}
-                    <div className={styles.orderAction}>{addButton}</div>
-                    </> : body ? <div className={styles.fromPrice} aria-live="polite">
-                        <span className={styles.summaryLabel}>Price</span><strong>{possibleFrom ?? "Priced when complete"}</strong>
-                        <small>{fitment ? "Final price once you choose a color." : color ? "Final price depends on the top and its color." : "Final price depends on the glass, top and color."}</small>
-                        <small>{money(ORDER_MINIMUM)} minimum per cart at checkout.</small>
-                    </div> : <p className={styles.purchaseHint}>The price appears here once the bottle is complete.<small>{money(ORDER_MINIMUM)} minimum per cart at checkout.</small></p>}
-                    <p className={styles.assurance}><ShieldCheck size={20} /><span>Made to work together.<small>Only compatible combinations are shown.</small></span></p>
-                </section>
+                <p className={styles.assurance}><ShieldCheck size={20} /><span>Made to work together.<small>Only compatible combinations are shown.</small></span></p>
             </div>
+            {configuration && addOffScreen && !lastAdded && <div className={styles.addBar} role="region" aria-label="Add this bottle to your cart" data-builder-add-bar>
+                <div className={styles.addBarText}><strong>{built}</strong><span>SKU {configuration.id}{order.validQuantity ? ` · ${selection.quantity.toLocaleString("en-US")} ${selection.quantity === 1 ? "pc" : "pcs"}` : ""}{order.unitPrice == null ? "" : ` · ${money(order.unitPrice)} each`}</span></div>
+                <strong className={styles.addBarTotal}>{money(order.total)}</strong>
+                {addButton}
+            </div>}
         </div>}
         <p className={styles.bottomNote}>Same bottles. More possibilities.</p>
     </div>;
