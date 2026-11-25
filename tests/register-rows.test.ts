@@ -48,11 +48,23 @@ describe("the committed register shapes cleanly for Convex", () => {
         const parts = rows.components.filter(c => c.componentId.startsWith("LIB-"));
         expect(parts.map(p => p.componentId).sort()).toEqual([
             "LIB-13-415-MtlRollon", "LIB-13-415-PlsticRollon", "LIB-14.3mm-Plug", "LIB-17-415-MtlRollon", "LIB-17-415-PlsticRollon", "LIB-18-415-Reducer",
-            "LIB-18-415-ShnBlkCap", "LIB-20-400-MtlRollon", "LIB-20-400-PlsticRollon",
+            "LIB-18-415-ShnBlkCap", "LIB-18-415-WhtPumpClOvrCp", "LIB-20-400-MtlRollon", "LIB-20-400-PlsticRollon",
         ]);
         for (const part of parts) {
             expect(part.sellable).toBe(false);
             expect(part.graceSku).toBeNull();
+        }
+    });
+
+    it("builds every white-pump clear-overcap bottle from the white rectangular pump library part (checklist 6a)", () => {
+        const white = rows.assemblies.filter(a => a.build.parts.some(p => p.componentId === "LIB-18-415-WhtPumpClOvrCp"));
+        expect(white.map(a => a.websiteSku).sort()).toEqual([
+            "LBElg100WhtClOvrCp", "LBElg60WhtClOvrCp", "LBElgFrst100WhtClOvrCp", "LBElgFrst60WhtClOvrCp", "LBEmp100WhtClOvrCp",
+            "LBEmp50WhtClOvrCp", "LBSlk100WhtRectClOverCap", "LBSlk30WhtRectClOverCap", "LBSlk50WhtRectClOverCap",
+        ]);
+        for (const assembly of white) {
+            expect(assembly.build.status).toBe("resolved");
+            expect(assembly.build.parts).toEqual([{ role: "pump", componentId: "LIB-18-415-WhtPumpClOvrCp" }]);
         }
     });
 
