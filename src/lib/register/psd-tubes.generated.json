@@ -1,0 +1,2890 @@
+{
+ "version": "e05d19ee5440c690",
+ "source": "scripts/paperdoll/seated-dip-tubes.py",
+ "tubes": {
+  "bell-10ml-13-415|Clear|spray": {
+   "bodyId": "bell-10ml-13-415",
+   "glass": "Clear",
+   "kind": "spray13",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-bell-10ml-13-415-clear-spray13.5fc9081e6b3b.png",
+    "key": "/images/approved-masters/dip-tube-register-bell-10ml-13-415-clear-spray13.5fc9081e6b3b.png",
+    "sha256": "5fc9081e6b3b006b5b176f817d7644317e52664f4fb31a617e4ee061013a7290",
+    "bytes": 12176,
+    "width": 70,
+    "height": 470
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-bell-10ml-13-415-clear-spray13.5fc9081e6b3b.png",
+    "key": "/images/approved-masters/dip-tube-register-bell-10ml-13-415-clear-spray13.5fc9081e6b3b.png",
+    "sha256": "5fc9081e6b3b006b5b176f817d7644317e52664f4fb31a617e4ee061013a7290",
+    "bytes": 12176,
+    "width": 70,
+    "height": 470
+   },
+   "box": {
+    "height": 420,
+    "width": 62.55,
+    "x": 468.72,
+    "y": 572.49
+   },
+   "floorY": 992.5,
+   "opaque": {
+    "left": 12,
+    "right": 68
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 11.75,
+   "plateKey": "bell-10ml-13-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.5,
+    "seatY": 457
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 358.24,
+    "right": 641.76,
+    "top": 457
+   },
+   "innerFloorY": 1003,
+   "stemExits": [
+    581.6,
+    581.6
+   ]
+  },
+  "circle-100ml-18-415|Clear|bulb": {
+   "bodyId": "circle-100ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-bulb.6bb598cb7fd2.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-bulb.6bb598cb7fd2.png",
+    "sha256": "6bb598cb7fd2476f281b47b593d61c37de2d743fdecf87f25b69e500488fba7c",
+    "bytes": 56859,
+    "width": 124,
+    "height": 1140
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-bulb.6bb598cb7fd2.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-bulb.6bb598cb7fd2.png",
+    "sha256": "6bb598cb7fd2476f281b47b593d61c37de2d743fdecf87f25b69e500488fba7c",
+    "bytes": 56859,
+    "width": 124,
+    "height": 1140
+   },
+   "box": {
+    "height": 587.78,
+    "width": 63.93,
+    "x": 468.03,
+    "y": 382.12
+   },
+   "floorY": 969.97,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-100ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 7.03,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 186.97,
+    "right": 813.03,
+    "top": 261
+   },
+   "innerFloorY": 977,
+   "stemExits": [
+    384.1,
+    387.1
+   ]
+  },
+  "circle-100ml-18-415|Clear|tassel": {
+   "bodyId": "circle-100ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-bulb.6bb598cb7fd2.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-bulb.6bb598cb7fd2.png",
+    "sha256": "6bb598cb7fd2476f281b47b593d61c37de2d743fdecf87f25b69e500488fba7c",
+    "bytes": 56859,
+    "width": 124,
+    "height": 1140
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-bulb.6bb598cb7fd2.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-bulb.6bb598cb7fd2.png",
+    "sha256": "6bb598cb7fd2476f281b47b593d61c37de2d743fdecf87f25b69e500488fba7c",
+    "bytes": 56859,
+    "width": 124,
+    "height": 1140
+   },
+   "box": {
+    "height": 587.78,
+    "width": 63.93,
+    "x": 468.03,
+    "y": 382.12
+   },
+   "floorY": 969.97,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-100ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 7.03,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 186.97,
+    "right": 813.03,
+    "top": 261
+   },
+   "innerFloorY": 977,
+   "stemExits": [
+    384.1,
+    387.1
+   ]
+  },
+  "circle-100ml-18-415|Clear|lotion": {
+   "bodyId": "circle-100ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-lotion.8891a0817461.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-lotion.8891a0817461.png",
+    "sha256": "8891a08174610b1e95620f30b410880cfa0122c465caae2f656f899856445a56",
+    "bytes": 50995,
+    "width": 128,
+    "height": 1140
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-lotion.8891a0817461.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-lotion.8891a0817461.png",
+    "sha256": "8891a08174610b1e95620f30b410880cfa0122c465caae2f656f899856445a56",
+    "bytes": 50995,
+    "width": 128,
+    "height": 1140
+   },
+   "box": {
+    "height": 587.78,
+    "width": 66,
+    "x": 467.26,
+    "y": 382.09
+   },
+   "floorY": 969.97,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-100ml-18-415|Clear",
+   "families": [
+    "lotion"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 7.03,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 186.97,
+    "right": 813.03,
+    "top": 261
+   },
+   "innerFloorY": 977,
+   "stemExits": [
+    384.1,
+    392
+   ]
+  },
+  "circle-100ml-18-415|Clear|spray": {
+   "bodyId": "circle-100ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-spray.1dd13dfd7a62.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-spray.1dd13dfd7a62.png",
+    "sha256": "1dd13dfd7a62f29e44730945a76f48b0827155b27257731a6abcfe5a4f3a6d54",
+    "bytes": 33699,
+    "width": 104,
+    "height": 1133
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-spray.1dd13dfd7a62.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-clear-spray.1dd13dfd7a62.png",
+    "sha256": "1dd13dfd7a62f29e44730945a76f48b0827155b27257731a6abcfe5a4f3a6d54",
+    "bytes": 33699,
+    "width": 104,
+    "height": 1133
+   },
+   "box": {
+    "height": 584.17,
+    "width": 53.62,
+    "x": 473.19,
+    "y": 385.84
+   },
+   "floorY": 969.97,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-100ml-18-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 7.03,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 186.97,
+    "right": 813.03,
+    "top": 261
+   },
+   "innerFloorY": 977,
+   "stemExits": [
+    387.8,
+    391.4
+   ]
+  },
+  "circle-100ml-18-415|Frosted|bulb": {
+   "bodyId": "circle-100ml-18-415",
+   "glass": "Frosted",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-bulb.a075d49dccf5.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-bulb.a075d49dccf5.png",
+    "sha256": "a075d49dccf5a59739544ffe5c6f3d17d2bbc67e14a85e6b37ed1bc06b3d45dc",
+    "bytes": 56949,
+    "width": 124,
+    "height": 1142
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-bulb.a075d49dccf5.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-bulb.a075d49dccf5.png",
+    "sha256": "a075d49dccf5a59739544ffe5c6f3d17d2bbc67e14a85e6b37ed1bc06b3d45dc",
+    "bytes": 56949,
+    "width": 124,
+    "height": 1142
+   },
+   "box": {
+    "height": 588.81,
+    "width": 63.93,
+    "x": 468.03,
+    "y": 380.98
+   },
+   "floorY": 969.97,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-100ml-18-415|Frosted",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 7.03,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 186.97,
+    "right": 813.03,
+    "top": 261
+   },
+   "innerFloorY": 977,
+   "stemExits": [
+    383,
+    386.1
+   ]
+  },
+  "circle-100ml-18-415|Frosted|tassel": {
+   "bodyId": "circle-100ml-18-415",
+   "glass": "Frosted",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-bulb.a075d49dccf5.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-bulb.a075d49dccf5.png",
+    "sha256": "a075d49dccf5a59739544ffe5c6f3d17d2bbc67e14a85e6b37ed1bc06b3d45dc",
+    "bytes": 56949,
+    "width": 124,
+    "height": 1142
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-bulb.a075d49dccf5.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-bulb.a075d49dccf5.png",
+    "sha256": "a075d49dccf5a59739544ffe5c6f3d17d2bbc67e14a85e6b37ed1bc06b3d45dc",
+    "bytes": 56949,
+    "width": 124,
+    "height": 1142
+   },
+   "box": {
+    "height": 588.81,
+    "width": 63.93,
+    "x": 468.03,
+    "y": 380.98
+   },
+   "floorY": 969.97,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-100ml-18-415|Frosted",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 7.03,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 186.97,
+    "right": 813.03,
+    "top": 261
+   },
+   "innerFloorY": 977,
+   "stemExits": [
+    383,
+    386.1
+   ]
+  },
+  "circle-100ml-18-415|Frosted|lotion": {
+   "bodyId": "circle-100ml-18-415",
+   "glass": "Frosted",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-lotion.ef247f0c93a8.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-lotion.ef247f0c93a8.png",
+    "sha256": "ef247f0c93a8e853b177d995c9dcaa09309330b5afc637d7c8f84a7f140b7ac0",
+    "bytes": 51122,
+    "width": 128,
+    "height": 1144
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-lotion.ef247f0c93a8.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-lotion.ef247f0c93a8.png",
+    "sha256": "ef247f0c93a8e853b177d995c9dcaa09309330b5afc637d7c8f84a7f140b7ac0",
+    "bytes": 51122,
+    "width": 128,
+    "height": 1144
+   },
+   "box": {
+    "height": 589.85,
+    "width": 66,
+    "x": 467.26,
+    "y": 380.12
+   },
+   "floorY": 969.97,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-100ml-18-415|Frosted",
+   "families": [
+    "lotion"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 7.03,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 186.97,
+    "right": 813.03,
+    "top": 261
+   },
+   "innerFloorY": 977,
+   "stemExits": [
+    382.1,
+    389.9
+   ]
+  },
+  "circle-100ml-18-415|Frosted|spray": {
+   "bodyId": "circle-100ml-18-415",
+   "glass": "Frosted",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-spray.de1f5b42f1f0.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-spray.de1f5b42f1f0.png",
+    "sha256": "de1f5b42f1f01b53a81903075cb99b10a9c7076d3e2883446c71eb019ee6a027",
+    "bytes": 33787,
+    "width": 104,
+    "height": 1137
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-spray.de1f5b42f1f0.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-100ml-18-415-frosted-spray.de1f5b42f1f0.png",
+    "sha256": "de1f5b42f1f01b53a81903075cb99b10a9c7076d3e2883446c71eb019ee6a027",
+    "bytes": 33787,
+    "width": 104,
+    "height": 1137
+   },
+   "box": {
+    "height": 586.24,
+    "width": 53.62,
+    "x": 473.19,
+    "y": 383.87
+   },
+   "floorY": 969.97,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-100ml-18-415|Frosted",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 7.03,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 186.97,
+    "right": 813.03,
+    "top": 261
+   },
+   "innerFloorY": 977,
+   "stemExits": [
+    385.9,
+    389.4
+   ]
+  },
+  "circle-15ml-13-415|Clear|spray": {
+   "bodyId": "circle-15ml-13-415",
+   "glass": "Clear",
+   "kind": "spray13",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-15ml-13-415-clear-spray13.c84dffc96898.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-15ml-13-415-clear-spray13.c84dffc96898.png",
+    "sha256": "c84dffc96898a4deb642c68104c4c728bf6ef2a29a8ce07f220f12f41cafef5f",
+    "bytes": 13253,
+    "width": 70,
+    "height": 514
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-15ml-13-415-clear-spray13.c84dffc96898.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-15ml-13-415-clear-spray13.c84dffc96898.png",
+    "sha256": "c84dffc96898a4deb642c68104c4c728bf6ef2a29a8ce07f220f12f41cafef5f",
+    "bytes": 13253,
+    "width": 70,
+    "height": 514
+   },
+   "box": {
+    "height": 458.88,
+    "width": 62.49,
+    "x": 468.75,
+    "y": 492.4
+   },
+   "floorY": 951.51,
+   "opaque": {
+    "left": 12,
+    "right": 68
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 11.75,
+   "plateKey": "circle-15ml-13-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.49,
+    "seatY": 380
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 237.66,
+    "right": 762.34,
+    "top": 380
+   },
+   "innerFloorY": 962,
+   "stemExits": [
+    501.5,
+    509.4
+   ]
+  },
+  "circle-50ml-18-415|Clear|bulb": {
+   "bodyId": "circle-50ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-bulb.cb6bed5d099b.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-bulb.cb6bed5d099b.png",
+    "sha256": "cb6bed5d099be1bfb4a89ae030967641a2b62dc85cfce86986292c914a1770df",
+    "bytes": 44385,
+    "width": 122,
+    "height": 907
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-bulb.cb6bed5d099b.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-bulb.cb6bed5d099b.png",
+    "sha256": "cb6bed5d099be1bfb4a89ae030967641a2b62dc85cfce86986292c914a1770df",
+    "bytes": 44385,
+    "width": 122,
+    "height": 907
+   },
+   "box": {
+    "height": 566.1,
+    "width": 76.15,
+    "x": 461.93,
+    "y": 418.18
+   },
+   "floorY": 984.49,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-50ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.51,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 193.78,
+    "right": 806.22,
+    "top": 261
+   },
+   "innerFloorY": 993,
+   "stemExits": [
+    420.2,
+    423.5
+   ]
+  },
+  "circle-50ml-18-415|Clear|tassel": {
+   "bodyId": "circle-50ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-bulb.cb6bed5d099b.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-bulb.cb6bed5d099b.png",
+    "sha256": "cb6bed5d099be1bfb4a89ae030967641a2b62dc85cfce86986292c914a1770df",
+    "bytes": 44385,
+    "width": 122,
+    "height": 907
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-bulb.cb6bed5d099b.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-bulb.cb6bed5d099b.png",
+    "sha256": "cb6bed5d099be1bfb4a89ae030967641a2b62dc85cfce86986292c914a1770df",
+    "bytes": 44385,
+    "width": 122,
+    "height": 907
+   },
+   "box": {
+    "height": 566.1,
+    "width": 76.15,
+    "x": 461.93,
+    "y": 418.18
+   },
+   "floorY": 984.49,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-50ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.51,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 193.78,
+    "right": 806.22,
+    "top": 261
+   },
+   "innerFloorY": 993,
+   "stemExits": [
+    420.2,
+    423.5
+   ]
+  },
+  "circle-50ml-18-415|Clear|lotion": {
+   "bodyId": "circle-50ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-lotion.338da578829c.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-lotion.338da578829c.png",
+    "sha256": "338da578829ca166b1952eb838cfb76f18b94a0f9b18ab87d5be45ab9e7750ff",
+    "bytes": 42729,
+    "width": 130,
+    "height": 910
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-lotion.338da578829c.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-lotion.338da578829c.png",
+    "sha256": "338da578829ca166b1952eb838cfb76f18b94a0f9b18ab87d5be45ab9e7750ff",
+    "bytes": 42729,
+    "width": 130,
+    "height": 910
+   },
+   "box": {
+    "height": 567.97,
+    "width": 81.14,
+    "x": 459.74,
+    "y": 416.43
+   },
+   "floorY": 984.49,
+   "opaque": {
+    "left": 5,
+    "right": 127
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-50ml-18-415|Clear",
+   "families": [
+    "lotion"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.51,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 193.78,
+    "right": 806.22,
+    "top": 261
+   },
+   "innerFloorY": 993,
+   "stemExits": [
+    418.4,
+    426.9
+   ]
+  },
+  "circle-50ml-18-415|Clear|spray": {
+   "bodyId": "circle-50ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-spray.b1c64f318dba.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-spray.b1c64f318dba.png",
+    "sha256": "b1c64f318dbaab2b7752c42e8d2364ca6b7249c2a0fffe5def229ef77a5d3e22",
+    "bytes": 26008,
+    "width": 104,
+    "height": 903
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-spray.b1c64f318dba.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-clear-spray.b1c64f318dba.png",
+    "sha256": "b1c64f318dbaab2b7752c42e8d2364ca6b7249c2a0fffe5def229ef77a5d3e22",
+    "bytes": 26008,
+    "width": 104,
+    "height": 903
+   },
+   "box": {
+    "height": 563.6,
+    "width": 64.91,
+    "x": 467.54,
+    "y": 420.97
+   },
+   "floorY": 984.49,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-50ml-18-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.51,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 193.78,
+    "right": 806.22,
+    "top": 261
+   },
+   "innerFloorY": 993,
+   "stemExits": [
+    423,
+    426.3
+   ]
+  },
+  "circle-50ml-18-415|Frosted|bulb": {
+   "bodyId": "circle-50ml-18-415",
+   "glass": "Frosted",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-bulb.4632be20b025.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-bulb.4632be20b025.png",
+    "sha256": "4632be20b025ecdc658f066eb57eae333ded8eeaef2311cf8ca8088cfff7a257",
+    "bytes": 44802,
+    "width": 122,
+    "height": 916
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-bulb.4632be20b025.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-bulb.4632be20b025.png",
+    "sha256": "4632be20b025ecdc658f066eb57eae333ded8eeaef2311cf8ca8088cfff7a257",
+    "bytes": 44802,
+    "width": 122,
+    "height": 916
+   },
+   "box": {
+    "height": 571.72,
+    "width": 76.15,
+    "x": 461.93,
+    "y": 412.53
+   },
+   "floorY": 984.49,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-50ml-18-415|Frosted",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.51,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 193.78,
+    "right": 806.22,
+    "top": 261
+   },
+   "innerFloorY": 993,
+   "stemExits": [
+    414.5,
+    418.5
+   ]
+  },
+  "circle-50ml-18-415|Frosted|tassel": {
+   "bodyId": "circle-50ml-18-415",
+   "glass": "Frosted",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-bulb.4632be20b025.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-bulb.4632be20b025.png",
+    "sha256": "4632be20b025ecdc658f066eb57eae333ded8eeaef2311cf8ca8088cfff7a257",
+    "bytes": 44802,
+    "width": 122,
+    "height": 916
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-bulb.4632be20b025.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-bulb.4632be20b025.png",
+    "sha256": "4632be20b025ecdc658f066eb57eae333ded8eeaef2311cf8ca8088cfff7a257",
+    "bytes": 44802,
+    "width": 122,
+    "height": 916
+   },
+   "box": {
+    "height": 571.72,
+    "width": 76.15,
+    "x": 461.93,
+    "y": 412.53
+   },
+   "floorY": 984.49,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-50ml-18-415|Frosted",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.51,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 193.78,
+    "right": 806.22,
+    "top": 261
+   },
+   "innerFloorY": 993,
+   "stemExits": [
+    414.5,
+    418.5
+   ]
+  },
+  "circle-50ml-18-415|Frosted|lotion": {
+   "bodyId": "circle-50ml-18-415",
+   "glass": "Frosted",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-lotion.8b5b221bb6e5.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-lotion.8b5b221bb6e5.png",
+    "sha256": "8b5b221bb6e5036bf6067efb4e170cc8be452be70fa19bcfb5ef1aa5f7b67ead",
+    "bytes": 43085,
+    "width": 128,
+    "height": 917
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-lotion.8b5b221bb6e5.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-lotion.8b5b221bb6e5.png",
+    "sha256": "8b5b221bb6e5036bf6067efb4e170cc8be452be70fa19bcfb5ef1aa5f7b67ead",
+    "bytes": 43085,
+    "width": 128,
+    "height": 917
+   },
+   "box": {
+    "height": 572.34,
+    "width": 79.89,
+    "x": 460.37,
+    "y": 412.43
+   },
+   "floorY": 984.49,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-50ml-18-415|Frosted",
+   "families": [
+    "lotion"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.51,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 193.78,
+    "right": 806.22,
+    "top": 261
+   },
+   "innerFloorY": 993,
+   "stemExits": [
+    414.4,
+    422.9
+   ]
+  },
+  "circle-50ml-18-415|Frosted|spray": {
+   "bodyId": "circle-50ml-18-415",
+   "glass": "Frosted",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-spray.186e64245325.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-spray.186e64245325.png",
+    "sha256": "186e642453250508affef5fd0ff0e152cb82c286a678323f3dbad3a7ee0251c5",
+    "bytes": 26192,
+    "width": 104,
+    "height": 909
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-spray.186e64245325.png",
+    "key": "/images/approved-masters/dip-tube-register-circle-50ml-18-415-frosted-spray.186e64245325.png",
+    "sha256": "186e642453250508affef5fd0ff0e152cb82c286a678323f3dbad3a7ee0251c5",
+    "bytes": 26192,
+    "width": 104,
+    "height": 909
+   },
+   "box": {
+    "height": 567.35,
+    "width": 64.91,
+    "x": 467.54,
+    "y": 416.97
+   },
+   "floorY": 984.49,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "circle-50ml-18-415|Frosted",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.51,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 193.78,
+    "right": 806.22,
+    "top": 261
+   },
+   "innerFloorY": 993,
+   "stemExits": [
+    419,
+    422.3
+   ]
+  },
+  "elegant-15ml-13-415|Clear|spray": {
+   "bodyId": "elegant-15ml-13-415",
+   "glass": "Clear",
+   "kind": "spray13",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-elegant-15ml-13-415-clear-spray13.b72bc06b67f7.png",
+    "key": "/images/approved-masters/dip-tube-register-elegant-15ml-13-415-clear-spray13.b72bc06b67f7.png",
+    "sha256": "b72bc06b67f742c0589f28f5314d7733378621ed05520cb56fb687b1a9096718",
+    "bytes": 14380,
+    "width": 70,
+    "height": 569
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-elegant-15ml-13-415-clear-spray13.b72bc06b67f7.png",
+    "key": "/images/approved-masters/dip-tube-register-elegant-15ml-13-415-clear-spray13.b72bc06b67f7.png",
+    "sha256": "b72bc06b67f742c0589f28f5314d7733378621ed05520cb56fb687b1a9096718",
+    "bytes": 14380,
+    "width": 70,
+    "height": 569
+   },
+   "box": {
+    "height": 508.95,
+    "width": 62.61,
+    "x": 468.69,
+    "y": 498.3
+   },
+   "floorY": 1007.49,
+   "opaque": {
+    "left": 12,
+    "right": 68
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 11.75,
+   "plateKey": "elegant-15ml-13-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.51,
+    "seatY": 384
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 310.86,
+    "right": 689.14,
+    "top": 384
+   },
+   "innerFloorY": 1018,
+   "stemExits": [
+    507.5,
+    517.2
+   ]
+  },
+  "elegant-15ml-13-415|Frosted|spray": {
+   "bodyId": "elegant-15ml-13-415",
+   "glass": "Frosted",
+   "kind": "spray13",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-elegant-15ml-13-415-frosted-spray13.cad34380dba0.png",
+    "key": "/images/approved-masters/dip-tube-register-elegant-15ml-13-415-frosted-spray13.cad34380dba0.png",
+    "sha256": "cad34380dba0b18a1a2f8c7ce596a3f353e3cfa7aa4f4f450aabe41766e04dbc",
+    "bytes": 14404,
+    "width": 70,
+    "height": 571
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-elegant-15ml-13-415-frosted-spray13.cad34380dba0.png",
+    "key": "/images/approved-masters/dip-tube-register-elegant-15ml-13-415-frosted-spray13.cad34380dba0.png",
+    "sha256": "cad34380dba0b18a1a2f8c7ce596a3f353e3cfa7aa4f4f450aabe41766e04dbc",
+    "bytes": 14404,
+    "width": 70,
+    "height": 571
+   },
+   "box": {
+    "height": 510.74,
+    "width": 62.61,
+    "x": 468.69,
+    "y": 496.91
+   },
+   "floorY": 1007.49,
+   "opaque": {
+    "left": 12,
+    "right": 68
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 11.75,
+   "plateKey": "elegant-15ml-13-415|Frosted",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.51,
+    "seatY": 384
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 310.86,
+    "right": 689.14,
+    "top": 384
+   },
+   "innerFloorY": 1018,
+   "stemExits": [
+    506.1,
+    516.8
+   ]
+  },
+  "flair-15ml-13-415|Clear|spray": {
+   "bodyId": "flair-15ml-13-415",
+   "glass": "Clear",
+   "kind": "spray13",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-flair-15ml-13-415-clear-spray13.d9fd5e4ff23c.png",
+    "key": "/images/approved-masters/dip-tube-register-flair-15ml-13-415-clear-spray13.d9fd5e4ff23c.png",
+    "sha256": "d9fd5e4ff23cc9234c794aa1e8c8b083c12e09c97dcb7a6e9e050cd1e83584a6",
+    "bytes": 13078,
+    "width": 70,
+    "height": 507
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-flair-15ml-13-415-clear-spray13.d9fd5e4ff23c.png",
+    "key": "/images/approved-masters/dip-tube-register-flair-15ml-13-415-clear-spray13.d9fd5e4ff23c.png",
+    "sha256": "d9fd5e4ff23cc9234c794aa1e8c8b083c12e09c97dcb7a6e9e050cd1e83584a6",
+    "bytes": 13078,
+    "width": 70,
+    "height": 507
+   },
+   "box": {
+    "height": 453.06,
+    "width": 62.55,
+    "x": 468.72,
+    "y": 543.51
+   },
+   "floorY": 996.5,
+   "opaque": {
+    "left": 12,
+    "right": 68
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 11.75,
+   "plateKey": "flair-15ml-13-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.5,
+    "seatY": 431
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 284.67,
+    "right": 715.33,
+    "top": 431
+   },
+   "innerFloorY": 1007,
+   "stemExits": [
+    552.7,
+    560.5
+   ]
+  },
+  "footed-rectangle-10ml-13-415|Clear|spray": {
+   "bodyId": "footed-rectangle-10ml-13-415",
+   "glass": "Clear",
+   "kind": "spray13",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-footed-rectangle-10ml-13-415-clear-spray13.8838d9af8837.png",
+    "key": "/images/approved-masters/dip-tube-register-footed-rectangle-10ml-13-415-clear-spray13.8838d9af8837.png",
+    "sha256": "8838d9af883748c534df65b7d4eb34023c11a5433d7457782b09549137886284",
+    "bytes": 11174,
+    "width": 70,
+    "height": 430
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-footed-rectangle-10ml-13-415-clear-spray13.8838d9af8837.png",
+    "key": "/images/approved-masters/dip-tube-register-footed-rectangle-10ml-13-415-clear-spray13.8838d9af8837.png",
+    "sha256": "8838d9af883748c534df65b7d4eb34023c11a5433d7457782b09549137886284",
+    "bytes": 11174,
+    "width": 70,
+    "height": 430
+   },
+   "box": {
+    "height": 384.26,
+    "width": 62.55,
+    "x": 468.72,
+    "y": 619.48
+   },
+   "floorY": 1003.5,
+   "opaque": {
+    "left": 12,
+    "right": 68
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 11.75,
+   "plateKey": "footed-rectangle-10ml-13-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.5,
+    "seatY": 507
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 347.74,
+    "right": 652.26,
+    "top": 507
+   },
+   "innerFloorY": 1014,
+   "stemExits": [
+    628.6,
+    636.5
+   ]
+  },
+  "round-128ml-18-415|Clear|bulb": {
+   "bodyId": "round-128ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-bulb.c1b18055a119.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-bulb.c1b18055a119.png",
+    "sha256": "c1b18055a1192b0f4cbb2453c73ab1f254653284d93197a0e15e720602dec329",
+    "bytes": 42402,
+    "width": 122,
+    "height": 871
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-bulb.c1b18055a119.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-bulb.c1b18055a119.png",
+    "sha256": "c1b18055a1192b0f4cbb2453c73ab1f254653284d93197a0e15e720602dec329",
+    "bytes": 42402,
+    "width": 122,
+    "height": 871
+   },
+   "box": {
+    "height": 569.18,
+    "width": 79.73,
+    "x": 460.14,
+    "y": 418.99
+   },
+   "floorY": 988.09,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-128ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.91,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 192.51,
+    "right": 807.49,
+    "top": 261
+   },
+   "innerFloorY": 997,
+   "stemExits": [
+    421,
+    424
+   ]
+  },
+  "round-128ml-18-415|Clear|tassel": {
+   "bodyId": "round-128ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-bulb.c1b18055a119.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-bulb.c1b18055a119.png",
+    "sha256": "c1b18055a1192b0f4cbb2453c73ab1f254653284d93197a0e15e720602dec329",
+    "bytes": 42402,
+    "width": 122,
+    "height": 871
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-bulb.c1b18055a119.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-bulb.c1b18055a119.png",
+    "sha256": "c1b18055a1192b0f4cbb2453c73ab1f254653284d93197a0e15e720602dec329",
+    "bytes": 42402,
+    "width": 122,
+    "height": 871
+   },
+   "box": {
+    "height": 569.18,
+    "width": 79.73,
+    "x": 460.14,
+    "y": 418.99
+   },
+   "floorY": 988.09,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-128ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.91,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 192.51,
+    "right": 807.49,
+    "top": 261
+   },
+   "innerFloorY": 997,
+   "stemExits": [
+    421,
+    424
+   ]
+  },
+  "round-128ml-18-415|Clear|lotion": {
+   "bodyId": "round-128ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-lotion.3bab05d6e443.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-lotion.3bab05d6e443.png",
+    "sha256": "3bab05d6e443bcce9043a4e3fb95d8053a177c678c9a4f8108c0e6f555b76c2a",
+    "bytes": 41370,
+    "width": 136,
+    "height": 873
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-lotion.3bab05d6e443.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-lotion.3bab05d6e443.png",
+    "sha256": "3bab05d6e443bcce9043a4e3fb95d8053a177c678c9a4f8108c0e6f555b76c2a",
+    "bytes": 41370,
+    "width": 136,
+    "height": 873
+   },
+   "box": {
+    "height": 570.49,
+    "width": 88.87,
+    "x": 455.89,
+    "y": 417.45
+   },
+   "floorY": 988.09,
+   "opaque": {
+    "left": 8,
+    "right": 133
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-128ml-18-415|Clear",
+   "families": [
+    "lotion"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.91,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 192.51,
+    "right": 807.49,
+    "top": 261
+   },
+   "innerFloorY": 997,
+   "stemExits": [
+    419.4,
+    429
+   ]
+  },
+  "round-128ml-18-415|Clear|spray": {
+   "bodyId": "round-128ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-spray.6e6b67773408.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-spray.6e6b67773408.png",
+    "sha256": "6e6b67773408c105b6486161b4c1f72b1ab356f818e82f1b6b8bbc17fc275d1f",
+    "bytes": 24907,
+    "width": 104,
+    "height": 866
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-spray.6e6b67773408.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-clear-spray.6e6b67773408.png",
+    "sha256": "6e6b67773408c105b6486161b4c1f72b1ab356f818e82f1b6b8bbc17fc275d1f",
+    "bytes": 24907,
+    "width": 104,
+    "height": 866
+   },
+   "box": {
+    "height": 565.92,
+    "width": 67.96,
+    "x": 466.02,
+    "y": 422.21
+   },
+   "floorY": 988.09,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-128ml-18-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.91,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 192.51,
+    "right": 807.49,
+    "top": 261
+   },
+   "innerFloorY": 997,
+   "stemExits": [
+    424.2,
+    428.7
+   ]
+  },
+  "round-128ml-18-415|Frosted|bulb": {
+   "bodyId": "round-128ml-18-415",
+   "glass": "Frosted",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-bulb.5665a28996c5.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-bulb.5665a28996c5.png",
+    "sha256": "5665a28996c5a19a90d3835ea79a7cc9c6af6e1700b1bef9eea2420802ab3184",
+    "bytes": 42325,
+    "width": 122,
+    "height": 867
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-bulb.5665a28996c5.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-bulb.5665a28996c5.png",
+    "sha256": "5665a28996c5a19a90d3835ea79a7cc9c6af6e1700b1bef9eea2420802ab3184",
+    "bytes": 42325,
+    "width": 122,
+    "height": 867
+   },
+   "box": {
+    "height": 566.57,
+    "width": 79.73,
+    "x": 460.14,
+    "y": 421.69
+   },
+   "floorY": 988.09,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-128ml-18-415|Frosted",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.91,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 192.51,
+    "right": 807.49,
+    "top": 261
+   },
+   "innerFloorY": 997,
+   "stemExits": [
+    423.7,
+    428
+   ]
+  },
+  "round-128ml-18-415|Frosted|tassel": {
+   "bodyId": "round-128ml-18-415",
+   "glass": "Frosted",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-bulb.5665a28996c5.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-bulb.5665a28996c5.png",
+    "sha256": "5665a28996c5a19a90d3835ea79a7cc9c6af6e1700b1bef9eea2420802ab3184",
+    "bytes": 42325,
+    "width": 122,
+    "height": 867
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-bulb.5665a28996c5.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-bulb.5665a28996c5.png",
+    "sha256": "5665a28996c5a19a90d3835ea79a7cc9c6af6e1700b1bef9eea2420802ab3184",
+    "bytes": 42325,
+    "width": 122,
+    "height": 867
+   },
+   "box": {
+    "height": 566.57,
+    "width": 79.73,
+    "x": 460.14,
+    "y": 421.69
+   },
+   "floorY": 988.09,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-128ml-18-415|Frosted",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.91,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 192.51,
+    "right": 807.49,
+    "top": 261
+   },
+   "innerFloorY": 997,
+   "stemExits": [
+    423.7,
+    428
+   ]
+  },
+  "round-128ml-18-415|Frosted|lotion": {
+   "bodyId": "round-128ml-18-415",
+   "glass": "Frosted",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-lotion.589b80e93389.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-lotion.589b80e93389.png",
+    "sha256": "589b80e933895fd537e8129a3e70506314a9a2d5671809a020b723bf1caaee1f",
+    "bytes": 40895,
+    "width": 136,
+    "height": 869
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-lotion.589b80e93389.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-lotion.589b80e93389.png",
+    "sha256": "589b80e933895fd537e8129a3e70506314a9a2d5671809a020b723bf1caaee1f",
+    "bytes": 40895,
+    "width": 136,
+    "height": 869
+   },
+   "box": {
+    "height": 567.88,
+    "width": 88.87,
+    "x": 455.89,
+    "y": 420.48
+   },
+   "floorY": 988.09,
+   "opaque": {
+    "left": 8,
+    "right": 133
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-128ml-18-415|Frosted",
+   "families": [
+    "lotion"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.91,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 192.51,
+    "right": 807.49,
+    "top": 261
+   },
+   "innerFloorY": 997,
+   "stemExits": [
+    422.5,
+    431.4
+   ]
+  },
+  "round-128ml-18-415|Frosted|spray": {
+   "bodyId": "round-128ml-18-415",
+   "glass": "Frosted",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-spray.128f404bdf6e.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-spray.128f404bdf6e.png",
+    "sha256": "128f404bdf6e67a3e262fc03a9481a939db96a88f7d7037d305bb8459cc93d2c",
+    "bytes": 24708,
+    "width": 104,
+    "height": 861
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-spray.128f404bdf6e.png",
+    "key": "/images/approved-masters/dip-tube-register-round-128ml-18-415-frosted-spray.128f404bdf6e.png",
+    "sha256": "128f404bdf6e67a3e262fc03a9481a939db96a88f7d7037d305bb8459cc93d2c",
+    "bytes": 24708,
+    "width": 104,
+    "height": 861
+   },
+   "box": {
+    "height": 562.65,
+    "width": 67.96,
+    "x": 466.02,
+    "y": 425.24
+   },
+   "floorY": 988.09,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-128ml-18-415|Frosted",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.91,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 192.51,
+    "right": 807.49,
+    "top": 261
+   },
+   "innerFloorY": 997,
+   "stemExits": [
+    427.2,
+    430.7
+   ]
+  },
+  "round-78ml-18-415|Clear|bulb": {
+   "bodyId": "round-78ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-bulb.1c4c81799b50.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-bulb.1c4c81799b50.png",
+    "sha256": "1c4c81799b50797c14c8d96114e0b8c34c9fa3a68074380765e036e6094918f9",
+    "bytes": 36691,
+    "width": 122,
+    "height": 759
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-bulb.1c4c81799b50.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-bulb.1c4c81799b50.png",
+    "sha256": "1c4c81799b50797c14c8d96114e0b8c34c9fa3a68074380765e036e6094918f9",
+    "bytes": 36691,
+    "width": 122,
+    "height": 759
+   },
+   "box": {
+    "height": 565.58,
+    "width": 90.91,
+    "x": 454.55,
+    "y": 429.56
+   },
+   "floorY": 994.84,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-78ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.16,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 200.38,
+    "right": 799.62,
+    "top": 261
+   },
+   "innerFloorY": 1005,
+   "stemExits": [
+    431.6,
+    441.1
+   ]
+  },
+  "round-78ml-18-415|Clear|tassel": {
+   "bodyId": "round-78ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-bulb.1c4c81799b50.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-bulb.1c4c81799b50.png",
+    "sha256": "1c4c81799b50797c14c8d96114e0b8c34c9fa3a68074380765e036e6094918f9",
+    "bytes": 36691,
+    "width": 122,
+    "height": 759
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-bulb.1c4c81799b50.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-bulb.1c4c81799b50.png",
+    "sha256": "1c4c81799b50797c14c8d96114e0b8c34c9fa3a68074380765e036e6094918f9",
+    "bytes": 36691,
+    "width": 122,
+    "height": 759
+   },
+   "box": {
+    "height": 565.58,
+    "width": 90.91,
+    "x": 454.55,
+    "y": 429.56
+   },
+   "floorY": 994.84,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-78ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.16,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 200.38,
+    "right": 799.62,
+    "top": 261
+   },
+   "innerFloorY": 1005,
+   "stemExits": [
+    431.6,
+    441.1
+   ]
+  },
+  "round-78ml-18-415|Clear|lotion": {
+   "bodyId": "round-78ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-lotion.d805de1786a0.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-lotion.d805de1786a0.png",
+    "sha256": "d805de1786a0baeebe43a00e4815678486a7a491a3ff576a3f2aaccb022cf840",
+    "bytes": 35328,
+    "width": 128,
+    "height": 753
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-lotion.d805de1786a0.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-lotion.d805de1786a0.png",
+    "sha256": "d805de1786a0baeebe43a00e4815678486a7a491a3ff576a3f2aaccb022cf840",
+    "bytes": 35328,
+    "width": 128,
+    "height": 753
+   },
+   "box": {
+    "height": 561.11,
+    "width": 95.38,
+    "x": 452.68,
+    "y": 433.87
+   },
+   "floorY": 994.84,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-78ml-18-415|Clear",
+   "families": [
+    "lotion"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.16,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 200.38,
+    "right": 799.62,
+    "top": 261
+   },
+   "innerFloorY": 1005,
+   "stemExits": [
+    435.9,
+    444.7
+   ]
+  },
+  "round-78ml-18-415|Clear|spray": {
+   "bodyId": "round-78ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-spray.e90ad6f75268.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-spray.e90ad6f75268.png",
+    "sha256": "e90ad6f75268f61f03094ebf2ce296f88d76bf1907cece78d53e4a392c749292",
+    "bytes": 21798,
+    "width": 104,
+    "height": 749
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-spray.e90ad6f75268.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-clear-spray.e90ad6f75268.png",
+    "sha256": "e90ad6f75268f61f03094ebf2ce296f88d76bf1907cece78d53e4a392c749292",
+    "bytes": 21798,
+    "width": 104,
+    "height": 749
+   },
+   "box": {
+    "height": 558.13,
+    "width": 77.5,
+    "x": 461.25,
+    "y": 436.71
+   },
+   "floorY": 994.84,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-78ml-18-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.16,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 200.38,
+    "right": 799.62,
+    "top": 261
+   },
+   "innerFloorY": 1005,
+   "stemExits": [
+    438.7,
+    446.4
+   ]
+  },
+  "round-78ml-18-415|Frosted|bulb": {
+   "bodyId": "round-78ml-18-415",
+   "glass": "Frosted",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-bulb.1c4c81799b50.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-bulb.1c4c81799b50.png",
+    "sha256": "1c4c81799b50797c14c8d96114e0b8c34c9fa3a68074380765e036e6094918f9",
+    "bytes": 36691,
+    "width": 122,
+    "height": 759
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-bulb.1c4c81799b50.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-bulb.1c4c81799b50.png",
+    "sha256": "1c4c81799b50797c14c8d96114e0b8c34c9fa3a68074380765e036e6094918f9",
+    "bytes": 36691,
+    "width": 122,
+    "height": 759
+   },
+   "box": {
+    "height": 565.58,
+    "width": 90.91,
+    "x": 454.55,
+    "y": 429.56
+   },
+   "floorY": 994.84,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-78ml-18-415|Frosted",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.16,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 200.38,
+    "right": 799.62,
+    "top": 261
+   },
+   "innerFloorY": 1005,
+   "stemExits": [
+    431.6,
+    441.1
+   ]
+  },
+  "round-78ml-18-415|Frosted|tassel": {
+   "bodyId": "round-78ml-18-415",
+   "glass": "Frosted",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-bulb.1c4c81799b50.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-bulb.1c4c81799b50.png",
+    "sha256": "1c4c81799b50797c14c8d96114e0b8c34c9fa3a68074380765e036e6094918f9",
+    "bytes": 36691,
+    "width": 122,
+    "height": 759
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-bulb.1c4c81799b50.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-bulb.1c4c81799b50.png",
+    "sha256": "1c4c81799b50797c14c8d96114e0b8c34c9fa3a68074380765e036e6094918f9",
+    "bytes": 36691,
+    "width": 122,
+    "height": 759
+   },
+   "box": {
+    "height": 565.58,
+    "width": 90.91,
+    "x": 454.55,
+    "y": 429.56
+   },
+   "floorY": 994.84,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-78ml-18-415|Frosted",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.16,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 200.38,
+    "right": 799.62,
+    "top": 261
+   },
+   "innerFloorY": 1005,
+   "stemExits": [
+    431.6,
+    441.1
+   ]
+  },
+  "round-78ml-18-415|Frosted|lotion": {
+   "bodyId": "round-78ml-18-415",
+   "glass": "Frosted",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-lotion.d805de1786a0.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-lotion.d805de1786a0.png",
+    "sha256": "d805de1786a0baeebe43a00e4815678486a7a491a3ff576a3f2aaccb022cf840",
+    "bytes": 35328,
+    "width": 128,
+    "height": 753
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-lotion.d805de1786a0.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-lotion.d805de1786a0.png",
+    "sha256": "d805de1786a0baeebe43a00e4815678486a7a491a3ff576a3f2aaccb022cf840",
+    "bytes": 35328,
+    "width": 128,
+    "height": 753
+   },
+   "box": {
+    "height": 561.11,
+    "width": 95.38,
+    "x": 452.68,
+    "y": 433.87
+   },
+   "floorY": 994.84,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-78ml-18-415|Frosted",
+   "families": [
+    "lotion"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.16,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 200.38,
+    "right": 799.62,
+    "top": 261
+   },
+   "innerFloorY": 1005,
+   "stemExits": [
+    435.9,
+    444.7
+   ]
+  },
+  "round-78ml-18-415|Frosted|spray": {
+   "bodyId": "round-78ml-18-415",
+   "glass": "Frosted",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-spray.e90ad6f75268.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-spray.e90ad6f75268.png",
+    "sha256": "e90ad6f75268f61f03094ebf2ce296f88d76bf1907cece78d53e4a392c749292",
+    "bytes": 21798,
+    "width": 104,
+    "height": 749
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-spray.e90ad6f75268.png",
+    "key": "/images/approved-masters/dip-tube-register-round-78ml-18-415-frosted-spray.e90ad6f75268.png",
+    "sha256": "e90ad6f75268f61f03094ebf2ce296f88d76bf1907cece78d53e4a392c749292",
+    "bytes": 21798,
+    "width": 104,
+    "height": 749
+   },
+   "box": {
+    "height": 558.13,
+    "width": 77.5,
+    "x": 461.25,
+    "y": 436.71
+   },
+   "floorY": 994.84,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.3,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "round-78ml-18-415|Frosted",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.16,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 200.38,
+    "right": 799.62,
+    "top": 261
+   },
+   "innerFloorY": 1005,
+   "stemExits": [
+    438.7,
+    446.4
+   ]
+  },
+  "royal-13ml-13-415|Clear|spray": {
+   "bodyId": "royal-13ml-13-415",
+   "glass": "Clear",
+   "kind": "spray13",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-royal-13ml-13-415-clear-spray13.81f9323dd91c.png",
+    "key": "/images/approved-masters/dip-tube-register-royal-13ml-13-415-clear-spray13.81f9323dd91c.png",
+    "sha256": "81f9323dd91c250d4054f4acda19a1bd532682deb5d0cd11c4587543043366eb",
+    "bytes": 12191,
+    "width": 70,
+    "height": 472
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-royal-13ml-13-415-clear-spray13.81f9323dd91c.png",
+    "key": "/images/approved-masters/dip-tube-register-royal-13ml-13-415-clear-spray13.81f9323dd91c.png",
+    "sha256": "81f9323dd91c250d4054f4acda19a1bd532682deb5d0cd11c4587543043366eb",
+    "bytes": 12191,
+    "width": 70,
+    "height": 472
+   },
+   "box": {
+    "height": 422.19,
+    "width": 62.61,
+    "x": 468.69,
+    "y": 547.54
+   },
+   "floorY": 969.49,
+   "opaque": {
+    "left": 12,
+    "right": 68
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 11.75,
+   "plateKey": "royal-13ml-13-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.51,
+    "seatY": 432
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 289.89,
+    "right": 710.11,
+    "top": 432
+   },
+   "innerFloorY": 980,
+   "stemExits": [
+    556.7,
+    561.5
+   ]
+  },
+  "slim-100ml-18-415|Clear|bulb": {
+   "bodyId": "slim-100ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-bulb.ad1f8b2649b8.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-bulb.ad1f8b2649b8.png",
+    "sha256": "ad1f8b2649b8bc8203a0109e18388594804ccdc7fba54c78ad0c0683a62a365b",
+    "bytes": 80463,
+    "width": 124,
+    "height": 1635
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-bulb.ad1f8b2649b8.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-bulb.ad1f8b2649b8.png",
+    "sha256": "ad1f8b2649b8bc8203a0109e18388594804ccdc7fba54c78ad0c0683a62a365b",
+    "bytes": 80463,
+    "width": 124,
+    "height": 1635
+   },
+   "box": {
+    "height": 610.37,
+    "width": 46.29,
+    "x": 476.85,
+    "y": 344.56
+   },
+   "floorY": 954.91,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-100ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 5.09,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 405.75,
+    "right": 594.25,
+    "top": 261
+   },
+   "innerFloorY": 960,
+   "stemExits": [
+    346.6,
+    351.3
+   ]
+  },
+  "slim-100ml-18-415|Clear|tassel": {
+   "bodyId": "slim-100ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-bulb.ad1f8b2649b8.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-bulb.ad1f8b2649b8.png",
+    "sha256": "ad1f8b2649b8bc8203a0109e18388594804ccdc7fba54c78ad0c0683a62a365b",
+    "bytes": 80463,
+    "width": 124,
+    "height": 1635
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-bulb.ad1f8b2649b8.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-bulb.ad1f8b2649b8.png",
+    "sha256": "ad1f8b2649b8bc8203a0109e18388594804ccdc7fba54c78ad0c0683a62a365b",
+    "bytes": 80463,
+    "width": 124,
+    "height": 1635
+   },
+   "box": {
+    "height": 610.37,
+    "width": 46.29,
+    "x": 476.85,
+    "y": 344.56
+   },
+   "floorY": 954.91,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-100ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 5.09,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 405.75,
+    "right": 594.25,
+    "top": 261
+   },
+   "innerFloorY": 960,
+   "stemExits": [
+    346.6,
+    351.3
+   ]
+  },
+  "slim-100ml-18-415|Clear|lotion": {
+   "bodyId": "slim-100ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-lotion.443eec1f5ed8.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-lotion.443eec1f5ed8.png",
+    "sha256": "443eec1f5ed8948aba4ba0595b887093c897d5a096bf486d244411753b5506eb",
+    "bytes": 73613,
+    "width": 128,
+    "height": 1652
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-lotion.443eec1f5ed8.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-lotion.443eec1f5ed8.png",
+    "sha256": "443eec1f5ed8948aba4ba0595b887093c897d5a096bf486d244411753b5506eb",
+    "bytes": 73613,
+    "width": 128,
+    "height": 1652
+   },
+   "box": {
+    "height": 616.72,
+    "width": 47.78,
+    "x": 476.29,
+    "y": 338.03
+   },
+   "floorY": 954.91,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-100ml-18-415|Clear",
+   "families": [
+    "lotion"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 5.09,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 405.75,
+    "right": 594.25,
+    "top": 261
+   },
+   "innerFloorY": 960,
+   "stemExits": [
+    340,
+    347.4
+   ]
+  },
+  "slim-100ml-18-415|Clear|spray": {
+   "bodyId": "slim-100ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-spray.a21044575b99.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-spray.a21044575b99.png",
+    "sha256": "a21044575b9916eba6fdbb63e9c3a1843c8c446d0bf38f207597b19fd1a4a291",
+    "bytes": 46466,
+    "width": 104,
+    "height": 1645
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-spray.a21044575b99.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-100ml-18-415-clear-spray.a21044575b99.png",
+    "sha256": "a21044575b9916eba6fdbb63e9c3a1843c8c446d0bf38f207597b19fd1a4a291",
+    "bytes": 46466,
+    "width": 104,
+    "height": 1645
+   },
+   "box": {
+    "height": 614.1,
+    "width": 38.82,
+    "x": 480.59,
+    "y": 340.75
+   },
+   "floorY": 954.91,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-100ml-18-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 5.09,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 405.75,
+    "right": 594.25,
+    "top": 261
+   },
+   "innerFloorY": 960,
+   "stemExits": [
+    342.7,
+    346.6
+   ]
+  },
+  "slim-30ml-18-415|Clear|bulb": {
+   "bodyId": "slim-30ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-bulb.cfab718df2f0.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-bulb.cfab718df2f0.png",
+    "sha256": "cfab718df2f099e03bc3d6a612ee0ed1c1bb927ae9c55cb4df58e1b8568e447e",
+    "bytes": 38744,
+    "width": 122,
+    "height": 802
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-bulb.cfab718df2f0.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-bulb.cfab718df2f0.png",
+    "sha256": "cfab718df2f099e03bc3d6a612ee0ed1c1bb927ae9c55cb4df58e1b8568e447e",
+    "bytes": 38744,
+    "width": 122,
+    "height": 802
+   },
+   "box": {
+    "height": 524.68,
+    "width": 79.81,
+    "x": 460.09,
+    "y": 412.34
+   },
+   "floorY": 937.08,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-30ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.92,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 366.16,
+    "right": 633.84,
+    "top": 261
+   },
+   "innerFloorY": 946,
+   "stemExits": [
+    414.3,
+    419.2
+   ]
+  },
+  "slim-30ml-18-415|Clear|tassel": {
+   "bodyId": "slim-30ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-bulb.cfab718df2f0.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-bulb.cfab718df2f0.png",
+    "sha256": "cfab718df2f099e03bc3d6a612ee0ed1c1bb927ae9c55cb4df58e1b8568e447e",
+    "bytes": 38744,
+    "width": 122,
+    "height": 802
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-bulb.cfab718df2f0.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-bulb.cfab718df2f0.png",
+    "sha256": "cfab718df2f099e03bc3d6a612ee0ed1c1bb927ae9c55cb4df58e1b8568e447e",
+    "bytes": 38744,
+    "width": 122,
+    "height": 802
+   },
+   "box": {
+    "height": 524.68,
+    "width": 79.81,
+    "x": 460.09,
+    "y": 412.34
+   },
+   "floorY": 937.08,
+   "opaque": {
+    "left": 26,
+    "right": 120
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-30ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.92,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 366.16,
+    "right": 633.84,
+    "top": 261
+   },
+   "innerFloorY": 946,
+   "stemExits": [
+    414.3,
+    419.2
+   ]
+  },
+  "slim-30ml-18-415|Clear|lotion": {
+   "bodyId": "slim-30ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-lotion.90ed0a40b08a.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-lotion.90ed0a40b08a.png",
+    "sha256": "90ed0a40b08a313cd221e52be3719238958d4189f1e00e7a3a9574526808acf3",
+    "bytes": 40044,
+    "width": 138,
+    "height": 853
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-lotion.90ed0a40b08a.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-lotion.90ed0a40b08a.png",
+    "sha256": "90ed0a40b08a313cd221e52be3719238958d4189f1e00e7a3a9574526808acf3",
+    "bytes": 40044,
+    "width": 138,
+    "height": 853
+   },
+   "box": {
+    "height": 558.05,
+    "width": 90.28,
+    "x": 455.19,
+    "y": 379.29
+   },
+   "floorY": 937.08,
+   "opaque": {
+    "left": 9,
+    "right": 135
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-30ml-18-415|Clear",
+   "families": [
+    "lotion"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.92,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 366.16,
+    "right": 633.84,
+    "top": 261
+   },
+   "innerFloorY": 946,
+   "stemExits": [
+    381.3,
+    391.7
+   ]
+  },
+  "slim-30ml-18-415|Clear|spray": {
+   "bodyId": "slim-30ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-spray.ce103cc290a3.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-spray.ce103cc290a3.png",
+    "sha256": "ce103cc290a38da98533593705ded62a6367b28cd5f3302edff89e806a8215e0",
+    "bytes": 24281,
+    "width": 104,
+    "height": 845
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-spray.ce103cc290a3.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-30ml-18-415-clear-spray.ce103cc290a3.png",
+    "sha256": "ce103cc290a38da98533593705ded62a6367b28cd5f3302edff89e806a8215e0",
+    "bytes": 24281,
+    "width": 104,
+    "height": 845
+   },
+   "box": {
+    "height": 552.81,
+    "width": 68.04,
+    "x": 465.98,
+    "y": 384.05
+   },
+   "floorY": 937.08,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-30ml-18-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 8.92,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 366.16,
+    "right": 633.84,
+    "top": 261
+   },
+   "innerFloorY": 946,
+   "stemExits": [
+    386.1,
+    392.2
+   ]
+  },
+  "slim-50ml-18-415|Clear|bulb": {
+   "bodyId": "slim-50ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-bulb.94ecf7d61eaa.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-bulb.94ecf7d61eaa.png",
+    "sha256": "94ecf7d61eaa084051d8cc53f1ce100949afbdfe6ea603305fc618826de2c9fe",
+    "bytes": 62090,
+    "width": 124,
+    "height": 1255
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-bulb.94ecf7d61eaa.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-bulb.94ecf7d61eaa.png",
+    "sha256": "94ecf7d61eaa084051d8cc53f1ce100949afbdfe6ea603305fc618826de2c9fe",
+    "bytes": 62090,
+    "width": 124,
+    "height": 1255
+   },
+   "box": {
+    "height": 595.53,
+    "width": 58.84,
+    "x": 470.58,
+    "y": 373.78
+   },
+   "floorY": 969.53,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-50ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 6.47,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 399.66,
+    "right": 600.34,
+    "top": 261
+   },
+   "innerFloorY": 976,
+   "stemExits": [
+    375.8,
+    377.8
+   ]
+  },
+  "slim-50ml-18-415|Clear|tassel": {
+   "bodyId": "slim-50ml-18-415",
+   "glass": "Clear",
+   "kind": "bulb",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-bulb.94ecf7d61eaa.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-bulb.94ecf7d61eaa.png",
+    "sha256": "94ecf7d61eaa084051d8cc53f1ce100949afbdfe6ea603305fc618826de2c9fe",
+    "bytes": 62090,
+    "width": 124,
+    "height": 1255
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-bulb.94ecf7d61eaa.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-bulb.94ecf7d61eaa.png",
+    "sha256": "94ecf7d61eaa084051d8cc53f1ce100949afbdfe6ea603305fc618826de2c9fe",
+    "bytes": 62090,
+    "width": 124,
+    "height": 1255
+   },
+   "box": {
+    "height": 595.53,
+    "width": 58.84,
+    "x": 470.58,
+    "y": 373.78
+   },
+   "floorY": 969.53,
+   "opaque": {
+    "left": 27,
+    "right": 122
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-50ml-18-415|Clear",
+   "families": [
+    "bulb",
+    "tassel"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 6.47,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 399.66,
+    "right": 600.34,
+    "top": 261
+   },
+   "innerFloorY": 976,
+   "stemExits": [
+    375.8,
+    377.8
+   ]
+  },
+  "slim-50ml-18-415|Clear|lotion": {
+   "bodyId": "slim-50ml-18-415",
+   "glass": "Clear",
+   "kind": "lotion",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-lotion.c87e85fd6015.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-lotion.c87e85fd6015.png",
+    "sha256": "c87e85fd6015126729220debe65806588ec96dc4d7b695054cc2b917129ec883",
+    "bytes": 55676,
+    "width": 128,
+    "height": 1267
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-lotion.c87e85fd6015.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-lotion.c87e85fd6015.png",
+    "sha256": "c87e85fd6015126729220debe65806588ec96dc4d7b695054cc2b917129ec883",
+    "bytes": 55676,
+    "width": 128,
+    "height": 1267
+   },
+   "box": {
+    "height": 601.23,
+    "width": 60.74,
+    "x": 469.87,
+    "y": 368.1
+   },
+   "floorY": 969.53,
+   "opaque": {
+    "left": 4,
+    "right": 125
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-50ml-18-415|Clear",
+   "families": [
+    "lotion"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 6.47,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 399.66,
+    "right": 600.34,
+    "top": 261
+   },
+   "innerFloorY": 976,
+   "stemExits": [
+    370.1,
+    377.3
+   ]
+  },
+  "slim-50ml-18-415|Clear|spray": {
+   "bodyId": "slim-50ml-18-415",
+   "glass": "Clear",
+   "kind": "spray",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-spray.f969de0f6fac.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-spray.f969de0f6fac.png",
+    "sha256": "f969de0f6fac0d8e4452c49e46b324fcc450ee64e31e70bf3a9e6d7d298f4a53",
+    "bytes": 36772,
+    "width": 104,
+    "height": 1260
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-spray.f969de0f6fac.png",
+    "key": "/images/approved-masters/dip-tube-register-slim-50ml-18-415-clear-spray.f969de0f6fac.png",
+    "sha256": "f969de0f6fac0d8e4452c49e46b324fcc450ee64e31e70bf3a9e6d7d298f4a53",
+    "bytes": 36772,
+    "width": 104,
+    "height": 1260
+   },
+   "box": {
+    "height": 597.9,
+    "width": 49.35,
+    "x": 475.32,
+    "y": 371.55
+   },
+   "floorY": 969.53,
+   "opaque": {
+    "left": 2,
+    "right": 102
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 13.6346,
+   "plateKey": "slim-50ml-18-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 6.47,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 399.66,
+    "right": 600.34,
+    "top": 261
+   },
+   "innerFloorY": 976,
+   "stemExits": [
+    373.5,
+    377.6
+   ]
+  },
+  "square-15ml-13-415|Clear|spray": {
+   "bodyId": "square-15ml-13-415",
+   "glass": "Clear",
+   "kind": "spray13",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-square-15ml-13-415-clear-spray13.f0ae235f4edd.png",
+    "key": "/images/approved-masters/dip-tube-register-square-15ml-13-415-clear-spray13.f0ae235f4edd.png",
+    "sha256": "f0ae235f4edded8f3aef454592844f1cb9f3484d3f6c4cee2a75e5d253cf5afe",
+    "bytes": 11968,
+    "width": 70,
+    "height": 463
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-square-15ml-13-415-clear-spray13.f0ae235f4edd.png",
+    "key": "/images/approved-masters/dip-tube-register-square-15ml-13-415-clear-spray13.f0ae235f4edd.png",
+    "sha256": "f0ae235f4edded8f3aef454592844f1cb9f3484d3f6c4cee2a75e5d253cf5afe",
+    "bytes": 11968,
+    "width": 70,
+    "height": 463
+   },
+   "box": {
+    "height": 414.14,
+    "width": 62.61,
+    "x": 468.69,
+    "y": 592.61
+   },
+   "floorY": 1006.49,
+   "opaque": {
+    "left": 12,
+    "right": 68
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 11.75,
+   "plateKey": "square-15ml-13-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 10.51,
+    "seatY": 489
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 363.39,
+    "right": 636.61,
+    "top": 489
+   },
+   "innerFloorY": 1017,
+   "stemExits": [
+    601.8,
+    606.6
+   ]
+  },
+  "tall-rectangle-10ml-13-415|Clear|spray": {
+   "bodyId": "tall-rectangle-10ml-13-415",
+   "glass": "Clear",
+   "kind": "spray13",
+   "seated": {
+    "url": "/images/approved-masters/dip-tube-register-tall-rectangle-10ml-13-415-clear-spray13.dafc8c8b086f.png",
+    "key": "/images/approved-masters/dip-tube-register-tall-rectangle-10ml-13-415-clear-spray13.dafc8c8b086f.png",
+    "sha256": "dafc8c8b086f669bc8d7025932e65268addb17b27a2e7ae2fa0974a74212889e",
+    "bytes": 22939,
+    "width": 70,
+    "height": 974
+   },
+   "exploded": {
+    "url": "/images/approved-masters/dip-tube-register-tall-rectangle-10ml-13-415-clear-spray13.dafc8c8b086f.png",
+    "key": "/images/approved-masters/dip-tube-register-tall-rectangle-10ml-13-415-clear-spray13.dafc8c8b086f.png",
+    "sha256": "dafc8c8b086f669bc8d7025932e65268addb17b27a2e7ae2fa0974a74212889e",
+    "bytes": 22939,
+    "width": 70,
+    "height": 974
+   },
+   "box": {
+    "height": 649.06,
+    "width": 46.65,
+    "x": 476.68,
+    "y": 341.3
+   },
+   "floorY": 990.17,
+   "opaque": {
+    "left": 12,
+    "right": 68
+   },
+   "opacity": 0.9,
+   "sourcePxPerMm": 11.75,
+   "plateKey": "tall-rectangle-10ml-13-415|Clear",
+   "families": [
+    "spray"
+   ],
+   "datum": {
+    "axisX": 500,
+    "pxPerMm": 7.83,
+    "seatY": 261
+   },
+   "glassBounds": {
+    "bottom": 1061,
+    "left": 433.48,
+    "right": 566.52,
+    "top": 261
+   },
+   "innerFloorY": 998,
+   "stemExits": [
+    348.6,
+    354.9
+   ]
+  }
+ }
+}
