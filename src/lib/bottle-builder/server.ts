@@ -1,7 +1,7 @@
 import "server-only";
 import { approvedComponentKits, APPROVED_KIT_VERSION } from "../paper-doll/approved-component-kits";
 import { DIVA_KIT_VERSION } from "../paper-doll/diva-kit-corrections";
-import { CYLINDER28_KIT_VERSION } from "../paper-doll/approved-kit-index";
+import { CYLINDER28_KIT_VERSION, SMALL_GLASS_KIT_VERSION } from "../paper-doll/approved-kit-index";
 import { storefrontFamily, sourceFamilies, withStorefrontFamily } from "../products/storefront-family";
 import { CYLINDER9_OVERCAP_MASTER } from "@/lib/register/detached-overcaps";
 import { CYLINDER25_COPPER_OVERCAP } from "@/lib/register/cylinder25-copper-overcap";
@@ -14,7 +14,7 @@ import { builderBodyIdentity, chooserGroupKey, chooserSourceRows, resolveBuilder
 import { resolveListedComponents, unavailableVintageFinishes, type ActiveComponent } from "./components";
 import { bareChooserKit, slimBuilderBodies } from "./payload";
 import type { BuilderFamily } from "./entry";
-import { familyOptionCount, familyScreenOrder, pickFamilyPreviewBodies, type BuilderFamilyPreview } from "./family-previews";
+import { familyOptionCount, familyScreenOrder, familySizes, type BuilderFamilyPreview } from "./family-previews";
 import { readLocalComponentKits } from "../paper-doll/local-component-kits";
 import { loadRegisterKits } from "@/lib/register/load";
 import { assembledKit, type RegisterKit } from "@/lib/register/stage-kit";
@@ -86,7 +86,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows, { strictRegister: true }));
-}, ["bottle-builder-family-chooser-v14-all-cylinder-masters", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION, DIVA_KIT_VERSION, CYLINDER28_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-family-chooser-v14-all-cylinder-masters", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION, DIVA_KIT_VERSION, CYLINDER28_KIT_VERSION, SMALL_GLASS_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** The cached family. When the cache has no entry to fall back on (a new key, an
  * eviction) and the register lookup fails, this one request builds the family
@@ -125,7 +125,7 @@ export const loadBuilderFamilies = unstable_cache(async () => {
         }
     }));
     return available.filter(family => family !== null);
-}, ["bottle-builder-families-bare-v12-all-cylinder-masters", APPROVED_KIT_VERSION, CYLINDER28_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-families-bare-v12-all-cylinder-masters", APPROVED_KIT_VERSION, CYLINDER28_KIT_VERSION, SMALL_GLASS_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 /** `strictRegister`: a failed register lookup throws instead of drawing the
  * published kits. Every cached caller sets it, so a Convex hiccup leaves the
@@ -183,7 +183,7 @@ const cachedBodyKits = unstable_cache(async (pairs: Array<[string, string | null
         kits[websiteSku] = loaded.get(websiteSku) ?? (graceSku ? loaded.get(graceSku) : undefined) ?? null;
     }
     return kits;
-}, ["bottle-builder-body-kits-v10-vial3-source", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION, DIVA_KIT_VERSION, CYLINDER28_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
+}, ["bottle-builder-body-kits-v10-vial3-source", CYLINDER9_OVERCAP_MASTER, CYLINDER25_COPPER_OVERCAP.sha256, APPROVED_KIT_VERSION, DIVA_KIT_VERSION, CYLINDER28_KIT_VERSION, SMALL_GLASS_KIT_VERSION], { revalidate: FAMILY_CACHE_SECONDS, tags: ["bottle-components"] });
 
 export async function loadBuilderBodyKits(family: string, bodyId: string) {
     if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};
@@ -310,9 +310,9 @@ export async function freshConfiguration(family: string, sku: string) {
     return bodies.flatMap(body => body.configurations).find(config => config.id === sku) ?? null;
 }
 
-/** The family screen's groups: a few real bodies per family, read from the same
- * cached family the chooser uses (the warm route keeps every family cached). A
- * family that fails to load keeps its tile and shows its outline icon instead. */
+/** The family screen's tiles: each family's sizes and option count, read from the same
+ * cached family the chooser uses (the warm route keeps every family cached). A family
+ * that fails to load keeps its tile and its single outline, with no sizes or count. */
 export async function loadBuilderFamilyPreviews(families: BuilderFamily[]): Promise<BuilderFamilyPreview[]> {
     const ordered = familyScreenOrder(families);
     const out = new Array<BuilderFamilyPreview>(ordered.length);
@@ -321,16 +321,16 @@ export async function loadBuilderFamilyPreviews(families: BuilderFamily[]): Prom
         while (cursor < ordered.length) {
             const index = cursor++;
             const family = ordered[index];
-            let bodies: BuilderFamilyPreview["bodies"] = [];
+            let sizes: number[] = [];
             let options = 0;
             try {
                 const all = withLocalReviewBodies(await loadBuilderFamily(family.family));
-                bodies = pickFamilyPreviewBodies(all);
+                sizes = familySizes(all);
                 options = familyOptionCount(all);
             } catch (error) {
                 console.error("[builder] family preview unavailable", family.family, error instanceof Error ? error.message : error);
             }
-            out[index] = { ...family, bodies, options };
+            out[index] = { ...family, sizes, options };
         }
     }));
     return out;

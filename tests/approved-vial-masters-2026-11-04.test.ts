@@ -4,6 +4,7 @@ import { describe, expect, it, vi } from 'vitest';
 import type { BuilderKit } from '@/lib/bottle-builder/model';
 import manifest from '@/lib/paper-doll/approved-kits.generated.json';
 import index from '@/lib/paper-doll/approved-kit-index.json';
+import { updatedCylinderKitVersion } from '@/lib/paper-doll/approved-kit-index';
 import { cylinderMasterSource } from '@/lib/products/cylinder-master';
 import { stageLayout } from '@/lib/products/pdp-redesign/stage';
 import { beforeVialRelease, vialReleaseNewSkus, vialReleaseReplacedSkus } from './helpers/vial-release-2026-11-04';
@@ -58,7 +59,8 @@ describe('Vial review masters published (2026-11-04)', () => {
             const response = await GET(new Request(`https://preview.vercel.app/api/bottle-masters/approved?sku=${sku}&v=${index.version}`));
             expect(response.status, sku).toBe(200);
             expect((await response.json()).kit).toEqual(hosted[sku]);
-            expect(cylinderMasterSource(sku)).toEqual({ family: 'approved', version: index.version });
+            // The small-glass bodies (2026-11-24) give these recipes their own version; the old one still answers with this kit.
+            expect(cylinderMasterSource(sku)).toEqual({ family: 'approved', version: updatedCylinderKitVersion(sku) ?? index.version });
         }
     });
 });

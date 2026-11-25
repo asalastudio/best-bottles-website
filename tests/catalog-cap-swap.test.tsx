@@ -69,10 +69,20 @@ describe("cap swap on a hero card", () => {
         expect(container.querySelector("img")?.getAttribute("src")).toBe(hero.url);
         act(() => root.unmount()); container.remove();
 
-        plates.current = { GBCyl5MtlRollCuMatt: plate("GBCyl5MtlRollCuMatt") };
+        // No calibration and no plate for the pick: the hero stays.
         render({ ...hero, url: "/images/catalog/uncalibrated.png" }, copper);
         expect(container.querySelector('[data-testid="catalog-card-cap-swap"]')).toBeNull();
         expect(container.querySelector("img")?.getAttribute("src")).toBe("/images/catalog/uncalibrated.png");
+    });
+
+    it("shows the picked cap's own plate on a hero without a calibration, never the other finish's hero", () => {
+        // 24 Nov 2026: picking Silver on the 30 ml Cylinder spray kept the gold hero. A pick with its own plate
+        // now shows that plate (hero > plate > local > imageUrl) when no swap can draw it.
+        plates.current = { GBCyl5MtlRollCuMatt: plate("GBCyl5MtlRollCuMatt") };
+        render({ ...hero, url: "/images/catalog/uncalibrated.png" }, copper);
+        expect(container.querySelector('[data-testid="catalog-card-cap-swap"]')).toBeNull();
+        expect(container.querySelector('[data-testid="catalog-card-selected-own-image"]')).not.toBeNull();
+        expect([...container.querySelectorAll("img")].map((img) => img.getAttribute("src"))).toEqual([plate("GBCyl5MtlRollCuMatt").image]);
     });
 
     it("shows the hero when the default cap is pictured", () => {

@@ -225,6 +225,27 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
         </LocaleLink>;
     }
 
+    // A picked finish with no hero of its own and no calibrated swap shows its own
+    // image down the card chain (plate, then reconciled local, then its usable
+    // Convex URL) rather than the group's other-finish hero: picking Silver on the
+    // 30 ml Cylinder spray kept the gold photo. The hero stays only while the
+    // plates load, or when the pick has no image of its own at all.
+    const selectedOwnImage = catalogHero && selected && skuOf(selected) !== catalogHero.websiteSku && assemblyPlates !== undefined
+        ? [selectedPlate?.image, getReconciledLocalSkuImage(skuOf(selected)), selected.imageUrl].find((url) => url && !failed.has(url))
+        : undefined;
+    if (catalogHero && selected && selectedOwnImage) {
+        return <LocaleLink href={href} aria-label={`View ${title}, ${selected.label}`}
+            className="relative block aspect-[10/11] w-full overflow-hidden bg-[#f5f3ef]"
+            data-visual-mode="selected-own-image" data-testid="catalog-card-selected-own-image" data-bb-image-audit="catalog-card"
+            data-bb-family={family ?? undefined} data-bb-product-group-slug={slug}
+            data-bb-website-sku={skuOf(selected) ?? undefined}>
+            <Image key={selectedOwnImage} src={selectedOwnImage} alt={`${title}, ${selected.label}`} fill
+                unoptimized={selectedOwnImage.includes(".public.blob.vercel-storage.com/")}
+                className="object-contain" style={{ mixBlendMode: "multiply" }} sizes={sizes}
+                onError={() => fail(selectedOwnImage)} />
+        </LocaleLink>;
+    }
+
     if (catalogHero) {
         return <ProductCardImagePreview
             productTitle={title} defaultImage={{ url: approvedHero ? exactVariant?.imageUrl ?? null : imageUrl, alt: title }} catalogHero={catalogHero}

@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { familyOptionCount, familyPreviewScale, familyScreenOrder, pickFamilyPreviewBodies } from "@/lib/bottle-builder/family-previews";
+import { familyOptionCount, familyPreviewScale, familyScreenOrder, familySizeRange, familySizes, pickFamilyTileSizes } from "@/lib/bottle-builder/family-previews";
+import { familyTileOutline, placeFamilyShapes } from "@/components/icons/FamilyShapeGroup";
+import { familyShapeOutline } from "@/components/icons/FamilyShapeIcon";
 import type { BuilderBody, BuilderConfiguration } from "@/lib/bottle-builder/model";
 
 const config = (id: string, color: string, extra: Partial<BuilderConfiguration> = {}) =>
@@ -13,19 +15,42 @@ describe("Build Your Bottle family screen", () => {
         expect(order).toEqual(["Cylinder", "Diva", "Slim", "Bell", "Vial"]);
     });
 
-    it("shows the family's range: smallest, middle and largest, one per capacity", () => {
+    it("draws the family's range: smallest, middle and largest size, one per capacity", () => {
         const bodies = [5, 9, 9, 25, 28, 50, 100].map((ml, i) => body("Cylinder", ml, i === 2 ? "13-415" : "17-415"));
-        expect(pickFamilyPreviewBodies(bodies).map(b => b.capacityMl)).toEqual([5, 28, 100]);
-        expect(pickFamilyPreviewBodies(bodies.slice(0, 2)).map(b => b.capacityMl)).toEqual([5, 9]);
-        expect(pickFamilyPreviewBodies([body("Grace", 30)]).map(b => b.capacityMl)).toEqual([30]);
+        expect(familySizes(bodies)).toEqual([5, 9, 25, 28, 50, 100]);
+        expect(pickFamilyTileSizes(familySizes(bodies))).toEqual([5, 28, 100]);
+        expect(pickFamilyTileSizes([5, 9])).toEqual([5, 9]);
+        expect(pickFamilyTileSizes([30])).toEqual([30]);
     });
 
-    it("keeps only the bare clear glass each bottle is drawn with, and skips bottles with nothing to draw", () => {
-        const amberFirst = body("Boston Round", 15, "18-400", [config("br-15-amber", "Amber"), config("br-15-clear", "Clear"), config("br-15-cobalt", "Cobalt Blue")]);
-        const blank = body("Boston Round", 60, "20-400", [config("br-60", "Clear", { bodyImage: undefined })]);
-        const [picked, ...rest] = pickFamilyPreviewBodies([amberFirst, blank]);
-        expect(rest).toHaveLength(0);
-        expect(picked.configurations.map(c => c.id)).toEqual(["br-15-clear"]);
+    it("writes the size range the way the mock-up does", () => {
+        expect(familySizeRange([15, 30, 60])).toBe("15 to 60 ml");
+        expect(familySizeRange([78, 128])).toBe("78 and 128 ml");
+        expect(familySizeRange([55])).toBe("55 ml");
+        expect(familySizeRange([3.3, 100])).toBe("3.3 and 100 ml");
+        expect(familySizeRange([])).toBe("");
+    });
+
+    it("stands each size on one shelf, the tallest at full height, left to right inside the frame", () => {
+        const outline = familyShapeOutline("Boston Round");
+        const placed = placeFamilyShapes(outline, [.72, .83, 1]);
+        expect(placed).toHaveLength(3);
+        // Every outline's baseline (y = 22) lands on the shelf, y = 78.
+        for (const p of placed) expect(p.y + 22 * p.scale).toBeCloseTo(78, 5);
+        expect(placed[2].scale / placed[0].scale).toBeCloseTo(1 / .72, 5);
+        const right = placed[2].x + outline.x1 * placed[2].scale;
+        expect(placed[0].x + outline.x0 * placed[0].scale).toBeGreaterThanOrEqual(6.9);
+        expect(right).toBeLessThanOrEqual(93.1);
+    });
+
+    it("draws Diva and Diamond with their tile detail, and keeps the plain outline for the menus", () => {
+        expect(familyTileOutline("Diva").paths.length).toBeGreaterThan(1);
+        expect(familyTileOutline("Diamond").paths.length).toBeGreaterThan(1);
+        expect(familyShapeOutline("Diva").paths).toHaveLength(1);
+        expect(familyShapeOutline("Diamond").paths).toHaveLength(1);
+        expect(familyTileOutline("Boston Round")).toEqual(familyShapeOutline("Boston Round"));
+        // Drawn outlines (relative commands) and unknown families still get an extent to lay out with.
+        for (const family of ["Vial", "Apothecary", "Nope"]) expect(familyShapeOutline(family).x1).toBeGreaterThan(familyShapeOutline(family).x0);
     });
 
     it("counts options as every size in every glass it comes in", () => {
@@ -43,6 +68,19 @@ describe("Build Your Bottle family screen", () => {
         expect(familyPreviewScale(group[1], group)).toBe(1);
         expect(familyPreviewScale(group[0], group)).toBeGreaterThanOrEqual(.5);
         expect(familyPreviewScale(group[0], group)).toBeLessThan(1);
+    });
+
+    it("reads a rounded capacity from the audit's nearest row, and never mixes measured and estimated heights", () => {
+        // 3.3 ml is the audit's 3 ml Cylinder (37 mm of 154 mm), so it stands below the 28 ml (81 mm).
+        const cylinder = [3.3, 28, 100].map(capacityMl => ({ family: "Cylinder", capacityMl }));
+        const [small, middle, tall] = cylinder.map(size => familyPreviewScale(size, cylinder));
+        expect(tall).toBe(1);
+        expect(small).toBeLessThanOrEqual(middle);
+        // Vial 9 ml has no row: the whole group steps up by capacity instead.
+        const vial = [2, 4, 9].map(capacityMl => ({ family: "Vial", capacityMl }));
+        const scales = vial.map(size => familyPreviewScale(size, vial));
+        expect(scales[0]).toBeLessThan(scales[1]);
+        expect(scales[1]).toBeLessThan(scales[2]);
     });
 });
 

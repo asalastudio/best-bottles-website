@@ -7,6 +7,7 @@ import { isLegacyBestBottlesImageUrl } from "../productVariantIntegrity";
 import { catalogSearchScore } from "../catalogFilters";
 import { oneMlVialApplicator } from "./one-ml-vial-applicators";
 import { getBlueHalfDramVialImage } from "./pdp-sku-image-fallback";
+import { hasSprayBottleEvidence } from "./applicator-inference";
 
 export type ProductCardVariantPreview = {
     id: string;
@@ -310,6 +311,16 @@ function finishFromName(itemName: string | null | undefined): string | null {
     return found ? found.replace(/\b\w/g, (char) => char.toUpperCase()) : null;
 }
 
+/**
+ * A spray bottle's metal top is not a screw cap: a stored capStyle of "Screw Cap" on one made its swatch read
+ * "Screw Cap Shiny Gold" beside a plain "Silver" (the 30 ml Cylinder sprays). Only that pairing is dropped;
+ * every other cap style, and "Screw Cap" on a capped bottle, still labels the swatch.
+ */
+function isScrewCapStyleOnSpray(variant: ProductCardVariantPreviewSource): boolean {
+    if (normalizeKey(variant.capStyle) !== "screw cap") return false;
+    return hasSprayBottleEvidence(variant) || /spray|mist/i.test(variant.applicator ?? "");
+}
+
 function resolveCapFinish(variant: ProductCardVariantPreviewSource): string | null {
     const bostonFinish = bostonDropperFinish(variant);
     if (bostonFinish) return bostonFinish;
@@ -318,7 +329,7 @@ function resolveCapFinish(variant: ProductCardVariantPreviewSource): string | nu
     const vial = oneMlVialApplicator(variant.websiteSku);
     if (vial) return `${vial.color} Applicator`;
     const capColor = cleanFinishLabel(variant.capColor);
-    const capStyle = cleanFinishLabel(variant.capStyle);
+    const capStyle = isScrewCapStyleOnSpray(variant) ? null : cleanFinishLabel(variant.capStyle);
     // A plug vial's closure is its plug, so the swatch says "White Plug", not a cap length.
     if (capStyle && normalizeKey(capStyle) === "plug") return capColor ? `${capColor} Plug` : "Plug";
     // Some legacy finish labels already include length; capStyle may contradict them.
