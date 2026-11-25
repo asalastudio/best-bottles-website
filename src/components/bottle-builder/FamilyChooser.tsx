@@ -59,8 +59,8 @@ export default function FamilyChooser({ families, previews, current, pendingFami
     return <section className={styles.chooser} aria-labelledby={headingId} data-family-chooser>
         <div className={styles.intro}>
             <span className={styles.eyebrow}>{stepLabel}</span>
-            <h2 id={headingId} ref={heading} tabIndex={-1}>Choose your bottle family</h2>
-            <p>Start with a shape. Every size, glass and fitment after this is made for the family you choose.</p>
+            <h2 id={headingId} ref={heading} tabIndex={-1}>Choose a shape</h2>
+            <p>Size, glass, top and cap color follow, each one fitted to the shape you pick.</p>
         </div>
         <ul className={styles.grid}>
             {familyScreenOrder(families).map(({ family }) => {
