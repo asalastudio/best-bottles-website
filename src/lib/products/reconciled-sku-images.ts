@@ -1,11 +1,11 @@
+import { ONE_ML_VIAL_STILLS } from "./one-ml-vial-applicators";
+
 /** Exact-SKU media recovered from the 2026-09-27 source audit.
  * A local cutout is used only for an export that passed the extraction checks; component fitment
  * still comes from the register and is never inferred from this image map. */
 export const reconciledLocalSkuImages: Readonly<Record<string, string>> = {
-  "GB1mlAmbVBlk": "/images/pdp/assembled-vials-2026-09-27/GB1mlAmbVBlk.png",
-  "GB1mlAmbVialWht": "/images/pdp/assembled-vials-2026-09-27/GB1mlAmbVialWht.png",
-  "GB1mlVBlk": "/images/pdp/assembled-vials-2026-09-27/GB1mlVBlk.png",
-  "GB1mlVWht": "/images/pdp/assembled-vials-2026-09-27/GB1mlVWht.png",
+  // The 1 mL plug vials: composites of their approved kits (25 Nov 2026), not the 27 Sep assembled photographs.
+  ...ONE_ML_VIAL_STILLS,
   "GBElg15BlkShSht": "/images/pdp/reconciled-2026-09-27/GBElg15BlkShSht.webp",
   "GBElg15CuSht": "/images/pdp/reconciled-2026-09-27/GBElg15CuSht.webp",
   "GBElg15GlMattSht": "/images/pdp/reconciled-2026-09-27/GBElg15GlMattSht.webp",

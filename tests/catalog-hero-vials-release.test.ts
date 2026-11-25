@@ -7,9 +7,16 @@ import batch3 from '../src/lib/products/catalog-hero-batch3-release.json';
 import approval from '../docs/hero-families/vials-2026-09-25/approval.json';
 import { getCatalogHero, getProductHero } from '../src/lib/products/catalog-heroes';
 import smallGlass from '../src/lib/paper-doll/small-glass-bodies.generated.json';
+import oneMl from '../public/images/pdp/one-ml-small-glass-2026-11-25/manifest.json';
 
 // 24 Nov 2026: heroes whose glass was re-shot keep their approved photo as `from` (scripts/diva-vial/small-glass-bodies.py).
-const swaps = smallGlass.heroes as Record<string, { from: string; url: string; sha256: string }>;
+const swaps = { ...smallGlass.heroes } as Record<string, { from: string; url: string; sha256: string }>;
+// 25 Nov 2026: the 1 ml plug vial heroes name the composites of their approved kits (scripts/diva-vial/one-ml-composites.mts).
+for (const [sku, moves] of Object.entries(oneMl.heroSwaps as Record<string, { table: string; from: string; to: string }[]>)) {
+  const move = moves.find(entry => entry.table.endsWith('catalog-hero-vials-release.json'));
+  const still = (oneMl.stills as Record<string, { url: string; sha256: string }>)[sku];
+  if (move) swaps[sku] = { from: move.from, url: move.to, sha256: still.sha256 };
+}
 
 afterEach(() => vi.unstubAllEnvs());
 
@@ -43,8 +50,10 @@ describe('Vial family catalog hero release', () => {
       const bytes = readFileSync(`public${hero.url}`);
       expect(createHash('sha256').update(bytes).digest('hex')).toBe(swap ? swap.sha256 : evidence.sha256);
       const meta = await sharp(bytes).metadata();
-      expect([meta.format, meta.width, meta.height]).toEqual(['webp', 1560, 1716]);
-      expect([hero.width, hero.height]).toEqual([1560, 1716]);
+      // A hero still is the 10:11 card frame: the released 1560x1716 WebP, or a 1 ml kit composite (1200x1320 PNG).
+      const oneMlStill = hero.url.startsWith('/images/pdp/one-ml-small-glass-2026-11-25/');
+      expect([meta.format, meta.width, meta.height]).toEqual(oneMlStill ? ['png', 1200, 1320] : ['webp', 1560, 1716]);
+      expect([hero.width, hero.height]).toEqual(oneMlStill ? [1200, 1320] : [1560, 1716]);
       expect(evidence.model).toBe('gpt-image-2.5-sunburst');
       expect(hero.framing).toEqual({ scale: 1, translateXPercent: 0, translateYPercent: 0 });
       expect(evidence.source.path.startsWith('legacy:')).toBe(LEGACY_PHOTO.includes(hero.websiteSku));
@@ -76,6 +85,11 @@ describe('Vial family catalog hero release', () => {
     }
     vi.stubEnv('NEXT_PUBLIC_CATALOG_HERO_PILOT', '');
     for (const hero of rows) {
+      // The 1 ml plug vials name the same kit composite in both registries (25 Nov 2026), flag or not.
+      if (hero.url.startsWith('/images/pdp/one-ml-small-glass-2026-11-25/')) {
+        expect(getCatalogHero(hero.groupSlug, [{ websiteSku: hero.websiteSku }])?.url).toBe(hero.url);
+        continue;
+      }
       expect(getCatalogHero(hero.groupSlug, [{ websiteSku: hero.websiteSku }])?.url).not.toBe(hero.url);
     }
   });

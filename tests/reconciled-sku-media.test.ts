@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import manifest from "../data/media/reconciliation-106.json";
+import oneMl from "../public/images/pdp/one-ml-small-glass-2026-11-25/manifest.json";
 import { getPdpSkuFallbackImage } from "../src/lib/products/pdp-sku-image-fallback";
 import {
   getReconciledLocalSkuImage,
@@ -26,13 +27,19 @@ describe("reconciled exact-SKU media", () => {
         expect(localUrl, row.websiteSku).toBeNull();
         continue;
       }
-      expect(localUrl, row.websiteSku).toBe(row.localImageUrl);
+      // The recorded file stays intact; the 1 mL legacy assemblies are served as their approved-kit composites (25 Nov 2026).
+      expect(createHash("sha256").update(readFileSync(`public${row.localImageUrl}`)).digest("hex"), row.websiteSku)
+        .toBe(row.localAssetSha256);
+      const still = row.mediaState === "local-legacy-assembled"
+        ? (oneMl.stills as Record<string, { url: string; sha256: string }>)[row.websiteSku]
+        : null;
+      expect(localUrl, row.websiteSku).toBe(still ? still.url : row.localImageUrl);
       expect(getPdpSkuFallbackImage(row.websiteSku), row.websiteSku).toBe(localUrl);
-      expect(localUrl, row.websiteSku).toContain(`/${row.websiteSku}.${row.mediaState === "local-legacy-assembled" ? "png" : "webp"}`);
+      expect(localUrl, row.websiteSku).toContain(`/${row.websiteSku}.${row.mediaState === "local-legacy-assembled" ? "" : "webp"}`);
       const path = `public${localUrl}`;
       expect(existsSync(path), row.websiteSku).toBe(true);
       expect(createHash("sha256").update(readFileSync(path)).digest("hex"), row.websiteSku)
-        .toBe(row.localAssetSha256);
+        .toBe(still ? still.sha256 : row.localAssetSha256);
     }
     expect(getReconciledLocalSkuImage("missing-sku")).toBeNull();
     expect(isReconciliationSku("missing-sku")).toBe(false);

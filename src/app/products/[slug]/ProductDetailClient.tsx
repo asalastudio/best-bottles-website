@@ -1100,6 +1100,7 @@ export default function ProductDetailClient({
     platesBySku = {},
     localKits = {},
     localComponentKits = {},
+    localComponentReview = false,
     localAssetPreview = false,
     localAssetVersion = '',
     displayDerivatives,
@@ -1121,6 +1122,8 @@ export default function ProductDetailClient({
     platesBySku?: Record<string, { image: string; imageCapOff: string | null; localCandidate?: boolean; reviewStatus?: string; heroStage?: boolean }>;
     localKits?: Record<string, LocalKitPilot>;
     localComponentKits?: Record<string, BuilderKit>;
+    /** True only when localhost review kits (localPdpComponentKits) are in play; approved kits never show the banner. */
+    localComponentReview?: boolean;
     localAssetPreview?: boolean;
     localAssetVersion?: string;
     /** Delivery copies for every image in these props (resolved on the server, see display-derivative.server.ts). */
@@ -1130,7 +1133,7 @@ export default function ProductDetailClient({
 }) {
     registerDisplayDerivatives(displayDerivatives);
     registerCatalogHeroes(catalogHeroes);
-    const localComponentPreview = Object.keys(localComponentKits).length > 0;
+    const localComponentPreview = localComponentReview;
     const { formatPrice: money } = useRegion();
     const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     const router = useRouter();
@@ -2163,7 +2166,7 @@ export default function ProductDetailClient({
         >
             <Navbar hideMobileSearch />
             <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px]" data-mobile-pdp-frame="">
-                {Object.keys(localComponentKits).length > 0 && <aside className="mx-4 mb-4 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-obsidian" data-asset-preview="components"><strong>Local component review</strong><p>Prepared component artwork is shown for the selected variants. These images have not been published.</p></aside>}
+                {localComponentReview && <aside className="mx-4 mb-4 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-obsidian" data-asset-preview="components"><strong>Local component review</strong><p>Prepared component artwork is shown for the selected variants. These images have not been published.</p></aside>}
                 {localAssetPreview && <aside className="mx-4 mb-4 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-obsidian" data-asset-preview="boston"><strong>{selectedPilot ? "30 mL Amber · interactive kit pilot" : "Boston Round · local image review"}</strong><p>{selectedPilot ? "Original glass/roller and cap layers are active after loading. Test Matte Black and Matte Silver with both roller materials and cap-on/off. Other finishes use their existing plates. Local review only." : selectedPlate?.localCandidate ? `Showing a prepared plate · ${selectedPlate.reviewStatus === 'approved' ? 'locally approved; awaiting release' : 'awaiting your image approval'}.` : 'Showing the current indexed image for this configuration.'} Kits and Sunburst heroes keep their current status.</p><a className="underline" href="/team/asset-ledger?preview=1&view=completion">Review the family contact sheet</a><button type="button" className="ml-4 min-h-11 underline" onClick={()=>router.refresh()}>Refresh latest images</button></aside>}
                 {glassNavigationError && <p role="alert" className="mx-4 mb-4 text-sm text-obsidian">{glassNavigationError}</p>}
                 {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
@@ -2183,7 +2186,7 @@ export default function ProductDetailClient({
                             variants={variants}
                             selectedVariant={selectedVariant ?? null}
                             platesBySku={platesBySku}
-                            selectedKitQuery={oneMlVialApplicator(selectedVariant?.websiteSku) ? undefined : selectedKitQuery}
+                            selectedKitQuery={selectedKitQuery}
                             localComponentPreviewSku={localComponentPreviewSku}
                             localKits={localKits}
                             skuImageFallbacks={pdpSkuImageFallbacks}
@@ -2238,7 +2241,7 @@ export default function ProductDetailClient({
                                 heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
                                 diameter={selectedVariant?.diameter ?? null}
                                 hasApproved3d={focusedPdpCapabilities.has3dMode}
-                                kitQuery={oneMlVialApplicator(selectedVariant?.websiteSku) ? undefined : selectedKitQuery}
+                                kitQuery={selectedKitQuery}
                                 localComponentPreviewSku={localComponentPreviewSku}
                                 localKitPilot={selectedPilot}
                                 selectedGraceSku={selectedVariant?.graceSku ?? null}
