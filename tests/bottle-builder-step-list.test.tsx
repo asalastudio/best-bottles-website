@@ -4,7 +4,11 @@
  * user-friendly so that it's explicitly clear of the natural flow"). The first screen's icon tiles are PR #440's.
  */
 import { readFileSync } from "node:fs";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+import { act } from "react";
+import { createRoot } from "react-dom/client";
+import BuilderSetQuantity from "@/components/bottle-builder/BuilderSetQuantity";
+import { builderSets, piecesFor, readSets } from "@/lib/bottle-builder/set-quantity";
 import { closeUpStyle, topWindow } from "@/lib/bottle-builder/top-close-up";
 
 describe("the first screen", () => {
@@ -34,9 +38,34 @@ describe("the desktop step list", () => {
         expect(client).not.toContain("styles.stepsBar");
         expect(client).not.toContain("styles.summaryNextAction");
         expect(css).not.toMatch(/\.stepsBar|\.nextStepCue|\.optionAction|\.mobileAction/);
-        // Quantity, price and Add to Cart sit under the list as soon as the bottle is complete.
         expect(client).toMatch(/data-builder-order=\{configuration \? "ready" : "waiting"\}/);
         expect(client).toMatch(/\{configuration \? <>[\s\S]*?id="builder-quantity"[\s\S]*?\{addButton\}/);
+    });
+
+    it("puts the order under the finished bottle: what was built, its SKU, the quantity in sets, the total and the button", () => {
+        // Jordan, 25 Nov 2026: "move over the add-to-cart button and the total, along with the quantity picker ...
+        // underneath the final assembled bottle, listing the product type, SKU number".
+        const preview = client.slice(client.indexOf('<section className={styles.preview}'), client.indexOf('<div className={styles.stepList}'));
+        const list = client.slice(client.indexOf('<div className={styles.stepList}'), client.indexOf('<div className={styles.addBar}'));
+        expect(preview).toContain('aria-label="Your order"');
+        expect(preview).toMatch(/<dt>Product<\/dt><dd>\{configuration\.product\.itemName\}<\/dd>/);
+        expect(preview).toMatch(/<dt>SKU<\/dt><dd data-builder-sku>\{configuration\.id\}<\/dd>/);
+        expect(preview).toMatch(/<dt>Includes<\/dt><dd>\{includes\}<\/dd>/);
+        expect(preview).toMatch(/<BuilderSetQuantity id="builder-quantity" quantity=\{selection\.quantity\} caseQuantity=\{configuration\.caseQuantity\}/);
+        expect(preview).toContain("{addButton}");
+        expect(list).not.toContain("data-builder-order");
+        expect(list).not.toContain("{addButton}");
+        // The card grows with its order instead of clipping it, and is only pinned on a screen tall enough for it.
+        expect(css).toMatch(/\.preview \{ height: auto; min-height: max\(420px, var\(--panel-height\)\); max-height: none; overflow: visible; \}/);
+        expect(css).toMatch(/@media \(min-width: 1100px\) and \(max-height: 639px\) \{\s*\.preview \{ position: static;/);
+        // Add to Cart is never below the fold on a finished bottle: when the card's button is not fully on screen,
+        // a bar at the foot of the window carries the bottle, its total and the same button.
+        expect(client).toMatch(/new IntersectionObserver\(\(\[entry\]\) => setAddOffScreen\(!entry\.isIntersecting\), \{ threshold: \.95 \}\)/);
+        expect(client).toMatch(/<div ref=\{addAnchor\} data-builder-add>\{addButton\}<\/div>/);
+        expect(client).toMatch(/\{configuration && addOffScreen && !lastAdded && <div className=\{styles\.addBar\}[\s\S]*?\{addButton\}\s*<\/div>\}/);
+        expect(css).toMatch(/\.addBar \{ position: fixed; left: 0; right: 0; bottom: 0;/);
+        // The phone uses the same picker on its last step.
+        expect(readFileSync("src/components/bottle-builder/MobileBuilder.tsx", "utf8")).toMatch(/<BuilderSetQuantity id=\{`\$\{id\}-quantity`\}/);
     });
 
     it("fills in a step that has one option and says so, instead of skipping it silently", () => {
@@ -88,5 +117,70 @@ describe("the desktop step list", () => {
         expect(client).toMatch(/function TopPhoto\([\s\S]*?previewParts\(config, "fitment"\)[\s\S]*?<FitmentIllustration fitment=\{fitment\} neck=\{neck\} \/>/);
         expect(client).toMatch(/const ghost = !body \? visibleBodies\[/);
         expect(client).toContain("until you pick a size.");
+    });
+});
+
+describe("quantity in sets", () => {
+    it("offers sets of 1, 12 and 144, and the case when it is a different quantity", () => {
+        expect(builderSets(null).map(set => set.size)).toEqual([1, 12, 144]);
+        expect(builderSets(845).map(set => set.label)).toEqual(["1", "12", "144", "Case of 845"]);
+        expect(builderSets(144).map(set => set.label)).toEqual(["1", "12", "144 (case)"]);
+        expect(builderSets(1).length).toBe(3);
+    });
+
+    it("reads pieces back as sets, keeping the chosen set size while the quantity is whole sets of it", () => {
+        const sets = builderSets(280);
+        expect(readSets(sets, 12)).toEqual({ size: 12, count: 1 });
+        expect(readSets(sets, 144)).toEqual({ size: 144, count: 1 });
+        expect(readSets(sets, 144, 12)).toEqual({ size: 12, count: 12 });
+        expect(readSets(sets, 280)).toEqual({ size: 280, count: 1 });
+        expect(readSets(sets, 7)).toEqual({ size: 1, count: 7 });
+        expect(readSets(sets, 30, 12)).toEqual({ size: 1, count: 30 });
+        // An emptied field keeps the set size and has no count.
+        expect(readSets(sets, NaN, 144)).toEqual({ size: 144, count: NaN });
+        expect(piecesFor(144, 3)).toBe(432);
+        expect(piecesFor(12, 0)).toBe(12);
+        expect(piecesFor(144, 1e9)).toBe(Math.floor(1_000_000 / 144) * 144);
+        expect(piecesFor(12, NaN)).toBeNaN();
+    });
+
+    it("is the catalog card's control: a Set of menu, a count of sets, and the total in pieces", async () => {
+        vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
+        const container = document.createElement("div"); document.body.append(container);
+        const root = createRoot(container);
+        let quantity = 12;
+        const changed = vi.fn((pieces: number) => { quantity = pieces; });
+        const priceFor = (pieces: number) => ({ unitPrice: .61, total: Math.round(61 * pieces) / 100 });
+        const draw = () => act(async () => root.render(<BuilderSetQuantity id="q" quantity={quantity} caseQuantity={280} priceFor={priceFor} onQuantity={changed} />));
+        const press = (selector: string) => act(async () => { container.querySelector<HTMLElement>(selector)!.click(); });
+        const toggle = () => container.querySelector<HTMLButtonElement>("[data-builder-set-toggle]")!;
+        await draw();
+        expect(toggle().textContent).toContain("Set of 12");
+        expect(toggle().getAttribute("aria-haspopup")).toBe("listbox");
+        expect(container.querySelector("[role=listbox]")).toBeNull();
+        expect(container.querySelector("[data-builder-total-quantity]")?.textContent).toContain("12 pcs");
+        // The menu lists every set with what the cart charges for it.
+        await press("[data-builder-set-toggle]");
+        expect([...container.querySelectorAll("[role=option]")].map(option => option.textContent)).toEqual([
+            "Set of 1 – $0.61 each", "Set of 12 – $7.32 ($0.61 each)", "Set of 144 – $87.84 ($0.61 each)", "Case of 280 – $170.80 ($0.61 each)"]);
+        expect(container.querySelector('[role=option][aria-selected="true"]')?.getAttribute("data-set-size")).toBe("12");
+        // Choosing a set starts at one of it and closes the menu.
+        await press('[role=option][data-set-size="144"]'); expect(changed).toHaveBeenLastCalledWith(144); await draw();
+        expect(container.querySelector("[role=listbox]")).toBeNull();
+        expect(toggle().textContent).toContain("Set of 144");
+        expect((container.querySelector("input") as HTMLInputElement).value).toBe("1");
+        await press('button[aria-label="Increase quantity"]'); expect(changed).toHaveBeenLastCalledWith(288); await draw();
+        expect(container.querySelector("[data-builder-total-quantity]")?.textContent).toContain("288 pcs");
+        expect(toggle().textContent).toContain("Set of 144");
+        await press("[data-builder-set-toggle]"); await press('[role=option][data-set-size="280"]'); expect(changed).toHaveBeenLastCalledWith(280); await draw();
+        expect(toggle().textContent).toContain("Case of 280");
+        await press("[data-builder-set-toggle]"); await press('[role=option][data-set-size="1"]'); await draw();
+        expect(container.querySelector("[data-builder-total-quantity]")?.textContent).toContain("1 pc");
+        expect((container.querySelector('button[aria-label="Decrease quantity"]') as HTMLButtonElement).disabled).toBe(true);
+        // Escape closes the menu without changing anything.
+        await press("[data-builder-set-toggle]");
+        await act(async () => { container.querySelector("[role=listbox]")!.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true })); });
+        expect(container.querySelector("[role=listbox]")).toBeNull();
+        await act(async () => root.unmount()); container.remove(); vi.unstubAllGlobals();
     });
 });

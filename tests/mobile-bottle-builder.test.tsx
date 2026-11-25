@@ -59,7 +59,7 @@ describe('mobile presentation over shared configuration',()=>{
   expect(container.querySelector('[data-mobile-builder]')?.getAttribute('data-keyboard')).toBe('false');
  });
  it('uses native preview dismissal and returns focus without losing the reviewed build',()=>{
-  toFinish();choose('Gold');button('Use case quantity');
+  toFinish();choose('Gold');click(container.querySelector('[data-builder-set-toggle]'));click(container.querySelector('[role=option][data-set-size="24"]'));
   const trigger=container.querySelector<HTMLButtonElement>('button[aria-label="Expand bottle preview"]')!;
   const dialog=container.querySelector<HTMLDialogElement>('dialog[aria-label="Expanded bottle preview"]')!;
   // jsdom does not implement the dialog API; actual touch/default-action coverage
@@ -73,7 +73,7 @@ describe('mobile presentation over shared configuration',()=>{
    act(()=>{dialog.open=false;dialog.dispatchEvent(new Event('close'));});
    expect(focus).toHaveBeenLastCalledWith({preventScroll:true});
    expect(stage()).toBe('3');expect(container.textContent).toContain('Gold');
-   expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('24');
+   expect(container.querySelector('[data-builder-total-quantity]')?.textContent).toContain('24 pcs');expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('1');
   }
   expect(add).not.toHaveBeenCalled();
  });
@@ -108,7 +108,7 @@ describe('mobile presentation over shared configuration',()=>{
   toFinish();choose('Gold');button('Glass');choose('Frosted');button('Continue to top');expect((container.querySelector('input[aria-label="Metal Roller"]') as HTMLInputElement).checked).toBe(true);button('Continue to cap color');expect((container.querySelector('input[aria-label="Gold"]') as HTMLInputElement).checked).toBe(true);
  });
  it('explains invalid dependencies while preserving quantity and requiring reselection',()=>{
-  toFinish();choose('Gold');button('Use case quantity');click(container.querySelector('button[aria-label="Edit bottle"]'));choose('9 ml, 17-415 neck');expect(container.textContent).toContain('Choose a top for this bottle and glass');button('Continue to top');expect(stage()).toBe('2');expect(container.querySelector('input[aria-label="Clear"]')).toBeNull();choose('Pump');button('Continue to color');expect((container.querySelector('input[aria-label="White"]') as HTMLInputElement).checked).toBe(true);expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('24');
+  toFinish();choose('Gold');click(container.querySelector('[data-builder-set-toggle]'));click(container.querySelector('[role=option][data-set-size="24"]'));click(container.querySelector('button[aria-label="Edit bottle"]'));choose('9 ml, 17-415 neck');expect(container.textContent).toContain('Choose a top for this bottle and glass');button('Continue to top');expect(stage()).toBe('2');expect(container.querySelector('input[aria-label="Clear"]')).toBeNull();choose('Pump');button('Continue to color');expect((container.querySelector('input[aria-label="White"]') as HTMLInputElement).checked).toBe(true);expect(container.querySelector('[data-builder-total-quantity]')?.textContent).toContain('24 pcs');expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('1');
  });
  it('passes over the glass step for a bottle made in one glass, in both directions',()=>{
   choose('9 ml, 17-415 neck');expect([...container.querySelectorAll('button')].some(b=>b.textContent?.trim()==='Continue to glass')).toBe(false);button('Continue to top');expect(stage()).toBe('2');button('Back');expect(stage()).toBe('0');
