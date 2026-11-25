@@ -60,7 +60,7 @@ describe("the desktop step list", () => {
         expect(css).toMatch(/@media \(min-width: 1100px\) and \(max-height: 639px\) \{\s*\.preview \{ position: static;/);
         // Add to Cart is never below the fold on a finished bottle: when the card's button is not fully on screen,
         // a bar at the foot of the window carries the bottle, its total and the same button.
-        expect(client).toMatch(/new IntersectionObserver\(\(\[entry\]\) => setAddOffScreen\(!entry\.isIntersecting\), \{ threshold: \.95 \}\)/);
+        expect(client).toMatch(/new IntersectionObserver\(\(\[entry\]\) => setAddOffScreen\(entry\.intersectionRatio < \.95\), \{ threshold: \.95 \}\)/);
         expect(client).toMatch(/<div ref=\{addAnchor\} data-builder-add>\{addButton\}<\/div>/);
         expect(client).toMatch(/\{configuration && addOffScreen && !lastAdded && <div className=\{styles\.addBar\}[\s\S]*?\{addButton\}\s*<\/div>\}/);
         expect(css).toMatch(/\.addBar \{ position: fixed; left: 0; right: 0; bottom: 0;/);
