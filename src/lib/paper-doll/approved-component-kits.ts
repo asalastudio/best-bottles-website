@@ -16,6 +16,7 @@ import sleekTubes from "./sleek-large-tubes.generated.json";
 import cylinder25Droppers from "./cylinder25-dropper.generated.json";
 import cylinder25Reducers from "./cylinder25-reducers.generated.json";
 import seatedDipTubes from "./seated-dip-tubes.generated.json";
+import smallGlass from "./small-glass-bodies.generated.json";
 import { CYLINDER25_COPPER_OVERCAP } from "../register/cylinder25-copper-overcap";
 import { withSelected25LotionTube } from "../register/cylinder-lotion-tube";
 import type { KitLike } from "@/lib/products/pdp-redesign/stage";
@@ -526,9 +527,25 @@ function withSeatedDipTubes(source: Record<string, BuilderKit>): Record<string, 
     return Object.fromEntries(Object.entries(source).map(([sku, kit]) => [sku, withSeatedDipTube(sku, kit)]));
 }
 
+// Small-glass bodies (24 Nov 2026, scripts/diva-vial/small-glass-bodies.py): the 1 ml plug vials, 2 ml 8-425 vials,
+// 3 ml green and blue 13-425 vials, 3 ml tola and 3 ml spray bottle wear a sharper re-shoot of their own glass, cut
+// to the outline they had. Only the body's image (and its box, tightened to the visible glass) changes; caps, plugs,
+// applicators and sprayer heads keep their approved layers and placement. The glass is AI-generated (Asala Brand Hub,
+// geometry-locked to the approved glass) and labelled so in the manifest.
+type SmallGlassImage = { url: string; sha256: string; bytes: number; width: number; height: number };
+const smallGlassBodies = smallGlass.bodies as Record<string, { image: SmallGlassImage | null }>;
+const smallGlassRows = Object.fromEntries(Object.entries(smallGlass.kits as Record<string, { body: string; box: BuilderPart["box"] | null }>)
+    .flatMap(([sku, { body, box }]) => {
+        const kit = existingRows[sku];
+        const image = smallGlassBodies[body]?.image;
+        if (!kit || !image) return [];
+        return [[sku, { ...kit, parts: kit.parts.map(part => part.slot !== "body" ? part
+            : { ...part, image: { ...part.image, ...image, key: image.url }, image2x: null, box: box ?? part.box }) }]];
+    })) as Record<string, BuilderKit>;
+
 // The Diva corrections touch only Diva kits; the Boston and 28 ml Cylinder roll-on recipes are added after them, unchanged.
 // The seated tubes were measured on these corrected kits, so they are fitted last (no roll-on has a tube entry).
-const rows: Record<string, BuilderKit> = withSeatedDipTubes({ ...withDivaSeating(withDivaOvercapTops({ ...existingRows, ...elegant30SeatRows, ...revisedRows, ...pillarRows, ...tulipRows })), ...bostonRollOnRows, ...cylinder28Rows });
+const rows: Record<string, BuilderKit> = withSeatedDipTubes({ ...withDivaSeating(withDivaOvercapTops({ ...existingRows, ...elegant30SeatRows, ...revisedRows, ...pillarRows, ...tulipRows, ...smallGlassRows })), ...bostonRollOnRows, ...cylinder28Rows });
 export { APPROVED_KIT_VERSION } from "./approved-kit-index";
 
 export function revisedCylinderKit(sku: string): BuilderKit | undefined {
