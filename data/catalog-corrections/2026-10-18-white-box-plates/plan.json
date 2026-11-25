@@ -1,0 +1,462 @@
+{
+  "title": "2026-10-18 white-box product stages: replace productPlates.front with a composed plate",
+  "snapshot": {
+    "deployment": "precise-raccoon-123",
+    "table": "productPlates",
+    "exportedAt": 1792391857347
+  },
+  "field": "productPlates.front (cap-on plate). frontCapOff, thumbs, views and source lineage are left as they are.",
+  "entries": [
+    {
+      "sku": "GBHeartFrst4TslRed",
+      "graceSku": "GB-DEC-FRS-4ML-GST-RED-T",
+      "page": "/products/heart-4ml-frosted-8mm-tassel",
+      "pageShowsFirst": true,
+      "plateId": "nn728cjcd8kb1sqfeyc6nyr5858eq9vg",
+      "familyId": "decorative-4ml-frosted-8mm",
+      "expectFront": {
+        "sha256": "1a4f9c19bf8b516b14ca923fb8c075db7a646b3752a9c510ead421ee2401a4e8",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-4ml-frosted-8mm/GBHeartFrst4TslRed/1a4f9c19bf8b516b14ca923fb8c075db7a646b3752a9c510ead421ee2401a4e8.front-on-1000x1100.webp"
+      },
+      "front": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-4ml-frosted-8mm/GBHeartFrst4TslRed/aa16b3a7faa020b235378b95f9d15bcb7b4d9fb71f15c75426b1e7e12a50af2a.front-on-1000x1100.webp",
+        "key": "plates/decorative-4ml-frosted-8mm/GBHeartFrst4TslRed/aa16b3a7faa020b235378b95f9d15bcb7b4d9fb71f15c75426b1e7e12a50af2a.front-on-1000x1100.webp",
+        "sha256": "aa16b3a7faa020b235378b95f9d15bcb7b4d9fb71f15c75426b1e7e12a50af2a",
+        "bytes": 47516,
+        "width": 1000,
+        "height": 1100
+      },
+      "file": "data/catalog-corrections/2026-10-18-white-box-plates/plates/GBHeartFrst4TslRed.aa16b3a7faa0.front-on-1000x1100.webp",
+      "transparent": false,
+      "source": {
+        "method": "catalog-hero",
+        "file": "public/images/catalog/bone-review/GBHeartFrst4TslRed.72085c2aa183.png",
+        "sha256": "72085c2aa1830c424b586ce9dd5abab7179bafce0d7b2899c7854c62058259b5",
+        "ledger": "sunburst-approved (release-3 lock)",
+        "note": "the bone-background photograph the catalogue card already shows for this SKU, 1560x1716 scaled to 1000x1100"
+      }
+    },
+    {
+      "sku": "Alu100mlSprayBlack",
+      "graceSku": "AB-ALU-CLR-100ML-SPR-BLK",
+      "page": "/products/aluminum-bottle-100ml-mixed-20-410",
+      "pageShowsFirst": true,
+      "plateId": "nn7fdtsb44yzhrvtvxnkpeg5ah8ep39m",
+      "familyId": "aluminum-bottle-100ml-clear-20-410",
+      "expectFront": {
+        "sha256": "5394907887f8ec54a305053d988f2b414c0bb3c93d7e70e65b6451fb4e21ca24",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-100ml-clear-20-410/Alu100mlSprayBlack/5394907887f8ec54a305053d988f2b414c0bb3c93d7e70e65b6451fb4e21ca24.front-on-1000x1100.webp"
+      },
+      "front": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-100ml-clear-20-410/Alu100mlSprayBlack/d3d5f9d4e62ff46509c72e017eb8fa5b2c6beafc5510208eb0b7385bfc929ce8.front-on-1000x1100.webp",
+        "key": "plates/aluminum-bottle-100ml-clear-20-410/Alu100mlSprayBlack/d3d5f9d4e62ff46509c72e017eb8fa5b2c6beafc5510208eb0b7385bfc929ce8.front-on-1000x1100.webp",
+        "sha256": "d3d5f9d4e62ff46509c72e017eb8fa5b2c6beafc5510208eb0b7385bfc929ce8",
+        "bytes": 9866,
+        "width": 1000,
+        "height": 1100
+      },
+      "file": "data/catalog-corrections/2026-10-18-white-box-plates/plates/Alu100mlSprayBlack.d3d5f9d4e62f.front-on-1000x1100.webp",
+      "transparent": false,
+      "source": {
+        "method": "catalog-hero",
+        "file": "public/images/catalog/bone-review/Alu100mlSprayBlack.560df11fa2c4.png",
+        "sha256": "560df11fa2c4afc135de1e852a86a5fb1526474810b5b219c2e51993d44c7198",
+        "ledger": "prior-release, indexed",
+        "note": "the bone-background photograph the catalogue card already shows for this SKU, 1560x1716 scaled to 1000x1100"
+      }
+    },
+    {
+      "sku": "Alu500",
+      "graceSku": "AB-ALU-CLR-500ML",
+      "page": "/products/aluminum-bottle-500ml-mixed-20-410",
+      "pageShowsFirst": true,
+      "plateId": "nn78yfnhmg19zqf09th9n5hd2x8ep6j7",
+      "familyId": "aluminum-bottle-500ml-clear-20-410",
+      "expectFront": {
+        "sha256": "cd1d9d9a86a6aa5b52bb95ed49b3553c93c66bd1d50ea04fab8074f6e4b8c181",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-500ml-clear-20-410/Alu500/cd1d9d9a86a6aa5b52bb95ed49b3553c93c66bd1d50ea04fab8074f6e4b8c181.front-on-1000x1100.webp"
+      },
+      "front": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-500ml-clear-20-410/Alu500/a5b4722a8f3cb3e4c86db563a5b3adadf650305a10c58c2e49ab2d8a27b7acd3.front-on-1000x1100.webp",
+        "key": "plates/aluminum-bottle-500ml-clear-20-410/Alu500/a5b4722a8f3cb3e4c86db563a5b3adadf650305a10c58c2e49ab2d8a27b7acd3.front-on-1000x1100.webp",
+        "sha256": "a5b4722a8f3cb3e4c86db563a5b3adadf650305a10c58c2e49ab2d8a27b7acd3",
+        "bytes": 17336,
+        "width": 1000,
+        "height": 1100
+      },
+      "file": "data/catalog-corrections/2026-10-18-white-box-plates/plates/Alu500.a5b4722a8f3c.front-on-1000x1100.webp",
+      "transparent": false,
+      "source": {
+        "method": "catalog-hero",
+        "file": "public/images/catalog/bone-review/Alu500.8cd5134acf51.png",
+        "sha256": "8cd5134acf51526a0c57625dfb2c4392617168c38a1fb61dddc7e33ac15310ce",
+        "ledger": "prior-release, indexed",
+        "note": "the bone-background photograph the catalogue card already shows for this SKU, 1560x1716 scaled to 1000x1100"
+      }
+    },
+    {
+      "sku": "GBMtlCylGl",
+      "graceSku": "GB-RYL-CLR-14ML-T",
+      "page": "/products/royal-14ml-clear-11mm",
+      "pageShowsFirst": true,
+      "plateId": "nn75981esketpf0y6hw9k28q5d8dm1bn",
+      "familyId": "royal-14ml-clear-11mm",
+      "expectFront": {
+        "sha256": "9c778b130b212cf2e3fe2d818eea909506272028faf6d89a822450597cb0c263",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-14ml-clear-11mm/GBMtlCylGl/9c778b130b212cf2e3fe2d818eea909506272028faf6d89a822450597cb0c263.front-on-1000x1100.webp"
+      },
+      "front": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-14ml-clear-11mm/GBMtlCylGl/d96f9f62a8f3ad2d6c7958a0dc29d960331a9151b825cf598e0896afe5be28af.front-on-1000x1100.webp",
+        "key": "plates/royal-14ml-clear-11mm/GBMtlCylGl/d96f9f62a8f3ad2d6c7958a0dc29d960331a9151b825cf598e0896afe5be28af.front-on-1000x1100.webp",
+        "sha256": "d96f9f62a8f3ad2d6c7958a0dc29d960331a9151b825cf598e0896afe5be28af",
+        "bytes": 39818,
+        "width": 1000,
+        "height": 1100
+      },
+      "file": "data/catalog-corrections/2026-10-18-white-box-plates/plates/GBMtlCylGl.d96f9f62a8f3.front-on-1000x1100.webp",
+      "transparent": false,
+      "source": {
+        "method": "catalog-hero",
+        "file": "public/images/catalog/bone-review/GBMtlCylGl.1103c802f122.png",
+        "sha256": "1103c802f122a99b7b0f7824a3188dc60262c7f0e9c4b278c2b7f67c33a7d310",
+        "ledger": "prior-release, indexed",
+        "note": "the bone-background photograph the catalogue card already shows for this SKU, 1560x1716 scaled to 1000x1100"
+      }
+    },
+    {
+      "sku": "GBBstnBlu15BlkDrpr",
+      "graceSku": "GB-BSR-CBL-15ML-BLK-T-01",
+      "page": "/products/boston-round-15ml-cobalt-blue-18-400-dropper",
+      "pageShowsFirst": true,
+      "plateId": "nn70ggf5jdpsz5twh7te55ypmn8emsnv",
+      "familyId": "boston-round-15ml-cobalt-blue-18-400",
+      "expectFront": {
+        "sha256": "97abc7b374f8d56dd11be846a7c482fa64a24d869219126ba082b61f8657a9e2",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkDrpr/97abc7b374f8d56dd11be846a7c482fa64a24d869219126ba082b61f8657a9e2.front-on-1000x1100.webp"
+      },
+      "front": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkDrpr/21e776e247dac5d49c344346ab7f64c862f81bf2d647c929f1fc139e9028edd1.front-on-1000x1100.webp",
+        "key": "plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15BlkDrpr/21e776e247dac5d49c344346ab7f64c862f81bf2d647c929f1fc139e9028edd1.front-on-1000x1100.webp",
+        "sha256": "21e776e247dac5d49c344346ab7f64c862f81bf2d647c929f1fc139e9028edd1",
+        "bytes": 28262,
+        "width": 1000,
+        "height": 1100
+      },
+      "file": "data/catalog-corrections/2026-10-18-white-box-plates/plates/GBBstnBlu15BlkDrpr.21e776e247da.front-on-1000x1100.webp",
+      "transparent": true,
+      "source": {
+        "method": "psd-cutout",
+        "masterPath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/5. GBBstnBlu15BlkDrp.psd",
+        "psdSha256": "c7d203fd2f68f94c5155d19e0905bebf2e34b52a8b127a4b81233887ebd39ede",
+        "readFrom": "Boston Rnd Bottles 20-400 (1oz and 2oz) + 18-400 half oz/2. Cobalt Blue Bottle (half ounce\uf02215 ml) Dropper/5GBBST~1.PSD",
+        "registration": {
+          "scale": 0.959434,
+          "ox": 228.98,
+          "oy": -25.12,
+          "residualVsLivePlate": 0.13,
+          "residualGate": 6.0,
+          "droppedLayer": "Background",
+          "psdSize": [
+            591,
+            1181
+          ],
+          "whiteRetouchRemoved": {
+            "pieces": 14,
+            "pixels": 25014
+          }
+        },
+        "note": "the live plate with its white background made transparent: same PSD, same placement"
+      }
+    },
+    {
+      "sku": "GBV1DrmBlackCapSht",
+      "graceSku": "GB-VIA-CLR-3ML-S-01",
+      "page": "/products/vial-4ml-clear-13-425",
+      "pageShowsFirst": true,
+      "plateId": "nn75zfff9v8b4mezfzfnp95yg98epqnt",
+      "familyId": "vial-4ml-clear-13-425",
+      "expectFront": {
+        "sha256": "3af2db78b0c406a05213fc89500cfebc6677cccb2d15f963f76cbd991093eb65",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-clear-13-425/GBV1DrmBlackCapSht/3af2db78b0c406a05213fc89500cfebc6677cccb2d15f963f76cbd991093eb65.front-on-1000x1100.webp"
+      },
+      "front": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-clear-13-425/GBV1DrmBlackCapSht/57b674d6182d42cc34cb4b2104569ad7aec8dc391aaa765d54324b6e3b26cba8.front-on-1000x1100.webp",
+        "key": "plates/vial-4ml-clear-13-425/GBV1DrmBlackCapSht/57b674d6182d42cc34cb4b2104569ad7aec8dc391aaa765d54324b6e3b26cba8.front-on-1000x1100.webp",
+        "sha256": "57b674d6182d42cc34cb4b2104569ad7aec8dc391aaa765d54324b6e3b26cba8",
+        "bytes": 20238,
+        "width": 1000,
+        "height": 1100
+      },
+      "file": "data/catalog-corrections/2026-10-18-white-box-plates/plates/GBV1DrmBlackCapSht.57b674d6182d.front-on-1000x1100.webp",
+      "transparent": true,
+      "source": {
+        "method": "psd-cutout",
+        "masterPath": "12. Vials/0. All Vials/Capped/GBVial1DrmBlackCapSht copy.psd",
+        "psdSha256": "90357325262886bfcbbf1e01afc4e8559fd244171674b24e2f284e9d29cddd91",
+        "readFrom": "12. Vials/0. All Vials/Capped/GBVial1DrmBlackCapSht copy.psd",
+        "registration": {
+          "scale": 1.776996,
+          "ox": 85.927,
+          "oy": -432.646,
+          "residualVsLivePlate": 0.93,
+          "residualGate": 6.0,
+          "droppedLayer": "Background",
+          "psdSize": [
+            472,
+            945
+          ],
+          "whiteRetouchRemoved": {
+            "pieces": 3,
+            "pixels": 18
+          }
+        },
+        "note": "the live plate with its white background made transparent: same PSD, same placement"
+      }
+    },
+    {
+      "sku": "GBElg30SpryBlk",
+      "graceSku": "GB-ELG-BLK-30ML-SPR-BLK",
+      "page": "/products/elegant-30ml-clear-15-415-perfumespray",
+      "pageShowsFirst": true,
+      "plateId": "nn76ntqbhb3dh7d8re0r24zbjn8dma8d",
+      "familyId": "elegant-30ml-clear-15-415",
+      "expectFront": {
+        "sha256": "70bb9a1ada575f26518ea21906e39f15c0a2b12fe115590ac0b32c3e1c69dc2e",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/elegant-30ml-clear-15-415/GBElg30SpryBlk/70bb9a1ada575f26518ea21906e39f15c0a2b12fe115590ac0b32c3e1c69dc2e.front-on-1000x1100.webp"
+      },
+      "front": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/elegant-30ml-clear-15-415/GBElg30SpryBlk/23de3629dfc963aa2b8a3acde9c92293a018a73de10c28a4967fff15edfc34c9.front-on-1000x1100.webp",
+        "key": "plates/elegant-30ml-clear-15-415/GBElg30SpryBlk/23de3629dfc963aa2b8a3acde9c92293a018a73de10c28a4967fff15edfc34c9.front-on-1000x1100.webp",
+        "sha256": "23de3629dfc963aa2b8a3acde9c92293a018a73de10c28a4967fff15edfc34c9",
+        "bytes": 24470,
+        "width": 1000,
+        "height": 1100
+      },
+      "file": "data/catalog-corrections/2026-10-18-white-box-plates/plates/GBElg30SpryBlk.23de3629dfc9.front-on-1000x1100.webp",
+      "transparent": true,
+      "source": {
+        "method": "psd-cutout",
+        "masterPath": "4.  15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/1. GBElg30SpryBlk..psd",
+        "psdSha256": "909fde2f419f3c143f53ee1c36cfb115eb2bfac988bb9d829c31223ec3abe276",
+        "readFrom": "15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/1. GBElg30SpryBlk..psd",
+        "registration": {
+          "scale": 0.842975,
+          "ox": 3.005,
+          "oy": -9.736,
+          "residualVsLivePlate": 0.57,
+          "residualGate": 6.0,
+          "droppedLayer": "Layer 0",
+          "psdSize": [
+            1181,
+            1417
+          ],
+          "whiteRetouchRemoved": {
+            "pieces": 8,
+            "pixels": 40
+          }
+        },
+        "note": "the live plate with its white background made transparent: same PSD, same placement"
+      }
+    },
+    {
+      "sku": "GBElg30SpryShnSl",
+      "graceSku": "GB-ELG-CLR-30ML-SPR-SSLV",
+      "page": "/products/elegant-30ml-clear-15-415-perfumespray",
+      "pageShowsFirst": false,
+      "plateId": "nn7cb7qppndnm13j645fvh229h8eqyf2",
+      "familyId": "elegant-30ml-clear-15-415",
+      "expectFront": {
+        "sha256": "28d9d0704ed80fe101209d9000f179eec183c308cdfcb8350c0ce8a66d1bb308",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/elegant-30ml-clear-15-415/GBElg30SpryShnSl/28d9d0704ed80fe101209d9000f179eec183c308cdfcb8350c0ce8a66d1bb308.front-on-1000x1100.webp"
+      },
+      "front": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/elegant-30ml-clear-15-415/GBElg30SpryShnSl/187743d2a26e4acb2dfa4e4f326d14583c22bb9dfa06e7392ab41245a2e8f9cc.front-on-1000x1100.webp",
+        "key": "plates/elegant-30ml-clear-15-415/GBElg30SpryShnSl/187743d2a26e4acb2dfa4e4f326d14583c22bb9dfa06e7392ab41245a2e8f9cc.front-on-1000x1100.webp",
+        "sha256": "187743d2a26e4acb2dfa4e4f326d14583c22bb9dfa06e7392ab41245a2e8f9cc",
+        "bytes": 23400,
+        "width": 1000,
+        "height": 1100
+      },
+      "file": "data/catalog-corrections/2026-10-18-white-box-plates/plates/GBElg30SpryShnSl.187743d2a26e.front-on-1000x1100.webp",
+      "transparent": true,
+      "source": {
+        "method": "psd-cutout",
+        "masterPath": "4.  15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/3. GBElg30SpryShSl.psd",
+        "psdSha256": "0506132a6b49b7eefe52421c1f36bf53e28cf9ff92e002f579fbb6f96d25a20b",
+        "readFrom": "15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/3. GBElg30SpryShSl.psd",
+        "registration": {
+          "scale": 0.843023,
+          "ox": 6.852,
+          "oy": -8.953,
+          "residualVsLivePlate": 0.5,
+          "residualGate": 6.0,
+          "droppedLayer": "Background",
+          "psdSize": [
+            1181,
+            1417
+          ],
+          "whiteRetouchRemoved": {
+            "pieces": 10,
+            "pixels": 49
+          }
+        },
+        "note": "the live plate with its white background made transparent: same PSD, same placement"
+      }
+    },
+    {
+      "sku": "GBElg30SpryShGl",
+      "graceSku": "GB-ELG-CLR-30ML-SPR-SGLD",
+      "page": "/products/elegant-30ml-clear-15-415-perfumespray",
+      "pageShowsFirst": false,
+      "plateId": "nn78ezspzdyhnf3drc9p3mcshs8empx3",
+      "familyId": "elegant-30ml-clear-15-415",
+      "expectFront": {
+        "sha256": "bcf2c8282a46b0d0bbcfb4dccfe16a54bc7aa60f971334dee5ef47121ddf4d68",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/elegant-30ml-clear-15-415/GBElg30SpryShGl/bcf2c8282a46b0d0bbcfb4dccfe16a54bc7aa60f971334dee5ef47121ddf4d68.front-on-1000x1100.webp"
+      },
+      "front": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/elegant-30ml-clear-15-415/GBElg30SpryShGl/1a36cf0bdab20cfd6ee99b17e67975a7254b8ca5e4671a12a45cf574683ba9a4.front-on-1000x1100.webp",
+        "key": "plates/elegant-30ml-clear-15-415/GBElg30SpryShGl/1a36cf0bdab20cfd6ee99b17e67975a7254b8ca5e4671a12a45cf574683ba9a4.front-on-1000x1100.webp",
+        "sha256": "1a36cf0bdab20cfd6ee99b17e67975a7254b8ca5e4671a12a45cf574683ba9a4",
+        "bytes": 25890,
+        "width": 1000,
+        "height": 1100
+      },
+      "file": "data/catalog-corrections/2026-10-18-white-box-plates/plates/GBElg30SpryShGl.1a36cf0bdab2.front-on-1000x1100.webp",
+      "transparent": true,
+      "source": {
+        "method": "psd-cutout",
+        "masterPath": "4.  15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/2. GBElg30SpryShnGl.psd",
+        "psdSha256": "39ef9f46594ff743363e600ba61f49c69e0f681c302f0632aace6d559327781e",
+        "readFrom": "15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/2. GBElg30SpryShnGl.psd",
+        "registration": {
+          "scale": 0.846473,
+          "ox": 9.936,
+          "oy": -14.174,
+          "residualVsLivePlate": 0.65,
+          "residualGate": 6.0,
+          "droppedLayer": "Background",
+          "psdSize": [
+            1181,
+            1417
+          ],
+          "whiteRetouchRemoved": {
+            "pieces": 8,
+            "pixels": 30
+          }
+        },
+        "note": "the live plate with its white background made transparent: same PSD, same placement"
+      }
+    },
+    {
+      "sku": "GBCrcl30SpryMattSl",
+      "graceSku": "GB-CIR-CLR-30ML-SPR-MSLV",
+      "page": "/products/circle-30ml-clear-15-415-perfumespray",
+      "pageShowsFirst": false,
+      "plateId": "nn7dbsepnpbzbna0ze3sr7z7m18dnhvz",
+      "familyId": "circle-30ml-clear-15-415",
+      "expectFront": {
+        "sha256": "0fcdbc4d49d45fb52920f6b7562a97183de2736ea1d17145f6a63c7ee9e7a24f",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-30ml-clear-15-415/GBCrcl30SpryMattSl/0fcdbc4d49d45fb52920f6b7562a97183de2736ea1d17145f6a63c7ee9e7a24f.front-on-1000x1100.webp"
+      },
+      "front": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-30ml-clear-15-415/GBCrcl30SpryMattSl/e583034dd46454c4ce5a02299899d9c2362949ac8de2349ddd64884705368e4e.front-on-1000x1100.webp",
+        "key": "plates/circle-30ml-clear-15-415/GBCrcl30SpryMattSl/e583034dd46454c4ce5a02299899d9c2362949ac8de2349ddd64884705368e4e.front-on-1000x1100.webp",
+        "sha256": "e583034dd46454c4ce5a02299899d9c2362949ac8de2349ddd64884705368e4e",
+        "bytes": 26740,
+        "width": 1000,
+        "height": 1100
+      },
+      "file": "data/catalog-corrections/2026-10-18-white-box-plates/plates/GBCrcl30SpryMattSl.e583034dd464.front-on-1000x1100.webp",
+      "transparent": true,
+      "source": {
+        "method": "psd-cutout",
+        "masterPath": "4.  15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/4. GBCrcl30SpryMattSl.psd",
+        "psdSha256": "cbba3397a8021ad3dd7e043be51ca564bc3f9362f4e78670ad6e90b356b1b1f1",
+        "readFrom": "15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/4. GBCrcl30SpryMattSl.psd",
+        "registration": {
+          "scale": 0.837438,
+          "ox": 15.549,
+          "oy": 4.876,
+          "residualVsLivePlate": 0.33,
+          "residualGate": 6.0,
+          "droppedLayer": "Background",
+          "psdSize": [
+            1181,
+            1417
+          ],
+          "whiteRetouchRemoved": {
+            "pieces": 39,
+            "pixels": 102
+          }
+        },
+        "note": "the live plate with its white background made transparent: same PSD, same placement"
+      }
+    },
+    {
+      "sku": "GBCrcl30SpryShnGl",
+      "graceSku": "GB-CIR-CLR-30ML-SPR-SGLD",
+      "page": "/products/circle-30ml-clear-15-415-perfumespray",
+      "pageShowsFirst": false,
+      "plateId": "nn7668e2bwx3zbr4qh0rxdhtxx8dmr05",
+      "familyId": "circle-30ml-clear-15-415",
+      "expectFront": {
+        "sha256": "bafa5c1ce88e2e8312d9b1d736abd2ade5da0b0f4f26c88f2fec8c27682222ba",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-30ml-clear-15-415/GBCrcl30SpryShnGl/bafa5c1ce88e2e8312d9b1d736abd2ade5da0b0f4f26c88f2fec8c27682222ba.front-on-1000x1100.webp"
+      },
+      "front": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-30ml-clear-15-415/GBCrcl30SpryShnGl/79ef323c3323cd7cec53e1e41f96f72acff42768a20f7ae43ea4558056220aee.front-on-1000x1100.webp",
+        "key": "plates/circle-30ml-clear-15-415/GBCrcl30SpryShnGl/79ef323c3323cd7cec53e1e41f96f72acff42768a20f7ae43ea4558056220aee.front-on-1000x1100.webp",
+        "sha256": "79ef323c3323cd7cec53e1e41f96f72acff42768a20f7ae43ea4558056220aee",
+        "bytes": 32940,
+        "width": 1000,
+        "height": 1100
+      },
+      "file": "data/catalog-corrections/2026-10-18-white-box-plates/plates/GBCrcl30SpryShnGl.79ef323c3323.front-on-1000x1100.webp",
+      "transparent": true,
+      "source": {
+        "method": "psd-cutout",
+        "masterPath": "4.  15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/2. GBCrcl30SpryShnGl.psd",
+        "psdSha256": "86a8d78fd53d12c8266eae6de72c1d3a31947208efe8b8ebffca8ff695d354b9",
+        "readFrom": "15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/2. GBCrcl30SpryShnGl.psd",
+        "registration": {
+          "scale": 0.83753,
+          "ox": 14.663,
+          "oy": 4.76,
+          "residualVsLivePlate": 0.45,
+          "residualGate": 6.0,
+          "droppedLayer": "Background",
+          "psdSize": [
+            1181,
+            1417
+          ],
+          "whiteRetouchRemoved": {
+            "pieces": 44,
+            "pixels": 118
+          }
+        },
+        "note": "the live plate with its white background made transparent: same PSD, same placement"
+      }
+    }
+  ],
+  "held": [
+    {
+      "page": "circle-30ml-clear-15-415",
+      "skus": [
+        "GBCrcl30GlCap",
+        "GBCrcl30SlCap"
+      ],
+      "record": "productKits (body part)",
+      "reason": "The glass reads as solid white because the kit's body layer is opaque white (alpha 255, RGB 253 inside the glass), and so is the glass layer of the master PSD it was cut from (7. GBCrcl30GlCap..psd, sha256 matches the kit's plate). No transparent Circle 30 ml glass exists in productKits, productPlates, the builder bodies or the master; the only see-through Circle 30 photographs in the repo are the bone heroes for GBCrcl30GlCap and GBCrcl30SpryMattGl, which show the cap beside the bottle, and the stage never reaches a hero while a kit exists. Fixing it needs new glass artwork (a re-matted body layer) or a stage rule, not a data correction."
+    },
+    {
+      "page": "circle-30ml-clear-15-415-perfumespray",
+      "skus": [
+        "GBCrcl30SpryBlk",
+        "GBCrcl30SpryShSl"
+      ],
+      "record": "productKits (body part)",
+      "reason": "Same opaque master glass layer (1. GBCrcl30SpryBlk.psd: alpha 255, RGB 253). Every Circle kit on the site (15, 30, 50, 100 ml) carries the same treatment, and clear Vial, Sleek, Elegant and Diva kit bodies are opaque near-white too (alpha 255, RGB 229-252); Circle's large round face makes it the most visible."
+    }
+  ]
+}
