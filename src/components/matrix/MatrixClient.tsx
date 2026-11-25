@@ -255,7 +255,8 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     useEffect(() => {
         const anchor = addAnchor.current;
         if (!complete || !anchor || typeof IntersectionObserver === "undefined") return;
-        const observer = new IntersectionObserver(([entry]) => setAddOffScreen(!entry.isIntersecting), { threshold: .95 });
+        // The ratio, not isIntersecting: browsers differ on whether a button that is half on screen still "intersects".
+        const observer = new IntersectionObserver(([entry]) => setAddOffScreen(entry.intersectionRatio < .95), { threshold: .95 });
         observer.observe(anchor);
         return () => observer.disconnect();
     }, [complete]);
