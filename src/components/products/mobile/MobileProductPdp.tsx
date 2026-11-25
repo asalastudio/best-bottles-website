@@ -255,7 +255,8 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const previewing = Boolean(previewSibling?.variant || (previewInGroup && previewInGroup._id !== selectedVariant?._id));
     const assembledOnly = requiresAssembledClosure(shownVariant?.applicator, shownVariant?.websiteSku);
     const pilot = shownVariant?.websiteSku ? localKits[shownVariant.websiteSku] : undefined;
-    const shownKitQuery: KitQueryResult = oneMlVialApplicator(shownVariant?.websiteSku) || previewing ? undefined : selectedKitQuery;
+    // The 1 mL plug vials draw their approved kit too (small-glass body, plug seated; 25 Nov 2026).
+    const shownKitQuery: KitQueryResult = previewing ? undefined : selectedKitQuery;
     const { kit: shownKit, parts: kitPartsWithCap } = useDecodedKitParts(
         { websiteSku: shownVariant?.websiteSku, graceSku: shownVariant?.graceSku },
         pilot ? (picker.viewMode === "capOff" ? pilot.off : pilot.on) : shownKitQuery,

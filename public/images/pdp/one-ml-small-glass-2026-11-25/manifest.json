@@ -1,0 +1,70 @@
+{
+ "stills": {
+  "GB1mlAmbVBlk": {
+   "url": "/images/pdp/one-ml-small-glass-2026-11-25/GB1mlAmbVBlk.6327a5a8c55d.png",
+   "sha256": "6327a5a8c55d8072a92700b0b011808fcd1c6889c9b4ac2139a69bf4749f5616",
+   "width": 1200,
+   "height": 1320,
+   "layers": [
+    "/images/approved-masters/glass-vial1-amber.7bdc6c81e32e.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-04/4c58f4e3b8ed4150781287dee7861f7a22eed3f525588735973dd0e956d5041a.png"
+   ]
+  },
+  "GB1mlAmbVialWht": {
+   "url": "/images/pdp/one-ml-small-glass-2026-11-25/GB1mlAmbVialWht.8c1cde8c18b4.png",
+   "sha256": "8c1cde8c18b42c08033d58838c7baaca27efdd09e80ee3b1befc7f07a4bff451",
+   "width": 1200,
+   "height": 1320,
+   "layers": [
+    "/images/approved-masters/glass-vial1-amber.7bdc6c81e32e.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-04/b477d543c094a53b7d6c66a340248def54d8e3503c67f9934ffb9c03ae8d3a66.png"
+   ]
+  },
+  "GB1mlVBlk": {
+   "url": "/images/pdp/one-ml-small-glass-2026-11-25/GB1mlVBlk.743e5baf1cf9.png",
+   "sha256": "743e5baf1cf9d5347f3878014f0b79f401c156f06be0668554a08a0fc3f64f5a",
+   "width": 1200,
+   "height": 1320,
+   "layers": [
+    "/images/approved-masters/glass-vial1-clear.930b4242c60a.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-04/4c58f4e3b8ed4150781287dee7861f7a22eed3f525588735973dd0e956d5041a.png"
+   ]
+  },
+  "GB1mlVWht": {
+   "url": "/images/pdp/one-ml-small-glass-2026-11-25/GB1mlVWht.1516aff1fcbd.png",
+   "sha256": "1516aff1fcbd00368f465442049517c23de836da4bd9052dfbb9eec45bd65497",
+   "width": 1200,
+   "height": 1320,
+   "layers": [
+    "/images/approved-masters/glass-vial1-clear.930b4242c60a.png",
+    "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/reviewed-master-media/2026-11-04/b477d543c094a53b7d6c66a340248def54d8e3503c67f9934ffb9c03ae8d3a66.png"
+   ]
+  }
+ },
+ "heroSwaps": {
+  "GB1mlAmbVialWht": [
+   {
+    "table": "src/lib/products/catalog-hero-vials-release.json",
+    "from": "/images/catalog/vials-approved-2026-09-25/GB1mlAmbVialWht.beb367a1279e.webp",
+    "to": "/images/pdp/one-ml-small-glass-2026-11-25/GB1mlAmbVialWht.8c1cde8c18b4.png"
+   },
+   {
+    "table": "src/lib/products/catalog-heroes.json",
+    "from": "/images/catalog/bone-review/GB1mlAmbVialWht.4f24001e1354.png",
+    "to": "/images/pdp/one-ml-small-glass-2026-11-25/GB1mlAmbVialWht.8c1cde8c18b4.png"
+   }
+  ],
+  "GB1mlVBlk": [
+   {
+    "table": "src/lib/products/catalog-hero-vials-release.json",
+    "from": "/images/catalog/vials-approved-2026-09-25/GB1mlVBlk.648b12fd544c.webp",
+    "to": "/images/pdp/one-ml-small-glass-2026-11-25/GB1mlVBlk.743e5baf1cf9.png"
+   },
+   {
+    "table": "src/lib/products/catalog-heroes.json",
+    "from": "/images/catalog/bone-review/GB1mlVBlk.6ff69ced464f.png",
+    "to": "/images/pdp/one-ml-small-glass-2026-11-25/GB1mlVBlk.743e5baf1cf9.png"
+   }
+  ]
+ }
+}

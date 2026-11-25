@@ -17,7 +17,7 @@ import { Package } from "@/components/icons";
 import { resolveCatalogCardVisual } from "@/lib/products/catalog-card-visual";
 import type { ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
 import { getReconciledLocalSkuImage, isReconciliationSku, isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
-import { isAssembledOneMlVialImage, isOneMlVialGroup, oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
+import { isAssembledOneMlVialImage, isOneMlVialGroup, isOneMlVialStill, oneMlVialApplicator } from "@/lib/products/one-ml-vial-applicators";
 import { getBlueHalfDramVialImage, isBlueHalfDramVialImage } from "@/lib/products/pdp-sku-image-fallback";
 import { componentPortrait } from "@/lib/products/component-portrait";
 import ComponentPortraitFrame from "@/components/products/ComponentPortraitFrame";
@@ -254,7 +254,7 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
         />;
     }
 
-    return <LocaleLink href={href} aria-label={`View ${title}`} className={`relative block aspect-[4/3] w-full overflow-hidden sm:aspect-[10/11] ${isReconciledLocalSkuAssetUrl(displayImage) ? "bg-[#f5f3ef]" : "bg-[#f8f6f2]"}`}
+    return <LocaleLink href={href} aria-label={`View ${title}`} className={`relative block aspect-[4/3] w-full overflow-hidden sm:aspect-[10/11] ${isReconciledLocalSkuAssetUrl(displayImage) || isOneMlVialStill(displayImage) ? "bg-[#f5f3ef]" : "bg-[#f8f6f2]"}`}
         onPointerEnter={(event) => { if (event.pointerType === "mouse") setHeroHovered(true); }}
         onPointerLeave={() => setHeroHovered(false)} data-visual-mode={swapUrl ? "selected-cap" : visual.mode}
         data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined} data-bb-product-group-slug={slug}

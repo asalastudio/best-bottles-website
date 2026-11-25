@@ -43,7 +43,7 @@ import { capacityMlFromSlug, parseProductSlug } from "@/lib/products/group-varia
 import { pdpStageFrame, pdpStageTransformCss } from "@/lib/products/pdp-stage-frame";
 import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 import { isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
-import { isAssembledOneMlVialImage } from "@/lib/products/one-ml-vial-applicators";
+import { isAssembledOneMlVialImage, isOneMlVialStill } from "@/lib/products/one-ml-vial-applicators";
 
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import FocusedPdpLayout from "./FocusedPdpLayout";
@@ -480,7 +480,7 @@ export default function ConfiguratorPdp({
   const showPhoto = !showPlate && !(show3d && has3d) && Boolean(photoFallback);
   const showLive3d = !showPlate && !showPhoto && has3d;
   const stage = (
-    <div className={`relative h-full w-full overflow-hidden ${showPhoto && isReconciledLocalSkuAssetUrl(photoFallback) ? "bg-[#f5f3ef]" : ""}`}>
+    <div className={`relative h-full w-full overflow-hidden ${showPhoto && (isReconciledLocalSkuAssetUrl(photoFallback) || isOneMlVialStill(photoFallback)) ? "bg-[#f5f3ef]" : ""}`}>
       {showDimensions ? (
         <div className="flex h-full w-full items-center justify-center bg-linen px-8 py-10">
           <div className="w-full max-w-sm border-y border-champagne/70">

@@ -13,6 +13,7 @@ import diva from '../docs/reviews/diva-family-final-manifest-2026-09-06.json';
 import shoulderApproval from '../docs/reviews/elegant-shoulder-alignment-2026-09-07.json';
 import circleRevision from '../docs/reviews/circle-recovery/alignment-and-matte-report.json';
 import { readdirSync, existsSync } from 'node:fs';
+import oneMl from '../public/images/pdp/one-ml-small-glass-2026-11-25/manifest.json';
 const approved=[...elegant.rows,...circle.rows,...empire.rows,...diva.rows];
 
 /**
@@ -88,6 +89,19 @@ describe('approved catalog hero release',()=>{
  });
  for(const h of heroes) it(`${h.websiteSku} preserves approved bytes, framing, bone and exact SKU filtering`,async()=>{
   const a=release.rows.find(a=>a.websiteSku===h.websiteSku)!;
+  // 25 Nov 2026: the 1 ml plug vial rows name their approved-kit composite; the approved photo stays as recorded.
+  const moved=(oneMl.heroSwaps as Record<string,{table:string;from:string;to:string}[]>)[h.websiteSku]?.find(m=>m.table.endsWith('catalog-heroes.json'));
+  if(moved) {
+   expect(createHash('sha256').update(readFileSync(`public${moved.from}`)).digest('hex')).toBe(a.sha256);
+   expect(h.url).toBe(moved.to);
+   const still=(oneMl.stills as Record<string,{sha256:string;width:number;height:number}>)[h.websiteSku];
+   expect(createHash('sha256').update(readFileSync(`public${h.url}`)).digest('hex')).toBe(still.sha256);
+   expect([h.width,h.height]).toEqual([still.width,still.height]);
+   expect(h.framing).toEqual({scale:1,translateXPercent:0,translateYPercent:0});
+   expect(getCatalogHero(h.groupSlug,[{websiteSku:h.websiteSku}])?.url).toBe(h.url);
+   expect(getCatalogHero(h.groupSlug,[{websiteSku:'unapproved-other-finish'}])).toBeNull();
+   return;
+  }
   const b=readFileSync(`public${h.url}`);
   expect(createHash('sha256').update(b).digest('hex')).toBe(a.sha256);
   expect(h.framing).toEqual(a.framing);

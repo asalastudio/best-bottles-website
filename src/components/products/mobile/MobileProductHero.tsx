@@ -19,7 +19,7 @@ import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLa
 import { hasRegisterBodyPlate } from "@/lib/products/register-stage-bone";
 import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { isReconciledLocalSkuAssetUrl } from "@/lib/products/reconciled-sku-images";
-import { isAssembledOneMlVialImage } from "@/lib/products/one-ml-vial-applicators";
+import { isAssembledOneMlVialImage, isOneMlVialStill } from "@/lib/products/one-ml-vial-applicators";
 import { mobilePdpToolbarPaddingTop } from "@/lib/products/mobile-pdp-chrome";
 
 const subscribeToHydration = () => () => {};
@@ -74,7 +74,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
         };
     }, []);
     return (
-        <div ref={ref} data-testid="mobile-pdp-hero" className={`relative w-full ${heroStage || hasRegisterBodyPlate(kitParts) ? "bg-bone" : "bg-white"}`}>
+        <div ref={ref} data-testid="mobile-pdp-hero" className={`relative w-full ${heroStage || hasRegisterBodyPlate(kitParts) || isOneMlVialStill(fallbackImageUrl) ? "bg-bone" : "bg-white"}`}>
             <div
                 ref={toolbarRef}
                 data-testid="mobile-pdp-hero-toolbar"

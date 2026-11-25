@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { catalogCapKind, catalogCapPhoto, catalogCapPlatePhoto } from "../src/lib/products/catalog-cap-photos";
+import { oneMlVialApplicator } from "../src/lib/products/one-ml-vial-applicators";
 import { getCatalogCardVariantPreviews, productCardVariantHref } from "../src/lib/products/product-card-variant-previews";
 
 const options = { productTitle: "9 ml Clear Cylinder Roll-On", groupColor: "Clear", productHref: "/products/cylinder?applicator=rollon&from=%2Fcatalog" };
@@ -58,7 +59,7 @@ describe("catalog top previews", () => {
                 imageUrl: `https://cdn.shopify.com/${websiteSku}.png`,
             })), { productTitle: `1 ml ${glass} Vial`, groupColor: glass, productHref: `/products/vial-1ml-${glass.toLowerCase()}-Plug` });
             expect(previews.map((preview) => preview.label)).toEqual(["Black Applicator", "White Applicator"]);
-            expect(previews.map((preview) => preview.imageUrl)).toEqual(skus.map((sku) => `/images/pdp/assembled-vials-2026-09-27/${sku}.png`));
+            expect(previews.map((preview) => preview.imageUrl)).toEqual(skus.map((sku) => oneMlVialApplicator(sku)!.image));
             expect(previews.map((preview) => new URL(productCardVariantHref(`/products/vial-1ml-${glass.toLowerCase()}-Plug`, preview), "https://bestbottles.com").searchParams.get("sku"))).toEqual(skus);
         }
     });

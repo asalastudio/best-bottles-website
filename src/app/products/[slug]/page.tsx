@@ -475,10 +475,12 @@ export default async function ProductPage({
     const primaryVariant = getPrimaryVariant(data);
     const requestHost = (await headers()).get('host');
     const approved = approvedComponentKits();
+    // Approved kits are published masters; only the localhost review kits are a "local component review".
+    const localReviewKits = localPdpComponentKits(requestHost, resolvedSearchParams.assetPreview, data.variants);
     const localComponentKits = { ...Object.fromEntries(data.variants.flatMap(variant => {
         const sku = variant.websiteSku;
         return sku && approved[sku] ? [[sku, approved[sku]]] : [];
-    })), ...localPdpComponentKits(requestHost, resolvedSearchParams.assetPreview, data.variants) };
+    })), ...localReviewKits };
     const siblingGroupsLoad = getSiblingGroups(data, activeSlug);
     // The plates for THIS group's variants, from the Convex index -- never
     // the whole catalogue, and never a throw: a missing plate costs the
@@ -578,6 +580,7 @@ export default async function ProductPage({
         platesBySku: localAssetPreview ? pilot.plates : withReleasedHeroStages(group, data?.variants ?? [], platesBySku),
         localKits: pilot.kits,
         localComponentKits,
+        localComponentReview: Object.keys(localReviewKits).length > 0,
         localAssetPreview,
         localAssetVersion: completion ? `${completion.token}:${completion.revision}` : '',
     };

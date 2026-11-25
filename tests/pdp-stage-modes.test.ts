@@ -62,7 +62,8 @@ describe("PDP stage mode capabilities", () => {
         expect(productDetailSource).toContain("const publishedKitQuery = useQuery(");
         expect(productDetailSource).toContain("?? publishedKitQuery");
         expect(productDetailSource).toContain("hasReleasedKit: Boolean(selectedKit?.parts?.length)");
-        expect(productDetailSource).toContain("kitQuery={oneMlVialApplicator(selectedVariant?.websiteSku) ? undefined : selectedKitQuery}");
+        // The 1 mL plug vials draw their approved kit too (25 Nov 2026): no SKU withholds the kit.
+        expect(productDetailSource).toContain("kitQuery={selectedKitQuery}");
         expect(productDetailSource).toContain("selectedGraceSku={selectedVariant?.graceSku ?? null}");
     });
 
