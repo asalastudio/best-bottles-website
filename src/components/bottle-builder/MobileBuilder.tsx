@@ -18,7 +18,7 @@ import { useTileIntent } from "./useTileIntent";
 
 // The same plain words as the desktop step list: Size, Glass, Top, Color.
 const stages = ["Size", "Glass", "Top", "Color"];
-const titles = ["Choose your size", "Choose your glass", "Choose your top", "Choose your color", "Review your bottle"];
+const titles = ["Choose your size", "Choose your glass", "Choose your top", "Choose your color"];
 const money = (n: number | null | undefined) => n == null ? "—" : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(n);
 
 export function shortFinishLabel(name: string) {
@@ -52,7 +52,8 @@ type Props = {
 /** Mobile presentation only. Exact configuration, pricing and submission stay in MatrixClient. */
 export default function MobileBuilder(p: Props) {
     const { body, color, fitment, closure, configuration } = p.current;
-    const stage = body ? p.stage : 0;
+    // Four steps. Quantity and price join the last one once the bottle is complete; there is no review screen.
+    const stage = body ? Math.min(p.stage, 3) : 0;
     const heading = useRef<HTMLHeadingElement>(null);
     const root = useRef<HTMLDivElement>(null);
     const bar = useRef<HTMLDivElement>(null);
@@ -60,6 +61,7 @@ export default function MobileBuilder(p: Props) {
     const filters = useRef<HTMLDialogElement>(null);
     const expanded = useRef<HTMLDialogElement>(null);
     const [notice, setNotice] = useState("");
+    const [tapped, setTapped] = useState(false);
     const [barHeight, setBarHeight] = useState(0);
     const [keyboardOpen, setKeyboardOpen] = useState(false);
     const [largeText, setLargeText] = useState(false);
@@ -70,7 +72,7 @@ export default function MobileBuilder(p: Props) {
     const expandTrigger = useRef<HTMLButtonElement>(null);
     const id = useId();
     const busy = p.pending || p.adding;
-    const canAdvance = [Boolean(body), Boolean(color), Boolean(fitment), Boolean(configuration), p.order.canAdd && p.hydrated][stage];
+    const canAdvance = [Boolean(body), Boolean(color), Boolean(fitment), Boolean(configuration) && p.order.canAdd && p.hydrated][stage];
     // A bottle with one glass has no glass stage: the colour is taken as read
     // and the Glass step is passed over in either direction.
     const skipGlass = Boolean(body) && p.current.colors.length === 1;
@@ -78,7 +80,7 @@ export default function MobileBuilder(p: Props) {
     const colorLabel = /Roller|Cap|Reducer/.test(fitment ?? "") ? "Cap color" : "Color";
     const blockedLabel = p.pending ? "Loading compatible choices…" : stage === 0 ? "Select a size to continue"
         : stage === 1 ? "Select your glass to continue" : stage === 2 ? "Select a top to continue"
-        : stage === 3 ? `Select a ${colorLabel.toLowerCase()} to continue`
+        : !configuration ? `Select a ${colorLabel.toLowerCase()} to continue`
         : !p.order.validQuantity ? "Enter a whole-number quantity from 1 to 1,000,000."
         : !p.hydrated ? "Loading your cart…" : "This combination is unavailable. Edit your choices to continue.";
     const preview = configuration ?? p.current.fitted[0] ?? p.current.colored[0] ?? body?.configurations[0];
@@ -104,10 +106,9 @@ export default function MobileBuilder(p: Props) {
     const visible = p.bodies.filter(b => (!p.size || b.capacityMl === Number(p.size)) && (!p.neck || b.neck === p.neck) && (!p.application || bodyFitments(b).includes(p.application)));
     const activeFilters = Boolean(p.size || p.neck || p.application);
     const showBar = !p.lastAdded;
-    const forwardLabel = stage === 4
-        ? p.adding ? "Checking your bottle…" : `Add to cart · ${money(p.order.total)}`
-        : canAdvance ? (stage === 0 && skipGlass ? "Continue to top" : ["Continue to glass", "Continue to top", `Continue to ${colorLabel.toLowerCase()}`, "Review bottle"][stage])
-        : blockedLabel;
+    const forwardLabel = !canAdvance ? blockedLabel
+        : stage === 3 ? p.adding ? "Checking your bottle…" : `Add to cart · ${money(p.order.total)}`
+        : stage === 0 && skipGlass ? "Continue to top" : ["Continue to glass", "Continue to top", `Continue to ${colorLabel.toLowerCase()}`][stage];
 
     useEffect(() => {
         if (!bar.current || !showBar) return;
@@ -163,15 +164,26 @@ export default function MobileBuilder(p: Props) {
     useEffect(() => {
         if (p.lastAdded) root.current?.querySelector<HTMLElement>("[role=status]")?.focus();
     }, [p.lastAdded]);
-    function go(target: number) {
+    function go(target: number, keepNotice = false) {
         if (busy) return;
         const next = skipGlass && target === 1 ? (stage < 1 ? 2 : 0) : target;
-        p.onStage(next); setNotice(""); setMoreOpen(false);
+        p.onStage(next); if (!keepNotice) setNotice(""); setMoreOpen(false);
         requestAnimationFrame(() => {
             heading.current?.focus({ preventScroll: true });
             window.scrollTo({ top: 0, behavior: "instant" });
         });
     }
+    // A tap on an option moves on by itself: to the first step still unanswered, or to the last one when
+    // everything already fits. It waits for the tapped bottle's options to arrive. A keyboard choice (arrow
+    // keys move through a radio group) only selects; Continue is its way forward.
+    useEffect(() => {
+        if (!tapped || busy) return;
+        setTapped(false);
+        const next = !body ? 0 : !color ? 1 : !fitment ? 2 : 3;
+        if (next !== stage) go(next, true);
+        // go is recreated every render; the advance runs once per tap.
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [tapped, busy]);
     function choose(patch: Partial<BuilderSelection>) {
         // The shared reconciler preserves each downstream choice if still valid.
         p.onUpdate(patch);
@@ -224,18 +236,17 @@ export default function MobileBuilder(p: Props) {
                 </div>
             </div>
         </div>
-        {stage > 0 && body && stage < 4 && <div className={styles.selectedBottle}>
-            <div><h2>{body.capacityMl} ml {body.profileLabel}{color ? ` · ${color}` : ""}</h2><p>{fitment && stage > 1 ? `${displayApplicatorName(fitment)} · ` : ""}{body.neck}{runningPrice ? ` · ${runningPrice}` : ""}</p></div>
+        {stage > 0 && body && <div className={styles.selectedBottle}>
+            <div><h2>{body.capacityMl} ml {body.profileLabel}{color ? ` · ${color}` : ""}</h2><p>{fitment && stage > 1 ? `${displayApplicatorName(fitment)} · ` : ""}{closure && stage === 3 ? `${shortFinishLabel(closure)} · ` : ""}{body.neck}{runningPrice ? ` · ${runningPrice}` : ""}</p></div>
             <button onClick={() => go(0)} disabled={busy} aria-label="Edit bottle">Edit</button>
         </div>}
         {stage > 0 && p.bodyNotice}
-        {stage === 4 && <h1 ref={heading} tabIndex={-1} className={styles.title}>{titles[stage]}</h1>}
         {stage > 0 && preview && <section className={styles.preview} aria-label="Live bottle preview">
             <div className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}>{previewImage()}</div>
             <button ref={expandTrigger} className={styles.expand} aria-label="Expand bottle preview" onClick={() => { setPreviewZoom(1); expanded.current?.showModal(); }}><ArrowsOutSimple size={18} /></button>
             {stage >= 3 && p.hasIncludedCover && <button className={styles.coverToggle} aria-pressed={p.showCover} onClick={p.onCover}>{p.showCover ? "Hide overcap" : "Show included overcap"}</button>}
         </section>}
-        {stage < 4 && <h1 ref={heading} tabIndex={-1} className={styles.title}>{stage === 3 ? `Choose your ${colorLabel.toLowerCase()}` : titles[stage]}</h1>}
+        <h1 ref={heading} tabIndex={-1} className={styles.title}>{stage === 3 ? `Choose your ${colorLabel.toLowerCase()}` : titles[stage]}</h1>
         {stage === 0 && <>
             {p.familyNotice}
             <div className={styles.filters}>{p.onChangeFamily
@@ -244,7 +255,7 @@ export default function MobileBuilder(p: Props) {
                 <button ref={filterTrigger} className={styles.filterButton} aria-haspopup="dialog" aria-expanded={filterOpen} onClick={() => { setFilterOpen(true); filters.current?.showModal(); }}><SlidersHorizontal size={18} /> Filter{activeFilters && <span aria-label="active">●</span>}</button>
             </div><p className={styles.count}>{visible.length} bottle {visible.length === 1 ? "option" : "options"}</p>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>Size</legend><div className={styles.bottleGrid}>
-                {visible.map((b, index) => <Choice key={b.id} name={`${id}-bottle`} value={b.id} selected={body?.id === b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} onSelect={() => choose({ bodyId: b.id })} onIntent={p.onBodyIntent && (() => p.onBodyIntent!(b.id))}>
+                {visible.map((b, index) => <Choice key={b.id} name={`${id}-bottle`} value={b.id} selected={body?.id === b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} onSelect={() => choose({ bodyId: b.id })} onTap={() => setTapped(true)} onIntent={p.onBodyIntent && (() => p.onBodyIntent!(b.id))}>
                     <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} scale={1.08 * Math.max(.55, p.chooserScale(b))} label={`${b.capacityMl} ml ${b.profileLabel}`} thumbnail placeholder priority={index < CHOOSER_PRIORITY_TILES} /></div>
                     <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <span>{b.profileLabel}</span>}<span>Neck: {b.neck}</span>
                 </Choice>)}
@@ -252,12 +263,12 @@ export default function MobileBuilder(p: Props) {
             {!visible.length && <div className={styles.empty}><p>No bottles match these filters.</p><button onClick={clearFilters}>Clear filters</button><Link href={`/catalog?families=${encodeURIComponent(p.family)}`}>Browse catalog</Link></div>}
         </>}
         {stage === 3 && capLinerNote(body?.neck, fitment) && <p className={styles.included}>{capLinerNote(body?.neck, fitment)}</p>}
-        {stage > 0 && stage < 4 && <>
+        {stage > 0 && <>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>{stages[stage]}</legend>
-                {stage === 1 && <div className={styles.glassGrid}>{p.current.colors.map(c => { const example = body!.configurations.find(item => item.color === c)!; return <Choice key={c} name={`${id}-glass`} value={c} selected={color === c} label={c} onSelect={() => choose({ color: c })}>
+                {stage === 1 && <div className={styles.glassGrid}>{p.current.colors.map(c => { const example = body!.configurations.find(item => item.color === c)!; return <Choice key={c} name={`${id}-glass`} value={c} selected={color === c} label={c} onSelect={() => choose({ color: c })} onTap={() => setTapped(true)}>
                     <div className={styles.glassThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
                 </Choice>; })}</div>}
-                {stage === 2 && <div className={styles.fitmentGrid}>{p.current.fitments.map(f => { return <Choice key={f} name={`${id}-fitment`} value={f} selected={fitment === f} label={displayApplicatorName(f)} onSelect={() => choose({ fitment: f })}>
+                {stage === 2 && <div className={styles.fitmentGrid}>{p.current.fitments.map(f => { return <Choice key={f} name={`${id}-fitment`} value={f} selected={fitment === f} label={displayApplicatorName(f)} onSelect={() => choose({ fitment: f })} onTap={() => setTapped(true)}>
                     <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div><strong>{displayApplicatorName(f)}</strong>{fitmentChoiceHints[f] && <span>{fitmentChoiceHints[f]}</span>}
                 </Choice>; })}</div>}
                 {stage === 3 && <div className={styles.finishGrid}>{p.current.fitted.map(c => <Choice key={c.id} name={`${id}-finish`} value={c.closure} selected={closure === c.closure} label={c.closure} onSelect={() => choose({ closure: c.closure })}>
@@ -269,12 +280,8 @@ export default function MobileBuilder(p: Props) {
             </fieldset>
             {stage === 3 && p.hasIncludedCover && <p className={styles.included}>Protective overcap included: <strong>{configuration?.kit?.parts.some(part => part.slot === "overcap" && part.image.url.includes("cylinder-9ml-clear-overcap-")) ? "Clear" : closure}</strong>. Supplied with this {fitment?.includes("Pump") ? "pump" : "sprayer"}; it cannot be mixed and matched.</p>}
         </>}
-        {stage === 4 && <section className={styles.review} aria-label="Review and quantity">
-            <dl className={styles.summary}>{[["Size", `${body?.capacityMl} ml ${body?.profileLabel}`, 0], ["Glass", color, 1], ["Top", fitment ? displayApplicatorName(fitment) : fitment, 2], [colorLabel, closure, 3]].map(([label, value, to]) => <div key={label}>
-                <dt>{label}</dt><dd>{value}{to === 0 && <small>{body?.neck} neck</small>}</dd><dd className={styles.summaryEdit}><button aria-label={`Edit ${label?.toString().toLowerCase()}`} disabled={busy} onClick={() => go(Number(to))}>Edit</button></dd>
-            </div>)}</dl>
+        {stage === 3 && configuration && <section className={styles.order} aria-label="Quantity and price">
             <p className={styles.included}>{fitmentContents(fitment)}</p>
-            {p.hasIncludedCover && <p className={styles.included}>Matching protective overcap included.</p>}
             <div className={styles.quantityRow}><label htmlFor={`${id}-quantity`}>Quantity</label><div className={styles.quantity}>
                 <button aria-label="Decrease quantity" disabled={busy || p.selection.quantity <= 1} onClick={() => p.onUpdate({ quantity: Math.max(1, p.selection.quantity - 1) })}><Minus size={18} /></button>
                 <input id={`${id}-quantity`} type="number" inputMode="numeric" min="1" max={MAX_QUANTITY} step="1" value={Number.isNaN(p.selection.quantity) ? "" : p.selection.quantity} disabled={busy} aria-invalid={!p.order.validQuantity} aria-describedby={`${id}-reason`} onChange={e => p.onUpdate({ quantity: e.target.value === "" ? NaN : Number(e.target.value) })} />
@@ -289,7 +296,7 @@ export default function MobileBuilder(p: Props) {
             {p.error && <p id={`${id}-reason`} role="alert" className={styles.error}>{p.error}</p>}
             <span id={p.error ? undefined : `${id}-reason`} className={styles.srOnly} aria-live="polite">{canAdvance ? "" : blockedLabel}</span>
             <div className={styles.actionRow}>{stage > 0 ? <button className={styles.back} disabled={busy} onClick={() => go(stage - 1)}><ArrowLeft size={18} /> Back</button> : <span />}
-                <button className={styles.primary} disabled={!canAdvance || busy} aria-describedby={`${id}-reason`} onClick={() => stage === 4 ? void submitBuild() : go(stage + 1)}>
+                <button className={styles.primary} disabled={!canAdvance || busy} aria-describedby={`${id}-reason`} onClick={() => stage === 3 ? void submitBuild() : go(stage + 1)}>
                     {forwardLabel}{canAdvance && !p.adding && <ArrowRight size={18} />}
                 </button>
             </div>
@@ -314,10 +321,10 @@ export default function MobileBuilder(p: Props) {
     </div>;
 }
 
-function Choice({ name, value, selected, label, onSelect, onIntent, disabled, children }: { name: string; value: string; selected: boolean; label: string; onSelect: () => void; onIntent?: () => void; disabled?: boolean; children: ReactNode }) {
+function Choice({ name, value, selected, label, onSelect, onTap, onIntent, disabled, children }: { name: string; value: string; selected: boolean; label: string; onSelect: () => void; /** A finger or mouse chose this tile (not the keyboard), the selected one included. */ onTap?: () => void; onIntent?: () => void; disabled?: boolean; children: ReactNode }) {
     const intent = useTileIntent(onIntent);
     return <label className={styles.choice} data-selected={selected} data-disabled={disabled} {...intent}>
-        <input type="radio" name={name} value={value} checked={selected} onChange={onSelect} aria-label={label} disabled={disabled} />
+        <input type="radio" name={name} value={value} checked={selected} onChange={onSelect} onClick={onTap && (event => { if (event.detail > 0) onTap(); })} aria-label={label} disabled={disabled} />
         {selected && <span className={styles.check}><Check size={13} weight="bold" /></span>}{children}
     </label>;
 }

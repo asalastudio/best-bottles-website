@@ -16,12 +16,14 @@ const bodies: BuilderBody[] = [
 let root: Root, container: HTMLDivElement;
 let viewport: EventTarget & { height: number; scale: number };
 const add = vi.fn();
-function Harness() {
- const [selection,setSelection]=useState(emptySelection());const [stage,setStage]=useState(0);
- return <MobileBuilder families={[{family:'Cylinder',groups:2}]} family="Cylinder" bodies={bodies} selection={selection} current={deriveBuilder(bodies,selection)} order={builderOrder(deriveBuilder(bodies,selection).configuration,selection.quantity,[])} stage={stage} onStage={setStage} onUpdate={patch=>setSelection(s=>reconcileSelection(bodies,{...s,...patch}))} onReset={()=>{setSelection(emptySelection());setStage(0)}} onFamily={()=>{}} onAdd={add} size="" neck="" application="" onFilter={()=>{}} pending={false} adding={false} hydrated error="" lastAdded={null} cartProgress={{subtotal:0,remaining:50,met:false}} hasIncludedCover={false} showCover={false} onCover={()=>{}} chooserScale={()=>1} />;
+function Harness({ slow = false }: { slow?: boolean }) {
+ const [selection,setSelection]=useState(emptySelection());const [stage,setStage]=useState(0);const [loaded,setLoaded]=useState(!slow);
+ return <>{slow&&<button onClick={()=>setLoaded(true)}>Finish loading</button>}<MobileBuilder families={[{family:'Cylinder',groups:2}]} family="Cylinder" bodies={bodies} selection={selection} current={deriveBuilder(bodies,selection)} order={builderOrder(deriveBuilder(bodies,selection).configuration,selection.quantity,[])} stage={stage} onStage={setStage} onUpdate={patch=>setSelection(s=>reconcileSelection(bodies,{...s,...patch}))} onReset={()=>{setSelection(emptySelection());setStage(0)}} onFamily={()=>{}} onAdd={add} size="" neck="" application="" onFilter={()=>{}} pending={Boolean(selection.bodyId)&&!loaded&&stage===0} adding={false} hydrated error="" lastAdded={null} cartProgress={{subtotal:0,remaining:50,met:false}} hasIncludedCover={false} showCover={false} onCover={()=>{}} chooserScale={()=>1} /></>;
 }
 const click = (el: Element | null) => act(()=>{ if(!el)throw Error('Missing control');(el as HTMLElement).click(); });
 const choose=(label:string)=>click(container.querySelector(`input[aria-label="${label}"]`));
+// A finger or mouse on a tile: a click with a press count, which a keyboard choice does not have.
+const tap=(label:string)=>act(()=>{const el=container.querySelector(`input[aria-label="${label}"]`);if(!el)throw Error('Missing control');el.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,detail:1}));});
 const button=(text:string)=>click([...container.querySelectorAll('button')].find(b=>b.textContent?.trim()===text)??null);
 const stage=()=>container.querySelector('[data-stage]')?.getAttribute('data-stage');
 beforeEach(async()=>{viewport=Object.assign(new EventTarget(),{height:window.innerHeight,scale:1});vi.stubGlobal('visualViewport',viewport);vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT',true);vi.stubGlobal('ResizeObserver',class{observe(){}disconnect(){}});vi.stubGlobal('requestAnimationFrame',(cb:()=>void)=>{cb();return 0});window.scrollTo=vi.fn();add.mockReset();container=document.createElement('div');document.body.append(container);root=createRoot(container);await act(async()=>root.render(<Harness/>));});
@@ -37,7 +39,7 @@ describe('mobile presentation over shared configuration',()=>{
   choose('Clear');button('Continue to top');expect(stage()).toBe('2');
  });
  it('uses keyboard layout only for a focused quantity editor and clears it on blur without a resize',()=>{
-  toFinish();choose('Gold');button('Review bottle');
+  toFinish();choose('Gold');
   const quantity=container.querySelector<HTMLInputElement>('input[type=number]')!;
   act(()=>{quantity.focus();viewport.height=window.innerHeight/2;viewport.dispatchEvent(new Event('resize'));});
   expect(container.querySelector('[data-mobile-builder]')?.getAttribute('data-keyboard')).toBe('true');
@@ -46,7 +48,7 @@ describe('mobile presentation over shared configuration',()=>{
  });
 
  it('keeps the action bar stable while a tap dismisses the keyboard, then releases layout after click',()=>{
-  toFinish();choose('Gold');button('Review bottle');
+  toFinish();choose('Gold');
   const quantity=container.querySelector<HTMLInputElement>('input[type=number]')!;
   const action=[...container.querySelectorAll('button')].find(b=>b.textContent?.includes('Add to cart'))!;
   act(()=>{quantity.focus();viewport.height=window.innerHeight/2;viewport.dispatchEvent(new Event('resize'));});
@@ -57,7 +59,7 @@ describe('mobile presentation over shared configuration',()=>{
   expect(container.querySelector('[data-mobile-builder]')?.getAttribute('data-keyboard')).toBe('false');
  });
  it('uses native preview dismissal and returns focus without losing the reviewed build',()=>{
-  toFinish();choose('Gold');button('Review bottle');button('Use case quantity');
+  toFinish();choose('Gold');button('Use case quantity');
   const trigger=container.querySelector<HTMLButtonElement>('button[aria-label="Expand bottle preview"]')!;
   const dialog=container.querySelector<HTMLDialogElement>('dialog[aria-label="Expanded bottle preview"]')!;
   // jsdom does not implement the dialog API; actual touch/default-action coverage
@@ -70,29 +72,53 @@ describe('mobile presentation over shared configuration',()=>{
    expect(close.type).toBe('submit');expect(close.form?.getAttribute('method')).toBe('dialog');
    act(()=>{dialog.open=false;dialog.dispatchEvent(new Event('close'));});
    expect(focus).toHaveBeenLastCalledWith({preventScroll:true});
-   expect(stage()).toBe('4');expect(container.textContent).toContain('Gold');
+   expect(stage()).toBe('3');expect(container.textContent).toContain('Gold');
    expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('24');
   }
   expect(add).not.toHaveBeenCalled();
  });
- it('requires explicit advancement and does not render an empty action bar',()=>{
-  expect(container.textContent).not.toContain('Continue to glass');choose('9 ml, 13-415 neck');expect(stage()).toBe('0');button('Continue to glass');expect(stage()).toBe('1');choose('Clear');expect(stage()).toBe('1');button('Continue to top');expect(stage()).toBe('2');choose('Metal Roller');expect(stage()).toBe('2');button('Continue to cap color');expect(stage()).toBe('3');choose('Gold');expect(stage()).toBe('3');button('Review bottle');expect(stage()).toBe('4');
+ it('leaves a keyboard choice where it is until Continue is pressed, and does not render an empty action bar',()=>{
+  expect(container.textContent).not.toContain('Continue to glass');choose('9 ml, 13-415 neck');expect(stage()).toBe('0');button('Continue to glass');expect(stage()).toBe('1');choose('Clear');expect(stage()).toBe('1');button('Continue to top');expect(stage()).toBe('2');choose('Metal Roller');expect(stage()).toBe('2');button('Continue to cap color');expect(stage()).toBe('3');choose('Gold');expect(stage()).toBe('3');
+ });
+ it('moves on by itself when an option is tapped, and has no review screen: quantity and Add to cart join the last step',()=>{
+  tap('9 ml, 13-415 neck');expect(stage()).toBe('1');tap('Clear');expect(stage()).toBe('2');tap('Metal Roller');expect(stage()).toBe('3');
+  expect(container.querySelector('h1')?.textContent).toBe('Choose your cap color');
+  expect(container.querySelector('input[type=number]')).toBeNull();expect(container.textContent).toContain('Select a cap color to continue');
+  tap('Gold');expect(stage()).toBe('3');
+  expect(container.querySelector('section[aria-label="Quantity and price"] input[type=number]')).toBeTruthy();
+  expect(container.textContent).toContain('Add to cart · $9.84');expect(container.textContent).not.toContain('Review');
+  expect(container.querySelector('[class*="selectedBottle"]')?.textContent).toContain('Metal Roller · Gold · 13-415');
+  button('Add to cart · $9.84');expect(add).toHaveBeenCalledOnce();
+ });
+ it('returns to the last step when a tapped change still fits, and moves on from an option that is already selected',()=>{
+  toFinish();choose('Gold');
+  button('Glass');expect(stage()).toBe('1');tap('Frosted');expect(stage()).toBe('3');
+  expect((container.querySelector('input[aria-label="Gold"]') as HTMLInputElement).checked).toBe(true);
+  button('Size');expect(stage()).toBe('0');tap('9 ml, 13-415 neck');expect(stage()).toBe('3');
+  // A change that unseats the top stops at the top, with the reason still on screen.
+  button('Size');tap('9 ml, 17-415 neck');expect(stage()).toBe('2');expect(container.textContent).toContain('Choose a top for this bottle and glass');
+  tap('Pump');expect(stage()).toBe('3');expect((container.querySelector('input[aria-label="White"]') as HTMLInputElement).checked).toBe(true);
+ });
+ it('waits for a tapped bottle\'s options before moving on',async()=>{
+  await act(async()=>root.render(<Harness key="slow" slow/>));
+  tap('9 ml, 17-415 neck');expect(stage()).toBe('0');expect([...container.querySelectorAll('button')].find(b=>b.textContent?.trim()==='Continue to top')?.disabled).toBe(true);
+  button('Finish loading');expect(stage()).toBe('2');
  });
  it('preserves valid downstream choices when editing glass',()=>{
-  toFinish();choose('Gold');button('Review bottle');click(container.querySelector('button[aria-label="Edit glass"]'));choose('Frosted');button('Continue to top');expect((container.querySelector('input[aria-label="Metal Roller"]') as HTMLInputElement).checked).toBe(true);button('Continue to cap color');expect((container.querySelector('input[aria-label="Gold"]') as HTMLInputElement).checked).toBe(true);
+  toFinish();choose('Gold');button('Glass');choose('Frosted');button('Continue to top');expect((container.querySelector('input[aria-label="Metal Roller"]') as HTMLInputElement).checked).toBe(true);button('Continue to cap color');expect((container.querySelector('input[aria-label="Gold"]') as HTMLInputElement).checked).toBe(true);
  });
  it('explains invalid dependencies while preserving quantity and requiring reselection',()=>{
-  toFinish();choose('Gold');button('Review bottle');button('Use case quantity');click(container.querySelector('button[aria-label="Edit size"]'));choose('9 ml, 17-415 neck');expect(container.textContent).toContain('Choose a top for this bottle and glass');button('Continue to top');expect(stage()).toBe('2');expect(container.querySelector('input[aria-label="Clear"]')).toBeNull();choose('Pump');button('Continue to color');expect((container.querySelector('input[aria-label="White"]') as HTMLInputElement).checked).toBe(true);button('Review bottle');expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('24');
+  toFinish();choose('Gold');button('Use case quantity');click(container.querySelector('button[aria-label="Edit bottle"]'));choose('9 ml, 17-415 neck');expect(container.textContent).toContain('Choose a top for this bottle and glass');button('Continue to top');expect(stage()).toBe('2');expect(container.querySelector('input[aria-label="Clear"]')).toBeNull();choose('Pump');button('Continue to color');expect((container.querySelector('input[aria-label="White"]') as HTMLInputElement).checked).toBe(true);expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('24');
  });
  it('passes over the glass step for a bottle made in one glass, in both directions',()=>{
   choose('9 ml, 17-415 neck');expect([...container.querySelectorAll('button')].some(b=>b.textContent?.trim()==='Continue to glass')).toBe(false);button('Continue to top');expect(stage()).toBe('2');button('Back');expect(stage()).toBe('0');
  });
  it('allows a valid build below the cart minimum through the existing add callback',()=>{
-  toFinish();choose('Silver');button('Review bottle');expect(container.textContent).toContain('Add to cart · $9.84');button('Add to cart · $9.84');expect(add).toHaveBeenCalledOnce();
+  toFinish();choose('Silver');expect(container.textContent).toContain('Add to cart · $9.84');button('Add to cart · $9.84');expect(add).toHaveBeenCalledOnce();
  });
  it('submits only once for repeated taps before the pending render',async()=>{
   let finish!:()=>void;add.mockImplementation(()=>new Promise<void>(resolve=>{finish=resolve}));
-  toFinish();choose('Gold');button('Review bottle');button('Add to cart · $9.84');button('Add to cart · $9.84');expect(add).toHaveBeenCalledOnce();await act(async()=>finish());
+  toFinish();choose('Gold');button('Add to cart · $9.84');button('Add to cart · $9.84');expect(add).toHaveBeenCalledOnce();await act(async()=>finish());
  });
  it('keeps the selected drawings at fitment and resets only the draft',()=>{
   toFinish();button('Back');expect(container.textContent).toContain('Metal Roller drawing');button('Start over');expect(stage()).toBe('0');expect(add).not.toHaveBeenCalled();expect(container.querySelector('input:checked')).toBeNull();

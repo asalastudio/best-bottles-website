@@ -22,7 +22,7 @@
 .selectedBottle { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 0 2px; }
 .selectedBottle h2 { font-family: var(--font-brand); font-size: 1rem; line-height: 1.2; font-weight: 600; text-transform: none; letter-spacing: 0; }
 .selectedBottle p { color: var(--quiet); font-size: .75rem; margin-top: 1px; }
-.selectedBottle button, .summary button, .case button { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; min-width: 44px; }
+.selectedBottle button, .case button { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; min-width: 44px; }
 .filters { display: flex; align-items: center; gap: 8px; }
 .filters label { flex: 1; min-width: 0; }
 .familyButton { flex: 1; min-width: 0; min-height: 40px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #b5aea2; border-radius: 3px; background: transparent; padding: 6px 10px; color: #252523; font-size: 14px; }
@@ -76,11 +76,8 @@
 .primary:disabled { background: #dedbd5; color: #565149; }
 .notice { font-size: .8125rem; padding: 8px 0; color: var(--gold); }
 .error { color: #923d29; }
-.summary { margin: 12px 0; }
-.summary > div { display: grid; grid-template-columns: minmax(68px,.65fr) minmax(0,1.35fr) auto; gap: 10px; align-items: center; border-bottom: 1px solid var(--line); padding: 8px 0; }
-.summary dt { color: var(--quiet); font-size: .875rem; }
-.summary dd { font-size: .875rem; }
-.summary small { display: block; color: var(--quiet); font-size: .75rem; }
+/* Quantity and price, under the last step's options once the bottle is complete. */
+.order { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 4px; }
 .quantityRow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 0; }
 .quantity { display: flex; border: 1px solid #b5aea2; border-radius: 3px; }
 .quantity button { width: 44px; display: grid; place-items: center; }
@@ -136,15 +133,12 @@
 /* Reflow enlarged text rather than squeezing controls into the reference layout. */
 .mobile[data-large-text=true] .chrome { grid-template-columns: minmax(0,1fr); }
 .mobile[data-large-text=true] .progress { grid-template-columns: repeat(2,minmax(0,1fr)); }
-.mobile[data-large-text=true] .summary > div { grid-template-columns: minmax(0,1fr) auto; }
-.mobile[data-large-text=true] .summary dd:not(.summaryEdit) { grid-row: 2; grid-column: 1 / -1; }
-.mobile[data-large-text=true] .summary .summaryEdit { grid-row: 1; grid-column: 2; }
 .mobile[data-large-text=true] .glassGrid, .mobile[data-large-text=true] .finishGrid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 .mobile[data-large-text=true] .actionRow { grid-template-columns: 1fr; gap: 4px; }
 .mobile[data-large-text=true] .actionBar { position: static; margin: 16px -16px -16px; }
 .mobile[data-large-text=true] { padding-bottom: 24px; }
 .mobile[data-large-text=true] .title { white-space: normal; }
-.selectedBottle > div, .summary :is(dt,dd), .totals :is(dt,dd) { min-width: 0; overflow-wrap: anywhere; }
+.selectedBottle > div, .totals :is(dt,dd) { min-width: 0; overflow-wrap: anywhere; }
 /* Keep the entire approved drawing inside its thumbnail, including roller plugs. */
 .componentThumb svg { width: auto !important; height: 100% !important; min-height: 0; }
 
