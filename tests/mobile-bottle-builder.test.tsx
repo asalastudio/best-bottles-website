@@ -26,7 +26,7 @@ const button=(text:string)=>click([...container.querySelectorAll('button')].find
 const stage=()=>container.querySelector('[data-stage]')?.getAttribute('data-stage');
 beforeEach(async()=>{viewport=Object.assign(new EventTarget(),{height:window.innerHeight,scale:1});vi.stubGlobal('visualViewport',viewport);vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT',true);vi.stubGlobal('ResizeObserver',class{observe(){}disconnect(){}});vi.stubGlobal('requestAnimationFrame',(cb:()=>void)=>{cb();return 0});window.scrollTo=vi.fn();add.mockReset();container=document.createElement('div');document.body.append(container);root=createRoot(container);await act(async()=>root.render(<Harness/>));});
 afterEach(()=>{act(()=>root.unmount());container.remove();vi.unstubAllGlobals()});
-function toFinish(){choose('9 ml, 13-415 neck');button('Continue to glass');choose('Clear');button('Continue to fitment');choose('Metal Roller');button('Continue to finish');}
+function toFinish(){choose('9 ml, 13-415 neck');button('Continue to glass');choose('Clear');button('Continue to top');choose('Metal Roller');button('Continue to cap color');}
 describe('mobile presentation over shared configuration',()=>{
  it('does not move Continue into keyboard layout when zoom or browser chrome shrinks the viewport',()=>{
   choose('9 ml, 13-415 neck');button('Continue to glass');
@@ -34,7 +34,7 @@ describe('mobile presentation over shared configuration',()=>{
   expect(container.querySelector('[data-mobile-builder]')?.getAttribute('data-keyboard')).toBe('false');
   act(()=>{viewport.scale=1;viewport.dispatchEvent(new Event('resize'));});
   expect(container.querySelector('[data-mobile-builder]')?.getAttribute('data-keyboard')).toBe('false');
-  choose('Clear');button('Continue to fitment');expect(stage()).toBe('2');
+  choose('Clear');button('Continue to top');expect(stage()).toBe('2');
  });
  it('uses keyboard layout only for a focused quantity editor and clears it on blur without a resize',()=>{
   toFinish();choose('Gold');button('Review bottle');
@@ -76,16 +76,16 @@ describe('mobile presentation over shared configuration',()=>{
   expect(add).not.toHaveBeenCalled();
  });
  it('requires explicit advancement and does not render an empty action bar',()=>{
-  expect(container.textContent).not.toContain('Continue to glass');choose('9 ml, 13-415 neck');expect(stage()).toBe('0');button('Continue to glass');expect(stage()).toBe('1');choose('Clear');expect(stage()).toBe('1');button('Continue to fitment');expect(stage()).toBe('2');choose('Metal Roller');expect(stage()).toBe('2');button('Continue to finish');expect(stage()).toBe('3');choose('Gold');expect(stage()).toBe('3');button('Review bottle');expect(stage()).toBe('4');
+  expect(container.textContent).not.toContain('Continue to glass');choose('9 ml, 13-415 neck');expect(stage()).toBe('0');button('Continue to glass');expect(stage()).toBe('1');choose('Clear');expect(stage()).toBe('1');button('Continue to top');expect(stage()).toBe('2');choose('Metal Roller');expect(stage()).toBe('2');button('Continue to cap color');expect(stage()).toBe('3');choose('Gold');expect(stage()).toBe('3');button('Review bottle');expect(stage()).toBe('4');
  });
  it('preserves valid downstream choices when editing glass',()=>{
-  toFinish();choose('Gold');button('Review bottle');click(container.querySelector('button[aria-label="Edit glass"]'));choose('Frosted');button('Continue to fitment');expect((container.querySelector('input[aria-label="Metal Roller"]') as HTMLInputElement).checked).toBe(true);button('Continue to finish');expect((container.querySelector('input[aria-label="Gold"]') as HTMLInputElement).checked).toBe(true);
+  toFinish();choose('Gold');button('Review bottle');click(container.querySelector('button[aria-label="Edit glass"]'));choose('Frosted');button('Continue to top');expect((container.querySelector('input[aria-label="Metal Roller"]') as HTMLInputElement).checked).toBe(true);button('Continue to cap color');expect((container.querySelector('input[aria-label="Gold"]') as HTMLInputElement).checked).toBe(true);
  });
  it('explains invalid dependencies while preserving quantity and requiring reselection',()=>{
-  toFinish();choose('Gold');button('Review bottle');button('Use case quantity');click(container.querySelector('button[aria-label="Edit bottle"]'));choose('9 ml, 17-415 neck');expect(container.textContent).toContain('Choose a compatible fitment');button('Continue to fitment');expect(stage()).toBe('2');expect(container.querySelector('input[aria-label="Clear"]')).toBeNull();choose('Pump');button('Continue to finish');expect((container.querySelector('input[aria-label="White"]') as HTMLInputElement).checked).toBe(true);button('Review bottle');expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('24');
+  toFinish();choose('Gold');button('Review bottle');button('Use case quantity');click(container.querySelector('button[aria-label="Edit size"]'));choose('9 ml, 17-415 neck');expect(container.textContent).toContain('Choose a top for this bottle and glass');button('Continue to top');expect(stage()).toBe('2');expect(container.querySelector('input[aria-label="Clear"]')).toBeNull();choose('Pump');button('Continue to color');expect((container.querySelector('input[aria-label="White"]') as HTMLInputElement).checked).toBe(true);button('Review bottle');expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('24');
  });
  it('passes over the glass step for a bottle made in one glass, in both directions',()=>{
-  choose('9 ml, 17-415 neck');expect([...container.querySelectorAll('button')].some(b=>b.textContent?.trim()==='Continue to glass')).toBe(false);button('Continue to fitment');expect(stage()).toBe('2');button('Back');expect(stage()).toBe('0');
+  choose('9 ml, 17-415 neck');expect([...container.querySelectorAll('button')].some(b=>b.textContent?.trim()==='Continue to glass')).toBe(false);button('Continue to top');expect(stage()).toBe('2');button('Back');expect(stage()).toBe('0');
  });
  it('allows a valid build below the cart minimum through the existing add callback',()=>{
   toFinish();choose('Silver');button('Review bottle');expect(container.textContent).toContain('Add to cart · $9.84');button('Add to cart · $9.84');expect(add).toHaveBeenCalledOnce();

@@ -16,8 +16,9 @@ import styles from "./MobileBuilder.module.css";
 import FamilyShapeIcon from "@/components/icons/FamilyShapeIcon";
 import { useTileIntent } from "./useTileIntent";
 
-const stages = ["Bottle", "Glass", "Fitment", "Finish"];
-const titles = ["Choose your bottle", "Choose your glass", "Choose your fitment", "Choose your finish", "Review your bottle"];
+// The same plain words as the desktop step list: Size, Glass, Top, Color.
+const stages = ["Size", "Glass", "Top", "Color"];
+const titles = ["Choose your size", "Choose your glass", "Choose your top", "Choose your color", "Review your bottle"];
 const money = (n: number | null | undefined) => n == null ? "—" : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(n);
 
 export function shortFinishLabel(name: string) {
@@ -73,12 +74,13 @@ export default function MobileBuilder(p: Props) {
     // A bottle with one glass has no glass stage: the colour is taken as read
     // and the Glass step is passed over in either direction.
     const skipGlass = Boolean(body) && p.current.colors.length === 1;
-    const blockedLabel = p.pending ? "Loading compatible choices…" : stage === 0 ? "Select a bottle to continue"
-        : stage === 1 ? "Select your glass color to continue" : stage === 2 ? "Select a fitment to continue"
-        : stage === 3 ? "Select a finish to continue"
+    // A roller, cap or reducer is finished by its cap; a sprayer, pump or dropper by its own collar.
+    const colorLabel = /Roller|Cap|Reducer/.test(fitment ?? "") ? "Cap color" : "Color";
+    const blockedLabel = p.pending ? "Loading compatible choices…" : stage === 0 ? "Select a size to continue"
+        : stage === 1 ? "Select your glass to continue" : stage === 2 ? "Select a top to continue"
+        : stage === 3 ? `Select a ${colorLabel.toLowerCase()} to continue`
         : !p.order.validQuantity ? "Enter a whole-number quantity from 1 to 1,000,000."
         : !p.hydrated ? "Loading your cart…" : "This combination is unavailable. Edit your choices to continue.";
-    const finishLabel = /Roller/.test(fitment ?? "") ? "Roller cap" : /Pump/.test(fitment ?? "") ? "Pump finish" : /Sprayer/.test(fitment ?? "") ? "Sprayer finish" : "Cap finish";
     const preview = configuration ?? p.current.fitted[0] ?? p.current.colored[0] ?? body?.configurations[0];
     const previewStage = stage < 2 || !fitment ? "body" : stage === 2 ? "fitment" : configuration ? "complete" : "fitment";
     const bodyReference = p.current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full") ?? p.current.colored.find(c => c.kit?.completeness === "full" && c.fitment !== "Reducer") ?? p.current.colored.find(c => c.kit?.completeness === "full") ?? p.current.colored[0] ?? body?.configurations[0];
@@ -104,7 +106,7 @@ export default function MobileBuilder(p: Props) {
     const showBar = !p.lastAdded;
     const forwardLabel = stage === 4
         ? p.adding ? "Checking your bottle…" : `Add to cart · ${money(p.order.total)}`
-        : canAdvance ? (stage === 0 && skipGlass ? "Continue to fitment" : ["Continue to glass", "Continue to fitment", "Continue to finish", "Review bottle"][stage])
+        : canAdvance ? (stage === 0 && skipGlass ? "Continue to top" : ["Continue to glass", "Continue to top", `Continue to ${colorLabel.toLowerCase()}`, "Review bottle"][stage])
         : blockedLabel;
 
     useEffect(() => {
@@ -175,9 +177,9 @@ export default function MobileBuilder(p: Props) {
         p.onUpdate(patch);
         if ((patch.bodyId && patch.bodyId !== body?.id || patch.color && patch.color !== color) && fitment) {
             const next = deriveBuilder(p.bodies, { ...p.selection, ...patch });
-            setNotice(!next.fitment ? "Changing the bottle may reset incompatible fitment and finish selections. Choose a compatible fitment for this bottle and glass." : !next.closure && closure ? "Choose a finish for your updated selection." : "");
+            setNotice(!next.fitment ? "Changing the bottle may reset a top and color that no longer fit. Choose a top for this bottle and glass." : !next.closure && closure ? "Choose a color for your updated selection." : "");
         } else if (patch.fitment && patch.fitment !== fitment && closure) {
-            setNotice(deriveBuilder(p.bodies, { ...p.selection, ...patch }).closure ? "" : "Choose a finish for this fitment.");
+            setNotice(deriveBuilder(p.bodies, { ...p.selection, ...patch }).closure ? "" : "Choose a color for this top.");
         } else setNotice("");
     }
     async function submitBuild() {
@@ -233,7 +235,7 @@ export default function MobileBuilder(p: Props) {
             <button ref={expandTrigger} className={styles.expand} aria-label="Expand bottle preview" onClick={() => { setPreviewZoom(1); expanded.current?.showModal(); }}><ArrowsOutSimple size={18} /></button>
             {stage >= 3 && p.hasIncludedCover && <button className={styles.coverToggle} aria-pressed={p.showCover} onClick={p.onCover}>{p.showCover ? "Hide overcap" : "Show included overcap"}</button>}
         </section>}
-        {stage < 4 && <h1 ref={heading} tabIndex={-1} className={styles.title}>{titles[stage]}</h1>}
+        {stage < 4 && <h1 ref={heading} tabIndex={-1} className={styles.title}>{stage === 3 ? `Choose your ${colorLabel.toLowerCase()}` : titles[stage]}</h1>}
         {stage === 0 && <>
             {p.familyNotice}
             <div className={styles.filters}>{p.onChangeFamily
@@ -241,7 +243,7 @@ export default function MobileBuilder(p: Props) {
                 : <label><span className={styles.srOnly}>Bottle family</span><select aria-label="Bottle family" value={p.family} disabled={busy} onChange={e => p.onFamily(e.target.value)}>{p.families.map(f => <option key={f.family}>{f.family}</option>)}</select></label>}
                 <button ref={filterTrigger} className={styles.filterButton} aria-haspopup="dialog" aria-expanded={filterOpen} onClick={() => { setFilterOpen(true); filters.current?.showModal(); }}><SlidersHorizontal size={18} /> Filter{activeFilters && <span aria-label="active">●</span>}</button>
             </div><p className={styles.count}>{visible.length} bottle {visible.length === 1 ? "option" : "options"}</p>
-            <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>Bottle</legend><div className={styles.bottleGrid}>
+            <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>Size</legend><div className={styles.bottleGrid}>
                 {visible.map((b, index) => <Choice key={b.id} name={`${id}-bottle`} value={b.id} selected={body?.id === b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} onSelect={() => choose({ bodyId: b.id })} onIntent={p.onBodyIntent && (() => p.onBodyIntent!(b.id))}>
                     <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} scale={1.08 * Math.max(.55, p.chooserScale(b))} label={`${b.capacityMl} ml ${b.profileLabel}`} thumbnail placeholder priority={index < CHOOSER_PRIORITY_TILES} /></div>
                     <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <span>{b.profileLabel}</span>}<span>Neck: {b.neck}</span>
@@ -268,7 +270,7 @@ export default function MobileBuilder(p: Props) {
             {stage === 3 && p.hasIncludedCover && <p className={styles.included}>Protective overcap included: <strong>{configuration?.kit?.parts.some(part => part.slot === "overcap" && part.image.url.includes("cylinder-9ml-clear-overcap-")) ? "Clear" : closure}</strong>. Supplied with this {fitment?.includes("Pump") ? "pump" : "sprayer"}; it cannot be mixed and matched.</p>}
         </>}
         {stage === 4 && <section className={styles.review} aria-label="Review and quantity">
-            <dl className={styles.summary}>{[["Bottle", `${body?.capacityMl} ml ${body?.profileLabel}`, 0], ["Glass", color, 1], ["Fitment", fitment ? displayApplicatorName(fitment) : fitment, 2], [finishLabel, closure, 3]].map(([label, value, to]) => <div key={label}>
+            <dl className={styles.summary}>{[["Size", `${body?.capacityMl} ml ${body?.profileLabel}`, 0], ["Glass", color, 1], ["Top", fitment ? displayApplicatorName(fitment) : fitment, 2], [colorLabel, closure, 3]].map(([label, value, to]) => <div key={label}>
                 <dt>{label}</dt><dd>{value}{to === 0 && <small>{body?.neck} neck</small>}</dd><dd className={styles.summaryEdit}><button aria-label={`Edit ${label?.toString().toLowerCase()}`} disabled={busy} onClick={() => go(Number(to))}>Edit</button></dd>
             </div>)}</dl>
             <p className={styles.included}>{fitmentContents(fitment)}</p>

@@ -11,6 +11,7 @@ import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, Sh
 import { useCart } from "@/components/CartProvider";
 import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
 import { useBuilderKits } from "@/components/bottle-builder/useBuilderKits";
+import { topCloseUp } from "@/lib/bottle-builder/top-close-up";
 import { useBuilderBodyConfigurations } from "@/components/bottle-builder/useBuilderBodyConfigurations";
 import { prefetchBody } from "@/components/bottle-builder/builder-requests";
 import { useTileIntent } from "@/components/bottle-builder/useTileIntent";
@@ -43,10 +44,15 @@ const MobileBuilder = dynamic(() => import("@/components/bottle-builder/MobileBu
 const subscribeMobile = (callback: () => void) => { const query = window.matchMedia("(max-width: 1099px)"); query.addEventListener("change", callback); return () => query.removeEventListener("change", callback); };
 const mobileSnapshot = () => window.matchMedia("(max-width: 1099px)").matches;
 const serverMobileSnapshot = (preferMobile: boolean) => () => preferMobile;
-// The same five stages as MobileBuilder, so one step index drives both layouts.
-// Glass is its own step: on a laptop the colour swatches used to sit below the
-// bottle grid inside a clipped scroll region and never came into view (2026-09-24 audit).
-const steps = ["Bottle", "Glass", "Fitment", "Finish", "Review"];
+// One step index drives both layouts: 0 size, 1 glass, 2 top, 3 its color, 4 review. Glass is its own step: on a
+// laptop the colour swatches used to sit below the bottle grid inside a clipped scroll region and never came into
+// view (2026-09-24 audit). The desktop step list has no review step; 4 there means every step is folded.
+/** What a bottle takes, in a word or two, for the size list. */
+const TAKES: Record<string, string> = {
+    "Fine Mist Sprayer": "mist sprayer", "Perfume Sprayer": "perfume sprayer", "Metal Roller": "roller", "Plastic Roller": "roller",
+    "Screw Cap": "screw cap", "Tear-off Cap": "tear-off cap", "Lotion Pump": "pump", "Dropper": "dropper", "Reducer": "reducer",
+    "Vintage Bulb Sprayer": "bulb sprayer", "Vintage Bulb Sprayer with Tassel": "bulb sprayer",
+};
 const fitmentDescriptions: Record<string, string> = {
     "Screw Cap": "Close and reopen your bottle.",
     "Reducer": "Control the flow through a small opening.",
@@ -224,8 +230,6 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
     // over in either direction, exactly as MobileBuilder does.
     const skipGlass = Boolean(body) && current.colors.length === 1;
     const completed = [Boolean(body), Boolean(color), Boolean(fitment), Boolean(configuration), false];
-    const canContinue = step === 0 ? Boolean(body) : step === 1 ? Boolean(color) : step === 2 ? Boolean(fitment) : Boolean(configuration);
-    const fitmentReady = step === 0 && canContinue && !pending;
     // Glass needs only the colours first paint already carries; Fitment needs the full body.
     const awaitingBody = chooser.loading && (step === 1 || (step === 0 && skipGlass));
     // Glass needs only the colours first paint carries; anything past it waits for the chosen bottle's options.
@@ -233,30 +237,25 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         && (advanceTo !== 1 || Boolean(body)) && (advanceTo !== 2 || Boolean(color)) && (advanceTo !== 3 || Boolean(fitment));
     useEffect(() => {
         if (!advanceReady || advanceTo == null || isMobile) return;
+        // A step with one option is taken as read, like one glass: the list says it was chosen for the customer.
+        const opening = advanceTo === 1 && skipGlass ? 2 : advanceTo;
+        if (opening === 2 && !fitment && current.fitments.length === 1) {
+            update({ fitment: current.fitments[0], closure: null }); setAdvanceTo(3); return;
+        }
         setAdvanceTo(null);
-        goTo(advanceTo);
+        goTo(opening === 3 && configuration && current.closures.length === 1 ? 4 : advanceTo);
         // goTo is recreated every render; the advance runs once per choice.
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [advanceReady, advanceTo, isMobile]);
     const bodyNotice = chooser.failed ? <div className={styles.familyPending} role="status">We couldn’t load this bottle’s options. <button type="button" className={styles.textButton} onClick={chooser.retry}>Try again</button></div> : null;
     const catalogHref = `/catalog?families=${encodeURIComponent(openFamily)}`;
-    const choosingFinish = step === 3;
     const unavailableFinishes = body?.unavailableFinishes?.filter(option => option.color === color && option.fitment === fitment) ?? [];
-    const finishLabel = /Roller/.test(fitment ?? "") ? "Roller cap"
-        : /Cap|Reducer/.test(fitment ?? "") ? "Cap finish"
-        : /Sprayer/.test(fitment ?? "") ? "Sprayer finish"
-        : /Pump/.test(fitment ?? "") ? "Pump finish" : "Component finish";
-    const finishTitle = /Roller/.test(fitment ?? "") ? "Select your cap" : `Choose your ${finishLabel.toLowerCase()}`;
-    const titles = ["Choose your bottle", "Choose your glass color", "Choose your fitment", finishTitle, "Review your bottle"];
-    const subtitles = [
-        `${visibleBodies.length} bottle ${visibleBodies.length === 1 ? "option" : "options"} · small to large`,
-        `${current.colors.length} glass ${current.colors.length === 1 ? "option" : "options"} for this bottle.`,
-        "Choose how your bottle dispenses or closes.",
-        fitment === "Screw Cap" && body?.family === "Cylinder" && body.capacityMl === 5 && body.neck === "13-415"
-            ? "Black and white short caps are ribbed. The other six short caps and the gold and silver tall caps have liners."
-            : `Choose the look of your ${/Roller/.test(fitment ?? "") ? "roller cap" : (fitment ? displayApplicatorName(fitment).toLowerCase() : "component")}. Every option shown fits your selection.`,
-        "Check your bottle, finish, and quantity before adding.",
-    ];
+    // The last choice is a color: of the cap where the top has one, of the top itself otherwise.
+    const colorLabel = /Roller|Cap|Reducer/.test(fitment ?? "") ? "Cap color" : "Color";
+    const colorNote = fitment === "Screw Cap" && body?.family === "Cylinder" && body.capacityMl === 5 && body.neck === "13-415"
+        ? "Black and white short caps are ribbed. The other six short caps and the gold and silver tall caps have liners."
+        : current.closures.length === 1 ? `This ${colorLabel.toLowerCase()} is included with your bottle.` : null;
+    const glassExample = body && color ? body.configurations.find(config => config.color === color) ?? null : null;
     function goTo(target: number) {
         if (adding) return;
         const next = skipGlass && target === 1 ? (step < 1 ? 2 : 0) : target;
@@ -331,18 +330,9 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         } catch (cause) { setError(cause instanceof Error ? cause.message : "Unable to add this bottle. Please try again."); }
         finally { setAdding(false); }
     }
-    function continueBuild() { goTo(Math.min(4, step + 1)); }
-
-    const nextActionLabel = step === 0 ? (skipGlass ? "Choose Your Fitment" : "Choose Your Glass")
-        : step === 1 ? "Choose Your Fitment"
-        : step === 2 ? /Roller|Cap|Reducer/.test(fitment ?? "") ? "Choose Your Caps"
-            : fitment ? `Choose Your ${finishLabel.replace(/\b\w/g, letter => letter.toUpperCase())}` : "Choose Your Finish"
-        : "Review Your Bottle";
-    const action = step < 4 ? <button key={`${step}-${body?.id}-${step <= 1 ? color : step === 2 ? fitment : closure}`} className={`${styles.primary} ${canContinue && !pending && !awaitingBody ? styles.nextStepCue : ""}`} disabled={!canContinue || pending || awaitingBody} onClick={continueBuild}>
-            {awaitingBody ? "Loading compatible choices…" : nextActionLabel} <ArrowRight size={17} />
-        </button> : <button className={styles.primary} disabled={!order.canAdd || adding || !isCartHydrated} onClick={addToCart}>
-            {adding ? "Checking your bottle…" : "Add to Cart"} {!adding && <ShoppingBag size={17} />}
-        </button>;
+    const addButton = <button className={styles.primary} disabled={!order.canAdd || adding || !isCartHydrated} onClick={addToCart}>
+        {adding ? "Checking your bottle…" : "Add to Cart"} {!adding && <ShoppingBag size={17} />}
+    </button>;
 
     if (isMobile && !familyScreen) return <MobileBuilder onChangeFamily={openFamilyScreen} familyNotice={familyNotice} families={families} family={openFamily} bodies={bodies}
         selection={selection} current={current} order={order} stage={step} onStage={next => { setStep(next); setError(""); }} priceRange={priceRange}
@@ -351,102 +341,55 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
         pending={pending || awaitingBody} bodyNotice={bodyNotice} adding={adding} hydrated={isCartHydrated} error={error} lastAdded={lastAdded} cartProgress={cartProgress}
         hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={b => chooserScale(b, bodies)} onBodyIntent={prefetchBottle} />;
 
+    // The step list (24 Nov 2026): one question open at a time, in order. A finished step folds into a line with its
+    // answer, a thumbnail and "Change", so the list is also the summary. Choosing an option is the only way forward;
+    // the price and Add to Cart sit under the list instead of on a review step of their own.
+    const firstMissing = !body ? 0 : !color ? 1 : !fitment ? 2 : !configuration ? 3 : null;
+    const lockedHint = `Choose ${["a size", "a glass", "a top", "a color"][firstMissing ?? 0]} first`;
+    const rowState = (index: number) => {
+        const done = completed[index], open = step === index;
+        return { done, open, locked: !done && !open && firstMissing !== null && index > firstMissing, hint: lockedHint, disabled: adding || pending, onOpen: () => goTo(index) };
+    };
+    const left = ["size", "glass", "top", "color"].filter((_, index) => !completed[index]);
+    const leftLine = `${left.length} ${left.length === 1 ? "choice" : "choices"} to go: ${left.length > 1 ? `${left.slice(0, -1).join(", ")} and ${left[left.length - 1]}` : left[0]}.`;
+    // A long family (Cylinder has 14 bottles, three of them 9 ml) reads as a list: what each bottle takes, and its neck.
+    const manySizes = visibleBodies.length > 6;
+    // One catalog profile arrives as "Pillar Pillar"; say it once.
+    const sizeName = (b: BuilderBody) => `${b.capacityMl} ml${b.profileLabel !== b.family ? ` ${[...new Set(b.profileLabel.split(" "))].join(" ")}` : ""}`;
+    const takes = (b: BuilderBody) => {
+        const names = [...new Set(bodyFitments(b).map(f => TAKES[f] ?? displayApplicatorName(f).toLowerCase()))];
+        const text = names.length > 1 ? `${names.slice(0, -1).join(", ")} or ${names[names.length - 1]}` : names[0] ?? "";
+        return text.charAt(0).toUpperCase() + text.slice(1);
+    };
+    // Before a size is picked the preview shows a bottle from the middle of the family instead of an empty stage.
+    const ghost = !body ? visibleBodies[Math.floor((visibleBodies.length - 1) / 2)] ?? null : null;
+    const built = [chosenFamily, body && sizeName(body), color && `${color} glass`, fitment && displayApplicatorName(fitment), closure].filter(Boolean).join(" · ");
+    const previewNote = !body ? (ghost ? `Showing the ${ghost.capacityMl} ml until you pick a size.` : "Pick a size to begin.")
+        : !color ? `Showing ${(preview?.color ?? "clear").toLowerCase()} glass until you pick one.`
+        : !fitment ? "No top yet. Choose how it dispenses or closes."
+        : !configuration ? `Choose a ${colorLabel.toLowerCase()} to finish.`
+        : `SKU ${configuration.id}`;
+    const topConfig = (f: string) => current.colored.find(c => c.fitment === f && c.kit) ?? null;
+
     return <div ref={builderRoot} className={styles.builder} data-bottle-builder data-current-step={familyScreen ? "family" : step} data-has-bottle={Boolean(body)} data-family-screen={familyScreen || undefined} aria-busy={pending || adding}>
         <header className={styles.header}>
             <div><div className={styles.headerLinks}><Link className={styles.backLink} href={catalogHref}><ArrowLeft size={13} /> Back to bottles</Link><Link className={styles.mobileCartLink} href="/cart">View cart{isCartHydrated && items.length > 0 ? ` (${items.reduce((sum, item) => sum + item.quantity, 0)})` : ""}</Link></div>
-                <h1>Build Your Bottle</h1><p>Choose your bottle and glass, then how it dispenses or closes and the finish you like.</p></div>
+                <h1>Build Your Bottle</h1>
+                <p>{familyScreen ? "Five choices: shape, size, glass, top and cap color. Each one narrows the next." : "Five choices, in order. Each one narrows the next, and you can change any of them whenever you like."}</p></div>
+            {familyScreen && <ol className={styles.choices} aria-label="The five choices">{["Shape", "Size", "Glass", "Top", "Cap color"].map((label, index) =>
+                <li key={label} aria-current={index === 0 ? "step" : undefined}><span>{index + 1}</span>{label}</li>)}</ol>}
         </header>
-        {/* Sticky on desktop: the nodes light up and the connectors fill as each step completes, in view at every step. */}
-        <div ref={stepsBar} className={styles.stepsBar}>
-            <nav aria-label="Bottle building progress" className={styles.steps}>
-                <button aria-current={familyScreen ? "step" : undefined} disabled={adding || pending} onClick={openFamilyScreen}
-                    className={familyScreen ? styles.activeStep : styles.completeStep}>
-                    <span>{familyScreen ? 1 : <Check size={15} weight="bold" />}</span><b>Family</b>
-                </button>
-                {steps.map((label, index) => <button key={label} aria-current={!familyScreen && step === index ? "step" : undefined}
-                    disabled={adding || pending || familyScreen || (index === 1 && (!body || skipGlass)) || (index === 2 && !color) || (index === 3 && !fitment) || (index === 4 && !configuration)}
-                    onClick={() => goTo(index)} className={!familyScreen && step === index ? styles.activeStep : completed[index] ? styles.completeStep : ""}>
-                    <span>{completed[index] ? <Check size={15} weight="bold" /> : index + 2}</span><b>{label}</b>
-                </button>)}
-            </nav>
-        </div>
         {lastAdded && <div ref={confirmation} className={styles.addedNotice} role="status" tabIndex={-1}>
             <CheckCircle size={25} weight="light" />
-            <div><h2>Your bottle has been added to cart.</h2><p>{lastAdded.quantity} × {lastAdded.name}</p><p>{checkoutMinimumMessage(cartProgress)}</p><p>Ready for another? Choose a bottle below to start a new build.</p></div>
+            <div><h2>Your bottle has been added to cart.</h2><p>{lastAdded.quantity} × {lastAdded.name}</p><p>{checkoutMinimumMessage(cartProgress)}</p><p>Ready for another? Choose a size below to start a new build.</p></div>
             <div className={styles.addedActions}><button className={styles.primary} onClick={() => goTo(0)}>Build Another Bottle</button>
                 <Link href="/cart" className={styles.secondary}>View Cart <ArrowRight size={16} /></Link>
 </div>
         </div>}
         {familyScreen && <>{familyNotice}<FamilyChooser families={families} previews={familyPreviewMap} current={familyScreenReturned ? openFamily : undefined}
-            pendingFamily={pending && chosenFamily !== openFamily ? chosenFamily : null} onChoose={chooseFamily} stepLabel="Step 1 of 6" focusOnMount={familyScreenReturned} disabled={adding} /></>}
+            pendingFamily={pending && chosenFamily !== openFamily ? chosenFamily : null} onChoose={chooseFamily} stepLabel="Step 1 of 5" focusOnMount={familyScreenReturned} disabled={adding} /></>}
         {!familyScreen && step === 0 && familyNotice}
         {!familyScreen && <div className={styles.workspace} id="builder-workspace">
-            <section className={styles.options} aria-label="Bottle options">
-                <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 2} of 6</span><button type="button" className={styles.startOver} onClick={startOver} disabled={adding}>Start over</button></div>
-                    <h2 tabIndex={-1} ref={optionHeading}>{titles[step]}</h2><p>{subtitles[step]}</p>
-                    {step === 0 && <button type="button" className={styles.familyCurrent} disabled={adding} onClick={openFamilyScreen} aria-label={`Bottle family: ${chosenFamily}. Change family`}>
-                        <FamilyShapeIcon family={chosenFamily} size={20} strokeWidth={1.1} /><strong>{chosenFamily}</strong><span>Change family</span>
-                    </button>}</div>
-                {bodyNotice}
-                <fieldset ref={optionsScroller} aria-label={titles[step]} disabled={adding || pending} className={styles.optionFieldset}>
-                {step === 0 && <div className={styles.bottleGrid}>
-                    {visibleBodies.map((b, index) => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)} onIntent={() => prefetchBottle(b.id)}>
-                        <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} thumbnail placeholder priority={index < CHOOSER_PRIORITY_TILES} /></div>
-                        <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <small>{b.profileLabel}</small>}<span className={styles.neckBadge}>Neck: {b.neck}</span>
-                    </Option>)}
-                </div>}
-                {step === 0 && !visibleBodies.length && <div className={styles.empty}><h3>No bottles for these choices.</h3><p>Try another size or bottle family.</p><button className={styles.secondary} onClick={() => { setSize(""); setNeck(""); setApplication(""); }}>Clear filters</button><Link href={catalogHref}>Explore the full catalog <ArrowRight size={15} /></Link></div>}
-                {step === 0 && body && <div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>{skipGlass ? <>{color} glass, the only glass for this bottle. Select <strong>Choose Your Fitment</strong> to continue.</> : <>Your bottle is ready. Select <strong>Choose Your Glass</strong> to continue.</>}</span></>}</div>}
-                {step === 1 && body && <>
-                    <div className={styles.compatibilityContext}><ShieldCheck size={18} /><span><strong>{body.capacityMl} ml {body.profileLabel}</strong><span>Neck: {body.neck} · Every glass below is this bottle</span></span></div>
-                    <div className={styles.colorGrid}>
-                        {current.colors.map(c => { const example = body.configurations.find(config => config.color === c)!; return <Option key={c} label={c} selected={color === c} onClick={() => { update({ color: c, fitment: null, closure: null }); setAdvanceTo(2); }}>
-                            <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
-                        </Option>; })}
-                    </div>
-                </>}
-                {(step === 2 || step === 3) && <>
-                    {step === 2 && <div className={styles.compatibilityContext}><ShieldCheck size={18} /><span><strong>{body?.capacityMl} ml {body?.family} · {color}</strong><span>Neck: {body?.neck} · Compatible components below</span></span></div>}
-                    {step === 2 ? <div className={styles.fitmentGrid}>{current.fitments.map(f => {
-                        const availableCount = current.colored.filter(c => c.fitment === f).length;
-                        const unavailableCount = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === f).length ?? 0;
-                        const count = availableCount + unavailableCount;
-                        return <Option key={f} label={displayApplicatorName(f)} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); setAdvanceTo(3); }}>
-                            <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div>
-                            <strong>{displayApplicatorName(f)}</strong><small>{count} {/(Roller|Cap)/.test(f) ? (count === 1 ? "cap option" : "cap options") : (count === 1 ? "finish" : "finishes")}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>
-                        </Option>;
-                    })}</div> : <>
-                        <div className={styles.selectedFitment}><div><strong>{displayApplicatorName(fitment ?? "")}</strong><small>{body?.neck} neck · {color} glass</small></div>
-                            <button className={styles.textButton} onClick={() => goTo(2)}>Change fitment</button></div>
-                        <div className={styles.closureSection}>
-                            <p>{current.closures.length === 1 ? `This ${finishLabel.toLowerCase()} is included with your bottle.` : `${configuration ? "Change" : "Select"} your ${finishLabel.toLowerCase()}${configuration ? " to customize this bottle." : " to see the complete bottle."}`}</p>
-                            {capLinerNote(body?.neck, fitment) && <p className={styles.linerNote}>{capLinerNote(body?.neck, fitment)}</p>}
-                        <div className={styles.closureGrid}>{current.fitted.map(c => <Option key={c.id} label={c.closure} selected={closure === c.closure} onClick={() => { update({ closure: c.closure }); setShowCover(false); }}>
-                                <div className={styles.closureThumb}><BuilderFinishImage config={c} peers={current.fitted} /></div><strong>{c.closure}</strong>
-                            </Option>)}{unavailableFinishes.map(option => <button type="button" disabled key={option.id} className={`${styles.option} ${styles.unavailableOption}`} aria-label={`${option.closure} — Out of stock`}>
-                                <div className={styles.closureThumb}>
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img src={displayImageUrl(option.imageUrl, 640)} alt="" loading="lazy" />
-                                </div><strong>{option.closure}</strong><small>Out of stock</small>
-                            </button>)}</div>
-                        </div>
-                        {configuration && hasIncludedCover && <div className={styles.includedCover}>
-                            {configuration.kit?.parts.some(p => p.slot === "overcap") && <div className={styles.includedCoverImage}><BuilderImage config={configuration} parts={configuration.kit.parts.filter(p => p.slot === "overcap")} stage="complete" thumbnail label="Included overcap" /></div>}
-                            <div><strong>Included overcap</strong><p>Comes with this {fitment?.includes("Pump") ? "pump" : "sprayer"} and cannot be selected separately.</p></div><CheckCircle size={20} />
-                        </div>}
-                    </>}
-                </>}
-                {step === 4 && <div className={styles.review}>
-                    <ShieldCheck size={30} weight="light" /><h3>Everything fits.</h3><p>{fitmentContents(fitment)}</p>{hasIncludedCover && <p>Matching protective overcap included.</p>}
-                            <dl><div><dt>Bottle</dt><dd>{body?.capacityMl} ml {body?.family}</dd></div><div><dt>Glass</dt><dd>{color}</dd></div><div><dt>Fitment</dt><dd>{displayApplicatorName(fitment ?? "")}</dd></div><div><dt>{finishLabel}</dt><dd>{closure}</dd></div><div><dt>Neck</dt><dd>{body?.neck}</dd></div></dl>
-                            <p className={styles.small}>Set your quantity in Your Build. We’ll check current availability before adding.</p>
-                </div>}
-                </fieldset>
-                <div className={styles.optionFooter}>
-                    {step > 0 && <button className={styles.previous} onClick={() => goTo(step - 1)} disabled={adding}><ArrowLeft size={15} /> Back</button>}
-                    {step < 3 && <div className={styles.optionAction}>{action}</div>}
-                </div>
-            </section>
             <section className={styles.preview} aria-label="Live bottle preview" data-preview-stage={previewStage} data-expanded={previewExpanded}>
                 <div className={styles.previewHeader}>{configuration && step >= 3
                     ? <span key={configuration.id} className={styles.completeBadge} role="status"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" /><path d="M7.2 12.4l3.1 3.1 6.5-6.8" /></svg>Your bottle is complete</span>
@@ -457,62 +400,141 @@ export default function MatrixClient({ families: initialFamilies, familyList, op
                 {configuration && activeFinishedView ? <div id={previewId} className={styles.previewImage}><BuilderViewStage configuration={configuration} view={activeFinishedView}
                     label={`${configuration.capacityMl} ml ${configuration.color} ${configuration.family} with ${displayApplicatorName(configuration.fitment)}, ${configuration.closure}, ${builderViewLabel(activeFinishedView).toLowerCase()}`} /></div>
                 : preview && previewConfig ? <div id={previewId} className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}><BuilderImage config={previewConfig} parts={displayParts} stage={displayStage} showCover={showCover} bodyReference={bodyReference} frameConfigurations={body?.configurations}
-                    label={body ? `${preview.capacityMl} ml ${preview.color} ${preview.family}${fitment ? ` with ${displayApplicatorName(fitment)}` : preview.kit ? " bottle body" : " bottle"}${closure ? `, ${closure}` : ""}` : "Bottle body preview — choose a bottle to begin"} /></div>
+                    label={`${preview.capacityMl} ml ${preview.color} ${preview.family}${fitment ? ` with ${displayApplicatorName(fitment)}` : preview.kit ? " bottle body" : " bottle"}${closure ? `, ${closure}` : ""}`} /></div>
+                : ghost ? <div id={previewId} className={`${styles.previewImage} ${styles.previewGhost}`}><BuilderImage config={clearBodyPreview(ghost)} parts={previewParts(clearBodyPreview(ghost), "body")} stage="body"
+                    label={`${ghost.capacityMl} ml ${ghost.family} bottle, shown until you pick a size`} /></div>
                     : <div className={styles.previewEmpty}><ShoppingBag size={32} weight="light" /><p>Your bottle starts here.</p></div>}
-                <div className={styles.previewCaption} aria-live="polite">{body ? <><h2>{body.capacityMl} ml {body.profileLabel}</h2><p>{color ?? "Choose your glass"}{fitment ? ` · ${displayApplicatorName(fitment)}` : ""}</p>{preview && !preview.kit && !borrowed && fitment && !configuration && <p>Your selected fitment is shown in the options. Choose your {finishLabel.toLowerCase()} to see the complete bottle.</p>}</> : <><h2>A bottle. Your possibilities.</h2><p>Choose a bottle to start building.</p></>}</div>
+                <div className={styles.previewCaption} aria-live="polite"><span className={styles.eyebrow}>Your bottle</span><h2>{built}</h2><p>{previewNote}</p>
+                    {body && preview && !preview.kit && !borrowed && fitment && !configuration && <p>Your selected top is shown in the options. Choose your {colorLabel.toLowerCase()} to see the complete bottle.</p>}</div>
                 {hasIncludedCover && !activeFinishedView && <div className={styles.coverControl}><span>Matching overcap included</span><button type="button" aria-pressed={showCover} onClick={() => setShowCover(value => !value)}>{showCover ? "Hide cap" : "Show cap"}</button></div>}
-                {body && <button className={styles.previewToggle} aria-expanded={previewExpanded} aria-controls={previewId} onClick={() => setPreviewExpanded(value => !value)}>{previewExpanded ? "Minimize preview" : "View larger bottle"}</button>}
             </section>
-            <aside className={styles.summary} aria-label="Your Build">
-                <div className={styles.summaryHeading}><h2 ref={reviewHeading} tabIndex={-1}>{step === 4 ? "Review your bottle" : "Your Build"}</h2></div>
-                {step < 4 && <div className={styles.summaryNextAction}>{action}</div>}
-                <SummaryLine number={1} label="Bottle" value={body ? `${body.capacityMl} ml ${body.profileLabel}` : null} detail={body ? `${body.neck} neck` : "Start with a bottle shape"} onEdit={() => goTo(0)} />
-                <SummaryLine number={2} label="Glass" value={color} detail="Choose your glass" onEdit={() => goTo(1)} />
-                <SummaryLine number={3} label="Fitment" value={fitment ? displayApplicatorName(fitment) : null} detail="Made to fit your bottle" onEdit={() => goTo(2)} />
-                {fitment && <SummaryLine number={4} label={finishLabel} value={closure} detail={finishTitle} onEdit={() => goTo(3)} />}
-                <div className={styles.purchase}>
-                    {step === 4 ? <>
+            <div className={styles.stepList} data-builder-steps>
+                <div className={styles.stepListHeader}><span className={styles.eyebrow}>Five choices, in order</span><button type="button" className={styles.startOver} onClick={startOver} disabled={adding}>Start over</button></div>
+                <StepRow number={1} title="Shape" done open={false} locked={false} hint="" disabled={adding || pending} onOpen={openFamilyScreen} value={chosenFamily}
+                    thumb={<FamilyShapeIcon family={chosenFamily} size={30} strokeWidth={1} />} />
+                <StepRow number={2} title="Size" {...rowState(0)} value={body ? sizeName(body) : null} detail={body ? `${body.neck} neck` : undefined}
+                    thumb={body && <BuilderImage config={clearBodyPreview(body)} parts={previewParts(clearBodyPreview(body), "body")} label="" thumbnail />}>
+                    <h2 tabIndex={-1} ref={optionHeading}>How much should it hold?</h2>
+                    {bodyNotice}
+                    <fieldset aria-label="Size" disabled={adding || pending} className={styles.optionFieldset}>
+                        <div className={manySizes ? styles.sizeList : styles.bottleGrid}>
+                            {visibleBodies.map((b, index) => <Option key={b.id} row={manySizes} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)} onIntent={() => prefetchBottle(b.id)}>
+                                <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} thumbnail placeholder priority={index < CHOOSER_PRIORITY_TILES} /></div>
+                                <div className={styles.sizeText}><strong>{sizeName(b)}</strong><small>{takes(b)}</small><span className={styles.neckBadge}>{b.neck} neck</span></div>
+                            </Option>)}
+                        </div>
+                        {!visibleBodies.length && <div className={styles.empty}><h3>No bottles for these choices.</h3><p>Try another size or bottle family.</p><button className={styles.secondary} onClick={() => { setSize(""); setNeck(""); setApplication(""); }}>Clear filters</button><Link href={catalogHref}>Explore the full catalog <ArrowRight size={15} /></Link></div>}
+                    </fieldset>
+                </StepRow>
+                <StepRow number={3} title="Glass" {...rowState(1)} value={color} auto={skipGlass ? "The only glass for this bottle, so it is chosen for you." : undefined}
+                    thumb={body && color && glassExample && <BuilderImage config={bareGlassPreview(glassExample)} parts={previewParts(bareGlassPreview(glassExample), "body")} label="" thumbnail />}>
+                    <h2 tabIndex={-1} ref={optionHeading}>Which glass?</h2>
+                    {body && <fieldset aria-label="Glass" disabled={adding || pending} className={styles.optionFieldset}><div className={styles.colorGrid}>
+                        {current.colors.map(c => { const example = body.configurations.find(config => config.color === c)!; return <Option key={c} label={c} selected={color === c} onClick={() => { update({ color: c, fitment: null, closure: null }); setAdvanceTo(2); }}>
+                            <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
+                        </Option>; })}
+                    </div></fieldset>}
+                </StepRow>
+                <StepRow number={4} title="Top" {...rowState(2)} value={fitment ? displayApplicatorName(fitment) : null} auto={fitment && current.fitments.length === 1 ? "The only top that fits this bottle, so it is chosen for you." : undefined}
+                    thumb={fitment && <TopPhoto config={topConfig(fitment)} fitment={fitment} neck={body?.neck} bodyReference={bodyReference} frame={body?.configurations} />}>
+                    <h2 tabIndex={-1} ref={optionHeading}>How should it dispense or close?</h2>
+                    {bodyNotice}
+                    <fieldset aria-label="Top" disabled={adding || pending} className={styles.optionFieldset}><div className={styles.fitmentGrid}>{current.fitments.map(f => {
+                        const availableCount = current.colored.filter(c => c.fitment === f).length;
+                        const unavailableCount = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === f).length ?? 0;
+                        const count = availableCount + unavailableCount;
+                        return <Option key={f} label={displayApplicatorName(f)} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); setAdvanceTo(3); }}>
+                            <div className={styles.componentThumb}><TopPhoto config={topConfig(f)} fitment={f} neck={body?.neck} bodyReference={bodyReference} frame={body?.configurations} /></div>
+                            <strong>{displayApplicatorName(f)}</strong><small>{count} {count === 1 ? "color" : "colors"}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>
+                        </Option>;
+                    })}</div></fieldset>
+                </StepRow>
+                <StepRow number={5} title={colorLabel} {...rowState(3)} value={closure} auto={closure && current.closures.length === 1 ? `The only ${colorLabel.toLowerCase()} for this top, so it is chosen for you.` : undefined}
+                    thumb={configuration && <BuilderFinishImage config={configuration} peers={current.fitted} />}>
+                    <h2 tabIndex={-1} ref={optionHeading}>{`Which ${colorLabel.toLowerCase()}?`}</h2>
+                    <div className={styles.closureSection}>
+                        {colorNote && <p>{colorNote}</p>}
+                        {capLinerNote(body?.neck, fitment) && <p className={styles.linerNote}>{capLinerNote(body?.neck, fitment)}</p>}
+                        <fieldset aria-label={colorLabel} disabled={adding || pending} className={styles.optionFieldset}><div className={styles.closureGrid}>{current.fitted.map(c => <Option key={c.id} label={c.closure} selected={closure === c.closure} onClick={() => { update({ closure: c.closure }); setShowCover(false); }}>
+                                <div className={styles.closureThumb}><BuilderFinishImage config={c} peers={current.fitted} /></div><strong>{c.closure}</strong>
+                            </Option>)}{unavailableFinishes.map(option => <button type="button" disabled key={option.id} className={`${styles.option} ${styles.unavailableOption}`} aria-label={`${option.closure} — Out of stock`}>
+                                <div className={styles.closureThumb}>
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src={displayImageUrl(option.imageUrl, 640)} alt="" loading="lazy" />
+                                </div><strong>{option.closure}</strong><small>Out of stock</small>
+                            </button>)}</div></fieldset>
+                    </div>
+                    {configuration && hasIncludedCover && <div className={styles.includedCover}>
+                        {configuration.kit?.parts.some(p => p.slot === "overcap") && <div className={styles.includedCoverImage}><BuilderImage config={configuration} parts={configuration.kit.parts.filter(p => p.slot === "overcap")} stage="complete" thumbnail label="Included overcap" /></div>}
+                        <div><strong>Included overcap</strong><p>Comes with this {fitment?.includes("Pump") ? "pump" : "sprayer"} and cannot be selected separately.</p></div><CheckCircle size={20} />
+                    </div>}
+                </StepRow>
+                <section className={styles.orderPanel} aria-label="Your order" data-builder-order={configuration ? "ready" : "waiting"}>
+                    <h2 ref={reviewHeading} tabIndex={-1}>{configuration ? "Ready to order" : leftLine}</h2>
+                    {configuration ? <>
+                    <p className={styles.orderFits}><ShieldCheck size={18} /><span>Everything fits. {fitmentContents(fitment)}{hasIncludedCover ? " Matching protective overcap included." : ""}</span></p>
                     <div className={styles.quantityRow}><label htmlFor="builder-quantity">Quantity</label><div className={styles.quantity}>
                         <button aria-label="Decrease quantity" disabled={adding || !body || selection.quantity <= 1} onClick={() => update({ quantity: Math.max(1, selection.quantity - 1) })}><Minus size={14} /></button>
                         <input id="builder-quantity" type="number" inputMode="numeric" min="1" max={MAX_QUANTITY} step="1" value={Number.isNaN(selection.quantity) ? "" : selection.quantity}
                             disabled={adding || !body} aria-invalid={!order.validQuantity} aria-describedby="builder-minimum" onChange={e => update({ quantity: e.target.value === "" ? NaN : Number(e.target.value) })} />
                         <button aria-label="Increase quantity" disabled={adding || !body || selection.quantity >= MAX_QUANTITY} onClick={() => update({ quantity: Math.min(MAX_QUANTITY, (Number.isFinite(selection.quantity) ? selection.quantity : 0) + 1) })}><Plus size={14} /></button>
                     </div></div>
-                    {configuration?.caseQuantity && <p className={styles.case}>Case pack: {configuration.caseQuantity.toLocaleString("en-US")} units <button disabled={adding} onClick={() => update({ quantity: configuration.caseQuantity! })}>Use case quantity</button></p>}
+                    {configuration.caseQuantity && <p className={styles.case}>Case pack: {configuration.caseQuantity.toLocaleString("en-US")} units <button disabled={adding} onClick={() => update({ quantity: configuration.caseQuantity! })}>Use case quantity</button></p>}
                     <div id="builder-minimum" className={styles.minimum} aria-live="polite">
                         {!order.validQuantity ? "Enter a whole-number quantity of at least 1." : minimumNote}
                         {order.validQuantity && <div className={styles.meter} aria-hidden="true"><i style={{ width: `${minimumPct}%` }} /></div>}
                     </div>
-                    <dl className={styles.totals}><div><dt>Unit price</dt><dd>{money(order.unitPrice)}</dd></div><div><dt>Total{order.validQuantity && configuration ? ` (${selection.quantity} units)` : ""}</dt><dd>{money(order.total)}</dd></div></dl>
-                    {error && <p className={styles.error} role="alert">{error}</p>}
-                    <div className={styles.desktopAction}>{action}</div>
-                    <button className={styles.mobileReviewBack} disabled={adding} onClick={() => goTo(3)}><ArrowLeft size={16} /> Back to {finishLabel.toLowerCase()}</button>
-
-                    </> : configuration ? <>
                     <dl className={styles.totals}><div><dt>Unit price</dt><dd>{money(order.unitPrice)}</dd></div><div><dt>Total{order.validQuantity ? ` (${selection.quantity} units)` : ""}</dt><dd>{money(order.total)}</dd></div></dl>
-                    <div className={styles.minimum} aria-live="polite">Set your quantity at review. {minimumNote}<div className={styles.meter} aria-hidden="true"><i style={{ width: `${minimumPct}%` }} /></div></div>
+                    {error && <p className={styles.error} role="alert">{error}</p>}
+                    <div className={styles.orderAction}>{addButton}</div>
                     </> : body ? <div className={styles.fromPrice} aria-live="polite">
-                        <span className={styles.summaryLabel}>Price</span><strong>{possibleFrom ?? "Priced at review"}</strong>
-                        <small>{fitment ? "Final price once you choose a finish." : color ? "Final price depends on the fitment and finish." : "Final price depends on the glass, fitment and finish."}</small>
+                        <span className={styles.summaryLabel}>Price</span><strong>{possibleFrom ?? "Priced when complete"}</strong>
+                        <small>{fitment ? "Final price once you choose a color." : color ? "Final price depends on the top and its color." : "Final price depends on the glass, top and color."}</small>
                         <small>{money(ORDER_MINIMUM)} minimum per cart at checkout.</small>
-                    </div> : <p className={styles.purchaseHint}>Choose your bottle, glass, fitment, and its cap or finish. Then review your quantity and price.<small>{money(ORDER_MINIMUM)} minimum per cart at checkout.</small></p>}
+                    </div> : <p className={styles.purchaseHint}>The price appears here once the bottle is complete.<small>{money(ORDER_MINIMUM)} minimum per cart at checkout.</small></p>}
                     <p className={styles.assurance}><ShieldCheck size={20} /><span>Made to work together.<small>Only compatible combinations are shown.</small></span></p>
-                </div>
-            </aside>
+                </section>
+            </div>
         </div>}
-        {!familyScreen && !lastAdded && <div className={styles.mobileAction}><div><span>{`Step ${step + 2} of 6`}</span><strong>{configuration ? money(order.total) : choosingFinish ? finishLabel : steps[step]}</strong></div>{action}</div>}
         <p className={styles.bottomNote}>Same bottles. More possibilities.</p>
     </div>;
 }
 
-function Option({ children, selected, onClick, onIntent, label, description }: { children: ReactNode; selected: boolean; onClick: () => void; onIntent?: () => void; label: string; description?: string }) {
+function Option({ children, selected, onClick, onIntent, label, description, row = false }: { children: ReactNode; selected: boolean; onClick: () => void; onIntent?: () => void; label: string; description?: string; row?: boolean }) {
     const descriptionId = useId();
     const intent = useTileIntent(onIntent);
-    return <button type="button" className={`${styles.option} ${selected ? styles.selected : ""}`} aria-label={label} aria-describedby={description ? descriptionId : undefined} aria-pressed={selected} onClick={onClick} {...intent}>
+    return <button type="button" className={`${styles.option} ${row ? styles.optionRow : ""} ${selected ? styles.selected : ""}`} aria-label={label} aria-describedby={description ? descriptionId : undefined} aria-pressed={selected} onClick={onClick} {...intent}>
         {selected && <span className={styles.selectionCheck}><Check size={12} weight="bold" /></span>}{children}{description && <span id={descriptionId} className={styles.optionDescription}>{description}</span>}
     </button>;
 }
-function SummaryLine({ number, label, value, detail, onEdit }: { number: number | null; label: string; value: string | null; detail: string; onEdit: () => void }) {
-    return <div className={`${styles.summaryLine} ${value ? styles.summaryComplete : ""}`}><span className={number == null ? styles.summarySubstep : styles.summaryNumber}>{number != null ? value ? <Check size={13} /> : number : ""}</span>
-        <div><span className={styles.summaryLabel}>{label}</span><strong>{value ?? detail}</strong>{value && label === "Bottle" && <small>{detail}</small>}</div>{value && <button aria-label={`Edit ${label.toLowerCase()}`} onClick={onEdit}>Edit</button>}</div>;
+
+/** One line of the step list. Open, it holds its question and options; finished, it is the answer, a thumbnail and "Change". */
+function StepRow({ number, title, done, open, locked, hint, value, detail, auto, thumb, disabled, onOpen, children }: {
+    number: number; title: string; done: boolean; open: boolean; locked: boolean; hint: string; value: string | null; detail?: string;
+    /** Set when this step had one option and was filled in for the customer. */
+    auto?: string;
+    thumb?: ReactNode; disabled: boolean; onOpen: () => void; children?: ReactNode;
+}) {
+    return <section className={styles.stepRow} data-builder-step={number} data-step-state={open ? "open" : done ? "done" : locked ? "locked" : "next"}>
+        <div className={styles.stepHead}>
+            <span className={styles.stepBadge}>{done ? <Check size={14} weight="bold" /> : number}</span>
+            <div className={styles.stepText}><span className={styles.stepTitle}>{title}</span>
+                {!open && done && <strong>{value}</strong>}
+                {!open && done && (auto ?? detail) && <small>{auto ?? detail}</small>}
+                {!open && !done && <small>{locked ? hint : "Up next"}</small>}
+            </div>
+            {!open && done && thumb && <span className={styles.stepThumb} aria-hidden="true">{thumb}</span>}
+            {!open && !locked && !auto && <button type="button" className={styles.textButton} disabled={disabled} onClick={onOpen} aria-label={`${done ? "Change" : "Choose"} ${title.toLowerCase()}`}>{done ? "Change" : "Choose"}</button>}
+        </div>
+        {open && <div className={styles.stepBody}>{children}</div>}
+    </section>;
+}
+
+/** The top as it looks on this bottle with its cap off: the same layers and camera as the preview, closed in on the
+ * neck. Until the bottle's layers arrive, and for a top that has none, the drawing stands in. */
+function TopPhoto({ config, fitment, neck, bodyReference, frame }: { config: BuilderConfiguration | null; fitment: string; neck?: string; bodyReference?: BuilderConfiguration; frame?: readonly BuilderConfiguration[] }) {
+    const parts = useMemo(() => config ? previewParts(config, "fitment") : [], [config]);
+    const closeUp = useMemo(() => topCloseUp(config, parts, bodyReference, frame), [config, parts, bodyReference, frame]);
+    if (!config || !closeUp) return <FitmentIllustration fitment={fitment} neck={neck} />;
+    return <span className={styles.topPhoto} data-top-photo><span style={closeUp}><BuilderImage config={config} parts={parts} stage="fitment" showCover={false} bodyReference={bodyReference} frameConfigurations={frame} label="" /></span></span>;
 }

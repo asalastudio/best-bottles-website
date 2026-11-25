@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import FamilyShapeIcon from "@/components/icons/FamilyShapeIcon";
-import BuilderImage from "@/components/bottle-builder/BuilderImage";
-import { previewParts } from "@/lib/bottle-builder/model";
 import type { BuilderFamily } from "@/lib/bottle-builder/entry";
 import { familyPreviewScale, familyScreenOrder, type BuilderFamilyPreview } from "@/lib/bottle-builder/family-previews";
+import { familyIconGroup, familySizeRange } from "@/lib/catalog/family-icon-group";
 import { registerDisplayDerivatives, type DisplayDerivativeMap } from "@/lib/products/display-derivative";
 import styles from "./FamilyChooser.module.css";
 
@@ -35,9 +33,9 @@ export function useFamilyPreviews(streamed: Promise<FamilyPreviewPayload> | unde
 }
 
 /**
- * Build Your Bottle's first screen (Jordan, 20 Nov 2026): choose the shape before the size. Each family
- * is a small group of its own bottles, the bare clear glass the bottle step draws, at their measured
- * relative heights; until those arrive, and for a family with no drawable body, its outline icon.
+ * Build Your Bottle's first screen (Jordan, 20 Nov 2026): choose the shape before the size. Each family is a
+ * group of its own outline icon, one per size, at their measured relative heights (24 Nov 2026: icons, not
+ * bottle photographs). Until the sizes arrive, and for a family with none to show, it is one icon.
  */
 export default function FamilyChooser({ families, previews, current, pendingFamily, onChoose, stepLabel, focusOnMount = false, disabled = false }: {
     families: BuilderFamily[];
@@ -56,32 +54,28 @@ export default function FamilyChooser({ families, previews, current, pendingFami
     return <section className={styles.chooser} aria-labelledby={headingId} data-family-chooser>
         <div className={styles.intro}>
             <span className={styles.eyebrow}>{stepLabel}</span>
-            <h2 id={headingId} ref={heading} tabIndex={-1}>Choose your bottle family</h2>
-            <p>Start with a shape. Every size, glass and fitment after this is made for the family you choose.</p>
+            <h2 id={headingId} ref={heading} tabIndex={-1}>Choose a shape</h2>
+            <p>Size, glass, top and cap color follow, each one fitted to the shape you pick.</p>
         </div>
         <ul className={styles.grid}>
             {familyScreenOrder(families).map(({ family }) => {
                 const bodies = previews[family]?.bodies ?? [];
-                // Options = sizes × glass colours; it arrives with the bottle groups. Until then the tile shows no count.
-                const options = previews[family]?.options ?? 0;
-                const countLabel = options ? `${options} ${options === 1 ? "option" : "options"}` : "";
+                // The group arrives with the sizes: the smallest, the largest and one between.
+                const range = familySizeRange(bodies.map(body => body.capacityMl));
                 const loading = pendingFamily === family;
                 const selected = current === family;
                 return <li key={family}>
                     <button type="button" className={`${styles.tile} ${selected ? styles.selected : ""}`} aria-pressed={selected}
-                        aria-label={countLabel ? `${family}, ${countLabel}` : family} disabled={disabled || Boolean(pendingFamily)}
+                        aria-label={range ? `${family}, ${range}` : family} disabled={disabled || Boolean(pendingFamily)}
                         onClick={() => onChoose(family)} data-family={family}>
                         <span className={styles.stage} aria-hidden="true">
-                            {bodies.length ? bodies.map(body => {
-                                const config = body.configurations[0];
-                                return <span key={body.id} className={styles.bottle}>
-                                    <BuilderImage config={config} parts={previewParts(config, "body")} label={`${body.capacityMl} ml ${family} bottle`}
-                                        scale={familyPreviewScale(body, bodies)} thumbnail />
-                                </span>;
-                            }) : <FamilyShapeIcon family={family} size={72} strokeWidth={0.8} className={styles.outline} />}
+                            <svg viewBox="0 0 100 100" className={styles.group} fill="none" stroke="currentColor" strokeWidth={.9}
+                                strokeLinecap="round" strokeLinejoin="round" focusable="false" data-family-icons={Math.max(1, bodies.length)}>
+                                <path d={familyIconGroup(family, bodies.map(body => familyPreviewScale(body, bodies)))} />
+                            </svg>
                         </span>
-                        <span className={styles.name}><FamilyShapeIcon family={family} size={18} strokeWidth={1.1} />{family}</span>
-                        <span className={styles.count}>{loading ? `Loading ${family} options…` : countLabel || "\u00a0"}</span>
+                        <span className={styles.name}>{family}</span>
+                        <span className={styles.count}>{loading ? `Loading ${family} options…` : range || "\u00a0"}</span>
                     </button>
                 </li>;
             })}
