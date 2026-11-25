@@ -171,6 +171,37 @@ describe("catalogue corrections (guarded, conditional, logged)", () => {
         expect(again.changedSince).toEqual([{ websiteSku: "GBSqr15BlkShSht", field: "itemName", now: black }]);
     });
 
+    it("swaps a dead image for a plate, keeps the old URL, writes nothing when any row has moved on, and rolls back", async () => {
+        const t = convexTest(schema, modules);
+        const dead = "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532329541_91d5uo.png?v=1779532418";
+        const plate = "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-20ml-white-40mm/CJWhite20/5189ed3a.front-on-1000x1100.webp";
+        const jar = { ...bottle, websiteSku: "CJWhite20", graceSku: "CJ-JAR-20ML-WHT", imageUrl: dead };
+        const other = { ...bottle, websiteSku: "CJClr3", graceSku: "CJ-JAR-CLR-3ML", imageUrl: "https://cdn.shopify.com/s/files/old.png" };
+        const jarId = await t.run(ctx => ctx.db.insert("products", jar as never));
+        const otherId = await t.run(ctx => ctx.db.insert("products", other as never));
+        const forward = { websiteSku: "CJWhite20", expect: { imageUrl: dead, legacyShopifyImageUrl: null }, patch: { imageUrl: plate, legacyShopifyImageUrl: dead } };
+        const stale = { websiteSku: "CJClr3", expect: { imageUrl: "https://cdn.shopify.com/s/files/expected.png" }, patch: { imageUrl: plate } };
+
+        // one stale row: the whole call throws and the good row is not written either
+        await expect(t.mutation(fn("correctProductFields"), { writeToken: token, dryRun: false, allOrNothing: true, reason: "test", entries: [forward, stale] }))
+            .rejects.toThrow(/nothing written: 1 entries no longer match \(CJClr3\.imageUrl\)/);
+        expect(await t.run(ctx => ctx.db.get(jarId))).toMatchObject({ imageUrl: dead });
+        expect((await t.run(ctx => ctx.db.get(jarId)))?.legacyShopifyImageUrl).toBeUndefined();
+        expect(await t.run(ctx => ctx.db.get(otherId))).toMatchObject({ imageUrl: other.imageUrl });
+        expect(await changeLog(t)).toHaveLength(0);
+
+        const wet = await t.mutation(fn("correctProductFields"), { writeToken: token, dryRun: false, allOrNothing: true, reason: "test", entries: [forward] });
+        expect(wet.written.map(describeWrite).sort()).toEqual([`imageUrl:${dead}→${plate}`, `legacyShopifyImageUrl:null→${dead}`]);
+        expect(await t.run(ctx => ctx.db.get(jarId))).toMatchObject({ imageUrl: plate, legacyShopifyImageUrl: dead });
+        expect(await changeLog(t)).toHaveLength(2);
+
+        // rollback: expect and patch swapped
+        const back = await t.mutation(fn("correctProductFields"), { writeToken: token, dryRun: false, allOrNothing: true, reason: "test rollback",
+            entries: [{ websiteSku: "CJWhite20", expect: forward.patch, patch: forward.expect }] });
+        expect(back.written).toHaveLength(2);
+        expect(await t.run(ctx => ctx.db.get(jarId))).toMatchObject({ imageUrl: dead, legacyShopifyImageUrl: null });
+    });
+
     it("changes one fitment marker conditionally, keeping the rule's other markers, and logs it", async () => {
         const t = convexTest(schema, modules);
         const markers = { "Bulb Sprayer": "✓", Dropper: "—", "Lotion Pump": "✓", Reducer: "✓", "Short Cap with Liner": "✓", Sprayer: "✓" };
