@@ -48,15 +48,14 @@ async function Builder({ familyParam, collection, sku }: { familyParam?: string;
     // the chooser paints without it, and a failure falls back to that fetch.
     const familyList = loadBuilderFamilies().catch(() => null);
     // A bare /matrix opens on the family screen; a family, product or collection link goes straight to its bottles.
-    // The screen's bottle groups stream in the same way, behind the outline icons that paint first.
+    // Each family's sizes and option count stream in the same way; the tiles paint with one outline first.
     const chooseFamilyFirst = !familyParam && !sku && !collection;
     // Only that screen needs them. A family, product or collection link must not wait on (or, with a cold
     // cache, rebuild) every family; if the customer opens the screen later, the client asks for the groups then.
     const familyPreviews = chooseFamilyFirst ? familyList
         .then(async list => {
             if (!list?.length) return null;
-            const families = await loadBuilderFamilyPreviews(list);
-            return { families, displayDerivatives: collectDisplayDerivatives(families.flatMap(f => f.bodies)) };
+            return { families: await loadBuilderFamilyPreviews(list) };
         })
         .catch(() => null) : undefined;
     const preferMobile = preferMobileRequest(await headers());

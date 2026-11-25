@@ -1,12 +1,13 @@
-import { clearBodyPreview, type BuilderBody } from "./model";
+import type { BuilderBody } from "./model";
 import type { BuilderFamily } from "./entry";
 import { NAV_FAMILIES } from "../navFamilies";
 import bodyHeightMedia from "./body-heights.generated.json";
 
-/** A family on the Build Your Bottle family screen: its name, how many bottles
- * the builder offers, and a few of its real bodies drawn as a small group. */
+/** A family on the Build Your Bottle family screen: its name, the sizes the builder
+ * offers it in, and how many bottles that makes. The tile draws the sizes as outlines. */
 export type BuilderFamilyPreview = BuilderFamily & {
-    bodies: BuilderBody[];
+    /** Every capacity the builder offers the family in, in ml, smallest first, once each. */
+    sizes: number[];
     /** Bottle options: every size in every glass colour it is made in (Boston Round: 3 sizes × 3 glasses = 9). */
     options: number;
 };
@@ -27,37 +28,52 @@ export function familyScreenOrder<T extends { family: string }>(families: T[]): 
     return [...families].sort((a, b) => rank(a.family) - rank(b.family) || a.family.localeCompare(b.family));
 }
 
-/** Only bodies the chooser can actually draw: a registered bare-glass layer or a reviewed body image. */
-function drawable(body: BuilderBody) {
-    const preview = clearBodyPreview(body);
-    return Boolean(preview && (preview.previewKit ?? preview.kit ?? preview.chooserKit ?? preview.bodyImage));
+/** Every capacity the family comes in, smallest first, once each. */
+export function familySizes(bodies: Pick<BuilderBody, "capacityMl">[]): number[] {
+    return [...new Set(bodies.map(b => b.capacityMl).filter(ml => ml > 0))].sort((a, b) => a - b);
 }
 
-/**
- * Up to `max` bodies that show the family's range: the smallest, the largest and
- * one from the middle, one per capacity. Each keeps only the bare clear-glass
- * configuration the chooser draws, so the family screen stays light.
- */
-export function pickFamilyPreviewBodies(bodies: BuilderBody[], max = 3): BuilderBody[] {
-    const byCapacity = new Map<number, BuilderBody>();
-    for (const body of [...bodies].filter(drawable).sort((a, b) => a.capacityMl - b.capacityMl || a.id.localeCompare(b.id))) {
-        if (!byCapacity.has(body.capacityMl)) byCapacity.set(body.capacityMl, body);
-    }
-    const ranged = [...byCapacity.values()];
-    const picked = ranged.length <= max ? ranged
-        : max === 1 ? [ranged[ranged.length - 1]]
-        : Array.from({ length: max }, (_, i) => ranged[Math.round(i * (ranged.length - 1) / (max - 1))]);
-    return picked.map(body => ({ ...body, configurations: [clearBodyPreview(body)] }));
+/** Up to `max` sizes that show the family's range: the smallest, the largest and one from the middle. */
+export function pickFamilyTileSizes(sizes: number[], max = 3): number[] {
+    if (sizes.length <= max) return sizes;
+    if (max === 1) return [sizes[sizes.length - 1]];
+    return [...new Set(Array.from({ length: max }, (_, i) => sizes[Math.round(i * (sizes.length - 1) / (max - 1))]))];
 }
 
-/** Each bottle's height relative to the tallest in its group, from the measured
- * glass heights the chooser already uses; floored so the smallest stays legible. */
+/** The tile's size line: "15 to 60 ml", "78 and 128 ml", or one size, "55 ml". */
+export function familySizeRange(sizes: number[]): string {
+    if (!sizes.length) return "";
+    const ml = (n: number) => String(Math.round(n * 10) / 10);
+    const [first, last] = [sizes[0], sizes[sizes.length - 1]];
+    if (sizes.length === 1) return `${ml(first)} ml`;
+    return `${ml(first)} ${sizes.length === 2 ? "and" : "to"} ${ml(last)} ml`;
+}
+
+/** Measured glass heights per family, by capacity. */
+const measuredByFamily = new Map<string, { capacityMl: number; mm: number }[]>();
+for (const [key, { bodyHeightMm }] of Object.entries(bodyHeights)) {
+    const [family, capacity] = key.split("|");
+    measuredByFamily.set(family, [...(measuredByFamily.get(family) ?? []), { capacityMl: Number(capacity), mm: bodyHeightMm }]);
+}
+
+/** A size's measured glass height: its own entry, or the family's entry for a capacity within 15% of it
+ * (the audit rounds, so a 3.3 ml Cylinder is its 3 ml row). */
+function measuredHeight({ family, capacityMl }: Pick<BuilderBody, "family" | "capacityMl">) {
+    const exact = bodyHeights[`${family}|${capacityMl}`]?.bodyHeightMm;
+    if (exact) return exact;
+    const near = (measuredByFamily.get(family) ?? [])
+        .filter(m => Math.abs(m.capacityMl - capacityMl) <= .15 * capacityMl)
+        .sort((a, b) => Math.abs(a.capacityMl - capacityMl) - Math.abs(b.capacityMl - capacityMl))[0];
+    return near?.mm ?? null;
+}
+
+/** Each bottle's height relative to the tallest in its group, from the measured glass heights; floored so
+ * the smallest stays legible. If any size in the group is unmeasured the whole group steps up by capacity
+ * instead, so a measured and an estimated height are never mixed into the wrong order. */
 export function familyPreviewScale(body: Pick<BuilderBody, "family" | "capacityMl">, group: Pick<BuilderBody, "family" | "capacityMl">[]) {
-    const height = (b: Pick<BuilderBody, "family" | "capacityMl">) => bodyHeights[`${b.family}|${b.capacityMl}`]?.bodyHeightMm ?? null;
-    const mine = height(body);
-    const tallest = Math.max(0, ...group.map(b => height(b) ?? 0));
-    if (mine && tallest) return Math.max(.5, mine / tallest);
-    // No measurement: order by capacity instead, so the group still steps up in size.
+    const heights = group.map(measuredHeight);
+    const mine = measuredHeight(body);
+    if (mine && heights.every(Boolean)) return Math.max(.5, mine / Math.max(...(heights as number[])));
     const largest = Math.max(...group.map(b => b.capacityMl));
     return largest > 0 ? Math.max(.5, Math.min(1, .55 + .45 * body.capacityMl / largest)) : 1;
 }
