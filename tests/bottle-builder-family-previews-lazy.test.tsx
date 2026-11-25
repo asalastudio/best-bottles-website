@@ -5,7 +5,7 @@ import { createRoot, type Root } from "react-dom/client";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { useFamilyPreviews, type FamilyPreviewPayload } from "@/components/bottle-builder/FamilyChooser";
 
-const payload = { families: [{ family: "Cylinder", bodies: [], options: 3 }], displayDerivatives: {} } as unknown as NonNullable<FamilyPreviewPayload>;
+const payload = { families: [{ family: "Cylinder", groups: 3, sizes: [9, 50, 100], options: 3 }] } satisfies NonNullable<FamilyPreviewPayload>;
 function Probe({ streamed, shown }: { streamed?: Promise<FamilyPreviewPayload>; shown: boolean }) {
     return <output>{Object.keys(useFamilyPreviews(streamed, shown)).join(",")}</output>;
 }

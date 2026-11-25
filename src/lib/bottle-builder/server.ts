@@ -14,7 +14,7 @@ import { builderBodyIdentity, chooserGroupKey, chooserSourceRows, resolveBuilder
 import { resolveListedComponents, unavailableVintageFinishes, type ActiveComponent } from "./components";
 import { bareChooserKit, slimBuilderBodies } from "./payload";
 import type { BuilderFamily } from "./entry";
-import { familyOptionCount, familyScreenOrder, pickFamilyPreviewBodies, type BuilderFamilyPreview } from "./family-previews";
+import { familyOptionCount, familyScreenOrder, familySizes, type BuilderFamilyPreview } from "./family-previews";
 import { readLocalComponentKits } from "../paper-doll/local-component-kits";
 import { loadRegisterKits } from "@/lib/register/load";
 import { assembledKit, type RegisterKit } from "@/lib/register/stage-kit";
@@ -310,9 +310,9 @@ export async function freshConfiguration(family: string, sku: string) {
     return bodies.flatMap(body => body.configurations).find(config => config.id === sku) ?? null;
 }
 
-/** The family screen's groups: a few real bodies per family, read from the same
- * cached family the chooser uses (the warm route keeps every family cached). A
- * family that fails to load keeps its tile and shows its outline icon instead. */
+/** The family screen's tiles: each family's sizes and option count, read from the same
+ * cached family the chooser uses (the warm route keeps every family cached). A family
+ * that fails to load keeps its tile and its single outline, with no sizes or count. */
 export async function loadBuilderFamilyPreviews(families: BuilderFamily[]): Promise<BuilderFamilyPreview[]> {
     const ordered = familyScreenOrder(families);
     const out = new Array<BuilderFamilyPreview>(ordered.length);
@@ -321,16 +321,16 @@ export async function loadBuilderFamilyPreviews(families: BuilderFamily[]): Prom
         while (cursor < ordered.length) {
             const index = cursor++;
             const family = ordered[index];
-            let bodies: BuilderFamilyPreview["bodies"] = [];
+            let sizes: number[] = [];
             let options = 0;
             try {
                 const all = withLocalReviewBodies(await loadBuilderFamily(family.family));
-                bodies = pickFamilyPreviewBodies(all);
+                sizes = familySizes(all);
                 options = familyOptionCount(all);
             } catch (error) {
                 console.error("[builder] family preview unavailable", family.family, error instanceof Error ? error.message : error);
             }
-            out[index] = { ...family, bodies, options };
+            out[index] = { ...family, sizes, options };
         }
     }));
     return out;

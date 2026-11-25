@@ -1,17 +1,14 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import FamilyShapeIcon from "@/components/icons/FamilyShapeIcon";
-import BuilderImage from "@/components/bottle-builder/BuilderImage";
-import { previewParts } from "@/lib/bottle-builder/model";
+import FamilyShapeGroup from "@/components/icons/FamilyShapeGroup";
 import type { BuilderFamily } from "@/lib/bottle-builder/entry";
-import { familyPreviewScale, familyScreenOrder, type BuilderFamilyPreview } from "@/lib/bottle-builder/family-previews";
-import { registerDisplayDerivatives, type DisplayDerivativeMap } from "@/lib/products/display-derivative";
+import { familyPreviewScale, familyScreenOrder, familySizeRange, pickFamilyTileSizes, type BuilderFamilyPreview } from "@/lib/bottle-builder/family-previews";
 import styles from "./FamilyChooser.module.css";
 
-export type FamilyPreviewPayload = { families: BuilderFamilyPreview[]; displayDerivatives: DisplayDerivativeMap } | null;
+export type FamilyPreviewPayload = { families: BuilderFamilyPreview[] } | null;
 
-/** The bottle groups stream into the page after the tiles have painted with their outline icons.
+/** Each family's sizes and option count stream into the page after the tiles have painted with one outline each.
  * A page that opened on a bottle streams none; it asks for them once, when the family screen is first shown. */
 export function useFamilyPreviews(streamed: Promise<FamilyPreviewPayload> | undefined, shown: boolean) {
     const [previews, setPreviews] = useState<Record<string, BuilderFamilyPreview>>({});
@@ -25,7 +22,6 @@ export function useFamilyPreviews(streamed: Promise<FamilyPreviewPayload> | unde
         source.then(payload => {
             settled = true;
             if (!live || !payload?.families) return;
-            registerDisplayDerivatives(payload.displayDerivatives);
             setPreviews(Object.fromEntries(payload.families.map(f => [f.family, f])));
         }, () => { settled = true; });
         // Closing the screen mid-request drops the answer; let the next opening ask again.
@@ -34,10 +30,17 @@ export function useFamilyPreviews(streamed: Promise<FamilyPreviewPayload> | unde
     return previews;
 }
 
+/** The outline group's heights: the family's smallest, middle and largest size as shares of the tallest. */
+function tileHeights(family: string, sizes: number[]) {
+    const picked = pickFamilyTileSizes(sizes).map(capacityMl => ({ family, capacityMl }));
+    return picked.length ? picked.map(size => familyPreviewScale(size, picked)) : [1];
+}
+
 /**
- * Build Your Bottle's first screen (Jordan, 20 Nov 2026): choose the shape before the size. Each family
- * is a small group of its own bottles, the bare clear glass the bottle step draws, at their measured
- * relative heights; until those arrive, and for a family with no drawable body, its outline icon.
+ * Build Your Bottle's first screen (Jordan, 20 Nov 2026): choose the shape before the size. Each family is
+ * drawn as outline icons, one per size (smallest, middle, largest) at their measured relative heights, with
+ * its size range (Jordan's 24 Nov mock-up, in place of the 20 Nov photo groups). Until the sizes arrive,
+ * and for a family whose sizes failed to load, the tile draws a single outline.
  */
 export default function FamilyChooser({ families, previews, current, pendingFamily, onChoose, stepLabel, focusOnMount = false, disabled = false }: {
     families: BuilderFamily[];
@@ -61,27 +64,23 @@ export default function FamilyChooser({ families, previews, current, pendingFami
         </div>
         <ul className={styles.grid}>
             {familyScreenOrder(families).map(({ family }) => {
-                const bodies = previews[family]?.bodies ?? [];
-                // Options = sizes × glass colours; it arrives with the bottle groups. Until then the tile shows no count.
+                const sizes = previews[family]?.sizes ?? [];
+                const range = familySizeRange(sizes);
+                // Options = sizes × glass colours; it arrives with the sizes. Until then the tile shows no count.
                 const options = previews[family]?.options ?? 0;
                 const countLabel = options ? `${options} ${options === 1 ? "option" : "options"}` : "";
+                const detail = [range, countLabel].filter(Boolean).join(" · ");
                 const loading = pendingFamily === family;
                 const selected = current === family;
                 return <li key={family}>
                     <button type="button" className={`${styles.tile} ${selected ? styles.selected : ""}`} aria-pressed={selected}
-                        aria-label={countLabel ? `${family}, ${countLabel}` : family} disabled={disabled || Boolean(pendingFamily)}
+                        aria-label={[family, range, countLabel].filter(Boolean).join(", ")} disabled={disabled || Boolean(pendingFamily)}
                         onClick={() => onChoose(family)} data-family={family}>
                         <span className={styles.stage} aria-hidden="true">
-                            {bodies.length ? bodies.map(body => {
-                                const config = body.configurations[0];
-                                return <span key={body.id} className={styles.bottle}>
-                                    <BuilderImage config={config} parts={previewParts(config, "body")} label={`${body.capacityMl} ml ${family} bottle`}
-                                        scale={familyPreviewScale(body, bodies)} thumbnail />
-                                </span>;
-                            }) : <FamilyShapeIcon family={family} size={72} strokeWidth={0.8} className={styles.outline} />}
+                            <FamilyShapeGroup family={family} heights={tileHeights(family, sizes)} className={styles.group} data-sizes={sizes.length || undefined} />
                         </span>
-                        <span className={styles.name}><FamilyShapeIcon family={family} size={18} strokeWidth={1.1} />{family}</span>
-                        <span className={styles.count}>{loading ? `Loading ${family} options…` : countLabel || "\u00a0"}</span>
+                        <span className={styles.name}>{family}</span>
+                        <span className={styles.count}>{loading ? `Loading ${family} options…` : detail || "\u00a0"}</span>
                     </button>
                 </li>;
             })}
