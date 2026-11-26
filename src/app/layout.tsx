@@ -13,7 +13,7 @@ import {
   SITE_TAGLINE,
   SITE_DESCRIPTION,
   DEFAULT_OG_IMAGE,
-  DEFAULT_ROBOTS,
+  robotsForHost,
   buildOrganizationJsonLd,
   buildWebSiteJsonLd,
 } from "@/lib/seo";
@@ -27,6 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const headerLocale = headerStore.get(LOCALE_HEADER);
   const locale: AppLocale = isLocale(headerLocale) ? headerLocale : defaultLocale;
   const pathname = headerStore.get(PATHNAME_HEADER) ?? "/";
+  const requestHost = headerStore.get("x-forwarded-host") ?? headerStore.get("host");
   const stripped = stripLocalePrefix(pathname) || "/";
   const isEs = locale === "es";
   const description = isEs ? esMessages.meta.homeDescription : SITE_DESCRIPTION;
@@ -60,7 +61,7 @@ export async function generateMetadata(): Promise<Metadata> {
     authors: [{ name: "Best Bottles", url: SITE_URL }],
     creator: "Nemat International",
     publisher: "Best Bottles",
-    robots: DEFAULT_ROBOTS,
+    robots: robotsForHost(requestHost),
     openGraph: {
       type: "website",
       locale: og.locale,
